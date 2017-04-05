@@ -1,0 +1,81 @@
+
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	
+	"infomodel"	"models/items/Diary/Info/Info_Diary.mdl"
+	"playermodel"	"models/items/Diary/Ground/Diary.mdl"
+	
+	"anim_prefix"	" "
+
+	"printname"	"Journal"
+	"description"	"This journal is inscribed with the initials \"G.B.\"
+
+			We have tracked LaCroix to Los Angeles. He has made his lair in the penthouse of the Venture Tower, hiding behind some legitimate business front while commanding his legion of demons by cover of night. I pray to the Lord for strength in the coming days, but there is a shadow that hangs over my heart like the dark wings of Lucifer himself. It is not LaCroix I fear, nor his underlings, but there is fear in my heart nonetheless. An ancient evil is stirring. May God grant me the strength to overcome it.
+
+			Woke up this morning, and the sun on my face was little comfort. We lost three of the Brethren last night in a fierce battle with some hellspawn... minions of the vampire we know as Alistair Grout. We have been unable to find his lair, but it is only a matter of time. May God have mercy on the souls of our Brethren.
+
+			The mystery surrounding the Ankaran Sarcophagus and the massacre on the Elizabeth Dane has my superiors troubled. I have been told to expect a package in the mail that may be helpful in shedding some light on this artifact. Its arrival seems... convenient... in light of LaCroix's recent arrival. Something is amiss, yet I cannot see what machinations are at play. I will wait and have faith that the Lord will see us through.
+
+			We finally found the lair of Alistair Grout, but it seems we were too late... the demon had already been sent to hell before I was able to dispatch him. I ran across a younger vampire who seemed unaware of Grout's demise. No doubt one of his sucklings come to visit its master. I took care of that demon and destroyed the house. I thank God for his eternal watchfulness over me and the Brotherhood.
+
+			There seems a great unrest among the vampire brood here in the city. Perhaps the arrival of LaCroix was unwelcome to the rest of the Damned? I know not, nor do I care. They will all burn, whether by my hand or the Father's.
+
+			The Ankaran Sarcophagus was stolen today from the Museum of Natural History. The police report we obtained leads me to believe that the demon spawn were behind it, and the book I received yesterday from the Vatican only reinforces that theory. I know now that these may very well be the end times, and the time of the final struggle may well be upon us.
+
+			I dreamed of LaCroix last night, of his hideous visage burned to ash in a great inferno. May it be that this is a vision given to me by God, and that I will be the vessel of his holy vengeance. The years have been long. Too long. Perhaps the soul of my father may finally rest in peace.
+
+			Brother Kriegler reported a disturbance at the vampire coven we have been observing at the mansion in Hollywood. It seems there was a party, and that something interrupted their fleshly rituals. He could say no more of the matter, but I smell LaCroix's meddling hand in this. All the better. May the demons feed on themselves until the world is rid of their evil.
+
+			I had dreams of fires in Griffith Park last evening. I know not their origin, but I fear the worst. I received a letter from His Holiness, warning me that he is fearful that the Apocalypse is upon us, and that my mission has become more important than ever. I hold his words close to my heart, and will fight for righteousness until I am no longer able.
+
+			I took Johansen from his hotel room last evening and brought him back here to the monastery. I am convinced that LaCroix will try to find him, as he is the only one with the knowledge about how the artifact can be opened. The Brethren have been warned to expect an assault on the monastery, and they are ready to die for His Glory, as am I. May the Holy Father bless us in these last dark days, and may the children of Satan burn forever in the hellfires of damnation. Amen."	// changed by wesp
+
+
+	"bucket"		"1"
+	"bucket_position"	"2"
+
+	"camera_class"		"noswitch"
+	"is_wieldable"		"0"
+	"weight"		"1"
+	"item_flags"		"1"
+	"item_type"		"powerup"
+	"item_worth"		"-1"
+	"is_visible_in_hud"		"1"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Book/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/Diary_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/Diary"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

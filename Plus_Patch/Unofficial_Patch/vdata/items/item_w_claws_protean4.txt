@@ -1,0 +1,62 @@
+// added by wesp
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"	"models/w_null.mdl"
+	"infomodel"	"models/items/beckett_key/Info/item_i_beckett_key.mdl"
+	"playermodel"	"models/items/beckett_key/Ground/item_g_beckett_key.mdl"
+	"wieldmodel_f"	"models/weapons/claw/wield/w_f_claws.mdl"
+	"wieldmodel_m"	"models/weapons/claw/wield/w_m_claws.mdl"
+	"anim_prefix"	"claw"
+
+	"printname"	"Library Card"
+	"description"	"This card gives you access to the LA public library computers."
+
+	"bucket"		"1"
+	"bucket_position"	"2"
+
+	"camera_class"		"noswitch"
+	"weight"		"3"
+	"item_flags"		"1"
+	"item_type"		"generic"
+	"item_worth"		"0"
+	"is_visible_in_hud"		"1"
+	"is_droppable"			"1"
+	"is_wieldable"			"0"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/card/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/beckett_key_sel"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/beckett_key"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

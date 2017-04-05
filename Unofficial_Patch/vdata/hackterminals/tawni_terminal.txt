@@ -1,0 +1,65 @@
+TerminalDefinition
+{
+	"screen saver"		"Tawni Sessions: GODDESS"		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""					// these surround the command prompt (2 characters), changed by wesp
+
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"TAWNI'S LAPTOP"	// changed by wesp
+		"line1"		"a way of life"
+
+	}
+	
+	SubDir
+	{
+		"name"			"Camera"	//(128 characters)
+		"password"		"cleopatra"
+		"description"		"Network Cameras"
+
+		Function	// added by wesp
+		{
+			"name"		"cam check"
+			"description"	"camera activation"
+			"runtext"	"You messed it up!"
+			"dependency"	"G.Tawni_Spotted == 1"
+		}
+
+		Function
+		{
+			"name"		"cam check"
+			"description"	"camera activation"
+			"runtext"	"No cameras detected."
+			"dependency"	"G.Imalia_Cam == 0 and G.Tawni_Spotted == 0"
+		}
+
+		Function
+		{
+			"name"		"cam check"
+			"description"	"camera activation"
+			"runtext"	"One camera activated."
+			"dependency"	"G.Imalia_Cam == 1 and G.Tawni_Spotted == 0"
+		}
+		
+		Function
+		{
+			"name"		"cam check"
+			"description"	"camera activation"
+			"runtext"	"Two cameras detected."
+			"dependency"	"G.Imalia_Cam == 2 and G.Tawni_Spotted == 0"
+		}
+
+		Function
+		{
+			"name"		"cam check"
+			"description"	"camera activation"
+			"dependency"	"G.Imalia_Cam == 3 and G.Tawni_Spotted == 0"
+			"trigger"	"1"
+			"runscript"	""
+			"runtext"	"3 cameras detected. Nicely done! I can't wait to see dirty little Tawni in action! We're monitoring you from here. Get out quietly and come back.
+
+- Imalia"
+		}
+	}
+}

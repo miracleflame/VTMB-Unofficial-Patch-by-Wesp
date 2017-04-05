@@ -1,0 +1,467 @@
+QuestTable
+{
+//	Quest
+//	{
+//		"Title"		This is a simple text title, and what will be used to refer to it in dialog.
+//
+//		"DisplayName"	This is what will be displayed as the heading for this journal entry
+//				LOCALIZE THIS FIELD
+//
+//		CompletionState
+//		{
+//			"ID"		Each completion state must have a UNIQUE, NUMERIC ID. By default, a player is considered to be at
+//					completion state 0, when the quest is unassigned. The quest will not be displayed in the journal
+//					unless the player has a valid ID for the quest.
+//
+//			"Description"	This is what will be displayed as the journal entry for this quest
+//					LOCALIZE THIS FIELD
+//
+//			"Type"		This controls the font, colors, etc, for the quest. MUST be "success, failure, incomplete"
+//
+//			"AwardXP"	This is how many experience points to award to a character when they reach this quest
+//					completion level. defaults to 0.
+//
+//			"AwardMoney"	This is how much money to award to a character when they reach this quest completion
+//					level. defaults to 0.
+//
+//			"Event"		This is script data, such as a flag assignment or a function call, that will be passed to
+//					the script interpreter. by default, there is no event script.
+//		}
+//	}
+
+	Quest
+	{
+		"Title"		"Kiki"
+		"DisplayName"	"Kikinapped"
+
+		CompletionState
+		{
+			"ID"		"1" // Wong Ho	121
+			"Description"	"Wong Ho's daughter Kiki has been kidnapped and is being held in the Lotus Blossom. If you rescue her, Wong Ho will help you in any way he can."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Kiki 51, 61
+			"Description"	"You have rescued Kiki, though you feel like killing her instead. You should go back to Wong Ho and collect on his offer of help."
+			"Type"		"incomplete"
+			"AwardXP"	"Kiki01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Wong Ho	171
+			"Description"	"You have rescued Kiki and returned to Wong Ho to collect on his offer of help."
+			"Type"		"success"
+			"AwardXP"	"Kiki02"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Gangster"
+		"DisplayName"	"Original Gangster"
+
+		CompletionState
+		{
+			"ID"		"1" // Wong Ho	291
+			"Description"	"You are to meet with Zhao at his warehouse to get more information on the possible whereabouts of Barabus."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Zhao 21, changed by wesp
+			"Description"	"You met with Zhao and he has provided you with the password to see Johnny at the Glaze nightclub."
+			"Type"		"incomplete"
+			"AwardXP"	"Gangster01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // changed by wesp
+			"Description"	"You succeeded in getting out of Zhao's in one piece, but Zhao himself was killed."
+			"Type"		"success"
+			"AwardXP"	"Gangster02"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // added by wesp
+			"Description"	"You succeeded in getting out of Zhao's and kept Zhao alive as well."
+			"Type"		"success"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Johnny"
+		"DisplayName"	"Dragon's Tail"
+
+		CompletionState
+		{
+			"ID"		"1" // Zhao 21, changed by wesp
+			"Description"	"You need to get to Johnny in his office upstairs at the Glaze nightclub to get information on the whereabouts of Barabus. The password to enter Glaze is \"725\" and you better do this without a big commotion."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Mandarin 41
+			"Description"	"Kill Johnny and the Mandarin will discuss Barabus' whereabouts with you."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"3"
+			"Description"	"You have killed Johnny."
+			"Type"		"success"
+			"AwardXP"	"Johnny01"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Mandarin"
+		"DisplayName"	"Come Into My Parlor"
+
+		CompletionState
+		{
+			"ID"		"1" // Mandarin 61
+			"Description"	"The Mandarin has told you he is holding Barabus at the Fu Syndicate. He wants you to go there to discuss the terms of Barabus' release."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // survived experiments
+			"Description"	"You have survived the Mandarin's experiments. Time to deal with the Mandarin."
+			"Type"		"incomplete"
+			"AwardXP"	"Mandarin01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // killed Mandarin
+			"Description"	"You have killed the Mandarin. You must locate Barabus and free him."
+			"Type"		"incomplete"
+			"AwardXP"	"Mandarin02"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" //  Barabus	11
+			"Description"	"You have released Barabus."
+			"Type"		"success"
+			"AwardXP"	"Mandarin03"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Yukie"
+		"DisplayName"	"Gone Fishin'"
+
+		CompletionState
+		{
+			"ID"		"1" // Yukie 231
+			"Description"	"Yukie is looking for a demon, a hengeyôkai. She is interested in anything you can find out about it."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Ming-Xiao 481
+			"Description"	"Ming-Xiao has told you the hengeyôkai's name is \"Zygaena\", and he entertains clients at the Red Dragon."
+			"Type"		"incomplete"
+			"AwardXP"	"Yukie01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Zygaena 151, 171, 191, 211, 231
+			"Description"	"You have set up a meeting with Zygaena, the hengeyôkai, at the fish market tonight. But first you'll need to tell Yukie."
+			"Type"		"incomplete"
+			"AwardXP"	"Yukie02"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" //  Yukie 341
+			"Description"	"You are to meet with Zygaena, the hengeyôkai demon, at the fish market. Yukie will meet you there."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" //  Hengeyokai death
+			"Description"	"You have destroyed the hengeyôkai demon."
+			"Type"		"success"
+			"AwardXP"	"Yukie03"
+		}
+
+		CompletionState
+		{
+			"ID"		"6" //  Yukie death, changed by wesp
+			"Description"	"Yukie is dead, thereby making it pointless for you to destroy her hengeyôkai demon."
+			"Type"		"failure"
+		}
+
+		CompletionState	// added by wesp
+		{
+			"ID"		"7" //  Hengeyokai death
+			"Description"	"You have destroyed the hengeyôkai demon."
+			"Type"		"success"
+			"AwardXP"	"Yukie04"
+		}
+
+		CompletionState	// added by wesp
+		{
+			"ID"		"8" //  Hengeyokai death
+			"Description"	"That guy was tough! It must have been the hengeyôkai demon in his human form. Better tell Yukie about it."
+			"Type"		"incomplete"
+		}
+
+	}
+
+	Quest
+	{
+		"Title"		"Eyes"
+		"DisplayName"	"Eye Gouge Hell"
+
+		CompletionState
+		{
+			"ID"		"1" // Ox 111
+			"Description"	"Mr. Ox wants you to \"harvest\" Lin's eyes for him. His body is being kept in a freezer in the back of a local noodle shop."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Got eyes
+			"Description"	"You have harvested Lin's eyes for Mr. Ox. Now to return them...."
+			"Type"		"incomplete"
+			"AwardXP"	"Eyes01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // ox 191
+			"Description"	"You have given Lin's eyes to Mr. Ox."
+			"Type"		"success"
+			"AwardXP"	"Eyes02"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // kill ox
+			"Description"	"You have killed Mr. Ox, thereby nullifying any deals you had struck with him."
+			"Type"		"failure"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Ox"
+		"DisplayName"	"Bad Luck Farmer"
+
+		CompletionState
+		{
+			"ID"		"1" // Ox 231
+			"Description"	"You are to place a bad luck talisman in a locker in the Lotus Blossum. The locker will have a black circle on it."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // place talisman, changed by wesp
+			"Description"	"You have successfully placed the bad luck talisman."
+			"Type"		"incomplete"
+			"AwardXP"	"Ox01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Shu 31, 41, Shu killed
+			"Description"	"You have dealt with the patron, because he caught you placing the talisman for Mr. Ox."
+			"Type"		"incomplete"
+			"AwardXP"	"Ox02"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // Ox 251, 261, changed by wesp
+			"Description"	"You have reported to Mr. Ox that the talisman was placed."
+			"Type"		"success"
+			"AwardXP"	"Ox03"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" // Ox 251, 261, added by wesp
+			"Description"	"You made Mr. Ox happy by telling him that you killed the patron while placing the talisman."
+			"Type"		"success"
+			"AwardXP"	"Ox04"
+		}
+
+		CompletionState
+		{
+			"ID"		"6" // kill ox, changed by wesp
+			"Description"	"You have killed Mr. Ox, thereby nullifying any deals you had struck with him."
+			"Type"		"failure"
+		}
+
+		CompletionState
+		{
+			"ID"		"7" // remove talisman, added by wesp
+			"Description"	"You have removed the bad luck talisman from the locker again."
+			"Type"		"incomplete"
+		}
+
+	}
+
+	Quest
+	{
+		"Title"		"Hitman"
+		"DisplayName"	"The Hitman Impasse"
+
+		CompletionState
+		{
+			"ID"		"1" //  Ji 151, 211, 221, 231, 241, changed by Wesp
+			"Description"	"Ji Wen Ja wants you to kill his old partner, Lu Fang."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Lu 181, 201, 211, 241, 251, 261, 271, changed by Wesp
+			"Description"	"Lu Fang wants you to kill his old partner, Ji Wen Ja."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Killed Lu Fang, changed by Wesp
+			"Description"	"You killed Lu Fang for Ji Wen Ja."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // Killed Ji Wen Ja, changed by Wesp
+			"Description"	"You killed Ji Wen Ja for Lu Fang."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" // Ji 281, changed by Wesp
+			"Description"	"You gave Ji Wen Ja Lu Fang's key. Come back later to get your money."
+			"Type"		"incomplete"
+			"AwardXP"	"Hitman01"
+		}
+
+		CompletionState
+		{
+			"ID"		"6" // Lu 431, changed by Wesp
+			"Description"	"You gave Lu Fang Ji Wen Ja's key. Come back later for your money."
+			"Type"		"incomplete"
+			"AwardXP"	"Hitman02"
+		}
+
+		CompletionState
+		{
+			"ID"		"7" // Lu 451, ji 411
+			"Description"	"You got your money for solving the old hitman's problem."
+			"Type"		"success"
+		}
+
+		CompletionState
+		{
+			"ID"		"8" // Ji 361, 391, Lu 351, 381
+			"Description"	"You convinced Ji Wen Ja and Lu Fang to stop hating each other and become friends again. Can you feel the love?"
+			"Type"		"success"
+			"AwardXP"	"Hitman03"
+		}
+
+		CompletionState
+		{
+			"ID"		"9" // both killed
+			"Description"	"You killed both the old hitmen. No money for you."
+			"Type"		"failure"
+		}
+
+		CompletionState
+		{
+			"ID"		"10" // one peace, one open, added by wesp
+			"Description"	"You convinced one hitman to make peace. Now tell the other...."
+			"Type"		"incomplete"
+		}
+	}
+
+	Quest
+	{
+		"Title"			"Giovanni"
+		"DisplayName"		"Italian Dinner"
+
+		CompletionState
+		{
+			"ID"			"1" // Gary 431
+			"Description"	"Gary has informed you that the sarcophagus is at the Giovanni mansion. It's time to retrieve it."
+			"Type"			"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"			"2" // infiltrated Giovanni Mansion
+			"Description"	"You have infiltrated the Giovanni mansion. Now to find the sarcophagus."
+			"Type"			"incomplete"
+			"AwardXP"		"Giovanni01"
+		}
+
+		CompletionState
+		{
+			"ID"			"3" // found sarcophagus room
+			"Description"	"You have found the sarcophagus room in the Giovanni mansion."
+			"Type"			"incomplete"
+			"AwardXP"		"Giovanni02"
+		}
+
+		CompletionState
+		{
+			"ID"			"4" // killed changs
+			"Description"	"You have found the sarcophagus room in the Giovanni mansion, and removed the last obstacle keeping you from bringing it back to the prince."
+			"Type"			"success"
+			"AwardXP"		"Giovanni03"
+		}
+	}
+
+	Quest	// added by wesp
+	{
+		"Title"		"Dirt"
+		"DisplayName"	"Dirty Dishes"
+
+		CompletionState
+		{
+			"ID"		"1"
+			"Description"	"The Giovanni candidates are trying to displace each other. Why don't you help one of them a bit?"
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2"
+			"Description"	"You have told one of the Giovanni candidates secrets that will prevent the others from joining the inner circle."
+			"Type"		"success"
+		}
+
+		CompletionState
+		{
+			"ID"		"3"
+			"Description"	"You didn't manage to help one of the Giovanni candidates to win the contest."
+			"Type"		"failure"
+		}
+	}
+}

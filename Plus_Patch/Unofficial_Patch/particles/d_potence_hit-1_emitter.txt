@@ -1,0 +1,33 @@
+Particle
+{
+	fps	"30"
+	frames	"30"
+
+	spawn		// added by EntenSchreck
+	{
+		particle	"D_Potence_Hit-1_Glow"
+		Burst		"40"	//"50"
+	}
+
+	spawn
+	{
+		particle	"D_Potence_Hit-1_GlowSmoke"
+		Burst		"25"
+		theta		"0~360"
+		phi		"0~360"
+		radius		"5"
+	}
+	spawn
+	{
+		particle	"D_Potence_Hit-1_Shock"
+		rate		"20"
+		z		"0"
+	}
+	spawn
+	{
+		particle	"D_Potence_Hit-3_ShockGlow"
+		rate		"10"
+	}
+
+}
+

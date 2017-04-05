@@ -1,0 +1,72 @@
+TerminalDefinition
+{
+	"screen saver"		"METALHEAD!! YEAH!!!"	
+	"brackets"		""	// changed by wesp			
+	
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Metalhead operations,"
+		"line1"		"For those about to rock,"
+		"line2"		"We salute you!"
+	}
+
+	SubDir
+	{
+		"name"			"Net Security"
+		"password"		"Bang Your Head"
+		"description"		"Available Connections"
+		"difficulty"		"6"
+
+		Function
+		{
+			"name"		"schrecknet"
+			"description"	"socket 1"
+			"dependency"	"G.Shubs_Botch == 0 and G.Shubs_Act == 2"	// changed by wesp
+			"runtext"	"schrecknet hub activated:
+
+I'm impressed. Now get out quietly. I'll send you an email soon.
+
+>m1tn1ck<"
+
+			"runscript"	"G.Shubs_Act = 3; mitSetQuestSeven()"
+		}
+
+		Function
+		{
+			"name"		"schrecknet"
+			"description"	"socket 1"
+			"dependency"	"G.Shubs_Botch == 1"
+			"runtext"	"schrecknet hub disconnecting:
+
+SUXORS. YOU BLEW IT, YOU FREAKIN' NOOB. YOU WON'T HEAR FROM ME AGAIN.
+
+>m1tn1ck<"
+		}
+	}
+
+	SubDir
+	{
+		"name"			"Safe"
+		"password"		"Turbo Lover"
+		"description"		"What do you want to do?"
+		"difficulty"		"8"
+
+		Function
+		{
+			"name"		"Unlock"
+			"description"	"Unlock door"
+			"runtext"	"Safe Door Unlocked."
+			"trigger"	"0"
+		}
+
+		Function
+		{
+			"name"		"Lock"
+			"description"	"Lock door."
+			"runtext"	"Safe Door Locked."
+			"trigger"	"1"
+		}
+	}
+}

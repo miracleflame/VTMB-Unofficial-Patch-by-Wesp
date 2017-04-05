@@ -1,0 +1,3706 @@
+//////////////////////////////////////////////////
+// NPC Stat Templates (Packages)	- Vampire
+//
+//	NPCs in worldcraft are assigned one of these which determines their statistics.
+
+ClanDataTables
+{
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"VampireGeneric"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male, Female"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"Boss"				"0"
+			"DisciplineStrata"		"0"
+			"SoundGroup"			""
+			"NoBiting"			"1"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"2"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"3"
+			"Intelligence"			"2"
+			"Wits"					"3"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"0"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"VampireBrujah"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"Brujah"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"Brujah"
+			"Body"					"Human"
+			"Gender"				"Male, Female"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"Boss"				"0"
+			"SoundGroup"			""
+
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+			
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"NoBiting"			"1"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+			"Athletics"				"2"
+			"Brawl"					"2"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"VampireBrujahThug"
+			"ParentTemplateName"	"VampireBrujah"
+			"Name"					"Brujah"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"Brujah"
+			"Body"					"Human"
+			"Gender"				"Male, Female"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"Boss"				"0"
+			"SoundGroup"			""
+			"NoBiting"			"1"
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+			"Athletics"				"2"
+			"Brawl"					"2"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"VampireBrujahElite"
+			"ParentTemplateName"	"VampireBrujah"
+			"Name"					"Brujah"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"Brujah"
+			"Body"					"Human"
+			"Gender"				"Male, Female"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"Boss"				"0"
+			"SoundGroup"			""
+			"NoBiting"			"1"
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+			"Athletics"				"2"
+			"Brawl"					"2"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"VampireGangrel"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"Gangrel"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"Gangrel"
+			"Body"					"Human"
+			"Gender"				"Male, Female"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"Boss"				"0"
+			"SoundGroup"			""
+			"NoBiting"			"1"
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+			"Athletics"				"2"
+			"Brawl"					"2"
+		}
+
+
+		Disciplines
+		{
+			"Protean"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+ClanData
+	{
+		// C R I T I C A L V A M P I R E		
+
+		Text
+		{
+			"TemplateName"			"VampireCritical"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male, Female"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"Boss"				"0"
+			"DisciplineStrata"		"7"
+			"SoundGroup"			""
+			"NoBiting"			"1"
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+			"Max_Health"		"1000"		
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"11"
+			"Dexterity"				"10"
+			"Stamina"				"10"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"11"
+			"Intelligence"			"9"
+			"Wits"					"4"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"5"
+			"Brawl"					"5"
+			"Dodge"					"4"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"5"
+			"Melee"					"5"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"
+			"Finance"				"0"
+			"Investigation"			"5"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Bach"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"Grünfeld Bach"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"DisciplineStrata"		"6"
+			"SoundGroup"			""
+			"NoBiting"			"1"
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+			"DamageFilterBashing"		"0.80"
+			"DamageFilterLethal"		"0.60"
+			"DamageFilterAggravated"	"1.00"
+			"Disallow_Knockbacks"		"1"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"4"
+			"Stamina"				"1"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"5"
+			"Intelligence"			"2"
+			"Wits"					"3"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"10"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"				"440"
+
+			"Armor_Rating"		"5"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"1"
+			"Brawl"					"2"
+			"Dodge"					"1"
+			"Intimidation"			"1"
+			"Subterfuge"			"1"
+//			"Animal_Ken"			"1"
+			"Firearms"				"1"
+			"Melee"					"1"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+		Numina
+		{
+			"Shield_of_Faith"	"5"
+			"Divine_Vision"		"0"
+			"Holy_Light"		"5"
+			"Mind_Shield"		"0"
+		}
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"SheriffMan"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"The Sheriff"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"0"
+			"DisciplineStrata"		"5"
+			"Boss"				"1"
+			"Monster"				"1"
+			"SoundGroup"			"Sheriff_Manbat"
+			"Disallow_Knockbacks"		"1"
+			"NoBiting"			"1"
+			"KnockbackRangedPlayer"		"1"
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+			"SpecialMoveADamage"		"25.0"	// "landblast" damage
+			"DamageFilterBashing"		"0.80"
+			"DamageFilterLethal"		"0.60"
+			"DamageFilterAggravated"	"1.00"
+			"DamageFilterFlame"		"0.1"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"4"
+			"Dexterity"				"5"
+			"Stamina"				"5"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"2"
+			"Intelligence"			"2"
+			"Wits"					"6"
+
+			"BloodPool"				"5000"
+			"FaithPoints"			"10"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"				"570"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"1"
+			"Brawl"					"5"
+			"Dodge"					"4"
+			"Intimidation"			"1"
+			"Subterfuge"			"1"
+//			"Animal_Ken"			"1"
+			"Firearms"				"2"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+		Disciplines
+		{
+			"Fortitude"				"5"
+			"Animalism"				"5"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"VampireSabbatLeader"	//HALLOWBROOK
+			"ParentTemplateName"	"VampireBrujah"			//HALLOWBROOK
+			"Name"				"Zulo Shape"	// changed by wesp
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"Brujah"
+			"Body"					"Human"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"5"
+			"Boss"				"0"
+			"Monster"				"1"
+			"KnockbackRangedPlayer"		"1"
+			"SoundGroup"			"Andrei_Transformed"
+			"NoBiting"				"1"
+			"SpawnModel"			"models/character/npc/unique/Downtown/Andrei/Andrei.mdl"
+			"SpecialMoveADamage"		"17.0"//"25.0"		// "charge-and-release" damage
+			"DamageFilterBashing"		"0.80"
+			"DamageFilterLethal"		"0.75"
+			"DamageFilterAggravated"	"1.00"
+			"DamageFilterFlame"		"0.9"
+			"Disallow_Knockbacks"		"1"
+			"HasTrueSight"			"1"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+
+			"Strength"				"6"
+			"Dexterity"				"5"
+			"Stamina"				"1"
+			"Charisma"				"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"6"
+			"Intelligence"			"1"
+			"Wits"					"5"
+
+			"BloodPool"				"0"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+
+			"Max_Health"				"450"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"5"
+			"Brawl"					"5"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"5"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Resistances
+		Resistances
+		{
+			// Dementation:
+			"Veil of Madness"		"Full"
+			"The Haunting"			"Full"
+			"Voice of Madness"		"Full"
+			"Waking Nightmare"		"Full"
+			"Total Insanity"		"Partial"
+
+			// Dominate:
+			"Calm"					"Full"
+			"Dance"					"Full"
+			"Follow"				"Full"
+			"Hide"					"Full"
+			"Jump"					"Full"
+			"Leave"					"Full"
+			"Mesmerize"				"Partial"
+			"Sleep"					"Partial"
+			"Impose Will"			"Partial DMG:0"
+			"Possession"			"Partial"
+
+			// Thaumaturgy:
+			"Blood Malady"			"Full"
+			"Bloody Eye"			"Partial"
+			"Theft of Vitae"		"Full"
+			"Purge Blood"			"Partial"
+			"Blood Boil"			"Partial DMG:4"
+		}
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"AndreiBlood"		//609
+			"ParentTemplateName"	"VampireGeneric"		//609
+			"Name"					"The Tzimisce"	//609
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"Brujah"
+			"Body"					"Human"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"5"
+			"Boss"				"0"
+			"Monster"				"1"
+			"KnockbackRangedPlayer"		"1"
+			"SoundGroup"			"Andrei_Transformed"
+			"NoBiting"				"1"
+			"SpawnModel"			"models/character/npc/unique/Downtown/Andrei/Andrei.mdl"
+			"SpecialMoveADamage"		"25.0"		// "charge-and-release" damage
+			"DamageFilterBashing"		"0.80"
+			"DamageFilterLethal"		"0.60"
+			"DamageFilterAggravated"	"1.00"
+			"DamageFilterFlame"		"0.35"
+			"Disallow_Knockbacks"		"1"
+			"HasTrueSight"			"1"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+
+			"Strength"				"6"
+			"Dexterity"				"5"
+			"Stamina"				"1"
+			"Charisma"				"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"6"
+			"Intelligence"			"1"
+			"Wits"					"5"
+
+			"BloodPool"				"0"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+
+			"Max_Health"				"450"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"5"
+			"Brawl"					"5"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"5"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Resistances
+		Resistances
+		{
+			// Dementation:
+			"Veil of Madness"		"Full"
+			"The Haunting"			"Full"
+			"Voice of Madness"		"Full"
+			"Waking Nightmare"		"Full"
+			"Total Insanity"		"Partial"
+
+			// Dominate:
+			"Calm"					"Full"
+			"Dance"					"Full"
+			"Follow"				"Full"
+			"Hide"					"Full"
+			"Jump"					"Full"
+			"Leave"					"Full"
+			"Mesmerize"				"Partial"
+			"Sleep"					"Partial"
+			"Impose Will"			"Partial DMG:0"
+			"Possession"			"Partial"
+
+			// Thaumaturgy:
+			"Blood Malady"			"Full"
+			"Bloody Eye"			"Partial"
+			"Theft of Vitae"		"Full"
+			"Purge Blood"			"Partial"
+			"Blood Boil"			"Partial DMG:4"
+		}
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"VampireToreador"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"Toreador"
+			"Body"					"Vampire"
+			"Gender"				"Male, Female"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"Boss"				"0"
+			"SoundGroup"			""
+			"NoBiting"			"1"
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"2"
+			"Dexterity"				"2"
+			"Stamina"				"1"
+			"Charisma"				"3"
+			"Manipulation"			"2"
+			"Appearance"			"3"
+			"Perception"			"4"
+			"Intelligence"			"1"
+			"Wits"					"3"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"0"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Jezebel"
+			"ParentTemplateName"	"VampireToreador"
+			"Name"					"Jezebel Locke"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"Toreador"
+			"Body"					"Vampire"
+			"Gender"				"Female"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"NoBiting"			"1"
+			"DisciplineStrata"		"5"
+			"Boss"				"0"
+			"SoundGroup"			""
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+
+			"DamageFilterBashing"		"0.80"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"6"
+			"Dexterity"				"2"
+			"Stamina"			"2"
+			"Perception"				"4"
+			"Wits"					"4"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"192"
+
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"1"
+			"Firearms"				"0"
+			"Melee"					"1"
+		}
+
+		Disciplines
+		{
+			"Presence"	"2"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"VampireNosferatu"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"Nosferatu"
+			"Body"					"Vampire"
+			"Gender"				"Male, Female"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"Boss"				"0"
+			"SoundGroup"			""
+			"NoBiting"			"1"
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"3"
+			"Stamina"				"2"
+			"Charisma"				"1"
+			"Manipulation"			"1"
+			"Appearance"			"0"
+			"Perception"			"4"
+			"Intelligence"			"1"
+			"Wits"					"3"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"0"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"BrotherKanker"
+			"ParentTemplateName"	"VampireNosferatu"
+			"Name"					"Brother Kanker"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"Nosferatu"
+			"Body"					"Vampire"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"NoBiting"			"1"
+			"DisciplineStrata"		"5"
+			"Boss"				"0"
+			"Monster"			"1"
+			"SoundGroup"			"shovel_head"
+			"Disallow_Knockbacks"		"1"
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+			"DamageFilterBashing"		"0.70"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"2"
+			"Dexterity"				"3"
+			"Stamina"				"2"
+			"Wits"					"4"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"224"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+			"Athletics"				"2"
+			"Brawl"					"1"
+			"Dodge"					"1"
+			"Animal_Ken"			"5"
+			"Firearms"				"0"
+			"Melee"					"1"
+			"Computer"				"5"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Nagaraja"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"				"Pisha the Nagaraja"
+			"Description"			"Pisha the Nagaraja"
+		}
+
+		General
+		{
+			"Clan"					"Pisha the Nagaraja"
+			"Body"					"Vampire"
+			"Gender"				"Female"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"NoBiting"			"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"5"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+
+			"Boss"				"1"
+			"SoundGroup"			""
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+			"DamageFilterBashing"		"0.80"
+			"DamageFilterLethal"		"0.80"
+			"DamageFilterAggravated"	"1.00"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"1"
+			"Dexterity"				"3"
+			"Stamina"				"1"
+			"Charisma"				"2"
+			"Manipulation"			"3"
+			"Appearance"			"3"
+			"Perception"			"5"
+			"Intelligence"			"4"
+			"Wits"					"4"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"			"284"
+			"Armor_Rating"			"2"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"3"
+			"Dodge"					"0"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"1"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"3"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"VampireLasombra"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Female"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"NoBiting"			"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"4"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+			"Monster"			"1"
+			"Boss"				"0"
+			"SoundGroup"	""
+			"NpcFakeReloadCountMin"		"7.0" //glock
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+			"DamageFilterBashing"		"0.95"//"0.75"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+			"HasTrueSight"			"1"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"2"
+			"Dexterity"				"2"
+			"Stamina"				"1"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"5"
+			"Intelligence"			"2"
+			"Wits"					"4"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"136"
+
+
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"0"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"5"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData	// added by wesp
+	{
+		Text
+		{
+			"TemplateName"			"VampireLasombraBoss"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"The Lasombra"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"NoBiting"			"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"5"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+			"Monster"			"1"
+			"Boss"				"1"
+			"SoundGroup"	""
+			"NpcFakeReloadCountMin"		"20.0"
+			"SpawnModel"			"models/character/npc/unique/Giovanni_Mansion/bodyblood/bodyblood.mdl"
+			"DamageFilterBashing"		"0.95"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+			"HasTrueSight"			"1"
+			"Disallow_Knockbacks"		"1"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"4"
+			"Dexterity"				"4"
+			"Stamina"				"2"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"4"
+			"Intelligence"			"2"
+			"Wits"					"4"
+
+			"BloodPool"				"40"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"336"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"3"
+			"Dodge"					"3"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"5"
+			"Melee"					"5"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"SabbatAuspexShottie"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"1"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+			"Monster"			"1"
+			"Boss"				"0"
+			"NoBiting"			"1"
+			"SoundGroup"	"shovel_head"
+			"NpcFakeReloadCountMin"		"6.0" // shottie
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+			"DamageFilterBashing"		"0.95"//"0.75"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+			"HasTrueSight"			"1"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"3"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"3"
+			"Intelligence"			"2"
+			"Wits"					"3"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"132"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"1"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		Disciplines
+		{
+			"Auspex"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"SabbatAuspexSteyr"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"1"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+			"Monster"			"1"
+			"Boss"				"0"
+			"NoBiting"			"1"
+			"SoundGroup"	"shovel_head"
+			"NpcFakeReloadCountMin"		"20.0" // Steyr
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+			"DamageFilterBashing"		"0.95"//"0.75"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+			"HasTrueSight"			"1"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"1"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"3"
+			"Intelligence"			"2"
+			"Wits"					"4"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"132"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"1"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"1"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		Disciplines
+		{
+			"Auspex"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"SabbatAuspexMac10"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"1"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+			"Monster"			"1"
+			"Boss"				"0"
+			"NoBiting"			"1"
+			"SoundGroup"	"shovel_head"
+			"NpcFakeReloadCountMin"		"20.0" // Mac10
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+			"DamageFilterBashing"		"0.95"//"0.75"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+
+			"HasTrueSight"			"1"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"2"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"4"
+			"Intelligence"			"2"
+			"Wits"					"4"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"132"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"1"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		Disciplines
+		{
+			"Auspex"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+
+
+ClanData
+	{
+		Text
+		{
+			"TemplateName"			"SabbatCelerityMac10"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"1"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+			"Monster"			"1"
+			"Boss"				"0"
+			"NoBiting"			"1"
+			"SoundGroup"	"shovel_head"
+			"NpcFakeReloadCountMin"		"20.0" //Mac10
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+			"HasTrueSight"			"1"
+			"DamageFilterBashing"		"0.95"//"1.00"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+
+			"HasTrueSight"			"1"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"1"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"4"
+			"Intelligence"			"2"
+			"Wits"					"3"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"128"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"1"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		Disciplines
+		{
+			"Celerity"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+
+
+ClanData
+	{
+		Text
+		{
+			"TemplateName"			"SabbatCelerityShottie"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"1"
+			"Boss"				"0"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+			"Monster"			"1"
+			"NoBiting"			"1"
+			"SoundGroup"	"shovel_head"
+			"NpcFakeReloadCountMin"		"6.0" //Shottie
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+			"HasTrueSight"			"1"
+			"DamageFilterBashing"		"1.00"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+
+			"HasTrueSight"			"1"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"1"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"3"
+			"Intelligence"			"2"
+			"Wits"					"3"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"128"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"1"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		Disciplines
+		{
+			"Celerity"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+ClanData
+	{
+		Text
+		{
+			"TemplateName"			"SabbatCelerityGlock"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"1"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+			"Monster"			"1"
+			"Boss"				"0"
+			"NoBiting"			"1"
+			"SoundGroup"	"shovel_head"
+			"NpcFakeReloadCountMin"		"7.0" //Glock
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+			"DamageFilterBashing"		"1.00"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+
+			"HasTrueSight"			"1"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"1"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"3"
+			"Intelligence"			"2"
+			"Wits"					"3"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"128"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"1"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		Disciplines
+		{
+			"Celerity"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+
+
+ClanData
+	{
+		Text
+		{
+			"TemplateName"			"SabbatFortitudeShottie"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"2"
+			"Monster"			"1"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+
+			"Boss"				"0"
+			"NoBiting"			"1"
+			"SoundGroup"	"shovel_head"
+			"Disallow_Knockbacks"		"1"
+			"HasTrueSight"			"1"
+			"NpcFakeReloadCountMin"		"6.0" // Ithaca
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+			"DamageFilterBashing"		"0.95" //"0.50"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+
+			"HasTrueSight"			"1"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"1"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"3"
+			"Intelligence"			"2"
+			"Wits"					"4"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"132"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"1"
+			"Dodge"					"3"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		Disciplines
+		{
+			"Fortitude"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"SabbatWithPotence"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"2"
+			"Monster"			"1"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+
+			"Boss"				"0"
+			"NoBiting"			"1"
+			"SoundGroup"	"shovel_head"
+			"HasTrueSight"			"1"
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+			"DamageFilterBashing"		"0.95"//"0.75"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"1"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"4"
+			"Intelligence"			"2"
+			"Wits"					"3"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"128"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"1"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		Disciplines
+		{
+			"Potence"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"SabbatPresenceShottie"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"1"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+			"Monster"			"1"
+			"Boss"				"0"
+			"NoBiting"			"1"
+			"SoundGroup"	"shovel_head"
+			"NpcFakeReloadCountMin"		"6.0" // Ithaca
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+			"DamageFilterBashing"		"0.95"//"0.75"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+
+			"HasTrueSight"			"1"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"1"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"4"
+			"Intelligence"			"2"
+			"Wits"					"3"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"128"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"3"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		Disciplines
+		{
+			"Presence"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"SabbatWithProtean"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"1"
+			"Monster"			"1"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+
+			"Boss"				"0"
+			"NoBiting"			"1"
+			"Disallow_Knockbacks"		"1"
+			"SoundGroup"			"shovel_head"
+			"DamageFilterBashing"		"0.95"//"0.75"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+			"HasTrueSight"			"1"
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+			"HasTrueSight"			"1"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"1"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"4"
+			"Intelligence"			"2"
+			"Wits"					"5"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"148"
+
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"1"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		Disciplines
+		{
+			"Protean"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"SabbatFireMage"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"NoBiting"			"1"
+			"DisciplineStrata"		"5"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+
+			"Boss"				"0"
+			"SoundGroup"			""
+			"DamageFilterBashing"		"1.00"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+			"HasTrueSight"			"1"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"1"
+			"Dexterity"				"0"
+			"Stamina"				"1"
+			"Charisma"				"3"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"5"
+			"Intelligence"			"4"
+			"Wits"					"4"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"			"256"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"0"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"ShovelHead"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"NoBiting"			"1"
+			"DisciplineStrata"		"0"
+			"Boss"				"0"
+			"Monster"				"1"
+			"SoundGroup"			"shovel_head"
+			"DamageFilterBashing"		"1.00"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"1"
+			"Dexterity"				"4"
+			"Stamina"				"2"
+			"Charisma"				"3"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"2"
+			"Intelligence"			"4"
+			"Wits"					"4"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"			"128"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"3"
+			"Dodge"					"1"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Werewolf"
+			"ParentTemplateName"		""	// changed by wesp
+			"Name"				"Werewolf"
+			"Description"			"Werewolf boss NPC"
+		}
+
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+
+			"Strength"			"2"
+			"Dexterity"			"1"
+			"Stamina"			"5"
+			"Charisma"			"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"6"
+			"Intelligence"			"5"
+			"Wits"				"6"
+
+			"BloodPool"			"0"
+			"FaithPoints"			"0"
+			"Starting_Equipment"		""
+			"Excluded_Equipment"		""
+
+			"Max_Health"			"80"
+			"HasTrueSight"			"1"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"			"0"
+			"Brawl"				"0"
+			"Dodge"				"5"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"			"0"
+			"Melee"				"0"
+			"Security"			"0"
+			"Stealth"			"0"
+			"Computer"			"0"
+			"Finance"			"0"
+			"Investigation"			"0"
+//			"Occult"			"0"
+		}
+
+
+		//	Resistances
+		Resistances
+		{
+			// Dementation:
+			"Veil of Madness"		"Full"
+			"The Haunting"			"Full"
+			"Voice of Madness"		"Full"
+			"Waking Nightmare"		"Full"
+			"Total Insanity"		"Full"
+
+			// Dominate:
+			"Calm"				"Full"
+			"Dance"				"Full"
+			"Follow"			"Full"
+			"Hide"				"Full"
+			"Jump"				"Full"
+			"Leave"				"Full"
+			"Mesmerize"			"Full"
+			"Sleep"				"Full"
+			"Impose Will"			"Full"
+			"Possession"			"Full"
+
+			// Thaumaturgy:
+			"Blood Malady"			"Full"
+			"Bloody Eye"			"Full"
+			"Theft of Vitae"		"Full"
+			"Purge Blood"			"Full"
+			"Blood Boil"			"Full"
+		}
+
+
+		General
+		{
+			"Kindred"				"0"
+			"Supernatural"			"1"
+			"Boss"				"1"
+			"DisciplineStrata"		"7"
+			"NoBiting"			"1"
+			"KnockbackRangedPlayer"		"1"
+			"SoundGroup"			"Werewolf"
+			"SpawnModel"			"models/character/monster/werewolf/werewolf.mdl"
+		}
+	}
+
+ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Killer"
+			"ParentTemplateName"	"VampireGangrel"
+			"Name"					"Serial Killer"	// changed by wesp
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"Gangrel"
+			"Body"					"Human"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"NoBiting"			"1"
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"5"
+			"Monster"			"1"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+
+			"Boss"				"0"
+			"SoundGroup"			"shovel_head"
+			"HasTrueSight"			"1"
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"1"
+			"Dexterity"				"4"
+			"Stamina"				"5"	
+			"Wits"					"1"
+
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"				"308"
+			"Armor_Rating"				"2"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+			"Athletics"				"2"
+			"Brawl"					"0"
+			"Dodge"					"2"
+		}
+
+
+		Disciplines
+		{
+			"Protean"	"3"
+			"Fortitude"	"2"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"BloodHuntAuspex"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male, Female"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"1"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+
+			"Boss"				"0"
+			"NoBiting"			"1"
+			"SoundGroup"			"Sabbat_Thug"
+			"HasTrueSight"			"1"
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+			"DamageFilterBashing"		"0.95"//"0.75"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"1"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"4"
+			"Intelligence"			"2"
+			"Wits"					"4"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"132"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"1"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		Disciplines
+		{
+			"Auspex"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+ClanData
+	{
+		Text
+		{
+			"TemplateName"			"BloodHuntCelerity"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male, Female"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"1"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+
+			"Boss"				"0"
+			"NoBiting"			"1"
+			"SoundGroup"			"Sabbat_Thug"
+
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+			"DamageFilterBashing"		"0.95"//"0.75"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"1"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"4"
+			"Intelligence"			"2"
+			"Wits"					"4"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"128"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"1"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		Disciplines
+		{
+			"Celerity"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+ClanData
+	{
+		Text
+		{
+			"TemplateName"			"BloodHuntFortitude"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male, Female"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"2"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+
+			"Boss"				"0"
+			"NoBiting"			"1"
+			"Disallow_Knockbacks"		"1"
+			"SoundGroup"			"Sabbat_Thug"
+
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+			"DamageFilterBashing"		"0.95"//"0.75"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"3"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"4"
+			"Intelligence"			"2"
+			"Wits"					"4"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"132"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"1"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		Disciplines
+		{
+			"Fortitude"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"BloodHuntPotence"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male, Female"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"2"
+			"Monster"				"1"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+
+			"Boss"				"0"
+			"NoBiting"			"1"
+			"SoundGroup"			"Sabbat_Thug"
+
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+			"DamageFilterBashing"		"0.95"//"0.75"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"2"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"4"
+			"Intelligence"			"2"
+			"Wits"					"4"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"128"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"3"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		Disciplines
+		{
+			"Potence"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"BloodHuntPresence"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male, Female"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"1"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+
+			"Boss"				"0"
+			"NoBiting"			"1"
+			"SoundGroup"			"Sabbat_Thug"
+
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+			"DamageFilterBashing"		"0.95"//"0.75"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"2"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"4"
+			"Intelligence"			"2"
+			"Wits"					"4"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"128"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"2"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		Disciplines
+		{
+			"Presence"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"BloodHuntProtean"
+			"ParentTemplateName"	"VampireGeneric"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Body"					"Vampire"
+			"Gender"				"Male, Female"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"1"
+			"Monster"			"1"
+
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+
+			"Boss"				"0"
+			"NoBiting"			"1"
+			"Disallow_Knockbacks"		"1"
+			"SoundGroup"			"shovel_head"
+
+			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+
+			"DamageFilterBashing"		"0.95"//"0.75"
+			"DamageFilterLethal"		"0.90"
+			"DamageFilterAggravated"	"1.00"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"3"
+			"Charisma"				"2"
+			"Manipulation"			"2"
+			"Appearance"			"2"
+			"Perception"			"4"
+			"Intelligence"			"2"
+			"Wits"					"4"
+
+			"BloodPool"				"10"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"148"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"2"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		Disciplines
+		{
+			"Protean"	"3"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+}

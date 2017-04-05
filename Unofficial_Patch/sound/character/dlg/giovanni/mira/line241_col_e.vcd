@@ -1,0 +1,52 @@
+// Choreo version 1
+actor "Mira"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 2.998277
+      param "character/dlg/giovanni/mira/line241_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 0.460000 1.000000
+      param "0.540"
+    }
+    event loud "Loud"
+    {
+      time 0.280000 0.390000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 1.120000 1.240000
+      param "0.120"
+    }
+    event loud "Loud"
+    {
+      time 1.320000 1.440000
+      param "0.120"
+    }
+    event loud "Loud"
+    {
+      time 1.640000 1.770000
+      param "0.130"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

@@ -1,0 +1,59 @@
+// Written
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"			"models/w_null.mdl"
+	"infomodel"			"models/items/beckett_book/info/item_i_beckett_book.mdl"
+	"playermodel"		"models/items/beckett_book/ground/item_g_beckett_book.mdl"
+	"wieldmodel_f"		"models/w_null.mdl"
+	"wieldmodel_m"		"models/w_null.mdl"
+	"anim_prefix"		" "
+
+	"printname"		"So You Wanna Shoot Things?"
+	"description"		"Using a gun is simple, easy, and fun for the whole family. First, get a gun - preferably something for home defense, like an automatic rifle. Second, check to see if the gun is loaded; if not, do so. Third, find a target - we recommend inanimate objects if no muggers are around. Fourth, shoot - feel the power.... This book raises your Firearms skill."
+
+	"weight"			"3"
+	"item_flags"		"1"
+	"item_type"			"powerup"
+	"item_worth"		"30"	// changed by wesp
+
+	"knowledge_min"		"3"
+	"grade"			"low"
+	"upgrade_ability"		"firearms"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Book/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/beckett_book_sel"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/beckett_book"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

@@ -1,0 +1,289 @@
+// Shotgun
+
+WeaponData
+{
+	"printname"		"Ithaca M37"	// changed by wesp
+	"description"		"The 12 gauge M37 is designed for close quarters use as a home defense weapon. Tried and true service for military and law enforcement, the M37 features all metal parts and a bottom feed and ejector for both righties and lefties. It has moderate recoil and is fairly light for ease of use."
+	"viewmodel"		"models/weapons/m37/view/v_m37.mdl"
+	"playermodel"		"models/weapons/m37/world/w_m37.mdl"
+	"wieldmodel_f"		"models/weapons/m37/wield/w_f_m37.mdl"
+	"wieldmodel_m"		"models/weapons/m37/wield/w_m_m37.mdl"
+	"infomodel"		"models/weapons/m37/info/info_m37.mdl"
+	// This should match the viewmodel QC file offset:
+//	"origin_x"		"0"
+//	"origin_y"		"2"
+//	"origin_z"		"68"
+
+	"origin_x"		"4"
+	"origin_y"		"20"
+	"origin_z"		"73"
+
+	"anim_prefix"		"m37"
+	"impact_snd_group"	"bullet"
+
+	"activation0"		"Single Pump"
+	"activation1"		"Error"
+	"jammed0"		"Jammed"
+	"jammed1"		"Jammed"
+	"bucket"		"1"
+	"bucket_position"	"8"
+	"camera_class"		"noswitch"	// changed by wesp
+	"weight"		"3"
+	"item_flags"		"0"
+	"item_type"		"weapon_firearm"
+	"reload_single"		"1"	// add in 1 shell at a time
+	"impact_force"		"1000"	// an impulse measured in kg*in/s
+	"sound_group"	"Shotgun"
+	"uses_accuracycursors"	"1"
+
+	"muzzleflash_particle" 		"W_ithaca_m_37_Emitter"
+	"muzzlesmoke_particle" 		"Blank_emitter"
+	"viewmuzzleflash_particle" 	"W_ithaca_m_37_View_Emitter"
+	"viewmuzzlesmoke_particle" 	"Blank_emitter"
+
+	"item_worth"		"90"
+	"player_sell"		"15"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"Weapons\Ranged\Shotgun\Deploy.wav"
+		}
+	}
+
+//Weapon Ammo
+	Magazine
+	{
+		"ammoprintname"		"Ithaca 12 Gauge Tubefeed"	// changed by wesp
+		"ammodescription"	"A box containing shotgun shells for the Ithaca M37."	// changed by wesp
+		"ammo_worth"		"12" //"18"
+		"ammoinfomodel"		"models/weapons/ammo/shotgun/shotgun_shells.mdl"
+
+		"Size"			"5"	// changed by wesp
+		"Default_Size"		"5"	// changed by wesp
+		"Dropped_Ammo"		"5"	// changed by wesp
+		"Type"			"Ithica_M37Round"
+		"ReloadTime"		"4.0"
+		
+		SoundData
+		{
+			"reload"
+			{
+				"sound1"	"Weapons/Ranged/Shotgun/Reload.wav"
+			}
+
+			"reload_npc"
+			{
+				"sound1"	"Weapons/Ranged/Shotgun/Reload.wav"
+			}
+		}
+	}
+
+//Primary Attack
+	Activation
+	{
+		"Tag"			"Primary"
+		"Type"			"Attack"
+		"Ammo_Type"		"Ithica_M37Round"
+		"Ammo_Cost"		"1"
+		"Ammo_Fired"		"8"
+
+		"SkillRequirement"	"5"		// min. skill requirement used in dmg calculations		
+		"BaseLethality"		"20"		// base lethality used in dmg calculations
+		"Dmg"			"2 Lethal Ranged_Combat DMG_BUCKSHOT"
+
+		"Botch_Table"		"Shotguns"
+		"Attack_Rate"		"1.0"
+		"NPC_Attack_Rate_Min"		"2.0"		// The range of times for NPCs using this weapon to pause between
+		"NPC_Attack_Rate_Max"		"3.0"		//   attacks when at a distance of NPC_Attack_Rate_Base_Range inches. 
+		"NPC_Attack_Rate_Base_Range"	"120"	//   Attack times scale down to Attack_Rate at a range of 0, and up
+							//   proportionally as the range increases. If NPC_Attack_Rate_Base_Range
+							//   is 0, the delay will not be scaled based on distance.
+		"Range"			"20"	
+
+		// SKS_RANGED
+		"KickPitchMin"			"-2.5"
+		"KickPitchMax"			"-27.00"
+		"KickYawMin"				"-5.0"
+		"KickYawMax"			"-3.0"
+		"KickTime"			"1.5"		// "0.04" I don't think this does anything, tbh
+		"CrosshairMinSize"		"23"		// smallest crosshair size for this activation [0-99]
+		"CrosshairFireSize"		"85"		// MAXIMUM size (Firearms 1) of the crosshair when the gun is fired [0-99] scales to Min as player's firearms increases
+		"CrosshairFireSizeMin"		"68"		// MIN size (Firearms 10) of the crosshair when the gun is fired [0-99]
+		"CrosshairWalkSizeMin"	"23"	//"40"		// min size of the crosshair when the player is walking [0-99]
+		"CrosshairWalkSizeMax"	"23"	//"68"		// max size of the crosshair when the player is walking [0-99]
+		"CrosshairRunSizeMin"	"68"			// min size of the crosshair when the player is running [0-99], changed by Wesp
+		"CrosshairRunSizeMax"	"85"			// max size of the crosshair when the player is running [0-99], changed by Wesp
+
+		"CrosshairIncSpeedMin"	"80"	//min speed(10 Firearm Feat) at which to increase bloom -low # slower
+		"CrosshairIncSpeedMax"	"95"	//max speed(1 Firearm Feat) at which to increase bloom -high # faster
+		"CrosshairDecSpeedMin"	"8"	//min speed(1 Firearm Feat) at which to decrease bloom -low # slower
+		"CrosshairDecSpeedMax"	"18"	//"40"max speed(10 Firearm Feat) at which to decrease bloom -high # faster
+
+		"CrosshairFirePercent"	"0.9"			// percent to bloom to crosshair upon firing a bullet
+
+		"MajorKnockbackDist"	"50.0"			// maximum distance to cause major knockback, changed by Wesp
+		"MinorKnockbackDist"	"250.0"			// maximum distance to cause minor knockback
+
+		"SpreadAngle"		"10.0"
+		"CriminalLevel"		"3"
+		"Accuracy"		"1"
+
+		SoundData
+		{
+			"empty"
+			{
+				"sound1"	"Weapons/Ranged/Shotgun/Empty.wav"
+			}
+
+			"attack"
+			{
+				"sound1"	"Weapons/Ranged/Shotgun/wield_override/Attack_1.wav"	// changed by wesp
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Ranged/Shotgun/wield_override/Attack_1.wav"	// changed by wesp
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Ranged/Shotgun/Deploy.wav"
+			}
+
+			"put_away"
+			{
+				"sound1"	"Weapons/Ranged/Put_Away.wav"
+			}			
+			
+			"fidget"
+			{
+				"sound1"	"Weapons/Ranged/Shotgun/Fidget.wav"
+			}
+		}
+
+		Tables
+		{
+			Table
+			{
+				"Name"          "WeaponRanges"
+				"InternalName"  "WeaponRanges"
+
+				"Clamping"      "1"
+
+				// point blank 0-80, close 80-110, short/medium 110-220,
+				// meduim 220-370, long 370-650, great 650+
+
+				"0"             "1"         // 5 (bonus)
+				"1"             "150"         // 4 (bonus)
+				"2"             "175"         // 3 (bonus)
+				"3"             "200"       // 2 (bonus)
+				"4"             "225"       // 1 (bonus)
+				"5"             "250"       // 0 (neutral)
+				"6"             "288"       //-1 (penalty)
+				"7"             "325"       //-2 (penalty)
+				"8"             "363"     //-3 (penalty)
+				"9"             "400"     //-4 (penalty)
+			}
+			Table
+			{
+				"Name"          "GrossPointBlank"
+				"InternalName"  "GrossPointBlank"
+
+				"Clamping"      "1"
+
+
+				// percentage from 1-12 feet out
+
+				"0"             "100"
+				"1"             "90"
+				"2"             "80"
+				"3"             "70"
+				"4"             "60"
+				"5"             "50"
+				"6"             "40"
+				"7"             "30"
+				"8"             "20"
+				"9"             "10"
+			}
+			
+		}
+	}
+
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/Shotgun_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/Shotgun"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/ammo/shotgun_ammo"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo2"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/ammo/shotgun_ammo_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+
+
+// Disabled because it uses Accuracy Crosshairs
+//		"crosshair"
+//		{
+//			"640"
+//			{
+//				"file"		"crosshairs"
+//				"x"			"0"
+//				"y"			"48"
+//				"width"		"24"
+//				"height"	"24"
+//			}
+
+
+
+		// Accuracy Crosshairs
+		"Acc_Crosshair00"		"hud/Crosshairs/Crosshair_01"
+		"Acc_Crosshair01"		"hud/Crosshairs/Crosshair_02"
+		"Acc_Crosshair02"		"hud/Crosshairs/Crosshair_03"
+		"Acc_Crosshair03"		"hud/Crosshairs/Crosshair_04"
+		"Acc_Crosshair04"		"hud/Crosshairs/Crosshair_05"
+		"Acc_Crosshair05"		"hud/Crosshairs/Crosshair_06"
+		"Acc_Crosshair06"		"hud/Crosshairs/Crosshair_07"
+		"Acc_Crosshair07"		"hud/Crosshairs/Crosshair_08"
+		"Acc_Crosshair08"		"hud/Crosshairs/Crosshair_09"
+		"Acc_Crosshair09"		"hud/Crosshairs/Crosshair_10"
+		"Interactive_Crosshair"	"hud/Crosshairs/Crosshair_Interactive"
+	}
+}

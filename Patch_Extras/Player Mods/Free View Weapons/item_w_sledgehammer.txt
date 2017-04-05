@@ -1,0 +1,201 @@
+//Sledgehammer
+
+WeaponData
+{
+	"printname"		"Sledgehammer"
+	"description"		"A heavy hammer ostensibly used for construction. Great for getting that song out of someone's head, as well as anything else inside. "
+	"viewmodel"	"models/weapons/w_null.mdl"	// changed by wesp
+	"playermodel"		"models/weapons/sledgehammer/ground/g_sledgehammer.mdl"
+	"wieldmodel_f"		"models/weapons/sledgehammer/wield/w_f_sledgehammer.mdl"
+	"wieldmodel_m"		"models/weapons/sledgehammer/wield/w_m_sledgehammer.mdl"
+	"infomodel"		"models/weapons/sledgehammer/info/i_sledgehammer.mdl"
+
+	"anim_prefix"		"sledgehammer"
+	"impact_snd_group"	"wood"
+
+	"bucket"		"0"
+	"bucket_position"	"8"
+
+	"camera_class"		"noswitch"	// changed by wesp
+	"weight"		"2"
+	"item_flags"	"0"
+	"item_type"		"weapon_melee"
+	"sound_group"	"Bush_Hook"
+
+	"knockback_chance"	"0.9"
+
+	"item_worth"		"70"
+
+	"projectile_particles"	"Sledgehammer_Pound_emitter"		// used to precache for slampoint particle
+
+	// Sounds...
+	SoundData
+	{
+		"swish"
+		{
+			"sound1"	"Weapons/Melee/Sledgehammer/Swish_1.wav"
+			"sound2"	"Weapons/Melee/Sledgehammer/Swish_2.wav"
+			"sound3"	"Weapons/Melee/Sledgehammer/Swish_3.wav"
+		}
+		"pickup"
+		{
+			"sound1"	"Weapons\Melee\Baton\Deploy.wav"	// changed by wesp
+		}
+		"stealth_kill_success"
+		{
+			"sound1"	"Weapons/Melee/Sledgehammer/Stealth_Sledgehammer.wav"
+		}
+
+		"stealth_kill_failure"
+		{
+			"sound1"	"Weapons/Melee/Fists/Stealth_Kill_Failure.wav"
+		}
+	}
+
+	Activation
+	{
+		"Tag"			"Primary"
+
+		"Type"		"Attack"
+		"Ammo_Type"		"None"
+		"Ammo_Cost"		"0"
+	
+		"SkillRequirement"	"5"		// min. skill requirement used in dmg calculations
+		"BaseLethality"		"10"		// base lethality used in dmg calculations
+		"Dmg"			"3 Bashing Close_Combat_Melee DMG_CLUB"
+		
+		"Botch_Table"	"Melee_Weapons"
+		"Attack_Rate"	"2.0"
+		"Range"		"0"
+		"CriminalLevel"	"4"
+
+		// Sounds...
+		SoundData
+		{
+			"attack"
+			{
+				"sound1"	"Weapons/Melee/Sledgehammer/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Sledgehammer/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Sledgehammer/Swish_3.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Melee/Sledgehammer/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Sledgehammer/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Sledgehammer/Swish_3.wav"
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons\Melee\Baton\Deploy.wav"	// changed by wesp
+			}
+			"put_away"
+			{
+				"sound1"	"Weapons/Melee/Put_Away.wav"
+			}
+			"fidget"
+			{
+				"sound1"	"Weapons/Melee/Sledgehammer/Fidget.wav"
+			}
+		}
+	}
+
+	Activation
+	{
+		"Tag"			"Secondary"
+
+		"Type"		"Secondary_Attack"
+		"Ammo_Type"		"None"
+		"Ammo_Cost"		"0"
+
+		"SkillRequirement"	"5"		// min. skill requirement used in dmg calculations
+		"BaseLethality"		"10"		// base lethality used in dmg calculations
+		"Dmg"			"3 Bashing Close_Combat_Melee DMG_CLUB"
+
+		"Botch_Table"	"Melee_Weapons"
+		"Attack_Rate"	"2.0"
+		"Range"		"0"
+		"CriminalLevel"	"4"
+
+		// Sounds...
+		SoundData
+		{
+			"attack"
+			{
+				"sound1"	"Weapons/Melee/Sledgehammer/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Sledgehammer/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Sledgehammer/Swish_3.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Melee/Sledgehammer/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Sledgehammer/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Sledgehammer/Swish_3.wav"
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons\Melee\Baton\Deploy.wav"	// changed by wesp
+			}
+			"put_away"
+			{
+				"sound1"	"Weapons/Melee/Put_Away.wav"
+			}
+			"fidget"
+			{
+				"sound1"	"Weapons/Melee/Sledgehammer/Fidget.wav"
+			}
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Melee/Sledgehammer_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Melee/Sledgehammer"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"crosshair"
+		{
+			"640"
+			{
+				"file"		"hud/crosshairs/unarmed"
+				"x"			"0"
+				"y"			"0"
+				"width"		"16"
+				"height"	"16"
+			}
+		}
+		"crosshair2"
+		{
+			"640"
+			{
+				"file"		"hud/crosshairs/unarmed_lit"
+				"x"			"0"
+				"y"			"0"
+				"width"		"16"
+				"height"	"16"
+			}
+		}
+	}
+}

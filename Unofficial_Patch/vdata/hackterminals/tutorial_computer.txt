@@ -1,0 +1,44 @@
+TerminalDefinition
+{
+	"screen saver"		"Brothers Downtown Garage"		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt and subdirector names(2 characters), changed by wesp
+
+	"email_password"	"letmein"		// the user must type this to access email from this terminal
+	"email_username"	"Jim Beam"		// printed at the top of the email window, not used for log in, was "Jack Daniels", changed by wesp. 
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Welcome, Jim."		//(any number of characters, but must fit in the screen, changed by wesp
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+	SubDir
+	{
+		"name"			"Safe"				// This is what is displayed as the name of this menu, and what the player must type to enter the menu (128 characters)
+		"password"		"chopshop"			// password required to run commands in this menu (16 characters)
+		"description"		"Safe Security Controls"	// This is printed each time the user enters this menu (128 characters)
+		"difficulty"		"2"
+
+		Function
+		{
+			"name"		"Unlock"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Unlock Safe"			// this is a description of this function  (128 characters)
+			"runtext"	"Safe doors unlocked."		// this text is printed when the player triggers this function.  (128 characters)
+			"trigger"	"0"				// fires entity output 0 when this command is run
+		}
+
+		Function
+		{
+			"name"		"Lock"
+			"description"	"Lock Safe"		
+			"runtext"	"Safe doors locked."
+			"trigger"	"1"				
+		}
+	}
+
+}

@@ -1,0 +1,60 @@
+
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	
+	"infomodel"	"models/items/nines_file/Info/item_i_nines_file.mdl"	// changed by wesp
+	"playermodel"	"models/items/nines_file/Ground/item_g_nines_file.mdl"	// changed by wesp
+	
+	"anim_prefix"	" "
+
+	"printname"	"Screenplay"
+	"description"	"An envelope with David Hatter's screenplay. It is tentatively titled \"Humanity vs. The Vampire Lords\"."	// changed by wesp
+
+	"bucket"		"1"
+	"bucket_position"	"2"
+
+	"camera_class"		"noswitch"
+	"is_wieldable"		"0"
+	"weight"		"1"
+	"item_flags"		"1"
+	"item_type"		"powerup"
+	"item_worth"		"-1"
+	"is_visible_in_hud"		"1"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Magazine/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/Nines_File_ws_SEL"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/Nines_File_ws"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

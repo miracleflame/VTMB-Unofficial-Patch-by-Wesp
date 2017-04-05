@@ -1,0 +1,924 @@
+DispositionTable
+{
+	// NOTE: The "Neutral" disposition must be the first on in the list, it is what the others will get their starting values from. 
+	Neutral			
+	{
+		"DispositionLevel"		"1"
+		
+		"Animation Name"		"Neutral"
+	
+		// Character will have a 65% chance of changing stances everytime
+		// he pauses in dialog for more than 0.15 seconds
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"65"
+
+		// Character will have a 85% of picking a fidget while not talking 
+		// (i.e. waiting for player to say something. )
+		"Standing Fidget Chance"		"50"				
+
+		// Character will have a 60% chance of changing stance while waiting for the player to 
+		// make a dialog choice, if the player takes more than 3 seconds.  
+		"Standing Stance Change Threshold"	"3.0"
+		"Standing stance Change Chance"		"80"
+		
+		DefaultExpression
+		{
+			"Expression Name"	"Neutral"
+			"Talking Expression"	"Neutral" // this is the character's default expression while talking. 
+			"intensity"		"1.0"
+		}
+
+		// eye targets are head relative, with the numbers being like the numbers on a keypad
+		// 0 will have the NPC fall back to normal look behavior, i.e. the player's eyes. 
+		EyeTarget	
+		{
+			"Default Direction"	"0"
+			"Fidget Points"		"[-1,-1,-1]"	// if all points are -1, the NPC will just pick a random point to look at. 		
+			"Min Interval"		"5"
+			"Max Interval"		"8"
+			"Hold Min"		".15"		
+			"Hold Max"		".25"
+			"Eye Turn Rate"		"0.3" // 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+		}
+
+		// these are layered on top of the NPCs current expression when they say something loud
+		// it will pick 1 at random from up to 4 expressions
+		LoudExpressions	
+		{
+			"fade in time"	"0.45"	// how long to blend in a loud expressoin
+			"fade out time"	"0.5"	// how long to blend out a loud expression
+			"min hold time"	"4.0"	// the NPC will try to hold the loud expression for the length of the loud section of dialog
+			"max hold time"	"10.0"	// the length of the loud expression will be clamped between the min and max hold time
+			"intensity"	"0.25"
+			"Expression0"	"Raised Both"
+			"Expression1"	"Raised Right"
+			"Expression2"	"Raised Left"
+			"Expression3"	"Lowered Both"
+		}
+
+		"Min Blink Interval"		"2.5"
+		"Max Blink Interval"		"6.0"
+		"Eye Turn Rate"			"0.9"	// 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+
+	}
+
+
+	Therese			
+	{
+		"DispositionLevel"		"1"
+		
+		"Animation Name"		"Therese"
+	
+		// Character will have a 65% chance of changing stances everytime
+		// he pauses in dialog for more than 0.15 seconds
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"65"
+
+		// Character will have a 85% of picking a fidget while not talking 
+		// (i.e. waiting for player to say something. )
+		"Standing Fidget Chance"		"50"				
+
+		// Character will have a 60% chance of changing stance while waiting for the player to 
+		// make a dialog choice, if the player takes more than 3 seconds.  
+		"Standing Stance Change Threshold"	"3.0"
+		"Standing stance Change Chance"		"80"
+		
+		DefaultExpression
+		{
+			"Expression Name"	"Neutral"
+			"Talking Expression"	"Neutral" // this is the character's default expression while talking. 
+			"intensity"		"1.0"
+		}
+
+		// eye targets are head relative, with the numbers being like the numbers on a keypad
+		// 0 will have the NPC fall back to normal look behavior, i.e. the player's eyes. 
+		EyeTarget	
+		{
+			"Default Direction"	"0"
+			"Fidget Points"		"[-1,-1,-1]"	// if all points are -1, the NPC will just pick a random point to look at. 		
+			"Min Interval"		"5"
+			"Max Interval"		"8"
+			"Hold Min"		".15"		
+			"Hold Max"		".25"
+			"Eye Turn Rate"		"0.3" // 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+		}
+
+		// these are layered on top of the NPCs current expression when they say something loud
+		// it will pick 1 at random from up to 4 expressions
+		LoudExpressions	
+		{
+			"fade in time"	"0.45"	// how long to blend in a loud expressoin
+			"fade out time"	"0.5"	// how long to blend out a loud expression
+			"min hold time"	"4.0"	// the NPC will try to hold the loud expression for the length of the loud section of dialog
+			"max hold time"	"10.0"	// the length of the loud expression will be clamped between the min and max hold time
+			"intensity"	"0.25"
+			"Expression0"	"Raised Both"
+			"Expression1"	"Raised Right"
+			"Expression2"	"Raised Left"
+			"Expression3"	"Lowered Both"
+		}
+
+		"Min Blink Interval"		"2.5"
+		"Max Blink Interval"		"6.0"
+		"Eye Turn Rate"			"0.9"	// 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+
+	}
+
+	Therese			
+	{
+		"DispositionLevel"		"2"
+		
+		"Animation Name"		"Therese"
+	
+		// Character will have a 65% chance of changing stances everytime
+		// he pauses in dialog for more than 0.15 seconds
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"65"
+
+		// Character will have a 85% of picking a fidget while not talking 
+		// (i.e. waiting for player to say something. )
+		"Standing Fidget Chance"		"50"				
+
+		// Character will have a 60% chance of changing stance while waiting for the player to 
+		// make a dialog choice, if the player takes more than 3 seconds.  
+		"Standing Stance Change Threshold"	"3.0"
+		"Standing stance Change Chance"		"80"
+		
+		DefaultExpression
+		{
+			"Expression Name"	"Anger"
+			"Talking Expression"	"Anger" // this is the character's default expression while talking. 
+			"intensity"		"1.0"
+		}
+
+		// eye targets are head relative, with the numbers being like the numbers on a keypad
+		// 0 will have the NPC fall back to normal look behavior, i.e. the player's eyes. 
+		EyeTarget	
+		{
+			"Default Direction"	"0"
+			"Fidget Points"		"[-1,-1,-1]"	// if all points are -1, the NPC will just pick a random point to look at. 		
+			"Min Interval"		"5"
+			"Max Interval"		"8"
+			"Hold Min"		".15"		
+			"Hold Max"		".25"
+			"Eye Turn Rate"		"0.3" // 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+		}
+
+		// these are layered on top of the NPCs current expression when they say something loud
+		// it will pick 1 at random from up to 4 expressions
+		LoudExpressions	
+		{
+			"fade in time"	"0.45"	// how long to blend in a loud expressoin
+			"fade out time"	"0.5"	// how long to blend out a loud expression
+			"min hold time"	"4.0"	// the NPC will try to hold the loud expression for the length of the loud section of dialog
+			"max hold time"	"10.0"	// the length of the loud expression will be clamped between the min and max hold time
+			"intensity"	"0.25"
+			"Expression0"	"Raised Both"
+			"Expression1"	"Raised Right"
+			"Expression2"	"Raised Left"
+			"Expression3"	"Lowered Both"
+		}
+
+		"Min Blink Interval"		"2.5"
+		"Max Blink Interval"		"6.0"
+		"Eye Turn Rate"			"0.9"	// 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+
+	}
+
+	Therese			
+	{
+		"DispositionLevel"		"3"
+		
+		"Animation Name"		"Therese"
+	
+		// Character will have a 65% chance of changing stances everytime
+		// he pauses in dialog for more than 0.15 seconds
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"65"
+
+		// Character will have a 85% of picking a fidget while not talking 
+		// (i.e. waiting for player to say something. )
+		"Standing Fidget Chance"		"50"				
+
+		// Character will have a 60% chance of changing stance while waiting for the player to 
+		// make a dialog choice, if the player takes more than 3 seconds.  
+		"Standing Stance Change Threshold"	"3.0"
+		"Standing stance Change Chance"		"80"
+		
+		DefaultExpression
+		{
+			"Expression Name"	"Enraged"
+			"Talking Expression"	"Enraged" // this is the character's default expression while talking. 
+			"intensity"		"1.0"
+		}
+
+		// eye targets are head relative, with the numbers being like the numbers on a keypad
+		// 0 will have the NPC fall back to normal look behavior, i.e. the player's eyes. 
+		EyeTarget	
+		{
+			"Default Direction"	"0"
+			"Fidget Points"		"[-1,-1,-1]"	// if all points are -1, the NPC will just pick a random point to look at. 		
+			"Min Interval"		"5"
+			"Max Interval"		"8"
+			"Hold Min"		".15"		
+			"Hold Max"		".25"
+			"Eye Turn Rate"		"0.3" // 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+		}
+
+		// these are layered on top of the NPCs current expression when they say something loud
+		// it will pick 1 at random from up to 4 expressions
+		LoudExpressions	
+		{
+			"fade in time"	"0.45"	// how long to blend in a loud expressoin
+			"fade out time"	"0.5"	// how long to blend out a loud expression
+			"min hold time"	"4.0"	// the NPC will try to hold the loud expression for the length of the loud section of dialog
+			"max hold time"	"10.0"	// the length of the loud expression will be clamped between the min and max hold time
+			"intensity"	"0.25"
+			"Expression0"	"Raised Both"
+			"Expression1"	"Raised Right"
+			"Expression2"	"Raised Left"
+			"Expression3"	"Lowered Both"
+		}
+
+		"Min Blink Interval"		"2.5"
+		"Max Blink Interval"		"6.0"
+		"Eye Turn Rate"			"0.9"	// 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+
+	}
+
+	Anger			
+	{
+		"DispositionLevel"		"1"
+		
+		DefaultExpression
+		{
+			"Expression Name"	"Anger"
+			"Intensity"		"1.0"
+		}
+
+
+		"Animation Name"			"Anger"
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"65"
+		"Standing Fidget Chance"		"50"				
+		"Standing Stance Change Threshold"	"2.0"
+		"Standing stance Change Chance"		"30"
+		"Standing Fidget Chance"		"95"					
+		EyeTarget	
+		{
+			"Default Direction"	"0"
+			"Fidget Points"		"[0,2,0]"	// the NPC will sweep across these points, and hold on each point for the specified amount of time. Use -1 in the last slots if you don't want 3 points. 		
+			"Min Interval"		"5"
+			"Max Interval"		"8"
+			"Hold Min"		".25"		
+			"Hold Max"		"1"
+			"Eye Turn Rate"		"0.95" // 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+		}
+
+		"MinBlinkInterval"		"2.5"
+		"MaxBlinkInterval"		"6.0"
+
+	}
+
+	Anger			
+	{
+		"DispositionLevel"		"1"
+		
+		DefaultExpression
+		{
+			"Expression Name"	"Anger"
+			"Intensity"		"1.0"
+		}
+
+
+		"Animation Name"			"Anger"
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"65"
+		"Standing Fidget Chance"		"50"				
+		"Standing Stance Change Threshold"	"2.0"
+		"Standing stance Change Chance"		"30"
+		"Standing Fidget Chance"		"95"					
+		EyeTarget	
+		{
+			"Default Direction"	"0"
+			"Fidget Points"		"[0,2,0]"	// the NPC will sweep across these points, and hold on each point for the specified amount of time. Use -1 in the last slots if you don't want 3 points. 		
+			"Min Interval"		"5"
+			"Max Interval"		"8"
+			"Hold Min"		".25"		
+			"Hold Max"		"1"
+			"Eye Turn Rate"		"0.95" // 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+		}
+
+		"MinBlinkInterval"		"2.5"
+		"MaxBlinkInterval"		"6.0"
+
+	}
+
+
+	Anger
+	{
+		"CopyDataFrom"			"Anger"		// this will copy expressions from the first entry called "Neutral"
+								// the data that follows will over-write those values for this disposition
+		"DispositionLevel"		"2"
+
+		"Animation Name"		"Enraged"
+
+		DefaultExpression
+		{
+			"Expression Name"	"Enraged"
+			"intensity"		"1.0"
+		}
+
+
+		"Standing Fidget Chance"	"99"					
+		EyeTarget	
+		{
+			"Default Direction"	"0"
+			"Fidget Points"		"[0,2,0]"	// the NPC will sweep across these points, and hold on each point for the specified amount of time. Use -1 in the last slots if you don't want 3 points. 		
+			"Min Interval"		"5"
+			"Max Interval"		"8"
+			"Hold Min"		"1"		
+			"Hold Max"		"2"
+			"Eye Turn Rate"		"0.95" // 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+		}
+
+		"MinBlinkInterval"		"4.5"
+		"MaxBlinkInterval"		"7.0"
+
+	}
+
+	Anger			
+	{
+		"DispositionLevel"		"3"
+		
+		DefaultExpression
+		{
+			"Expression Name"	"neutral"
+			"Intensity"		"1.0"
+		}
+
+
+		"Animation Name"			"Anger"
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"65"
+		"Standing Fidget Chance"		"50"				
+		"Standing Stance Change Threshold"	"2.0"
+		"Standing stance Change Chance"		"30"
+		"Standing Fidget Chance"		"95"					
+		EyeTarget	
+		{
+			"Default Direction"	"0"
+			"Fidget Points"		"[0,2,0]"	// the NPC will sweep across these points, and hold on each point for the specified amount of time. Use -1 in the last slots if you don't want 3 points. 		
+			"Min Interval"		"5"
+			"Max Interval"		"8"
+			"Hold Min"		".25"		
+			"Hold Max"		"1"
+			"Eye Turn Rate"		"0.95" // 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+		}
+
+		"MinBlinkInterval"		"2.5"
+		"MaxBlinkInterval"		"6.0"
+
+	}
+
+
+	Joy
+	{
+		"DispositionLevel"			"1"
+		"Animation Name"			"Joy"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"65"
+		"Standing Fidget Chance"		"15"				
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"25"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"Joy"
+			"Talking Expression"	"Joy_NoDeform"
+			"intensity"		"1.0"
+		}
+	}
+
+	Joy
+	{
+		"CopyDataFrom"			"Joy"	
+		"DispositionLevel"		"2"
+		"Standing Fidget Chance"	"45"					
+		DefaultExpression
+		{
+			"Expression Name"	"Melancholy Smile"
+			"Talking Expression"	"Melancholy Smile_NoDeform"
+			"intensity"		"1.0"
+		}
+	}
+
+	Joy
+	{
+		"CopyDataFrom"			"Joy"	
+		"DispositionLevel"		"3"
+		"Standing Fidget Chance"	"65"					
+		DefaultExpression
+		{
+			"Expression Name"	"Sly Smile"
+			"Talking Expression"	"Sly Smile_NoDeform"
+			"intensity"		"1.0"
+		}
+	}
+
+	Sad
+	{
+		"DispositionLevel"			"1"
+		"Animation Name"			"Sad"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"65"
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"15"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"Sad"
+			"Talking Expression"	"Sad_NoDeform"
+			"intensity"		"1.0"
+		}
+	}
+
+	Sad
+	{
+		"CopyDataFrom"			"Sad"	
+		"DispositionLevel"		"2"
+		"Standing Fidget Chance"	"35"					
+		DefaultExpression
+		{
+			"Expression Name"	"miserable"
+			"intensity"		"1.0"
+		}
+	}
+
+	Sad
+	{
+		"CopyDataFrom"			"Sad"	
+		"DispositionLevel"		"3"
+		"Standing Fidget Chance"	"55"					
+		DefaultExpression
+		{
+			"Expression Name"	"Nearly Crying"
+			"Talking Expression"	"Nearly Crying_No Deform"
+			"intensity"		"1.0"
+		}
+	}
+
+	Fear
+	{
+		"DispositionLevel"			"1"
+		"Animation Name"			"Frightened"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"75"
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"15"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"fear"
+			"Talking Expression"	"fear_NoDeform"
+			"intensity"		"1.0"
+		}
+	}
+
+
+	Fear
+	{
+		"CopyDataFrom"			"Fear"	
+		"DispositionLevel"		"2"
+		"Animation Name"		"Very Frightened"
+		"Standing Fidget Chance"	"55"					
+		DefaultExpression
+		{
+			"Expression Name"	"Frightened"
+			"intensity"		"1.0"
+		}
+	}
+
+	Disgust
+	{
+		"DispositionLevel"			"1"
+		"Animation Name"			"Disgust"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"85"
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"15"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"Disgust"
+			"Talking Expression"	"Disgust_NoDeform"
+			"intensity"		"1.0"
+		}
+		EyeTarget	
+		{
+			"Default Direction"	"0"
+			"Fidget Points"		"[0,2,3]"	// the NPC will sweep across these points, and hold on each point for the specified amount of time. Use -1 in the last slots if you don't want 3 points. 
+			"Min Interval"		"5"
+			"Max Interval"		"8"
+			"Hold Min"		".15"		
+			"Hold Max"		".45"
+			"Eye Turn Rate"		"0.6" // 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+		}
+
+	}
+
+	Apathy
+	{
+		"DispositionLevel"			"1"
+		"Animation Name"			"Apathy"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"60"
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"15"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"Apathy"
+			"intensity"		"1.0"
+		}
+		EyeTarget	
+		{
+			"Default Direction"	"0"
+			"Fidget Points"		"[7,8,9]"	// the NPC will sweep across these points, and hold on each point for the specified amount of time. Use -1 in the last slots if you don't want 3 points. 		
+			"Min Interval"		"5"
+			"Max Interval"		"8"
+			"Hold Min"		"1"		
+			"Hold Max"		"2"
+			"Eye Turn Rate"		"0.2" // 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+		}
+	}
+
+
+	Flirtatious
+	{
+		"DispositionLevel"			"1"
+		"Animation Name"			"Flirt"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"85"
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"15"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"Flirtatious"
+			"Talking Expression"	"Flirtatious_NoDeform"
+			"intensity"		"1.0"
+		}
+	}
+
+	Confused
+	{
+		"DispositionLevel"			"1"
+		"Animation Name"			"Confused"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"60"
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"15"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"Confused"
+			"Talking Expression"	"Confused_NoDeform"
+			"intensity"		"1.0"
+		}
+		EyeTarget	
+		{
+			"Default Direction"	"0"
+			"Fidget Points"		"[7,5,9]"	// the NPC will sweep across these points, and hold on each point for the specified amount of time. Use -1 in the last slots if you don't want 3 points. 
+			"Min Interval"		"5"
+			"Max Interval"		"8"
+			"Hold Min"		".15"		
+			"Hold Max"		".25"
+			"Eye Turn Rate"		"0.2" // 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+		}
+		
+	}
+
+
+	// This plays on a character if they cannot find their disposition (when in debug mode)
+	Error
+	{
+		"DispositionLevel"		"1"
+		
+		DefaultExpression
+		{
+			"Expression Name"	"Happy"
+			"intensity"		"1.0"
+		}
+	
+		
+		"Standing Fidget Chance"	"100"					
+
+		"MinBlinkInterval"		"1.5"
+		"MaxBlinkInterval"		"2.0"
+	}
+
+	Lay
+	{
+		"DispositionLevel"			"1"
+		"Animation Name"			"Lay"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"75"
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"15"					
+	
+		EyeTarget	
+		{
+			"Default Direction"	"0"
+			"Fidget Points"		"[0,0,0]"	// the NPC will sweep across these points, and hold on each point for the specified amount of time. Use -1 in the last slots if you don't want 3 points. 
+			"Min Interval"		"5"
+			"Max Interval"		"8"
+			"Hold Min"		".15"		
+			"Hold Max"		".25"
+			"Eye Turn Rate"		"0.2" // 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+		}
+
+		DefaultExpression
+		{
+			"Expression Name"	"Neutral"
+			"intensity"		"1.0"
+		}
+	}
+
+
+	Lay
+	{
+		"DispositionLevel"			"2"
+		"Animation Name"			"Lay"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"75"
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"15"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"Neutral"
+			"intensity"		"1.0"
+		}
+	}
+
+
+	Lay
+	{
+		"DispositionLevel"			"3"
+		"Animation Name"			"Lay"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"75"
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"15"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"Joy"
+			"intensity"		"1.0"
+		}
+	}
+	
+	Lay
+	{
+		"DispositionLevel"			"4"
+		"Animation Name"			"Lay"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"75"
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"15"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"Anger"
+			"intensity"		"1.0"
+		}
+	}
+	
+	Damaged
+	{
+		"DispositionLevel"			"1"
+		"Animation Name"			"Damaged"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"75"
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"15"					
+
+		EyeTarget	
+		{
+			"Default Direction"	"0"
+			"Fidget Points"		"[0,0,0]"	// the NPC will sweep across these points, and hold on each point for the specified amount of time. Use -1 in the last slots if you don't want 3 points. 
+			"Min Interval"		"5"
+			"Max Interval"		"8"
+			"Hold Min"		".15"		
+			"Hold Max"		".25"
+			"Eye Turn Rate"		"0.2" // 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+		}
+
+		DefaultExpression
+		{
+			"Expression Name"	"anger"
+			"intensity"		"1.0"
+		}
+	}
+	Dead
+	{
+		"DispositionLevel"			"1"
+		"Animation Name"			"Dead"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"75"
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"15"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"anger"
+			"intensity"		"1.0"
+		}
+	}
+	Sitting
+	{
+		"DispositionLevel"			"1"
+		"Animation Name"			"Sitting"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"75"
+		"Standing Stance Change Threshold"	"0"
+		"Standing stance Change Chance"		"0"
+		"Standing Fidget Chance"		"0"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"Neutral"
+			"intensity"		"1.0"
+		}
+	}
+	Bartender
+	{
+		"DispositionLevel"			"1"
+		"Animation Name"			"Bartender"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"75"
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"15"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"anger"
+			"intensity"		"1.0"
+		}
+	}
+	Bartender
+	{
+		"DispositionLevel"			"2"
+		"Animation Name"			"Bartender"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"75"
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"15"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"Happy"
+			"intensity"		"1.0"
+		}
+	}
+
+	Lily
+	{
+		"DispositionLevel"			"1"
+		"Animation Name"			"Lily"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"75"
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"15"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"Happy"
+			"intensity"		"1.0"
+		}
+	}
+
+	Lily
+	{
+		"DispositionLevel"			"2"
+		"Animation Name"			"Lily"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"75"
+		"Standing Stance Change Threshold"	"5.0"
+		"Standing stance Change Chance"		"50"
+		"Standing Fidget Chance"		"15"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"Happy"
+			"intensity"		"1.0"
+		}
+	}
+
+	//Only Lily has this disposition
+	ChairDamaged
+	{
+		"CopyDataFrom"			"Damaged"	
+		"DispositionLevel"			"1"
+		"Animation Name"			"ChairDamaged"
+	}
+	
+	//Only Lily has this disposition
+	ChairDamaged
+	{
+		"CopyDataFrom"			"Damaged"	
+		"DispositionLevel"			"2"
+		"Animation Name"			"ChairDamaged"
+	}
+
+
+
+
+		PrinceSitting			
+	{
+		"DispositionLevel"		"1"
+		
+		DefaultExpression
+		{
+			"Expression Name"	"Neutral"
+			"Intensity"		"1.0"
+		}
+
+
+		"Animation Name"			"PrinceSitting"
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"65"
+		"Standing Fidget Chance"		"0"				
+		"Standing Stance Change Threshold"	"0"
+		"Standing stance Change Chance"		"0"
+		"Standing Fidget Chance"		"0"					
+		EyeTarget	
+		{
+			"Default Direction"	"0"
+			"Fidget Points"		"[0,2,0]"	// the NPC will sweep across these points, and hold on each point for the specified amount of time. Use -1 in the last slots if you don't want 3 points. 		
+			"Min Interval"		"5"
+			"Max Interval"		"8"
+			"Hold Min"		".25"		
+			"Hold Max"		"1"
+			"Eye Turn Rate"		"0.95" // 0.1 is slow, 1.0 is instant. 0.95 is HL2 default
+		}
+
+		"MinBlinkInterval"		"2.5"
+		"MaxBlinkInterval"		"6.0"
+
+	}
+
+	BehindBack
+	{
+		"DispositionLevel"			"1"
+		"Animation Name"			"BehindBack"
+
+		"Talking Stance Change Threshold"	"0.15"
+		"Talking Stance Change Chance"		"75"
+		"Standing Stance Change Threshold"	"0"
+		"Standing stance Change Chance"		"0"
+		"Standing Fidget Chance"		"0"					
+
+		DefaultExpression
+		{
+			"Expression Name"	"Neutral"
+			"intensity"		"1.0"
+		}
+	}
+
+}

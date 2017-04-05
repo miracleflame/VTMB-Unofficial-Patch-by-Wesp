@@ -1,0 +1,169 @@
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//ENBSeries: boris-vorontsov@yandex.ru, boris-vorontsov.narod.ru
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/*
+THIS IS HLSL (HIGH LEVEL SHADER LANGUAGE) FILE FOR EXECUTING ADDITIONAL
+HARDWARE EFFECTS. MAKE THE COPY BEFORE CHANGING IT!
+*/
+
+//keyboard controled variables
+float	tempF1;
+float	tempF2;
+float	tempF3;
+float	tempF4;
+float	tempF5;
+float	tempF6;
+float	tempF7;
+float	tempF8;
+float	tempF9;
+float	tempF0;
+
+
+//global variables, already set before executing this code
+float	ScreenSize;	//width of the display resolution (1024 f.e.)
+float	ScreenScaleY;	//screen proportions (1.333 for 1024/768)
+float	ScreenBrightnessAdaptation;//(-10..10) for bloom it controls how much to dark in the night or when scene is dark (user defined constant factor)
+float	bloomPower;//(0..10) actually used for bloom, but may be useful here (user defined constant factor)
+float	useBloom;//(0 or 1) if bloom enabled by user
+
+
+
+//textures
+texture2D texColor;
+
+sampler2D SamplerColor = sampler_state
+{
+	Texture   = <texColor>;
+	MinFilter = LINEAR;
+	MagFilter = LINEAR;
+	MipFilter = NONE;//NONE;
+	AddressU  = Clamp;
+	AddressV  = Clamp;
+	SRGBTexture=FALSE;
+};
+
+struct VS_OUTPUT_POST {
+	float4 vpos  : POSITION;
+	float2 txcoord : TEXCOORD0;
+};
+
+struct VS_INPUT_POST {
+	float3 pos  : POSITION;
+	float2 txcoord : TEXCOORD0;
+};
+
+
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+VS_OUTPUT_POST VS_PostProcess(VS_INPUT_POST IN)
+{
+	VS_OUTPUT_POST OUT;
+
+	float4 pos=float4(IN.pos.x,IN.pos.y,IN.pos.z,1.0);
+
+	OUT.vpos=pos;
+	OUT.txcoord.xy=IN.txcoord.xy;
+
+	return OUT;
+}
+
+
+
+
+float4 PS_PostProcess(VS_OUTPUT_POST In) : COLOR
+{
+/*
+float	tempF1=1.0;
+float	tempF2=1.0;
+float	tempF3=1.0;
+float	tempF4=1.0;
+float	tempF5=1.3;
+float	tempF6=4.35;
+float	tempF7=1.12;
+float	tempF8=1.2;
+float	tempF9=3.17;
+float	tempF0=1.4;
+*/
+//START TO MAKE YOUR CHANGES FROM HERE
+	float4 res;
+	float4 uvsrc=0;
+	uvsrc.xy=In.txcoord;
+
+	res=0.0;
+	float4 coord=0.0;
+	coord.xy=In.txcoord.xy;
+	float4 origcolor=tex2D(SamplerColor, coord.xy);
+	float origgray=max(origcolor.r, max(origcolor.g, origcolor.b));
+
+
+float2 dir=0.0;
+
+	float4 color;
+
+
+
+
+dir.xy=1.7*pow(origgray,0.3)/ScreenSize;//tempF9*
+//dir.xy=2.0*pow(origgray,0.5) * float2(tempF9, tempF9)/ScreenSize;
+
+coord.xy=In.txcoord+dir.xy*1.0;
+color.r=tex2D(SamplerColor, coord.xy).r;
+
+coord.xy=In.txcoord+dir.xy*0.5;
+color.g=tex2D(SamplerColor, coord.xy).g;
+
+coord.xy=In.txcoord+dir.xy*0.3;
+color.b=tex2D(SamplerColor, coord.xy).b;
+
+res.xyz=color.xyz;
+
+
+/*
+dir.xy=tempF9*1.0*pow(origgray,0.5)/ScreenSize;
+//dir.xy=2.0*pow(origgray,0.5) * float2(tempF9, tempF9)/ScreenSize;
+
+coord.xy=In.txcoord-dir.xy*1.0;
+color.r=tex2D(SamplerColor, coord.xy).r;
+
+coord.xy=In.txcoord;//+dir.xy*0.6;
+color.g=tex2D(SamplerColor, coord.xy).g;
+
+coord.xy=In.txcoord+dir.xy*1.0;
+color.b=tex2D(SamplerColor, coord.xy).b;
+
+res.xyz=max(color.xyz, origcolor.xyz);
+
+*/
+
+	res.a=1.0;
+	return  res;
+}
+
+
+
+
+
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+technique PostProcess
+{
+    pass P0
+    {
+	VertexShader = compile vs_3_0 VS_PostProcess();
+	PixelShader  = compile ps_3_0 PS_PostProcess();
+
+	FogEnable=FALSE;
+	ALPHATESTENABLE=FALSE;
+	SEPARATEALPHABLENDENABLE=FALSE;
+	AlphaBlendEnable=FALSE;
+	FogEnable=FALSE;
+	SRGBWRITEENABLE=FALSE;
+	}
+}
+

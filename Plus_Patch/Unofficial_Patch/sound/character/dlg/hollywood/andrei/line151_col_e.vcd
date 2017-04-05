@@ -1,0 +1,112 @@
+// Choreo version 1
+actor "Andrei"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 21.856146
+      param "character/dlg/hollywood/andrei/line151_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "Andrei_Line151_col_E"	// added by wesp
+    {
+      time 0.000000 21.856146
+      param "Andrei_Line151_col_E"
+    }
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 3.900000 4.610000
+      param "0.710"
+    }
+    event silence "Silence"
+    {
+      time 4.780000 4.890000
+      param "0.110"
+    }
+    event silence "Silence"
+    {
+      time 6.320000 7.090000
+      param "0.770"
+    }
+    event silence "Silence"
+    {
+      time 11.179999 11.300000
+      param "0.120"
+    }
+    event silence "Silence"
+    {
+      time 11.889999 13.270000
+      param "1.380"
+    }
+    event silence "Silence"
+    {
+      time 14.020000 14.200000
+      param "0.180"
+    }
+    event silence "Silence"
+    {
+      time 14.219999 14.950000
+      param "0.730"
+    }
+    event silence "Silence"
+    {
+      time 15.630000 15.799999
+      param "0.170"
+    }
+    event silence "Silence"
+    {
+      time 15.820000 16.830000
+      param "1.010"
+    }
+    event silence "Silence"
+    {
+      time 18.410000 18.570000
+      param "0.160"
+    }
+    event silence "Silence"
+    {
+      time 18.619999 18.820000
+      param "0.200"
+    }
+    event silence "Silence"
+    {
+      time 18.990000 19.309999
+      param "0.320"
+    }
+    event silence "Silence"
+    {
+      time 21.719999 21.910000
+      param "0.190"
+    }
+    event loud "Loud"
+    {
+      time 0.190000 0.300000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 10.480000 10.590000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 11.330000 11.440000
+      param "0.110"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

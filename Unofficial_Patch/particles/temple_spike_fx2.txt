@@ -1,0 +1,41 @@
+Particle
+{
+	frames 		"15"
+	sprite		"spearheadember"
+	size		"1"
+	height		"-30,-5,-5"
+	width		".2,1"
+	rotation	"0"
+	depth_offset	"0"
+	movealign	"1"
+	parent_speed	"1"
+	sortfront	"1"
+	Radius_speed	"0"
+	Z_speed		"-50~50"
+	x_speed		"450~500"
+	red			"555"
+	green		"255"
+	blue		"255"
+	color		"0,0(1),255(2)"
+	mask		"0,0(1),255(2)"
+
+	spawn
+	{
+		particle	"temple_spike_fx1-2"
+		rate		"30"
+	}
+	spawn
+	{
+		particle	"temple_spike_fx1-3"
+		burst		"1"
+	}
+	
+	collide
+	{
+		
+		decal
+		{
+			particle	"temple_spike_fx1-1"
+		}
+	}
+}

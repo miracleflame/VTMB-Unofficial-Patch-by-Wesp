@@ -1,0 +1,516 @@
+{	1	}{	I told you everything - there's no reason for you to keep me here! Let me go!	}{	I told you everything - there's no reason for you to keep me here! Let me go!	}{	#	}{	npc.SetDisposition("Angry", 1)	}{	G.Story_State = 70	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	Dr. Johansen?	}{	Dr. Johansen?	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	Eh, what's up, doc?	}
+{	3	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	Tell me about the Ankaran Sarcophagus.	}{	Tell me about the Ankaran Sarcophagus.	}{	71	}{	Dominate 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	A speech on the sarcophagus.... Speech! SPEECH!	}{	A speech on the sarcophagus.... Speech! SPEECH!	}{	181	}{	Dementation 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	Shut up! Tell me what you know about the Ankaran Sarcophagus.	}{	Shut up! Tell me what you know about the Ankaran Sarcophagus.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	Finish my sentence or I am unhappy. "The Ankaran Sarcophagus is..."	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	ARRGH! Get away from me! Help! Don't hurt me!	}{	ARRGH! Get away from me! Help! Don't hurt me!	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	G.Story_State = 70	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	What makes you think I'm going to hurt you?	}{	What makes you think I'm going to hurt you?	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	13	}{	It's tempting.	}{	It's tempting.	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	I am an archaeologist! You can't hold me here like this, I am a hostage! I do not need protection! Bring me back to my hotel at once!	}{	I am an archaeologist! You can't hold me here like this, I am a hostage! I do not need protection! Bring me back to my hotel at once!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	There's a boat not far from here. Help me and I'll help you escape.	}{	There's a boat not far from here. Help me and I'll help you escape.	}{	61	}{	Persuasion 8 & pc.humanity >= 5	}{	G.Prof_Escape = 1	}{	}{	}{	}{	}{	}{	}{	I will take you on a boat ride if you speak of sarcophagi.	}
+{	23	}{	I'm here to help you, Dr. Johansen.	}{	I'm here to help you, Dr. Johansen.	}{	41	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	We are all hostages to our crazy fate. But I am not your captor.	}
+{	24	}{	Tell me about the Ankaran Sarcophagus.	}{	Tell me about the Ankaran Sarcophagus.	}{	71	}{	Dominate 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	A speech on the sarcophagus.... Speech! SPEECH!	}{	A speech on the sarcophagus.... Speech! SPEECH!	}{	181	}{	Dementation 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	I need some information. Perhaps if you help me out, I'll let you go.	}{	I need some information. Perhaps if you help me out, I'll let you go.	}{	41	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	Answers equal freedom, doc.	}
+{	27	}{	Settle down, gramps, or I'll give you something to really be afraid of.	}{	Settle down, gramps, or I'll give you something to really be afraid of.	}{	51	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	FINISH MY SENTENCE! "THE ANKARAN SARCOPHAGUS IS..."	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	What's wrong with you? Your face? Torture? Did they torture you with acid?	}{	What's wrong with you? Your face? Torture? Did they torture you with acid?	}{	#	}{	npc.SetDisposition("Disgusted", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Don't worry about it. I'm here to ask you some questions.	}{	Don't worry about it. I'm here to ask you some questions.	}{	61	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	33	}{	Yeah, that's it. Now, about this Ankaran Sarcophagus...	}{	Yeah, that's it. Now, about this Ankaran Sarcophagus...	}{	41	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	They did, and if you don't answer my questions, you'll get the same.	}{	They did, and if you don't answer my questions, you'll get the same.	}{	51	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Why are they doing this? What is this nonsense with the guns and the crosses and the talk of vampires? Why do they insist on keeping me here? Who are these people?	}{	Why are they doing this? What is this nonsense with the guns and the crosses and the talk of vampires? Why do they insist on keeping me here? Who are these people?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	They're gone now. I can let you go, just please answer my questions.	}{	They're gone now. I can let you go, just please answer my questions.	}{	61	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	There are no people now, just meat. You can come with me after we talk.	}
+{	43	}{	Bunch of militia nutjobs. Answer my questions and I'll get you out.	}{	Bunch of militia nutjobs. Answer my questions and I'll get you out.	}{	61	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	More questions... I don't work here! But I can let you go, if you say what I want.	}
+{	44	}{	It takes old people a long time to heal bones, never does heal right, either.	}{	It takes old people a long time to heal bones, never does heal right, either.	}{	51	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	Is it true you can get rid of old man smell by cutting off their nose?	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	I am an old man! How can you threaten me like this? Do you have a conscience? Just let me go... I have a wife and children, I want to see them again... help me.	}{	I am an old man! How can you threaten me like this? Do you have a conscience? Just let me go... I have a wife and children, I want to see them again... help me.	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	Answer my questions and there's no reason for me to hurt you.	}{	Answer my questions and there's no reason for me to hurt you.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	Talk to me and I will save my torture for a boring day.	}
+{	53	}{	Wrong answer, professor.	}{	Wrong answer, professor.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	Oh no, someone broke your fingers!	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Ja, ja, okay... anything, just get me out of these caverns and away from these crazies. I think I'm starting to get pneumonia.	}{	Ja, ja, okay... anything, just get me out of these caverns and away from these crazies. I think I'm starting to get pneumonia.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Tell me what you know about the Ankaran Sarcophagus.	}{	Tell me what you know about the Ankaran Sarcophagus.	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me a story about the Ankaran Sarcophagus.	}
+{	63	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	64	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	The sarcophagus? You went through all that trouble for the sarcophagus? Ja, I'll tell you, but, don't you think it would be better to get out of here before those men come back?	}{	The sarcophagus? You went through all that trouble for the sarcophagus? Ja, I'll tell you, but, don't you think it would be better to get out of here before those men come back?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	I dealt with them. They won't give us any problems.	}{	I dealt with them. They won't give us any problems.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	Men? No, just cave meat now.	}
+{	73	}{	Don't worry about them. Just answer my questions.	}{	Don't worry about them. Just answer my questions.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	Oh, them, I just punched their cards. Place is under new management.	}
+{	74	}{	I can make you answer my questions if I have to.	}{	I can make you answer my questions if I have to.	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	Pain is truth, I hear.	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	[Screams in pain]AARGH! [Sobs]What do you want from me?	}{	[Screams in pain]AARGH! [Sobs]What do you want from me?	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	83	}{	I'm going to ask a question. Answer it and I don't twist your leg off completely.	}{	I'm going to ask a question. Answer it and I don't twist your leg off completely.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	I ask, you answer, I smile, your bones don't poke through your skin.	}
+{	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	Ask - ask!	}{	Ask - ask!	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	How do I open the Ankaran Sarcophagus?	}{	How do I open the Ankaran Sarcophagus?	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	Finish my sentence. "To open the Ankaran Sarcophagus..."	}
+{	93	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	There is a key.	}{	There is a key.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.SetQuest("Johansen",2)	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	Where's the key?	}{	Where's the key?	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	I like this game. "I can find the key..."	}
+{	103	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	I don't know. The museum, I think.	}{	I don't know. The museum, I think.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	It's not there.	}{	It's not there.	}{	121	}{	}{	}{	}{	}{	}{	}{	}{	}{	No. No. No. No. No....	}
+{	113	}{	I think you're lying. Know what that means?	}{	I think you're lying. Know what that means?	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	THAT'S NOT HOW TO PLAY! PENALTY!	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	I don't know where it is! Please, just let me go!	}{	I don't know where it is! Please, just let me go!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	Think harder.	}{	Think harder.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	Go deeper into your mind.	}
+{	123	}{	The correct answer was "let me draw you a map".	}{	The correct answer was "let me draw you a map".	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	THAT'S NOT HOW TO PLAY! PENALTY!	}
+{	124	}{	You served your purpose. Scream loud, someone might find you.	}{	You served your purpose. Scream loud, someone might find you.	}{	441	}{	}{	}{	}{	}{	}{	}{	}{	}{	I leave you now. Ironically, you will be dug up by an archaeologist in many years.	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	[Screams in pain]AHHH! Oh, god... why do you do this? I tell you, I don't know. I only know the sarcophagus was stolen. The key must have been too. Let me out, I know nothing.	}{	[Screams in pain]AHHH! Oh, god... why do you do this? I tell you, I don't know. I only know the sarcophagus was stolen. The key must have been too. Let me out, I know nothing.	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	Do you have a copy of the key?	}{	Do you have a copy of the key?	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	Then make me a spare.	}
+{	133	}{	Ran out of bones. Looks like I've got to start on the other foot.	}{	Ran out of bones. Looks like I've got to start on the other foot.	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hey, there's another bone.	}
+{	134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	It could be on the ship still, maybe, I do not know. Now, please, let me go.	}{	It could be on the ship still, maybe, I do not know. Now, please, let me go.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	Do you have a copy of the key?	}{	Do you have a copy of the key?	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	Make me a spare.	}
+{	143	}{	The correct answer was "let me draw you a map".	}{	The correct answer was "let me draw you a map".	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	THAT'S NOT HOW TO PLAY! PENALTY!	}
+{	144	}{	You served your purpose. Start screaming, someone might find you.	}{	You served your purpose. Start screaming, someone might find you.	}{	441	}{	}{	}{	}{	}{	}{	}{	}{	}{	I leave you now. Ironically, you will be dug up by an archaeologist in many years.	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	No, the key is not like a door key. It is a large stone object, there are no copies.	}{	No, the key is not like a door key. It is a large stone object, there are no copies.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	I don't believe you. And when I don't believe someone, I tend to snap.	}{	I don't believe you. And when I don't believe someone, I tend to snap.	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	THAT'S NOT HOW TO PLAY! PENALTY!	}
+{	153	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	154	}{	You served your purpose. Scream loud, someone might find you.	}{	You served your purpose. Scream loud, someone might find you.	}{	441	}{	}{	}{	}{	}{	}{	}{	}{	}{	I leave you now. Ironically, you will be dug up by an archaeologist in many years.	}
+{	155	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	[Howls in pain]AHHH! I told you everything! [Sobs]Why are you doing this to me? I told you everything! Oh, oh, my wife... I want to see my wife again.	}{	[Howls in pain]AHHH! I told you everything! [Sobs]Why are you doing this to me? I told you everything! Oh, oh, my wife... I want to see my wife again.	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	You served your purpose. Scream loud, someone might find you.	}{	You served your purpose. Scream loud, someone might find you.	}{	0	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	I leave you now. Ironically, you will be dug up by an archaeologist in many years.	}
+{	163	}{	Where's the fucking key?!? I need that key, goddammit!	}{	Where's the fucking key?!? I need that key, goddammit!	}{	171	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	AND I NEED A KEY! PENALTY!	}
+{	164	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	[A cry of pain escapes him, dies]AHHHH....	}{	[A cry of pain escapes him, dies]AHHHH....	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	FindPlayer().HumanityAdd( -1 )	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	173	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	174	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	I guess if you can get all the way here, you deserve the answers - but can I make one request first? After I answer your questions, you help me escape.	}{	I guess if you can get all the way here, you deserve the answers - but can I make one request first? After I answer your questions, you help me escape.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	Sure.	}{	Sure.	}{	191	}{	}{	G.Prof_Escape = 1	}{	}{	}{	}{	}{	}{	}{	Ja.	}
+{	183	}{	Maybe.	}{	Maybe.	}{	191	}{	}{	}{	}{	}{	}{	}{	}{	}{	Maybe yes, maybe no.	}
+{	184	}{	Just answer my questions.	}{	Just answer my questions.	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	Pain is truth, I hear.	}
+{	185	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	Alright. Where should I begin?	}{	Alright. Where should I begin?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	What can you tell me about the sarcophagus?	}{	What can you tell me about the sarcophagus?	}{	211	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me a story about the sarcophagus.	}
+{	193	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	Blah, blah, blah. I want to get inside.	}
+{	194	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	195	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	201	}{	Please! There is no need for violence here. If you really want to know about the sarcophagus, I'll tell you. Such a thing to get overworked about!	}{	Please! There is no need for violence here. If you really want to know about the sarcophagus, I'll tell you. Such a thing to get overworked about!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	What can you tell me about the sarcophagus?	}{	What can you tell me about the sarcophagus?	}{	211	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me a story about the sarcophagus.	}
+{	203	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	204	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	205	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	208	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	211	}{	Let's start with the history of the Ankaran Sarcophagus. That is a long and interesting legend, lost and found throughout the ages. Tell me, are you familiar with the Assyrians?	}{	Let's start with the history of the Ankaran Sarcophagus. That is a long and interesting legend, lost and found throughout the ages. Tell me, are you familiar with the Assyrians?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	No.	}{	No.	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	???	}
+{	213	}{	Yes.	}{	Yes.	}{	241	}{	}{	}{	}{	}{	}{	}{	}{	}{	I love their work.	}
+{	214	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	Blah, blah, blah. I want to get inside.	}
+{	215	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	217	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	221	}{	Well, the Assyrians lived in Mesopotamia, a region between the Tigris and Euphrates rivers. Most of this territory is now modern-day Iraq, Iran, Turkey, and Syria.	}{	Well, the Assyrians lived in Mesopotamia, a region between the Tigris and Euphrates rivers. Most of this territory is now modern-day Iraq, Iran, Turkey, and Syria.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	Go on.	}{	Go on.	}{	231	}{	}{	}{	}{	}{	}{	}{	}{	}{	This one is listening.	}
+{	223	}{	I always hated history in school. Keep going, I guess.	}{	I always hated history in school. Keep going, I guess.	}{	231	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ramble on.	}
+{	224	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	Blah, blah, blah. I want to get inside.	}
+{	225	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	226	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	227	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	228	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	231	}{	They were warmongers, conquerors, a people driven to expand by their kings. Even before the Romans, they migrated their conquered people to the territories to stem revolt, but, uh... I'm afraid I'm getting off the subject.	}{	They were warmongers, conquerors, a people driven to expand by their kings. Even before the Romans, they migrated their conquered people to the territories to stem revolt, but, uh... I'm afraid I'm getting off the subject.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	Go on.	}{	Go on.	}{	241	}{	}{	}{	}{	}{	}{	}{	}{	}{	This one is listening.	}
+{	233	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	234	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	Blah, blah, blah. I want to get inside.	}
+{	235	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	236	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	238	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	241	}{	Uh ja, ja, well, the markings on the sarcophagus seem to hint that it is from some time between 1050 and 800 B.C., which was a period of fierce expansion by the Assyrians. Oddly, for those years, only one king shows up on the historical record.	}{	Uh ja, ja, well, the markings on the sarcophagus seem to hint that it is from some time between 1050 and 800 B.C., which was a period of fierce expansion by the Assyrians. Oddly, for those years, only one king shows up on the historical record.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	Please continue.	}{	Please continue.	}{	251	}{	}{	}{	}{	}{	}{	}{	}{	}{	This one is listening.	}
+{	243	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	244	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	245	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	Blah, blah, blah. I want to get inside.	}
+{	246	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	247	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	248	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	250	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	251	}{	While most likely he wiped all evidence of his predecessors' existence or passed the name to his heirs, one monarch, Messerach, the one-eyed king, is given credit for the territory and achievements of this time. But he would have had to have been over 250 years old! Like a Dracula or something.	}{	While most likely he wiped all evidence of his predecessors' existence or passed the name to his heirs, one monarch, Messerach, the one-eyed king, is given credit for the territory and achievements of this time. But he would have had to have been over 250 years old! Like a Dracula or something.	}{	#	}{	}{	G.Prof_Messerach = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	So?	}{	So?	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	Or something...?	}
+{	253	}{	What does this have to do with the sarcophagus?	}{	What does this have to do with the sarcophagus?	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	Messerach? Or someone else?	}
+{	254	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	Blah, blah, blah. I want to get inside.	}
+{	255	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	256	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	I find it hard to believe a sarcophagus with a person as important as Messerach could remain in - oh, what is the word? - pristine or intact condition for so many years, but this is who is believed to be contained within.	}{	I find it hard to believe a sarcophagus with a person as important as Messerach could remain in - oh, what is the word? - pristine or intact condition for so many years, but this is who is believed to be contained within.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	Are you sure?	}{	Are you sure?	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	Positive?	}
+{	263	}{	Was he a vampire?	}{	Was he a vampire?	}{	291	}{	}{	}{	}{	}{	}{	}{	}{	}{	A real vampire... really?	}
+{	264	}{	Why don't you just open it and find out?	}{	Why don't you just open it and find out?	}{	271	}{	}{	}{	}{	}{	}{	}{	}{	}{	Did you look inside?	}
+{	265	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	Blah, blah, blah. I want to get inside.	}
+{	266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	268	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	270	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	271	}{	Maybe you have not heard - it was stolen from the museum before we had a chance to open it. Usually, we use equipment to carbon-date, X-ray, and take air samples before we pry open the lid.	}{	Maybe you have not heard - it was stolen from the museum before we had a chance to open it. Usually, we use equipment to carbon-date, X-ray, and take air samples before we pry open the lid.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	272	}{	You compared him to a vampire... any reason?	}{	You compared him to a vampire... any reason?	}{	291	}{	}{	}{	}{	}{	}{	}{	}{	}{	A real vampire... really?	}
+{	273	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	274	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	Blah, blah, blah. I want to get inside.	}
+{	275	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	276	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	277	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	278	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	281	}{	An educated guess....	}{	An educated guess....	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	(Auto-Link)	}{	(Auto-Link)	}{	271	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	283	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	284	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	285	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	286	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	287	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	288	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	291	}{	You know, it is interesting that you ask me that. The goddess on the outside of the sarcophagus was Lamastu. In Assyrian myth, Lamastu was an evil demoness who preyed on humans. Many people cite her as the mother of vampire myth, and...	}{	You know, it is interesting that you ask me that. The goddess on the outside of the sarcophagus was Lamastu. In Assyrian myth, Lamastu was an evil demoness who preyed on humans. Many people cite her as the mother of vampire myth, and...	}{	#	}{	}{	G.Prof_Lamastu = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	And?	}{	And?	}{	301	}{	}{	}{	}{	}{	}{	}{	}{	}{	...	}
+{	293	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	Spare me all the bullshit. How do I open the sarcophagus?	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	Blah, blah, blah. I want to get inside.	}
+{	294	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	295	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	296	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	297	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	298	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	300	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	301	}{	The engravings on, and found around, the sarcophagus portray a regal figure drinking the blood of his enemies. Now, this image is found in many cultures, specifically among those of royal lineage... but there is a quite scientific explanation.	}{	The engravings on, and found around, the sarcophagus portray a regal figure drinking the blood of his enemies. Now, this image is found in many cultures, specifically among those of royal lineage... but there is a quite scientific explanation.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	302	}{	Which is?	}{	Which is?	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	He was the first LARPer?	}
+{	303	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	304	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	305	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	306	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	307	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	308	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	309	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	310	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	311	}{	A disorder known as porphyria. In short, it is caused by a deficiency of the iron in the blood, and in many cultures, for the nobility that could conceivably get away with the cure, the treatment was to... drink human blood.	}{	A disorder known as porphyria. In short, it is caused by a deficiency of the iron in the blood, and in many cultures, for the nobility that could conceivably get away with the cure, the treatment was to... drink human blood.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	312	}{	So Messerach drank human blood?	}{	So Messerach drank human blood?	}{	321	}{	}{	}{	}{	}{	}{	}{	}{	}{	He knew the sweet ecstasy of... I mean, he drank blood?	}
+{	313	}{	Porphyria? I think I might have that.	}{	Porphyria? I think I might have that.	}{	331	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ooh, I have that too.	}
+{	314	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	315	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	316	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	317	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	318	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	319	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	320	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	321	}{	Perhaps. Drinking the blood of your enemies is, if nothing else, symbolic. It can inspire fear in your foes and dissidents. Don't misunderstand me, I in no way believe it was a vampire. Vampires... that's what caused this whole mess - these maniacs believe they exist!	}{	Perhaps. Drinking the blood of your enemies is, if nothing else, symbolic. It can inspire fear in your foes and dissidents. Don't misunderstand me, I in no way believe it was a vampire. Vampires... that's what caused this whole mess - these maniacs believe they exist!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	322	}{	How did you find the Ankaran Sarcophagus?	}{	How did you find the Ankaran Sarcophagus?	}{	381	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	Why did YOU discover it?	}
+{	323	}{	Do you really believe Messerach is inside the sarcophagus?	}{	Do you really believe Messerach is inside the sarcophagus?	}{	341	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	Messerach is inside, with no doubt?	}
+{	324	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	325	}{	What else do you know about vampires?	}{	What else do you know about vampires?	}{	351	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	Can you tell me another story about vampires?	}
+{	326	}{	Enough with the history lesson. How do I open the sarcophagus?	}{	Enough with the history lesson. How do I open the sarcophagus?	}{	361	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	No more stories, I want in.	}
+{	327	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	328	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	329	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	330	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	331	}{	It is quite treatable today without having to drink the blood.	}{	It is quite treatable today without having to drink the blood.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	332	}{	Are you saying Messerach drank human blood?	}{	Are you saying Messerach drank human blood?	}{	321	}{	}{	}{	}{	}{	}{	}{	}{	}{	He knew the sweet ecstasy of... I mean, he drank blood?	}
+{	333	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	334	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	335	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	336	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	337	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	338	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	339	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	340	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	341	}{	That, I can't be sure of, nor can anyone. But I promise you, it is more likely to be filled with... ah... Gummy Bears, than vampires. Perhaps, maybe, a mummy - but not likely the kind to go about chasing Abbott and Costello.	}{	That, I can't be sure of, nor can anyone. But I promise you, it is more likely to be filled with... ah... Gummy Bears, than vampires. Perhaps, maybe, a mummy - but not likely the kind to go about chasing Abbott and Costello.	}{	#	}{	}{	G.Prof_Mess = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	342	}{	How did you find the Ankaran Sarcophagus?	}{	How did you find the Ankaran Sarcophagus?	}{	381	}{	G.Prof_Find == 0	}{	}{	}{	}{	}{	}{	}{	}{	Why did YOU discover it?	}
+{	343	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	344	}{	What else do you know about vampires?	}{	What else do you know about vampires?	}{	351	}{	G.Prof_Vamp == 0	}{	}{	}{	}{	}{	}{	}{	}{	Can you tell me another story about vampires?	}
+{	345	}{	So how does the sarcophagus open?	}{	So how does the sarcophagus open?	}{	361	}{	G.Prof_Vamp == 1 and G.Prof_Find == 1	}{	}{	}{	}{	}{	}{	}{	}{	No more stories, I want in.	}
+{	346	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	347	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	348	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	349	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	350	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	351	}{	Mmm... not much really. I'm an archaeologist, not a mythologist. But, I do know that Lamastu, the Assyrian demoness, was thought to have been the inspiration for Lilith, the first wife of Adam in the Jewish Old Testament, another source of the vampire myth.	}{	Mmm... not much really. I'm an archaeologist, not a mythologist. But, I do know that Lamastu, the Assyrian demoness, was thought to have been the inspiration for Lilith, the first wife of Adam in the Jewish Old Testament, another source of the vampire myth.	}{	#	}{	}{	G.Prof_Vamp = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	352	}{	How did you find the Ankaran Sarcophagus?	}{	How did you find the Ankaran Sarcophagus?	}{	381	}{	G.Prof_Find == 0	}{	}{	}{	}{	}{	}{	}{	}{	Why did YOU discover it?	}
+{	353	}{	Do you really believe Messerach is inside the sarcophagus?	}{	Do you really believe Messerach is inside the sarcophagus?	}{	341	}{	G.Prof_Mess == 0	}{	}{	}{	}{	}{	}{	}{	}{	Messerach is inside, with no doubt?	}
+{	354	}{	So how does the sarcophagus open?	}{	So how does the sarcophagus open?	}{	361	}{	G.Prof_Mess == 1 and G.Prof_Find == 1	}{	}{	}{	}{	}{	}{	}{	}{	No more stories, I want in.	}
+{	355	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	356	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	357	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	358	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	359	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	360	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	361	}{	Ah! Quite interesting. There is a surprisingly complex mechanical lock on the face of the sarcophagus. By sheer luck, we were able to find the key not far from the sarcophagus. Why no one ever found it and robbed it - it's perplexing.	}{	Ah! Quite interesting. There is a surprisingly complex mechanical lock on the face of the sarcophagus. By sheer luck, we were able to find the key not far from the sarcophagus. Why no one ever found it and robbed it - it's perplexing.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	362	}{	A key! Of course! Do you have it?	}{	A key! Of course! Do you have it?	}{	371	}{	}{	}{	}{	}{	}{	}{	}{	}{	I want it, and I can't wait for Xmas.	}
+{	363	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	364	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	365	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	366	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	367	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	368	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	369	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	370	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	371	}{	How strange you would ask. I haven't seen the key since it was loaded onto the Elizabeth Dane in Turkey. It was stolen before the sarcophagus, even! I am still hopeful that the police find both pieces before the contents can be disturbed.	}{	How strange you would ask. I haven't seen the key since it was loaded onto the Elizabeth Dane in Turkey. It was stolen before the sarcophagus, even! I am still hopeful that the police find both pieces before the contents can be disturbed.	}{	#	}{	}{	pc.SetQuest("Johansen",2)	}{	}{	}{	}{	}{	}{	}{	}
+{	372	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	373	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	374	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	375	}{	Do you have a copy of the key?	}{	Do you have a copy of the key?	}{	391	}{	}{	}{	}{	}{	}{	}{	}{	}{	Where is the spare?	}
+{	376	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	377	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	378	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	379	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	380	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	381	}{	Uh, that is... you see... in archaeology, one can spend years looking for a dig site - following local rumors, studying old maps... it's a complicated process, very boring.	}{	Uh, that is... you see... in archaeology, one can spend years looking for a dig site - following local rumors, studying old maps... it's a complicated process, very boring.	}{	#	}{	}{	G.Prof_Find = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	382	}{	I'm interested, please go on.	}{	I'm interested, please go on.	}{	401	}{	}{	}{	}{	}{	}{	}{	}{	}{	This one is listening.	}
+{	383	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	384	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	385	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	386	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	387	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	388	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	389	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	390	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	391	}{	No... it's not the kind of key you can copy at the hardware store. It's actually very sophisticated and I meant to study it at the museum.	}{	No... it's not the kind of key you can copy at the hardware store. It's actually very sophisticated and I meant to study it at the museum.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	392	}{	(Auto-Link)	}{	(Auto-Link)	}{	431	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	393	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	394	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	395	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	396	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	397	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	398	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	399	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	400	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	401	}{	Finding and organizing a dig is the least interesting part of an archaeologist's job. Trust me, you don't want to hear about it.	}{	Finding and organizing a dig is the least interesting part of an archaeologist's job. Trust me, you don't want to hear about it.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	402	}{	Sounds like you're hiding something. Care to share?	}{	Sounds like you're hiding something. Care to share?	}{	411	}{	pc.CalcFeat("Inspection") > 4 or IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	LYING!	}
+{	403	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	404	}{	Do you really believe Messerach is inside the sarcophagus?	}{	Do you really believe Messerach is inside the sarcophagus?	}{	341	}{	G.Prof_Mess == 0	}{	}{	}{	}{	}{	}{	}{	}{	Messerach is inside, with no doubt?	}
+{	405	}{	What else do you know about vampires?	}{	What else do you know about vampires?	}{	351	}{	G.Prof_Vamp == 0	}{	}{	}{	}{	}{	}{	}{	}{	Can you tell me another story about vampires?	}
+{	406	}{	How does the sarcophagus open?	}{	How does the sarcophagus open?	}{	361	}{	G.Prof_Vamp == 1 and G.Prof_Mess == 1	}{	}{	}{	}{	}{	}{	}{	}{	No more stories, I want in.	}
+{	407	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	408	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	409	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	410	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	411	}{	I don't know what would make you believe that; I have been very forthcoming with you so far. I [nervous laughter]think that maybe you are not as familiar with the process as me.	}{	I don't know what would make you believe that; I have been very forthcoming with you so far. I [nervous laughter]think that maybe you are not as familiar with the process as me.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	412	}{	It seems strange how it was found after all this time... like it wanted to be found.	}{	It seems strange how it was found after all this time... like it wanted to be found.	}{	421	}{	Persuasion 9	}{	}{	}{	}{	}{	}{	}{	}{	It called to you... no, it wrote you.	}
+{	413	}{	Tell me how you found the site.	}{	Tell me how you found the site.	}{	421	}{	Dominate 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	414	}{	I'm familiar with people LYING.	}{	I'm familiar with people LYING.	}{	421	}{	Dementation 3	}{	}{	}{	}{	}{	}{	}{	}{	I'm familiar with people LYING.	}
+{	415	}{	I am willing to beat it out of you if necessary.	}{	I am willing to beat it out of you if necessary.	}{	421	}{	Intimidate 7	}{	}{	}{	}{	}{	}{	}{	}{	Truth or pain?	}
+{	416	}{	Never mind. Do you really believe Messerach is inside the sarcophagus?	}{	Never mind. Do you really believe Messerach is inside the sarcophagus?	}{	341	}{	G.Prof_Mess == 0	}{	}{	}{	}{	}{	}{	}{	}{	Messerach is inside, with no doubt?	}
+{	417	}{	Never mind. What else do you know about vampires?	}{	Never mind. What else do you know about vampires?	}{	351	}{	G.Prof_Vamp == 0	}{	}{	}{	}{	}{	}{	}{	}{	Can you tell me another story about vampires?	}
+{	418	}{	So then how does the sarcophagus open?	}{	So then how does the sarcophagus open?	}{	361	}{	G.Prof_Vamp == 1 and G.Prof_Mess == 1	}{	}{	}{	}{	}{	}{	}{	}{	No more stories, I want in.	}
+{	419	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	420	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	421	}{	Okay... I'll tell you, ja. I was not even aware of the sarcophagus' existence until I received a package, with no reply address, in the mail. Inside was the information on how to find it and the key. Please, keep it a secret, or I could be ruined.	}{	Okay... I'll tell you, ja. I was not even aware of the sarcophagus' existence until I received a package, with no reply address, in the mail. Inside was the information on how to find it and the key. Please, keep it a secret, or I could be ruined.	}{	#	}{	}{	pc.AwardExperience("Society04")	}{	}{	}{	}{	}{	}{	}{	}
+{	422	}{	Very interesting. Do you really believe Messerach is inside the sarcophagus?	}{	Very interesting. Do you really believe Messerach is inside the sarcophagus?	}{	341	}{	G.Prof_Mess == 0	}{	}{	}{	}{	}{	}{	}{	}{	Messerach is inside, with no doubt?	}
+{	423	}{	Very interesting. What else do you know about vampires?	}{	Very interesting. What else do you know about vampires?	}{	351	}{	G.Prof_Vamp == 0	}{	}{	}{	}{	}{	}{	}{	}{	Can you tell me another story about vampires?	}
+{	424	}{	Very interesting. How does the sarcophagus open?	}{	Very interesting. How does the sarcophagus open?	}{	361	}{	G.Prof_Vamp == 1 and G.Prof_Mess == 1	}{	}{	}{	}{	}{	}{	}{	}{	No more stories, I want in.	}
+{	425	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	426	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	427	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	428	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	429	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	430	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	431	}{	I've answered all your questions. Do you think, now, you could please get me out of here? I don't care who you are or why you've had so many questions about the sarcophagus - I just want to leave this place.	}{	I've answered all your questions. Do you think, now, you could please get me out of here? I don't care who you are or why you've had so many questions about the sarcophagus - I just want to leave this place.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	432	}{	Alright, I'll free you. There's a boat nearby. We can escape on it.	}{	Alright, I'll free you. There's a boat nearby. We can escape on it.	}{	461	}{	}{	G.Prof_Escape = 2	}{	}{	}{	}{	}{	}{	}{	Let's go on a cruise together, just you and me.	}
+{	433	}{	Sorry. I'm afraid you know too much.	}{	Sorry. I'm afraid you know too much.	}{	441	}{	G.Prof_Escape == 0	}{	}{	}{	}{	}{	}{	}{	}{	Your head is inflated with secrets that might seep out. Apologies.	}
+{	434	}{	Sorry. I'm afraid you know too much.	}{	Sorry. I'm afraid you know too much.	}{	451	}{	G.Prof_Escape == 1	}{	}{	}{	}{	}{	}{	}{	}{	Your head is inflated with secrets that might seep out. Apologies.	}
+{	435	}{	Start screaming. Maybe someone will find you.	}{	Start screaming. Maybe someone will find you.	}{	441	}{	G.Prof_Escape == 0	}{	}{	}{	}{	}{	}{	}{	}{	I leave you now. Ironically, you will be dug up by an archaeologist in many years.	}
+{	436	}{	Start screaming. Maybe someone will find you.	}{	Start screaming. Maybe someone will find you.	}{	451	}{	G.Prof_Escape == 1	}{	}{	}{	}{	}{	}{	}{	}{	I leave you now. Ironically, you will be dug up by an archaeologist in many years.	}
+{	437	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	438	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	439	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	440	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	441	}{	Please! Please don't leave me here! HELP! NO, PLEASE, COME BACK!	}{	Please! Please don't leave me here! HELP! NO, PLEASE, COME BACK!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	442	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	443	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	444	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	445	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	446	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	447	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	448	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	449	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	450	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	451	}{	But you said you'd let me go! Don't leave me here! OH, NO! HELP! HELP! COME BACK!	}{	But you said you'd let me go! Don't leave me here! OH, NO! HELP! HELP! COME BACK!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	452	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	453	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	454	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	455	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	456	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	457	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	458	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	459	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	460	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	461	}{	Thank you, my friend. I don't know where you came from, but I will never forget this kindness.	}{	Thank you, my friend. I don't know where you came from, but I will never forget this kindness.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	462	}{	No problem.	}{	No problem.	}{	0	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	Don't mention it, or better do!	}
+{	463	}{	No problem.	}{	No problem.	}{	0	}{	G.Patch_Plus == 1	}{	FindPlayer().HumanityAdd( 1 )	}{	}{	}{	}{	}{	}{	}{	Don't mention it, or better do!	}
+{	464	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	465	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	466	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	467	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	468	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	469	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	470	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	471	}{	Help! Help! Does anybody hear me?	}{	Help! Help! Does anybody hear me?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	472	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	473	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	474	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	475	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	476	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	477	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	478	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	479	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	480	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	481	}{	You have no right to keep me here like this! I demand that you let me go!	}{	You have no right to keep me here like this! I demand that you let me go!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	482	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	483	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	484	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	485	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	486	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	487	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	488	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	489	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	490	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	491	}{	[long scream]OWWWW! AAAHHHH!	}{	[long scream]OWWWW! AAAHHHH!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	492	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	493	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	494	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	495	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	496	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	497	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	498	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	499	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	500	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	501	}{	Let me out of here! Please, why are you doing this?!? Somebody help!	}{	Let me out of here! Please, why are you doing this?!? Somebody help!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	502	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	503	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	504	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	505	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	506	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	507	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	508	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	509	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	510	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	511	}{	Please, let me go! I promise not to tell anyone any of this!	}{	Please, let me go! I promise not to tell anyone any of this!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	512	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	513	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	514	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	515	}{	(Starting Condition)	}{	}{	11	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	516	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

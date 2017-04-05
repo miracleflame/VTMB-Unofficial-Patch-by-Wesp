@@ -1,0 +1,26 @@
+{	1	}{	The moon is a mysterious mistress...	}{	The moon is a mysterious mistress...	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	Uh... she is?	}{	Uh... she is?	}{	11	}{	G.Flynn_Message == 0	}{	}{	}{	}{	}{	}{	}{	}{	Ah! You've tuned to my vibrations!	}
+{	3	}{	What? I think I read that book once.	}{	What? I think I read that book once.	}{	11	}{	G.Flynn_Message == 0	}{	}{	}{	}{	}{	}{	}{	}{	Speak not of my mistress in that manner.	}
+{	4	}{	Weirdo.	}{	Weirdo.	}{	11	}{	G.Flynn_Message == 0	}{	}{	}{	}{	}{	}{	}{	}{	None know better than I.	}
+{	5	}{	I think you have the wrong number.	}{	I think you have the wrong number.	}{	11	}{	G.Flynn_Message == 0	}{	}{	}{	}{	}{	}{	}{	}{	You've discombobulated your digits.	}
+{	6	}{	... who walks the night with demons of dread.	}{	... who walks the night with demons of dread.	}{	21	}{	G.Flynn_Message == 1	}{	}{	}{	}{	}{	}{	}{	}{	... who walks the night with demons of dread.	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	[sound of phone hanging up]...	}{	[sound of phone hanging up]...	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	G.No_Idle = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	13	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	...	}{	...	}{	#	}{	}{	G.No_Idle = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	Hello?	}{	Hello?	}{	1	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yes?	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	The Luckee Star motel. Room 2. Don't be long.	}{	The Luckee Star motel. Room 2. Don't be long.	}{	#	}{	}{	G.Lucky_Blood = 1; pc.SetQuest("Tape",6)	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	I'll be there.	}{	I'll be there.	}{	0	}{	}{	G.No_Idle = 0	}{	}{	}{	}{	}{	}{	}{	I'm only as long as my libido. Farewell.	}
+{	23	}{	Whatever.	}{	Whatever.	}{	0	}{	}{	G.No_Idle = 0	}{	}{	}{	}{	}{	}{	}{	May this star be lucky a little longer.	}
+{	24	}{	Goodbye.	}{	Goodbye.	}{	0	}{	}{	G.No_Idle = 0	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	(Starting Condition)	}{	}{	15	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

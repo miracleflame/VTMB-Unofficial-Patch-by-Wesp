@@ -1,0 +1,1210 @@
+// General InfoBarMessages Doc
+
+InfoBarMessages
+{
+	// Note: Do ***NOT*** Localize anything in this file!
+
+	// Note: These are order dependent, do *NOT* change the ordering without changing game_shared\infobar_shared.h!
+
+	// Note: In order to add a new msg type, you must change this file (InfoBarTypes.txt), Stats.txt (Infobar_Strings) for
+	//	the text, and game_shared\infobar_shared.h for code.
+
+	//
+	// InfoBarMsg
+	// {
+	//	"NeedsGender"	-- Whether Gender information is needed (used for sounds that are gender-based)
+	//	"HudMsg"		-- Whether to display this message in the HUD Feedback Window instead of being centered
+	//	"FilterMultiple"	-- Whether to allow multiple messages of the same type at the same time
+	//	"ResetTimer"	-- Whether to reset the "last-received" timer for this message type
+	//	"PrintType"		-- How to print the data, from one of the following types:
+	//					* Default: The data field should be utilized internally in the code
+	//					* Data: The data field should be printed directly (as a #)
+	//					* Passed_Str: The string is passed in directly (string generated on the server)
+	//					* Compound_Passed_Str: The string is passed in directly (string generated on the server), but prepended with the Infobar_Strings (stats.txt) string for its type
+	//	"R"			-- Color R value
+	//	"G"			-- Color G value
+	//	"B"			-- Color B value
+	//	"Disabled"		-- Disabled (will not be displayed)
+	// }
+	//
+
+
+	InfoBarMsg
+	{
+		"InternalName"	"Frenzy"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Need_Blood"
+
+		"NeedsGender"	"1"
+		"HudMsg"		"0"	// changed by wesp
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Botch"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"	// changed by wesp
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Masquerade_Violation"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"100"
+		"B"			"100"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Masquerade_Enforced"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"100"
+		"B"			"100"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Criminal_Violation"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"1"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"100"
+		"B"			"100"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Inventory_Full"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"	// changed by wesp
+		"FilterMultiple"	"1"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Quest_Complete"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Quest_Log_Updated"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"100"
+		"B"			"100"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Experience_Rewarded"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Data"
+		"R"			"230"
+		"G"			"100"
+		"B"			"100"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Money_Gained"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"0"
+		"PrintType"		"Data"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Money_Lost"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"0"
+		"PrintType"		"Data"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Humanity_Loss"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Humanity_Gain"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"New_Discipline_Gained"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Need_Lockpicks"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"	// changed by wesp
+		"FilterMultiple"	"1"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Feed_Failed_Not_Blueblood"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Feed_Failed_BadBlood"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Feed_Failed_Sated"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Key_Used"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Key_Removed"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Need_to_Holster_Weapon"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Inadequate Skill"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Award_Table_Experience"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"		"Lockpicking_Skill_Too_Low"
+
+		"NeedsGender"		"0"
+		"HudMsg"		"0"	// changed by wesp
+		"FilterMultiple"	"0"
+		"ResetTimer"		"1"
+		"PrintType"		"Data"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Skill_Increased"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Weapon_Mode_Select"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Trait_Effect_Gained"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Compound_Passed_Str"
+		"R"			"0"
+		"G"			"0"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Trait_Effect_Lost"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Compound_Passed_Str"
+		"R"			"0"
+		"G"			"255"
+		"B"			"0"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Item_Gained"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Passed_Str"
+		"R"			"230"
+		"G"			"100"
+		"B"			"100"
+	}
+
+	// Obfuscate Messages
+	InfoBarMsg
+	{
+		"InternalName"	"Obfuscate_Failed_Crouching"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Obfuscate_Failed_Crawling"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Obfuscate_Failed_Standing"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Obfuscate_Failed_Walking"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Obfuscate_Failed_Running"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Obfuscate_Failed_Jumping"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Obfuscate_Failed_Using"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Obfuscate_Failed_Attacking"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Obfuscate_Failed_Attacking_Not_Stealth"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Obfuscate_Failed_Seen"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Obfuscate_Failed_Feeding"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Obfuscate_Failed_Bumped_Object"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Damage_Inflicted_Amt"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Data"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+
+		"Disabled"		"1"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Damage_Soaked_Amt"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Data"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+
+		"Disabled"		"1"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Tgt_Discipline_No_Target_Found"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Tgt_Discipline_No_Target_Found_Radius"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Tgt_Discipline_No_Target_Found_Cone"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Physics_Hand_Object_Too_Heavy"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"1"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Physics_Hand_Standing_On_Object"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"1"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	// Area type messages
+	InfoBarMsg
+	{
+		"InternalName"	"Area_Type_CopAlert"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"	// changed by wesp
+		"FilterMultiple"	"1"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Area_Type_Combat"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"1"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Area_Type_Safe"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"1"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Area_Type_Elysium"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"1"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+	
+	InfoBarMsg
+	{
+		"InternalName"	"Feed_Failed_Cannot_Rat_Feed"
+
+		"NeedsGender"		"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"		"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+
+
+	InfoBarMsg
+	{
+		"InternalName"		"Game_Saved"
+
+		"NeedsGender"		"0"	// Whether Gender information is needed (used for sounds that are gender-based)
+		"HudMsg"		"1"	// Whether to display this message in the HUD Feedback Window instead of being centered
+		"FilterMultiple"	"0"	// Whether to allow multiple messages of the same type at the same time
+		"ResetTimer"		"0"	// Whether to reset the "last-received" timer for this message type
+		"PrintType"		"Default"	// Whether the data field should be printed directly (as a #), as opposed to utilized internally
+		"R"			"25"	// Color R value
+		"G"			"250"	// Color G value
+		"B"			"25"	// Color B value
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"		"Cannot_Save_Game"
+
+		"NeedsGender"		"0"	// Whether Gender information is needed (used for sounds that are gender-based)
+		"HudMsg"		"1"	// Whether to display this message in the HUD Feedback Window instead of being centered
+		"FilterMultiple"	"0"	// Whether to allow multiple messages of the same type at the same time
+		"ResetTimer"		"0"	// Whether to reset the "last-received" timer for this message type
+		"PrintType"		"Default"	// Whether the data field should be printed directly (as a #), as opposed to utilized internally
+		"R"			"250"	// Color R value
+		"G"			"25"	// Color G value
+		"B"			"25"	// Color B value
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Need_More_Blood"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Discipline_Activated"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Passed_Str"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+
+//		"Disabled"		"1"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Discipline_Deactivated"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Passed_Str"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+
+//		"Disabled"		"1"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Cop_Heightened_Alert_Start"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"1"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Cop_Heightened_Alert_End"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"1"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Weapons_Not_Allowed"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"1"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Disciplines_Not_Allowed"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"1"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	// Obfuscate Messages
+	InfoBarMsg
+	{
+		"InternalName"	"Obfuscate_Paused"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Obfuscate_Running"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"		"Dialog_Blocked_Combat"
+
+		"NeedsGender"		"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"1"
+		"ResetTimer"		"1"
+		"PrintType"		"Default"
+		"R"			"250"	// Color R value
+		"G"			"25"	// Color G value
+		"B"			"25"	// Color B value
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"		"NoSave_Dialog"
+
+		"NeedsGender"		"0"	// Whether Gender information is needed (used for sounds that are gender-based)
+		"HudMsg"		"1"	// Whether to display this message in the HUD Feedback Window instead of being centered
+		"FilterMultiple"	"0"	// Whether to allow multiple messages of the same type at the same time
+		"ResetTimer"		"0"	// Whether to reset the "last-received" timer for this message type
+		"PrintType"		"Default"	// Whether the data field should be printed directly (as a #), as opposed to utilized internally
+		"R"			"250"	// Color R value
+		"G"			"25"	// Color G value
+		"B"			"25"	// Color B value
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"		"NoSave_Grappling"
+
+		"NeedsGender"		"0"	// Whether Gender information is needed (used for sounds that are gender-based)
+		"HudMsg"		"1"	// Whether to display this message in the HUD Feedback Window instead of being centered
+		"FilterMultiple"	"0"	// Whether to allow multiple messages of the same type at the same time
+		"ResetTimer"		"0"	// Whether to reset the "last-received" timer for this message type
+		"PrintType"		"Default"	// Whether the data field should be printed directly (as a #), as opposed to utilized internally
+		"R"			"250"	// Color R value
+		"G"			"25"	// Color G value
+		"B"			"25"	// Color B value
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"		"NoSave_Using"
+
+		"NeedsGender"		"0"	// Whether Gender information is needed (used for sounds that are gender-based)
+		"HudMsg"		"1"	// Whether to display this message in the HUD Feedback Window instead of being centered
+		"FilterMultiple"	"0"	// Whether to allow multiple messages of the same type at the same time
+		"ResetTimer"		"0"	// Whether to reset the "last-received" timer for this message type
+		"PrintType"		"Default"	// Whether the data field should be printed directly (as a #), as opposed to utilized internally
+		"R"			"250"	// Color R value
+		"G"			"25"	// Color G value
+		"B"			"25"	// Color B value
+	}
+
+
+	InfoBarMsg
+	{
+		"InternalName"		"NoSave_Dead"
+
+		"NeedsGender"		"0"	// Whether Gender information is needed (used for sounds that are gender-based)
+		"HudMsg"		"1"	// Whether to display this message in the HUD Feedback Window instead of being centered
+		"FilterMultiple"	"0"	// Whether to allow multiple messages of the same type at the same time
+		"ResetTimer"		"0"	// Whether to reset the "last-received" timer for this message type
+		"PrintType"		"Default"	// Whether the data field should be printed directly (as a #), as opposed to utilized internally
+		"R"			"250"	// Color R value
+		"G"			"25"	// Color G value
+		"B"			"25"	// Color B value
+	}
+
+
+	InfoBarMsg
+	{
+		"InternalName"		"NoSave_Cutscene"
+
+		"NeedsGender"		"0"	// Whether Gender information is needed (used for sounds that are gender-based)
+		"HudMsg"		"1"	// Whether to display this message in the HUD Feedback Window instead of being centered
+		"FilterMultiple"	"0"	// Whether to allow multiple messages of the same type at the same time
+		"ResetTimer"		"0"	// Whether to reset the "last-received" timer for this message type
+		"PrintType"		"Default"	// Whether the data field should be printed directly (as a #), as opposed to utilized internally
+		"R"			"250"	// Color R value
+		"G"			"25"	// Color G value
+		"B"			"25"	// Color B value
+	}
+
+
+	InfoBarMsg
+	{
+		"InternalName"		"NoSave_Cutscene"
+
+		"NeedsGender"		"0"	// Whether Gender information is needed (used for sounds that are gender-based)
+		"HudMsg"		"1"	// Whether to display this message in the HUD Feedback Window instead of being centered
+		"FilterMultiple"	"0"	// Whether to allow multiple messages of the same type at the same time
+		"ResetTimer"		"0"	// Whether to reset the "last-received" timer for this message type
+		"PrintType"		"Default"	// Whether the data field should be printed directly (as a #), as opposed to utilized internally
+		"R"			"250"	// Color R value
+		"G"			"25"	// Color G value
+		"B"			"25"	// Color B value
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Discipline_Timer_Must_Wait"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Feed_Attempt_Failed"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Feed_Failed_Was_Lowborn"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+
+	InfoBarMsg
+	{
+		"InternalName"		"Lockpicking_Skill_Success"
+
+		"NeedsGender"		"0"
+		"HudMsg"		"0"	// changed by wesp
+		"FilterMultiple"	"0"
+		"ResetTimer"		"1"
+		"PrintType"		"Data"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"		"Cannot_Fight_On_Ladder"
+
+		"NeedsGender"		"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"1"
+		"ResetTimer"		"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"		"Door_Locked_By_Wanted_Level"
+
+		"NeedsGender"		"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"		"0"
+		"PrintType"		"Default"
+		"R"			"250"
+		"G"			"50"
+		"B"			"50"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Cant_Get_Weapon"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"1"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"		"Game_Saving"
+
+		"NeedsGender"		"0"	// Whether Gender information is needed (used for sounds that are gender-based)
+		"HudMsg"		"1"	// Whether to display this message in the HUD Feedback Window instead of being centered
+		"FilterMultiple"	"0"	// Whether to allow multiple messages of the same type at the same time
+		"ResetTimer"		"0"	// Whether to reset the "last-received" timer for this message type
+		"PrintType"		"Default"	// Whether the data field should be printed directly (as a #), as opposed to utilized internally
+		"R"			"250"	// Color R value
+		"G"			"250"	// Color G value
+		"B"			"25"	// Color B value
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Tgt_Discipline_No_Target_Found_Range"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"0"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Tgt_Discipline_No_Target_Found_Los"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"1"
+		"FilterMultiple"	"0"
+		"ResetTimer"	"0"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+
+	InfoBarMsg
+	{
+		"InternalName"	"Inventory_Full_Dropped"
+
+		"NeedsGender"	"0"
+		"HudMsg"		"0"
+		"FilterMultiple"	"1"
+		"ResetTimer"	"1"
+		"PrintType"		"Default"
+		"R"			"230"
+		"G"			"230"
+		"B"			"255"
+	}
+}

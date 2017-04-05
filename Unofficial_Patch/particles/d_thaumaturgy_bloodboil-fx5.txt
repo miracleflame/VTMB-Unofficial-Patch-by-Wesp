@@ -1,0 +1,38 @@
+Particle
+{
+	frames 		"40"
+
+	sprite		"ember4"
+	size		"5~15"
+
+	Rotation 	"0"
+
+	z_speed		"0,-50~-90"
+
+	parent_speed	"0"
+
+	red			"255"
+	green		"0~60"
+	blue		"0~20"
+	color		"0,0,255"
+
+	mask		"255,255,0"
+
+	spawn
+	{
+		particle	"D_Thaumaturgy_bloodboil_fx5_trail"
+		rate		"30"
+		radius		"0"
+		theta		"0~360"
+		phi			"90~-90"
+	}
+
+	collide 
+	{
+		
+		decal
+		{
+			particle	"d_thaumaturgy_bloodboil_ground_fx1"
+		}
+	}
+}

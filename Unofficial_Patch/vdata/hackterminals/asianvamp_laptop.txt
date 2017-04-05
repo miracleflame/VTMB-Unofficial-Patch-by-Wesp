@@ -1,0 +1,61 @@
+TerminalDefinition
+{
+	"screen saver"		"TOGV"		// Bounces around on the screen when the terminal is not being used, changed by wesp. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Temple of Golden Virtue"  
+		"line1"		"Progress Reports"
+		"line2"		""
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+	SubDir
+	{
+		"name"			"Reports"				// This is what is displayed as the name of this menu, and what the player must type to enter the menu (128 characters)
+//		"password"		""				// password required to run commands in this menu (16 characters)
+		"description"		"Cainite Observation" 	// This is printed each time the user enters this menu (128 characters)
+
+		Function
+		{
+			"name"		"10/12/04"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Report 01"		// this is a description of this function  (128 characters)
+			"runtext"	"My initial observations of the city indicate that the Cainites here are both scattered and unorganized. There are three individuals of note, but they seem to be involved in some sort of dispute. I shall continue to watch and listen."
+
+		}
+		
+		Function
+		{
+			"name"		"10/18/04"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Report 02"		// this is a description of this function  (128 characters)
+			"runtext"	"These Cainites are a curious and fragile race. They waste the gift of their immortality on petty schemings and fleshly gain. We will have little problem making this city our own."
+		}
+
+		Function
+		{
+			"name"		"10/21/04"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Report 03"		// this is a description of this function  (128 characters)
+			"runtext"	"It seems that my presence here has been noted by one of the Cainites, a 'Nosferatu' I believe they are called. He has entrusted the responsibility of my surveillance to a bumbling mortal fool. I have begun to follow this so-called spy... a small, amusing respite from my usual duties."
+		}
+
+		Function
+		{
+			"name"		"10/22/04-1"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Report 04"		// this is a description of this function  (128 characters), changed by wesp
+			"runtext"	"It seems that I have drawn the attention of a newcomer, an agent of the prince. I know very little about this individual, but the agent seems much more resourceful than most Cainites I have observed. I will prepare myself in the event that our paths cross."	// changed by wesp
+		}
+
+		Function
+		{
+			"name"		"10/22/04-2"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Report 05"		// this is a description of this function  (128 characters
+			"runtext"	"The agent of whom I spoke before has discovered the corpse of Virgil Crumb. An altercation seems imminent. If I do not survive, let my last report state that Santa Monica is ripe for the taking. You will find little resistance if we come here in force."
+		}
+	}
+}

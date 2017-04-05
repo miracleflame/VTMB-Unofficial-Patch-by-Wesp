@@ -1,0 +1,50 @@
+TerminalDefinition
+{
+	"screen saver"		"Ground 0 Internet Cafe"// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt and subdirector names(2 characters), changed by wesp
+
+	"email_password"	"Kafka"		// the user must type this to access email from this terminal
+	"email_username"	"Josefk"		// printed at the top of the email window, not used for log in. 
+	"difficulty"		"4"
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Ground 0 Login: Josef K"	//(any number of characters, but must fit in the screen
+	}
+
+	Email
+	{
+		"subject"	"(no subject)"
+		"sender"	"vnk@bobcom.vtm"
+		"body"		"Meet me in the alley behind the Fast Buck."
+		"dependency"	"G.Isaac_Tribute == 1"
+		"runscript"	"OnCourierEmail()"
+	}
+
+	Email
+	{
+		"subject"	"VIRUS ALERT: read me!"
+		"sender"	"snifq@mail.vtm"
+		"body"		"MAV has detected a virus in the attachment of this message. The virus has been quarantined and a notice sent to snifq@mail.vtm."
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+	SubDir
+	{
+		"name"			"Apps"	//(128 characters)
+		"description"		"Apps"
+
+		Function
+		{
+			"name"		"dir"
+			"description"	"directory listing"	
+			"runtext"	"Access denied. Your account balance is $0.56. To recharge your account, please speak to a Ground Zero employee."
+		}
+	}
+
+}

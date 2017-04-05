@@ -1,0 +1,62 @@
+// Written
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"			"models/w_null.mdl"
+	"infomodel"		"models/items/occult/info/info_handle.mdl"
+	"playermodel"		"models/items/occult/ground/handle.mdl"
+	"wieldmodel_f"		"models/w_null.mdl"
+	"wieldmodel_m"		"models/w_null.mdl"
+	"anim_prefix"		" "
+
+	"printname"			"Saulocept"
+	"description"		"A tidal chorus of whispers washes across your thoughts. They seem to be offering guidance, but their message eludes your conscious mind. Their motivations are unknown, but you find yourself increasingly willing to submit to their guidance. As long as you possess Saulocept you will gain an extra point of experience every time you are awarded three or more experience. Saulocept may or may not have other effects."
+
+	"weight"			"3"
+	"item_flags"		"1"
+	"item_type"			"powerup"
+	"item_worth"		"50"
+
+	"occult_min"		"2"
+	"occult_power"		"Experience"
+	"equip_effect"		"Item (Occult Experience)" 
+
+	"is_droppable"			"1"
+	"is_wieldable"		"0"
+
+	SoundData	// added by wesp
+	{
+		"pickup"
+		{
+			"sound1"	"items/Key/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"		"hud/Inventory_Images/General_Items/handle_sel"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"		"hud/Inventory_Images/General_Items/handle"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

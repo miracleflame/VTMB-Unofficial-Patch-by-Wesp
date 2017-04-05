@@ -1,0 +1,65 @@
+// Choreo version 1
+actor "prince2"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time -0.000000 2.378209
+      param "character/dlg/downtown la/prince2/line541_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"	// changed by wesp
+  {
+    event gesture "Lacroix2_Line541_col_E"
+    {
+      time 0.000000 2.333333
+      param "Lacroix2_Line541_col_E"
+    }
+  }
+  channel "Expressions"
+  {
+    event expression "Confused 01"
+    {
+      time 0.013333 1.013333
+      param "lacroix_expressions"
+      param2 "Confused"
+      event_ramp
+      {
+        0.0947 0.9836
+        0.8947 0.9742
+      }
+    }
+    event expression "Raised Both 01"
+    {
+      time 1.666667 2.333333
+      param "lacroix_expressions"
+      param2 "Raised Both"
+      event_ramp
+      {
+        0.0684 0.9532
+        0.5842 0.9415
+      }
+    }
+  }
+  channel "brows"
+  {
+    event expression "Anger 01"
+    {
+      time 0.906667 1.746667
+      param "lacroix_expressions"
+      param2 "Anger"
+      event_ramp
+      {
+        0.0947 0.5176
+        0.7421 0.5036
+      }
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

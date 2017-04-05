@@ -1,0 +1,47 @@
+// Choreo version 1
+actor "SMblueblood"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 3.691973
+      param "character/dlg/santa monica/smblueblood/line11_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "SM_BlueBlood_Line121_col_E"	// added by wesp
+    {
+      time 0.000000 3.691973
+      param "SM_BlueBlood_Line121_col_E"
+    }
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 1.420000 1.630000
+      param "0.210"
+    }
+    event silence "Silence"
+    {
+      time 2.200000 2.380000
+      param "0.180"
+    }
+    event loud "Loud"
+    {
+      time 1.000000 1.110000
+      param "0.110"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

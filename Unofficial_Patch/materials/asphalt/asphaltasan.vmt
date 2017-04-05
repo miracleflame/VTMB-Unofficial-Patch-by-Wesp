@@ -1,0 +1,26 @@
+"LightmappedGeneric"
+{
+	"$basetexture"	"asphalt/asphalta"
+	"$surfaceprop"	"concrete"
+	"$envmap"	"env_cubemap"
+	"$envmapmask"	"asphalt/asphalta_ref"
+
+	"Proxies"
+	{
+		"GlobalWetness"
+		{
+			"resultVar"	"$envmaptint[0]"
+			"scale"		 0.56
+		}
+		"GlobalWetness"
+		{
+			"resultVar"	"$envmaptint[1]"
+			"scale"		 0.56
+		}
+		"GlobalWetness"
+		{
+			"resultVar"	"$envmaptint[2]"
+			"scale"		 0.56
+		}
+	}
+}

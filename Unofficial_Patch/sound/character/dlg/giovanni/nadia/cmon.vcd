@@ -1,0 +1,26 @@
+// Choreo version 1
+actor "Nadia"
+{
+  channel "WAV"
+  {
+    event speak "line411_col_e"
+    {
+      time 0.193333 2.795215
+      param "Character\dlg\Giovanni\Nadia\line411_col_e.mp3"
+      fixedlength
+    }
+  }
+  channel "Animation"
+  {
+    event gesture "calling_back"
+    {
+      time 0.000000 1.200000
+      param "calling_back"
+      sequenceduration 3.000000
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

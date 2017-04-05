@@ -1,0 +1,641 @@
+//////////////////////////////////////////////////
+// NPC Stat Templates (Packages)
+//
+//	NPCs in worldcraft are assigned one of these which determines their statistics.
+
+ClanDataTables
+{
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"OfficerGeneric"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+//			"ClanEffect"			""
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"SoundGroup"	"Officer"
+			"NpcFakeReloadCountMin"		"6.0" // anaconda
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"5"
+			"Dexterity"				"2"
+			"Stamina"				"3"
+			"Charisma"			"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"5"
+			"Intelligence"			"1"
+			"Wits"					"3"
+
+			"BloodPool"				"8"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"100"
+			"Armor_Rating"		"2"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"3"
+			"Dodge"					"1"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"4"
+			"Melee"					"3"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"7"   // defense vs pc feeding
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"HunterSafeArea"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+//			"ClanEffect"			""
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"SoundGroup"	"Italian_Accent"
+			"NpcFakeReloadCountMin"		"1.0" // crossbow
+			"NeverInnocent"			"1"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"3"
+			"Charisma"			"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"5"
+			"Intelligence"			"1"
+			"Wits"					"3"
+
+			"BloodPool"				"8"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"100"
+			"Armor_Rating"		"2"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"3"
+			"Dodge"					"1"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"2"
+			"Melee"					"2"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"7"   // defense vs pc feeding
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+			Disciplines
+			{
+				"shield_of_faith"		"3"
+			}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"HunterSafeArea2"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+//			"ClanEffect"			""
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"SoundGroup"	"Italian_Accent"
+			"NeverInnocent"			"1"	// added by wesp
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"2"
+			"Stamina"				"4"
+			"Charisma"			"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"5"
+			"Intelligence"			"1"
+			"Wits"					"3"
+
+			"BloodPool"				"8"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"120"
+			"Armor_Rating"		"2"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"3"
+			"Dodge"					"3"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"3"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"7"   // defense vs pc feeding
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+			Disciplines
+			{
+				"shield_of_faith"		"3"
+			}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+ClanData
+	{
+		Text
+		{
+			"TemplateName"			"HunterSafeArea3"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+//			"ClanEffect"			""
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"SoundGroup"	"Italian_Accent"
+			"NeverInnocent"			"1"	// added by wesp
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"4"
+			"Dexterity"				"2"
+			"Stamina"				"5"
+			"Charisma"			"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"5"
+			"Intelligence"			"1"
+			"Wits"					"5"
+
+			"BloodPool"				"8"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"136"
+			"Armor_Rating"		"2"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"3"
+			"Dodge"					"4"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"4"
+			"Melee"					"3"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"9"   // defense vs pc feeding
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+			Disciplines
+			{
+				"shield_of_faith"		"3"
+			}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"ChunkGuard"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+//			"ClanEffect"			""
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"SoundGroup"	"Officer"	// changed by wesp
+			"NpcFakeReloadCountMin"		"6.0" // thirtyeight
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"1"
+			"Stamina"				"2"
+			"Charisma"				"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"3"
+			"Intelligence"			"1"
+			"Wits"					"2"
+
+			"BloodPool"				"6"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"ChunkGuard"
+			"Excluded_Equipment"	"ChunkGuard"
+			
+			"Max_Health"			"60"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"1"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"1"
+			"Melee"					"1"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"2"   // Defense vs pc feed
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"ClinicGuard"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+//			"ClanEffect"			""
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"SoundGroup"	"Officer"	// changed by wesp
+			"NpcFakeReloadCountMin"		"6.0" // thirtyeight
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"			"3"
+			"Dexterity"			"1"
+			"Stamina"			"2"
+			"Charisma"			"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"3"
+			"Intelligence"			"1"
+			"Wits"					"2"
+
+			"BloodPool"				"6"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"ChunkGuard"
+			"Excluded_Equipment"	"ChunkGuard"
+			
+			"Max_Health"			"52"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"0"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"1"
+			"Melee"					"1"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"2"   // Defense vs pc feed
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"MuseumGuard"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+//			"ClanEffect"			""
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"SoundGroup"	"Officer"	// changed by wesp
+			"NormalFootfallDist"		"1400"
+			"HeavyFootfallDist"		"1700"
+			"NormalFootfallVol"		"1.00"
+			"HeavyFootfallVol"		"1.00"
+			"NpcFakeReloadCountMin"		"6.0" // 38
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"4"
+			"Dexterity"				"2"
+			"Stamina"				"2"
+			"Charisma"				"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"5"
+			"Intelligence"			"1"
+			"Wits"					"3"
+
+			"BloodPool"				"6"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+
+			"Max_Health"			"64"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"5"
+			"Dodge"					"1"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"4"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"   // defense vs pc feeding
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+
+}
+

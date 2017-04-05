@@ -1,0 +1,59 @@
+// Written
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"	"models/w_null.mdl"
+	"infomodel"	"models/items/Keycard/Info/item_i_keycard.mdl"
+	"playermodel"	"models/items/Keycard/Ground/g_keycard.mdl"
+	"wieldmodel_f"	"models/w_null.mdl"
+	"wieldmodel_m"	"models/w_null.mdl"
+	"anim_prefix"	" "
+
+	"printname"	"Tattoo Parlor Key"
+	"description"	"You're not sure what this key is for."
+
+	"bucket"		"1"
+	"bucket_position"	"2"
+
+	"camera_class"		"noswitch"
+	"weight"		"3"
+	"item_flags"		"1"
+	"item_type"		"generic"
+	"item_worth"		"0"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Key/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/keycard_sel"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/keycard"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

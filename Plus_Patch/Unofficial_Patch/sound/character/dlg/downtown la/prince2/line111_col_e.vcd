@@ -1,0 +1,99 @@
+// Choreo version 1
+actor "prince2"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 12.853311
+      param "character/dlg/downtown la/prince2/line111_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"	// changed by wesp
+  {
+    event gesture "Lacroix2_Line111_col_E"
+    {
+      time 0.000000 12.833333
+      param "Lacroix2_Line111_col_E"
+    }
+  }
+  channel "Expressions"
+  {
+    event expression "Concern No Deform 01"
+    {
+      time 0.013333 1.080000
+      param "lacroix_expressions"
+      param2 "Concern No Deform"
+      event_ramp
+      {
+        0.0740 0.9930
+        0.9880 0.9555
+      }
+    }
+    event expression "Raised Both 01"
+    {
+      time 2.760000 4.680000
+      param "lacroix_expressions"
+      param2 "Raised Both"
+      event_ramp
+      {
+        0.0940 0.7424
+        0.1380 0.7424
+        1.7660 0.7424
+        1.7940 0.7424
+      }
+    }
+    event expression "Concern No Deform 02"
+    {
+      time 6.453333 8.086666
+      param "lacroix_expressions"
+      param2 "Concern No Deform"
+      event_ramp
+      {
+        0.1049 0.9696
+        1.5008 0.9508
+      }
+    }
+  }
+  channel "brows"
+  {
+    event expression "Anger 01"
+    {
+      time 1.000000 2.833333
+      param "lacroix_expressions"
+      param2 "Anger"
+      event_ramp
+      {
+        0.0960 0.9602
+        1.0450 0.9953
+        1.2575 0.5386
+        1.3025 0.5386
+        1.6089 0.5386
+        1.6554 0.5386
+      }
+    }
+    event expression "Anger 02"
+    {
+      time 8.653333 12.780000
+      param "lacroix_expressions"
+      param2 "Anger"
+      event_ramp
+      {
+        0.1488 0.9391
+        1.6610 0.9953
+        2.0659 0.5714
+        2.1415 0.5714
+        2.4390 0.5714
+        2.4756 0.5714
+        2.6537 1.0000
+        3.9301 0.9040
+      }
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

@@ -1,0 +1,56 @@
+Particle
+{
+	loop		"1"
+	fps		"30"
+
+	spawn		// restored by wesp
+	{
+		particle	"MM_cursor_fx1"
+		rate		"100"
+		z		"0"
+		radius		"0~.05"
+		theta		"90"
+		phi		"0~360"
+	}
+
+	spawn		// added by wesp
+	{
+		particle	"m_clouds_emmiter"
+		rate		"1"
+		z		"-30"
+
+	}
+
+	spawn		// added by wesp
+	{
+		particle	"m_clans_emmiter"
+		rate		"1"
+		z		"-65"
+
+	}
+
+	spawn		// added by wesp
+	{
+		particle	"m_cels_emmiter"
+		rate		"1"
+		z		"-15"
+
+	}
+	spawn		// added by wesp
+	{
+		particle	"m_fire2-emitter"
+		rate		"1"
+		z		"-50"
+
+	}
+
+	spawn		// added by wesp
+	{
+		particle	"vtm_glowtemp"
+		rate		"1"
+		//z		"-75"
+
+	}
+
+}
+

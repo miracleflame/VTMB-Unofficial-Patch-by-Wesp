@@ -1,0 +1,59 @@
+TerminalDefinition
+{
+	"screen saver"		"Kamikazi Zen"					// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""						// these surround the command prompt (2 characters), changed by wesp
+
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Kamikazi Zen: Network Operations"  
+		"line1"		""
+
+	}
+	
+	SubDir
+	{
+		"name"			"Net Security"	//(128 characters)
+		"description"		"NETWORK CONTROL HUB: Available Connections"
+		"password"		"nirvana"
+		"difficulty"		"8"	
+
+		Function
+		{
+			"name"		"schrecknet"
+			"description"	"Available Connections"	
+			"runtext"	"schrecknet hub activated:
+You'd best do your job and get the fuck out of there, newbie. Tick-tock....
+Need help? If so, find the office of a guy named Rob Nesler... I'm logged in there and will see what I can do for you. Otherwise, you're on your own. 
+Thanks, kid and take care of yourself out there.
+>m1tn1ck<" // changed by wesp
+			"runscript"	"mitSetQuestNine()"
+			"trigger"	"0"
+		}
+	}
+
+	SubDir
+	{
+		"name"			"Vault"	//(128 characters)
+		"password"		"nippelhcs"
+		"description"		"Available Connections"
+
+		Function
+		{
+			"name"		"unlock"	// changed by wesp
+			"description"	"unlock"	// changed by wesp
+			"runtext"	"Vault is unlocked."	// changed by wesp
+			"trigger"	"0"
+
+		}
+
+		Function
+		{
+			"name"		"lock"	// changed by wesp
+			"description"	"lock"	// changed by wesp	
+			"runtext"	"Vault is locked."	// changed by wesp
+			"trigger"	"1"
+		}
+	}
+}

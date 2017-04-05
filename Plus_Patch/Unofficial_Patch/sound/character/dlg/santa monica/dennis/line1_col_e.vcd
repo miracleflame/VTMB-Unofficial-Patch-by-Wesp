@@ -1,0 +1,92 @@
+// Choreo version 1
+actor "Dennis"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 16.460045
+      param "character/dlg/santa monica/dennis/line1_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "Dennis_Line291_Col_E"	// added by wesp
+    {
+      time 0.000000 13.389206
+      param "Dennis_Line291_Col_E"
+    }
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 0.000000 0.170000
+      param "0.170"
+    }
+    event silence "Silence"
+    {
+      time 1.230000 1.510000
+      param "0.280"
+    }
+    event silence "Silence"
+    {
+      time 2.820000 3.300000
+      param "0.480"
+    }
+    event silence "Silence"
+    {
+      time 7.270000 7.950000
+      param "0.680"
+    }
+    event silence "Silence"
+    {
+      time 9.220000 9.800000
+      param "0.580"
+    }
+    event silence "Silence"
+    {
+      time 10.040000 10.280000
+      param "0.240"
+    }
+    event silence "Silence"
+    {
+      time 10.370000 10.500000
+      param "0.130"
+    }
+    event silence "Silence"
+    {
+      time 10.730000 11.200000
+      param "0.470"
+    }
+    event silence "Silence"
+    {
+      time 12.960000 13.110000
+      param "0.150"
+    }
+    event silence "Silence"
+    {
+      time 14.380000 14.520000
+      param "0.140"
+    }
+    event silence "Silence"
+    {
+      time 14.900000 15.259999
+      param "0.360"
+    }
+    event loud "Loud"
+    {
+      time 13.809999 13.929999
+      param "0.120"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

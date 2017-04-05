@@ -1,0 +1,267 @@
+{	1	}{	Uh-huh... yeah, you look real good at me. Before we do bu'ness - before anything changes hands - I want you to hear this: If you try to cross me, I will fuck you. If you tell the cops about me, I will find you, then I will fuck you. And if you are a cop...	}{	Okay... yeah. Listen up, girl. Cash-money up front and that is non-negotiable in your case. So we're clear, I have got not one moral fiber restraining me against hitting a bitch should she get out of line, you understand?	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	(Auto-Link)	}{	(Auto-Link)	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	I will fuck you and your whole family, includin' that squirrel in your front yard. Now that we know the terms, what can I do to make you walk out feeling like you just flew first-class with a cheerleader in your lap?	}{	That said, what can I do to make you feel like the world is your bucket of fudge ripple with walnuts?	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	What've you got?	}{	What've you got?	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	What's in your little green bag?	}
+{	13	}{	I'm looking for Astrolite. Got any?	}{	I'm looking for Astrolite. Got any?	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need astral light to set the sky on fire.	}
+{	14	}{	You know a guy named Mercurio?	}{	You know a guy named Mercurio?	}{	51	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	Give me the Astrolite now and I won't throw your balls into the Pacific.	}{	Give me the Astrolite now and I won't throw your balls into the Pacific.	}{	61	}{	Intimidate 3	}{	}{	}{	}{	}{	}{	}{	}{	Give me the astral light or your fun sack will become as fish.	}
+{	16	}{	Do you know the fleet-footed god?	}{	Do you know the fleet-footed god?	}{	251	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	Do you know the fleet-footed god?	}
+{	17	}{	You can kiss your ass goodbye, bitch!	}{	You can shove your fudge ripple up your ass!	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	I'd like to kill you now, please.	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	Yeah... that is what I love about this business. Fine women come to my house for my shit. I don't even got to call 'em on the phone or nothin'. Say there, pretty lady, what can I hook you up with tonight?	}{	Yeah... that is what I love about this business. Fine women come to my house for my shit. I don't even got to call 'em on the phone or nothin'. Say there, pretty lady, what can I hook you up with tonight?	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	What've you got?	}{	What've you got?	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	What's in your little green bag?	}
+{	23	}{	I'm looking for Astrolite. Got any?	}{	I'm looking for Astrolite. Got any?	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need astral light to set the sky on fire.	}
+{	24	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	My staff maintains at all times a twenty-four carat smorgasbord of A+ narcotics guaranteed to make the competition's shit seem like a weak cappuccino in comparison. White, green, blues, reds, black - you pick a color.	}{	My staff maintains at all times a twenty-four carat smorgasbord of A+ narcotics guaranteed to make the competition's shit seem like a weak cappuccino in comparison. White, green, blues, reds, black - you pick a color.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	I'm looking for something different. Got any explosives?	}{	I'm looking for something different. Got any explosives?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need explosions.	}
+{	33	}{	You know a guy named Mercurio?	}{	You know a guy named Mercurio?	}{	51	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	Give me the Astrolite now and I won't throw your balls into the Pacific.	}{	Give me the Astrolite now and I won't throw your balls into the Pacific.	}{	61	}{	Intimidate 3	}{	}{	}{	}{	}{	}{	}{	}{	Give me the astral light or your fun sack will become as fish.	}
+{	35	}{	Do you know the fleet-footed god?	}{	Do you know the fleet-footed god?	}{	251	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Ain't that a goddamn coincidence? You know you da second person to ask for dat tonight? Considerin' dat's not a very popular item, I have really got to wonder why you thought I might have some.	}{	Ain't that a goddamn coincidence? You know you da second person to ask for dat tonight? Considerin' dat's not a very popular item, I have really got to wonder why you thought I might have some.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	Give me the Astrolite.	}{	Give me the Astrolite.	}{	71	}{	Dominate 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	43	}{	Nothing matters. Give me the astral light.	}{	Nothing matters. Give me the astral light.	}{	71	}{	Dementation 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	Give me the Astrolite.	}{	Give me the Astrolite.	}{	71	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	The Astrolite is perfect for me.	}{	The Astrolite is perfect for me.	}{	71	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	I suppose I could try to find another seller, but I heard you were the man to talk to.	}{	I suppose I could try to find another seller, but I heard you were the man to talk to.	}{	81	}{	Persuasion 3	}{	}{	}{	}{	}{	}{	}{	}{	Voices told me you had what I need, but maybe they were wrong.	}
+{	47	}{	I heard you have some.	}{	I heard you have some.	}{	91	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	I heard your name on the midnight wind.	}{	I heard your name on the midnight wind.	}{	261	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	Give me the Astrolite now and I won't throw your balls into the Pacific.	}{	Give me the Astrolite now and I won't throw your balls into the Pacific.	}{	61	}{	Intimidate 3	}{	}{	}{	}{	}{	}{	}{	}{	Give me the astral light or your fun sack will become as fish.	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Mercurio? Yeah, we know him. [talking to others in the house]We know Mercurio, don't we? How is our friend Mercurio?	}{	Mercurio? Yeah, we know him. [talking to others in the house]We know Mercurio, don't we? How is our friend Mercurio?	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	Not well. I came for the Astrolite you promised him.	}{	Not well. I came for the Astrolite you promised him.	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	He carries the scars of your betrayal. I come to take what is his.	}
+{	53	}{	Give me the Astrolite now and I won't throw your balls into the Pacific.	}{	Give me the Astrolite now and I won't throw your balls into the Pacific.	}{	61	}{	Intimidate 3	}{	}{	}{	}{	}{	}{	}{	}{	Give me the astral light or your fun sack will become as fish.	}
+{	54	}{	Alive. Which is more than you'll be. This is what they call payback, asshole.	}{	Alive. Which is more than you'll be. This is what they call payback, asshole.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	He'll be better when I make him a gift of your vitals.	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	[Laughs]He he ha ha. I like my balls where dey are right now, thank you very much. Shit... you have got to be one of the stupidest motherfuckers in existence. What'd I tell you when you came in here, huh? [talking to others in the house]Get da boat ready, boys. We goin' shark fishin'.	}{	[Laughs]He he ha ha. I like my balls where dey are right now, thank you very much. Shit... you have got to be one of the stupidest motherfuckers in existence. What'd I tell you when you came in here, huh? [talking to others in the house]Get da boat ready, boys. We goin' shark fishin'.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Ha ha.... Bring it.	}{	Ha ha.... Bring it.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	}
+{	63	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	64	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Explosives? Fun stuff. You can get yourself a lotta attention that way. I may have somethin'. Why would you need to get your hands on some fireworks?	}{	Explosives? Fun stuff. You can get yourself a lotta attention that way. I may have somethin'. Why would you need to get your hands on some fireworks?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	I'm going fishing.	}{	I'm going fishing.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	The fish are ripe for hunting.	}
+{	73	}{	Money problems. I need to make a car disappear for the insurance.	}{	Money problems. I need to make a car disappear for the insurance.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	I want to set the night on fire.	}
+{	74	}{	Wife got the house in the divorce.	}{	Husband got the house in the divorce.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	There's gold in them there hills... and my ex.	}
+{	75	}{	May want to watch the news tonight.	}{	May want to watch the news tonight.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	The news shall ring of my glorious deeds!	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Sure, okay. I got some stuff that'll do the trick. Astrolite: it's like TNT's bigger, meaner cousin with a prison record. I don't like keepin' the stuff around - too dangerous - so I'll let you have it for a little less than the goin' rate.	}{	Sure, okay. I got some stuff that'll do the trick. Astrolite: it's like TNT's bigger, meaner cousin with a prison record. I don't like keepin' the stuff around - too dangerous - so I'll let you have it for a little less than the goin' rate.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	I'm good for the money. Believe me, I'd never rip a guy like you off.	}{	I'm good for the money. Believe me, I'd never rip a guy like you off.	}{	241	}{	Persuasion 4	}{	}{	}{	}{	}{	}{	}{	}{	Give me the astral light and soon your pockets will be full on my word.	}
+{	83	}{	I'll give you $300 then, if you really need to get rid of it that badly.	}{	I'll give you $300 then, if you really need to get rid of it that badly.	}{	111	}{	Haggle 3 & pc.CurrentMoney() >= 300	}{	pc.MoneyRemove( 300 )	}{	}{	}{	}{	}{	}{	}{	I'll give you three hundred simoleons.	}
+{	84	}{	I'll give you $500.	}{	I'll give you $500.	}{	111	}{	Haggle -3 & pc.CurrentMoney() >= 500	}{	pc.MoneyRemove( 500 )	}{	}{	}{	}{	}{	}{	}{	I'll give you five Ben Franklins.	}
+{	85	}{	Anything else you take besides cash?	}{	Anything else you take besides cash?	}{	121	}{	F_Seduction 3	}{	}{	}{	}{	}{	}{	}{	}{	Money is so boring, sweetheart. I'm sure we can figure something else out....	}
+{	86	}{	Anything else you take besides cash?	}{	Anything else you take besides cash?	}{	151	}{	F_Seduction -3	}{	}{	}{	}{	}{	}{	}{	}{	Money is so boring, sweetheart. I'm sure we can figure something else out....	}
+{	87	}{	I don't have any money.	}{	I don't have any money.	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	My pockets are as empty as my head.	}
+{	88	}{	Mercurio already paid for it. Remember him?	}{	Mercurio already paid for it. Remember him?	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	Fleet-footed Mercury already paid for it, do you not remember?	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	Yeah? And who'd you hear dat from? The Yellow Pages? Seems a little suspicious. Know what? I'll let you have the Astrolite. Right when we get into international waters. [Talking to others in the house]Boys! We gonna do a little shark fishin'!	}{	Yeah? And who'd you hear dat from? The Yellow Pages? Seems a little suspicious. Know what? I'll let you have the Astrolite. Right when we get into international waters. [Talking to others in the house]Boys! We gonna do a little shark fishin'!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	I don't think so.	}{	I don't think so.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	}
+{	93	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	[Surprised]Is that a fact, jack?!? Damn.... I tell you what. If you can get outta here without a bullet through your face, I'll let you keep it.	}{	[Surprised]Is that a fact, jack?!? Damn.... I tell you what. If you can get outta here without a bullet through your face, I'll let you keep it.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	I accept.	}{	I accept.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	}
+{	103	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	You just bought yourself a bomb. You get caught with this, you ain't get it from me, understand? I don't care if you tell 'em Santa Claus brought it for you. But you drop my name, and you'll wish you would have blown yourself up.	}{	You just bought yourself a bomb. You get caught with this, you ain't get it from me, understand? I don't care if you tell 'em Santa Claus brought it for you. But you drop my name, and you'll wish you would have blown yourself up.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.GiveItem("item_g_astrolite"); G.Dennis_Astrolite = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Right. Thanks for the explosives. Goodbye.	}{	Right. Thanks for the explosives. Goodbye.	}{	0	}{	pc.GetQuestState("Astrolite") == 1	}{	pc.SetQuest("Astrolite",2)	}{	}{	}{	}{	}{	}{	}{	My joy will explode my insides.	}
+{	113	}{	On second thought, I think I'll walk out of here with the bomb and my money.	}{	On second thought, I think I'll walk out of here with the bomb and my money.	}{	101	}{	pc.GetQuestState("Astrolite") == 1	}{	pc.SetQuest("Astrolite",2)	}{	}{	}{	}{	}{	}{	}{	My true nature is greedy, I will take the astral light and the money.	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	Right. Thanks for the explosives. Goodbye.	}{	Right. Thanks for the explosives. Goodbye.	}{	0	}{	pc.GetQuestState("Astrolite") == 4	}{	pc.SetQuest("Astrolite",5)	}{	}{	}{	}{	}{	}{	}{	My joy will explode my insides.	}
+{	120	}{	On second thought, I think I'll walk out of here with the bomb and my money.	}{	On second thought, I think I'll walk out of here with the bomb and my money.	}{	101	}{	pc.GetQuestState("Astrolite") == 4	}{	pc.SetQuest("Astrolite",5)	}{	}{	}{	}{	}{	}{	}{	My true nature is greedy, I will take the astral light and the money.	}
+{	121	}{	Mmm-hmm. I'd be open to negotiations. Question is: how open are you?	}{	Mmm-hmm. I'd be open to negotiations. Question is: how open are you?	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	Want to send your buddy out of the room and find out?	}{	Want to send your buddy out of the room and find out?	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	123	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	Yo, go check the odometer on my car.	}{	Yo, go check the odometer on my car.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Dennis_Alone = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	(Auto-Link)	}{	(Auto-Link)	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	133	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	Now, I'll give you what you want... but I got what you need.	}{	Now, I'll give you what you want... but I got what you need.	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	Let me show you a new trick I picked up.	}{	Let me show you a new trick I picked up.	}{	0	}{	}{	G.Seductive_Feed = 1; pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	Here comes some special magic for you.	}
+{	143	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	In your case, hell no! Every night I got some skeez trying to hang it up on me for a hit. I wouldn't take that shit if you promised me a van of blow. Damn!	}{	In your case, hell no! Every night I got some skeez trying to hang it up on me for a hit. I wouldn't take that shit if you promised me a van of blow. Damn!	}{	#	}{	npc.SetDisposition("Disgust", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	I'll give you $300 then, if you really need to get rid of the Astrolite that badly.	}{	I'll give you $300 then, if you really need to get rid of the Astrolite that badly.	}{	111	}{	Haggle 3 & pc.CurrentMoney() >= 300	}{	pc.MoneyRemove( 300 )	}{	}{	}{	}{	}{	}{	}{	I'll give you three hundred simoleons.	}
+{	153	}{	I'll give you $500 for the Astrolite.	}{	I'll give you $500 for the Astrolite.	}{	111	}{	Haggle -3 & pc.CurrentMoney() >= 500	}{	pc.MoneyRemove( 500 )	}{	}{	}{	}{	}{	}{	}{	I'll give you five Ben Franklins.	}
+{	154	}{	I don't have any money.	}{	I don't have any money.	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	My pockets are as empty as my head.	}
+{	155	}{	Mercurio already paid for it. Remember him?	}{	Mercurio already paid for it. Remember him?	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	Fleet-footed Mercury already paid for it, do you not remember?	}
+{	156	}{	Give me the Astrolite now and I won't throw your balls into the Pacific.	}{	Give me the Astrolite now and I won't throw your balls into the Pacific.	}{	61	}{	Intimidate 3	}{	}{	}{	}{	}{	}{	}{	}{	Give me the astral light or your fun sack will become as fish.	}
+{	157	}{	I'm good for the money. Believe me, I'd never rip a guy like you off.	}{	I'm good for the money. Believe me, I'd never rip a guy like you off.	}{	241	}{	Persuasion 4	}{	}{	}{	}{	}{	}{	}{	}{	Give me the astral light and soon your pockets will be full on my word.	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	You mean you been wastin' my time?!? I fuckin' hate that shit. Get out of my house 'fore I feed your broke, pale ass to my dogs!	}{	You mean you been wastin' my time?!? I fuckin' hate that shit. Get out of my house 'fore I feed your broke, pale ass to my dogs!	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	Fine. Goodbye.	}{	Fine. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	The moon will be your viscous mistress. Farewell.	}
+{	163	}{	No. I'd rather you make me get out.	}{	No. I'd rather you make me get out.	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	Will that be before or after I eviscerate you?	}
+{	164	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	We done here.	}{	We done here.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	173	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	174	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	Hey, there's somebody in here!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	183	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	184	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	185	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	Hey, look over here!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	193	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	194	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	195	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	201	}{	What the hell?!?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	203	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	204	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	205	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	208	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	211	}{	Somebody fix the goddamn lights!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	213	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	214	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	215	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	217	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	221	}{	Hey! Fix the lights, dammit!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	223	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	224	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	225	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	226	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	227	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	228	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	231	}{	[Dies]Ah, ugh!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	233	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	234	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	235	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	236	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	238	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	241	}{	You sure you're good for it? Cuz all it means to me if you're not is a little late-night shark fishin' trip with the boys, if you understand what I'm sayin'. Here. You hold on to it. But if you don't pay me, your life is shit. Understand?	}{	You sure you're good for it? Cuz all it means to me if you're not is a little late-night shark fishin' trip with the boys, if you understand what I'm sayin'. Here. You hold on to it. But if you don't pay me, your life is shit. Understand?	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	pc.GiveItem("item_g_astrolite"); G.Dennis_Astrolite = 1; G.Dennis_Owe = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	Yeah I understand. I'll bring the money as soon as I can. Goodbye.	}{	Yeah I understand. I'll bring the money as soon as I can. Goodbye.	}{	0	}{	pc.GetQuestState("Astrolite") == 1	}{	pc.SetQuest("Astrolite",2)	}{	}{	}{	}{	}{	}{	}{	Understood. The belly of the great fish is not my place.	}
+{	243	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	244	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	245	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	246	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	247	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	248	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	250	}{	Yeah I understand. I'll bring the money as soon as I can. Goodbye.	}{	Yeah I understand. I'll bring the money as soon as I can. Goodbye.	}{	0	}{	pc.GetQuestState("Astrolite") == 4	}{	pc.SetQuest("Astrolite",5)	}{	}{	}{	}{	}{	}{	}{	Understood. The belly of the great fish is not my place.	}
+{	251	}{	Fleet-footed god? What are you talkin' about? You got to be on somethin'.	}{	Fleet-footed god? What are you talkin' about? You got to be on somethin'.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	Mercury, broken and bloodied.	}{	Mercury, broken and bloodied.	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	253	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	254	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	255	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	256	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	Midnight wind, huh? Yeah, right. You got snitch written all over you. [Talking to others in the house]Boys, start up the boat! We gonna do a little shark fishin'!	}{	Midnight wind, huh? Yeah, right. You got snitch written all over you. [Talking to others in the house]Boys, start up the boat! We gonna do a little shark fishin'!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	Ha ha ha.... No.	}{	Ha ha ha.... No.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	}
+{	263	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	264	}{	(Starting Condition)	}{	}{	141	}{	G.Dennis_Alone == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	265	}{	(Starting Condition)	}{	}{	171	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	266	}{	(Starting Condition)	}{	}{	21	}{	F_Seduction 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	267	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

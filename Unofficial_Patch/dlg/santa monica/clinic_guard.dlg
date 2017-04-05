@@ -1,0 +1,198 @@
+{	1	}{	This area's for hospital staff only.	}{	This area's for hospital staff only.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Guard_Warning = G.Guard_Warning + 1	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	I'm here to fix the network. Nurse downstairs told me to talk to you.	}{	I'm here to fix the network. Nurse downstairs told me to talk to you.	}{	121	}{	G.Nurse_Persuade == 1	}{	}{	}{	}{	}{	}{	}{	}{	The computers refuse to speak. The nurse sent me here to reconcile them.	}
+{	3	}{	Give me your keys and leave me alone.	}{	Give me your keys and leave me alone.	}{	131	}{	Dominate 1	}{	G.Guard_Dominated = 1; G.CS_Key = 1; pc.GiveItem("item_k_clinic_cs_key")	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	You're much too handsome to be working in a place like this.	}{	You're much too handsome to be working in a place like this.	}{	151	}{	F_Seduction 3	}{	}{	}{	}{	}{	}{	}{	}{	Your face belongs in movies, not security.	}
+{	5	}{	I am a key ring, feed me! Then you can't see me.	}{	I am a key ring, feed me! Then you can't see me.	}{	131	}{	Dementation 1	}{	G.Guard_Dominated = 1; G.CS_Key = 1; pc.GiveItem("item_k_clinic_cs_key")	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	Give me your keys and leave me alone.	}{	Give me your keys and leave me alone.	}{	131	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles(); G.Guard_Dominated = 1; G.CS_Key = 1; pc.GiveItem("item_k_clinic_cs_key")	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	But I belong here and I need your keys.	}{	But I belong here and I need your keys.	}{	131	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles(); G.Guard_Dominated = 1; G.CS_Key = 1; pc.GiveItem("item_k_clinic_cs_key")	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	Who's going to stop me? You?	}{	Who's going to stop me? You?	}{	11	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	I cannot be stopped by mere mortals.	}
+{	9	}{	Okay.	}{	Okay.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Understood.	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	You can't be up here - you're going to have to leave.	}{	You can't be up here - you're going to have to leave.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	I'm here to fix the network. Nurse downstairs told me to talk to you.	}{	I'm here to fix the network. Nurse downstairs told me to talk to you.	}{	121	}{	G.Nurse_Persuade == 1	}{	}{	}{	}{	}{	}{	}{	}{	The computers refuse to speak. The nurse sent me here to reconcile them.	}
+{	13	}{	Give me your keys and leave me alone.	}{	Give me your keys and leave me alone.	}{	131	}{	Dominate 1	}{	G.Guard_Dominated = 1; G.CS_Key = 1; pc.GiveItem("item_k_clinic_cs_key")	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	You're much too handsome to be working in a place like this.	}{	You're much too handsome to be working in a place like this.	}{	151	}{	F_Seduction 3	}{	}{	}{	}{	}{	}{	}{	}{	Your face belongs in movies, not security.	}
+{	15	}{	I am a key ring, feed me! Then you can't see me.	}{	I am a key ring, feed me! Then you can't see me.	}{	131	}{	Dementation 1	}{	G.Guard_Dominated = 1; G.CS_Key = 1; pc.GiveItem("item_k_clinic_cs_key")	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	Give me your keys and leave me alone.	}{	Give me your keys and leave me alone.	}{	131	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles(); G.Guard_Dominated = 1; G.CS_Key = 1; pc.GiveItem("item_k_clinic_cs_key")	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	But I belong here and I need your keys.	}{	But I belong here and I need your keys.	}{	131	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles(); G.Guard_Dominated = 1; G.CS_Key = 1; pc.GiveItem("item_k_clinic_cs_key")	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	Who's going to stop me? You?	}{	Who's going to stop me? You?	}{	21	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	I cannot be stopped by mere mortals.	}
+{	20	}{	Okay.	}{	Okay.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Understood.	}
+{	21	}{	[More irritated]Did you hear me? This is a restricted area. Now leave, or I will use force.	}{	[More irritated]Did you hear me? This is a restricted area. Now leave, or I will use force.	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	G.Guard_Warning = G.Guard_Warning + 1	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	I'm here to fix the network. Nurse downstairs told me to talk to you.	}{	I'm here to fix the network. Nurse downstairs told me to talk to you.	}{	121	}{	G.Nurse_Persuade == 1	}{	}{	}{	}{	}{	}{	}{	}{	The computers refuse to speak. The nurse sent me here to reconcile them.	}
+{	23	}{	Give me your keys and leave me alone.	}{	Give me your keys and leave me alone.	}{	131	}{	Dominate 1	}{	G.Guard_Dominated = 1; G.CS_Key = 1; pc.GiveItem("item_k_clinic_cs_key")	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	You're much too handsome to be working in a place like this.	}{	You're much too handsome to be working in a place like this.	}{	151	}{	F_Seduction 3	}{	}{	}{	}{	}{	}{	}{	}{	Your face belongs in movies, not security.	}
+{	25	}{	I am a key ring, feed me! Then you can't see me.	}{	I am a key ring, feed me! Then you can't see me.	}{	131	}{	Dementation 1	}{	G.Guard_Dominated = 1; G.CS_Key = 1; pc.GiveItem("item_k_clinic_cs_key")	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	Give me your keys and leave me alone.	}{	Give me your keys and leave me alone.	}{	131	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles(); G.Guard_Dominated = 1; G.CS_Key = 1; pc.GiveItem("item_k_clinic_cs_key")	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	But I belong here and I need your keys.	}{	But I belong here and I need your keys.	}{	131	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles(); G.Guard_Dominated = 1; G.CS_Key = 1; pc.GiveItem("item_k_clinic_cs_key")	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	You want to stop me?	}{	You want to stop me?	}{	51	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	You cannot stop a creature like me.	}
+{	30	}{	Okay.	}{	Okay.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Understood.	}
+{	31	}{	That's it! This is your last warning.	}{	That's it! This is your last warning.	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	G.Guard_Warning = G.Guard_Warning + 1	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	33	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	I'm calling for backup... stay where you are!	}{	I'm calling for backup... stay where you are!	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	43	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Stop or I'll shoot!	}{	Stop or I'll shoot!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	53	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Hey you!	}{	Hey you!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	63	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	64	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	You're in a lot of trouble!	}{	You're in a lot of trouble!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	73	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Come quietly and there's no need for me to use force.	}{	Come quietly and there's no need for me to use force.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	83	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	Hmm....	}{	Hmm....	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	93	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	Cancel that backup.	}{	Cancel that backup.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	103	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	[Dies]	}{	[Dies]	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	113	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	Yeah, she called. I don't remember hearing anything about computer problems, but... you'd know better than I would. I'll open the door for you. Follow me.	}{	Yeah, she called. I don't remember hearing anything about computer problems, but... you'd know better than I would. I'll open the door for you. Follow me.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Guard_Open = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	Thanks.	}{	Thanks.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Cool.	}
+{	123	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	You can let yourself out.	}{	You can let yourself out.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	I need access to your controlled substances room.	}{	I need access to your controlled substances room.	}{	161	}{	Persuasion 3 & G.Guard_Dominated < 1 and OneOfSet(1,2) and G.Guard_CS == 0	}{	}{	}{	}{	}{	}{	}{	}{	I must enter Controlled Substances or the computers will remain incommunicado.	}
+{	133	}{	I need access to your controlled substances room.	}{	I need access to your controlled substances room.	}{	171	}{	Persuasion 3 & G.Guard_Dominated < 1 and OneOfSet(2,2) and G.Guard_CS == 0	}{	}{	}{	}{	}{	}{	}{	}{	I must enter Controlled Substances or the computers will remain incommunicado.	}
+{	134	}{	Thanks again.	}{	Thanks again.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Much thanks.	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	Alright, I'll get the door for you.	}{	Alright, I'll get the door for you.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Guard_CS = 1; G.Guard_Open = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	143	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	Uh... miss?	}{	Uh... miss?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	Want to find out if you're daydreaming?	}{	Want to find out if you're daydreaming?	}{	0	}{	}{	G.Guard_Seduce = 1; G.Seductive_Feed = 1; pc.SeductiveFeed(npc); G.CS_Key = 1; pc.GiveItem("item_k_clinic_cs_key"); G.Guard_Open = 2	}{	}{	}{	}{	}{	}{	}{	Want to find out if you're daydreaming?	}
+{	153	}{	Wait, I just remembered I have better taste. Excuse me.	}{	Wait, I just remembered I have better taste. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Maybe it was the wrong kind of movie though. I'll go.	}
+{	154	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	Sorry, that's off limits.	}{	Sorry, that's off limits.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	You do your job, I'll do mine.	}{	You do your job, I'll do mine.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	Do like you do and I do like I do.	}
+{	163	}{	The master CPU driver has to be recoupled right away or it'll be fried!	}{	The master CPU driver has to be recoupled right away or it'll be fried!	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	The master brain has to be recoupled or it will die!	}
+{	164	}{	If I don't fix it, I'll just have to come back tomorrow.	}{	If I don't fix it, I'll just have to come back tomorrow.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	If I don't talk to the computers now I will have to return.	}
+{	165	}{	Really? Do you think you can make an exception for me?	}{	Really? Do you think you can make an exception for me?	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	Don't you think I'm special enough to do this?	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	Sorry, that's off limits.	}{	Sorry, that's off limits.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	Look, it's not like I'm going to steal anything, okay?	}{	Look, it's not like I'm going to steal anything, okay?	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	I won't take anything, I don't need.	}
+{	173	}{	But you're going to let me in anyway, right?	}{	But you're going to let me in anyway, right?	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	But still you allow me in, yes?	}
+{	174	}{	You do your job, I'll do mine.	}{	You do your job, I'll do mine.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	Do like you do and I do like I do.	}
+{	175	}{	If I don't fix it right now, you could have some serious security risks.	}{	If I don't fix it right now, you could have some serious security risks.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	The system will leak all over if I don't heal it.	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	Sorry, I can't let just anyone in there, unless it's an emergency.	}{	Sorry, I can't let just anyone in there, unless it's an emergency.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	183	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	184	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	185	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	193	}{	(Starting Condition)	}{	}{	131	}{	G.Guard_Open == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	194	}{	(Starting Condition)	}{	}{	41	}{	G.Guard_Warning > 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	195	}{	(Starting Condition)	}{	}{	31	}{	G.Guard_Warning == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	196	}{	(Starting Condition)	}{	}{	21	}{	G.Guard_Warning == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	(Starting Condition)	}{	}{	61	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

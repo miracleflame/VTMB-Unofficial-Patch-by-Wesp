@@ -1,0 +1,2065 @@
+// ItemType Definitions Doc
+
+ItemTypeData
+{
+	// For this file, Localize only the "Name" fields (NOT the "InternalName" field or any others!)
+
+	// Inventory Sections (partly UI-based, but integral to critter data layout too)
+	InventorySections
+	{
+		"Name"		"Inventory Sections"
+		"InternalName"	"Inventory_Sections"
+
+		// Note that currently, if inventory sections are added or deleted, 2 minor code changes must occur (shareddefs.h and c_baseplayer.h)
+
+		// Thanks to an ugly hack there is a hardcode VWEAPON_SLOT_ARMOR in vitems.h you'll have to fix
+		// if you monkey around with inventorysection order!
+		
+		// Note: The "None" section *must* exist, and must be the first one...
+		InventorySection
+		{
+			"Name"		"None"
+			"InternalName"	"None"
+
+			"IsDisplayed"	"0"
+		}
+
+//		InventorySection
+//		{
+//			"Name"		"Disciplines"
+//			"InternalName"	"Disciplines"
+//
+//			"IsDisplayed"	"1"
+//		}
+
+// NCT		InventorySection
+//		{
+//			"Name"		"Weapon"
+//			"InternalName"	"Weapon"
+//
+//			"IsDisplayed"	"1"
+//		}
+
+		InventorySection
+		{
+			"Name"		"Weapon (Melee)"
+			"InternalName"	"Weapon_Melee"
+
+			"IsDisplayed"	"1"
+		}
+
+		InventorySection
+		{
+			"Name"		"Weapon (Ranged)"
+			"InternalName"	"Weapon_Ranged"
+
+			"IsDisplayed"	"1"
+		}
+
+		InventorySection
+		{
+			"Name"		"Weapon (Thrown)"
+			"InternalName"	"Weapon_Thrown"
+
+			"IsDisplayed"	"1"
+		}
+
+		InventorySection
+		{
+			"Name"		"Armor"
+			"InternalName"	"Armor"
+
+			"IsDisplayed"	"1"
+		}
+
+		InventorySection
+		{
+			"Name"		"General"
+			"InternalName"	"Generic"
+
+			"IsDisplayed"	"1"
+		}
+
+		InventorySection
+		{
+			"Name"		"Powerups"
+			"InternalName"	"Powerups"
+
+			"IsDisplayed"	"1"
+		}
+
+		InventorySection
+		{
+			"Name"		"Hidden"
+			"InternalName"	"Hidden"
+
+			"IsDisplayed"	"0"
+		}
+
+//		InventorySection
+//		{
+//			"Name"		"Maintenance"
+//			"InternalName"	"Maintenance"
+//
+//			"IsDisplayed"	"1"
+//		}
+	}
+
+	// Item Types
+	// If you change the order/number of items in this list you must 
+	// edit the enum table in vamp_data.h!
+	ItemTypes
+	{
+		"Name"		"Item Types"
+		"InternalName"	"Item_Types"
+
+		ItemType
+		{
+			"Name"			"Weapon_Melee"
+			"InternalName"		"Weapon_Melee"
+
+			"IsWielded"			"1"
+			"IsWorn"			"0"
+			"IsWeapon"			"1"
+			"InventorySection"	"Weapon_Melee"
+// NCT			"InventorySection"	"Weapon"
+		}
+
+		ItemType
+		{
+			"Name"			"Weapon_Firearm"
+			"InternalName"		"Weapon_Firearm"
+
+			"IsWielded"			"1"
+			"IsWorn"			"0"
+			"IsWeapon"			"1"
+			"InventorySection"	"Weapon_Ranged"
+// NCT			"InventorySection"	"Weapon"
+		}
+
+		ItemType
+		{
+			"Name"			"Weapon_Thrown"
+			"InternalName"		"Weapon_Thrown"
+
+			"IsWielded"			"1"
+			"IsWorn"			"0"
+			"IsWeapon"			"1"
+// wesp			"InventorySection"	"Weapon_Thrown"
+			"InventorySection"	"Weapon_Ranged"
+		}
+
+		ItemType
+		{
+			"Name"			"Ammo"
+			"InternalName"		"Ammo"
+
+			"IsWielded"			"0"
+			"IsWorn"			"0"
+			"IsWeapon"			"0"
+			"InventorySection"	"None"
+		}
+
+		ItemType
+		{
+			"Name"			"Armor"
+			"InternalName"		"Armor"
+
+			"IsWielded"			"0"
+			"IsWorn"			"1"
+			"IsWeapon"			"0"
+			"InventorySection"	"Armor"
+		}
+
+		ItemType
+		{
+			"Name"			"Money"
+			"InternalName"		"Money"
+
+			"IsWielded"			"0"
+			"IsWorn"			"0"
+			"IsWeapon"			"0"
+			"InventorySection"	"Generic"
+		}
+
+		ItemType
+		{
+			"Name"			"Jewelry"
+			"InternalName"		"Jewelry"
+
+			"IsWielded"			"0"
+			"IsWorn"			"1"
+			"IsWeapon"			"0"
+			"InventorySection"	"Generic"
+		}
+
+		ItemType
+		{
+			"Name"			"Generic"
+			"InternalName"		"Generic"
+
+			"IsWielded"			"0"
+			"IsWorn"			"0"
+			"IsWeapon"			"0"
+			"InventorySection"	"Generic"
+		}
+
+		ItemType
+		{
+			"Name"			"Powerup"
+			"InternalName"		"Powerup"
+
+			"IsWielded"			"0"
+			"IsWorn"			"0"
+			"IsWeapon"			"0"
+			"InventorySection"	"Powerups"
+		}
+
+		ItemType
+		{
+			"Name"			"Bloodpack"
+			"InternalName"		"Bloodpack"
+
+			"IsWielded"			"0"
+			"IsWorn"			"0"
+			"IsWeapon"			"1"
+			"InventorySection"	"Generic"
+		}
+
+		ItemType
+		{
+			"Name"			"Hidden"
+			"InternalName"		"Hidden"
+
+			"IsWielded"			"1"
+			"IsWorn"			"0"
+			"IsWeapon"			"1"
+			"InventorySection"	"Hidden"
+		}
+	}
+
+
+	// Botch Table Types
+	BotchTypes
+	{
+		"Name"		"Botch Types"
+		"InternalName"	"Botch_Types"
+
+		BotchType
+		{
+			"Name"		"None"
+			"InternalName"	"None"
+
+			"OwnerDamage"	""
+			"AmmoLost"		"0"
+			"ForceReload"	"0"
+			"ItemBreaks"	"0"
+			"FallToGround"	"0"
+//			"ClientEffect"	""
+		}
+
+		BotchType
+		{
+			"Name"		"Breaks"
+			"InternalName"	"Breaks"
+
+			"OwnerDamage"	""
+			"AmmoLost"		"0"
+			"ForceReload"	"0"
+			"ItemBreaks"	"1"
+			"FallToGround"	"1"
+//			"ClientEffect"	""
+		}
+
+		BotchType
+		{
+			"Name"		"Misfire"
+			"InternalName"	"Misfire"
+
+			"OwnerDamage"	""
+			"AmmoLost"		"1"
+			"ForceReload"	"0"
+			"ItemBreaks"	"0"
+			"FallToGround"	"0"
+//			"ClientEffect"	"Puff_Of_Smoke"
+		}
+
+		BotchType
+		{
+			"Name"		"Cylinder Falls Open"
+			"InternalName"	"Cylinder_Falls_Open"
+
+			"OwnerDamage"	""
+			"AmmoLost"		"0"
+			"ForceReload"	"1"
+			"ItemBreaks"	"0"
+			"FallToGround"	"0"
+//			"ClientEffect"	""
+		}
+
+		BotchType
+		{
+			"Name"		"Eject Magazine"
+			"InternalName"	"Eject_Magazine"
+
+			"OwnerDamage"	""
+			"AmmoLost"		"0"
+			"ForceReload"	"1"
+			"ItemBreaks"	"0"
+			"FallToGround"	"0"
+//			"ClientEffect"	""
+		}
+
+		BotchType
+		{
+			"Name"		"Slide Flies Off"
+			"InternalName"	"Slide_Flies_Off"
+
+			"OwnerDamage"	"1 Bashing"
+			"AmmoLost"		"0"
+			"ForceReload"	"1"
+			"ItemBreaks"	"0"
+			"FallToGround"	"0"
+//			"ClientEffect"	""
+		}
+
+		BotchType
+		{
+			"Name"		"Bolt Flies Off"
+			"InternalName"	"Bolt_Flies_Off"
+
+			"OwnerDamage"	"2 Bashing"
+			"AmmoLost"		"0"
+			"ForceReload"	"1"
+			"ItemBreaks"	"0"
+			"FallToGround"	"0"
+//			"ClientEffect"	""
+		}
+
+		BotchType
+		{
+			"Name"		"Chamber Explodes"
+			"InternalName"	"Chamber_Explodes"
+
+			"OwnerDamage"	"1 Aggravated"
+			"AmmoLost"		"1"
+			"ForceReload"	"0"
+			"ItemBreaks"	"0"
+			"FallToGround"	"0"
+//			"ClientEffect"	"Explosion"
+		}
+
+		BotchType
+		{
+			"Name"		"String Breaks"
+			"InternalName"	"String_Breaks"
+
+			"OwnerDamage"	""
+			"AmmoLost"		"1"
+			"ForceReload"	"1"
+			"ItemBreaks"	"0"
+			"FallToGround"	"0"
+//			"ClientEffect"	""
+		}
+
+		BotchType
+		{
+			"Name"		"Brawl Self Injury"
+			"InternalName"	"Brawl_Self_Injury"
+
+			"OwnerDamage"	"1 Bashing"
+			"AmmoLost"		"0"
+			"ForceReload"	"0"
+			"ItemBreaks"	"0"
+			"FallToGround"	"0"
+//			"ClientEffect"	""
+		}
+	}
+
+
+	// Botch Tables
+	BotchTables
+	{
+		"Name"		"Botch Tables"
+		"InternalName"	"Botch_Tables"
+
+		BotchTable
+		{
+			"Name"		"Fists/Claws/Bite"
+			"InternalName"	"Fists_Claws_Bite"
+
+			"Botch1"		"None"
+			"Botch2"		"None"
+			"Botch3"		"None"
+		}
+
+		BotchTable
+		{
+			"Name"		"Melee Weapons"
+			"InternalName"	"Melee_Weapons"
+
+			"Botch1"		"None"
+			"Botch2"		"None"
+			"Botch3"		"Breaks"
+		}
+
+		BotchTable
+		{
+			"Name"		"Revolvers"
+			"InternalName"	"Revolvers"
+
+			"Botch1"		"None"
+			"Botch2"		"Misfire"
+			"Botch3"		"Cylinder_Falls_Open"
+		}
+
+		BotchTable
+		{
+			"Name"		"Pistols"
+			"InternalName"	"Pistols"
+
+			"Botch1"		"None"
+			"Botch2"		"Eject_Magazine"
+			"Botch3"		"Slide_Flies_Off"
+		}
+
+		BotchTable
+		{
+			"Name"		"Bolt Rifles"
+			"InternalName"	"Bolt_Rifles"
+
+			"Botch1"		"None"
+			"Botch2"		"Misfire"
+			"Botch3"		"Bolt_Flies_Off"
+		}
+
+		BotchTable
+		{
+			"Name"		"Auto/Semi Rifles"
+			"InternalName"	"Auto_Semi_Rifles"
+
+			"Botch1"		"None"
+			"Botch2"		"Eject_Magazine"
+			"Botch3"		"Slide_Flies_Off"
+		}
+
+		BotchTable
+		{
+			"Name"		"Shotguns"
+			"InternalName"	"Shotguns"
+
+			"Botch1"		"None"
+			"Botch2"		"Misfire"
+			"Botch3"		"Chamber_Explodes"
+		}
+
+		BotchTable
+		{
+			"Name"		"Crossbow"
+			"InternalName"	"Crossbow"
+
+			"Botch1"		"None"
+			"Botch2"		"None"
+			"Botch3"		"String_Breaks"
+		}
+
+		BotchTable
+		{
+			"Name"		"Lockpicks"
+			"InternalName"	"Lockpicks"
+
+			"Botch1"		"None"
+			"Botch2"		"Breaks"
+			"Botch3"		"Breaks"
+		}
+
+		BotchTable
+		{
+			"Name"		"Brawl"
+			"InternalName"	"Brawl"
+
+			"Botch1"		"Brawl_Self_Injury"
+			"Botch2"		"Brawl_Self_Injury"
+			"Botch3"		"Brawl_Self_Injury"
+		}
+	}
+
+	// These tables list activation (attack/etc.) options
+	ActivationTypes
+	{
+		"Name"		"Activation Types"
+		"InternalName"	"Activation_Types"
+
+		// Note that changing these requires associated code changes...
+		ActivationType
+		{
+			"Name"		"None"
+			"InternalName"	"None"
+		}
+
+		ActivationType
+		{
+			"Name"		"Attack"
+			"InternalName"	"Attack"
+		}
+
+		ActivationType
+		{
+			"Name"		"Secondary Attack"
+			"InternalName"	"Secondary_Attack"
+		}
+
+		ActivationType
+		{
+			"Name"		"Zoom Out (Loop)"
+			"InternalName"	"Zoom_Out_Loop"
+		}
+
+		ActivationType
+		{
+			"Name"		"Toggle Primary Mode"
+			"InternalName"	"Toggle_Primary_Mode"
+		}
+
+		ActivationType
+		{
+			"Name"		"Use"
+			"InternalName"	"Use"
+		}
+
+		ActivationType
+		{
+			"Name"		"Throw"
+			"InternalName"	"Throw"
+		}
+	}
+
+	// These tables list starting equipment groups for a critter
+	StartingEquipTables
+	{
+		"Name"		"Starting Equipment Tables"
+		"InternalName"	"Starting_Equipment_Tables"
+
+		StartingEquip
+		{
+			"Name"		"Default"
+			"InternalName"	"Default"
+
+			"Money"		"0"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_w_fists"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"		"Player Kindred"
+			"InternalName"	"Player_Kindred"
+
+			"Money"		"0"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+//				"Item"	"item_a_lt_cloth"
+// removed			"Item"	"weapon_physcannon"
+// by wesp			"Item"	"item_g_keyring"
+//				"Item"	"item_g_wallet"
+//				"Item"	"item_w_fists"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"		"Player Kindred Ventrue"
+			"InternalName"	"Player_Kindred_Ventrue"
+
+			"Money"		"0"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_a_lt_cloth"
+				"Item"	"weapon_physcannon"
+				"Item"	"item_g_keyring"
+				"Item"	"item_g_wallet"
+				"Item"	"item_w_fists"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"		"Player Chica"
+			"InternalName"	"Player_Chica"
+
+			"Money"		"0"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_a_lt_cloth"
+				"Item"	"weapon_physcannon"
+				"Item"	"item_g_keyring"
+				"Item"	"item_g_wallet"
+				"Item"	"item_w_fists"
+				"Item"	"item_w_thirtyeight"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"		"Player Drifter"	// changed by wesp
+			"InternalName"	"Player_Drifter"
+
+			"Money"		"0"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_a_lt_cloth"
+				"Item"	"weapon_physcannon"
+				"Item"	"item_g_keyring"
+				"Item"	"item_g_wallet"
+				"Item"	"item_w_fists"
+				"Item"	"item_w_knife"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"		"Player Starving Artist"
+			"InternalName"	"Player_Starving_Artist"
+
+			"Money"		"5"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_a_lt_cloth"
+				"Item"	"weapon_physcannon"
+				"Item"	"item_g_keyring"
+				"Item"	"item_g_wallet"
+				"Item"	"item_w_fists"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"		"Player Black-Hearted"
+			"InternalName"	"Player_Black_Hearted"
+
+			"Money"		"0"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_a_lt_cloth"
+				"Item"	"weapon_physcannon"
+				"Item"	"item_g_keyring"
+				"Item"	"item_g_wallet"
+				"Item"	"item_w_colt_anaconda"
+				"Item"	"item_w_fists"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"			"Player Leopold"
+			"InternalName"	"Player_Leopold"
+
+			"Money"			"500"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_a_lt_cloth"
+				"Item"	"weapon_physcannon"
+				"Item"	"item_g_keyring"
+				"Item"	"item_g_wallet"
+				"Item"	"item_g_lockpick"
+				"Item"	"item_w_fists"
+			}
+		}
+
+// new equipment added for multiplayer by wesp
+
+		StartingEquip
+		{
+			"Name"			"Brujah"
+			"InternalName"	"Brujah"
+
+			"Money"			"500"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_a_lt_cloth"
+				"Item"	"weapon_physcannon"
+				"Item"	"item_g_keyring"
+				"Item"	"item_g_wallet"
+				"Item"	"item_g_lockpick"
+				"Item"	"item_w_fists"
+				"Item"	"item_w_sledgehammer"
+				"Item"	"item_w_glock_17c"
+				"Item"	"item_w_colt_anaconda"
+				"Item"	"item_w_uzi"
+				"Item"	"item_w_remington_m_700"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"			"Gangrel"
+			"InternalName"	"Gangrel"
+
+			"Money"			"500"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_a_lt_cloth"
+				"Item"	"weapon_physcannon"
+				"Item"	"item_g_keyring"
+				"Item"	"item_g_wallet"
+				"Item"	"item_g_lockpick"
+				"Item"	"item_w_fists"
+				"Item"	"item_w_bush_hook"
+				"Item"	"item_w_thirtyeight"
+				"Item"	"item_w_deserteagle"
+				"Item"	"item_w_mac_10"
+				"Item"	"item_w_remington_m_700"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"			"Malkavian"
+			"InternalName"	"Malkavian"
+
+			"Money"			"500"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_a_lt_cloth"
+				"Item"	"weapon_physcannon"
+				"Item"	"item_g_keyring"
+				"Item"	"item_g_wallet"
+				"Item"	"item_g_lockpick"
+				"Item"	"item_w_fists"
+				"Item"	"item_w_severed_arm"
+				"Item"	"item_w_glock_17c"
+				"Item"	"item_w_colt_anaconda"
+				"Item"	"item_w_uzi"
+				"Item"	"item_w_crossbow"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"			"Nosferatu"
+			"InternalName"	"Nosferatu"
+
+			"Money"			"500"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_a_lt_cloth"
+				"Item"	"weapon_physcannon"
+				"Item"	"item_g_keyring"
+				"Item"	"item_g_wallet"
+				"Item"	"item_g_lockpick"
+				"Item"	"item_w_fists"
+				"Item"	"item_w_fireaxe"
+				"Item"	"item_w_thirtyeight"
+				"Item"	"item_w_deserteagle"
+				"Item"	"item_w_mac_10"
+				"Item"	"item_w_crossbow"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"			"Toreador"
+			"InternalName"	"Toreador"
+
+			"Money"			"500"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_a_lt_cloth"
+				"Item"	"weapon_physcannon"
+				"Item"	"item_g_keyring"
+				"Item"	"item_g_wallet"
+				"Item"	"item_g_lockpick"
+				"Item"	"item_w_fists"
+				"Item"	"item_w_baseball_bat"
+				"Item"	"item_w_glock_17c"
+				"Item"	"item_w_colt_anaconda"
+				"Item"	"item_w_crossbow_flaming"
+				"Item"	"item_w_steyr_aug"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"			"Tremere"
+			"InternalName"	"Tremere"
+
+			"Money"			"500"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_a_lt_cloth"
+				"Item"	"weapon_physcannon"
+				"Item"	"item_g_keyring"
+				"Item"	"item_g_wallet"
+				"Item"	"item_g_lockpick"
+				"Item"	"item_w_fists"
+				"Item"	"item_w_tire_iron"
+				"Item"	"item_w_thirtyeight"
+				"Item"	"item_w_deserteagle"
+				"Item"	"item_w_supershotgun"
+				"Item"	"item_w_remington_m_700"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"			"Ventrue"
+			"InternalName"	"Ventrue"
+
+			"Money"			"500"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_a_lt_cloth"
+				"Item"	"weapon_physcannon"
+				"Item"	"item_g_keyring"
+				"Item"	"item_g_wallet"
+				"Item"	"item_g_lockpick"
+				"Item"	"item_w_fists"
+				"Item"	"item_w_baton"
+				"Item"	"item_w_glock_17c"
+				"Item"	"item_w_colt_anaconda"
+				"Item"	"item_w_ithaca_m_37"
+				"Item"	"item_w_rem_m_700_bach"
+			}
+		}
+		StartingEquip
+		{
+			"Name"			"Condotierre"
+			"InternalName"	"Condotierre"
+
+			"Money"			"500"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_a_lt_cloth"
+				"Item"	"weapon_physcannon"
+				"Item"	"item_g_keyring"
+				"Item"	"item_g_wallet"
+				"Item"	"item_g_lockpick"
+				"Item"	"item_w_fists"
+				"Item"	"item_w_knife"
+				"Item"	"item_w_glock_17c"
+				"Item"	"item_w_colt_anaconda"
+				"Item"	"item_w_supershotgun"
+				"Item"	"item_w_remington_m_700"
+			}
+		}
+		StartingEquip
+		{
+			"Name"			"Inquisitor"
+			"InternalName"	"Inquisitor"
+
+			"Money"			"500"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_a_lt_cloth"
+				"Item"	"weapon_physcannon"
+				"Item"	"item_g_keyring"
+				"Item"	"item_g_wallet"
+				"Item"	"item_g_lockpick"
+				"Item"	"item_w_fists"
+				"Item"	"item_w_katana"
+				"Item"	"item_w_glock_17c"
+				"Item"	"item_w_colt_anaconda"
+				"Item"	"item_w_steyr_aug"
+				"Item"	"item_w_rem_m_700_bach"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"			"Mercenary"
+			"InternalName"	"Mercenary"
+
+			"Money"			"500"
+			Items
+			{
+				"Item"	"item_w_unarmed"
+				"Item"	"item_a_lt_cloth"
+				"Item"	"weapon_physcannon"
+				"Item"	"item_g_keyring"
+				"Item"	"item_g_wallet"
+				"Item"	"item_g_lockpick"
+				"Item"	"item_w_fists"
+				"Item"	"item_w_torch"
+				"Item"	"item_w_thirtyeight"
+				"Item"	"item_w_deserteagle"
+				"Item"	"item_w_flamethrower"
+				"Item"	"item_w_crossbow"
+			}
+		}
+
+// multiplayer changes by wesp end
+
+		StartingEquip
+		{
+			"Name"			"NPCGeneric"
+			"InternalName"	"NPCGeneric"
+
+			"Money"		"0"
+			Items
+			{
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"			"TzimisceCreation1"
+			"InternalName"	"TzimisceCreation1"
+
+			"Money"		"0"
+			Items
+			{
+				"Item"	"item_w_tzimisce_melee"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"			"TzimisceCreation2"
+			"InternalName"	"TzimisceCreation2"
+
+			"Money"		"0"
+			Items
+			{
+				"Item"	"item_w_tzimisce2_claw"
+				"Item"	"item_w_tzimisce2_head"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"			"TzimisceCreation3"
+			"InternalName"	"TzimisceCreation3"
+
+			"Money"		"0"
+			Items
+			{
+				"Item"	"item_w_tzimisce3_claw"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"			"ChunkGuard"
+			"InternalName"	"ChunkGuard"
+
+			"Money"		"0"
+			Items
+			{
+				"Item"	"item_w_colt_anaconda"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"		"Civilian"
+			"InternalName"	"Civilian"
+
+			"Money"		"0"
+			Items
+			{
+				// Because each of these is an object, and we don't need them,
+				//	we are only giving this on-demand (via discipline fx/etc.)
+//				"Item"	"item_w_unarmed"
+//				"Item"	"item_w_fists"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"		"Gargoyle"
+			"InternalName"	"Gargoyle"
+
+			"Money"		"0"
+			Items
+			{
+				"Item"	"item_w_gargoyle_fist"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"		"Hengeyokai"
+			"InternalName"	"Hengeyokai"
+
+			"Money"		"0"
+			Items
+			{
+				"Item"	"item_w_hengeyokai_fist"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"		"ManBat"
+			"InternalName"	"ManBat"
+
+			"Money"		"0"
+			Items
+			{
+				"Item"	"item_w_manbat_claw"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"		"ManBatMinion"
+			"InternalName"	"ManBatMinion"
+
+			"Money"		"0"
+			Items
+			{
+				"Item"	"item_w_claws"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"		"MingXiao"
+			"InternalName"	"MingXiao"
+
+			"Money"		"0"
+			Items
+			{
+				"Item"	"item_w_mingxiao_melee"
+				"Item"	"item_w_mingxiao_spit"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"		"MingXiaoTentacle"
+			"InternalName"	"MingXiaoTentacle"
+
+			"Money"		"0"
+			Items
+			{
+				"Item"	"item_w_mingxiao_tentacle"
+			}
+		}
+
+		StartingEquip
+		{
+			"Name"		"Yukie"
+			"InternalName"	"Yukie"
+
+			"Money"		"100"
+			Items
+			{
+				"Item"	"item_w_katana"
+			}
+		}
+	}
+
+	// These tables list equipment that is *not* wieldable by a particular critter
+	ExcludedEquipTables
+	{
+		"Name"		"Excluded Equipment Tables"
+		"InternalName"	"Excluded_Equipment_Tables"
+
+		ExcludedEquip
+		{
+			"Name"		"Default"
+			"InternalName"	"Default"
+
+
+			"ExcludedFlag"	"ClawedForm"
+			"ExcludedFlag"	"WolfForm"
+		}
+
+		ExcludedEquip
+		{
+			"Name"		"Toreador"
+			"InternalName"	"Toreador"
+
+
+			"ExcludedFlag"	"No_BlueBlood"
+		}
+
+		ExcludedEquip
+		{
+			"Name"		"Clawed_Form"
+			"InternalName"	"Clawed_Form"
+
+
+			"RequiredFlag"	"ClawedForm"
+			"ExcludedFlag"	"WolfForm"
+		}
+
+		ExcludedEquip
+		{
+			"Name"		"Clawed_Form_Toreador"
+			"InternalName"	"Clawed_Form_Toreador"
+
+
+			"ExcludedFlag"	"No_BlueBlood"
+			"RequiredFlag"	"ClawedForm"
+			"ExcludedFlag"	"WolfForm"
+		}
+
+		ExcludedEquip
+		{
+			"Name"		"Wolf_Form"
+			"InternalName"	"Wolf_Form"
+
+
+			"ExcludedFlag"	"ClawedForm"
+			"RequiredFlag"	"WolfForm"
+		}
+
+		ExcludedEquip
+		{
+			"Name"		"TzimisceCreation1"
+			"InternalName"	"TzimisceCreation1"
+
+
+			"RequiredFlag"	"ClawedForm"
+		}
+
+		ExcludedEquip
+		{
+			"Name"		"TzimisceCreation2"
+			"InternalName"	"TzimisceCreation2"
+
+
+			"RequiredFlag"	"ClawedForm"
+		}
+
+		ExcludedEquip
+		{
+			"Name"		"TzimisceCreation3"
+			"InternalName"	"TzimisceCreation3"
+
+
+			"RequiredFlag"	"ClawedForm"
+		}
+
+
+		ExcludedEquip
+		{
+			"Name"		"Gargoyle"
+			"InternalName"	"Gargoyle"
+
+
+			"RequiredFlag"	"ClawedForm"
+		}
+
+		ExcludedEquip
+		{
+			"Name"		"Hengeyokai"
+			"InternalName"	"Hengeyokai"
+
+
+			"RequiredFlag"	"ClawedForm"
+		}
+
+		ExcludedEquip
+		{
+			"Name"		"ManBat"
+			"InternalName"	"ManBat"
+
+
+			"RequiredFlag"	"ClawedForm"
+		}
+
+		ExcludedEquip
+		{
+			"Name"		"ManBatMinion"
+			"InternalName"	"ManBatMinion"
+
+
+			"RequiredFlag"	"ClawedForm"
+		}
+
+		ExcludedEquip
+		{
+			"Name"		"ChunkGuard"
+			"InternalName"	"ChunkGuard"
+
+			"ExcludedFlag"	"ClawedForm"
+			"ExcludedFlag"	"WolfForm"
+			"ExcludedFlag"	"No_NPC"
+
+
+//???
+			Items
+			{
+				"Item"		"item_g_electronic_lockpick"
+				"Item"		"item_g_lockpick"
+				"Item"		"item_i_written"
+				"Item"		"item_w_wolf_head"
+				"Item"		"item_w_wallet"
+
+// Note: Remove this when get Vampire.fgd cleaned up!
+"Item"		"weapon_pistol"
+			}
+		}
+	}
+
+	// These tables list starting equipment groups for a critter
+	MPEquipTables
+	{
+		"Name"		"MP Equipment Tables"
+		"InternalName"	"MP_Equipment_Tables"
+
+		MPEquip
+		{
+			"Name"		"Default"
+			"InternalName"	"Default"
+
+//			"Money"		"0"
+			Equip
+			{
+				Item
+				{
+					"Item"	"item_w_katana"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_w_colt_anaconda"
+					"Cost"	"8"
+					"StartsOn"	"1"
+				}
+				Item
+				{
+					"Item"	"item_w_ithaca_m_37"
+					"Cost"	"12"
+				}
+				Item
+				{
+					"Item"	"item_w_supershotgun"
+					"Cost"	"15"
+				}
+				Item
+				{
+					"Item"	"item_w_glock_17c"
+					"Cost"	"8"
+				}
+				Item
+				{
+					"Item"	"item_w_mac_10"
+					"Cost"	"15"
+				}
+			}
+
+			Armor
+			{
+				Item
+				{
+					"Item"	"item_a_lt_cloth"
+					"Cost"	"0"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_cloth"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_a_lt_leather"
+					"Cost"	"10"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_leather"
+					"Cost"	"20"
+				}
+				Item
+				{
+					"Item"	"item_a_flak_jacket"
+					"Cost"	"30"
+				}
+				Item
+				{
+					"Item"	"item_a_riot_gear"
+					"Cost"	"40"
+				}
+			}
+		}
+
+		MPEquip
+		{
+			"Name"		"Brujah"
+			"InternalName"	"Brujah"
+
+			Equip
+			{
+				Item
+				{
+					"Item"	"item_w_katana"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_w_colt_anaconda"
+					"Cost"	"8"
+					"StartsOn"	"1"
+				}
+				Item
+				{
+					"Item"	"item_w_ithaca_m_37"
+					"Cost"	"12"
+				}
+				Item
+				{
+					"Item"	"item_w_supershotgun"
+					"Cost"	"15"
+				}
+				Item
+				{
+					"Item"	"item_w_glock_17c"
+					"Cost"	"8"
+				}
+				Item
+				{
+					"Item"	"item_w_mac_10"
+					"Cost"	"15"
+				}
+			}
+
+			Armor
+			{
+				Item
+				{
+					"Item"	"item_a_lt_cloth"
+					"Cost"	"0"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_cloth"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_a_lt_leather"
+					"Cost"	"10"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_leather"
+					"Cost"	"20"
+				}
+				Item
+				{
+					"Item"	"item_a_flak_jacket"
+					"Cost"	"30"
+				}
+				Item
+				{
+					"Item"	"item_a_riot_gear"
+					"Cost"	"40"
+				}
+			}
+		}
+
+		MPEquip
+		{
+			"Name"		"Gangrel"
+			"InternalName"	"Gangrel"
+
+			Equip
+			{
+				Item
+				{
+					"Item"	"item_w_katana"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_w_colt_anaconda"
+					"Cost"	"8"
+					"StartsOn"	"1"
+				}
+				Item
+				{
+					"Item"	"item_w_ithaca_m_37"
+					"Cost"	"12"
+				}
+				Item
+				{
+					"Item"	"item_w_supershotgun"
+					"Cost"	"15"
+				}
+				Item
+				{
+					"Item"	"item_w_glock_17c"
+					"Cost"	"8"
+				}
+				Item
+				{
+					"Item"	"item_w_mac_10"
+					"Cost"	"15"
+				}
+			}
+
+			Armor
+			{
+				Item
+				{
+					"Item"	"item_a_lt_cloth"
+					"Cost"	"0"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_cloth"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_a_lt_leather"
+					"Cost"	"10"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_leather"
+					"Cost"	"20"
+				}
+				Item
+				{
+					"Item"	"item_a_flak_jacket"
+					"Cost"	"30"
+				}
+				Item
+				{
+					"Item"	"item_a_riot_gear"
+					"Cost"	"40"
+				}
+			}
+		}
+
+		MPEquip
+		{
+			"Name"		"Malkavian"
+			"InternalName"	"Malkavian"
+
+			Equip
+			{
+				Item
+				{
+					"Item"	"item_w_katana"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_w_colt_anaconda"
+					"Cost"	"8"
+					"StartsOn"	"1"
+				}
+				Item
+				{
+					"Item"	"item_w_ithaca_m_37"
+					"Cost"	"12"
+				}
+				Item
+				{
+					"Item"	"item_w_supershotgun"
+					"Cost"	"15"
+				}
+				Item
+				{
+					"Item"	"item_w_glock_17c"
+					"Cost"	"8"
+				}
+				Item
+				{
+					"Item"	"item_w_mac_10"
+					"Cost"	"15"
+				}
+			}
+
+			Armor
+			{
+				Item
+				{
+					"Item"	"item_a_lt_cloth"
+					"Cost"	"0"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_cloth"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_a_lt_leather"
+					"Cost"	"10"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_leather"
+					"Cost"	"20"
+				}
+				Item
+				{
+					"Item"	"item_a_flak_jacket"
+					"Cost"	"30"
+				}
+				Item
+				{
+					"Item"	"item_a_riot_gear"
+					"Cost"	"40"
+				}
+			}
+		}
+
+		MPEquip
+		{
+			"Name"		"Nosferatu"
+			"InternalName"	"Nosferatu"
+
+			Equip
+			{
+				Item
+				{
+					"Item"	"item_w_katana"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_w_colt_anaconda"
+					"Cost"	"8"
+					"StartsOn"	"1"
+				}
+				Item
+				{
+					"Item"	"item_w_ithaca_m_37"
+					"Cost"	"12"
+				}
+				Item
+				{
+					"Item"	"item_w_supershotgun"
+					"Cost"	"15"
+				}
+				Item
+				{
+					"Item"	"item_w_glock_17c"
+					"Cost"	"8"
+				}
+				Item
+				{
+					"Item"	"item_w_mac_10"
+					"Cost"	"15"
+				}
+			}
+
+			Armor
+			{
+				Item
+				{
+					"Item"	"item_a_lt_cloth"
+					"Cost"	"0"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_cloth"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_a_lt_leather"
+					"Cost"	"10"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_leather"
+					"Cost"	"20"
+				}
+				Item
+				{
+					"Item"	"item_a_flak_jacket"
+					"Cost"	"30"
+				}
+				Item
+				{
+					"Item"	"item_a_riot_gear"
+					"Cost"	"40"
+				}
+			}
+		}
+
+		MPEquip
+		{
+			"Name"		"Toreador"
+			"InternalName"	"Toreador"
+
+			Equip
+			{
+				Item
+				{
+					"Item"	"item_w_katana"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_w_colt_anaconda"
+					"Cost"	"8"
+					"StartsOn"	"1"
+				}
+				Item
+				{
+					"Item"	"item_w_ithaca_m_37"
+					"Cost"	"12"
+				}
+				Item
+				{
+					"Item"	"item_w_supershotgun"
+					"Cost"	"15"
+				}
+				Item
+				{
+					"Item"	"item_w_glock_17c"
+					"Cost"	"8"
+				}
+				Item
+				{
+					"Item"	"item_w_mac_10"
+					"Cost"	"15"
+				}
+			}
+
+			Armor
+			{
+				Item
+				{
+					"Item"	"item_a_lt_cloth"
+					"Cost"	"0"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_cloth"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_a_lt_leather"
+					"Cost"	"10"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_leather"
+					"Cost"	"20"
+				}
+				Item
+				{
+					"Item"	"item_a_flak_jacket"
+					"Cost"	"30"
+				}
+				Item
+				{
+					"Item"	"item_a_riot_gear"
+					"Cost"	"40"
+				}
+			}
+		}
+
+		MPEquip
+		{
+			"Name"		"Tremere"
+			"InternalName"	"Tremere"
+
+			Equip
+			{
+				Item
+				{
+					"Item"	"item_w_katana"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_w_colt_anaconda"
+					"Cost"	"8"
+					"StartsOn"	"1"
+				}
+				Item
+				{
+					"Item"	"item_w_ithaca_m_37"
+					"Cost"	"12"
+				}
+				Item
+				{
+					"Item"	"item_w_supershotgun"
+					"Cost"	"15"
+				}
+				Item
+				{
+					"Item"	"item_w_glock_17c"
+					"Cost"	"8"
+				}
+				Item
+				{
+					"Item"	"item_w_mac_10"
+					"Cost"	"15"
+				}
+			}
+
+			Armor
+			{
+				Item
+				{
+					"Item"	"item_a_lt_cloth"
+					"Cost"	"0"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_cloth"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_a_lt_leather"
+					"Cost"	"10"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_leather"
+					"Cost"	"20"
+				}
+				Item
+				{
+					"Item"	"item_a_flak_jacket"
+					"Cost"	"30"
+				}
+				Item
+				{
+					"Item"	"item_a_riot_gear"
+					"Cost"	"40"
+				}
+			}
+		}
+
+		MPEquip
+		{
+			"Name"		"Ventrue"
+			"InternalName"	"Ventrue"
+
+			Equip
+			{
+				Item
+				{
+					"Item"	"item_w_katana"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_w_colt_anaconda"
+					"Cost"	"8"
+					"StartsOn"	"1"
+				}
+				Item
+				{
+					"Item"	"item_w_ithaca_m_37"
+					"Cost"	"12"
+				}
+				Item
+				{
+					"Item"	"item_w_supershotgun"
+					"Cost"	"15"
+				}
+				Item
+				{
+					"Item"	"item_w_glock_17c"
+					"Cost"	"8"
+				}
+				Item
+				{
+					"Item"	"item_w_mac_10"
+					"Cost"	"15"
+				}
+			}
+
+			Armor
+			{
+				Item
+				{
+					"Item"	"item_a_lt_cloth"
+					"Cost"	"0"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_cloth"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_a_lt_leather"
+					"Cost"	"10"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_leather"
+					"Cost"	"20"
+				}
+				Item
+				{
+					"Item"	"item_a_flak_jacket"
+					"Cost"	"30"
+				}
+				Item
+				{
+					"Item"	"item_a_riot_gear"
+					"Cost"	"40"
+				}
+			}
+		}
+
+		MPEquip
+		{
+			"Name"		"Leopold1"
+			"InternalName"	"Leopold1"
+
+			Equip
+			{
+				Item
+				{
+					"Item"	"item_w_katana"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_w_colt_anaconda"
+					"Cost"	"8"
+					"StartsOn"	"1"
+				}
+				Item
+				{
+					"Item"	"item_w_ithaca_m_37"
+					"Cost"	"12"
+				}
+				Item
+				{
+					"Item"	"item_w_supershotgun"
+					"Cost"	"15"
+				}
+				Item
+				{
+					"Item"	"item_w_glock_17c"
+					"Cost"	"8"
+				}
+				Item
+				{
+					"Item"	"item_w_mac_10"
+					"Cost"	"15"
+				}
+				Item
+				{
+					"Item"	"item_g_lockpick"
+					"Cost"	"10"
+					"StartsOn"	"1"
+				}
+			}
+
+			Armor
+			{
+				Item
+				{
+					"Item"	"item_a_lt_cloth"
+					"Cost"	"0"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_cloth"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_a_lt_leather"
+					"Cost"	"10"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_leather"
+					"Cost"	"20"
+				}
+				Item
+				{
+					"Item"	"item_a_flak_jacket"
+					"Cost"	"30"
+				}
+				Item
+				{
+					"Item"	"item_a_riot_gear"
+					"Cost"	"40"
+				}
+			}
+		}
+
+		MPEquip
+		{
+			"Name"		"Leopold2"
+			"InternalName"	"Leopold2"
+
+			Equip
+			{
+				Item
+				{
+					"Item"	"item_w_katana"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_w_colt_anaconda"
+					"Cost"	"8"
+					"StartsOn"	"1"
+				}
+				Item
+				{
+					"Item"	"item_w_ithaca_m_37"
+					"Cost"	"12"
+				}
+				Item
+				{
+					"Item"	"item_w_supershotgun"
+					"Cost"	"15"
+				}
+				Item
+				{
+					"Item"	"item_w_glock_17c"
+					"Cost"	"8"
+				}
+				Item
+				{
+					"Item"	"item_w_mac_10"
+					"Cost"	"15"
+				}
+				Item
+				{
+					"Item"	"item_g_lockpick"
+					"Cost"	"10"
+				}
+			}
+
+			Armor
+			{
+				Item
+				{
+					"Item"	"item_a_lt_cloth"
+					"Cost"	"0"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_cloth"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_a_lt_leather"
+					"Cost"	"10"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_leather"
+					"Cost"	"20"
+				}
+				Item
+				{
+					"Item"	"item_a_flak_jacket"
+					"Cost"	"30"
+				}
+				Item
+				{
+					"Item"	"item_a_riot_gear"
+					"Cost"	"40"
+				}
+			}
+		}
+
+		MPEquip
+		{
+			"Name"		"Leopold3"
+			"InternalName"	"Leopold3"
+
+			Equip
+			{
+				Item
+				{
+					"Item"	"item_w_katana"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_w_colt_anaconda"
+					"Cost"	"8"
+					"StartsOn"	"1"
+				}
+				Item
+				{
+					"Item"	"item_w_ithaca_m_37"
+					"Cost"	"12"
+				}
+				Item
+				{
+					"Item"	"item_w_supershotgun"
+					"Cost"	"15"
+				}
+				Item
+				{
+					"Item"	"item_w_glock_17c"
+					"Cost"	"8"
+				}
+				Item
+				{
+					"Item"	"item_w_mac_10"
+					"Cost"	"15"
+				}
+				Item
+				{
+					"Item"	"item_g_lockpick"
+					"Cost"	"10"
+				}
+			}
+
+			Armor
+			{
+				Item
+				{
+					"Item"	"item_a_lt_cloth"
+					"Cost"	"0"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_cloth"
+					"Cost"	"5"
+				}
+				Item
+				{
+					"Item"	"item_a_lt_leather"
+					"Cost"	"10"
+				}
+				Item
+				{
+					"Item"	"item_a_hvy_leather"
+					"Cost"	"20"
+				}
+				Item
+				{
+					"Item"	"item_a_flak_jacket"
+					"Cost"	"30"
+				}
+				Item
+				{
+					"Item"	"item_a_riot_gear"
+					"Cost"	"40"
+				}
+			}
+		}
+	}
+}

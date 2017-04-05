@@ -1,0 +1,205 @@
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//ENBSeries: boris-vorontsov@yandex.ru
+//boris-vorontsov.narod.ru
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+/*
+THIS IS HLSL (HIGH LEVEL SHADER LANGUAGE) FILE FOR EXECUTING ADDITIONAL
+HARDWARE EFFECTS. MAKE THE COPY BEFORE CHANGING IT!
+*/
+
+//keyboard controled variables
+float	tempF1;
+float	tempF2;
+float	tempF3;
+float	tempF4;
+float	tempF5;
+float	tempF6;
+float	tempF7;
+float	tempF8;
+float	tempF9;
+float	tempF0;
+
+
+
+//global variables, already set before executing this code
+float	FadeFactor;	//adaptation time factor
+
+
+
+//textures
+texture2D texDepth;	//original scene depth
+texture2D texCurr;	//4*4 texture
+texture2D texPrev;	//4*4 texture
+
+sampler2D SamplerDepth = sampler_state
+{
+	Texture   = <texDepth>;
+	MinFilter = LINEAR;
+	MagFilter = LINEAR;
+	MipFilter = LINEAR;//NONE;
+	AddressU  = Clamp;
+	AddressV  = Clamp;
+	SRGBTexture=FALSE;
+};
+
+sampler2D SamplerCurr = sampler_state
+{
+	Texture   = <texCurr>;
+	MinFilter = LINEAR;
+	MagFilter = LINEAR;
+	MipFilter = NONE;
+	AddressU  = Clamp;
+	AddressV  = Clamp;
+	SRGBTexture=FALSE;
+};
+
+sampler2D SamplerPrev = sampler_state
+{
+	Texture   = <texPrev>;
+	MinFilter = LINEAR;
+	MagFilter = LINEAR;
+	MipFilter = NONE;
+	AddressU  = Clamp;
+	AddressV  = Clamp;
+	SRGBTexture=FALSE;
+};
+
+
+
+struct VS_OUTPUT_POST
+{
+	float4 vpos  : POSITION;
+	float2 txcoord : TEXCOORD0;
+};
+
+struct VS_INPUT_POST
+{
+	float3 pos  : POSITION;
+	float2 txcoord : TEXCOORD0;
+};
+
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+VS_OUTPUT_POST VS_Focus(VS_INPUT_POST IN)
+{
+	VS_OUTPUT_POST OUT;
+
+	float4 pos=float4(IN.pos.x,IN.pos.y,IN.pos.z,1.0);
+
+	OUT.vpos=pos;
+	OUT.txcoord.xy=IN.txcoord.xy;
+
+	return OUT;
+}
+
+
+
+float4 PS_ReadFocus(VS_OUTPUT_POST IN) : COLOR
+{
+	float4 uvsrc;
+	uvsrc.xy=IN.txcoord.xy;
+	uvsrc.z=0.0;
+	uvsrc.w=3.0;
+
+	const float2 offset[4]=
+	{
+		float2(0.0, 0.3),
+		float2(0.0, -0.3),
+		float2(0.3, 0.0),
+		float2(-0.3, 0.0)
+	};
+
+	float4 res=tex2Dbias(SamplerDepth, uvsrc);
+	for (int i=0; i<4; i++)
+	{
+		uvsrc.xy=offset[i];
+		uvsrc.xy+=IN.txcoord;
+		res+=tex2Dbias(SamplerDepth, uvsrc);
+	}
+	res*=0.2;
+	res.w=1.0;
+	return res;
+}
+
+
+
+float4 PS_WriteFocus(VS_OUTPUT_POST IN) : COLOR
+{
+	float4 uvsrc;
+	uvsrc.xy=IN.txcoord.xy;
+	uvsrc.z=0.0;
+	uvsrc.w=0.0;
+
+	const float2	offset[4]=
+	{
+	//0.25 may not work if filtering of hdr not available
+		float2(0.0, 0.3),
+		float2(0.0, -0.3),
+		float2(0.3, 0.0),
+		float2(-0.3, 0.0)
+	};
+
+	float4 res=0.0;
+	float4 curr=tex2D(SamplerCurr, uvsrc.xy);
+	float4 prev=tex2D(SamplerPrev, uvsrc.xy);
+	for (int i=0; i<4; i++)
+	{
+		uvsrc.xy=offset[i];
+		uvsrc.xy+=IN.txcoord;
+		curr+=tex2D(SamplerCurr, uvsrc.xy);
+		prev+=tex2D(SamplerPrev, uvsrc.xy);
+	}
+	curr*=0.2;
+	prev*=0.2;
+
+	res=(curr-prev)*FadeFactor + prev;//use external
+
+	res.w=1.0;
+	return res;
+}
+
+
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+technique ReadFocus
+{
+	pass P0
+	{
+		VertexShader = compile vs_2_0 VS_Focus();
+		PixelShader  = compile ps_2_0 PS_ReadFocus();
+
+		ZEnable=FALSE;
+		CullMode=NONE;
+		ALPHATESTENABLE=FALSE;
+		SEPARATEALPHABLENDENABLE=FALSE;
+		AlphaBlendEnable=FALSE;
+		FogEnable=FALSE;
+		SRGBWRITEENABLE=FALSE;
+	}
+}
+
+
+
+technique WriteFocus
+{
+	pass P0
+	{
+		VertexShader = compile vs_2_0 VS_Focus();
+		PixelShader  = compile ps_2_0 PS_WriteFocus();
+
+		ZEnable=FALSE;
+		CullMode=NONE;
+		ALPHATESTENABLE=FALSE;
+		SEPARATEALPHABLENDENABLE=FALSE;
+		AlphaBlendEnable=FALSE;
+		FogEnable=FALSE;
+		SRGBWRITEENABLE=FALSE;
+	}
+}
+
+

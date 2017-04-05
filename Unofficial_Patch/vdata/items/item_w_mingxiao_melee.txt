@@ -1,0 +1,98 @@
+// Ming Close Melee, changed by wesp
+
+WeaponData
+{
+	"printname"	"Ming Close Melee"	// added by wesp
+	"description"	"Close quarter attack by Ming."	// added by wesp
+
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"            "models/weapons/w_null.mdl"
+	"playermodel"          "models/weapons/w_null.mdl"
+	"wieldmodel_f"         "models/weapons/w_null.mdl"
+	"wieldmodel_m"         "models/weapons/w_null.mdl"
+	"anim_prefix"          ""
+
+	"impact_snd_group"	"fist"
+
+	"bucket"               "0"
+	"bucket_position"      "1"
+
+	"weight"               "10"
+	"item_flags"           "0"
+	"item_type"            "weapon_melee hidden"
+	"item_worth"           "0"
+	"equip_mask"		"ClawedForm"
+
+	"is_visible_in_hud"    "0"
+
+	"BitFlag_CantBeLast"   "1"
+
+	// Sounds...
+	SoundData
+	{
+		"swish"
+		{
+			"sound1"	"Character\Monster\Ming Xiao\attack_swish_1.wav"
+			"sound2"	"Character\Monster\Ming Xiao\attack_swish_2.wav"
+		}
+	}
+
+	Activation
+	{
+		"Tag"              "Primary"
+
+		"Type"             "Attack"
+		"Ammo_Type"        "None"
+		"Ammo_Cost"        "0"
+		"Botch_Table"      "Fists_Claws_Bite"
+		"Attack_Rate"      "0.5"
+		"Range"            "0"
+
+		"SkillRequirement"	"8"		// min. skill requirement used in dmg calculations
+		"BaseLethality"		"28"		// base lethality used in dmg calculations
+		"Dmg"              "1 Lethal Close_Combat_Melee DMG_SLASH"
+
+		"ImpactForceMin"   "64.0"
+		"ImpactForceMax"   "128.0"
+
+		"CriminalLevel"	"5"
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Temp_Inven"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Temp_Inven"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+//		"crosshair"
+//		{
+//			"640"
+//			{
+//				"file"		"crosshairs"
+//				"x"			"0"
+//				"y"			"48"
+//				"width"		"24"
+//				"height"	"24"
+//			}
+//		}
+	}
+}

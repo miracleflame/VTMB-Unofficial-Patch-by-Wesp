@@ -1,0 +1,59 @@
+// Written
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"			"models/w_null.mdl"
+	"infomodel"			"models/items/beckett_book/info/item_i_beckett_book.mdl"
+	"playermodel"		"models/items/beckett_book/ground/item_g_beckett_book.mdl"
+	"wieldmodel_f"		"models/w_null.mdl"
+	"wieldmodel_m"		"models/w_null.mdl"
+	"anim_prefix"		" "
+
+	"printname"		"Kendo for Advanced Students"
+	"description"		"If you have gained the insight, willpower, and form from your first two years of Kendo, you are now ready for the secrets of the Kendo masters. Here is the one ancient rule every warrior must remember - only one can land the killing strike. Hit the kill zone or hit nothing. If you cannot control your attack, you are dead. This book raises your Melee skill."
+
+	"weight"			"3"
+	"item_flags"		"1"
+	"item_type"			"powerup"
+	"item_worth"		"40"
+
+	"knowledge_min"		"5"
+	"grade"				"mid"
+	"upgrade_ability"	"melee"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Book/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/beckett_book_sel"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/beckett_book"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

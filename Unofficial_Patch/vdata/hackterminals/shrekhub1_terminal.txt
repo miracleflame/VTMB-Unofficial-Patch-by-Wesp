@@ -1,0 +1,33 @@
+TerminalDefinition
+{
+	"screen saver"		"Megahurtz Computing: Think Occasionally"		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""						// these surround the command prompt (2 characters), changed by wesp
+
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Megahurtz Computing"  
+	}
+
+	SubDir
+	{
+		"name"			"Net Security"	//(128 characters)
+		"password"		"Gil Bates"
+		"description"		"Available Connections"
+
+		Function
+		{
+			"name"		"schrecknet"
+			"description"	"hub activation"
+			"runtext"	"schrecknet hub enabled:
+
+Nice going, kid. I'll email you with instructions for the next hub.
+
+>m1tn1ck<"
+			"trigger"	"0"
+			"dependency"	"G.Shubs_Act == 0"	// changed by wesp
+			"runscript"	"mitSetQuestThree()"
+		}
+	}
+}

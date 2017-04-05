@@ -1,0 +1,48 @@
+// Choreo version 1
+actor "!playercontroller"
+{
+  channel "SFX"	// added by wesp
+  {
+    event speak "SFX"
+    {
+      time 4.0 6.0
+      param "character\female\feed_on_loop.wav"
+      fixedlength
+    }
+    event speak "SFX"
+    {
+      time 6.0 8.0
+      param "character\female\feed_on_loop.wav"
+      fixedlength
+    }
+  }
+  channel "Anim"
+  {
+    event sequence "ghoul"
+    {
+      time 0.000000 11.267
+      param "entire_scene"
+      fixedlength
+    }
+  }
+ 
+  bonerename "Bip01" "Bip01"
+}
+
+actor "Heather"
+{
+  channel "Anim"
+  {
+    event sequence "ghoul"
+    {
+      time 0.000000 11.267
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  bonerename "Bip02" "Bip01"
+}
+
+
+fps 60
+snap off

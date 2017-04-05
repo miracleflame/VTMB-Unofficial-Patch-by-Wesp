@@ -1,0 +1,71 @@
+Particle	// added by wesp
+{
+		frames	"30"
+
+	spawn
+	{
+		particle "D_presence_cast_fx1"
+		rate		"30"
+		radius "0"
+		theta "0"
+		phi	"0"
+		x	"4"
+		z	"10"
+	}
+
+	spawn
+	{
+		particle "D_presence_cast_fx2"
+		burst		"1"
+		radius "0"
+		theta "0"
+		phi	"0"
+		x	"4"
+		z	"10"
+	}
+
+	spawn
+	{
+		particle "D_presence_cast_fx3"
+		burst		"1"
+		radius "0"
+		theta "0"
+		phi	"0"
+		x	"4"
+		z	"10"
+	}
+// restored by wesp from d_presence_emitter
+	spawn
+	{
+		particle	"D_Presence_Stars"
+		rate		"3"
+		burst		"1"
+		phi		"180~-180"
+		theta		"0~360"
+		x		"4"
+		z		"10"
+	}
+// restored by wesp from d_presence_emitter
+	spawn
+	{
+		particle	"D_Presence_Halo"
+		burst		"1"
+		rate		"3"
+		x		"5"
+		z		"10"
+	}
+// restored by wesp from d_presence_body_emitter
+	spawn
+	{
+		particle "D_Presence_Aura"
+		burst		"1"
+		rate "5"
+		radius "0"
+		theta "0~360"
+		phi	"0"
+		x	"4"
+		z	"10"
+	}
+
+}
+

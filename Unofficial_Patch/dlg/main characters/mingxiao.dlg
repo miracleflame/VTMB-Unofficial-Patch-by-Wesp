@@ -1,0 +1,886 @@
+{	1	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	[icy, proper, vindictive, condescending. Speaks snappishly. Faux british accent. Like Julianee Moore as Maude Lebowski in The Big Lebowski.]	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	Welcome, Kindred, and thank you for respecting our traditions by announcing your presence in our domain. I am Ming-Xiao, High Priestess to the people of Chinatown. Can I get you anything? Tea, perhaps?	}{	Welcome, Kindred, and thank you for respecting our traditions by announcing your presence in our domain. I am Ming-Xiao, High Priestess to the people of Chinatown. Can I get you anything? Tea, perhaps?	}{	#	}{	}{	G.Ming_Met = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	No, no tea, thank you.	}{	No, no tea, thank you.	}{	41	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	13	}{	I'd rather learn a little bit about your people.	}{	I'd rather learn a little bit about your people.	}{	251	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	I thought you should know... I killed one of your spies in Santa Monica.	}{	I thought you should know... I killed one of your spies in Santa Monica.	}{	741	}{	not IsClan(pc,"Malkavian") and G.Kjspy_Dead == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	Let's cut the chit-chat. I'm looking for a Nosferatu vampire.	}{	Let's cut the chit-chat. I'm looking for a Nosferatu vampire.	}{	21	}{	not IsClan(pc,"Malkavian")	}{	G.Ming_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	I have a few questions for you.	}{	I have a few questions for you.	}{	281	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	Ah! The Mistress of Mirrors!	}{	Ah! The Mistress of Mirrors!	}{	801	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	[matter of fact]Please, Kindred. There is no need to be abrupt.	}{	[matter of fact]Please, Kindred. There is no need to be abrupt.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	Whatever, lady. Just tell me what I need to know and I'm outta here.	}{	Whatever, lady. Just tell me what I need to know and I'm outta here.	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	I have no words to waste on you, life-eater.	}
+{	23	}{	Yes, of course. Forgive me, Ming-Xiao. I was out of place.	}{	Yes, of course. Forgive me, Ming-Xiao. I was out of place.	}{	31	}{	}{	G.Ming_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	Forgive my tremulous tongue, mirror mistress.	}
+{	24	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	Very well. Despite the hostility between our people, I would expect an agent of the prince to behave civilly. Now might I offer you something?	}{	Very well. Despite the hostility between our people, I would expect an agent of the prince to behave civilly. Now might I offer you something?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	No thank you. I have a very, er, specific sort of diet.	}{	No thank you. I have a very, er, specific sort of diet.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am fickle in my food choice.	}
+{	33	}{	Not right now. Forgive my brevity, but I do need to find this vampire.	}{	Not right now. Forgive my brevity, but I do need to find this vampire.	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	Please light my path to the missing monstrosity.	}
+{	34	}{	Who said I worked for the prince?	}{	Who said I worked for the prince?	}{	651	}{	}{	}{	}{	}{	}{	}{	}{	}{	I confess no conspiracy with the jester-prince.	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Ah, that is right. Your kind drinks solely of mortal blood, correct? No longer may you partake in the simple pleasures of the mortal realm. A shame.	}{	Ah, that is right. Your kind drinks solely of mortal blood, correct? No longer may you partake in the simple pleasures of the mortal realm. A shame.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	My "kind"? What, exactly, is your "kind"?	}{	My "kind"? What, exactly, is your "kind"?	}{	251	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of your "kind", mirror mistress.	}
+{	43	}{	You can?	}{	You can?	}{	61	}{	not IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	You still partake of such pleasures?	}
+{	44	}{	Would that I could again, but alas, no. Your kind is able to?	}{	Would that I could again, but alas, no. Your kind is able to?	}{	61	}{	IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	See ya.	}{	See ya.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	50	}{	See ya.	}{	See ya.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	51	}{	Most of us are also banished from the realm of the sun. Although we suffer rot instead of burning, the day's light is no more kind to our existence.	}{	Most of us are also banished from the realm of the sun. Although we suffer rot instead of burning, the day's light is no more kind to our existence.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	And how do you attain this existence?	}{	And how do you attain this existence?	}{	91	}{	G.Ming_Breath == 0	}{	}{	}{	}{	}{	}{	}{	}{	Explain this enigmatic existence.	}
+{	53	}{	So as a mortal you can choose to become supernatural?	}{	So as a mortal you can choose to become supernatural?	}{	101	}{	G.Ming_Breath == 1	}{	}{	}{	}{	}{	}{	}{	}{	You choose this supernatural state?	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	59	}{	I'm outta here.	}{	I'm outta here.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	60	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	61	}{	Yes. We Kuei-jin [KWAY-jin]are similar to you Kindred in fewer ways than you might imagine.	}{	Yes. We Kuei-jin [KWAY-jin]are similar to you Kindred in fewer ways than you might imagine.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	You are vampires, right?	}{	You are vampires, right?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	Does Caine's curse flow in your veins?	}
+{	63	}{	Kuei-jin?	}{	Kuei-jin?	}{	251	}{	G.Ming_Kjname == 0	}{	}{	}{	}{	}{	}{	}{	}{	Kuei-jin?	}
+{	64	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	I'm outta here.	}{	I'm outta here.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	70	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	71	}{	[slight laugh-laughing at the naivete of the question]We are supernatural; that does not mean we are like yourself. We are beings returned through the Second Breath for a purpose.	}{	[slight laugh-laughing at the naivete of the question]We are supernatural; that does not mean we are like yourself. We are beings returned through the Second Breath for a purpose.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	C'mon. You're saying we're nothing alike?	}{	C'mon. You're saying we're nothing alike?	}{	81	}{	G.Ming_Unlife == 0	}{	}{	}{	}{	}{	}{	}{	}{	So different, the souls of Kuei-jin and Kindred?	}
+{	73	}{	Second Breath?	}{	Second Breath?	}{	91	}{	G.Ming_Unlife == 0	}{	}{	}{	}{	}{	}{	}{	}{	Second Breath?	}
+{	74	}{	What purpose?	}{	What purpose?	}{	111	}{	G.Ming_Unlife == 0	}{	}{	}{	}{	}{	}{	}{	}{	Paint me a picture of this purpose.	}
+{	75	}{	You've got a lot of nerve insulting Kindred like that.	}{	You've got a lot of nerve insulting Kindred like that.	}{	131	}{	G.Ming_Unlife == 0 and G.Ming_Sorry < 2	}{	}{	}{	}{	}{	}{	}{	}{	Speak not so ill of my blood brethren!	}
+{	76	}{	I have a few other questions.	}{	I have a few other questions.	}{	281	}{	G.Ming_Unlife == 1	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	77	}{	I have a few more questions about the Kuei-jin.	}{	I have a few more questions about the Kuei-jin.	}{	711	}{	G.Ming_Unlife == 1	}{	}{	}{	}{	}{	}{	}{	}{	Uncover this conundrum of the Kuei-jin!	}
+{	78	}{	There have to be at least a few similarities, right?	}{	There have to be at least a few similarities, right?	}{	81	}{	G.Ming_Unlife == 1	}{	}{	}{	}{	}{	}{	}{	}{	Such contrast between Kuei-jin and Kindred?	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	We share superficial similarities; Kuei-jin feed on essences that can be found in blood, yes... but as we refine our existence, rarely are we lowered to consume the bodily fluids of others.	}{	We share superficial similarities; Kuei-jin feed on essences that can be found in blood, yes... but as we refine our existence, rarely are we lowered to consume the bodily fluids of others.	}{	#	}{	}{	G.Ming_Feed = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	How else are we similar?	}{	How else are we similar?	}{	51	}{	G.Ming_Unlife == 0	}{	}{	}{	}{	}{	}{	}{	}{	What other rivers flow between us?	}
+{	83	}{	And how do you attain this existence?	}{	And how do you attain this existence?	}{	91	}{	G.Ming_Unlife == 0 and G.Ming_Breath == 0	}{	}{	}{	}{	}{	}{	}{	}{	Explain this enigmatic existence.	}
+{	84	}{	So as a mortal you can choose to become supernatural?	}{	So as a mortal you can choose to become supernatural?	}{	101	}{	G.Ming_Unlife == 0 and G.Ming_Breath == 1	}{	}{	}{	}{	}{	}{	}{	}{	You choose this supernatural state?	}
+{	85	}{	Oh, so I'm some lowly blood-lickin' dog?	}{	Oh, so I'm some lowly blood-lickin' dog?	}{	131	}{	G.Ming_Unlife == 0 and G.Ming_Sorry < 2	}{	}{	}{	}{	}{	}{	}{	}{	Your lascivious lips call me lowly!	}
+{	86	}{	I have a few other questions.	}{	I have a few other questions.	}{	281	}{	G.Ming_Unlife == 1	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	87	}{	I have a few more questions about the Kuei-jin.	}{	I have a few more questions about the Kuei-jin.	}{	711	}{	G.Ming_Unlife == 1	}{	}{	}{	}{	}{	}{	}{	}{	Uncover this conundrum of the Kuei-jin!	}
+{	88	}{	It's an acquired taste. I'm outta here.	}{	It's an acquired taste. I'm outta here.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	Speak not until you've tasted our sanguine suppers. I leave you.	}
+{	89	}{	It's an acquired taste. I'm outta here.	}{	It's an acquired taste. I'm outta here.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	Speak not until you've tasted our sanguine suppers. I leave you.	}
+{	90	}{	I'm about to drain your bodily fluids, bitch. See ya.	}{	I'm about to drain your bodily fluids, bitch. See ya.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your own fluids will flow with such words, demon-priestess. Farewell.	}
+{	91	}{	The Second Breath - our rebirth into the supernatural form. It is a spiritual awakening, not some lowly blood ritual meant to spread a despicable curse.	}{	The Second Breath - our rebirth into the supernatural form. It is a spiritual awakening, not some lowly blood ritual meant to spread a despicable curse.	}{	#	}{	}{	G.Ming_Breath = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	But we are similar.	}{	But we are similar.	}{	81	}{	G.Ming_Unlife == 0 and G.Ming_Feed == 0	}{	}{	}{	}{	}{	}{	}{	}{	Our kinds cast similar shadows.	}
+{	93	}{	So as a mortal you can choose to become supernatural?	}{	So as a mortal you can choose to become supernatural?	}{	101	}{	G.Ming_Unlife == 0 and G.Ming_Feed == 1	}{	}{	}{	}{	}{	}{	}{	}{	You choose this supernatural state?	}
+{	94	}{	Oh, I get it. You're angels and we're just lowly bloodsuckers, right?	}{	Oh, I get it. You're angels and we're just lowly bloodsuckers, right?	}{	131	}{	G.Ming_Unlife == 0 and G.Ming_Sorry < 2	}{	}{	}{	}{	}{	}{	}{	}{	Despicable is the fork of your demon tongue!	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	Right. But did you choose this life when you were mortal?	}{	Right. But did you choose this life when you were mortal?	}{	101	}{	G.Ming_Unlife == 1	}{	}{	}{	}{	}{	}{	}{	}{	When mortal you chose this ethereal existence?	}
+{	97	}{	I have a few more questions about the Kuei-jin.	}{	I have a few more questions about the Kuei-jin.	}{	711	}{	G.Ming_Unlife == 1	}{	}{	}{	}{	}{	}{	}{	}{	Uncover this conundrum of the Kuei-jin!	}
+{	98	}{	I'm outta here.	}{	I'm outta here.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	99	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	100	}{	Keep it up and you'll get another spiritual awakening. Later.	}{	Keep it up and you'll get another spiritual awakening. Later.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	You shall awaken in the hell of fork-tongued fury. Farewell.	}
+{	101	}{	No, we do not choose, but events of our lives can awaken dark spiritual energies. We are not born of the whims of another as the Kindred are.	}{	No, we do not choose, but events of our lives can awaken dark spiritual energies. We are not born of the whims of another as the Kindred are.	}{	#	}{	}{	G.Ming_Whim = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	So why are some chosen to become supernatural?	}{	So why are some chosen to become supernatural?	}{	111	}{	G.Ming_Unlife == 0 and G.Ming_Purpose == 0	}{	}{	}{	}{	}{	}{	}{	}{	What reason behind this unfortunate fate?	}
+{	103	}{	Whatever. It sounds like you guys are just as screwed as we are.	}{	Whatever. It sounds like you guys are just as screwed as we are.	}{	121	}{	G.Ming_Unlife == 0 and G.Ming_Purpose == 1	}{	}{	}{	}{	}{	}{	}{	}{	Your dressing is different, yet cursed also you are.	}
+{	104	}{	Why are some chosen and others not?	}{	Why are some chosen and others not?	}{	111	}{	G.Ming_Unlife == 1	}{	}{	}{	}{	}{	}{	}{	}{	What reason behind this unfortunate fate?	}
+{	105	}{	I have a few more questions about the Kuei-jin.	}{	I have a few more questions about the Kuei-jin.	}{	711	}{	G.Ming_Unlife == 1	}{	}{	}{	}{	}{	}{	}{	}{	Uncover this conundrum of the Kuei-jin!	}
+{	106	}{	I have a few other questions.	}{	I have a few other questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	107	}{	You're going to die on my whim if you keep up with the lip.	}{	You're going to die on my whim if you keep up with the lip.	}{	691	}{	G.Ming_Unlife == 1	}{	}{	}{	}{	}{	}{	}{	}{	My whims may war with your own, demon-priestess. Farewell.	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	The reasons are as numerous as the Kuei-jin themselves. Each is reborn with a purpose that they must find. Once their path is evident, they must seek to fulfill it, even if it takes eternity.	}{	The reasons are as numerous as the Kuei-jin themselves. Each is reborn with a purpose that they must find. Once their path is evident, they must seek to fulfill it, even if it takes eternity.	}{	#	}{	}{	G.Ming_Purpose = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	It sounds as much of a curse as the Embrace of Caine.	}{	It sounds as much of a curse as the Embrace of Caine.	}{	121	}{	G.Ming_Unlife == 0 and G.Ming_Whim == 1	}{	}{	}{	}{	}{	}{	}{	}{	Your dressing is different, yet cursed also you are.	}
+{	113	}{	How are the Kuei-jin similar to Kindred?	}{	How are the Kuei-jin similar to Kindred?	}{	81	}{	G.Ming_Unlife == 0 and G.Ming_Whim == 0	}{	}{	}{	}{	}{	}{	}{	}{	What other rivers flow between Kuei-jin and Kindred?	}
+{	114	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	I have to go.	}{	I have to go.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	118	}{	I have to go.	}{	I have to go.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	119	}{	This conversation seems like an eternity. Later.	}{	This conversation seems like an eternity. Later.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hell is an eternity with your tepid tales. Farewell.	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	On the contrary, it is another chance for us to find our place in the universe, a chance for transcendence. We are not damned, not burdened with an ancient guilt, as in the legend of your biblical progenitor.	}{	On the contrary, it is another chance for us to find our place in the universe, a chance for transcendence. We are not damned, not burdened with an ancient guilt, as in the legend of your biblical progenitor.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	Speaking of legends, have you heard of the Ankaran Sarcophagus?	}{	Speaking of legends, have you heard of the Ankaran Sarcophagus?	}{	351	}{	G.Ming_Bros == 0	}{	}{	}{	}{	}{	}{	}{	}{	Have your ears seen the Ankaran Sarcophagus?	}
+{	123	}{	Funny. You guys actually buy into this stuff?	}{	Funny. You guys actually buy into this stuff?	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	You actually believe this boisterous babble?	}
+{	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	I have to go.	}{	I have to go.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	126	}{	I have to go.	}{	I have to go.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	127	}{	Uh, I'm transcending out of this bullshit. Later.	}{	Uh, I'm transcending out of this bullshit. Later.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	May fate transcends my being from this bulldung. Farewell.	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	Oh no, dear Kindred. You misunderstand me. I mean no disrespect.	}{	Oh no, dear Kindred. You misunderstand me. I mean no disrespect.	}{	#	}{	G.Ming_Sorry = G.Ming_Sorry + 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	I think you do. You keep insulting Kindred vampires... and me.	}{	I think you do. You keep insulting Kindred vampires... and me.	}{	321	}{	G.Ming_Sorry == 2	}{	}{	}{	}{	}{	}{	}{	}{	Your words stain both me and my blood brethren.	}
+{	133	}{	That's better. So tell me... how are we similar?	}{	That's better. So tell me... how are we similar?	}{	81	}{	G.Ming_Feed == 0	}{	}{	}{	}{	}{	}{	}{	}{	So different are Kindred and Kuei-jin?	}
+{	134	}{	Exactly. Now tell me how you attain this existence.	}{	Exactly. Now tell me how you attain this existence.	}{	91	}{	G.Ming_Breath == 0	}{	}{	}{	}{	}{	}{	}{	}{	How did you arrive at your ethereal existence?	}
+{	135	}{	There you go. So, as a mortal you chose to become supernatural?	}{	There you go. So, as a mortal you chose to become supernatural?	}{	101	}{	G.Ming_Breath == 1 or G.Ming_Feed == 1	}{	}{	}{	}{	}{	}{	}{	}{	You chose this supernatural state?	}
+{	136	}{	I have to go.	}{	I have to go.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	137	}{	I have to go.	}{	I have to go.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	138	}{	Yo. Disrespect THIS. See ya.	}{	Yo. Disrespect THIS. See ya.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	And I mean no disrespect with this middle digit. Farewell.	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	No. Kuei-jin do not rise after the Second Breath with an awareness of their condition. The road to enlightenment is always long and arduous. Many Kuei-jin die a Final Death before they realize what has become of them.	}{	No. Kuei-jin do not rise after the Second Breath with an awareness of their condition. The road to enlightenment is always long and arduous. Many Kuei-jin die a Final Death before they realize what has become of them.	}{	#	}{	}{	G.Ming_Unlife = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	Your path seems intimately bound to mortals.	}{	Your path seems intimately bound to mortals.	}{	151	}{	pc.perception > 3 and pc.intelligence > 2 and G.Ming_Human == 0	}{	}{	}{	}{	}{	}{	}{	}{	You seem to walk the same roads as your mortal minions.	}
+{	143	}{	What is the Kuei-jin's relationship with humans like?	}{	What is the Kuei-jin's relationship with humans like?	}{	151	}{	pc.perception > 3 and pc.intelligence > 2 and G.Ming_Human == 0	}{	}{	}{	}{	}{	}{	}{	}{	Do Kuei-jin mingle with their human herd?	}
+{	144	}{	You said you're an open secret, but you still hide from mortals.	}{	You said you're an open secret, but you still hide from mortals.	}{	161	}{	G.Ming_Human == 1	}{	}{	}{	}{	}{	}{	}{	}{	You still hide from your human herd.	}
+{	145	}{	So you're a priestess to mortals and the undead? Busy girl.	}{	So you're a priestess to mortals and the undead? Busy girl.	}{	171	}{	G.Ming_Human == 2	}{	}{	}{	}{	}{	}{	}{	}{	You guide spirits both mortal and mystical?	}
+{	146	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	I'm outta here.	}{	I'm outta here.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	150	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	151	}{	In our homeland, man and supernatural live in uneasy harmony. Our mortals see spirituality in all things, and our existence is taken for granted. An open secret is the easiest to keep.	}{	In our homeland, man and supernatural live in uneasy harmony. Our mortals see spirituality in all things, and our existence is taken for granted. An open secret is the easiest to keep.	}{	#	}{	}{	G.Ming_Human = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	You do not hide your nature?	}{	You do not hide your nature?	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Do Kuei-jin cloak themselves in secrecy?	}
+{	153	}{	But you hide like the rest of us.	}{	But you hide like the rest of us.	}{	161	}{	G.Ming_Kjname > 0	}{	}{	}{	}{	}{	}{	}{	}{	You still hide from your human herd.	}
+{	154	}{	"Your" existence. Eastern vampires, you mean?	}{	"Your" existence. Eastern vampires, you mean?	}{	251	}{	G.Ming_Kjname == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me more of this Eastern existence.	}
+{	155	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	See ya.	}{	See ya.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	160	}{	See ya.	}{	See ya.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	161	}{	We do, in fact. Our purpose is to seek transcendence. Interfering in mortals' lives, or their interference in Kuei-jin unlives, detracts from this pursuit.	}{	We do, in fact. Our purpose is to seek transcendence. Interfering in mortals' lives, or their interference in Kuei-jin unlives, detracts from this pursuit.	}{	#	}{	}{	G.Ming_Human = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	But you're a priestess to the humans as well, aren't you?	}{	But you're a priestess to the humans as well, aren't you?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	You guide spirits both mortal and mystical?	}
+{	163	}{	Kuei-jin?	}{	Kuei-jin?	}{	251	}{	G.Ming_Kjname == 0	}{	}{	}{	}{	}{	}{	}{	}{	Kuei-jin?	}
+{	164	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	Yeah, except when you need to drain one of them dry, right?	}{	Yeah, except when you need to drain one of them dry, right?	}{	181	}{	G.Ming_Humandone == 1 & Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	Do you transcend the evacuation of their veins?	}
+{	167	}{	I'm sure you interfere when you need to feed.	}{	I'm sure you interfere when you need to feed.	}{	181	}{	G.Ming_Humandone == 1 & Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	Feeding seems an urgent interference.	}
+{	168	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	169	}{	Whatever. I'm outta here.	}{	Whatever. I'm outta here.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	170	}{	Whatever. I'm outta here.	}{	Whatever. I'm outta here.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	171	}{	My purpose touches many lives; such is my path.	}{	My purpose touches many lives; such is my path.	}{	#	}{	}{	G.Ming_Human = 3	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	Isn't that interference?	}{	Isn't that interference?	}{	191	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	Intertwine? Interfere?	}
+{	173	}{	Yeah... like a hungry shepherd to her flock, right?	}{	Yeah... like a hungry shepherd to her flock, right?	}{	181	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	Yours is the path of the hungry wolf, mistress.	}
+{	174	}{	Perhaps "many lives serve your purpose" is a better way to put it.	}{	Perhaps "many lives serve your purpose" is a better way to put it.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	This flock serves your dark designs.	}
+{	175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	179	}{	Never mind. I'm blowin' this joint. See ya.	}{	Never mind. I'm blowin' this joint. See ya.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	180	}{	Never mind. I'm blowin' this joint. See ya.	}{	Never mind. I'm blowin' this joint. See ya.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	181	}{	We Kuei-jin do not claim majesty over mortals as Kindred do: whether as bestial lords or shadowy puppetmasters, you all delight in your superiority over naturally weaker creatures.	}{	We Kuei-jin do not claim majesty over mortals as Kindred do: whether as bestial lords or shadowy puppetmasters, you all delight in your superiority over naturally weaker creatures.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	Weaker creatures?	}{	Weaker creatures?	}{	191	}{	not IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	Weaker creatures?	}
+{	183	}{	You minister to mortal spirits, and show them contempt by calling them weak?	}{	You minister to mortal spirits, and show them contempt by calling them weak?	}{	191	}{	IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	184	}{	I claim no majesty. Guidance of "weaker creatures" is a gift.	}{	I claim no majesty. Guidance of "weaker creatures" is a gift.	}{	191	}{	IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	185	}{	Are you just trying to piss me off?	}{	Are you just trying to piss me off?	}{	241	}{	G.Ming_Sorry < 2	}{	}{	}{	}{	}{	}{	}{	}{	Your words mince the balance of my mind, demoness.	}
+{	186	}{	You're telling me your humans don't fear the supernatural?	}{	You're telling me your humans don't fear the supernatural?	}{	201	}{	G.Ming_Humandone == 1	}{	}{	}{	}{	}{	}{	}{	}{	Your herd fears not your enigmatic embodiment?	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	This scene is dead. See ya.	}{	This scene is dead. See ya.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	190	}{	This scene is dead. See ya.	}{	This scene is dead. See ya.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	191	}{	I mean it in the most practical sense. Does the parent show the child contempt by protecting it? To help those weaker than oneself is a tenet of my order.	}{	I mean it in the most practical sense. Does the parent show the child contempt by protecting it? To help those weaker than oneself is a tenet of my order.	}{	#	}{	}{	G.Ming_Human = 4	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	I agree with your comment about guiding those who need it.	}{	I agree with your comment about guiding those who need it.	}{	231	}{	IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	193	}{	I see what you mean.	}{	I see what you mean.	}{	201	}{	Humanity 4	}{	}{	}{	}{	}{	}{	}{	}{	Your words ring true, mirror mistress.	}
+{	194	}{	Mortals. Really, who needs 'em, except as juice bags?	}{	Mortals. Really, who needs 'em, except as juice bags?	}{	201	}{	Humanity -4	}{	}{	}{	}{	}{	}{	}{	}{	Better the blind herd to feed my thirst....	}
+{	195	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	I've got to go. See ya.	}{	I've got to go. See ya.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	200	}{	I've got to go. See ya.	}{	I've got to go. See ya.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	201	}{	The mortals of our domain are blessedly humble, simple, and content to avoid supernatural attention, which is more than can be said for Western stock.	}{	The mortals of our domain are blessedly humble, simple, and content to avoid supernatural attention, which is more than can be said for Western stock.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	What are you saying?	}{	What are you saying?	}{	211	}{	Humanity 4	}{	}{	}{	}{	}{	}{	}{	}{	Speak further, mirror mistress.	}
+{	203	}{	They all bleed the same, I'll tell you that much.	}{	They all bleed the same, I'll tell you that much.	}{	211	}{	Humanity -4	}{	}{	}{	}{	}{	}{	}{	}{	Sweet the blood of my purposeless prey.	}
+{	204	}{	Oh, so now even our humans are inferior?	}{	Oh, so now even our humans are inferior?	}{	241	}{	G.Ming_Sorry < 2	}{	}{	}{	}{	}{	}{	}{	}{	Even the Kindred herd are hapless, demoness?	}
+{	205	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	207	}{	Whatever. You seem to be saying you respect these mortals.	}{	Whatever. You seem to be saying you respect these mortals.	}{	211	}{	G.Ming_Humandone == 1	}{	}{	}{	}{	}{	}{	}{	}{	You hold in high regard this mortal herd?	}
+{	208	}{	I've got to go. See ya.	}{	I've got to go. See ya.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	209	}{	I've got to go. See ya.	}{	I've got to go. See ya.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	210	}{	See this finger? This is Western for "you're full of it". See ya.	}{	See this finger? This is Western for "you're full of it". See ya.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	211	}{	Were we not all human at one point? It is[RM: "Is it" misread] not obvious, Kindred, that mortality is not the end? Is it then not unreasonable to think that further existences lie beyond? That we are all simply transforming?	}{	Were we not all human at one point? It is[RM: "Is it" misread] not obvious, Kindred, that mortality is not the end? Is it then not unreasonable to think that further existences lie beyond? That we are all simply transforming?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	My point exactly. Refreshingly enlightened.	}{	My point exactly. Refreshingly enlightened.	}{	221	}{	G.Ming_Humandone == 0 and IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	213	}{	I can see your point.	}{	I can see your point.	}{	221	}{	G.Ming_Humandone == 0	}{	}{	}{	}{	}{	}{	}{	}{	Your words ring true, mirror mistress.	}
+{	214	}{	I'm not sure I totally agree.	}{	I'm not sure I totally agree.	}{	221	}{	G.Ming_Humandone == 0	}{	}{	}{	}{	}{	}{	}{	}{	Misguided are your musings.	}
+{	215	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	G.Ming_Humandone == 1	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	217	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	219	}{	Whatever. I'm outta here.	}{	Whatever. I'm outta here.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	220	}{	Whatever. I'm outta here.	}{	Whatever. I'm outta here.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	221	}{	This is what we seek. Or at least as best as I can explain it to you.	}{	This is what we seek. Or at least as best as I can explain it to you.	}{	#	}{	}{	G.Ming_Human = 5; G.Ming_Humandone = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	223	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	224	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	225	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	226	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	227	}{	Wow. You're really stuck-up for a dead chick, aren't you?	}{	Wow. You're really stuck-up for a dead chick, aren't you?	}{	241	}{	G.Ming_Sorry < 2	}{	}{	}{	}{	}{	}{	}{	}{	Acidic your tongue, mistress.	}
+{	228	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	229	}{	Whatever. I'm outta here.	}{	Whatever. I'm outta here.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	230	}{	Whatever. I'm outta here.	}{	Whatever. I'm outta here.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	231	}{	Indeed. I am familiar with clan Ventrue [VEN-troo]and similarities do exist. We understand human and supernatural society more keenly than most.	}{	Indeed. I am familiar with clan Ventrue [VEN-troo]and similarities do exist. We understand human and supernatural society more keenly than most.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	Agreed.	}{	Agreed.	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	233	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	234	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	235	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	236	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	238	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	241	}{	No. I am sorry if my words are sharp. Such are our ways.	}{	No. I am sorry if my words are sharp. Such are our ways.	}{	#	}{	G.Ming_Sorry = G.Ming_Sorry + 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	Yeah, if "sharp" means that you keep insulting Kindred.	}{	Yeah, if "sharp" means that you keep insulting Kindred.	}{	321	}{	G.Ming_Sorry == 2	}{	}{	}{	}{	}{	}{	}{	}{	Your sharpness cuts the throats of my brethren.	}
+{	243	}{	"Naturally weaker creatures", how am I supposed to take that?	}{	"Naturally weaker creatures", how am I supposed to take that?	}{	191	}{	G.Ming_Human == 3	}{	G.Ming_Sorry = 1	}{	}{	}{	}{	}{	}{	}{	You color our herd in the shades of weakness.	}
+{	244	}{	Well you keep insulting Kindred, insulting mortals....	}{	Well you keep insulting Kindred, insulting mortals....	}{	211	}{	G.Ming_Human == 4	}{	G.Ming_Sorry = 1	}{	}{	}{	}{	}{	}{	}{	Your insults bite the flesh of both Kindred and kine.	}
+{	245	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	246	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	G.Ming_Human == 5	}{	G.Ming_Sorry = 1	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	247	}{	Whatever. I'm outta here.	}{	Whatever. I'm outta here.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	248	}{	Whatever. I'm outta here.	}{	Whatever. I'm outta here.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	249	}{	And I'm sorry that I ever walked into this freakshow. Later.	}{	And I'm sorry that I ever walked into this freakshow. Later.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	Careful that your way leads not to death's door, demoness.	}
+{	250	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	251	}{	We are called the Kuei-jin, though you may know us as [scornful]"Eastern vampires". It is a grave misnomer, I can assure you.	}{	We are called the Kuei-jin, though you may know us as [scornful]"Eastern vampires". It is a grave misnomer, I can assure you.	}{	#	}{	}{	G.Ming_Kjname = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	Are you the leader of these "Kuei-jin"?	}{	Are you the leader of these "Kuei-jin"?	}{	261	}{	}{	G.Ming_Kjname = G.Ming_Kjname + 1	}{	}{	}{	}{	}{	}{	}{	Do you lead these eaters of life?	}
+{	253	}{	Are you descended from Caine?	}{	Are you descended from Caine?	}{	271	}{	}{	G.Ming_Kjname = G.Ming_Kjname + 1	}{	}{	}{	}{	}{	}{	}{	Does the curse of Caine flow in your veins?	}
+{	254	}{	Misnomer? I don't get it. You guys are vampires, right?	}{	Misnomer? I don't get it. You guys are vampires, right?	}{	71	}{	G.Ming_Feed == 0	}{	}{	}{	}{	}{	}{	}{	}{	Misnamed? Kuei-jin and vampire, the same?	}
+{	255	}{	And the Kuei-jin do not hide their nature from humans?	}{	And the Kuei-jin do not hide their nature from humans?	}{	161	}{	G.Ming_Human == 1	}{	}{	}{	}{	}{	}{	}{	}{	Do Kuei-jin cloak themselves in secrecy?	}
+{	256	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	G.Ming_Human == 5	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	In a sense, yes. You may think of me as the Baron of Chinatown, to borrow from your coarse, Cainite language.	}{	In a sense, yes. You may think of me as the Baron of Chinatown, to borrow from your coarse, Cainite language.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	Are you descended from Caine?	}{	Are you descended from Caine?	}{	271	}{	G.Ming_Kjname == 2	}{	G.Ming_Kjname = G.Ming_Kjname + 1	}{	}{	}{	}{	}{	}{	}{	Are you also cursed of Caine?	}
+{	263	}{	Let me see if I have this straight: you are a vampire, correct?	}{	Let me see if I have this straight: you are a vampire, correct?	}{	71	}{	G.Ming_Feed == 0	}{	}{	}{	}{	}{	}{	}{	}{	Do you call yourself Kindred?	}
+{	264	}{	And the Kuei-jin do not hide their nature from humans?	}{	And the Kuei-jin do not hide their nature from humans?	}{	161	}{	G.Ming_Human == 1	}{	}{	}{	}{	}{	}{	}{	}{	Do Kuei-jin cloak themselves in secrecy?	}
+{	265	}{	So you're a priestess to mortals and the undead? Busy girl.	}{	So you're a priestess to mortals and the undead? Busy girl.	}{	171	}{	G.Ming_Human == 2	}{	}{	}{	}{	}{	}{	}{	}{	You guide spirits both mortal and mystical?	}
+{	266	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	G.Ming_Human == 5	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	268	}{	I'm outta here.	}{	I'm outta here.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	269	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	270	}{	Would it be coarse to say you're a bitch? Later.	}{	Would it be coarse to say you're a bitch? Later.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	271	}{	[Laughing at the charming naivete of the question]No. We are not simply some exotic Cainite bloodline.	}{	[Laughing at the charming naivete of the question]No. We are not simply some exotic Cainite bloodline.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	272	}{	Are you the leader of these "Kuei-jin"?	}{	Are you the leader of these "Kuei-jin"?	}{	261	}{	G.Ming_Kjname == 2	}{	G.Ming_Kjname = G.Ming_Kjname + 1	}{	}{	}{	}{	}{	}{	}{	Do you lead these eaters of life?	}
+{	273	}{	But you are a vampire?	}{	But you are a vampire?	}{	71	}{	G.Ming_Feed == 0	}{	}{	}{	}{	}{	}{	}{	}{	Do you wear the vampiric veil, mistress?	}
+{	274	}{	And the Kuei-jin do not hide their nature from humans?	}{	And the Kuei-jin do not hide their nature from humans?	}{	161	}{	G.Ming_Human == 1	}{	}{	}{	}{	}{	}{	}{	}{	Do Kuei-jin also cloak themselves in secrecy?	}
+{	275	}{	So you're a priestess to mortals and the undead? Busy girl.	}{	So you're a priestess to mortals and the undead? Busy girl.	}{	171	}{	G.Ming_Human == 2 and G.Ming_Kjname == 3	}{	}{	}{	}{	}{	}{	}{	}{	You guide spirits both mortal and mystical?	}
+{	276	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	G.Ming_Human == 5	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	277	}{	I'm outta here.	}{	I'm outta here.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	278	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	279	}{	I can assure you that all of us are glad that you aren't. See ya.	}{	I can assure you that all of us are glad that you aren't. See ya.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	281	}{	What can I help you with?	}{	What can I help you with?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	Tell me about your people.	}{	Tell me about your people.	}{	251	}{	G.Ming_Kjname == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me more of your people, mirror mistress.	}
+{	283	}{	I had some questions about the Kuei-jin.	}{	I had some questions about the Kuei-jin.	}{	291	}{	G.Ming_Kjname > 0	}{	}{	}{	}{	}{	}{	}{	}{	Uncover this conundrum of the Kuei-jin!	}
+{	284	}{	Do you know of a hengeyôkai in Chinatown?	}{	Do you know of a hengeyôkai in Chinatown?	}{	461	}{	G.Yukie_Quest == 1 and G.Ming_Ziggy == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek a horrendous hengeyôkai.	}
+{	285	}{	Tell me about the hengeyôkai again.	}{	Tell me about the hengeyôkai again.	}{	481	}{	G.Ming_Ziggy == 1 and G.Zyg_Meet == 0 and G.Yukie_Market == 0 and not IsDead("Zygaena")	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the horrendous hengeyôkai.	}
+{	286	}{	I'm looking for a missing Nosferatu.	}{	I'm looking for a missing Nosferatu.	}{	421	}{	G.Ming_Barrabus == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek a Nosferatu night-child.	}
+{	287	}{	I'm still looking for the Nosferatu. What do I need to do again?	}{	I'm still looking for the Nosferatu. What do I need to do again?	}{	441	}{	G.Ming_Barrabus > 0 and pc.GetQuestState("Barabus") > 3	}{	}{	}{	}{	}{	}{	}{	}{	Where might I find the Nosferatu night-child?	}
+{	288	}{	Where can I find the Tong?	}{	Where can I find the Tong?	}{	581	}{	G.WongHo_Kiki == 1 and G.Kiki_Rescued == 0	}{	}{	}{	}{	}{	}{	}{	}{	Where could the Tong be found?	}
+{	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	290	}{	Actually, I'm leaving. See ya.	}{	Actually, I'm leaving. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	291	}{	There is much Kindred have to learn about our ways.	}{	There is much Kindred have to learn about our ways.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	I have some questions about Kuei-jin society.	}{	I have some questions about Kuei-jin society.	}{	711	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of your secret society.	}
+{	293	}{	I want to know about your relationship to humans.	}{	I want to know about your relationship to humans.	}{	301	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of your human herd.	}
+{	294	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	295	}{	You can't. I'm outta here.	}{	You can't. I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	296	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	297	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	298	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	300	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	301	}{	Humans? What is it you would like to know?	}{	Humans? What is it you would like to know?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	302	}{	How do the Kuei-jin interact with them?	}{	How do the Kuei-jin interact with them?	}{	151	}{	G.Ming_Humandone == 0 and G.Ming_Human == 0	}{	}{	}{	}{	}{	}{	}{	}{	How do you mingle with these mortals?	}
+{	303	}{	You do not hide your nature from them?	}{	You do not hide your nature from them?	}{	161	}{	G.Ming_Humandone == 0 and G.Ming_Human == 1	}{	}{	}{	}{	}{	}{	}{	}{	Do Kuei-jin cloak themselves in secrecy?	}
+{	304	}{	You are priestess to both humans and the undead who feed on them?	}{	You are priestess to both humans and the undead who feed on them?	}{	171	}{	G.Ming_Humandone == 0 and G.Ming_Human == 2	}{	}{	}{	}{	}{	}{	}{	}{	You guide spirits both mortal and mystical?	}
+{	305	}{	Why do you care to minister to those on whom you feed?	}{	Why do you care to minister to those on whom you feed?	}{	181	}{	G.Ming_Humandone == 0 and G.Ming_Human == 3	}{	}{	}{	}{	}{	}{	}{	}{	Why guide the souls who are your sustenance?	}
+{	306	}{	Is it difficult keeping your secret from mortals?	}{	Is it difficult keeping your secret from mortals?	}{	201	}{	G.Ming_Humandone == 0 and G.Ming_Human == 4	}{	}{	}{	}{	}{	}{	}{	}{	How do you hide from your human herd?	}
+{	307	}{	Tell me again... do you hide from humans as we do?	}{	Tell me again... do you hide from humans as we do?	}{	161	}{	G.Ming_Humandone == 1	}{	}{	}{	}{	}{	}{	}{	}{	Do Kuei-jin cloak themselves in secrecy?	}
+{	308	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	309	}{	I'm outta here.	}{	I'm outta here.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	310	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	311	}{	The newly arrived artifact? What of it?	}{	The newly arrived artifact? What of it?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	312	}{	Do you know about it?	}{	Do you know about it?	}{	351	}{	G.Ming_Sarcophagus == 0	}{	}{	}{	}{	}{	}{	}{	}{	Know you anything of this terrible box?	}
+{	313	}{	You do not think it has anything to do with Gehenna?	}{	You do not think it has anything to do with Gehenna?	}{	361	}{	G.Ming_Sarcophagus == 1	}{	}{	}{	}{	}{	}{	}{	}{	Stone and secrets, the Dark Father, and Gehenna's dark dawn!	}
+{	314	}{	Do you know who has the sarcophagus?	}{	Do you know who has the sarcophagus?	}{	391	}{	G.Ming_Sarcophagus == 2	}{	}{	}{	}{	}{	}{	}{	}{	Who holds this shadowy secret?	}
+{	315	}{	You said you had agents searching for the sarcophagus.	}{	You said you had agents searching for the sarcophagus.	}{	411	}{	G.Ming_Sarcophagus == 3	}{	}{	}{	}{	}{	}{	}{	}{	You spoke of agents who seek this dark secret?	}
+{	316	}{	Do you know where it might be?	}{	Do you know where it might be?	}{	411	}{	G.Ming_Sarcophagus == 3	}{	}{	}{	}{	}{	}{	}{	}{	Where is the terrible box?	}
+{	317	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	318	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	319	}{	I'm outta here.	}{	I'm outta here.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	320	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	321	}{	[stern, strained politeness]You must understand, Kindred - though I show you hospitality now, our two peoples are not at peace.	}{	[stern, strained politeness]You must understand, Kindred - though I show you hospitality now, our two peoples are not at peace.	}{	#	}{	}{	G.Ming_Sorry = 3	}{	}{	}{	}{	}{	}{	}{	}
+{	322	}{	Don't try to warp history to a Nosferatu, honey; we know the truth.	}{	Don't try to warp history to a Nosferatu, honey; we know the truth.	}{	331	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	323	}{	You might be conquerors now, but the rebellion is coming!	}{	You might be conquerors now, but the rebellion is coming!	}{	331	}{	IsClan(pc,"Brujah")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	324	}{	The Camarilla seeks only order for the city.	}{	The Camarilla seeks only order for the city.	}{	331	}{	IsClan(pc,"Ventrue") or IsClan(pc,"Tremere") or IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	325	}{	The hunter invades... then wails when his prey fights back.	}{	The hunter invades... then wails when his prey fights back.	}{	331	}{	IsClan(pc,"Gangrel")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	326	}{	Madness is not blindness, priestess. You are the uninvited guest.	}{	Madness is not blindness, priestess. You are the uninvited guest.	}{	331	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	327	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	328	}{	Not since the Kuei-jin invaded our lands.	}{	Not since the Kuei-jin invaded our lands.	}{	331	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	329	}{	Why do you need California?	}{	Why do you need California?	}{	331	}{	}{	}{	}{	}{	}{	}{	}{	}{	What need have you of this Western wilderness?	}
+{	330	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	331	}{	[dismissive]Really? Can Kindred claim any ancestral homeland on the western coast of America? I think not. New is the arrival of Kindred and Kuei-jin alike; who, then, is the invader?	}{	[dismissive]Really? Can Kindred claim any ancestral homeland on the western coast of America? I think not. New is the arrival of Kindred and Kuei-jin alike; who, then, is the invader?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	332	}{	Can't we all just get along?	}{	Can't we all just get along?	}{	341	}{	}{	}{	}{	}{	}{	}{	}{	}{	History will tell the final tale.	}
+{	333	}{	The Camarilla has a history with Western mortals.	}{	The Camarilla has a history with Western mortals.	}{	341	}{	}{	}{	}{	}{	}{	}{	}{	}{	Long have Kindred claimed the Western herd.	}
+{	334	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	335	}{	I need to go.	}{	I need to go.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	336	}{	I need to go.	}{	I need to go.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	337	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	338	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	339	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	340	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	341	}{	Things change. Alliances shift. And people are not always what they seem. Remember that, Kindred.	}{	Things change. Alliances shift. And people are not always what they seem. Remember that, Kindred.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	342	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	343	}{	I'm shifting out of here. See ya.	}{	I'm shifting out of here. See ya.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	344	}{	I'm shifting out of here. See ya.	}{	I'm shifting out of here. See ya.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	345	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	346	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	347	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	348	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	349	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	350	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	351	}{	Of course. [derisive]The entire city is alight with news of its arrival and speculation about one of your ancient vampire grandfathers, and his evil apocalyptic plot.	}{	Of course. [derisive]The entire city is alight with news of its arrival and speculation about one of your ancient vampire grandfathers, and his evil apocalyptic plot.	}{	#	}{	}{	G.Ming_Sarcophagus = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	352	}{	I take it you don't believe in that?	}{	I take it you don't believe in that?	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	You sound skeptical of this secret.	}
+{	353	}{	Do you know where the sarcophagus is?	}{	Do you know where the sarcophagus is?	}{	391	}{	G.Ming_Bros == 0	}{	}{	}{	}{	}{	}{	}{	}{	Know you where lies the terrible box?	}
+{	354	}{	Whatever. I have a few more questions.	}{	Whatever. I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	355	}{	Why you gotta constantly disrespect my peeps?	}{	Why you gotta constantly disrespect my peeps?	}{	401	}{	G.Ming_Sorry < 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	356	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	357	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	358	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	359	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	360	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	361	}{	Kuei-jin do not share your history, nor do we share in your false prophecies.	}{	Kuei-jin do not share your history, nor do we share in your false prophecies.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	362	}{	False then, also, the shadow of the Yama Kings!	}{	False then, also, the shadow of the Yama Kings!	}{	831	}{	IsClan(pc,"Malkavian") and G.Ming_Yama == 0	}{	G.Ming_Yama = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	363	}{	False prophecies?	}{	False prophecies?	}{	371	}{	}{	}{	}{	}{	}{	}{	}{	}{	What falseness find you in these foretellings?	}
+{	364	}{	Yes, it all does seem rather silly, doesn't it?	}{	Yes, it all does seem rather silly, doesn't it?	}{	371	}{	}{	}{	}{	}{	}{	}{	}{	}{	Truth is rarely found in such fantasies.	}
+{	365	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	366	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	367	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	368	}{	I need to go.	}{	I need to go.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	369	}{	I need to go.	}{	I need to go.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	370	}{	Keep it up, and I'm going to share my boot with your ass. See ya.	}{	Keep it up, and I'm going to share my boot with your ass. See ya.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	Soon you will share hell's darkness with demons, mistress.	}
+{	371	}{	It all serves to distract the Kindred. Such a distasteful existence you live, skulking in the shadows, fighting for scraps and fearing the return of your fictitious fathers, completely oblivious to your true purpose.	}{	It all serves to distract the Kindred. Such a distasteful existence you live, skulking in the shadows, fighting for scraps and fearing the return of your fictitious fathers, completely oblivious to your true purpose.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	372	}{	Do you know the true history of the Kindred?	}{	Do you know the true history of the Kindred?	}{	381	}{	}{	}{	}{	}{	}{	}{	}{	}{	Can you foretell Kindred fate?	}
+{	373	}{	And I suppose you know everyone's true purpose.	}{	And I suppose you know everyone's true purpose.	}{	381	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	374	}{	Do you know where the sarcophagus is?	}{	Do you know where the sarcophagus is?	}{	391	}{	G.Ming_Bros == 0	}{	}{	}{	}{	}{	}{	}{	}{	Know you where lies the terrible box?	}
+{	375	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	376	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	377	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	378	}{	I need to go.	}{	I need to go.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	379	}{	I need to go.	}{	I need to go.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	380	}{	My purpose just changed to flipping you the bird. Later.	}{	My purpose just changed to flipping you the bird. Later.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	May this middle digit guide you to oblivion. Farewell.	}
+{	381	}{	No, I do not. But with my help, you might find the path you were meant for. Instead, you stumble through the afterlife, a meaty remnant still clinging to the mortal rib.	}{	No, I do not. But with my help, you might find the path you were meant for. Instead, you stumble through the afterlife, a meaty remnant still clinging to the mortal rib.	}{	#	}{	}{	G.Ming_Sarcophagus = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	382	}{	Do you know where the sarcophagus is?	}{	Do you know where the sarcophagus is?	}{	391	}{	G.Ming_Bros == 0	}{	}{	}{	}{	}{	}{	}{	}{	Know you where lies the terrible box?	}
+{	383	}{	Will you stop insulting Kindred?	}{	Will you stop insulting Kindred?	}{	401	}{	G.Ming_Sorry < 2	}{	}{	}{	}{	}{	}{	}{	}{	Spit no more your venom, demoness!	}
+{	384	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	385	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	386	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	387	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	388	}{	I need to go.	}{	I need to go.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	389	}{	I need to go.	}{	I need to go.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	390	}{	You know what? How's THIS for a meaty remnant. See ya.	}{	Keep talkin' that trash, and your heart will be a meaty remnant!	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	391	}{	[casual]We seek it, of course. I have two of my best agents looking. It could be a powerful bargaining tool.	}{	[casual]We seek it, of course. I have two of my best agents looking. It could be a powerful bargaining tool.	}{	#	}{	}{	G.Ming_Sarcophagus = 3	}{	}{	}{	}{	}{	}{	}{	}
+{	392	}{	Who are these agents?	}{	Who are these agents?	}{	411	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	393	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	394	}{	I'm outta here.	}{	I'm outta here.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	395	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	396	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	397	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	398	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	399	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	400	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	401	}{	[thinly veiled condescension, amusement]You must misunderstand me, young Kindred. Certainly I do not mean to offend.	}{	[thinly veiled condescension, amusement]You must misunderstand me, young Kindred. Certainly I do not mean to offend.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	402	}{	Can't you just apologize?	}{	Can't you just apologize?	}{	321	}{	}{	}{	}{	}{	}{	}{	}{	}{	Can your lips leak an apologetic lullaby?	}
+{	403	}{	But you keep insulting our beliefs.	}{	But you keep insulting our beliefs.	}{	371	}{	G.Ming_Sarcophagus == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	404	}{	Fine. Do you know who has the sarcophagus?	}{	Fine. Do you know who has the sarcophagus?	}{	391	}{	G.Ming_Sarcophagus == 2 and G.Ming_Bros == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	405	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	406	}{	Too late. See ya.	}{	Too late. See ya.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	407	}{	Too late. See ya.	}{	Too late. See ya.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	408	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	409	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	410	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	411	}{	Let me just say that I do not encourage you to seek the Ankaran [an-KAR-en]Sarcophagus.	}{	Let me just say that I do not encourage you to seek the Ankaran [an-KAR-en]Sarcophagus.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	412	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	413	}{	I'm outta here. See ya.	}{	I'm outta here. See ya.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	414	}{	I'm outta here. See ya.	}{	I'm outta here. See ya.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	415	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	416	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	417	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	418	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	419	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	420	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	421	}{	So. The great Nosferatu [NAHS-fur-ah-too]have lost an agent, have they? It was not by my hand, if that's what they think.	}{	So. The great Nosferatu [NAHS-fur-ah-too]have lost an agent, have they? It was not by my hand, if that's what they think.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	422	}{	Do you have any idea where he could be?	}{	Do you have any idea where he could be?	}{	431	}{	}{	}{	}{	}{	}{	}{	}{	}{	No knowledge at all of this Nossie?	}
+{	423	}{	If the glove fits.... Where can I find him?	}{	If the glove fits.... Where can I find him?	}{	431	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	424	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	425	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	426	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	427	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	428	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	429	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	430	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	431	}{	I don't know where he is. Perhaps you should speak with Wong Ho about this.	}{	I don't know where he is. Perhaps you should speak with Wong Ho about this.	}{	#	}{	}{	G.Ming_Wongho = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	432	}{	Who is Wong Ho?	}{	Who is Wong Ho?	}{	441	}{	G.Ming_Barrabus == 0	}{	G.Ming_Barrabus = 1	}{	}{	}{	}{	}{	}{	}{	Who is this Wong Ho?	}
+{	433	}{	Where is he, again?	}{	Where is he, again?	}{	441	}{	G.Ming_Barrabus > 0	}{	}{	}{	}{	}{	}{	}{	}{	Where can I find this Wong Ho?	}
+{	434	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	G.Ming_Barrabus > 0	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	435	}{	I'll do so. See ya.	}{	I'll do so. See ya.	}{	491	}{	G.Ming_Barrabus > 0 and npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	436	}{	I'll do so. See ya.	}{	I'll do so. See ya.	}{	0	}{	G.Ming_Barrabus > 0 and npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	437	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	438	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	439	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	440	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	441	}{	Wong Ho owns the Red Dragon restaurant. He is a prominent businessman, who has garnered much respect among his people. If something is amiss in Chinatown, he may know how to help you.	}{	Wong Ho owns the Red Dragon restaurant. He is a prominent businessman, who has garnered much respect among his people. If something is amiss in Chinatown, he may know how to help you.	}{	#	}{	}{	pc.SetQuest("Barabus",4)	}{	}{	}{	}{	}{	}{	}{	}
+{	442	}{	I'll head down to the Red Dragon.	}{	I'll head down to the Red Dragon.	}{	491	}{	G.Ming_Barrabus == 1	}{	G.Ming_Barrabus = 2	}{	}{	}{	}{	}{	}{	}{	I will chase this deadly Dragon.	}
+{	443	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	444	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	G.Ming_Barrabus = 2	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	445	}{	Time to go. See ya.	}{	Time to go. See ya.	}{	491	}{	npc.times_talked == 1	}{	G.Ming_Barrabus = 2	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	446	}{	Time to go. See ya.	}{	Time to go. See ya.	}{	0	}{	npc.times_talked > 1	}{	G.Ming_Barrabus = 2	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	447	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	448	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	449	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	450	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	451	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	452	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	453	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	454	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	455	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	456	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	457	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	458	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	459	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	460	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	461	}{	Ah yes, the hengeyôkai[hen-gee-YO-kai] - Zygaena[zi-GAY-nuh], I believe his name was. I had nearly forgotten him.	}{	Ah yes, the hengeyôkai[hen-gee-YO-kai] - Zygaena[zi-GAY-nuh], I believe his name was. I had nearly forgotten him.	}{	#	}{	}{	G.Ming_Ziggy = 1; G.Ming_Zygaena = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	462	}{	Then you know him?	}{	Then you know him?	}{	471	}{	}{	}{	}{	}{	}{	}{	}{	}{	Zygaena? Zany!	}
+{	463	}{	Does he work for you?	}{	Does he work for you?	}{	471	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	464	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	465	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	466	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	467	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	468	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	469	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	470	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	471	}{	He announced his presence in our domain, and I granted him permission to operate. He does not act on my behalf, however, I can assure you.	}{	He announced his presence in our domain, and I granted him permission to operate. He does not act on my behalf, however, I can assure you.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	472	}{	Where can I find him?	}{	Where can I find him?	}{	481	}{	}{	}{	}{	}{	}{	}{	}{	}{	Where hides this churlish changeling?	}
+{	473	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	474	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	475	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	476	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	477	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	478	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	479	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	480	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	481	}{	I believe he said he operates an importing business and entertains clients at the Red Dragon.	}{	I believe he said he operates an importing business and entertains clients at the Red Dragon.	}{	#	}{	}{	pc.SetQuest("Yukie",2)	}{	}{	}{	}{	}{	}{	}{	}
+{	482	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	G.Ming_Pissed < 3	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	483	}{	I've got to go. Later.	}{	I've got to go. Later.	}{	491	}{	npc.times_talked == 1 and G.Ming_Pissed < 3	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	484	}{	I've got to go. Later.	}{	I've got to go. Later.	}{	0	}{	npc.times_talked > 1 and G.Ming_Pissed < 3	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	485	}{	Uh... why are you being so helpful all of a sudden?	}{	Uh... why are you being so helpful all of a sudden?	}{	701	}{	G.Ming_Pissed == 3	}{	}{	}{	}{	}{	}{	}{	}{	Your sudden altruism is alarming!	}
+{	486	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	487	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	488	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	489	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	490	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	491	}{	I grant you permission to operate in the Kuei-jin domain... for now. May you find your path, Kindred.	}{	I grant you permission to operate in the Kuei-jin domain... for now. May you find your path, Kindred.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	492	}{	Thanks.	}{	Thanks.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Coolies!	}
+{	493	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	494	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	495	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	496	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	497	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	498	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	499	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	500	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	501	}{	Welcome back, Kindred. Do you seek guidance?	}{	Welcome back, Kindred. Do you seek guidance?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	502	}{	Do you know of a silver-haired man?	}{	Do you know of a silver-haired man?	}{	601	}{	G.Silver_Know == 1	}{	}{	}{	}{	}{	}{	}{	}{	I seek a man with locks of silver.	}
+{	503	}{	I found out about your little project with the Fu Syndicate.	}{	I found out about your little project with the Fu Syndicate.	}{	751	}{	G.Silver_Know == 2	}{	}{	}{	}{	}{	}{	}{	}{	I foiled your freakish plot with the Fu!	}
+{	504	}{	Have you heard of the Ankaran Sarcophagus?	}{	Have you heard of the Ankaran Sarcophagus?	}{	351	}{	G.Ming_Sarcophagus == 0 and G.Ming_Bros == 0	}{	}{	}{	}{	}{	}{	}{	}{	Have your ears seen the Ankaran Sarcophagus?	}
+{	505	}{	Tell me again what you know about the sarcophagus.	}{	Tell me again what you know about the sarcophagus.	}{	311	}{	G.Ming_Sarcophagus > 0 and G.Ming_Bros == 0	}{	}{	}{	}{	}{	}{	}{	}{	Speak to me of terrible Ankaran box!	}
+{	506	}{	Did you give much guidance to Wong Ho?	}{	Did you give much guidance to Wong Ho?	}{	511	}{	G.Tong_Known == 1	}{	}{	}{	}{	}{	}{	}{	}{	You guide the Wong Ho too?	}
+{	507	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	508	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	509	}{	I'd like to ask you a few questions.	}{	I'd like to ask you a few questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	510	}{	Not right now. See ya.	}{	Not right now. See ya.	}{	0	}{	G.Silver_Know == 0 or G.Ming_Ziggy == 0	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	511	}{	Wong Ho, yes, I know him well.	}{	Wong Ho, yes, I know him well.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	512	}{	Could you tell me about him again?	}{	Could you tell me about him again?	}{	441	}{	pc.GetQuestState("Barabus") < 3	}{	}{	}{	}{	}{	}{	}{	}{	Weave me a tale of Wong Ho.	}
+{	513	}{	He speaks very highly of you.	}{	He speaks very highly of you.	}{	521	}{	G.Ming_Highly == 0 and G.Wong_ZQ > 0	}{	}{	}{	}{	}{	}{	}{	}{	A goddess you are to his blind eyes.	}
+{	514	}{	His daughter has been kidnapped. He wants me to get her back.	}{	His daughter has been kidnapped. He wants me to get her back.	}{	561	}{	G.WongHo_Kiki == 1 and G.Kiki_Rescued == 0	}{	}{	}{	}{	}{	}{	}{	}{	His treasure has been taken, and I seek to return it.	}
+{	515	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	516	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	517	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	518	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	519	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	520	}{	Never mind. Goodbye.	}{	Never mind. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	521	}{	I provide spiritual guidance to all who seek it.	}{	I provide spiritual guidance to all who seek it.	}{	#	}{	}{	G.Ming_Kindred = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	522	}{	And that serves your purposes well, doesn't it?	}{	And that serves your purposes well, doesn't it?	}{	531	}{	pc.perception >= 4 or pc.wits >= 4	}{	}{	}{	}{	}{	}{	}{	}{	Your guidance points to a perilous path.	}
+{	523	}{	His daughter has been kidnapped. He wants me to get her back.	}{	His daughter has been kidnapped. He wants me to get her back.	}{	561	}{	G.WongHo_Kiki == 1 and G.Kiki_Rescued == 0	}{	}{	}{	}{	}{	}{	}{	}{	His treasure has been taken, and I seek to return it.	}
+{	524	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	525	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	526	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	527	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	528	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	529	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	530	}{	Don't need any. See ya.	}{	Don't need any. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	531	}{	Events make their own sense. All things fall into place according to plans larger than our own. You should know this lesson well by now, Kindred.	}{	Events make their own sense. All things fall into place according to plans larger than our own. You should know this lesson well by now, Kindred.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	532	}{	That's deep. I have a few more questions for you.	}{	That's deep. I have a few more questions for you.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	533	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	534	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	535	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	536	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	537	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	538	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	539	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	540	}{	I see. Goodbye.	}{	I see. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	541	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	542	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	543	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	544	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	545	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	546	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	547	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	548	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	549	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	550	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	551	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	552	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	553	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	554	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	555	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	556	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	557	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	558	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	559	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	560	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	561	}{	I certainly hope you succeed.	}{	I certainly hope you succeed.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	562	}{	He only asked me to do it because he thinks I'm working for you.	}{	He only asked me to do it because he thinks I'm working for you.	}{	531	}{	pc.perception >= 4 or pc.wits >= 4	}{	}{	}{	}{	}{	}{	}{	}{	His trust in me goes only as far as your blessing.	}
+{	563	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	564	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	565	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	566	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	567	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	568	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	569	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	570	}{	I will try. Goodbye.	}{	I will try. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	571	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	572	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	573	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	574	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	575	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	576	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	577	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	578	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	579	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	580	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	581	}{	The Tong strong-arm many local businesses for use of their facilities. Check the back alleys. I wish you good fortune.	}{	The Tong strong-arm many local businesses for use of their facilities. Check the back alleys. I wish you good fortune.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	582	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	583	}{	See ya.	}{	See ya.	}{	491	}{	npc.times_talked == 1 and G.Ming_Pissed < 3	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	584	}{	See ya.	}{	See ya.	}{	0	}{	npc.times_talked > 1 and G.Ming_Pissed < 3	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	585	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	586	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	587	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	588	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	589	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	590	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	591	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	592	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	593	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	594	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	595	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	596	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	597	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	598	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	599	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	600	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	601	}{	Silver-haired man? I'm sorry, I do not know a silver-haired man.	}{	Silver-haired man? I'm sorry, I do not know a silver-haired man.	}{	#	}{	}{	Whisper("Lying")	}{	}{	}{	}{	}{	}{	}{	}
+{	602	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	603	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	604	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	605	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	606	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	607	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	608	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	609	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	610	}{	Later.	}{	Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	611	}{	Was there something else, Kindred?	}{	Was there something else, Kindred?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	612	}{	I ran into your agents - they're dead now.	}{	I ran into your agents - they're dead now.	}{	621	}{	G.Ming_Changs == 0	}{	}{	}{	}{	}{	}{	}{	}{	I crushed the Changs into gooey gristle.	}
+{	613	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	614	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	615	}{	I'd like to ask you a few questions.	}{	I'd like to ask you a few questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	616	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	617	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	618	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	619	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	620	}{	Not right now. See ya.	}{	Not right now. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	621	}{	A most unfortunate crossing of paths.	}{	A most unfortunate crossing of paths.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	622	}{	They said something about an alliance between the Kuei-jin and LaCroix.	}{	They said something about an alliance between the Kuei-jin and LaCroix.	}{	631	}{	}{	}{	}{	}{	}{	}{	}{	}{	They spoke of your clandestine connection with LaCroix.	}
+{	623	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	624	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	625	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	626	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	627	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	628	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	629	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	630	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	631	}{	Let me assure you that my agents, the Chang Brothers, speak with no diplomatic authority.	}{	Let me assure you that my agents, the Chang Brothers, speak with no diplomatic authority.	}{	#	}{	}{	G.Ming_Bros = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	632	}{	But you do. So are you conspiring with LaCroix or not?	}{	But you do. So are you conspiring with LaCroix or not?	}{	641	}{	}{	}{	}{	}{	}{	}{	}{	}{	Have you joined hands with the jester, demoness?	}
+{	633	}{	You're not answering the question.	}{	You're not answering the question.	}{	641	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your words hold not an answer to my inquiry.	}
+{	634	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	635	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	636	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	637	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	638	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	639	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	640	}{	If you say so. I'm outta here.	}{	If you say so. I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	641	}{	I may or may not choose to speak with you, the prince, or anyone else for that matter. Speaking does not make us allies.	}{	I may or may not choose to speak with you, the prince, or anyone else for that matter. Speaking does not make us allies.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	642	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	643	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	644	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	645	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	646	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	647	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	648	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	649	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	650	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	651	}{	Come now, Cainite. I think you'll find me to be quite forthright. I expect no less in return.	}{	Come now, Cainite. I think you'll find me to be quite forthright. I expect no less in return.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	652	}{	Well, my patience has run out. Where is the vampire I'm looking for?	}{	Well, my patience has run out. Where is the vampire I'm looking for?	}{	421	}{	}{	G.Ming_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	I've no more patience for your perjury. Where is the Kindred I seek?	}
+{	653	}{	I'll remember that. Can I ask you a few questions?	}{	I'll remember that. Can I ask you a few questions?	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	654	}{	I need to go.	}{	I need to go.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	655	}{	I need to go.	}{	I need to go.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	656	}{	The only lesson I've learned is that the Kuei-jin are full of shit.	}{	The only lesson I've learned is that the Kuei-jin are full of shit.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	I've learned Kuei-jin are conspicuously constipated.	}
+{	657	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	658	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	659	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	660	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	661	}{	Greetings, Cainite. Have your manners improved since last we spoke? There are many things in this world that I tolerate, but disrespect is not one of them.	}{	Greetings, Cainite. Have your manners improved since last we spoke? There are many things in this world that I tolerate, but disrespect is not one of them.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	662	}{	I'm sorry I was rude before. Please forgive me.	}{	I'm sorry I was rude before. Please forgive me.	}{	671	}{	}{	G.Ming_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	Please forgive my bilious babblings.	}
+{	663	}{	You'd better get used to it, because I don't kiss Kuei-jin ass.	}{	You'd better get used to it, because I don't kiss Kuei-jin ass.	}{	681	}{	G.Ming_Wongho == 0	}{	}{	}{	}{	}{	}{	}{	}{	My lips kiss not the caboose of the Kuei-jin, demoness.	}
+{	664	}{	Can you tolerate my foot in your ass?	}{	Can you tolerate my foot in your ass?	}{	696	}{	G.Ming_Wongho == 1	}{	}{	}{	}{	}{	}{	}{	}{	Can you tolerate my boot in your backside?	}
+{	665	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	666	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	667	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	668	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	669	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	670	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	671	}{	I accept your apology. It is good to see that you are beginning to learn your place.	}{	I accept your apology. It is good to see that you are beginning to learn your place.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	672	}{	Thank you for your understanding. I have a few questions.	}{	Thank you for your understanding. I have a few questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your grace is as boundless as my madness. May I mine your gray matter?	}
+{	673	}{	On second thought, fuck off.	}{	On second thought, fuck off.	}{	681	}{	G.Ming_Wongho == 0	}{	}{	}{	}{	}{	}{	}{	}{	Wait! My other selves say "fuck off".	}
+{	674	}{	Actually, I just decided my place is going to be pissing on your grave.	}{	Actually, I just decided my place is going to be pissing on your grave.	}{	696	}{	G.Ming_Wongho == 1	}{	}{	}{	}{	}{	}{	}{	}{	I've learned that your grave will be soaked with the ballast of my bladder.	}
+{	675	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	676	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	677	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	678	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	679	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	680	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	681	}{	I see. You disappoint me, Cainite. Your attitude does not bode well for our continued relationship. I recommend you think about the future of this city, and return when you can be civil.	}{	I see. You disappoint me, Cainite. Your attitude does not bode well for our continued relationship. I recommend you think about the future of this city, and return when you can be civil.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	682	}{	I'll think about it. Later.	}{	I'll think about it. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	683	}{	I AM the future, bitch. See ya.	}{	I AM the future, bitch. See ya.	}{	0	}{	G.Ming_Wongho == 0	}{	}{	}{	}{	}{	}{	}{	}{	The future is my fury, mistress. Farewell.	}
+{	684	}{	I've been thinking a lot about the future. You aren't in it.	}{	I've been thinking a lot about the future. You aren't in it.	}{	696	}{	G.Ming_Wongho == 1	}{	}{	}{	}{	}{	}{	}{	}{	You have no place in the future's formula, demoness.	}
+{	685	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	686	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	687	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	688	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	689	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	690	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	691	}{	You try my patience, Cainite. This is my domain. Try to remember your place in it. Farewell.	}{	You try my patience, Cainite. This is my domain. Try to remember your place in it. Farewell.	}{	#	}{	}{	G.Ming_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	692	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	693	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	694	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	695	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	696	}{	I have endured your rudeness long enough. Please see yourself to the door and do not return to this temple.	}{	I have endured your rudeness long enough. Please see yourself to the door and do not return to this temple.	}{	#	}{	}{	G.Ming_Pissed = 3	}{	}{	}{	}{	}{	}{	}{	}
+{	697	}{	Is that a tear I see rolling down your cheek? You're pathetic. Later.	}{	Is that a tear I see rolling down your cheek? You're pathetic. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You cry like a coddled school girl. I leave you.	}
+{	698	}{	The next I show up here I'll burn this place to the ground. See ya.	}{	The next I show up here I'll burn this place to the ground. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	When next I return, this temple will burn. Farewell.	}
+{	699	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	700	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	701	}{	I have nothing left to say to you. Leave now.	}{	I have nothing left to say to you. Leave now.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	702	}{	I'll make this quick. Do you know of a hengeyôkai in Chinatown?	}{	I'll make this quick. Do you know of a hengeyôkai in Chinatown?	}{	706	}{	G.Yukie_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	What know you of a horrendous hengeyôkai?	}
+{	703	}{	Later.	}{	Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	704	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	705	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	706	}{	Hmmm. Yes, I know of one. His name is Zygaena.	}{	Hmmm. Yes, I know of one. His name is Zygaena.	}{	#	}{	}{	G.Ming_Ziggy = 1; G.Ming_Zygaena = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	707	}{	Does he work for you?	}{	Does he work for you?	}{	471	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	708	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	709	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	710	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	711	}{	Yes?	}{	Yes?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	712	}{	You guys are vampires, right?	}{	You guys are vampires, right?	}{	71	}{	G.Ming_Feed == 0	}{	}{	}{	}{	}{	}{	}{	}{	Does the curse of Caine flow in your veins?	}
+{	713	}{	How are Kuei-jin similar to vampires?	}{	How are Kuei-jin similar to vampires?	}{	81	}{	G.Ming_Feed == 0	}{	}{	}{	}{	}{	}{	}{	}{	Do Kuei-jin and Kindred cast similar shadows?	}
+{	714	}{	How do Kuei-jin come to be?	}{	How do Kuei-jin come to be?	}{	91	}{	G.Ming_Breath == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the creation of Kuei-jin.	}
+{	715	}{	Your condition doesn't sound so very different from my own.	}{	Your condition doesn't sound so very different from my own.	}{	121	}{	G.Ming_Purpose == 1 and G.Ming_Unlife == 0	}{	}{	}{	}{	}{	}{	}{	}{	Your dressing is different, yet cursed also you are.	}
+{	716	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	717	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	718	}{	I learned a lot from killing your spy in Santa Monica.	}{	I learned a lot from killing your spy in Santa Monica.	}{	741	}{	G.Ming_Spy == 0 and G.Ming_Unlife == 0 and G.Kjspy_Dead == 1	}{	G.Ming_Spy = 1	}{	}{	}{	}{	}{	}{	}{	Much I learned from sizzling your Santa Monica spy.	}
+{	719	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	720	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	721	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	722	}{	Tell me again... are the Kuei-jin like vampires?	}{	Tell me again... are the Kuei-jin like vampires?	}{	71	}{	G.Ming_Unlife == 1	}{	}{	}{	}{	}{	}{	}{	}{	Do Kuei-jin and Kindred cast similar shadows?	}
+{	723	}{	Tell me again... how do Kuei-jin come to be?	}{	Tell me again... how do Kuei-jin come to be?	}{	91	}{	G.Ming_Unlife == 1	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the creation of Kuei-jin.	}
+{	724	}{	I have a few more questions.	}{	I have a few more questions.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	725	}{	I'm outta here.	}{	I'm outta here.	}{	491	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	726	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	727	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	728	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	729	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	730	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	731	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	732	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	733	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	734	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	735	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	736	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	737	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	738	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	739	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	740	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	741	}{	Ah, yes. I am aware that you dispatched one of our operatives. It is of little consequence.	}{	Ah, yes. I am aware that you dispatched one of our operatives. It is of little consequence.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	742	}{	Funny. I have a few more questions for you.	}{	Funny. I have a few more questions for you.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	743	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	744	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	745	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	746	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	747	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	748	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	749	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	750	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	751	}{	[unruffled]You did? Interesting. Might I inquire as to who gave you that piece of information?	}{	[unruffled]You did? Interesting. Might I inquire as to who gave you that piece of information?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	752	}{	I did a little digging in their computer files... after I trashed the place.	}{	I did a little digging in their computer files... after I trashed the place.	}{	761	}{	}{	}{	}{	}{	}{	}{	}{	}{	I unearthed your mischievous machinations... after I sacked the Syndicate.	}
+{	753	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	754	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	755	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	756	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	757	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	758	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	759	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	760	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	761	}{	Haha! I applaud you, Kindred. You must be a great warrior indeed.	}{	Haha! I applaud you, Kindred. You must be a great warrior indeed.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	762	}{	Yeah, I am. But that doesn't let you off the hook.	}{	Yeah, I am. But that doesn't let you off the hook.	}{	771	}{	}{	}{	}{	}{	}{	}{	}{	}{	Great I am, but greater my wrath at your betrayal!	}
+{	763	}{	I don't get it. Why are you involved with them?	}{	I don't get it. Why are you involved with them?	}{	771	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why did you swim with these Syndicate sharks?	}
+{	764	}{	Don't kiss my ass, bitch. You set me up.	}{	Don't kiss my ass, bitch. You set me up.	}{	771	}{	}{	}{	}{	}{	}{	}{	}{	}{	You placed me in the path of peril.	}
+{	765	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	766	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	767	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	768	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	769	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	770	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	771	}{	I'm sorry. I thought you were aware... our people are at war. Do you think your elders would do any different?	}{	I'm sorry. I thought you were aware... our people are at war. Do you think your elders would do any different?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	772	}{	But they tried to kill me, too!	}{	But they tried to kill me, too!	}{	791	}{	}{	}{	}{	}{	}{	}{	}{	}{	The sharks tried to feed.	}
+{	773	}{	No. And neither would I. Next time we meet, it's as enemies.	}{	No. And neither would I. Next time we meet, it's as enemies.	}{	781	}{	}{	}{	}{	}{	}{	}{	}{	}{	We wear the mask of enemies when next we meet.	}
+{	774	}{	Fuck off, you creepy ninja vampire bitch. See ya.	}{	Fuck off, you creepy ninja vampire bitch. See ya.	}{	0	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	775	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	776	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	777	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	778	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	779	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	780	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	781	}{	My dear Kindred, we have never been otherwise. Farewell.	}{	My dear Kindred, we have never been otherwise. Farewell.	}{	#	}{	}{	G.Ming_Pissed = 3	}{	}{	}{	}{	}{	}{	}{	}
+{	782	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	783	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	784	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	785	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	786	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	787	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	788	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	789	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	790	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	791	}{	Yes, I'm sure they did.	}{	Yes, I'm sure they did.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	792	}{	You're a cold-hearted bitch. Next time we meet, it's as enemies.	}{	You're a cold-hearted bitch. Next time we meet, it's as enemies.	}{	781	}{	}{	}{	}{	}{	}{	}{	}{	}{	We wear the mask of enemies when next we meet.	}
+{	793	}{	Whatever. I'm outta here.	}{	Whatever. I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	794	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	795	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	796	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	797	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	798	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	799	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	800	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	801	}{	I'm sorry? I'm not sure I heard you correctly.	}{	I'm sorry? I'm not sure I heard you correctly.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	802	}{	The surface is cracked, tarnished, revealing more mirrors beneath.	}{	The surface is cracked, tarnished, revealing more mirrors beneath.	}{	811	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	803	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	804	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	805	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	806	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	807	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	808	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	809	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	810	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	811	}{	Ugh! What wretched strain of Caine's curse is this?	}{	Ugh! What wretched strain of Caine's curse is this?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	812	}{	Truth wears many masks, mistress.	}{	Truth wears many masks, mistress.	}{	821	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	813	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	814	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	815	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	816	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	817	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	818	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	819	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	820	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	821	}{	Indeed it does, Kindred. But let us speak of other things. How might I assist you?	}{	Indeed it does, Kindred. But let us speak of other things. How might I assist you?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	822	}{	Earl Grey is no saucy sustenance.	}{	Earl Grey is no saucy sustenance.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	823	}{	Tell me more of your people, mirror mistress.	}{	Tell me more of your people, mirror mistress.	}{	251	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	824	}{	I destroyed a life-eater in Santa Monica, Lady by the Sea.	}{	I destroyed a life-eater in Santa Monica, Lady by the Sea.	}{	741	}{	G.Kjspy_Dead == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	825	}{	Time is precious and you are not. I seek a Nosferatu night-child.	}{	Time is precious and you are not. I seek a Nosferatu night-child.	}{	21	}{	}{	G.Ming_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	826	}{	May I mine your gray matter?	}{	May I mine your gray matter?	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	827	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	828	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	829	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	830	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	831	}{	You would do well not to speak of such things, madman. The Yama Kings are no child's ghost story.	}{	You would do well not to speak of such things, madman. The Yama Kings are no child's ghost story.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	832	}{	Hail the coming of the Demon Emperor!	}{	Hail the coming of the Demon Emperor!	}{	841	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	833	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	834	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	835	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	836	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	837	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	838	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	839	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	840	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	841	}{	The Sixth Age has not yet come! Let us talk of something else.	}{	The Sixth Age has not yet come! Let us talk of something else.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	842	}{	Know you where lies the sarcophagus?	}{	Know you where lies the sarcophagus?	}{	391	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	843	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	844	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	845	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	846	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	847	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	848	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	849	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	850	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	851	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	852	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	853	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	854	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	855	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	856	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	857	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	858	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	859	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	860	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	861	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	862	}{	Greetings.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	863	}{	Yes?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	864	}{	What are you doing here?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	865	}{	I no longer wish to speak with you.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	866	}{	Yes.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	867	}{	No.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	868	}{	Thank you.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	869	}{	What did you say?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	870	}{	What?!?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	871	}{	I do not know.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	872	}{	I cannot help you with that.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	873	}{	I am pleased.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	874	}{	By the way...	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	875	}{	Take this.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	876	}{	I will send you an email concerning this.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	877	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	878	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	879	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	880	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	881	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	882	}{	(Starting Condition)	}{	}{	11	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	883	}{	(Starting Condition)	}{	}{	611	}{	G.Story_State >= 65 and G.Ming_Bros == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	884	}{	(Starting Condition)	}{	}{	701	}{	G.Ming_Pissed == 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	885	}{	(Starting Condition)	}{	}{	661	}{	G.Ming_Pissed == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	886	}{	(Starting Condition)	}{	}{	501	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	}

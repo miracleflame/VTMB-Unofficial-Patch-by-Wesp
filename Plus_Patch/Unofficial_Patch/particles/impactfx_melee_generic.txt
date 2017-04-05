@@ -1,0 +1,23 @@
+Particle
+{
+	loop	"0"
+	frames	"30"	
+
+	spawn
+	{
+		particle "ImpactFX_BloodSpatter_Out"
+		burst "30"
+		phi "-40~40"
+		theta "0~360"
+		x	"2"
+	}
+
+	spawn		// changed by EntenSchreck
+	{
+		particle 	"impactfx_bloodspatter_base"
+		burst "1"
+	}
+
+}
+
+	

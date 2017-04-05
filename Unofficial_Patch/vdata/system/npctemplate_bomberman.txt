@@ -1,0 +1,99 @@
+//////////////////////////////////////////////////
+// NPC Stat Templates (Packages)
+//
+// Cabbie
+//
+
+ClanDataTables
+{
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Bomberman"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"Dominated Guard"	// changed by wesp
+			"Description"			"Bomb guy in Ventrue 2, needs to be immune to Possession"
+		}
+
+		General
+		{
+			"Clan"				"None"
+//			"ClanEffect"			""
+			"Kindred"			"0"
+			"Supernatural"			"0"
+			"Boss"				"1"	// changed by wesp
+			"DisciplineStrata"		"3"
+			"SoundGroup"			""
+			"Disallow_Knockbacks"		"1"
+			"NoBiting"			"1"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"				"Physical_Mental_Social"
+			"Strength"				"2"
+			"Dexterity"				"1"
+			"Stamina"				"1"
+			"Charisma"				"1"
+			"Manipulation"				"1"
+			"Appearance"				"1"
+			"Perception"				"2"
+			"Intelligence"				"1"
+			"Wits"					"5"
+			"Max_Health"				"420"
+			"Armor_Rating"				"4"
+			"BloodPool"				"5"
+			"FaithPoints"				"0"
+			"Starting_Equipment"			"Civilian"
+			"Excluded_Equipment"			"Default"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"2"
+			"Intimidation"				"0"
+			"Subterfuge"				"0"
+//			"Animal_Ken"				"0"
+			"Firearms"				"1"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"     // Defense vs pc feeding
+			"Finance"				"0"
+			"Investigation"				"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+}

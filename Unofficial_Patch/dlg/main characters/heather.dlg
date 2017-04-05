@@ -1,0 +1,1021 @@
+{	1	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	[Dying and genuinely afraid for her life. Desperately doesn't want to die]Uh. Please - get a doctor.	}{	[Dying and genuinely afraid for her life. Desperately doesn't want to die]Uh. Please - get a doctor.	}{	#	}{	}{	G.Heather_Know = 1; heatherQuest1()	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	I'll see what I can do.	}{	I'll see what I can do.	}{	13	}{	}{	}{	}{	}{	}{	}{	}{	}{	The broken will be mended.	}
+{	13	}{	[shocked, in pain, frightened]Uhh. My insides.... It hurts so bad.	}{	[shocked, in pain, frightened]Uhh. My insides.... It hurts so bad.	}{	#	}{	}{	G.Heather_Insides = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	15	}{	[in pain, starting to cry]Heh huh. Can someone call my grandma... please?!?	}{	[in pain, starting to cry]Heh huh. Can someone call my grandma... please?!?	}{	#	}{	}{	G.Heather_Grandma = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	Stay with me, I can save you!	}{	Stay with me, I can save you!	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	Don't go before I rescue you, little morsel!	}
+{	17	}{	[In pain, fighting it]Ah! Nnnnghhhh -	}{	[In pain, fighting it]Ah! Nnnnghhhh -	}{	#	}{	}{	G.Heather_Groan = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	19	}{	[unconscious, pained groaning]Nngh ah... heh ah.	}{	[unconscious, pained groaning]Nngh ah... heh ah.	}{	#	}{	}{	G.Heather_Groan = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	21	}{	[unconscious, pained groaning]Ahh... heh... ahhhh!	}{	[unconscious, pained groaning]Ahh... heh... ahhhh!	}{	#	}{	}{	G.Heather_Grandma = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	(Auto-Link)	}{	(Auto-Link)	}{	31	}{	G.Knox_Ghoul == 2 or G.Mercurio_Ghoul == 1 }{	}{	}{	}{	}{	}{	}{	}{	(Auto-Link)	}
+{	23	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	24	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	[unconscious, pained, open-mouthed groaning]Ngh...	}{	[unconscious, pained, open-mouthed groaning]Ngh...	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Maybe my blood can save you...	}{	Maybe my blood can save you...	}{	0	}{	pc.bloodpool > 1	}{	G.Heather_Steve = 1	}{	}{	}{	}{	}{	}{	}{	Taste my blood and be mine!	}
+{	33	}{	Sorry, I can't help you.	}{	Sorry, I can't help you.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	This one can do nothing for you.	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	[pain groaning, drinking sound, perking up]Mmm...	}{	[pain groaning, drinking sound, perking up]Mmm...	}{	#	}{	npc.SetDisposition("lay", 1)	}{	G.Heather_Drank = 1; G.Heather_Steve = 2; FindPlayer().HumanityAdd( 1 ); pc.Bloodloss(1); heatherQuest2()	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	You alright?	}{	You alright?	}{	51	}{	not IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	Your flesh mends.	}
+{	43	}{	You like that? Best cure in the world.	}{	You like that? Best cure in the world.	}{	51	}{	not IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	Rise! My divinity is your salvation.	}
+{	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	You like that? Best cure in the world.	}{	You like that? Best cure in the world.	}{	101	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	You will be fine. I must go.	}{	You will be fine. I must go.	}{	111	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	[eyes opening, recovering, weak]You.... Wa- Who... wh-who are you? Ohh. What did you do? What did you do to me? Ah.	}{	[eyes opening, recovering, weak]You.... Wa- Who... wh-who are you? Ohh. What did you do? What did you do to me? Ah.	}{	#	}{	npc.SetDisposition("lay", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	Nothing. I must be going now.	}{	Nothing. I must be going now.	}{	0	}{	}{	G.Heather_SM = 1	}{	}{	}{	}{	}{	}{	}{	The words would be a perilous poison. Farewell.	}
+{	53	}{	Nothing... I'm just a nurse.	}{	Nothing... I'm just a nurse.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am a simple worker... a hospital healer.	}
+{	54	}{	I simply wanted to help.	}{	I simply wanted to help.	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	I only wished to lessen your pain.	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	No - no you did something. I can feel it. It's... fixing me. You- I-I kissed your wrist. What did you do?	}{	No - no you did something. I can feel it. It's... fixing me. You- I-I kissed your wrist. What did you do?	}{	#	}{	npc.SetDisposition("lay", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	63	}{	Look, forget about this... and don't say anything. You'll be fine.	}{	Look, forget about this... and don't say anything. You'll be fine.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	Some things are best forgotten. Wash me from your mind.	}
+{	64	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	But you did something. I-I-I kissed your wrist... I can feel it inside of me. What did you do?	}{	But you did something. I-I-I kissed your wrist... I can feel it inside of me. What did you do?	}{	#	}{	npc.SetDisposition("lay", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	73	}{	Look, forget about this... and don't say anything. You'll be fine.	}{	Look, forget about this... and don't say anything. You'll be fine.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	Some things are best forgotten. Wash me from your mind.	}
+{	74	}{	I fed you my blood. I'm a vampire. My blood can heal you.	}{	I fed you my blood. I'm a vampire. My blood can heal you.	}{	101	}{	}{	G.Heather_SM = 1	}{	}{	}{	}{	}{	}{	}{	I am a child of the night, bloodthirsty and damned. My blood has healed you.	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	You - I feel like I know you... like you've always been here.	}{	You - I feel like I know you... like you've always been here.	}{	#	}{	npc.SetDisposition("lay", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	83	}{	I really must be going now.	}{	I really must be going now.	}{	0	}{	}{	G.Heather_SM = 2	}{	}{	}{	}{	}{	}{	}{	I must leave you, my blood-love. Farewell.	}
+{	84	}{	I am a vampire. My blood healed you.	}{	I am a vampire. My blood healed you.	}{	101	}{	}{	G.Heather_SM = 3	}{	}{	}{	}{	}{	}{	}{	I am a child of the night, bloodthirsty and damned. My blood has healed you.	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	[confused]Hmm? Uh... who are you? Can I help you with something?	}{	[confused]Hmm? Uh... who are you? Can I help you with something?	}{	#	}{	npc.SetDisposition("lay", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Just passing through.	}{	Just passing through.	}{	103	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	93	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	What? Doctor! Security!!!	}{	What? Doctor! Security!!!	}{	#	}{	npc.SetDisposition("lay", 2)	}{	G.Nurse_Warn = 3	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	103	}{	I just need... some rest... now[falls asleep].	}{	I just need... some rest... now[falls asleep].	}{	#	}{	npc.SetDisposition("Dead",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	[seeing Nos player]Get away from me! NOOOooo![Screams]	}{	[seeing Nos player]Get away from me! NOOOooo![Screams]	}{	#	}{	npc.SetDisposition("lay", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	113	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	Hey! I-I know this might seem creepy and all, but please don't blow me off, okay? Someone told me I could find you here. I mean, I've been looking all over for you since that night, because I just wanted to... I'm in your debt.	}{	Hey! I-I know this might seem creepy and all, but please don't blow me off, okay? Someone told me I could find you here. I mean, I've been looking all over for you since that night, because I just wanted to... I'm in your debt.	}{	#	}{	npc.SetDisposition("Confused",1)	}{	G.Heather_Spoken = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	(Auto-Link)	}{	(Auto-Link)	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	123	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	I want to... help you. I owe you my life and... I feel like I need to repay you. Oh, I almost forgot - I'm Heather, Heather Poe. I'm not weirding you out or anything, am I?	}{	I want to... help you. I owe you my life and... I feel like I need to repay you. Oh, I almost forgot - I'm Heather, Heather Poe. I'm not weirding you out or anything, am I?	}{	#	}{	npc.SetDisposition("Confused",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	That's hard to do these nights. You look much better. I'm glad.	}{	That's hard to do these nights. You look much better. I'm glad.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	I do not see Death over you anymore.	}
+{	133	}{	No. I knew you would return. You may be useful to me.	}{	No. I knew you would return. You may be useful to me.	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Weird me out? HA HA... I knew you would find me. You may be useful.	}
+{	134	}{	Heather, you shouldn't be here.	}{	Heather, you shouldn't be here.	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	You. Must. Go.	}
+{	135	}{	Turn around, go back home. You cannot get involved with me.	}{	Turn around, go back home. You cannot get involved with me.	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	I remove your leash. Run free.	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	Only because of you - what you did for me.	}{	Only because of you - what you did for me.	}{	#	}{	npc.SetDisposition("Joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	(Auto-Link)	}{	(Auto-Link)	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	143	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	Wait...!	}{	Wait...!	}{	#	}{	npc.SetDisposition("Sad",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	(Auto-Link)	}{	(Auto-Link)	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	153	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	154	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	I CAN be, I know I can. I'll do everything I can for you, I - Look... here.	}{	I CAN be, I know I can. I'll do everything I can for you, I - Look... here.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	(Auto-Link)	}{	(Auto-Link)	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	163	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	164	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	Here, I... I got you this, I thought you might be able to use it. I can be useful to you... I'd do anything - just tell me you'll let me help you... let me stay with you... make me feel this way.	}{	Here, I... I got you this, I thought you might be able to use it. I can be useful to you... I'd do anything - just tell me you'll let me help you... let me stay with you... make me feel this way.	}{	#	}{	npc.SetDisposition("Sad",1)	}{	spawnRing()	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	Of course. Heather, I would love for you to stay with me.	}{	Of course. Heather, I would love for you to stay with me.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hmm... I always wanted a pet - something to cradle before I sleep.	}
+{	173	}{	If you want to feel like that... then you're going to have to earn it.	}{	If you want to feel like that... then you're going to have to earn it.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	Heh, heh, heh.... Welcome.	}
+{	174	}{	Oh, man, did I make a mistake. Heather... I only did that to save your life.	}{	Oh, man, did I make a mistake. Heather... I only did that to save your life.	}{	211	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your life was escaping, so I locked it back in its cage. I should have let it go.	}
+{	175	}{	No. If you stay with me, you'll get hurt. Get out of here. Now.	}{	No. If you stay with me, you'll get hurt. Get out of here. Now.	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	If I could share my thoughts, you would run. YOU DO NOT WANT THIS!	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	Really?!? I promise you won't regret it! Promise! I'll get you money, I'll get you things... everything! I want to be... important to you.	}{	Really?!? I promise you won't regret it! Promise! I'll get you money, I'll get you things... everything! I want to be... important to you.	}{	#	}{	npc.SetDisposition("Joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	Wait for me at my place. I can't have you following me around, it's dangerous.	}{	Wait for me at my place. I can't have you following me around, it's dangerous.	}{	191	}{	}{	}{	}{	}{	}{	}{	}{	}{	Good. Go to our home. But no one can know about you, my pet.	}
+{	183	}{	As long as you're useful, you'll have some importance to me.	}{	As long as you're useful, you'll have some importance to me.	}{	191	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am a creature of whim. And you will be a creature of my whims.	}
+{	184	}{	Wait... Heather, I'm sorry, you have to go on with your life. Forget about me.	}{	Wait... Heather, I'm sorry, you have to go on with your life. Forget about me.	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	I do not want the future guilt. Or the blood on my hands.	}
+{	185	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	Uh, I know where you live... I checked there first. I'll wait for you at your place. And when you do come back, I'll take care of whatever you want - I'd do anything for you.	}{	Uh, I know where you live... I checked there first. I'll wait for you at your place. And when you do come back, I'll take care of whatever you want - I'd do anything for you.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Heather_Haven = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	My dear Heather, what did I ever do without you. I'll see you later.	}{	My dear Heather, what did I ever do without you. I'll see you later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You fill the empty hole where my guts used to be. Until later, my pet.	}
+{	193	}{	Do that. And clean the place up a little, would you. Later, Heather.	}{	Do that. And clean the place up a little, would you. Later, Heather.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	YES.... Add the "less" to the "spot" in my haven. Be by to check on it, real soon.	}
+{	194	}{	Do what you want. Goodbye.	}{	Do what you want. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You heard the rattle, if you want to stick your hand in the hole, be my guest.	}
+{	195	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	201	}{	You don't mean that! I know you need me. Just... just let me stay near you for a little while, and if you still don't want me around, if you tell me to go, I'll go, I promise.	}{	You don't mean that! I know you need me. Just... just let me stay near you for a little while, and if you still don't want me around, if you tell me to go, I'll go, I promise.	}{	#	}{	npc.SetDisposition("Sad",1)	}{	G.Heather_Haven = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	Fair enough. But when I say it's time to go, you go. See you later.	}{	Fair enough. But when I say it's time to go, you go. See you later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	As I can show you in, I can shove you out at any time. See you in the future.	}
+{	203	}{	Fine. And clean the place up a little, would you. Later, Heather.	}{	Fine. And clean the place up a little, would you. Later, Heather.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	YES.... Add the "less" to the "spot" in my haven. Be by to check on it, real soon.	}
+{	204	}{	I don't think so.... Heather, are you listening?	}{	I don't think so.... Heather, are you listening?	}{	0	}{	}{	G.Heather_Warning = 1	}{	}{	}{	}{	}{	}{	}{	In your mind you are already there. Blah, blah, blah, blah.... My words are useless.	}
+{	205	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	208	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	211	}{	What do you mean? You're like, you're like... The effect you had on me made me want to live - it's all because of you. You saved my life. Please, let me be of use to you - I'll do whatever, I don't care.	}{	What do you mean? You're like, you're like... The effect you had on me made me want to live - it's all because of you. You saved my life. Please, let me be of use to you - I'll do whatever, I don't care.	}{	#	}{	npc.SetDisposition("Sad",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	If you must... fine.	}{	If you must... fine.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	If you haven't a care, neither do I.	}
+{	213	}{	No cares, huh? I can think of something.... Yeah, okay.	}{	No cares, huh? I can think of something.... Yeah, okay.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	Only a fool would wish for this. Welcome to my madness, fool.	}
+{	214	}{	No! Get out of here! Go! Don't ever talk to me again!	}{	No! Get out of here! Go! Don't ever talk to me again!	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	RUN, YOU FOOL! RUN!!!	}
+{	215	}{	You have any sense? Maybe if I smack you around a little, you'll learn.	}{	You have any sense? Maybe if I smack you around a little, you'll learn.	}{	231	}{	}{	}{	}{	}{	}{	}{	}{	}{	My hand is starting to feel your pain, and it wants to return it.	}
+{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	217	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	221	}{	[Saddened]But I... uh... I've never felt this way about somebody before.... I think I... When I'm around you, it's... I love you! Can't you please let me be a part of your life?	}{	[Saddened]But I... uh... I've never felt this way about somebody before.... I think I... When I'm around you, it's... I love you! Can't you please let me be a part of your life?	}{	#	}{	npc.SetDisposition("Sad",2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	I don't have the heart to say no. Very well.	}{	I don't have the heart to say no. Very well.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	Bravo.... The word "no" no longer exists in my vocabulary.	}
+{	223	}{	No. Forget you ever met me. Have a good life. Farewell.	}{	No. Forget you ever met me. Have a good life. Farewell.	}{	0	}{	}{	G.Heather_Warning = 1	}{	}{	}{	}{	}{	}{	}{	I have no life to share. Go, for I too am gone.	}
+{	224	}{	Unless you want to wind up dead, never let me see you again.	}{	Unless you want to wind up dead, never let me see you again.	}{	0	}{	}{	G.Heather_Warning = 1	}{	}{	}{	}{	}{	}{	}{	You can share my death if I see you again. Now GO!	}
+{	225	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	226	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	227	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	228	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	231	}{	Hurt me, I don't care... do whatever you want. I just want to be with you, no matter what.	}{	Hurt me, I don't care... do whatever you want. I just want to be with you, no matter what.	}{	#	}{	npc.SetDisposition("Sad",2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	If you must... fine.	}{	If you must... fine.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	If you haven't a care, neither do I.	}
+{	233	}{	If you really feel that way... but you will do everything I say, no question.	}{	If you really feel that way... but you will do everything I say, no question.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	Only a fool would wish for this. Welcome to my madness, fool.	}
+{	234	}{	What the hell is wrong with you? I just threatened you! Get out of here!	}{	What the hell is wrong with you? I just threatened you! Get out of here!	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	So stubborn. So foolish. And it can only get worse.	}
+{	235	}{	This is called tough love, Heather. Might sting a bit.	}{	This is called tough love, Heather. Might sting a bit.	}{	241	}{	}{	}{	}{	}{	}{	}{	}{	}{	It pains you to feel that way. It feels a lot like MY HAND on YOUR FACE.	}
+{	236	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	238	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	241	}{	[Recovering from a smack]Your touch... ugh... no matter how hard, is gentle and loving. No matter what you do, it won't change these feelings I have for you.	}{	[Recovering from a smack]Your touch... ugh... no matter how hard, is gentle and loving. No matter what you do, it won't change these feelings I have for you.	}{	#	}{	npc.SetDisposition("Sad",2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	Fine. I'll keep you around. But don't ever say that again.	}{	Fine. I'll keep you around. But don't ever say that again.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	Never repeat those words and you may serve me.	}
+{	243	}{	That's what I like to hear. You may hang around me, for now.	}{	That's what I like to hear. You may hang around me, for now.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	A HA HA... I am amused. I will have a lot of fun with you.	}
+{	244	}{	What can I say to make you go away?	}{	What can I say to make you go away?	}{	251	}{	}{	}{	}{	}{	}{	}{	}{	}{	What can I say to make you disappear?	}
+{	245	}{	I'll put you back in the hospital if you don't get out of here!	}{	I'll put you back in the hospital if you don't get out of here!	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	I found you near death, and I can return you to that state.	}
+{	246	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	247	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	248	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	250	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	251	}{	Nothing.	}{	Nothing.	}{	#	}{	npc.SetDisposition("Sad",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	You want to be a part of this damnation? You got it.	}{	You want to be a part of this damnation? You got it.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	Welcome to the world of the Damned. You can fill out the forms later.	}
+{	253	}{	Very well. But you do what I say.	}{	Very well. But you do what I say.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	"Nothing"? Still here? Very well, you may stay, but my words are your bread.	}
+{	254	}{	I regret ever helping you. Get out of here, Heather. Don't let me see you again.	}{	I regret ever helping you. Get out of here, Heather. Don't let me see you again.	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	I regret being kind. From this day forward, I will be cruel. Leave my sight.	}
+{	255	}{	You pathetic addict. Get out of here! Stupid bitch.	}{	You pathetic addict. Get out of here! Stupid bitch.	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your existence disgusts me. To look upon you is to define "pathetic".	}
+{	256	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	Look, I know you told me you don't want me around, but I just couldn't do it. Don't you understand? I need you... I love you - please don't make me leave you again! I promise I won't get in the way, and I can help.	}{	Look, I know you told me you don't want me around, but I just couldn't do it. Don't you understand? I need you... I love you - please don't make me leave you again! I promise I won't get in the way, and I can help.	}{	#	}{	npc.SetDisposition("Sad",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	Heather? You don't understand, but it's for your own benefit I asked you to go.	}{	Heather? You don't understand, but it's for your own benefit I asked you to go.	}{	271	}{	}{	}{	}{	}{	}{	}{	}{	}{	You have taken one more step towards your doom. Walk away.	}
+{	263	}{	Crazy, stalking bitch! Leave, now, or I don't know what I may do to you.	}{	Crazy, stalking bitch! Leave, now, or I don't know what I may do to you.	}{	271	}{	}{	}{	}{	}{	}{	}{	}{	}{	I enjoy surprises as much as a cat. Can't you see my claws?	}
+{	264	}{	If I can't get rid of you, make yourself useful - clean this place up, would you?	}{	If I can't get rid of you, make yourself useful - clean this place up, would you?	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hmm... so you want to help. Help yourself to a rag and shine something.	}
+{	265	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	268	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	270	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	271	}{	I don't care! My life felt meaningless until that night when you saved me. I'd die for you.	}{	I don't care! My life felt meaningless until that night when you saved me. I'd die for you.	}{	#	}{	npc.SetDisposition("Sad",2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	272	}{	If that's the way you feel, I guess you can stay... for now.	}{	If that's the way you feel, I guess you can stay... for now.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	Since I don't feel like throwing you out a window, I guess you may stay.	}
+{	273	}{	I'd rather it didn't come to that. So do as I say and go.	}{	I'd rather it didn't come to that. So do as I say and go.	}{	291	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yes, you will. So you must reject your fate.	}
+{	274	}{	You don't have to die for me... but you will do everything I ask.	}{	You don't have to die for me... but you will do everything I ask.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	If you're going to die on me, try to die somewhere near the trash.	}
+{	275	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	276	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	277	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	278	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	281	}{	Yes, yes, whatever you say... anything for the reward of your love.	}{	Yes, yes, whatever you say... anything for the reward of your love.	}{	#	}{	npc.SetDisposition("Joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	You would do anything, wouldn't you? I suppose I'm responsible for you now.	}{	You would do anything, wouldn't you? I suppose I'm responsible for you now.	}{	351	}{	}{	}{	}{	}{	}{	}{	}{	}{	You're insane. How fitting you found your way here.	}
+{	283	}{	Anything? I'll hold you to that.	}{	Anything? I'll hold you to that.	}{	351	}{	}{	}{	}{	}{	}{	}{	}{	}{	Anything? Did you ever stop to think of the outcomes of that word?	}
+{	284	}{	My love is vampire blood, Heather. A great reward to be sure.	}{	My love is vampire blood, Heather. A great reward to be sure.	}{	391	}{	}{	}{	}{	}{	}{	}{	}{	}{	Love, vampire blood, one and the same from my wrist. Ready for your reward?	}
+{	285	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	286	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	287	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	288	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	291	}{	I can't... I just can't. I'll be whoever you want me to be. Without your attention, without your presence, this world is merciless and vulgar and... Please don't make me go!	}{	I can't... I just can't. I'll be whoever you want me to be. Without your attention, without your presence, this world is merciless and vulgar and... Please don't make me go!	}{	#	}{	npc.SetDisposition("Sad",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	Go. Never come back. Go back to your life.	}{	Go. Never come back. Go back to your life.	}{	301	}{	Dominate 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	293	}{	Go. Never come back. Go back to your life.	}{	Go. Never come back. Go back to your life.	}{	301	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	294	}{	I never existed. This never happened. All is dream. Go outside and wake up.	}{	I never existed. This never happened. All is dream. Go outside and wake up.	}{	311	}{	Dementation 1	}{	}{	}{	}{	}{	}{	}{	}{	I never existed. This never happened. All is dream. Go outside and wake up.	}
+{	295	}{	Yes, I'm fabulous, but you will still leave me.	}{	Yes, I'm fabulous, but you will still leave me.	}{	301	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	296	}{	You may not understand now, but it's for your safety. Go, Heather.	}{	You may not understand now, but it's for your safety. Go, Heather.	}{	321	}{	}{	}{	}{	}{	}{	}{	}{	}{	I thought I wanted a pet, but I do not want the responsibility. Go - you are free.	}
+{	297	}{	Stupid ghoul. Get out of here! I command you to leave!	}{	Stupid ghoul. Get out of here! I command you to leave!	}{	321	}{	}{	}{	}{	}{	}{	}{	}{	}{	My Humanity is your escape. Leave while it still exists.	}
+{	298	}{	Whatever I do, you won't listen. Come close, I want my blood back.	}{	Whatever I do, you won't listen. Come close, I want my blood back.	}{	0	}{	}{	G.Heather_Kill = 1; G.Seductive_Feed = 1; pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	If you will not leave, then my blood will leave your body.	}
+{	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	300	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	301	}{	I... have to go. I have class tomorrow and... my grandmother must be worried about me.	}{	I... have to go. I have class tomorrow and... my grandmother must be worried about me.	}{	#	}{	npc.SetDisposition("Confused",1)	}{	G.Heather_Dominated = 1; G.Heather_Gone = 1; FindPlayer().HumanityAdd( 1 )	}{	}{	}{	}{	}{	}{	}{	}
+{	302	}{	Goodbye Heather.	}{	Goodbye Heather.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	303	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	304	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	305	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	306	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	307	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	308	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	309	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	310	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	311	}{	[spaced out]Hmm. I have to wake up... get ready for school. What a weird dream this has been; what a strange person to dream about. Huh. Goodbye, master of my dreams.	}{	[spaced out]Hmm. I have to wake up... get ready for school. What a weird dream this has been; what a strange person to dream about. Huh. Goodbye, master of my dreams.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Heather_Dementated = 1; G.Heather_Gone = 1; FindPlayer().HumanityAdd( 1 )	}{	}{	}{	}{	}{	}{	}{	}
+{	312	}{	Farewell, my house pet.	}{	Farewell, my house pet.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Farewell, my house pet.	}
+{	313	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	314	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	315	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	316	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	317	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	318	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	319	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	320	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	321	}{	[Distressed]What?!? But I...	}{	[Distressed]What?!? But I...	}{	#	}{	npc.SetDisposition("Confused",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	322	}{	You did say you would do as I ask, correct? I want you to leave.	}{	You did say you would do as I ask, correct? I want you to leave.	}{	331	}{	}{	}{	}{	}{	}{	}{	}{	}{	This is my will, which you are blood-bound to.	}
+{	323	}{	Out. Now.	}{	Out. Now.	}{	331	}{	}{	}{	}{	}{	}{	}{	}{	}{	OUT! GO! ESCAPE! NOW!	}
+{	324	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	325	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	326	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	327	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	328	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	329	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	330	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	331	}{	[saddened, emotionally crushed]Okay, I'll go... if you really don't want me here.	}{	[saddened, emotionally crushed]Okay, I'll go... if you really don't want me here.	}{	#	}{	npc.SetDisposition("Sad",1)	}{	G.Heather_Gone = 1; FindPlayer().HumanityAdd( 1 )	}{	}{	}{	}{	}{	}{	}{	}
+{	332	}{	This is for your own good. Please stay away. Goodbye, Heather.	}{	This is for your own good. Please stay away. Goodbye, Heather.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Death will find you one day, but I will not lead him to you. Goodbye, my pet.	}
+{	333	}{	I don't. Now go. Do not come back.	}{	I don't. Now go. Do not come back.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	GO! RUN!	}
+{	334	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	335	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	336	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	337	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	338	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	339	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	340	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	341	}{	I'm so glad you're back. I've been waiting here just like you asked. Your place is, um... nice.	}{	I'm so glad you're back. I've been waiting here just like you asked. Your place is, um... nice.	}{	#	}{	npc.SetDisposition("Joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	While you were gone, I tapped my foot over three thousand times. I-I don't know why I counted... huh.	}
+{	342	}{	I didn't decorate it.	}{	I didn't decorate it.	}{	351	}{	}{	}{	}{	}{	}{	}{	}{	}{	I have the same habit.	}
+{	343	}{	If you have any complaints, you can leave.	}{	If you have any complaints, you can leave.	}{	351	}{	}{	}{	}{	}{	}{	}{	}{	}{	Now we know how many foot taps it takes to make me appear. Wonderful.	}
+{	344	}{	It may not be much, but it's mine.	}{	It may not be much, but it's mine.	}{	351	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	345	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	346	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	347	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	348	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	349	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	350	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	351	}{	Is there something I can do for you? Anything? Just ask.	}{	Is there something I can do for you? Anything? Just ask.	}{	#	}{	npc.SetDisposition("Flirt",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	352	}{	There's something you should know before we go on.	}{	There's something you should know before we go on.	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	There is a truth you must know, my pet.	}
+{	353	}{	Get some rest. I want you to watch over me during the day, when I sleep.	}{	Get some rest. I want you to watch over me during the day, when I sleep.	}{	371	}{	}{	}{	}{	}{	}{	}{	}{	}{	Sleep, so that as I dream through the day, you can scare the sun away.	}
+{	354	}{	I could use some of your blood, Heather.	}{	I could use some of your blood, Heather.	}{	381	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'm famished. Let me lap the sweet juices from your neck.	}
+{	355	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	356	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	357	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	358	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	359	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	360	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	361	}{	Oh... are you married? Is that why you don't want me around?	}{	Oh... are you married? Is that why you don't want me around?	}{	#	}{	npc.SetDisposition("Sad",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	362	}{	No. You survived because of my blood. I am a vampire. You are bound to me.	}{	No. You survived because of my blood. I am a vampire. You are bound to me.	}{	391	}{	}{	}{	}{	}{	}{	}{	}{	}{	If your naïveté was blood, I would never go hungry. No. I am the undead.	}
+{	363	}{	I'm a vampire. You are my blood-bound servant. Still love me?	}{	I'm a vampire. You are my blood-bound servant. Still love me?	}{	391	}{	}{	}{	}{	}{	}{	}{	}{	}{	HA HA HA... no. I'm a vampire. Still love me?	}
+{	364	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	365	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	366	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	367	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	368	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	369	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	370	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	371	}{	Oh, you're a night person? Me too!	}{	Oh, you're a night person? Me too!	}{	#	}{	npc.SetDisposition("Flirt",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	372	}{	No. You survived because of my blood. I am a vampire. You are bound to me.	}{	No. You survived because of my blood. I am a vampire. You are bound to me.	}{	391	}{	}{	}{	}{	}{	}{	}{	}{	}{	If your naïveté was blood, I would never go hungry. No. I am the undead.	}
+{	373	}{	I'm a vampire. You are my blood-bound servant. Still love me?	}{	I'm a vampire. You are my blood-bound servant. Still love me?	}{	391	}{	}{	}{	}{	}{	}{	}{	}{	}{	HA HA HA... no. I'm a vampire. Still love me?	}
+{	374	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	375	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	376	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	377	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	378	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	379	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	380	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	381	}{	I've never done that before, but for you... if you want, I guess I could try it. Is this like a sex thing?	}{	I've never done that before, but for you... if you want, I guess I could try it. Is this like a sex thing?	}{	#	}{	npc.SetDisposition("Confused",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	382	}{	No. You survived because of my blood. I am a vampire. You are bound to me.	}{	No. You survived because of my blood. I am a vampire. You are bound to me.	}{	391	}{	}{	}{	}{	}{	}{	}{	}{	}{	If your naïveté was blood, I would never go hungry. No. I am the undead.	}
+{	383	}{	Yes, kind of. I'm a vampire. You are my blood-bound servant. Still love me?	}{	Yes, kind of. I'm a vampire. You are my blood-bound servant. Still love me?	}{	391	}{	}{	}{	}{	}{	}{	}{	}{	}{	HA HA HA... no. I'm a vampire. Still love me?	}
+{	384	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	385	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	386	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	387	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	388	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	389	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	390	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	391	}{	What? [nervous laugh]You're joking, right? That's like slang for something, like catcher, or some fetish term, right? Not like a "bleh, BLEH" vampire... [nervous]right?	}{	What? [nervous laugh]You're joking, right? That's like slang for something, like catcher, or some fetish term, right? Not like a "bleh, BLEH" vampire... [nervous]right?	}{	#	}{	npc.SetDisposition("Confused",1)	}{	}{	}{	}{	}{	}{	}{	}{	That... makes sense. It all makes sense! Those feelings that something's there in the dark, it wasn't my imagination... it's not crazy at all.	}
+{	392	}{	I'm afraid not. My blood commingles with your own. A term for you is ghoul.	}{	I'm afraid not. My blood commingles with your own. A term for you is ghoul.	}{	401	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ah, you're starting to understand, my ghoul. I am so proud of you.	}
+{	393	}{	Don't you understand, I've chosen you. You should feel honored, mortal.	}{	Don't you understand, I've chosen you. You should feel honored, mortal.	}{	401	}{	}{	}{	}{	}{	}{	}{	}{	}{	Of all the mud in this city, I picked you up and made you in my image.	}
+{	394	}{	Bleh! Oh, you poor, confused child. Come here, I'm famished.	}{	Bleh! Oh, you poor, confused child. Come here, I'm famished.	}{	401	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	395	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	396	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	397	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	398	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	399	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	400	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	401	}{	No... no, there's no such thing. You're... this isn't funny anymore.	}{	No... no, there's no such thing. You're... this isn't funny anymore.	}{	#	}{	npc.SetDisposition("Fear",1)	}{	}{	}{	}{	}{	}{	}{	}{	It's like you've pulled the shades off my mind's window. I can see now. There's a whole world out there, it's mind-blowing.	}
+{	402	}{	Don't worry, my sweet pet. I will protect you. I will make you feel incredible.	}{	Don't worry, my sweet pet. I will protect you. I will make you feel incredible.	}{	411	}{	}{	}{	}{	}{	}{	}{	}{	}{	And it only gets better. I will show you truth and love like you've never known.	}
+{	403	}{	Do you want me to leave forever? To love someone else?	}{	Do you want me to leave forever? To love someone else?	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	Are you saying you want to leave? Because I can disappear anytime I want!	}
+{	404	}{	This is the best laugh I've had in a while. Now, come - do as you're told.	}{	This is the best laugh I've had in a while. Now, come - do as you're told.	}{	431	}{	}{	}{	}{	}{	}{	}{	}{	}{	I can pull the shades back down, if you don't do as I say. Understand?	}
+{	405	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	406	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	407	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	408	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	409	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	410	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	411	}{	You will? I do love you so much. Whatever you are... I don't care, I just want to be with you.	}{	You will? I do love you so much. Whatever you are... I don't care, I just want to be with you.	}{	#	}{	npc.SetDisposition("Joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	412	}{	Yes, always know that I adore you. I share my blood with only you, dear Heather.	}{	Yes, always know that I adore you. I share my blood with only you, dear Heather.	}{	441	}{	}{	}{	}{	}{	}{	}{	}{	}{	That is my adoration running through your veins. All for you, only you.	}
+{	413	}{	That's great. Now, do something to show me you care.	}{	That's great. Now, do something to show me you care.	}{	441	}{	}{	}{	}{	}{	}{	}{	}{	}{	WOW! Now entertain me.	}
+{	414	}{	Good, because if you ran right now, I'd have to kill you.	}{	Good, because if you ran right now, I'd have to kill you.	}{	441	}{	}{	}{	}{	}{	}{	}{	}{	}{	Good, because if you ran right now, I'd have to kill you.	}
+{	415	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	416	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	417	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	418	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	419	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	420	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	421	}{	No! Please don't leave. I don't care what you are, just don't leave me.	}{	No! Please don't leave. I don't care what you are, just don't leave me.	}{	#	}{	npc.SetDisposition("Sad",2)	}{	}{	}{	}{	}{	}{	}{	}{	No! Please don't leave.... I'll be your moon. Don't make me drift through this lonely universe alone!	}
+{	422	}{	I'm not going anywhere, my pet. Don't worry.	}{	I'm not going anywhere, my pet. Don't worry.	}{	441	}{	}{	}{	}{	}{	}{	}{	}{	}{	I do love moonlight so much. Shine for me, my pet.	}
+{	423	}{	That's great. Now, do something to show me you care.	}{	That's great. Now, do something to show me you care.	}{	441	}{	}{	}{	}{	}{	}{	}{	}{	}{	WOW! Now entertain me.	}
+{	424	}{	Good, because if you ran right now, I'd have to kill you.	}{	Good, because if you ran right now, I'd have to kill you.	}{	441	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yes, you must be my moon. For if you were water, I would have to dam you.	}
+{	425	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	426	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	427	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	428	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	429	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	430	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	431	}{	Yes... anything you say.	}{	Yes... anything you say.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	432	}{	Yes, always know that I adore you. I share my blood with only you, dear Heather.	}{	Yes, always know that I adore you. I share my blood with only you, dear Heather.	}{	441	}{	}{	}{	}{	}{	}{	}{	}{	}{	That is my adoration running through your veins. All for you, only you.	}
+{	433	}{	That's great. Now, do something to show me you care.	}{	That's great. Now, do something to show me you care.	}{	441	}{	}{	}{	}{	}{	}{	}{	}{	}{	WOW! Now entertain me.	}
+{	434	}{	Good, because if you ran right now, I'd have to kill you.	}{	Good, because if you ran right now, I'd have to kill you.	}{	441	}{	}{	}{	}{	}{	}{	}{	}{	}{	Good shade, because if you were like a curtain and ran, I would have to throw you out.	}
+{	435	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	436	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	437	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	438	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	439	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	440	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	441	}{	What can I do to show my appreciation?	}{	What can I do to show my appreciation?	}{	#	}{	npc.SetDisposition("Flirt",1)	}{	G.Heather_Secret = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	442	}{	You have any money on you?	}{	You have any money on you?	}{	451	}{	}{	}{	}{	}{	}{	}{	}{	}{	Open your wallet and feed me its guts.	}
+{	443	}{	I'm feeling famished. Share your blood with me.	}{	I'm feeling famished. Share your blood with me.	}{	461	}{	}{	}{	}{	}{	}{	}{	}{	}{	Bleed for me.	}
+{	444	}{	Tell me a little about yourself.	}{	Tell me a little about yourself.	}{	471	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me a story about yourself.	}
+{	445	}{	Wait here. Don't worry, I'll be back.	}{	Wait here. Don't worry, I'll be back.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You can be here when I return. I am gone.	}
+{	446	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	447	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	448	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	449	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	450	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	451	}{	Umm... here, here, that's all I've got.	}{	Umm... here, here, that's all I've got.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Heather_Wallet = 1; pc.MoneyAdd( 20 )	}{	}{	}{	}{	}{	}{	}{	}
+{	452	}{	I feel famished. Share your blood with me.	}{	I feel famished. Share your blood with me.	}{	461	}{	G.Heather_Feed == 0	}{	}{	}{	}{	}{	}{	}{	}{	Bleed for me.	}
+{	453	}{	I feel famished. Share your blood with me.	}{	I feel famished. Share your blood with me.	}{	501	}{	G.Heather_Feed == 1	}{	}{	}{	}{	}{	}{	}{	}{	Bleed for me.	}
+{	454	}{	Tell me a little about yourself.	}{	Tell me a little about yourself.	}{	471	}{	G.Heather_Bio == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me a story about yourself.	}
+{	455	}{	That'll do for now. Try and find some more, would you? See you later.	}{	That'll do for now. Try and find some more, would you? See you later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	When I return, I expect you to deliver their relatives to me. I am gone.	}
+{	456	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	457	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	458	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	459	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	460	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	461	}{	Please... take me inside of you.	}{	Please... take me inside of you.	}{	#	}{	npc.SetDisposition("Flirt",1)	}{	G.Heather_Feed = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	462	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	G.Seductive_Feed = 1; pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	}
+{	463	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	464	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	465	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	466	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	467	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	468	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	469	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	470	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	471	}{	Me? I'm not so special, you know. I go to college, I'm majoring in fashion design... I think I'm pretty creative. I just started school - a year late, because my... my parents died - um, car crash. I didn't really have anyone special in my life... until you came along.	}{	Me? I'm not so special, you know. I go to college, I'm majoring in fashion design... I think I'm pretty creative. I just started school - a year late, because my... my parents died - um, car crash. I didn't really have anyone special in my life... until you came along.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Heather_Bio = 1	}{	}{	}{	}{	}{	}{	}{	It's all a blur of nonsense. I'd rather forget the past, the ignorance, and just follow your trail of headcrumbs into wonderland.	}
+{	472	}{	How sad.... Don't worry, I'm here for you, dearest Heather.	}{	How sad.... Don't worry, I'm here for you, dearest Heather.	}{	481	}{	}{	}{	}{	}{	}{	}{	}{	}{	Wherever the rabbit hole leads, you'll be right beside me.	}
+{	473	}{	That life's over now. Now you belong to me. Always remember this.	}{	That life's over now. Now you belong to me. Always remember this.	}{	491	}{	}{	}{	}{	}{	}{	}{	}{	}{	That's right, because you belong to me. Remember this.	}
+{	474	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	475	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	476	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	477	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	478	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	479	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	480	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	481	}{	[smiles]Heh....	}{	[smiles]Heh....	}{	#	}{	npc.SetDisposition("Joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	482	}{	I feel famished. Share your blood with me.	}{	I feel famished. Share your blood with me.	}{	461	}{	G.Heather_Feed == 0	}{	}{	}{	}{	}{	}{	}{	}{	Bleed for me.	}
+{	483	}{	I feel famished. Share your blood with me.	}{	I feel famished. Share your blood with me.	}{	501	}{	G.Heather_Feed == 1	}{	}{	}{	}{	}{	}{	}{	}{	Bleed for me.	}
+{	484	}{	You have any money on you?	}{	You have any money on you?	}{	451	}{	G.Heather_Wallet == 0	}{	}{	}{	}{	}{	}{	}{	}{	Open your wallet and feed me its guts.	}
+{	485	}{	About your appearance... change it.	}{	About your appearance... change it.	}{	985	}{	G.Heather_Clothes == 0	}{	}{	}{	}{	}{	}{	}{	}{	Your skin... change it.	}
+{	486	}{	Wait here. Don't worry, I'll be back.	}{	Wait here. Don't worry, I'll be back.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Keep smiling until I return.	}
+{	487	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	488	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	489	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	490	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	491	}{	I understand.	}{	I understand.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	492	}{	I feel famished. Share your blood with me.	}{	I feel famished. Share your blood with me.	}{	461	}{	G.Heather_Feed == 0	}{	}{	}{	}{	}{	}{	}{	}{	Bleed for me.	}
+{	493	}{	I feel famished. Share your blood with me.	}{	I feel famished. Share your blood with me.	}{	501	}{	G.Heather_Feed == 1	}{	}{	}{	}{	}{	}{	}{	}{	Bleed for me.	}
+{	494	}{	You have any money on you?	}{	You have any money on you?	}{	451	}{	G.Heather_Wallet == 0	}{	}{	}{	}{	}{	}{	}{	}{	Open your wallet and feed me its guts.	}
+{	495	}{	About your appearance... change it.	}{	About your appearance... change it.	}{	985	}{	G.Heather_Clothes == 0	}{	}{	}{	}{	}{	}{	}{	}{	Your skin... change it.	}
+{	496	}{	Wait here. Don't worry, I'll be back.	}{	Wait here. Don't worry, I'll be back.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Keep understanding until I return.	}
+{	497	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	498	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	499	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	500	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	501	}{	I feel a little bit lightheaded right now. Maybe I should lie down.	}{	I feel a little bit lightheaded right now. Maybe I should lie down.	}{	#	}{	npc.SetDisposition("Apathy",1)	}{	G.Heather_Sleep = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	502	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	503	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	504	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	505	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	506	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	507	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	508	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	509	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	510	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	511	}{	Anything I can do for you?	}{	Anything I can do for you?	}{	#	}{	npc.SetDisposition("Flirt",1)	}{	}{	}{	}{	}{	}{	}{	}{	Play with me?	}
+{	512	}{	You have any money on you?	}{	You have any money on you?	}{	451	}{	G.Heather_Wallet == 0	}{	}{	}{	}{	}{	}{	}{	}{	Open your wallet and feed me its guts.	}
+{	513	}{	I feel famished. Share your blood with me.	}{	I feel famished. Share your blood with me.	}{	461	}{	G.Heather_Feed == 0	}{	}{	}{	}{	}{	}{	}{	}{	Bleed for me.	}
+{	514	}{	I feel famished. Share your blood with me.	}{	I feel famished. Share your blood with me.	}{	501	}{	G.Heather_Feed == 1	}{	}{	}{	}{	}{	}{	}{	}{	Bleed for me.	}
+{	515	}{	Tell me a little about yourself.	}{	Tell me a little about yourself.	}{	471	}{	G.Heather_Bio == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me a story about yourself.	}
+{	516	}{	About your appearance... change it.	}{	About your appearance... change it.	}{	985	}{	G.Heather_Clothes == 0	}{	}{	}{	}{	}{	}{	}{	}{	Your skin... change it.	}
+{	517	}{	Wait here. Don't worry, I'll be back.	}{	Wait here. Don't worry, I'll be back.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You may please me in the future. I am gone.	}
+{	518	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	519	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	520	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	521	}{	[Delivered nervously, frenetically, like a junkie]Uh. Finally, you're back! I thought maybe something happened to you! I shouldn't even think such a thing, I mean... if you disappeared - how could I go on? But, you're here now... oh, I'm so glad when you're near me.	}{	[Delivered nervously, frenetically, like a junkie]Uh. Finally, you're back! I thought maybe something happened to you! I shouldn't even think such a thing, I mean... if you disappeared - how could I go on? But, you're here now... oh, I'm so glad when you're near me.	}{	#	}{	npc.SetDisposition("Sad",2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	522	}{	Calm down, my pet. Here, take me internally. I am forever yours.	}{	Calm down, my pet. Here, take me internally. I am forever yours.	}{	531	}{	Humanity 6	}{	pc.Bloodloss(1)	}{	}{	}{	}{	}{	}{	}{	Calm down, my pet. Take me internally. I am forever yours.	}
+{	523	}{	Looks like a certain ghoul needs her blood fix.	}{	Looks like a certain ghoul needs her blood fix.	}{	541	}{	}{	}{	}{	}{	}{	}{	}{	}{	Heh heh... withdrawal sucks, doesn't it? Addictive stuff, blood.	}
+{	524	}{	You already burn that blood I gave you?	}{	You already burn that blood I gave you?	}{	541	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	525	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	526	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	527	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	528	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	529	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	530	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	531	}{	[Euphoric trance, breathy, like she just had incredible sex]Ohhh... ahh... this feeling. It's... it's love. All I can feel is... love for you.	}{	[Euphoric trance, breathy, like she just had incredible sex]Ohhh... ahh... this feeling. It's... it's love. All I can feel is... love for you.	}{	#	}{	npc.SetDisposition("Flirt",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	532	}{	And I for you, Heather.	}{	And I for you, Heather.	}{	571	}{	Humanity 6	}{	}{	}{	}{	}{	}{	}{	}{	My way of showing mine for you.	}
+{	533	}{	How amusing. I'd rather you showed your love with gifts.	}{	How amusing. I'd rather you showed your love with gifts.	}{	571	}{	}{	}{	}{	}{	}{	}{	}{	}{	Love? I would prefer prizes.	}
+{	534	}{	And if you want to get more, you better keep me entertained.	}{	And if you want to get more, you better keep me entertained.	}{	571	}{	}{	}{	}{	}{	}{	}{	}{	}{	Entertain me and maybe you'll feel it again.	}
+{	535	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	536	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	537	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	538	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	539	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	540	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	541	}{	Blood? What do you mean?	}{	Blood? What do you mean?	}{	#	}{	npc.SetDisposition("Confused",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	542	}{	I fed you my blood that night... that's why you feel so "alive".	}{	I fed you my blood that night... that's why you feel so "alive".	}{	551	}{	}{	}{	}{	}{	}{	}{	}{	}{	You already know the answer.	}
+{	543	}{	If you want to continue to stay with me, you'll ask me for my blood.	}{	If you want to continue to stay with me, you'll ask me for my blood.	}{	551	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	544	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	545	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	546	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	547	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	548	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	549	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	550	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	551	}{	I didn't mean anything by it. Please, give me your blood.	}{	I didn't mean anything by it. Please, give me your blood.	}{	#	}{	npc.SetDisposition("Sad",1)	}{	}{	}{	}{	}{	}{	}{	}{	Let your wrist cry your love.	}
+{	552	}{	Here... don't waste it.	}{	Here... don't waste it.	}{	531	}{	}{	pc.Bloodloss(1)	}{	}{	}{	}{	}{	}{	}{	They are weeping.	}
+{	553	}{	I don't know. Maybe I should find someone who can appreciate it.	}{	I don't know. Maybe I should find someone who can appreciate it.	}{	561	}{	}{	}{	}{	}{	}{	}{	}{	}{	Maybe they should cry for someone else.	}
+{	554	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	555	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	556	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	557	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	558	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	559	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	560	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	561	}{	NO! I need it! I need you! Please... give it to me - I'd do anything for you, anything! Just don't leave me.	}{	NO! I need it! I need you! Please... give it to me - I'd do anything for you, anything! Just don't leave me.	}{	#	}{	npc.SetDisposition("Sad",2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	562	}{	That's what I like to hear.	}{	That's what I like to hear.	}{	531	}{	}{	pc.Bloodloss(1)	}{	}{	}{	}{	}{	}{	}{	Those are the magic words.	}
+{	563	}{	Fine, just stop whining.	}{	Fine, just stop whining.	}{	531	}{	}{	pc.Bloodloss(1)	}{	}{	}{	}{	}{	}{	}{	Hmm... fine.	}
+{	564	}{	Heh heh... pathetic. Junkie! Alright... I'll give you some blood, ghoul.	}{	Heh heh... pathetic. Junkie! Alright... I'll give you some blood, ghoul.	}{	531	}{	}{	pc.Bloodloss(1)	}{	}{	}{	}{	}{	}{	}{	Here, you wretch, gobble it down.	}
+{	565	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	566	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	567	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	568	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	569	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	570	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	571	}{	I almost forgot, I got a college loan check today. Here, I want you to take some of the money.	}{	I almost forgot, I got a college loan check today. Here, I want you to take some of the money.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Heather_Loan = 1; G.Heather_Feed = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	572	}{	Your college loan money? I can't take this. You can't drop out.	}{	Your college loan money? I can't take this. You can't drop out.	}{	581	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am a poor investment. You should invest this in a future.	}
+{	573	}{	Thanks... I could use some new clothes.	}{	Thanks... I could use some new clothes.	}{	631	}{	}{	pc.MoneyAdd(500)	}{	}{	}{	}{	}{	}{	}{	Ooh... mad money.	}
+{	574	}{	This it? You better have more next time! Worthless bitch!!!	}{	This it? You better have more next time! Worthless bitch!!!	}{	641	}{	}{	pc.MoneyAdd(500)	}{	}{	}{	}{	}{	}{	}{	I've seen more green in the color purple. YOU ARE JUST AS WORTHLESS!	}
+{	575	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	576	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	577	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	578	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	579	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	580	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	581	}{	I'd rather you kept it - I think I'm going to drop outta school. You know, so I can watch over you during the day or run errands for you. It's the least I can do to earn my keep.	}{	I'd rather you kept it - I think I'm going to drop outta school. You know, so I can watch over you during the day or run errands for you. It's the least I can do to earn my keep.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	582	}{	Heather, forget me... live your life. You can't stay with me anymore.	}{	Heather, forget me... live your life. You can't stay with me anymore.	}{	591	}{	}{	}{	}{	}{	}{	}{	}{	}{	My pet. It is time to set you free.	}
+{	583	}{	When you put it that way - thanks, I could use a few extra bucks.	}{	When you put it that way - thanks, I could use a few extra bucks.	}{	631	}{	}{	pc.MoneyAdd(500)	}{	}{	}{	}{	}{	}{	}{	Good argument. I'll buy something red, to remind me of your hair.	}
+{	584	}{	It's a start.	}{	It's a start.	}{	631	}{	}{	pc.MoneyAdd(500)	}{	}{	}{	}{	}{	}{	}{	Your keep is to keep it coming.	}
+{	585	}{	No, keep your money and stay in school. This must remain a secret, never speak of me.	}{	No, keep your money and stay in school. This must remain a secret, never speak of me.	}{	661	}{	}{	}{	}{	}{	}{	}{	}{	}{	No. Stay quiet about me and continue with boredom school!	}
+{	586	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	587	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	588	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	589	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	590	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	591	}{	But I-	}{	But I-	}{	#	}{	npc.SetDisposition("Sad",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	592	}{	Go. Never come back. Go back to your life.	}{	Go. Never come back. Go back to your life.	}{	301	}{	Dominate 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	593	}{	I never existed. This never happened. All is dream. Go outside and wake up.	}{	I never existed. This never happened. All is dream. Go outside and wake up.	}{	311	}{	Dementation 1	}{	}{	}{	}{	}{	}{	}{	}{	I never existed. This never happened. All is dream. Go outside and wake up.	}
+{	594	}{	You will leave me now and return to your mortal existence.	}{	You will leave me now and return to your mortal existence.	}{	301	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	595	}{	This is my final request of you. Do as I say. Live a long, happy life for me.	}{	This is my final request of you. Do as I say. Live a long, happy life for me.	}{	601	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	My words are your actions, remember? Live for those who can't, my pet.	}
+{	596	}{	I made a mistake. Now go. Never let me see you again.	}{	I made a mistake. Now go. Never let me see you again.	}{	601	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	I get so confused and then I make mistakes. Like you.	}
+{	597	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	598	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	599	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	600	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	601	}{	[Hurt, sad and angry]You don't mean it!	}{	[Hurt, sad and angry]You don't mean it!	}{	#	}{	npc.SetDisposition("Sad",2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	602	}{	Go. Never come back. Go back to your life.	}{	Go. Never come back. Go back to your life.	}{	301	}{	Dominate 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	603	}{	I never existed. This never happened. All is dream. Go outside and wake up.	}{	I never existed. This never happened. All is dream. Go outside and wake up.	}{	311	}{	Dementation 1	}{	}{	}{	}{	}{	}{	}{	}{	I never existed. This never happened. All is dream. Go outside and wake up.	}
+{	604	}{	You will leave me now and return to your mortal existence.	}{	You will leave me now and return to your mortal existence.	}{	301	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	605	}{	This life is dangerous. You'll end up dead. I won't let that happen. Farewell.	}{	This life is dangerous. You'll end up dead. I won't let that happen. Farewell.	}{	611	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	The cords are severed by love. To bind them is to die.	}
+{	606	}{	Get it through your thick skull - I don't want you here! Get out! NOW!	}{	Get it through your thick skull - I don't want you here! Get out! NOW!	}{	611	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	Ghoul, fool! Go... GET OUT NOW!	}
+{	607	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	608	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	609	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	610	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	611	}{	[Sniffling, about to cry]I'll leave... okay? But if you ever change your mind-	}{	[Sniffling, about to cry]I'll leave... okay? But if you ever change your mind-	}{	#	}{	npc.SetDisposition("Sad",3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	612	}{	I won't.	}{	I won't.	}{	621	}{	}{	}{	}{	}{	}{	}{	}{	}{	I cannot.	}
+{	613	}{	GET OUT!	}{	GET OUT!	}{	621	}{	}{	}{	}{	}{	}{	}{	}{	}{	OUT!	}
+{	614	}{	-then I'll find you, I promise.	}{	-then I'll find you, I promise.	}{	621	}{	Humanity 8	}{	}{	}{	}{	}{	}{	}{	}{	-the way will lead me back to you.	}
+{	615	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	616	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	617	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	618	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	619	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	620	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	621	}{	[Sad]Sure, alright. I'll umm... I'll go now. Well... good- [sniffs, stifles her sobbing]goodbye.	}{	[Sad]Sure, alright. I'll umm... I'll go now. Well... good- [sniffs, stifles her sobbing]goodbye.	}{	#	}{	npc.SetDisposition("Sad",3)	}{	G.Heather_Gone = 1; FindPlayer().HumanityAdd( 1 )	}{	}{	}{	}{	}{	}{	}{	}
+{	622	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	623	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	624	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	625	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	626	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	627	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	628	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	629	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	630	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	631	}{	I'll try to get more, you know, when I can.	}{	I'll try to get more, you know, when I can.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	632	}{	For now, share your blood with me.	}{	For now, share your blood with me.	}{	651	}{	G.Heather_Feed == 0	}{	}{	}{	}{	}{	}{	}{	}{	I also like the color red.	}
+{	633	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	634	}{	Good. I'll be back later, in case you want to give me something else.	}{	Good. I'll be back later, in case you want to give me something else.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	When I return, surprise me.	}
+{	635	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	636	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	637	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	638	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	639	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	640	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	641	}{	[discouraged]I'm sorry, I'll try harder next time.	}{	[discouraged]I'm sorry, I'll try harder next time.	}{	#	}{	npc.SetDisposition("Sad",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	642	}{	You can still be of some use. Give your blood to me.	}{	You can still be of some use. Give your blood to me.	}{	651	}{	G.Heather_Feed == 0	}{	}{	}{	}{	}{	}{	}{	}{	At least you're still full of blood.	}
+{	643	}{	About your appearance... change it.	}{	About your appearance... change it.	}{	985	}{	G.Heather_Clothes == 0	}{	}{	}{	}{	}{	}{	}{	}{	Your skin... change it.	}
+{	644	}{	Good. I'll be back later, in case you want to give me something else.	}{	Good. I'll be back later, in case you want to give me something else.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	More when I return, or my love dwindles.	}
+{	645	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	646	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	647	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	648	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	649	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	650	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	651	}{	With pleasure.	}{	With pleasure.	}{	#	}{	npc.SetDisposition("Joy",1)	}{	G.Heather_Feed = 1	}{	}{	}{	}{	}{	}{	}{	Let me warm you inside.	}
+{	652	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	G.Seductive_Feed = 1; pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	653	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	654	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	655	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	656	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	657	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	658	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	659	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	660	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	661	}{	Anything for you.	}{	Anything for you.	}{	#	}{	npc.SetDisposition("Flirt",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	662	}{	For now, share your blood with me.	}{	For now, share your blood with me.	}{	651	}{	G.Heather_Feed == 0	}{	}{	}{	}{	}{	}{	}{	}{	Open up.	}
+{	663	}{	About your appearance... change it.	}{	About your appearance... change it.	}{	985	}{	G.Heather_Clothes == 0	}{	}{	}{	}{	}{	}{	}{	}{	Your skin... change it.	}
+{	664	}{	Maybe later. See you, Heather.	}{	Maybe later. See you, Heather.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Anything must wait. I am gone.	}
+{	665	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	666	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	667	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	668	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	669	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	670	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	671	}{	[Excited]Oh, you're back! I, um... I went out this evening and I... well, I met someone and he wouldn't leave me alone so I - w- he came back here with me and... well, I thought you might want to... you know, want to... drink his blood.	}{	[Excited]Oh, you're back! I, um... I went out this evening and I... well, I met someone and he wouldn't leave me alone so I - w- he came back here with me and... well, I thought you might want to... you know, want to... drink his blood.	}{	#	}{	npc.SetDisposition("Joy",1)	}{	G.Heather_Lure = 1; G.Heather_Feed = 0; G.Mcfly_Present = 0	}{	}{	}{	}{	}{	}{	}{	I went fishing today... and I caught a big one. Can you hear him flopping around the bathroom? That's how you can tell he's fresh.	}
+{	672	}{	You did what?!? Where is he?	}{	You did what?!? Where is he?	}{	681	}{	}{	}{	}{	}{	}{	}{	}{	}{	No no no no no... fish travel in schools! Where is it?	}
+{	673	}{	Ah, I love coming home to find dinner waiting. Thank you, my pet.	}{	Ah, I love coming home to find dinner waiting. Thank you, my pet.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	674	}{	Just in time, I'm starved. You're finally making yourself useful.	}{	Just in time, I'm starved. You're finally making yourself useful.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	Good that it was here or perhaps I may have torn into you. Good girl.	}
+{	675	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	676	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	677	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	678	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	679	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	680	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	681	}{	Um... in the bathroom. I, uh... I locked - I locked him in. Did I mess up?	}{	Um... in the bathroom. I, uh... I locked - I locked him in. Did I mess up?	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	You don't like fish? [upset]I-I just thought, you know, it'd be a nice change of pace if you dined in for a change.	}
+{	682	}{	I'll deal with this. You stay here.	}{	I'll deal with this. You stay here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	The smell will attract flies. You stay. Sit. Be good.	}
+{	683	}{	I don't know yet. I'll see what I can do.	}{	I don't know yet. I'll see what I can do.	}{	0	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	684	}{	Hmm... maybe I'm overreacting. I might enjoy this.	}{	Hmm... maybe I'm overreacting. I might enjoy this.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Isn't that sweet? I withdraw my words. Soup's on.	}
+{	685	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	686	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	687	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	688	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	689	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	690	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	691	}{	I'm just glad you're pleased. Um, he's in the bathroom - don't worry, I locked him in.	}{	I'm just glad you're pleased. Um, he's in the bathroom - don't worry, I locked him in.	}{	#	}{	npc.SetDisposition("Joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	I already tasted him - he's delicious, you'll love him.	}
+{	692	}{	I'll go help myself.	}{	I'll go help myself.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	It smells delicious.	}
+{	693	}{	Excellent.	}{	Excellent.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yummy.	}
+{	694	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	695	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	696	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	697	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	698	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	699	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	700	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	701	}{	Master?	}{	Master?	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	702	}{	Dump his body somewhere inconspicuous, would you?	}{	Dump his body somewhere inconspicuous, would you?	}{	711	}{	IsDead("McFly") and G.Mcfly_Dump == 0	}{	}{	}{	}{	}{	}{	}{	}{	Fish stink up the place. Clean up, would you.	}
+{	703	}{	I let him go. Never, ever do that again, Heather.	}{	I let him go. Never, ever do that again, Heather.	}{	721	}{	(G.Mcfly_Leave == 1 or G.Mcfly_Dominated == 1 or G.Mcfly_Dementated == 1) and G.Mcfly_Free == 0	}{	G.Mcfly_Free = 1	}{	}{	}{	}{	}{	}{	}{	I put the fish back in the pond.	}
+{	704	}{	About your appearance... change it.	}{	About your appearance... change it.	}{	985	}{	G.Heather_Clothes == 0	}{	}{	}{	}{	}{	}{	}{	}{	Your skin... change it.	}
+{	705	}{	It's nothing, my pet, excuse me.	}{	It's nothing, my pet, excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Excuse me, my pet.	}
+{	706	}{	Oh, are you still here? I'll be off now.	}{	Oh, are you still here? I'll be off now.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Don't you talk to me! I am gone.	}
+{	707	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	708	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	709	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	710	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	711	}{	I promise, it'll be done by the time you get back.	}{	I promise, it'll be done by the time you get back.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Mcfly_Dump = 1	}{	}{	}{	}{	}{	}{	}{	I'll clean up, you go outside and play.	}
+{	712	}{	Good. Goodbye, Heather.	}{	Good. Goodbye, Heather.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yes... so many playmates waiting for me.	}
+{	713	}{	See that it is.	}{	See that it is.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	If this place stinks when I return, I'll rub your nose in it.	}
+{	714	}{	And after that's done, get lost. I don't want you here anymore.	}{	And after that's done, get lost. I don't want you here anymore.	}{	591	}{	}{	}{	}{	}{	}{	}{	}{	}{	Clean up, pack up, walk out.	}
+{	715	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	716	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	717	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	718	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	719	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	720	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	721	}{	I'm really, really sorry. I'll make it up to you, I promise!	}{	I'm really, really sorry. I'll make it up to you, I promise!	}{	#	}{	npc.SetDisposition("Sad",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	722	}{	I can't stay mad at you. Fine. Apology accepted. See you later, Heather.	}{	I can't stay mad at you. Fine. Apology accepted. See you later, Heather.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	When you make that face, I can't stay mad at you. Goodbye, my pet.	}
+{	723	}{	You bet your ass you will, if you want my blood ever again. Goodbye.	}{	You bet your ass you will, if you want my blood ever again. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You will never taste this blood on your tongue if you don't.	}
+{	724	}{	No, Heather, it was my mistake. You need to go. I no longer need you.	}{	No, Heather, it was my mistake. You need to go. I no longer need you.	}{	591	}{	}{	}{	}{	}{	}{	}{	}{	}{	You have shown me the error of pity. Get out. Now.	}
+{	725	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	726	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	727	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	728	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	729	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	730	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	731	}{	[Scared, relieved]Oh, it's you. Earlier tonight, you weren't following me, were you? I had this feeling like I was being watched. Maybe it's nothing but... I'm still a little shook up.	}{	[Scared, relieved]Oh, it's you. Earlier tonight, you weren't following me, were you? I had this feeling like I was being watched. Maybe it's nothing but... I'm still a little shook up.	}{	#	}{	npc.SetDisposition("Sad",1)	}{	G.Heather_Scared = 1; G.Heather_Feed = 0	}{	}{	}{	}{	}{	}{	}{	[Frightened, breathing heavily]I'm being watched! I know it. Something followed me - they could be watching me right now! Make them stop, make them stop! Get their eyes off me!	}
+{	732	}{	It wasn't me. It could be one of a number of people who want me dead -er.	}{	It wasn't me. It could be one of a number of people who want me dead -er.	}{	741	}{	}{	}{	}{	}{	}{	}{	}{	}{	I do not sense any eyes here now.	}
+{	733	}{	Somebody you don't know approaches you, shoot them, in the head.	}{	Somebody you don't know approaches you, shoot them, in the head.	}{	751	}{	}{	}{	}{	}{	}{	}{	}{	}{	If you see the eyes again... blind them.	}
+{	734	}{	Your life might be in danger. So, Heather, I have to ask you to leave my service.	}{	Your life might be in danger. So, Heather, I have to ask you to leave my service.	}{	591	}{	}{	}{	}{	}{	}{	}{	}{	}{	No... this is the end... this is the end if you don't escape.	}
+{	735	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	736	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	737	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	738	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	739	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	740	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	741	}{	Want you dead? Why? How could anyone think of harming someone so... extraordinary.	}{	Want you dead? Why? How could anyone think of harming someone so... extraordinary.	}{	#	}{	npc.SetDisposition("Confused",1)	}{	}{	}{	}{	}{	}{	}{	}{	Are the eyes really gone? Will it really be okay?	}
+{	742	}{	Jealousy, probably. You just be careful, okay, my pet?	}{	Jealousy, probably. You just be careful, okay, my pet?	}{	761	}{	}{	}{	}{	}{	}{	}{	}{	}{	The eyes are looking for me, not you.	}
+{	743	}{	Somebody you don't know approaches you, shoot them, in the head.	}{	Somebody you don't know approaches you, shoot them, in the head.	}{	751	}{	}{	}{	}{	}{	}{	}{	}{	}{	If you see the eyes again... blind them.	}
+{	744	}{	Heather, promise me to stay indoors until this is over!	}{	Heather, promise me to stay indoors until this is over!	}{	761	}{	G.Patch_Plus == 1	}{	G.Heather_Indoors = 1	}{	}{	}{	}{	}{	}{	}{	Stay in the golden cage of the sky until I set you free.	}
+{	745	}{	Your life might be in danger. So, Heather, I have to ask you to leave my service.	}{	Your life might be in danger. So, Heather, I have to ask you to leave my service.	}{	591	}{	}{	}{	}{	}{	}{	}{	}{	}{	No... this is the end... this is the end if you don't escape.	}
+{	746	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	747	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	748	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	749	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	750	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	751	}{	If they're after you... yes, I'll do it. [To self]I just need to learn how to use a gun first.	}{	If they're after you... yes, I'll do it. [To self]I just need to learn how to use a gun first.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	Yes. If I see the eyes... I'll blind them!	}
+{	752	}{	Do that.	}{	Do that.	}{	761	}{	}{	}{	}{	}{	}{	}{	}{	}{	Do so.	}
+{	753	}{	Your life might be in danger. So, Heather, I have to ask you to leave my service.	}{	Your life might be in danger. So, Heather, I have to ask you to leave my service.	}{	591	}{	}{	}{	}{	}{	}{	}{	}{	}{	No... this is the end... this is the end if you don't escape.	}
+{	754	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	755	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	756	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	757	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	758	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	759	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	760	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	761	}{	I will.	}{	I will.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	Do I still distract you?	}
+{	762	}{	Good. Now, come here, I need your blood.	}{	Good. Now, come here, I need your blood.	}{	0	}{	}{	G.Heather_Feed = 1; G.Seductive_Feed = 1; pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	Just like the stars. I think tonight is a blood moon.	}
+{	763	}{	About your appearance... change it.	}{	About your appearance... change it.	}{	985	}{	G.Heather_Clothes == 0	}{	}{	}{	}{	}{	}{	}{	}{	Your skin... change it.	}
+{	764	}{	Just don't lead them here. Goodbye, Heather.	}{	Just don't lead them here. Goodbye, Heather.	}{	0	}{	G.Heather_Indoors == 0	}{	}{	}{	}{	}{	}{	}{	}{	Just keep the eyes away from here. I am gone.	}
+{	765	}{	You should. See you later, Heather.	}{	You should. See you later, Heather.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	No.	}
+{	766	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	767	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	768	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	769	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	770	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	771	}{	Master?	}{	Master?	}{	#	}{	npc.SetDisposition("Flirt",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	772	}{	Dump his body somewhere inconspicuous, would you?	}{	Dump his body somewhere inconspicuous, would you?	}{	711	}{	IsDead("McFly") and G.Mcfly_Dump == 0	}{	}{	}{	}{	}{	}{	}{	}{	Fish stink up the place. Clean up, would you.	}
+{	773	}{	I let him go. Never, ever do that again, Heather.	}{	I let him go. Never, ever do that again, Heather.	}{	721	}{	(G.Mcfly_Leave == 1 or G.Mcfly_Dominated == 1 or G.Mcfly_Dementated == 1) and G.Mcfly_Free == 0	}{	G.Mcfly_Free = 1	}{	}{	}{	}{	}{	}{	}{	I put the fish back in the pond.	}
+{	774	}{	I need your blood.	}{	I need your blood.	}{	0	}{	G.Heather_Feed == 0	}{	G.Heather_Feed = 1; G.Seductive_Feed = 1; pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	Bleed for me.	}
+{	775	}{	About your appearance... change it.	}{	About your appearance... change it.	}{	985	}{	G.Heather_Clothes == 0	}{	}{	}{	}{	}{	}{	}{	}{	Your skin... change it.	}
+{	776	}{	I'll return later.	}{	I'll return later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Where? Not here.	}
+{	777	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	778	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	779	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	780	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	781	}{	[Shaky, needs a fix]I'm so glad you're back! I've been waiting forever. I've been kind of nervous - I can't feel you inside my veins anymore. I just need a little more - please, Master? - just a few drops.	}{	[Shaky, needs a fix]I'm so glad you're back! I've been waiting forever. I've been kind of nervous - I can't feel you inside my veins anymore. I just need a little more - please, Master? - just a few drops.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Heather_Fix = 1; G.Heather_Feed = 0	}{	}{	}{	}{	}{	}{	}{	My veins are so so dry... I'm a desert rose. I want your storm... I need your rain - just a few drops. Make me blossom.	}
+{	782	}{	Yes, of course. Come here, my pet.	}{	Yes, of course. Come here, my pet.	}{	811	}{	}{	pc.Bloodloss(1)	}{	}{	}{	}{	}{	}{	}{	Do I hear thunder, my rose?	}
+{	783	}{	I don't know. What have you done for me lately?	}{	I don't know. What have you done for me lately?	}{	791	}{	}{	}{	}{	}{	}{	}{	}{	}{	You don't smell so sweet lately, rose.	}
+{	784	}{	Heather, it's getting dangerous. For your sake, I must ask you to leave me.	}{	Heather, it's getting dangerous. For your sake, I must ask you to leave me.	}{	591	}{	}{	}{	}{	}{	}{	}{	}{	}{	No... this is the end... this is the end if you don't escape.	}
+{	785	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	786	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	787	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	788	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	789	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	790	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	791	}{	Umm... um... what do you want me to do? I've given you everything. I've been good to you. If I failed you, just tell me what to do and I'll do it. Don't you understand how much I need you... how much I love you?	}{	Umm... um... what do you want me to do? I've given you everything. I've been good to you. If I failed you, just tell me what to do and I'll do it. Don't you understand how much I need you... how much I love you?	}{	#	}{	npc.SetDisposition("Sad",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	792	}{	I guess you've earned it. Come here.	}{	I guess you've earned it. Come here.	}{	811	}{	}{	pc.Bloodloss(1)	}{	}{	}{	}{	}{	}{	}{	A HA HA AH HA HA... a joke. Blossom.	}
+{	793	}{	A little more groveling might persuade me.	}{	A little more groveling might persuade me.	}{	801	}{	}{	}{	}{	}{	}{	}{	}{	}{	This is MY blood, not wine.	}
+{	794	}{	Actually, Heather, there will be no more blood for now on. I want you to leave.	}{	Actually, Heather, there will be no more blood for now on. I want you to leave.	}{	591	}{	}{	}{	}{	}{	}{	}{	}{	}{	Dark clouds are looming, but they bring only destruction. You must go.	}
+{	795	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	796	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	797	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	798	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	799	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	800	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	801	}{	[Desperate]Please... please give me your blood, my master, my love, my only reason for living. I'll do anything you ask. I'd die for you, my glory, my god!	}{	[Desperate]Please... please give me your blood, my master, my love, my only reason for living. I'll do anything you ask. I'd die for you, my glory, my god!	}{	#	}{	npc.SetDisposition("Sad",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	802	}{	That will do nicely. Come here, ghoul.	}{	That will do nicely. Come here, ghoul.	}{	811	}{	}{	pc.Bloodloss(1)	}{	}{	}{	}{	}{	}{	}{	Ah, now you are worthy.	}
+{	803	}{	Ha, ha... look at you. Yes, okay, here's your blood, you pitiful wretch.	}{	Ha, ha... look at you. Yes, okay, here's your blood, you pitiful wretch.	}{	811	}{	}{	pc.Bloodloss(1)	}{	}{	}{	}{	}{	}{	}{	Pitiful. Disgusting. Fragile. Mortal. Take it, wretch.	}
+{	804	}{	Actually, Heather, there will be no more blood for now on. I want you to leave.	}{	Actually, Heather, there will be no more blood for now on. I want you to leave.	}{	591	}{	}{	}{	}{	}{	}{	}{	}{	}{	Dark clouds are looming, but they bring only destruction. You must go.	}
+{	805	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	806	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	807	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	808	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	809	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	810	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	811	}{	Oh, thank you....[breathes heavily, almost orgasmic] Amazing. I feel so much better... like I'm the most important person in the world - next to you, of course.	}{	Oh, thank you....[breathes heavily, almost orgasmic] Amazing. I feel so much better... like I'm the most important person in the world - next to you, of course.	}{	#	}{	npc.SetDisposition("Flirt",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	812	}{	Isn't that cute? I'll see you later, Heather.	}{	Isn't that cute? I'll see you later, Heather.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ah, you are precious when you speak such nonsense. Goodbye, pet.	}
+{	813	}{	Whatever you say, ghoul. Don't burn that blood; last you get for a while. Goodbye.	}{	Whatever you say, ghoul. Don't burn that blood; last you get for a while. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Nothing is as important as me. Savor my blood, like it was your last.	}
+{	814	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	815	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	816	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	817	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	818	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	819	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	820	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	821	}{	I had a dream this afternoon - you were in it. You were stroking my hair, telling me you loved me, and then in the next instant you were gone, and I was alone, and I cried out for you but you wouldn't answer. You're here now - I've never felt more relieved.	}{	I had a dream this afternoon - you were in it. You were stroking my hair, telling me you loved me, and then in the next instant you were gone, and I was alone, and I cried out for you but you wouldn't answer. You're here now - I've never felt more relieved.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Heather_Dream = 1; G.Heather_Feed = 0	}{	}{	}{	}{	}{	}{	}{	I had a dream this afternoon as I lay napping near where you sleep. I was running behind you in the moonlight when I tripped and fell. I looked up and you were gone, and then I noticed what I tripped on... my corpse.	}
+{	822	}{	I would never leave you, dearest Heather.	}{	I would never leave you, dearest Heather.	}{	831	}{	Humanity 6	}{	}{	}{	}{	}{	}{	}{	}{	As long as you can see this face, you are safe and loved.	}
+{	823	}{	Dream on, I'd never tell you I loved you.	}{	Dream on, I'd never tell you I loved you.	}{	841	}{	}{	}{	}{	}{	}{	}{	}{	}{	I run alone. You are merely meat I keep to remind me how pathetic I once was.	}
+{	824	}{	I'm afraid, Heather, that... we really do have to part. I can't ruin your life anymore.	}{	I'm afraid, Heather, that... we really do have to part. I can't ruin your life anymore.	}{	591	}{	}{	}{	}{	}{	}{	}{	}{	}{	Then you know you must go.	}
+{	825	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	826	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	827	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	828	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	829	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	830	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	831	}{	[Smiles]Huh... you're so kind to me.	}{	[Smiles]Huh... you're so kind to me.	}{	#	}{	npc.SetDisposition("Joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	832	}{	I would never forgive myself if anything happened to you.	}{	I would never forgive myself if anything happened to you.	}{	851	}{	G.Heather_Indoors == 0	}{	}{	}{	}{	}{	}{	}{	}{	I can be nothing but, my love.	}
+{	833	}{	Yes, yes I am.	}{	Yes, yes I am.	}{	851	}{	G.Heather_Indoors == 0	}{	}{	}{	}{	}{	}{	}{	}{	Yes, at such a cost.	}
+{	834	}{	Yes, and I could use some...	}{	Yes, and I could use some...	}{	881	}{	G.Heather_Indoors == 1	}{	}{	}{	}{	}{	}{	}{	}{	Something else.	}
+{	835	}{	I would never forgive myself if anything happened to you.	}{	I would never forgive myself if anything happened to you.	}{	0	}{	G.Heather_Indoors == 1	}{	}{	}{	}{	}{	}{	}{	}{	I can be nothing but, my love.	}
+{	836	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	837	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	838	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	839	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	840	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	841	}{	[Sad]Despite your feelings for me, I am eternally yours.	}{	[Sad]Despite your feelings for me, I am eternally yours.	}{	#	}{	npc.SetDisposition("Sad",2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	842	}{	Yes, yes, I know.	}{	Yes, yes, I know.	}{	851	}{	G.Heather_Indoors == 0	}{	}{	}{	}{	}{	}{	}{	}{	Yes, you bloom only for me.	}
+{	843	}{	Nah, you're mortal. You're mine until you croak and I have to get a new ghoul.	}{	Nah, you're mortal. You're mine until you croak and I have to get a new ghoul.	}{	851	}{	G.Heather_Indoors == 0	}{	}{	}{	}{	}{	}{	}{	}{	No, you will wither and die.	}
+{	844	}{	Yes, and I could use some...	}{	Yes, and I could use some...	}{	881	}{	G.Heather_Indoors == 1	}{	}{	}{	}{	}{	}{	}{	}{	Something else.	}
+{	845	}{	Yes, yes, I know.	}{	Yes, yes, I know.	}{	0	}{	G.Heather_Indoors == 1	}{	}{	}{	}{	}{	}{	}{	}{	Yes, you bloom only for me.	}
+{	846	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	847	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	848	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	849	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	850	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	851	}{	I... I got something for you. Here, it should fit you. I hope you like it... I thought it looked like something you'd wear.	}{	I... I got something for you. Here, it should fit you. I hope you like it... I thought it looked like something you'd wear.	}{	#	}{	npc.SetDisposition("Flirt",1)	}{	G.Heather_Armor = 1; pc.GiveItem("item_a_body_armor")	}{	}{	}{	}{	}{	}{	}{	I brought you a new skin. I think it suits you.	}
+{	852	}{	It's wonderful. Thank you, Heather. I appreciate this.	}{	It's wonderful. Thank you, Heather. I appreciate this.	}{	861	}{	Humanity 6	}{	}{	}{	}{	}{	}{	}{	}{	You know me too well, my sweet one.	}
+{	853	}{	I knew I kept you around for some reason.	}{	I knew I kept you around for some reason.	}{	861	}{	}{	}{	}{	}{	}{	}{	}{	}{	Now you're beginning to know your place.	}
+{	854	}{	Whatever. Is that it?	}{	Whatever. Is that it?	}{	871	}{	}{	}{	}{	}{	}{	}{	}{	}{	That all?	}
+{	855	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	856	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	857	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	858	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	859	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	860	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	861	}{	Think of me when you wear it.	}{	Think of me when you wear it.	}{	#	}{	npc.SetDisposition("Flirt",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	862	}{	I will. Before I go, do you think you...	}{	I will. Before I go, do you think you...	}{	881	}{	}{	}{	}{	}{	}{	}{	}{	}{	I always think of you. One last thing, before I am gone...	}
+{	863	}{	Sure. I've got to go, Heather. Thanks for the threads.	}{	Sure. I've got to go, Heather. Thanks for the threads.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will show the streets my new skin. Thank you, my pet.	}
+{	864	}{	I'm out of here. Later, Heather.	}{	I'm out of here. Later, Heather.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	865	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	866	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	867	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	868	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	869	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	870	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	871	}{	[downhearted]Yes.	}{	[downhearted]Yes.	}{	#	}{	npc.SetDisposition("Sad",2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	872	}{	I could use some...	}{	I could use some...	}{	881	}{	}{	}{	}{	}{	}{	}{	}{	}{	Something else.	}
+{	873	}{	Gotta go.	}{	Gotta go.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ha ha ha... ghoul.	}
+{	874	}{	It'll do. Bye, ghoul.	}{	It'll do. Bye, ghoul.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hmph. I am gone.	}
+{	875	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	876	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	877	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	878	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	879	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	880	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	881	}{	You need my blood? Of course!	}{	You need my blood? Of course!	}{	#	}{	npc.SetDisposition("Flirt",1)	}{	}{	}{	}{	}{	}{	}{	}{	Open me up!	}
+{	882	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	G.Heather_Feed = 1; G.Seductive_Feed = 1; pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	}
+{	883	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	884	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	885	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	886	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	887	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	888	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	889	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	890	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	891	}{	Master?	}{	Master?	}{	#	}{	npc.SetDisposition("Flirt",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	892	}{	Can I have some...	}{	Can I have some...	}{	881	}{	G.Heather_Feed == 0	}{	}{	}{	}{	}{	}{	}{	}{	Know why I'm here?	}
+{	893	}{	About your appearance... change it.	}{	About your appearance... change it.	}{	985	}{	G.Heather_Clothes == 0	}{	}{	}{	}{	}{	}{	}{	}{	Your skin... change it.	}
+{	894	}{	It's nothing. I'll be back later.	}{	It's nothing. I'll be back later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why am I here?	}
+{	895	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	896	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	897	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	898	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	899	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	900	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	901	}{	[Terrified scream]Ahhh... help!	}{	[Terrified scream]Ahhh... help!	}{	#	}{	npc.SetDisposition("Sad",3)	}{	}{	}{	}{	}{	}{	}{	}{	[Terrified scream]Ahhh... help!	}
+{	902	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	903	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	904	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	905	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	906	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	907	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	908	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	909	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	910	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	911	}{	[Terrified scream]Ahhh... save me!	}{	[Terrified scream]Ahhh... save me!	}{	#	}{	npc.SetDisposition("Sad",3)	}{	}{	}{	}{	}{	}{	}{	}{	[Terrified scream]Ahhh... save me!	}
+{	912	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	913	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	914	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	915	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	916	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	917	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	918	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	919	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	920	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	921	}{	[Terror, panic, struggling crying - she is chained up, scared, crying, hoping she will be heard and saved - loop]	}{	[Terror, panic, struggling crying - she is chained up, scared, crying, hoping she will be heard and saved - loop]	}{	#	}{	npc.SetDisposition("Sad",3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	922	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	923	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	924	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	925	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	926	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	927	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	928	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	929	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	930	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	931	}{	[Bloodcurdling death scream and gasp]	}{	[Bloodcurdling death scream and gasp]	}{	#	}{	npc.SetDisposition("Sad",3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	932	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	933	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	934	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	935	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	936	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	937	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	938	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	939	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	940	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	941	}{	[Saying goodbye as someone walks out]Goodbye.	}{	[Saying goodbye as someone walks out]Goodbye.	}{	#	}{	npc.SetDisposition("Joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	942	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	943	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	944	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	945	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	946	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	947	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	948	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	949	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	950	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	951	}{	[Saying goodbye as someone walks out]See you later.	}{	[Saying goodbye as someone walks out]See you later.	}{	#	}{	npc.SetDisposition("Joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	952	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	953	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	954	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	955	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	956	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	957	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	958	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	959	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	960	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	961	}{	[Saying goodbye as someone walks out]I'll miss you.	}{	[Saying goodbye as someone walks out]I'll miss you.	}{	#	}{	npc.SetDisposition("Joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	962	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	963	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	964	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	965	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	966	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	967	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	968	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	969	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	970	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	971	}{	I'll send you an email.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	972	}{	I'm so happy to see you!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	973	}{	Hey.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	974	}{	What now?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	975	}{	Go away.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	976	}{	Yeah.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	977	}{	No.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	978	}{	Thank you!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	979	}{	WHAT?!?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	980	}{	I'm not sure.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	981	}{	I'm sorry, I can't.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	982	}{	That's so cool!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	983	}{	By the way -	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	984	}{	Here.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	985	}{	Okay.	}{	Okay.	}{	#	}{	}{	G.Heather_Clothes = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	986	}{	When I get back, I hope I'm in for a pleasant surprise.	}{	When I get back, I hope I'm in for a pleasant surprise.	}{	0	}{	G.Heather_Outfit == 0 or G.Heather_Outfit == 1	}{	G.Heather_Outfit = 2	}{	}{	}{	}{	}{	}{	}{	Spin your cocoon, little caterpillar. I want to see a butterfly later.	}
+{	987	}{	I like it dark and gothic.	}{	I like it dark and gothic.	}{	0	}{	G.Heather_Outfit == 0 or G.Heather_Outfit == 2	}{	G.Heather_Outfit = 1	}{	}{	}{	}{	}{	}{	}{	I like clothes fitting the darkness of my soul.	}
+{	988	}{	See that you have by the time I get back.	}{	See that you have by the time I get back.	}{	0	}{	G.Heather_Outfit == 1 or G.Heather_Outfit == 2	}{	G.Heather_Outfit = 0	}{	}{	}{	}{	}{	}{	}{	My mind wants you the way I met you.	}
+{	989	}{	On the other hand, forget it.	}{	On the other hand, forget it.	}{	0	}{	}{	G.Heather_Clothes = 0	}{	}{	}{	}{	}{	}{	}{	Nevermind my mind.	}
+{	990	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	991	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	992	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	993	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	994	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	995	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	996	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	997	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	998	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	999	}{	(Starting Condition)	}{	}{	671	}{	G.Mcfly_Present == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1000	}{	(Starting Condition)	}{	}{	891	}{	G.Heather_Armor == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1001	}{	(Starting Condition)	}{	}{	821	}{	G.Story_State >= 70 and G.Heather_Dream == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1002	}{	(Starting Condition)	}{	}{	771	}{	G.Heather_Fix == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1003	}{	(Starting Condition)	}{	}{	781	}{	G.Story_State >= 45 and G.Story_State < 65	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1004	}{	(Starting Condition)	}{	}{	771	}{	G.Heather_Scared == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1005	}{	(Starting Condition)	}{	}{	731	}{	G.Story_State >= 35 and G.Story_State < 45	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1006	}{	(Starting Condition)	}{	}{	701	}{	G.Heather_Lure == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1007	}{	(Starting Condition)	}{	}{	771	}{	G.Story_State >= 30 and G.Story_State < 35	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1008	}{	(Starting Condition)	}{	}{	661	}{	G.Heather_Loan == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1009	}{	(Starting Condition)	}{	}{	521	}{	G.Story_State >= 25 and G.Story_State < 30	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1010	}{	(Starting Condition)	}{	}{	511	}{	G.Heather_Secret == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1011	}{	(Starting Condition)	}{	}{	261	}{	G.Heather_Warning == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1012	}{	(Starting Condition)	}{	}{	341	}{	G.Heather_Haven == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1013	}{	(Starting Condition)	}{	}{	121	}{	G.Story_State == 15	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1014	}{	(Starting Condition)	}{	}{	111	}{	G.Heather_Drank == 1 and IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1015	}{	(Starting Condition)	}{	}{	91	}{	G.Heather_Drank == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1016	}{	(Starting Condition)	}{	}{	41	}{	G.Heather_Steve == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1017	}{	(Starting Condition)	}{	}{	31	}{	(G.Knox_Ghoul == 2 or G.Mercurio_Ghoul == 1) and G.Heather_Grandma == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1018	}{	(Starting Condition)	}{	}{	17	}{	G.Heather_Groan == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1019	}{	(Starting Condition)	}{	}{	19	}{	G.Heather_Grandma == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1020	}{	(Starting Condition)	}{	}{	15	}{	G.Heather_Know == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1021	}{	(Starting Condition)	}{	}{	11	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

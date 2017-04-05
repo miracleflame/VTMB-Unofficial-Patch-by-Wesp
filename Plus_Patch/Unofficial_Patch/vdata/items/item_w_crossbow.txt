@@ -1,0 +1,274 @@
+//Crossbow
+
+WeaponData
+{
+	"printname"		"Pyro crossbow" // changed by Wesp
+	"description"		"An advanced version of the ancient Chinese weapon. It silently fires one bolt at a time and ignites the tip to deal aggravated damage." // changed by Wesp
+
+	"viewmodel"			"models/weapons/crossbow/view/v_crossbow.mdl"
+	"playermodel"		"models/weapons/crossbow/ground/g_crossbow.mdl"
+	"wieldmodel_f"		"models/weapons/crossbow/wield/w_f_crossbow.mdl"
+	"wieldmodel_m"		"models/weapons/crossbow/wield/w_m_crossbow.mdl"
+	"infomodel"			"models/weapons/crossbow/info/i_crossbow.mdl"
+
+	// This should match the viewmodel QC file offset:
+	"origin_x"		"0"
+	"origin_y"		"-3"
+	"origin_z"		"69.5"
+
+	"anim_prefix"		"crossbow"
+	"impact_snd_group"	""
+
+	"activation0"		"Attack"
+	"activation1"		"Attack"
+	"jammed0"		"Jammed"
+	"jammed1"		"Jammed"
+	"bucket"		"1"
+	"bucket_position"	"2"
+	"camera_class"		"ranged"
+	"weight"		"3"
+	"item_flags"		"0"
+	"item_type"		"weapon_firearm"
+	"sound_group"	"Crossbow"
+
+	"fires_projectile"	"1"
+	"projectile_velocity"	"1000"
+	"projectile_model"	"models/weapons/projectile/bolt.mdl"
+//	"projectile_particles"	""
+	"projectile_particles"	"crossbow_flame_emitter"
+	"projectile_sticks"	"0"
+	"can_stakedmg"		"1"
+
+	"muzzleflash_particle"		""
+	"muzzlesmoke_particle"		""
+	"viewmuzzleflash_particle"	""
+	"viewmuzzlesmoke_particle"	""
+
+	"uses_accuracycursors"	"1"
+	"equip_mask"		"Normal"
+	"impact_snd_group"	"bullet"
+
+	"item_worth"		"125"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"Weapons\Ranged\Crossbow\Deploy.wav"
+		}
+	}
+
+//Weapon Ammo
+	Magazine
+	{
+		"ammoprintname"		"Crossbow Bolt"
+		"ammodescription"	"These are modern crossbow bolts."	// changed by Wesp
+
+		"Size"			"1"	// changed by Wesp
+		"Default_Size"		"1"
+		"Dropped_Ammo"		"1"	// changed by wesp
+		"Type"			"CrossbowBolt"
+		"ReloadTime"		"2.5"
+		"ammo_worth"		"2"	// changed by Wesp
+		"ammoinfomodel"		"models/weapons/ammo/crossbow/i_crossbow_ammo.mdl"	// added by wesp
+
+		SoundData
+		{
+			"reload"
+			{
+				"sound1"	"weapons/Ranged/crossbow/reload.wav"
+			}
+
+			"reload_npc"
+			{		
+				"sound1"	"weapons/Ranged/crossbow/reload.wav"
+			}
+		}
+	}
+
+//Primary Attack
+	Activation
+	{
+		"Tag"			"Primary"
+		"Type"		"Attack"
+		"Ammo_Type"		"CrossbowBolt"
+		"Ammo_Cost"		"1"
+
+		"SkillRequirement"	"8"		// min. skill requirement used in dmg calculations		
+		"BaseLethality"		"16"		// base lethality used in dmg calculations
+		"Dmg"			"2 Aggravated Ranged_Combat DMG_BURN"	// changed by Wesp
+
+		"Botch_Table"	"Crossbow"
+		"Attack_Rate"		"1.0"
+		"NPC_Attack_Rate_Min"		"1.8"		// The range of times for NPCs using this weapon to pause between
+		"NPC_Attack_Rate_Max"		"2.8"		//   attacks when at a distance of NPC_Attack_Rate_Base_Range inches. 
+		"NPC_Attack_Rate_Base_Range"	"120"	//   Attack times scale down to Attack_Rate at a range of 0, and up
+							//   proportionally as the range increases. If NPC_Attack_Rate_Base_Range
+							//   is 0, the delay will not be scaled based on distance.
+
+		"Range"		"45"
+		"KickPitchMin"	"-2.00"
+		"KickPitchMax"	"-10.00"
+		"KickYawMin"	"0"
+		"KickYawMax"	"-1.00"
+		"KickTime"		"0.05"
+		"SpreadAngle"	"3.0"
+		"CriminalLevel"	"1"	// changed by wesp
+		"Accuracy"		"6"
+
+/////////////////////
+
+		// SKS_RANGED
+		"CrosshairMinSize"		"10"			// smallest crosshair size for this activation [0-99]
+		"CrosshairFireSize"		"60"			// size of the crosshair when the gun is fired [0-99], changed by wesp
+		"CrosshairFireSizeMin"		"30"		// MIN size (Firearms 10) of the crosshair when the gun is fired [0-99], added by wesp
+		"CrosshairWalkSizeMin"	"10"			// min size of the crosshair when the player is walking [0-99], changed by wesp
+		"CrosshairWalkSizeMax"	"10"			// max size of the crosshair when the player is walking [0-99], changed by wesp
+		"CrosshairRunSizeMin"	"30"			// min size of the crosshair when the player is running [0-99]
+		"CrosshairRunSizeMax"	"60"			// max size of the crosshair when the player is running [0-99]
+		"CrosshairIncSpeedMin"	"50"			// min speed at which to increase bloom
+		"CrosshairIncSpeedMax"	"60"			// max speed at which to increase bloom
+		"CrosshairDecSpeedMin"	"10"			// min speed at which to decrease bloom
+		"CrosshairDecSpeedMax"	"90"			// max speed at which to decrease bloom
+		"CrosshairFirePercent"	"0.7"			// percent to bloom to crosshair upon firing a bullet
+
+////////////////////
+
+
+
+		SoundData
+		{
+			"empty"
+			{
+				"sound1"	"weapons/Ranged/crossbow/dryfire1.wav"
+			}
+
+			"attack"
+			{
+				"sound1"	"weapons/Ranged/crossbow/Attack_1.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"weapons/Ranged/crossbow/Attack_1.wav"
+			}
+
+			"botch"
+			{
+				"sound1"	"weapons/Ranged/crossbow/botch.wav"
+			}
+
+			"deploy"
+			{
+				"sound1"	"weapons/Ranged/crossbow/deploy.wav"
+			}
+
+			"put_away"
+			{
+				"sound1"	"weapons/Ranged/crossbow/put_away.wav"
+			}
+		}
+
+		Tables
+		{
+			Table
+			{
+				"Name"          "WeaponRanges"
+				"InternalName"  "WeaponRanges"
+
+				"Clamping"      "1"
+
+				// point blank 0-80, close 80-110, short/medium 110-220,
+				// meduim 220-370, long 370-650, great 650+
+
+				"0"             "0"         // 5 (bonus)
+				"1"             "0"         // 4 (bonus)
+				"2"             "0"         // 3 (bonus)
+				"3"             "0"         // 2 (bonus)
+				"4"             "80"        // 1 (bonus)
+				"5"             "30000"     // 0 (neutral)
+				"6"             "30000"     //-1 (penalty)
+				"7"             "30000"     //-2 (penalty)
+				"8"             "30000"     //-3 (penalty)
+				"9"             "30000"     //-4 (penalty)
+			}
+		}
+	}
+
+//Sprites
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/Crossbowflaming_sel"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/Crossbowflaming"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/ammo/crossbow_ammo"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo2"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/ammo/crossbow_ammo_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+
+
+// Disabled because it uses Accuracy Crosshairs
+//		"crosshair"
+//		{
+//			"640"
+//			{
+//				"file"		"crosshairs"
+//				"x"			"0"
+//				"y"			"48"
+//				"width"		"24"
+//				"height"	"24"
+//			}
+
+
+
+		// Accuracy Crosshairs
+		"Acc_Crosshair00"		"hud/Crosshairs/Crosshair_01"
+		"Acc_Crosshair01"		"hud/Crosshairs/Crosshair_02"
+		"Acc_Crosshair02"		"hud/Crosshairs/Crosshair_03"
+		"Acc_Crosshair03"		"hud/Crosshairs/Crosshair_04"
+		"Acc_Crosshair04"		"hud/Crosshairs/Crosshair_05"
+		"Acc_Crosshair05"		"hud/Crosshairs/Crosshair_06"
+		"Acc_Crosshair06"		"hud/Crosshairs/Crosshair_07"
+		"Acc_Crosshair07"		"hud/Crosshairs/Crosshair_08"
+		"Acc_Crosshair08"		"hud/Crosshairs/Crosshair_09"
+		"Acc_Crosshair09"		"hud/Crosshairs/Crosshair_10"
+		"Interactive_Crosshair"	"hud/Crosshairs/Crosshair_Interactive"
+	}
+}

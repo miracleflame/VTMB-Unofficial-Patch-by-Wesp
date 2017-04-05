@@ -1,0 +1,299 @@
+{	1	}{	Hey there, handsome. My name is Misti. Can I interest you in a private dance? I've got something special in mind, just for you.	}{	Hey there, sweetheart. My name is Misti. Can I interest you in a private dance? I've got something special in mind, just for you.	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	Sounds great.	}{	Sounds great.	}{	11	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	No thanks. If I change my mind, I'll come find you.	}{	No thanks. If I change my mind, I'll come find you.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	No doubt your dances would bring the sweet little death. Perhaps later.	}
+{	4	}{	Forget it. I've seen better bodies in a morgue.	}{	Forget it. I've seen better bodies in a morgue.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	Better to play with dead ringworms.	}
+{	5	}{	Let me swim in your lava lagoon.	}{	Let me swim in your lava lagoon.	}{	161	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	Great. Now all I need from you is 100 dollars, and then we can go back and get things started.	}{	Great. Now all I need from you is 100 dollars, and then we can go back and get things started.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	Sounds good to me. Here's a C-note.	}{	Sounds good to me. Here's a C-note.	}{	41	}{	pc.CurrentMoney() >= 100	}{	pc.MoneyRemove( 100 ); G.Misti_Regular = 1	}{	}{	}{	}{	}{	}{	}{	Here is a hundred pieces of gold.	}
+{	13	}{	100 bucks? Come on. How about 75?	}{	100 bucks? Come on. How about 75?	}{	41	}{	Haggle 6 & pc.CurrentMoney() >= 75	}{	pc.MoneyRemove( 75 ); G.Misti_Regular = 1	}{	}{	}{	}{	}{	}{	}{	Seventy-five simoleons and no more.	}
+{	14	}{	So much? Even for me? Come on, sweetheart... how about 60?	}{	So much? Even for me? Come on, sweetheart... how about 60?	}{	41	}{	Seduction 6 & (pc.CurrentMoney() >= 60 and not IsClan (pc,"Toreador"))	}{	pc.MoneyRemove( 60 ); G.Misti_Regular = 1	}{	}{	}{	}{	}{	}{	}{	Sixty is a better price for one as fractured as I.	}
+{	15	}{	So much? Even for me? Come on, sweetheart... how about 40?	}{	So much? Even for me? Come on, sweetheart... how about 40?	}{	41	}{	Seduction 6 & (pc.CurrentMoney() >= 40 and IsClan (pc,"Toreador"))	}{	pc.MoneyRemove( 40 ); G.Misti_Regular = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	Actually, I'm a little short on cash, baby.	}{	Actually, I'm a little short on cash, baby.	}{	71	}{	}{	G.Misti_Regular = 1	}{	}{	}{	}{	}{	}{	}{	My pockets are as empty as my head.	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	Forget it. I'm outta here.	}{	Forget it. I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	21	}{	Mmmm. Hi, there. Good to see you again, sweetheart. Want to have a little party? Just you and me?	}{	Mmmm. Hi, there. Good to see you again, sweetheart. Want to have a little party? Just you and me?	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	Oh yeah!	}{	Oh yeah!	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	If that party is in your private places....	}
+{	23	}{	Sorry, Misti. Maybe later.	}{	Sorry, Misti. Maybe later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I've no time for your devilish dance. Farewell.	}
+{	24	}{	Whatever. If I get that desperate, I'll jump off a bridge.	}{	Whatever. If I get that desperate, I'll jump off a bridge.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'd sooner boogie with a dung beetle.	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	33	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Okay. Now follow me back to the private rooms and we can get a little more... comfortable.	}{	Okay. Now follow me back to the private rooms and we can get a little more... comfortable.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	Lead the way.	}{	Lead the way.	}{	0	}{	}{	G.Misti_Follow = 1	}{	}{	}{	}{	}{	}{	}{	I will follow your busty beacon.	}
+{	43	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Just follow me... we're almost there.	}{	Just follow me... we're almost there.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	Okay.	}{	Okay.	}{	0	}{	}{	G.Misti_Follow = 1	}{	}{	}{	}{	}{	}{	}{	Following....	}
+{	53	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	There we are. Now... what would you like me to do? I just love a man who tells me what he wants and how he wants it.	}{	There we are. Now... what would you like me to do, hmm? I shouldn't tell you this, but dancing for girls always drives me absolutely wild.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Come here, I have a secret to tell you.	}{	Come here, I have a secret to tell you.	}{	0	}{	}{	G.Seductive_Feed = 1; pc.SeductiveFeed(npc); G.Misti_Follow = 0	}{	}{	}{	}{	}{	}{	}{	Come here. I have words to whisper into your secret places....	}
+{	63	}{	I want you to close your eyes, my sweet.	}{	I want you to close your eyes, my sweet.	}{	0	}{	not IsClan(pc,"Malkavian")	}{	G.Seductive_Feed = 1; pc.SeductiveFeed(npc); G.Misti_Follow = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	64	}{	Hm, I'm not hungry right now, just dance for me!	}{	Hm, I'm not hungry right now, so get wild for me!	}{	0	}{	G.Patch_Plus == 1	}{	G.Misti_Follow = 0; G.Misti_Dance = 1	}{	}{	}{	}{	}{	}{	}{	Shake it baby!	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	Actually, I just want to get out of here. See ya.	}{	Actually, I just want to get out of here. See ya.	}{	0	}{	}{	G.Misti_Follow = 0	}{	}{	}{	}{	}{	}{	}{	I've forgotten who we are. Farewell.	}
+{	71	}{	What? Then I'm a little short on time, sweetheart. Sorry, but I don't give up these goods for free.	}{	What? Then I'm a little short on time, sweetheart. Sorry, but I don't give up these goods for free.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	I understand. I'll come back when I've got the bucks.	}{	I understand. I'll come back when I've got the bucks.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll find some green and return for some goggling.	}
+{	73	}{	Why should I pay for them? You already did. And you got ripped off, by the way.	}{	Why should I pay for them? You already did. And you got ripped off, by the way.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	I should be paid to stomach your stitchings and stretchings.	}
+{	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	What!?! Listen, I don't have to take this kind of crap from a desperate loser like you. Go pay for it somewhere else, asshole!	}{	What!?! Listen, I don't have to take this kind of crap from you, bitch! Go pay for it somewhere else.	}{	#	}{	npc.SetDisposition("Angry", 1)	}{	G.Misti_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	Gladly. Later.	}{	Gladly. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I shall be paying for eternity.	}
+{	83	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	You do that, sweetheart.	}{	You do that, sweetheart.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	93	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	[pissed]What do you want?	}{	[pissed]What do you want?	}{	#	}{	npc.SetDisposition("Angry", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	Come on, Misti. I was just kidding. I'd really like to get to know you better.	}{	Come on, Misti. I was just kidding. I'd really like to get to know you better.	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	Forgive me, little devil. I wish only to die in your dark dance.	}
+{	103	}{	Nothing from you. Later.	}{	Nothing from you. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your body in a chalky outline. Farewell.	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	Sure. Whatever. 100 bucks and that's my final offer.	}{	Sure. Whatever. 100 bucks and that's my final offer.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Fine, fine. Let's go.	}{	Fine, fine. Let's go.	}{	41	}{	pc.CurrentMoney() >= 100	}{	pc.MoneyRemove( 100 ); G.Misti_Regular = 1; G.Misti_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	Here's your hundred.	}
+{	113	}{	Oh! Look at that! I don't quite have a hundred bucks.	}{	Oh! Look at that! I don't quite have a hundred bucks.	}{	121	}{	}{	}{	}{	}{	}{	}{	}{	}{	I don't have the dinero.	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	Whatever. If it was a dollar, you'd still owe me some change. See ya.	}{	Whatever. If it was a dollar, you'd still owe me some change. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I don't crave your cottage cheese. Farewell.	}
+{	121	}{	Get a job and stop wasting my time.	}{	Get a job and stop wasting my time.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	Later.	}{	Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	123	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	Aaah! Freak! Get away from me!	}{	Aaah! Freak! Get away from me!	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	G.Misti_Follow = 0	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	133	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	Hey, sweetheart. How are you tonight? Do anything for ya?	}{	Hey, sweetheart. How are you tonight? Do anything for ya?	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	VV sent me over. She said I could have a freebie.	}{	VV sent me over. She said I could have a freebie.	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	The vampy vixen told me to visit your voodoo.	}
+{	143	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	I can think of a lot of things, but I'm a little short on time. See ya.	}{	I can think of a lot of things, but I'm a little short on time. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Now is not the time, little devil. Farewell.	}
+{	151	}{	VV sent you? Oh, right. She paid for you in advance. She told me to give you whatever you wanted. Shall we go back to the private rooms?	}{	VV sent you? Oh, right. She paid for you in advance. She told me to give you whatever you wanted. Shall we go back to the private rooms?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	Sounds like a fine idea.	}{	Sounds like a fine idea.	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	Privates are where I like to be.	}
+{	153	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	154	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	Uh, sure... whatever you say, baby. Why don't you follow me to one of the private rooms and we'll get to know each other a little better.	}{	Uh, sure... whatever you say, baby. Why don't you follow me to one of the private rooms and we'll get to know each other a little better.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	I'll be your little Pompeii.	}{	I'll be your little Pompeii.	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	163	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	164	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	173	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	174	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	183	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	184	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	185	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	193	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	194	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	195	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	201	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	203	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	204	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	205	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	208	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	211	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	213	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	214	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	215	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	217	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	221	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	223	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	224	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	225	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	226	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	227	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	228	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	231	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	233	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	234	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	235	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	236	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	238	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	241	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	243	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	244	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	245	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	246	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	247	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	248	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	250	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	251	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	253	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	254	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	255	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	256	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	263	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	264	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	265	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	268	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	270	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	271	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	272	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	273	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	274	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	275	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	276	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	277	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	278	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	281	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	283	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	284	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	285	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	286	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	287	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	288	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	291	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	293	}{	(Starting Condition)	}{	}{	61	}{	G.Misti_Follow == 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	294	}{	(Starting Condition)	}{	}{	51	}{	G.Misti_Follow == 1 or G.Misti_Follow == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	295	}{	(Starting Condition)	}{	}{	131	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	296	}{	(Starting Condition)	}{	}{	141	}{	G.Velvet_Doll == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	297	}{	(Starting Condition)	}{	}{	21	}{	G.Misti_Regular == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	298	}{	(Starting Condition)	}{	}{	101	}{	G.Misti_Pissed == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	299	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

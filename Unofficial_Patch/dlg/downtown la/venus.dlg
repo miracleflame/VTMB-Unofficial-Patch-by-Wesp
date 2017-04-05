@@ -1,0 +1,410 @@
+{	1	}{	Everybody comes in here's got to have a shot, house rules. Inhibition's the first thing to go. Two more of these and you'll be telling me your nastiest, dirtiest stories. I am your beat priestess and it's time to confess.	}{	Everybody comes in here's got to have a shot, house rules. Inhibition's the first thing to go. Two more of these and you'll be telling me your nastiest, dirtiest stories. I am your beat priestess and it's time to confess.	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	And who am I about to have the pleasure of speaking to?	}{	And who am I about to have the pleasure of speaking to?	}{	11	}{	Seduction 5	}{	}{	}{	}{	}{	}{	}{	}{	Are you the priestess for this temple of beats?	}
+{	3	}{	Who are you?	}{	Who are you?	}{	21	}{	Seduction -5	}{	}{	}{	}{	}{	}{	}{	}{	What name do I shout in a crowd to summon you?	}
+{	4	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	Are you a bartender or a groupie for The Cure?	}{	Are you a bartender or a groupie for The Cure?	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	Gothic architecture, gothic colors, gothic clothes - that would make you a...?	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	Never touch the stuff. Goodbye.	}{	Never touch the stuff. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I have no use for it. Farewell.	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	Venus was her name, handsome. Got anything you want to confess, love?	}{	Venus was her name, cutie. Got anything you want to confess, love?	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	G.Venus_Know = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	Larry mention me?	}{	Larry mention me?	}{	141	}{	G.Larry_Venus == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am sent by the fat man, goddess of love.	}
+{	13	}{	Last person had their nose into my business doesn't have one anymore.	}{	Last person had their nose into my business doesn't have one anymore.	}{	61	}{	Intimidate 5	}{	}{	}{	}{	}{	}{	}{	}{	Curiosity kills the cat, and anyone else who asks me that.	}
+{	14	}{	Too much. Nothing I can talk about though.	}{	Too much. Nothing I can talk about though.	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	If sin was mud, I would be a pig. But I may not share.	}
+{	15	}{	A few nights ago, the life I knew was obliterated.	}{	A few nights ago, the life I knew was obliterated.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	Several moons have passed since the madness crept in.	}
+{	16	}{	That warehouse that blew up in Santa Monica? That was me.	}{	That warehouse that blew up in Santa Monica? That was me.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	It was my own hands which launched buildings in Santa Monica.	}
+{	17	}{	I've killed a lot of people.	}{	I've killed a lot of people.	}{	51	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	Death is my shadow, and many have stood within it.	}
+{	18	}{	No... not especially.	}{	No... not especially.	}{	31	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	Nothing I cannot choke back.	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	Venus was her name. Got anything you want to confess?	}{	Venus was her name. Got anything you want to confess?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Venus_Know = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	Larry mention me?	}{	Larry mention me?	}{	141	}{	G.Larry_Venus == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am sent by the fat man.	}
+{	23	}{	Last person had their nose into my business doesn't have one anymore.	}{	Last person had their nose into my business doesn't have one anymore.	}{	61	}{	Intimidate 5	}{	}{	}{	}{	}{	}{	}{	}{	Curiosity kills the cat, and anyone else who asks me that.	}
+{	24	}{	Too much. Nothing I can talk about though.	}{	Too much. Nothing I can talk about though.	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	If sin was mud, I would be a pig. But I may not share.	}
+{	25	}{	A few nights ago, the life I knew was obliterated.	}{	A few nights ago, the life I knew was obliterated.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	Several moons have passed since the madness crept in.	}
+{	26	}{	That warehouse that blew up in Santa Monica? That was me.	}{	That warehouse that blew up in Santa Monica? That was me.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	It was my own hands which launched buildings in Santa Monica.	}
+{	27	}{	I've killed a lot of people.	}{	I've killed a lot of people.	}{	51	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	Death is my shadow, and many have stood within it.	}
+{	28	}{	No... not especially.	}{	No... not especially.	}{	31	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	Nothing I cannot choke back.	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	No matter how many times I hear that line, it never gets any more believable. So what's your thing, hmm? Stealing from work? Sex in graveyards? Watching the neighbor's daughter with the lights off?	}{	No matter how many times I hear that line, it never gets any more believable. So what's your thing, hmm? Stealing from work? Sex in graveyards? Watching the neighbor's daughter with the lights off?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	No, nothing like that.	}{	No, nothing like that.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	These pages are filled with deeds more macabre.	}
+{	33	}{	A few nights ago, the life I knew was obliterated.	}{	A few nights ago, the life I knew was obliterated.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	Several moons have passed since the madness crept in.	}
+{	34	}{	That warehouse that blew up in Santa Monica? That was me.	}{	That warehouse that blew up in Santa Monica? That was me.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	It was my own hands which launched buildings in Santa Monica.	}
+{	35	}{	Kicking ass, taking names.	}{	Kicking ass, taking names.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	Starting fires under asses and fanning the flames.	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Mmm... sounds serious. I'm going to need details so I know whether to pour a Hail Mary or a Highway to Hell.	}{	Mmm... sounds serious. I'm going to need details so I know whether to pour a Hail Mary or a Highway to Hell.	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	Use your imagination. I'm leaving.	}{	Use your imagination. I'm leaving.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Speak to my memory, I am gone.	}
+{	43	}{	That warehouse that blew up in Santa Monica? That was me.	}{	That warehouse that blew up in Santa Monica? That was me.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	It was my own hands which launched buildings in Santa Monica.	}
+{	44	}{	I like to drink blood. Human blood.	}{	I like to drink blood. Human blood.	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	I imbibe the iron milk from the wounds of the living.	}
+{	45	}{	I voted Republican one time.	}{	I voted Republican one time.	}{	51	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	Sometimes when the dream creature waves, I wave back.	}{	Sometimes when the dream creature waves, I wave back.	}{	381	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	[Shocked but interested]Really? I don't think I've got anything in this place that's going to wash away that sin. But you know what, fuck it, nothing exciting ever happens in Heaven anyway, right?	}{	[Shocked but interested]Really? I don't think I've got anything in this place that's going to wash away that sin. But you know what, fuck it, nothing exciting ever happens in Heaven anyway, right?	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	Yeah, being an angel sucks.	}{	Yeah, being an angel sucks.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	Indeed, and I won't become an angel anyway.	}
+{	53	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Oh, yeah? I've been waiting for someone like you to come in here. You see, I've got this situation that's gotten a little out of hand and I need someone to inform some people that they won't be getting paid this month. Intrigued yet?	}{	Oh, yeah? I've been waiting for someone like you to come in here. You see, I've got this situation that's gotten a little out of hand and I need someone to inform some people that they won't be getting paid this month. Intrigued yet?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Venus_Job = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Intrigued. Go on....	}{	Intrigued. Go on....	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	The ears salivate. Continue.	}
+{	63	}{	Since the minute you started moving your lips.	}{	Since the minute you started moving your lips.	}{	71	}{	Seduction 4	}{	}{	}{	}{	}{	}{	}{	}{	Anything that exits your lips, goddess, is my will.	}
+{	64	}{	You've got ten seconds....	}{	You've got ten seconds....	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	My patience is wet paper.	}
+{	65	}{	Sorry, not interested. Excuse me.	}{	Sorry, not interested. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	This is not my path at the moment. I am gone.	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Well... the parking lot next to the Empire hotel - couple of guys, Russian accents, bit thick. I need you to tell them Venus doesn't have their money. That's it.	}{	Well... the parking lot next to the Empire hotel - couple of guys, Russian accents, bit thick. I need you to tell them Venus doesn't have their money. That's it.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Venus_Job = 2; pc.SetQuest("Confession",2); G.Venus_Quest = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	I'll do it.	}{	I'll do it.	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	This task speaks to my will.	}
+{	73	}{	That's it?	}{	That's it?	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	What's in it for me?	}{	What's in it for me?	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	What will be my prize?	}
+{	75	}{	I'll have to think about it. Excuse me.	}{	I'll have to think about it. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My brain shall twist around your offer. I must be gone.	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	That's it.	}{	That's it.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	I'll do it.	}{	I'll do it.	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	This task speaks to my will.	}
+{	83	}{	What's in it for me?	}{	What's in it for me?	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	What will be my prize?	}
+{	84	}{	I'll have to think about it. Excuse me.	}{	I'll have to think about it. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My brain shall twist around your offer. I must be gone.	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	Drinks on the house for a week.	}{	Drinks on the house for a week.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	I don't drink.	}{	I don't drink.	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	My self-esteem is fine.	}
+{	93	}{	I'd prefer cash.	}{	I'd prefer cash.	}{	101	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	I delight in seeing the forefathers.	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	I'll have to think about it. Excuse me.	}{	I'll have to think about it. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My brain shall twist around your offer. I must be gone.	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	You want cash? Whatever, I can do that. Question is: are you worth it?	}{	You want cash? Whatever, I can do that. Question is: are you worth it?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	Definitely. I'll do it.	}{	Definitely. I'll do it.	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	Cast no doubt. I speak to the czar's children.	}
+{	103	}{	Let me think about it. Excuse me.	}{	Let me think about it. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My brain shall twist around your offer. I must be gone.	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	Mmm... I expected you'd bite. Empire hotel, tell them I'm broke. [Quickly]You can run, right? Never mind... just don't go starting any streetfights, alright? These guys are connected. Anyhow, a lot of people have yet to confess to the beat priestess. Later, darling.	}{	Mmm... I expected you'd bite. Empire hotel, tell them I'm broke. [Quickly]You can run, right? Never mind... just don't go starting any streetfights, alright? These guys are connected. Anyhow, a lot of people have yet to confess to the beat priestess. Later, darling.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	G.Venus_Quest = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Back in a minute.	}{	Back in a minute.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will be as the wind.	}
+{	113	}{	I just hope someone does something they'll regret.	}{	I just hope someone does something they'll regret.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I can hardly contain your message in my mouth.	}
+{	114	}{	Oh, and get rid of that annoying turnstile, will you?	}{	Oh, and get rid of that annoying turnstile, will you?	}{	0	}{	G.Patch_Plus == 1 and G.Turnstile_Gone == 0	}{	G.Turnstile_Gone = 1	}{	}{	}{	}{	}{	}{	}{	I will be gone like the stupid fan in your door.	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	[Pretending to not hear above the music]What?	}{	[Pretending to not hear above the music]What?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	Passed on your message.	}{	Passed on your message.	}{	131	}{	G.Igor_Talk == 1	}{	}{	}{	}{	}{	}{	}{	}{	Your message was delivered, goddess.	}
+{	123	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	About that job... what do you need me to do?	}{	About that job... what do you need me to do?	}{	71	}{	G.Venus_Job == 1	}{	}{	}{	}{	}{	}{	}{	}{	What was your task again, goddess?	}
+{	125	}{	About that job... I'll do it.	}{	About that job... I'll do it.	}{	111	}{	G.Venus_Job == 2 and G.Venus_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	I will be your page.	}
+{	126	}{	I've got something to confess.	}{	I've got something to confess.	}{	41	}{	G.Venus_Know == 1 and G.Venus_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	About that guy... I'll do it.	}{	About that guy... I'll do it.	}{	201	}{	G.Venus_Boris == 1	}{	}{	}{	}{	}{	}{	}{	}{	I will spill the white Russian.	}
+{	130	}{	Never mind. Goodbye.	}{	Never mind. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am already gone.	}
+{	131	}{	I can't hear you, let's talk in my office.	}{	I can't hear you, let's talk in my office.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	Okay.	}{	Okay.	}{	0	}{	}{	G.Venus_Office = 1	}{	}{	}{	}{	}{	}{	}{	Done.	}
+{	133	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	Larry? Oh, so you're the [paraphrasing a reference she does not understand]"Action Jackson" he was going to send over?	}{	Larry? Oh, so you're the [paraphrasing a reference she does not understand]"Cleopatra Jones" he was going to send over?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Larry_Venus = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	(Auto-Link)	}{	(Auto-Link)	}{	61	}{	G.Venus_Job == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	143	}{	Yes, I am.	}{	Yes, I am.	}{	121	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	[Somewhat disgusted]Ugh! Corpse Fluid's playing over at Possession. This is Confession. No mosh pits in my establishment.	}{	[Somewhat disgusted]Ugh! Corpse Fluid's playing over at Possession. This is Confession. No mosh pits in my establishment.	}{	#	}{	npc.SetDisposition("Disgust", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	Larry mention me?	}{	Larry mention me?	}{	141	}{	G.Larry_Venus == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	153	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	154	}{	Oh... my mistake. Goodbye.	}{	Oh... my mistake. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	Right. Because this is a mask. Think I'll go now.	}{	Right. Because this is a mask. Think I'll go now.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	Well, you certainly did better than my bouncer did; poor dear can't turn his neck to the right anymore. [frenetic, antsy]Already had a call from Boris - wasn't too happy about tonight, son of a bitch. Say, how would you like to get into the club business, hmm?	}{	Well, you certainly did better than my bouncer did; poor dear can't turn his neck to the right anymore. [frenetic, antsy]Already had a call from Boris - wasn't too happy about tonight, son of a bitch. Say, how would you like to get into the club business, hmm?	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	G.Venus_Quest = 2; pc.SetQuest("Confession",5)	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	I'm afraid I'm not following.	}{	I'm afraid I'm not following.	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hmm? I was distracted by the voices.	}
+{	163	}{	Boris?	}{	Boris?	}{	171	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	Boris?	}
+{	164	}{	Own a club? It's my lifelong dream!	}{	Own a club? It's my lifelong dream!	}{	171	}{	G.Extra_Lines == 1 and IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	Sure, why not?	}{	Sure, why not?	}{	171	}{	G.Extra_Lines == 1 and not IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	Like a new moon, I am attracted but not shining.	}
+{	166	}{	I am listening...	}{	I am listening...	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	It is not as exciting as a tilt-a-whirl, but yes.	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	Well, to start this club, I had to take out a significant loan from a king bastard by the name of Boris, and every time I haven't been able to make the monthly, plus interest, the bastard takes what he feels is a suitable late fee.	}{	Well, to start this club, I had to take out a significant loan from a king bastard by the name of Boris, and every time I haven't been able to make the monthly, plus interest, the bastard takes what he feels is a suitable late fee.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Igor_Talk = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	Go on.	}{	Go on.	}{	181	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	Babble until exhaustion, goddess.	}
+{	173	}{	My kind of guy.	}{	My kind of guy.	}{	181	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	He is a blockbuster?	}
+{	174	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	I've got a club to run, so I'll be blunt. I refuse to... fuck... that fat, misogynistic old man one more time to hold on to the club. So, I need someone to eliminate him. Do this and I'll make you a silent partner.	}{	I've got a club to run, so I'll be blunt. I refuse to... fuck... that fat, misogynistic old man one more time to hold on to the club. So, I need someone to eliminate him. Do this and I'll make you a silent partner.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	I'm no murderer. Forget it.	}{	I'm no murderer. Forget it.	}{	191	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	Killed I am, but a killer I am not.	}
+{	183	}{	Good as done.	}{	Good as done.	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will become Mars to save you from Vulcan, love goddess.	}
+{	184	}{	What's the catch?	}{	What's the catch?	}{	191	}{	}{	}{	}{	}{	}{	}{	}{	}{	Goddess, you profess simplicity.	}
+{	185	}{	Murder someone? I thought this was going to be difficult.	}{	Murder someone? I thought this was going to be difficult.	}{	191	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	I am Charon, Venus.	}
+{	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	Boris is high up in the Russian mafia. Does that make a difference?	}{	Boris is high up in the Russian mafia. Does that make a difference?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Venus_Boris = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	I didn't think this was going to be easy. I'll do it.	}{	I didn't think this was going to be easy. I'll do it.	}{	201	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	Yes, yes, still I will assassinate the czar.	}
+{	193	}{	He's still human, right? He'll be dead before the sun rises.	}{	He's still human, right? He'll be dead before the sun rises.	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	Paupers and kings are equally humbled by death.	}
+{	194	}{	I've killed bigger. Leave it to me.	}{	I've killed bigger. Leave it to me.	}{	201	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	If it still breathes, it cannot best me. You will see.	}
+{	195	}{	I'm sorry, I won't do it, no matter what he's into. Goodbye.	}{	I'm sorry, I won't do it, no matter what he's into. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My morals fail me in this battle. I must retreat.	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	201	}{	He's at the Empire hotel. Always has a few of the fiercest bully boys standing around trying to out-sneer each other. He's got a short temper, and more than likely he's been drinking for the last four hours. Here - key to the penthouse level.	}{	He's at the Empire hotel. Always has a few of the fiercest bully boys standing around trying to out-sneer each other. He's got a short temper, and more than likely he's been drinking for the last four hours. Here - key to the penthouse level.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Venus_Quest = 3; pc.GiveItem("item_k_empire_mafia_key"); pc.SetQuest("Venus",1)	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	Be back when he's no longer breathing.	}{	Be back when he's no longer breathing.	}{	0	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	Yes... the czar's reign will end shortly.	}
+{	203	}{	When I get back, we'll talk about our club.	}{	When I get back, we'll talk about our club.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will return to begin my post as vicious beat commander.	}
+{	204	}{	Thanks. And get rid of that annoying turnstile, will you?	}{	Thanks. And get rid of that annoying turnstile, will you?	}{	0	}{	G.Patch_Plus == 1 and G.Turnstile_Gone == 0	}{	G.Turnstile_Gone = 1	}{	}{	}{	}{	}{	}{	}{	I will be gone like the stupid fan in your door.	}
+{	205	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	208	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	211	}{	Boris?	}{	Boris?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	Dead.	}{	Dead.	}{	241	}{	IsDead("Boris")	}{	G.Venus_Boris = 2	}{	}{	}{	}{	}{	}{	}{	The czar has fallen.	}
+{	213	}{	The debt is off. Now we are partners.	}{	The debt is off. Now we are partners.	}{	251	}{	G.Boris_Debt == 1	}{	G.Pay_Base = G.Story_State; G.Venus_Money = 1; pc.SetQuest("Venus",4); pc.RemoveItem("item_k_empire_mafia_key")	}{	}{	}{	}{	}{	}{	}{	He won't bother your temple anymore. But I will.	}
+{	214	}{	Still alive.	}{	Still alive.	}{	221	}{	not IsDead("Boris")	}{	}{	}{	}{	}{	}{	}{	}{	The czar's heart still drums the melody of the living.	}
+{	215	}{	I haven't got to it yet. I'll be back later.	}{	I haven't got to it yet. I'll be back later.	}{	0	}{	not IsDead("Boris")	}{	}{	}{	}{	}{	}{	}{	}{	Ah, yes, that was my path. I am gone.	}
+{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	217	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	221	}{	Oh, I had you figured for a pro - this kind of operation's very cut and dry. Club not enough to motivate you?	}{	Oh, I had you figured for a pro - this kind of operation's very cut and dry. Club not enough to motivate you?	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	I'm only in it for the money. And I received a better offer.	}{	I'm only in it for the money. And I received a better offer.	}{	231	}{	G.Boris_Venus == 1	}{	}{	}{	}{	}{	}{	}{	}{	I pay at the pantheon of dead presidents - kill my old goddesses, they say, Venus.	}
+{	223	}{	I haven't got to it yet. I'll be back later.	}{	I haven't got to it yet. I'll be back later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ah, yes, that was my path. I am gone.	}
+{	224	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	225	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	226	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	227	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	228	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	231	}{	You didn't...![gasps]	}{	You didn't...![gasps]	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	pc.SetQuest("Venus",6)	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	I did.	}{	I did.	}{	0	}{	}{	npc.SetRelationship("player D_FR 5")	}{	}{	}{	}{	}{	}{	}{	The opposite.	}
+{	233	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	234	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	235	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	236	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	238	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	241	}{	Is 'at Boris' blood? Guess we're partners then. If you only knew what I had to do over the years to keep this place open. Tell you what, partner, come in every few days and I'll give you your cut. Here's tonight's.	}{	Is 'at Boris' blood? Guess we're partners then. If you only knew what I had to do over the years to keep this place open. Tell you what, partner, come in every few days and I'll give you your cut. Here's tonight's.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	pc.MoneyAdd(250); G.Pay_Base = G.Story_State; G.Venus_Money = 1; pc.SetQuest("Venus",4); pc.RemoveItem("item_k_empire_mafia_key")	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	(Auto-Link)	}{	(Auto-Link)	}{	251	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	243	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	244	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	245	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	246	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	247	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	248	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	250	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	251	}{	I've got some money to make us. I'll hold your share of the profits. Don't forget to drop by and scoop them up once in a while, hmm.	}{	I've got some money to make us. I'll hold your share of the profits. Don't forget to drop by and scoop them up once in a while, hmm.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	You'll see me again and often, don't worry. Goodbye, Venus.	}{	You'll see me again and often, don't worry. Goodbye, Venus.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will return as often as the stars, goddess.	}
+{	253	}{	You know, I actually had some suggestions for the club....	}{	You know, I actually had some suggestions for the club....	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	The fruits of my fever dreams would paint these walls splendidly.	}
+{	254	}{	I'll do. And get rid of that annoying turnstile, will you?	}{	I'll do. And get rid of that annoying turnstile, will you?	}{	0	}{	G.Patch_Plus == 1 and G.Turnstile_Gone == 0	}{	G.Turnstile_Gone = 1	}{	}{	}{	}{	}{	}{	}{	I will be gone like the stupid fan in your door.	}
+{	255	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	256	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	Really, I'd love to hear them, but I've got to go find a new DJ. Our old one's still spinning that pixie-wavematic eighties-redux electronica - it's so last Friday. Heaps of thanks, again.	}{	Really, I'd love to hear them, but I've got to go find a new DJ. Our old one's still spinning that pixie-wavematic eighties-redux electronica - it's so last Friday. Heaps of thanks, again.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	My pleasure.	}{	My pleasure.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Heaps of pleasures.	}
+{	263	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	264	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	265	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	268	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	270	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	271	}{	There you are. Finished yet?	}{	There you are. Finished yet?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	272	}{	Let's talk in your office.	}{	Let's talk in your office.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	Let us enter your orifice.	}
+{	273	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	274	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	275	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	276	}{	No, not yet. Goodbye.	}{	No, not yet. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Finished? No, forgotten. I am gone.	}
+{	277	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	278	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	281	}{	[Can't hear over the music]What?	}{	[Can't hear over the music]What?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	Let's talk in your office.	}{	Let's talk in your office.	}{	291	}{	}{	}{	}{	}{	}{	}{	}{	}{	Let us enter your orifice.	}
+{	283	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	284	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	285	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	286	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	287	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	288	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	291	}{	Ya, I can't hear you, let's talk in my office.	}{	Ya, I can't hear you, let's talk in my office.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	Okay.	}{	Okay.	}{	0	}{	}{	G.Venus_Office = 1	}{	}{	}{	}{	}{	}{	}{	Done.	}
+{	293	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	294	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	295	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	296	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	297	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	298	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	300	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	301	}{	Money, right?	}{	Money, right?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	302	}{	(Auto-Link)	}{	(Auto-Link)	}{	321	}{	(G.Pay_Base + 5 > G.Story_State)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	303	}{	(Auto-Link)	}{	(Auto-Link)	}{	311	}{	(G.Pay_Base + 5 == G.Story_State)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	304	}{	(Auto-Link)	}{	(Auto-Link)	}{	331	}{	(G.Pay_Base + 5 < G.Story_State)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	305	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	306	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	307	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	308	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	309	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	310	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	311	}{	I've got your cut right here.	}{	I've got your cut right here.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.MoneyAdd((G.Story_State - G.Pay_Base) * 25)	}{	}{	}{	}{	}{	}{	}{	}
+{	312	}{	Thanks, Venus. Keep it coming.	}{	Thanks, Venus. Keep it coming.	}{	0	}{	}{	G.Pay_Base = G.Story_State	}{	}{	}{	}{	}{	}{	}{	May the pilgrims never cease paying tribute at your temple, goddess.	}
+{	313	}{	Thanks. And get rid of that annoying turnstile, will you?	}{	Thanks. And get rid of that annoying turnstile, will you?	}{	0	}{	G.Patch_Plus == 1 and G.Turnstile_Gone == 0	}{	G.Turnstile_Gone = 1; G.Pay_Base = G.Story_State	}{	}{	}{	}{	}{	}{	}{	I will be gone like the stupid fan in your door.	}
+{	314	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	315	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	316	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	317	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	318	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	319	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	320	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	321	}{	Come back in a few nights. I'll have another wad for you.	}{	Come back in a few nights. I'll have another wad for you.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	322	}{	Okay.	}{	Okay.	}{	341	}{	G.Scream == 0	}{	G.Scream = 1	}{	}{	}{	}{	}{	}{	}{	Understood.	}
+{	323	}{	Okay.	}{	Okay.	}{	351	}{	G.Scream == 1	}{	G.Scream = 2	}{	}{	}{	}{	}{	}{	}{	Understood.	}
+{	324	}{	Okay.	}{	Okay.	}{	361	}{	G.Scream == 2	}{	G.Scream = 3	}{	}{	}{	}{	}{	}{	}{	Understood.	}
+{	325	}{	Okay.	}{	Okay.	}{	371	}{	G.Scream == 3	}{	G.Scream = 0	}{	}{	}{	}{	}{	}{	}{	Understood.	}
+{	326	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	327	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	328	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	329	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	330	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	331	}{	Been a while, your money's been piling up. Here, that should provide for an interesting evening.	}{	Been a while, your money's been piling up. Here, that should provide for an interesting evening.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.MoneyAdd((G.Story_State - G.Pay_Base) * 25)	}{	}{	}{	}{	}{	}{	}{	}
+{	332	}{	Thanks. Keep it coming.	}{	Thanks. Keep it coming.	}{	0	}{	}{	G.Pay_Base = G.Story_State	}{	}{	}{	}{	}{	}{	}{	Your blessing is always appreciated, goddess.	}
+{	333	}{	Thanks. And get rid of that annoying turnstile, will you?	}{	Thanks. And get rid of that annoying turnstile, will you?	}{	0	}{	G.Patch_Plus == 1 and G.Turnstile_Gone == 0	}{	G.Turnstile_Gone = 1; G.Pay_Base = G.Story_State	}{	}{	}{	}{	}{	}{	}{	I will be gone like the stupid fan in your door.	}
+{	334	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	335	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	336	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	337	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	338	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	339	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	340	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	341	}{	[Screaming to crowd]I don't see enough sinning out there!	}{	[Screaming to crowd]I don't see enough sinning out there!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	342	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	343	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	344	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	345	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	346	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	347	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	348	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	349	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	350	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	351	}{	[Screaming to crowd]1... 2... 3... shots, people!	}{	[Screaming to crowd]1... 2... 3... shots, people!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	352	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	353	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	354	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	355	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	356	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	357	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	358	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	359	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	360	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	361	}{	[Screaming to crowd]Get out of your seats and onto that floor, you wankers!	}{	[Screaming to crowd]Get out of your seats and onto that floor, you wankers!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	362	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	363	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	364	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	365	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	366	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	367	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	368	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	369	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	370	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	371	}{	[Screaming to crowd]If I don't see a sea of arses movin' in the next twenty seconds, you're all out on the curb, got it?!?	}{	[Screaming to crowd]If I don't see a sea of arses movin' in the next twenty seconds, you're all out on the curb, got it?!?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	372	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	373	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	374	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	375	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	376	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	377	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	378	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	379	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	380	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	381	}{	Ah, dream creature, hmm? Okay, someone's circulating the bad candy again, I see, but that's alright - no sense, no fear, right?	}{	Ah, dream creature, hmm? Okay, someone's circulating the bad candy again, I see, but that's alright - no sense, no fear, right?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	382	}{	(Auto-Link)	}{	(Auto-Link)	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	383	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	384	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	385	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	386	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	387	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	388	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	389	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	390	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	391	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	392	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	393	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	394	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	395	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	396	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	397	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	398	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	399	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	400	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	401	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	402	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	403	}{	(Starting Condition)	}{	}{	301	}{	G.Venus_Money == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	404	}{	(Starting Condition)	}{	}{	211	}{	G.Venus_Office == 1 and G.Venus_Quest == 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	405	}{	(Starting Condition)	}{	}{	271	}{	G.Venus_Quest == 3 and G.Venus_Office == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	406	}{	(Starting Condition)	}{	}{	161	}{	G.Igor_Talk == 1 and G.Venus_Office == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	407	}{	(Starting Condition)	}{	}{	121	}{	G.Venus_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	408	}{	(Starting Condition)	}{	}{	151	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	409	}{	(Starting Condition)	}{	}{	121	}{	G.Venus_Know == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	410	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

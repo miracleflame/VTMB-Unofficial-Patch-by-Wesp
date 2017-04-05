@@ -1,0 +1,47 @@
+// Choreo version 1, changed by wesp
+actor "Regent"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 10.136576
+      param "character/dlg/main characters/regent/line621_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event loud "Loud"
+    {
+      time 1.950000 2.060000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 4.420000 4.530000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 4.630000 4.750000
+      param "0.120"
+    }
+    event loud "Loud"
+    {
+      time 8.690000 8.809999
+      param "0.120"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

@@ -1,0 +1,66 @@
+// Written
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"		"models/weapons/pistol/view/v_pistol.mdl"
+	"playermodel"	"models/weapons/pistol/world/w_pistol.mdl"
+	"wieldmodel_f"	"models/none.mdl"
+	"wieldmodel_m"	"models/none.mdl"
+	"anim_prefix"	"pistol"
+
+	"printname"		"Written"
+	"description"	"Written"
+
+	"bucket"		"1"
+	"bucket_position"	"2"
+
+	"weight"		"3"
+	"item_flags"	"1"
+	"item_type"		"generic"
+	"item_worth"	"50"
+
+	Activation
+	{
+		"Tag"			"Primary"
+
+		"Type"		"Use"
+		"Ammo_Type"		"None"
+		"Ammo_Cost"		"0"
+		"Botch_Table"	"None"
+		"Attack_Rate"	"1.0"
+		"Range"		"0"
+
+		// Sounds...
+		SoundData
+		{
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Melee/katana"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Melee/katana"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

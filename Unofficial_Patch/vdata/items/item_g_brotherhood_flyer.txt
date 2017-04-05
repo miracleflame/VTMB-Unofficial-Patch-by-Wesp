@@ -1,0 +1,61 @@
+
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	
+	"infomodel"	"models/items/brotherhoodflyer/Info/info_brotherhoodflyer_r.mdl"
+	"playermodel"	"models/items/brotherhoodflyer/Ground/brotherhoodflyer.mdl"
+	
+	"anim_prefix"	" "
+
+	"printname"	"Brotherhood Flyer"
+	"description"	"The writing on this flyer reads \"I am Enlightened\"."
+
+
+	"bucket"		"1"
+	"bucket_position"	"2"
+
+	"camera_class"		"noswitch"
+	"is_wieldable"		"0"
+	"weight"		"1"
+	"item_flags"		"1"
+	"item_type"		"powerup"
+	"item_worth"		"-1"
+	"is_visible_in_hud"	"1"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Magazine/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/Brotherhood_Flyer_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"		"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/Brotherhood_Flyer"
+				"x"		"0"
+				"y"		"0"
+				"width"		"100"
+				"height"	"64"
+			}
+		}
+	}
+}

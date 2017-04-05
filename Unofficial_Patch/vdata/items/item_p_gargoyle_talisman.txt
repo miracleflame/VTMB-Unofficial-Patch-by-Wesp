@@ -1,0 +1,67 @@
+// Written
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"			"models/w_null.mdl"
+	"infomodel"			"models/items/occult_gargoyle/info/info_pendant.mdl"
+	"playermodel"		"models/items/occult_gargoyle/ground/pendant.mdl"
+	"wieldmodel_f"		"models/w_null.mdl"
+	"wieldmodel_m"		"models/w_null.mdl"
+	"anim_prefix"		" "
+
+	"printname"		"Rune of the Third Eye"
+	"description"		"This strange talisman is unusually heavy, emanating a palpable power. It reduces the amount of damage done by Gargoyles."
+
+	"weight"		"3"
+	"item_flags"		"1"
+	"item_type"		"powerup"
+	"item_worth"		"50"
+
+	"occult_min"		"2"
+	"occult_power"		"Strength"
+	"equip_effect"		"" 
+
+
+	DmgSpecialInfo
+	{
+		"CritterClass"	"npc_VGargoyle"	// Critter ClassName (that it links to, i.e., the name of the text file)
+		"DmgModifier"	"50%"			// Modifies the damage post-soak
+		"SoundFX"		"Disciplines/BloodHealing_Activate.wav"  // Sound played when you take a hit
+	}
+
+	SoundData	// added by wesp
+	{
+		"pickup"
+		{
+			"sound1"	"items/Key/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"		"hud/Inventory_Images/General_Items/pendant3_sel"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"		"hud/Inventory_Images/General_Items/pendant3"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

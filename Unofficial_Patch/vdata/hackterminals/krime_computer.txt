@@ -1,0 +1,215 @@
+TerminalDefinition
+{
+	"screen saver"		"Kilpatrick's Krimeputer"		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Kilpatrick's Krimeputer"
+		"line1"		"Begin Your Search"
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+	"email_password"	"freedom"		// the user must type this to access email from this terminal, added by wesp
+	"email_username"	"arthur"	// added by wesp
+
+	Email		// added by wesp
+	{
+		"subject"	"Your Father"
+		"sender"	"Mom"
+		"dependency"	"G.Patch_Plus == 1"
+		"body"		"Arthur, your father wanted me to write you to tell you that he has a boil that is three inches across! You really need to come visit and see this thing. Love, mom"
+	}
+
+	SubDir
+	{
+		"name"			"A-F"
+		"password"		""
+		"description"		"Perpetrators of Criminality"
+
+		Function
+		{
+			"name"		"Baum, C"
+			"description"	"Cienna Baum"
+			"runtext"	"Bond written 10/9/99 -- Prostitution. Case#245682. Second Offense. Bond Amount: $1500. Type of Bond: Cash - paid in full. Notes: Local girl. Friend of bondsman who did not know that she was a \"working girl\" when he picked her up has identified that she carries a contagious case of the chooch devils."
+		}
+
+		Function
+		{
+			"name"		"Bremerkamp, M"
+			"description"	"Mark Bremerkamp"
+			"runtext"	"Bond written 11/12/03 -- Public Disturbance - Drunk, Indecent Exposure, Vandalism. Case#664487. Bond Amount: $2200. Type of Bond: Cash - paid by credit card. Notes: Public urinator."
+		}
+
+		Function
+		{
+			"name"		"Cleaver, V"
+			"description"	"Vandal Cleaver"
+			"runtext"	"Bond written 01/01/02 -- Two Counts Concealment of a deadly weapon, Threats. Case#341800. Bond Amount: $20,000. Type of Bond: Cash - paid in full. Notes: Picked up after local woman reported being stalked by subject. Found with a knife and a stun gun. Good lawyer got this guy's sentence talked down from intent to do bodily harm to restraining order in a matter of hours."
+		}
+
+		Function
+		{
+			"name"		"Cougat, F"
+			"description"	"Fernando Cougat"
+			"runtext"	"Bond written 06/09/00 -- Statutory Rape, Purchasing Alcohol for a Minor. Case#449073. Bond Amount: $10,000. Type of Bond: Collateral - Car, Red 02 Powell Persephone (CA Plate#STP4LDz). Notes: Picked up outside The Asylum for trying to move a drunk sixteen year old to his car. This ain't Canada, buddy."
+		}
+
+		Function
+		{
+			"name"		"Crumb, V"
+			"description"	"Virgil Crumb"
+			"runtext"	"Bond written 03/25/02 -- Two Counts Public Disturbance - Drunk and Nudity. Case#766141. Bond Amount: $5,000. Type of Bond: Cash - paid in full. Notes: Local. VOID: Subject's corpse identified. Being held at Medical Clinic Morgue. Authorities notifying next of kin."
+			"runscript"	"virgilViewed()"
+		}
+
+		Function	// changed by wesp
+		{
+			"name"		"Durbin, M"
+			"description"	"Michael \"Muddy\" Durbin"
+			"runtext"	"Bond written 03/05/04 -- Assault. Prior Conviction for Grand Theft Auto. Prior Conviction for Robbery. Case#777121. Bond Amount: $10,000. Type of Bond: Collateral - 01 Corvega, color: Gray. Notes: Threepeat Offender, wouldn't be surprised if this guy tries to run. And I don't want to know why he's called Muddy."
+		}
+	}
+
+	SubDir
+	{
+		"name"			"G-M"
+		"password"		""
+		"description"		"Perpetrators of Criminality"
+
+		Function
+		{
+			"name"		"Grady, C"
+			"description"	"Carl Grady"
+			"runtext"	"Bond written 04/02/01 -- Possession with Intent to Distribute. Case#320091. Bond Amount: $25,000. Type of Bond: Property - House, 222 Ocean's Way, Santa Monica, CA. Notes: Local surfer."
+		}
+
+		Function
+		{
+			"name"		"Iberson, M"
+			"description"	"Mitch \"The Tabby\" Iberson"
+			"runtext"	"Bond written 02/10/02 -- Concealment - Firearm. Case#445090. Bond Amount: $10,000. Type of Bond: Cash - paid in full. Notes: Guy's got a big, purple blotch on his face that'll make you sick. Update 03/22/02 -- Deceased. Chunk of him washed ashore last week."
+		}
+
+		Function
+		{
+			"name"		"Kramer, A"
+			"description"	"Ansel \"Gretel\" Kramer"
+			"runtext"	"Bond written 11/14/03 -- Prostitution. Case#332121. Bond Amount: $3,000. Type of Bond: Cash - paid in full. Notes: This is what we used to call a Jack-in-the-box - Wind her up and a something's going to pop out."
+		}
+
+		Function
+		{
+			"name"		"Mateo, M"
+			"description"	"Mike Mateo"
+			"runtext"	"Bond written 03/13/02 -- Battery. Prior Conviction for Possession. Case#110089. Bond Amount: $5,000. Type of Bond: Cash - paid in full. Notes: Another local. Santa Monica used to be a swell place to live."
+		}
+
+		Function
+		{
+			"name"		"Moore, C"
+			"description"	"Chad Moore"
+			"runtext"	"Bond written 10/12/03 -- Public Disturbance - Noise. Case#232300. Bond Amount: $2,000. Type of Bond: Collateral - 50 copies of Console Game (\"Red Asphalt\"), 40 copies of PC game (\"Arcanum\"). Notes: Brought him in for excessive talking smack at the local arcade."
+		}
+	}
+
+	SubDir
+	{
+		"name"			"N-R"
+		"password"		""
+		"description"		"Perpetrators of Criminality"
+
+		Function
+		{
+			"name"		"Nilson, B"
+			"description"	"Brian Nilson"
+			"runtext"	"Bond written 12/01/01 -- Battery. Case#245990. Bond Amount: $10,000. Type of Bond: Cash. Notes: Local thug threw some guy who was allegedly trying to buy drugs from him down the beach access stairs."
+		}
+
+		Function
+		{
+			"name"		"Olsen, O"
+			"description"	"Orion Olsen"
+			"runtext"	"Bond written 02/29/02 -- DUI. Case#770405. Bond Amount: $15,000. Type of Bond: Collateral - Car, Black '99 Ponce Gorgemando (CA Plate#LV2 Drnk). Notes: Guy drove his SUV through a bookstore, but since there wasn't a coffee shop inside, there were no casualties."
+		}
+
+		Function
+		{
+			"name"		"Pedroso, B"
+			"description"	"Bobby Pedroso"
+			"runtext"	"Bond written 08/11/00 -- Robbery. Case#932433. Bond Amount: $20,000. Type of Bond: Collateral - Car, Green '77 Race Guzzlestein (CA Plate#STL 555). Notes: Robbed a convenience store in Hollywood."
+		}
+
+		Function
+		{
+			"name"		"Perillo, T"
+			"description"	"Thundarr Perillo Jr."
+			"runtext"	"Bond written 05/15/04 -- Identity Theft. Case#439882. Bond Amount: $10,000. Type of Bond: Collateral - One Russian Woman. Notes: Charged with impersonating a coder."
+		}
+
+		Function
+		{
+			"name"		"Rhoades, S"
+			"description"	"Steve Rhoades"
+			"runtext"	"Bond written 02/20/04 -- Just Because. Case#855221. Bond Amount: $5,000. Type of Bond: Collateral - Steve's stuff. Notes: He just looks suspicious. They should just keep him in jail so he doesn't have the chance to pull off the crime everyone suspects he's bound to."
+		}
+	}
+
+	SubDir
+	{
+		"name"			"S-Z"
+		"password"		""
+		"description"		"Perpetrators of Criminality"
+
+		Function
+		{
+			"name"		"Schmidt, A"
+			"description"	"Al Schmidt"
+			"runtext"	"Bond written 06/20/01 -- Grand Theft Auto. Case#900221. Bond Amount: $10,000. Type of Bond: Collateral - Car, White '88 Fensler Generic GT (CA Plate#0ME 0MY). Notes: I don't think the car he put up for collateral is his."
+		}
+
+		Function
+		{
+			"name"		"Silvers, R"
+			"description"	"Roddy Silvers"
+			"runtext"	"Bond written 05/30/01 -- Animal Cruelty. Case#832221. Bond Amount: $17,000. Type of Bond: Collateral - Hunting Rifle. Notes: Just because an animal's rare, doesn't mean you should sneak into the zoo and eat it before it goes extinct."
+		}
+
+		Function
+		{
+			"name"		"Toten, R"
+			"description"	"Rolf Toten"
+			"runtext"	"Bond written 08/22/03 -- Immigration. Case#663321. Bond Amount: $15,000. Type of Bond: Collateral - Car, Red Lightningbird '77 (CA Plate#GUYCONI). Notes: Go back to Germania, pal. We don't take the Euro in these parts."
+			"runscript"	"rolfViewed()"
+		}
+
+		Function
+		{
+			"name"		"Valentine, I"
+			"description"	"Isabel Valentine"
+			"runtext"	"Bond written 10/13/03 -- Battery. Case#222999. Bond Amount: $5,000. Type of Bond: Cash - paid in full. Notes: She's got a rep for beating the snot out of the locals."
+		}
+	}
+
+	SubDir	// added by wesp
+	{
+		"name"			"Bonds"				// This is what is displayed as the name of this menu, and what the player must type to enter the menu (128 characters)
+		"password"			"money"				// password required to run commands in this menu (16 characters)
+		"description"		"currently outstanding bonds" 	// This is printed each time the user enters this menu (128 characters)
+
+		Function
+		{
+			"name"		"Muddy"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Info on Muddy"		// this is a description of this function  (128 characters)
+		 	"dependency"	"G.Patch_Plus == 1"
+			"runtext"		"I don't want to know why he's called Muddy."		// this text is printed when the player triggers this function.  (128 characters)
+		}
+		
+	}
+
+}

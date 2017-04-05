@@ -1,0 +1,64 @@
+I was asked in a PM by Nexus user "CassyCade" how one made new shaders for SweetFX.
+I thought I'd share my reply with you guys too as there might be someone here that wanted to try their hand at making a shader.
+
+Quote:
+The way SweetFX work is the dlls each call their own .fx file which sets up code specific to them , then the main.h file is called which loads each shader if it has been enabled in the settings, and then later in the file calls it if it's been enabled.
+
+I suggest that you start by going into the SweetFX/Shaders/ folder and make a copy of another shader .h file like splitscreen.h and name your copy what you will.
+Then go to the main.h file and copy the code that loads splitscreen.h and paste it in again and change the USE_SPLITSCREEN to USE_YOURSHADERNAME and point it to your shader file.
+Next find the section that runs the splitscreen pass and change it to run your shader.
+Code:
+
+	// Splitscreen
+	#if (USE_CADERSHADER == 1)
+		FinalColor = CaderShaderPass(FinalColor,tex);
+	#endif
+
+Then open the SweetFX_settings.txt file and create a new option to enable or disable your shader at the top and create a new section later in the file to set it's settings (you can copy the section for another shader again - just make sure you don't use the same #define constant names.
+
+You now have a copy of the splitscreen shader.
+
+Now edit the new shader so the function name matches the name you called earlier in main.h and remove the body of the shader function and write your own code here.
+Code:
+
+   /*-----------------------------------------------------------.   
+  /                      CaderShader                           /
+  '-----------------------------------------------------------*/
+/*
+Awesome shader by cassycade
+
+- Does this and a little bit of that.
+*/
+
+float4 CaderShaderPass( float4 colorInput, float2 tex )
+{
+//your code here
+
+
+
+//return something; //must be a float4
+
+//I usually do :
+//colorInput.rgb = my_awesome_output;
+
+//return colorInput;
+}
+
+You can write hlsl shaders in whatever editor you like.
+I use Notepad2, but Notepad++ is also a good text editor.
+
+I also use GPU ShaderAnalyzer to profile the shaders and get a better insight into how the hlsl code translates into assembler.
+I also test using a dx9 demo by Humus to profile the speed of the shader in a real environment rather than just guess based on how many assembler instructions it compiles to.
+You can use any dx9, dx10 or dx11 program, but I suggest a simple one that runs at a great frame rate and displays the fps so you can easily tell how much your shader affects performance.
+
+Other useful tools are :
+Graphtoy to visualize graphs in a shader language - do note that Graphtoy uses glsl which is very similar but not identical to hlsl.
+And WolframAlpha to help you reduce or plot (both reduce and plot are wolframalpha keywords .. try them) your algoritms and to doublecheck your math. Simply entering in your formula (in a syntax that wolframalpha understands) can yield you hints on how you can rephrase your algorithm, which may or may not get it to run faster - remember to benchmark your code changes .. never assume that it runs better/faster - check.
+
+The log.log file and GPU ShaderAnalyzer will both give you hints when something goes wrong and it won't compile right.
+I often forget an ; or forget to close a ( with a )
+
+The official list of HLSL intrinsic functions is also an important reference. Remember than for the most part you can ignore intrinsics for shader model 4 and 5 since DX 9 only supports up to shader model 3.
+
+Also if you find yourself needing the tex2D function (very likely) then I've written a alias function called myTex2D that calls the correct function for dx9 when using that and call the correct function for dx10/11 when using that.
+I suggest you use it.

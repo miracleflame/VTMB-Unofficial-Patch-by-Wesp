@@ -1,0 +1,259 @@
+NewsData
+{
+
+	Story
+	{
+
+		"Name"		"Side02"	
+
+		Version
+		{
+			"dependency"		"G.Beachhouse_Bodycount >= 4 and G.Story_State < 20 and not IsPCMalk()"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line171_col_e.vcd"
+		}
+
+		Version
+		{
+			"dependency"		"G.Beachhouse_Bodycount >= 4 and G.Story_State < 20 and IsPCMalk()"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line171_col_n.vcd"
+		}
+	}
+
+	Story
+	{
+		Version
+		{
+			"dependency"		"G.Jeanette_Quest == 2 and G.Story_State < 20 and G.Chunk_Dead == 0"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line181_col_e.vcd"
+		}
+	}
+
+	Story
+	{
+
+		Version
+		{
+			"dependency"		"G.Jeanette_Quest == 2 and G.Story_State < 20 and G.Chunk_Dead == 1"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line191_col_e.vcd"
+		}
+
+	}
+
+	Story
+	{
+		Version
+		{
+			"dependency"		"G.Therese_Quest == 4 and G.Story_State < 20 and not IsPCMalk() and G.Thugs_Peace == 0"	// changed by wesp
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line201_col_e.vcd"
+		}
+		
+		Version
+		{
+			"dependency"		"G.Therese_Quest == 4 and G.Story_State < 20 and IsPCMalk() and G.Thugs_Peace == 0"	// changed by wesp
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line201_col_n.vcd"
+		}
+	}
+
+	Story
+	{
+
+		Version
+		{
+			"dependency"		"G.Killer_Key == 1 and G.Story_State < 50"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line211_col_e.vcd"
+		}
+	}
+
+	Story
+	{
+		Version
+		{
+			"dependency"		"G.Pisha_Please == 1 and G.Story_State < 50"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line221_col_e.vcd"
+		}
+	}
+
+	Story
+	{
+
+		Version
+		{
+			"dependency"		"G.Ashlookalike_Dead == 1 and G.Story_State < 65"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line231_col_e.vcd"
+		}
+	}
+
+	Story
+	{
+
+		Version
+		{
+			"dependency"		"G.Muddy_Dead == 1 and G.Story_State < 65"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line241_col_e.vcd"
+		}
+	}
+
+	Story
+	{
+
+
+		Version
+		{
+			"dependency"		"G.Hatter_Dead == 1 and G.Story_State < 65 and FindPlayer().IsMale()"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line251_col_e.vcd"
+		}
+
+		Version
+		{
+			"dependency"		"G.Hatter_Dead == 1 and G.Story_State < 65 and not FindPlayer().IsMale()"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line251_col_f.vcd"
+		}
+	}
+
+	Story
+	{
+
+
+		Version
+		{
+			"dependency"		"G.Chastity_Dead == 1 and G.Sin_Innocent == 0 and G.Sin_Sound == 0 and G.Story_State < 65"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line261_col_e.vcd"
+		}
+	}
+
+	Story
+	{
+
+
+		Version
+		{
+			"dependency"		"G.Chastity_Dead == 1 and G.Sin_Innocent >= 1 and G.Story_State < 65 and FindPlayer().IsMale()"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line271_col_e.vcd"
+		}
+
+		Version
+		{
+			"dependency"		"G.Chastity_Dead == 1 and G.Sin_Innocent >= 1 and G.Story_State < 65 and not FindPlayer().IsMale()"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line271_col_f.vcd"
+		}
+	}
+
+	Story
+	{
+
+
+		Version
+		{
+			"dependency"		"G.Isaac_Movie >= 1 and G.Story_State < 65"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line281_col_e.vcd"
+		}
+	}
+
+	Story
+	{
+
+
+		Version
+		{
+			"dependency"		"G.WongHo_Dead == 1 and G.WongHo_End == 1 and G.Story_State > 70"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line291_col_e.vcd"
+		}
+	}
+
+	Story
+	{
+
+
+		Version
+		{
+			"dependency"		"G.Story_State < 30"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line301_col_e.vcd"
+		}
+
+	}
+
+	Story
+	{
+
+
+		Version
+		{
+			"dependency"		"G.Story_State >= 10 and G.Story_State < 40"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line311_col_e.vcd"
+		}
+	}
+
+	Story
+	{
+
+
+		Version
+		{
+			"dependency"		"G.Story_State >= 30 and G.Story_State < 65"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line321_col_e.vcd"
+		}
+	}
+
+	Story
+	{
+
+
+		Version
+		{
+			"dependency"		"G.Story_State >= 30 and G.Story_State < 65"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line331_col_e.vcd"
+		}
+	}
+
+	Story
+	{
+
+
+		Version
+		{
+			"dependency"		"G.Story_State >= 40 and G.Story_State < 70"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line341_col_e.vcd"
+		}
+
+	}
+
+	Story
+	{
+
+
+		Version
+		{
+			"dependency"		"G.Story_State > 60"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line351_col_e.vcd"
+		}
+	}
+
+	Story
+	{
+
+
+		Version
+		{
+			"dependency"		"G.Story_State > 65"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line361_col_e.vcd"
+		}
+	}
+
+	Story
+	{
+
+
+		Version
+		{
+			"dependency"		"G.Story_State > 70 and not IsPCMalk()"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line371_col_e.vcd"
+		}
+
+		Version
+		{
+			"dependency"		"G.Story_State > 70 and IsPCMalk()"
+			"filename"		"sound\Character\dlg\GENERIC\Newscaster\line371_col_n.vcd"
+		}
+	}
+
+}

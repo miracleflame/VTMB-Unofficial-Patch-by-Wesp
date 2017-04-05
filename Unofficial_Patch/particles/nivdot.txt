@@ -1,0 +1,31 @@
+Particle
+{
+	sprite		"nivdot"
+	burst		"1"
+	size		"10"
+	width		"1"
+	height		"1"
+	frames		"120"
+	color		"255"
+
+	parent_speed	"1"
+
+	Radius_speed	"0~10" // The speed the particle travels from the emitter
+
+	theta_speed	"0~180" //The speed it orbits the emitting particle horizontally
+	phi_speed	"0~180" //The speed it orbits the emitting particle vertically
+
+	elevation_speed	"20"
+
+	movealign	"0"
+
+	spawn
+	{
+		
+		particle	"nivdot2"
+		rate		"100"
+		radius		"0"
+		theta		"0"
+		phi			"0"
+	}
+}

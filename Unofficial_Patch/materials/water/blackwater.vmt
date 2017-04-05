@@ -1,0 +1,26 @@
+// added by psycho-a
+"LightmappedGeneric"
+{
+	"$baseTexture" "effects/ref_12"
+	"%toolTexture" "water/oilfieldwatera"
+	"$bumpmap" "dev/water_normal"
+	"$envmap" "env_cubemap"
+//	"$envmaptint" "[.4 .4 .4]"
+	"$envmapcontrast" "0.85"
+	"$surfaceprop" "water"
+//	"$translucent" "1"
+
+	"$bumpframe" "0"
+	"$bumpoffset" "[0 0]"
+	"$scale" "[0.5 0.5]"
+
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$bumpmap"
+			"animatedtextureframenumvar" "$bumpframe"
+			"animatedtextureframerate" "24.00"
+		}
+	}
+}

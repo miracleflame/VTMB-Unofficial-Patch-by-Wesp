@@ -1,0 +1,85 @@
+TerminalDefinition
+{
+	"screen saver"		"Santa Monica Medical Clinic"		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+
+	"email_password"	"panacea"		// the user must type this to access email from this terminal
+	"email_username"	"mstmartin"
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Dr. Malcolm St. Martin"
+	}
+	
+	SubDir
+	{
+		"name"			"Patients"	//(128 characters)
+		"password"		"hippocrates"
+		"description"		"Patient List"	
+
+		Function
+		{
+			"name"		"H. Poe"
+			"description"	"Patient's information"	
+			"runtext"	"Diagnosis: Ruptured organs. Lacerations. Internal bleeding. Condition: Critical"
+			"dependency"	"G.Story_State < 10"
+
+		}
+
+		Function
+		{
+			"name"		"A. Kilpatrick"
+			"description"	"Patient's information"	
+			"runtext"	"Diagnosis: Severe tinea infection compounded by untreated herpes simplex 2."
+
+		}
+
+		Function
+		{
+			"name"		"D. Marsh"
+			"description"	"Patient's information"	
+			"runtext"	"Diagnosis: Frequent bouts of sexlexia."
+		}
+
+		Function
+		{
+			"name"		"M. Barber"
+			"description"	"Patient's information"	
+			"runtext"	"Diagnosis: Chronic marbopperitis. Uncurable."
+		}
+	}
+
+	Email
+	{
+		"subject"	"Tonight?"
+		"sender"	"PBenice@SMMCmail.vtm"
+		"body"		"Malcolm, are you free tonight? I thought you could swing by my apartment after your shift. You do still make house calls, don't you, doctor? I have something that needs to be checked out. - Paige"
+		"runscript"	"G.Malcolm_Affair = G.Malcolm_Affair +1"
+	}
+
+	Email
+	{
+		"subject"	"Re: Think she's suspicious"
+		"sender"	"PBenice@SMMCmail.vtm"
+		"body"		"Do I really have to ask twice? We don't have to do anything if you don't want. But I really do need some help studying for my anatomy test. Please? - Paige"
+		"runscript"	"G.Malcolm_Affair = G.Malcolm_Affair +1"
+	}
+
+	Email
+	{
+		"subject"	"Re: Think she's suspicious"
+		"sender"	"PBenice@SMMCmail.vtm"
+		"body"		"Guess I'll see you around five. I'm really glad you finally decided to come over. And if you should want me to show my appreciation... you just have to ask. - Paige"
+		"runscript"	"G.Malcolm_Affair = G.Malcolm_Affair +1"
+	}
+
+	Email
+	{
+		"subject"	"On your way home"
+		"sender"	"Trina@SOL.vtm"
+		"body"		"Malcolm, do you think you'll be able to get a day off next week? My mother's coming into town on Thursday. I bought a new mattress and some new curtains for the guest room. And do you think you can pick up some doughnuts and orange juice on the way home for breakfast?"
+		"runscript"	"G.Malcolm_Wife = 1"
+	}
+}

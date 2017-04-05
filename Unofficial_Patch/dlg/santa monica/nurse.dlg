@@ -1,0 +1,129 @@
+{	1	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	Please, wait your turn and you'll be seen.	}{	Please, wait your turn and you'll be seen.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Nurse_Talk = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	I come seeking a cure for the pain of the soul.	}{	I come seeking a cure for the pain of the soul.	}{	101	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	I come seeking a cure for the pain of the soul.	}
+{	13	}{	The spider's web of computation needs repair, so I am here.	}{	The spider's web of computation needs repair, so I am here.	}{	111	}{	Persuasion 4 & IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	I'm here to work on the network upstairs.	}{	I'm here to work on the network upstairs.	}{	51	}{	Persuasion 4 & G.Nurse_Insult == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	I'll not be seen nor will I wait.	}{	I'll not be seen nor will I wait.	}{	31	}{	Dominate 1 & IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	I'll not be seen nor will I wait.	}{	I'll not be seen nor will I wait.	}{	31	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	You'll be seeing me beyond sight!	}{	You'll be seeing me beyond sight!	}{	31	}{	Dementation 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	I'm just bringing my friend who's being treated some personal items.	}{	I'm just bringing my friend who's being treated some personal items.	}{	31	}{	Persuasion 3 & G.Nurse_Insult == 0	}{	}{	}{	}{	}{	}{	}{	}{	My friend is in need of the gifts I come bearing.	}
+{	19	}{	Okay.	}{	Okay.	}{	0	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	Yeah, whatever.	}{	Yeah, whatever.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	21	}{	[More stern]Did you hear me? Take a seat - the doctor will get to you when he can.	}{	[More stern]Did you hear me? Take a seat - the doctor will get to you when he can.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	I'll not be seen nor will I wait.	}{	I'll not be seen nor will I wait.	}{	31	}{	Dominate 1 & IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	23	}{	I'll not be seen nor will I wait.	}{	I'll not be seen nor will I wait.	}{	31	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	But they need someone like me there!	}{	But they need someone like me there!	}{	31	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	You'll be seeing me beyond sight!	}{	You'll be seeing me beyond sight!	}{	31	}{	Dementation 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	I'm here to work on the network upstairs.	}{	I'm here to work on the network upstairs.	}{	51	}{	Persuasion 4 & G.Nurse_Insult == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	The spider's web of computation needs repair, so I am here.	}{	The spider's web of computation needs repair, so I am here.	}{	111	}{	Persuasion 4 & IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	I'm just bringing my friend who's being treated some personal items.	}{	I'm just bringing my friend who's being treated some personal items.	}{	31	}{	Persuasion 3 & G.Nurse_Insult == 0	}{	}{	}{	}{	}{	}{	}{	}{	My friend is in need of the gifts I come bearing.	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	Okay.	}{	Okay.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	31	}{	[Matter of fact]Alright. Go on back.	}{	[Matter of fact]Alright. Go on back.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Nurse_Flag = 1; G.Nurse_Warn = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	33	}{	...	}{	...	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	You can't go back there! Security! Security!	}{	You can't go back there! Security! Security!	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	43	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Nobody told me to expect any technicians.	}{	Nobody told me to expect any technicians.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	Nobody told me to expect any stupid bitches.	}{	Nobody told me to expect any stupid bitches.	}{	71	}{	}{	G.Nurse_Insult = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	53	}{	Call whoever it is in charge - I don't care, I get paid by the minute.	}{	Call whoever it is in charge - I don't care, I get paid by the minute.	}{	61	}{	}{	G.Nurse_Flag = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	I just want to look at a few things, I'll be out in a few seconds. Understand, broad?	}{	I just want to look at a few things, I'll be out in a few seconds. Understand, broad?	}{	71	}{	}{	G.Nurse_Insult = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	Well, your driver conflex has a security nagle in the IP routing matrix.	}{	Well, your driver conflex has a security nagle in the IP routing matrix.	}{	61	}{	}{	G.Nurse_Flag = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Fine, whatever. Here's the key for the second floor. Stairs are down the hall. Tell the guard upstairs you're here to work on the network.	}{	Fine, whatever. Here's the key for the second floor. Stairs are down the hall. Tell the guard upstairs you're here to work on the network.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.GiveItem("item_k_clinic_stairs_key"); G.Nurse_Persuade = 1; G.Nurse_Warn = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Thanks, I will. Goodbye.	}{	Thanks, I will. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	The lost are those that cannot see.	}
+{	63	}{	I just hope I'm in time to salvage the UniVBE server. Bye.	}{	I just hope I'm in time to salvage the UniVBE server. Bye.	}{	0	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	64	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	[Slightly ticked off]Sir, I'm going to have to ask you to leave.	}{	[Slightly ticked off]Ma'am, I'm going to have to ask you to leave.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Nurse_Warn = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	73	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Oh my god! What happened to you?	}{	Oh my god! What happened to you?	}{	#	}{	npc.SetDisposition("Disgust", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	Uhhh, I was a burn victim as a small child.	}{	Uhhh, I was a burn victim as a small child.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	83	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	I'm sorry, you'll still have to wait your turn.	}{	I'm sorry, you'll still have to wait your turn.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Nurse_Talk = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	93	}{	I'm here to work on the network upstairs.	}{	I'm here to work on the network upstairs.	}{	51	}{	Persuasion 4 & G.Nurse_Insult == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	I'm just bringing my friend who's being treated some personal items.	}{	I'm just bringing my friend who's being treated some personal items.	}{	31	}{	Persuasion 3 & G.Nurse_Insult == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	Okay.	}{	Okay.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	Yeah, whatever.	}{	Yeah, whatever.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	What the hell are you blabbering about? Go over there and wait your turn to be seen, please.	}{	What the hell are you blabbering about? Go over there and wait your turn to be seen, please.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	You'll be seeing me beyond sight!	}{	You'll be seeing me beyond sight!	}{	31	}{	Dementation 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	103	}{	The spider's web of computation needs repair, so I am here.	}{	The spider's web of computation needs repair, so I am here.	}{	111	}{	Persuasion 4 & G.Nurse_Insult == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	My friend is in need of the gifts I come bearing.	}{	My friend is in need of the gifts I come bearing.	}{	31	}{	Persuasion 3 & G.Nurse_Insult == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	I am no longer here.	}{	I am no longer here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	What the hell? Web? Y-y-you mean our network? What about it?	}{	What the hell? Web? Y-y-you mean our network? What about it?	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Your driver conflex has a security nagle in the IP routing matrix.	}{	Your driver conflex has a security nagle in the IP routing matrix.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	113	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	(Starting Condition)	}{	}{	91	}{	IsClan(pc,"Nosferatu") and G.Nurse_Talk == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	123	}{	(Starting Condition)	}{	}{	81	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	(Starting Condition)	}{	}{	33	}{	G.Nurse_Flag == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	(Starting Condition)	}{	}{	11	}{	G.Nurse_Safe == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	(Starting Condition)	}{	}{	41	}{	G.Nurse_Warn == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	(Starting Condition)	}{	}{	21	}{	G.Nurse_Warn == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	(Starting Condition)	}{	}{	11	}{	G.Nurse_Talk == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	(Starting Condition)	}{	}{	11	}{	npc.times_talked > 0	}{	}{	}{	}{	}{	}{	}{	}{	}

@@ -1,0 +1,32 @@
+Particle
+{
+	loop "1"
+	Frames		"30"
+	Radius_speed	"-50,50"
+	parent_speed	"1"
+	elevation_speed	"0"
+	theta_speed	"100~200"
+	phi_speed	"50~300"
+
+	spawn
+	{
+		particle "D_Thaumaturgy_BloodRip_Trail"
+		rate "400"
+		loop "1"
+		theta "0~360"
+		phi	"180~-180"
+		radius "0~5"
+	}
+	spawn
+	{
+		particle "D_Thaumaturgy_BloodRip_Mist"
+		rate "50"
+		loop "1"
+		theta "0~360"
+		phi	"180~-180"
+		radius "0~5"
+	}
+
+
+}
+

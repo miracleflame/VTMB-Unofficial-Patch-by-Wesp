@@ -1,0 +1,3528 @@
+// Domination
+DisciplineTgtList
+{
+
+
+
+// ---------------------
+
+
+
+// Dominate: Level 1, changed by EntenSchreck
+DisciplineTgt
+{
+	"Name"		"Command"	// changed by wesp
+	"InternalName"	"Dominate_Command"
+
+	"Discipline"	"Dominate"
+	"Level"		"1"
+
+	"TgtHightlightParticle"	"D_Target_Aura_Emitter"
+
+	"BloodCost"		"1"
+	"Overt"		"0"
+	"SupernaturalLvl"	"0"
+	"RecoveryTime"	"5.0"
+	"ShouldRemove_OnTakeDamage"	"1"
+	"ShouldRemove_OnWasBumped"	"1"
+
+	AoE
+	{
+		"Range"	"600"
+		"Source"	"Self"	// Self/Target
+		"Affects"	"Target"	// Target/Radius:#/Cone:#
+		Affects_Filters
+		{
+			"Critter"		"1"
+			"No_Self"		"1"
+		}
+
+
+		// Tables:
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Invulnerable"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+				"Player"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"Player"		"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Supernatural"
+			}
+		}
+
+//
+// ADD DISCIPLINESTRATA EFFECTS BELOW THIS LINE
+//
+
+		Affects_Table	// added by wesp
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"Doggie"
+			}
+
+			Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"Gargoyle"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"Hengeyokai"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"CharTemplate"	"TzimisceCreation2"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+
+			}
+		}
+
+		Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"MingXiao"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"MingXiaoProxy"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"SheriffMan"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"ManBat"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table	// added by Entenschreck, disallow "Leave"
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"TutorialShovelhead"
+			}
+
+			Mapping
+			{
+				"Chance"	"25%"
+				"HitTable"	"Hit_Human_Dance"
+			}
+			Mapping
+			{
+				"Chance"	"25%"
+				"HitTable"	"Hit_Human_Hide"
+			}
+			Mapping
+			{
+				"Chance"	"25%"
+				"HitTable"	"Hit_Human_Calm"
+			}
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human_Trance"
+			}
+		}
+	
+            Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"0"
+			}
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Human_Dance"
+			}
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Human_Hide"
+			}
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Human_Calm"
+			}
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Human_Leave"
+			}
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human_Trance"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"1"
+			}
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_1_Dance"
+			}
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_1_Calm"
+			}
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_1_Hide"
+			}
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_1_Leave"
+			}
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_1_Trance"
+			}
+		}		
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"2"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_2_Dance"
+			}
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_2_Calm"
+			}
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_2_Hide"
+			}
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_2_Leave"
+			}
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_2_Trance"
+			}
+		}		
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"3"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_3"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"4"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_4"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"5"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_5"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"6"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_6"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"7"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_7"
+			}
+		}	
+
+//
+// ADD DISCIPLINESTRATA EFFECTS ABOVE THIS LINE
+//
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Human_Dance"
+			}
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Human_Hide"
+			}
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Human_Calm"
+			}
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Human_Leave"
+			}
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human_Trance"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"No_Boss"		"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Boss"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Boss_NoEffect"
+			}
+		}
+	}
+
+	Effect_Src_Instant
+	{
+		Particle_ThirdPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Dominate_Cast_Emitter1"
+			"AttachType"	"BoneSinglePoint"
+			"AttachName"	"Bip01 Head"
+		}
+
+		Particle_FirstPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Dominate_Hud_Cast_Emitter1"
+			"AttachType"	"ScreenCenter"
+			"AttachName"	""
+		}
+
+		SoundFX
+		{
+//			"Sound"		"Disciplines/Dominate/Mesmerize_Ramp.wav"
+		}
+	}
+
+	Effect_Src_Hit
+	{
+		SoundFX
+		{
+			"Sound"		"Disciplines/Dominate/Dominate_Mesmerize.wav"
+		}
+	}
+
+
+	// Effects:
+	Hit_Invulnerable
+	{
+	}
+
+	Hit_Player_Human
+	{
+	}
+
+	Hit_Player_Supernatural
+	{
+	}
+
+	Hit_Human_Trance //works
+	{
+		"Dmg_Health"		"0%"
+		"AI_Schedule"		"SCHED_TROIKA_D_TRANCE"
+		"Duration"		"15"	// changed by wesp
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_Trance_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"d_dominate_hit_target"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+		OnEnd
+		{
+			"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"
+		}
+		OnInterrupt
+		{
+			"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"
+
+			Effect_Tgt_Hit
+			{
+				Particle_ThirdPerson
+				{
+					"Entity"		"env_particle"
+					"RateMin"		"1.0"
+					"OpacityMin"	"1.0"
+					"SizeMin"		"1.0"
+					"ParticleName"	"D_Dominate_Trance_Broke_Emitter"
+					"AttachType"	"BoneSinglePoint"
+					"AttachName"	"Bip01 Head"
+
+					"Detach"		"1"
+				}
+			}
+		}
+	}
+
+//==================================
+
+	Hit_Human_Dance // works
+	{
+		"Dmg_Health"		"0%"
+		"AI_Schedule"		"SCHED_TROIKA_DO_DANCE_ACTIVITY"
+		"Duration"		"15"	// changed by wesp
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_Trance_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"d_dominate_hit_target"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+		OnEnd
+		{
+			"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"
+		}
+		OnInterrupt
+		{
+			"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"
+
+			Effect_Tgt_Hit
+			{
+				Particle_ThirdPerson
+				{
+					"Entity"		"env_particle"
+					"RateMin"		"1.0"
+					"OpacityMin"	"1.0"
+					"SizeMin"		"1.0"
+					"ParticleName"	"D_Dominate_Trance_Broke_Emitter"
+					"AttachType"	"BoneSinglePoint"
+					"AttachName"	"Bip01 Head"
+
+					"Detach"		"1"
+				}
+			}
+		}
+	}
+
+//==================================
+
+	Hit_Human_Calm // animation confuses players, changed to Trance
+	{
+		"AI_Schedule"		"SCHED_TROIKA_D_TRANCE"
+		//"AI_NPCFlag"		"D_CALM"
+		"Duration"		"15"	// changed by wesp
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_Trance_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"d_dominate_hit_target"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+		OnEnd
+		{
+			"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"
+		}
+		OnInterrupt
+		{
+			"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"
+
+			Effect_Tgt_Hit
+			{
+				Particle_ThirdPerson
+				{
+					"Entity"		"env_particle"
+					"RateMin"		"1.0"
+					"OpacityMin"	"1.0"
+					"SizeMin"		"1.0"
+					"ParticleName"	"D_Dominate_Trance_Broke_Emitter"
+					"AttachType"	"BoneSinglePoint"
+					"AttachName"	"Bip01 Head"
+
+					"Detach"		"1"
+				}
+			}
+		}
+	}
+
+//==================================
+
+	Hit_Human_Hide // works
+	{
+		"Dmg_Health"		"0%"
+		"AI_Schedule"		"SCHED_TROIKA_D_TRANCE"		//"SCHED_TROIKA_FLEE_AND_COWER"
+		"Duration"		"15"	// changed by wesp
+
+		//"Gesture_Anim"	""
+		//"Gesture_Duration" "12"
+
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_Trance_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"d_dominate_hit_target"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+		OnEnd
+		{
+			"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"
+	
+			//"Gesture_Anim"	""
+			//"Gesture_Duration" "0.5"
+
+		}
+		OnInterrupt
+		{
+			"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"
+
+			Effect_Tgt_Hit
+			{
+				Particle_ThirdPerson
+				{
+					"Entity"		"env_particle"
+					"RateMin"		"1.0"
+					"OpacityMin"	"1.0"
+					"SizeMin"		"1.0"
+					"ParticleName"	"D_Dominate_Trance_Broke_Emitter"
+					"AttachType"	"BoneSinglePoint"
+					"AttachName"	"Bip01 Head"
+
+					"Detach"		"1"
+				}
+			}
+		}
+	}
+
+//==================================
+
+	Hit_Human_Leave // works, but players might get confused. Hence it's changed to Trance.
+	{
+		"Dmg_Health"		"0%"
+		"AI_Schedule"		"SCHED_TROIKA_D_TRANCE"	//"SCHED_TROIKA_DO_LEAVE_ACTIVITY"
+		"Duration"		"15"	// changed by wesp
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_Trance_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"d_dominate_hit_target"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+		OnEnd
+		{
+			"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"
+		}
+		OnInterrupt
+		{
+			"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"
+
+			Effect_Tgt_Hit
+			{
+				Particle_ThirdPerson
+				{
+					"Entity"		"env_particle"
+					"RateMin"		"1.0"
+					"OpacityMin"	"1.0"
+					"SizeMin"		"1.0"
+					"ParticleName"	"D_Dominate_Trance_Broke_Emitter"
+					"AttachType"	"BoneSinglePoint"
+					"AttachName"	"Bip01 Head"
+
+					"Detach"		"1"
+				}
+			}
+		}
+	}
+
+	Hit_Supernatural_NoEffect
+	{
+		"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"	// added by Populism	
+           "Duration"			"3"	// In order to play particles/etc.
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Thaum_Emitter"
+				"AttachType"	"BoneTreeWithColors"
+				"AttachName"	""
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Generic_Emitter"
+				"AttachType"	"BoneTree"
+				"AttachName"	""
+			}
+		}
+	}
+        
+	Hit_Strata_1_Trance
+	{
+		"InheritFrom"		"Hit_Human_Trance"
+		"Duration"		"15"	// changed by wesp
+	}
+	Hit_Strata_1_Dance
+	{
+		"InheritFrom"		"Hit_Human_Dance"
+		"Duration"		"15"	// changed by wesp
+	}
+	Hit_Strata_1_Calm
+	{
+		"InheritFrom"		"Hit_Human_Calm"
+		"Duration"		"15"	// changed by wesp
+	}
+	Hit_Strata_1_Hide
+	{
+		"InheritFrom"		"Hit_Human_Hide"
+		"Duration"		"15"	// changed by wesp
+	}
+	Hit_Strata_1_Leave
+	{
+		"InheritFrom"		"Hit_Human_Leave"
+		"Duration"		"15"	// changed by wesp
+	}
+
+	Hit_Strata_2_Trance
+	{
+		"InheritFrom"		"Hit_Human_Trance"
+		"Duration"		"4"
+	}
+
+	Hit_Strata_2_Dance
+	{
+		"InheritFrom"		"Hit_Human_Dance"
+		"Duration"		"4"
+	}
+
+	Hit_Strata_2_Hide
+	{
+		"InheritFrom"		"Hit_Human_Hide"
+		"Duration"		"4"
+	}
+
+	Hit_Strata_2_Calm
+	{
+		"InheritFrom"		"Hit_Human_Calm"
+		"Duration"		"4"
+	}
+
+	Hit_Strata_2_Leave
+	{
+		"InheritFrom"		"Hit_Human_Leave"
+		"Duration"		"4"
+	}
+
+	Hit_Strata_3
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Strata_4
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Strata_5	//changed by Entenschreck to full resistance 
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Strata_6	//changed by Entenschreck to full resistance 
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Strata_7
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Boss_NoEffect
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+}
+
+
+
+// ---------------------
+
+
+
+// Dominate: Level 2
+DisciplineTgt
+{
+	"Name"		"Brainwipe"
+	"InternalName"	"Dominate_BrainWipe"
+
+	"Discipline"	"Dominate"
+	"Level"		"2"
+
+//	"TgtHightlightParticle"	"D_Target_Aura_Emitter"
+
+	"BloodCost"		"2"
+	"Overt"		"0"
+	"RecoveryTime"	"5.5"
+	"ShouldRemove_OnTakeDamage"	"1"
+//	"ShouldRemove_OnHearCombat"	"1"
+
+	AoE
+	{
+		"Range"	"0"
+		"Source"	"Self"	// Self/Target
+		"Affects"	"Radius"	// Target/Radius:#/Cone:#
+		"MaxRadius"	"250"
+		Affects_Filters
+		{
+			"Critter"	"1"
+			"No_Self"	"1"
+			"No_Friends"	"1"
+		}
+
+
+		// Tables:
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Invulnerable"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+				"Player"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"Player"		"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Supernatural"
+			}
+		}
+
+//
+// ADD DISCIPLINESTRATA EFFECTS BELOW THIS LINE
+//
+
+		Affects_Table	// added by wesp
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"Doggie"
+			}
+
+			Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+            Affects_Table	// added by Populism
+		{
+		
+                  Affects_Filters
+	            {
+				"CharTemplate"	"TzimisceCreation1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}		
+
+		Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"CharTemplate"	"TzimisceCreation2"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+
+			}
+		}
+
+            Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"0"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table // TJP need to update after JLR completes revision
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_1"
+			}
+		}		
+
+		Affects_Table // TJP need to update after JLR completes revision
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"2"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_2"
+			}
+		}
+
+		Affects_Table // TJP need to update after JLR completes revision
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"3"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_3"
+			}
+		}		
+
+		Affects_Table // TJP need to update after JLR completes revision
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"4"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_4"
+			}
+		}		
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"5"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_5"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"6"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_6"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"7"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_7"
+			}
+		}	
+
+//
+// ADD DISCIPLINESTRATA EFFECTS ABOVE THIS LINE
+//
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"No_Boss"		"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"35%"
+				"HitTable"	"Hit_Supernatural"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Boss"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Boss_NoEffect"
+			}
+		}
+	}
+
+	Effect_Src_Instant
+	{
+		Particle_ThirdPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Dominate_Cast_Emitter2"
+			"AttachType"	"BoneSinglePoint"
+			"AttachName"	"Bip01 Head"
+		}
+
+		Particle_FirstPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Dominate_Hud_Cast_Emitter2"
+			"AttachType"	"ScreenCenter"
+			"AttachName"	""
+		}
+
+		SoundFX
+		{
+//			"Sound"		"Disciplines/Dominate/Mesmerize_Ramp.wav"
+		}
+	}
+
+	Effect_Src_Hit
+	{
+		SoundFX
+		{
+			"Sound"		"Disciplines/Dominate/dominate_brainwipe.wav"
+		}
+	}
+
+
+	// Effects:
+	Hit_Invulnerable
+	{
+	}
+
+	Hit_Player_Human
+	{
+	}
+
+	Hit_Player_Supernatural
+	{
+	}
+
+	Hit_Human
+	{
+		"AI_Schedule"		"SCHED_TROIKA_D_BRAINWIPE"
+//		"AI_NPCFlag"		"D_CALM"
+////		"Duration"			"-1"
+		"Duration"			"5"	// changed by wesp
+
+		"Knockback"	"50%"
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_BrainWipe_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"d_dominate_hit_target"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+
+		OnEnd
+		{
+////			"AI_Schedule"		"SCHED_TROIKA_D_BRAINWIPE_END"
+		}
+
+		OnInterrupt
+		{
+////			"AI_Schedule"		"SCHED_TROIKA_D_BRAINWIPE_END"
+
+			FREEME_SoundFX
+			{
+//				"Sound"		"Disciplines/Dominate/Mesmerize_Ramp.wav"
+			}
+		}
+	}
+
+	Hit_Supernatural
+	{
+		"InheritFrom"		"Hit_Human"
+		"Duration"			"3"
+	}
+
+	Hit_Supernatural_NoEffect
+	{
+		"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"	// added by Populism	
+		"Duration"			"3"	// In order to play particles/etc.
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Thaum_Emitter"
+				"AttachType"	"BoneTreeWithColors"
+				"AttachName"	""
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Generic_Emitter"
+				"AttachType"	"BoneTree"
+				"AttachName"	""
+			}
+		}
+	}
+
+        
+	Hit_Strata_1 // TJP needs to update once JLR completes revision
+	{
+		"InheritFrom"		"Hit_Human"
+		"Duration"			"3"
+	}
+
+	Hit_Strata_2 
+	{
+		"InheritFrom"		"Hit_Human"	// changed by Populism
+		"Duration"			"3"			// added by wesp
+	}
+
+	Hit_Strata_3
+	{
+		"InheritFrom"		"Hit_Human"
+		"Duration"			"3"
+      }
+
+	Hit_Strata_4
+	{
+		"InheritFrom"		"Hit_Human"	// changed by Populism
+		"Duration"			"3"			// added by wesp
+	}
+
+	Hit_Strata_5
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Strata_6
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Strata_7
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Boss_NoEffect
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+}
+
+
+
+// ---------------------
+
+
+
+// Dominate: Level 3, changed by EntenSchreck
+DisciplineTgt
+{
+	"Name"		"Sleep"
+	"InternalName"	"Dominate_Sleep"
+
+	"Discipline"	"Dominate"
+	"Level"		"3"
+
+	"TgtHightlightParticle"	"D_Target_Aura_Emitter"
+
+	"BloodCost"		"2"	// changed by wesp
+	"Overt"		"0"
+	"RecoveryTime"	"4.5"	// changed by wesp
+	"ShouldRemove_OnWasBumped"	"1"
+
+	AoE
+	{
+		"Range"	"600"		// changed by wesp
+		"Source"	"Self"	// Self/Target
+		"Affects"	"Target"	// Target/Radius:#/Cone:#, changed by wesp
+		Affects_Filters
+		{
+			"Critter"		"1"
+			"No_Self"		"1"
+			"No_Friends"	"1"
+		}
+
+
+		// Tables:
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Invulnerable"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"			"1"
+				"Player"		"1"
+				"Primary_Target"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Human_Primary"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+				"Player"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"Player"		"1"
+				"Primary_Target"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Supernatural_Primary"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"Player"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Supernatural"
+			}
+		}
+
+//
+// BLAHBEDEE BLAHBEDEE BLAHBEDEE
+//
+
+		Affects_Table	// added by wesp
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"Doggie"
+			}
+
+			Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+            Affects_Table	// added by Populism
+		{
+		
+                  Affects_Filters
+	            {
+				"CharTemplate"	"TzimisceCreation1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+            Affects_Table	// added by Populism
+		{
+		
+                  Affects_Filters
+	            {
+				"CharTemplate"	"TzimisceCreation2"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+            Affects_Table	// added by Populism
+		{
+		
+                  Affects_Filters
+	            {
+				"CharTemplate"	"TzimisceCreation3"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"1"
+				"Primary_Target"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"60%"
+				"HitTable"	"Hit_Supernatural_Primary"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_1_Partial_Resist"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"60%"
+				"HitTable"	"Hit_Supernatural"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_1_Partial_Resist"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"2"
+				"Primary_Target"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"40%"
+				"HitTable"	"Hit_Supernatural_Primary"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_2_Partial_Resist"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"2"
+			}
+
+			Mapping
+			{
+				"Chance"	"40%"
+				"HitTable"	"Hit_Supernatural"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_2_Partial_Resist"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"3"
+				"Primary_Target"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"60%"
+				"HitTable"	"Hit_Supernatural_Primary"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_3_Partial_Resist"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"3"
+			}
+
+			Mapping
+			{
+				"Chance"	"60%"
+				"HitTable"	"Hit_Supernatural"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_3_Partial_Resist"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"4"
+				"Primary_Target"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"40%"
+				"HitTable"	"Hit_Supernatural_Primary"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_4_Partial_Resist"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"4"
+			}
+
+			Mapping
+			{
+				"Chance"	"40%"
+				"HitTable"	"Hit_Supernatural"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_4_Partial_Resist"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"5"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_5"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"6"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_6"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"7"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_7"
+			}
+		}	
+//
+// BLAHBEDEE BLAHBEDEE BLAHBEDEE
+//
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"		"1"
+				"Primary_Target"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human_Primary"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"		"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"No_Boss"		"1"
+				"Primary_Target"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"50%"
+				"HitTable"	"Hit_Supernatural_Primary"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect_Primary"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"No_Boss"		"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"50%"
+				"HitTable"	"Hit_Supernatural"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Boss"		"1"
+				"Primary_Target"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Boss_NoEffect_Primary"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Boss"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Boss_NoEffect"
+			}
+		}
+	}
+
+	Effect_Src_Instant
+	{
+		Particle_ThirdPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Dominate_Cast_Emitter3"
+			"AttachType"	"BoneSinglePoint"
+			"AttachName"	"Bip01 Head"
+		}
+
+		Particle_FirstPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Dominate_Hud_Cast_Emitter3"
+			"AttachType"	"ScreenCenter"
+			"AttachName"	""
+		}
+
+		SoundFX
+		{
+//			"Sound"		"Disciplines/Dominate/Sleep_Ramp.wav"
+		}
+	}
+
+	Effect_Src_Hit
+	{
+		SoundFX
+		{
+			"Sound"		"Disciplines/Dominate/Dominate_sleep.wav"
+		}
+	}
+
+
+	// Effects:
+	Hit_Invulnerable
+	{
+	}
+
+	Hit_Player_Human_Primary
+	{
+	}
+
+	Hit_Player_Human
+	{
+	}
+
+	Hit_Player_Supernatural
+	{
+	}
+
+	Hit_Player_Supernatural_Primary
+	{
+	}
+
+	Hit_Human_Primary
+	{
+		"AI_Schedule"		"SCHED_TROIKA_KNOCKOUT"	//"SCHED_TROIKA_DO_SLEEP_ACTIVITY"
+		"Duration"			"20"	// changed by wesp"
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_Suicide_Pact_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_Suicide_Pact_Emitter2"	// changed by wesp
+				"AttachType"	"BoneTree"
+				"AttachName"	"Bip01 Head"	// changed by wesp
+			}
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"d_dominate_hit_target"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_BrainWipe_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Human
+	{
+		"AI_Schedule"		"SCHED_TROIKA_DO_SLEEP_ACTIVITY"
+		"Duration"			"20"	// changed by wesp
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_BrainWipe_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Supernatural_Primary
+	{
+		"InheritFrom"		"Hit_Human_Primary"
+	}
+
+	Hit_Supernatural
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Supernatural_NoEffect_Primary
+	{
+		"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"	// added by Populism
+		"Duration"			"3"	// In order to play particles/etc.
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_Suicide_Pact_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_Suicide_Pact_Emitter2"	// changed by wesp
+				"AttachType"	"BoneTree"
+				"AttachName"	"Bip01 Head"	// changed by wesp
+			}
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"d_dominate_hit_target"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Partial_Resist_Dom_Emitter"
+				"AttachType"	"BoneTreeWithColors"
+				"AttachName"	""
+			}
+		}
+	}
+
+//	Hit_Supernatural_NoEffect
+//	{
+//		Effect_Tgt_Hit
+//		{
+//			Old_Particle_ThirdPerson
+//			{
+//				"Entity"		"disc_particle"
+//				"RateMin"		"1.0"
+//				"OpacityMin"	"1.0"
+//				"SizeMin"		"1.0"
+//				"ParticleName"	"D_Full_Resist_Dom_Emitter"
+//				"AttachType"	"BoneTreeWithColors"
+//				"AttachName"	""
+//			}
+//
+//			Old_Particle_ThirdPerson
+//			{
+//				"Entity"		"disc_particle"
+//				"RateMin"		"1.0"
+//				"OpacityMin"	"1.0"
+//				"SizeMin"		"1.0"
+//				"ParticleName"	"D_Full_Resist_Generic_Emitter"
+//				"AttachType"	"BoneTree"
+//				"AttachName"	""
+//			}
+//
+//			Particle_ThirdPerson
+//			{
+//				"Entity"		"disc_particle"
+//				"RateMin"		"1.0"
+//				"OpacityMin"	"1.0"
+//				"SizeMin"		"1.0"
+//				"ParticleName"	"D_Partial_Resist_Dom_Emitter"
+//				"AttachType"	"BoneTreeWithColors"
+//				"AttachName"	""
+//			}
+//		}
+//	}
+
+      Hit_Supernatural_NoEffect
+	{
+		"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"	// added by Populism
+		"Duration"			"3"	// In order to play particles/etc.
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Thaum_Emitter"
+				"AttachType"	"BoneTreeWithColors"
+				"AttachName"	""
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Generic_Emitter"
+				"AttachType"	"BoneTree"
+				"AttachName"	""
+			}
+		}
+	}
+
+	Hit_Strata_1_Partial_Resist
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"0%"	// changed by Populism
+	}
+
+	Hit_Strata_2_Partial_Resist
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"0%"	// changed by Populism
+	}
+
+	Hit_Strata_3_Partial_Resist
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"0%"	// changed by Populism
+	}
+
+	Hit_Strata_4_Partial_Resist
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"0%"	// changed by Populism
+	}
+
+	Hit_Strata_5
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"0%"	// changed by Populism
+	}
+	
+	Hit_Strata_6
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"0%"	// changed by Populism
+	}
+
+	Hit_Strata_7
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Boss_NoEffect_Primary
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect_Primary"
+	}
+
+	Hit_Boss_NoEffect
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+}
+
+
+// ---------------------
+
+// Dominate: Level 4, changed by EntenSchreck
+DisciplineTgt
+{
+	"Name"		"Suicide"	// changed by wesp
+	"InternalName"	"Dominate_Impose Will"
+
+	"Discipline"	"Dominate"
+	"Level"		"4"
+
+	"TgtHightlightParticle"	"D_Target_Aura_Emitter"
+
+	"BloodCost"		"3"	// changed by EntenSchreck "2"
+	"Overt"		"0"
+	"RecoveryTime"	"4.5"
+
+	AoE
+	{
+		"Range"	"600"
+		"Source"	"Self"	// Self/Target
+		"Affects"	"Target"	// Target/Radius:#/Cone:#
+		Affects_Filters
+		{
+			"Critter"		"1"
+			"No_Self"		"1"
+		}
+
+
+		// Tables:
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Invulnerable"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+				"Player"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"Player"		"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Supernatural"
+			}
+		}
+
+//
+// ADD DISCIPLINESTRATA EFFECTS BELOW THIS LINE
+//
+
+		Affects_Table	// added by wesp
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"Doggie"
+			}
+
+			Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table	// added by wesp
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"Zombie"
+			}
+
+			Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table	// added by Populism
+		{
+
+			Affects_Filters
+			{
+				"CharTemplate"		"Gargoyle"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table	// added by Populism
+		{
+
+			Affects_Filters
+			{
+				"CharTemplate"		"Hengeyokai"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"MingXiao"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"MingXiaoProxy"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+            Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"MingXiaoTentacle"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+            Affects_Table	// added by Populism
+		{
+		
+                  Affects_Filters
+	            {
+				"CharTemplate"	"TzimisceCreation1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+            Affects_Table	// added by Populism
+		{
+		
+                  Affects_Filters
+	            {
+				"CharTemplate"	"TzimisceCreation2"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+            Affects_Table	// added by Populism
+		{
+		
+                  Affects_Filters
+	            {
+				"CharTemplate"	"TzimisceCreation3"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+            Affects_Table
+		{		
+                  Affects_Filters
+	            {
+				"DisciplineStrata"	"0"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"50%"
+				"HitTable"	"Hit_Human"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_1"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"2"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Human"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_2"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"3"
+			}
+
+			Mapping
+			{
+				"Chance"	"50%"
+				"HitTable"	"Hit_Human"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_3"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"4"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Human"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_4"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"5"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_5"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"6"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_6"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"7"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_7"
+			}
+		}	
+
+//
+// ADD DISCIPLINESTRATA EFFECTS ABOVE THIS LINE
+//
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"No_Boss"		"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"40%"
+				"HitTable"	"Hit_Supernatural"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Boss"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Boss_NoEffect"
+			}
+		}
+	}
+
+	Effect_Src_Instant
+	{
+		Particle_ThirdPerson
+		{
+			"Entity"	"disc_particle"
+			"RateMin"	"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"	"1.0"
+			"ParticleName"	"D_Dominate_Cast_Emitter4"
+			"AttachType"	"BoneSinglePoint"
+			"AttachName"	"Bip01 Head"
+		}
+
+		Particle_FirstPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Dominate_Hud_Cast_Emitter4"
+			"AttachType"	"ScreenCenter"
+			"AttachName"	""
+		}
+
+		SoundFX
+		{
+//			"Sound"		"Disciplines/Dominate/ImposeWill_Ramp.wav"
+		}
+	}
+
+	Effect_Src_Hit
+	{
+		SoundFX
+		{
+			"Sound"		"Disciplines/Dominate/Dominate_ImposeWill.wav"
+		}
+	}
+
+
+	// Effects:
+	Hit_Invulnerable
+	{
+	}
+
+	Hit_Player_Human
+	{
+	}
+
+	Hit_Player_Supernatural
+	{
+	}
+
+	Hit_Human
+	{
+		"AI_Schedule"		"SCHED_TROIKA_D_SUICIDE"	// This schedule picks appropriate animation/etc.
+		"AddToComfort"		"0"	// changed by wesp
+		"Duration"		"-1"	// Infinite
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_Suicide_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_Suicide_Hand_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 L Hand"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_Suicide_Hand_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 R Hand"
+			}
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"d_dominate_hit_target"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Supernatural
+	{
+		"InheritFrom"		"Hit_Human"
+		"AddToComfort"		"0"
+	}
+
+	Hit_Supernatural_PartialEffect //TJP c/p'd from Dementate:Vision of Death... changed the emitters, hope it works.
+	{
+		"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"	// added by Populism
+		"Dmg_Health"		"5-10%"
+		"Duration"			"3"	// Infinite
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_Suicide_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Partial_Resist_Dom_Emitter"
+				"AttachType"	"BoneTreeWithColors"
+				"AttachName"	""
+			}
+		}
+	}
+
+//	Hit_Supernatural_NoEffect
+//	{
+//		Effect_Tgt_Hit
+//		{
+//			Old_Particle_ThirdPerson
+//			{
+//				"Entity"		"disc_particle"
+//				"RateMin"		"1.0"
+//				"OpacityMin"	"1.0"
+//				"SizeMin"		"1.0"
+//				"ParticleName"	"D_Full_Resist_Dom_Emitter"
+//				"AttachType"	"BoneTreeWithColors"
+//				"AttachName"	""
+//			}
+//
+//			Old_Particle_ThirdPerson
+//			{
+//				"Entity"		"disc_particle"
+//				"RateMin"		"1.0"
+//				"OpacityMin"	"1.0"
+//				"SizeMin"		"1.0"
+//				"ParticleName"	"D_Full_Resist_Generic_Emitter"
+//				"AttachType"	"BoneTree"
+//				"AttachName"	""
+//			}
+//
+//			Particle_ThirdPerson
+//			{
+//				"Entity"		"disc_particle"
+//				"RateMin"		"1.0"
+//				"OpacityMin"	"1.0"
+//				"SizeMin"		"1.0"
+//				"ParticleName"	"D_Partial_Resist_Dom_Emitter"
+//				"AttachType"	"BoneTreeWithColors"
+//				"AttachName"	""
+//			}
+//		}
+//	}
+
+	Hit_Supernatural_NoEffect
+	{
+		"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"	// added by Populism
+		"Duration"			"3"	// In order to play particles/etc.
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Thaum_Emitter"
+				"AttachType"	"BoneTreeWithColors"
+				"AttachName"	""
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Generic_Emitter"
+				"AttachType"	"BoneTree"
+				"AttachName"	""
+			}
+		}
+	}
+
+
+	Hit_Strata_1
+	{
+		"InheritFrom"		"Hit_Supernatural_PartialEffect"
+		"Dmg_Health"		"0%"	// changed by Populism
+		"Duration"		"2"	// How do we make this nothing?
+	}
+
+	Hit_Strata_2
+	{
+		"InheritFrom"		"Hit_Supernatural_PartialEffect"
+		"Dmg_Health"		"0%"	// changed by Populism
+		"Duration"		"2"	// How do we make this nothing?
+	}
+
+	Hit_Strata_3
+	{
+		"InheritFrom"		"Hit_Supernatural_PartialEffect"
+		"Dmg_Health"		"0%"	// changed by Populism
+		"Duration"		"2"	// How do we make this nothing?
+	}
+
+	Hit_Strata_4
+	{
+		"InheritFrom"		"Hit_Supernatural_PartialEffect"
+		"Dmg_Health"		"0%"	// changed by Populism
+		"Duration"		"2"	// How do we make this nothing?
+	}
+
+	Hit_Strata_5
+	{
+		"InheritFrom"		"Hit_Supernatural_PartialEffect"
+		"Dmg_Health"		"0%"	// changed by Populism
+		"Duration"		"2"	// How do we make this nothing?
+	}
+
+	Hit_Strata_6
+	{
+		"InheritFrom"		"Hit_Supernatural_PartialEffect"
+		"Dmg_Health"		"0%"	// changed by Populism
+		"Duration"		"2"	// How do we make this nothing?
+	}
+
+	Hit_Strata_7
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Boss_NoEffect
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+}
+
+
+
+// ---------------------
+
+
+
+// Dominate: Level 5, changed by EntenSchreck
+DisciplineTgt
+{
+	"Name"		"Possession"
+	"InternalName"	"Dominate_Possession"
+
+	"Discipline"	"Dominate"
+	"Level"		"5"
+
+	"TgtHightlightParticle"	"D_Target_Aura_Emitter"
+
+	"BloodCost"		"4"	// changed by wesp
+	"Overt"		"0"
+	"RecoveryTime"	"10.0"
+
+	AoE
+	{
+		"Range"	"600"
+		"Source"	"Self"	// Self/Target
+		"Affects"	"Target"	// Target/Radius:#/Cone:#
+		Affects_Filters
+		{
+			"Critter"		"1"
+			"No_Self"		"1"
+			"No_Friends"	"1"
+		}
+
+
+		// Tables:
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Invulnerable"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+				"Player"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"Player"		"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Supernatural"
+			}
+		}
+
+//
+// ADD DISCIPLINESTRATA EFFECTS BELOW THIS LINE
+//
+
+		Affects_Table	// changed by wesp
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"Doggie"
+			}
+
+			Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table	// changed by Populism
+		{
+			Affects_Filters
+			{
+				"CharTemplate"	"TzimisceCreation1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"0"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"CharTemplate"	"BloodGuardian"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"CharTemplate"	"Zombie"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"CharTemplate"	"CrackhousePlagueVictim"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"CharTemplate"	"Bomberman"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"CharTemplate"	"ChangBrosClaw"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_ChangBrosClaw"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"40%"
+				"HitTable"	"Hit_Human"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_Partial"
+			}
+
+//			Mapping
+//			{
+//	Populism			"Chance"	"20%"
+//				"HitTable"	"Hit_Strata_Kill"
+//			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_1"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"2"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Human"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_Partial"
+			}
+
+//			Mapping
+//			{
+//	Populism			"Chance"	"20%"
+//				"HitTable"	"Hit_Strata_Kill"
+//			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_2"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"3"
+			}
+
+			Mapping
+			{
+				"Chance"	"40%"
+				"HitTable"	"Hit_Human"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_Partial"
+			}
+
+//			Mapping
+//			{
+//	Populism			"Chance"	"20%"
+//				"HitTable"	"Hit_Strata_Kill"
+//			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_3"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"4"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Human"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_Partial"
+			}
+
+//			Mapping
+//			{
+//	Populism			"Chance"	"20%"
+//				"HitTable"	"Hit_Strata_Kill"
+//			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_4"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"5"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_5"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"6"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_6"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"7"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_7"
+			}
+		}	
+
+//
+// ADD DISCIPLINESTRATA EFFECTS ABOVE THIS LINE
+//
+
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"No_Boss"		"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"40%"
+				"HitTable"	"Hit_Supernatural"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Boss"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Boss_NoEffect_NoEffect"
+			}
+		}
+	}
+
+	Effect_Src_Instant
+	{
+		Particle_ThirdPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Dominate_Cast_Emitter5"
+			"AttachType"	"BoneSinglePoint"
+			"AttachName"	"Bip01 Head"
+		}
+
+		Particle_FirstPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Dominate_Hud_Cast_Emitter5"
+			"AttachType"	"ScreenCenter"
+			"AttachName"	""
+		}
+
+		SoundFX
+		{
+//			"Sound"		"Disciplines/Dominate/Possession_Ramp.wav"
+		}
+	}
+
+	Effect_Src_Hit
+	{
+		SoundFX
+		{
+			"Sound"		"Disciplines/Dominate/Dominate_Possession.wav"
+		}
+	}
+
+
+	// Effects:
+	Hit_Invulnerable
+	{
+	}
+
+	Hit_Player_Human
+	{
+	}
+
+	Hit_Player_Supernatural
+	{
+	}
+
+	Hit_Human
+	{
+		"AI_Schedule"		"SCHED_TROIKA_D_POSSESSION"
+		"DoPossession"		"1"
+		"Duration"			"30"	// changed by wesp
+
+		TraitEffect
+		{
+			"Effect"		"Discipline (Dominate-Possession)"
+		}
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_Possession_Emitter"
+				"AttachType"	"BoneTree"
+				"AttachName"	""
+			}
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"d_dominate_hit_target"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+
+		OnEnd
+		{
+//			"Force_Death"	"1"
+			"AI_Schedule"		"SCHED_TROIKA_D_SUICIDE"	// This schedule picks appropriate animation/etc.
+		}
+	}
+
+	Hit_Supernatural
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Supernatural_NoEffect
+	{
+		"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"	// changed by Populism
+		"Duration"			"3"	// In order to play particles/etc.
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Thaum_Emitter"
+				"AttachType"	"BoneTreeWithColors"
+				"AttachName"	""
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Generic_Emitter"
+				"AttachType"	"BoneTree"
+				"AttachName"	""
+			}
+		}
+	}
+
+	Hit_Supernatural_ChangBrosClaw	// changed by wesp
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		
+//		"InheritFrom"		"Hit_Human"
+//		"Duration"		"13-15"
+//		OnEnd
+//		{
+//		}
+
+	}
+
+	Hit_Strata_Partial
+	{
+		"InheritFrom"		"Hit_Human"
+		"Duration"		"10-15"
+	}
+	
+//	Hit_Strata_Kill
+//	{
+//		"InheritFrom"		"Hit_Human"
+// Populism	"Duration"		"1-2"
+//	}
+
+	Hit_Strata_1
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"40%"
+	}
+
+	Hit_Strata_2
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"30%"
+	}
+
+	Hit_Strata_3
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"40%"
+	}
+
+	Hit_Strata_4
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"30%"
+	}
+
+	Hit_Strata_5
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Strata_6
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Strata_7
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Boss_NoEffect
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+}
+
+
+
+// ---------------------
+}

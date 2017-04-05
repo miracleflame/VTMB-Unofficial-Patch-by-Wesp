@@ -1,0 +1,77 @@
+// Choreo version 1
+actor "Imalia"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 11.233651
+      param "character/dlg/warrens/imalia/line395_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 0.850000 0.960000
+      param "0.110"
+    }
+    event silence "Silence"
+    {
+      time 3.660000 3.770000
+      param "0.110"
+    }
+    event silence "Silence"
+    {
+      time 7.910000 8.050000
+      param "0.140"
+    }
+    event silence "Silence"
+    {
+      time 8.690000 8.830000
+      param "0.140"
+    }
+    event silence "Silence"
+    {
+      time 9.330000 9.570000
+      param "0.240"
+    }
+    event silence "Silence"
+    {
+      time 10.190000 10.300000
+      param "0.110"
+    }
+    event silence "Silence"
+    {
+      time 12.990000 13.130000
+      param "0.140"
+    }
+    event loud "Loud"
+    {
+      time 4.390000 4.500000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 4.570000 4.680000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 6.910000 7.060000
+      param "0.150"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

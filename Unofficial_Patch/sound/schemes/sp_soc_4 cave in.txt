@@ -1,0 +1,85 @@
+SoundScheme
+{
+	Music
+	{
+		"Filename"	"music/Default_Combat.mp3"
+		"Volume"	"40"
+		"NoPause" "0"	// added by wesp
+	}
+
+	Combat
+	{
+		"Filename"	"music/Default_Combat.mp3"  //placeholder until compressed sound files are available
+		"Volume"	"40"
+		"NoPause" "0"	// added by wesp
+	}
+
+	Ambient
+	{
+		"Filename"	"Epic\Earthquake_Loop.wav"
+		"Volume"	"90"
+	}
+
+	RandomSound
+	{
+		"Filename"	"Environmental\Breaks\Smash_Stairway.wav"
+		"PitchMin"	"95"	
+		"PitchMax"	"110"
+		"Volume"	"80"
+		"Frequency"	"10"
+		
+		"AudibleRadius"		"2000"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"400"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"1000"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"100"		// the sound will be played no higher than these many units above the sound scheme entity
+	}
+
+	RandomSound
+	{
+		"Filename"	"Environmental\Breaks\Smashthrough_Doorway.wav"
+		"PitchMin"	"95"	
+		"PitchMax"	"110"
+		"Volume"	"80"
+		"Frequency"	"10"
+		
+		"AudibleRadius"		"2000"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"400"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"1000"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"100"		// the sound will be played no higher than these many units above the sound scheme entity
+	}
+
+	RandomSound
+	{
+		"Filename"	"Environmental\Breaks\Smashthrough_Wall.wav"
+		"PitchMin"	"95"	
+		"PitchMax"	"110"
+		"Volume"	"80"
+		"Frequency"	"10"
+		
+		"AudibleRadius"		"2000"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"400"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"1000"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"100"		// the sound will be played no higher than these many units above the sound scheme entity
+	}
+
+	RandomSound
+	{
+		"Filename"	"Environmental\People\Scream_Man.wav"
+		"PitchMin"	"97"	
+		"PitchMax"	"100"
+		"Volume"	"60"
+		"Frequency"	"10"
+		
+		"AudibleRadius"		"3000"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"500"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"700"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"0"		// the sound will be played no higher than these many units above the sound scheme entity
+		"AngleMin"		"0"
+		"AngleMax"		"360"
+	}
+
+}

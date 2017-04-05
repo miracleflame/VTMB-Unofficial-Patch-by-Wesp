@@ -1,0 +1,22 @@
+Particle
+{
+	loop "1"
+	precipitation "1"
+
+	spawn
+	{
+		particle    "raindrops2"
+		rate        "1000"
+		radius      "0"
+		theta       "0"
+	}
+
+	spawn
+	{
+		particle    "rainfog"
+		rate        "70"
+		radius      "800"
+		theta       "0~360"
+		phi         "0"
+	}
+}

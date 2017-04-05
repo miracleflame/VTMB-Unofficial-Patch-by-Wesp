@@ -1,0 +1,42 @@
+TerminalDefinition
+{
+	"screen saver"		"Santa Monica Blood Bank"		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Santa Monica Blood Bank"  
+	}
+
+	SubDir
+	{
+		"name"			"Freezers"
+		"password"		"ambrosia"
+		"description"		"Freezer Controls"
+
+		Function
+		{
+			"name"		"Temperature"
+			"description"	"Status Check"
+			"runtext"	"Freezer 1: -10 degrees Celsius    Freezer 2: -12 degrees Celsius   Freezer 3: -2 degrees Celsius"
+		}
+
+		Function
+		{
+			"name"		"Passcode"
+			"description"	"Passcode"
+			"dependency"	"G.E_Quest < 2"
+			"runtext"	"Error Retrieving Data. Contact Administrator."
+		}
+
+		Function
+		{
+			"name"		"Passcode"
+			"description"	"Passcode"
+			"dependency"	"G.E_Quest == 2"
+			"runtext"	"1969"
+			"runscript"	"freezerCode()"
+		}
+	}
+}

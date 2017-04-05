@@ -1,0 +1,63 @@
+SignData
+{
+	// NOTE: Labels get text justification
+	//	 TextBlocks get word wrapping	
+	//	 Font sizes per resolution are defined in vampire/resource/TrackerScheme.res
+
+	// if you don't specify X and Y pos for the background image, it will autocenter. 
+	BackgroundImage
+	{
+		"Name"		"interface/charactermaintenance/background"
+		"Tiled"		"0"
+//		"XPos"		"100"
+//		"YPos"		"100"
+		"Wide"		"500"
+		"Tall"		"600"
+	}
+
+
+	TextBlock
+	{
+		"Text"		"This is a sample sign entity. The text in this section should wrap to the box."
+		"Font"		"ParagraphText"
+		"XPos"		"50"
+		"YPos"		"150"
+		"Wide"		"300"
+		"Tall"		"200"
+		"TextRGBA"		"[255, 0, 255,200]"
+		"BackgroundRGBA"	"[0,0,0,100]"
+	}
+
+	TextBlock
+	{
+		"Text"		"This is a another block of text on the sample sign entity."
+		"XPos"		"150"
+		"YPos"		"300"
+		"Wide"		"300"
+		"Tall"		"100"
+		"TextRGBA"		"[255, 0, 255,60]"
+		"BackgroundRGBA"	"[0,0,0,0]"
+
+		"Font"		"MainMenu"
+		"Font_640"	"MainMenu"
+		"Font_800"	"ParagraphText"
+		"Font_1024"	"Tahoma"
+		"Font_1280"	"Copperplate"
+		"Font_1600"	"MainMenu"
+	}
+
+	Label
+	{
+		"Text"		"This is a sample label"
+		"Alignment"	"southeast"
+		"Font"		"Tahoma"
+		"XPos"		"250"
+		"YPos"		"50"
+		"Wide"		"300"
+		"Tall"		"100"
+		"TextRGBA"		"[0, 0, 255,160]"
+		"BackgroundRGBA"	"[0,0,0,255]"
+	}
+
+}
+

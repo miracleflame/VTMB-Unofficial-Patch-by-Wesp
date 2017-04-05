@@ -1,0 +1,29 @@
+Particle
+{
+	sprite		"DropletFast"
+	frames		"150"
+	movealign	"1"
+	X_speed		"20"
+	Y_speed		"20"
+	Z_speed		"-300"
+	size		"3"
+	height		"10"
+	color		"0,80(10)"
+	mask		"0"
+	precipitation	"1"
+
+	collide
+	{
+		spawn
+		{
+		particle 	"RainSplashDummy"
+		friction 	"0"
+		Bounce		"0"
+		}
+
+		decal
+		{
+		particle 	"RainStain"
+		}
+	}
+}

@@ -1,0 +1,178 @@
+{	1	}{	Oh my gosh! Is that you? Everyone was worried sick about you! When you didn't show up and didn't call and nobody knew anything about what happened to you - we thought you were dead! Are you okay? You know what, never mind, we have to help you.	}{	Oh my gosh! Is that you? Everyone was worried sick about you! When you didn't show up and didn't call and nobody knew anything about what happened to you - we thought you were dead! Are you okay? You know what, never mind, we have to help you.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	It's not necessary. I'm fine.	}{	It's not necessary. I'm fine.	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	Help yourself, get away from here.	}
+{	3	}{	Who are you?	}{	Who are you?	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	???	}
+{	4	}{	You're obviously mentally disturbed.... Leave me the hell alone.	}{	You're obviously mentally disturbed.... Leave me the hell alone.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	Madness, believe me, I know.	}
+{	5	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	Is it drugs? Something like that? Look, let me make a call - we'll get you some help. Nobody's judging you. They'll be happy to know you're alive!	}{	Is it drugs? Something like that? Look, let me make a call - we'll get you some help. Nobody's judging you. They'll be happy to know you're alive!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	Who the hell are you?	}{	Who the hell are you?	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	Who. Is. This?	}
+{	13	}{	Touch that phone and you're dead, bitch!	}{	Touch that phone and you're dead, bitch!	}{	91	}{	Intimidate 5	}{	}{	}{	}{	}{	}{	}{	}{	Don't make the last song you hear a dial tone.	}
+{	14	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	It's me, Samantha! Don't you... did you suffer amnesia, is that it? Let me make a call. We-we'll get everybody together, we can talk - maybe you'll remember something. The important thing is that they know that you're alive.	}{	It's me, Samantha! Don't you... did you suffer amnesia, is that it? Let me make a call. We-we'll get everybody together, we can talk - maybe you'll remember something. The important thing is that they know that you're alive.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	You never saw me, Samantha. I'm dead. This is how you will remember me.	}{	You never saw me, Samantha. I'm dead. This is how you will remember me.	}{	31	}{	Dominate 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	23	}{	No, don't you remember me? I'm your pet turtle, from when you were a kid.	}{	No, don't you remember me? I'm your pet turtle, from when you were a kid.	}{	51	}{	Dementation 3	}{	}{	}{	}{	}{	}{	}{	}{	No, don't you remember me? I'm your pet turtle, from when you were a kid.	}
+{	24	}{	Touch that phone and you're dead, bitch!	}{	Touch that phone and you're dead, bitch!	}{	91	}{	Intimidate 5	}{	}{	}{	}{	}{	}{	}{	}{	Don't make the last song you hear a dial tone.	}
+{	25	}{	I think you've made a mistake; I just moved here. I don't know you.	}{	I think you've made a mistake; I just moved here. I don't know you.	}{	111	}{	Persuasion 5	}{	}{	}{	}{	}{	}{	}{	}{	This is my first expedition in this city. I've never encountered a native.	}
+{	26	}{	No, they can't know, please don't.	}{	No, they can't know, please don't.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	Alive? Don't tell them that.... It's a lie.	}
+{	27	}{	Don't worry about me, Samantha, I'm fine. I don't need help.	}{	Don't worry about me, Samantha, I'm fine. I don't need help.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	LEAVE ME ALONE!	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	I'm sorry, I've made a terrible mistake. That person I mistook you for, I just remembered they... they died.	}{	I'm sorry, I've made a terrible mistake. That person I mistook you for, I just remembered they... they died.	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	G.Samantha_Dominated = 1; FindPlayer().ChangeMasqueradeLevel( -1 )	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	I'm sorry for your loss. Excuse me.	}{	I'm sorry for your loss. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	33	}{	How sad.... I'm sure if they were here, they would want you to get on with your life.	}{	How sad.... I'm sure if they were here, they would want you to get on with your life.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	I don't think you know what you're saying. We're going to help you. You'll see - everybody just wants to see you safe and back to your old self. Wait here. I'm going to make a call - it's gonna be okay.	}{	I don't think you know what you're saying. We're going to help you. You'll see - everybody just wants to see you safe and back to your old self. Wait here. I'm going to make a call - it's gonna be okay.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Samantha_Phone = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	But...	}{	But...	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	43	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Shelly? Holy crap! You got big! I'm sorry I flushed you, I thought you were dead.	}{	Shelly? Holy crap! You got big! I'm sorry I flushed you, I thought you were dead.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	Nah, I wasn't dead, I was just asleep.	}{	Nah, I wasn't dead, I was just asleep.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	53	}{	No hard feelings.	}{	No hard feelings.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	So... what's it like to be a turtle?	}{	So... what's it like to be a turtle?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	It's a lot like being a walking house that eats lettuce.	}{	It's a lot like being a walking house that eats lettuce.	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	63	}{	No complaints.	}{	No complaints.	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	64	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Can I give you a hug, Shelly?	}{	Can I give you a hug, Shelly?	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	You probably shouldn't, I'm swarming with salmonella.	}{	You probably shouldn't, I'm swarming with salmonella.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	73	}{	I'd let you, but the other turtles might start talking.	}{	I'd let you, but the other turtles might start talking.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Well, it was nice seeing you again, Shelly. We should get together for the holidays. Call me, okay?	}{	Well, it was nice seeing you again, Shelly. We should get together for the holidays. Call me, okay?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Samantha_Dementated = 1; FindPlayer().ChangeMasqueradeLevel( -1 )	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	I will. Bye bye, Samantha!	}{	I will. Bye bye, Samantha!	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	83	}{	You know I'll be there. Goodbye, Samantha.	}{	You know I'll be there. Goodbye, Samantha.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	What happened? Please, just come with me - we'll get help, whatever the problem. There's a lot of people concerned about you - don't you care?	}{	What happened? Please, just come with me - we'll get help, whatever the problem. There's a lot of people concerned about you - don't you care?	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Forget you saw me. Your life depends on it.	}{	Forget you saw me. Your life depends on it.	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	Leave this face in your past, or face your doom.	}
+{	93	}{	The person you knew is dead. You'll be too, if you tell anyone about me.	}{	The person you knew is dead. You'll be too, if you tell anyone about me.	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am not alive... and what I do to liars can't even be talked about on the news.	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	I don't understand. What happened to you?	}{	I don't understand. What happened to you?	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	G.Samantha_Threat = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	Errgh... enough! It's coming... ARRRGH!	}{	Errgh... enough! It's coming... ARRRGH!	}{	0	}{	Humanity -5	}{	pc.FrenzyTrigger()	}{	}{	}{	}{	}{	}{	}{	I HEAR IT ROARING... it sees you. ARRRGH!	}
+{	103	}{	It's best you don't know. For your own sake. You never saw me. Goodbye.	}{	It's best you don't know. For your own sake. You never saw me. Goodbye.	}{	0	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	Happened to who? Got it? I am gone forever.	}
+{	104	}{	Don't try me, bitch! I'll rip out your larynx if I have to. Keep your mouth shut.	}{	Don't try me, bitch! I'll rip out your larynx if I have to. Keep your mouth shut.	}{	0	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	Don't make me take your tongue with me. Stay in the past.	}
+{	105	}{	Can't take a hint? Now they'll be wondering where YOU went - you're dead, bitch.	}{	Can't take a hint? Now they'll be wondering where YOU went - you're dead, bitch.	}{	0	}{	Humanity 5	}{	npc.SetRelationship("player D_FR 5")	}{	}{	}{	}{	}{	}{	}{	The same thing that is about to happen to you - I died.	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	Come on, this is serious. I know it's you. Don't you recognize me? It's me, it's Samantha! What happened to you?	}{	Come on, this is serious. I know it's you. Don't you recognize me? It's me, it's Samantha! What happened to you?	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Lady, listen, I really don't know who you are. Is this some kind of scam?	}{	Lady, listen, I really don't know who you are. Is this some kind of scam?	}{	121	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hah hah hah... who orchestrated this joke? MASTERFUL!	}
+{	113	}{	Honestly, Samantha, I'm not him. Okay? You understand?	}{	Honestly, Samantha, I'm not her. Okay? You understand?	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	Flee, Samantha, this is not the one you know.	}
+{	114	}{	Samantha, please, you can't tell anyone you saw me.	}{	Samantha, please, you can't tell anyone you saw me.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	Samantha... shh!	}
+{	115	}{	Crazy bitch! Get lost. Like I said, I just moved here.	}{	Crazy bitch! Get lost. Like I said, I just moved here.	}{	121	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am the hello! Can you person direct me nice to the tourist wonderful? So good!	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	But your face, you look exactly the same. It's uncanny.... I can't believe it.	}{	But your face, you look exactly the same. It's uncanny.... I can't believe it.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	Maybe he doesn't want to be found, did you think of that?	}{	Maybe she doesn't want to be found, did you think of that?	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	Playing pretend is no game. You do not want to participate.	}
+{	123	}{	I don't know what to tell you. You mind stepping out of my way?	}{	I don't know what to tell you. You mind stepping out of my way?	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	Looks are but the meatsicle confining the screaming brain.	}
+{	124	}{	Lots of people look the same. Look around. I'm not them.	}{	Lots of people look the same. Look around. I'm not them.	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	Mine is a popular face. I feel so generic.	}
+{	125	}{	I'm his identical twin. I'm sorry to tell you he's fled the country.	}{	I'm her identical twin. I'm sorry to tell you she's fled the country.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	We are twins, but I'm the evil one. Sorry.	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	[Sad]Yeah. Sorry. My mistake.[Starts to sniff, like about to cry]	}{	[Sad]Yeah. Sorry. My mistake.[Starts to sniff, like about to cry]	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	G.Samantha_Persuaded = 1; FindPlayer().ChangeMasqueradeLevel( -1 )	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	133	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	It is you!	}{	It is you!	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	(Auto-Link)	}{	(Auto-Link)	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	143	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	Hey, Jenny... yeah, it's Sam. You'll never believe who I found! You know who disappeared a little while ago? ... Yeah, I couldn't believe it either! He just walked by me in Hollywood - he's right here. Anyhow, something seems wrong and I - and I wondered if you could call a few people and - ... Well, he didn't recognize me at first and I think it might be drugs or something. He needs our help. ... Okay. ... Well maybe we could check him into a hospital or get the police involved. ... Well we can't just leave him like this, he's - ... Alright, call them and I'll - and I'll keep him here. Just let everybody know he's alive and that we're gonna get him some help.	}{	[Telephone conversation]Hey, Jenny... yeah, i-it's Sam. You'll never believe who I found! You know who disappeared a little while ago? ... Yeah, I know, I couldn't believe it either! Just walked by me in Hollywood - she's right here. Anyhow, something seems wrong and I - I wondered if you could call a few people and - ... Well, she didn't recognize me at first and I think it might be drugs or something. She needs our help. ... Okay. ... W-well maybe... maybe we could check her into a hospital or get the police involved. ... Well we can't just leave her like this, she's - ... Alright, call them and I - and I'll keep her here. Just let everybody know she's alive and we're gonna get her some help.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	153	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	154	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	It's gonna be okay.	}{	It's gonna be okay.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	163	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	164	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	173	}{	(Starting Condition)	}{	}{	101	}{	G.Samantha_Threat == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	174	}{	(Starting Condition)	}{	}{	131	}{	G.Samantha_Persuaded == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	175	}{	(Starting Condition)	}{	}{	81	}{	G.Samantha_Dementated == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	(Starting Condition)	}{	}{	31	}{	G.Samantha_Dominated == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	(Starting Condition)	}{	}{	161	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

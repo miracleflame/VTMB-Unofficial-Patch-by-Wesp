@@ -1,0 +1,28 @@
+LightmappedGeneric
+{
+	"$basetexture"	"decals/structural/parkingc"
+	"$translucent" "1"
+	"$decal" "1"
+	"$decalscale" ".25"
+	"$envmap" "envmap/pier"
+	"$envmapmask" "asphalt/asphalta_ref"
+
+	"Proxies"
+	{
+		"GlobalWetness"
+		{
+			"resultVar" "$envmaptint[0]"
+			"scale" 0.6
+		}
+		"GlobalWetness"
+		{
+			"resultVar" "$envmaptint[1]"
+			"scale" 0.6
+		}
+		"GlobalWetness"
+		{
+			"resultVar" "$envmaptint[2]"
+			"scale" 0.6
+		}
+	}
+}

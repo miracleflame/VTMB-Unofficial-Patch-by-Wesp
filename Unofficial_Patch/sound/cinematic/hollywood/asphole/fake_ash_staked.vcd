@@ -1,0 +1,46 @@
+// Choreo version 1
+actor "Hunter"
+{
+ channel "SFX"	// added by wesp
+  {
+    event speak "SFX"
+    {
+      time 6.467000 -1.000000
+      param "impact\physics\metal\hit_hard1.wav"
+      fixedlength
+    }
+  }
+  channel "Anim"
+  {
+    event sequence "fake_ash_staked"
+    {
+      time 0.000000 13.433000
+      param "entire_scene"
+    }
+  }
+  channel "Events"
+  {
+    event firetrigger "stake_impact"
+    {
+      time 6.467000 -1.000000
+      param "1"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+actor "Ash_lookalike"
+{
+  channel "Anim"
+  {
+    event sequence "fake_ash_staked"
+    {
+      time 0.000000 13.433000
+      param "entire_scene"
+    }
+  }
+  bonerename "Bip02" "Bip01"
+}
+
+fps 60
+snap off

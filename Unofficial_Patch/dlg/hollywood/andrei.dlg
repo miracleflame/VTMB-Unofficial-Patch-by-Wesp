@@ -1,0 +1,318 @@
+{	1	}{	Ah. It seems that these final nights have brought us together once again. I see you have begun to embrace the beast within you. I smell the sweetest blood of my brethren upon your very hands. But enough with the pleasantries. Witness the power of my flesh, transformed into the vessel of your destruction. Farewell young cainite.	}{	Ah. It seems that these final nights have brought us together once again. I see you have begun to embrace the beast within you. I smell the sweetest blood of my brethren upon your very hands. But enough with the pleasantries. Witness the power of my flesh, transformed into the vessel of your destruction. Farewell young cainite.	}{	#	}{	}{	G.Andrei_Library = 2; pc.GiveItem("item_w_chang_blade")	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	I know what you are doing in LA. Time to die, Sabbat freak!	}{	I know what you are doing in LA. Time to die, Sabbat freak!	}{	0	}{	G.Player_Sabbat == 0	}{	}{	}{	}{	}{	}{	}{	}{	My mind knows your purpose, Sword of Caine. And soon it will know your death!	}
+{	3	}{	Actually I'm interested in the Sabbat myself. But threatening me can only have one result!	}{	Actually I'm interested in the Sabbat myself. But threatening me can only have one result!	}{	0	}{	G.Player_Sabbat > 0	}{	}{	}{	}{	}{	}{	}{	}{	I want to become Sword of Caine myself, maybe I will take your place!	}
+{	4	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	[sniff, sniff, sniff deeply]What is that... smell?	}{	[sniff, sniff, sniff deeply]What is that... smell?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	[Andrei is from Eastern Europe; it would be great if he could have some creepy hard-to-place accent. He should be strong but creepy, like a dominant male spider making sexual overtures at its prey. He is a master of manipulation, in utter control of the situation at all times (at least, that's what he wants you to believe)]	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	(Auto-Link)	}{	(Auto-Link)	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	Ahh, hello young Cainite. I see your face is not so lifeless, your nerves not so deadened, that you cannot express shock. Tell me childe, is my appearance that frightening, or is it my knowledge of you that is so unnerving?	}{	Ahh, hello young Cainite. I see your face is not so lifeless, your nerves not so deadened, that you cannot express shock. Tell me childe, is my appearance that frightening, or is it my knowledge of you that is so unnerving?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	What the hell is going on in here? This place is a madhouse!	}{	What the hell is going on in here? This place is a madhouse!	}{	21	}{	not IsClan(pc,"Malkavian") and not IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	13	}{	Frightening? Take a look at this grill, buddy.	}{	Frightening? Take a look at this grill, buddy.	}{	211	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	Ah! The Sword of Caine!	}{	Ah! The Sword of Caine!	}{	221	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	Oh, childe of Caine, the sights in this haven pale in comparison to my ancestral estate. Comfort... is a custom, and all of this artifice brings me closer to my home. Do not fear from my furniture, young one.	}{	Oh, childe of Caine, the sights in this haven pale in comparison to my ancestral estate. Comfort... is a custom, and all of this artifice brings me closer to my home. Do not fear from my furniture, young one.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	You're the one who made the tape, aren't you?	}{	You're the one who made the tape, aren't you?	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	You made the terrible tape!	}
+{	23	}{	You know I am quite fascinated by the bloody architecture. In reality it's even better than on the tape!	}{	You know I am quite fascinated by the bloody architecture. In reality it's even better than on the tape!	}{	131	}{	Humanity -5 & G.Patch_Plus == 1	}{	G.Sabbat_Side = G.Sabbat_Side +1	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	Not too much for those of us able to give the gift of metamorphosis, young one. I know you have a cold appreciation for the aesthetic of my creations, I see awe and longing in your eyes.	}{	Not too much for those of us able to give the gift of metamorphosis, young one. I know you have a cold appreciation for the aesthetic of my creations, I see awe and longing in your eyes.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Yeah, you see the longing to kill you!	}{	Yeah, you see the longing to get you killed!	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	Aww, I am longing for you to be dead already... again!	}
+{	33	}{	Good observation! Maybe I should join the Sabbat...	}{	Good observation! Maybe I should join the Sabbat...	}{	141	}{	G.Sabbat_Side >= 2	}{	G.Player_Sabbat = 1	}{	}{	}{	}{	}{	}{	}{	You look through me like I do. Should I join the Sword of Caine?	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Revulsion is instinctual, and instinct is a powerful level to work toward; to evoke it, a glorious accomplishment. Revulsion is a striking color on my palette. I see wonderment in your dead eyes; you long to wield such power as deftly as I.	}{	Revulsion is instinctual, and instinct is a powerful level to work toward; to evoke it, a glorious accomplishment. Revulsion is a striking color on my palette. I see wonderment in your dead eyes; you long to wield such power as deftly as I.	}{	#	}{	Whisper("Gibberish")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	I don't think so, asshole.	}{	I don't think so, asshole.	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	You've misread my motivations, demon.	}
+{	43	}{	You have no idea who I am or what I'm about.	}{	You have no idea who I am or what I'm about.	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	My soul is a dark mirror you cannot fathom.	}
+{	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	Uh, I long to separate your head from your body.	}{	Uh, I long to separate your head from your body.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	I long to lop off your lizardly head.	}
+{	46	}{	Not really!	But what else can you offer?	}{	Not really!	But what else can you offer?	}{	51	}{	Humanity -5 & G.Patch_Plus == 1	}{	G.Sabbat_Side = G.Sabbat_Side +1	}{	}{	}{	}{	}{	}{	}{	What else can you give to us?	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Then perhaps it's your longing to become something more. You've indulged your vampiric nature, reveled in your vampiric prowess, now the Beast inside of you longs to evolve further. That gift is on the tips of my talons to give.	}{	Then perhaps it's your longing to become something more. You've indulged your vampiric nature, reveled in your vampiric prowess, now the Beast inside of you longs to evolve further. That gift is on the tips of my talons to give.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	If it means looking anything like you, forget it.	}{	If it means looking anything like you, forget it.	}{	61	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	I long not to resemble your gory grill.	}
+{	53	}{	Just because you've surrendered to the Beast doesn't mean I will.	}{	Just because you've surrendered to the Beast doesn't mean I will.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	Into you the Beast has sunk his claws deep.	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	I've got a gift for you. It starts with a "D" and ends with an "E-A-T-H".	}{	I've got a gift for you. It starts with a "D" and ends with an "E-A-T-H".	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	The boatman has come to collect his toll, demon! DIE!	}
+{	56	}{	What do you mean by that?	}{	What do you mean by that?	}{	61	}{	Humanity -5 & G.Patch_Plus == 1	}{	G.Sabbat_Side = G.Sabbat_Side +1	}{	}{	}{	}{	}{	}{	}{	What did he say that I did hear?	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Do not fear your nature, childe. Your body is not a dead husk, but a chrysalis of beastly splendor. Embrace it. I can take your body - this passing, mortal machine - and reshape it into an engine of Cainite fury.	}{	Do not fear your nature, childe. Your body is not a dead husk, but a chrysalis of beastly splendor. Embrace it. I can take your body - this passing, mortal machine - and reshape it into an engine of Cainite fury.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	You think I'd actually want to become your servant? Dream on.	}{	You think I'd actually want to become your servant? Dream on.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	My neck will stay leashless, false prophet!	}
+{	63	}{	That sounded like a threat. It's go-time, freak.	}{	That sounded like a threat. It's go-time, freak.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your Final Death.	}
+{	64	}{	I'm not interested in becoming your sculpture, but we might still work together, Sabbat.	}{	I'm not interested in becoming your sculpture, but we might still work together, Sabbat.	}{	141	}{	G.Sabbat_Side >= 2	}{	G.Player_Sabbat = 1	}{	}{	}{	}{	}{	}{	}{	I will stay as I am, but we can still play together, Sword of Caine.	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	[sharp, indignant]You are instantly known to me. I smell your vitae and can imagine the taste of your viscera on my talons. [sniff deeply]Ahhh yes, it's in the blood, strong and balmy. It's not yours to hide, childe.	}{	[sharp, indignant]You are instantly known to me. I smell your vitae and can imagine the taste of your viscera on my talons. [sniff deeply]Ahhh yes, it's in the blood, strong and balmy. It's not yours to hide, childe.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	Whatever. How come every Sabbat I meet is a stark raving lunatic?	}{	Whatever. How come every Sabbat I meet is a stark raving lunatic?	}{	61	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	73	}{	What? I don't even know what you're talking about anymore.	}{	What? I don't even know what you're talking about anymore.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your words have become a bloody bungle.	}
+{	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	Keep your talons to yourself. I'm putting an end to this right now.	}{	You want to taste my viscera on the first date? That's it!	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	Death comes to you on tattered wings! DIE!	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	It is not for me - it's for the will of the Sabbat[Suh-BAHT]! The Camarilla [cam-err-ILL-uh]is stunted; dead and festering in the womb, good only as pawns of the fathers. Even now, they answer the call of the Ancient and seek to free him from his torpor.	}{	It is not for me - it's for the will of the Sabbat[Suh-BAHT]! The Camarilla [cam-err-ILL-uh]is stunted; dead and festering in the womb, good only as pawns of the fathers. Even now, they answer the call of the Ancient and seek to free him from his torpor.	}{	#	}{	}{	G.Andrei_Sabbat = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	The Ancient?	}{	The Ancient?	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ancient?	}
+{	83	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	Blessed creatures; I have broken through their mortal crust and drawn from them their greatest strength: [drawn-out pronunciation]mutability. I coax bone, weave flesh, and lace sinew tight until it strains to lash out!	}{	Blessed creatures; I have broken through their mortal crust and drawn from them their greatest strength: [drawn-out pronunciation]mutability. I coax bone, weave flesh, and lace sinew tight until it strains to lash out!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Where did you get the... raw materials for them?	}{	Where did you get the... raw materials for them?	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	From where come your bloody battalions?	}
+{	93	}{	But they sure are ugly.	}{	But they sure are ugly.	}{	121	}{	}{	}{	}{	}{	}{	}{	}{	}{	Their appearance is appalling.	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	Speaking of lashing out... you're dead, freakshow.	}{	Speaking of lashing out... you're dead, freakshow.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	Death, dark shadows, and your smoking ashes! DIE!	}
+{	99	}{	Amazing! Can I learn that if I join the Sabbat?	}{	Amazing! Can I learn that if I join the Sabbat?	}{	141	}{	G.Sabbat_Side >= 2	}{	G.Player_Sabbat = 1	}{	}{	}{	}{	}{	}{	}{	Will I get this gift when I become Sword of Caine?	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	Illegals, mongrels, half bloods, and Caitiff[KATE-if]; the bane of society, Kindred and kine. They are as of [RM: of as]little consequence to authority as they are to me. It is... a culling, of sorts.	}{	Illegals, mongrels, half bloods, and Caitiff[KATE-if]; the bane of society, Kindred and kine. They are as of [RM: of as]little consequence to authority as they are to me. It is... a culling, of sorts.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	The "machines" you create are brutal, broken, and ugly.	}{	The "machines" you create are brutal, broken, and ugly.	}{	121	}{	}{	}{	}{	}{	}{	}{	}{	}{	These dreadful "machines" are disgusting!	}
+{	103	}{	That's pretty sick. And they're really disgusting.	}{	That's pretty sick. And they're really disgusting.	}{	121	}{	}{	}{	}{	}{	}{	}{	}{	}{	Their appearance is appalling.	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	Nobody will miss them. Looks like I would fit well into the Sabbat!	}{	Nobody will miss them. Looks like I would fit well into the Sabbat!	}{	141	}{	G.Sabbat_Side >= 2	}{	G.Player_Sabbat = 1	}{	}{	}{	}{	}{	}{	}{	They are gone with the wind. I am sharp like the Sword of Caine!	}
+{	110	}{	You're about to be culled, freak. And daddy's gonna be doin' the cullin'.	}{	You're about to be culled, freak. And mama's gonna be doin' the cullin'.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	You shall be reaped in my blood harvest, demon!	}
+{	111	}{	To gouge out the eyes of the Camarilla. The sewers are clogged with my creations. I will kill or drive the Nosferatu from their pestilent nests. Without the sewer rats to guide them, the Camarilla will be blind to the Sabbat's designs.	}{	To gouge out the eyes of the Camarilla. The sewers are clogged with my creations. I will kill or drive the Nosferatu from their pestilent nests. Without the sewer rats to guide them, the Camarilla will be blind to the Sabbat's designs.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Ah! So you're one of those Sabbat assholes. And this is your plan?	}{	Ah! So you're one of those Sabbat assholes. And this is your plan?	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	Did you devise this devilish design?	}
+{	113	}{	The Sabbat, I'm interested in that. Do they do what you tell them?	}{	The Sabbat, I'm interested in that. Do they do what you tell them?	}{	81	}{	Humanity -5 & G.Patch_Plus == 1	}{	G.Sabbat_Side = G.Sabbat_Side +1	}{	}{	}{	}{	}{	}{	}{	I want to learn about the Sword of Caine. Are they following your lead?	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	I'm sorry, but I can't let that happen.	}{	I'm sorry, but I can't let that happen.	}{	141	}{	not IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	This dark design will not come to fruition, false prophet!	}
+{	120	}{	I may be one of those rats, but I'll still kick your ass.	}{	I may be one of those rats, but I'll still kick your ass.	}{	141	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	Perhaps, but they are exquisitely functional. Still, there's an uncanny elegance to even this, my most mercenary of designs.	}{	Perhaps, but they are exquisitely functional. Still, there's an uncanny elegance to even this, my most mercenary of designs.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	To tell you the truth, you're even uglier than they are.	}{	To tell you the truth, you're even uglier than they are.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your wretchedness weighs heavier than theirs.	}
+{	123	}{	It must have been a lot of work to create these "machines".	}{	It must have been a lot of work to create these "machines".	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	Much work to build the "machines", yes?	}
+{	124	}{	Man, you are really deluded. And I've got just what the doctor ordered.	}{	Man, you are really deluded. And I've got just what the doctor ordered.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	I've a permanent cure for your putridness, fiend.	}
+{	125	}{	You are right, they are small but powerful. I like them!	}{	You are right, they are small but powerful. I like them!	}{	31	}{	Humanity -5 & G.Patch_Plus == 1	}{	G.Sabbat_Side = G.Sabbat_Side +1	}{	}{	}{	}{	}{	}{	}{	I like your little animals of terror!	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	[distastefully]Oh yes, the "tape". Merely a test. Certainly not intended to fall into mortal hands. Fortunately, we are in the capital of mortal trickery and illusion. So did the tape drive you to find me? From whence flows your longing, childe?	}{	[distastefully]Oh yes, the "tape". Merely a test. Certainly not intended to fall into mortal hands. Fortunately, we are in the capital of mortal trickery and illusion. So did the tape drive you to find me? From whence flows your longing, childe?	}{	#	}{	}{	G.Andrei_Tape = 1; G.Story_State = 40	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	I'm longing to kick your ass. What the hell is this all about?	}{	I'm longing to kick your ass. What the hell is this all about?	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why do you haunt these hills, childe of Caine?	}
+{	133	}{	I don't know, really. What is going on down here?	}{	I don't know, really. What is going on down here?	}{	111	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	134	}{	I'm rather intrigued by it. Why did you create these creatures?	}{	I'm rather intrigued by it. Why did you create these creatures?	}{	111	}{	Humanity -5 & G.Patch_Plus == 1	}{	G.Sabbat_Side = G.Sabbat_Side +1	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	Now, Camarilla whelp, let me see you fight your nature in the face of those who have embraced their Beast. Deny yourself Caine's gifts, and be torn asunder by my minions!	}{	Now, Camarilla whelp, let me see you fight your nature in the face of those who have embraced their Beast. Deny yourself Caine's gifts, and be torn asunder by my minions!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	You asked for this.	}{	You asked for this.	}{	0	}{	G.Player_Sabbat == 0	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	The angel of death comes swift and furious, fiend!	}
+{	143	}{	Bring it on.	}{	Bring it on.	}{	0	}{	G.Player_Sabbat == 0 and not IsClan(pc,"Malkavian")	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	}
+{	144	}{	Didn't you listen, I want to join you. Or is this some kind of test? If so, go ahead!	}{	Didn't you listen, I want to join you. Or is this some kind of test? If so, go ahead!	}{	0	}{	G.Player_Sabbat == 1	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	Oh, you want to test my power before I can join. I will win!	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	Cursed Tremere blood hangs heavy on the air. Young too, squirming larva of the wretched brood who stole their immortality. Tell me childe, are you scared? Do I frighten you? Is my knowledge of you unnerving?	}{	Cursed Tremere blood hangs heavy on the air. Young too, squirming larva of the wretched brood who stole their immortality. Tell me fledgling, are you scared? Do I frighten you? Is my knowledge of you unnerving?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	What the hell is going on around here? This place is a madhouse!	}{	What the hell is going on around here? This place is a madhouse!	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	153	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	154	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	He slumbers within the Ankaran Sarcophagus; one of the fathers whose return shall hearken the Reckoning. Gehenna [guh-HEN-nuh]is at hand and the Camarilla are unwittingly speeding us all toward our doom.	}{	He slumbers within the Ankaran Sarcophagus; one of the fathers whose return shall hearken the Reckoning. Gehenna [guh-HEN-nuh]is at hand and the Camarilla are unwittingly speeding us all toward our doom.	}{	#	}{	}{	G.Andrei_Ancient = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	Maybe, maybe not. What about these creatures? Did you make them?	}{	Maybe, maybe not. What about these creatures? Did you make them?	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Are these creepy creatures your creations?	}
+{	163	}{	Whatever. You're boring me. Time to die.	}{	Whatever. You're boring me. Time to die.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	The reaper has come for you! I am the reaper.	}
+{	164	}{	That sounds bad! Maybe I can join the Sabbat to prevent this.	}{	That sounds bad! Maybe I can join the Sabbat to prevent this.	}{	141	}{	G.Sabbat_Side >= 2	}{	G.Player_Sabbat = 1	}{	}{	}{	}{	}{	}{	}{	We want to become Sword of Caine to stop this fate!	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	[Still civil and controlled, but barely. Slightly faster and more urgent delivery, through clenched teeth.]I recognized the smell of your blood, young Cainite - very potent, greater than our last meeting. I could smell it, even over the flood of my fallen brethren. Doesn't that make you wonder?	}{	[Still civil and controlled, but barely. Slightly faster and more urgent delivery, through clenched teeth.]I recognized the smell of your blood, young Cainite - very potent, greater than our last meeting. I could smell it, even over the flood of my fallen brethren. Doesn't that make you wonder?	}{	#	}{	}{	G.Clean_Rubble = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	Didn't I kill you already? This time I'll finish the job.	}{	Didn't I kill you already? This time I'll finish the job.	}{	181	}{	G.Player_Sabbat == 0	}{	}{	}{	}{	}{	}{	}{	}{	Again I will extinguish your evil light.	}
+{	173	}{	You won't fool me.	}{	You won't fool me.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	My ears hear not your dark devilry.	}
+{	174	}{	Save it, freak.	}{	Save it, freak.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	You're a hellish Gila monster!	}
+{	175	}{	No, because you knew that I was coming for you.	}{	No, because you knew that I was coming for you.	}{	181	}{	G.Player_Sabbat == 2	}{	}{	}{	}{	}{	}{	}{	}{	You surely remembered seeing me only some bloody killings ago.	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	Greetings.	}{	Greetings.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	It looks as if I was more powerful than all of your creatures in the end. So did I pass that test and can join the Sabbat now?	}{	It looks as if I was more powerful than all of your creatures in the end. So did I pass that test and can join the Sabbat now?	}{	185	}{	}{	}{	}{	}{	}{	}{	}{	}{	Did I win the duel to become Sword of Caine by killing all of your little pet machines?	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	Puppet! The strength of your blood is all that's saved you from yourself. [rage cracking the façade]Wretched weak-minded mongrel! The blood is wasted in you. Wasted!	}{	Puppet! The strength of your blood is all that's saved you from yourself. [rage cracking the façade]Wretched weak-minded mongrel! The blood is wasted in you. Wasted!	}{	#	}{	npc.SetDisposition("Angry", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	Wasted is what you're about to be.	}{	Wasted is what you're about to be.	}{	191	}{	}{	}{	}{	}{	}{	}{	}{	}{	Death has weighed you, and you are found wanting.	}
+{	183	}{	What are you talking about?	}{	What are you talking about?	}{	191	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your words are steeped in your heart's black blood!	}
+{	184	}{	Puppet? For who? LaCroix? Nines Rodriguez?	}{	Puppet? For who? LaCroix? Nines Rodriguez?	}{	191	}{	}{	}{	}{	}{	}{	}{	}{	}{	No one pulls the strings of this puppet.	}
+{	185	}{	Yes.	}{	Yes.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	186	}{	Great!	}{	Great!	}{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	Happy, happy, happy!	}
+{	187	}{	What do you want?	}{	What do you want?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	LaCroix send me to kill you.	}{	LaCroix send me to kill you.	}{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	I came here to kill you for the jester.	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	Miserable ignorant gutterspawn! You are blind! The sarcophagus must be destroyed!	}{	Miserable ignorant gutterspawn! You are blind! The sarcophagus must be destroyed!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	Too bad. Not going to happen.	}{	Too bad. Not going to happen.	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	No. The Dark Father has come!	}
+{	193	}{	What? What do you think is going to happen?	}{	What? What do you think is going to happen?	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	What fear have you of this fable?	}
+{	194	}{	I'm standing right here. Come get some.	}{	I'm standing right here. Come get some.	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hell's gates will welcome you.	}
+{	195	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	What did you say?	}{	What did you say?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	Relax, I will just tell him I did the job.	}{	Relax, I will just tell him I did the job.	}{	205	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will lie to him like I always do to myself. }
+{	199	}{	You heard me, I will do exactly what he ordered.	}{	You heard me, I will do exactly what he ordered.	}{	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	Listen and learn, I will do what he wants.	}
+{	200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	201	}{	I will do it myself if I must! And you - you will be purified. It is the blood that he is speaking through, the blood of all the pawns! It all must be purified!	}{	I will do it myself if I must! And you - you will be purified. It is the blood that he is speaking through, the blood of all the pawns! It all must be purified!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	Wait! What's going to happen if the sarcophagus is opened?	}{	Wait! What's going to happen if the sarcophagus is opened?	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	Inside, a furious fire! The pyre burns! Die, false prophet!	}
+{	203	}{	Finally. Let's do this.	}{	Finally. Let's do this.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	Yours is the path to final sleep.	}
+{	204	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	205	}{	Thank you.	}{	Thank you.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	206	}{	Then I'll kill his Kuei-Jin bitch and hand him to you on a plate!	}{	Then I'll kill his Kuei-Jin bitch and hand him to you on a plate!	}{	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	Later I'll break his mirror mistress and make fun of him for you!	}
+{	207	}{	I cannot help you with that.	}{	I cannot help you with that.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	208	}{	No problem, I'll do it alone.	}{	No problem, I'll do it alone.	}{	215	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will fight on my own.	}
+{	209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	211	}{	Don't be ashamed of your appearance, young one. The Beast in us takes many forms, but all are beautiful in their own way. And this need only be the beginning.	}{	Don't be ashamed of your appearance, young one. The Beast in us takes many forms, but all are beautiful in their own way. And this need only be the beginning.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	You're the one who made the tape, aren't you?	}{	You're the one who made the tape, aren't you?	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	213	}{	The beginning of our future together? So you made the tape.	}{	The beginning of our future together? So you made the tape.	}{	131	}{	Humanity -5 & G.Patch_Plus == 1	}{	G.Sabbat_Side = G.Sabbat_Side +1	}{	}{	}{	}{	}{	}{	}{	}
+{	214	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	215	}{	I am pleased.	}{	I am pleased.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	216	}{	Why are you so taciturn today?	}{	Why are you so taciturn today?	}{	217	}{	}{	}{	}{	}{	}{	}{	}{	}{	Do you have no more lines to say?	}
+{	217	}{	I don't know.	}{	I don't know.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	218	}{	Then let's do it!	}{	Then let's do it!	}{	225	}{	}{	}{	}{	}{	}{	}{	}{	}{	Let us start, NOW!	}
+{	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	221	}{	Ah! You see the truth of things, don't you, childe of Malkav. Blessed with your beastly visions, you are shown that the Sabbat are the only true heirs to the legacy of our dark father.	}{	Ah! You see the truth of things, don't you, childe of Malkav. Blessed with your beastly visions, you are shown that the Sabbat are the only true heirs to the legacy of our dark father.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	No! You cast not his shadow, false prophet!	}{	No! You cast not his shadow, false prophet!	}{	231	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	223	}{	The Dark Father walks among us, with scales in his hand.	}{	The Dark Father walks among us, with scales in his hand.	}{	241	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	224	}{	This might indeed be true. So you made the tape?	}{	This might indeed be true. So you made the tape?	}{	131	}{	Humanity -5 & G.Patch_Plus == 1	}{	G.Sabbat_Side = G.Sabbat_Side +1	}{	}{	}{	}{	}{	}{	}{	}
+{	225	}{	One more thing...	}{	One more thing...	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	226	}{	Yes?	}{	Yes?	}{	227	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	227	}{	Take this.	}{	Take this.	}{	#	}{	}{	pc.GiveItem("item_w_occultblade"); pc.SetQuest("Shangrila",5); G.Player_Sabbat = 3; G.Clean_Rubble = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	228	}{	I'll cut down our enemies with it. }{	I'll cut down our enemies with it. }{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Oh, a magic sword to kill our enemies!	}
+{	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	231	}{	Do not test me, young one. In time you will know the wisdom and power of the Children of Caine. Your flesh shall serve as my instrument of instruction.	}{	Do not test me, young one. In time you will know the wisdom and power of the Children of Caine. Your flesh shall serve as my instrument of instruction.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	It is you who made the terrible tape!	}{	It is you who made the terrible tape!	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	233	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	234	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	235	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	236	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	237	}{	What!?!	}{	What!?!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	238	}{	I changed my mind, after seeing what you did to this girl here!	}{	I changed my mind, after seeing what you did to this girl here!	}{	247	}{	}{	}{	}{	}{	}{	}{	}{	}{	My other self didn't like your behaviour towards the flower on the wall.	}
+{	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	241	}{	Indeed. And I fear not his wrath nor his judgment. Can you say the same, Camarilla pawn? The pathetic schemings of your new prince will not save you all from destruction.	}{	Indeed. And I fear not his wrath nor his judgment. Can you say the same, Camarilla pawn? The pathetic schemings of your new prince will not save you all from destruction.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	It is you who made the terrible tape!	}{	It is you who made the terrible tape!	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	243	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	244	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	245	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	246	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	247	}{	I no longer wish to speak with you.	}{	I no longer wish to speak with you.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	248	}{	Yeah, talking time is over. Time to die, freak!	}{	Yeah, talking time is over. Time to die, freak!	}{	0	}{	}{	G.Player_Sabbat = 2	}{	}{	}{	}{	}{	}{	}{	No more talking. Dying time is here, false prophet!	}
+{	249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	250	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	251	}{	Greetings.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	Yes?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	253	}{	What do you want?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	254	}{	I no longer wish to speak with you.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	255	}{	Yes.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	256	}{	No.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	257	}{	Thank you.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	258	}{	What!?!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	What did you say?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	I don't know.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	I cannot help you with that.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	I am pleased.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	263	}{	One more thing...	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	264	}{	Take this.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	265	}{	I will send you an email.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	268	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	270	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	271	}{	[Call-in Radio Line]Good evening, Deb.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	272	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	273	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	274	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	275	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	276	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	277	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	278	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	281	}{	[Call-in Radio Line][Weird laughter]Do you ever worry, Deb, that the world is going to end?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	283	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	284	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	285	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	286	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	287	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	288	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	291	}{	[Call-in Radio Line][More weird laughter]Do you have any idea how insignificant you are? When they start devouring the world, you will be but a bloodstain on their capes.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	293	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	294	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	295	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	296	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	297	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	298	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	300	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	301	}{	[Call-in Radio Line]There is a red star in the night sky. The blood of mortals and the blood of ages, all will be consumed. They are coming - these are the final nights.[click of the phone being hung up]	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	302	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	303	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	304	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	305	}{	...	}{	...	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	306	}{	What the hell is going on in here? This place is a madhouse!	}{	What the hell is going on in here? This place is a madhouse!}{	21	}{	not IsClan(pc,"Malkavian") and not IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	307	}{	Frightening? Take a look at this grill, buddy.	}{	Frightening? Take a look at this grill, buddy.	}{	211	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	308	}{	Ah! The Sword of Caine!	}{	Ah! The Sword of Caine!	}{	221	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	309	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	310	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	311	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	312	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	313	}{	(Starting Condition)	}{	}{	1	}{	G.Andrei_Library == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	314	}{	(Starting Condition)	}{	}{	177	}{	G.Player_Sabbat == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	315	}{	(Starting Condition)	}{	}{	171	}{	G.Story_State >= 75	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	316	}{	(Starting Condition)	}{	}{	305	}{	G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	317	}{	(Starting Condition)	}{	}{	5	}{	IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	318	}{	(Starting Condition)	}{	}{	11	}{	not IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	}

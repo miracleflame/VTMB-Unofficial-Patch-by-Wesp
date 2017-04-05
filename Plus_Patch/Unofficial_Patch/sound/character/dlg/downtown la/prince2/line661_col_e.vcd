@@ -1,0 +1,115 @@
+// Choreo version 1
+actor "prince2"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time -0.000000 16.693310
+      param "character/dlg/downtown la/prince2/line661_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"	// changed by wesp
+  {
+    event gesture "Lacroix2_Line661_col_E"
+    {
+      time 0.000000 16.666666
+      param "Lacroix2_Line661_col_E"
+    }
+  }
+  channel "Expressions"
+  {
+    event expression "Concern No Deform 01"
+    {
+      time 0.000000 1.386667
+      param "lacroix_expressions"
+      param2 "Concern No Deform"
+      event_ramp
+      {
+        0.2000 0.9766
+        1.1900 0.9742
+      }
+    }
+    event expression "Concern No Deform 02"
+    {
+      time 5.273333 7.460000
+      param "lacroix_expressions"
+      param2 "Concern No Deform"
+      event_ramp
+      {
+        0.2500 0.9555
+        1.9724 0.9344
+      }
+    }
+    event expression "Raised Both 01"
+    {
+      time 4.246667 4.613334
+      param "lacroix_expressions"
+      param2 "Raised Both"
+      event_ramp
+      {
+        0.1143 0.8220
+      }
+    }
+    event expression "Concern No Deform 03"
+    {
+      time 8.760000 12.513334
+      param "lacroix_expressions"
+      param2 "Concern No Deform"
+      event_ramp
+      {
+        0.2571 0.9133
+        3.5081 0.9204
+      }
+    }
+    event expression "Concern No Deform 04"
+    {
+      time 13.226665 14.773332
+      param "lacroix_expressions"
+      param2 "Concern No Deform"
+      event_ramp
+      {
+        0.1714 0.9391
+        1.4143 0.9157
+      }
+    }
+    event expression "Concern No Deform 05"
+    {
+      time 15.073333 16.719999
+      param "lacroix_expressions"
+      param2 "Anger"
+      event_ramp
+      {
+        0.1357 0.6956
+        0.2286 0.7377
+        0.3214 0.7377
+        1.2257 0.7377
+        1.3329 0.7377
+        1.5114 0.6932
+      }
+    }
+  }
+  channel "brows"
+  {
+    event expression "Anger 01"
+    {
+      time 1.206667 5.473334
+      param "lacroix_expressions"
+      param2 "Anger"
+      event_ramp
+      {
+        0.2143 0.9602
+        3.0214 1.0000
+        3.1429 0.4239
+        3.3929 1.0000
+        4.0319 0.9415
+      }
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

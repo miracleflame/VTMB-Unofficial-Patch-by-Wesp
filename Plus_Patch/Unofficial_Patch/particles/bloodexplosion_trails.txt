@@ -1,0 +1,27 @@
+Particle
+{
+	min_frames	"25"
+	frames 		"50"
+	max_frames	"100"
+	sprite		"ash"
+	size		"20,0"
+	Rotate		"0,90,180,270,360"
+	Radius_speed	"10,300(10),50(40)"
+	Z_speed		"0,-300(40)"
+	red		"255"
+	green		"0"	//"255"
+	blue		"0"	//"255"
+	color		"64"	//"400,0(20)"
+	mask		"0,255(20)"
+
+	collide
+	{
+		self
+		{
+			bounce ".5"
+			gravity "300"
+			friction "1"
+		}
+	}
+}
+

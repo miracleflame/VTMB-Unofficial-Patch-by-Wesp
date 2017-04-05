@@ -1,0 +1,24 @@
+{	1	}{	Yes? May I help you?	}{	Yes? May I help you?	}{	#	}{	}{	G.No_Idle = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	I'm on a blood drive.	}{	I'm on a blood drive.	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	Only if you have a straitjacket.	}
+{	3	}{	I could use some sunblock.	}{	I could use some sunblock.	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	Which of my personalities are you asking?	}
+{	4	}{	Uh... I don't think so.	}{	Uh... I don't think so.	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	Fate often answers with silence.	}
+{	5	}{	Hello... I spoke with you on the phone a little while ago.	}{	Hello... I spoke with you on the phone a little while ago.	}{	21	}{	G.Gimble_Phone == 1	}{	}{	}{	}{	}{	}{	}{	}{	Ah! The limb lord!	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	[Click]...	}{	[Click]...	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	G.Gimble_Vandal == 0 and G.Gimble_Leave == 0	}{	G.No_Idle = 0	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	13	}{	Nobody home?	}{	Nobody home?	}{	0	}{	G.Gimble_Vandal == 1 or G.Gimble_Leave == 1	}{	G.Gimble_Open = 1; G.Phone_Call = 1; G.No_Idle = 0	}{	}{	}{	}{	}{	}{	}{	Alone at home...	}
+{	14	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	Oh, right, right. I'll buzz you in.	}{	Oh, right, right. I'll buzz you in.	}{	#	}{	}{	G.Gimble_Open = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	Thanks.	}{	Thanks.	}{	0	}{	}{	G.No_Idle = 0	}{	}{	}{	}{	}{	}{	}{	No two buzzes are the same.	}
+{	23	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	(Starting Condition)	}{	}{	11	}{	G.Gimble_Vandal == 1 or G.Gimble_Leave == 1	}{	G.No_Idle = 1	}{	}{	}{	}{	}{	}{	}{	}

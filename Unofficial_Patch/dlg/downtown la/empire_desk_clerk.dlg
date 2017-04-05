@@ -1,0 +1,73 @@
+{	1	}{	Yes? May I help you?	}{	Yes? May I help you?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	Is there a guest here named Jezebel Locke?	}{	Is there a guest here named Jezebel Locke?	}{	11	}{	G.Hannah_Jezebel == 1	}{	}{	}{	}{	}{	}{	}{	}{	I seek Queen Jezebel!	}
+{	3	}{	Not right now. See ya.	}{	Not right now. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need some gray matter glue. Farewell.	}
+{	4	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	Yes. Miss Locke is one of our more, umm, popular guests. Why do you ask?	}{	Yes. Miss Locke is one of our more, umm, popular guests. Why do you ask?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	I need a key to her room.	}{	I need a key to her room.	}{	21	}{	G.Jezebel_Dead == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need the key to her kingdom.	}
+{	13	}{	Oh, never mind.	}{	Oh, never mind.	}{	0	}{	G.Jezebel_Dead == 1	}{	}{	}{	}{	}{	}{	}{	}{	Sorry, I already forgot.	}
+{	14	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	I can't do that. It's against hotel policy.	}{	I can't do that. It's against hotel policy.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	I'm an old friend of hers, on a surprise visit.	}{	I'm an old friend of hers, on a surprise visit.	}{	31	}{	Persuasion 4 & not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	23	}{	I am the Queen's long-lost blood-brother.	}{	I am the Queen's long-lost blood-sister.	}{	31	}{	Persuasion 4 & IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	But for me you will do it anyway.	}{	But for me you will do it anyway.	}{	31	}{	Presence 2 & (G.Patch_Plus == 1 and IsClan(pc,"Toreador"))	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	Come on, give me a key, and later I'll give you some room service.	}{	Come on, give me a key, and later I'll give you some room service.	}{	31	}{	Seduction 4 & not IsMale(pc)	}{	}{	}{	}{	}{	}{	}{	}{	The Queen's key for me, means special room service for you.	}
+{	26	}{	If you don't give me a key, I'm going to rip out your tongue.	}{	If you don't give me a key, I'm going to rip out your tongue.	}{	31	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	Your choice is the key or your ruptured cranium.	}
+{	27	}{	Give me the key!	}{	Give me the key!	}{	31	}{	Dominate 2 & IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	I am the key master and you will make me a key!	}{	I am the key master and you will make me a key!	}{	31	}{	Dementation 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	Listen, I really need to get into her room.	}{	Listen, I really need to get into her room.	}{	41	}{	IsMale(pc)	}{	}{	}{	}{	}{	}{	}{	}{	Please! I need to find this Queen of Darkness!	}
+{	30	}{	Whatever. See ya.	}{	Whatever. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	31	}{	I see. Well, in that case, perhaps I can make an exception. Here is the key to her suite. Have a nice evening.	}{	I see. Well, in that case, perhaps I can make an exception. Here is the key to her suite. Have a nice evening.	}{	#	}{	}{	pc.AwardExperience("Plague02"); pc.GiveItem("item_k_empire_jezebel_key")	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Thanks. See ya.	}{	Thanks. See ya.	}{	0	}{	}{	G.Clerk_End = 1	}{	}{	}{	}{	}{	}{	}{	Thanks. That Locke shall now open up to me.	}
+{	33	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	I'm sorry, sir. But if I went back to the office and made a key for everyone who told me that, I'd have lost my job a long time ago. Now, unless there's something else, I have work to attend to.	}{	I'm sorry, sir. But if I went back to the office and made a key for everyone who told me that, I'd have lost my job a long time ago. Now, unless there's something else, I have work to attend to.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	Come on, give me a key, and later I'll give you some room service.	}{	Come on, give me a key, and later I'll give you some room service.	}{	31	}{	Seduction 4 & G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	The Queen's key for me, means special room service for you.	}
+{	43	}{	I understand. Have a nice evening.	}{	I understand. Have a nice evening.	}{	0	}{	}{	G.Clerk_End = 1	}{	}{	}{	}{	}{	}{	}{	My shadow will darken other domains. Farewell.	}
+{	44	}{	Whatever. See ya.	}{	Whatever. See ya.	}{	0	}{	not IsClan(pc,"Malkavian")	}{	G.Clerk_End = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	Yo. Attend THIS! Later.	}{	Yo. Attend THIS! Later.	}{	0	}{	not IsClan(pc,"Malkavian")	}{	G.Clerk_End = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Was there something else?	}{	Was there something else?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	No. See ya.	}{	No. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	53	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Huh? Oh my Go- ... Ugghh! Someone call the CDC! It's one of the plague victims! Get away from me!	}{	Huh? Oh my Go- ... Ugghh! Someone call the CDC! It's one of the plague victims! Get away from me!	}{	#	}{	npc.SetDisposition("Disgust", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	63	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	64	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	(Starting Condition)	}{	}{	61	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	73	}{	(Starting Condition)	}{	}{	51	}{	G.Clerk_End == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

@@ -1,0 +1,41 @@
+TerminalDefinition
+{
+	"screen saver"		"Santa Monica Medical Clinic"		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"S.M.M.C. Secure Console"  
+		"line1"		"Health and Safety"
+		"line2"		"Security"
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+	SubDir
+	{
+		"name"			"Camera"
+		"password"		"optometry"
+		"description"		"Camera Controls"
+
+		Function
+		{
+			"name"		"Camera 1"
+			"description"	"Controlled Substances Camera"
+			"runtext"	"Controlled Substances camera disabled. For security purposes, all other cameras have automatically been enabled."
+			"trigger"	"1"
+		}
+
+		Function
+		{
+			"name"		"Camera 2"
+			"description"	"Prescription Camera"
+			"runtext"	"Prescription Storage camera disabled. For security purposes, all other cameras have automatically been enabled."
+			"trigger"	"0"
+		}
+	}
+}

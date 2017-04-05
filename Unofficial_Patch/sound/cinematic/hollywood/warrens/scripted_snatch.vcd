@@ -1,0 +1,59 @@
+// Choreo version 1.0
+
+actor "SpiderchickGuard"
+{
+
+  channel "SewerGuard_fear"
+  {
+    event speak "SFX"
+    {
+      time 3.0 14.0
+      param "character/male/blue_blood/panicrun_loop_alt.wav"
+      fixedlength
+    }
+  }
+
+  channel "tzimisce_wait"
+  {
+    event speak "SFX"
+    {
+      time 3.0 14.0
+      param "character/monster/spiderchick/fidget1.wav"
+      fixedlength
+    }
+  }
+
+  channel "SewerGuard_scream"
+  {
+    event speak "SFX"
+    {
+      time 14.0 15.4
+      param "environmental/people/scream_man2.wav"
+      fixedlength
+    }
+  }
+
+  channel "tzimisce_snatch"
+  {
+    event speak "SFX"
+    {
+      time 14.0 16.0
+      param "character/monster/spiderchick/massive_attack2.wav"
+      fixedlength
+    }
+  }
+
+  channel "SewerGuard_die"
+  {
+    event speak "SFX"
+    {
+      time 15.4 16.0
+      param "surfaces/flesh/bodyfall1.wav"
+      fixedlength
+    }
+  }
+
+}
+
+fps 60
+snap off

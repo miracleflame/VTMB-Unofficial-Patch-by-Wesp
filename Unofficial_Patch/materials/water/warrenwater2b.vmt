@@ -1,0 +1,30 @@
+"LightmappedGeneric"
+{
+	"$baseTexture" "water/cheap_water"
+	"$bumpmap" "dev/water_normal"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.9 .9 .9]"
+	"$envmapcontrast" "1"
+	"$surfaceprop" "water"
+	"$translucent" "1"
+
+	"$bumpframe" "0"
+	"$bumpoffset" "[0 0]"
+	"$scale" "[0.5 0.5]"
+
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$bumpmap"
+			"animatedtextureframenumvar" "$bumpframe"
+			"animatedtextureframerate" "24.00"
+		}
+		"TextureScroll"
+		{
+			"texturescrollvar" "$baseTextureTransform"
+			"texturescrollrate" 0.00
+			"texturescrollangle" 0.00
+		}
+	}
+}

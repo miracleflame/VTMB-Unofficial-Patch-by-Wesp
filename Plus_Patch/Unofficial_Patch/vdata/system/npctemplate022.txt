@@ -1,0 +1,183 @@
+ClanDataTables
+{
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Mandarin"
+			"ParentTemplateName"	""
+			"Name"					"Mandarin"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"M_Body"				"models/character/npc/unique/malkgirl/girl.mdl"
+			"F_Body"				"models/character/npc/unique/malkgirl/girl.mdl"
+			"Gender"				"Male"	// changed by wesp
+			"Kindred"				"0"
+			"SoundGroup"			"Asian"	// changed by wesp
+			"NormalFootfallDist"		"300"
+			"HeavyFootfallDist"		"600"
+			"NormalFootfallVol"		"0.45"
+			"HeavyFootfallVol"		"0.85"
+			"NpcFakeReloadCountMin"		"6.0" // SPAS
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"1"
+			"Stamina"				"4"
+			"Charisma"				"1"
+			"Manipulation"				"1"
+			"Appearance"				"1"
+			"Perception"				"3"
+			"Intelligence"				"1"
+			"Wits"					"5"
+
+			"Max_Health"				"164"
+			"BloodPool"				"6"
+			"FaithPoints"				"15"
+			"Armor_Rating"				"2"
+			"Starting_Equipment"			"NPCGeneric"
+			"Excluded_Equipment"			"Default"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+			"Dodge"					"1"
+			"Firearms"				"2"
+			"Melee"					"2"
+			"Computer"				"9"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+
+		LoiterActivities
+		{
+//			Activity				Frequency
+			"ACT_IDLE"				"1.0"
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"FuSecurity"
+			"ParentTemplateName"	""
+			"Name"					"Fu Security"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"M_Body"				"models/character/npc/unique/malkgirl/girl.mdl"
+			"F_Body"				"models/character/npc/unique/malkgirl/girl.mdl"
+			"Gender"				"Male"	// changed by wesp
+			"Kindred"				"0"
+			"NoBiting"			"1"	// added by wesp
+			"SoundGroup"	""
+			"NormalFootfallDist"		"300"
+			"HeavyFootfallDist"		"600"
+			"NormalFootfallVol"		"0.45"
+			"HeavyFootfallVol"		"0.85"
+			"NpcFakeReloadCountMin"		"6.0" // anaconda
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"1"
+			"Stamina"				"4"
+			"Charisma"				"1"
+			"Manipulation"				"1"
+			"Appearance"				"1"
+			"Perception"				"5"
+			"Intelligence"				"1"
+			"Wits"					"5"
+
+			"Max_Health"				"108"
+			"BloodPool"				"6"
+			"FaithPoints"				"15"
+			"Armor_Rating"				"1"
+			"Starting_Equipment"			"NPCGeneric"
+			"Excluded_Equipment"			"Default"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+			"Dodge"					"1"
+			"Firearms"				"3"
+			"Melee"					"2"
+			"Computers"				"3"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+
+		LoiterActivities
+		{
+//			Activity				Frequency
+			"ACT_IDLE"				"1.0"
+		}
+	}
+}

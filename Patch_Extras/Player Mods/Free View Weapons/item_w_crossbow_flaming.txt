@@ -1,0 +1,294 @@
+// Dragon's Breath, by Lenuska
+
+WeaponData
+{
+	"printname"		"Dragon's Breath"
+	"description"		"In accordance with the Protocol to the Geneva Convention of 1983 the use of phosphorous munitions in populated areas is prohibited. This sawed off shotgun fires them nevertheless."	// changed by wesp
+
+	"viewmodel"		"models/weapons/breath/view/v_dragonbreath.mdl"
+	"playermodel"		"models/weapons/breath/world/w_dragonbreath.mdl"
+	"wieldmodel_f"		"models/weapons/breath/wield/w_f_dragonbreath.mdl"
+	"wieldmodel_m"		"models/weapons/breath/wield/w_m_dragonbreath.mdl"
+	"infomodel"		"models/weapons/breath/info/info_dragonbreath.mdl"
+	// This should match the viewmodel QC file offset:
+
+	"origin_x"		"2"
+	"origin_y"		"10"
+	"origin_z"		"74"
+
+	"anim_prefix"		"m37"
+	"impact_snd_group"	"bullet"
+
+	"activation0"		"Single Pump"
+	"activation1"		"Error"
+	"jammed0"		"Jammed"
+	"jammed1"		"Jammed"
+	"bucket"		"1"
+	"bucket_position"	"8"
+	"camera_class"		"noswitch"	// changed by wesp
+	"weight"		"3"
+	"item_flags"		"0"
+	"item_type"		"weapon_firearm"
+	"reload_single"		"1"	// add in 1 shell at a time
+	"impact_force"		"1000"	// an impulse measured in kg*in/s, changed by wesp
+	"sound_group"	"Shotgun"
+	"uses_accuracycursors"	"1"
+	
+
+	"projectile_velocity"	"1000"				// changed by wesp
+	"projectile_particles"	"crossbow_flame_emitter"	// changed by wesp
+	"fires_projectile"	"1"
+	"projectile_sticks"	"0"
+	"can_stakedmg"		"1"
+
+	"muzzleflash_particle" 		"W_ithaca_m_37_Emitter"		// changed by wesp
+	"muzzlesmoke_particle" 		"Blank_emitter"
+	"viewmuzzleflash_particle" 	"W_ithaca_m_37_View_Emitter"	// changed by wesp
+	"viewmuzzlesmoke_particle" 	"Blank_emitter"
+
+	"item_worth"		"290"	// changed by wesp
+	"player_sell"		"60"	// added by wesp
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"Weapons/Ranged/Put_Away.wav"	// changed by wesp
+		}
+	}
+
+//Weapon Ammo
+	Magazine
+	{
+		"ammoprintname"		"Dragon's Breath phosphoric cartridges"		// changed by wesp
+		"ammodescription"	"Handmade phosphoric shotgun cartridges."	// changed by wesp
+		"ammo_worth"		"4"	// changed by wesp
+		"ammoinfomodel"		"models/weapons/ammo/shotgun/shotgon_shells.mdl"	// changed by wesp
+
+		"Size"			"2"
+		"Default_Size"		"2"	// changed by wesp
+		"Dropped_Ammo"		"2"
+		"Type"			"MediumRound"	// changed by wesp
+		"ReloadTime"		"1.0"
+		
+		SoundData
+		{
+			"reload"
+			{
+				"sound1"	"Weapons/Ranged/Shotgun/Reload.wav"
+			}
+
+			"reload_npc"
+			{
+				"sound1"	"Weapons/Ranged/Shotgun/Reload.wav"
+			}
+		}
+	}
+
+//Primary Attack
+	Activation
+	{
+		"Tag"			"Primary"
+		"Type"			"Attack"
+		"Ammo_Type"		"MediumRound"	// changed by wesp
+		"Ammo_Cost"		"1"
+		"Ammo_Fired"		"16"
+
+		"SkillRequirement"	"6"		// min. skill requirement used in dmg calculations		
+		"BaseLethality"		"20"		// base lethality used in dmg calculations
+		"Dmg"			"4 Aggravated Ranged_Combat DMG_BUCKSHOT"	// changed by wesp
+
+		"Botch_Table"		"Shotguns"
+		"Attack_Rate"		"1.0"
+		"NPC_Attack_Rate_Min"		"2.0"		// The range of times for NPCs using this weapon to pause between
+		"NPC_Attack_Rate_Max"		"3.0"		//   attacks when at a distance of NPC_Attack_Rate_Base_Range inches. 
+		"NPC_Attack_Rate_Base_Range"	"120"	//   Attack times scale down to Attack_Rate at a range of 0, and up
+							//   proportionally as the range increases. If NPC_Attack_Rate_Base_Range
+							//   is 0, the delay will not be scaled based on distance.
+		"Range"			"20"		// changed by wesp
+
+		// SKS_RANGED
+		"KickPitchMin"			"-2.5"
+		"KickPitchMax"			"-27.00"
+		"KickYawMin"				"-5.0"
+		"KickYawMax"			"-3.0"
+		"KickTime"			"1.5"		// "0.04" I don't think this does anything, tbh
+		"CrosshairMinSize"		"23"		// smallest crosshair size for this activation [0-99]
+		"CrosshairFireSize"		"85"		// MAXIMUM size (Firearms 1) of the crosshair when the gun is fired [0-99] scales to Min as player's firearms increases
+		"CrosshairFireSizeMin"		"68"		// MIN size (Firearms 10) of the crosshair when the gun is fired [0-99]
+		"CrosshairWalkSizeMin"	"23"	//"40"		// min size of the crosshair when the player is walking [0-99]
+		"CrosshairWalkSizeMax"	"23"	//"68"		// max size of the crosshair when the player is walking [0-99]
+		"CrosshairRunSizeMin"	"68"			// min size of the crosshair when the player is running [0-99], changed by Wesp
+		"CrosshairRunSizeMax"	"85"			// max size of the crosshair when the player is running [0-99], changed by Wesp
+
+		"CrosshairIncSpeedMin"	"80"	//min speed(10 Firearm Feat) at which to increase bloom -low # slower
+		"CrosshairIncSpeedMax"	"95"	//max speed(1 Firearm Feat) at which to increase bloom -high # faster
+		"CrosshairDecSpeedMin"	"8"	//min speed(1 Firearm Feat) at which to decrease bloom -low # slower
+		"CrosshairDecSpeedMax"	"18"	//"40"max speed(10 Firearm Feat) at which to decrease bloom -high # faster
+
+		"CrosshairFirePercent"	"0.9"			// percent to bloom to crosshair upon firing a bullet
+
+		"MajorKnockbackDist"	"50.0"			// maximum distance to cause major knockback, changed by wesp
+		"MinorKnockbackDist"	"250.0"			// maximum distance to cause minor knockback
+
+		"SpreadAngle"		"5.0"			// changed by Wesp
+		"CriminalLevel"		"3"
+		"Accuracy"		"1"
+
+		SoundData
+		{
+			"empty"
+			{
+				"sound1"	"Weapons/Ranged/Shotgun/Empty.wav"
+			}
+
+			"attack"
+			{
+				"sound1"	"Weapons/Ranged/Shotgun/Attack_1.wav"	// changed by wesp
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Ranged/Shotgun/Attack_1.wav"	// changed by wesp
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Ranged/Put_Away.wav"	// changed by wesp
+			}
+
+			"put_away"
+			{
+				"sound1"	"Weapons/Ranged/Put_Away.wav"
+			}			
+			
+			"fidget"
+			{
+				"sound1"	"Weapons/Ranged/Shotgun/Fidget.wav"
+			}
+		}
+
+		Tables
+		{
+			Table
+			{
+				"Name"          "WeaponRanges"
+				"InternalName"  "WeaponRanges"
+
+				"Clamping"      "1"
+
+				// point blank 0-80, close 80-110, short/medium 110-220,
+				// meduim 220-370, long 370-650, great 650+
+
+				"0"             "1"         // 5 (bonus)
+				"1"             "150"         // 4 (bonus)
+				"2"             "175"         // 3 (bonus)
+				"3"             "200"       // 2 (bonus)
+				"4"             "225"       // 1 (bonus)
+				"5"             "250"       // 0 (neutral)
+				"6"             "288"       //-1 (penalty)
+				"7"             "325"       //-2 (penalty)
+				"8"             "363"     //-3 (penalty)
+				"9"             "400"     //-4 (penalty)
+			}
+			Table
+			{
+				"Name"          "GrossPointBlank"
+				"InternalName"  "GrossPointBlank"
+
+				"Clamping"      "1"
+
+
+				// percentage from 1-12 feet out
+
+				"0"             "90"
+				"1"             "80"
+				"2"             "70"
+				"3"             "60"
+				"4"             "50"
+				"5"             "40"
+				"6"             "30"
+				"7"             "20"
+				"8"             "10"
+				"9"             "5"
+			}
+			
+		}
+	}
+
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/dragons_breath_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/dragons_breath"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/ammo/shotgon_ammo"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo2"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/ammo/shotgon_ammo_SEL"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+
+
+// Disabled because it uses Accuracy Crosshairs
+//		"crosshair"
+//		{
+//			"640"
+//			{
+//				"file"		"crosshairs"
+//				"x"			"0"
+//				"y"			"48"
+//				"width"		"24"
+//				"height"	"24"
+//			}
+
+
+
+		// Accuracy Crosshairs
+		"Acc_Crosshair00"		"hud/Crosshairs/Crosshair_01"
+		"Acc_Crosshair01"		"hud/Crosshairs/Crosshair_02"
+		"Acc_Crosshair02"		"hud/Crosshairs/Crosshair_03"
+		"Acc_Crosshair03"		"hud/Crosshairs/Crosshair_04"
+		"Acc_Crosshair04"		"hud/Crosshairs/Crosshair_05"
+		"Acc_Crosshair05"		"hud/Crosshairs/Crosshair_06"
+		"Acc_Crosshair06"		"hud/Crosshairs/Crosshair_07"
+		"Acc_Crosshair07"		"hud/Crosshairs/Crosshair_08"
+		"Acc_Crosshair08"		"hud/Crosshairs/Crosshair_09"
+		"Acc_Crosshair09"		"hud/Crosshairs/Crosshair_10"
+		"Interactive_Crosshair"	"hud/Crosshairs/Crosshair_Interactive"
+	}
+}

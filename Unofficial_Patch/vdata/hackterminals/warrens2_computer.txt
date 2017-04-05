@@ -1,0 +1,125 @@
+TerminalDefinition
+{
+	"screen saver"		"CEG Electric"	// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"EKG Electric"
+		"line1"		"Control"
+	}
+		SubDir
+		{
+			"name"			"PUMP 118A"
+			"description"		"Pump Control"
+			"difficulty"		"2"
+			"password"		"septic"
+
+			Function
+			{
+				"name"		"Pumps ON"
+				"runtext"	"Pumps powering up."
+				"trigger"	"1"	
+				"dependency"	"G.WarrensPump == 0 and G.PumpTransition == 0"
+			}
+
+			Function
+			{
+				"name"		"Pumps ON"
+				"runtext"	"Pumps already activated."
+				"dependency"	"G.WarrensPump == 1 and G.PumpTransition == 0"
+			}
+
+			Function
+			{
+				"name"		"Pumps ON"
+				"runtext"	"Pumps in transition."
+				"dependency"	"G.PumpTransition == 1"
+			}
+
+			Function
+			{
+				"name"		"Pumps OFF"
+				"runtext"	"Pumps already deactivated."
+				"dependency"	"G.WarrensPump == 0 and G.PumpTransition == 0"
+			}
+
+			Function
+			{
+				"name"		"Pumps OFF"
+				"runtext"	"Shutting down pumps."
+				"trigger"	"2"	
+				"dependency"	"G.WarrensPump == 1 and G.PumpTransition == 0"
+			}
+
+			Function
+			{
+				"name"		"Pumps OFF"
+				"runtext"	"Pumps in transition."
+				"trigger"	"2"	
+				"dependency"	"G.PumpTransition == 1"
+			}
+
+			Function
+			{
+				"name"		"Res Status"
+				"runtext"	"Reservoirs 1 and 2 clear."
+				"dependency"	"G.WarrensPump == 0 and G.PumpTransition == 0"
+			}
+
+			Function
+			{
+				"name"		"Res Status"
+				"runtext"	"Reservoirs 1 and 2 flooded."
+				"trigger"	"2"	
+				"dependency"	"G.WarrensPump == 1 and G.PumpTransition == 0"
+			}
+
+			Function
+			{
+				"name"		"Res Status"
+				"runtext"	"Water cycling in progress."
+				"trigger"	"2"	
+				"dependency"	"G.PumpTransition == 1"
+			}
+
+		}
+		
+		Subdir
+		{
+			"name"			"Electrical"
+			"password"		"tank"
+			"difficulty"		"7"
+			
+			Function
+			{
+				"name"		"Power ON"
+				"runtext"	"Enabling power."
+				"trigger"	"3"	
+				"dependency"	"G.WarrensPower == 0"
+			}
+			
+			Function //changed by wesp
+			{
+				"name"		"Power ON"
+				"runtext"	"Power already activated."
+				"dependency"	"G.WarrensPower == 1"
+			}
+
+			Function
+			{
+				"name"		"Power OFF"
+				"runtext"	"Power already deactivated."
+				"dependency"	"G.WarrensPower == 0"
+			}
+			
+			Function
+			{
+				"name"		"Power OFF"
+				"runtext"	"Shutting down power."
+				"trigger"	"4"	
+				"dependency"	"G.WarrensPower == 1"
+			}
+		}
+}

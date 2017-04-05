@@ -1,0 +1,47 @@
+// Choreo version 1
+actor "Chunk3"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 1.544649
+      param "character/dlg/downtown la/chunk3/line501_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 1.440000 1.550000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 0.230000 0.360000
+      param "0.130"
+    }
+    event loud "Loud"
+    {
+      time 0.420000 0.540000
+      param "0.120"
+    }
+    event loud "Loud"
+    {
+      time 0.820000 0.940000
+      param "0.120"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

@@ -1,0 +1,62 @@
+// Written
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"	"models/w_null.mdl"
+	"infomodel"	"models/items/locket/Info/Info_locket.mdl"
+	"playermodel"	"models/items/locket/Ground/locket.mdl"
+	"wieldmodel_f"	"models/w_null.mdl"
+	"wieldmodel_m"	"models/w_null.mdl"
+	"anim_prefix"	" "
+
+	"printname"	"Antique Locket"
+	"description"	"This locket is old and slightly tarnished. It might be your imagination, but it seems to radiate an unnatural heat."
+
+	"bucket"		"1"
+	"bucket_position"	"2"
+
+	"camera_class"		"noswitch"
+	"weight"		"3"
+	"item_flags"		"1"
+	"item_type"		"generic"
+	"item_worth"		"0"
+	"is_visible_in_hud"		"1"
+	"is_droppable"			"0"
+	"is_wieldable"			"0"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Key/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/locket_sel"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/locket"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

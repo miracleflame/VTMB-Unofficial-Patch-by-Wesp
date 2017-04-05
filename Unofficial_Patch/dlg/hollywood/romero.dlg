@@ -1,0 +1,813 @@
+{	1	}{	Whoa there, slick - might want to think about knocking next time, I damn near blew your head off. Thought you might be a zombie.	}{	Whoa there, sugarpuss - might want to think about knocking next time, I damn near blew your head off. Thought you might be a zombie.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	Why would you think I was a zombie?	}{	Why would you think I was a zombie?	}{	461	}{	not IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	I think my shambling needs work. What makes you say different?	}
+{	3	}{	Why would you think I was a zombie?	}{	Why would you think I was a zombie?	}{	431	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	Who are you?	}{	Who are you?	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	How do I address you, confused one?	}
+{	5	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	13	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	Name's Romero... I'm the caretaker here. Well, that is, I don't exactly keep people from getting in, although that is part of my job. No, you see, I'm here to make sure nothing gets out.	}{	Name's Romero... I'm the caretaker here. Well, that is, I don't exactly keep people from getting in, although that is part of my job. No, you see, I'm here to make sure nothing gets out.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	What do you mean?	}{	What do you mean?	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	Really? I'm in charge of making sure the stars don't go anywhere. Stay! Good star.	}
+{	23	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	33	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	I love my job, what can I say? By the way...	}{	I love my job, what can I say? By the way...	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	(Auto-Link)	}{	(Auto-Link)	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	43	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	See it's like this: every night 'round this time for the past... oh, several months now, the dead've been getting up with an itch to stroll down Hollywood Boulevard. Nobody knows why, but they're working on it.	}{	See it's like this: every night 'round this time for the past... oh, several months now, the dead've been getting up with an itch to stroll down Hollywood Boulevard. Nobody knows why, but they're working on it.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	(Auto-Link)	}{	(Auto-Link)	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	53	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Till they figure it out, they needed a volunteer to patch the problem and I stepped forward. Problem temporarily solved, the baron's happy, I get to shoot zombies and guarantee I get my blood for another month. I've carved out a nice niche here.	}{	Till they figure it out, they needed a volunteer to patch the problem and I stepped forward. Problem temporarily solved, the baron's happy, I get to shoot zombies and guarantee I get my blood for another month. I've carved out a nice niche here.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	So, all you do is shoot zombies?	}{	So, all you do is shoot zombies?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	The dead taste your lead?	}
+{	63	}{	Sounds like fun.	}{	Sounds like fun.	}{	91	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	Ooh... fun.	}
+{	64	}{	What's causing the zombies to rise?	}{	What's causing the zombies to rise?	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why don't the dead sleep?	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Shoot them, blow them away, frag them - whatever the situation calls for. Sometimes I throw in chopping and dicing just to mix it up.	}{	Shoot them, blow them away, frag them - whatever the situation calls for. Sometimes I throw in chopping and dicing just to mix it up.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Romero_Shootin = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	What's causing the zombies to rise?	}{	What's causing the zombies to rise?	}{	81	}{	G.Romero_Rise == 0	}{	}{	}{	}{	}{	}{	}{	}{	Why don't the dead sleep?	}
+{	73	}{	Sounds like fun.	}{	Sounds like fun.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ooh... fun.	}
+{	74	}{	Well, enjoy. Goodbye.	}{	Well, enjoy. Goodbye.	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	The prejudice against the undead is strong here, so I am gone.	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Who knows? Vampire necro-hoodoo, toxic waste, solar radiation - the important part is: they continue to rise up, and I get to put 'em down. Everybody's a winner.	}{	Who knows? Vampire necro-hoodoo, toxic waste, solar radiation - the important part is: they continue to rise up, and I get to put 'em down. Everybody's a winner.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Romero_Rise = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	All you do here is shoot zombies?	}{	All you do here is shoot zombies?	}{	71	}{	G.Romero_Shootin == 0 and G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	The dead taste your lead?	}
+{	83	}{	Sounds like fun.	}{	Sounds like fun.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ooh... fun.	}
+{	84	}{	Enjoy. Goodbye.	}{	Enjoy. Goodbye.	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	The prejudice against the undead is strong here, so I am gone.	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	You're telling me. Far as I know I'm the only person around Hollywood who considers marksmanship an art. A lot of the stiffs around here used to be asshole celebrities too. Bonus.	}{	You're telling me. Far as I know I'm the only person around Hollywood who considers marksmanship an art. A lot of the stiffs around here used to be asshole celebrities too. Bonus.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	(Auto-Link)	}{	(Auto-Link)	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	93	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	Hey - you wouldn't be interested in watching the place while I go handle some business, would you? I'm not supposed to leave or it might end up in a zombie holocaust or something. Like one time, these goths snuck in... wooh, wasn't pretty.	}{	Hey - you wouldn't be interested in watching the place while I go handle some business, would you? I'm not supposed to leave or it might end up in a zombie holocaust or something. Like one time, these goths snuck in... wooh, wasn't pretty.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	G.Romero_Offer = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	What do I have to do?	}{	What do I have to do?	}{	141	}{	pc.IsMale()	}{	}{	}{	}{	}{	}{	}{	}{	How do I stop the zombie hordes?	}
+{	103	}{	What do I have to do?	}{	What do I have to do?	}{	141	}{	Appearance -2 & not pc.IsMale()	}{	}{	}{	}{	}{	}{	}{	}{	How do I stop the zombie hordes?	}
+{	104	}{	What do I have to do?	}{	What do I have to do?	}{	131	}{	Appearance 2 & not pc.IsMale()	}{	}{	}{	}{	}{	}{	}{	}{	How do I stop the zombie hordes?	}
+{	105	}{	What's in it for me?	}{	What's in it for me?	}{	121	}{	Humanity -8	}{	}{	}{	}{	}{	}{	}{	}{	What's my motivation?	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	No, sorry not interested.	}{	No, sorry not interested.	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	No thanks, but for the grace of the blood, there go I.	}
+{	111	}{	Well, if you change your mind, you know where I'll be. Careful not to let anything out as you leave.	}{	Well, if you change your mind, you know where I'll be. Careful not to let anything out as you leave.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	I will. Goodbye.	}{	I will. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	It changes as it stays the same. I am gone.	}
+{	113	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	Let's see... if you can't shoot straight, I can probably fix that. And I've got quite the arsenal - I can probably let one piece go. We'll work something out when I get back.	}{	Let's see... if you can't shoot straight, I can probably fix that. And I've got quite the arsenal - I can probably let one piece go. We'll work something out when I get back.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	What do I have to do?	}{	What do I have to do?	}{	141	}{	pc.IsMale()	}{	}{	}{	}{	}{	}{	}{	}{	How do I stop the zombie hordes?	}
+{	123	}{	What do I have to do?	}{	What do I have to do?	}{	141	}{	Appearance -2 & not pc.IsMale()	}{	}{	}{	}{	}{	}{	}{	}{	How do I stop the zombie hordes?	}
+{	124	}{	What do I have to do?	}{	What do I have to do?	}{	131	}{	Appearance 2 & not pc.IsMale()	}{	}{	}{	}{	}{	}{	}{	}{	How do I stop the zombie hordes?	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	Uh, you know, I know you're technically dead and all, but... goddamn you are one striking looking piece of ass. Where were you when you were still breathing, huh? I don't suppose you'd still be interested in a little, uh -	}{	Uh, you know, I know you're technically dead and all, but... goddamn you are one striking looking piece of ass. Where were you when you were still breathing, huh? I don't suppose you'd still be interested in a little, uh -	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	G.Romero_Crush = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	I can slick my parts with blood as you thrust up against my corpse. Okay?	}{	I can slick my parts with blood as you thrust up against my corpse. Okay?	}{	341	}{	IsClan(pc,"Malkavian")	}{	G.Romero_Crush = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	133	}{	Stick to the subject at hand, Romero.	}{	Stick to the subject at hand, Romero.	}{	511	}{	}{	G.Romero_Crush = 0	}{	}{	}{	}{	}{	}{	}{	I'd rather speak of your other love for the undead.	}
+{	134	}{	Even if I were alive the answer'd still be no. Let's get back on track.	}{	Even if I were alive the answer'd still be no. Let's get back on track.	}{	521	}{	not IsClan(pc,"Malkavian")	}{	G.Romero_Crush = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	I just might, but let's get back to business first.	}{	I just might, but let's get back to business first.	}{	531	}{	}{	}{	}{	}{	}{	}{	}{	}{	Fleshy pleasure? Sounds like a laugh... but fleshy business first.	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	I'll be back in about five minutes. If you should see any zombies in that time, you need to put them down. Now, they're dead, so you're either going to have to hack them up good or shoot 'em in the head. Just don't let them bite you.	}{	I'll be back in about five minutes. If you should see any zombies in that time, you need to put them down. Now, they're dead, so you're either going to have to hack them up good or shoot 'em in the head. Just don't let them bite you.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Romero_Details = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	Why? Do you turn into a zombie if they bite you?	}{	Why? Do you turn into a zombie if they bite you?	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	Does it cause zombie status? I am out of holy water.	}
+{	143	}{	Alright, I'll take over. But you'd better come back in five minutes or I'm leaving.	}{	Alright, I'll take over. But you'd better come back in five minutes or I'm leaving.	}{	541	}{	G.Romero_Crush == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here in ten minutes. Until then, I am you.	}
+{	144	}{	Alright, I'll take over. But you'd better come back in five minutes or I'm leaving.	}{	Alright, I'll take over. But you'd better come back in five minutes or I'm leaving.	}{	161	}{	G.Romero_Crush == 0	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here in five minutes. Until then, I am you.	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	I'm not interested in fighting zombies. Maybe I can help some other way?	}{	I'm not interested in fighting zombies. Maybe I can help some other way?	}{	681	}{	G.Romero_Kidding == 0 and not IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	I have a soft spot for the undead. Something else, perhaps?	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	Naw, it just hurts like a bitch.	}{	Naw, it just hurts like a bitch.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	Alright, I'll take over. But you'd better come back in five minutes or I'm leaving.	}{	Alright, I'll take over. But you'd better come back in five minutes or I'm leaving.	}{	541	}{	G.Romero_Crush == 1	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here in ten minutes. Until then, I am you.	}
+{	153	}{	Alright, I'll take over. But you'd better come back in five minutes or I'm leaving.	}{	Alright, I'll take over. But you'd better come back in five minutes or I'm leaving.	}{	161	}{	G.Romero_Crush == 0	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here in five minutes. Until then, I am you.	}
+{	154	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	I'm not interested in fighting zombies. Maybe I can help some other way?	}{	I'm not interested in fighting zombies. Maybe I can help some other way?	}{	681	}{	G.Romero_Kidding == 0 and not IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	I have a soft spot for the undead. Something else, perhaps?	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	Hold tight. I've got something to take care of. I'll be back. Goodbye.	}{	Hold tight. I've got something to take care of. I'll be back. Goodbye.	}{	0	}{	}{	G.Romero_Quest = 1	}{	}{	}{	}{	}{	}{	}{	Tell the dead to stay put. I am returning.	}
+{	161	}{	Fantastic. Only one rule - nothing gets out. Keep 'em away from the front and back gates. Here, this might come in handy. Back in five.	}{	Fantastic. Only one rule - nothing gets out. Keep 'em away from the front and back gates. Here, this might come in handy. Back in five.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	pc.GiveItem("item_w_remington_m_700"); pc.GiveAmmo("item_w_remington_m_700",10); G.Romero_Quest = 2; pc.SetQuest("Romero",1)	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	Got it. Goodbye.	}{	Got it. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'm crazy, not stupid. You are gone.	}
+{	163	}{	Hurry up. This is so beneath me. Goodbye.	}{	Hurry up. This is so beneath me. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am a creature of infinite power... doing a ghoul's job. Five minutes.	}
+{	164	}{	Take your time, I'm going to enjoy this. Goodbye.	}{	Take your time, I'm going to enjoy this. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Just like a video game... I could play for hours. You are gone.	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	What the hell? I can't get a six-pack without the whole shithouse going up in flames? How do I explain this? What's the opposite of not screwed? That's ME right now.	}{	What the hell? I can't get a six-pack without the whole shithouse going up in flames? How do I explain this? What's the opposite of not screwed? That's ME right now.	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	pc.RemoveItem("item_w_remington_m_700"); G.Romero_Quest = 5	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	Yeah. Sorry about letting them get out. Goodbye.	}{	Yeah. Sorry about letting them get out. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Look at them go! It's like watching old people race.	}
+{	173	}{	Wait, I helped you out, somewhat. How about some gratitude and a reward?	}{	Wait, I helped you out, somewhat. How about some gratitude and a reward?	}{	181	}{	Humanity -8	}{	}{	}{	}{	}{	}{	}{	}{	Where are the fabulous prizes I was promised?	}
+{	174	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	Where are my manners - thanks for letting the rotting animated corpses out to chew on the flesh of the living so I could spend all of my pre-dawn hours cleaning up decaying flesh and half-eaten dolt carcasses. Really, made my night.	}{	Where are my manners - thanks for letting the rotting animated corpses out to chew on the flesh of the living so I could spend all of my pre-dawn hours cleaning up decaying flesh and half-eaten dolt carcasses. Really, made my night.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	I won't ask again... give me something for my time.	}{	I won't ask again... give me something for my time.	}{	191	}{	Intimidate 7	}{	}{	}{	}{	}{	}{	}{	}{	It doesn't have to be shiny but it has to be something. And now.	}
+{	183	}{	I won't ask again... give me something for my time.	}{	I won't ask again... give me something for my time.	}{	201	}{	Intimidate -7	}{	}{	}{	}{	}{	}{	}{	}{	It doesn't have to be shiny but it has to be something. And now.	}
+{	184	}{	Sorry. Goodbye.	}{	Sorry. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Oops. I am gone.	}
+{	185	}{	Have fun with that. Goodbye.	}{	Have fun with that. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You're welcome. I am no longer here.	}
+{	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	Oh, I know when to pick a fight and when to back down, and looking at you - I'm sure the outcome's going to result in a very mangled me, though I might point out though that we're in a public place and, uh, I'm a close acquaintance of Isaac.	}{	Oh, I know when to pick a fight and when to back down, and looking at you - I'm sure the outcome's going to result in a very mangled me, though I might point out though that we're in a public place and, uh, I'm a close acquaintance of Isaac.	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	Point made. Goodbye.	}{	Point made. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	It is a ruse, but it is no joke. I am gone.	}
+{	193	}{	I'm not going to take this from a goddamn ghoul. C'mon.	}{	I'm not going to take this from a goddamn ghoul. C'mon.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Let's even things up. I'm dead, they're dead, hmm... think I see what's to be done.	}
+{	194	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	195	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	201	}{	Walk it off, superstar. I may not have your powers but I can pop a head open at this distance no problem. And don't forget, we're in public and I'm a close acquaintance of Isaac. Now get moving so I can cover your mess.	}{	Walk it off, superstar. I may not have your powers but I can pop a head open at this distance no problem. And don't forget, we're in public and I'm a close acquaintance of Isaac. Now get moving so I can cover your mess.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	Point made. Goodbye.	}{	Point made. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	It is a ruse, but it is no joke. I am gone.	}
+{	203	}{	I'm not going to take this from a goddamn ghoul. C'mon.	}{	I'm not going to take this from a goddamn ghoul. C'mon.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Let's even things up. I'm dead, they're dead, hmm... think I see what's to be done.	}
+{	204	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	205	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	208	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	211	}{	Very nice. The whole time I was getting that six-pack I kept thinking, "I might've made a mistake". Can't believe I missed out on tonight's action. Eh, they'll be back tomorrow night. Hey, let me give you something for the assist.	}{	Very nice. The whole time I was getting that six-pack I kept thinking, "I might've made a mistake". Can't believe I missed out on tonight's action. Eh, they'll be back tomorrow night. Hey, let me give you something for the assist.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	Sure. What've you got?	}{	Sure. What've you got?	}{	241	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ooh... is it scabby?	}
+{	213	}{	Damn right you better.	}{	Damn right you better.	}{	241	}{	}{	}{	}{	}{	}{	}{	}{	}{	That's always the right answer.	}
+{	214	}{	It's not necessary. Goodbye.	}{	It's not necessary. Goodbye.	}{	0	}{	Humanity 6	}{	G.Romero_Quest = 4	}{	}{	}{	}{	}{	}{	}{	I'll just pin it on my karma, thanks. I am gone.	}
+{	215	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	217	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	221	}{	You know, for a hot little number you sure know how to handle the hordes of the undead. I like that in a woman. I like it a lot.	}{	You know, for a hot little number you sure know how to handle the hordes of the undead. I like that in a woman. I like it a lot.	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	pc.SetQuest("Romero",2)	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	Uh, thanks. Can I get something for my troubles so I can get out of here?	}{	Uh, thanks. Can I get something for my troubles so I can get out of here?	}{	241	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll take the consolation prize instead.	}
+{	223	}{	I'm REALLY not interested. I only did this to get something in return.	}{	I'm REALLY not interested. I only did this to get something in return.	}{	241	}{	}{	}{	}{	}{	}{	}{	}{	}{	I like generosity a lot. That, and shrieking in crowds.	}
+{	224	}{	I bet you could show me a thing or two about handling a weapon.	}{	I bet you could show me a thing or two about handling a weapon.	}{	231	}{	Firearms -3 & G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	Let me hold your piece, while you guide my fingers.	}
+{	225	}{	Oh, I can handle a piece. Can I keep the rifle?	}{	Oh, I can handle a piece. Can I keep the rifle?	}{	261	}{	Firearms 3 & G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	My hands are hungry to hold the long gun. Can I keep it?	}
+{	226	}{	I bet you could show me a thing or two about handling a weapon.	}{	I bet you could show me a thing or two about handling a weapon.	}{	231	}{	Firearms -4 & G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	Let me hold your piece, while you guide my fingers.	}
+{	227	}{	Oh, I can handle a piece. Can I keep the rifle?	}{	Oh, I can handle a piece. Can I keep the rifle?	}{	261	}{	Firearms 4 & G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	My hands are hungry to hold the long gun. Can I keep it?	}
+{	228	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	231	}{	If that's what you want to call it. Here, let me see if I can't improve your aim.	}{	If that's what you want to call it. Here, let me see if I can't improve your aim.	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	pc.BumpStat("firearms", 1); G.Romero_Quest = 4	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	(Auto-Link)	}{	(Auto-Link)	}{	251	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	233	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	234	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	235	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	236	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	238	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	241	}{	[To self]Hmm... what've I got to give? I can give you a couple boxes of ammo... or, uh... uh, if you need it, I can try to improve your aim with a gun.	}{	[To self]Hmm... what've I got to give? I can give you a couple boxes of ammo... or, uh... uh, if you need it, I can try to improve your aim with a gun.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	I know how to use a firearm. Mind if I keep the rifle?	}{	I know how to use a firearm. Mind if I keep the rifle?	}{	261	}{	Firearms 3 & G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	Long gun, please.	}
+{	243	}{	I don't need ammo because I can't shoot. Teach me how to use a firearm.	}{	I don't need ammo because I can't shoot. Teach me how to use a firearm.	}{	271	}{	Firearms -3 & G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	Which end do you point at things you want to die?	}
+{	244	}{	I know how to use a firearm. Mind if I keep the rifle?	}{	I know how to use a firearm. Mind if I keep the rifle?	}{	261	}{	Firearms 4 & G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	Long gun, please.	}
+{	245	}{	I don't need ammo because I can't shoot. Teach me how to use a firearm.	}{	I don't need ammo because I can't shoot. Teach me how to use a firearm.	}{	271	}{	Firearms -4 & G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	Which end do you point at things you want to die?	}
+{	246	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	247	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	248	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	250	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	251	}{	There we go. Hope that'll help your aim. And, uh, keep the rifle. It'd be a damn shame if anything were to happen to that tight little body of yours. You keep it in one piece, you hear me?	}{	There we go. Hope that'll help your aim. And, uh, keep the rifle. It'd be a damn shame if anything were to happen to that tight little body of yours. You keep it in one piece, you hear me?	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	G.Romero_Ally = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	253	}{	Will do, Romero.	}{	Will do, Romero.	}{	551	}{	}{	}{	}{	}{	}{	}{	}{	}{	Stay sweet, you smell sour. I am gone.	}
+{	254	}{	Uh, thanks for the lesson. Bye.	}{	Uh, thanks for the lesson. Bye.	}{	551	}{	}{	}{	}{	}{	}{	}{	}{	}{	Whenever I shoot a stranger, I shall think of you. I am no longer here.	}
+{	255	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	256	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	Old Jamie Sue? Personally, I prefer the boomstick, so what the hell, she's all yours.	}{	Old Jamie Sue? Personally, I prefer the boomstick, so what the hell, she's all yours.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.GiveItem("item_w_remington_m_700"); G.Romero_Quest = 4	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	(Auto-Link)	}{	(Auto-Link)	}{	551	}{	G.Romero_Crush == 1 and G.Romero_Whore != 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	263	}{	(Auto-Link)	}{	(Auto-Link)	}{	281	}{	G.Romero_Crush == 0 and G.Romero_Whore != 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	264	}{	(Auto-Link)	}{	(Auto-Link)	}{	651	}{	G.Romero_Whore == 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	265	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	268	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	270	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	271	}{	When you fire, keep your eyes on the target even after you shoot. And, uh, use the sight, that's what it's there for. And style doesn't count for jack if you can't hit anything. Keep that Glock to the side crap in the movies.	}{	When you fire, keep your eyes on the target even after you shoot. And, uh, use the sight, that's what it's there for. And style doesn't count for jack if you can't hit anything. Keep that Glock to the side crap in the movies.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.BumpStat("firearms", 1); G.Romero_Quest = 4	}{	}{	}{	}{	}{	}{	}{	}
+{	272	}{	(Auto-Link)	}{	(Auto-Link)	}{	551	}{	G.Romero_Crush == 1 and G.Romero_Whore != 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	273	}{	(Auto-Link)	}{	(Auto-Link)	}{	281	}{	G.Romero_Crush == 0 and G.Romero_Whore != 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	274	}{	(Auto-Link)	}{	(Auto-Link)	}{	651	}{	G.Romero_Whore == 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	275	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	276	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	277	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	278	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	281	}{	Ah, would you look at the time - million dollar midnight movie's 'bout to start. Tonight's Teen Mummy Meets Hercules Jr. Keep the sun off your face, ace. See ya.	}{	Ah, would you look at the time - million dollar midnight movie's 'bout to start. Tonight's Teen Mummy Meets Hercules Jr. Keep the sun off your face, ace. See ya.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Romero_Return = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	Yeah. Goodbye.	}{	Yeah. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am gone.	}
+{	283	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	284	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	285	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	286	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	287	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	288	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	291	}{	Change your mind?	}{	Change your mind?	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	Yeah. I'll watch the place until you get back.	}{	Yeah. I'll watch the place until you get back.	}{	161	}{	G.Romero_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	Let me at the zombie hordes.	}
+{	293	}{	What do I have to do?	}{	What do I have to do?	}{	141	}{	G.Romero_Offer == 1	}{	}{	}{	}{	}{	}{	}{	}{	How must I fight the zombie hordes?	}
+{	294	}{	No, I've still got a few things to do. Goodbye.	}{	No, I've still got a few things to do. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Huh? Oh, that. I will be here again in the future.	}
+{	295	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	296	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	297	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	298	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	300	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	301	}{	How's that whole bloodsucking thing working out for you?	}{	How's that whole bloodsucking thing working out for you?	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	302	}{	Not bad. How are things in the cemetery?	}{	Not bad. How are things in the cemetery?	}{	321	}{	}{	}{	}{	}{	}{	}{	}{	}{	Sometimes I dream of an amorphous blob under a city. How are you?	}
+{	303	}{	Same old. Goodbye.	}{	Same old. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	SLURRRP. Yeah, like that. I am gone.	}
+{	304	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	305	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	306	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	307	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	308	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	309	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	310	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	311	}{	I knew you'd be back. Couldn't stop thinking about me, could you?	}{	I knew you'd be back. Couldn't stop thinking about me, could you?	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	312	}{	Of course. How's it going?	}{	Of course. How's it going?	}{	321	}{	}{	}{	}{	}{	}{	}{	}{	}{	You and the intentions of the Dark Father. How are you?	}
+{	313	}{	I need for you to give me something this time.	}{	I need for you to give me something this time.	}{	591	}{	G.Romero_Boink == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	314	}{	Yeah, that's it. Well, I have to go. Goodbye.	}{	Yeah, that's it. Well, I have to go. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I think you can do the thinking about you for both of us. I am gone.	}
+{	315	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	316	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	317	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	318	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	319	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	320	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	321	}{	Moon comes up, dead come out, hammer comes down. TV gets, uh, lousy reception. All in all, life's hovering around... swell.	}{	Moon comes up, dead come out, hammer comes down. TV gets, uh, lousy reception. All in all, life's hovering around... swell.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	322	}{	Nice to hear it. Goodbye.	}{	Nice to hear it. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	It's a dream, isn't it. I will leave you in your nirvana.	}
+{	323	}{	Sounds boring. Anything else you may need?	}{	Sounds boring. Anything else you may need?	}{	671	}{	G.Patch_Plus == 1 and G.Romero_Whore != 3 and G.Romero_Boink == 0 and not IsClan(pc,"Nosferatu")	}{	G.Romero_Ally = 0	}{	}{	}{	}{	}{	}{	}{	The same and the same and the same. Need something new?	}
+{	324	}{	Any chance for me to do some zombie killing?	}{	Any chance for me to do some zombie killing?	}{	161	}{	G.Patch_Plus == 1 and G.Romero_Quest <= 1	}{	G.Romero_Hammer = 2	}{	}{	}{	}{	}{	}{	}{	Can I be the hammer?	}
+{	325	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	326	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	327	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	328	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	329	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	330	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	331	}{	Oh, it's you - doorman to the dead.	}{	Oh, it's you - doorman to the dead.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	332	}{	I said I was sorry. Goodbye.	}{	I said I was sorry. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You have no sense of humor. Hah hah hah.... I am gone.	}
+{	333	}{	Just remember who's immortal here. Goodbye.	}{	Just remember who's immortal here. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You forgot to add "almighty undead monster". Remember that.	}
+{	334	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	335	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	336	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	337	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	338	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	339	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	340	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	341	}{	Well, when you put it that way, I'll just pick up a magazine or something.	}{	Well, when you put it that way, I'll just pick up a magazine or something.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	342	}{	How do I battle the zombie hordes?	}{	How do I battle the zombie hordes?	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	How is the epic zombie battle conducted?	}
+{	343	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	344	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	345	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	346	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	347	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	348	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	349	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	350	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	351	}{	Figures they'd come out while I was gone - guess that means they're learning. Give me a hand finishing off the last of them, would you?	}{	Figures they'd come out while I was gone - guess that means they're learning. Give me a hand finishing off the last of them, would you?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.SetQuest("Romero",2); G.Romero_Hammer = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	352	}{	No need, really.	}{	No need, really.	}{	211	}{	}{	}{	}{	}{	}{	}{	}{	}{	We don't need this.	}
+{	353	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	354	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	355	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	356	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	357	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	358	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	359	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	360	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	361	}{	Hi, Deb, this is... [making up a fake name]uh, Viggo.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	362	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	363	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	364	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	365	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	366	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	367	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	368	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	369	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	370	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	371	}{	Um, I'm working the late shift... here at the... uh, Yacht Club.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	372	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	373	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	374	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	375	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	376	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	377	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	378	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	379	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	380	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	381	}{	Two.... Actually three, one is.... in the shop.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	382	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	383	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	384	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	385	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	386	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	387	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	388	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	389	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	390	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	391	}{	Um.... You probably wouldn't know the brand, I, uh.... bought them in Italy.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	392	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	393	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	394	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	395	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	396	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	397	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	398	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	399	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	400	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	401	}{	Um... yes.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	402	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	403	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	404	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	405	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	406	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	407	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	408	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	409	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	410	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	411	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	412	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	413	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	414	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	415	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	416	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	417	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	418	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	419	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	420	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	421	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	422	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	423	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	424	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	425	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	426	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	427	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	428	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	429	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	430	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	431	}{	Look at how you look - why wouldn't I think you're a zombie? [shakes his head]Heh, Nosferatu....	}{	Look at how you look - why wouldn't I think you're a zombie? [shakes his head]Heh, Nosferatu....	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	432	}{	How do you know about the Nosferatu?	}{	How do you know about the Nosferatu?	}{	441	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	433	}{	Who are you?	}{	Who are you?	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	434	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	435	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	436	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	437	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	438	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	439	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	440	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	441	}{	Hey, I'm the baron's own personal ghoul. I know about all of you.	}{	Hey, I'm the baron's own personal ghoul. I know about all of you.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	442	}{	Another damned ghoul? How many of you are there?	}{	Another damned ghoul? How many of you are there?	}{	451	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	443	}{	Do you have a name?	}{	Do you have a name?	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	444	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	445	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	446	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	447	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	448	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	449	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	450	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	451	}{	I'll pretend I didn't hear that. Damned ghoul's dandy and all, but uh...	}{	I'll pretend I didn't hear that. Damned ghoul's dandy and all, but uh...	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	452	}{	(Auto-Link)	}{	(Auto-Link)	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	453	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	454	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	455	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	456	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	457	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	458	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	459	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	460	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	461	}{	Who else would be waltzing in here in the middle of the night?[holds out his hand]	}{	Who else would be waltzing in here in the middle of the night?[holds out his hand]	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	462	}{	(Auto-Link)	}{	(Auto-Link)	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	463	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	464	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	465	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	466	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	467	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	468	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	469	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	470	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	471	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	472	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	473	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	474	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	475	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	476	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	477	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	478	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	479	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	480	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	481	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	482	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	483	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	484	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	485	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	486	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	487	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	488	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	489	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	490	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	491	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	492	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	493	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	494	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	495	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	496	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	497	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	498	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	499	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	500	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	501	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	502	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	503	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	504	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	505	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	506	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	507	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	508	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	509	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	510	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	511	}{	I can try, but... it's not going to be easy with the, uh... twins... in the room. So anyway -	}{	I can try, but... it's not going to be easy with the, uh... twins... in the room. So anyway -	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	512	}{	(Auto-Link)	}{	(Auto-Link)	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	513	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	514	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	515	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	516	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	517	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	518	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	519	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	520	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	521	}{	No, huh? Well, that's what imaginations are for. So, anyway -	}{	No, huh? Well, that's what imaginations are for. So, anyway -	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	522	}{	(Auto-Link)	}{	(Auto-Link)	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	523	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	524	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	525	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	526	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	527	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	528	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	529	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	530	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	531	}{	Business... right. I was thinking I'd head up to the strip and look for a dance partner for the old naughty tango, but uh... you're kind of giving me the hot, uh.... Wanna save me a trip?	}{	Business... right. I was thinking I'd head up to the strip and look for a dance partner for the old naughty tango, but uh... you're kind of giving me the hot, uh.... Wanna save me a trip?	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	532	}{	I don't think so.	}{	I don't think so.	}{	601	}{	}{	G.Romero_Crush = 0	}{	}{	}{	}{	}{	}{	}{	The joining of our flesh is not among my immediate plans.	}
+{	533	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	534	}{	Why don't you go do what you got to and I'll hold the fort?	}{	Why don't you go do what you got to and I'll hold the fort?	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	I want to play with the undead. You go play your fleshy game.	}
+{	535	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	536	}{	Sounds like fun. Let's play.	}{	Sounds like fun. Let's play.	}{	561	}{	}{	G.Romero_Ally = 1	}{	}{	}{	}{	}{	}{	}{	My little ghoul of lust... let our flesh meld.	}
+{	537	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	538	}{	I'll save you the trip. I'll bring someone back for you.	}{	I'll save you the trip. I'll bring someone back for you.	}{	621	}{	Persuasion 4	}{	G.Romero_Crush = 0	}{	}{	}{	}{	}{	}{	}{	The trip is not your future, it is mine.	}
+{	539	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	540	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	541	}{	Fantastic. Only one rule: nothing gets out. Keep 'em away from the front and back gates and that, uh, magic ass of yours. Here, use this. Back in five.	}{	Fantastic. Only one rule: nothing gets out. Keep 'em away from the front and back gates and that, uh, magic ass of yours. Here, use this. Back in five.	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	pc.GiveItem("item_w_remington_m_700"); pc.GiveAmmo("item_w_remington_m_700", 10); G.Romero_Quest = 2; pc.SetQuest("Romero",1)	}{	}{	}{	}{	}{	}{	}{	}
+{	542	}{	Got it. Goodbye.	}{	Got it. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'm crazy, not stupid. You are gone.	}
+{	543	}{	Hurry up. This is so beneath me. Goodbye.	}{	Hurry up. This is so beneath me. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am a creature of infinite power... doing a ghoul's job. Ten minutes.	}
+{	544	}{	Take your time, I'm going to enjoy this. Goodbye.	}{	Take your time, I'm going to enjoy this. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Just like a video game... I could play for hours. You are gone.	}
+{	545	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	546	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	547	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	548	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	549	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	550	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	551	}{	So, uh, cold and HOT, now that that's all taken care of, I'm free for the rest of the night. And you gotta admit, uh, you and I, there's something there. Got ten minutes you want to kill?	}{	So, uh, cold and HOT, now that that's all taken care of, I'm free for the rest of the night. And you gotta admit, uh, you and I, there's something there. Got ten minutes you want to kill?	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	552	}{	Sure, what the hell.	}{	Sure, what the hell.	}{	561	}{	pc.bloodpool > 1	}{	}{	}{	}{	}{	}{	}{	}{	What the hell.	}
+{	553	}{	I do.	}{	I do.	}{	561	}{	pc.bloodpool > 1	}{	}{	}{	}{	}{	}{	}{	}{	Let us kill them together.	}
+{	554	}{	I don't do that sort of thing any more. Sorry.	}{	I don't do that sort of thing any more. Sorry.	}{	581	}{	}{	}{	}{	}{	}{	}{	}{	}{	My body is a cold, dead place.	}
+{	555	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	556	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	557	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	558	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	559	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	560	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	561	}{	Really? I mean... REAL-ly....	}{	Really? I mean... REAL-ly....	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	562	}{	(Auto-Link)	}{	(Auto-Link)	}{	571	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	563	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	564	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	565	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	566	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	567	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	568	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	569	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	570	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	571	}{	Just don't bite it, alright? ... What? I mean my neck.	}{	Just don't bite it, alright? ... What? I mean my neck.	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	G.Romero_Boink = 1; pc.Bloodloss(1)	}{	}{	}{	}{	}{	}{	}{	}
+{	572	}{	I'm not promising anything. Now strip, ghoul.	}{	I'm not promising anything. Now strip, ghoul.	}{	0	}{	G.Romero_Quest != 4	}{	pc.AwardExperience("Pimp01")	}{	}{	}{	}{	}{	}{	}{	Shut up, bow, and worship your mistress. And get some rope.	}
+{	573	}{	I'll be gentle... maybe....	}{	I'll be gentle... maybe....	}{	0	}{	G.Romero_Quest != 4	}{	pc.AwardExperience("Pimp01")	}{	}{	}{	}{	}{	}{	}{	I'll be a soft caress... and a slap across the face.	}
+{	574	}{	I'm not promising anything. Now strip, ghoul.	}{	I'm not promising anything. Now strip, ghoul.	}{	0	}{	G.Romero_Quest == 4	}{	}{	}{	}{	}{	}{	}{	}{	Shut up, bow, and worship your mistress. And get some rope.	}
+{	575	}{	I'll be gentle... maybe....	}{	I'll be gentle... maybe....	}{	0	}{	G.Romero_Quest == 4	}{	}{	}{	}{	}{	}{	}{	}{	I'll be a soft caress... and a slap across the face.	}
+{	576	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	577	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	578	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	579	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	580	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	581	}{	Oh... you married?	}{	Oh... you married?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	582	}{	Look, if you promise to never ask again or tell anyone, I'll do something.	}{	Look, if you promise to never ask again or tell anyone, I'll do something.	}{	561	}{	pc.bloodpool > 1	}{	}{	}{	}{	}{	}{	}{	}{	If you don't open your lips about this, I'll use mine.	}
+{	583	}{	Cute. See you, Romero.	}{	Cute. See you, Romero.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hilarious. Bye bye, ghoul.	}
+{	584	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	585	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	586	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	587	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	588	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	589	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	590	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	591	}{	I like where this is going. What's on your mind?	}{	I like where this is going. What's on your mind?	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	G.Romero_Boink = 3	}{	}{	}{	}{	}{	}{	}{	}
+{	592	}{	Come here, I want to whisper it in your ear.	}{	Come here, I want to whisper it in your ear.	}{	0	}{	}{	G.Seductive_Feed = 1; pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	So many voices... let me ignore them for just a moment.	}
+{	593	}{	Dessert.	}{	Dessert.	}{	0	}{	}{	G.Seductive_Feed = 1; pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	Dessert.	}
+{	594	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	595	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	596	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	597	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	598	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	599	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	600	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	601	}{	Joke... right. I'm gonna go grab a six-pack and maybe a magazine, so, anyway -	}{	Joke. You like a guy with a sense of humor? ... Right. I'm gonna go grab a six-pack and maybe a magazine, so, anyway -	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	G.Romero_Kidding = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	602	}{	(Auto-Link)	}{	(Auto-Link)	}{	141	}{	G.Romero_Quest != 4	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	603	}{	Have fun.	}{	Have fun.	}{	0	}{	G.Romero_Quest == 4	}{	}{	}{	}{	}{	}{	}{	}{	All these little pictures...	}
+{	604	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	605	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	606	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	607	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	608	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	609	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	610	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	611	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	612	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	613	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	614	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	615	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	616	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	617	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	618	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	619	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	620	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	621	}{	Really? You will? Great. I'll just stay here and keep watch. Oh, and uh, FYI I like 'em a little, you know, stacked. 'preciate it.	}{	Really? You will? Great. I'll just stay here and keep watch. Oh, and uh, FYI I like 'em a little, you know, stacked. 'preciate it.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Romero_Whore = 1; pc.SetQuest("Loser",1)	}{	}{	}{	}{	}{	}{	}{	}
+{	622	}{	I'll be back soon.	}{	I'll be back soon.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I have already shed this scene.	}
+{	623	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	624	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	625	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	626	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	627	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	628	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	629	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	630	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	631	}{	I hate to be a pain in the ass but, uh, the pants party's started and no one's passed out the invitations.	}{	I hate to be a pain in the ass but, uh, the pants party's started and no one's passed out the invitations.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	632	}{	I think I'd rather take care of the zombies after all.	}{	I think I'd rather take care of the zombies after all.	}{	701	}{	G.Romero_Whore == 0 and G.Romero_Quest != 4	}{	}{	}{	}{	}{	}{	}{	}{	I have returned to slay the zombie hordes!	}
+{	633	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	634	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	635	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	636	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	637	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	638	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	639	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	640	}{	I'll be back soon.	}{	I'll be back soon.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I have already shed this scene.	}
+{	641	}{	Hey - VERY nice. What can I give you for the assist?	}{	Hey - VERY nice. What can I give you for the assist?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Romero_Whore = 3; pc.SetQuest("Loser",5)	}{	}{	}{	}{	}{	}{	}{	}
+{	642	}{	Money is always nice.	}{	Money is always nice.	}{	661	}{	}{	}{	}{	}{	}{	}{	}{	}{	Currency across my palm.	}
+{	643	}{	I could use a rifle.	}{	I could use a rifle.	}{	261	}{	Firearms 3 & G.Patch_Plus == 0 and G.Romero_Quest != 4	}{	}{	}{	}{	}{	}{	}{	}{	Long gun, please.	}
+{	644	}{	Could you help me improve my skill with firearms?	}{	Could you help me improve my skill with firearms?	}{	271	}{	Firearms -3 & G.Patch_Plus == 0 and G.Romero_Quest != 4	}{	}{	}{	}{	}{	}{	}{	}{	Which end do you point at things you want to die?	}
+{	645	}{	I could use a rifle.	}{	I could use a rifle.	}{	261	}{	Firearms 4 & G.Patch_Plus == 1 and G.Romero_Quest != 4	}{	}{	}{	}{	}{	}{	}{	}{	Long gun, please.	}
+{	646	}{	Could you help me improve my skill with firearms?	}{	Could you help me improve my skill with firearms?	}{	271	}{	Firearms -4 & G.Patch_Plus == 1 and G.Romero_Quest != 4	}{	}{	}{	}{	}{	}{	}{	}{	Which end do you point at things you want to die?	}
+{	647	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	648	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	649	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	650	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	651	}{	Ah, would you look at the time - me and, uh... girl here, got some couchlympics to compete in, so if you don't mind...	}{	Ah, would you look at the time - me and, uh... girl here, got some couchlympics to compete in, so if you don't mind...	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	652	}{	Have fun.	}{	Have fun.	}{	0	}{	}{	endRomero()	}{	}{	}{	}{	}{	}{	}{	My mind was never here.	}
+{	653	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	654	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	655	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	656	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	657	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	658	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	659	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	660	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	661	}{	Sure, here ya go.	}{	Sure, here ya go.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	pc.MoneyAdd( 100 )	}{	}{	}{	}{	}{	}{	}{	}
+{	662	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	663	}{	This seems a bit light... how about a little more?	}{	This seems a bit light... how about a little more?	}{	691	}{	pc.CalcFeat("haggle") == 4	}{	pc.MoneyAdd( 25 )	}{	}{	}{	}{	}{	}{	}{	More money!	}
+{	664	}{	This seems a bit light... how about a little more?	}{	This seems a bit light... how about a little more?	}{	691	}{	pc.CalcFeat("haggle") == 5	}{	pc.MoneyAdd( 50 )	}{	}{	}{	}{	}{	}{	}{	More money!	}
+{	665	}{	This seems a bit light... how about a little more?	}{	This seems a bit light... how about a little more?	}{	691	}{	Haggle 6	}{	pc.MoneyAdd( 75 )	}{	}{	}{	}{	}{	}{	}{	More money!	}
+{	666	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	667	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	668	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	669	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	670	}{	Thanks.	}{	Thanks.	}{	651	}{	}{	}{	}{	}{	}{	}{	}{	}{	Money!	}
+{	671	}{	Sometimes a man needs the kind of release putting a .44 slug through a zombie's brain doesn't provide. C'mon, you're a guy, you understand, right?	}{	Sometimes a man needs the kind of release putting a .44 slug through a zombie's brain doesn't provide. You know... temporary affection.	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	672	}{	I'll save you the trip. I'll bring someone back for you.	}{	I'll save you the trip. I'll bring someone back for you.	}{	621	}{	G.Romero_Quest != 4	}{	}{	}{	}{	}{	}{	}{	}{	The trip is not your future, it is mine.	}
+{	673	}{	I will bring someone back for you.	}{	I will bring someone back for you.	}{	621	}{	G.Romero_Quest == 4	}{	}{	}{	}{	}{	}{	}{	}{	I will catch some prey for you.	}
+{	674	}{	So you are hot again?	}{	So you are hot again?	}{	551	}{	Appearance 2 & G.Romero_Crush == 1	}{	}{	}{	}{	}{	}{	}{	}{	I see you are burning inside!	}
+{	675	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	676	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	677	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	678	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	679	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	680	}{	You're a sad, sad little man.	}{	You're a sad, sad little man.	}{	601	}{	}{	}{	}{	}{	}{	}{	}{	}{	As my stomach churns.	}
+{	681	}{	[A little embarrassed]Well, uh, I dunno... what're you thinking?	}{	[A little embarrassed]Well, uh, I dunno... what're you thinking?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	682	}{	I don't know... what kind of business do you need to take care of?	}{	I don't know... what kind of business do you need to take care of?	}{	671	}{	}{	}{	}{	}{	}{	}{	}{	}{	What business does the non-businessman do?	}
+{	683	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	684	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	685	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	686	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	687	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	688	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	689	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	690	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	691	}{	Huh? Sure. Hey -	}{	Huh? Sure. Hey -	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	692	}{	(Auto-Link)	}{	(Auto-Link)	}{	651	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	693	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	694	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	695	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	696	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	697	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	698	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	699	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	700	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	701	}{	Fish ain't bitin', huh? Yeah, I've been there. Ah, screw it, I'm just gonna go grab a six-pack instead... and maybe a magazine.	}{	Fish ain't bitin', huh? Yeah, I've been there. Ah, screw it, I'm just gonna go grab a six-pack instead... and maybe a magazine.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Romero_Kidding = 1; pc.SetQuest("Loser",3)	}{	}{	}{	}{	}{	}{	}{	}
+{	702	}{	What do I need to do again?	}{	What do I need to do again?	}{	141	}{	G.Romero_Details == 1	}{	}{	}{	}{	}{	}{	}{	}{	Tell me again how to stop the undead hordes.	}
+{	703	}{	What do I need to do?	}{	What do I need to do?	}{	141	}{	G.Romero_Details == 0	}{	}{	}{	}{	}{	}{	}{	}{	How must I stop the undead hordes?	}
+{	704	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	705	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	706	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	707	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	708	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	709	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	710	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	711	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	712	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	713	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	714	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	715	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	716	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	717	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	718	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	719	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	720	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	721	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	722	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	723	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	724	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	725	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	726	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	727	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	728	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	729	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	730	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	731	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	732	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	733	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	734	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	735	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	736	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	737	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	738	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	739	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	740	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	741	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	742	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	743	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	744	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	745	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	746	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	747	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	748	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	749	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	750	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	751	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	752	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	753	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	754	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	755	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	756	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	757	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	758	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	759	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	760	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	761	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	762	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	763	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	764	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	765	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	766	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	767	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	768	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	769	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	770	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	771	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	772	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	773	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	774	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	775	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	776	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	777	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	778	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	779	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	780	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	781	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	782	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	783	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	784	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	785	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	786	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	787	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	788	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	789	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	790	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	791	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	792	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	793	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	794	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	795	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	796	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	797	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	798	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	799	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	800	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	801	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	802	}{	(Starting Condition)	}{	}{	301	}{	G.Romero_Whore == 3 and G.Romero_Hammer < 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	803	}{	(Starting Condition)	}{	}{	641	}{	G.Romero_Whore == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	804	}{	(Starting Condition)	}{	}{	631	}{	G.Romero_Whore == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	805	}{	(Starting Condition)	}{	}{	331	}{	G.Romero_Quest == 5	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	806	}{	(Starting Condition)	}{	}{	171	}{	G.Romero_Fail == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	807	}{	(Starting Condition)	}{	}{	311	}{	G.Romero_Ally == 1 and G.Romero_Quest != 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	808	}{	(Starting Condition)	}{	}{	301	}{	G.Romero_Quest == 4	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	809	}{	(Starting Condition)	}{	}{	221	}{	G.Romero_Quest == 3 and G.Romero_Crush == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	810	}{	(Starting Condition)	}{	}{	351	}{	G.Romero_Quest == 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	811	}{	(Starting Condition)	}{	}{	291	}{	G.Romero_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	812	}{	(Starting Condition)	}{	}{	291	}{	G.Romero_Offer == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	813	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

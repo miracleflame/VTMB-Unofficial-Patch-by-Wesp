@@ -1,0 +1,26 @@
+LightmappedGeneric
+{
+	"$basetexture"	"ground\streetdsan"
+	"$envmap" "env_cubemap"
+	"$envmapmask" "ground\streetdsan_ref"
+	"$surfaceprop" "concrete"
+
+	"Proxies"
+	{
+		"GlobalWetness"
+		{
+			"resultVar"	"$envmaptint[0]"
+			"scale"		 0.6
+		}
+		"GlobalWetness"
+		{
+			"resultVar"	"$envmaptint[1]"
+			"scale"		 0.6
+		}
+		"GlobalWetness"
+		{
+			"resultVar"	"$envmaptint[2]"
+			"scale"		 0.6
+		}
+	}
+}

@@ -1,0 +1,53 @@
+SoundScheme	// added by wesp
+{
+
+	Music
+	{
+		"Filename"	"Music\Dreamscape 2 (Unused).mp3"
+		"Volume"	"40"
+		"NoPause" "0"	// added by wesp
+	}
+
+	Combat
+	{
+		"Filename"	"Music\Dangerous_Places_Combat.mp3"
+		"Volume"	"40"
+		"NoPause" "0"	// added by wesp
+	}
+
+	Ambient
+	{
+		"Filename"	"environmental/Sewers/sewer ambinc no drips.wav"
+		"Volume"	"40"
+	}
+
+	RandomSound
+	{
+		"Filename"	"environmental/animals/rat_Single1.wav"
+		"PitchMin"	"90"	
+		"PitchMax"	"110"
+		"Volume"	"50"
+		"Frequency"	"5"
+		
+		"AudibleRadius"		"1000"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"100"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"500"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"0"		// the sound will be played no higher than these many units above the sound scheme entity
+	}
+
+	RandomSound
+	{
+		"Filename"	"environmental/animals/rat_Single2.wav"
+		"PitchMin"	"90"	
+		"PitchMax"	"110"
+		"Volume"	"50"
+		"Frequency"	"5"
+		
+		"AudibleRadius"		"1000"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"100"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"500"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"0"		// the sound will be played no higher than these many units above the sound scheme entity
+	}
+}

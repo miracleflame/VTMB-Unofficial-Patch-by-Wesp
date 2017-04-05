@@ -1,0 +1,207 @@
+// Tire Iron
+
+WeaponData
+{
+	"printname"		"Baseball Bat"
+	"description"		"Once, the signature crack of this equipment conjured images of America's pastime. Now, it has evolved into the brutal chorus of a thugsong."	// changed by wesp 
+//	"viewmodel"		"models/weapons/baseball_bat/view/v_baseball_bat.mdl"
+//"viewmodel"	""
+"viewmodel"	"models/weapons/w_null.mdl"
+	"playermodel"		"models/weapons/baseball_bat/ground/g_baseball_bat.mdl"
+	"wieldmodel_f"		"models/weapons/baseball_bat/wield/w_f_baseball_bat.mdl"
+	"wieldmodel_m"		"models/weapons/baseball_bat/wield/w_m_baseball_bat.mdl"
+	"infomodel"		"models/weapons/baseball_bat/info/i_baseball_bat.mdl"
+
+
+	"anim_prefix"		"baseballbat"
+
+	"impact_snd_group"	"wood"
+
+	"bucket"		"0"
+	"bucket_position"	"3"
+
+	"camera_class"		"noswitch"	// changed by wesp
+	"weight"		"2"
+	"item_flags"		"0"
+	"item_type"		"weapon_melee"
+	"sound_group"		"Tire_Iron"
+	"knockback_chance"	"0.4"
+
+	"item_worth"		"15"
+
+	// Sounds...
+	SoundData
+	{
+		"swish"
+		{
+			"sound1"	"Weapons/Melee/Baseball_Bat/Swish_1.wav"
+			"sound2"	"Weapons/Melee/Baseball_Bat/Swish_2.wav"
+			"sound3"	"Weapons/Melee/Baseball_Bat/Swish_3.wav"
+		}
+		"pickup"
+		{
+			"sound1"	"Weapons\Melee\Baseball_Bat\Deploy.wav"
+		}
+
+		"stealth_kill_success"
+		{
+			"sound1"	"Weapons/Melee/Baseball_Bat/Stealth_Baseball_Bat.wav"
+		}
+
+		"stealth_kill_failure"
+		{
+			"sound1"	"Weapons/Melee/Fists/Stealth_Kill_Failure.wav"
+		}
+	}
+
+	Activation
+	{
+		"Tag"			"Primary"
+
+		"Type"			"Attack"
+		"Ammo_Type"		"None"
+		"Ammo_Cost"		"0"
+
+		"SkillRequirement"	"2"		// min. skill requirement used in dmg calculations, changed by wesp
+		"BaseLethality"		"8"		// base lethality used in dmg calculations
+		"Dmg"			"2 Bashing Close_Combat_Melee DMG_CLUB"
+
+		"Botch_Table"		"Melee_Weapons"
+		"Attack_Rate"		"1.0"
+		"Range"			"0"
+		"CriminalLevel"		"2"
+
+
+		// Sounds...
+		SoundData
+		{
+			"attack"
+			{
+				"sound1"	"Weapons/Melee/Baseball_Bat/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Baseball_Bat/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Baseball_Bat/Swish_3.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Melee/Baseball_Bat/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Baseball_Bat/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Baseball_Bat/Swish_3.wav"
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Melee/Baseball_Bat/Deploy.wav"
+			}
+			"put_away"
+			{
+				"sound1"	"Weapons/Melee/Baseball_Bat/Put_Away.wav"
+			}
+			"fidget"
+			{
+				"sound1"	"Weapons/Melee/Baseball_Bat/Fidget.wav"
+			}
+		}
+	}
+
+	// DMG_BULLET DMG_SLASH DMG_SUPERCLAWBITE DMG_CLAWBITE DMG_BURN DMG_CLUB DMG_BLAST
+
+	Activation
+	{
+		"Name"		"Secondary"
+		"InternalName"	"Secondary"
+
+		"Type"		"Secondary_Attack"
+		"Ammo_Type"	"None"
+		"Ammo_Cost"	"0"
+
+		"SkillRequirement"	"4"		// min. skill requirement used in dmg calculations
+		"BaseLethality"		"8"		// base lethality used in dmg calculations
+		"Dmg"			"2 Bashing Close_Combat_Melee DMG_CLUB"
+
+		"Botch_Table"	"Melee_Weapons"
+		"Attack_Rate"	"1.0"
+		"Range"		"0"
+		"CriminalLevel"	"2"
+
+		// Sounds...
+		SoundData
+		{
+			"attack"
+			{
+				"sound1"	"Weapons/Melee/Baseball_Bat/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Baseball_Bat/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Baseball_Bat/Swish_3.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Melee/Baseball_Bat/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Baseball_Bat/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Baseball_Bat/Swish_3.wav"
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Melee/Baseball_Bat/Deploy.wav"
+			}
+			"put_away"
+			{
+				"sound1"	"Weapons/Melee/Baseball_Bat/Put_Away.wav"
+			}
+			"fidget"
+			{
+				"sound1"	"Weapons/Melee/Baseball_Bat/Fidget.wav"
+			}
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Melee/Baseball_Bat_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Melee/Baseball_Bat"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"crosshair"
+		{
+			"640"
+			{
+				"file"		"hud/crosshairs/unarmed"
+				"x"			"0"
+				"y"			"0"
+				"width"		"16"
+				"height"	"16"
+			}
+		}
+		"crosshair2"
+		{
+			"640"
+			{
+				"file"		"hud/crosshairs/unarmed_lit"
+				"x"			"0"
+				"y"			"0"
+				"width"		"16"
+				"height"	"16"
+			}
+		}
+	}
+}

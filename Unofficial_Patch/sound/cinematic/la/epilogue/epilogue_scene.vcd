@@ -1,0 +1,184 @@
+// Choreo version 1
+actor "Jack"
+{
+  channel "Anim"
+  {
+    event sequence "epilogue_scene"
+    {
+      time 0.000000 77.333336
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  channel "SFX"
+  {
+    event speak "SFX"
+    {
+      time 0.006667 22.588842
+      param "CINEMATIC\LA\Epilogue\epilogue final stereo.wav"
+      fixedlength
+    }
+  }
+  channel "dlg"
+  {
+    event speak "Jack_941"
+    {
+      time 0.313333 4.781337
+      param "Character\dlg\MAIN CHARACTERS\jack_tutorial\line941_col_e.mp3"
+      fixedlength
+    }
+    event speak "Jack_951"
+    {
+      time 5.153334 9.046644
+      param "Character\dlg\MAIN CHARACTERS\jack_tutorial\line951_col_e.mp3"
+      fixedlength
+    }
+    event speak "Jack_961"
+    {
+      time 9.100000 14.560658
+      param "Character\dlg\MAIN CHARACTERS\jack_tutorial\line961_col_e.mp3"
+      fixedlength
+    }
+    event speak "Jack_971"
+    {
+      time 15.100000 19.100000
+      param "Character\dlg\MAIN CHARACTERS\jack_tutorial\line971_col_e.mp3"
+      fixedlength
+    }
+    event speak "Jack_981"
+    {
+      time 20.100000 24.100000
+      param "Character\dlg\MAIN CHARACTERS\jack_tutorial\line981_col_e.mp3"
+      fixedlength
+    }
+  }
+  channel "Expressions"
+  {
+    event expression "Concern 01"
+    {
+      time 2.766667 4.013334
+      param "smiling_jack_expressions"
+      param2 "Concern"
+      event_ramp
+      {
+        0.1600 0.9624
+        1.1520 0.9484
+      }
+    }
+    event expression "Laugh 01"
+    {
+      time 5.326667 6.313334
+      param "smiling_jack_expressions"
+      param2 "Laugh"
+      event_ramp
+      {
+        0.1800 0.9296
+        0.8927 0.9718
+      }
+    }
+    event expression "Laugh 02"
+    {
+      time 9.013333 10.193334
+      param "smiling_jack_expressions"
+      param2 "Laugh"
+      event_ramp
+      {
+        0.1368 0.9953
+        0.9632 0.9766
+      }
+    }
+    event expression "Laugh 03"
+    {
+      time 11.686667 12.760000
+      param "smiling_jack_expressions"
+      param2 "Laugh"
+      event_ramp
+      {
+        0.1789 0.6323
+        0.2895 0.6323
+        0.7137 0.6323
+        0.8874 0.6323
+      }
+    }
+  }
+  channel "Expressions2"
+  {
+    event expression "Raised Both 01"
+    {
+      time 3.913334 4.620000
+      param "smiling_jack_expressions"
+      param2 "Raised Both"
+      event_ramp
+      {
+        0.1080 0.9484
+        0.4847 0.9507
+      }
+    }
+    event expression "Raised Both 02"
+    {
+      time 10.000000 11.840000
+      param "smiling_jack_expressions"
+      param2 "Raised Both"
+      event_ramp
+      {
+        0.1895 0.6932
+        0.3526 0.6932
+        1.4368 0.6932
+        1.6368 0.6932
+      }
+    }
+    event expression "Sad 01"
+    {
+      time 12.593333 14.460000
+      param "smiling_jack_expressions"
+      param2 "Sad"
+      event_ramp
+      {
+        0.2000 0.9836
+        1.6800 0.9836
+      }
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+
+actor "Mummy"
+{
+  channel "Anim"
+  {
+    event sequence "epilogue_scene"
+    {
+      time 0.000000 77.333336
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  bonerename "Bip02" "Bip01"
+}
+
+actor "Caine"
+{
+  channel "Anim"
+  {
+    event sequence "epilogue_scene"
+    {
+      time 0.000000 77.333336
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  channel "dlg"
+  {
+    event speak "Caine_531"
+    {
+      time 25.653336 35.222565
+      param "Character\dlg\MAIN CHARACTERS\Caine\line531_col_e.mp3"
+      fixedlength
+    }
+  }
+  bonerename "Bip03" "Bip01"
+}
+
+fps 60
+snap off

@@ -1,0 +1,59 @@
+// Written
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	
+	"infomodel"	"models/items/businesscard/Info/info_businesscard.mdl"
+	"playermodel"	"models/items/businesscard/Ground/businesscard.mdl"
+	
+	"anim_prefix"	" "
+
+	"printname"	"Business Card"
+	"description"	"This is a business card for \"Haunted LA\". The name on the card is Simon Milligan. The address listed is Skyeline Apartments, Apt. 1, Downtown Los Angeles, CA"
+
+	"bucket"		"1"
+	"bucket_position"	"2"
+
+	"camera_class"		"noswitch"
+	"is_wieldable"		"0"
+	"weight"		"3"
+	"item_flags"		"1"
+	"item_type"		"powerup"
+	"item_worth"		"0"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Card/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/businesscard_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/businesscard"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

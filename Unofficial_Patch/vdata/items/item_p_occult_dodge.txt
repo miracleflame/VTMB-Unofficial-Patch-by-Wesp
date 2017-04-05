@@ -1,0 +1,62 @@
+// Written
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"			"models/w_null.mdl"
+	"infomodel"		"models/items/occult/info/info_thorn.mdl"
+	"playermodel"		"models/items/occult/ground/thorn.mdl"
+	"wieldmodel_f"		"models/w_null.mdl"
+	"wieldmodel_m"		"models/w_null.mdl"
+	"anim_prefix"		" "
+
+	"printname"			"Weekapaug Thistle"
+	"description"		"This petrified reed was not meant to fall into the hands of the Damned, but vampires can benefit from its shamanistic magick all the same. Increases Defense by one point."
+
+	"weight"			"3"
+	"item_flags"		"1"
+	"item_type"			"powerup"
+	"item_worth"		"50"
+
+	"occult_min"		"2"
+	"occult_power"		"Dodge"
+	"equip_effect"		"Item (Occult Dodge)"
+
+	"is_droppable"			"1"
+	"is_wieldable"		"0"
+
+	SoundData	// added by wesp
+	{
+		"pickup"
+		{
+			"sound1"	"items/Book/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"		"hud/Inventory_Images/General_Items/thorn_sel"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"		"hud/Inventory_Images/General_Items/thorn"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

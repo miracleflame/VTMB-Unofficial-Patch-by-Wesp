@@ -1,0 +1,37 @@
+// Choreo version 1
+actor "Johnny"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 1.254240
+      param "character/dlg/chinatown/johnny/line51_col_f.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 1.040000 1.260000
+      param "0.220"
+    }
+    event loud "Loud"
+    {
+      time 0.420000 0.560000
+      param "0.140"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

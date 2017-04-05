@@ -1,0 +1,56 @@
+TerminalDefinition
+{
+	"screen saver"		"I'll save your screen, NERD!"	// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""		// these surround the command prompt (2 characters), changed by wesp
+	"email_username"	"gwelch"		// printed at the top of the email window, not used for log in. 
+	"email_password"	"riches"	// printed at the top of the email window, not used for log in. 
+
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Skyeline Security"
+		"line1"		"Premium Customer Interface"
+
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+
+
+	
+	SubDir
+	{
+		"name"			"Safe"
+		"description"		"Safe"
+		"password"		"jewels"
+		"difficulty"		"6"
+
+		Function
+		{
+			"name"		"Unlock"
+			"description"	""
+			"runtext"	"Safe Unlocked."
+			"trigger"	"3"
+			"dependency"	"G.Patch_Plus == 1"
+		}
+		Function
+		{
+			"name"		"Unlock"
+			"description"	""
+			"runtext"	"Safe Unlocked."
+			"trigger"	"4"
+			"dependency"	"G.Patch_Plus == 0"
+		}
+		Function
+		{
+			"name"		"Lock"
+			"description"	""
+			"runtext"	"Safe Locked."
+			"trigger"	"5"
+		}
+	}
+}

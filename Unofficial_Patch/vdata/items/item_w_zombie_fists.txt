@@ -1,0 +1,151 @@
+// Fists
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+//	"viewmodel"	"models/weapons/Fists/view/v_fists.mdl"
+//"viewmodel"	""
+"viewmodel"	"models/weapons/w_null.mdl"
+	"infomodel"		"models/items/occult/info/info_amber.mdl"	// changed by wesp
+	"playermodel"		"models/items/occult/ground/amber.mdl"	// changed by wesp
+	"wieldmodel_f"	"models/weapons/w_null.mdl"
+	"wieldmodel_m"	"models/weapons/w_null.mdl"
+	"anim_prefix"		" "
+
+	"impact_snd_group"	"fist"
+
+	"printname"		"Unknown"	// changed by wesp
+	"description"	"Hmm, when you gaze upon this object, the skies darken and lightning flashes. Those aren't good clues to what this is though.
+
+You need a Research skill of at least 4 to use this item."	// added by wesp
+
+	"activation0"	"Attack"
+	"activation1"	""
+
+	"camera_class"		"melee"
+	"bucket"		"0"
+	"bucket_position"	"0"
+
+	"weight"		"3"	// changed by wesp
+	"item_flags"		"1"	// changed by wesp
+	"item_type"		"generic"	// changed by wesp
+	"item_worth"		"50"	// changed by wesp
+
+	"is_visible_in_hud"	"1"
+	"permanent_inventory"	"1"	// added by wesp
+	"is_droppable"		"0"	// changed by wesp
+	"is_wieldable"		"0"	// added by wesp
+
+	"knockback_chance" 	"0.4"
+
+	// Sounds...
+	SoundData
+	{
+		"swish"
+		{
+			"sound1"	"Weapons/Melee/Fists/Swish_1.wav"
+			"sound2"	"Weapons/Melee/Fists/Swish_2.wav"
+			"sound3"	"Weapons/Melee/Fists/Swish_3.wav"
+		}
+
+		"stealth_kill_success"
+		{
+			"sound1"	"Weapons/Melee/Fists/Stealth_Kill_Success.wav"
+		}
+
+		"stealth_kill_failure"
+		{
+			"sound1"	"Weapons/Melee/Fists/Stealth_Kill_Failure.wav"
+		}
+
+		"pickup"	// added by wesp
+		{
+			"sound1"	"items/Book/Pickup.wav"
+		}
+	}
+
+	Activation
+	{
+		"Tag"			"Primary"
+		"Type"			"Attack"
+		"Ammo_Type"		"None"
+		"Ammo_Cost"		"0"
+		"Botch_Table"		"Fists_Claws_Bite"
+		"Attack_Rate"		"0.5"
+		"Range"			"0"
+		"CriminalLevel"		"1"
+
+		"SkillRequirement"	"1"		// min. skill requirement used in dmg calculations
+		"BaseLethality"		"9"		// base lethality used in dmg calculations
+		"Dmg"			"3 Bashing Close_Combat_Brawl DMG_FIST"
+
+		// Sounds...
+		SoundData
+		{
+			"attack"
+			{
+				"sound1"	"Weapons/Melee/Fists/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Fists/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Fists/Swish_3.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Melee/Fists/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Fists/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Fists/Swish_3.wav"
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Melee/Fists/Deploy.wav"
+			}
+			"put_away"
+			{
+				"sound1"	"Weapons/Melee/Fists/Put_Away.wav"
+			}
+			"fidget"
+			{
+				"sound1"	"Weapons/Melee/Fists/Fidget.wav"
+			}
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData	// changed by wesp
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"		"hud/Inventory_Images/General_Items/amber_sel"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"		"hud/Inventory_Images/General_Items/amber"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+//		"crosshair"
+//		{
+//			"640"
+//			{
+//				"file"		"crosshairs"
+//				"x"			"0"
+//				"y"			"48"
+//				"width"		"24"
+//				"height"	"24"
+//			}
+//		}
+	}
+}

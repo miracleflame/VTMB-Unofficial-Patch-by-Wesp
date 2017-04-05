@@ -1,0 +1,188 @@
+// Katana
+
+WeaponData
+{
+	"printname"	"Sheriff Sword"
+	"description"	"You shouldn't have this! But now you do."	// changed by wesp 
+	"item_worth"	"100"
+
+//	"viewmodel"		"models/weapons/katana/view/v_katana.mdl"
+//"viewmodel"	""
+"viewmodel"	"models/weapons/w_null.mdl"
+	"playermodel"	"models/weapons/sheriff_sword/ground/g_sheriff_sword.mdl"	// changed by wesp
+	"wieldmodel_f"	"models/weapons/sheriff_sword/wield/sheriff_sword.mdl"
+	"wieldmodel_m"	"models/weapons/sheriff_sword/wield/sheriff_sword.mdl"
+	"infomodel"	"models/weapons/sheriff_sword/info/i_sheriff_sword.mdl"	// changed by wesp
+	"is_droppable"	"1"
+
+	"anim_prefix"	"sheriff_sword"
+	"impact_snd_group"	"blade"
+
+	"activation0"	"Attack"
+	"activation1"	""
+	"bucket"		"0"
+	"bucket_position"	"6"
+	"camera_class"		"melee"
+	"weight"		"2"
+	"item_flags"	"0"
+	"item_type"		"weapon_melee"
+	"sound_group"	"Katana"
+	"can_stakedmg"	"1"
+
+	// Sounds... 
+	SoundData
+	{
+		"swish"
+		{
+			"sound1"	"Weapons/Melee/Sheriff_Sword/Swish_1.wav"
+			"sound2"	"Weapons/Melee/Sheriff_Sword/Swish_2.wav"
+			"sound3"	"Weapons/Melee/Sheriff_Sword/Swish_3.wav"
+		}
+		"pickup"	// added by wesp 
+		{
+			"sound1"	"Weapons\Melee\Katana\Deploy.wav"
+		}
+		"stealth_kill_success"
+		{
+			"sound1"	"Weapons/Melee/Katana/Stealth_Sword.wav"	// changed by wesp
+		}
+		"stealth_kill_failure"
+		{
+			"sound1"	"Weapons/Melee/Fists/Stealth_Kill_Failure.wav"
+		}
+	}
+
+	Activation
+	{
+		"Tag"			"Primary"
+
+		"Type"		"Attack"
+		"Ammo_Type"		"None"
+		"Ammo_Cost"		"0"
+		"Botch_Table"	"Melee_Weapons"
+		"Attack_Rate"	"1.0"
+		"Range"		"0"
+		"CriminalLevel"	"3"
+
+		"SkillRequirement"	"6"		// min. skill requirement used in dmg calculations
+		"BaseLethality"		"16"		// base lethality used in dmg calculations
+		"Dmg"              "2 Aggravated Close_Combat_Melee DMG_SUPERCLAWBITE"	// changed by wesp
+
+		// Sounds...
+		SoundData
+		{
+			"attack"
+			{
+				"sound1"	"Weapons/Melee/Katana/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Katana/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Katana/Swish_3.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Melee/Katana/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Katana/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Katana/Swish_3.wav"
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Melee/Katana/Deploy.wav"
+			}
+			"put_away"
+			{
+				"sound1"	"Weapons/Melee/Katana/Put_Away.wav"
+			}
+			"fidget"
+			{
+				"sound1"	"Weapons/Melee/Katana/Fidget.wav"
+			}
+		}
+	}
+
+	Activation
+	{
+		"Tag"			"Secondary"
+
+		"Type"		"Secondary_Attack"
+		"Ammo_Type"		"None"
+		"Ammo_Cost"		"0"
+		"Botch_Table"	"Melee_Weapons"
+		"Attack_Rate"	"1.0"
+		"Range"		"0"
+		"CriminalLevel"	"3"
+
+		"SkillRequirement"	"6"		// min. skill requirement used in dmg calculations
+		"BaseLethality"		"16"		// base lethality used in dmg calculations, changed by wesp
+		"Dmg"              "2 Aggravated Close_Combat_Melee DMG_SUPERCLAWBITE"	// changed by wesp
+
+		// Sounds...
+		SoundData
+		{
+			"attack"
+			{
+				"sound1"	"Weapons/Melee/Katana/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Katana/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Katana/Swish_3.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Melee/Katana/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Katana/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Katana/Swish_3.wav"
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Melee/Katana/Deploy.wav"
+			}
+			"put_away"
+			{
+				"sound1"	"Weapons/Melee/Katana/Put_Away.wav"
+			}
+			"fidget"
+			{
+				"sound1"	"Weapons/Melee/Katana/Fidget.wav"
+			}
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Melee/Sheriff_Sword_SEL"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Melee/Sheriff_Sword"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+//		"crosshair"
+//		{
+//			"640"
+//			{
+//				"file"		"crosshairs"
+//				"x"			"0"
+//				"y"			"48"
+//				"width"		"24"
+//				"height"	"24"
+//			}
+//		}
+	}
+}

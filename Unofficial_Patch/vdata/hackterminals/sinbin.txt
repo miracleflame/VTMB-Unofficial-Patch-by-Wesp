@@ -1,0 +1,244 @@
+TerminalDefinition
+{
+	"screen saver"		"The S I N  B I N"	// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"The Sin Bin"
+		"line1"		"Mopped Weekly!"
+
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+
+	SubDir
+	{
+		"name"			"Inventory"
+		"description"		"New Titles, by Distributor"
+
+		Function	// changed by wesp
+		{
+			"name"		"PlayfulRabbit"
+			"runtext"	"Playful Rabbit: Video-Erotica for Couples
+					-Hazy Lens Simulated Copulation 7 -Lukewarm Passion Theatre: The Minister's Wife               -Petticoat Dreams                 -The Dowager's Driver          -Playful Rabbit's Hottest Penisless Sex Scenes Revealed         -How Scandalously Ribald!         -A Collection of Girls Staring Longingly Into Each Others' Eyes, Set To Saxophone"
+		}
+
+		Function	// changed by wesp
+		{
+			"name"		"Beastmastur"
+			"runtext"	"Beastmastur Productions: The Finest in Fresh-Faced Feathered and Furry Frolicking
+					-National Anthropomorphic Explorer: In search of the Wild Madagascar Tree Choad         -Lady Chatterly's Woofer                     -Big Game Humper 4: Furbound         -Global Goose Chase 19: The Wet Hot Waterfowl of the Nile                     -Rooby-Roo in: Rhymes with Ruttspucked                        -Yetifelcher"
+		}
+
+		Function	// changed by wesp
+		{
+			"name"		"J Pron"
+			"runtext"	"J Pron: Hottest Import Features
+					-Schoolgirl Everything              -Platoontang                 -Soiled Train Seats           -Mangalicious Androgyny             -Prove She's Not 18!         -Mechapunani                  -When Tentacle Met Orifice          -The 2004 Enemasters"
+		}
+
+		Function	// changed by wesp
+		{
+			"dependency"	"G.Story_State > 49"
+			"name"		"Manbot"
+			"runtext"	"Manbot: For Man on Robot Action
+					-Busterborg                         -I Dream of Starscream                               -Oilcans                      -Tarnished Taints                   -The Exhaust Pipe"
+		}
+
+	}
+
+
+	SubDir
+	{
+		"name"			"Peepshow"	// changed by wesp
+		"description"		"Peepshow Window Override"
+		"dependency"		"G.Velvet_Quest != 1"
+
+		Function
+		{
+			"name"		"Status"
+			"description"	"SYSTEM READOUT"
+			"runtext"	"Window Control Override.
+					 Software Status: Installed.
+					 Hardware Status: Malfunctioning.
+					 Notes: Handyman coming soon. - FB"
+		}
+
+		Function
+		{
+			"name"		"Lockdown"
+			"description"	"Overriding Window Controls"
+			"runtext"	"Window 1 Unavailable.
+					Window 2 Unavailable.
+					Window 3 Unavailable."
+
+		}
+
+	}
+
+
+	SubDir
+	{
+		"name"			"Peepshow"
+		"password"		"sinner"
+		"description"		"Peepshow Window Override"
+		"dependency"		"G.Velvet_Quest == 1"
+
+		Function
+		{
+			"name"		"Status"
+			"description"	"SYSTEM READOUT"
+			"runtext"	"Window 1: MALFUNCTION. Override unavailable.
+					Window 2: Operational.
+					Window 3: Operational.
+					Notes: Parts on order for window 1. -FB"
+		}
+
+		Function
+		{
+			"name"		"Lockdown"
+			"description"	"Overriding Window Controls"
+			"runtext"	"Window 1 Unavailable.
+					Window 2 LOCKED DOWN.
+					Window 3 LOCKED DOWN."
+			"runscript"	"G.Sinbin_Hackwindow = 1"
+			"trigger"	"0"
+	 		"dependency"	"G.Sinbin_Hackwindow == 0"
+		}
+	
+		Function
+		{
+			"name"		"Unlock"
+			"description"	"Re-enable Coin Feed Window Controls"
+			"runtext"	"Must be reset manually. Call Globomechawindow for assistance."
+	 		"dependency"	"G.Sinbin_Hackwindow == 1"
+
+		}
+	}
+
+	SubDir
+	{
+		"name"			"LogFile"
+		"password"		"sinner"
+		"description"		"Yesterday's Totals"
+		"dependency"		"G.Velvet_Quest == 1"
+
+		Function
+		{
+			"name"		"Chastity"
+			"runtext"	"Chastity's totals
+					-PS  $120
+					"
+		}
+
+		Function
+		{
+			"name"		"Jennifer"
+			"runtext"	"Jen's totals ;-)
+					-CR  $100
+					-CR  $250
+					-CR  $250
+					-CR  $150
+					-CR  $250
+					-CR  $550 (2 customers)
+					-CR  $150
+					"
+		}
+
+
+		Function
+		{
+			"name"		"Kerri"	// changed by wesp
+			"runtext"	"Kerri's totals
+					-PS  $240
+					-CR  $350
+					-CR  $750 (donkey show)
+					-CR  $250
+					-CR  $250
+					-CR  $350
+					-CR  $250
+					"
+		}
+
+	}
+
+	SubDir
+	{
+		"name"			"Log File"
+		"password"		"sinner"
+		"description"		"Yesterday's Totals"
+		"dependency"		"G.Velvet_Quest != 1"
+
+
+
+		Function
+		{
+			"name"		"Chastity"
+			"runtext"	"Chastity's totals
+					-PS  $80
+					"
+		}
+
+		Function
+		{
+			"name"		"Jennifer"
+			"runtext"	"Jen's totals ;-)
+					-CR  $100
+					-CR  $250
+					-CR  $250
+					-CR  $150
+					-CR  $250
+					-CR  $2500 (bachelor party)
+					-CR  $150
+					"
+		}
+
+
+		Function
+		{
+			"name"		"Kerri"
+			"runtext"	"Kerri's totals
+					-PS  $240
+					-CR  $350
+					-CR  $250
+					-CR  $500 
+					-CR  $250
+					"
+		}
+
+	}
+
+	SubDir
+	{
+		"name"			"PRIVATE"
+		"description"		"Flynn's Personal Info: GET OUT!"
+		"password"		"dirtydog"
+		"difficulty"		"4"
+
+		Function
+		{
+			"name"		"DMP"
+			"description"	"DMP Contact Info"
+			"runtext"	"I guess you just pick up the phone down the street and say \"Who walks the night with demons of dread.\"
+Man, that shit is creepy. This is a reminder to myself never to do it. Unless there's some cash in it.
+Well, cash or whores. But that's a given."
+			"runscript"	"gotSecretMessage()"
+			"dependency"	"FindPlayer().GetQuestState(\"Tape\") > 0"
+		}
+
+		Function
+		{
+			"name"		"'Big John' Farmer."
+			"description"	"Big John's Contact Info"
+			"runtext"	"John's finally left the acting side and has begun to produce films. As expected, he's stickin' to the farm stuff. He said to contact him at 1(888)555-0101.
+
+That guy needs help."
+		}
+	}
+}

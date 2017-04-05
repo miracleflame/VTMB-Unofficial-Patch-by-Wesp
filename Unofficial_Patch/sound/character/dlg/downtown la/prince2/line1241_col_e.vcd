@@ -1,0 +1,47 @@
+// Choreo version 1
+actor "Prince2"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 9.113832
+      param "character/dlg/downtown la/prince2/line1241_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 0.690000 0.820000
+      param "0.130"
+    }
+    event silence "Silence"
+    {
+      time 1.620000 2.320000
+      param "0.700"
+    }
+    event loud "Loud"
+    {
+      time 0.050000 0.170000
+      param "0.120"
+    }
+    event loud "Loud"
+    {
+      time 1.170000 1.280000
+      param "0.110"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

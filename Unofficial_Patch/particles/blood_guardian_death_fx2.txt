@@ -1,0 +1,33 @@
+Particle
+{
+	frames 		"60"
+	size		"0"
+	flat		"0"
+	height		"0"
+	width		"0"
+	movealign	"0"
+	elevation_speed	"-100"
+	Radius_speed	"5"
+	theta_speed	"0,30,-30,10,10,0"
+	phi_speed	"30,-30"
+	x_speed		"0"
+	Depth_offset	"0"
+	Rotation 	"0"
+	Parent_Speed	"0"
+
+	red			"300,100"
+	blue		"0"
+	green		"0"
+	color		"155,155(55)"
+
+	mask		"100"
+	sortfront	"0"
+
+	collide 
+	{
+		decal
+		{
+			particle	"blood_guardian_trail2"
+		}
+	}
+}

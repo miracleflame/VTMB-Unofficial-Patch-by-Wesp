@@ -1,0 +1,146 @@
+// Chang Brothers Claws, models and icons by Lenuska
+ 
+WeaponData
+{
+	"printname"	"Tiger's Claws"	// changed by wesp
+	"description"	"These are devious looking metal claws with a wooden handle. They even deal aggravated damage."	// changed by wesp
+
+	"viewmodel"	"models/weapons/w_null.mdl"
+	"playermodel"	"models/weapons/handleclaws/ground/g_handleclaws.mdl"
+	"wieldmodel_f"	"models/weapons/handleclaws/wield/w_f_handleclaws.mdl"
+	"wieldmodel_m"	"models/weapons/handleclaws/wield/w_m_handleclaws.mdl"
+	"infomodel"	"models/weapons/handleclaws/info/i_handleclaws.mdl"
+	"anim_prefix"	""
+
+	"impact_snd_group"	"fist"
+
+	"bucket"		"1"	// changed by Lenuska
+	"bucket_position"	"2"	// changed by Lenuska
+
+	"camera_class"		"melee"
+	"weight"		"10"
+	"item_flags"		"1"
+	"item_type"		"weapon_melee"	// changed by Lenuska
+	"item_worth"		"100"		// changed by wesp
+	"player_sell"		"85"		// changed by wesp
+
+	"is_visible_in_hud"	"1"	// changed by Lenuska
+	"is_droppable"		"1"	// added by Lenuska
+	"is_wieldable"		"1"	// added by Lenuska
+	
+	"knockback_chance" 	"0.1"
+
+	// Sounds...
+	SoundData
+	{
+		"swish"
+		{
+			"sound1"	"Weapons/Melee/Claws/Swish_1.wav"
+			"sound2"	"Weapons/Melee/Claws/Swish_2.wav"
+			"sound3"	"Weapons/Melee/Claws/Swish_3.wav"
+		}
+
+		"pickup"
+		{
+			"sound1"	"Weapons\Melee\Claws\Deploy.wav"
+		}
+
+		"stealth_kill_success"
+		{
+			"sound1"	"Weapons/Melee/Severed_Arm/Stealth_Severed_Arm.wav"
+		}
+
+		"stealth_kill_failure"
+		{
+			"sound1"	"Weapons/Melee/Fists/Stealth_Kill_Failure.wav"
+		}
+	}
+	
+	Activation
+	{
+		"Tag"			"Primary"
+		"Type"			"Attack"
+		"Ammo_Type"		"None"
+		"Ammo_Cost"		"0"
+
+		"SkillRequirement"	"10"		
+		"BaseLethality"		"13"		
+		"Dmg"			"2 Aggravated Close_Combat_Melee DMG_SUPERCLAWBITE"
+
+		"Botch_Table"		"Melee_Weapons"	// changed by Lenuska
+		"Attack_Rate"		"0.5"
+		"Range"			"0"
+		"CriminalLevel"		"3"	// changed by Lenuska
+
+	// Sounds...
+		SoundData
+		{
+			"attack"
+			{
+				"sound1"	"Weapons/Melee/Claws/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Claws/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Claws/Swish_3.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Melee/Claws/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Claws/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Claws/Swish_3.wav"
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Melee/Claws/Deploy.wav"
+			}
+
+			"put_away"
+			{
+				"sound1"	"Weapons/Melee/Claws/Put_Away.wav"
+			}
+
+			"fidget"
+			{
+				"sound1"	"Weapons/Melee/Claws/Fidget.wav"
+			}
+		}
+	}
+
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_melee/handleclaws_sel"	// changed by Lenuska
+				"x"		"0"
+				"y"		"0"
+				"width"		"100"
+				"height"	"64"
+			}
+		}
+
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_melee/handleclaws"	// changed by Lenuska
+				"x"		"0"
+				"y"		"0"
+				"width"		"100"
+				"height"	"64"
+			}
+		}
+//		"crosshair"
+//		{
+//			"640"
+//			{
+//				"file"		"crosshairs"
+//				"x"			"0"
+//				"y"			"48"
+//				"width"		"24"
+//				"height"	"24"
+//			}
+//		}
+	}
+}

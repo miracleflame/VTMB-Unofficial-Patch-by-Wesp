@@ -1,0 +1,114 @@
+{	1	}{	Huh? Oh! Hey! Help! You gotta get me out of here, man! This guy's a freakin' nut job!	}{	Huh? Oh! Hey! Help! You gotta get me out of here, man! This guy's a freakin' nut job!	}{	#	}{	}{	G.No_Idle = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	Who? Gimble?	}{	Who? Gimble?	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	"Who? Gimble?" Yeah, Gimble! That guy's been takin' pieces off o' me and McGee over here for the last three days! He's crazy, man! Freakin' crazy!	}{	"Who? Gimble?" Yeah, Gimble! That guy's been takin' pieces off o' me and McGee over here for the last three days! He's crazy, man! Freakin' crazy!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	Okay. Now how do I open this door?	}{	Okay. Now how do I open this door?	}{	0	}{	G.Gimble_Vandal == 0	}{	}{	}{	}{	}{	}{	}{	}{	Now how do I open this curious cage?	}
+{	13	}{	Okay. Now how do I open this door?	}{	Okay. Now how do I open this door?	}{	0	}{	G.Gimble_Vandal > 0 and G.Gimble_Humanity == 1	}{	G.Gimble_Dead = 1; pc.SetQuest("Arthur Knox", 3); FindPlayer().HumanityAdd( 1 )	}{	}{	}{	}{	}{	}{	}{	Now how do I open this curious cage?	}
+{	14	}{	Okay. Now how do I open this door?	}{	Okay. Now how do I open this door?	}{	0	}{	G.Gimble_Vandal > 0 and G.Gimble_Humanity == 0	}{	G.Gimble_Dead = 1; pc.SetQuest("Arthur Knox", 3)	}{	}{	}{	}{	}{	}{	}{	Now how do I open this curious cage?	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	Thanks, man! You're a life-saver. I wasn't sure I was gonna make it. I'm tellin' you... I've been on some weird cases, but this one takes the cake.	}{	Thanks, man! You're a life-saver. I wasn't sure I was gonna make it. I'm tellin' you... I've been on some weird cases, but this one takes the cake.	}{	#	}{	}{	G.Carson_Rescued = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	You're Carson I take it?	}{	You're Carson I take it?	}{	31	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	23	}{	Heeeerrrre's Johnny!	}{	Heeeerrrre's Johnny!	}{	36	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	Yeah... yeah, that's me. How did you know?	}{	Yeah... yeah, that's me. How did you know?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Arthur Kilpatrick sent me.	}{	Arthur Kilpatrick sent me.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	33	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	Ha ha ha... that's funny. Cut it with the Carson jokes, will ya? In case you didn't notice, this ain't exactly the Tonight Show down here.	}{	Ha ha ha... that's funny. Cut it with the Carson jokes, will ya? In case you didn't notice, this ain't exactly the Tonight Show down here.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	Kilpatrick the Key Master sent me!	}{	Kilpatrick the Key Master sent me!	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	He did? Oh, man, that's solid! I owe that guy big. I hope I can figure out a way to get him back for this.	}{	He did? Oh, man, that's solid! I owe that guy big. I hope I can figure out a way to get him back for this.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	He's got some work for you, so you should head back to the office.	}{	He's got some work for you, so you should head back to the office.	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	He has more bounties for you to hunt.	}
+{	43	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	What? Oh, no man. No, no, no. Not for me anymore. Look at my hand! Gimble took my trigger finger for a trophy. I'm all through with this business. I hate to leave Arthur in a lurch, but that's just the way it is.	}{	What? Oh, no man. No, no, no. Not for me anymore. Look at my hand! Gimble took my trigger finger for a trophy. I'm all through with this business. I hate to leave Arthur in a lurch, but that's just the way it is.	}{	#	}{	}{	G.Arthur_Knox = 3	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	I understand. Well, I'll give him the bad news. See ya.	}{	I understand. Well, I'll give him the bad news. See ya.	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	I shall tell him this troubling truth. Farewell.	}
+{	53	}{	Man. You ain't no Fall Guy. Later.	}{	Man. You ain't no Fall Guy. Later.	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	The Fall Guy grieves over your disgrace. I leave you.	}
+{	54	}{	You hear that dog barking? I think it's Old Yeller. I'm outta here.	}{	You hear that dog barking? I think it's Old Yeller. I'm outta here.	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	On your back lies a yellow brick road. I am no longer here.	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Huh? Aaaaahhh! Oh god! Gimble got to you, too? Man... that's inhumane. Looks like he sliced up your face and sewed it back together in the wrong order.	}{	Huh? Aaaaahhh! Oh god! Gimble got to you, too? Man... that's inhumane. Looks like he sliced up your face and sewed it back together in the wrong order.	}{	#	}{	npc.SetDisposition("Disgust",1)	}{	G.Carson_Rescued = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	It's a birthmark. You're Carson, right? Kilpatrick sent me.	}{	It's a birthmark. You're Carson, right? Kilpatrick sent me.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	63	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	64	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Thanks, again. Don't worry, I'll take care of old stumpy here.	}{	Thanks, again. Don't worry, I'll take care of old stumpy here.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	Yeah, better come back with the police.	}{	Yeah, better come back with the police.	}{	0	}{	}{	G.No_Idle = 1	}{	}{	}{	}{	}{	}{	}{	Get the black ones for the red one, when you return.	}
+{	73	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Check, check. Is this thing recording? God, I hate these things. Uh ahem. Anyway... the, uh, McGee case is getting weirder all the time. I found where he's been hiding, and I saw some really creepy stuff down there. There was, uh, no sign of McGee. I'm gonna follow up on another lead I got, too. I updated the files on the computer. Uh, this is Carson, signing off. Man, that sounds stupid!	}{	Check, check. Is this thing recording? God, I hate these things. Uh ahem. Anyway... the, uh, McGee case is getting weirder all the time. I found where he's been hiding, and I saw some really creepy stuff down there. There was, uh, no sign of McGee. I'm gonna follow up on another lead I got, too. I updated the files on the computer. Uh, this is Carson, signing off. Man, that sounds stupid!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	83	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	Hey! How ya doin'?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Hey there...	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	93	}{	Yeah? What do you want?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	94	}{	I ain't in the mood to talk with you.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	You got it.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	That's a negative.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	Thanks.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	What'd you just say?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	What?!?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	Don't know.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	Can't help you with that, I'm afraid.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	Well ain't that somethin'!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	103	}{	By the way...	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	Go ahead and take this.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	I'll shoot you an email on that.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	(Starting Condition)	}{	}{	71	}{	G.Carson_Rescued == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	113	}{	(Starting Condition)	}{	}{	61	}{	IsClan(pc,"Nosferatu") and G.Gimble_Dead == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	114	}{	(Starting Condition)	}{	}{	21	}{	G.Gimble_Dead == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

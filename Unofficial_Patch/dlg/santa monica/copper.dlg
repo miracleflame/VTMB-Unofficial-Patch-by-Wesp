@@ -1,0 +1,207 @@
+{	1	}{	Umm... uhh... uh, do you know who the head vampire is?	}{	Umm... uhh... uh, do you know who the head vampire is?	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	What are you talking about?	}{	What are you talking about?	}{	11	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	Who doesn't?	}{	Who doesn't?	}{	11	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	He walks among us, playing his ancient game.	}{	He walks among us, playing his ancient game.	}{	191	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	I refuse to get involved in this conversation.	}{	I refuse to get involved in this conversation.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	This conversation goes on without me.	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	If the head vampire dies, we all become human again, right?	}{	If the head vampire dies, we all become human again, right?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	Only in the movies.	}{	Only in the movies.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	Only a silver screen dream.	}
+{	13	}{	If he's killed with the Holy Stake, sure. Interested in purchasing it?	}{	If he's killed with the Holy Stake, sure. Interested in purchasing it?	}{	51	}{	Persuasion 3	}{	G.Copper_Stake = 1	}{	}{	}{	}{	}{	}{	}{	You need only the Holy Stake.	}
+{	14	}{	I don't have time for this. Goodbye.	}{	I don't have time for this. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You're kookier than who I see in the mirror. Farewell.	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	Oh. But -	}{	Oh. But -	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	(Auto-Link)	}{	(Auto-Link)	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	23	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	Umm... how about blood transfusions? If I get a full blood transfusion I can become human again, right?	}{	Umm... how about blood transfusions? If I get a full blood transfusion I can become human again, right?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	No. I think it's permanent.	}{	No. I think it's permanent.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	The disease sticks to you like dirty underwear.	}
+{	33	}{	Sure. If it's unicorn blood.	}{	Sure. If it's unicorn blood.	}{	71	}{	Persuasion 3	}{	G.Copper_Uni = 1	}{	}{	}{	}{	}{	}{	}{	You can transfuse the blood of a one-horned horse.	}
+{	34	}{	I don't have time for this. Goodbye.	}{	I don't have time for this. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	But how? I don't want this... I want to be human again.	}{	But how? I don't want this... I want to be human again.	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	Guess what - it's not going to happen.	}{	Guess what - it's not going to happen.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	In dreams, you will be. And I will be a dinosaur. RAWRRRR!	}
+{	43	}{	The dead can never live again. But they can survive. Do you understand?	}{	The dead can never live again. But they can survive. Do you understand?	}{	181	}{	G.Patch_Plus == 1	}{	G.Copper_Humanity = 1; pc.HumanityAdd(1)	}{	}{	}{	}{	}{	}{	}{	The leopard cannot change its spots. But it can hunt. Understand?	}
+{	44	}{	The dead can never live again. But they can survive. Do you understand?	}{	The dead can never live again. But they can survive. Do you understand?	}{	181	}{	G.Patch_Plus == 0	}{	G.Copper_Humanity = 1	}{	}{	}{	}{	}{	}{	}{	The leopard cannot change its spots. But it can hunt. Understand?	}
+{	45	}{	Then you are doomed to die again.	}{	Then you are doomed to die again.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Death visits the weak twice.	}
+{	46	}{	You don't deserve to be one of us.	}{	You don't deserve to be one of us.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	More blood for the rest.	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Okay. But first I had another question.	}{	Okay. But first I had another question.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	(Auto-Link)	}{	(Auto-Link)	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	53	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Wh-w-what? Aww, no... th-there's nothin' I can do?	}{	Wh-w-what? Aww, no... th-there's nothin' I can do?	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	G.Copper_Damn = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	You can try not to let your condition defeat you.	}{	You can try not to let your condition defeat you.	}{	41	}{	Persuasion 2	}{	}{	}{	}{	}{	}{	}{	}{	What? You're not having a blast?	}
+{	63	}{	You can stay out of my way. Goodbye.	}{	You can stay out of my way. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	64	}{	Yeah. Sorry. Good luck.	}{	Yeah. Sorry. Good luck.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll leave my pity here with you.	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Unicorn blood?	}{	Unicorn blood?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	Oh, there can be vampires but no such thing as unicorns?	}{	Oh, there can be vampires but no such thing as unicorns?	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	We are walking myths.	}
+{	73	}{	Fine, I won't sell you any then.	}{	Fine, I won't sell you any then.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	More for me then.	}
+{	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	I'll buy it, I'll buy it! I'm gonna go get some money. Umm... come back in a little while.	}{	I'll buy it, I'll buy it! I'm gonna go get some money. Umm... come back in a little while.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Copper_Quest = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	Yeah, I may also find some special chewing gum to erode your fangs.	}{	Yeah, I may also find some special chewing gum to erode your fangs.	}{	0	}{	G.Patch_Plus == 1	}{ pc.SetQuest("Copper", 1)	}{	}{	}{	}{	}{	}{	}{	I may also produce some special rubber to bring your teeth down.	}
+{	83	}{	I will.	}{	I will.	}{	0	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	There and back again.	}
+{	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	There's nothin' I can do.... I-I'm damned.	}{	There's nothin' I can do.... I-I'm damned.	}{	#	}{	npc.SetDisposition("Sad", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Wait... it's not permanent. The truth is...	}{	Wait... it's not permanent. The truth is...	}{	11	}{	Persuasion 5 & G.Copper_Stake == 0 and G.Copper_Uni == 0	}{	}{	}{	}{	}{	}{	}{	}{	My mistake... there is a way for the leopard to become a gazelle.	}
+{	93	}{	Good luck.	}{	Good luck.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Sorrow will be your companion.	}
+{	94	}{	Get over it already, geez.	}{	Get over it already, geez.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	A fate worse than thread.	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	You have any of those items you mentioned?	}{	You have any of those items you mentioned?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	I have the special chewing gum for your teeth for $100.	}{	I have the special chewing gum for your teeth for $100.	}{	111	}{	G.Copper_Gum == 0 and pc.HasItem("item_g_ring_serial_killer_1") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_g_ring_serial_killer_1"); G.Copper_Gum = 1; pc.MoneyAdd(100)	}{	}{	}{	}{	}{	}{	}{	I have the special rubber for your fangs for $100.	}
+{	103	}{	Need any more unicorn blood?	}{	Need any more unicorn blood?	}{	161	}{	G.Copper_Blood >=3 and G.Copper_Uni == 1 and pc.HasItem("item_g_bloodpack")	}{	}{	}{	}{	}{	}{	}{	}{	I have more one-horned horse blood.	}
+{	104	}{	Sure. How much unicorn blood do you need?	}{	Sure. How much unicorn blood do you need?	}{	141	}{	G.Copper_Blood < 3 and G.Copper_Uni == 1 and pc.HasItem("item_g_bloodpack")	}{	}{	}{	}{	}{	}{	}{	}{	I have the blood of the magical stallion. How much do you desire?	}
+{	105	}{	Here's the stake. You have $100?	}{	Here's the stake. You have $100?	}{	121	}{	G.Copper_Stake == 1 and pc.HasItem("item_g_stake")	}{	}{	}{	}{	}{	}{	}{	}{	I have the Holy Stake if you've got the blessed $100.	}
+{	106	}{	I have some minotaur blood right here, but that won't help.	}{	I have some minotaur blood right here, but that won't help.	}{	0	}{	pc.HasItem("item_g_bluebloodpack") or pc.HasItem("item_g_eldervitaepack")	}{	}{	}{	}{	}{	}{	}{	}{	I'm carrying the blood of the magic bull, but that will not save you.	}
+{	107	}{	Not yet, but why don't you give me the money now and I'll bring them later?	}{	Not yet, but why don't you give me the money now and I'll bring them later?	}{	111	}{	Intimidate 3 & G.Copper_Gum == 0	}{	G.Copper_Rob = 1; pc.MoneyAdd(200)	}{	}{	}{	}{	}{	}{	}{	I recommend you give me the moolah for the magic. In advance.	}
+{	108	}{	I'll return with the merchandise. Goodbye.	}{	I'll return with the merchandise. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I have nothing but my other personalities. Farewell.	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	Uh... o-okay. I-I guess. Here.	}{	Uh... o-okay. I-I guess. Here.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Don't worry, I'll come back when I have them.	}{	Don't worry, I'll come back when I have them.	}{	0	}{	G.Copper_Rob == 1	}{	pc.SetQuest("Copper", 3)	}{	}{	}{	}{	}{	}{	}{	A fool is better left broke. Farewell.	}
+{	113	}{	Now need any more unicorn blood?	}{	Now need any more unicorn blood?	}{	161	}{	G.Copper_Rob == 0 and G.Copper_Blood >=3 and G.Copper_Uni == 1 and pc.HasItem("item_g_bloodpack")	}{	}{	}{	}{	}{	}{	}{	}{	I have more one-horned horse blood.	}
+{	114	}{	Now do you need some unicorn blood?	}{	Now do you need some unicorn blood?	}{	141	}{	G.Copper_Rob == 0 and G.Copper_Blood < 3 and G.Copper_Uni == 1 and pc.HasItem("item_g_bloodpack")	}{	}{	}{	}{	}{	}{	}{	}{	I have the blood of the magical stallion. How much do you desire?	}
+{	115	}{	And here's the stake. You have $100?	}{	And here's the stake. You have $100?	}{	121	}{	G.Copper_Stake == 1 and pc.HasItem("item_g_stake")	}{	}{	}{	}{	}{	}{	}{	}{	And I have the Holy Stake if you've got the blessed $100.	}
+{	116	}{	I'll return with more merchandise. Goodbye.	}{	I'll return with more merchandise. Goodbye.	}{	0	}{	G.Copper_Rob == 0 and G.Copper_Uni < 2	}{	}{	}{	}{	}{	}{	}{	}{	I have nothing more but my other personalities. Farewell.	}
+{	117	}{	Enjoy. Goodbye.	}{	Enjoy. Goodbye.	}{	0	}{	G.Copper_Uni == 2 and G.Copper_Stake == 0 and G.Patch_Plus == 1	}{	pc.SetQuest("Copper", 4)	}{	}{	}{	}{	}{	}{	}{	You sure do. I am gone.	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	Yeah, here you go. Uh, now where can I find the head vampire?	}{	Yeah, here you go. Uh, now where can I find the head vampire?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.RemoveItem("item_g_stake"); pc.MoneyAdd(100)	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	He's in the tallest building downtown. His name's LaCroix.	}{	He's in the tallest building downtown. His name's LaCroix.	}{	131	}{	Humanity 3 & G.Patch_Plus == 1	}{	G.Copper_Prince = 1; pc.HumanityAdd(-1)	}{	}{	}{	}{	}{	}{	}{	LaCroix lives in a mansion in the sky.	}
+{	123	}{	His name's Rodriguez. He's probably downtown.	}{	His name's Rodriguez. He's probably downtown.	}{	131	}{	Humanity 3 & G.Patch_Plus == 1	}{	G.Copper_Nines = 1; pc.HumanityAdd(-1)	}{	}{	}{	}{	}{	}{	}{	They call him Rodriguez. He sits on his throne downtown.	}
+{	124	}{	Can't you figure it out? He's the President of the United States.	}{	Can't you figure it out? He's the President of the United States.	}{	131	}{	Humanity 3 & G.Patch_Plus == 1	}{	G.Copper_Prez = 1; pc.HumanityAdd(-1); G.Copper_Masquerade = 1	}{	}{	}{	}{	}{	}{	}{	Hail to the chief! The President is a bloodsucker.	}
+{	125	}{	He's in the tallest building downtown. His name's LaCroix.	}{	He's in the tallest building downtown. His name's LaCroix.	}{	131	}{	Humanity -3 & G.Patch_Plus == 1	}{	G.Copper_Prince = 1	}{	}{	}{	}{	}{	}{	}{	LaCroix lives in a mansion in the sky.	}
+{	126	}{	His name's Rodriguez. He's probably downtown.	}{	His name's Rodriguez. He's probably downtown.	}{	131	}{	Humanity -3 & G.Patch_Plus == 1	}{	G.Copper_Nines = 1	}{	}{	}{	}{	}{	}{	}{	They call him Rodriguez. He sits on his throne downtown.	}
+{	127	}{	Can't you figure it out? He's the President of the United States.	}{	Can't you figure it out? He's the President of the United States.	}{	131	}{	Humanity -3 & G.Patch_Plus == 1	}{	G.Copper_Prez = 1; G.Copper_Masquerade = 1	}{	}{	}{	}{	}{	}{	}{	Hail to the chief! The President is a bloodsucker.	}
+{	128	}{	He's in the tallest building downtown. His name's LaCroix.	}{	He's in the tallest building downtown. His name's LaCroix.	}{	131	}{	G.Patch_Plus == 0	}{	G.Copper_Prince = 1	}{	}{	}{	}{	}{	}{	}{	LaCroix lives in a mansion in the sky.	}
+{	129	}{	His name's Rodriguez. He's probably downtown.	}{	His name's Rodriguez. He's probably downtown.	}{	131	}{	G.Patch_Plus == 0	}{	G.Copper_Nines = 1	}{	}{	}{	}{	}{	}{	}{	They call him Rodriguez. He sits on his throne downtown.	}
+{	130	}{	Can't you figure it out? He's the President of the United States.	}{	Can't you figure it out? He's the President of the United States.	}{	131	}{	G.Patch_Plus == 0	}{	G.Copper_Prez = 1	}{	}{	}{	}{	}{	}{	}{	Hail to the chief! The President is a bloodsucker.	}
+{	131	}{	We won't have to live like this anymore - I'm going to kill the head vampire.	}{	We won't have to live like this anymore - I'm going to kill the head vampire.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Copper_Slayer = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	133	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	G.Patch_Plus == 1	}{	pc.SetQuest("Copper", 2)	}{	}{	}{	}{	}{	}{	}{	}
+{	134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	I'll buy as much as you've got.	}{	I'll buy as much as you've got.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	I have one bag. $120.	}{	I have one bag. $120.	}{	151	}{	pc.AmmoCount("item_g_bloodpack") > 0 and G.Copper_Blood < 2	}{	G.Copper_Blood = G.Copper_Blood +1; pc.MoneyAdd(120); pc.RemoveItem("item_g_bloodpack")	}{	}{	}{	}{	}{	}{	}{	One bag of magic for $120.	}
+{	143	}{	I have one bag. $120.	}{	I have one bag. $120.	}{	161	}{	pc.AmmoCount("item_g_bloodpack") > 0 and G.Copper_Blood == 2	}{	G.Copper_Blood = G.Copper_Blood +1; pc.MoneyAdd(120); pc.RemoveItem("item_g_bloodpack")	}{	}{	}{	}{	}{	}{	}{	One bag of magic for $120.	}
+{	144	}{	I have two bags. $240.	}{	I have two bags. $240.	}{	151	}{	pc.AmmoCount("item_g_bloodpack") > 1 and G.Copper_Blood == 0	}{	G.Copper_Blood = G.Copper_Blood +2; pc.MoneyAdd(240); pc.RemoveItem("item_g_bloodpack"); pc.RemoveItem("item_g_bloodpack")	}{	}{	}{	}{	}{	}{	}{	Two bags of magic for $240.	}
+{	145	}{	I have two bags. $240.	}{	I have two bags. $240.	}{	161	}{	pc.AmmoCount("item_g_bloodpack") > 1 and G.Copper_Blood == 1	}{	G.Copper_Blood = G.Copper_Blood +2; pc.MoneyAdd(240); pc.RemoveItem("item_g_bloodpack"); pc.RemoveItem("item_g_bloodpack")	}{	}{	}{	}{	}{	}{	}{	Two bags of magic for $240.	}
+{	146	}{	I have three bags. $360.	}{	I have three bags. $360.	}{	161	}{	pc.AmmoCount("item_g_bloodpack") > 2 and G.Copper_Blood == 0	}{	G.Copper_Blood = G.Copper_Blood +3; pc.MoneyAdd(360); pc.RemoveItem("item_g_bloodpack"); pc.RemoveItem("item_g_bloodpack"); pc.RemoveItem("item_g_bloodpack")	}{	}{	}{	}{	}{	}{	}{	Three bags of magic for $360.	}
+{	147	}{	I'll come back when I have some more.	}{	I'll come back when I have some more.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll return with more bags of magic.	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	As soon as I have three bags, I should have enough to become human again.	}{	As soon as I have three bags, I should have enough to become human again.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	153	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	154	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	I think I have enough for the procedure now. Thanks for the blood.	}{	I think I have enough for the procedure now. Thanks for the blood.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Copper_Uni = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	Just to be sure, you may want to kill the head vampire with this holy stake - $100.	}{	Just to be sure, you may want to kill the head vampire with this holy stake - $100.	}{	121	}{	G.Copper_Stake == 1 and pc.HasItem("item_g_stake")	}{	}{	}{	}{	}{	}{	}{	}{	A start, but the heart of the Dark Father will free us all. A hundred smackers for freedom.	}
+{	163	}{	I also have the special chewing gum for your teeth for $100.	}{	I also have the special chewing gum for your teeth for $100.	}{	111	}{	G.Copper_Gum == 0 and pc.HasItem("item_g_ring_serial_killer_1") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_g_ring_serial_killer_1"); G.Copper_Gum = 1; pc.MoneyAdd(100)	}{	}{	}{	}{	}{	}{	}{	I also have the special rubber for your fangs for $100.	}
+{	164	}{	Enjoy. Goodbye.	}{	Enjoy. Goodbye.	}{	0	}{	}{	pc.SetQuest("Copper", 4)	}{	}{	}{	}{	}{	}{	}{	You sure do. I am gone.	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	Um... I kind of need the money I gave you.	}{	Um... I kind of need the money I gave you.	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	Don't worry, I'll get the stuff. Goodbye.	}{	Don't worry, I'll get the stuff. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	The time grows as thin as your blood. Farewell.	}
+{	173	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	174	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	...	}{	...	}{	#	}{	npc.SetDisposition("Sad", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	It's going to be okay, champ.	}{	It's going to be okay, champ.	}{	0	}{	}{	npc.SetDisposition("joy", 2)	}{	}{	}{	}{	}{	}{	}{	HA HA HA HA HA HA HA!	}
+{	183	}{	Always remember what you are.	}{	Always remember what you are.	}{	0	}{	}{	npc.SetDisposition("joy", 2)	}{	}{	}{	}{	}{	}{	}{	Have you checked your pulse? Maybe it came back to you? Nahhh.	}
+{	184	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	185	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	Huh? Y-you mean he's around here? W-where? And- and what game is he playing? I-I really need to find him!	}{	Huh? Y-you mean he's around here? W-where? And- and what game is he playing? I-I really need to find him!	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	Why do you seek the Dark Father?	}{	Why do you seek the Dark Father?	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	193	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	194	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	195	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	201	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	(Starting Condition)	}{	}{	161	}{	G.Copper_Uni == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	203	}{	(Starting Condition)	}{	}{	181	}{	G.Copper_Humanity == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	204	}{	(Starting Condition)	}{	}{	171	}{	G.Copper_Rob == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	205	}{	(Starting Condition)	}{	}{	101	}{	G.Copper_Stake == 1 or G.Copper_Uni == 1 or G.Copper_Gum == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	206	}{	(Starting Condition)	}{	}{	91	}{	G.Copper_Damn == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	207	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

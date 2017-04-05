@@ -1,0 +1,294 @@
+//Average Pistol
+
+WeaponData
+{
+	"printname"		"GLOCK 19"	// changed by wesp
+	"description"		"A 9 mm standard pistol with a polymer grip and guide rod (instead of metal) that makes it lighter than other pistols. It can be found in use by most law enforcement agencies."	// changed by wesp
+
+	"viewmodel"		"models/weapons/pistol_glock/view/v_pistol_glock.mdl"
+	"playermodel"		"models/weapons/pistol_glock/ground/g_pistol_glock.mdl"
+	"wieldmodel_f"		"models/weapons/pistol_glock/wield/w_f_pistol_glock.mdl"
+	"wieldmodel_m"		"models/weapons/pistol_glock/wield/w_m_pistol_glock.mdl"
+	"infomodel"		"models/weapons/pistol_glock/info/info_pistol_glock.mdl"
+
+	// This should match the viewmodel QC file offset:
+	"origin_x"		"6"
+	"origin_y"		"6"
+	"origin_z"		"68"
+
+	"anim_prefix"		"glock"
+
+	"activation0"		"Single"
+	"activation1"		"Attack"
+	"jammed0"		"Jammed"
+	"jammed1"		"Jammed"
+	"bucket"		"1"
+	"bucket_position"		"2"
+	"camera_class"		"noswitch"	// changed by wesp
+	"weight"		"3"
+	"item_flags"		"0"
+	"item_type"		"weapon_firearm"
+	"sound_group"	"Glock"
+	"uses_accuracycursors"	"1"
+	"impact_snd_group"	"bullet"
+
+	"item_worth"		"180"
+	"player_sell"		"35"	// added by wesp
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"Weapons\Ranged\Glock\Deploy.wav"
+		}
+	}
+
+//Weapon Ammo
+	Magazine
+	{
+		"ammoprintname"		"GLOCK 9 mm Magazine"	// changed by wesp
+		"ammodescription"	"A magazine of 9 mm rounds for the GLOCK 19."	// changed by wesp
+		"ammoinfomodel"		"models/weapons/ammo/glock/i_glock_ammo.mdl"
+
+		"Size"			"17"	// changed by wesp
+		"Default_Size"		"17"	// changed by wesp
+		"Dropped_Ammo"		"17"	// changed by wesp
+		"Type"			"Glock_17cRound"
+		"ReloadTime"		"3.5"
+		"ammo_worth"		"7"
+		
+		
+		SoundData
+		{
+			"reload"
+			{
+				"sound1"	"Weapons/Ranged/Glock/Reload.wav"
+			}
+
+			"reload_npc"
+			{
+				"sound1"	"Weapons/Ranged/Glock/Reload.wav"
+			}
+		}
+	}
+
+//Primary Attack
+	Activation
+	{
+
+		"SkillRequirement"	"5"		// min. skill requirement used in dmg calculations		
+		"BaseLethality"		"9"		// base lethality used in dmg calculations
+		"Dmg"			"2 Lethal Ranged_Combat DMG_BULLET"
+		
+		"Attack_Rate"		"0.4"			//"0.2"
+		"NPC_Attack_Rate_Min"		".9"		// The range of times for NPCs using this weapon to pause between
+		"NPC_Attack_Rate_Max"		"2.2"		//   attacks when at a distance of NPC_Attack_Rate_Base_Range inches. 
+		"NPC_Attack_Rate_Base_Range"	"80"	//   Attack times scale down to Attack_Rate at a range of 0, and up
+							//   proportionally as the range increases. If NPC_Attack_Rate_Base_Range
+							//   is 0, the delay will not be scaled based on distance.
+
+		"Tag"			"Primary"
+		"Type"			"Attack"
+		"Ammo_Type"		"Glock_17cRound"
+		"Ammo_Cost"		"1"
+		"Botch_Table"		"Pistols"
+		"Range"			"20"
+
+		// SKS_RANGED
+		"KickPitchMax"			"-7.50"		//"-10.00"
+		"KickPitchMin"			"-1.75"		//"-1.75"
+		"KickYawMax"			"-0.75"		//"-2.5"
+		"KickYawMin"			"-0.0"		//"-0.2"
+		"KickTime"			"0.03"		//"0.02"
+
+		"CrosshairMinSize"		"12"		// smallest crosshair size for this activation [0-99]
+		"CrosshairFireSize"		"44"		// MAXIMUM size (Firearms 1) of the crosshair when the gun is fired [0-99] scales to Min as player's firearms increases
+		"CrosshairFireSizeMin"		"34"		// MIN size (Firearms 10) of the crosshair when the gun is fired [0-99], changed by wesp
+		"CrosshairWalkSizeMin"	"12"	//"30"		// min size of the crosshair when the player is walking [0-99]
+		"CrosshairWalkSizeMax"	"12"	//"44"		// max size of the crosshair when the player is walking [0-99]
+		"CrosshairRunSizeMin"	"34"			// min size of the crosshair when the player is running [0-99], changed by wesp
+		"CrosshairRunSizeMax"	"44"			// max size of the crosshair when the player is running [0-99]
+
+		"CrosshairIncSpeedMin"	"42"	// min speed(10 Firearm Feat) at which to increase bloom -low # slower
+		"CrosshairIncSpeedMax"	"50"	// max speed(1 Firearm Feat) at which to increase bloom -high # faster
+		"CrosshairDecSpeedMin"	"7"	// min speed(1 Firearm Feat) at which to decrease bloom -low # slower
+		"CrosshairDecSpeedMax"	"16"	// max speed(10 Firearm Feat) at which to decrease bloom -high # faster
+
+		"CrosshairFirePercent"	"0.65"			//"0.5" percent to bloom to crosshair upon firing a bullet
+
+//		"CrosshairMinSize"		"10"		//"10" smallest crosshair size for this activation [0-99]
+//		"CrosshairFireSize"		"40"		//"40" size of the crosshair when the gun is fired [0-99]
+//		"CrosshairWalkSizeMin"	"10"			//"10" min size of the crosshair when the player is walking [0-99]
+//		"CrosshairWalkSizeMax"	"25"			//"25" max size of the crosshair when the player is walking [0-99]
+//		"CrosshairRunSizeMin"	"20"			//"20" min size of the crosshair when the player is running [0-99]
+//		"CrosshairRunSizeMax"	"55"			//"55" max size of the crosshair when the player is running [0-99]
+//		"CrosshairIncSpeedMin"	"60"	//min speed(10 Firearm Feat) at which to increase bloom -low # slower
+//		"CrosshairIncSpeedMax"	"80"	//max speed(1 Firearm Feat) at which to increase bloom -high # faster
+//		"CrosshairDecSpeedMin"	"20"	//min speed(1 Firearm Feat) at which to decrease bloom -low # slower
+//		"CrosshairDecSpeedMax"	"40"	//"40"max speed(10 Firearm Feat) at which to decrease bloom -high # faster		
+
+
+
+		"SpreadAngle"		"4.0"
+		"CriminalLevel"	"3"
+		"Accuracy"		"6"
+
+		SoundData
+		{
+			"empty"
+			{
+				"sound1"	"Weapons/Ranged/Glock/Empty.wav"
+			}
+
+			"attack"
+			{
+				"sound1"	"Weapons/Ranged/Glock/Attack_1.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Ranged/Glock/Attack_1.wav"	
+
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Ranged/Glock/Deploy.wav"
+			}
+
+			"put_away"
+			{
+				"sound1"	"Weapons/Ranged/Glock/Put_Away.wav"
+			}			
+			
+			"fidget"
+			{
+				"sound1"	"Weapons/Ranged/Glock/Fidget.wav"
+			}
+		}
+
+		Tables
+		{
+			Table
+			{
+				"Name"          "WeaponRanges"
+				"InternalName"  "WeaponRanges"
+
+				"Clamping"      "1"
+
+				// point blank 0-80, close 80-110, short/medium 110-220,
+				// meduim 220-370, long 370-650, great 650+
+
+				"0"             "0"         // 5 (bonus)
+				"1"             "0"         // 4 (bonus)
+				"2"             "0"         // 3 (bonus)
+				"3"             "80"        // 2 (bonus)
+				"4"             "80"        // 1 (bonus)
+				"5"             "30000"     // 0 (neutral)
+				"6"             "30000"     //-1 (penalty)
+				"7"             "30000"     //-2 (penalty)
+				"8"             "30000"     //-3 (penalty)
+				"9"             "30000"     //-4 (penalty)
+			}
+			Table
+			{
+				"Name"          "GrossPointBlank"
+				"InternalName"  "GrossPointBlank"
+
+				"Clamping"      "1"
+
+
+				// percentage from 1-12 feet out
+
+				"0"             "100"
+				"1"             "90"
+				"2"             "80"
+				"3"             "70"
+				"4"             "60"
+				"5"             "50"
+				"6"             "40"
+				"7"             "30"
+				"8"             "20"
+				"9"             "10"
+			}
+			
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/Glock_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/Glock"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_ranged/ammo/glock_ammo"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo2"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_ranged/ammo/glock_ammo_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+
+
+// Disabled because it uses Accuracy Crosshairs
+//		"crosshair"
+//		{
+//			"640"
+//			{
+//				"file"		"crosshairs"
+//				"x"			"0"
+//				"y"			"48"
+//				"width"		"24"
+//				"height"	"24"
+//			}
+
+
+
+		// Accuracy Crosshairs
+		"Acc_Crosshair00"		"hud/Crosshairs/Crosshair_01"
+		"Acc_Crosshair01"		"hud/Crosshairs/Crosshair_02"
+		"Acc_Crosshair02"		"hud/Crosshairs/Crosshair_03"
+		"Acc_Crosshair03"		"hud/Crosshairs/Crosshair_04"
+		"Acc_Crosshair04"		"hud/Crosshairs/Crosshair_05"
+		"Acc_Crosshair05"		"hud/Crosshairs/Crosshair_06"
+		"Acc_Crosshair06"		"hud/Crosshairs/Crosshair_07"
+		"Acc_Crosshair07"		"hud/Crosshairs/Crosshair_08"
+		"Acc_Crosshair08"		"hud/Crosshairs/Crosshair_09"
+		"Acc_Crosshair09"		"hud/Crosshairs/Crosshair_10"
+		"Interactive_Crosshair"	"hud/Crosshairs/Crosshair_Interactive"
+	}
+}

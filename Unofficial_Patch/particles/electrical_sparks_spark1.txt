@@ -1,0 +1,29 @@
+Particle
+{
+	frames 		"15~60"
+
+	sprite		"dropletfast"
+	size		"5,1"
+
+	movealign	"1"
+
+	x_speed		"-200~200"
+	y_speed		"-200~200"
+	Z_speed		"-200~200,-600"
+
+	red			"100"
+	green		"100"
+	blue		"255"
+	color		"300"
+	mask		"0"
+	
+	collide
+	{
+		self
+		{
+			bounce "1"
+			gravity "600"
+			friction ".5"
+		}
+	}
+}

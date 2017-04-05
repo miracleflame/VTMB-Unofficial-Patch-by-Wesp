@@ -1,0 +1,1276 @@
+{	1	}{	Greetings, neonate. I'm glad you found your way here. I have been looking forward to meeting you for quite some time.	}{	Greetings, neonate. I'm glad you found your way here. I have been looking forward to meeting you for quite some time.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	And you are?	}{	And you are?	}{	21	}{	pc.GetQuestState("Strauss") == 1 and not IsClan(pc,"Malkavian")	}{	pc.SetQuest("Strauss",2)	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	Blood magicks and betrayal! And the true king upon his throne!	}{	Blood magicks and betrayal! And the true king upon his throne!	}{	1191	}{	pc.GetQuestState("Strauss") == 1 and IsClan(pc,"Malkavian")	}{	pc.SetQuest("Strauss",2)	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	And you are?	}{	And you are?	}{	21	}{	pc.GetQuestState("Strauss") == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	Blood magicks and betrayal! And the true king upon his throne!	}{	Blood magicks and betrayal! And the true king upon his throne!	}{	1191	}{	pc.GetQuestState("Strauss") == 0 and IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	Greetings, neonate. Might I assume you received my invitation? I have been looking forward to meeting you for quite some time.	}{	Greetings, neonate. Might I assume you received my invitation? I have been looking forward to meeting you for quite some time.	}{	#	}{	}{	pc.SetQuest("Strauss",2)	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	Yeah, I got it. I'm assuming you are...	}{	Yeah, I got it. I'm assuming you are...	}{	21	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	13	}{	Blood magicks and betrayal! And the true king upon his throne!	}{	Blood magicks and betrayal! And the true king upon his throne!	}{	1191	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	Strauss. Maximillian Strauss. I am the regent of this chantry. Welcome.	}{	Strauss. Maximillian Strauss. I am the regent of this chantry. Welcome.	}{	#	}{	}{	G.Regent_Introduced = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	Thanks. What is this place?	}{	Thanks. What is this place?	}{	61	}{	IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	23	}{	Thanks. What exactly is a "chantry"?	}{	Thanks. What exactly is a "chantry"?	}{	111	}{	not IsClan(pc,"Tremere") and G.Regent_Chantry == 0	}{	G.Regent_Chantry = 1	}{	}{	}{	}{	}{	}{	}{	"Chantry" holds mystery for me.	}
+{	24	}{	A regent? What's that?	}{	A regent? What's that?	}{	121	}{	not IsClan(pc,"Tremere") and G.Regent_Regent == 0	}{	G.Regent_Regent = 1	}{	}{	}{	}{	}{	}{	}{	"Regent" is opaque and shadowy.	}
+{	25	}{	I'm new around here, Max. What's the word on the street?	}{	I'm new around here, Max. What's the word on the street?	}{	151	}{	G.PC_Heardepidemic == 0 and G.Regent_Talkedepidemic == 0 and not IsClan(pc,"Tremere") and not IsDead("Bishop_Vick")	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of this dark city of angels.	}
+{	26	}{	I heard about this so-called epidemic. It seems to be getting out of hand.	}{	I heard about this so-called epidemic. It seems to be getting out of hand.	}{	171	}{	G.PC_Heardepidemic == 1 and G.Regent_Talkedepidemic == 0 and not IsClan(pc,"Tremere") and not IsDead("Bishop_Vick")	}{	}{	}{	}{	}{	}{	}{	}{	Disease and epidemic spreads among our brethren.	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	I've gotta cruise. See ya.	}{	I've gotta cruise. See ya.	}{	0	}{	not IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	31	}{	Hello, neonate. How can I be of assistance?	}{	Hello, neonate. How can I be of assistance?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Do you have a few minutes to talk with me?	}{	Do you have a few minutes to talk with me?	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	Might we trade words, wizard-king?	}
+{	33	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	Tell me again what it means to join the chantry.	}{	Tell me again what it means to join the chantry.	}{	631	}{	G.Regent_Family == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	Actually, I've got to go.	}{	Actually, I've got to go.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	41	}{	Of course.	}{	Of course.	}{	#	}{	}{	G.Regent_Questions = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	I have a few questions for you.	}{	I have a few questions for you.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	43	}{	I'm new around here, Max. What's the word on the street?	}{	I'm new around here, Max. What's the word on the street?	}{	151	}{	G.PC_Heardepidemic == 0 and G.Regent_Questpestilence == 0 and G.Regent_Talkedepidemic == 0 and not IsDead("Bishop_Vick")	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of this dark city of angels.	}
+{	44	}{	I heard about this so-called epidemic. It seems to be getting out of hand.	}{	I heard about this so-called epidemic. It seems to be getting out of hand.	}{	171	}{	G.PC_Heardepidemic == 1 and G.Regent_Questpestilence == 0 and G.Regent_Talkedepidemic == 0 and not IsDead("Bishop_Vick")	}{	}{	}{	}{	}{	}{	}{	}{	Disease and epidemic spreads among our brethren.	}
+{	45	}{	Maybe I could look into the epidemic for you.	}{	Maybe I could look into the epidemic for you.	}{	191	}{	G.Regent_Pestilence == 1 and G.Jumbles_Enter == 0	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps I might probe the problem of this plague.	}
+{	46	}{	I'm still looking into the cause of the epidemic.	}{	I'm still looking into the cause of the epidemic.	}{	321	}{	G.Regent_Pestilence == 2 and pc.GetQuestState("AllPlague") < 3 and pc.GetQuestState("Regent") > 1 and pc.GetQuestState("Regent") < 5	}{	}{	}{	}{	}{	}{	}{	}{	I still seek the source of the dark disease.	}
+{	47	}{	I solved the problem with the epidemic.	}{	I solved the problem with the epidemic.	}{	331	}{	G.Regent_Solvedplague == 0 and pc.GetQuestState("Regent") == 5	}{	G.Regent_Solvedplague = 1	}{	}{	}{	}{	}{	}{	}{	I broke the withered horse of Pestilence, and his Dark Bishop in the grave.	}
+{	48	}{	I have a question for you about Gargoyles.	}{	I have a question for you about Gargoyles.	}{	411	}{	G.Isaac_Gargoyle == 3 and G.Regent_QuestGargoyle < 2 and G.Regent_Gargoyleasked == 0	}{	G.Regent_Gargoyleasked = 1	}{	}{	}{	}{	}{	}{	}{	I seek knowledge of Gargoyles, the stone-skinned Blood Golems!	}
+{	49	}{	I've yet to deal with your little Gargoyle problem.	}{	I've yet to deal with your little Gargoyle problem.	}{	601	}{	not IsDead("Gargoyle") and G.Gargoyle_Convinced == 0 and G.Regent_QuestGargoyle == 2	}{	}{	}{	}{	}{	}{	}{	}{	I have yet to kill the Blood Golem.	}
+{	50	}{	I resolved the issue with the Gargoyle, Strauss.	}{	I resolved the issue with the Gargoyle, Strauss.	}{	611	}{	(IsDead("Gargoyle") or G.Gargoyle_Convinced == 1) and G.Regent_Gargoyle == 0 and G.Regent_QuestGargoyle >= 1	}{	G.Regent_Gargoyle = 1	}{	}{	}{	}{	}{	}{	}{	I did ensure that the Blood Golem haunts Hollywood no more.	}
+{	51	}{	I have some more questions about Gargoyles.	}{	I have some more questions about Gargoyles.	}{	421	}{	G.Regent_QuestGargoyle < 2 and G.Regent_Gargoyleasked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I seek knowledge of Gargoyles.	}
+{	52	}{	I'm outta here. See ya.	}{	I'm outta here. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	53	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Ah, yes... forgive me. I forget that you were not Embraced within the pyramid. We share the same blood, you and I, but there is much you have yet to learn about our clan.	}{	Ah, yes... forgive me. I forget that you were not Embraced within the pyramid. We share the same blood, you and I, but there is much you have yet to learn about our clan.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	You're of the Tremere clan?	}{	You're of the Tremere clan?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	63	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	64	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Yes. This new life in which you find yourself undoubtedly seems strange. I'm sure you have many questions, young one. I will answer those which I am able.	}{	Yes. This new life in which you find yourself undoubtedly seems strange. I'm sure you have many questions, young one. I will answer those which I am able.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	What did you mean, "Embraced within the pyramid"?	}{	What did you mean, "Embraced within the pyramid"?	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	73	}{	What, exactly, is a "chantry"?	}{	What, exactly, is a "chantry"?	}{	111	}{	G.Regent_Chantry == 0	}{	G.Regent_Chantry = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	You said you're a regent... what does that mean?	}{	You said you're a regent... what does that mean?	}{	121	}{	G.Regent_Regent == 0	}{	G.Regent_Regent = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	Let's talk about something else.	}{	Let's talk about something else.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	The pyramid is the social structure of our clan, with each level of advancement watched over by the next. There are apprentices here at the chantry who are my charges, and I have a lord who watches over me and other local regents, and so on.	}{	The pyramid is the social structure of our clan, with each level of advancement watched over by the next. There are apprentices here at the chantry who are my charges, and I have a lord who watches over me and other local regents, and so on.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	(Auto-Link)	}{	(Auto-Link)	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	83	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	In most cases, Tremere are very selective about who they Embrace and how it is done. There are traditions and laws that we adhere to, so the circumstances of your Embrace were, let us say, unconventional. Therefore, you are "outside" the pyramid.	}{	In most cases, Tremere are very selective about who they Embrace and how it is done. There are traditions and laws that we adhere to, so the circumstances of your Embrace were, let us say, unconventional. Therefore, you are "outside" the pyramid.	}{	#	}{	}{	G.Regent_Apprentice = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	I see. Can I get "inside" the pyramid? Be an apprentice?	}{	I see. Can I get "inside" the pyramid? Be an apprentice?	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	93	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	Such things are possible, young one. But you would have to prove your worth to the clan before it would even be a consideration. Tremere guard their secrets well. Perhaps it is something we will speak of later.	}{	Such things are possible, young one. But you would have to prove your worth to the clan before it would even be a consideration. Tremere guard their secrets well. Perhaps it is something we will speak of later.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	I see. Tell me what a "chantry" is.	}{	I see. Tell me what a "chantry" is.	}{	111	}{	G.Regent_Questions == 0 and G.Regent_Chantry == 0	}{	G.Regent_Chantry = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	103	}{	You said were a regent?	}{	You said were a regent?	}{	121	}{	G.Regent_Questions == 0 and G.Regent_Regent == 0	}{	G.Regent_Regent = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	Actually, I've got a few other questions.	}{	Actually, I've got a few other questions.	}{	141	}{	G.Regent_Questions == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	There was one more thing.	}{	There was one more thing.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	A chantry is a local gathering place for those of the Tremere clan. I live here, as do apprentices from time to time.	}{	A chantry is a local gathering place for those of the Tremere clan. I live here, as do apprentices from time to time.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	What did you mean, "Embraced within the pyramid"?	}{	What did you mean, "Embraced within the pyramid"?	}{	81	}{	G.Regent_Apprentice == 0 and IsClan(pc,"Tremere") and G.Regent_Questions == 0	}{	}{	}{	}{	}{	}{	}{	}{	What did you mean, "Embraced within the pyramid"?	}
+{	113	}{	Cool. And you're a regent? What is that?	}{	Cool. And you're a regent? What is that?	}{	121	}{	G.Regent_Questions == 0 and G.Regent_Regent == 0	}{	G.Regent_Regent = 1	}{	}{	}{	}{	}{	}{	}{	"Regent" is opaque and shadowy.	}
+{	114	}{	I'm new around here, Max. What's the word on the street?	}{	I'm new around here, Max. What's the word on the street?	}{	151	}{	G.PC_Heardepidemic == 0 and G.Regent_Questpestilence == 0 and G.Regent_Talkedepidemic == 0 and not IsDead("Bishop_Vick")	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of this dark city of angels.	}
+{	115	}{	I heard about this so-called epidemic. It seems to be getting out of hand.	}{	I heard about this so-called epidemic. It seems to be getting out of hand.	}{	171	}{	G.PC_Heardepidemic == 1 and G.Regent_Questpestilence == 0 and G.Regent_Talkedepidemic == 0 and not IsDead("Bishop_Vick")	}{	}{	}{	}{	}{	}{	}{	}{	Disease and epidemic spreads among our brethren.	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	Actually, I've got a few other questions.	}{	Actually, I've got a few other questions.	}{	141	}{	G.Regent_Questions == 1	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	120	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	121	}{	A regent is the leader of a chantry, as well as a teacher to young Tremere apprentices who are studying the mysteries of our clan.	}{	A regent is the leader of a chantry, as well as a teacher to young Tremere apprentices who are studying the mysteries of our clan.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	What did you mean, "Embraced within the pyramid"?	}{	What did you mean, "Embraced within the pyramid"?	}{	81	}{	G.Regent_Apprentice == 0 and IsClan(pc,"Tremere") and G.Regent_Questions == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	123	}{	Can you tell me about the mysteries?	}{	Can you tell me about the mysteries?	}{	131	}{	not IsClan(pc,"Tremere") and G.Regent_Questions == 0	}{	}{	}{	}{	}{	}{	}{	}{	Reveal these mysteries, wizard-king!	}
+{	124	}{	Cool. What's a "chantry"?	}{	Cool. What's a "chantry"?	}{	111	}{	G.Regent_Questions == 0 and G.Regent_Chantry == 0	}{	G.Regent_Chantry = 1	}{	}{	}{	}{	}{	}{	}{	"Chantry" holds mystery for me.	}
+{	125	}{	I'm new around here, Max. What's the word on the street?	}{	I'm new around here, Max. What's the word on the street?	}{	151	}{	G.PC_Heardepidemic == 0 and G.Regent_Questpestilence == 0 and G.Regent_Talkedepidemic == 0 and not IsDead("Bishop_Vick")	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of this dark city of angels.	}
+{	126	}{	I heard about this so-called epidemic. It seems to be getting out of hand.	}{	I heard about this so-called epidemic. It seems to be getting out of hand.	}{	171	}{	G.PC_Heardepidemic == 1 and G.Regent_Questpestilence == 0 and G.Regent_Talkedepidemic == 0 and not IsDead("Bishop_Vick")	}{	}{	}{	}{	}{	}{	}{	}{	Disease and epidemic spreads among our brethren.	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	Just a few more questions...	}{	Just a few more questions...	}{	141	}{	G.Regent_Questions == 1	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	130	}{	I'm leaving. See ya.	}{	I'm leaving. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains. Farewell.	}
+{	131	}{	I'm sorry, neonate, the secrets of the Tremere clan are hidden from all but those who share our blood. [menacing]You would do best not to look into them any further.	}{	I'm sorry, neonate, the secrets of the Tremere clan are hidden from all but those who share our blood. [menacing]You would do best not to look into them any further.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	Uh, sure, whatever. Can you at least tell me what a "chantry" is?	}{	Uh, sure, whatever. Can you at least tell me what a "chantry" is?	}{	111	}{	G.Regent_Questions == 0 and G.Regent_Chantry == 0	}{	G.Regent_Chantry = 1	}{	}{	}{	}{	}{	}{	}{	Then reveal the mystery of this "chantry"!	}
+{	133	}{	Okay. What CAN you tell me, Max? What's going on here in downtown?	}{	Okay. What CAN you tell me, Max? What's going on here in downtown?	}{	151	}{	G.Regent_Questpestilence == 0 and G.PC_Heardepidemic == 0 and G.Regent_Talkedepidemic == 0 and not IsDead("Bishop_Vick")	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of this dark city of angels.	}
+{	134	}{	Okay. Well maybe you can tell me about this "epidemic" going on downtown.	}{	Okay. Well maybe you can tell me about this "epidemic" going on downtown.	}{	171	}{	G.Regent_Questpestilence == 0 and G.PC_Heardepidemic == 1 and G.Regent_Talkedepidemic == 0 and not IsDead("Bishop_Vick")	}{	}{	}{	}{	}{	}{	}{	}{	Disease and epidemic spreads among our brethren.	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	Just a few more questions...	}{	Just a few more questions...	}{	141	}{	G.Regent_Questions == 1	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	140	}{	I've gotta cruise. See ya.	}{	I've gotta cruise. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My mind has left. My body follows.	}
+{	141	}{	What is it you would like to know?	}{	What is it you would like to know?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	Tell me about the Camarilla.	}{	Tell me about the Camarilla.	}{	221	}{	G.Regent_Camarilla == 0	}{	G.Regent_Camarilla = 1	}{	}{	}{	}{	}{	}{	}{	Uncloud this Camarilla!	}
+{	143	}{	I have more questions about the Camarilla.	}{	I have more questions about the Camarilla.	}{	231	}{	G.Regent_Camarilla == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	144	}{	What did you mean, "Embraced within the pyramid"?	}{	What did you mean, "Embraced within the pyramid"?	}{	81	}{	G.Regent_Apprentice == 0 and IsClan(pc,"Tremere") and G.Regent_Questions == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	Tell me about this chantry.	}{	Tell me about this chantry.	}{	111	}{	G.Regent_Chantry == 0	}{	G.Regent_Chantry = 1	}{	}{	}{	}{	}{	}{	}{	"Chantry" holds mystery for me.	}
+{	146	}{	What do you know about the Ankaran Sarcophagus?	}{	What do you know about the Ankaran Sarcophagus?	}{	1221	}{	G.Story_State >= 15	}{	}{	}{	}{	}{	}{	}{	}{	What know you of the Ankaran Sarcophagus?	}
+{	147	}{	I have a question for you about Gargoyles.	}{	I have a question for you about Gargoyles.	}{	411	}{	G.Isaac_Gargoyle == 3 and G.Regent_QuestGargoyle == 0 and G.Regent_Gargoyleasked == 0	}{	G.Regent_Gargoyleasked = 1	}{	}{	}{	}{	}{	}{	}{	I seek knowledge of Gargoyles, the stone-skinned Blood Golems!	}
+{	148	}{	I have some more questions about Gargoyles.	}{	I have some more questions about Gargoyles.	}{	421	}{	G.Regent_QuestGargoyle < 2 and G.Regent_Gargoyleasked == 1	}{	}{	}{	}{	}{	}{	}{	}{	I seek knowledge of Gargoyles.	}
+{	149	}{	Let's talk about something else.	}{	Let's talk about something else.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	One thing more...	}
+{	150	}{	Nothing right now. Goodbye.	}{	Nothing right now. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	No knowledge is necessary now. Goodbye.	}
+{	151	}{	Let me give you some advice, young one. Your survival in Kindred society will often depend on your ability to find out yourself what is going on around you. Remember that well.	}{	Let me give you some advice, young one. Your survival in Kindred society will often depend on your ability to find out yourself what is going on around you. Remember that well.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	I appreciate the advice.	}{	I appreciate the advice.	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Memory is rarely a gift of the schizophrenic.	}
+{	153	}{	Uh, thanks, DAD.	}{	Uh, thanks, DAD.	}{	161	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	154	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	As for what is going on here in downtown, the word on everyone's lips, Kindred or kine, seems to be "epidemic".	}{	As for what is going on here in downtown, the word on everyone's lips, Kindred or kine, seems to be "epidemic".	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	Yeah? Why? What's going on?	}{	Yeah? Why? What's going on?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ah! A withered horse runs among us.	}
+{	163	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	164	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	It seems that disease has been spreading at an alarming rate throughout the downtown population. Considering our particular... appetites... the local Kindred are more than concerned about these developments.	}{	It seems that disease has been spreading at an alarming rate throughout the downtown population. Considering our particular... appetites... the local Kindred are more than concerned about these developments.	}{	#	}{	}{	G.PC_Heardepidemic = 1; G.Regent_Talkedepidemic = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	Interesting.	}{	Interesting.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	Dirty blood is our doom.	}
+{	173	}{	Dude. That shit is WACK.	}{	Dude. That shit is WACK.	}{	181	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	174	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	Yes, indeed. My opinion is that the local Anarchs are responsible for these outbreaks. Their precipitous indulgence of certain passions often leads to such things. Ergo, their need for the watchful eye of the Camarilla.	}{	Yes, indeed. My opinion is that the local Anarchs are responsible for these outbreaks. Their precipitous indulgence of certain passions often leads to such things. Ergo, their need for the watchful eye of the Camarilla.	}{	#	}{	}{	G.Regent_Pestilence = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	183	}{	Interesting you should think that. I'm already looking into it for the Anarchs.	}{	Interesting you should think that. I'm already looking into it for the Anarchs.	}{	196	}{	G.Damsel_Quest > 0	}{	}{	}{	}{	}{	}{	}{	}{	The Anarchs have me searching for this problematic pestilence.	}
+{	184	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	185	}{	Maybe I could look into the epidemic for you.	}{	Maybe I could look into the epidemic for you.	}{	191	}{	G.Damsel_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps I might probe the problem of this pestilence?	}
+{	186	}{	Camarilla? What's that all about?	}{	Camarilla? What's that all about?	}{	221	}{	G.Regent_Camarilla == 0	}{	G.Regent_Camarilla = 1	}{	}{	}{	}{	}{	}{	}{	Uncloud this Camarilla!	}
+{	187	}{	Whatever. I have a few more questions.	}{	Whatever. I have a few more questions.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	188	}{	There's only room for one of us on that soapbox. I'm outta here.	}{	There's only room for one of us on that soapbox. I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your soapbox is surprisingly small. Farewell.	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	Hmmm. An interesting proposition. If you succeed in finding the cause of this epidemic and putting an end to it, I will compensate you appropriately for your efforts.	}{	Hmmm. An interesting proposition. If you succeed in finding the cause of this epidemic and putting an end to it, I will compensate you appropriately for your efforts.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	I'll do it. We'll figure out what you owe me when I return.	}{	I'll do it. We'll figure out what you owe me when I return.	}{	211	}{	G.Damsel_Quest == 0	}{	G.Regent_Pestilence = 2; pc.SetQuest("Regent",1)	}{	}{	}{	}{	}{	}{	}{	I shall do this deed.	}
+{	193	}{	What's in it for me?	}{	What's in it for me?	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	And what of my reward, wizard-king?	}
+{	194	}{	I'll do it. We'll figure out what you owe me when I return.	}{	I'll do it. We'll figure out what you owe me when I return.	}{	216	}{	G.Damsel_Quest > 0	}{	G.Regent_Pestilence = 2; pc.SetQuest("Regent",8)	}{	}{	}{	}{	}{	}{	}{	I shall do this deed.	}
+{	195	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	196	}{	I see. Most disappointing, neonate. You seem to show a startling lack of concern when choosing your associates in this new life. I pray that their... lawless proclivities do not ultimately affect your own standing among your other peers.	}{	I see. Most disappointing, neonate. You seem to show a startling lack of concern when choosing your associates in this new life. I pray that their... lawless proclivities do not ultimately affect your own standing among your other peers.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	Hmmm. Perhaps I could look into it for the Camarilla as well... on the sly.	}{	Hmmm. Perhaps I could look into it for the Camarilla as well... on the sly.	}{	191	}{	pc.GetQuestState("AllPlague") < 3	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps I might also secretly search for the Camarilla?	}
+{	198	}{	Whatever. I'm down with the Anarchs. I don't buy into your Camarilla crap.	}{	Whatever. I'm down with the Anarchs. I don't buy into your Camarilla crap.	}{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am an Anarch! A Childe of Entropy! I play not your ancient games!	}
+{	199	}{	I'll take it under advisement, Max. A few more questions.	}{	I'll take it under advisement, Max. A few more questions.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	200	}{	My proclivities are my own business, regent. I'm outta here.	}{	My proclivities are my own business, regent. I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	201	}{	I will ponder the nature of your payment while you are gone. Believe me, I will treat you fairly, neonate. And your service to the Camarilla won't be forgotten.	}{	I will ponder the nature of your payment while you are gone. Believe me, I will treat you fairly, neonate. And your service to the Camarilla won't be forgotten.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	Alright. I'll take care of it.	}{	Alright. I'll take care of it.	}{	211	}{	G.Damsel_Quest == 0	}{	G.Regent_Pestilence = 2; pc.SetQuest("Regent",1)	}{	}{	}{	}{	}{	}{	}{	I shall do this deed.	}
+{	203	}{	Alright. I'll take care of it.	}{	Alright. I'll take care of it.	}{	216	}{	G.Damsel_Quest > 0	}{	G.Regent_Pestilence = 2; pc.SetQuest("Regent",8)	}{	}{	}{	}{	}{	}{	}{	I shall do this deed.	}
+{	204	}{	Forget it. I don't work for free.	}{	Forget it. I don't work for free.	}{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	No gold, no glory.	}
+{	205	}{	I'll think about it. Tell me a little more about the Camarilla.	}{	I'll think about it. Tell me a little more about the Camarilla.	}{	221	}{	G.Regent_Camarilla == 0	}{	G.Regent_Camarilla = 1	}{	}{	}{	}{	}{	}{	}{	Uncloud this Camarilla!	}
+{	206	}{	Actually, I have a few more questions.	}{	Actually, I have a few more questions.	}{	141	}{	G.Regent_Camarilla == 1	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	208	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	210	}{	I'm outta here, Max. See ya.	}{	I'm outta here, Max. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains. Farewell.	}
+{	211	}{	Very well. Again, I recommend speaking with the Anarchs. You can find most of them at the local watering hole, reveling in the vices of their former lives. I believe the place is called The Last Round.	}{	Very well. Again, I recommend speaking with the Anarchs. You can find most of them at the local watering hole, reveling in the vices of their former lives. I believe the place is called The Last Round.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	I'll remember that. I have a few more questions for you.	}{	I'll remember that. I have a few more questions for you.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	213	}{	Before I go, tell me a little about the Camarilla.	}{	Before I go, tell me a little about the Camarilla.	}{	221	}{	G.Regent_Camarilla == 0	}{	G.Regent_Camarilla = 1	}{	}{	}{	}{	}{	}{	}{	Uncloud this Camarilla!	}
+{	214	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	215	}{	I'll check in with you later.	}{	I'll check in with you later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My mind has left. My body follows.	}
+{	216	}{	Very well.	}{	Very well.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	217	}{	Hold on... I have a few more questions for you.	}{	Hold on... I have a few more questions for you.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	218	}{	Before I go, tell me a little about the Camarilla.	}{	Before I go, tell me a little about the Camarilla.	}{	221	}{	G.Regent_Camarilla == 0	}{	G.Regent_Camarilla = 1	}{	}{	}{	}{	}{	}{	}{	Uncloud this Camarilla!	}
+{	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	220	}{	Later.	}{	Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	221	}{	The Camarilla? It is merely a Kindred sect that exists to protect its members from the outside world. There are specific codes of behavior that we abide by in order to insure the continuance of our species. It is nothing more and nothing less.	}{	The Camarilla? It is merely a Kindred sect that exists to protect its members from the outside world. There are specific codes of behavior that we abide by in order to insure the continuance of our species. It is nothing more and nothing less.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	I see. Can I ask you a few more questions about the Camarilla?	}{	I see. Can I ask you a few more questions about the Camarilla?	}{	231	}{	}{	}{	}{	}{	}{	}{	}{	}{	Uncloud this Camarilla!	}
+{	223	}{	Cool. Actually, there was something else.	}{	Cool. Actually, there was something else.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	One thing more...	}
+{	224	}{	Sounds like another bullshit excuse for you "capes" to impose control.	}{	Sounds like another bullshit excuse for you "capes" to impose control.	}{	741	}{	G.Damsel_Cape == 1	}{	G.Regent_Anarchs = 1	}{	}{	}{	}{	}{	}{	}{	You are little more than mad puppet masters, trying to pull our strings!	}
+{	225	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	226	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	227	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	228	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	230	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	231	}{	Surely. What else would you like to know?	}{	Surely. What else would you like to know?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	Are all vampires a part of the Camarilla?	}{	Are all vampires a part of the Camarilla?	}{	241	}{	}{	}{	}{	}{	}{	}{	}{	}{	Do all bloodsuckers belong to this brood?	}
+{	233	}{	Why aren't the Anarchs in the Camarilla?	}{	Why aren't the Anarchs in the Camarilla?	}{	286	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why do the Anarchs shun this freaky family?	}
+{	234	}{	What do you think of Prince LaCroix?	}{	What do you think of Prince LaCroix?	}{	271	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the jester-prince.	}
+{	235	}{	Actually, there was something else I needed.	}{	Actually, there was something else I needed.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	One thing more...	}
+{	236	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	238	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	241	}{	No. There are many independent clans who are not aligned with the Camarilla. And the Sabbat is another sect of various vampire clans whose beliefs are very different than our own. Unsavory sorts, to say the least. I understand you have already run afoul of them.	}{	No. There are many independent clans who are not aligned with the Camarilla. And the Sabbat is another sect of various vampire clans whose beliefs are very different than our own. Unsavory sorts, to say the least. I understand you have already run afoul of them.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	Yeah. Good thing Nines Rodriguez was there to help me out.	}{	Yeah. Good thing Nines Rodriguez was there to help me out.	}{	251	}{	G.Regent_Nines == 0	}{	G.Regent_Nines = 1	}{	}{	}{	}{	}{	}{	}{	Rodriguez, the midnight warrior, casts a long shadow.	}
+{	243	}{	Whatever. They were about to get a beat down before Nines showed up.	}{	Whatever. They were about to get a beat down before Nines showed up.	}{	251	}{	G.Regent_Nines == 0 and not IsClan(pc,"Malkavian")	}{	G.Regent_Nines = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	244	}{	I'd like to ask you a few more questions about the Camarilla.	}{	I'd like to ask you a few more questions about the Camarilla.	}{	231	}{	}{	}{	}{	}{	}{	}{	}{	}{	Uncloud this Camarilla!	}
+{	245	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	246	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	247	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	248	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	250	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains. Farewell.	}
+{	251	}{	Ah, yes. The infamous Mr. Rodriguez. I understand you owe him your life twice now. Had he not intervened, the prince would have surely had that hound of his separate your head from your shoulders.	}{	Ah, yes. The infamous Mr. Rodriguez. I understand you owe him your life twice now. Had he not intervened, the prince would have surely had that hound of his separate your head from your shoulders.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	You're probably right.	}{	You're probably right.	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	His pale hand was well-appreciated.	}
+{	253	}{	Shit. I was just waiting to make my move.	}{	Shit. I was just waiting to make my move.	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	I needed him not to rouse that rabble.	}
+{	254	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	255	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	256	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	In any case, it's a shame that Rodriguez cannot see the wisdom of the Camarilla. He would make a powerful ally. As it is, he is a significant thorn in LaCroix's side, which serves my purposes just the same.	}{	In any case, it's a shame that Rodriguez cannot see the wisdom of the Camarilla. He would make a powerful ally. As it is, he is a significant thorn in LaCroix's side, which serves my purposes just the same.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	Your purposes? Aren't your purposes and the prince's the same?	}{	Your purposes? Aren't your purposes and the prince's the same?	}{	271	}{	}{	}{	}{	}{	}{	}{	}{	}{	Do not the wizard-king and the jester-prince share their purpose?	}
+{	263	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	264	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	265	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	268	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	270	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	271	}{	LaCroix is a prince, neonate, and a Ventrue on top of that. Even if he weren't as young and indiscriminate as he's already proven himself to be, I... but I say too much. Let us just say that he and I have differing ideas on the use of power.	}{	LaCroix is a prince, neonate, and a Ventrue on top of that. Even if he weren't as young and indiscriminate as he's already proven himself to be, I... but I say too much. Let us just say that he and I have differing ideas on the use of power.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	272	}{	It's alright, you can trust me. What is your true opinion of him?	}{	It's alright, you can trust me. What is your true opinion of him?	}{	291	}{	Persuasion 5 & G.Regent_Prince == 0	}{	}{	}{	}{	}{	}{	}{	}{	Put your trust in this shattered psyche, wizard-king.	}
+{	273	}{	It's alright, you can trust me. What is your true opinion of him?	}{	It's alright, you can trust me. What is your true opinion of him?	}{	281	}{	Persuasion -5	}{	}{	}{	}{	}{	}{	}{	}{	Put your trust in this shattered psyche, wizard-king.	}
+{	274	}{	I think your words betray a disloyalty to LaCroix.	}{	I think your words betray a disloyalty to LaCroix.	}{	741	}{	}{	G.Regent_LaCroix = 1	}{	}{	}{	}{	}{	}{	}{	Your words reek of infidelity to the jester!	}
+{	275	}{	I'm sure you do. A few more questions about the Camarilla...	}{	I'm sure you do. A few more questions about the Camarilla...	}{	231	}{	}{	}{	}{	}{	}{	}{	}{	}{	Uncloud this Camarilla!	}
+{	276	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	277	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	278	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	280	}{	How Machiavellian of you. See ya.	}{	How Machiavellian of you. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You wear a Machiavellian mantle. Farewell.	}
+{	281	}{	I have overstepped my bounds. I will say no more.	}{	I have overstepped my bounds. I will say no more.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	Fine. Tell me more of the Camarilla.	}{	Fine. Tell me more of the Camarilla.	}{	231	}{	}{	}{	}{	}{	}{	}{	}{	}{	Uncloud this Camarilla!	}
+{	283	}{	Actually, there was something else I needed.	}{	Actually, there was something else I needed.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	One thing more...	}
+{	284	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	285	}{	Neither will I. See ya, Max.	}{	Neither will I. See ya, Max.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	286	}{	The Anarchs feel that they don't need the structure and discipline of the Camarilla. I feel that they pose a threat, both to those loyal to the Camarilla and to themselves. Most are mere children, and need our guidance.	}{	The Anarchs feel that they don't need the structure and discipline of the Camarilla. I feel that they pose a threat, both to those loyal to the Camarilla and to themselves. Most are mere children, and need our guidance.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	287	}{	An interesting observation. I have a few more questions about the Camarilla.	}{	An interesting observation. I have a few more questions about the Camarilla.	}{	231	}{	}{	}{	}{	}{	}{	}{	}{	}{	Uncloud this Camarilla!	}
+{	288	}{	Whatever. I think the Anarchs have it right. They don't need your babysitting.	}{	Whatever. I think the Anarchs have it right. They don't need your babysitting.	}{	741	}{	}{	G.Regent_Anarchs = 1	}{	}{	}{	}{	}{	}{	}{	The Anarchs need not your motherly musings!	}
+{	289	}{	The last thing I need is a bunch of geezers telling me what's up.	}{	The last thing I need is a bunch of geezers telling me what's up.	}{	741	}{	}{	}{	}{	}{	}{	}{	}{	}{	My fate is my own! I walk my own path of shadows, wizard-king!	}
+{	290	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	291	}{	[considering]Hmmm. Well, without saying too much, I think that Sebastian LaCroix lacks the usual discretion necessary to be a prince. I see in him a lust for power that overshadows his responsibility to the Camarilla.	}{	[considering]Hmmm. Well, without saying too much, I think that Sebastian LaCroix lacks the usual discretion necessary to be a prince. I see in him a lust for power that overshadows his responsibility to the Camarilla.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	Really? Perhaps you think you can do a better job?	}{	Really? Perhaps you think you can do a better job?	}{	301	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ah! Your iron crown begins to sparkle!	}
+{	293	}{	I think your words betray a disloyalty to LaCroix.	}{	I think your words betray a disloyalty to LaCroix.	}{	741	}{	}{	G.Regent_LaCroix = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	294	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	295	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	296	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	297	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	298	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	300	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	301	}{	[laughs]No, young one. I aspire not to such lowly heights. My only interests are those of my clan and the Camarilla.	}{	[laughs]No, young one. I aspire not to such lowly heights. My only interests are those of my clan and the Camarilla.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	302	}{	In that order?	}{	In that order?	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	An indicative order of your interests.	}
+{	303	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	304	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	305	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	306	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	307	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	308	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	309	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	310	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	311	}{	[chuckles again, a little menacing]You will do well in this new life, young one. That I can see already.	}{	[chuckles again, a little menacing]You will do well in this new life, young one. That I can see already.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	312	}{	I hope so. A few more questions about the Camarilla.	}{	I hope so. A few more questions about the Camarilla.	}{	231	}{	}{	}{	}{	}{	}{	}{	}{	}{	Uncloud this Camarilla!	}
+{	313	}{	Just another minute of your time.	}{	Just another minute of your time.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	One thing more...	}
+{	314	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	315	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	316	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	317	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	318	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	319	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	320	}{	I need to go. See ya, Max.	}{	I need to go. See ya, Max.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My mind has left. My body follows.	}
+{	321	}{	I see. Well, return when you have more information.	}{	I see. Well, return when you have more information.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	322	}{	Alright. Can I ask you a few questions before I go?	}{	Alright. Can I ask you a few questions before I go?	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	323	}{	Count on it. See ya.	}{	Count on it. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains. Farewell.	}
+{	324	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	325	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	326	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	327	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	328	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	329	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	330	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	331	}{	You have? Impressive, young one. What, exactly, was the source of the epidemic?	}{	You have? Impressive, young one. What, exactly, was the source of the epidemic?	}{	#	}{	}{	G.Regent_Questpestilence = 4; pc.SetQuest("Regent",6)	}{	}{	}{	}{	}{	}{	}{	}
+{	332	}{	It was a blood cult, headed by a vampire named Bishop Vick - a plaguebearer.	}{	It was a blood cult, headed by a vampire named Bishop Vick - a plaguebearer.	}{	341	}{	}{	}{	}{	}{	}{	}{	}{	}{	Bishop Vick sat upon the withered horse.	}
+{	333	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	334	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	335	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	336	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	337	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	338	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	339	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	340	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	341	}{	Tell me of this so-called bishop.	}{	Tell me of this so-called bishop.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	342	}{	He wanted to bring about the end of the world.	}{	He wanted to bring about the end of the world.	}{	351	}{	}{	}{	}{	}{	}{	}{	}{	}{	He wished to close the curtain on our cursed drama.	}
+{	343	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	344	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	345	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	346	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	347	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	348	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	349	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	350	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	351	}{	Hmmm. [concerned, resigned]I see. That end may very well be upon us. But to business. I have a debt to pay you for your services.	}{	Hmmm. [concerned, resigned]I see. That end may very well be upon us. But to business. I have a debt to pay you for your services.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	352	}{	Yes, you do.	}{	Yes, you do.	}{	381	}{	}{	}{	}{	}{	}{	}{	}{	}{	What treasures...?	}
+{	353	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	354	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	355	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	356	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	357	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	358	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	359	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	360	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	361	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	362	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	363	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	364	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	365	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	366	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	367	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	368	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	369	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	370	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	371	}{	A wise choice, neonate. True power lies not in wealth but in the things it affords you. You have done well. Your status is much raised here at the chantry. Perhaps you might have a place here with us sometime in the future.	}{	A wise choice, neonate. True power lies not in wealth but in the things it affords you. You have done well. Your status is much raised here at the chantry. Perhaps you might have a place here with us sometime in the future.	}{	#	}{	}{	pc.GiveItem("item_p_occult_blood_buff")	}{	}{	}{	}{	}{	}{	}{	}
+{	372	}{	I hope so. A few more questions...	}{	I hope so. A few more questions...	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	373	}{	There was one more thing I needed.	}{	There was one more thing I needed.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	374	}{	Cool. I'm outta here, Max. See ya.	}{	Cool. I'm outta here, Max. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	375	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	376	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	377	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	378	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	379	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	380	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	381	}{	If you so desire, I can give to you a unique talisman that might be of use in the future. If that does not interest you, I can compensate you with hard currency. You decide.	}{	If you so desire, I can give to you a unique talisman that might be of use in the future. If that does not interest you, I can compensate you with hard currency. You decide.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	382	}{	I'll take the item you're talking about.	}{	I'll take the item you're talking about.	}{	371	}{	IsClan(pc,"Tremere") and G.Regent_Haven2 == 0	}{	G.Regent_Haven1 = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	383	}{	I'll take the item you're talking about.	}{	I'll take the item you're talking about.	}{	391	}{	IsClan(pc,"Tremere") and G.Regent_Haven2 == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	384	}{	Give me the cash, baby.	}{	Give me the cash, baby.	}{	401	}{	IsClan(pc,"Tremere") and pc.CalcFeat("haggle") < 4	}{	pc.MoneyAdd( 250 ); G.Regent_Haven1 = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	385	}{	Give me the cash, baby.	}{	Give me the cash, baby.	}{	401	}{	IsClan(pc,"Tremere") and pc.CalcFeat("haggle") == 4	}{	pc.MoneyAdd( 300 ); G.Regent_Haven1 = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	386	}{	Give me the cash, baby.	}{	Give me the cash, baby.	}{	401	}{	IsClan(pc,"Tremere") and pc.CalcFeat("haggle") > 4	}{	pc.MoneyAdd( 350 ); G.Regent_Haven1 = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	387	}{	Give me the cash, baby.	}{	Give me the cash, baby.	}{	401	}{	not IsClan(pc,"Tremere") and pc.CalcFeat("haggle") < 4	}{	pc.MoneyAdd( 250 )	}{	}{	}{	}{	}{	}{	}{	Green is my kind of color.	}
+{	388	}{	Give me the cash, baby.	}{	Give me the cash, baby.	}{	401	}{	not IsClan(pc,"Tremere") and pc.CalcFeat("haggle") == 4	}{	pc.MoneyAdd( 300 )	}{	}{	}{	}{	}{	}{	}{	Green is my kind of color.	}
+{	389	}{	Give me the cash, baby.	}{	Give me the cash, baby.	}{	401	}{	not IsClan(pc,"Tremere") and pc.CalcFeat("haggle") > 4	}{	pc.MoneyAdd( 350 )	}{	}{	}{	}{	}{	}{	}{	Green is my kind of color.	}
+{	390	}{	I'll take the item you're talking about.	}{	I'll take the item you're talking about.	}{	391	}{	not IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	I'll take the treasured talisman.	}
+{	391	}{	A wise decision, neonate. True power lies not in wealth but in the things it affords you. I hope this object serves you well.	}{	A wise decision, neonate. True power lies not in wealth but in the things it affords you. I hope this object serves you well.	}{	#	}{	}{	pc.GiveItem("item_p_occult_blood_buff")	}{	}{	}{	}{	}{	}{	}{	}
+{	392	}{	Thanks. I have a few more questions.	}{	Thanks. I have a few more questions.	}{	141	}{	not IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	393	}{	There was one more thing I needed.	}{	There was one more thing I needed.	}{	41	}{	not IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	One thing more...	}
+{	394	}{	Me too. See ya.	}{	Me too. See ya.	}{	0	}{	not IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	395	}{	I'll use it for the benefit of the clan.	}{	I'll use it for the benefit of the clan.	}{	621	}{	IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	396	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	397	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	398	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	399	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	400	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	401	}{	I think you will find this more than generous. Use it well, neonate.	}{	I think you will find this more than generous. Use it well, neonate.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	402	}{	Thanks. I have a few more questions.	}{	Thanks. I have a few more questions.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	403	}{	There was one more thing I needed.	}{	There was one more thing I needed.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	One thing more...	}
+{	404	}{	I will. See ya.	}{	I will. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains. Farewell.	}
+{	405	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	406	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	407	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	408	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	409	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	410	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	411	}{	[a little surprised]Gargoyles? Why are you asking about Gargoyles?	}{	[a little surprised]Gargoyles? Why are you asking about Gargoyles?	}{	#	}{	}{	pc.SetQuest("Gargoyle",1)	}{	}{	}{	}{	}{	}{	}{	}
+{	412	}{	It seems that one lives in an old theatre in Hollywood. I have some questions.	}{	It seems that one lives in an old theatre in Hollywood. I have some questions.	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	One haunts a theatre in Hollywood! Tell me more!	}
+{	413	}{	I'd heard that the Tremere clan knows a lot about them. Can you help me?	}{	I'd heard that the Tremere clan knows a lot about them. Can you help me?	}{	481	}{	IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	414	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	415	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	416	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	417	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	418	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	419	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	420	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	421	}{	[composed, again]What can I tell you about them?	}{	[composed, again]What can I tell you about them?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	422	}{	What is a Gargoyle?	}{	What is a Gargoyle?	}{	431	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of these Blood Golems!	}
+{	423	}{	How can I fight them?	}{	How can I fight them?	}{	471	}{	not IsDead("Gargoyle") and G.Gargoyle_Convinced == 0 }{	}{	}{	}{	}{	}{	}{	}{	How do I destroy such a demon?	}
+{	424	}{	Is there something special about this Gargoyle? Share your secrets with me.	}{	Is there something special about this Gargoyle? Share your secrets with me.	}{	481	}{	IsClan(pc,"Tremere") and G.Regent_Gargoyleinside == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	425	}{	Come on, Max... you're not telling me something about this Gargoyle.	}{	Come on, Max... you're not telling me something about this Gargoyle.	}{	481	}{	Persuasion 5 & (not IsClan(pc,"Tremere") and G.Regent_Gargoyleinside == 0)	}{	}{	}{	}{	}{	}{	}{	}{	Your eyes hide a blood secret, wizard-king! Tell me of this Blood Golem!	}
+{	426	}{	Come on, Max... you're not telling me something about this Gargoyle.	}{	Come on, Max... you're not telling me something about this Gargoyle.	}{	461	}{	Persuasion -5 & (not IsClan(pc,"Tremere"))	}{	}{	}{	}{	}{	}{	}{	}{	Your eyes hide a blood secret, wizard-king! Tell me of this Blood Golem!	}
+{	427	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	428	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	429	}{	Actually, can I ask about something else?	}{	Actually, can I ask about something else?	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	One thing more...	}
+{	430	}{	Nothing. Goodbye.	}{	Nothing. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	No things more. Goodbye.	}
+{	431	}{	A Gargoyle, put simply, is a creature that was created to protect the Tremere clan in the early years of our existence. They are very powerful, and not to be trifled with.	}{	A Gargoyle, put simply, is a creature that was created to protect the Tremere clan in the early years of our existence. They are very powerful, and not to be trifled with.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	432	}{	The Tremere "created" them?	}{	The Tremere "created" them?	}{	441	}{	}{	}{	}{	}{	}{	}{	}{	}{	Created by the blood-sorcerers?	}
+{	433	}{	Do the Gargoyles still serve the Tremere?	}{	Do the Gargoyles still serve the Tremere?	}{	451	}{	}{	}{	}{	}{	}{	}{	}{	}{	Do these demons still serve their magical masters?	}
+{	434	}{	Do you know who created this Gargoyle, Max?	}{	Do you know who created this Gargoyle, Max?	}{	481	}{	IsClan(pc,"Tremere") and G.Regent_Gargoyleinside == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	435	}{	Do you know who created this Gargoyle, Max?	}{	Do you know who created this Gargoyle, Max?	}{	481	}{	Persuasion 5 & not IsClan(pc,"Tremere") and G.Regent_Gargoyleinside == 0	}{	}{	}{	}{	}{	}{	}{	}{	Who is the creator of this cretin?	}
+{	436	}{	Do you know who created this Gargoyle, Max?	}{	Do you know who created this Gargoyle, Max?	}{	461	}{	Persuasion -5 & not IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	Who is the creator of this cretin?	}
+{	437	}{	A few more questions about Gargoyles...	}{	A few more questions about Gargoyles...	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me more of these Blood Golems!	}
+{	438	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	439	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	440	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	441	}{	Yes. We used our extensive knowledge of blood magics to create a race of protectors. They served that purpose well, but they have also caused many problems. It's a complicated issue.	}{	Yes. We used our extensive knowledge of blood magics to create a race of protectors. They served that purpose well, but they have also caused many problems. It's a complicated issue.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	442	}{	Just how complicated?	}{	Just how complicated?	}{	451	}{	}{	}{	}{	}{	}{	}{	}{	}{	What color is this complication?	}
+{	443	}{	Whatever. I just need to know how to fight one.	}{	Whatever. I just need to know how to fight one.	}{	471	}{	not IsDead("Gargoyle") and G.Gargoyle_Convinced == 0 }{	}{	}{	}{	}{	}{	}{	}{	How do I destroy such a demon?	}
+{	444	}{	A few more questions about Gargoyles...	}{	A few more questions about Gargoyles...	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me more of these Blood Golems!	}
+{	445	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	446	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	447	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	448	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	449	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	450	}{	Just one more thing...	}{	Just one more thing...	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	One thing more...	}
+{	451	}{	Well, many Gargoyles still serve their Tremere masters, but a number of them have since rebelled and gone into hiding. They are a sentient race, but ultimately unfit for the freedom they desire. They need the guidance of their former masters.	}{	Well, many Gargoyles still serve their Tremere masters, but a number of them have since rebelled and gone into hiding. They are a sentient race, but ultimately unfit for the freedom they desire. They need the guidance of their former masters.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	452	}{	Sounds like you have some personal experience in this matter, Max.	}{	Sounds like you have some personal experience in this matter, Max.	}{	481	}{	IsClan(pc,"Tremere") and G.Regent_Gargoyleinside == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	453	}{	Sounds like you have some personal experience in this matter, Max.	}{	Sounds like you have some personal experience in this matter, Max.	}{	481	}{	Persuasion 5 & not IsClan(pc,"Tremere") and G.Regent_Gargoyleinside == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	454	}{	Sounds like you have some personal experience in this matter, Max.	}{	Sounds like you have some personal experience in this matter, Max.	}{	461	}{	Persuasion -5 & not IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	455	}{	If I need to get rid of one, how do I do it?	}{	If I need to get rid of one, how do I do it?	}{	471	}{	not IsDead("Gargoyle") and G.Gargoyle_Convinced == 0 }{	}{	}{	}{	}{	}{	}{	}{	How do I destroy such a demon?	}
+{	456	}{	A few more questions about Gargoyles...	}{	A few more questions about Gargoyles...	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me more of these Blood Golems!	}
+{	457	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	458	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	459	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	460	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	461	}{	Some things are not to be spoken of, neonate. This is Tremere business, and you need not know any more than that.	}{	Some things are not to be spoken of, neonate. This is Tremere business, and you need not know any more than that.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	462	}{	If you say so, Max. Just tell me how I can get rid of it.	}{	If you say so, Max. Just tell me how I can get rid of it.	}{	471	}{	not IsDead("Gargoyle") and G.Gargoyle_Convinced == 0 }{	}{	}{	}{	}{	}{	}{	}{	How do I destroy such a demon?	}
+{	463	}{	A few more questions about Gargoyles...	}{	A few more questions about Gargoyles...	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me more of these Blood Golems.	}
+{	464	}{	Just one more thing...	}{	Just one more thing...	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	One thing more...	}
+{	465	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	466	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	467	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	468	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	469	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	470	}{	I'm outta here. Later.	}{	I'm outta here. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My mind has left. My body follows.	}
+{	471	}{	With much difficulty, I'm afraid. Gargoyles are notoriously resilient. Their hides are made of stone. Firearms will be almost useless. Blunt force is the only thing they understand.	}{	With much difficulty, I'm afraid. Gargoyles are notoriously resilient. Their hides are made of stone. Firearms will be almost useless. Blunt force is the only thing they understand.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	472	}{	That's great. A few more questions about Gargoyles...	}{	That's great. A few more questions about Gargoyles...	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me more of these Blood Golems.	}
+{	473	}{	One more thing...	}{	One more thing...	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	One thing more...	}
+{	474	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	475	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	476	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	477	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	478	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	479	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	480	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	481	}{	[Sigh]Yes. I know something of Gargoyles, and of this Gargoyle in particular. I had hoped that he would meet his Final Death, but it seems my creation still lives to torment me.	}{	[Sigh]Yes. I know something of Gargoyles, and of this Gargoyle in particular. I had hoped that he would meet his Final Death, but it seems my creation still lives to torment me.	}{	#	}{	}{	G.Regent_Gargoyleinside = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	482	}{	What? YOUR creation?!?	}{	What? YOUR creation?!?	}{	491	}{	G.Patch_Plus == 0 }{	}{	}{	}{	}{	}{	}{	}{	You fathered this fiend?	}
+{	483	}{	What? YOUR creation?!?	}{	What? YOUR creation?!?	}{	491	}{	G.Patch_Plus == 1 }{	pc.AwardExperience("Gargoyle05")	}{	}{	}{	}{	}{	}{	}{	You fathered this fiend?	}
+{	484	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	485	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	486	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	487	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	488	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	489	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	490	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	491	}{	Yes. Many years ago, I created this Gargoyle to protect the chantry from our enemies. He was a faithful servant, and saved my life more than once.	}{	Yes. Many years ago, I created this Gargoyle to protect the chantry from our enemies. He was a faithful servant, and saved my life more than once.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	492	}{	(Auto-Link)	}{	(Auto-Link)	}{	501	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-Link)	}
+{	493	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	494	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	495	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	496	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	497	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	498	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	499	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	500	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	501	}{	Unfortunately, he became increasingly upset about his role as my protector, and wished to be set free. I refused to do so. [almost sadly]Finally, he stole away into the night, and I haven't seen him since.	}{	Unfortunately, he became increasingly upset about his role as my protector, and wished to be set free. I refused to do so. [almost sadly]Finally, he stole away into the night, and I haven't seen him since.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	502	}{	I see. Well, Isaac Abrams has asked me to get rid of the Gargoyle.	}{	I see. Well, Isaac Abrams has asked me to get rid of the Gargoyle.	}{	531	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	503	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	504	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	505	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	506	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	507	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	508	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	509	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	510	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	511	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	512	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	513	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	514	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	515	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	516	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	517	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	518	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	519	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	520	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	521	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	522	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	523	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	524	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	525	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	526	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	527	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	528	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	529	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	530	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	531	}{	Isaac Abrams? His disrespect for the Camarilla is surpassed only by his hatred of LaCroix. If he finds out, it will be a source of great embarrassment for the clan and the Camarilla. He cannot learn that this Gargoyle was my creation. Do you understand?	}{	Isaac Abrams? His disrespect for the Camarilla is surpassed only by his hatred of LaCroix. If he finds out, it will be a source of great embarrassment for the clan and the Camarilla. He cannot learn that this Gargoyle was my creation. Do you understand?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	532	}{	Completely. I will protect the secrets of the clan.	}{	Completely. I will protect the secrets of the clan.	}{	541	}{	IsClan(pc,"Tremere")	}{	G.Regent_QuestGargoyle = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	533	}{	Completely. I will tell no one of your secret.	}{	Completely. I will tell no one of your secret.	}{	551	}{	not IsClan(pc,"Tremere")	}{	G.Regent_QuestGargoyle = 2	}{	}{	}{	}{	}{	}{	}{	I will keep this sorcerous secret.	}
+{	534	}{	I will take it under consideration.	}{	I will take it under consideration.	}{	561	}{	}{	}{	}{	}{	}{	}{	}{	}{	I have options to weigh, wizard-king.	}
+{	535	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	536	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	537	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	538	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	539	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	540	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	541	}{	[relieved]Ah, I see that you've learned well. Despite the indiscretions of your sire, you are proving to be an asset for the clan. I commend and thank you, neonate.	}{	[relieved]Ah, I see that you've learned well. Despite the indiscretions of your sire, you are proving to be an asset for the clan. I commend and thank you, neonate.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	542	}{	No problem. Now what should I do?	}{	No problem. Now what should I do?	}{	581	}{	not IsDead("Gargoyle") and G.Gargoyle_Convinced == 0 }{	}{	}{	}{	}{	}{	}{	}{	}
+{	543	}{	Actually I already resolved the issue with the Gargoyle.	}{	Actually I already resolved the issue with the Gargoyle.	}{	611	}{	(IsDead("Gargoyle") or G.Gargoyle_Convinced == 1)	}{	G.Regent_Gargoyle = 1	}{	}{	}{	}{	}{	}{	}{	I did ensure that the Blood Golem haunts Hollywood no more already.	}
+{	544	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	545	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	546	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	547	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	548	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	549	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	550	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	551	}{	I appreciate your discretion in this matter, neonate.	}{	I appreciate your discretion in this matter, neonate.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	552	}{	Good to hear. Now, what do I need to do?	}{	Good to hear. Now, what do I need to do?	}{	581	}{	not IsDead("Gargoyle") and G.Gargoyle_Convinced == 0 }{	}{	}{	}{	}{	}{	}{	}{	What need I do now?	}
+{	553	}{	Actually I already resolved the issue with the Gargoyle.	}{	Actually I already resolved the issue with the Gargoyle.	}{	611	}{	(IsDead("Gargoyle") or G.Gargoyle_Convinced == 1)	}{	G.Regent_Gargoyle = 1	}{	}{	}{	}{	}{	}{	}{	I did ensure that the Blood Golem haunts Hollywood no more already.	}
+{	554	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	555	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	556	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	557	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	558	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	559	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	560	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	561	}{	[menacing]You do that, neonate. If I hear that you have divulged my secret to anyone - ANYONE - you will never be welcome in this chantry again. Do you understand?	}{	[menacing]You do that, neonate. If I hear that you have divulged my secret to anyone - ANYONE - you will never be welcome in this chantry again. Do you understand?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	562	}{	Yes. You can trust me. I will protect the interests of the clan.	}{	Yes. You can trust me. I will protect the interests of the clan.	}{	591	}{	IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	563	}{	Yes. Don't worry. You can trust me.	}{	Yes. Don't worry. You can trust me.	}{	591	}{	not IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	I will speak no words against you.	}
+{	564	}{	I understand that you're in a precarious position, Max.	}{	I understand that you're in a precarious position, Max.	}{	571	}{	}{	}{	}{	}{	}{	}{	}{	}{	You find yourself precariously perched, wizard-king.	}
+{	565	}{	I'm tired of Camarilla secrecy. The Anarchs should know about this.	}{	I'm tired of Camarilla secrecy. The Anarchs should know about this.	}{	571	}{	}{	}{	}{	}{	}{	}{	}{	}{	Abrams will savor your dark secret.	}
+{	566	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	567	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	568	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	569	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	570	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	571	}{	It's a dangerous game you're playing, neonate. I trust you'll make the right decision. Farewell.	}{	It's a dangerous game you're playing, neonate. I trust you'll make the right decision. Farewell.	}{	#	}{	}{	G.Regent_QuestGargoyle = 4	}{	}{	}{	}{	}{	}{	}{	}
+{	572	}{	How can I fight the gargoyle?	}{	How can I fight the gargoyle?	}{	471	}{	not IsDead("Gargoyle") and G.Gargoyle_Convinced == 0 }{	}{	}{	}{	}{	}{	}{	}{	How do I destroy the demon?	}
+{	573	}{	Actually I already resolved the issue with the Gargoyle.	}{	Actually I already resolved the issue with the Gargoyle.	}{	611	}{	(IsDead("Gargoyle") or G.Gargoyle_Convinced == 1)	}{	G.Regent_Gargoyle = 1	}{	}{	}{	}{	}{	}{	}{	I did ensure that the Blood Golem haunts Hollywood no more already.	}
+{	574	}{	Goodbye, Max.	}{	Goodbye, Max.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Farewell, wizard-king.	}
+{	575	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	576	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	577	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	578	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	579	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	580	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	581	}{	Here... take this. It is an ancient ward that may help you in your battle with the Gargoyle. You need only carry it on your person to enjoy its protection.	}{	Here... take this. It is an ancient ward that may help you in your battle with the Gargoyle. You need only carry it on your person to enjoy its protection.	}{	#	}{	}{	pc.GiveItem("item_p_gargoyle_talisman")	}{	}{	}{	}{	}{	}{	}{	}
+{	582	}{	Thanks, but how do I best fight the gargoyle?	}{	Thanks, but how do I best fight the gargoyle?	}{	471	}{	not IsDead("Gargoyle") and G.Gargoyle_Convinced == 0 }{	}{	}{	}{	}{	}{	}{	}{	Gift appreciated, but how do I destroy the demon?	}
+{	583	}{	Thanks.	}{	Thanks.	}{	591	}{	}{	}{	}{	}{	}{	}{	}{	}{	My person appreciates this gift.	}
+{	584	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	585	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	586	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	587	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	588	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	589	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	590	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	591	}{	Good luck, young one. When you succeed in destroying the Gargoyle, return and I will give you an appropriate reward.	}{	Good luck, young one. When you succeed in destroying the Gargoyle, return and I will give you an appropriate reward.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	592	}{	One question left, how can I fight the gargoyle?	}{	One question left, how can I fight the gargoyle?	}{	471	}{	not IsDead("Gargoyle") and G.Gargoyle_Convinced == 0 }{	}{	}{	}{	}{	}{	}{	}{	More knowledge needed. How do I destroy the demon?	}
+{	593	}{	Actually I already resolved the issue with the Gargoyle.	}{	Actually I already resolved the issue with the Gargoyle.	}{	611	}{	(IsDead("Gargoyle") or G.Gargoyle_Convinced == 1)	}{	G.Regent_Gargoyle = 1	}{	}{	}{	}{	}{	}{	}{	I did ensure that the Blood Golem haunts Hollywood no more already.	}
+{	594	}{	Hold on. There was something else I needed.	}{	Hold on. There was something else I needed.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	One thing more...	}
+{	595	}{	I'll do that. See ya.	}{	I'll do that. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	596	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	597	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	598	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	599	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	600	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	601	}{	Then return to me when you have.	}{	Then return to me when you have.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	602	}{	Wait! One more thing...	}{	Wait! One more thing...	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	One thing more...	}
+{	603	}{	Cool. Later.	}{	Cool. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My mind has left. My body follows.	}
+{	604	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	605	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	606	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	607	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	608	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	609	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	610	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	611	}{	You did? That's quite an accomplishment for one so young, neonate. And with discretion as well. Again, you impress me.	}{	You did? That's quite an accomplishment for one so young, neonate. And with discretion as well. Again, you impress me.	}{	#	}{	}{	G.Regent_Haven2 = 1; G.Regent_QuestGargoyle = 5	}{	}{	}{	}{	}{	}{	}{	}
+{	612	}{	Just doing what I feel is right.	}{	Just doing what I feel is right.	}{	711	}{	G.Patch_Plus == 0 and G.Isaac_Gargoyle == 4	}{	pc.SetQuest("Gargoyle",5); pc.MoneyAdd( 500 )	}{	}{	}{	}{	}{	}{	}{	This deed deserved discretion.	}
+{	613	}{	Just doing what I feel is right.	}{	Just doing what I feel is right.	}{	711	}{	G.Patch_Plus == 0 and G.Isaac_Gargoyle < 4	}{	pc.SetQuest("Gargoyle",9); pc.MoneyAdd( 500 )	}{	}{	}{	}{	}{	}{	}{	This deed deserved discretion.	}
+{	614	}{	Just doing what I feel is right.	}{	Just doing what I feel is right.	}{	711	}{	G.Patch_Plus == 1 and G.Isaac_Gargoyle == 4	}{	pc.SetQuest("Gargoyle",5); pc.GiveItem("item_p_occult_dexterity")	}{	}{	}{	}{	}{	}{	}{	This deed deserved discretion.	}
+{	615	}{	Just doing what I feel is right.	}{	Just doing what I feel is right.	}{	711	}{	G.Patch_Plus == 1 and G.Isaac_Gargoyle < 4	}{	pc.SetQuest("Gargoyle",9); pc.GiveItem("item_p_occult_dexterity")	}{	}{	}{	}{	}{	}{	}{	This deed deserved discretion.	}
+{	616	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	617	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	618	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	619	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	620	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	621	}{	Yes, indeed. You have more than proven yourself, and I have spoken of you to my lord. He and I both agree that you would be a great asset to the clan.	}{	Yes, indeed. You have more than proven yourself, and I have spoken of you to my lord. He and I both agree that you would be a great asset to the clan.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	622	}{	What does that mean?	}{	What does that mean?	}{	631	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	623	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	624	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	625	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	626	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	627	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	628	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	629	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	630	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	631	}{	It means that you are welcome to join the chantry as an apprentice. As a result, you will live here in a room of your own, and enjoy the luxury and privacy it affords you. Do you accept this honor, neonate?	}{	It means that you are welcome to join the chantry as an apprentice. As a result, you will live here in a room of your own, and enjoy the luxury and privacy it affords you. Do you accept this honor, neonate?	}{	#	}{	}{	G.Regent_Family = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	632	}{	Of course.	}{	Of course.	}{	641	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	633	}{	I don't know. I need to think about it.	}{	I don't know. I need to think about it.	}{	651	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	634	}{	I think I will have to respectfully decline.	}{	I think I will have to respectfully decline.	}{	661	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	635	}{	Forget it. I go my own way.	}{	Forget it. I go my own way.	}{	661	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	636	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	637	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	638	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	639	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	640	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	641	}{	[pleased]I knew that I was right about you. Welcome to the pyramid, my apprentice. Your things have already been moved from your haven in Santa Monica... they are upstairs waiting for you.	}{	[pleased]I knew that I was right about you. Welcome to the pyramid, my apprentice. Your things have already been moved from your haven in Santa Monica... they are upstairs waiting for you.	}{	#	}{	}{	G.Regent_Family = 3	}{	}{	}{	}{	}{	}{	}{	}
+{	642	}{	Thanks, Max. One more thing...	}{	Thanks, Max. One more thing...	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	643	}{	Uh... I have this, uh, "friend" who likes to hang out with me...	}{	Uh... I have this, uh, "friend" who likes to hang out with me...	}{	646	}{	G.Heather_Drank == 1 and not IsDead("Heather") and G.Heather_Haven == 1 and G.Heather_Gone == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	644	}{	Nice to be a part of the family. See you later.	}{	Nice to be a part of the family. See you later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	645	}{	All of them? I doubt it. I'll get the rest right away.	}{	All of them? I doubt it. I'll get the rest right away.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	646	}{	I am also aware of your ghoul. She is a questionable distraction, in my opinion, but she will be welcome here.	}{	I am also aware of your ghoul. She is a questionable distraction, in my opinion, but she will be welcome here.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	647	}{	Thanks, Max. One more thing...	}{	Thanks, Max. One more thing...	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	648	}{	Nice to be a part of the family. See you later.	}{	Nice to be a part of the family. See you later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	649	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	650	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	651	}{	[disappointed]I see. Well, think hard on this, neonate. Such an offer is only given once. I pray you make the right decision.	}{	[disappointed]I see. Well, think hard on this, neonate. Such an offer is only given once. I pray you make the right decision.	}{	#	}{	}{	G.Regent_Family = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	652	}{	I'm sure I will. See you, Max.	}{	I'm sure I will. See you, Max.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	653	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	654	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	655	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	656	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	657	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	658	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	659	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	660	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	661	}{	[disappointed]I see. That is most disappointing, neonate. I was hoping that you would have chosen more wisely. We have nothing else to speak about for now. Farewell.	}{	[disappointed]I see. That is most disappointing, neonate. I was hoping that you would have chosen more wisely. We have nothing else to speak about for now. Farewell.	}{	#	}{	}{	G.Regent_Family = 4	}{	}{	}{	}{	}{	}{	}{	}
+{	662	}{	Later.	}{	Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	663	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	664	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	665	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	666	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	667	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	668	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	669	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	670	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	671	}{	Yes, you have exhibited loyalty to the clan, and it will not be forgotten. Your discretion in this matter has increased your standing here at the chantry. Nicely done.	}{	Yes, you have exhibited loyalty to the clan, and it will not be forgotten. Your discretion in this matter has increased your standing here at the chantry. Nicely done.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	672	}{	Just doing my part for the clan.	}{	Just doing my part for the clan.	}{	681	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	673	}{	Compliments are great, but cash is better.	}{	Compliments are great, but cash is better.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	674	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	675	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	676	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	677	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	678	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	679	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	680	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	681	}{	And it will remembered. If there is nothing else, I bid you farewell.	}{	And it will remembered. If there is nothing else, I bid you farewell.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	682	}{	Actually, there was one more thing.	}{	Actually, there was one more thing.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	683	}{	See ya.	}{	See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	684	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	685	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	686	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	687	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	688	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	689	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	690	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	691	}{	You have already been compensated by Abrams for your part in this. If you continue to show us loyalty, your future reward from me will be much greater. We will speak of it at another time.	}{	You have already been compensated by Abrams for your part in this. If you continue to show us loyalty, your future reward from me will be much greater. We will speak of it at another time.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	692	}{	I hope so. One more thing...	}{	I hope so. One more thing...	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	693	}{	Uh, actually, I think I'll take the money. Now.	}{	Uh, actually, I think I'll take the money. Now.	}{	701	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	694	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	695	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	696	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	697	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	698	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	699	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	700	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	701	}{	I see. Most disappointing, neonate. But I will comply with your wishes. This should be an acceptable amount for your services. Enjoy your payment... it came at a higher price than you know.	}{	I see. Most disappointing, neonate. But I will comply with your wishes. This should be an acceptable amount for your services. Enjoy your payment... it came at a higher price than you know.	}{	#	}{	}{	G.Regent_Haven2 = 0; pc.MoneyAdd( 500 )	}{	}{	}{	}{	}{	}{	}{	}
+{	702	}{	If you say so. Just one more thing...	}{	If you say so. Just one more thing...	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	703	}{	Money talks, bullshit walks. Later.	}{	Money talks, bullshit walks. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	704	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	705	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	706	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	707	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	708	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	709	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	710	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	711	}{	And your efforts are well appreciated. Please, accept this gift as payment for your accomplishment. The Tremere clan appreciates your... confidentiality.	}{	And your efforts are well appreciated. Please, accept this gift as payment for your accomplishment. The Tremere clan appreciates your... confidentiality.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	712	}{	Like I said, my interests lie with the clan.	}{	Like I said, my interests lie with the clan.	}{	621	}{	IsClan(pc,"Tremere") and G.Regent_Haven1 == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	713	}{	Like I said, my interests lie with the clan.	}{	Like I said, my interests lie with the clan.	}{	671	}{	IsClan(pc,"Tremere") and G.Regent_Haven1 == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	714	}{	No problem. One more thing...	}{	No problem. One more thing...	}{	41	}{	not IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	One thing more...	}
+{	715	}{	Cool. See ya, Max.	}{	Cool. See ya, Max.	}{	0	}{	not IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	716	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	717	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	718	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	719	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	720	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	721	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	722	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	723	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	724	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	725	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	726	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	727	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	728	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	729	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	730	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	731	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	732	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	733	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	734	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	735	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	736	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	737	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	738	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	739	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	740	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	741	}{	I'm sorry you think so. Perhaps we have nothing further to speak of.	}{	I'm sorry you think so. Perhaps we have nothing further to speak of.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	742	}{	Wait! Maybe I could hear a little more before I make my decision.	}{	Wait! Maybe I could hear a little more before I make my decision.	}{	751	}{	}{	}{	}{	}{	}{	}{	}{	}{	Wait! Perhaps my tongue was a little too testy.	}
+{	743	}{	You said it, pal. Anarchy rules! I'm outta here.	}{	You said it, pal. Anarchy rules! I'm outta here.	}{	0	}{	G.Regent_Anarchs == 1	}{	G.Regent_Pissed = G.Regent_Pissed + 1	}{	}{	}{	}{	}{	}{	}{	I fly the Anarch flag, wizard-king! Farewell.	}
+{	744	}{	Your loyalty to LaCroix is questionable. Mine is not. Later.	}{	Your loyalty to LaCroix is questionable. Mine is not. Later.	}{	0	}{	G.Regent_LaCroix == 1 }{	G.Regent_Pissed = G.Regent_Pissed + 1	}{	}{	}{	}{	}{	}{	}{	I cannot stomach your infidelity to the jester. I leave you.	}
+{	745	}{	I don't follow anyone's rules, buddy. See ya.	}{	I don't follow anyone's rules, buddy. See ya.	}{	0	}{	}{	G.Regent_Pissed = G.Regent_Pissed + 1	}{	}{	}{	}{	}{	}{	}{	This road is one I travel alone. Farewell.	}
+{	746	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	747	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	748	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	749	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	750	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	751	}{	Hmmm. A wise choice, neonate. It is always better to listen and learn, than to act with brazen recklessness. Perhaps you might be a useful ally, after all.	}{	Hmmm. A wise choice, neonate. It is always better to listen and learn, than to act with brazen recklessness. Perhaps you might be a useful ally, after all.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	752	}{	Cool. Can I ask you a few more questions?	}{	Cool. Can I ask you a few more questions?	}{	141	}{	}{	G.Regent_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	753	}{	On second thought, I'd never sell out to the Camarilla. I'm outta here.	}{	On second thought, I'd never sell out to the Camarilla. I'm outta here.	}{	761	}{	G.Regent_LaCroix == 0	}{	G.Regent_Pissed = G.Regent_Pissed + 1	}{	}{	}{	}{	}{	}{	}{	I sell not my soul to your Camarilla conspiracy! Farewell.	}
+{	754	}{	Actually, I can no longer tolerate your subtle insubordination to LaCroix.	}{	Actually, I can no longer tolerate your subtle insubordination to LaCroix.	}{	761	}{	G.Regent_LaCroix == 1	}{	G.Regent_Pissed = G.Regent_Pissed + 1	}{	}{	}{	}{	}{	}{	}{	I serve the jester-prince, and you seem to spit on his shadow. Farewell.	}
+{	755	}{	You know what? I make my own rules, pal. See ya.	}{	You know what? I make my own rules, pal. See ya.	}{	761	}{	}{	G.Regent_Pissed = G.Regent_Pissed + 1	}{	}{	}{	}{	}{	}{	}{	I need no company on my long and lonely road. I leave you.	}
+{	756	}{	You know what? Forget it. I'm through with your Camarilla ilk.	}{	You know what? Forget it. I'm through with your Camarilla ilk.	}{	781	}{	G.Regent_Pissed == 2 and G.Regent_LaCroix == 0	}{	}{	}{	}{	}{	}{	}{	}{	I bow to no crusty Camarilla cape! Farewell.	}
+{	757	}{	I don't think so. LaCroix is my prince, and I follow only his orders.	}{	I don't think so. LaCroix is my prince, and I follow only his orders.	}{	781	}{	G.Regent_Pissed == 2 and G.Regent_LaCroix == 1	}{	}{	}{	}{	}{	}{	}{	}{	Your scars of infidelity sicken me, wizard-king! I serve the jester-prince.	}
+{	758	}{	This whole Kindred society thing SUCKS. Put that in your pipe and smoke it.	}{	This whole Kindred society thing SUCKS. Put that in your pipe and smoke it.	}{	781	}{	}{	}{	}{	}{	}{	}{	}{	}{	Smoke the pipe of my self-solidarity! I leave you.	}
+{	759	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	760	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	761	}{	Then I recommend you leave immediately.	}{	Then I recommend you leave immediately.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	762	}{	With pleasure.	}{	With pleasure.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Already gone.	}
+{	763	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	764	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	765	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	766	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	767	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	768	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	769	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	770	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	771	}{	I thought we had defined the nature of our relationship when last we spoke. I'm assuming you know where the door is, whelp?	}{	I thought we had defined the nature of our relationship when last we spoke. I'm assuming you know where the door is, whelp?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	772	}{	Hold on, Max. Maybe I was a little out of line before.	}{	Hold on, Max. Maybe I was a little out of line before.	}{	751	}{	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps my tongue was a little too testy.	}
+{	773	}{	Whatever. I don't even know why I came here. See ya.	}{	Whatever. I don't even know why I came here. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	774	}{	Before I leave, I wanted you to know... I'm going to take the Camarilla down.	}{	Before I leave, I wanted you to know... I'm going to take the Camarilla down.	}{	781	}{	}{	}{	}{	}{	}{	}{	}{	}{	You and the Camarilla shall fuel my furious fire!	}
+{	775	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	776	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	777	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	778	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	779	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	780	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	781	}{	It seems there is no reasoning with you. Leave now. You will never enter this chantry again.	}{	It seems there is no reasoning with you. Leave now. You will never enter this chantry again.	}{	#	}{	}{	G.Regent_Pissed = 3	}{	}{	}{	}{	}{	}{	}{	}
+{	782	}{	This place sucks, anyway. Watch your back, Max. Later.	}{	This place sucks, anyway. Watch your back, Max. Later.	}{	0	}{	pc.GetQuestState("Regent") == 0 or pc.GetQuestState("Regent") == 6	}{	}{	}{	}{	}{	}{	}{	}{	This chantry compels me to upchuck. Farewell.	}
+{	783	}{	This place sucks, anyway. Watch your back, Max. Later.	}{	This place sucks, anyway. Watch your back, Max. Later.	}{	0	}{	pc.GetQuestState("Regent") > 0 and pc.GetQuestState("Regent") != 6	}{	pc.SetQuest("Regent",7)	}{	}{	}{	}{	}{	}{	}{	This chantry compels me to upchuck. Farewell.	}
+{	784	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	785	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	786	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	787	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	788	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	789	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	790	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	791	}{	Leave now. We will never speak again.	}{	Leave now. We will never speak again.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	792	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	793	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	794	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	795	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	796	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	797	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	798	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	799	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	800	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	801	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	802	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	803	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	804	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	805	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	806	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	807	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	808	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	809	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	810	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	811	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	812	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	813	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	814	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	815	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	816	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	817	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	818	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	819	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	820	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	821	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	822	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	823	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	824	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	825	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	826	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	827	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	828	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	829	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	830	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	831	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	832	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	833	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	834	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	835	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	836	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	837	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	838	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	839	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	840	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	841	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	842	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	843	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	844	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	845	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	846	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	847	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	848	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	849	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	850	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	851	}{	Greetings, neonate. I have heard of your recent... difficulties with LaCroix. I can't say that I am surprised. Love of power always leads to betrayal, but I'm glad that you have survived.	}{	Greetings, neonate. I have heard of your recent... difficulties with LaCroix. I can't say that I am surprised. Love of power always leads to betrayal, but I'm glad that you have survived.	}{	#	}{	}{	G.Regent_Ending = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	852	}{	Thanks, Max. Listen... the prince has been double dealing with the Kuei-jin.	}{	Thanks, Max. Listen... the prince has been double dealing with the Kuei-jin.	}{	861	}{	G.Story_State == 120	}{	}{	}{	}{	}{	}{	}{	}{	The jester throws in his lot with the Eastern Life-Eaters.	}
+{	853	}{	Thanks, Max. Now it's time to end this...	}{	Thanks, Max. Now it's time to end this...	}{	0	}{	G.Story_State != 120	}{	}{	}{	}{	}{	}{	}{	}{	The time is up, I'm going to have some fun.	}
+{	854	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	855	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	856	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	857	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	858	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	859	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	860	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	861	}{	Hmmm. It is as I had feared. The Beast takes many forms within us, and it seems that LaCroix has finally surrendered to its power. Please, excuse me for a moment.	}{	Hmmm. It is as I had feared. The Beast takes many forms within us, and it seems that LaCroix has finally surrendered to its power. Please, excuse me for a moment.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	862	}{	(Auto-Link)	}{	(Auto-Link)	}{	871	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-Link)	}
+{	863	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	864	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	865	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	866	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	867	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	868	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	869	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	870	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	871	}{	Yes. Yes. I see. Of course, my lord. It will be done.	}{	Yes. Yes. I see. Of course, my lord. It will be done.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	872	}{	(Auto-Link)	}{	(Auto-Link)	}{	881	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-Link)	}
+{	873	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	874	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	875	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	876	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	877	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	878	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	879	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	880	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	881	}{	The prince and his new-found eastern allies need to be dealt with swiftly and severely. You have proven your strength many times in this drama. Are you now ready to prove your loyalty to the Camarilla?	}{	The prince and his new-found eastern allies need to be dealt with swiftly and severely. You have proven your strength many times in this drama. Are you now ready to prove your loyalty to the Camarilla?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	882	}{	That's why I'm here.	}{	That's why I'm here.	}{	891	}{	IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	883	}{	That's why I'm here.	}{	That's why I'm here.	}{	901	}{	not IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	I fly the Camarilla flag.	}
+{	884	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	885	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	886	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	887	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	888	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	889	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	890	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	891	}{	It seems that the Tremere clan must lead the Camarilla through this time of darkness. But tread carefully, neonate. I fear that this night heralds something far more sinister than the petty machinations of a rogue prince.	}{	It seems that the Tremere clan must lead the Camarilla through this time of darkness. But tread carefully, neonate. I fear that this night heralds something far more sinister than the petty machinations of a rogue prince.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	892	}{	What do you mean?	}{	What do you mean?	}{	911	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	893	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	894	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	895	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	896	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	897	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	898	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	899	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	900	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	901	}{	Your loyalty will be remembered. But tread carefully, neonate. I fear that this night heralds something far more sinister than the petty machinations of a rogue prince.	}{	Your loyalty will be remembered. But tread carefully, neonate. I fear that this night heralds something far more sinister than the petty machinations of a rogue prince.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	902	}{	What do you mean?	}{	What do you mean?	}{	911	}{	}{	}{	}{	}{	}{	}{	}{	}{	Make your words more clear.	}
+{	903	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	904	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	905	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	906	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	907	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	908	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	909	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	910	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	911	}{	I do not know. This sarcophagus seems to have unleashed a raging whirlwind, pulling all of those who surround it into this storm. I cannot see what secrets it holds, but be warned... a dark shadow falls across my mind. There are some powers best left undisturbed.	}{	I do not know. This sarcophagus seems to have unleashed a raging whirlwind, pulling all of those who surround it into this storm. I cannot see what secrets it holds, but be warned... a dark shadow falls across my mind. There are some powers best left undisturbed.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	912	}{	I think that the Kuei-jin have the key to the sarcophagus.	}{	I think that the Kuei-jin have the key to the sarcophagus.	}{	921	}{	}{	}{	}{	}{	}{	}{	}{	}{	The Life-Eaters have the key to open this stone secret.	}
+{	913	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	914	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	915	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	916	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	917	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	918	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	919	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	920	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	921	}{	Then your path leads first to the Kuei-jin Temple, where you must dispose of this Ming-Xiao and her minions. After you have secured the key, you must deal with LaCroix and his rabid dog. Only then will justice have been served.	}{	Then your path leads first to the Kuei-jin Temple, where you must dispose of this Ming-Xiao and her minions. After you have secured the key, you must deal with LaCroix and his rabid dog. Only then will justice have been served.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	922	}{	I understand. I will do what needs to be done... for the Camarilla.	}{	I understand. I will do what needs to be done... for the Camarilla.	}{	931	}{	}{	}{	}{	}{	}{	}{	}{	}{	I hold the banner high in the midst of this terrible tempest.	}
+{	923	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	924	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	925	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	926	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	927	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	928	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	929	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	930	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	931	}{	Of that I have no doubt, neonate. I wish you luck in the final act of this drama. Farewell.	}{	Of that I have no doubt, neonate. I wish you luck in the final act of this drama. Farewell.	}{	#	}{	}{	pc.SetQuest("Ming",7)	}{	}{	}{	}{	}{	}{	}{	}
+{	932	}{	See ya, Max.	}{	See ya, Max.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I await my curtain call. Farewell, wizard-king.	}
+{	933	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	934	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	935	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	936	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	937	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	938	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	939	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	940	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	941	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	942	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	943	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	944	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	945	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	946	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	947	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	948	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	949	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	950	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	951	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	952	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	953	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	954	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	955	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	956	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	957	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	958	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	959	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	960	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	961	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	962	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	963	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	964	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	965	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	966	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	967	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	968	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	969	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	970	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	971	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	972	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	973	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	974	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	975	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	976	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	977	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	978	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	979	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	980	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	981	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	982	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	983	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	984	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	985	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	986	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	987	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	988	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	989	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	990	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	991	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	992	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	993	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	994	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	995	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	996	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	997	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	998	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	999	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1000	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1001	}{	Well done, neonate. Your powers are considerable for one so young. You will be a great asset in the years to come, and the sarcophagus will reside safely in the hands of the Camarilla.	}{	Well done, neonate. Your powers are considerable for one so young. You will be a great asset in the years to come, and the sarcophagus will reside safely in the hands of the Camarilla.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1002	}{	Thanks, Max. What about the sarcophagus?	}{	Thanks, Max. What about the sarcophagus?	}{	1011	}{	}{	}{	}{	}{	}{	}{	}{	}{	What of the secret sarcophagus?	}
+{	1003	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1004	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1005	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1006	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1007	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1008	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1009	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1010	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1011	}{	I told you before that there are some powers in this world that are best left undisturbed. I don't know what lies in the sarcophagus...	}{	I told you before that there are some powers in this world that are best left undisturbed. I don't know what lies in the sarcophagus...	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1012	}{	(Auto-Link)	}{	(Auto-Link)	}{	1021	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1013	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1014	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1015	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1016	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1017	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1018	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1019	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1020	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1021	}{	... and I believe that it may be in our best interests not to find out. If these be the final nights of our existence, I do not rush to bring about Gehenna any sooner than it need come. Let the shadows of time cover this dark treasure, so that eventually it fades even from our memories. Some things are best forgotten, neonate... some things are best forgotten.	}{	... and I believe that it may be in our best interests not to find out. If these be the final nights of our existence, I do not rush to bring about Gehenna any sooner than it need come. Let the shadows of time cover this dark treasure, so that eventually it fades even from our memories. Some things are best forgotten, neonate... some things are best forgotten.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1022	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1023	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1024	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1025	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1026	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1027	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1028	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1029	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1030	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1031	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1032	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1033	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1034	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1035	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1036	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1037	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1038	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1039	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1040	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1041	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1042	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1043	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1044	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1045	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1046	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1047	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1048	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1049	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1050	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1051	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1052	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1053	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1054	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1055	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1056	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1057	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1058	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1059	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1060	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1061	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1062	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1063	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1064	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1065	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1066	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1067	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1068	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1069	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1070	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1071	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1072	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1073	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1074	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1075	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1076	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1077	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1078	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1079	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1080	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1081	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1082	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1083	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1084	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1085	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1086	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1087	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1088	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1089	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1090	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1091	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1092	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1093	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1094	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1095	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1096	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1097	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1098	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1099	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1101	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1102	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1103	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1111	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1112	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1113	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1121	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1122	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1123	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1132	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1133	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1141	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1142	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1143	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1151	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1152	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1153	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1154	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1155	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1161	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1162	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1163	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1164	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1172	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1173	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1174	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1181	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1182	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1183	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1184	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1185	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1191	}{	Ah. A child of Malkav, no less. Do dark visions cloud your sight, young one, shattered reflections of your clan father's mind?	}{	Ah. A child of Malkav, no less. Do dark visions cloud your sight, young one, shattered reflections of your clan father's mind?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1192	}{	The glass is cracked, but strangely clear.	}{	The glass is cracked, but strangely clear.	}{	1201	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1193	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1194	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1195	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1201	}{	There is truth in your words, neonate, more than you yet realize. Your madness allows you to glimpse the truth of this existence, to see through the shadowy veil into the world beyond.	}{	There is truth in your words, neonate, more than you yet realize. Your madness allows you to glimpse the truth of this existence, to see through the shadowy veil into the world beyond.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1202	}{	On your head an iron crown, and the jester dances before you.	}{	On your head an iron crown, and the jester dances before you.	}{	1211	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1203	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1204	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1205	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1208	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1211	}{	Hmmm. Be cautious when speaking of these visions. Truth is rarely welcomed by those who cannot see it. There are many Kindred who will be less, shall we say, accepting of it than I am.	}{	Hmmm. Be cautious when speaking of these visions. Truth is rarely welcomed by those who cannot see it. There are many Kindred who will be less, shall we say, accepting of it than I am.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1212	}{	Tell me your name, wizard-king.	}{	Tell me your name, wizard-king.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1213	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1214	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1215	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1217	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1221	}{	No more than yourself. But I do know that LaCroix is much too focused on acquiring it. His obvious need for it reveals a weakness that his enemies may one day exploit.	}{	No more than yourself. But I do know that LaCroix is much too focused on acquiring it. His obvious need for it reveals a weakness that his enemies may one day exploit.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1222	}{	What do you think is inside of it?	}{	What do you think is inside of it?	}{	1231	}{	}{	}{	}{	}{	}{	}{	}{	}{	What secrets lie beneath its lid?	}
+{	1223	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1224	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1225	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1226	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1227	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1228	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1231	}{	I do not know, although I must admit that I sense a change in the night air, something subtle and not altogether pleasant. Perhaps the arrival of the sarcophagus is the harbinger of something more dreadful.	}{	I do not know, although I must admit that I sense a change in the night air, something subtle and not altogether pleasant. Perhaps the arrival of the sarcophagus is the harbinger of something more dreadful.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1232	}{	Like what?	}{	Like what?	}{	1241	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1233	}{	A dark shadow, a curious hare, and the pillar ablaze in the night sky!	}{	A dark shadow, a curious hare, and the pillar ablaze in the night sky!	}{	1236	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1234	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1235	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1236	}{	You seem to know more than I about these matters. I pray that your visions don't portend the end of us all.	}{	You seem to know more than I about these matters. I pray that your visions don't portend the end of us all.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1237	}{	May I mine your gray matter?	}{	May I mine your gray matter?	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1238	}{	I am no longer here.	}{	I am no longer here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1241	}{	I will say no more.	}{	I will say no more.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1242	}{	I have a few more questions.	}{	I have a few more questions.	}{	141	}{	G.Regent_Ending == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1243	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1244	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1245	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1246	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1247	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1248	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1250	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1251	}{	Greetings.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1252	}{	Yes?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1253	}{	What are you doing here?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1254	}{	I no longer wish to speak with you.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1255	}{	Yes.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1256	}{	No.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1257	}{	Thank you.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1258	}{	What did you just say?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1259	}{	What!?!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1260	}{	I do not know.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1261	}{	I cannot help you with that.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1262	}{	I am pleased.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1263	}{	By the way...	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1264	}{	Take this.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1265	}{	I will send you an email concerning this.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1268	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1270	}{	(Starting Condition)	}{	}{	1241	}{	G.Story_State >= 100 and G.Regent_Ending == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1271	}{	(Starting Condition)	}{	}{	851	}{	G.Story_State >= 100	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1272	}{	(Starting Condition)	}{	}{	791	}{	G.Regent_Pissed == 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1273	}{	(Starting Condition)	}{	}{	771	}{	G.Regent_Pissed > 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1274	}{	(Starting Condition)	}{	}{	31	}{	G.Regent_Introduced == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1275	}{	(Starting Condition)	}{	}{	11	}{	G.Regent_Invitation == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1276	}{	(Starting Condition)	}{	}{	1	}{	G.Regent_Invitation == 0	}{	}{	}{	}{	}{	}{	}{	}{	}

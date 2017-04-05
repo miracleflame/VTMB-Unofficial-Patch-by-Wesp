@@ -1,0 +1,443 @@
+// Good Sub Machine Gun
+
+WeaponData
+{
+	"printname"		"IMI Uzi"	// changed by wesp
+	"description"		"The Uzi was developed to be a reliable and compact gun, robust enough to take a lot of punishment, and accurate enough to dish it out in a hurry. The ergonomic design of the Uzi was one of the first to incorporate wrap-around bolt and blowback action and to contain the magazine housing inside the pistol grip for quick and easy reloads. Limited recoil and climb make one-handed firing feasible."	// changed by wesp
+	"viewmodel"		"models/weapons/submachine_uzi/view/v_submachine_uzi.mdl"
+	"playermodel"		"models/weapons/submachine_uzi/ground/g_uzi.mdl"
+	"wieldmodel_f"		"models/weapons/submachine_uzi/wield/w_f_submachine_uzi.mdl"
+	"wieldmodel_m"		"models/weapons/submachine_uzi/wield/w_m_submachine_uzi.mdl"
+	"infomodel"		"models/weapons/submachine_uzi/info/i_uzi.mdl"
+
+	// This should match the viewmodel QC file offset:
+	"origin_x"		"1"
+	"origin_y"		"-5"
+	"origin_z"		"68"
+
+	"anim_prefix"		"uzi"
+
+// Fixed for the 07/02/2004 Switch by JLR for Leonard
+//	"activation0"		"Single"
+//	"activation1"		"Full Auto"
+	"activation0"		"Auto"	// changed by wesp
+	"activation1"		"Single"
+	"jammed0"		"Jammed"
+	"jammed1"		"Jammed"
+	"bucket"		"1"
+	"bucket_position"	"6"
+	"camera_class"		"noswitch"	// changed by wesp
+	"weight"		"3"
+	"item_flags"		"0"
+	"item_type"		"weapon_firearm"
+	"sound_group"	"Uzi"
+	"uses_accuracycursors"	"1"
+	"impact_snd_group"	"bullet"
+
+	"item_worth"		"320"
+	"player_sell"		"65"	// added by wesp
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"Weapons\Ranged\Uzi\Deploy.wav"
+		}
+	}
+
+
+//Weapon Ammo
+	Magazine
+	{
+		"ammoprintname"		"Uzi 9 mm Rounds"	// changed by wesp
+		"ammodescription"	"An Uzi 9 mm magazine."	// changed by wesp
+		"ammo_worth"		"15"
+		"ammoinfomodel"		"models/weapons/ammo/uzi/i_uzi_ammo.mdl"
+
+		"Size"			"32"	// changed by wesp
+		"Default_Size"		"32"	// changed by wesp
+		"Dropped_Ammo"		"32"	// changed by wesp
+		"Type"			"UziRound"
+		"ReloadTime"		"2.5"
+		
+		SoundData
+		{
+			"reload"
+			{
+				"sound1"	"Weapons/Ranged/Uzi/Reload.wav"
+			}
+
+			"reload_npc"
+			{
+				"sound1"	"Weapons/Ranged/Uzi/Reload.wav"
+			}
+		}
+	}
+
+//Primary Attack
+	Activation
+	{
+// Switched 07/02/2004 by JLR for Leonard
+//		"Tag"			"Primary"
+		"Tag"			"PrimaryMode2"
+		"Type"			"Attack"
+		"Ammo_Type"		"UziRound"
+		"Ammo_Cost"		"1"
+		"Ammo_Fired"		"1"
+		"Botch_Table"		"Pistols"
+		"Range"			"50"
+
+		"SkillRequirement"	"6"		// min. skill requirement used in dmg calculations
+		"BaseLethality"		"10"		// base lethality used in dmg calculations
+		"Dmg"			"2 Lethal Ranged_Combat DMG_BULLET"
+
+		"Attack_Rate"			"0.30"
+		"NPC_Attack_Rate_Min"		"1.0"		// The range of times for NPCs using this weapon to pause between
+		"NPC_Attack_Rate_Max"		"2.0"		//   attacks when at a distance of NPC_Attack_Rate_Base_Range inches. 
+		"NPC_Attack_Rate_Base_Range"	"120"	//   Attack times scale down to Attack_Rate at a range of 0, and up
+							//   proportionally as the range increases. If NPC_Attack_Rate_Base_Range
+							//   is 0, the delay will not be scaled based on distance.
+
+
+		// SKS_RANGED
+		"KickPitchMin"			"-1.0"
+		"KickPitchMax"			"-10.00"
+		"KickYawMin"			"-0.2"
+		"KickYawMax"			"-5.0"
+		"KickTime"				"0.04"
+		"CrosshairMinSize"		"15"		// smallest crosshair size for this activation [0-99], changed by wesp
+		"CrosshairFireSize"		"90"		// MAXIMUM size (Firearms 1) of the crosshair when the gun is fired [0-99] scales to Min as player's firearms increases
+		"CrosshairFireSizeMin"		"60"		// MIN size (Firearms 10) of the crosshair when the gun is fired [0-99]
+		"CrosshairWalkSizeMin"	"15"			// min size of the crosshair when the player is walking [0-99], changed by wesp
+		"CrosshairWalkSizeMax"	"15"			// max size of the crosshair when the player is walking [0-99], changed by wesp
+		"CrosshairRunSizeMin"	"60"			// min size of the crosshair when the player is running [0-99], changed by wesp
+		"CrosshairRunSizeMax"	"90"			// max size of the crosshair when the player is running [0-99], changed by Wesp
+
+		"CrosshairIncSpeedMin"	"12"	//"60"min speed(10 Firearm Feat) at which to increase bloom -low # slower
+		"CrosshairIncSpeedMax"	"12"	//"60"max speed(1 Firearm Feat) at which to increase bloom -high # faster
+		"CrosshairDecSpeedMin"	"28"	//min speed(1 Firearm Feat) at which to decrease bloom -low # slower
+		"CrosshairDecSpeedMax"	"28"	//"40"max speed(10 Firearm Feat) at which to decrease bloom -high # faster
+
+		"CrosshairFirePercent"	"0.06"			// percent to bloom to crosshair upon firing a bullet
+
+
+
+		"SpreadAngle"		"5.0"
+		"CriminalLevel"	"3"
+		"Accuracy"		"6"
+		"BurstMin"		"3"
+		"BurstMax"		"5"
+
+		SoundData
+		{
+			"empty"
+			{
+				"sound1"	"Weapons/Ranged/Uzi/Empty.wav"
+			}
+
+			"attack"
+			{
+				"sound1"	"Weapons/Ranged/Uzi/Attack_1.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Ranged/Uzi/Attack_1.wav"	
+
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Ranged/Deploy.wav"
+			}
+
+			"put_away"
+			{
+				"sound1"	"Weapons/Ranged/Put_Away.wav"
+			}			
+			
+			"fidget"
+			{
+				"sound1"	"Weapons/Ranged/Uzi/Fidget.wav"
+			}
+		}
+
+		Tables
+		{
+			Table
+			{
+				"Name"          "WeaponRanges"
+				"InternalName"  "WeaponRanges"
+
+				"Clamping"      "1"
+
+				// point blank 0-80, close 80-110, short/medium 110-220,
+				// meduim 220-370, long 370-650, great 650+
+
+				"0"             "0"         // 5 (bonus)
+				"1"             "0"         // 4 (bonus)
+				"2"             "0"         // 3 (bonus)
+				"3"             "80"        // 2 (bonus)
+				"4"             "180"       // 1 (bonus)
+				"5"             "750"       // 0 (neutral)
+				"6"             "30000"     //-1 (penalty)
+				"7"             "30000"     //-2 (penalty)
+				"8"             "30000"     //-3 (penalty)
+				"9"             "30000"     //-4 (penalty)
+			}
+			Table
+			{
+				"Name"          "GrossPointBlank"
+				"InternalName"  "GrossPointBlank"
+
+				"Clamping"      "1"
+
+
+				// percentage from 1-12 feet out
+
+				"0"             "100"
+				"1"             "90"
+				"2"             "80"
+				"3"             "70"
+				"4"             "60"
+				"5"             "50"
+				"6"             "40"
+				"7"             "30"
+				"8"             "20"
+				"9"             "10"
+			}
+			
+		}
+	}
+
+//Secondary Attack
+	Activation
+	{
+// Switched 07/02/2004 by JLR for Leonard
+//		"Tag"			"PrimaryMode2"
+		"Tag"			"Primary"
+		"Type"			"Attack"
+		"allow_autofire"	"1"
+		"Ammo_Type"		"UziRound"
+		"Ammo_Cost"		"1"
+		"Ammo_Fired"		"1"
+		"Botch_Table"		"Pistols"
+
+		"SkillRequirement"	"6"		// min. skill requirement used in dmg calculations
+		"BaseLethality"		"10"		// base lethality used in dmg calculations
+		"Dmg"			"2 Lethal Ranged_Combat DMG_BULLET"
+
+		"Attack_Rate"			"0.10"
+		"NPC_Attack_Rate_Min"		"0.6"	// The range of times for NPCs using this weapon to pause between
+		"NPC_Attack_Rate_Max"		"2.2"	//   attacks when at a distance of NPC_Attack_Rate_Base_Range inches. 
+		"NPC_Attack_Rate_Base_Range"	"120"	//   Attack times scale down to Attack_Rate at a range of 0, and up
+							//   proportionally as the range increases. If NPC_Attack_Rate_Base_Range
+							//   is 0, the delay will not be scaled based on distance.
+		"Range"			"50"
+		"SpreadAngle"		"5.0"
+		"CriminalLevel"	"3"
+		"Accuracy"		"6"
+		"BurstMin"		"3"
+		"BurstMax"		"5"
+
+		// SKS_RANGED
+
+		"KickPitchMin"			"-0.5"
+		"KickPitchMax"			"-8.00"
+		"KickYawMin"			"-0.2"
+		"KickYawMax"			"-4.0"
+		"KickTime"				"0.04"
+		"CrosshairMinSize"		"15"		// smallest crosshair size for this activation [0-99], changed by wesp
+		"CrosshairFireSize"		"90"		// MAXIMUM size (Firearms 1) of the crosshair when the gun is fired [0-99] scales to Min as player's firearms increases
+		"CrosshairFireSizeMin"		"60"		// MIN size (Firearms 10) of the crosshair when the gun is fired [0-99]
+		"CrosshairWalkSizeMin"	"15"			// min size of the crosshair when the player is walking [0-99], changed by Wesp
+		"CrosshairWalkSizeMax"	"15"		//"90"	// max size of the crosshair when the player is walking [0-99], changed by Wesp
+		"CrosshairRunSizeMin"	"60"			// min size of the crosshair when the player is running [0-99], changed by wesp
+		"CrosshairRunSizeMax"	"90"		//"90"	// max size of the crosshair when the player is running [0-99], changed by Wesp
+
+		"CrosshairIncSpeedMin"	"24"	//"60"min speed(10 Firearm Feat) at which to increase bloom -low # slower
+		"CrosshairIncSpeedMax"	"24"	//"60"max speed(1 Firearm Feat) at which to increase bloom -high # faster
+		"CrosshairDecSpeedMin"	"20"	//min speed(1 Firearm Feat) at which to decrease bloom -low # slower
+		"CrosshairDecSpeedMax"	"20"	//"40"max speed(10 Firearm Feat) at which to decrease bloom -high # faster
+
+		"CrosshairFirePercent"	"0.08"			// percent to bloom to crosshair upon firing a bullet
+
+//		"KickPitchMin"			"-0.55"
+//		"KickPitchMax"			"-5.00"
+//		"KickYawMin"			"-0.0"
+//		"KickYawMax"			"-0.5"
+//		"KickTime"				"0.02"
+//		"CrosshairMinSize"		"10"			// smallest crosshair size for this activation [0-99]
+//		"CrosshairFireSize"		"40"			// size of the crosshair when the gun is fired [0-99]
+//		"CrosshairWalkSizeMin"	"20"			// min size of the crosshair when the player is walking [0-99]
+//		"CrosshairWalkSizeMax"	"45"			// max size of the crosshair when the player is walking [0-99]
+//		"CrosshairRunSizeMin"	"30"			// min size of the crosshair when the player is running [0-99]
+//		"CrosshairRunSizeMax"	"60"			// max size of the crosshair when the player is running [0-99]
+//		"CrosshairIncSpeedMin"	"50"			// min speed at which to increase bloom
+//		"CrosshairIncSpeedMax"	"60"			// max speed at which to increase bloom
+//		"CrosshairDecSpeedMin"	"10"			// min speed at which to decrease bloom
+//		"CrosshairDecSpeedMax"	"90"			// max speed at which to decrease bloom
+//		"CrosshairFirePercent"	"0.5"			// percent to bloom to crosshair upon firing a bullet
+
+
+
+		SoundData
+		{
+			"empty"
+			{
+				"sound1"	"Weapons/Ranged/Uzi/Empty.wav"
+			}
+
+			"attack"
+			{
+				"sound1"	"Weapons/Ranged/Uzi/Attack_2.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Ranged/Uzi/Attack_2.wav"	
+
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Ranged/Deploy.wav"
+			}
+
+			"put_away"
+			{
+				"sound1"	"Weapons/Ranged/Put_Away.wav"
+			}			
+			
+			"fidget"
+			{
+				"sound1"	"Weapons/Ranged/Uzi/Fidget.wav"
+			}
+		}
+
+		Tables
+		{
+			Table
+			{
+				"Name"          "WeaponRanges"
+				"InternalName"  "WeaponRanges"
+
+				"Clamping"      "1"
+				// point blank 0-80, close 80-110, short/medium 110-220,
+				// meduim 220-370, long 370-650, great 650+
+
+				"0"             "0"         // 5 (bonus)
+				"1"             "0"         // 4 (bonus)
+				"2"             "0"         // 3 (bonus)
+				"3"             "80"        // 2 (bonus)
+				"4"             "180"       // 1 (bonus)
+				"5"             "750"       // 0 (neutral)
+				"6"             "30000"     //-1 (penalty)
+				"7"             "30000"     //-2 (penalty)
+				"8"             "30000"     //-3 (penalty)
+				"9"             "30000"     //-4 (penalty)
+			}
+		}
+	}
+
+//Toggle Firing Mode
+	Activation
+	{
+		"Tag"		"Secondary"
+		"Type"		"Toggle_Primary_Mode"
+		"Attack_Rate"	".3"
+
+
+
+		SoundData
+		{
+			"to_mode1"
+			{
+				"sound1"	"weapons/Ranged/Uzi/To_Mode1.wav"
+			}
+
+			"to_mode2"
+			{
+				"sound1"	"weapons/Ranged/Uzi/To_Mode2.wav"
+
+			}
+
+		}
+	}
+
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/Uzi_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/Uzi"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_ranged/Ammo/uzi_ammo"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo2"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_ranged/Ammo/uzi_ammo_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+
+
+// Disabled because it uses Accuracy Crosshairs
+//		"crosshair"
+//		{
+//			"640"
+//			{
+//				"file"		"crosshairs"
+//				"x"			"0"
+//				"y"			"48"
+//				"width"		"24"
+//				"height"	"24"
+//			}
+
+
+
+		// Accuracy Crosshairs
+		"Acc_Crosshair00"		"hud/Crosshairs/Crosshair_01"
+		"Acc_Crosshair01"		"hud/Crosshairs/Crosshair_02"
+		"Acc_Crosshair02"		"hud/Crosshairs/Crosshair_03"
+		"Acc_Crosshair03"		"hud/Crosshairs/Crosshair_04"
+		"Acc_Crosshair04"		"hud/Crosshairs/Crosshair_05"
+		"Acc_Crosshair05"		"hud/Crosshairs/Crosshair_06"
+		"Acc_Crosshair06"		"hud/Crosshairs/Crosshair_07"
+		"Acc_Crosshair07"		"hud/Crosshairs/Crosshair_08"
+		"Acc_Crosshair08"		"hud/Crosshairs/Crosshair_09"
+		"Acc_Crosshair09"		"hud/Crosshairs/Crosshair_10"
+		"Interactive_Crosshair"	"hud/Crosshairs/Crosshair_Interactive"
+	}
+}

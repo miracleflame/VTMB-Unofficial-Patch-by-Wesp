@@ -1,0 +1,58 @@
+// Choreo version 1
+actor "Venus"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 9.959184
+      param "character/dlg/downtown la/venus/line51_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "Venus_line51_col_f"
+    {
+     time 0.000000 9.900000
+     param "Venus_line51_col_f"
+    }
+  }
+
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 0.790000 1.120000
+      param "0.330"
+    }
+    event silence "Silence"
+    {
+      time 6.200000 6.480000
+      param "0.280"
+    }
+    event silence "Silence"
+    {
+      time 7.050000 7.190000
+      param "0.140"
+    }
+    event loud "Loud"
+    {
+      time 5.800000 5.910000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 7.250000 7.380000
+      param "0.130"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

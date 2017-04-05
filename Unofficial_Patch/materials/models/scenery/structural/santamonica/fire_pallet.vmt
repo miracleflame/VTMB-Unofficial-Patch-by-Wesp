@@ -1,0 +1,34 @@
+VertexLitGeneric
+{
+	"$basetexture"	"models/scenery/structural/santamonica/fire_pallet"
+	"$selfillum"	1
+	"$temp1" 0
+	"$temp2" 0
+
+	"Proxies"
+	{
+		"Sine"
+		{
+			"resultVar"	"$temp1"
+			"sineperiod"	5
+			"sinemin"	.2
+			"sinemax"	.8
+		}
+
+		"Sine"
+		{
+			"resultVar"	"$temp2"
+			"sineperiod"	3
+			"sinemin"	.3
+			"sinemax"	.8
+			"timeoffset"	1.5
+		}
+
+		"Add"
+		{
+			"srcVar1"	"$temp1"
+			"srcVar2"	"$temp2"
+			"resultVar"	"$selfillumtint"
+		}
+	}
+}

@@ -1,0 +1,61 @@
+TerminalDefinition	// added by wesp
+{
+	"screen saver"		"Freedom for Vorlon ships!"		// Bounces around on the screen when the terminal is not being used, changed by wesp. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Secret LA public library"  
+		"line1"		""
+		"line2"		""
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+	SubDir
+	{
+		"name"			"Notes"				// This is what is displayed as the name of this menu, and what the player must type to enter the menu (128 characters)
+		"password"		"gangrel"				// password required to run commands in this menu (16 characters)
+		"description"		"Lasombra activities" 	// This is printed each time the user enters this menu (128 characters)
+
+		Function
+		{
+			"name"		"First"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"First note"		// this is a description of this function  (128 characters)
+			"runtext"	"While researching for a history project in the LA public library, I noticed a Lasombra entering the art room. I sneaked in Obfuscated after him but the room was empty! I waited until he returned and followed him down into the sewers through the hatch I use to enter myself. He climbed to the streets nearby and visited several clubs."
+		}
+		
+		Function
+		{
+			"name"		"Second"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Second note"		// this is a description of this function  (128 characters)
+			"runtext"	"Today the Lasombra went into the old house downtown with the red symbol. I followed him in after a while but only found a black guy who asked if I'd been enlightened. I left and noticed the agent of the prince entering the building some time later. Soon afterwards the black guy ran out and moved into the sewers where I lost him."
+		}
+
+		Function
+		{
+			"name"		"Third"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Third note"		// this is a description of this function  (128 characters)
+			"runtext"	"I followed the Lasombra in a cab to Santa Monica. There I watched how the Lasombra entered the old junkyard, probably to talk with that Caitiff living there. Before I could do something about it, the agent of the prince arrived and suddenly the Lasombra teleported nearby! I hope I wasn't spotted. Again he took a cab, back downtown to his lair in the LA library."
+		}
+
+		Function
+		{
+			"name"		"Fourth"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Fourth note"		// this is a description of this function  (128 characters)
+			"runtext"	"From my observations I deduce that the Lasombra is trying to recruit vampires or ghouls to compliment the dumb Sabbat cannon fodder. I'm pretty sure he failed turning the Caitiff, I don't know about this black guy. I don't like the new LA prince but I heard that Beckett from my own clan is in town. He's a scholar, I'll tell him about it!"
+		}
+
+		Function
+		{
+			"name"		"Fifth"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Fifth note"		// this is a description of this function  (128 characters)
+			"runtext"	"I fixed a meeting with Beckett in the Santa Monica smoke shop as I followed the black guy there and he seems to be a regular customer. I overheard that he wants to meet someone at the end of the Santa Monica pier and this must be the Lasombra. I hope he'll start from the smoke shop so Beckett and I can easily trail him to the guy!"
+			"runscript"	"G.Library_Coffee = 2; librarySetQuest()"
+		}
+	}
+}

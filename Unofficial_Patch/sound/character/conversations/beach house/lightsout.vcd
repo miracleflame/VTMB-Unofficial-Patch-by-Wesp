@@ -1,0 +1,73 @@
+// Choreo version 1
+actor "Mike"
+{
+  channel "Speech"
+  {
+    event speak "mike1"
+    {
+      time 6.6 6.8
+      param "Character\CONVERSATIONS\Beach House\Kitchen\Mike001.wav"
+      fixedlength
+    }
+  }
+}
+
+actor "Dennis"
+{
+  channel "Speech"
+  {
+    event speak "dennis1"
+    {
+      time 8.2 8.7
+      param "Character\CONVERSATIONS\Beach House\Kitchen\Dennis001.wav"
+      fixedlength
+    }
+  }
+}
+
+actor "Carl"
+{
+  channel "Speech"
+  {
+    event speak "carl1"
+    {
+      time 4.813334 6.653152
+      param "Character\CONVERSATIONS\Beach House\Kitchen\Carl001.wav"
+      fixedlength
+    }
+    event speak "carl2"
+    {
+      time 7.913333 11.053106
+      param "Character\CONVERSATIONS\Beach House\Kitchen\Carl002.wav"
+      fixedlength
+    }
+  }
+}
+
+actor "Al"
+{
+  channel "Speech"
+  {
+    event speak "al1"
+    {
+      time -0.300000 5.429886
+      param "Character\CONVERSATIONS\Beach House\Living Room\Al008.wav"
+      fixedlength
+    }
+    event speak "al2"
+    {
+      time 5.880001 8.279638
+      param "Character\CONVERSATIONS\Beach House\Living Room\Al009.wav"
+      fixedlength
+    }
+    event speak "al3"
+    {
+      time 10.000001 12.889797
+      param "Character\CONVERSATIONS\Beach House\Living Room\Al010.wav"
+      fixedlength
+    }
+  }
+}
+
+fps 60
+snap off

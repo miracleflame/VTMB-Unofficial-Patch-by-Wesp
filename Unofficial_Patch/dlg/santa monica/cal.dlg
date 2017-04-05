@@ -1,0 +1,347 @@
+{	1	}{	Get somethin' for you, chief?	}{	Get somethin' for you, chief?	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	I'm on the wagon.	}{	I'm on the wagon.	}{	11	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	I don't drink... alcohol.	}{	I don't drink... alcohol.	}{	11	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	I seek the daughters of Janus.	}{	I seek the daughters of Janus.	}{	250	}{	IsClan(pc,"Malkavian") and G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	I'm looking for Therese. Know where can I find her?	}{	I'm looking for Therese. Know where can I find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Knox_TT == 0	}{	}{	}{	}{	}{	}{	}{	}{	May I find Knox at your doors?	}
+{	7	}{	I don't drink your flavor of libation. Farewell.	}{	I don't drink your flavor of libation. Farewell.	}{	11	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	There's a juice bar down the street. They serve the fruits over there.	}{	There's a juice bar down the street. They serve the fruits over there.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	I'm looking for Therese. Know where I can find her?	}{	I'm looking for Therese. Know where I can find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek the daughters of Janus.	}
+{	13	}{	You're a funny guy. You'll be the first stand-up comedian I've knocked down.	}{	You're a funny guy. You'll be the first stand-up comedian I've knocked down.	}{	41	}{	Intimidate -4	}{	}{	}{	}{	}{	}{	}{	}{	Must I cuff you about the head and shoulders?	}
+{	14	}{	You're a funny guy. You'll be the first stand-up comedian I've knocked down.	}{	You're a funny guy. You'll be the first stand-up comedian I've knocked down.	}{	61	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	Must I cuff you about the head and shoulders?	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	What can I get you, beautiful?	}{	What can I get you, beautiful?	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	I'm on the wagon.	}{	I'm on the wagon.	}{	31	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	23	}{	I don't drink... alcohol.	}{	I don't drink... alcohol.	}{	31	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	I seek the daughters of Janus.	}{	I seek the daughters of Janus.	}{	250	}{	IsClan(pc,"Malkavian") and G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	I'm looking for Therese. Where can I find her?	}{	I'm looking for Therese. Where can I find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Knox_TT == 0	}{	}{	}{	}{	}{	}{	}{	}{	May I find Knox at your doors?	}
+{	27	}{	I don't drink your flavor of libation. Farewell.	}{	I don't drink your flavor of libation. Farewell.	}{	0	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	You sure? I make a mean Bloody Mary.	}{	You sure? I make a mean Bloody Mary.	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	I'm sure you do. A big man like you must have lots of talents.	}{	I'm sure you do. A big man like you must have lots of talents.	}{	51	}{	Seduction 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	33	}{	I'm sure you do. A big man like you must have lots of talents.	}{	I'm sure you do. A big man like you must have lots of talents.	}{	55	}{	Seduction -3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	I'm looking for Therese. Know where I can find her?	}{	I'm looking for Therese. Know where I can find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Calm down, ace. This isn't that kind of establishment. You get out of line again, I'll personally introduce your ass to the sidewalk. Now what do you need?	}{	Easy, girl. This ain't that kind of establishment. I'm not one to hit a woman, but you're pushin' it. Just tell me what it is you want.	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	G.Cal_Known = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	I seek two sisters, the daughters of Janus.	}{	I seek two sisters, the daughters of Janus.	}{	261	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0 and IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	43	}{	I'm looking for Therese. Know where I can find her?	}{	I'm looking for Therese. Know where I can find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	Nothing. Bye.	}{	Nothing. Bye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your breath has outstayed my welcome. Farewell.	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	[Dirty old man laugh]Lookin' for a good time, huh? Yeah, Big Cal will show you a good time. You ain't too hard on the eyes, sweetheart. Me and you, we'll have a little party, huh? I get off around six o'clock.	}{	[Dirty old man laugh]Lookin' for a good time, huh? Yeah, Big Cal will show you a good time. You ain't too hard on the eyes, sweetheart. Me and you, we'll have a little party, huh? I get off around six o'clock.	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	G.Cal_Known = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	I'll be there, big Cal. But first I need you to tell me where I can find Therese.	}{	I'll be there, big Cal. But first I need you to tell me where I can find Therese.	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	53	}{	I'll pass. I'm not a morning person. See you later, Cal.	}{	I'll pass. I'm not a morning person. See you later, Cal.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	[Chuckles]Yeah. Too bad you ain't gonna find out. No offense, but I got beautiful women around me all day, and you just ain't up to snuff. Now can I get you something?	}{	[Chuckles]Yeah. Too bad you ain't gonna find out. No offense, but I got beautiful women around me all day, and you just ain't up to snuff. Now can I get you something?	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	G.Cal_Known = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	I need to find Therese.	}{	I need to find Therese.	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	Get me a thread and a needle so I can stitch you up when I'm through with you.	}{	Get me a thread and a needle so I can stitch you up when I'm through with you.	}{	41	}{	Intimidate -4	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	Get me a thread and a needle so I can stitch you up when I'm through with you.	}{	Get me a thread and a needle so I can stitch you up when I'm through with you.	}{	61	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Hey, hey... I guess you mean business. I don't want any trouble. Just tell me what you need.	}{	Hey, hey... I guess you mean business. I don't want any trouble. Just tell me what you need.	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	G.Cal_Known = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	I seek the daughters of Janus.	}{	I seek the daughters of Janus.	}{	261	}{	IsClan(pc,"Malkavian") and G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	63	}{	I'm looking for Therese. Know where I can find her?	}{	I'm looking for Therese. Know where I can find her?	}{	81	}{	not IsClan(pc,"Malkavian") and G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	64	}{	Show me some respect next time. That's what I need.	}{	Show me some respect next time. That's what I need.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need you to stop breathing your breakfast on me. Farewell.	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	73	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Therese? She's upstairs. She said she had business to attend to, but I can hear her and Jeanette bickerin' from here. Why do you need to see her?	}{	Therese? She's upstairs. She said she had business to attend to, but I can hear her and Jeanette bickerin' from here. Why do you need to see her?	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	G.Cal_Known = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	My reasons are opaque to a hired hops hound.	}{	My reasons are opaque to a hired hops hound.	}{	281	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	83	}{	I need to talk to her.	}{	I need to talk to her.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	We need to talk and talk and talk.	}
+{	84	}{	None of your business.	}{	None of your business.	}{	91	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	I called earlier, about the bartending job they need to fill right away.	}{	I called earlier, about the bartending job they need to fill right away.	}{	111	}{	M_Persuasion 3 & not IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	I am the new bar jockey. Where's my saddle?	}
+{	86	}{	I called earlier. I have an interview for the part-time hostess position.	}{	I called earlier. I have an interview for the part-time hostess position.	}{	121	}{	F_Persuasion 3 & not IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	For all the parasites that come through here, she requires a hostess.	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	Yeah, yeah. I hear that from everyone, pal. She expectin' you or something?	}{	Yeah, yeah. I hear that from everyone, sweetheart. She expectin' you or something?	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	That's it. She's expecting me.	}{	That's it. She's expecting me.	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yes?	}
+{	93	}{	She's not expecting me, but she'll like what I've got to say.	}{	She's not expecting me, but she'll like what I've got to say.	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	She knows, we all know, don't you know?	}
+{	94	}{	I called earlier, about the bartending job they need to fill right away.	}{	I called earlier, about the bartending job they need to fill right away.	}{	111	}{	M_Persuasion 3 & not IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	I called earlier. I have an interview for the part-time hostess position.	}{	I called earlier. I have an interview for the part-time hostess position.	}{	121	}{	F_Persuasion 3 & not IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	Alright, look, I'll cut you a break cuz we're busy here. I'll buzz Therese, tell her you're comin'. Take the elevator over there up. But if I hear that you're not supposed to be there, you and me are gonna have a little heart-to-heart, you hear me?	}{	Alright, look, I'll cut you a break cuz we're busy here. I'll buzz Therese, tell her you're comin'. Take the elevator over there up. But if I hear that you're not supposed to be there, you and me are gonna have a little heart-to-heart, you hear me?	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	G.Cal_Permission = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	Thanks. Goodbye.	}{	Thanks. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	103	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	What? Are you serious? I've worked for that bitch the last fifteen years, and now she's replacin' me? Well, you can go take the elevator over there up and tell her she can kiss my ass. I'm outta here.	}{	What? Are you serious? I've worked for that bitch the last fifteen years, and now she's replacin' me? Well, you can go take the elevator over there up and tell her she can kiss my ass. I'm outta here.	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	G.Cal_Quits = 1; G.Cal_Permission = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Sorry I had to be the one to tell you. Bye.	}{	Sorry I had to be the one to tell you. Bye.	}{	0	}{	}{	npc.SetDisposition("Bartender", 1)	}{	}{	}{	}{	}{	}{	}{	I'll cry eighty-proof tears for you. Goodbye.	}
+{	113	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	Damn. I wish that was my job. Go on up and see her.	}{	Damn. I wish that was my job. Go on up and see her. Take the elevator over there.	}{	#	}{	npc.SetDisposition("Bartender", 2)	}{	G.Cal_Permission = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	Thanks. Bye.	}{	Thanks. Bye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	This watering hole is well-kept. Farewell.	}
+{	123	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	[Shock]Oh! What the... what's wrong with yer face? They shootin' a movie near by or somethin'? Damn, you should really go take off that mask... you're, uh, scarin' the clientele.	}{	[Shock]Oh! What the... what's wrong with yer face? They shootin' a movie near by or somethin'? Damn, you should really go take off that mask... you're, uh, scarin' the clientele.	}{	#	}{	npc.SetDisposition("Disgust", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	Sorry... I can't take it off right now. Can you tell me where Therese is?	}{	Sorry... I can't take it off right now. Can you tell me where Therese is?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	133	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Knox_TT == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	134	}{	I'll go disappear for a while then. Bye.	}{	I'll go disappear for a while then. Bye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	Like I said, go on up and see Therese. The elevator's over there.	}{	Like I said, go on up and see Therese. The elevator's over there.	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	143	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	I always hated that damn job, anyway.	}{	I always hated that damn job, anyway.	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	Whisper("Crying")	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	153	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	154	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	Something else you need, chief?	}{	Something else you need, beautiful?	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	I need to see Jeanette or Therese.	}{	I need to see Jeanette or Therese.	}{	231	}{	G.Jeanette_Refuse > 0 and G.Jeanette_Fire == 1	}{	}{	}{	}{	}{	}{	}{	}{	I seek the daughters of Janus.	}
+{	163	}{	I'm looking for Therese. Know where can I find her?	}{	I'm looking for Therese. Where can I find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek the dark daughter.	}
+{	164	}{	What do you know of the daughters of the two-headed god?	}{	What do you know of the daughters of the two-headed god?	}{	291	}{	G.Cal_Permission == 1 and IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	What do you know about Therese and Jeanette?	}{	What do you know about Therese and Jeanette?	}{	181	}{	G.Cal_Permission == 1 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Knox_TT == 0	}{	}{	}{	}{	}{	}{	}{	}{	May I find Knox at your doors?	}
+{	167	}{	I just need someone to tell my troubles to.	}{	I just need someone to tell my troubles to.	}{	191	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	No. Goodbye.	}{	No. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	To be somewhere else.	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	Hey, don't take this the wrong way, but even beer goggles have their limits, you know - if you were hopin' to find someone drunk enough to go home with ya.	}{	Hey, don't take this the wrong way, but even beer goggles have their limits, you know - if you were hopin' to find someone drunk enough to go home with ya.	}{	#	}{	npc.SetDisposition("Disgust", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	I need to see Jeanette or Therese.	}{	I need to see Jeanette or Therese.	}{	231	}{	G.Jeanette_Refuse > 0 and G.Jeanette_Fire == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	173	}{	I'm looking for Therese. Know where can I find her?	}{	I'm looking for Therese. Where can I find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	174	}{	What do you know about Therese and Jeanette?	}{	What do you know about Therese and Jeanette?	}{	181	}{	G.Cal_Permission == 1 and G.Jeanette_Refuse == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	175	}{	I just need someone to listen to my troubles.	}{	I just need someone to listen to my troubles.	}{	191	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Knox_TT == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	I think I'll take my business elsewhere. Goodbye.	}{	I think I'll take my business elsewhere. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	You'd know better than anybody, fatass. Goodbye.	}{	You'd know better than anybody, fatass. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	They cut me a check every two weeks. End of discussion.	}{	They cut me a check every two weeks. End of discussion.	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	I need someone to tell my troubles to.	}{	I need someone to tell my troubles to.	}{	191	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	183	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Knox_TT == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	184	}{	Got it. Goodbye.	}{	Got it. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	185	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	Oh boy.	}{	Oh boy.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	I was born in the ghetto....	}{	I was born in the ghetto....	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	193	}{	My doctor called, said I had three months to live....	}{	My doctor called, said I had three months to live....	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	194	}{	My pet iguana just died....	}{	My pet iguana just died....	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	195	}{	I just found out my best friend's a circus clown....	}{	I just found out my best friend's a circus clown....	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	201	}{	Yeah.	}{	Yeah.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	... I'm mad as hell at the world....	}{	... I'm mad as hell at the world....	}{	211	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	203	}{	... In the card game of life I got dealt a hand of jack squat....	}{	... In the card game of life I got dealt a hand of jack squat....	}{	211	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	204	}{	... Why does something like that happen...?	}{	... Why does something like that happen...?	}{	211	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	205	}{	... It's a nightmare, I tell you....	}{	... It's a nightmare, I tell you....	}{	211	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	208	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	211	}{	Uh huh.	}{	Uh huh.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	... Sweet lady H, here I come.	}{	... Sweet lady H, here I come.	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	213	}{	... I'm positive now that there is no god.	}{	... I'm positive now that there is no god.	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	214	}{	... The only thing I have to look forward to now is death.	}{	... The only thing I have to look forward to now is death.	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	215	}{	... I'm a walking TV movie of the week.	}{	... I'm a walking TV movie of the week.	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	217	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	221	}{	[Sarcastically]Right. You gonna buy a drink or what?	}{	[Sarcastically]Right. You gonna buy a drink or what?	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	I don't drink. Goodbye.	}{	I don't drink. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	223	}{	Don't touch the stuff, sorry. Goodbye.	}{	Don't touch the stuff, sorry. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	224	}{	No. But I feel much better having told someone. Thank you. Goodbye.	}{	No. But I feel much better having told someone. Thank you. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	225	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	226	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	227	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	228	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	231	}{	They ain't here. Therese, I don't know where she went, and Jeanette - she just ran out of here. They'll be back later I guess. Probably havin' lady problems or something.	}{	They ain't here. Therese, I don't know where she went, and Jeanette - she just ran out of here. They'll be back later I guess. Probably havin' lady problems or something.	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	G.Jeanette_Fire = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	Uh, thanks. Goodbye.	}{	Uh, thanks. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your odors are beyond description. Farewell.	}
+{	233	}{	Too much information. I'll try back later.	}{	Too much information. I'll try back later.	}{	0	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	234	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	235	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	236	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	238	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	241	}{	Knox? Yeah... he's usually around here somewhere. Just look for a guy that doesn't look like he has any business being here. That's Knox.	}{	Knox? Yeah... he's usually around here somewhere. Just look for a guy that doesn't look like he has any business being here. That's Knox.	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	I'm looking for Therese. Know where can I find her?	}{	I'm looking for Therese. Where can I find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek the dark daughter of Janus.	}
+{	243	}{	Thanks. I'll go see if he's here.	}{	Thanks. I'll go see if he's here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	244	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	245	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	246	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	247	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	248	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	250	}{	Janus? What the hell are you talkin' about? Damn. Why do I always get the weird ones?	}{	Janus? What the hell are you talkin' about? Damn. Why do I always get the weird ones?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	251	}{	The sisters, spawned of the two-headed god....	}{	The sisters, spawned of the two-headed god....	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	Weird will be the place I move your nose.	}{	Weird will be the place I move your nose.	}{	41	}{	Intimidate -4	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	253	}{	Weird will be the place I move your nose.	}{	Weird will be the place I move your nose.	}{	61	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	254	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	255	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	256	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	Huh? Look, the only sisters around here are Therese and Jeanette, and they own the place. They're both upstairs, fightin' as usual. Why do you need to see them?	}{	Huh? Look, the only sisters around here are Therese and Jeanette, and they own the place. They're both upstairs, fightin' as usual. Why do you need to see them?	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	Whisper("Deluded")	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	Their voices are the mother of my ears.	}{	Their voices are the mother of my ears.	}{	271	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	263	}{	Therese said that she needed another ale monkey.	}{	Therese said that she needed another ale monkey.	}{	111	}{	M_Persuasion 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	264	}{	I'm a dancer. Jeanette wants to check the color of my thong.	}{	I'm a dancer. Jeanette wants to check the color of my thong.	}{	121	}{	F_Persuasion 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	265	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	268	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	270	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	271	}{	Wow. I have no idea what you just said. Is she expecting you?	}{	Wow. I have no idea what you just said. Is she expecting you?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	272	}{	Therese waits in the arms of her own shadow.	}{	Therese waits in the arms of her own shadow.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	273	}{	Jeanette will love the words that I birth for her.	}{	Jeanette will love the words that I birth for her.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	274	}{	She said that she needed another ale monkey.	}{	She said that she needed another ale monkey.	}{	111	}{	M_Persuasion 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	275	}{	I'm a dancer, and she said she needed to check the color of my thong.	}{	I'm a dancer, and she said she needed to check the color of my thong.	}{	121	}{	F_Persuasion 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	276	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	277	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	278	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	281	}{	Uh, yeah... whatever. Look, I'll let you on up, but if you start gettin' too weird up there, I'll come up and put you out of your misery. Y'understand?	}{	Uh, yeah... whatever. Look, I'll let you on up, but if you start gettin' too weird up there, I'll have to come up and escort your pretty little behind back out on the street. You hear me?	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	G.Cal_Permission = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	Your blood is thicker than an alehouse brew. Farewell.	}{	Your blood is thicker than an alehouse brew. Farewell.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	283	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	284	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	285	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	286	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	287	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	288	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	291	}{	Ah, you talkin' about Therese and Jeanette? They cut me a check every two weeks. End of discussion.	}{	Ah, you talkin' about Therese and Jeanette? They cut me a check every two weeks. End of discussion.	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	May I find Knox at your doors?	}{	May I find Knox at your doors?	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Knox_TT == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	293	}{	I am no longer here.	}{	I am no longer here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	294	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	295	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	296	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	297	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	298	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	300	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	301	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	302	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	303	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	304	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	305	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	306	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	307	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	308	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	309	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	310	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	311	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	312	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	313	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	314	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	315	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	316	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	317	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	318	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	319	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	320	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	321	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	322	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	323	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	324	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	325	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	326	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	327	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	328	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	329	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	330	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	331	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	332	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	333	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	334	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	335	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	336	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	337	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	338	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	339	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	340	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	341	}{	(Starting Condition)	}{	}{	141	}{	G.Cal_Permission == 1 and G.Therese_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	342	}{	(Starting Condition)	}{	}{	171	}{	G.Cal_Known == 1 and IsClan(pc,"Nosferatu") and G.Cal_Quits == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	343	}{	(Starting Condition)	}{	}{	161	}{	G.Cal_Known == 1 and G.Cal_Quits == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	344	}{	(Starting Condition)	}{	}{	151	}{	G.Cal_Quits == 1 and G.Therese_Quest < 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	345	}{	(Starting Condition)	}{	}{	131	}{	G.Cal_Known == 0 and IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	346	}{	(Starting Condition)	}{	}{	21	}{	npc.times_talked >= 1 and not IsMale(pc)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	347	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked >= 1 and IsMale(pc)	}{	}{	}{	}{	}{	}{	}{	}{	}

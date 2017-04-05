@@ -1,0 +1,32 @@
+//Attach Type: Bone Tree + Model Colors
+
+Particle
+{
+	loop "1"
+	fps "30"
+	frames "300"
+	burst "1"
+
+	spawn
+	{
+		particle "D_ThaumaturgyHit_Clouds"
+		loop "0"
+		rate "50"
+		burst "50"
+		radius "0"
+		theta "0~360"
+		phi	"180~-180"
+	}
+
+	spawn
+	{
+		particle "D_ThaumaturgyHit_Skulls"
+		loop "0"
+		rate "5"
+		burst "5"
+		radius "0"
+		theta "0~360"
+		phi	"180~-180"
+	}
+}
+

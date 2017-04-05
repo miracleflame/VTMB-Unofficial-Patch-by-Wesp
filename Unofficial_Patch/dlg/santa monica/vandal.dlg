@@ -1,0 +1,526 @@
+{	1	}{	You next up for the needle? Hmm? Your donation could save a life, you know. Oh, but isn't it a little late for altruism? I don't think you're here to give blood at all. I don't buy it, Jack. I bet you're here to take blood. Am I right?	}{	You next up for the needle? Hmm? Your donation could save a life, you know. Oh, but isn't it a little late for altruism? I don't think you're here to give blood at all. I don't buy it, Betty. I bet you're here to take blood. Am I right?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	I don't know what you're talking about.	}{	I don't know what you're talking about.	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your tongue makes strange, garbled noises.	}
+{	3	}{	You offering?	}{	You offering?	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	Does the Pope wear a funny hat?	}
+{	4	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	They all come in here with that same, nonchalant look. With that "Who, me?" stare, as if they were so clever. Do you think you're the first vampire to try and come in here to buy blood? Honestly.	}{	They all come in here with that same, nonchalant look. With that "Who, me?" stare, as if they were so clever. Do you think you're the first vampire to try and come in here to buy blood? Honestly.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	G.Vandal_Shop = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	Alright, yeah. I'll buy some blood. How much?	}{	Alright, yeah. I'll buy some blood. How much?	}{	41	}{	not IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	Your eyes see much. How much for a liquid lunch?	}
+{	13	}{	Depends on what kind of vintage you're selling.	}{	Depends on what kind of vintage you're selling.	}{	51	}{	IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	Really, I don't know what you're talking about. Vampires? Whatever.	}{	Really, I don't know what you're talking about. Vampires? Whatever.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	You're making less sense than I usually do.	}
+{	15	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need to enter this bloody fortress.	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	Fine. If you don't want any, deny it. Deny that you wouldn't put the lukewarm bag to your lips and slurp out the copper-smelling sauce like a swarm of mosquitoes on a hemophiliac's back.	}{	Fine. If you don't want any, deny it. Deny that you wouldn't put the lukewarm bag to your lips and slurp out the copper-smelling sauce like a swarm of mosquitoes on a hemophiliac's back.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Vandal_Shop = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	Alright, I'll buy some. How much?	}{	Alright, I'll buy some. How much?	}{	41	}{	not IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	Alright, I'll dine with you. How much for a liquid lunch?	}
+{	23	}{	I'll buy some, if you have the right vintage.	}{	I'll buy some, if you have the right vintage.	}{	51	}{	IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	You should get some help. Goodbye.	}{	You should get some help. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	DENY! Deny, deny, goodbye.	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	Right down to business. None of this "pretend I don't drink blood" shit. Very refreshing to find a decisive customer. I respect that. So, what'll it be?	}{	Right down to business. None of this "pretend I don't drink blood" shit. Very refreshing to find a decisive customer. I respect that. So, what'll it be?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Vandal_Shop = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	How much?	}{	How much?	}{	41	}{	not IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	How much for the crimson nectar?	}
+{	33	}{	I require a finer vintage than the swill most others drink.	}{	I require a finer vintage than the swill most others drink.	}{	51	}{	IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need to enter this bloody fortress.	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	If you have to ask...	}{	If you have to ask...	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	Show me what you got.	}{	Show me what you got.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Show me your crimson nectars.	}
+{	43	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need to enter this bloody fortress.	}
+{	44	}{	Nothing right now then. Perhaps later.	}{	Nothing right now then. Perhaps later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Don't ask, don't tell. I am gone.	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	I can accommodate a refined palate.	}{	I can accommodate a refined palate.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	Let's see what you got.	}{	Let's see what you got.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	53	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	Nothing right now then. Perhaps later.	}{	Nothing right now then. Perhaps later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Why'd you have to go and let that bitch out? There's one less Phil in the world now. Why'd you have to let her go and eat him, huh? Now I'll never get to do in that bastard myself. Well, you know what - no blood for you, no more!	}{	Why'd you have to go and let that bitch out? There's one less Phil in the world now. Why'd you have to let her go and eat him, huh? Now I'll never get to do in that bastard myself. Well, you know what - no blood for you, no more!	}{	#	}{	npc.SetDisposition("Anger", 3)	}{	G.Lily_Free = 2; G.Vandal_Pissed = 1; G.Vandal_Quest = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	What incident? Nothing happened back there. I was just buying blood.	}{	What incident? Nothing happened back there. I was just buying blood.	}{	111	}{	Dominate 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	63	}{	Ha ha ha....	}{	Ha ha ha....	}{	481	}{	Dementation 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	64	}{	I need to get blood from somewhere. Haven't had ghoul blood in a while.	}{	I need to get blood from somewhere. Haven't had ghoul blood in a while.	}{	101	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	Maybe I will suck the life from your veins, blood slave.	}
+{	65	}{	What incident? Nothing happened back there. I was just buying blood.	}{	What incident? Nothing happened back there. I was just buying blood.	}{	111	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	You're lucky. If I hadn't freed her, her friends were going to shoot up the place.	}{	You're lucky. If I hadn't freed her, her friends were going to shoot up the place.	}{	121	}{	Persuasion 3 & not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	Are you sure there's nothing I could do to you to change your mind?	}{	Are you sure there's nothing I could do to you to change your mind?	}{	201	}{	F_Seduction 4	}{	}{	}{	}{	}{	}{	}{	}{	Come now, little ghoul. There are things I can do to you that you wouldn't believe.	}
+{	68	}{	I don't need your blood. Not when I know how you're getting it.	}{	I don't need your blood. Not when I know how you're getting it.	}{	211	}{	Humanity 7	}{	}{	}{	}{	}{	}{	}{	}{	Blood from a little flower is blood I cannot drink.	}
+{	69	}{	What can I do to set this straight?	}{	What can I do to set this straight?	}{	371	}{	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps I can write the next act in this little blood-drama.	}
+{	70	}{	Why don't I pay you an amount you think is fair to overlook this?	}{	Why don't I pay you an amount you think is fair to overlook this?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	Fairest gold is often the cause of a sweet amnesia.	}
+{	71	}{	Fair? How fair?	}{	Fair? How fair?	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	I'll give you $100. I buy blood in volume. You're lucky I don't ask for a discount.	}{	I'll give you $100. I buy blood in volume. You're lucky I don't ask for a discount.	}{	81	}{	Haggle 3 & pc.CurrentMoney() >= 100	}{	pc.MoneyRemove(100)	}{	}{	}{	}{	}{	}{	}{	I have a hundred little pieces of gold paper.	}
+{	73	}{	$100?	}{	$100?	}{	91	}{	Haggle -3 & pc.CurrentMoney() >= 100	}{	}{	}{	}{	}{	}{	}{	}{	I have a hundred little pieces of gold paper.	}
+{	74	}{	I need to get blood from somewhere. Haven't had ghoul blood in a while.	}{	I need to get blood from somewhere. Haven't had ghoul blood in a while.	}{	101	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	Maybe I will suck the life from your veins, blood slave.	}
+{	75	}{	I'll settle this after I get some cash.	}{	I'll settle this after I get some cash.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll be back with gold to erase your memory. Farewell.	}
+{	76	}{	Forget I said anything. I don't need your blood.	}{	Forget I said anything. I don't need your blood.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Forget I am here. I don't need your blood.	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Fair enough. Need anything right now?	}{	Fair enough. Need anything right now?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.E_Missing = 3; G.Vandal_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	Yes, I do.	}{	Yes, I do.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Something red and delicious....	}
+{	83	}{	Maybe another time. But not another word about what happened.	}{	Maybe another time. But not another word about what happened.	}{	0	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	No, and tell no one the tale of the lost little flower that I picked. Farewell.	}
+{	84	}{	Yes, I do.	}{	Yes, I do.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Something red and delicious....	}
+{	85	}{	Maybe another time. But not another word about what happened.	}{	Maybe another time. But not another word about what happened.	}{	0	}{	G.Patch_Plus == 1	}{	pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1	}{	}{	}{	}{	}{	}{	}{	No, and tell no one the tale of the lost little flower that I picked. Farewell.	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	Fair is double that.	}{	Fair is double that.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Fine. Here.	}{	Fine. Here.	}{	81	}{	pc.CurrentMoney() >= 200	}{	pc.MoneyRemove(200); G.E_Missing = 3; G.Vandal_Pissed = 0; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1	}{	}{	}{	}{	}{	}{	}{	Greedy little ghoul. Take your blood-money.	}
+{	93	}{	I'll come back with the cash.	}{	I'll come back with the cash.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll be back with gold to erase your memory. Farewell.	}
+{	94	}{	Forget I said anything. I don't need your blood.	}{	Forget I said anything. I don't need your blood.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You lost your gold, little blood slave. I am no longer here.	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	[Laughs nervously]Hehahaha. Well, mistakes are made from time to time - without them, some of us might never have been born. Heh... I don't know what I'm saying half the time. Have a freebie, my compliments. You need more?	}{	[Laughs nervously]Hehahaha. Well, mistakes are made from time to time - without them, some of us might never have been born. Heh... I don't know what I'm saying half the time. Have a freebie, my compliments. You need more?	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	G.Vandal_Shop = 1; G.E_Missing = 3; G.Vandal_Pissed = 0; spawnVandalBlood()	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	Yeah, I need some more blood.	}{	Yeah, I need some more blood.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Something red and delicious....	}
+{	103	}{	I'll be back later. And the service better be with a smile this time.	}{	I'll be back later. And the service better be with a smile this time.	}{	0	}{	G.Story_State < 100 and G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	When I return, pray I do not drink from your neck. Farewell.	}
+{	104	}{	Yeah, I need some more blood.	}{	Yeah, I need some more blood.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Something red and delicious....	}
+{	105	}{	I'll be back later. And the service better be with a smile this time.	}{	I'll be back later. And the service better be with a smile this time.	}{	0	}{	G.Story_State < 100 and G.Patch_Plus == 1	}{	pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1	}{	}{	}{	}{	}{	}{	}{	When I return, pray I do not drink from your neck. Farewell.	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	Right, a transaction. Green for red. Interested?	}{	Right, a transaction. Green for red. Interested?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.E_Missing = 3; G.Vandal_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Yes, I'd like to make a withdrawal.	}{	Yes, I'd like to make a withdrawal.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	113	}{	Nothing right now.	}{	Nothing right now.	}{	0	}{	G.Story_State < 100 and G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	114	}{	Yes, I'd like to make a withdrawal.	}{	Yes, I'd like to make a withdrawal.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	Nothing right now.	}{	Nothing right now.	}{	0	}{	G.Story_State < 100 and G.Patch_Plus == 1	}{ pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	That's interesting. A missed opportunity. Guns make people cocky. They never appreciate what a skilled hand married to a knife can do. All you have to do is get close enough to cut off the trigger finger. Or their face.	}{	That's interesting. A missed opportunity. Guns make people cocky. They never appreciate what a skilled hand married to a knife can do. All you have to do is get close enough to cut off the trigger finger. Or their face.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	(Auto-Link)	}{	(Auto-Link)	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	123	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	You like to talk, don't you? I wanna hear a story. Tell me, what's the best way you've violenced up someone? I wanna hear every grisly detail. If I like your story, I'll sell you some blood.	}{	You like to talk, don't you? I wanna hear a story. Tell me, what's the best way you've violenced up someone? I wanna hear every grisly detail. If I like your story, I'll sell you some blood.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	One time I was jumped in an alley by this big dude...	}{	One time I was jumped in an alley by this big dude...	}{	141	}{	Humanity -8	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	133	}{	I was at a movie theater and this guy wouldn't shut up...	}{	I was at a movie theater and this guy wouldn't shut up...	}{	141	}{	Humanity -8	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	134	}{	I was robbing this old liquor store clerk one time...	}{	I was robbing this old liquor store clerk one time...	}{	141	}{	Humanity -8	}{	G.Vandal_Please = G.Vandal_Please +1	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	This lady cop pulled me over one time, to give me a speeding ticket...	}{	This lady cop pulled me over one time, to give me a speeding ticket...	}{	141	}{	Humanity -5	}{	G.Vandal_Please = G.Vandal_Please +2	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	I'm no killer.	}{	I'm no killer.	}{	211	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	Yes?	}{	Yes?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	Started giving me shit, you know, really pissing me off.	}{	Started giving me shit, you know, really pissing me off.	}{	151	}{	Humanity -8	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	143	}{	Pulls a gun on me. Made me lose control... made me crazy. You know?	}{	Pulls a gun on me. Made me lose control... made me crazy. You know?	}{	151	}{	Humanity -5	}{	G.Vandal_Please = G.Vandal_Please +2	}{	}{	}{	}{	}{	}{	}{	}
+{	144	}{	Shouts at me, threatens me - saying they're going to kill me.	}{	Shouts at me, threatens me - saying they're going to kill me.	}{	151	}{	Humanity -8	}{	G.Vandal_Please = G.Vandal_Please +1	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	Kept staring at me, giving me the stink eye.	}{	Kept staring at me, giving me the stink eye.	}{	151	}{	Humanity -8	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	Keep going.	}{	Keep going.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	Let's just say they fell onto a sharp object twenty-six times.	}{	Let's just say they fell onto a sharp object twenty-six times.	}{	161	}{	}{	G.Vandal_Please = G.Vandal_Please +2	}{	}{	}{	}{	}{	}{	}{	}
+{	153	}{	You should have seen their face when I broke their nose. Pop!	}{	You should have seen their face when I broke their nose. Pop!	}{	161	}{	}{	G.Vandal_Please = G.Vandal_Please +1	}{	}{	}{	}{	}{	}{	}{	}
+{	154	}{	So I took out my gun and made them do a crazy dance. Laughed my ass off.	}{	So I took out my gun and made them do a crazy dance. Laughed my ass off.	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	Good thing I had my nunchuks with me. I went all Bruce Lee on 'em.	}{	Good thing I had my nunchuks with me. I went all Bruce Lee on 'em.	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	Wow....	}{	Wow....	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	(Auto-Link)	}{	(Auto-Link)	}{	171	}{	G.Vandal_Please == 6	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	163	}{	(Auto-Link)	}{	(Auto-Link)	}{	181	}{	G.Vandal_Please >= 3 and G.Vandal_Please < 6	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	164	}{	(Auto-Link)	}{	(Auto-Link)	}{	191	}{	G.Vandal_Please < 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	That's some vile, depraved, maniacal shit. You are SICK mother. Yeah, I'll sell you your fix.	}{	That's some vile, depraved, maniacal shit. You are SICK mother. Yeah, I'll sell you your fix.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.E_Missing = 3; G.Vandal_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	Right, let's see what you got.	}{	Right, let's see what you got.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	173	}{	I'll be back later. I've got some people to take care of first.	}{	I'll be back later. I've got some people to take care of first.	}{	0	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	174	}{	Right, let's see what you got.	}{	Right, let's see what you got.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	175	}{	I'll be back later. I've got some people to take care of first.	}{	I'll be back later. I've got some people to take care of first.	}{	0	}{	G.Patch_Plus == 1	}{	pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	You're okay with me. Need a fix?	}{	You're okay with me. Need a fix?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.E_Missing = 3; G.Vandal_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	Yeah.	}{	Yeah.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	183	}{	Not right now. I'll be back later though.	}{	Not right now. I'll be back later though.	}{	0	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	184	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	185	}{	Yeah.	}{	Yeah.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	186	}{	Not right now. I'll be back later though.	}{	Not right now. I'll be back later though.	}{	0	}{	G.Patch_Plus == 1	}{	pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	You call that grisly? I want hard-core, unrated, unfiltered, congressional-hearing-style debasement. You don't deserve blood. Go get it yourself.	}{	You call that grisly? I want hard-core, unrated, unfiltered, congressional-hearing-style debasement. You don't deserve blood. Go get it yourself.	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	Forget I said anything. I don't need your blood.	}{	Forget I said anything. I don't need your blood.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You lost your gold, little blood slave. I am no longer here.	}
+{	193	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	194	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	195	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	201	}{	Start breathing, you corpse. I already fell for that act once and that's how I came to end up here. Her blood frees me and binds me. I'm eternally hers... slave to the bitch goddess.	}{	Start breathing, you corpse. I already fell for that act once and that's how I came to end up here. Her blood frees me and binds me. I'm eternally hers... slave to the bitch goddess.	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	Is there anything I can do to set this straight?	}{	Is there anything I can do to set this straight?	}{	371	}{	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps I can write the next act in this little blood-drama.	}
+{	203	}{	Why don't I pay you an amount you think is fair to overlook this?	}{	Why don't I pay you an amount you think is fair to overlook this?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	Fairest gold is often the cause of a sweet amnesia.	}
+{	204	}{	I need to get blood from somewhere. Haven't had ghoul blood in a while.	}{	I need to get blood from somewhere. Haven't had ghoul blood in a while.	}{	101	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	Maybe I will suck the life from your veins, blood slave.	}
+{	205	}{	Ha ha ha....	}{	Ha ha ha....	}{	481	}{	Dementation 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	206	}{	Sell me blood.	}{	Sell me blood.	}{	111	}{	Dominate 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	207	}{	Sell me blood.	}{	Sell me blood.	}{	111	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	208	}{	I'm not impressed, ghoul!	}{	I'm not impressed, ghoul!	}{	111	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	209	}{	You're lucky. If I hadn't freed her, her friends were going to shoot up the place.	}{	You're lucky. If I hadn't freed her, her friends were going to shoot up the place.	}{	121	}{	Persuasion 3 & not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	210	}{	I don't need your blood. Not when I know how you're getting it.	}{	I don't need your blood. Not when I know how you're getting it.	}{	211	}{	Humanity 7	}{	}{	}{	}{	}{	}{	}{	}{	Blood from a little flower is blood I cannot drink.	}
+{	211	}{	Blood comes from out of the living. From all kinds, in a red torrent. A crimson seep at the speed of a heartbeat. For each drop a teeny bit of life shed... you don't care how it's got, as long as it is. You'll be begging for it, and not getting any.	}{	Blood comes from out of the living. From all kinds, in a red torrent. A crimson seep at the speed of a heartbeat. For each drop a teeny bit of life shed... you don't care how it's got, as long as it is. You'll be begging for it, and not getting any.	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	Whatever....	}{	Whatever....	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You're talking to someone who's already left.	}
+{	213	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	214	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	215	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	217	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	221	}{	Need a fix?	}{	Need a fix?	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	Yeah.	}{	Yeah.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Give me the red sweetness....	}
+{	223	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0 and G.Story_State < 100	}{	}{	}{	}{	}{	}{	}{	}{	I need to enter this bloody fortress.	}
+{	224	}{	Say, where do you get your blood from now?	}{	Say, where do you get your blood from now?	}{	371	}{	G.Story_State < 100 and G.Vandal_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	So who is your bloody well now?	}
+{	225	}{	Not right now.	}{	Not right now.	}{	0	}{	G.Story_State < 100	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	226	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	227	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	228	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	231	}{	It's a mesmerizing liquid, isn't it? The color, the bouquet, the form. When I was a kid, I used to wait for the snap of the rat trap. It would trickle out of the animal's face and ooze just far enough to coagulate around the cheese... a poetic death.	}{	It's a mesmerizing liquid, isn't it? The color, the bouquet, the form. When I was a kid, I used to wait for the snap of the rat trap. It would trickle out of the animal's face and ooze just far enough to coagulate around the cheese... a poetic death.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	Uh, yeah... just sell me some blood.	}{	Uh, yeah... just sell me some blood.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Just give me blood, gory ghoul.	}
+{	233	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need to enter this bloody fortress.	}
+{	234	}{	I'll come back later. Freak.	}{	I'll come back later. Freak.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You smell of small, chittering deaths. Farewell.	}
+{	235	}{	Say, where do you get your blood from now?	}{	Say, where do you get your blood from now?	}{	371	}{	G.Story_State < 100 and G.Vandal_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	So who is your bloody well now?	}
+{	236	}{	We should swap stories some time. I gotta go.	}{	We should swap stories some time. I gotta go.	}{	0	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	I like the texture of your tale, little ghoul. I leave you.	}
+{	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	238	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	241	}{	Here again? What's the matter, can't bring yourself to tear into the neck of some quote-unquote innocent? All that blood out there and you have to buy the pre-packaged stuff. Tsk... that's okay, I understand. I forgive you.	}{	Here again? What's the matter, can't bring yourself to tear into the neck of some quote-unquote innocent? All that blood out there and you have to buy the pre-packaged stuff. Tsk... that's okay, I understand. I forgive you.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	What are you implying?	}{	What are you implying?	}{	251	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me the meaning of your rantings.	}
+{	243	}{	Fresh blood? Maybe I should start with you.	}{	Fresh blood? Maybe I should start with you.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your words give me visions of a ragged hole in your neck.	}
+{	244	}{	Whatever. Just give me a fix.	}{	Whatever. Just give me a fix.	}{	331	}{	}{	}{	}{	}{	}{	}{	}{	}{	Just give me some redness.	}
+{	245	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need to enter this bloody fortress.	}
+{	246	}{	Say, where do you get your blood from now?	}{	Say, where do you get your blood from now?	}{	371	}{	G.Story_State < 100 and G.Vandal_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	So who is your bloody well now?	}
+{	247	}{	If you don't need my patronage, then I'll leave.	}{	If you don't need my patronage, then I'll leave.	}{	331	}{	}{	}{	}{	}{	}{	}{	}{	}{	Wasted words will lose you blood-sale, ghoul.	}
+{	248	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	250	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	251	}{	All that power and you don't even use it. Seems wasteful - shameful. All these sheep - all these happy-go-lucky 9-to-5 tools walking around oblivious. If one or two, or three or four of them go missing... the flock grazes on.	}{	All that power and you don't even use it. Seems wasteful - shameful. All these sheep - all these happy-go-lucky 9-to-5 tools walking around oblivious. If one or two, or three or four of them go missing... the flock grazes on.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	There's survival and then there's homicide. I don't have to kill to feed.	}{	There's survival and then there's homicide. I don't have to kill to feed.	}{	261	}{	Humanity 6	}{	}{	}{	}{	}{	}{	}{	}{	Only the tainted hunter kills what he does not need. Gold buys me grace.	}
+{	253	}{	Indeed. But one cannot get too greedy or the sheep become wolves.	}{	Indeed. But one cannot get too greedy or the sheep become wolves.	}{	291	}{	Humanity -6	}{	}{	}{	}{	}{	}{	}{	}{	Feed too often, and the sheep become wolves.	}
+{	254	}{	I could kill you right now. How does that make you feel?	}{	I could kill you right now. How does that make you feel?	}{	301	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yes. And you are one of those flock, little ghoulie.	}
+{	255	}{	I've heard enough from you. Not another word about this.	}{	I've heard enough from you. Not another word about this.	}{	331	}{	}{	}{	}{	}{	}{	}{	}{	}{	I wish to wag my tongue no more on this.	}
+{	256	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	Survival? Since when has survival had nothing to do with murder? Murder is what mankind and your kind, do best. Can you look me in the eyes and tell me you've never killed anyone? How 'bout it, saint? Yes or no?	}{	Survival? Since when has survival had nothing to do with murder? Murder is what mankind and your kind, do best. Can you look me in the eyes and tell me you've never killed anyone? How 'bout it, saint? Yes or no?	}{	#	}{	npc.SetDisposition("Disgust", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	I've killed. But only because I had to do it to survive.	}{	I've killed. But only because I had to do it to survive.	}{	271	}{	}{	}{	}{	}{	}{	}{	}{	}{	I only take lives that prolong my own.	}
+{	263	}{	I've never killed anyone.	}{	I've never killed anyone.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	I have never severed the last line.	}
+{	264	}{	All the time. I'm thinking about killing you right now.	}{	All the time. I'm thinking about killing you right now.	}{	321	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yes, and I see you as my next head on the wall.	}
+{	265	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	268	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	270	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	271	}{	To survive... my point exactly. Those that kill survive. The soldier that kills the other soldier first lives. The nation that kills the most enemies wins the war. It's the natural order of life. You are a predator. I respect that. I envy you.	}{	To survive... my point exactly. Those that kill survive. The soldier that kills the other soldier first lives. The nation that kills the most enemies wins the war. It's the natural order of life. You are a predator. I respect that. I envy you.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	272	}{	Shut the hell up and do your job, ghoul.	}{	Shut the hell up and do your job, ghoul.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	I tire of hearing your babblings. I need blood.	}
+{	273	}{	You're a waste of life. If I were you, I'd never speak to me about this again.	}{	You're a waste of life. If I were you, I'd never speak to me about this again.	}{	331	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tread lightly on this ground, lest it open up and grind you to ghoulie stew.	}
+{	274	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	275	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	276	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	277	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	278	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	281	}{	I meant no offense... I have respect for you. I just meant that -	}{	I meant no offense... I have respect for you. I just meant that -	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	(Auto-Link)	}{	(Auto-Link)	}{	251	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-Link)	}
+{	283	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	284	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	285	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	286	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	287	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	288	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	291	}{	Oh... yes... I understand. The predator needs the prey more than the prey needs the predator. Survival instincts will transform them into killers. The natural order. I see.	}{	Oh... yes... I understand. The predator needs the prey more than the prey needs the predator. Survival instincts will transform them into killers. The natural order. I see.	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	Now can I get some blood?	}{	Now can I get some blood?	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	I want the red stuff, blood slave.	}
+{	293	}{	You think about that. I'll return later.	}{	You think about that. I'll return later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	For once you see clearly, errand boy. Farewell.	}
+{	294	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	295	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	296	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	297	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	298	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	300	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	301	}{	I know your kind. I know you could do it. It would be easy... but I'm not like the others. I respect you. I admire you. If I had that power... I'd soak in the blood of the weak too. It's pure survival - the powerful fuel dynasties with the meek's blood.	}{	I know your kind. I know you could do it. It would be easy... but I'm not like the others. I respect you. I admire you. If I had that power... I'd soak in the blood of the weak too. It's pure survival - the powerful fuel dynasties with the meek's blood.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	302	}{	I've only killed to survive. I'm not a murderer.	}{	I've only killed to survive. I'm not a murderer.	}{	271	}{	}{	}{	}{	}{	}{	}{	}{	}{	I only take lives that prolong my own.	}
+{	303	}{	I've never killed anyone.	}{	I've never killed anyone.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	I have never severed the last line.	}
+{	304	}{	Exactly. In fact, I'm thinking about killing you right now.	}{	Exactly. In fact, I'm thinking about killing you right now.	}{	331	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	Yes, and I see you as my next head on the wall.	}
+{	305	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	306	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	307	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	308	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	309	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	310	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	311	}{	Liar. I can see it in your eyes... smell it on your breath - you're a predator at heart. And even if you deny that, even if you swear you left your halo in the taxi, you exist to kill others. And I respect you for that. I envy you.	}{	Liar. I can see it in your eyes... smell it on your breath - you're a predator at heart. And even if you deny that, even if you swear you left your halo in the taxi, you exist to kill others. And I respect you for that. I envy you.	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	312	}{	Shut the hell up and do your job, ghoul.	}{	Shut the hell up and do your job, ghoul.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	I tire of hearing your babblings. I need blood.	}
+{	313	}{	You're a waste of life. If I were you, I'd never speak to me about this again.	}{	You're a waste of life. If I were you, I'd never speak to me about this again.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tread lightly on this ground, lest it open up and grind you to ghoulie stew.	}
+{	314	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	315	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	316	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	317	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	318	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	319	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	320	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	321	}{	Oh, as you should. Yes, I'm weaker than you. I'm no match for you. I serve your kind because of my weakness - my addiction to your blood. And I aspire to be like you. To think like you. To be on the other side of this conversation. I respect and envy you.	}{	Oh, as you should. Yes, I'm weaker than you. I'm no match for you. I serve your kind because of my weakness - my addiction to your blood. And I aspire to be like you. To think like you. To be on the other side of this conversation. I respect and envy you.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	322	}{	As you should. Now do your job.	}{	As you should. Now do your job.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	I see you only as future sustenance. Remember that, and give me blood.	}
+{	323	}{	I'm satisfied with that answer. Remember your place. Farewell.	}{	I'm satisfied with that answer. Remember your place. Farewell.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your link is right below mine on the food chain, blood slave. Farewell.	}
+{	324	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	325	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	326	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	327	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	328	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	329	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	330	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	331	}{	Of course. Your power far surpasses my own. I bow to that. I understand my place in the natural order. How can I serve you?	}{	Of course. Your power far surpasses my own. I bow to that. I understand my place in the natural order. How can I serve you?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	332	}{	You know what I'm here for.	}{	You know what I'm here for.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Show me the red stuff.	}
+{	333	}{	I'm leaving. And I don't want to hear you rant next time I come in.	}{	I'm leaving. And I don't want to hear you rant next time I come in.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	When next I return, keep your rantings inside or I will turn you inside out.	}
+{	334	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	335	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	336	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	337	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	338	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	339	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	340	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	341	}{	More? You're quite the glutton. This city's veins are starting to dry up.	}{	More? You're quite the glutton. This city's veins are starting to dry up.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	342	}{	Let's see the stuff.	}{	Let's see the stuff.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Show me the red stuff.	}
+{	343	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need to enter this bloody fortress.	}
+{	344	}{	If you don't need my patronage, then I'll leave.	}{	If you don't need my patronage, then I'll leave.	}{	331	}{	}{	}{	}{	}{	}{	}{	}{	}{	Wasted words will lose you blood-sale, ghoul.	}
+{	345	}{	I'll come back later.	}{	I'll come back later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You still have some. Pray I do not come calling on you.	}
+{	346	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	347	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	348	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	349	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	350	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	351	}{	Today, I slit my wrist over a plastic salad bowl and spurted a few jets of the stuff until the bowl felt about right for two more bags. All just to fill your order. I hope you enjoy it.	}{	Today, I slit my wrist over a plastic salad bowl and spurted a few jets of the stuff until the bowl felt about right for two more bags. All just to fill your order. I hope you enjoy it.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	352	}{	Charming, eww... I guess I'll buy some.	}{	Charming, eww... I guess I'll buy some.	}{	0	}{	Humanity 5	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	I'll take some crimson elixir.	}
+{	353	}{	No sample? Alright, let's see what you got.	}{	No sample? Alright, let's see what you got.	}{	0	}{	Humanity -5	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	I want to lick the bowl.	}
+{	354	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need to enter this bloody fortress.	}
+{	355	}{	Say, where do you get your blood from now?	}{	Say, where do you get your blood from now?	}{	371	}{	G.Story_State < 100 and G.Vandal_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	So who is your bloody well now?	}
+{	356	}{	That's just disturbing. I'll come back later.	}{	That's just disturbing. I'll come back later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I won't partake of your tainted apéritif. Farewell.	}
+{	357	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	358	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	359	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	360	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	361	}{	The blood god returns.	}{	The blood goddess returns.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	362	}{	Blood me.	}{	Blood me.	}{	0	}{	G.Gimble_Vandal == 0 or G.Gimble_Vandal == 2	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	I need to feed....	}
+{	363	}{	Later.	}{	Later.	}{	0	}{	G.Gimble_Vandal == 0 or G.Gimble_Vandal == 2	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	364	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need to enter this bloody fortress.	}
+{	365	}{	Yeah, give me some blood of the guy I sent to you.	}{	Yeah, give me some blood of the guy I sent to you.	}{	0	}{	G.Gimble_Vandal == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); G.Vandal_Shop = 1; G.Vandal_Quest = 4; G.E_Missing = 3; G.Vandal_Pissed = 0; G.Gimble_Vandal = 2; pc.SetQuest("Danielle",6)	}{	}{	}{	}{	}{	}{	}{	Feed me with the blood from the madman I sent....	}
+{	366	}{	So you liked the lunatic? I don't need his blood right now though.	}{	So you liked the lunatic? I don't need his blood right now though.	}{	0	}{	G.Gimble_Vandal == 1	}{	G.Vandal_Shop = 1; G.Vandal_Quest = 4; G.E_Missing = 3; G.Vandal_Pissed = 0; G.Gimble_Vandal = 2; pc.SetQuest("Danielle",6)	}{	}{	}{	}{	}{	}{	}{	I sent you a present, but I don't need it's blood.	}
+{	367	}{	Say, where do you get your blood from now?	}{	Say, where do you get your blood from now?	}{	371	}{	G.Story_State < 100 and G.Vandal_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	So who is your bloody well now?	}
+{	368	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	369	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	370	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	371	}{	Now that you let that one go, I have to go out and find someone else to fill the chair. But it's kind of chilly out and now that my co-pilot's been devoured, I'm flying solo. I need a new body. Find another donor and I'll whip up a fresh batch.	}{	Now that you let that one go, I have to go out and find someone else to fill the chair. But it's kind of chilly out and now that my co-pilot's been devoured, I'm flying solo. I need a new body. Find another donor and I'll whip up a fresh batch.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	372	}{	Where should I look?	}{	Where should I look?	}{	381	}{	not IsClan(pc,"Nosferatu") or G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	Where can I find another little blood bag?	}
+{	373	}{	I haven't had ghoul blood in a while... you all alone?	}{	I haven't had ghoul blood in a while... you all alone?	}{	101	}{	Intimidate 4 & G.Vandal_Quest == 0 and G.Vandal_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	Maybe I will suck the life from your veins, blood slave.	}
+{	374	}{	Ha ha ha....	}{	Ha ha ha....	}{	481	}{	Dementation 1 & G.Vandal_Quest == 0 and G.Vandal_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	375	}{	Sell me blood.	}{	Sell me blood.	}{	111	}{	Dominate 1 & G.Vandal_Quest == 0 and G.Vandal_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	376	}{	You're lucky. If I hadn't freed her, her friends were going to shoot up the place.	}{	You're lucky. If I hadn't freed her, her friends were going to shoot up the place.	}{	121	}{	Persuasion 3 & (not IsClan(pc,"Malkavian") and G.Vandal_Quest == 0 and G.Vandal_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	The flower had little sickling friends who would have come calling.	}
+{	377	}{	Why don't I pay you an amount you think is fair to overlook this?	}{	Why don't I pay you an amount you think is fair to overlook this?	}{	71	}{	not IsClan(pc,"Nosferatu") and G.Vandal_Quest == 0 and G.Vandal_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	Fairest gold is often the cause of a sweet amnesia.	}
+{	378	}{	I don't need your blood. Not when I know how you're getting it.	}{	I don't need your blood. Not when I know how you're getting it.	}{	211	}{	Humanity 7	}{	}{	}{	}{	}{	}{	}{	}{	Blood from a little flower is blood I cannot drink.	}
+{	379	}{	I'm not much of a people person. Why don't I pay you a fair amount to forget this?	}{	I'm not much of a people person. Why don't I pay you a fair amount to forget this?	}{	71	}{	IsClan(pc,"Nosferatu") and G.Vandal_Quest == 0 and G.Vandal_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	380	}{	Sell me blood.	}{	Sell me blood.	}{	111	}{	Thaumaturgy 1 & (G.Patch_Plus == 1 and G.Vandal_Quest == 0 and G.Vandal_Plus == 0)	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	381	}{	The bitch who owns me, and this place, runs The Asylum. Lots of young, stupid blood there. Not like the putrid, stinking vagrant blood we so often get. Don't shed any at the club though, nononono... the missus, she don't appreciate it.	}{	The bitch who owns me, and this place, runs The Asylum. Lots of young, stupid blood there. Not like the putrid, stinking vagrant blood we so often get. Don't shed any at the club though, nononono... the missus, she don't appreciate it.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	382	}{	Fine. I'll check out The Asylum. Goodbye.	}{	Fine. I'll check out The Asylum. Goodbye.	}{	0	}{	G.Vandal_Quest == 0	}{	G.Vandal_Quest = 1; pc.SetQuest("Danielle",1); G.Vandal_Plus = 0	}{	}{	}{	}{	}{	}{	}{	I will look in the house of the shattered. Farewell.	}
+{	383	}{	Fine. I'll check out The Asylum. Goodbye.	}{	Fine. I'll check out The Asylum. Goodbye.	}{	0	}{	G.Vandal_Quest >= 1	}{	}{	}{	}{	}{	}{	}{	}{	I will look in the house of the shattered. Farewell.	}
+{	384	}{	I don't think I really want to do this, bye.	}{	I don't think I really want to do this, bye.	}{	0	}{	G.Vandal_Quest >= 1	}{	}{	}{	}{	}{	}{	}{	}{	A voice tells me to not do this, as I'm gone already.	}
+{	385	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	386	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	387	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	388	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	389	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	390	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	391	}{	Blood don't grow on trees.	}{	Blood don't grow on trees.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	392	}{	What can I do to make up for the girl I freed?	}{	What can I do to make up for the girl I freed?	}{	371	}{	G.Vandal_Quest == 0 and G.Story_State < 100	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps I can write the next act in this little blood-drama.	}
+{	393	}{	I need to get blood from somewhere. Haven't had ghoul blood in a while.	}{	I need to get blood from somewhere. Haven't had ghoul blood in a while.	}{	101	}{	Intimidate 4 & G.Vandal_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	Maybe I will suck the life from your veins, blood slave.	}
+{	394	}{	Sell me blood.	}{	Sell me blood.	}{	111	}{	Dominate 1 & G.Vandal_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	395	}{	I'll go find someone.	}{	I'll go find someone.	}{	381	}{	(not IsClan(pc,"Nosferatu") or G.Patch_Plus == 1) and G.Vandal_Quest == 1 and G.Story_State < 100	}{	}{	}{	}{	}{	}{	}{	}{	I will return with a new little flower to plant in your pot.	}
+{	396	}{	Ha ha ha....	}{	Ha ha ha....	}{	481	}{	Dementation 1 & G.Vandal_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	397	}{	Sell me blood.	}{	Sell me blood.	}{	111	}{	Thaumaturgy 1 & (G.Patch_Plus == 1 and G.Vandal_Quest == 0)	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	398	}{	I'm in a kind of hurry right now. Maybe your blood will do.	}{	I'm in a kind of hurry right now. Maybe your blood will do.	}{	101	}{	G.Story_State >= 100	}{	}{	}{	}{	}{	}{	}{	}{	Maybe your veins will give me blood.	}
+{	399	}{	Why don't I pay you $200 to forget the girl?	}{	Why don't I pay you $200 to forget the girl?	}{	81	}{	pc.CurrentMoney() >= 200 and G.Vandal_Quest == 0	}{	pc.MoneyRemove(200)	}{	}{	}{	}{	}{	}{	}{	I have two hundred little pieces of gold to cause a sweet amnesia.	}
+{	400	}{	This ain't over, ghoul.	}{	This ain't over, ghoul.	}{	0	}{	IsClan(pc,"Nosferatu") and G.Story_State < 100 and G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	401	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	402	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	403	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	404	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	405	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	406	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	407	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	408	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	409	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	410	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	411	}{	Sweet girl you sent up. Made the other one seem like sour milk. Real bleeder, lovely thing. Least, she used to be. But she'll live on in your heart, won't she? Need a bag of her?	}{	Sweet girl you sent up. Made the other one seem like sour milk. Real bleeder, lovely thing. Least, she used to be. But she'll live on in your heart, won't she? Need a bag of her?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Vandal_Shop = 1; G.Vandal_Quest = 4; G.E_Missing = 3; G.Vandal_Pissed = 0; pc.SetQuest("Danielle",6)	}{	}{	}{	}{	}{	}{	}{	}
+{	412	}{	Yeah.	}{	Yeah.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Give me the red sweetness....	}
+{	413	}{	Not right now. Goodbye.	}{	Not right now. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Not right now. Goodbye.	}
+{	414	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	415	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	416	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	417	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	418	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	419	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	420	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	421	}{	Employees only - them's the rules of the queen bitch herself.	}{	Employees only - them's the rules of the queen bitch herself.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	422	}{	I don't think you heard me... I said I need to get into the back, ghoul.	}{	I don't think you heard me... I said I need to get into the back, ghoul.	}{	441	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	I will not ask again, you bloodletting buffoon.	}
+{	423	}{	It's okay... the queen bitch gave me her okay. Go ahead, call her.	}{	It's okay... the queen bitch gave me her okay. Go ahead, call her.	}{	461	}{	Persuasion 3 & G.Vandal_Fail == 0	}{	}{	}{	}{	}{	}{	}{	}{	The dark daughter has given me her blessing.	}
+{	424	}{	Why don't I come in there and help you reconsider...?	}{	Why don't I come in there and help you reconsider...?	}{	451	}{	Seduction 4 & not IsMale(pc)	}{	}{	}{	}{	}{	}{	}{	}{	Let me in, I'll do the same for you, my luscious little ghoulie.	}
+{	425	}{	Open the door!	}{	Open the door!	}{	431	}{	}{	}{	}{	}{	}{	}{	}{	}{	The door remains closed, ghoul.	}
+{	426	}{	Queen bitch?	}{	Queen bitch?	}{	431	}{	}{	}{	}{	}{	}{	}{	}{	}{	Which royal dog do you speak of?	}
+{	427	}{	Fine. Goodbye.	}{	Fine. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	428	}{	You're lucky I left my shotgun at home. Goodbye.	}{	You're lucky I left my shotgun at home. Goodbye.	}{	0	}{	not pc.HasItem("item_w_ithaca_m_37") and not pc.HasItem("item_w_supershotgun")	}{	}{	}{	}{	}{	}{	}{	}{	This is not over blood keeper. I am gone.	}
+{	429	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	430	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	431	}{	Now serving number seventy-five... number seventy-five?	}{	Now serving number seventy-five... number seventy-five?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	432	}{	I don't think you heard me... I said I need to get into the back, ghoul.	}{	I don't think you heard me... I said I need to get into the back, ghoul.	}{	441	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	I will not ask again, you bloodletting buffoon.	}
+{	433	}{	It's okay... the queen bitch gave me her okay.	}{	It's okay... the queen bitch gave me her okay.	}{	461	}{	Persuasion 3 & G.Vandal_Fail == 0	}{	}{	}{	}{	}{	}{	}{	}{	The dark daughter has given me her blessing.	}
+{	434	}{	Why don't I come in there and help you reconsider...?	}{	Why don't I come in there and help you reconsider...?	}{	451	}{	Seduction 4 & not IsMale(pc)	}{	}{	}{	}{	}{	}{	}{	}{	Let me in, I'll do the same for you, my luscious little ghoulie.	}
+{	435	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	436	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	437	}{	Fine. Goodbye.	}{	Fine. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	438	}{	You're lucky I left my shotgun at home. Goodbye.	}{	You're lucky I left my shotgun at home. Goodbye.	}{	0	}{	not pc.HasItem("item_w_ithaca_m_37") and not pc.HasItem("item_w_supershotgun")	}{	}{	}{	}{	}{	}{	}{	}{	This is not over, blood keeper. I am gone.	}
+{	439	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	440	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	441	}{	This mortality is such a handicap. If we were on a level playing field, you wouldn't be so bold - if one slash to the throat could mean the difference between existence or not.	}{	This mortality is such a handicap. If we were on a level playing field, you wouldn't be so bold - if one slash to the throat could mean the difference between existence or not.	}{	#	}{	npc.SetDisposition("Disgust", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	442	}{	It doesn't, though, to me.	}{	It doesn't, though, to me.	}{	471	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ifs and buts, something something nuts, mortal.	}
+{	443	}{	I tried to be nice, now I'm coming in.	}{	I tried to be nice, now I'm coming in.	}{	471	}{	}{	}{	}{	}{	}{	}{	}{	}{	You force my vicious hand, blood slave.	}
+{	444	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	445	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	446	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	447	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	448	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	449	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	450	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	451	}{	[Snide]I don't do dead chicks.	}{	[Snide]I don't do dead chicks.	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	452	}{	I don't think you heard me... I said I need to get into the back, ghoul.	}{	I don't think you heard me... I said I need to get into the back, ghoul.	}{	441	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	I will not ask again, you bloodletting buffoon.	}
+{	453	}{	It's okay... the queen bitch gave me her okay. Go ahead, call her.	}{	It's okay... the queen bitch gave me her okay. Go ahead, call her.	}{	461	}{	Persuasion 3 & G.Vandal_Fail == 0	}{	}{	}{	}{	}{	}{	}{	}{	The dark daughter has given me her blessing.	}
+{	454	}{	Open the door!	}{	Open the door!	}{	431	}{	}{	}{	}{	}{	}{	}{	}{	}{	Throw open this gate!	}
+{	455	}{	Fine. Goodbye.	}{	Fine. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	456	}{	You're lucky I left my shotgun at home. Goodbye.	}{	You're lucky I left my shotgun at home. Goodbye.	}{	0	}{	not pc.HasItem("item_w_ithaca_m_37") and not pc.HasItem("item_w_supershotgun")	}{	}{	}{	}{	}{	}{	}{	}{	This is not over, blood keeper. I am gone.	}
+{	457	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	458	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	459	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	460	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	461	}{	She did, huh? Queen bitch told me never to let anyone back there. I remember her repeating it over and over in that cold, pretentious voice of hers.	}{	She did, huh? Queen bitch told me never to let anyone back there. I remember her repeating it over and over in that cold, pretentious voice of hers.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	462	}{	So, are you going to let me in or what?	}{	So, are you going to let me in or what?	}{	431	}{	}{	G.Vandal_Fail = 1	}{	}{	}{	}{	}{	}{	}{	Let me in, ghoul.	}
+{	463	}{	Go ahead, call her.	}{	Go ahead, call her.	}{	471	}{	}{	}{	}{	}{	}{	}{	}{	}{	Contact her majesty and face the truth.	}
+{	464	}{	You don't want to disappoint her, do you?	}{	You don't want to disappoint her, do you?	}{	431	}{	}{	G.Vandal_Fail = 1	}{	}{	}{	}{	}{	}{	}{	The dark daughter will not be happy with your meddlings.	}
+{	465	}{	I don't think you heard me... I said I need to get into the back, ghoul.	}{	I don't think you heard me... I said I need to get into the back, ghoul.	}{	441	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	I will not ask again, you bloodletting buffoon.	}
+{	466	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	467	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	468	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	469	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	470	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	471	}{	[Irritated growl]Mmm.... Opened.	}{	[Irritated growl]Mmm.... Opened.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Vandal_Permission = 1; G.Vandal_Seen = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	472	}{	Don't worry, I won't make too much of a mess.	}{	Don't worry, I won't make too much of a mess.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My inner child thanks you for opening the candy store.	}
+{	473	}{	Now get back to work.	}{	Now get back to work.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Get back to your suckings, blood slave. Farewell.	}
+{	474	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	475	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	476	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	477	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	478	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	479	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	480	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	481	}{	[Starts laughing]Heh heh... hm, hm, mmm, hngh, hee hee hee....	}{	[Starts laughing]Heh heh... hm, hm, mmm, hngh, hee hee hee....	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	482	}{	A HA HA HA HA....	}{	A HA HA HA HA....	}{	491	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	483	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	484	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	485	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	486	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	487	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	488	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	489	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	490	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	491	}{	[Maniacal laughter]A HA HA HA HA HA HAAAAA! HO HO HO HOo.... AH! AH! Ha... hoo... ho ho... haa.... Oh, ho ho, ha.... What were we laughing about?	}{	[Maniacal laughter]A HA HA HA HA HA HAAAAA! HO HO HO HOo.... AH! AH! Ha... hoo... ho ho... haa.... Oh, ho ho, ha.... What were we laughing about?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.E_Missing = 3; G.Vandal_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	492	}{	The price of the red nectar you were about to sell me.	}{	The price of the red nectar you were about to sell me.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	493	}{	Does one need a reason? Until we meet again - laugh.	}{	Does one need a reason? Until we meet again - laugh.	}{	0	}{	G.Story_State < 100 and G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	494	}{	The price of the red nectar you were about to sell me.	}{	The price of the red nectar you were about to sell me.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	495	}{	Does one need a reason? Until we meet again - laugh.	}{	Does one need a reason? Until we meet again - laugh.	}{	0	}{	G.Story_State < 100 and G.Patch_Plus == 0	}{	pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	496	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	497	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	498	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	499	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	500	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	501	}{	Why'd you have to go and let that bitch out? There's one less Bill in the world now. Why'd you have to let her go and eat him, huh? Now I'll never get to do in that bastard myself. Well, you know what - no blood for you, no more!	}{	Why'd you have to go and let that bitch out? There's one less Bill in the world now. Why'd you have to let her go and eat him, huh? Now I'll never get to do in that bastard myself. Well, you know what - no blood for you, no more!	}{	#	}{	npc.SetDisposition("Anger", 3)	}{	G.Lily_Free = 2; G.Vandal_Pissed = 1; G.Vandal_Quest = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	502	}{	What incident? Nothing happened back there. I was just buying blood.	}{	What incident? Nothing happened back there. I was just buying blood.	}{	111	}{	Dominate 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	503	}{	Ha ha ha....	}{	Ha ha ha....	}{	481	}{	Dementation 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	504	}{	I need to get blood from somewhere. Haven't had ghoul blood in a while.	}{	I need to get blood from somewhere. Haven't had ghoul blood in a while.	}{	101	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	Maybe I will suck the life from your veins, blood slave.	}
+{	505	}{	What incident? Nothing happened back there. I was just buying blood.	}{	What incident? Nothing happened back there. I was just buying blood.	}{	111	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	506	}{	You're lucky. If I hadn't freed her, her friends were going to shoot up the place.	}{	You're lucky. If I hadn't freed her, her friends were going to shoot up the place.	}{	121	}{	Persuasion 3 & not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	507	}{	Are you sure there's nothing I could do to you to change your mind?	}{	Are you sure there's nothing I could do to you to change your mind?	}{	201	}{	F_Seduction 4	}{	}{	}{	}{	}{	}{	}{	}{	Come now, little ghoul. There are things I can do to you that you wouldn't believe.	}
+{	508	}{	I don't need your blood. Not when I know how you're getting it.	}{	I don't need your blood. Not when I know how you're getting it.	}{	211	}{	Humanity 7	}{	}{	}{	}{	}{	}{	}{	}{	Blood from a little flower is blood I cannot drink.	}
+{	509	}{	What can I do to set this straight?	}{	What can I do to set this straight?	}{	371	}{	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps I can write the next act in this little blood-drama.	}
+{	510	}{	Why don't I pay you an amount you think is fair to overlook this?	}{	Why don't I pay you an amount you think is fair to overlook this?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	Fairest gold is often the cause of a sweet amnesia.	}
+{	511	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	512	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	513	}{	(Starting Condition)	}{	}{	391	}{	G.Story_State >= 100 and G.Vandal_Pissed == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	514	}{	(Starting Condition)	}{	}{	221	}{	G.Story_State >= 100	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	515	}{	(Starting Condition)	}{	}{	361	}{	G.Vandal_Quest == 3 and G.Gimble_Vandal == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	516	}{	(Starting Condition)	}{	}{	411	}{	G.Vandal_Quest == 3 and (G.Gimble_Vandal == 0 or G.Gimble_Vandal == 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	517	}{	(Starting Condition)	}{	}{	391	}{	G.Vandal_Quest == 1 or G.Vandal_Pissed == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	518	}{	(Starting Condition)	}{	}{	501	}{	G.Lily_Free == 1 and IsDead("Phil")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	519	}{	(Starting Condition)	}{	}{	61	}{	G.Lily_Free == 1 and not IsDead("Phil")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	520	}{	(Starting Condition)	}{	}{	361	}{	G.Vandal_Blood > 8	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	521	}{	(Starting Condition)	}{	}{	351	}{	G.Vandal_Blood == 8	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	522	}{	(Starting Condition)	}{	}{	341	}{	G.Vandal_Blood == 6	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	523	}{	(Starting Condition)	}{	}{	241	}{	G.Vandal_Blood == 4	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	524	}{	(Starting Condition)	}{	}{	231	}{	G.Vandal_Blood == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	525	}{	(Starting Condition)	}{	}{	221	}{	G.Vandal_Shop == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	526	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

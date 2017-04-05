@@ -1,0 +1,29 @@
+Particle
+{
+	sprite		"DropletFast"
+	frames		"20"
+	movealign	"1"
+	Elevation_speed	"-275~-250"
+	size		"8"
+	
+	red			"100,255"
+	green		"100,255"	// changed by wesp
+	blue		"100,255"	// changed by wesp
+
+	color		"120,10"
+	mask		"0"
+
+	collide
+	{
+		spawn
+		{
+			particle 	"RainSplashDummy"
+			friction 	"0"
+			Bounce		"0"
+		}
+		decal
+		{
+			particle 	"RainRing"
+		}
+	}
+}

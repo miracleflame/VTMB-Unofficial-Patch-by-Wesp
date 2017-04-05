@@ -1,0 +1,26 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "brick/floora"
+	"$surfaceprop" "brick"
+	"$envmap" "env_cubemap"
+	"$envmapmask" "brick/floora_ref"
+
+	"Proxies"
+	{
+		"GlobalWetness"
+		{
+			"resultVar"	"$envmaptint[0]"
+			"scale"		 1.0
+		}
+		"GlobalWetness"
+		{
+			"resultVar"	"$envmaptint[1]"
+			"scale"		 1.0
+		}
+		"GlobalWetness"
+		{
+			"resultVar"	"$envmaptint[2]"
+			"scale"		 1.0
+		}
+	}
+}

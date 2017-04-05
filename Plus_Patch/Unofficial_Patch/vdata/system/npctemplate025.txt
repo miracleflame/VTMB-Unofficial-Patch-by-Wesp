@@ -1,0 +1,212 @@
+//////////////////////////////////////////////////
+// NPC Stat Templates (Packages)	- Human
+//
+//	NPCs in worldcraft are assigned one of these which determines their statistics.
+
+ClanDataTables
+{
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Chastity"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"Chastity"
+			"Description"			"Chastity"
+		}
+
+		General
+		{
+			"Clan"					"Chastity"
+			"M_Body"				"models/character/npc/unique/malkgirl/girl.mdl"
+			"F_Body"				"models/character/npc/unique/malkgirl/girl.mdl"
+			"Gender"				"Female"	// changed by wesp
+			"Kindred"				"0"
+			"DisciplineStrata"		"3"
+			"SoundGroup"	""
+			"NoBiting"			"0"
+			"NormalFootfallDist"		"300"
+			"HeavyFootfallDist"		"600"
+			"NormalFootfallVol"		"0.45"
+			"HeavyFootfallVol"		"0.85"
+			"NpcFakeReloadCountMin"		"6.0" // none
+			"NeverInnocent"           "1"
+			"Boss"				"1"
+			"Disallow_Knockbacks"		"1"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"4"
+			"Dexterity"				"1"
+			"Stamina"				"3"
+			"Charisma"				"1"
+			"Manipulation"				"1"
+			"Appearance"				"1"
+			"Perception"				"4"
+			"Intelligence"				"1"
+			"Wits"					"4"
+			"Max_Health"				"196"
+
+			"BloodPool"				"6"
+			"FaithPoints"			"15"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"3"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"3"
+			"Melee"					"4"	// changed by wesp
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"6"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+
+		LoiterActivities
+		{
+//			Activity				Frequency
+			"ACT_IDLE"				"1.0"
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Julius"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			"Julius"
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"M_Body"				"models/character/npc/unique/malkgirl/girl.mdl"
+			"F_Body"				"models/character/npc/unique/malkgirl/girl.mdl"
+			"Gender"				"Male"	// changed by wesp
+			"Kindred"				"1"	// changed by wesp
+			"Supernatural"			"1"	// added by wesp
+			"NoBiting"				"1"
+			"DisciplineStrata"		"3"
+			"SoundGroup"	""
+			"NormalFootfallDist"		"300"
+			"HeavyFootfallDist"		"600"
+			"NormalFootfallVol"		"0.45"
+			"HeavyFootfallVol"		"0.85"
+			"NpcFakeReloadCountMin"		"6.0" // none
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"4"
+			"Dexterity"				"1"
+			"Stamina"				"4"
+			"Charisma"				"1"
+			"Manipulation"				"1"
+			"Appearance"				"1"
+			"Perception"				"2"
+			"Intelligence"				"1"
+			"Wits"					"3"
+			"Max_Health"				"104"
+
+			"BloodPool"				"6"
+			"FaithPoints"			"15"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"2"
+			"Intimidation"				"0"
+			"Subterfuge"				"0"
+//			"Animal_Ken"				"0"
+			"Firearms"				"0"
+			"Melee"					"3"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"2"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+
+		LoiterActivities
+		{
+//			Activity				Frequency
+			"ACT_IDLE"				"1.0"
+		}
+	}
+}

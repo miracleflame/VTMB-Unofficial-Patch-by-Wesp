@@ -1,0 +1,33 @@
+SignData
+{
+	// Signs will check scripts from top to bottom.
+	// The first depenency to return true will 
+	// 
+
+	Sign
+	{
+		"dependency"		"G.Test_Flag == 1"	
+		"filename"		"vdata/signs/Newspaper_OH_1.txt"
+	}
+
+	Sign
+	{
+		"dependency"		"G.Test_Flag == 2"	
+		"filename"		"vdata/signs/Newspaper_OH_2.txt"
+	}
+
+	Sign
+	{
+		"dependency"		"G.Test_Flag > 2 and G.Test_Flag < 4"	
+		"filename"		"vdata/signs/Newspaper_OH_3.txt"
+	}
+
+	Sign
+	{
+		// make sure that something is always displayed, or it will freak out...
+		"dependency"		"G.Story_State >= 0"	
+		"filename"		"vdata/signs/Newspaper_OH_4.txt"
+	}
+
+
+}

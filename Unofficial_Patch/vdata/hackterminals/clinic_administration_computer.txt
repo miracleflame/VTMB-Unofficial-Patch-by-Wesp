@@ -1,0 +1,118 @@
+TerminalDefinition
+{
+	"screen saver"		"Surgical forceps are not a toy!"	// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+	"email_username"	"dboyle"		// printed at the top of the email window, not used for log in. 
+	"email_password"	"lakers"		// printed at the top of the email window, not used for log in. 
+
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"S.M.M.C. Secure Console"
+		"line1"		"Administration Offices"
+		"line2"		"Danny Boyle, Administrator"
+
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+
+
+	SubDir
+	{
+		"name"			"Personnel"
+		"description"		"Confidential Information"	
+
+		Function
+		{
+			"name"		"Flabottomus, P"
+			"description"	"Employment History"	
+			"runtext"	"Phil Flabottomus is a loyal employee, and a hard worker, but seems to have various digestive tract abnormalities which, unfortunately, result in an increased rate of flatulence. The smell of these phenomena is nothing short of horrendous. It seems we may have to do something about him."
+		}
+
+		Function
+		{
+			"name"		"Bill, E"
+			"description"	"Employment History"	
+			"runtext"	"Dr. Bill has worked as this clinic's internal wrangler since 1999."
+		}
+		
+		Function
+		{
+			"name"		"St. Martin, M"
+			"description"	"Employment History"	
+			"runtext"	"Malcolm St. Martin is our night shift senior physician."
+		}
+
+		Function
+		{
+			"name"		"Roberts, D"
+			"description"	"Employment History"	
+			"runtext"	"Has never lost a patient. No one can succeed like Dr. Roberts."
+		}
+
+		Function
+		{
+			"name"		"Thornton, K"
+			"description"	"Employment History"	
+			"runtext"	"Several malpractice suits filed against him for unnecessary gynecology. Suggest termination."
+		}
+	}
+
+	Email
+	{
+		"subject"	"A little help"
+		"sender"	"Fred Dingo"
+		"body"		"Hey, Danny. I could use a little help down here. Can you go up to Controlled Substances for some morphine? I'm pretty busy right now. Thanks. F-Dog."
+		"dependency"	"G.Werewolf_Quest ==  0"
+	}
+		
+	Email
+	{
+		"subject"	"Re: yo mama"
+		"sender"	"Fred Dingo"
+		"body"		"No, it's not for my personal use, you bastard.... :) I didn't know they were out upstairs. Maybe you can get some in Malcolm's office. BTW, your mother wears combat boots. F-dog."
+		"dependency"	"G.Werewolf_Quest ==  0"
+	}
+	Email
+	{
+		"subject"	"Re: amnesia"
+		"sender"	"Fred Dingo"
+		"body"		"Oh, shit! That's cold. But I'll make sure to knock before I go in. I'd hate to catch him in the middle of a \"pelvic examination\". And by the way... tell your mom to stop calling me. F-dog."
+		"dependency"	"G.Werewolf_Quest ==  0"
+	}
+
+	Email
+	{
+		"subject"	"Strange blood sample"
+		"sender"	"Fred Dingo"
+		"body"		"Hey, Danny. We received an interesting blood sample from someone over at the Sun. I guess some freak told them it was \"werewolf\" blood. Can you believe that shit? Anyway, they're paying us to run the numbers, so could you do it on your next shift? Many thanks. F-Dog."
+		"dependency"	"G.Werewolf_Quest ==  1"
+	}
+		
+	Email
+	{
+		"subject"	"Re: blood test"
+		"sender"	"Fred Dingo"		
+		"body"		"How the hell am I supposed to know what you're testing for? Get creative.... :) It's really not a big deal, but just see if there's anything strange about it. F-dog."
+		"dependency"	"G.Werewolf_Quest ==  1"
+	}
+	Email
+	{
+		"subject"	"Re: where is it?"
+		"sender"	"Fred Dingo"		
+		"body"		"Oh yeah, sorry. The sample is in the electronic cabinet in Controlled Substances. BTW, you down for some hoops this weekend? F-dog."
+		"dependency"	"G.Werewolf_Quest ==  1"
+	}
+	Email
+	{
+		"subject"	"Re: you're on thin ice"
+		"sender"	"Fred Dingo"
+		"body"		"Jesus! Do you know anything? I had Phil change the password a few hours ago. The new password is the name of Malcolm's dirty little secret. Ooops!!! Did I say that? You better delete this thing when you're done reading it! See you at the park on Saturday morning. F-dog."
+		"dependency"	"G.Werewolf_Quest ==  1"
+	}
+}

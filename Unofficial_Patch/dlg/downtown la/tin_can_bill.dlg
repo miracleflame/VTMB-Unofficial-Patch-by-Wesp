@@ -1,0 +1,173 @@
+{	1	}{	[Cough, cough]Who's there, huh? Old Bill can't see too good these days. I-is that you, Fred? I ain't got no booze tonight, so you may as well get the hell out of here.	}{	[Cough, cough]Who's there, huh? Old Bill can't see too good these days. I-is that you, Betty? I ain't got no booze tonight, so you may as well get the hell out of here.	}{	#	}{	}{	Whisper("Moaning")	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	It's not Fred, Bill. I heard that you can tell me why everyone is getting sick.	}{	It's not Betty, Bill. I heard that you can tell me why everyone is getting sick.	}{	11	}{	Humanity 6 & not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	I don't need your booze, old man. Tell me what you know about this epidemic.	}{	I don't need your booze, old man. Tell me what you know about this epidemic.	}{	11	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	Man, you smell. Tell me what you know about this epidemic before I vomit.	}{	Man, you smell. Tell me what you know about this epidemic before I vomit.	}{	21	}{	Humanity -6 & not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	Ah! I see you wear the Dark Brother's mark!	}{	Ah! I see you wear the Dark Brother's mark!	}{	6	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	Eh? [Cough, cough]"Dark Brother"? What're you talkin' about? It's jes' me, old Tin Can Bill. Now leave an old man alone to sleep in peace. I don't want to be bothered unless you've got a bottle to share.	}{	Eh? [Cough, cough]"Dark Brother"? What're you talkin' about? It's jes' me, old Tin Can Bill. Now leave an old man alone to sleep in peace. I don't want to be bothered unless you've got a bottle to share.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	May the shadows of the past haunt your present! Speak!	}{	May the shadows of the past haunt your present! Speak!	}{	61	}{	Dementation 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	Tell me of the source of your sickness.	}{	Tell me of the source of your sickness.	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	Yeah... I might be able to. [cough, cough]But I'm awful thirsty tonight, mister. Could you spare five bucks for a man who's been down on his luck?	}{	Yeah... I might be able to. [cough, cough]But I'm awful thirsty tonight, miss. Could you spare five bucks for a man who's been down on his luck?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	Sure... here's five bucks.	}{	Sure... here's five bucks.	}{	31	}{	pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Take your five pieces of gold.	}
+{	13	}{	Uh, sure. I'll give it to you right after we talk.	}{	Uh, sure. I'll give it to you right after we talk.	}{	31	}{	Persuasion 4	}{	G.Bill_Persuade = 1	}{	}{	}{	}{	}{	}{	}{	I promise to pay your toll after the tale.	}
+{	14	}{	I don't seem to have anything on me.	}{	I don't seem to have anything on me.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	My pockets are as empty as my head.	}
+{	15	}{	Forget it, old man. Get a job.	}{	Forget it, old man. Get a job.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	You will get no prize from me, odorous one.	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	Well, I don't think I'm going to be able to remember anything until I have a little green in my hand. [cough, cough]Come back when you can be a little more generous.	}{	Well, I don't think I'm going to be able to remember anything until I have a little green in my hand. [cough, cough]Come back when you can be a little more generous.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	Tell me!	}{	Tell me!	}{	41	}{	Dominate 2 & IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	23	}{	You don't want to see me angry, old man. Now tell me.	}{	You don't want to see me angry, old man. Now tell me.	}{	41	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	Unlock your tongue or lose it.	}
+{	24	}{	Come on, old man. Tell me your little secret and I'll tell you one.	}{	Come on, old man. Tell me your little secret and I'll tell you one.	}{	51	}{	Seduction 4 & not IsMale(pc)	}{	}{	}{	}{	}{	}{	}{	}{	Get it off your chest and I'll do the same with my shirt.	}
+{	25	}{	Fine. Here's five bucks. Now tell me what's going on.	}{	Fine. Here's five bucks. Now tell me what's going on.	}{	31	}{	pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Here is the gold you desire, now speak.	}
+{	26	}{	You will remember anything for me.	}{	You will remember anything for me.	}{	31	}{	Presence 2 & (G.Patch_Plus == 1 and IsClan(pc,"Toreador"))	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	Whatever. I'll come back later.	}{	Whatever. I'll come back later.	}{	0	}{	}{	G.Bill_ComeBackLater = 1	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	Heh, heh... thank you, much! [cough, cough]I'm going to have to go pick up some hootch. [cough, cough]For medicinal purposes, you know... heh heh heh....[laughs again, ending in a cough]	}{	Heh, heh... thank you, much! [cough, cough]I'm going to have to go pick up some hootch. [cough, cough]For medicinal purposes, you know... heh heh heh....[laughs again, ending in a cough]	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	(Auto-Link)	}{	(Auto-Link)	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	33	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	[Scared]Sure, sure... n-now that you put it that way, I-I guess I could tell you what wanna know. [cough, cough]No reason to get your gizzard all in a twist.	}{	[Scared]Sure, sure... n-now that you put it that way, I-I guess I could tell you what wanna know. [cough, cough]No reason to get your gizzard all in a twist.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	(Auto-Link)	}{	(Auto-Link)	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	43	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	[Cough, cough]Now I know you ain't going to believe old Bill, because I been tellin' my friends and the cops and everyone since it happened, and people just say that it's the hootch talkin', and nothin' more.	}{	[Cough, cough]Now I know you ain't going to believe old Bill, because I been tellin' my friends and the cops and everyone since it happened, and people just say that it's the hootch talkin', and nothin' more.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	It's alright. I'll believe you, Bill.	}{	It's alright. I'll believe you, Bill.	}{	61	}{	Humanity 6	}{	}{	}{	}{	}{	}{	}{	}{	Your words bear the weight of truth.	}
+{	53	}{	With the way you smell, I'm not surprised they think that.	}{	With the way you smell, I'm not surprised they think that.	}{	61	}{	Humanity -6	}{	}{	}{	}{	}{	}{	}{	}{	Your smells are louder than your words.	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	[He lowers his voice, almost whispering]It was a monster, y'see! A monster with his face all twisted and ugly, teeth longer'n your finger, and these eyes - piss yellow and full o' hate. I never seen eyes like that before... still givin' me bad dreams.	}{	[He lowers his voice, almost whispering]It was a monster, y'see! A monster with his face all twisted and ugly, teeth longer'n your finger, and these eyes - piss yellow and full o' hate. I never seen eyes like that before... still givin' me bad dreams.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	So? What happened?	}{	So? What happened?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	Keep your tongue wagging.	}
+{	63	}{	Whatever. Just tell me where the hell this so-called "monster" came from.	}{	Whatever. Just tell me where the hell this so-called "monster" came from.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ah! Tell me of the Dark Brother's lair.	}
+{	64	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	[Getting more hysterical]He grabbed me, threw me over his shoulder, t-t-took me to the bad place... the dark place. [cough, cough]Oh god, the smell... worse than anything I've - and then he bit me, my neck.... Oh god, i-it was horrible![cough, cough]	}{	[Getting more hysterical]He grabbed me, threw me over his shoulder, t-t-took me to the bad place... the dark place. [cough, cough]Oh god, the smell... worse than anything I've - and then he bit me, my neck.... Oh god, i-it was horrible![cough, cough]	}{	#	}{	npc.SetDisposition("Disgust", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	(Auto-Link)	}{	(Auto-Link)	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	73	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Don't remember too much after that; blacked out and woke up here in my alley. [cough, cough]Haven't been feeling too well since then.[cough, cough, cough]	}{	Don't remember too much after that; blacked out and woke up here in my alley. [cough, cough]Haven't been feeling too well since then.[cough, cough, cough]	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	Bill! I need to know where the monster took you.	}{	Bill! I need to know where the monster took you.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Where did the Beastial Brother take you?	}
+{	83	}{	Suck it up, old man. Just tell me where the monster took you.	}{	Suck it up, old man. Just tell me where the monster took you.	}{	91	}{	not IsClan(pc, "Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	[Cough, cough, cough, cough]Came up through the sewers, he did. Just around the corner there. [cough, cough, cough, cough]Don't want to go back to the bad place, friend. [cough, cough, cough, cough]Don't let the monster come back and take me there....[cough, cough, cough, cough]	}{	[Cough, cough, cough, cough]Came up through the sewers, he did. Just around the corner there. [cough, cough, cough, cough]Don't want to go back to the bad place, friend. [cough, cough, cough, cough]Don't let the monster come back and take me there....[cough, cough, cough, cough]	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Bill! Stay with me! Everything's going to be alright!	}{	Bill! Stay with me! Everything's going to be alright!	}{	101	}{	Humanity 6 & pc.GetQuestState("AllPlague") == 0	}{	pc.SetQuest("Plague",6)	}{	}{	}{	}{	}{	}{	}{	The Beastial Brother will haunt you no more.	}
+{	93	}{	Thanks for the information. See ya.	}{	Thanks for the information. See ya.	}{	101	}{	Humanity 6 & pc.GetQuestState("AllPlague") == 0	}{	pc.SetQuest("Plague",6)	}{	}{	}{	}{	}{	}{	}{	Protect thyself, hootch-meister.	}
+{	94	}{	Will you die already?	}{	Will you die already?	}{	101	}{	Humanity -6 & pc.GetQuestState("AllPlague") == 0	}{	pc.SetQuest("Plague",6)	}{	}{	}{	}{	}{	}{	}{	Death takes too long in claiming your wine-soaked soul.	}
+{	95	}{	Bill! Stay with me! Everything's going to be alright!	}{	Bill! Stay with me! Everything's going to be alright!	}{	101	}{	Humanity 6 & pc.GetQuestState("AllPlague") != 0	}{	pc.SetQuest("AllPlague",11)	}{	}{	}{	}{	}{	}{	}{	The Beastial Brother will haunt you no more.	}
+{	96	}{	Thanks for the information. See ya.	}{	Thanks for the information. See ya.	}{	101	}{	Humanity 6 & pc.GetQuestState("AllPlague") != 0	}{	pc.SetQuest("AllPlague",11)	}{	}{	}{	}{	}{	}{	}{	Protect thyself, hootch-meister.	}
+{	97	}{	Will you die already?	}{	Will you die already?	}{	101	}{	Humanity -6 & pc.GetQuestState("AllPlague") != 0	}{	pc.SetQuest("AllPlague",11)	}{	}{	}{	}{	}{	}{	}{	Death takes too long in claiming your wine-soaked soul.	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	[Bill dies]...	}{	[Bill dies]...	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	G.Bill_Dead = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	Don't worry, Bill. Someone's going to pay for this.	}{	Don't worry, Bill. Someone's going to pay for this.	}{	0	}{	Humanity 6	}{	}{	}{	}{	}{	}{	}{	}{	The Beastial Brother will pay the price for your puncturing.	}
+{	103	}{	That's a bummer.	}{	That's a bummer.	}{	0	}{	Humanity 6	}{	}{	}{	}{	}{	}{	}{	}{	Another thread of the tapestry unravels. Farewell.	}
+{	104	}{	Good riddance, you pathetic drunk.	}{	Good riddance, you pathetic drunk.	}{	0	}{	Humanity -6	}{	}{	}{	}{	}{	}{	}{	}{	Savor this last, lonely liqueur. Drunks always die alone.	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	Hey, friend! [cough, cough]You find me a little green?	}{	Hey, friend! [cough, cough]You find me a little green?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Yeah... here's five bucks.	}{	Yeah... here's five bucks.	}{	31	}{	pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Here is the gold you seek.	}
+{	113	}{	Uh, sure. I'll give it to you right after we talk.	}{	Uh, sure. I'll give it to you right after we talk.	}{	31	}{	Persuasion 4	}{	G.Bill_Persuade = 1	}{	}{	}{	}{	}{	}{	}{	I promise to pay your toll after the tale.	}
+{	114	}{	Sorry. Still got nothin' for you.	}{	Sorry. Still got nothin' for you.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	Senseless and penniless I stand here.	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	Ahhh! No, please... the monster! Don't take me away again! I-I d- I don't want to go away to the bad place!	}{	Ahhh! No, please... the monster! Don't take me away again! I-I d- I don't want to go away to the bad place!	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	What are you talking about?	}{	What are you talking about?	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	123	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	Oh god! You're even more horrible than I remember. Can't look at your face... those eyes.... [cough, cough, cough]P-please, just leave me alone!	}{	Oh god! You're even more horrible than I remember. Can't look at your face... those eyes.... [cough, cough, cough]P-please, just leave me alone!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	Are you Tin Can Bill?	}{	Are you Tin Can Bill?	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	133	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	Y-you know who I am! [cough, cough, cough]You took me to the b-bad place... s-smelled so bad.... N-no... [cough, cough, cough, cough]not into the sewers again!	}{	Y-you know who I am! [cough, cough, cough]You took me to the b-bad place... s-smelled so bad.... N-no... [cough, cough, cough, cough]not into the sewers again!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	What sewers? Calm down! I'm not who you think I am!	}{	What sewers? Calm down! I'm not who you think I am!	}{	151	}{	Humanity 6	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	143	}{	Uh... yeah! I'm the monster! Now tell me where I took you or I'll... uh... do it again!	}{	Uh... yeah! I'm the monster! Now tell me where I took you or I'll... uh... do it again!	}{	151	}{	Humanity -6	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	[Cough, cough, cough, cough]Sewers... just around the corner... b-bad place. Oh god... [cough, cough, cough, cough, cough]heart... can't breathe!	}{	[Cough, cough, cough, cough]Sewers... just around the corner... b-bad place. Oh god... [cough, cough, cough, cough, cough]heart... can't breathe!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	Hold on, Bill! I'll get some help!	}{	Hold on, Bill! I'll get some help!	}{	101	}{	Humanity 6 & pc.GetQuestState("AllPlague") == 0	}{	pc.SetQuest("Plague",6)	}{	}{	}{	}{	}{	}{	}{	}
+{	153	}{	You need to relax.	}{	You need to relax.	}{	101	}{	Humanity 6 & pc.GetQuestState("AllPlague") == 0	}{	pc.SetQuest("Plague",6)	}{	}{	}{	}{	}{	}{	}{	}
+{	154	}{	Heh. Sounds like a nasty cough you got there, old man.	}{	Heh. Sounds like a nasty cough you got there, old man.	}{	101	}{	Humanity -6 & pc.GetQuestState("AllPlague") == 0	}{	pc.SetQuest("Plague",6)	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	Hold on, Bill! I'll get some help!	}{	Hold on, Bill! I'll get some help!	}{	101	}{	Humanity 6 & pc.GetQuestState("AllPlague") != 0	}{	pc.SetQuest("AllPlague",11)	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	You need to relax.	}{	You need to relax.	}{	101	}{	Humanity 6 & pc.GetQuestState("AllPlague") != 0	}{	pc.SetQuest("AllPlague",11)	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	Heh. Sounds like a nasty cough you got there, old man.	}{	Heh. Sounds like a nasty cough you got there, old man.	}{	101	}{	Humanity -6 & pc.GetQuestState("AllPlague") != 0	}{	pc.SetQuest("AllPlague",11)	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	163	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	164	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	(Starting Condition)	}{	}{	121	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	173	}{	(Starting Condition)	}{	}{	111	}{	G.Bill_ComeBackLater == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

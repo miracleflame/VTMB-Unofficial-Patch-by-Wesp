@@ -1,0 +1,42 @@
+// Choreo version 1
+actor "Barabus"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 0.754649
+      param "character/dlg/chinatown/barabus/line75_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 0.000000 0.140000
+      param "0.140"
+    }
+    event silence "Silence"
+    {
+      time 0.370000 0.760000
+      param "0.390"
+    }
+    event loud "Loud"
+    {
+      time 0.180000 0.290000
+      param "0.110"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

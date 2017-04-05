@@ -1,0 +1,174 @@
+// Tire Iron
+
+WeaponData
+{
+	"printname"		"A severed arm"
+	"description"		"Although the previous owner probably misses it, you can still put it to good use."
+	"item_worth"		"0"
+
+	"viewmodel"		"models/weapons/w_null.mdl"
+	"playermodel"		"models/weapons/severed_arm/ground/g_severed_arm.mdl"
+	"wieldmodel_f"		"models/weapons/severed_arm/wield/w_f_severed_arm.mdl"
+	"wieldmodel_m"		"models/weapons/severed_arm/wield/w_m_severed_arm.mdl"
+	"infomodel"		"models/weapons/severed_arm/info/i_severed_arm.mdl"
+
+
+	"anim_prefix"		"baseballbat"
+
+	"impact_snd_group"	"fist"
+
+	"bucket"		"0"
+	"bucket_position"	"3"
+
+	"camera_class"		"noswitch"	// changed by wesp
+	"weight"		"2"
+	"item_flags"		"0"
+	"item_type"		"weapon_melee"
+	"sound_group"		"Tire_Iron"
+
+	"knockback_chance"	"0.4"
+
+	// Sounds...
+	SoundData
+	{
+		"swish"
+		{
+			"sound1"	"Weapons/Melee/Swish_1.wav"
+			"sound2"	"Weapons/Melee/Swish_2.wav"
+			"sound3"	"Weapons/Melee/Swish_3.wav"
+		}
+		"pickup"	// changed by wesp
+		{
+			"sound1"	"items/bloodpack/bloodpack_reload.wav"
+		}
+		"stealth_kill_success"
+		{
+			"sound1"	"Weapons/Melee/Severed_Arm/Stealth_Severed_Arm.wav"
+		}
+
+		"stealth_kill_failure"
+		{
+			"sound1"	"Weapons/Melee/Fists/Stealth_Kill_Failure.wav"
+		}
+	}
+
+	Activation
+	{
+		"Tag"			"Primary"
+
+		"Type"			"Attack"
+		"Ammo_Type"		"None"
+		"Ammo_Cost"		"0"
+		"Botch_Table"		"Melee_Weapons"
+		"Attack_Rate"		"1.0"
+		"Range"			"0"
+		"CriminalLevel"		"4"
+
+
+		"SkillRequirement"	"4"		// min. skill requirement used in dmg calculations
+		"BaseLethality"		"9"		// base lethality used in dmg calculations
+		"Dmg"			"2 Bashing Close_Combat_Melee DMG_CLUB"
+
+		// Sounds...
+		SoundData
+		{
+			"attack"
+			{
+				"sound1"	"weapons/tireiron/TireIron-swing.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"weapons/tireiron/TireIron-swing.wav"
+			}
+
+			"botch"
+			{
+				"sound1"	"weapons/tireiron/botch.wav"
+			}
+
+			"deploy"
+			{
+				"sound1"	"weapons/tireiron/deploy.wav"
+			}
+		}
+	}
+
+	// DMG_BULLET DMG_SLASH DMG_SUPERCLAWBITE DMG_CLAWBITE DMG_BURN DMG_CLUB DMG_BLAST
+
+	Activation
+	{
+		"Name"		"Secondary"
+		"InternalName"	"Secondary"
+
+		"Type"		"Secondary_Attack"
+		"Ammo_Type"	"None"
+		"Ammo_Cost"	"0"
+
+		"SkillRequirement"	"4"		// min. skill requirement used in dmg calculations
+		"BaseLethality"		"9"		// base lethality used in dmg calculations
+		"Dmg"			"2 Bashing Close_Combat_Melee DMG_CLUB"
+
+		"Botch_Table"	"Melee_Weapons"
+		"Attack_Rate"	"1.0"
+		"Range"		"0"
+		"CriminalLevel"	"4"
+
+		// Sounds...
+		SoundData
+		{
+			"attack"
+			{
+				"sound1"	"weapons/tireiron/TireIron-swing.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"weapons/tireiron/TireIron-swing.wav"
+			}
+
+			"botch"
+			{
+				"sound1"	"weapons/tireiron/botch.wav"
+			}
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Melee/severed_arm_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Melee/severed_arm"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+//		"crosshair"
+//		{
+//			"640"
+//			{
+//				"file"		"crosshairs"
+//				"x"			"0"
+//				"y"			"48"
+//				"width"		"24"
+//				"height"	"24"
+//			}
+//		}
+	}
+}

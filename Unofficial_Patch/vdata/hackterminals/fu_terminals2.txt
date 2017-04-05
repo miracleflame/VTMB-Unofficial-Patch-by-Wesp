@@ -1,0 +1,38 @@
+TerminalDefinition
+{
+	"screen saver"		"Own the unknown"	// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+	"email_username"	"gcass"		// printed at the top of the email window, not used for log in. 
+	"email_password"	"elimination"		// printed at the top of the email window, not used for log in. 
+	"Difficulty"		"7"
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Fu Syndicate"
+		"line1"		"Research Division"
+
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+	// runscript added by wesp
+
+	Email
+	{
+		"subject"	"Status"
+		"sender"	"Priestess"
+		"body"		"What is the current status of the project? A new subject was delivered to you last week. If I do not see results by the end of this month, you understand the consequences."
+		"runscript"	"G.Silver_Know = 2"
+	}
+
+	Email
+	{
+		"subject"	"RE: Progress Report"
+		"sender"	"Priestess"
+		"body"		"Article 2, the elimination of Wong Ho, is imminent. Kiki, his daughter, will also be liquidated as per Article 2a."
+		"runscript"	"G.Mandarin_Knows = 1"	// changed by wesp
+	}
+}

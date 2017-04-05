@@ -1,0 +1,102 @@
+TerminalDefinition
+{
+	"screen saver"		"The Asylum"		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+	"email_password"	"1baroness3"		// the user must type this to access email from this terminal
+	"email_username"	"TVoerman"
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"The Asylum"
+		"line1"		"Good Evening, Miss Voerman"
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+	SubDir
+	{
+		"name"			"Contacts"			// This is what is displayed as the name of this menu, and what the player must type to enter the menu (128 characters)
+		"password"		"business"			// password required to run commands in this menu (16 characters)
+		"description"		"Business Associates"	 	// This is printed each time the user enters this menu (128 characters)
+
+		Function
+		{
+			"name"		"LaCroix"	// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Sebastian LaCroix"		// this is a description of this function  (128 characters)
+			"runtext"	"(213) 555-4508, Ext 702, Camarilla Prince of LA"
+		}
+
+		Function
+		{
+			"name"		"Tung"	// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Bertram Tung"		// this is a description of this function  (128 characters)
+			"runtext"	"bertram@schrecknet.vtm, local Nosferatu"
+		}
+
+		Function
+		{
+			"name"		"Johnson"	// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Julian Johnson"	// this is a description of this function  (128 characters)
+			"runtext"	"(310) 555-3657, jj@cconstruction.vtm, Community Construction"
+		}
+
+		Function
+		{
+			"name"		"Miller"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Jeff \"The Flow\" Miller"		// this is a description of this function  (128 characters)
+			"runtext"	"(213) 555-2617, theflow@undergroundsound.vtm, Disk Jockey"
+		}
+
+		Function
+		{
+			"name"		"Vandal"	// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Vandal"		// this is a description of this function  (128 characters)
+			"runtext"	"(310) 555-7280, Blood Bank Manager"
+		}
+
+		Function
+		{
+			"name"		"LaBeau"		// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Pierre LaBeau"		// this is a description of this function  (128 characters)
+			"runtext"	"(818) 555-9072, Art Coordinator"
+		}		
+	}
+
+	Email
+	{
+		"subject"	"Nectar of the Gods"
+		"sender"	"Vandal Cleaver"	
+		"body"		"Miss Voerman, your humble servant has done his all to provide you with yet another batch of the finest sanguine spirits. And I apologize for not pouring it when you asked, last time. Forgive me - unlike you, I'm an imperfect being."
+
+	}
+
+	Email
+	{
+		"subject"	"Halting Construction"
+		"sender"	"Julian Johnson"	
+		"body"		"Look, Miss Voerman. I'm really sorry to do this, but the men won't work there any more. They say it's haunted."
+
+	}
+
+	Email
+	{
+		"subject"	"re: Santa Monica is MY city!!"
+		"sender"	"Jeanette"	
+		"body"		"Why are you always so mean? Bertie's not so bad once you get to know him. You're the disgusting one!"
+		"dependency"	"G.Therese_Quest >= 1"	// changed by wesp
+	}
+
+	Email
+	{
+		"subject"	"re: Santa Monica is MY city!!"
+		"sender"	"Jeanette"
+		"body"		"No, your bitchy attitude is tearing us apart. You need to cool off, why don't you go swim in the Pacific and look for your pendant?"
+		"dependency"	"G.Therese_Quest > 2"	// changed by wesp
+	}
+
+}

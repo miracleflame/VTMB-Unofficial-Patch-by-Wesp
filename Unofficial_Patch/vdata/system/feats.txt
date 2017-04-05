@@ -1,0 +1,384 @@
+// Feat Doc
+
+FeatData
+{
+	// WARNING WARNING WARNING:  Changing the MaxValue may not be safe, some Feats have
+	//   hard-coded "code" limits expecting it to be 10 (or 20, etc.).  Check with JLR first!
+
+	Feats
+	{
+		"Name"		"Feats"
+		"InternalName"	"Feats"
+
+		//  "Base#" are the Traits that the Feat is based upon
+		//  "Weighting" is the dice-roll table to use when rolling this feat
+		Feat
+		{
+			"Name"		"Lockpicking"
+			"InternalName"	"Intrusion"
+			"HelpText"		"Measures your character's skill at breaking into places you're not supposed to be. The Dexterity attribute and the Security ability both contribute to the Lockpicking feat."
+
+			"MaxValue"		"10"
+			"Base0"		"Dexterity"
+			"Base1"		"Security"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Sneaking"
+			"InternalName"	"Sneaking"
+			"HelpText"		"Measures your character's ability to avoid detection. The Dexterity attribute and the Stealth ability both contribute to the Sneaking feat."
+
+			"MaxValue"		"10"
+			"Base0"		"Dexterity"
+			"Base1"		"Stealth"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+
+		Feat
+		{
+			"Name"		"Hacking"
+			"InternalName"	"Hacking"
+			"HelpText"		"Measures your character's ability to crack into computers and other electronic devices. The Wits attribute and the Computer ability both contribute to the Hacking feat."
+
+			"MaxValue"		"20"
+			"Base0"		"Wits"
+			"Base1"		"Computer"
+//			"Base2"		"Hacking_Mod"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Inspection"
+			"InternalName"	"Inspection"
+			"HelpText"		"Measures your character's ability to notice hidden details. The Perception attribute and the Investigation ability both contribute to the Inspection feat."
+
+			"MaxValue"		"20"
+			"Base0"		"Perception"
+			"Base1"		"Investigation"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+
+			Table
+			{
+
+			// These are the artificial values assigned to npcs in WC
+			// in lieu of inspection derived from stats
+
+				"Name"				"Inspection_Vision_Distances"
+				"InternalName"		"Inspection_Vision_Distances"
+				"Clamping"			"1"
+				"TraitDependency"	"Inspection"
+
+			//	feat_value			vision_distance (in game units)
+				"0"					"60"		// Should never actually get this, but...
+				"1"					"290" // 
+	 			"2"					"380" // +90
+				"3"					"440" // +60
+		 		"4"					"480" // +40
+				"5"					"510" // +30
+	 			"6"					"540" // +30
+				"7"					"590" // +50
+		 		"8"					"660" // +70
+				"9"					"750" // +90
+	 			"10"					"2400" //"2400"
+			}
+
+			Table
+			{
+				"Name"				"Inspection_Hearing_Scalars"
+				"InternalName"		"Inspection_Hearing_Scalars"
+
+				"Clamping"			"1"
+
+				"TraitDependency"	"Inspection"
+
+			//	feat_value			hearing_scalar
+				"0"					"0.71"		// Should never actually get this, but...
+				"1"					"0.71"
+	 			"2"					"0.86"
+				"3"					"1.00"		// An average human has inspection of 3.
+		 		"4"					"1.14"
+				"5"					"1.29"
+	 			"6"					"1.43"
+				"7"					"1.57"
+		 		"8"					"1.71"
+				"9"					"1.86"
+	 			"10"				"2.00"
+			}
+
+		}
+
+		Feat
+		{
+			"Name"		"Research"
+			"InternalName"	"Research"
+			"HelpText"		"Measures your character's ability to read books, and learn new abilities. The Intelligence attribute and the Scholarship ability both contribute to the Research feat."
+			"Disabled"		"1"
+
+			"MaxValue"		"10"
+			"Base0"		"Academics"
+			"Base1"		"Intelligence"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Haggle"
+			"InternalName"	"Haggle"
+			"HelpText"		"Measures your character's ability to estimate the value of goods, and haggle for better prices. The Manipulation attribute and the Finance ability both contribute to the Haggle feat."
+			"Disabled"		"1"
+
+			"MaxValue"		"10"
+			"Base0"		"Finance"
+			"Base1"		"Manipulation"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Intimidate"
+			"InternalName"	"Intimidate"
+			"HelpText"		"Measures your character's ability to instill fear in others and force their cooperation. The Intelligence attribute and the Intimidation ability both contribute to the Intimidate feat."
+			"Disabled"		"1"
+
+			"MaxValue"		"10"
+			"Base0"		"Intelligence"
+			"Base1"		"Intimidation"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Persuasion"
+			"InternalName"	"Persuasion"
+			"HelpText"		"Measures your character's ability to convince people that they want what you want. The Charisma attribute and the Scholarship ability both contribute to the Persuasion feat."
+			"Disabled"		"1"
+
+			"MaxValue"		"10"
+			"Base0"		"Charisma"
+			"Base1"		"Academics" //TJP internal name for Scholarship
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Seduction"
+			"InternalName"	"Seduction"
+			"HelpText"		"Measures your character's ability to titillate others into helping you. The Appearance attribute and the Subterfuge ability both contribute to the Seduction feat."
+			"Disabled"		"1"
+
+			"MaxValue"		"10"
+			"Base0"		"Appearance"
+			"Base1"		"Subterfuge"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Unarmed"
+			"InternalName"	"Close_Combat_Brawl"
+			"HelpText"		"Measures your character's ability to do damage in unarmed combat, and Feed on the unwilling. The Strength attribute and the Brawl ability both contribute to the Unarmed Combat feat."
+
+			"MaxValue"		"20"
+			"Base0"		"Brawl"
+			"Base1"		"Strength"
+			"Automatic0"	"Automatic_Str_Successes"
+			"Display2nd0"	"Automatic_Str_Successes"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Melee"
+			"InternalName"	"Close_Combat_Melee"
+			"HelpText"		"Measures your character's ability to damage with melee weapons such as knives and clubs. The Strength attribute and the Melee ability both contribute to the Melee Combat feat."
+
+			"MaxValue"		"20"
+			"Base0"		"Melee"
+			"Base1"		"Strength"
+			"Automatic0"	"Automatic_Str_Successes"
+			"Display2nd0"	"Automatic_Str_Successes"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Ranged"
+			"InternalName"	"Ranged_Combat"
+			"HelpText"		"Measures your accuracy and damage with firearms of all kinds. The Perception attribute and the Firearms ability both contribute to the Ranged Combat feat."
+
+			"MaxValue"		"20"
+			"Base0"		"Firearms"
+			"Base1"		"Perception"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Defense"
+			"InternalName"	"Defensive_Maneuvers"
+			"HelpText"		"Measures your character's ability to avoid taking damage of all types in combat. The Wits attribute and the Dodge ability both contribute to the Defense feat."
+
+			"MaxValue"		"20"
+			"Base0"		"Dodge"
+			"Base1"		"Wits"
+//			"Base2"		"Defense_Mod"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Bashing"
+			"InternalName"	"Soak_vs_Bashing"
+			"HelpText"		"How much bashing damage a mortal character can absorb."
+
+			"MaxValue"		"20"
+			"Base0"		"Armor_Rating"
+			"Base1"		"Stamina"
+			"Base2"		"Soak_Pool"
+			"Display2nd0"	"Automatic_Soak_Successes"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Lethal"
+			"InternalName"	"Soak_vs_Lethal"
+			"HelpText"		"How much lethal damage a mortal character can absorb."
+
+			"MaxValue"		"20"
+			"Base0"		"Armor_Rating"
+			"Base1"		"Soak_Pool"
+			"Display2nd0"	"Automatic_Soak_Successes"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Lethal Falling"
+			"InternalName"	"Soak_vs_Lethal_Falling"
+			"HelpText"		"How much falling damage a mortal character can absorb."
+
+			"MaxValue"		"20"
+			"Base0"		"Armor_Rating / 2"
+			"Base1"		"Soak_Pool"
+			"Display2nd0"	"Automatic_Soak_Successes"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Aggravated"
+			"InternalName"	"Soak_vs_Aggravated"
+			"HelpText"		"How much aggravated damage a mortal character can absorb."
+
+			"MaxValue"		"20"
+			"Base0"		"Soak_Pool"
+//			"Base1"		"Armor_Rating"
+			"Display2nd0"	"Automatic_Soak_Successes"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Bashing"	//"Soak vs. Bashing (Kindred)"
+			"InternalName"	"Soak_vs_Bashing_Kindred"
+			"HelpText"	"Your ability to shrug off damage from bullets and blunt melee weapons. Stamina, as well as clothing and body armor contribute to Bashing soak."
+
+			"MaxValue"		"20"
+			"Base0"		"Armor_Rating"
+			"Base1"		"Stamina"
+			"Base2"		"Soak_Pool"
+			"Display2nd0"	"Automatic_Soak_Successes"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Lethal"	//"Soak vs. Lethal (Kindred)"
+			"InternalName"	"Soak_vs_Lethal_Kindred"
+			"HelpText"	"Your ability to shrug off damage from bladed melee weapons. While vampires may defend against lethal damage with their Defense feat, they are nearly helpless once the blow is landed. Clothing and body armor add to your Lethal soak feat."
+
+			"MaxValue"		"20"
+			"Base0"		"Armor_Rating"
+			"Base1"		"Soak_Pool"
+//			"Base2"		"Stamina"
+			"Display2nd0"	"Automatic_Soak_Successes"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Lethal Falling"
+			"InternalName"	"Soak_vs_Lethal_Falling_Kindred"
+			"HelpText"		"How much falling damage a kindred character can absorb."
+
+			"MaxValue"		"20"
+			"Base0"		"Armor_Rating / 2"
+			"Base1"		"Soak_Pool"
+			"Base2"		"Stamina"
+			"Display2nd0"	"Automatic_Soak_Successes"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Aggravated"	//"Soak vs. Aggravated (Kindred)"
+			"InternalName"	"Soak_vs_Aggravated_Kindred"
+			"HelpText"	"Your ability to shrug off damage from claws, fangs, fire, and electricity. Aggravated damage is deathly serious. Vampires can defend against claws and fangs with their Defense feat, but are helpless against fire and electricity. Aggravated damage can be soaked through supernatural means only."
+			"MaxValue"		"20"
+			"Base0"		"Soak_Pool"
+//			"Base1"		"Armor_Rating"
+			"Display2nd0"	"Automatic_Soak_Successes"
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Damage"
+			"InternalName"	"Damage"
+			"HelpText"		"How much damage a character can do."
+
+			"MaxValue"		"9999"
+			// Not based off of stats, the value is instead dependent on the weapon in question...
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+
+		Feat
+		{
+			"Name"		"Frenzy Feat"
+			"InternalName"	"Frenzy_Feat"
+			"HelpText"		"A Frenzy test."
+
+			"MaxValue"		"10"
+			// Not based off of stats
+			"PCWeighting"	"Normal"
+			"NPCWeighting"	"Normal"
+		}
+	}
+}

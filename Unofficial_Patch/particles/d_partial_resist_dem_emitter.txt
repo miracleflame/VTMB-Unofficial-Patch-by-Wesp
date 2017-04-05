@@ -1,0 +1,39 @@
+//Attach Type: Bone Tree + Model Colors
+
+Particle
+{
+	sprite		"point_16"
+	loop		"1"
+	frames		"90"
+
+//	spawn
+//	{
+//		particle	"D_ThaumatergyHit_Projectiles"
+//		loop		"0"
+//		rate		"0,0~50,0,0,30(45)"
+//	wesp	radius		"0~5"
+//		theta		"0~360"
+//		phi		"180~-180"
+//		z		"-10~10"
+//	}
+
+	spawn		// added by wesp
+	{
+		particle	"partial_resist_thaum_fx1"
+		burst		"1"
+		radius		"0"
+		theta		"0~360"
+		phi		"20~-20"
+
+	}
+	spawn		// added by wesp
+	{
+		particle	"partial_resist_thaum_fx2"
+		rate		"50"
+		radius		"0"
+		theta		"0~360"
+		phi		"90~-90"
+
+	}
+
+}

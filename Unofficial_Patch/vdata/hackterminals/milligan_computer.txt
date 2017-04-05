@@ -1,0 +1,59 @@
+TerminalDefinition
+{
+	"screen saver"		"Boo!"		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""		// these surround the command prompt (2 characters), changed by wesp
+	"email_username"	"egon"		// printed at the top of the email window, not used for log in. 
+	"email_password"	"ectoplasm"	// printed at the top of the email window, not used for log in. 
+
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Haunted LA"
+		"line1"		"Simon Milligan"
+
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+
+
+	SubDir
+	{
+		"name"			"Upcoming Shows"
+		"description"		"Locations and Plans"	
+
+		Function
+		{
+			"name"		"Show17"
+			"description"	"Hospital Horror"	
+			"runtext"	"Show 17: Hospital Horror. A dilapidated hospital in the downtown area, this place is very spooky. Minimal work required, the place is scary as hell. We'll say it's the ghost of a nurse who feels as if she still has patients to serve."
+		}
+
+		Function
+		{
+			"name"		"Show18"
+			"description"	"Eternal Unrest"	
+			"runtext"	"Show 18: Eternal Unrest. There's a cemetery in Hollywood. It's full of actors with more than just dead careers. Again, it shouldn't take much effort on our part."
+		}
+	}
+
+	Email
+	{
+		"subject"	"I <3 Haunted LA"
+		"sender"	"Fanboy McGee"
+		//poor spelling intentional to fit the character of the letter
+		"body"		"Haunted LA is like the greated show evar! I totally am gonna visit all the places you talk about!!1 Hey! You should go 2 this one hoetl I stayed at one time in palm springs i swear it was haunted.  The ghost kept turning on the sink faucet! Maybe he had OCD about washing his hands LOL!!!"
+	}
+
+	Email
+	{
+		"subject"	"Holy shit, YOU SUCK!!!"
+		"sender"	"Angry Guy with Strong Opinions"
+		"body"		"Haunted LA my ass! Even if there were such a thing as ghosts and shit, which there ain't, there's no fucking way a god damned werewolf could be hanging out in Griffith Park. Just who in the hell do you think you're fooling? It's not even as if we have real fucking wolves around here for it to hide out with. I hope you get eaten by some flesh-eating monster, you stupid bastard!"
+	}
+
+}

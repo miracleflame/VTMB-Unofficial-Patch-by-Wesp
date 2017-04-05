@@ -1,0 +1,134 @@
+{	1	}{	[Whimpering in fear]	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	[Teeth chattering, horrified, completely unnerved]D-d-d-did you see it?	}{	[Teeth chattering, horrified, completely unnerved]D-d-d-did you see it?	}{	#	}{	}{	npc.WillTalk(0)	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	That bloody mess? It's kind of hard to miss.	}{	The headless corpse? It's kind of hard to miss.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	The dangling, headless horror?	}
+{	13	}{	What did you see?	}{	What did you see?	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell your eyes to speak!	}
+{	14	}{	No.	}{	No.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	You did this, didn't you?	}{	You did this, didn't you?	}{	111	}{	Humanity -4	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	He done tore him up. Right in two. Ripped him 'part like a rag doll.	}{	He done tore him up. Right in two. Ripped him 'part like a rag doll.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	Tell me what you saw.	}{	Tell me what you saw.	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	Open to me the movie in your mind!	}
+{	23	}{	Who was it?	}{	Who was it?	}{	31	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	Was it the shadow-cloaked killer?	}
+{	24	}{	What were you doing here?	}{	What were you doing here?	}{	31	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	What brings you to this grisly grave?	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	These two guys - the dead guy and the other'n - uh, they showed up. I been living here so I hid, I thought maybe they was owners or... or cops come to clean the place out.	}{	These two guys - the dead guy and the other'n - uh, they showed up. I been living here so I hid, I thought maybe they was owners or... or cops come to clean the place out.	}{	#	}{	}{	G.Bum_Story = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Who was the other guy?	}{	Who was the other guy?	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	Who was the homeboy of the headless one?	}
+{	33	}{	Yeah? What were they doing?	}{	Yeah? What were they doing?	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	Continue this terrible tale.	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Uh, they was waitin' on someone. They was gonna do some kind of job they was sayin'. But the person they was meetin', well he was late, so - the one guy leaves to find a phone and call him and the dead guy stayed. Well, that's when the killer... yeah, that's when he showed up.	}{	Uh, they was waitin' on someone. They was gonna do some kind of job they was sayin'. But the person they was meetin', well he was late, so - the one guy leaves to find a phone and call him and the dead guy stayed. Well, that's when the killer... yeah, that's when he showed up.	}{	#	}{	}{	G.Bum_Story = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	Who made the call?	}{	Which one made the phone call? Did you catch his name?	}{	51	}{	G.Bum_Muddy == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	43	}{	Did you hear the name of the Ichabod's buddy?	}{	Did you hear the name of the Ichabod's buddy?	}{	46	}{	G.Bum_Muddy == 0 and IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	Showed up?	}{	Showed up?	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ah! The shadow-cloaked killer stepped from his dark domain!	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	Eh? Ichabod? What the hell are you talkin' about? You been at the moonshine tonight, boy?	}{	Eh? Ichabod? What the hell are you talkin' about? You been at the moonshine tonight, girl?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	Who was the friend of he with no head?	}{	Who was the friend of he with no head?	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	The dead feller called him "Muddy".	}{	The dead feller called him "Muddy".	}{	#	}{	}{	G.Bum_Muddy = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	So... this dead guy and Muddy, what were they doing here?	}{	So... this dead guy and Muddy, what were they doing here?	}{	41	}{	G.Bum_Story == 1	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the dirty deeds of Muddy and his headless henchman.	}
+{	53	}{	Go on.	}{	Go on.	}{	61	}{	G.Extra_Lines == 1 and G.Bum_Story == 2	}{	}{	}{	}{	}{	}{	}{	}{	Spin your tale, wine-wizard!	}
+{	54	}{	You will forget what you saw here. Leave and do not return.	}{	You will forget what you saw here. Leave and do not return.	}{	101	}{	Dominate 1 & (IsClan(pc,"Ventrue") and G.Bum_Story == 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	You will forget what you saw here. Leave and do not return.	}{	You will forget what you saw here. Leave and do not return.	}{	101	}{	Thaumaturgy 1 & (G.Patch_Plus == 1 and G.Bum_Story == 3)	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	Now be a good boy and forget everything you saw here.	}{	Now be a good boy and forget everything you saw here.	}{	101	}{	Presence 1 & (G.Patch_Plus == 1 and G.Bum_Story == 3)	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	If you tell anyone that story they'll lock you up forever. You should leave now.	}{	If you tell anyone that story they'll lock you up forever. You should leave now.	}{	101	}{	Persuasion 5 & G.Bum_Story == 3	}{	}{	}{	}{	}{	}{	}{	}{	This story will place you in a padded cell. Silence if you love your freedom.	}
+{	58	}{	I know you think you saw all this, but trust me, you didn't. Now leave.	}{	I know you think you saw all this, but trust me, you didn't. Now leave.	}{	101	}{	Intimidate 5 & G.Bum_Story == 3	}{	}{	}{	}{	}{	}{	}{	}{	Tell this tale again, and I will harvest YOUR head. Now leave.	}
+{	59	}{	Thanks. See ya.	}{	Thanks. See ya.	}{	0	}{	G.Bum_Story == 3	}{	G.Bum_Leave = 1	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	One second he wa'n't there an' then he was; like out of the shadows he come up. Scared the shit outta t' dead guy. I liked ta scream but I couldn't breathe.	}{	One second he wa'n't there an' then he was; like out of the shadows he come up. Scared the shit outta t' dead guy. I liked ta scream but I couldn't breathe.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Then what happened?	}{	Then what happened?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	What did the shadows then reveal?	}
+{	63	}{	You're lucky you didn't.	}{	You're lucky you didn't.	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	A booze-laden breath may have been your death.	}
+{	64	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Oh, that killer, he grew these claws... I swear it, I saw it. The dead guy went white, like he seen the devil, then the killer grabbed him around the neck an' lifted him up and started cursin' at the guy.	}{	Oh, that killer, he grew these claws... I swear it, I saw it. The dead guy went white, like he seen the devil, then the killer grabbed him around the neck an' lifted him up and started cursin' at the guy.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	What did he say?	}{	What did he say?	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	What words from this dark devil?	}
+{	73	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Oh, I-I couldn't hear too good. Somethin' about revenge for what he did or what they did. Th-the killer made sure the dead guy knew who he was, and then ripped him open... uh, just tore him apart. He did it real slow; made the guy scream.	}{	Oh, I-I couldn't hear too good. Somethin' about revenge for what he did or what they did. Th-the killer made sure the dead guy knew who he was, and then ripped him open... uh, just tore him apart. He did it real slow; made the guy scream.	}{	#	}{	}{	pc.SetQuest("Serial",3)	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	Did the other guy come back?	}{	Did the other guy come back?	}{	91	}{	G.Bum_Muddy == 0	}{	}{	}{	}{	}{	}{	}{	}{	Did Ichabod's buddy return?	}
+{	83	}{	What about the other guy, Muddy, did he come back?	}{	What about the other guy, Muddy, did he come back?	}{	91	}{	G.Bum_Muddy == 1	}{	}{	}{	}{	}{	}{	}{	}{	Did Muddy return to these waters?	}
+{	84	}{	You will forget what you saw here. Leave and do not return.	}{	You will forget what you saw here. Leave and do not return.	}{	101	}{	Dominate 1 & IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	You will forget what you saw here. Leave and do not return.	}{	You will forget what you saw here. Leave and do not return.	}{	101	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	Now be a good boy and forget everything you saw here.	}{	Now be a good boy and forget everything you saw here.	}{	101	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	If you tell anyone that story they'll lock you up forever. You should leave now.	}{	If you tell anyone that story they'll lock you up forever. You should leave now.	}{	101	}{	Persuasion 5	}{	}{	}{	}{	}{	}{	}{	}{	This story will place you in a padded cell. Silence if you love your freedom.	}
+{	88	}{	I know you think you saw all this, but trust me, you didn't. Now leave.	}{	I know you think you saw all this, but trust me, you didn't. Now leave.	}{	101	}{	Intimidate 5	}{	}{	}{	}{	}{	}{	}{	}{	Tell this tale again, and I will harvest YOUR head. Now leave.	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	Thanks. See ya.	}{	Thanks. See ya.	}{	0	}{	}{	G.Bum_Leave = 1	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	91	}{	No, he never come back.	}{	No, he never come back.	}{	#	}{	}{	G.Bum_Story = 3	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Did you catch that guy's name?	}{	Did you catch that guy's name?	}{	51	}{	G.Bum_Muddy == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	93	}{	Did you hear the name of the Ichabod's buddy?	}{	Did you hear the name of the Ichabod's buddy?	}{	46	}{	G.Bum_Muddy == 0 and IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	94	}{	You will forget what you saw here. Leave and do not return.	}{	You will forget what you saw here. Leave and do not return.	}{	101	}{	Dominate 1 & IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	You will forget what you saw here. Leave and do not return.	}{	You will forget what you saw here. Leave and do not return.	}{	101	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	Now be a good boy and forget everything you saw here.	}{	Now be a good boy and forget everything you saw here.	}{	101	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	If you tell anyone that story they'll lock you up forever. You should leave now.	}{	If you tell anyone that story they'll lock you up forever. You should leave now.	}{	101	}{	Persuasion 5	}{	}{	}{	}{	}{	}{	}{	}{	This story will place you in a padded cell. Silence if you love your freedom.	}
+{	98	}{	I know you think you saw all this, but trust me, you didn't. Now leave.	}{	I know you think you saw all this, but trust me, you didn't. Now leave.	}{	101	}{	Intimidate 5	}{	}{	}{	}{	}{	}{	}{	}{	Tell this tale again, and I will harvest YOUR head. Now leave.	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	Thanks. See ya.	}{	Thanks. See ya.	}{	0	}{	}{	G.Bum_Leave = 1	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	101	}{	Okay, okay, I will. I don't want never think about that again.	}{	Okay, okay, I will. I don't want never think about that again.	}{	#	}{	}{	pc.AwardExperience("Killer02"); FindPlayer().ChangeMasqueradeLevel( -1 )	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	G.Bum_Leave = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	103	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	Uh, me? No, nonononono, no. Do I look like I could do that with my bare hands? Hehe. No blood on me, look!	}{	Uh, me? No, nonononono, no. Do I look like I could do that with my bare hands? Hehe. No blood on me, look!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Good point. So what happened here?	}{	Good point. So what happened here?	}{	21	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	113	}{	Then what did happen?	}{	Then what did happen?	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	Spin me a yarn, wine-wizard!	}
+{	114	}{	I don't believe you. You're a bad liar and will pay for your crimes.	}{	I don't believe you. You're a bad liar and will pay for your crimes.	}{	0	}{	}{	npc.SetRelationship("player D_FR 5")	}{	}{	}{	}{	}{	}{	}{	Your words stink worse than your breath. I will judge you for your crimes.	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	123	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	133	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	134	}{	(Starting Condition)	}{	}{	11	}{	G.Killer_Message == 1 or npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

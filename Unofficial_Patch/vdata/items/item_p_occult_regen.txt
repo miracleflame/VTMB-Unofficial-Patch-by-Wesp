@@ -1,0 +1,67 @@
+// Written
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"			"models/w_null.mdl"
+	"infomodel"			"models/items/occult_chalice/info/info_chalice.mdl"
+	"playermodel"		"models/items/occult_chalice/ground/chalice.mdl"
+	"wieldmodel_f"		"models/w_null.mdl"
+	"wieldmodel_m"		"models/w_null.mdl"
+	"anim_prefix"		" "
+
+	"printname"			"The Odious Chalice"
+	"description"		"The perverse creation of a Tzimisce fleshcrafter, this abomination is forced to live a tortured eternity in servitude to the Damned. As you kill enemies, the Chalice will fill with blood. Use the Chalice to feed from it and gain its stored vitae."
+
+	"weight"			"3"
+	"item_flags"		"1"
+	"item_type"			"powerup"
+	"item_worth"		"0"
+
+	"occult_min"		"1"
+	"occult_power"		"regen"
+
+	"is_droppable"			"1"
+	"is_wieldable"		"0"
+
+
+	Magazine
+	{
+		"ammoinfomodel"		"models/items/occult_chalicesquashed/info/info_squashed.mdl"
+	}
+
+	SoundData	// added by wesp
+	{
+		"pickup"
+		{
+			"sound1"	"items/bloodpack/bloodpack_reload.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"		"hud/Inventory_Images/General_Items/chalicegood_sel"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"		"hud/Inventory_Images/General_Items/chalicegood"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

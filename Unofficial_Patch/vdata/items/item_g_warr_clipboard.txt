@@ -1,0 +1,81 @@
+
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	
+	"infomodel"	"models/items/Clipboard/Info/Info_Clipboard.mdl"
+	"playermodel"	"models/items/Clipboard/Ground/Clipboard.mdl"
+	
+	"anim_prefix"	" "
+
+	"printname"	"Clipboard"	// dates changed by wesp
+	"description"	"This looks like the clipboard of an employee of the Los Angeles Department of Water and Power, Spring 2004:
+
+			Mon, 24th - Initial investigations into the reports of the strange sightings in the LA sewers started today. Entered quadrant 13, and will move into both 14 and 15 later on in the afternoon. Quadrant 13 seems normal.
+
+			Tue, 25th - Quadrant 13 checked out, but heard unidentified noises at various points in both quadrants 14 and 15. Called into dispatch to confirm that no other inspectors were working in the area. There were none. Coordinates noted. Investigation into 16 tomorrow.
+			
+			Wed, 26th - Strange noises, undoubtedly some sort of animal, heard again in Quadrant 16. I saw what may have been the animal at the intersection of corridors 63a and 64b, but could find nothing upon further investigation. There were strange prints in the mud on the edge of the corridor, almost hand-like, although it was difficult to make them out in the darkness.
+			
+			Thu, 27th - More prints found in corridor 73d. They disappeared into what looked like an entrance into an older part of the sewers. Called dispatch to see if they had blueprints of the old sewer section, but they didn't. Requested advice on how to proceed, and dispatch told me to continue with caution tomorrow.
+			
+			Fri, 28th/8:00am - Began investigation of the older part of the sewers this morning. Saw again what I believe to be an animal, although I don't know exactly how to classify it... the skin seems bare, almost reptilian. I can hear it constantly, almost as if it is following me, although the echoes down here make it impossible to gauge distance.
+			
+			Fri, 28th/9:15am - Can't seem to raise dispatch on the radio, so unable to check in. There is a smell that has become more and more pronounced as I travel further into the old sewers, undoubtedly the carcass of an animal washed down here in the last big rain. Investigations continue.
+			
+			Fri, 28th/11:31am - Found the source of the smell, and it looks to be human remains. Immediately called dispatch, but was unable to reach them. The body seems to be that of a transient, but there are tears, massive tears in the flesh that indicate an animal may have recently fed upon the corpse. I have noted the coordinates of the body, and am returning immediately to report my findings.
+			
+			Fri, 28th/1:22pm - I have become temporarily lost in the old tunnels, and repeated attempts to reach dispatch have ended in failure. The animal sounds I heard before have begun to approach again, and I fear that I may be being hunted. As a precaution, I have unholstered my weapon.
+			
+			Fri, 28th/5:30pm - Undoubtedly lost. I may have traveled deeper into the old sewers. Something is following me, I know it. Can't reach dispatch. Batteries running out in my flashlight.
+			
+			GOD HELP ME... SAW CREATURE... SOME SORT OF MONSTROSITY... TEETH AND BLOOD... CAN'T GET OUT... NO MORE LIGHT... CAN'T REACH ANYONE... PLEASE, OH GOD WHAT IS TH... (The writing trails off, spattered with what looks to be blood.)"
+			
+			
+	"bucket"		"1"
+	"bucket_position"	"2"
+
+	"camera_class"		"noswitch"
+	"is_wieldable"		"0"
+	"weight"		"1"
+	"item_flags"		"1"
+	"item_type"		"powerup"
+	"item_worth"		"-1"
+	"is_visible_in_hud"		"1"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Magazine/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/clipboard_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/clipboard"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

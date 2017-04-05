@@ -1,0 +1,172 @@
+{	1	}{	[ROAR!]Kindred invader! Monster! I will smash you, crush you, tear the flesh from your bones!	}{	[ROAR!]Kindred invader! Monster! I will smash you, crush you, tear the flesh from your bones!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	Hold on! I'm not here to fight you! I just want to talk!	}{	Hold on! I'm not here to fight you! I just want to talk!	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	Calm your blood furor! I wield nothing but words.	}
+{	3	}{	That's an interesting way to start a conversation. I'm only here to talk.	}{	That's an interesting way to start a conversation. I'm only here to talk.	}{	11	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	You must be the Gargoyle I'm here to get rid of.	}{	You must be the Gargoyle I'm here to get rid of.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	Ah! The stone golem I've come to slay!	}
+{	5	}{	Wow. You're even uglier than I thought you would be.	}{	Wow. You're even uglier than I thought you would be.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	Goliath falls today, and in my hands a stone and sling.	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	Talk? No! Always Kindred are talking, scheming, hurting others with their lies! Monsters, you all! Abominations! A curse upon the earth!	}{	Talk? No! Always Kindred are talking, scheming, hurting others with their lies! Monsters, you all! Abominations! A curse upon the earth!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	Wait! I come here in peace! I have an offer from Isaac Abrams!	}{	Wait! I come here in peace! I have an offer from Isaac Abrams!	}{	21	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	13	}{	Wait! I know your master, Maximillian Strauss!	}{	Wait! I know your master, Maximillian Strauss!	}{	31	}{	not IsClan(pc,"Malkavian") and G.Regent_Gargoyleinside == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	I'm not here to fight! We can work this out peacefully!	}{	I'm not here to fight! We can work this out peacefully!	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	Different we are, yet both damned and deathless! Let words be our battle!	}
+{	15	}{	You're calling me a monster? Take a look in the mirror, pal.	}{	You're calling me a monster? Take a look in the mirror, pal.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	A cracked mirror will show you the true monster.	}
+{	16	}{	Well, I've heard enough of this crap. Say good night, bright eyes.	}{	Well, I've heard enough of this crap. Say good night, bright eyes.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	It seems I will wear death's robes once again! Die!	}
+{	17	}{	I bring you an olive branch from the blood baron!	}{	I bring you an olive branch from the blood baron!	}{	161	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	Offer? What offer? Yet another lie! He hopes to control me, to enslave me, just as my master before him! First, he sends his underlings to destroy me and now he wants to make peace? No! Curse him! Curse you all!	}{	Offer? What offer? Yet another lie! He hopes to control me, to enslave me, just as my master before him! First, he sends his underlings to destroy me and now he wants to make peace? No! Curse him! Curse you all!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	Believe me! He doesn't want to control you! He said he needs your protection!	}{	Believe me! He doesn't want to control you! He said he needs your protection!	}{	51	}{	Persuasion 6	}{	}{	}{	}{	}{	}{	}{	}{	He needs no puppet but a mountain of stone behind him.	}
+{	23	}{	He doesn't want to enslave you, he just wants you to work for him...	}{	He doesn't want to enslave you, he just wants you to work for him...	}{	41	}{	Persuasion -6	}{	}{	}{	}{	}{	}{	}{	}{	He needs no slave but a golem working for him.	}
+{	24	}{	Well, I tried to talk. Now we do things my way. The hard way.	}{	Well, I tried to talk. Now we do things my way. The hard way.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	When talk does not help, bashing stone will do.	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	[ROAR!]Strauss! The demon who made me! Enslaved me! Turned my flesh to stone! Bound me in blood to his black heart! [ROAR!]I will bow no more to your kind, demon!	}{	[ROAR!]Strauss! The demon who made me! Enslaved me! Turned my flesh to stone! Bound me in blood to his black heart! [ROAR!]I will bow no more to your kind, demon!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Not all of us... I come here with an offer of peace from Isaac Abrams!	}{	Not all of us... I come here with an offer of peace from Isaac Abrams!	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	33	}{	It doesn't have to be this way. Isaac Abrams wants you to work for him.	}{	It doesn't have to be this way. Isaac Abrams wants you to work for him.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	You sound like a broken record. And now you're going to look like one.	}{	You sound like a broken record. And now you're going to look like one.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	NO! [ROAR!]There will be no more talk! Death for you, demon! Death and final darkness!	}{	NO! [ROAR!]There will be no more talk! Death for you, demon! Death and final darkness!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	No! Please! There has to be another way...!	}{	No! Please! There has to be another way...!	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	Wait! Death need not rule this dark day!	}
+{	43	}{	Fine. I will end your enslavement... forever.	}{	Fine. I will end your enslavement... forever.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	The final sleep enslaves none. I send you there.	}
+{	44	}{	Whatever. Let's just get this over with.	}{	Whatever. Let's just get this over with.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	Your stone will become ash, mixed with my spittle.	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	[Hesitates]What is this? Another devilish trick? Am I to trade one chain for another? Bow to Abrams now, instead of my old master? Never!	}{	[Hesitates]What is this? Another devilish trick? Am I to trade one chain for another? Bow to Abrams now, instead of my old master? Never!	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	G.Gargoyle_Persuade = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	There are soldiers and there are commanders. You will make a good soldier.	}{	There are soldiers and there are commanders. You will make a good soldier.	}{	141	}{	G.Gargoyle_Pissed == 0	}{	G.Gargoyle_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	Some are generals, others soldiers. You seem more fit to salute.	}
+{	53	}{	There are soldiers and there are commanders. You will make a good soldier.	}{	There are soldiers and there are commanders. You will make a good soldier.	}{	71	}{	G.Gargoyle_Pissed == 1	}{	}{	}{	}{	}{	}{	}{	}{	Some are generals, others soldiers. You seem more fit to salute.	}
+{	54	}{	Isaac doesn't need another servant... he needs an ally against his Camarilla foes.	}{	Isaac doesn't need another servant... he needs an ally against his Camarilla foes.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	You, a mountain behind him, and the blood baron battles the Camarilla.	}
+{	55	}{	He could use a friend like you. He needs you to hold on to his power.	}{	He could use a friend like you. He needs you to hold on to his power.	}{	141	}{	G.Gargoyle_Pissed == 0	}{	G.Gargoyle_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	Power is a fickle mistress, and you the jeweled gift.	}
+{	56	}{	He could use a friend like you. He needs you to hold on to his power.	}{	He could use a friend like you. He needs you to hold on to his power.	}{	71	}{	G.Gargoyle_Pissed == 1	}{	}{	}{	}{	}{	}{	}{	}{	Power is a fickle mistress, and you the jeweled gift.	}
+{	57	}{	Face it, kid, you don't exactly have a lot of options here.	}{	Face it, kid, you don't exactly have a lot of options here.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	Choose your stony words wisely... the olive branch is fragile.	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Camarilla? What means this, Camarilla?	}{	Camarilla? What means this, Camarilla?	}{	#	}{	}{	G.Gargoyle_Persuade = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	You really aren't too smart, are you?	}{	You really aren't too smart, are you?	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	It seems your gray matter has petrified as well.	}
+{	63	}{	It means you better start doing your homework. They're in charge these days.	}{	It means you better start doing your homework. They're in charge these days.	}{	141	}{	G.Gargoyle_Pissed == 0	}{	G.Gargoyle_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	Follow the strings upwards from the puppet's hands.	}
+{	64	}{	It means you better start doing your homework. They're in charge these days.	}{	It means you better start doing your homework. They're in charge these days.	}{	71	}{	G.Gargoyle_Pissed == 1	}{	}{	}{	}{	}{	}{	}{	}{	Follow the strings upwards from the puppet's hands.	}
+{	65	}{	Actually, I'm kind of working for them. They want to take over LA.	}{	Actually, I'm kind of working for them. They want to take over LA.	}{	141	}{	G.Gargoyle_Pissed == 0	}{	G.Gargoyle_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	I work for the jester. And he wishes this city of angels his kingdom.	}
+{	66	}{	Actually, I'm kind of working for them. They want to take over LA.	}{	Actually, I'm kind of working for them. They want to take over LA.	}{	71	}{	G.Gargoyle_Pissed == 1	}{	}{	}{	}{	}{	}{	}{	}{	I work for the jester. And he wishes this city of angels his kingdom.	}
+{	67	}{	They are Kindred who want to rule over other Kindred. Isaac fights against them.	}{	They are Kindred who want to rule over other Kindred. Isaac fights against them.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	Enslavers of our kind, and the blood baron rages against them.	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Soulless fiend! I will hear no more of your twisted words! Death for you, and final darkness!	}{	Soulless fiend! I will hear no more of your twisted words! Death for you, and final darkness!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	Hold on! I didn't mean that!	}{	Hold on! I didn't mean that!	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	Wait! The wrong words tumbled from my tongue!	}
+{	73	}{	Oh well. You can't say I didn't try.	}{	Oh well. You can't say I didn't try.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	Your ears are made of stone as well. Farewell.	}
+{	74	}{	I'm going to enjoy this thoroughly.	}{	I'm going to enjoy this thoroughly.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	I came with dove's wings, but now wield a reaper's scythe!	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	He... fights? Fights against his own kind?	}{	He... fights? Fights against his own kind?	}{	#	}{	}{	G.Gargoyle_Persuade = 3	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	Yes, but only as long as it takes him to consolidate his own power.	}{	Yes, but only as long as it takes him to consolidate his own power.	}{	141	}{	G.Gargoyle_Pissed == 0	}{	G.Gargoyle_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	He fights the armies of the undead who grasp at his power.	}
+{	83	}{	Yes, but only as long as it takes him to consolidate his own power.	}{	Yes, but only as long as it takes him to consolidate his own power.	}{	71	}{	G.Gargoyle_Pissed == 1	}{	}{	}{	}{	}{	}{	}{	}{	He fights the armies of the undead who grasp at his power.	}
+{	84	}{	Yes. He fights against those who... well, uh... made you a slave.	}{	Yes. He fights against those who... well, uh... made you a slave.	}{	91	}{	IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	Yes. He fights against those who made you a slave as well... the Tremere.	}{	Yes. He fights against those who made you a slave as well... the Tremere.	}{	91	}{	not IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	He stands against the blood sorcerers, the makers of your chains.	}
+{	86	}{	Survival in this world is all about who tells who what to do.	}{	Survival in this world is all about who tells who what to do.	}{	141	}{	G.Gargoyle_Pissed == 0	}{	G.Gargoyle_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	Often this unlife is defined by obedience to new gods.	}
+{	87	}{	Survival in this world is all about who tells who what to do.	}{	Survival in this world is all about who tells who what to do.	}{	71	}{	G.Gargoyle_Pissed == 1	}{	}{	}{	}{	}{	}{	}{	}{	Often this unlife is defined by obedience to new gods.	}
+{	88	}{	Yes. And now, unfortunately, I'm going to fight you.	}{	Yes. And now, unfortunately, I'm going to fight you.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	I tire of this babble. Prepare to tread hell's lonely road.	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	[Growl]The Tremere... hate them above all your kind, I do. Secrecy and sorcery, betrayal and blood magic. Damned to hell are all of you, but the Tremere most of all.	}{	[Growl]The Tremere... hate them above all your kind, I do. Secrecy and sorcery, betrayal and blood magic. Damned to hell are all of you, but the Tremere most of all.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	You better watch you're saying about my clan, monster.	}{	You better watch you're saying about my clan, monster.	}{	101	}{	IsClan(pc,"Tremere")	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	}
+{	93	}{	Well, they're not all bad. Take me for instance.	}{	Well, they're not all bad. Take me for instance.	}{	101	}{	IsClan(pc,"Tremere")	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	}
+{	94	}{	Right... err... I couldn't agree more. Isaac needs you to wipe them all out.	}{	Right... err... I couldn't agree more. Isaac needs you to wipe them all out.	}{	111	}{	IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	Actually, they're not such bad people when you get to know them.	}{	Actually, they're not such bad people when you get to know them.	}{	71	}{	not IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	Makers of magic, mysterious and mighty....	}
+{	96	}{	Yes. Isaac needs your help to eradicate their curse once and for all.	}{	Yes. Isaac needs your help to eradicate their curse once and for all.	}{	111	}{	not IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	The blood baron hopes to cure this disease.	}
+{	97	}{	Right. Now things will be different when Isaac is giving everyone the orders.	}{	Right. Now things will be different when Isaac is giving everyone the orders.	}{	71	}{	not IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	The sorcerers will be purged of their blood magics, and the baron all-powerful!	}
+{	98	}{	Don't blame the player, kid. Blame the game. By the way... yours is over.	}{	Don't blame the player, kid. Blame the game. By the way... yours is over.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	You are about to become quite acquainted with that fiery lake. DIE!	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	What? Your veins flow with Tremere blood? [ROAR!]Die, betrayer!	}{	What? Your veins flow with Tremere blood? [ROAR!]Die, betrayer!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	103	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	Yes. I will fight alongside this Abrams, and help him in his battle against this... Camarilla. Lifeless demon he may be, but I swear to fight at his side.	}{	Yes. I will fight alongside this Abrams, and help him in his battle against this... Camarilla. Lifeless demon he may be, but I swear to fight at his side.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Good to hear it. I'll tell Isaac he has a new ally.	}{	Good to hear it. I'll tell Isaac he has a new ally.	}{	121	}{	}{	}{	}{	}{	}{	}{	}{	}{	The blood baron will be pleased. Farewell.	}
+{	113	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	Yes. Now leave me! This theater is my domain, and I seek the peace of solitude.	}{	Yes. Now leave me! This theater is my domain, and I seek the peace of solitude.	}{	#	}{	}{	G.Gargoyle_Convinced = 1; pc.SetQuest("Gargoyle",2)	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	See ya.	}{	See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	123	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	Leave this place, Kindred.	}{	Leave this place, Kindred.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	133	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	Ah! Soulless monsters! Always wanting more power, more slaves! I should kill you now, and be done with it!	}{	Ah! Soulless monsters! Always wanting more power, more slaves! I should kill you now, and be done with it!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	Perhaps ally is a better word. He needs your strength to fight the Camarilla...	}{	Perhaps ally is a better word. He needs your strength to fight the Camarilla...	}{	61	}{	G.Gargoyle_Persuade == 1	}{	}{	}{	}{	}{	}{	}{	}{	No! The baron needs a right hand for his left, not a simpering slave...	}
+{	143	}{	Look. Everyone has to take orders, and so will you.	}{	Look. Everyone has to take orders, and so will you.	}{	71	}{	G.Gargoyle_Persuade == 1	}{	}{	}{	}{	}{	}{	}{	}{	Realize your place, and bow your knee.	}
+{	144	}{	No! Wait! I don't like them and neither does Isaac. That's why he's fighting them.	}{	No! Wait! I don't like them and neither does Isaac. That's why he's fighting them.	}{	81	}{	G.Gargoyle_Persuade == 2	}{	}{	}{	}{	}{	}{	}{	}{	Wait! My heart wears no Camarilla emblem! I battle them with the blood baron.	}
+{	145	}{	The Camarilla is where it's at. I recommend you start changing your attitude.	}{	The Camarilla is where it's at. I recommend you start changing your attitude.	}{	71	}{	G.Gargoyle_Persuade == 2	}{	}{	}{	}{	}{	}{	}{	}{	Life or unlife, dark hearts need direction. Serve the Camarilla.	}
+{	146	}{	Wait! Isaac only needs power so he can fight your old enemies, the Tremere.	}{	Wait! Isaac only needs power so he can fight your old enemies, the Tremere.	}{	91	}{	G.Gargoyle_Persuade == 3	}{	}{	}{	}{	}{	}{	}{	}{	No! Such power only to crush the meddling blood magickers, the Tremere....	}
+{	147	}{	Power is like anything else. Some people have it and some people don't.	}{	Power is like anything else. Some people have it and some people don't.	}{	71	}{	G.Gargoyle_Persuade == 3	}{	}{	}{	}{	}{	}{	}{	}{	Those without yearn after such power. When you have none, serve those who do.	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	Fine. You want it, you got it. Bring it on!	}{	Fine. You want it, you got it. Bring it on!	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	The grave calls your cursed name, golem. Farewell.	}
+{	151	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	153	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	154	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	Blood baron? Olive branch? You speak in twisted words and lies, as all your kind do!	}{	Blood baron? Olive branch? You speak in twisted words and lies, as all your kind do!	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	Abrams, he of the celluloid dream! An offer, extended hands.	}{	Abrams, he of the celluloid dream! An offer, extended hands.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	163	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	164	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	(Starting Condition)	}{	}{	131	}{	G.Gargoyle_Convinced == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

@@ -1,0 +1,38 @@
+Particle
+{
+	min_frames	"25"
+	frames 		"50"
+	max_frames	"100"
+	sprite		"flamebody"
+	size		"3,0"
+	Rotate		"0,90,180,270,360"
+	x_speed		"500~-500"
+	y_speed		"500~-500"
+	Z_speed		"400~900,-700"
+	red			"255"
+	green		"255"
+	blue		"255"
+	color		"400,0"
+	mask		"0"
+
+	spawn
+	{
+		particle "FireTrail"
+		rate "100"
+		loop "1"
+		theta "0~360"
+		phi	"180~-180"
+
+	}
+
+	collide
+	{
+		self
+		{
+			bounce ".5"
+			gravity "300"
+			friction "1"
+		}
+	}
+}
+

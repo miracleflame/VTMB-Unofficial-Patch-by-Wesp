@@ -1,0 +1,18 @@
+// Choreo version 1
+actor "tutorial_security_guard"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 6.000
+      param "character/dlg/downtown la/tutorial_security_guard/line51_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

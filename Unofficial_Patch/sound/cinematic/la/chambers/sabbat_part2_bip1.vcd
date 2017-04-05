@@ -1,0 +1,51 @@
+// Choreo version 1
+
+actor "Andrei2"
+{
+  channel "animations"
+  {
+    event sequence "splash"
+    {
+      time 0.000000 26.633
+      param "entire_scene"
+    }
+  }
+  bonerename "Bip02" "Bip01"
+}
+
+actor "Sabbat1"
+{
+  channel "animations"
+  {
+    event sequence "splash"
+    {
+      time 0.000000 26.633
+      param "entire_scene"
+    }
+  }
+  bonerename "Bip03" "Bip01"
+}
+
+actor "Sabbat2"
+{
+  channel "animations"
+  {
+    event sequence "splash"
+    {
+      time 0.000000 26.633
+      param "entire_scene"
+    }
+  }
+  channel "dlg"
+  {
+    event speak "Andrei Speaks"
+    {
+      time 0.873333 14.797664
+      param "Character\dlg\hollywood\Andrei\line301_col_e.mp3"
+      fixedlength
+    }
+  }
+  bonerename "Bip04" "Bip01"
+}
+fps 60
+snap off

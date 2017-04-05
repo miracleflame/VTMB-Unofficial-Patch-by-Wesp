@@ -1,0 +1,64 @@
+{	1	}{	Ah! Welcome, brother! I see you have been enlightened! Are you searching for something? Do you seek the truth? You've come to the right place, brother. We've got more truth here than we can handle.[laughs, hysterically]	}{	Ah! Welcome, sister! I see you have been enlightened! Are you searching for something? Do you seek the truth? Well you have come to the right place, sister. We've got more truth here than we can handle.[laughs, hysterically]	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	Who the hell are you?	}{	Who the hell are you?	}{	21	}{	not IsClan(pc, "Malkavian")	}{	G.Vick_Q2 = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	Are you the leader of the Brotherhood of the Ninth Circle?	}{	Are you the leader of the Brotherhood of the Ninth Circle?	}{	21	}{	not IsClan(pc, "Malkavian")	}{	G.Vick_Q2 = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	You're the cause of all of this disease, aren't you?	}{	You're the cause of all of this disease, aren't you?	}{	11	}{	}{	G.Vick_Q1 = 1	}{	}{	}{	}{	}{	}{	}{	Ah! The disease-ridden demagogue!	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	[Coughs]Disease? Brother, you've got to open your mind! One man's disease is another man's sanctity! Here among the Brotherhood of the Ninth Circle, we have shed these earthly labels! Come! Partake of our divine communion.	}{	[Coughs]Disease? Sister, you've got to open your mind! One man's disease is another man's sanctity! Here among the Brotherhood of the Ninth Circle, we have shed these earthly labels! Come! Partake of our divine communion.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	Who the hell are you?	}{	Who the hell are you?	}{	21	}{	Humanity 6 & G.Vick_Q2 == 0	}{	G.Vick_Q2 = 1	}{	}{	}{	}{	}{	}{	}{	Tell me your name, plaguebearer!	}
+{	13	}{	Are you the guy I need to talk to if I want to join up?	}{	Are you the guy I need to talk to if I want to join up?	}{	21	}{	Humanity -6 & G.Vick_Q2 == 0	}{	G.Vick_Q2 = 1	}{	}{	}{	}{	}{	}{	}{	Need I speak with you to join this gruesome gathering?	}
+{	14	}{	You said something about the "last days"... are you talking about Gehenna?	}{	You said something about the "last days"... are you talking about Gehenna?	}{	31	}{	G.Vick_Lastdays == 1 and G.Vick_Q3 == 0	}{	G.Vick_Q3 = 1	}{	}{	}{	}{	}{	}{	}{	Do your days also end with Gehenna?	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	They call me Bishop Vick, Shepherd of the Damned, your midnight guide through our last days here on earth. Do you feel it, brother? The curtain being drawn back at last, drawn back by my hand, by the Brotherhood of the Ninth Circle!	}{	They call me Bishop Vick, Shepherd of the Damned, your midnight guide through our last days here on earth. Do you feel it, sister? The curtain being drawn back at last, drawn back by my hand, by the Brotherhood of the Ninth Circle!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Vick_Lastdays = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	23	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	Last days here on Earth... are you talking about Gehenna?	}{	Last days here on Earth... are you talking about Gehenna?	}{	31	}{	G.Vick_Q3 == 0	}{	G.Vick_Q3 = 1	}{	}{	}{	}{	}{	}{	}{	Do your days also end with Gehenna?	}
+{	25	}{	Are you the one who's been spreading all of this disease?	}{	Are you the one who's been spreading all of this disease?	}{	11	}{	G.Vick_Q1 == 0	}{	G.Vick_Q1 = 1	}{	}{	}{	}{	}{	}{	}{	You are the disease-ridden demagogue!	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	Gehenna? Judgment Day? The Apocalypse? Again, brother, you are too indoctrinated into the antiquated beliefs of this material world. There is no rhyme or reason, no all-powerful and terrible gods who watch over their children.	}{	Gehenna? Judgment Day? The Apocalypse? Oh again, sister, you are too indoctrinated into the antiquated beliefs of this material world. There is no rhyme or reason, no all-powerful and terrible gods who watch over their children.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	(Auto-Link)	}{	(Auto-Link)	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	33	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	You talk of disease... what about the disease that you and I both carry, our flesh remade into nothing more than an abomination, feeding on our brothers and sisters like so many cattle? What god watched over me when that demon tore into my neck and made me into this monster you see before you?	}{	You talk of disease... what about the disease that you and I both carry, our flesh remade into nothing more than an abomination, feeding on our brothers and sisters like so many cattle? What god watched over me when that demon tore into my neck and made me into this monster you see before you?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	(Auto-Link)	}{	(Auto-Link)	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	43	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	No, brother. There is no god who would tolerate such a thing. And so I have become God, and the diseases I carry to the masses will bring about an end of my own making, until we have all journeyed below into the Ninth Circle.	}{	No, sister. There is no god who would tolerate such a thing. And so I have become God, and the diseases I carry to the masses will bring about an end of my own making, until we have all journeyed below into the Ninth Circle.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	You've lost your mind, Vick. This is insanity!	}{	You've lost your mind, Vick. This is insanity!	}{	61	}{	Humanity 6	}{	}{	}{	}{	}{	}{	}{	}{	Your vision is more twisted than my own. Turn from this path, dark bishop!	}
+{	53	}{	I understand your feelings about being a vampire, but this is no way to deal with it.	}{	I understand your feelings about being a vampire, but this is no way to deal with it.	}{	61	}{	Humanity 6 & not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	Sounds good. Do you have an application or something?	}{	Sounds good. Do you have an application or something?	}{	61	}{	Humanity -6	}{	}{	}{	}{	}{	}{	}{	}{	I, too, wish to ride your evil wave, oh Minister of the Macabre!	}
+{	55	}{	I think this is a little out of my league. I'm going to hit the road.	}{	I think this is a little out of my league. I'm going to hit the road.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps this is a party best left to plaguebearers.	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	The time for words has come and gone, my brother. You and I will take those last steps together, and see what truth lies behind the curtain. Let the night fall forever on this cursed earth, and let the fruits of my labor bring a long and bloody harvest!	}{	The time for words has come and gone, my sister. You and I will take those last steps together, and see what truth lies behind the curtain. Let the night fall forever on this cursed earth, and let the fruits of my labor bring a long and bloody harvest!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Bring it on, Vick!	}{	Bring it on, Vick!	}{	0	}{	Humanity 6	}{	}{	}{	}{	}{	}{	}{	}{	I'm the cure for your viral viciousness, Vick. DIE!	}
+{	63	}{	Wait! I know we can work this out.	}{	Wait! I know we can work this out.	}{	0	}{	Humanity 6	}{	}{	}{	}{	}{	}{	}{	}{	Can't we let words fight this battle?	}
+{	64	}{	It sounded like a good idea, but now you've gone and pissed me off.	}{	It sounded like a good idea, but now you've gone and pissed me off.	}{	0	}{	Humanity -6	}{	}{	}{	}{	}{	}{	}{	}{	I'll urinate on your ashy remains, bishop.	}

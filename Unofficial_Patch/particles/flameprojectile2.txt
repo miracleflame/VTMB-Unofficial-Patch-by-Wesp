@@ -1,0 +1,25 @@
+Particle
+{
+	loop "0"
+	Frames		"30"
+	max_frames	"40"
+//	sprite "smile"
+	z_speed		"0,-100,-250"
+	Radius_speed	"300"
+	size "40"
+
+	collide
+	{
+		spawn
+		{
+			particle	"FlameThrowerFire_Emitter"
+			friction	"0"
+			Bounce		"0"
+			loop 		"0"
+			rate 		"250"
+			radius 		"0~20"
+			theta		"0~360"
+			phi			"0"
+		}
+	}
+}

@@ -1,0 +1,65 @@
+{	1	}{	Confession bitch send you?	}{	Confession bitch send you?	}{	#	}{	}{	G.Igor_Talk = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	That she did.	}{	That she did.	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	I hail from Venus.	}
+{	3	}{	Who wants to know?	}{	Who wants to know?	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	Where are your handlers, grizzly bear?	}
+{	4	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	Money, where is money?	}{	Money, where is money?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	She told me to tell you she doesn't have the money.	}{	She told me to tell you she doesn't have the money.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	Her purse is empty - no salmon tonight for you, grizzly.	}
+{	13	}{	Venus can't make her payment. I'm sure she has a good reason.	}{	Venus can't make her payment. I'm sure she has a good reason.	}{	21	}{	Persuasion 6	}{	}{	}{	}{	}{	}{	}{	}{	The goddess' tithes are slight this month, grizzly. Please forgive her.	}
+{	14	}{	She doesn't have it. That's all I've got to say to you. Now get out of here.	}{	She doesn't have it. That's all I've got to say to you. Now get out of here.	}{	21	}{	Intimidate 5	}{	}{	}{	}{	}{	}{	}{	}{	There is no such thing. Back to your cave, grizzly.	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	Up your mother's ass.	}{	Up your mother's ass.	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	Stuffed inside your mama bear's nethers.	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	No money?	}{	No money?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	There's no reason to get upset. I'm just the messenger.	}{	There's no reason to get upset. I'm just the messenger.	}{	41	}{	Persuasion 6	}{	}{	}{	}{	}{	}{	}{	}{	I only relay the goddess' message. Do not maul me, mighty grizzly.	}
+{	23	}{	You already received the money.	}{	You already received the money.	}{	41	}{	Dominate 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	You must be hungry, grizzly. But look, your friends are salmon.	}{	You must be hungry, grizzly. But look, your friends are salmon.	}{	61	}{	Dementation 2	}{	}{	}{	}{	}{	}{	}{	}{	You must be hungry, grizzly. But look, your friends are salmon.	}
+{	25	}{	You already received the money.	}{	You already received the money.	}{	41	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	I don't need to pay anyone.	}{	I don't need to pay anyone.	}{	41	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	No.	}{	No.	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	No.	}
+{	28	}{	What, are you dense? No money!	}{	What, are you dense? No money!	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	You are thicker than the forests you live in, grizzly.	}
+{	29	}{	My job here is done. Nice meeting you all.	}{	My job here is done. Nice meeting you all.	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am out of messages, and so I rewind.	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	Virvu nogi (Break their legs)!	}{	Virvu nogi (Break their legs)!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	}
+{	33	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Da (Yes). Tell bitch we be back next month.	}{	Da (Yes). Tell bitch we be back next month.	}{	#	}{	}{	G.Igor_Dominated = 1; pc.SetQuest("Confession",3)	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	43	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	You die.	}{	You die.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	Again?	}{	Again?	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	I did, thanks for noticing.	}
+{	53	}{	Don't count on it.	}{	Don't count on it.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	Bear season has begun.	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Salmon? Must eat salmon.	}{	Salmon? Must eat salmon.	}{	#	}{	}{	G.Igor_Dementated = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	63	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	64	}{	(Starting Condition)	}{	}{	41	}{	G.Igor_Dominated == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

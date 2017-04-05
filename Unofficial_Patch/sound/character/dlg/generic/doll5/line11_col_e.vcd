@@ -1,0 +1,37 @@
+// Choreo version 1
+actor "plus_Doll5"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 0.736009
+      param "character/dlg/generic/doll5/line11_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 0.570000 0.740000
+      param "0.170"
+    }
+    event loud "Loud"
+    {
+      time 0.190000 0.300000
+      param "0.110"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

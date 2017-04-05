@@ -1,0 +1,84 @@
+TerminalDefinition
+{
+	"screen saver"		"We're watching you!"	// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""		// these surround the command prompt (2 characters), changed by wesp
+	"email_username"	"tom"		// printed at the top of the email window, not used for log in. 
+	"email_password"	"peep"	// printed at the top of the email window, not used for log in. 
+
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Skyeline Apartments"
+		"line1"		"Security"
+
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+
+
+	SubDir
+	{
+		"name"			"Apartment Notes"
+		"description"		"Resident Notes"	
+
+		Function
+		{
+			"name"		"Apt 1"
+			"description"	""	
+			"runtext"	"Apt 1. Simon Milligan. He's on TV, so odds are footage of his place will be worth something eventually. I gotta keep an eye on him."
+
+		}
+
+		Function
+		{
+			"name"		"Apt 2"
+			"description"	""	
+			"runtext"	"Apt 2. Sean Milton. He's a slob, and he never really has chicks over. Some guy has been staying with him lately, so I haven't wanted to watch much."
+
+		}
+
+		Function
+		{
+			"name"		"Apt 3"
+			"description"	""	
+			"runtext"	"Apt 3. Georgia Welch. This rich broad is pretty hot. Oh, the password on her door is 9648, so maybe I'll sneak in there and steal some panties to auction off online."
+
+		}
+
+		Function
+		{
+			"name"		"Apt 4"
+			"description"	""	
+			"runtext"	"Apt 4. Vacant. No reason to keep an eye on this one."
+
+		}
+
+		Function
+		{
+			"name"		"Apt 5"
+			"description"	""	
+			"runtext"	"Apt 5. Paul Anderson. I thought there was no reason to watch him, but then I caught him upstairs. I'll keep the tape rolling."
+		}
+
+		Function
+		{
+			"name"		"Apt 6"
+			"description"	""	
+			"runtext"	"Apt 6. Hannah Glazer. The gold mine! Something hot is always going down in here, and that something is usually Hannah herself."
+
+		}
+
+	}
+
+	Email
+	{
+		"subject"	"hidden cameras online"				
+		"sender"	"Butch Rider"
+		"body"		"Hey Tom, it sounds like we have a deal. You keep sending in that security footage, and I'll pay you for the good stuff."
+	}
+}

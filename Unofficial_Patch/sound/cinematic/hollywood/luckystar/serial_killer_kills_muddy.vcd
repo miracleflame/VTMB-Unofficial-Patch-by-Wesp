@@ -1,0 +1,50 @@
+// Choreo version 1
+actor "Killer"
+{
+  channel "SFX"	// added by wesp
+  {
+    event speak "SFX"
+    {
+      time 0.0 0.5
+      param "character\male\death_2.wav"
+      fixedlength
+    }
+    event speak "SFX"
+    {
+      time 1.1 1.5
+      param "impact\physics\metal\hit_hard1.wav"
+      fixedlength
+    }
+    event speak "SFX"
+    {
+      time 2.1 2.9
+      param "environmental\city\glass breaks.wav"
+      fixedlength
+    }
+  }
+  channel "Anim"
+  {
+    event sequence "Kill"
+    {
+      time 0.000000 2.967
+      param "entire_scene"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+actor "Muddy"
+{
+  channel "Anim"
+  {
+    event sequence "Kill"
+    {
+      time 0.000000 2.967
+      param "entire_scene"
+    }
+  }
+  bonerename "Bip02" "Bip01"
+}
+
+fps 60
+snap off

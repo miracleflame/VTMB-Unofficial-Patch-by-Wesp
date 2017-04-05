@@ -1,0 +1,96 @@
+TerminalDefinition
+{
+	"screen saver"		"Abrams Jewelry, Inc."	// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt and subdirector names(2 characters), changed by wesp
+
+	"email_password"	"letmein"		// the user must type this to access email from this terminal
+	"email_username"	"Abrams Jewelry"	// printed at the top of the email window, not used for log in. 
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Abrams Jewelry, Inc., L.L.C."		//(any number of characters, but must fit in the screen
+		"line1"		"Invoice and Inventory Management"
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+	SubDir
+	{
+		"name"			"Safe"				// This is what is displayed as the name of this menu, and what the player must type to enter the menu (128 characters)
+		"password"		"griff"				// password required to run commands in this menu (16 characters)
+		"description"		"Safe Security Controls"	// This is printed each time the user enters this menu (128 characters)
+
+
+		Function
+		{
+			"name"		"Unlock"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Unlock Safe"			// this is a description of this function  (128 characters)
+			"runtext"	"Safe doors unlocked."		// this text is printed when the player triggers this function.  (128 characters)
+			"trigger"	"0"				// fires entity output 0 when this command is run
+			"runscript"	"G.Safe_Locked = 0"
+		}
+
+		Function
+		{
+			"name"		"Lock"
+			"description"	"Lock Safe"		
+			"runtext"	"Safe doors locked."
+			"trigger"	"1"		
+			"runscript"	"G.Safe_Locked = 1"
+		}
+	}
+
+	SubDir
+	{
+		"name"			"Printer"	//(128 characters)
+		"description"		"Printer Control"	
+
+		Function
+		{
+			"name"		"invoices"
+			"description"	"print a list of recent transactions"	
+			"runtext"	"Sending invoice list to printer, please wait...."
+
+		}
+
+	}
+
+	Email
+	{
+		"subject"	"A reminder"
+		"sender"	"LaCroix"
+		"body"		"Mercurio will contact you when you arrive in Santa Monica. Waste no time in meeting with him. -SL"
+	}
+
+	Email
+	{
+		"subject"	"DANG! It's big you know!!!111"
+		"sender"	"Hung Low"		
+		"body"		"PENIS ENLARGEMENT! Watch the girls come running! Call today! 1-800-BIG-STICK!"
+		"autodelete"	"1"
+	}
+
+	Email
+	{
+		"subject"	"The first move"
+		"sender"	"a friend"		
+		"body"		"The king sends out his pawn."
+		"dependency"	"G.Story_State < 10"
+	}
+
+	Email
+	{
+		"subject"	"I want to see you soon"
+		"sender"	"Jeanette  Voerman"		
+		"body"		"I'm bored. Can't you come entertain me? I'm at the club.... XOXOXO"
+		"dependency"	"G.Jeanette_Know > 0"
+		"runscript"	"G.Jeanette_Invite = 1"
+	}
+
+
+
+}

@@ -1,0 +1,85 @@
+TerminalDefinition
+{
+	"screen saver"		"Santa Monica Medical Clinic"		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"S.M.M.C. Secure Console"  
+		"line1"		"Health and Safety"
+		"line2"		"Central Information Services"
+	}
+
+	SubDir
+	{
+		"name"			"CS Door"
+		"password"		"dosage"
+		"description"		"Controlled Substances Door"
+		
+		Function
+		{
+			"name"		"Lock"
+			"description"	"Lock the Door"
+			"runtext"	"Door locked."
+			"trigger"	"0"
+		}
+
+		Function
+		{
+			"name"		"Unlock"
+			"description"	"Unlock the Door"
+			"runtext"	"Door unlocked."
+			"trigger" 	"1"
+		}
+	}
+
+	SubDir
+	{
+		"name"			"CS Cabinet"
+		"password"		"money"
+		"description"		"Controlled Substances Cabinet"
+		"dependency"		"G.Werewolf_Quest ==  0"
+
+		Function
+		{
+			"name"		"Lock"
+			"description"	"Lock the cabinet"
+			"runtext"	"Cabinet locked."
+			"trigger"	"2"
+		}
+
+		Function
+		{
+			"name"		"Unlock"
+			"description"	"Unlock the cabinet"
+			"runtext"	"Cabinet unlocked. Controlled Substances camera enabled for your security."
+			"trigger" 	"3"
+		}
+	}
+
+	SubDir
+	{
+		"name"			"CS Cabinet"
+		"password"		"paige"
+		"description"		"Controlled Substances Cabinet"
+		"dependency"		"G.Werewolf_Quest ==  1"
+
+		Function
+		{
+			"name"		"Lock"
+			"description"	"Lock the cabinet"
+			"runtext"	"Cabinet locked."
+			"trigger"	"2"
+		}
+
+		Function
+		{
+			"name"		"Unlock"
+			"description"	"Unlock the cabinet"
+			"runtext"	"Cabinet unlocked. Controlled Substances camera enabled for your security."
+			"trigger" 	"3"
+		}
+	}
+
+}

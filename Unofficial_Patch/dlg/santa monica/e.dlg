@@ -1,0 +1,350 @@
+{	1	}{	Listen, it's like I've told you types 'bout a thousand times now - we know we can't hunt 'round here, alright? We're minding our own business, no reason to hassle the weaklings.	}{	Listen, it's like I've told you types 'bout a thousand times now - we know we can't hunt 'round here, alright? We're minding our own business, no reason to hassle the weaklings.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	You see any thugs come through here carrying bats?	}{	You see any thugs come through here carrying bats?	}{	191	}{	G.Mercurio_Quest == 1 and not IsClan(pc,"Malkavian") and G.Beachhouse == 0 and G.E_Demons == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	Have you seen bat-wielding beach demons?	}{	Have you seen bat-wielding beach demons?	}{	301	}{	G.Mercurio_Quest == 1 and IsClan(pc,"Malkavian") and G.Beachhouse == 0 and G.E_Demons == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	What are you talking about?	}{	What are you talking about?	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will cast no shadow on your flame, little sickling.	}
+{	5	}{	That's cool. Mind if I chill with you?	}{	That's cool. Mind if I chill with you?	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	Let us trade words here under the moribund moon.	}
+{	6	}{	This is MY beach. Now get the hell out of here.	}{	This is MY beach. Now get the hell out of here.	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	Leave now or I will don black robe and sickle.	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	You mean you ain't here to run us off?	}{	You mean you ain't here to run us off?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	No, why would you think that?	}{	No, why would you think that?	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	No. But a pity to be trapped within invisible walls.	}
+{	13	}{	Uh, no. Is that common?	}{	Uh, no. Is that common?	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	It must trouble you to take flight often.	}
+{	14	}{	Maybe I am. But I'll let you stay for say, fifty bucks.	}{	Maybe I am. But I'll let you stay for say, fifty bucks.	}{	61	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	Fifty greenbacks and you can dance till dawn.	}
+{	15	}{	Yeah, I am. What are you going to do about it?	}{	Yeah, I am. What are you going to do about it?	}{	51	}{	Intimidate -4	}{	}{	}{	}{	}{	}{	}{	}{	You trespass on my territory, little sickling.	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	Be my guest. But you'd be the first. Most of the time you types just run us off, or in the case of some of the long faces we got gathered around here, kill us on sight.	}{	Be my guest. But you'd be the first. Most of the time you types just run us off, or in the case of some of the long faces we got gathered around here, kill us on sight.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	What? Why?	}{	What? Why?	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why do wolves run off the little sicklings?	}
+{	23	}{	What's wrong with you?	}{	What's wrong with you?	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	Fear makes them hate you?	}
+{	24	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	Don't know. We all seem to have come down with the same disease - ah, hell, who am I kiddin', we're a bad horror show alright. And we seem to be the runts - the mistakes. You types call us thin-bloods... I say we're all equally screwed.	}{	Don't know. We all seem to have come down with the same disease - ah, hell, who am I kiddin', we're a bad horror show alright. And we seem to be the runts - the mistakes. You types call us thin-bloods... I say we're all equally screwed.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.E_Bugfix = 1; G.E_Thin = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Thin-bloods? But what clan are you from?	}{	Thin-bloods? But what clan are you from?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	Whose clan blood is it that runs thin in your veins?	}
+{	33	}{	I'm new to this myself. What's a thin-blood?	}{	I'm new to this myself. What's a thin-blood?	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the thin blood.	}
+{	34	}{	How'd this happen to you?	}{	How'd this happen to you?	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	How did your blood go from thick to thin?	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	This scene is dead. I'm outta here.	}{	This scene is dead. I'm outta here.	}{	0	}{	}{	G.E_Story = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	We're getting pretty sick of it. Someone citing domain or in the worst cases, hunting us for sport.	}{	We're getting pretty sick of it. Someone citing domain or in the worst cases, hunting us for sport.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	What? Why?	}{	What? Why?	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	Who is the hunter and why?	}
+{	43	}{	What's wrong with you?	}{	What's wrong with you?	}{	31	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	Funny. I was just having the same idea.	}{	Funny. I was just having the same idea.	}{	51	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps I will engage in that same evil game.	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	This place is beat. I'm outta here.	}{	This place is beat. I'm outta here.	}{	0	}{	}{	G.E_Story = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	I'm tired of running - you know, we're all tired of running. We may be weak, but odds favor us. Just leave us alone, we'll move on soon enough.	}{	I'm tired of running - you know, we're all tired of running. We may be weak, but odds favor us. Just leave us alone, we'll move on soon enough.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.E_Threat = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	I'll let you stay for say, fifty bucks.	}{	I'll let you stay for say, fifty bucks.	}{	61	}{	Intimidate 4 & G.E_Extort == 0	}{	}{	}{	}{	}{	}{	}{	}{	Two twenties and a ten will buy you safe passage on these sands.	}
+{	53	}{	Who are you people?	}{	Who are you people?	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of this motley crew.	}
+{	54	}{	Not good enough. Now things get ugly.	}{	Not good enough. Now things get ugly.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	Leave before next I return or the flames will feed on you.	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	I'm outta here. You better be gone when I get back.	}{	I'm outta here. You better be gone when I get back.	}{	0	}{	}{	G.E_Story = 1	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	61	}{	We look like we're livin' the high life? We've been bled dry, could say. Findin' it hard to hold down a day job recently.	}{	We look like we're livin' the high life? We've been bled dry, could say. Findin' it hard to hold down a day job recently.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.E_Extort = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Who are you people?	}{	Who are you people?	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of this motley crew.	}
+{	63	}{	Then get off my beach.	}{	Then get off my beach.	}{	51	}{	G.E_Threat == 0	}{	}{	}{	}{	}{	}{	}{	}{	Find other sands to walk upon, little sickling.	}
+{	64	}{	I guess that means I take it out of your ass, punk.	}{	I guess that means I take it out of your ass, punk.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	Your thin blood will stain the sands tonight!	}
+{	65	}{	No money? Damn. I'm outta here.	}{	No money? Damn. I'm outta here.	}{	0	}{	}{	G.E_Story = 1	}{	}{	}{	}{	}{	}{	}{	Your empty pockets won't bring your final sleep. For now. Farewell.	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Clan? See, I've heard all that before, an- and I still don't know what the hell anyone's talkin' about. I'd like to know just what I've become - we- we'd all like to know jus- just what the... the hell kinda devil's contract we've apparently signed.	}{	Clan? See, I've heard all that before, an- and I still don't know what the hell anyone's talkin' about. I'd like to know just what I've become - we- we'd all like to know jus- just what the... the hell kinda devil's contract we've apparently signed.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	G.E_Clan = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	You mentioned they call you thin-bloods. What does that mean?	}{	You mentioned they call you thin-bloods. What does that mean?	}{	81	}{	G.E_Thin == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the thin blood.	}
+{	73	}{	How'd this happen to you?	}{	How'd this happen to you?	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	How did your blood go from thick to thin?	}
+{	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Damned if I know. I know you don't want to be one. You seem to be in the loop - you tell me.	}{	Damned if I know. I know you don't want to be one. You seem to be in the loop - you tell me.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	I don't know. How'd this happen to you?	}{	I don't know. How'd this happen to you?	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Opaque are my thoughts, also. How was this curse laid upon you?	}
+{	83	}{	For starters, what clan are you?	}{	For starters, what clan are you?	}{	71	}{	G.E_Clan == 0	}{	}{	}{	}{	}{	}{	}{	}{	What clan spawned the thin ones?	}
+{	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	If I was in the loop, I wouldn't be out here talking to you. See ya.	}{	If I was in the loop, I wouldn't be out here talking to you. See ya.	}{	0	}{	}{	G.E_Story = 1	}{	}{	}{	}{	}{	}{	}{	I'm loopless. Farewell.	}
+{	91	}{	I'd just came to town for the surf tourney - seems like years ago, but it's, well, been about six months now. Every night during the finals, I used to hit the local diner after the beach parties fizzled out in the A.M. That's where I met her.	}{	I'd just came to town for the surf tourney - seems like years ago, but it's, well, been about six months now. Every night during the finals, I used to hit the local diner after the beach parties fizzled out in the A.M. That's where I met her.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Met who?	}{	Met who?	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ah! Your dark muse.	}
+{	93	}{	Please continue.	}{	Please continue.	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	The flower girl.	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	She had a natural beauty, not like all the plastic dolls littering the sand. Her name was Lily. I remember introducing meself - the way she seemed grateful for the company. Well, a few nights after our meeting, we were on the beach alone and...	}{	She had a natural beauty, not like all the plastic dolls littering the sand. Her name was Lily. I remember introducing meself - the way she seemed grateful for the company. Well, a few nights after our meeting, we were on the beach alone and...	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	Go on.	}{	Go on.	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me your tale, little sickling.	}
+{	103	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	Hmmm. WHOA! Look at the time! I'm outta here.	}{	Hmmm. WHOA! Look at the time! I'm outta here.	}{	0	}{	}{	G.E_Story = 1	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	111	}{	She tried to tell me what she was, but I didn't understand. And so, she showed me. I was furious with her when I took it all in. I cursed her and left, never really knowing what I was. I realize now how she must've felt. So, here I am, now, a mystery to meself.	}{	She tried to tell me what she was, but I didn't understand. And so, she showed me. I was furious with her when I took it all in. I cursed her and left, never really knowing what I was. I realize now how she must've felt. So, here I am, now, a mystery to meself.	}{	#	}{	npc.SetDisposition("Sad", 2)	}{	G.E_Lily = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Is Lily dead?	}{	Is Lily dead?	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	Is your flower dead?	}
+{	113	}{	Hate to break it to you, friend, but you're all vampires.	}{	Hate to break it to you, friend, but you're all vampires.	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	We're all children of the night, blood-thirsty and damned.	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	Maybe I should look into this whole thin-blood thing.	}{	Maybe I should look into this whole thin-blood thing.	}{	121	}{	G.E_Info == 0	}{	G.E_Quest = 1; pc.SetQuest("Lily",1)	}{	}{	}{	}{	}{	}{	}{	Perhaps I can delve the mysteries of your thin blood.	}
+{	120	}{	I'll get back to you if I hear anything. See ya.	}{	I'll get back to you if I hear anything. See ya.	}{	0	}{	G.E_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	I will return if I learn anything of your thinness.	}
+{	121	}{	Well I hope you have better luck than I did. No one's been particularly friendly to me in this city. Only reason we're in Santa Monica's cuz we haven't been chased out yet.	}{	Well I hope you have better luck than I did. No one's been particularly friendly to me in this city. Only reason we're in Santa Monica's cuz we haven't been chased out yet.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.E_Info = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	This Lily... is she dead?	}{	This Lily... is she dead?	}{	151	}{	G.E_Hope == 0	}{	}{	}{	}{	}{	}{	}{	}{	Is your flower dead?	}
+{	123	}{	You do know you're vampires, right?	}{	You do know you're vampires, right?	}{	131	}{	G.E_Vampire == 0	}{	}{	}{	}{	}{	}{	}{	}{	We're all children of the night, blood-thirsty and damned.	}
+{	124	}{	Are all these others here thin-bloods as well?	}{	Are all these others here thin-bloods as well?	}{	141	}{	G.E_Sabbath == 0	}{	}{	}{	}{	}{	}{	}{	}{	Does the thin blood flow for you all?	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	I'll ask around, see what I can dig up.	}{	I'll ask around, see what I can dig up.	}{	161	}{	G.E_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	Secrets hidden from you may show themselves to me.	}
+{	130	}{	I'll get back to you if I hear anything. See ya.	}{	I'll get back to you if I hear anything. See ya.	}{	0	}{	G.E_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	I will return if I learn anything of your thinness.	}
+{	131	}{	That's what Lily tried to tell me. But what I don't understand are the rules and the terms and the reason some of 'em are at our throats claiming we're harbingers of the apocalypse. That's what I want to know.	}{	That's what Lily tried to tell me. But what I don't understand are the rules and the terms and the reason some of 'em are at our throats claiming we're harbingers of the apocalypse. That's what I want to know.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	G.E_Vampire = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	This Lily... is she dead?	}{	This Lily... is she dead?	}{	151	}{	G.E_Hope == 0	}{	}{	}{	}{	}{	}{	}{	}{	Is your flower dead?	}
+{	133	}{	Are all these others here thin-bloods as well?	}{	Are all these others here thin-bloods as well?	}{	141	}{	G.E_Sabbath == 0	}{	}{	}{	}{	}{	}{	}{	}{	Does the thin blood flow for you all?	}
+{	134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	Maybe I should look into this whole thin-blood thing.	}{	Maybe I should look into this whole thin-blood thing.	}{	121	}{	G.E_Info == 0	}{	G.E_Quest = 1; pc.SetQuest("Lily",1)	}{	}{	}{	}{	}{	}{	}{	Perhaps I can delve the mysteries of your thin blood.	}
+{	140	}{	I'll get back to you if I hear anything.	}{	I'll get back to you if I hear anything.	}{	0	}{	G.E_Info == 1	}{	}{	}{	}{	}{	}{	}{	}{	I will return if I learn anything of your thinness.	}
+{	141	}{	Aye. Most of them just recently arrived in LA. Got chased off by the Sabbath or some such thing from their home cities. They're more in the dark than I am. They're a good bunch, but... well they've been through a lot. It's affected them.	}{	Aye. Most of them just recently arrived in LA. Got chased off by the Sabbath or some such thing from their home cities. They're more in the dark than I am. They're a good bunch, but... well they've been through a lot. It's affected them.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.E_Sabbath = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	This Lily... is she dead?	}{	This Lily... is she dead?	}{	151	}{	G.E_Hope == 0	}{	}{	}{	}{	}{	}{	}{	}{	Is your flower dead?	}
+{	143	}{	You do know you're vampires, right?	}{	You do know you're vampires, right?	}{	131	}{	G.E_Vampire == 0	}{	}{	}{	}{	}{	}{	}{	}{	We're all children of the night, blood-thirsty and damned.	}
+{	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	Maybe I should look into this whole thin-blood thing.	}{	Maybe I should look into this whole thin-blood thing.	}{	121	}{	G.E_Info == 0	}{	G.E_Quest = 1; pc.SetQuest("Lily",1)	}{	}{	}{	}{	}{	}{	}{	Perhaps I can delve the mysteries of your thin blood.	}
+{	150	}{	I'll get back to you if I hear anything.	}{	I'll get back to you if I hear anything.	}{	0	}{	G.E_Info == 1	}{	}{	}{	}{	}{	}{	}{	}{	I will return if I learn anything of your thinness.	}
+{	151	}{	Clinically, yes. But honestly, I don't know. I suppose I'd have moved on by now if I didn't think she'd show up one of these nights. There's a lot I've got left to say to her.	}{	Clinically, yes. But honestly, I don't know. I suppose I'd have moved on by now if I didn't think she'd show up one of these nights. There's a lot I've got left to say to her.	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	G.E_Hope = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	You do know you're vampires, right?	}{	You do know you're vampires, right?	}{	131	}{	G.E_Vampire == 0	}{	}{	}{	}{	}{	}{	}{	}{	We're all children of the night, blood-thirsty and damned.	}
+{	153	}{	Are all these others here thin-bloods as well?	}{	Are all these others here thin-bloods as well?	}{	141	}{	G.E_Sabbath == 0	}{	}{	}{	}{	}{	}{	}{	}{	Does the thin blood flow for you all?	}
+{	154	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	Maybe I should look into this whole thin-blood thing.	}{	Maybe I should look into this whole thin-blood thing.	}{	121	}{	G.E_Info == 0	}{	G.E_Quest = 1; pc.SetQuest("Lily",1)	}{	}{	}{	}{	}{	}{	}{	Perhaps I can delve the mysteries of your thin blood.	}
+{	160	}{	I'll get back to you if I hear anything.	}{	I'll get back to you if I hear anything.	}{	0	}{	G.E_Info == 1	}{	}{	}{	}{	}{	}{	}{	}{	I will return if I learn anything of your thinness.	}
+{	161	}{	Oh, we'd appreciate it. Oh, 'fore I forget, name's E. The black-haired beauty over there's Rosa - sees the future, so she says. That nervous bloke is Copper, and the one who can't speak so well's Julius. Kids' gloves with them; they've had it rough.	}{	Oh, we'd appreciate it. Oh, 'fore I forget, name's E. The black-haired beauty over there's Rosa - sees the future, so she says. That nervous bloke is Copper, and the one who can't speak so well's Julius. Kids' gloves with them; they've had it rough.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	Any idea where I might begin looking for information?	}{	Any idea where I might begin looking for information?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	Where might I find thin little secrets?	}
+{	163	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	164	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	I'll see what I can find out. See ya.	}{	I'll see what I can find out. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Dark times, thin blood and the watchful eye of the Dark Father. Farewell.	}
+{	171	}{	Seems no one'll talk about it. This all started that night in the diner... maybe you could start there.	}{	Seems no one'll talk about it. This all started that night in the diner... maybe you could start there.	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	This Lily you spoke of. Is she dead?	}{	This Lily you spoke of. Is she dead?	}{	151	}{	G.E_Hope == 0	}{	}{	}{	}{	}{	}{	}{	}{	Is your flower dead?	}
+{	173	}{	You do know you're vampires, right?	}{	You do know you're vampires, right?	}{	131	}{	G.E_Vampire == 0	}{	}{	}{	}{	}{	}{	}{	}{	We're all children of the night, blood-thirsty and damned.	}
+{	174	}{	Are all these others here thin-bloods as well?	}{	Are all these others here thin-bloods as well?	}{	141	}{	G.E_Sabbath == 0	}{	}{	}{	}{	}{	}{	}{	}{	Does the thin blood flow for you all?	}
+{	175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	I'll see what I can do. Goodbye.	}{	I'll see what I can do. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains. Farewell.	}
+{	181	}{	Look at the ocean... I used to love swimming out into her at the crack of dawn.	}{	Look at the ocean... I used to love swimming out into her at the crack of dawn.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.E_Ocean = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	I'm sure you did. Can I ask you a few more questions?	}{	I'm sure you did. Can I ask you a few more questions?	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	183	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	184	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	185	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	I wouldn't try that again. See ya.	}{	I wouldn't try that again. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	191	}{	You should try up there, through that chain-link gate. Couple of nasty looking blokes come out there couple o' times a night.	}{	You should try up there, through that chain-link gate. Couple of nasty looking blokes come out there couple o' times a night.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	Thanks. Can I ask you a few more questions?	}{	Thanks. Can I ask you a few more questions?	}{	311	}{	G.E_Thin == 1	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	193	}{	Cool. Now who are you guys, exactly?	}{	Cool. Now who are you guys, exactly?	}{	11	}{	G.E_Thin == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me the tale of this thin little group.	}
+{	194	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	195	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	200	}{	Thanks.	}{	Thanks.	}{	0	}{	G.E_Thin == 1	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains. Farewell.	}
+{	201	}{	Got me. I reckon it happened a bit before we got here. Lot o' viciousness the whole world over. Bound to creep into your backyard sooner or later.	}{	Got me. I reckon it happened a bit before we got here. Lot o' viciousness the whole world over. Bound to creep into your backyard sooner or later.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.E_Murder = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	Can I ask you a few more questions?	}{	Can I ask you a few more questions?	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	203	}{	I'm looking for some guys that live on the beach. Know any place like that?	}{	I'm looking for some guys that live on the beach. Know any place like that?	}{	191	}{	G.Mercurio_Quest == 1 and not IsClan(pc,"Malkavian") and G.Beachhouse == 0 and G.E_Demons == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	204	}{	Have you seen bat-wielding beach demons?	}{	Have you seen bat-wielding beach demons?	}{	301	}{	G.Mercurio_Quest == 1 and IsClan(pc,"Malkavian") and G.Beachhouse == 0 and G.E_Demons == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	205	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	208	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	210	}{	I see. Goodbye.	}{	I see. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Souls dance to dark, delicious music. Farewell.	}
+{	211	}{	D'you find out anything yet?	}{	D'you find out anything yet?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	No, nothing yet. Can I ask you a few more questions?	}{	No, nothing yet. Can I ask you a few more questions?	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	The veil is still opaque. May I mine your gray matter?	}
+{	213	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	214	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	215	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	217	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	220	}{	No. But I think I have a lead. I'll let you know if anything turns up.	}{	No. But I think I have a lead. I'll let you know if anything turns up.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	No. The trail of thin blood is inconsistent. I must seek it out again.	}
+{	221	}{	You brought my Lily back. She told me all about what happened. I don't know why you helped us, but... your blood's worth bottlin'. I'll never let her go again. Thank you.	}{	You brought my Lily back. She told me all about what happened. I don't know why you helped us, but... your blood's worth bottlin'. I'll never let her go again. Thank you.	}{	#	}{	npc.SetDisposition("Joy", 2)	}{	pc.SetQuest("Lily",8)	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	You're welcome, E. Keep her safe.	}{	You're welcome, E. Keep her safe.	}{	231	}{	}{	}{	}{	}{	}{	}{	}{	}{	Keep your flower pinned next to your heart.	}
+{	223	}{	No one deserved to be left in that place. I did what was right.	}{	No one deserved to be left in that place. I did what was right.	}{	231	}{	}{	}{	}{	}{	}{	}{	}{	}{	The flower had taken root in a vicious garden.	}
+{	224	}{	Did she tell you about the guy she killed? That was quite a sight.	}{	Did she tell you about the guy she killed? That was quite a sight.	}{	251	}{	Humanity 3 & G.Lily_Extort == 2	}{	FindPlayer().HumanityAdd( -1 )	}{	}{	}{	}{	}{	}{	}{	Your little flower has ugly thorns, sickling.	}
+{	225	}{	Did she tell you about the guy she killed? That was quite a sight.	}{	Did she tell you about the guy she killed? That was quite a sight.	}{	251	}{	Humanity -3 & G.Lily_Extort == 2	}{	}{	}{	}{	}{	}{	}{	}{	Your little flower has ugly thorns, sickling.	}
+{	226	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	227	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	228	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	231	}{	We're gonna be gettin' out of LA soon. Too dangerous here. Rosa told us something big's about to happen and I don't want to be here when the Jack comes out of the box. Take that for what you will.	}{	We're gonna be gettin' out of LA soon. Too dangerous here. Rosa told us something big's about to happen and I don't want to be here when the Jack comes out of the box. Take that for what you will.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.E_Warn = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	I'll think about that. Thanks, E. Good luck.	}{	I'll think about that. Thanks, E. Good luck.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	He has already exited his box, but has not yet scared his children. I am gone.	}
+{	233	}{	"Jack comes out of the box"? I don't like the sound of that. Goodbye, E.	}{	"Jack comes out of the box"? I don't like the sound of that. Goodbye, E.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I look forward to the Jack's entrance.	}
+{	234	}{	If the shithouse goes up in flames, it'll probably be my fault. See you, E.	}{	If the shithouse goes up in flames, it'll probably be my fault. See you, E.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Death walks among us all, sickling. The last grains are falling. Farewell.	}
+{	235	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	236	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	238	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	241	}{	Evenin'.	}{	Evenin'.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	Hey. Can I ask you a few questions?	}{	Hey. Can I ask you a few questions?	}{	311	}{	G.E_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	243	}{	What's up, E. Can I ask you a few questions?	}{	What's up, E. Can I ask you a few questions?	}{	311	}{	G.E_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	May I mine your gray matter?	}
+{	244	}{	Did Lily tell you about the guy she killed? That was quite a sight.	}{	Did Lily tell you about the guy she killed? That was quite a sight.	}{	251	}{	Humanity 3 & G.Lily_Extort == 2	}{	FindPlayer().HumanityAdd( -1 )	}{	}{	}{	}{	}{	}{	}{	Your little flower has ugly thorns, sickling.	}
+{	245	}{	Did Lily tell you about the guy she killed? That was quite a sight.	}{	Did Lily tell you about the guy she killed? That was quite a sight.	}{	251	}{	Humanity -3 & G.Lily_Extort == 2	}{	}{	}{	}{	}{	}{	}{	}{	Your little flower has ugly thorns, sickling.	}
+{	246	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	247	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	248	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	250	}{	Just passing through. See ya.	}{	Just passing through. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	251	}{	Listen, I know Lily. And if she did that, well, I'm sure the bastard had it comin'. We've all done things that aren't our nature - 'specially because of this damned blood. I probably woulda done the same thing.	}{	Listen, I know Lily. And if she did that, well, I'm sure the bastard had it comin'. We've all done things that aren't our nature - 'specially because of this damned blood. I probably woulda done the same thing.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.E_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	Hmmm. Maybe you're right. Take care of yourself, E.	}{	Hmmm. Maybe you're right. Take care of yourself, E.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your words carry the weight of truth. Farewell.	}
+{	253	}{	Not the reaction I was going for. Thought you should know.	}{	Not the reaction I was going for. Thought you should know.	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	Thin-blooded little monsters.	}
+{	254	}{	Your girlfriend's a murderess.	}{	Your girlfriend's a murderess.	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your little flower has the hands of the reaper.	}
+{	255	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	256	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	Oh, rack off!	}{	Oh, rack off!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	263	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	264	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	265	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	268	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	270	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	271	}{	What, now they're sendin' the extra-uglies to sweep us up?	}{	What, now they're sendin' the extra-uglies to sweep us up?	}{	#	}{	npc.SetDisposition("Disgust", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	272	}{	Excuse me?	}{	Excuse me?	}{	1	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	273	}{	What did you say?	}{	What did you say?	}{	1	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	274	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	275	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	276	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	277	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	278	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	281	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	283	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	284	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	285	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	286	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	287	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	288	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	291	}{	You talkin' about the murders on the pier? Pfft. Got me. I reckon it happened a bit before we got here. Lot o' viciousness the whole world over. Bound to creep into your backyard sooner or later.	}{	You talkin' about the murders on the pier? Pfft. Got me. I reckon it happened a bit before we got here. Lot o' viciousness the whole world over. Bound to creep into your backyard sooner or later.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	G.E_Murder = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	May I mine your gray matter?	}{	May I mine your gray matter?	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	293	}{	Have you seen bat-wielding beach demons?	}{	Have you seen bat-wielding beach demons?	}{	301	}{	G.Mercurio_Quest == 1 and IsClan(pc,"Malkavian") and G.Beachhouse == 0 and G.E_Demons == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	294	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	295	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	296	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	297	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	298	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	300	}{	Souls dance to dark, delicious music. Farewell.	}{	Souls dance to dark, delicious music. Farewell.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	301	}{	Ya gotta mighty strange way o' sayin' things, mate. But if you be looking for those nasty lookin' blokes always stompin' through here, you should try up there through the chain-link gate.	}{	Ya gotta mighty strange way o' sayin' things, mate. But if you be looking for those nasty lookin' blokes always stompin' through here, you should try up there through the chain-link gate.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.E_Demons = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	302	}{	May I mine your gray matter?	}{	May I mine your gray matter?	}{	311	}{	G.E_Thin == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	303	}{	Tell me the tale of this thin little group.	}{	Tell me the tale of this thin little group.	}{	11	}{	G.E_Thin == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	304	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	305	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	306	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	307	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	308	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	309	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	310	}{	Dream of warmer waters. Farewell.	}{	Dream of warmer waters. Farewell.	}{	0	}{	G.E_Thin == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	311	}{	Be my guest.	}{	Be my guest.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	312	}{	Just thought I'd say goodbye one more time before you left. So... goodbye.	}{	Just thought I'd say goodbye one more time before you left. So... goodbye.	}{	0	}{	G.E_Quest == 3	}{	}{	}{	}{	}{	}{	}{	}{	Final farewells are sad and sorrowful. And this will be our last, little sickling.	}
+{	313	}{	Have you seen bat-wielding beach demons?	}{	Have you seen bat-wielding beach demons?	}{	301	}{	G.Mercurio_Quest == 1 and IsClan(pc,"Malkavian") and G.Beachhouse == 0 and G.E_Demons == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	314	}{	I'm looking for some guys that live on the beach. Know any place like that?	}{	I'm looking for some guys that live on the beach. Know any place like that?	}{	191	}{	G.Mercurio_Quest == 1 and not IsClan(pc,"Malkavian") and G.Beachhouse == 0 and G.E_Demons == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	315	}{	Do you know anything about the murder on the pier?	}{	Do you know anything about the murder on the pier?	}{	201	}{	G.Know_Murder == 1 and G.E_Murder == 0 and not IsClan(pc,"Malkavian") and G.E_Quest < 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	316	}{	Do you know anything of the shadow-cloaked killer?	}{	Do you know anything of the shadow-cloaked killer?	}{	291	}{	G.Know_Murder == 1 and G.E_Murder == 0 and IsClan(pc,"Malkavian") and G.E_Quest < 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	317	}{	So, uh... who are you guys?	}{	So, uh... who are you guys?	}{	11	}{	G.E_Thin == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me the tale of this thin little group.	}
+{	318	}{	So tell me... how did you get to be a thin-blood?	}{	So tell me... how did you get to be a thin-blood?	}{	91	}{	G.E_Lily == 0 and G.E_Thin == 1 and G.E_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	Why is your blood so thin?	}
+{	319	}{	Tell me again about what happened with you and Lily.	}{	Tell me again about what happened with you and Lily.	}{	111	}{	G.E_Lily == 1 and G.E_Thin == 1 and G.E_Quest == 0	}{	G.E_Story = 0	}{	}{	}{	}{	}{	}{	}{	Tell me the tale of you and your Lily.	}
+{	320	}{	Any idea where I might start looking for information about thin-bloods?	}{	Any idea where I might start looking for information about thin-bloods?	}{	171	}{	G.E_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	Where might I seek precious secrets of your thin plasma?	}
+{	321	}{	Later.	}{	Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	322	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	323	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	324	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	325	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	326	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	327	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	328	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	329	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	330	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	331	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	332	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	333	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	334	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	335	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	336	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	337	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	338	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	339	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	340	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	341	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	342	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	343	}{	(Starting Condition)	}{	}{	261	}{	G.E_Pissed == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	344	}{	(Starting Condition)	}{	}{	241	}{	G.E_Warn == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	345	}{	(Starting Condition)	}{	}{	221	}{	G.E_Quest == 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	346	}{	(Starting Condition)	}{	}{	211	}{	G.E_Quest == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	347	}{	(Starting Condition)	}{	}{	181	}{	G.E_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	348	}{	(Starting Condition)	}{	}{	241	}{	G.E_Story == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	349	}{	(Starting Condition)	}{	}{	271	}{	npc.times_talked == 1 and IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	350	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

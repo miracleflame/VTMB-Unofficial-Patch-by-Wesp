@@ -1,0 +1,277 @@
+// Average Sub-Machinegun
+
+WeaponData
+{
+	"printname"		"Ingram MAC-10"	// changed by wesp
+	"description"		"A small, light machine pistol that fires a 9 mm pistol round, not made for accuracy as much as to deliver the largest amount of ordinance in the shortest period of time. Bursts are more accurate but due to the high cyclic rate and low weight of the weapon, it is still seen as mainly a \"spray and pray\" gun."
+	"viewmodel"		"models/weapons/submachine_mac10/view/v_submachine_mac10.mdl"
+	"playermodel"		"models/weapons/submachine_mac10/ground/g_submachine_mac10.mdl"
+	"wieldmodel_f"		"models/weapons/submachine_mac10/wield/w_f_submachine_mac10.mdl"
+	"wieldmodel_m"		"models/weapons/submachine_mac10/wield/w_m_submachine_mac10.mdl"
+	"infomodel"		"models/weapons/submachine_mac10/info/info_submachine_mac10.mdl"
+	// This should match the viewmodel QC file offset:
+	"origin_x"		"0"
+	"origin_y"		"3"
+	"origin_z"		"67"
+	"anim_prefix"		"mac10"
+
+	"activation0"		"Full Auto"
+	"activation1"		"Error"
+	"jammed0"		"Jammed"
+	"jammed1"		"Jammed"
+	"bucket"		"1"
+	"bucket_position"	"5"
+	"camera_class"		"noswitch"	// changed by wesp
+	"weight"		"3"
+	"item_flags"		"0"
+	"item_type"		"weapon_firearm"
+	"sound_group"	"Mac_10"
+	"uses_accuracycursors"	"1"
+	"impact_snd_group"	"bullet"
+
+	"item_worth"		"110"
+	"player_sell"		"15"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"Weapons\Ranged\Mac_10\Deploy.wav"
+		}
+	}
+
+	Magazine
+	{
+		"ammoprintname"		"MAC-10 9 mm Clip"	// changed by wesp
+		"ammodescription"	"A magazine of MAC-10 9 mm rounds."	// changed by wesp
+		"ammoinfomodel"		"models/weapons/ammo/mac_10/i_mac_10_ammo.mdl"
+
+		"ammo_worth"		"11"//"15"
+
+		"Size"			"32"	// changed by wesp
+		"Default_Size"		"32"	// changed by wesp
+		"Dropped_Ammo"		"32"	// changed by wesp
+		"Type"			"Mac_10Round"
+		"ReloadTime"		"2.5"
+		
+		SoundData
+		{
+			"reload"
+			{
+				"sound1"	"Weapons/Ranged/Mac_10/Reload.wav"
+			}
+
+			"reload_npc"
+			{		
+				"sound1"	"weapons/Ranged/Mac_10/Reload.wav"
+			}
+		}
+	}
+
+	Activation
+	{
+		"Botch_Table"		"Pistols"
+		"Range"			"25"
+		"Tag"			"Primary"
+		"Type"			"Attack"
+		"allow_autofire"	"1"
+		"Ammo_Type"		"Mac_10Round"
+		"Ammo_Cost"		"1"
+		"Ammo_Fired"		"1"
+
+		"SkillRequirement"	"5"			// min. skill requirement used in dmg calculations		
+		"BaseLethality"		"9"			// base lethality used in dmg calculations
+		"Dmg"			"1 Lethal Ranged_Combat DMG_BULLET"
+
+		"Attack_Rate"			"0.10"
+		"NPC_Attack_Rate_Min"		"0.6"		// The range of times for NPCs using this weapon to pause between
+		"NPC_Attack_Rate_Max"		"2.0"		//   attacks when at a distance of NPC_Attack_Rate_Base_Range inches. 
+		"NPC_Attack_Rate_Base_Range"	"100"	//   Attack times scale down to Attack_Rate at a range of 0, and up
+							//   proportionally as the range increases. If NPC_Attack_Rate_Base_Range
+							//   is 0, the delay will not be scaled based on distance.
+
+		// SKS_RANGED
+		"KickPitchMin"			"-0.2"	// changed by wesp
+		"KickPitchMax"			"-2.0"	// changed by Wesp
+		"KickYawMin"			"-0.2"
+		"KickYawMax"			"-2.0"	// changed by wesp
+		"KickTime"				"0.04"
+		"CrosshairMinSize"		"20"		// smallest crosshair size for this activation [0-99]
+		"CrosshairFireSize"		"99"		// MAXIMUM size (Firearms 1) of the crosshair when the gun is fired [0-99] scales to Min as player's firearms increases
+		"CrosshairFireSizeMin"		"70"		// MIN size (Firearms 10) of the crosshair when the gun is fired [0-99]
+		"CrosshairWalkSizeMin"	"20"			// min size of the crosshair when the player is walking [0-99], changed by wesp
+		"CrosshairWalkSizeMax"	"20"			// max size of the crosshair when the player is walking [0-99], changed by wesp
+		"CrosshairRunSizeMin"	"70"			// min size of the crosshair when the player is running [0-99], changed by Wesp
+		"CrosshairRunSizeMax"	"99"		//"90"	// max size of the crosshair when the player is running [0-99], changed by Wesp
+
+		"CrosshairIncSpeedMin"	"18"	//"60"min speed(10 Firearm Feat) at which to increase bloom -low # slower
+		"CrosshairIncSpeedMax"	"18"	//"60"max speed(1 Firearm Feat) at which to increase bloom -high # faster
+		"CrosshairDecSpeedMin"	"28"	//min speed(1 Firearm Feat) at which to decrease bloom -low # slower
+		"CrosshairDecSpeedMax"	"28"	//"40"max speed(10 Firearm Feat) at which to decrease bloom -high # faster
+
+		"CrosshairFirePercent"	"0.08"			// percent to bloom to crosshair upon firing a bullet
+
+		"SpreadAngle"		"5.0"
+		"CriminalLevel"	"3"
+		"Accuracy"		"6"
+		"BurstMin"		"3"
+		"BurstMax"		"5"
+
+		SoundData
+		{
+			"empty"
+			{
+				"sound1"	"Weapons/Ranged/Mac_10/Empty.wav"
+			}
+
+			"attack"
+			{
+				"sound1"	"Weapons/Ranged/Mac_10/Attack_1.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Ranged/Mac_10/Attack_1.wav"	
+
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Ranged/Deploy.wav"
+			}
+
+			"put_away"
+			{
+				"sound1"	"Weapons/Ranged/Put_Away.wav"
+			}			
+			
+			"fidget"
+			{
+				"sound1"	"Weapons/Ranged/Mac_10/Fidget.wav"
+			}
+		}
+
+		Tables
+		{
+			Table
+			{
+				"Name"          "WeaponRanges"
+				"InternalName"  "WeaponRanges"
+
+				"Clamping"      "1"
+
+				// point blank 0-80, close 80-110, short/medium 110-220,
+				// meduim 220-370, long 370-650, great 650+
+
+				"0"             "0"         // 5 (bonus)
+				"1"             "0"         // 4 (bonus)
+				"2"             "0"         // 3 (bonus)
+				"3"             "80"        // 2 (bonus)
+				"4"             "110"       // 1 (bonus)
+				"5"             "370"       // 0 (neutral)
+				"6"             "30000"     //-1 (penalty)
+				"7"             "30000"     //-2 (penalty)
+				"8"             "30000"     //-3 (penalty)
+				"9"             "30000"     //-4 (penalty)
+			}
+			Table
+			{
+				"Name"          "GrossPointBlank"
+				"InternalName"  "GrossPointBlank"
+
+				"Clamping"      "1"
+
+
+				// percentage from 1-12 feet out
+
+				"0"             "100"
+				"1"             "90"
+				"2"             "80"
+				"3"             "70"
+				"4"             "60"
+				"5"             "50"
+				"6"             "40"
+				"7"             "30"
+				"8"             "20"
+				"9"             "10"
+			}
+			
+		}
+	}
+
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/Mac_10_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/Mac_10"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_ranged/ammo/mac_10_ammo"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo2"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_ranged/ammo/mac_10_ammo_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+
+
+// Disabled because it uses Accuracy Crosshairs
+//		"crosshair"
+//		{
+//			"640"
+//			{
+//				"file"		"crosshairs"
+//				"x"			"0"
+//				"y"			"48"
+//				"width"		"24"
+//				"height"	"24"
+//			}
+
+
+
+		// Accuracy Crosshairs
+		"Acc_Crosshair00"		"hud/Crosshairs/Crosshair_01"
+		"Acc_Crosshair01"		"hud/Crosshairs/Crosshair_02"
+		"Acc_Crosshair02"		"hud/Crosshairs/Crosshair_03"
+		"Acc_Crosshair03"		"hud/Crosshairs/Crosshair_04"
+		"Acc_Crosshair04"		"hud/Crosshairs/Crosshair_05"
+		"Acc_Crosshair05"		"hud/Crosshairs/Crosshair_06"
+		"Acc_Crosshair06"		"hud/Crosshairs/Crosshair_07"
+		"Acc_Crosshair07"		"hud/Crosshairs/Crosshair_08"
+		"Acc_Crosshair08"		"hud/Crosshairs/Crosshair_09"
+		"Acc_Crosshair09"		"hud/Crosshairs/Crosshair_10"
+		"Interactive_Crosshair"	"hud/Crosshairs/Crosshair_Interactive"
+	}
+}

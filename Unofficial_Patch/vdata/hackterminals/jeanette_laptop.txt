@@ -1,0 +1,124 @@
+TerminalDefinition
+{
+	"screen saver"		"Kitties vs. Ducklings for my heart"		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+	"email_password"	"wishes"		// the user must type this to access email from this terminal
+	"email_username"	"Jeannie"
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"The Asylum"
+		"line1"		"Hello Sweetheart"	// changed by wesp
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+	SubDir
+	{
+		"name"			"Contacts"
+		"password"		"callme"
+		"description"		"Little Black Book"
+
+		Function
+		{
+			"name"		"Mikey"
+			"description"	"Mikey"
+			"runtext"	"(310) 555-5337, mikey@yahooligan.vtm - *****"
+		}
+
+		Function
+		{
+			"name"		"Bertie"
+			"description"	"Bertie"
+			"runtext"	"bertram@schrecknet.vtm - **"
+		}
+
+		Function
+		{
+			"name"		"Arthur"
+			"description"	"Arthur"
+			"runtext"	"(310) 555-9829 - *"
+		}
+
+		Function
+		{
+			"name"		"Jeff"
+			"description"	"Jeff"
+			"runtext"	"(310) 555-9006 - ****"
+		}
+
+		Function
+		{
+			"name"		"Sara"
+			"description"	"Sara"
+			"runtext"	"(310) 555-2216 - ****"
+		}
+
+		Function
+		{
+			"name"		"Jack"
+			"description"	"Jack"
+			"runtext"	"(310) 555-8181 - *****"
+		}
+
+		Function	// added by wesp
+		{
+			"name"		"Duckling"
+			"description"	"Duckling"
+			"runtext"	"My new kitten! - ***"
+			"dependency"	"G.Jeanette_Boink > 0"
+		}		
+
+	}
+
+	Email
+	{
+		"subject"	"Freedom"
+		"sender"	"Jack"
+		"body"		"The lady by the sea is far too beautiful to be chained to the Camarilla."
+		"dependency"	"G.Therese_Dead == 1"
+	}
+
+	Email
+	{
+		"subject"	"Taking it underground"
+		"sender"	"Bertram"
+		"body"		"I'll be hiding out until your sister calms down. Let her know I pose no threat, and have her contact me when all is well."
+		"dependency"	"G.Therese_Quest == 1"
+	}
+
+	Email
+	{
+		"subject"	"Friday Night"
+		"sender"	"Mikey"
+		"body"		"Hey, what are you doing Friday night? I was thinking about stopping by the club, maybe we can do some... heh... dancing?"
+	}
+
+	Email
+	{
+		"subject"	"Santa Monica is MY city!!"
+		"sender"	"Therese Voerman"	
+		"body"		"You dirty little slut! How DARE you meddle in the affairs of my city, and with that disgusting Nosferatu no less?"
+	}
+
+	Email
+	{
+		"subject"	"re: Santa Monica is MY city!!"
+		"sender"	"Therese Voerman"
+		"body"		"I'm disgusting? I'm not the one that let that Nosferatu touch me! Can't you see that he is trying to tear us apart to take over the city?"
+		"dependency"	"G.Therese_Quest >= 2"	// changed by wesp
+	}
+
+	Email
+	{
+		"subject"	"re: Santa Monica is MY city!!"
+		"sender"	"Therese Voerman"
+		"body"		"How could you? And now my gallery too? I'm going to show you a little something, Jeanette... the sun!"
+		"dependency"	"G.Jeanette_Quest > 0 or G.Jeanette_Refuse > 0"	// changed by wesp
+	}
+}

@@ -1,0 +1,597 @@
+{	1	}{	Hey, you! You want your fortune read? You give me five dollar, I give you "secret Chinese enlightenment"? Only stupid person not want to know future!	}{	Hey, you! You want your fortune read? You give me five dollar, I give you "secret Chinese enlightenment"? Only stupid person not want to know future!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Ji_Know = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	Sure, why don't you tell me my future?	}{	Sure, why don't you tell me my future?	}{	21	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	I don't believe in that crap.	}{	I don't believe in that crap.	}{	11	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	You Ji Wen Ja?	}{	You Ji Wen Ja?	}{	301	}{	G.Lu_Ji >= 1	}{	}{	}{	}{	}{	}{	}{	}{	Gee When Jaw?	}
+{	5	}{	You calling me stupid?	}{	You calling me stupid?	}{	31	}{	G.Lu_Ji == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	You know of the Dark Father too?!?	}{	You know of the Dark Father too?!?	}{	518	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	You know of the Dark Father too?!?	}
+{	8	}{	Whatever. Goodbye.	}{	Whatever. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I already know. I don't want to know.	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	What come after today? Tomorrow! Tomorrow the future! How you not believe in tomorrow? Aw, forget you. Your future not look good anyway.	}{	What come after today? Tomorrow! Tomorrow the future! How you not believe in tomorrow? Aw, forget you. Your future not look good anyway.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	My future's not good? What do you mean?	}{	My future's not good? What do you mean?	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	What have you seen?	}
+{	13	}{	Right. Whatever you say, pal. Goodbye.	}{	Right. Whatever you say, pal. Goodbye.	}{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	I already know. I don't want to know.	}
+{	14	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	HEY! COME GET FORTUNE! YOU TOO GOOD FOR FUTURE?!?	}{	HEY! COME GET FORTUNE! YOU TOO GOOD FOR FUTURE?!?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	Five dollar!	}{	Five dollar!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	Here. Tell me my fortune.	}{	Here. Tell me my fortune.	}{	441	}{	OneOfSet(1,6) and pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Here, forecast my fate!	}
+{	23	}{	Here. Tell me my fortune.	}{	Here. Tell me my fortune.	}{	451	}{	OneOfSet(2,6) and pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Here, forecast my fate!	}
+{	24	}{	Here. Tell me my fortune.	}{	Here. Tell me my fortune.	}{	461	}{	OneOfSet(3,6) and pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Here, forecast my fate!	}
+{	25	}{	Here. Tell me my fortune.	}{	Here. Tell me my fortune.	}{	471	}{	OneOfSet(4,6) and pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Here, forecast my fate!	}
+{	26	}{	Here. Tell me my fortune.	}{	Here. Tell me my fortune.	}{	481	}{	OneOfSet(5,6) and pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Here, forecast my fate!	}
+{	27	}{	Here. Tell me my fortune.	}{	Here. Tell me my fortune.	}{	491	}{	OneOfSet(6,6) and pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Here, forecast my fate!	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	I don't have five dollars right now.	}{	I don't have five dollars right now.	}{	51	}{	pc.CurrentMoney() < 5	}{	}{	}{	}{	}{	}{	}{	}{	My treasure chest is empty.	}
+{	30	}{	Sorry, not interested. Goodbye.	}{	Sorry, not interested. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I already know. I don't want to know.	}
+{	31	}{	Oh, you tough! You gonna beat up old man? Oh, no! It senior citizen boxing champ! Please don't break my other hip, Mr. Tough Guy!	}{	Oh, you tough! You gonna beat up old man? Oh, no! It senior citizen boxing champ! Please don't break my other hip, Mr. Tough Guy!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Calm down, I'm not going to hit an old man.	}{	That's Mrs. Tough Guy to you! But I'm not going to hit an old man.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	33	}{	Pathetic. I'll let time take care of you. Goodbye.	}{	I'm female, you know? And I'll let time take care of you. Goodbye.	}{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	Forget you! I give fortune to someone else!	}{	Forget you! I give fortune to someone else!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Then why you still here? You want fortune read or not?	}{	Then why you still here? You want fortune read or not?	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	Okay.	}{	Okay.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	43	}{	No thanks, bye.	}{	No thanks, bye.	}{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	Ji Wen Ja fortune ten times better than voodoo priestess fortune!	}{	Ji Wen Ja fortune ten times better than voodoo priestess fortune!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Oh, you want fortune for free, okay, here go. You will get job in future, probably making French fry. You will come back with burger money and pay for real fortune. Don't waste my time!	}{	Oh, you want fortune for free, okay, here go. You will get job in future, probably making French fry. You will come back with burger money and pay for real fortune. Don't waste my time!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	Sorry.	}{	Sorry.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	What time?	}
+{	53	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Oh! Look who it is! It badass of Chinatown! You want fortune read, Mr. Superhero? Maybe you interested in making some cash?	}{	Oh! Look who it is! It badass of Chinatown! You want fortune read, Miss Superhero? Maybe you interested in making some cash?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Ji_Badass = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Money?	}{	Money?	}{	71	}{	G.Lu_Ji == 0	}{	}{	}{	}{	}{	}{	}{	}{	Almighty Dollars?	}
+{	63	}{	You Ji Wen Ja?	}{	You Ji Wen Ja?	}{	301	}{	G.Lu_Ji >= 1	}{	}{	}{	}{	}{	}{	}{	}{	Gee When Jaw?	}
+{	64	}{	I'd like my fortune read.	}{	I'd like my fortune read.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am anxious about my fate.	}
+{	65	}{	Fortune telling is crap.	}{	Fortune telling is crap.	}{	11	}{	G.Lu_Ji == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	Not interested. Goodbye.	}{	Not interested. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Paper has no power over me... any more.	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Yes, big, big dollar for easy job. All you have to do is make one person disappear. But not like magic show, you understand?	}{	Yes, big, big dollar for easy job. All you have to do is make one person disappear. But not like magic show, you understand?	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	You want me to kill someone?	}{	You want me to kill someone?	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	REDRUM!	}
+{	73	}{	Murder, eh? Now you're talking.	}{	Murder, eh? Now you're talking.	}{	81	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Why don't you say it a little louder so people on next block can hear? Yeah, that what I mean.	}{	Why don't you say it a little louder so people on next block can hear? Yeah, that what I mean.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	Sorry, I'm no killer. Find someone else.	}{	Sorry, I'm no killer. Find someone else.	}{	91	}{	Humanity 8	}{	}{	}{	}{	}{	}{	}{	}{	I only kill what I eat, and I have no stomach.	}
+{	83	}{	I need to hear the details first.	}{	I need to hear the details first.	}{	101	}{	Humanity -8	}{	}{	}{	}{	}{	}{	}{	}{	Continue that train of thought.	}
+{	84	}{	How painful and messy do you want it done?	}{	How painful and messy do you want it done?	}{	111	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	I'm running a special on gooey right now.	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	That fine. I find someone else who need a lot of cash.	}{	That fine. I find someone else who need a lot of cash.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Why don't you tell me the details? I could use the cash.	}{	Why don't you tell me the details? I could use the cash.	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	NO! I can change. See, now I love murder.	}
+{	93	}{	Like I said, I don't do that. Goodbye.	}{	Like I said, I don't do that. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	There is no shortage.	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	You may not believe it and I don't care, but I used to be number one hitman for Chinese mafia. They call me Ji Wen Ja - travel agent for underworld - because I send so many people there.	}{	You may not believe it and I don't care, but I used to be number one hitman for Chinese mafia. They call me Ji Wen Ja - travel agent for underworld - because I send so many people there.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	(Auto-Link)	}{	(Auto-Link)	}{	121	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	103	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	I like how you think. Listen up.	}{	I like how you think. Listen up.	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	(Auto-Link)	}{	(Auto-Link)	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	113	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	Before I retired, I carry out biggest mission of career: kill visiting Chinese government official. Too big mission for one man so I have friend, Lu Fang, assist me. We kill man, but have to hide reward so no one trace hit to us.	}{	Before I retired, I carry out biggest mission of career: kill visiting Chinese government official. Too big mission for one man so I have friend, Lu Fang, assist me. We kill man, but have to hide reward so no one trace hit to us.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	(Auto-Link)	}{	(Auto-Link)	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	123	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	Lu Fang and I both have key for cash box so both of us have to open it together many years after hit. But Lu a snake. He kill me once I open box. He say, I kill him - big liar! So we not speak anymore. But I need money. I want his key.	}{	Lu Fang and I both have key for cash box so both of us have to open it together many years after hit. But Lu a snake. He kill me once I open box. He say, I kill him - big liar! So we not speak anymore. But I need money. I want his key.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	You want me to kill Lu Fang and take his key?	}{	You want me to kill Lu Fang and take his key?	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	Pull the Fang and take his key?	}
+{	133	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	That's right. I give you ten percent of money you kill Lu. I sure Lu have key on him. You bring me key, I give you money... everybody happy - except Lu, ha ha ha!	}{	That's right. I give you ten percent of money you kill Lu. I sure Lu have key on him. You bring me key, I give you money... everybody happy - except Lu, ha ha ha!	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	I guess I'll go get that key from Lu, then.	}{	I guess I'll go get that key from Lu, then.	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will go pull the Fang.	}
+{	143	}{	Forget it. I'm not going to kill an old man.	}{	Forget it. I'm not going to kill an old man.	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Time will take care of him, not me.	}
+{	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	You good kid. I wait here for you.	}{	You good kid. I wait here for you.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Ji_Lu = 1; pc.SetQuest("Hitman",1)	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	Where can I find Lu?	}{	Where can I find Lu?	}{	171	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	153	}{	Where is the Fang's jaw?	}{	Where is the Fang's jaw?	}{	528	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	Where is the Fang's jaw?	}
+{	154	}{	I think I already got your key, where's my money?	}{	I think I already got your key, where's my money?	}{	261	}{	pc.HasItem("item_k_hitman_lu_key")	}{	}{	}{	}{	}{	}{	}{	}{	Methinks I found your treasure key already, where is my gold?	}
+{	155	}{	I'll be back shortly. Goodbye.	}{	I'll be back shortly. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	It will be like I was never gone.	}
+{	156	}{	Killing old people is like shooting fish in a barrel. Fun. Goodbye.	}{	Killing old people is like shooting fish in a barrel. Fun. Goodbye.	}{	0	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	Killing old people is like shooting fish in a barrel - fun. Goodbye.	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	Oh, what matter? He bad man, he kill lot of people! I think he communist too!	}{	Oh, what matter? He bad man, he kill lot of people! I think he communist too!	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	You've convinced me. Alright, I'll do it.	}{	You've convinced me. Alright, I'll do it.	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	Then my mind has changed.	}
+{	163	}{	That's evil. Never ever, ask me again. Goodbye.	}{	That's evil. Never ever, ask me again. Goodbye.	}{	0	}{	}{	G.Ji_Refuse = 1	}{	}{	}{	}{	}{	}{	}{	I am not so muddled as to become blind to evil. Never ask me this again.	}
+{	164	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	Lu a big booze sponge. He spend all his time and money trying to perfect art of being drunk off his ass at Red Dragon lounge. You probably smell him before you see him, like weasel he is.	}{	Lu a big booze sponge. He spend all his time and money trying to perfect art of being drunk off his ass at Red Dragon lounge. You probably smell him before you see him, like weasel he is.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	I see. Goodbye.	}{	I see. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Keep the nostrils open, understood.	}
+{	173	}{	One key coming up. Goodbye.	}{	One key coming up. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will enter the dragon.	}
+{	174	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	Where my key?	}{	Where my key?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	Lu offered me twenty percent if I kill you.	}{	Lu offered me twenty percent if I kill you.	}{	201	}{	G.Lu_Ji == 1 and G.Lu_Killed != 1 and G.Ji_Lu != 2	}{	}{	}{	}{	}{	}{	}{	}{	The Fang outbids you.	}
+{	183	}{	Lu offered me forty percent if I kill you.	}{	Lu offered me forty percent if I kill you.	}{	221	}{	G.Lu_Ji == 2 and G.Lu_Killed != 1 and G.Ji_Lu != 3	}{	}{	}{	}{	}{	}{	}{	}{	The Fang outbids you again.	}
+{	184	}{	Lu offered me sixty percent if I kill you.	}{	Lu offered me sixty percent if I kill you.	}{	231	}{	G.Lu_Ji == 3 and G.Lu_Killed != 1 and G.Ji_Lu != 4	}{	}{	}{	}{	}{	}{	}{	}{	The Fang outbids you again.	}
+{	185	}{	Lu offered me eighty percent if I kill you.	}{	Lu offered me eighty percent if I kill you.	}{	241	}{	G.Lu_Ji == 4 and G.Lu_Killed != 1 and G.Ji_Lu != 5	}{	}{	}{	}{	}{	}{	}{	}{	The Fang outbids you again.	}
+{	186	}{	I got your key, where's my money?	}{	I got your key, where's my money?	}{	261	}{	pc.HasItem("item_k_hitman_lu_key")	}{	}{	}{	}{	}{	}{	}{	}{	I found your treasure key, where is my gold?	}
+{	187	}{	You should put your past behind you and trust each other. Why are you fighting?	}{	You should put your past behind you and trust each other. Why are you fighting?	}{	321	}{	G.Lu_Killed != 1 and G.Lu_Ji > 0	}{	}{	}{	}{	}{	}{	}{	}{	Why must the Fang be pulled? Fangs belong with Gee When Jaws.	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	How about a fortune?	}{	How about a fortune?	}{	191	}{	G.Ji_Fortune == 0 and G.Lu_Killed != 1	}{	}{	}{	}{	}{	}{	}{	}{	I am anxious about my fate.	}
+{	190	}{	I'm working on it. Goodbye.	}{	I'm working on it. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will enter the dragon.	}
+{	191	}{	You want fortune? Okay, here go. You going to go to Red Dragon. You going to see monkey-faced drunk named Lu. Lu going to have an accident, fall on bullet. You going to take key from former Lu and bring to rich man, Ji Wen Ja.	}{	You want fortune? Okay, here go. You going to go to Red Dragon. You going to see monkey-faced drunk named Lu. Lu going to have an accident, fall on bullet. You going to take key from former Lu and bring to rich man, Ji Wen Ja.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Ji_Fortune = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	Lu offered me twenty percent if I kill you.	}{	Lu offered me twenty percent if I kill you.	}{	201	}{	G.Lu_Ji == 1 and G.Lu_Killed != 1 and G.Ji_Lu != 2	}{	}{	}{	}{	}{	}{	}{	}{	The Fang outbids you.	}
+{	193	}{	Lu offered me forty percent if I kill you.	}{	Lu offered me forty percent if I kill you.	}{	221	}{	G.Lu_Ji == 2 and G.Lu_Killed != 1 and G.Ji_Lu != 3	}{	}{	}{	}{	}{	}{	}{	}{	The Fang outbids you again.	}
+{	194	}{	Lu offered me sixty percent if I kill you.	}{	Lu offered me sixty percent if I kill you.	}{	231	}{	G.Lu_Ji == 3 and G.Lu_Killed != 1 and G.Ji_Lu != 4	}{	}{	}{	}{	}{	}{	}{	}{	The Fang outbids you again.	}
+{	195	}{	Lu offered me eighty percent if I kill you.	}{	Lu offered me eighty percent if I kill you.	}{	241	}{	G.Lu_Ji == 4 and G.Lu_Killed != 1 and G.Ji_Lu != 5	}{	}{	}{	}{	}{	}{	}{	}{	The Fang outbids you again.	}
+{	196	}{	I got your key, where's my money?	}{	I got your key, where's my money?	}{	261	}{	pc.HasItem("item_k_hitman_lu_key")	}{	}{	}{	}{	}{	}{	}{	}{	I found your treasure key, where is my gold?	}
+{	197	}{	You should put your past behind you and trust each other. Why are you fighting?	}{	You should put your past behind you and trust each other. Why are you fighting?	}{	321	}{	G.Lu_Killed != 1 and G.Lu_Ji > 0	}{	}{	}{	}{	}{	}{	}{	}{	Why must the Fang be pulled? Fangs belong with Gee When Jaws.	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	200	}{	I got it. Goodbye.	}{	I got it. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will enter the dragon.	}
+{	201	}{	What?!? Lu a liar. You bring him key, he go senile, say "What deal? I don't know deal!" You not trust Lu! Ji Wen Ja your friend!	}{	What?!? Lu a liar. You bring him key, he go senile, say "What deal? I don't know deal!" You not trust Lu! Ji Wen Ja your friend!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	Twenty percent's an awful lot of money.	}{	Twenty percent's an awful lot of money.	}{	211	}{	}{	}{	}{	}{	}{	}{	}{	}{	Is that your final offer?	}
+{	203	}{	Money speaks a whole lot louder than BS.	}{	Money speaks a whole lot louder than BS.	}{	211	}{	}{	}{	}{	}{	}{	}{	}{	}{	Treasure is my only motivation.	}
+{	204	}{	Forget it, Ji. You're a dead man.	}{	Forget it, Ji. You're a dead man.	}{	211	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	205	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	208	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	211	}{	Wait wait wait! I give you thirty percent! You take care of Lu, I give you more money! Gah, I hate Lu!	}{	Wait wait wait! I give you thirty percent! You take care of Lu, I give you more money! Gah, I hate Lu!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Ji_Lu = 2; pc.SetQuest("Hitman",1)	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	Thirty percent? Sounds good. I'll be back. Goodbye.	}{	Thirty percent? Sounds good. I'll be back. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	More is always the right answer.	}
+{	213	}{	And for thirty percent, I hate Lu, too. Goodbye.	}{	And for thirty percent, I hate Lu, too. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Now I hate the Fang too. I am gone.	}
+{	214	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	215	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	217	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	221	}{	Forty?!? Lu evil man. When he was hitman, he kill women, children, pets... I only kill other men. He have no conscience! Okay, okay. I hate Lu so much, I give you fifty percent.	}{	Forty?!? Lu evil man. When he was hitman, he kill women, children, pets... I only kill other men. He have no conscience! Okay, okay. I hate Lu so much, I give you fifty percent.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Ji_Lu = 3; pc.SetQuest("Hitman",1)	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	223	}{	Boy, are you guys stupid. Giving me all your money. What do I care?	}{	Boy, are you guys stupid. Giving me all your money. What do I care?	}{	371	}{	}{	}{	}{	}{	}{	}{	}{	}{	The money is bloody, but it is all mine. Stupid, but lucrative.	}
+{	224	}{	If Lu won't pay more, he's a dead man. Goodbye.	}{	If Lu won't pay more, he's a dead man. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	The Fang reaches deep in his pockets, or lies deep underground.	}
+{	225	}{	Fifty? Okay, deal. Goodbye.	}{	Fifty? Okay, deal. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	More is always the right answer.	}
+{	226	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	227	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	228	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	231	}{	Lu gonna give you sixty? He a crazy man! He spend all the money on plum wine and cheap beer! I want to use money for orphans - yeah, that right, I want to give back blood money to community. Aye yah. Fine. I give you seventy. Go get Lu.	}{	Lu gonna give you sixty? He a crazy man! He spend all the money on plum wine and cheap beer! I want to use money for orphans - yeah, that right, I want to give back blood money to community. Aye yah. Fine. I give you seventy. Go get Lu.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Ji_Lu = 4; pc.SetQuest("Hitman",1)	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	233	}{	Boy are you guys stupid. Giving me all your money. What do I care?	}{	Boy are you guys stupid. Giving me all your money. What do I care?	}{	371	}{	}{	}{	}{	}{	}{	}{	}{	}{	The money is bloody, but it is all mine. Stupid, but lucrative.	}
+{	234	}{	Seventy? You got it. Goodbye.	}{	Seventy? You got it. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	More is always the right answer.	}
+{	235	}{	This is too easy. Goodbye.	}{	This is too easy. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Heh heh heh. This should be criminal. Oh, wait... it is.	}
+{	236	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	238	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	241	}{	Listen! Lu is evil man. He trick you - hell, he try to kill you after you give him key. Ji Wen Ja is your friend. I give you eighty, same as Lu, but Lu, he deserve to die. Please rid the earth of big drunken evil. I swear, I give you eighty - no trick!	}{	Listen! Lu is evil man. He trick you - hell, he try to kill you after you give him key. Ji Wen Ja is your friend. I give you eighty, same as Lu, but Lu, he deserve to die. Please rid the earth of big drunken evil. I swear, I give you eighty - no trick!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Ji_Lu = 5; pc.SetQuest("Hitman",1)	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	Boy are you guys stupid. Giving me all your money. What do I care?	}{	Boy are you guys stupid. Giving me all your money. What do I care?	}{	371	}{	}{	}{	}{	}{	}{	}{	}{	}{	The money is bloody, but it is all mine. Stupid, but lucrative.	}
+{	243	}{	I never liked Lu anyway. Goodbye.	}{	I never liked Lu anyway. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	The Fang MUST be pulled.	}
+{	244	}{	Sorry, Ji. A deal's a deal. I never liked you anyway. Give me your key.	}{	Sorry, Ji. A deal's a deal. I never liked you anyway. Give me your key.	}{	251	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hmm... but the Fang cracks me up, so... give me the Jaw key.	}
+{	245	}{	You lose, Ji. I'll pry that key from your cold, dead hands.	}{	You lose, Ji. I'll pry that key from your cold, dead hands.	}{	251	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will break the Jaw and take the key.	}
+{	246	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	247	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	248	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	250	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	251	}{	Oh, I give you something, but it not key!	}{	Oh, I give you something, but it not key!	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	}
+{	253	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	254	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	255	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	256	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	Hah! Lu in Hell drinking demon piss! I win, Lu! Hah hah! Oh, this happiest day I've had in fifty years! I dance on your grave, Lu!	}{	Hah! Lu in Hell drinking demon piss! I win, Lu! Hah hah! Oh, this happiest day I've had in fifty years! I dance on your grave, Lu!	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	Can I have my money?	}{	Can I have my money?	}{	271	}{	}{	}{	}{	}{	}{	}{	}{	}{	The Fang is pulled. Where is my reward?	}
+{	263	}{	That's great, but I'd like my money.	}{	That's great, but I'd like my money.	}{	271	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	264	}{	Not that it wasn't fun, but can I have my money?	}{	Not that it wasn't fun, but can I have my money?	}{	271	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	That was a laugh... but I still want my prize.	}
+{	265	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	268	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	270	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	271	}{	Sure, sure, I give you your money. But I have to get money first. You give me key, I go get money, you meet me here later for big dollar.	}{	Sure, sure, I give you your money. But I have to get money first. You give me key, I go get money, you meet me here later for big dollar.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	272	}{	Fine, here's the key. I'll be back later.	}{	Fine, here's the key. I'll be back later.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	The Fang's key.... I will reappear later.	}
+{	273	}{	You know what will happen to you if you don't pay, right? Here's the key.	}{	You know what will happen to you if you don't pay, right? Here's the key.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	If you take this key and flee, you unlock the afterlife.	}
+{	274	}{	Forget it. No cash, no key.	}{	Forget it. No cash, no key.	}{	291	}{	}{	}{	}{	}{	}{	}{	}{	}{	The hand with the key opens when the other hand is full of riches.	}
+{	275	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	276	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	277	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	278	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	281	}{	Don't worry! Ji Wen Ja not going to trick you. I be back later, have money then. Maybe I buy new suit for Lu funeral, hah ha hah!	}{	Don't worry! Ji Wen Ja not going to trick you. I be back later, have money then. Maybe I buy new suit for Lu funeral, hah ha hah!	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Ji_Key = 1; pc.SetQuest("Hitman",5); pc.RemoveItem("item_k_hitman_lu_key")	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	Fine. I'll talk to you later. Goodbye.	}{	Fine. I'll talk to you later. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hah... hah hah... AAH HAH HAH HAH HAH. Don't forget, or else!	}
+{	283	}{	You'd better have the money. Or else. Goodbye.	}{	You'd better have the money. Or else. Goodbye.	}{	0	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	You'd better have the money, or else! Goodbye.	}
+{	284	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	285	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	286	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	287	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	288	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	291	}{	No key, no cash. You think I loaded? Why you think I have you get key from Lu? You think fortune teller millionaire? Trust Ji Wen Ja. Give me key, I have money later.	}{	No key, no cash. You think I loaded? Why you think I have you get key from Lu? You think fortune teller millionaire? Trust Ji Wen Ja. Give me key, I have money later.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	Here, but you'd better get the money.	}{	Here, but you'd better get the money.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	The Fang's key.... I will reappear later.	}
+{	293	}{	Cross me and you're a dead man. Here's the key.	}{	Cross me and you're a dead man. Here's the key.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	If you take this key and flee, you unlock the afterlife.	}
+{	294	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	295	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	296	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	297	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	298	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	300	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	301	}{	You work for IRS? Ho, n-no English, sorry!	}{	You work for IRS? Ho, n-no English, sorry!	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	302	}{	Lu said he'd give me a share of the money for your key.	}{	Lu said he'd give me a share of the money for your key.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	The Fang sends me for your key.	}
+{	303	}{	You're a dead man. Lu sends his regards.	}{	You're a dead man. Lu sends his regards.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	The Fang hired your death, which is what I am.	}
+{	304	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	305	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	306	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	307	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	308	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	309	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	310	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	311	}{	Wait! You work for Lu? He want key, right? How much he pay you?	}{	Wait! You work for Lu? He want key, right? How much he pay you?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	312	}{	Twenty percent.	}{	Twenty percent.	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	A lot.	}
+{	313	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	314	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	315	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	316	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	317	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	318	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	319	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	320	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	321	}{	If I open treasure with Lu, Lu kill me, cuz he sneaky. What I do, trust Lu? Hah! That like trusting booze with... Lu! You know he going to drink it, so don't give him opportunity.	}{	If I open treasure with Lu, Lu kill me, cuz he sneaky. What I do, trust Lu? Hah! That like trusting booze with... Lu! You know he going to drink it, so don't give him opportunity.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	322	}{	Aren't you two too old to kill each other? And you'd never get away with it.	}{	Aren't you two too old to kill each other? And you'd never get away with it.	}{	331	}{	Persuasion 7	}{	}{	}{	}{	}{	}{	}{	}{	You are so close to death. Death or imprisonment is all that waits.	}
+{	323	}{	Man, your stupidity makes me angry! You can work together.	}{	Man, your stupidity makes me angry! You can work together.	}{	331	}{	Intimidate 7 & G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	My head aches talking to you. Make it stop and be friends!	}
+{	324	}{	Whatever, fine. I'll go kill Lu. Goodbye.	}{	Whatever, fine. I'll go kill Lu. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Eh, I will pull the Fang.	}
+{	325	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	326	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	327	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	328	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	329	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	330	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	331	}{	Maybe, but Lu crazy! He once kill puppy cuz it bark all night and keep him up. You want me to trust puppy murderer?	}{	Maybe, but Lu crazy! He once kill puppy cuz it bark all night and keep him up. You want me to trust puppy murderer?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	332	}{	When is the last time you talked to Lu?	}{	When is the last time you talked to Lu?	}{	341	}{	}{	}{	}{	}{	}{	}{	}{	}{	When is the last the Fang and the Jaw were together?	}
+{	333	}{	He kills puppies?!? That's it, I'm killing Lu. Goodbye.	}{	He kills puppies?!? That's it, I'm killing Lu. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	A hound or him, for great rewards I will destroy anything.	}
+{	334	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	335	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	336	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	337	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	338	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	339	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	340	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	341	}{	Two weeks ago, I said, "Hey, Lu, stick this up your ass!" and I gave him finger. Otherwise, I haven't talked to him in twenty-five years.	}{	Two weeks ago, I said, "Hey, Lu, stick this up your ass!" and I gave him finger. Otherwise, I haven't talked to him in twenty-five years.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	342	}{	Maybe if you talked with him, you'd realize he wasn't going to kill you.	}{	Maybe if you talked with him, you'd realize he wasn't going to kill you.	}{	351	}{	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps the Fang and the Jaw need to speak more often.	}
+{	343	}{	Forget this. I'm going to get Lu. Goodbye.	}{	Forget this. I'm going to get Lu. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll pull the Fang, just to get this done quicker.	}
+{	344	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	345	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	346	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	347	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	348	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	349	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	350	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	351	}{	Maybe. But...	}{	Maybe. But...	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	352	}{	Then you two could split the money. You both need the money more than jail.	}{	Then you two could split the money. You both need the money more than jail.	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	You both pray to profit - your god could reward both of you.	}
+{	353	}{	You're right. Let me go deal with Lu. Goodbye.	}{	You're right. Let me go deal with Lu. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I grow tired of this, so the Fang will pay.	}
+{	354	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	355	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	356	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	357	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	358	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	359	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	360	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	361	}{	Alright. I will talk with Lu. Maybe we can work this out. But if he try anything funny, big Lu stain all over Red Dragon.	}{	Alright. I will talk with Lu. Maybe we can work this out. But if he try anything funny, big Lu stain all over Red Dragon.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Ji_Lu = 6	}{	}{	}{	}{	}{	}{	}{	}
+{	362	}{	Okay. Good luck. Goodbye.	}{	Okay. Good luck. Goodbye.	}{	0	}{	G.Lu_Ji >= 6	}{	pc.SetQuest("Hitman",8); FindPlayer().HumanityAdd( 1 )	}{	}{	}{	}{	}{	}{	}{	This is the greatest reward. And it saves ammo.	}
+{	363	}{	Okay. Good luck. Goodbye.	}{	Okay. Good luck. Goodbye.	}{	0	}{	G.Lu_Ji != 6	}{	pc.SetQuest("Hitman",10)	}{	}{	}{	}{	}{	}{	}{	This is the greatest reward. And it saves ammo.	}
+{	364	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	365	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	366	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	367	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	368	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	369	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	370	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	371	}{	Stupid? What do you mean?	}{	Stupid? What do you mean?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	372	}{	I get more money than either of you would get. Not that it bothers me.	}{	I get more money than either of you would get. Not that it bothers me.	}{	381	}{	}{	}{	}{	}{	}{	}{	}{	}{	One gets death, one gets nothing. I get everything!	}
+{	373	}{	Never mind. I'm going to see Lu. Goodbye.	}{	Never mind. I'm going to see Lu. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Forget that.... I am gone.	}
+{	374	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	375	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	376	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	377	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	378	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	379	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	380	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	381	}{	I hate Lu that much!	}{	I hate Lu that much!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	382	}{	What do I care if two old fools want to pay me all their money for a hit?	}{	What do I care if two old fools want to pay me all their money for a hit?	}{	391	}{	}{	}{	}{	}{	}{	}{	}{	}{	Old fools equals more stuff I can purchase.	}
+{	383	}{	Wait, forget it. I want to kill Lu. Goodbye.	}{	Wait, forget it. I want to kill Lu. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	As do I. I am gone.	}
+{	384	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	385	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	386	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	387	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	388	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	389	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	390	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	391	}{	Old fool?!? I show you! No money for you! No more hit. Lu and I will take money and split. The hell with you! Goddamn mercenary! Trying to take old man's money!	}{	Old fool?!? I show you! No money for you! No more hit. Lu and I will take money and split. The hell with you! Goddamn mercenary! Trying to take old man's money!	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	G.Ji_Lu = 7	}{	}{	}{	}{	}{	}{	}{	}
+{	392	}{	Damn. What a shame. Goodbye.	}{	Damn. What a shame. Goodbye.	}{	0	}{	G.Lu_Ji >= 6	}{	pc.SetQuest("Hitman",8); FindPlayer().HumanityAdd( 1 )	}{	}{	}{	}{	}{	}{	}{	... suckers ...	}
+{	393	}{	Damn. What a shame. Goodbye.	}{	Damn. What a shame. Goodbye.	}{	0	}{	G.Lu_Ji < 6	}{	pc.SetQuest("Hitman",10)	}{	}{	}{	}{	}{	}{	}{	... suckers ...	}
+{	394	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	395	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	396	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	397	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	398	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	399	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	400	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	401	}{	Hey! Look at me - notice something different? I stinking rich! See - rich man smile! Rich man shoes, too!	}{	Hey! Look at me - notice something different? I stinking rich! See - rich man smile! Rich man shoes, too!	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	402	}{	Where's my money?	}{	Where's my money?	}{	411	}{	G.Ji_Lu == 1	}{	pc.MoneyAdd( 120 )	}{	}{	}{	}{	}{	}{	}{	Where is my reward?	}
+{	403	}{	Where's my money?	}{	Where's my money?	}{	411	}{	G.Ji_Lu == 2	}{	pc.MoneyAdd( 360 )	}{	}{	}{	}{	}{	}{	}{	Where is my reward?	}
+{	404	}{	Where's my money?	}{	Where's my money?	}{	411	}{	G.Ji_Lu == 3	}{	pc.MoneyAdd( 600 )	}{	}{	}{	}{	}{	}{	}{	Where is my reward?	}
+{	405	}{	Where's my money?	}{	Where's my money?	}{	411	}{	G.Ji_Lu == 4	}{	pc.MoneyAdd( 840 )	}{	}{	}{	}{	}{	}{	}{	Where is my reward?	}
+{	406	}{	Where's my money?	}{	Where's my money?	}{	411	}{	G.Ji_Lu == 5	}{	pc.MoneyAdd( 960 )	}{	}{	}{	}{	}{	}{	}{	Where is my reward?	}
+{	407	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	408	}{	Can I get a fortune, Ji?	}{	Can I get a fortune, Ji?	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am anxious about my fate.	}
+{	409	}{	Enjoy. Goodbye, Ji.	}{	Enjoy. Goodbye, Ji.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	No matter what we adorn ourselves in, we cannot hide from him. I am gone.	}
+{	410	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	411	}{	Here. Think of wonderful deed you do wiping big, monkey-face drunk off planet when you spend it.	}{	Here. Think of wonderful deed you do wiping big, monkey-face drunk off planet when you spend it.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Ji_Lu = 8; G.Ji_Key = 2; pc.SetQuest("Hitman",7)	}{	}{	}{	}{	}{	}{	}{	}
+{	412	}{	Thanks, Ji. Goodbye.	}{	Thanks, Ji. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	So many things to throw this at. I will find one.	}
+{	413	}{	This is it? You call this a lot of money?	}{	This is it? You call this a lot of money?	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	This is no jackpot!	}
+{	414	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	415	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	416	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	417	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	418	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	419	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	420	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	421	}{	I do hit in 1960's. That fortune in sixties. You don't want it? Give back to Ji Wen Ja!	}{	I do hit in 1960's. That fortune in sixties. You don't want it? Give back to Ji Wen Ja!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	422	}{	Never mind. Goodbye.	}{	Never mind. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Cheap decade. I am gone.	}
+{	423	}{	Do you have any idea what things cost nowadays? Whatever. Goodbye.	}{	Do you have any idea what things cost nowadays? Whatever. Goodbye.	}{	0	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	424	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	425	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	426	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	427	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	428	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	429	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	430	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	431	}{	You! Goddamn mercenary! Try to trick Ji and Lu out of money! Get out of here! I kick your ass!	}{	You! Goddamn mercenary! Try to trick Ji and Lu out of money! Get out of here! I kick your ass!	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	432	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	433	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	434	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	435	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	436	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	437	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	438	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	439	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	440	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	441	}{	You see orange cat on Tuesday - WHOA, THAT BAD! Call doctor!	}{	You see orange cat on Tuesday - WHOA, THAT BAD! Call doctor!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	442	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	443	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	444	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	445	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	446	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	447	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	448	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	449	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	450	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	451	}{	Here your lucky numbers - WRITE DOWN, I NOT REPEAT! Here go. 11, 17, 25, 93, 11, and uh, 62.	}{	Here your lucky numbers - WRITE DOWN, I NOT REPEAT! Here go. 11, 17, 25, 93, 11, and uh, 62.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	452	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	453	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	454	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	455	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	456	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	457	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	458	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	459	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	460	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	461	}{	You going to go to fancy restaurant. You going to order snails. DON'T EAT THEM! That disgusting! Snail very dirty!	}{	You going to go to fancy restaurant. You going to order snails. DON'T EAT THEM! That disgusting! Snail very dirty!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	462	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	463	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	464	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	465	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	466	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	467	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	468	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	469	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	470	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	471	}{	That guy you work with... yeah, he take all credit for your idea.	}{	That guy you work with... yeah, he take all credit for your idea.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	472	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	473	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	474	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	475	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	476	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	477	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	478	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	479	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	480	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	481	}{	Next time you get on plane - CHANGE SEAT TO EXIT ROW! This make sure you not sit next to big fatass.	}{	Next time you get on plane - CHANGE SEAT TO EXIT ROW! This make sure you not sit next to big fatass.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	482	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	483	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	484	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	485	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	486	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	487	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	488	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	489	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	490	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	491	}{	You going to get a visitor at your door next week - DON'T OPEN DOOR! It Jehovah Witness. They so annoying!	}{	You going to get a visitor at your door next week - DON'T OPEN DOOR! It Jehovah Witness. They so annoying!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	492	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	493	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	494	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	495	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	496	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	497	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	498	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	499	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	500	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	501	}{	One year from this day, you going to get mysterious package - DON'T OPEN! Music club will own your ass then.	}{	One year from this day, you going to get mysterious package - DON'T OPEN! Music club will own your ass then.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	502	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	503	}{	HEY! COME GET FORTUNE! YOU TOO GOOD FOR FUTURE?!?	}{	HEY! COME GET FORTUNE! YOU TOO GOOD FOR FUTURE?!?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	504	}{	Ji Wen Ja fortune ten times better than voodoo priestess fortune!	}{	Ji Wen Ja fortune ten times better than voodoo priestess fortune!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	505	}{	Forget you! I give fortune to someone else!	}{	Forget you! I give fortune to someone else!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	506	}{	[Singing]Lu is dead, Lu is dead, Lu is dead, Lu is dead, no more monkey-face drunk man, Lu is dead.	}{	[Singing]Lu is dead, Lu is dead, Lu is dead, Lu is dead, no more monkey-face drunk man, Lu is dead.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	507	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	508	}{	[Drunk and singing]Da da de doy eh doy, I will going to kill Lu, then I said I love Lu, everything better between Ji and Lu, everything fine.	}{	[Drunk and singing]Da da de doy eh doy, I will going to kill Lu, then I said I love Lu, everything better between Ji and Lu, everything fine.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	509	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	510	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	511	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	512	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	513	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	514	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	515	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	516	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	517	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	518	}{	Ah sure, yeah, I tell you all.	}{	Ah sure, yeah, I tell you all.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	519	}{	(Auto-Link)	}{	(Auto-Link)	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	520	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	521	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	522	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	523	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	524	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	525	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	526	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	527	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	528	}{	Yeah, I don't understand... my English a little broken, but I think uh... maybe your mind a little... broken.	}{	Yeah, I don't understand... my English a little broken, but I think uh... maybe your mind a little... broken.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	529	}{	The Fang! I need to find the Fang!	}{	The Fang! I need to find the Fang!	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	530	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	531	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	532	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	533	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	534	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	535	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	536	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	537	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	538	}{	Ahh. Love will find you next week. Don't stay in love too long! Husband find you too!	}{	Ahh. Love will find you next week. Don't stay in love too long! Husband find you too!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	539	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	540	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	541	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	542	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	543	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	544	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	545	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	546	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	547	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	548	}{	You want fortune?	}{	You want fortune?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	549	}{	Here. Tell me my fortune.	}{	Here. Tell me my fortune.	}{	501	}{	OneOfSet(1,8) and pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Here, forecast my fate!	}
+{	550	}{	Here. Tell me my fortune.	}{	Here. Tell me my fortune.	}{	538	}{	OneOfSet(2,8) and pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Here, forecast my fate!	}
+{	551	}{	Here. Tell me my fortune.	}{	Here. Tell me my fortune.	}{	461	}{	OneOfSet(3,8) and pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Here, forecast my fate!	}
+{	552	}{	Here. Tell me my fortune.	}{	Here. Tell me my fortune.	}{	471	}{	OneOfSet(4,8) and pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Here, forecast my fate!	}
+{	553	}{	Here. Tell me my fortune.	}{	Here. Tell me my fortune.	}{	481	}{	OneOfSet(5,8) and pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Here, forecast my fate!	}
+{	554	}{	Here. Tell me my fortune.	}{	Here. Tell me my fortune.	}{	491	}{	OneOfSet(6,8) and pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Here, forecast my fate!	}
+{	555	}{	Here. Tell me my fortune.	}{	Here. Tell me my fortune.	}{	441	}{	OneOfSet(7,8) and pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Here, forecast my fate!	}
+{	556	}{	Here. Tell me my fortune.	}{	Here. Tell me my fortune.	}{	451	}{	OneOfSet(8,8) and pc.CurrentMoney() >= 5	}{	pc.MoneyRemove(5)	}{	}{	}{	}{	}{	}{	}{	Here, forecast my fate!	}
+{	557	}{	Sorry, not interested. Goodbye.	}{	Sorry, not interested. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I already know. I don't want to know.	}
+{	558	}{	This fortune booth, not information.	}{	This fortune booth, not information.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	559	}{	I'd like my fortune read.	}{	I'd like my fortune read.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am anxious about my fate.	}
+{	560	}{	You Ji Wen Ja?	}{	You Ji Wen Ja?	}{	301	}{	G.Lu_Ji >= 1	}{	}{	}{	}{	}{	}{	}{	}{	Gee When Jaw?	}
+{	561	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	562	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	563	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	564	}{	Not interested. Goodbye.	}{	Not interested. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I already know. I don't want to know.	}
+{	565	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	566	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	567	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	568	}{	Hey, ugly! You want your fortune read? You give me five dollar, I give you "secret Chinese enlightenment"! Only stupid person not want to know future!	}{	Hey, ugly! You want your fortune read? You give me five dollar, I give you "secret Chinese enlightenment"! Only stupid person not want to know future!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	569	}{	Sure, why don't you tell me my future?	}{	Sure, why don't you tell me my future?	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	570	}{	I don't believe in that crap.	}{	I don't believe in that crap.	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	571	}{	You Ji Wen Ja?	}{	You Ji Wen Ja?	}{	301	}{	G.Lu_Ji >= 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	572	}{	You calling me ugly?	}{	You calling me ugly?	}{	31	}{	G.Lu_Ji == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	573	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	574	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	575	}{	Whatever. Goodbye.	}{	Whatever. Goodbye.	}{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	576	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	577	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	578	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	579	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	580	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	581	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	582	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	583	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	584	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	585	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	586	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	587	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	588	}{	(Starting Condition)	}{	}{	506	}{	G.Ji_Lu == 8	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	589	}{	(Starting Condition)	}{	}{	508	}{	G.Ji_Lu == 6	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	590	}{	(Starting Condition)	}{	}{	431	}{	G.Ji_Lu == 7	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	591	}{	(Starting Condition)	}{	}{	401	}{	G.Ji_Key == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	592	}{	(Starting Condition)	}{	}{	181	}{	G.Ji_Lu >= 1 and G.Ji_Lu < 6	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	593	}{	(Starting Condition)	}{	}{	558	}{	G.Kiki_Rescued == 1 and G.Ji_Badass == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	594	}{	(Starting Condition)	}{	}{	61	}{	G.Kiki_Rescued == 1 and G.Ji_Badass == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	595	}{	(Starting Condition)	}{	}{	548	}{	G.Ji_Know == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	596	}{	(Starting Condition)	}{	}{	568	}{	IsClan(pc,"Nosferatu") and npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	597	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

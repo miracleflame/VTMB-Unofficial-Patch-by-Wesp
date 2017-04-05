@@ -1,0 +1,108 @@
+{	1	}{	[Thick Italian accent, marble mouthed, struggles with the English language, thuggish]You have invitation?	}{	[Thick Italian accent, marble mouthed, struggles with the English language, thuggish]You have invitation?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	Yes, I do. Here you go.	}{	Yes, I do. Here you go.	}{	11	}{	IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_victor")	}{	G.Victor_Know = 1 }{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}
+{	3	}{	Yes, I do. Here you go.	}{	Yes, I do. Here you go.	}{	21	}{	not IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_victor") and not pc.HasItem("item_g_giovanni_invitation_maria")	}{	G.Victor_Know = 1 }{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}
+{	4	}{	Yes, I do. Here you go.	}{	Yes, I do. Here you go.	}{	11	}{	not IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_maria")	}{	G.Maria_Know = 1 }{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}
+{	5	}{	Yes, I do. Here you go.	}{	Yes, I do. Here you go.	}{	21	}{	IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_maria") and not pc.HasItem("item_g_giovanni_invitation_victor")	}{	G.Maria_Know = 1 }{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}
+{	6	}{	Sure, it's right... I thought it was right here. Aw, no, I must've lost it - damn!	}{	Sure, it's right... I thought it was right here. Aw, no, I must've lost it - damn!	}{	41	}{	Persuasion 9	}{	}{	}{	}{	}{	}{	}{	}{	Must have left it in my other body.	}
+{	7	}{	Don't you think you could make an exception... for me?	}{	Don't you think you could make an exception... for me?	}{	41	}{	Seduction 8 & not IsMale(pc)	}{	}{	}{	}{	}{	}{	}{	}{	Could you carry me in on those broad shoulders of yours?	}
+{	8	}{	Invitation to what?	}{	Invitation to what?	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	To...?	}
+{	9	}{	No, I don't.	}{	No, I don't.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	I pick up lots of things, but not one of those.	}
+{	10	}{	I think I have the wrong address, excuse me.	}{	I think I have the wrong address, excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	This isn't the amusement park. How dare you ask me for a ticket? I am gone.	}
+{	11	}{	Hmm... please have a [pause, struggles with word]wonderful time.	}{	Hmm... please have a [pause, struggles with word]wonderful time.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Luca_Enter = 1; gio1_openFront()	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	Thank you.	}{	Thank you.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Always.	}
+{	13	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	This invitation... not for you.	}{	This invitation... not for you.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	Oh? Excuse me. I must have gotten them switched. I'll be right back.	}{	Oh? Excuse me. I must have gotten them switched. I'll be right back.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Heh heh.... Oops. Let me go swap genders.	}
+{	23	}{	Don't you think you could make an exception... for me?	}{	Don't you think you could make an exception... for me?	}{	41	}{	Seduction 8 & not IsMale(pc)	}{	}{	}{	}{	}{	}{	}{	}{	Could you carry me in on those broad shoulders of yours?	}
+{	24	}{	So? It's an invitation, isn't it?	}{	So? It's an invitation, isn't it?	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	It's a ticket. Admit one - that's me.	}
+{	25	}{	Either you let me in or I let myself in.	}{	Either you let me in or I let myself in.	}{	71	}{	Intimidate 5	}{	}{	}{	}{	}{	}{	}{	}{	I will put a clown down if that's what it takes to get on the ride.	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	Hmm... I think you... okay go in. And have a [pause, struggles with word]wonderful time.	}{	Hmm... I think you... okay go in. And have a [pause, struggles with word]wonderful time.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Luca_Enter = 1; gio1_openFront()	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Very understanding of you, thank you.	}{	Very understanding of you, thank you.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will enjoy the ride.	}
+{	33	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	No invitation, can't go in. Apologies.	}{	No invitation, can't go in. Apologies.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	Here you go.	}{	Here you go.	}{	11	}{	IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_victor")	}{	G.Victor_Know = 1 }{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}
+{	43	}{	Here you go.	}{	Here you go.	}{	21	}{	not IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_victor") and not pc.HasItem("item_g_giovanni_invitation_maria")	}{	G.Victor_Know = 1 }{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}
+{	44	}{	Here you go.	}{	Here you go.	}{	11	}{	not IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_maria")	}{	G.Maria_Know = 1 }{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}
+{	45	}{	Here you go.	}{	Here you go.	}{	21	}{	IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_maria") and not pc.HasItem("item_g_giovanni_invitation_victor")	}{	G.Maria_Know = 1 }{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}
+{	46	}{	Either you let me in or I let myself in.	}{	Either you let me in or I let myself in.	}{	71	}{	Intimidate 5	}{	}{	}{	}{	}{	}{	}{	}{	I will put a clown down if that's what it takes to get on the ride.	}
+{	47	}{	Name is Victor Rossellini. I should be on the guest list.	}{	Name is Victor Rossellini. I should be on the guest list.	}{	31	}{	Persuasion 9 & IsMale(pc) and G.Victor_Know == 1	}{	}{	}{	}{	}{	}{	}{	}{	Has the family already forgotten Victor Rossellini? No! Check every list!	}
+{	48	}{	Name is Maria Rossellini. I should be on the guest list.	}{	Name is Maria Rossellini. I should be on the guest list.	}{	31	}{	Persuasion 9 & not IsMale(pc) and G.Maria_Know == 1	}{	}{	}{	}{	}{	}{	}{	}{	Has the family already forgotten Maria Rossellini? No! Check every list!	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	I understand. Goodbye.	}{	I understand. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	But I want to explore the fun house.... I need a ticket.	}
+{	51	}{	Family reunion tonight. [Struggles with word]In- invitation only.	}{	Family reunion tonight. [Struggles with word]In- invitation only.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	Here you go.	}{	Here you go.	}{	11	}{	IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_victor")	}{	G.Victor_Know = 1; Relay_Open_Front_Door()	}{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}
+{	53	}{	Here you go.	}{	Here you go.	}{	21	}{	not IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_victor") and not pc.HasItem("item_g_giovanni_invitation_maria")	}{	G.Victor_Know = 1 }{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}
+{	54	}{	Here you go.	}{	Here you go.	}{	11	}{	not IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_maria")	}{	G.Maria_Know = 1; Relay_Open_Front_Door()	}{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}
+{	55	}{	Here you go.	}{	Here you go.	}{	21	}{	IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_maria") and not pc.HasItem("item_g_giovanni_invitation_victor")	}{	G.Maria_Know = 1 }{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}
+{	56	}{	I need no invitation.	}{	I need no invitation.	}{	31	}{	Dominate 4 & IsClan(pc,"Ventrue") and G.Patch_Plus == 1 }{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	Invitation? It's right... I thought it was right here. Aw, no, I must've lost it - damn!	}{	Invitation? It's right... I thought it was right here. Aw, no, I must've lost it - damn!	}{	31	}{	Persuasion 9	}{	}{	}{	}{	}{	}{	}{	}{	Must have left it in my other body.	}
+{	58	}{	Don't you think you could make an exception... for me?	}{	Don't you think you could make an exception... for me?	}{	41	}{	Seduction 8 & not IsMale(pc)	}{	}{	}{	}{	}{	}{	}{	}{	Could you carry me in on those broad shoulders of yours?	}
+{	59	}{	Either you let me in or I let myself in.	}{	Either you let me in or I let myself in.	}{	71	}{	Intimidate 5	}{	}{	}{	}{	}{	}{	}{	}{	I will put a clown down if that's what it takes to get on the ride.	}
+{	60	}{	I understand. Goodbye.	}{	I understand. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	But I want to explore the fun house.... I need a ticket.	}
+{	61	}{	I ask you to leave, please.	}{	I ask you to leave, please.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Luca_Leave = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Or you'll do what?	}{	Or you'll do what?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	Or what, clown?	}
+{	63	}{	Step aside, you mook.	}{	Step aside, you mook.	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will put a clown down if that's what it takes to get on the ride.	}
+{	64	}{	Here's my invitation, motherfucker. Right in your goddamn skull.	}{	Here's my invitation, motherfucker. Right in your goddamn skull.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	If I can't get in, then I will ride your clownie corpse like a sled!	}
+{	65	}{	Alright, I'm going.	}{	Alright, I'm going.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I leave, for your benefit.	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	You leave now or... something bad will happen to you.	}{	You leave now or... something bad will happen to you.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Luca_Leave = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	Wait, I found my invitation.	}{	Wait, I found my invitation.	}{	11	}{	IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_victor")	}{	G.Victor_Know = 1 }{	}{	}{	}{	}{	}{	}{	Now I have my ticket, let me in the fun house.	}
+{	73	}{	Wait, I found my invitation.	}{	Wait, I found my invitation.	}{	21	}{	not IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_victor") and not pc.HasItem("item_g_giovanni_invitation_maria")	}{	G.Victor_Know = 1 }{	}{	}{	}{	}{	}{	}{	Now I have my ticket, let me in the fun house.	}
+{	74	}{	Wait, I found my invitation.	}{	Wait, I found my invitation.	}{	11	}{	not IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_maria")	}{	G.Maria_Know = 1 }{	}{	}{	}{	}{	}{	}{	Now I have my ticket, let me in the fun house.	}
+{	75	}{	Wait, I found my invitation.	}{	Wait, I found my invitation.	}{	21	}{	IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_maria") and not pc.HasItem("item_g_giovanni_invitation_victor")	}{	G.Maria_Know = 1 }{	}{	}{	}{	}{	}{	}{	Now I have my ticket, let me in the fun house.	}
+{	76	}{	My invitation... I thought it was right here. Aw, no, I must've lost it - damn!	}{	My invitation... I thought it was right here. Aw, no, I must've lost it - damn!	}{	41	}{	Persuasion 9	}{	}{	}{	}{	}{	}{	}{	}{	Must have left it in my other body.	}
+{	77	}{	Don't you think you could make an exception... for me?	}{	Don't you think you could make an exception... for me?	}{	41	}{	Seduction 8 & not IsMale(pc)	}{	}{	}{	}{	}{	}{	}{	}{	Could you carry me in on those broad shoulders of yours?	}
+{	78	}{	I'm going in. You can try to stop me if you want. But you won't.	}{	I'm going in. You can try to stop me if you want. But you won't.	}{	91	}{	Humanity -3	}{	}{	}{	}{	}{	}{	}{	}{	I'm going in the funhouse, dead clown or no.	}
+{	79	}{	You're about to find out it's a bad night to be a goon.	}{	You're about to find out it's a bad night to be a goon.	}{	91	}{	Humanity -3	}{	}{	}{	}{	}{	}{	}{	}{	If I can't get in, then I will ride your clownie corpse like a sled!	}
+{	80	}{	Okay, I'm leaving.	}{	Okay, I'm leaving.	}{	0	}{	Humanity 3	}{	}{	}{	}{	}{	}{	}{	}{	But I want to explore the fun house.... I need a ticket.	}
+{	81	}{	You leave property or... I hurt you very much.	}{	You leave property or... I hurt you very much.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Luca_Leave = 3	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	Wait, I found my invitation.	}{	Wait, I found my invitation.	}{	11	}{	IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_victor")	}{	G.Victor_Know = 1 }{	}{	}{	}{	}{	}{	}{	Now I have my ticket, let me in the fun house.	}
+{	83	}{	Wait, I found my invitation.	}{	Wait, I found my invitation.	}{	21	}{	not IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_victor") and not pc.HasItem("item_g_giovanni_invitation_maria")	}{	G.Victor_Know = 1 }{	}{	}{	}{	}{	}{	}{	Now I have my ticket, let me in the fun house.	}
+{	84	}{	Wait, I found my invitation.	}{	Wait, I found my invitation.	}{	11	}{	not IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_maria")	}{	G.Maria_Know = 1 }{	}{	}{	}{	}{	}{	}{	Now I have my ticket, let me in the fun house.	}
+{	85	}{	Wait, I found my invitation.	}{	Wait, I found my invitation.	}{	21	}{	IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_maria") and not pc.HasItem("item_g_giovanni_invitation_victor")	}{	G.Maria_Know = 1 }{	}{	}{	}{	}{	}{	}{	Now I have my ticket, let me in the fun house.	}
+{	86	}{	My invitation... I thought it was right here. Aw, no, I must've lost it - damn!	}{	My invitation... I thought it was right here. Aw, no, I must've lost it - damn!	}{	31	}{	Persuasion 9	}{	}{	}{	}{	}{	}{	}{	}{	Must have left it in my other body.	}
+{	87	}{	Don't you think you could make an exception... for me?	}{	Don't you think you could make an exception... for me?	}{	41	}{	Seduction 8 & not IsMale(pc)	}{	}{	}{	}{	}{	}{	}{	}{	Could you carry me in on those broad shoulders of yours?	}
+{	88	}{	I'm going in. You can try to stop me if you want. But you won't.	}{	I'm going in. You can try to stop me if you want. But you won't.	}{	91	}{	Humanity -3	}{	}{	}{	}{	}{	}{	}{	}{	I'm going in the funhouse, dead clown or no.	}
+{	89	}{	You're about to find out it's a bad night to be a goon.	}{	You're about to find out it's a bad night to be a goon.	}{	91	}{	Humanity -3	}{	}{	}{	}{	}{	}{	}{	}{	If I can't get in, then I will ride your clownie corpse like a sled!	}
+{	90	}{	I'm going. Goodbye.	}{	I'm going. Goodbye.	}{	0	}{	Humanity 3	}{	}{	}{	}{	}{	}{	}{	}{	But I want to explore the fun house.... I need a ticket.	}
+{	91	}{	I kill you!	}{	I kill you!	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Other way around.	}{	Other way around.	}{	0	}{	}{	npc.SetRelationship("player D_HT 5")	}{	}{	}{	}{	}{	}{	}{	Heh....	}
+{	93	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	Name?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	Yeah?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	Si.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	No.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	103	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	(Starting Condition)	}{	}{	11	}{	G.Luca_Enter == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	(Starting Condition)	}{	}{	91	}{	G.Luca_Leave == 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	(Starting Condition)	}{	}{	81	}{	G.Luca_Leave == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	(Starting Condition)	}{	}{	71	}{	G.Luca_Leave == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

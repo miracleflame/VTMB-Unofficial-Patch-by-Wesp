@@ -1,0 +1,26 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "concrete/ohcurba"
+	"$surfaceprop" "concrete"
+	"$envmap" "env_cubemap"
+	"$envmapmask" "concrete/ohcurba_ref"
+
+	"Proxies"
+	{
+		"GlobalWetness"
+		{
+			"resultVar"	"$envmaptint[0]"
+			"scale"		 1.0
+		}
+		"GlobalWetness"
+		{
+			"resultVar"	"$envmaptint[1]"
+			"scale"		 1.0
+		}
+		"GlobalWetness"
+		{
+			"resultVar"	"$envmaptint[2]"
+			"scale"		 1.0
+		}
+	}
+}

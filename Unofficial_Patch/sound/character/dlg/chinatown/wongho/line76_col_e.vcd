@@ -1,0 +1,77 @@
+// Choreo version 1
+actor "WongHo"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.500000 21.803537
+      param "character/dlg/chinatown/wongho/line76_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "cellphone_idle"
+    {
+      time 0.000000 5.000000
+      param "cellphone_idle"
+    }
+    event gesture "cellphone_idle"
+    {
+      time 2.500000 7.500000
+      param "cellphone_idle"
+    }
+    event gesture "cellphone_idle"
+    {
+      time 5.000000 10.000000
+      param "cellphone_idle"
+    }
+    event gesture "cellphone_idle"
+    {
+      time 7.500000 12.500000
+      param "cellphone_idle"
+    }
+    event gesture "cellphone_idle"
+    {
+      time 10.000000 15.000000
+      param "cellphone_idle"
+    }
+    event gesture "cellphone_idle"
+    {
+      time 12.500000 17.500000
+      param "cellphone_idle"
+    }
+    event gesture "cellphone_idle"
+    {
+      time 15.000000 20.000000
+      param "cellphone_idle"
+    }
+    event gesture "cellphone_idle"
+    {
+      time 17.500000 22.500000
+      param "cellphone_idle"
+    }
+    event gesture "cellphone_outof"
+    {
+      time 20.000000 21.500000
+      param "cellphone_idle"
+    }
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event loud "Loud"
+    {
+      time 4.490000 4.600000
+      param "0.110"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

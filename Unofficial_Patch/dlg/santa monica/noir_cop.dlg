@@ -1,0 +1,38 @@
+{	1	}{	Crime scene - gonna have to ask you to step back, please.	}{	Crime scene - gonna have to ask you to step back, please.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	What's going on here?	}{	What's going on here?	}{	11	}{	G.Noir_Talk == 0	}{	}{	}{	}{	}{	}{	}{	}{	Murder most foul?	}
+{	3	}{	Okay.	}{	Okay.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Okydoky.	}
+{	4	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	Ah, some lunatic broke into the gallery and slashed up the paintings. Everyone's a critic these days, huh?	}{	Ah, some lunatic broke into the gallery and slashed up the paintings. Everyone's a critic these days, huh?	}{	#	}{	}{	G.Noir_Talk = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	Thanks, officer.	}{	Thanks, officer.	}{	0	}{	G.Gallery_Slashed == 0 and pc.GetQuestState("Slashterpiece") != 5	}{	pc.SetQuest("Slashterpiece",3)	}{	}{	}{	}{	}{	}{	}{	Lunatic...? You are GOOD, detective. I am gone.	}
+{	13	}{	Thanks, officer.	}{	Thanks, officer.	}{	0	}{	G.Gallery_Slashed == 0 and pc.GetQuestState("Slashterpiece") == 5	}{	}{	}{	}{	}{	}{	}{	}{	Lunatic...? You are GOOD, detective. I am gone.	}
+{	14	}{	I just hope they catch the guy, uh, person who did this. Bye, now.	}{	I just hope they catch the girl, uh, person who did this. Bye, now.	}{	0	}{	G.Gallery_Slashed == 1	}{	}{	}{	}{	}{	}{	}{	}{	The fish will go into the net. I am gone.	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	What the... oh, geez, look at you. Now, now, now wait. I know most people, they, they can't accept you because of your uniqueness, but I understand - my, my sister's a freak - Alley the Crocodile Girl. She's in a traveling circus around the Midwest - that poor, sweet, wonderful scaly girl. Listen... do you need a hug?	}{	What the... oh, geez, look at you. Now, now, now wait. I know most people, they, they can't accept you because of your uniqueness, but I understand - my, my sister's a freak - Alley the Crocodile Girl. She's in a traveling circus around the Midwest - that poor, sweet, wonderful scaly girl. Listen... do you need a hug?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	Uh, I'm okay. How about you tell me what happened to the Gallery.	}{	Uh, I'm okay. How about you tell me what happened to the Gallery.	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	23	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	Sure, sure.	}{	Sure, sure.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	(Auto-Link)	}{	(Auto-Link)	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	33	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	(Starting Condition)	}{	}{	1	}{	G.Noir_Talk == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	(Starting Condition)	}{	}{	21	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

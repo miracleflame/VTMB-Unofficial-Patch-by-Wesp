@@ -1,0 +1,68 @@
+TerminalDefinition
+{
+	"screen saver"		"If you're reading this,               you are NOT dead."		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"S.M.M.C. Morgue"  
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+	SubDir
+	{
+		"name"			"Cadavers"
+		"password"		"Cowbell"
+		"description"		"Cadavers in cold storage."
+
+		Function
+		{
+			"name"		"Abobo, G"
+			"description"	"Locker 1A -- 10/18/04"
+			"runtext"	"Wounds suggest subject was beaten to death with a baseball bat."
+		}
+
+		Function
+		{
+			"name"		"Crumb, V"	// changed by wesp
+			"description"	"Locker 3A -- 10/19/04"
+			"runtext"	"Subject died from heart failure. Personal items in storage B."
+			"dependency"	"G.Knox_Quest == 5"	//changed by wesp
+		}
+
+		Function
+		{
+			"name"		"Jane Doe"
+			"description"	"Locker 2B -- 10/17/04"
+			"runtext"	"Subject apparently died of indeterminate causes. Note: Subject's body contained only one pint of blood. Foul play suspected."
+		}
+
+		Function
+		{
+			"name"		"Falz, D"
+			"description"	"Locker 5B -- 10/18/04"
+			"runtext"	"Severely beaten to death. Something about the way this one looked made me want to lock it in the freezer."
+		}
+
+		Function
+		{
+			"name"		"Perry, D"
+			"description"	"Locker 4A -- 10/17/04"
+			"runtext"	"Subject apparently choked to death on ham and/or cheese."
+		}
+
+		Function	// added by wesp
+		{
+			"name"		"Poe, H"
+			"description"	"Locker 3B -- 10/22/04"
+			"runtext"	"Subject died from internal bleedings. Sweet red-haired girl, it's a real shame."
+			"dependency"	"G.Heather_Drank == 0 and G.Story_State > 9"
+			"runscript"	"heatherSetQuest()"
+		}
+	}
+}

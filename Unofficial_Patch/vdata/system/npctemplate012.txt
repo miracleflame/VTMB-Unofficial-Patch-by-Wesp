@@ -1,0 +1,1091 @@
+//////////////////////////////////////////////////
+// NPC Stat Templates (Packages)	- 
+//
+//	NPCs in worldcraft are assigned one of these which determines their statistics.
+
+ClanDataTables
+{
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"ChangBros"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"Blade Brother"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"Blade Brother"
+			"Body"					"Human"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"5"
+			"Boss"				"1"
+			"Disallow_Kindred_Death"	"1"
+			"NoBiting"			"1"
+			"SoundGroup"			"Asian"
+//			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+			"DamageFilterBashing"		"0.50"
+			"DamageFilterLethal"		"0.50"
+			"DamageFilterAggravated"	"1.00"
+			"SpecialMoveADamage"		"40.0"		// "united-hold-hands-and-attack" damage
+		        "HasTrueSight"			"1"
+			"TrueSightVisionDistance"	"250"
+			"Has_Burning_Death"		"0"	// added by wesp
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"6"
+			"Dexterity"				"2"
+			"Stamina"				"1"
+			"Charisma"				"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"6"
+			"Intelligence"			"1"
+			"Wits"					"6"
+
+			"BloodPool"				"15"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+
+			"Max_Health"			"276"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"4"
+			"Brawl"					"2"
+			"Dodge"					"4"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"5"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Resistances
+		Resistances
+		{
+			// Dementation:
+			"Veil of Madness"		"Full"
+			"The Haunting"			"Full"
+			"Voice of Madness"		"Full"
+			"Waking Nightmare"		"Full"
+			"Total Insanity"		"Partial"
+
+			// Dominate:
+			"Calm"					"Full"
+			"Dance"					"Full"
+			"Follow"				"Full"
+			"Hide"					"Full"
+			"Jump"					"Full"
+			"Leave"					"Full"
+			"Mesmerize"				"Partial"
+			"Sleep"					"Partial"
+			"Impose Will"			"Partial DMG:0"
+			"Possession"			"Partial"
+
+			// Thaumaturgy:
+			"Blood Malady"			"Full"
+			"Bloody Eye"			"Partial"
+			"Theft of Vitae"		"Full"
+			"Purge Blood"			"Partial"
+			"Blood Boil"			"Partial DMG:4"
+		}
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"ChangBrosClaw" //called specifically by dominate and dementate posession effects.
+			"ParentTemplateName"	"ChangBros" 
+			"Name"					"Claw Brother"
+			"Description"			"The one with the claws... and yes, the schlong."
+		}
+		General
+		{
+			"Clan"					"Claw Brother"
+		}
+	}
+
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"AsianVampire"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"The Cathayan"	// changed by wesp
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"Cathayan" 
+			"Body"					"Human"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"NoBiting"			"1"
+			"DisciplineStrata"		"5"
+			"Boss"				"0"
+			"Disallow_Kindred_Death"	"1"
+			"SoundGroup"			"Asian"
+
+//			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+			"NpcFakeReloadCountMin"		"6.0" // Crossbow (overpowered for this encounter)
+			"DamageFilterBashing"		"0.8"
+			"DamageFilterLethal"		"1.00"
+			"DamageFilterAggravated"	"1.00"
+		        "HasTrueSight"			"1"
+			"TrueSightVisionDistance"	"350"
+			"Has_Burning_Death"		"0"	// added by wesp
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+
+			"Strength"			"4"
+			"Dexterity"			"2"
+			"Stamina"				"1"
+			"Charisma"				"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"2"
+			"Intelligence"			"1"
+			"Wits"				"5"
+
+			"BloodPool"				"15"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+
+			"Max_Health"			"192"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"4"
+			"Brawl"					"2"
+			"Dodge"					"1"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"2"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Resistances
+		Resistances
+		{
+			// Dementation:
+			"Veil of Madness"		"Full"
+			"The Haunting"			"Full"
+			"Voice of Madness"		"Full"
+			"Waking Nightmare"		"Full"
+			"Total Insanity"		"Partial"
+
+			// Dominate:
+			"Calm"					"Full"
+			"Dance"					"Full"
+			"Follow"				"Full"
+			"Hide"					"Full"
+			"Jump"					"Full"
+			"Leave"					"Full"
+			"Mesmerize"				"Partial"
+			"Sleep"					"Partial"
+			"Impose Will"			"Partial DMG:0"
+			"Possession"			"Partial"
+
+			// Thaumaturgy:
+			"Blood Malady"			"Full"
+			"Bloody Eye"			"Partial"
+			"Theft of Vitae"		"Full"
+			"Purge Blood"			"Partial"
+			"Blood Boil"			"Partial DMG:4"
+		}
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"BloodGuardian"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"Blood Guardian"
+			"Description"			""
+
+		}
+
+		General
+		{
+			"Clan"					"Blood Guardian"
+			"Body"					"Human"
+			"Gender"				"Male"	// changed by wesp
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"NoBiting"			"1"
+			"DisciplineStrata"		"5"
+			"Boss"				"1"
+			"Disallow_Kindred_Death"	"1"
+			"Monster"			"1"
+			"SoundGroup"			"zombie_male"
+			"DisciplineStrata"		"1"
+//			"SpawnModel"			"models/character/npc/unique/malkgirl/girl.mdl"
+			"NpcFakeReloadCountMin"		"6.0" // none
+			"Disallow_Knockbacks"		"1"
+			"DamageFilterBashing"		"0.7"
+			"DamageFilterLethal"		"0.7"
+			"DamageFilterAggravated"	"0.80"
+		        "HasTrueSight"			"1"
+			"TrueSightVisionDistance"	"350"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+
+			"Strength"				"1"
+			"Dexterity"				"2"
+			"Stamina"				"0"
+			"Charisma"				"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"2"
+			"Intelligence"			"1"
+			"Wits"					"1"
+
+			"BloodPool"				"40"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+
+			"Max_Health"			"135"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"4"
+			"Brawl"					"0"
+			"Dodge"					"1"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Resistances
+		Resistances
+		{
+			// Dementation:
+			"Veil of Madness"		"Full"
+			"The Haunting"			"Full"
+			"Voice of Madness"		"Full"
+			"Waking Nightmare"		"Full"
+			"Total Insanity"		"Partial"
+
+			// Dominate:
+			"Calm"					"Full"
+			"Dance"					"Full"
+			"Follow"				"Full"
+			"Hide"					"Full"
+			"Jump"					"Full"
+			"Leave"					"Full"
+			"Mesmerize"				"Partial"
+			"Sleep"					"Partial"
+			"Impose Will"			"Partial DMG:0"
+			"Possession"			"Partial"
+
+			// Thaumaturgy:
+			"Blood Malady"			"Full"
+			"Bloody Eye"			"Partial"
+			"Theft of Vitae"		"Full"
+			"Purge Blood"			"Partial"
+			"Blood Boil"			"Partial DMG:4"
+		}
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	// Gargoyle
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Gargoyle"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"The Gargoyle"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"Gargoyle"
+			"M_Body"				"/models/character/monster/gargoyle/gargoyle.mdl"
+			"Gender"				"Male"
+			"ClanEffect"			""
+			"Kindred"				"0"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"5"
+			"Boss"				"1"
+			"Disallow_Kindred_Death"	"1"
+			"Disallow_FirearmsToBashing"	"1"
+			"KnockbackRangedPlayer"		"1"
+			"SoundGroup"			"Gargoyle"
+			"NoBiting"				"1"
+			"DeathGib"			"models/character/monster/gargoyle/gargoyle_gibbs/garg_gibbs.mdl"
+			"GibsCollide"		"1"
+			"DamageFilterBashing"		"1.5"
+			"DamageFilterLethal"		"0.05"
+			"DamageFilterAggravated"	"0.25"
+			"AbsorbsRangedAttacks"		"0" //"1"
+//			"ReceivesExtraClubDmg"		"0"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"7"
+			"Dexterity"				"2"
+			"Stamina"				"1"
+			"Charisma"				"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"5"  //"3"
+			"Intelligence"			"1"
+			"Wits"					"5"
+
+			"BloodPool"				"0"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"Gargoyle"
+			"Excluded_Equipment"	"Gargoyle"
+			"Max_Health"				"800" //"400"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"3"
+			"Brawl"					"5"
+			"Dodge"					"0"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"3"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Resistances
+		Resistances
+		{
+			// Dementation:
+			"Veil of Madness"		"Full"
+			"The Haunting"		"Full"
+			"Voice of Madness"	"Full"
+			"Waking Nightmare"	"Full"
+			"Total Insanity"		"Partial"
+
+			// Dominate:
+			"Calm"			"Full"
+			"Dance"			"Full"
+			"Follow"			"Full"
+			"Hide"			"Full"
+			"Jump"			"Full"
+			"Leave"			"Full"
+			"Mesmerize"			"Partial"
+			"Sleep"			"Partial"
+			"Impose Will"		"Partial DMG:0"
+			"Possession"		"Partial"
+
+			// Thaumaturgy:
+			"Blood Malady"		"Full"
+			"Bloody Eye"		"Partial"
+			"Theft of Vitae"		"Full"
+			"Purge Blood"		"Partial"
+			"Blood Boil"		"Partial DMG:2"
+		}
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	// Hengeyokai
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Hengeyokai"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"Zygaena the Hengeyokai"	// changed by wesp
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"Hengeyokai"
+			"M_Body"				"/models/character/monster/Hengeyokai/Hengeyokai.mdl"
+			"Gender"				"Male"
+			"ClanEffect"			""
+			"Kindred"				"0"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"5"
+			"Boss"				"1"
+			"Disallow_Kindred_Death"	"1"
+			"KnockbackRangedPlayer"		"1"
+			"SoundGroup"			"Hengeyokai"
+			"NoBiting"				"1"
+			"GibsCollide"		"1"
+			"DamageFilterBashing"		"0.8"
+			"DamageFilterLethal"		"0.5"
+			"DamageFilterAggravated"	"1.0"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"6"
+			"Dexterity"				"2"
+			"Stamina"				"5"
+			"Charisma"				"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"5"  //"3"
+			"Intelligence"			"1"
+			"Wits"					"4"
+
+			"BloodPool"				"15"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"Hengeyokai"
+			"Excluded_Equipment"	"Hengeyokai"
+			"Max_Health"				"968"
+			"Armor_Rating"		"3"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"3"
+			"Brawl"					"5"
+			"Dodge"					"3"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"3"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Resistances
+		Resistances
+		{
+			// Dementation:
+			"Veil of Madness"		"Full"
+			"The Haunting"		"Full"
+			"Voice of Madness"	"Full"
+			"Waking Nightmare"	"Full"
+			"Total Insanity"		"Partial"
+
+			// Dominate:
+			"Calm"			"Full"
+			"Dance"			"Full"
+			"Follow"			"Full"
+			"Hide"			"Full"
+			"Jump"			"Full"
+			"Leave"			"Full"
+			"Mesmerize"			"Partial"
+			"Sleep"			"Partial"
+			"Impose Will"		"Partial DMG:0"
+			"Possession"		"Partial"
+
+			// Thaumaturgy:
+			"Blood Malady"		"Full"
+			"Bloody Eye"		"Partial"
+			"Theft of Vitae"		"Full"
+			"Purge Blood"		"Partial"
+			"Blood Boil"		"Partial DMG:2"
+		}
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	// Yukie
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Yukie"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"Yukie"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Gender"				"Female"
+			"ClanEffect"			""
+			"Kindred"			"0"
+			"Supernatural"			"0"
+			"DisciplineStrata"		"5"
+			"Boss"				"0"
+			"Disallow_Kindred_Death"	"0"
+			"SoundGroup"			"unique/yukie"
+			"NoBiting"				"1"
+			"GibsCollide"		"1"
+			"DamageFilterBashing"		"0.75"
+			"DamageFilterLethal"		"0.75"
+			"DamageFilterAggravated"	"0.75"
+
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"4"
+			"Dexterity"				"5"
+			"Stamina"				"3"
+			"Charisma"				"3"
+			"Manipulation"			"3"
+			"Appearance"			"3"
+			"Perception"			"2"  
+			"Intelligence"			"3"
+			"Wits"					"4"
+
+			"BloodPool"				"5"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"Yukie"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"				"400"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"3"
+			"Brawl"					"3"
+			"Dodge"					"5"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"3"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"9"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Resistances
+		
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	// ManBat
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"ManBat"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"				"Chiropteran Behemoth"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"The Sheriff"
+			"M_Body"				"/models/character/monster/manbat/manbat.mdl"
+			"Gender"				"Male"
+			"ClanEffect"			""
+			"Kindred"			"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"6"
+			"Boss"				"1"
+			"Disallow_Kindred_Death"	"1"
+			"SoundGroup"			"Sheriff_Manbat"
+			"KnockbackRangedPlayer"		"1"
+			"DamageFilterBashing"		"1.00"
+			"DamageFilterLethal"		"1.00"
+			"DamageFilterAggravated"	"1.00"
+			"DamageFilterFlame"		"0.8"
+			"NoBiting"				"1"
+			"GibsCollide"		"1"
+			"Has_Burning_Death"		"1"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"6"
+			"Dexterity"				"5"
+			"Stamina"				"5"
+			"Charisma"				"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"5"  //"3"
+			"Intelligence"			"1"
+			"Wits"					"2"
+
+			"BloodPool"				"15"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"ManBat"
+			"Excluded_Equipment"	"ManBat"
+			"Max_Health"				"880"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"3"
+			"Brawl"					"5"
+			"Dodge"					"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"5"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Resistances
+		Resistances
+		{
+			// Dementation:
+			"Veil of Madness"		"Full"
+			"The Haunting"		"Full"
+			"Voice of Madness"	"Full"
+			"Waking Nightmare"	"Full"
+			"Total Insanity"		"Partial"
+
+			// Dominate:
+			"Calm"			"Full"
+			"Dance"			"Full"
+			"Follow"			"Full"
+			"Hide"			"Full"
+			"Jump"			"Full"
+			"Leave"			"Full"
+			"Mesmerize"			"Partial"
+			"Sleep"			"Partial"
+			"Impose Will"		"Partial DMG:0"
+			"Possession"		"Partial"
+
+			// Thaumaturgy:
+			"Blood Malady"		"Full"
+			"Bloody Eye"		"Partial"
+			"Theft of Vitae"		"Full"
+			"Purge Blood"		"Partial"
+			"Blood Boil"		"Partial DMG:2"
+		}
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	// ManBat Minion
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"ManBatMinion"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"ManBatMinion"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"Disallow_Kindred_Death"	"0"
+			"Has_Burning_Death"		"1"
+			"DisciplineStrata"		"1"
+			"Boss"				"0"
+			"Monster"			"1"
+			"SoundGroup"			"shovel_head"
+			"NoBiting"			"1"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"4"
+			"Dexterity"				"2"
+			"Stamina"				"3"
+			"Charisma"			"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"6"
+			"Intelligence"			"1"
+			"Wits"					"5" //"2"
+
+			"BloodPool"				"8"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"ManBatMinion"
+			"Excluded_Equipment"	"ManBatMinion"
+			"Max_Health"		"225" //"175"
+			"Armor_Rating"		"2"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"3"
+			"Dodge"					"1"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"2"
+			"Melee"					"3"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"5"   // defense vs pc feeding
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+ClanData
+	{
+		Text
+		{
+			"TemplateName"			"ManBatOfficer"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+//			"ClanEffect"			""
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"SoundGroup"	"Officer"
+			"FastFood"			"1"	// ensures feeding always succeeds
+			"NpcFakeReloadCountMin"		"6.0" // anaconda
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"4"
+			"Dexterity"				"2"
+			"Stamina"				"3"
+			"Charisma"			"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"4"
+			"Intelligence"			"1"
+			"Wits"					"3"
+
+			"BloodPool"				"8"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"100"
+			"Armor_Rating"		"2"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"3"
+			"Dodge"					"1"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"2"
+			"Melee"					"3"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"9"   // defense vs pc feeding
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+}

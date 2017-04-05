@@ -1,0 +1,255 @@
+// Strings
+
+StringData
+{
+	// For this file, Don't Localize ANYTHING!!!
+	Strings
+	{
+		// -----------------------------------------------------
+		// Do not translate!  Internal Strings ONLY!
+		// -----------------------------------------------------
+		DamageType
+		{
+			"Name0"	"Bashing"
+			"Name1"	"Lethal"
+			"Name2"	"Aggravated"
+		}
+
+		Equality
+		{
+			"Name0"	"=="
+			"Name1"	"!="
+			"Name2"	">"
+			"Name3"	"<"
+//				"Name4"	">="
+//				"Name5"	"<="
+		}
+
+		TagStrings
+		{
+			// These are used with Weapon Activation Tags (found in weapon data-files).
+			"Name0"	"Primary"
+			"Name1"	"PrimaryMode2"
+			"Name2"	"Secondary"
+		}
+
+		TraitFxStrs
+		{
+			"Name0"	"Attack"
+			"Name1"	"Fx_Translucency"
+			"Name2"	"Fx_Red_Filter"
+			"Name3"	"Fx_Mild_Shake"
+			"Name4" 	"Fx_Motion_Trail"
+			"Name5" 	"Fx_Model_Wolf"
+			"Name6" 	"Fx_Presence"
+			"Name7" 	"Fx_Supernatural_Level"
+			"Name8"	"Fx_Fortitude"
+			"Name9"	"Fx_Bloodshield"
+			"Name10"	"Fx_Bloodthrob"
+			"Name11"	"Fx_Model_Protean4"
+			"Name12"	"Fx_Humanity_Mods_Doubled"
+			"Name13"	"FX_Increased_Rat_Feed"
+			"Name14"	"Fx_Feed_Bonus_Opp_Gender"
+			"Name15"	"Fx_Feed_Bonus_Tramps"
+			"Name16"	"Fx_Cannot_Rat_Feed"
+			"Name17"	"Fx_No_Resist_Feeding"
+			// Warning: Remember to change game_shared\v_stat_effects_shared.h if you add to this!!
+		}
+
+		OccultGroups
+		{
+			// These are the different types of occult items...
+			"Name0"	"None"
+			"Name1"	"Frenzy"
+			"Name2"	"Hacking"
+			"Name3"	"Regen"
+			"Name4"	"Lockpicking"
+			"Name5"	"Presence"
+			"Name6"	"Obfuscate"
+			"Name7"	"Dexterity"
+			"Name8"	"Strength"
+			"Name9"	"Experience"
+			"Name10"	"BloodBuff"
+			"Name11"	"Dodge"
+			"Name12"	"ThaumDamage"
+			"Name13"	"PassiveDurations"
+			"Name14"	"HealRate"
+		}
+
+		ItemSubGroups
+		{
+			// These match with in-hand "Item" model groups for character models
+			"Name0"	"None"
+			"Name1"	"Glock"
+			"Name2"	"P220S"
+			"Name3"	"Smith"
+			"Name4"	"Anaconda"
+			"Name5"	"DualPistol"
+			"Name6"	"crossbow"
+			"Name7"	"dbs"
+			"Name8"	"enfield"
+			"Name9"	"flamethrower"
+			"Name10"	"grenade"
+			"Name11"	"m37"
+			"Name12"	"rem700"
+			"Name13"	"stakelauncher"
+			"Name14"	"steyr"
+			"Name15"	"stryker"
+			"Name16"	"uzi"
+			"Name17"	"bushhook"
+			"Name18"	"broadsword"
+			"Name19"	"katana"
+			"Name20"	"knife"
+			"Name21"	"razor"
+			"Name22"	"stake"
+			"Name23"	"tireiron"
+			"Name24"	"claw"
+			"Name25"	"fists"
+		}
+
+		AttributeOrder
+		{
+			"Name0"		"Physical_Social_Mental"
+			"Name1"		"Physical_Mental_Social"
+			"Name2"		"Social_Physical_Mental"
+			"Name3"		"Social_Mental_Physical"
+			"Name4"		"Mental_Social_Physical"
+			"Name5"		"Mental_Physical_Social"
+			"Name6"		"Attribute_No_Order"
+		}
+
+		AbilityOrder
+		{
+			"Name0"		"Talents_Skills_Knowledges"
+			"Name1"		"Talents_Knowledges_Skills"
+			"Name2"		"Skills_Talents_Knowledges"
+			"Name3"		"Skills_Knowledges_Talents"
+			"Name4"		"Knowledges_Talents_Skills"
+			"Name5"		"Knowledges_Skills_Talents"
+			"Name6"		"Ability_No_Order"
+		}
+
+		// These are played client-side when activating a targeted discipline
+		UI_Discipline_Targeting_ProgBar_Sounds  // Don't Translate/Localize
+		{
+			//  -- (Space " " means "no sound for now")
+			// [Dem: Src]
+			"Name0"	"Disciplines/Dementation/Veil_Ramp.wav"		// VeilOfMadness_Src
+			"Name1"	"Disciplines/Dementation/Haunting_Ramp.wav"	// Haunting_Src
+			"Name2"	"Disciplines/Dementation/Voice_Ramp.wav"		// VoiceOfMadness_Src
+			"Name3"	"Disciplines/Dementation/Nightmare_Ramp.wav"	// WakingNightmare_Src
+			"Name4"	"Disciplines/Dementation/Insanity_Ramp.wav"	// TotalInsanity_Src
+			// [Dem: Tgt]
+			"Name5"	" "	// VeilOfMadness_Tgt
+			"Name6"	" "	// Haunting_Tgt
+			"Name7"	" "	// VoiceOfMadness_Tgt
+			"Name8"	" "	// WakingNightmare_Tgt
+			"Name9"	" "	// TotalInsanity_Tgt
+			// [Dom: Src]
+			"Name10"	"Disciplines/Dominate/Suggestion_Ramp.wav"	// CommandTheWeariedMind_Src 1 (Calm)
+			"Name11"	"Disciplines/Dominate/Suggestion_Ramp.wav"	// CommandTheWeariedMind_Src 2 (Dance)
+			"Name12"	"Disciplines/Dominate/Suggestion_Ramp.wav"	// CommandTheWeariedMind_Src 3 (Follow)
+			"Name13"	"Disciplines/Dominate/Suggestion_Ramp.wav"	// CommandTheWeariedMind_Src 4 (Hide)
+			"Name14"	"Disciplines/Dominate/Suggestion_Ramp.wav"	// CommandTheWeariedMind_Src 5 (Jump)
+			"Name15"	"Disciplines/Dominate/Suggestion_Ramp.wav"	// CommandTheWeariedMind_Src 6 (Leave)
+			"Name16"	"Disciplines/Dominate/Mesmerize_Ramp.wav"		// Mesmerize_Src
+			"Name17"	"Disciplines/Dominate/Sleep_Ramp.wav"		// Sleep_Src
+			"Name18"	"Disciplines/Dominate/Impose_Ramp.wav"		// ImposeWill_Src
+			"Name19"	"Disciplines/Dominate/Possession_Ramp.wav"		// Posession_Src
+			// [Dom: Tgt]
+			"Name20"	" "	// CommandTheWeariedMind_Src 1 (Calm)
+			"Name21"	" "	// CommandTheWeariedMind_Src 2 (Dance)
+			"Name22"	" "	// CommandTheWeariedMind_Src 3 (Follow)
+			"Name23"	" "	// CommandTheWeariedMind_Src 4 (Hide)
+			"Name24"	" "	// CommandTheWeariedMind_Src 5 (Jump)
+			"Name25"	" "	// CommandTheWeariedMind_Src 6 (Leave)
+			"Name26"	" "	// Mesmerize_Src
+			"Name27"	" "	// Sleep_Src
+			"Name28"	" "	// ImposeWill_Src
+			"Name29"	" "	// Posession_Src
+			// [Thaum: Src]
+			"Name30"	"Disciplines/Thaumaturgy/Malady_Ramp.wav"		// BloodMalady_Src
+			"Name31"	"Disciplines/Thaumaturgy/Eye_Ramp.wav"		// BloodyEye_Src
+			"Name32"	"Disciplines/Thaumaturgy/Theft_Ramp.wav"		// TheftOfVitae_Src
+			"Name33"	"Disciplines/Thaumaturgy/Purge_Ramp.wav"		// BloodVomit/PurgeBlood_Src
+			"Name34"	"Disciplines/Thaumaturgy/Cauldron_Ramp.wav"	// BloodBoil_Src
+			// [Thaum: Tgt]
+			"Name35"	" " 	// BloodMalady_Tgt
+			"Name36"	" "	// BloodyEye_Tgt
+			"Name37"	" "	// TheftOfVitae_Tgt
+			"Name38"	" "	// BloodVomit/PurgeBlood_Tgt
+			"Name39"	" "	// BloodBoil_Tgt
+ 		}
+
+		// These are played when the target is hit with the discipline (localized)
+		UI_Discipline_Targeting_Sounds  // Don't Translate/Localize
+		{
+			//  -- (Space " " means "no sound for now")
+			// [Dem: Src]
+			"Name0"	"Disciplines/Dementation/Veil_Hit.wav"		// VeilOfMadness_Src
+			"Name1"	"Disciplines/Dementation/Haunting_Hit.wav"	// Haunting_Src
+			"Name2"	"Disciplines/Dementation/Voice_Hit.wav"		// VoiceOfMadness_Src
+			"Name3"	"Disciplines/Dementation/Nightmare_Hit.wav"	// WakingNightmare_Src
+			"Name4"	"Disciplines/Dementation/Insanity_Hit.wav"	// TotalInsanity_Src
+			// [Dem: Tgt]
+			"Name5"	" "	// VeilOfMadness_Tgt
+			"Name6"	" "	// Haunting_Tgt
+			"Name7"	" "	// VoiceOfMadness_Tgt
+			"Name8"	" "	// WakingNightmare_Tgt
+			"Name9"	" "	// TotalInsanity_Tgt
+			// [Dom: Src]
+			"Name10"	"Disciplines/Dominate/Dominate_Command_Calm.wav"	// CommandTheWeariedMind_Src 1 (Calm)
+			"Name11"	"Disciplines/Dominate/Dominate_Command_Dance.wav"	// CommandTheWeariedMind_Src 2 (Dance)
+			"Name12"	"Disciplines/Dominate/Dominate_Command_Follow.wav"	// CommandTheWeariedMind_Src 3 (Follow)
+			"Name13"	"Disciplines/Dominate/Dominate_Command_Hide.wav"	// CommandTheWeariedMind_Src 4 (Hide)
+			"Name14"	"Disciplines/Dominate/Dominate_Command_Jump.wav"	// CommandTheWeariedMind_Src 5 (Jump)
+			"Name15"	"Disciplines/Dominate/Dominate_Command_Leave.wav"	// CommandTheWeariedMind_Src 6 (Leave)
+			"Name16"	"Disciplines/Dominate/Dominate_Mesmerize.wav"	// Mesmerize_Src
+			"Name17"	"Disciplines/Dominate/Dominate_Sleep.wav"	// Sleep_Src
+			"Name18"	"Disciplines/Dominate/Dominate_ImposeWill.wav"	// ImposeWill_Src
+			"Name19"	"Disciplines/Dominate/Dominate_Possession.wav"	// Posession_Src
+			// [Dom: Tgt]
+			"Name20"	" "	// CommandTheWeariedMind_Tgt 1 (Calm)
+			"Name21"	" "	// CommandTheWeariedMind_Tgt 2 (Dance)
+			"Name22"	" "	// CommandTheWeariedMind_Tgt 3 (Follow)
+			"Name23"	" "	// CommandTheWeariedMind_Tgt 4 (Hide)
+			"Name24"	" "	// CommandTheWeariedMind_Tgt 5 (Jump)
+			"Name25"	" "	// CommandTheWeariedMind_Tgt 6 (Leave)
+			"Name26"	" "	// Mesmerize_Tgt
+			"Name27"	" "	// Sleep_Tgt
+			"Name28"	" "	// ImposeWill_Tgt
+			"Name29"	" "	// Posession_Tgt
+			// [Thaum: Src]
+			"Name30"	"Disciplines/Thaumaturgy/Malady_Hit.wav" 		// BloodMalady_Src
+			"Name31"	"Disciplines/Thaumaturgy/Eye_Hit.wav"		// BloodyEye_Src
+			"Name32"	"Disciplines/Thaumaturgy/Theft_Hit.wav"		// TheftOfVitae_Src
+			"Name33"	"Disciplines/Thaumaturgy/Purge_Hit.wav"		// BloodVomit/PurgeBlood_Src
+			"Name34"	"Disciplines/Thaumaturgy/Cauldron_Hit.wav"	// BloodBoil_Src
+			// [Thaum: Tgt]
+			"Name35"	" " 	// BloodMalady_Tgt
+			"Name36"	" "	// BloodyEye_Tgt
+			"Name37"	" "	// TheftOfVitae_Tgt
+			"Name38"	" "	// BloodVomit/PurgeBlood_Tgt
+			"Name39"	" "	// BloodBoil_Tgt
+ 		}
+
+		DisciplineResistances
+		{
+			"Name0"		"None"
+			"Name1"		"Partial"
+			"Name2"		"Full"
+		}
+
+		ClanStrs_NO_LOCALIZE
+		{
+			"Name0"	"None"
+			"Name1"	"Brujah"
+			"Name2"	"Gangrel"
+			"Name3"	"Malkavian"
+			"Name4"	"Nosferatu"
+			"Name5"	"Toreador"
+			"Name6"	"Tremere"
+			"Name7"	"Ventrue"
+		}
+	}
+}

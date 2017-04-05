@@ -1,0 +1,2656 @@
+LoadingTips
+{
+//
+//
+//	[Loading Tips]
+//
+//
+//		LOCALIZATION:	Localize/Translate the "Text" Fields ***ONLY***!!!
+//
+//
+//
+//
+//
+//	Tip Section Description:	Note that not all fields may be used for a given PopUp.
+//						PopUps may share the same Internal Name, the system will randomly pick one.
+//						PopUps inherit Default information from their group.
+//
+//
+//
+//	Tip
+//	{
+//		"Type"		The tip type (Game/World)
+//		"StoryState"	The Story State # this tip is available to
+//		"Size"		The tip size (Small/Large)
+//		"CharTemplate"	The internal name of a character template (Player_Brujah, etc.) to match
+//						If not specified, works for all characters.
+//
+//		// Translate this:
+//		"Text"		The text to be displayed (must be localized!)
+//	}
+//
+
+/////////////////////////
+/////////////////////////
+//before starting a new game(into character creation): G.Story_State = -6
+//after char creation (into embrace): G.Story_State = -5
+//after embrace (into the courtroom scene): G.Story_State = -4
+//after the courtroom scene (into the tutorial): G.Story_State = -3
+//after the tutorial (into the haven): G.Story_State = -2
+//beginning of the game (before Santa Monica): G.Story_State = -1
+//Once you are in Santa Monica: G.Story_State = 0
+	
+	// Screens before the game
+	Tips_Section
+	{
+		// StoryState -6, before character creation
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"-6"
+			"Size"		"Small"
+			"Text"		"The World of Darkness is a place where immortal monsters pull the strings of humanity. Violence and despair are common here. The world is bleak, but escape is an ever-present commodity - perhaps too present...."
+		}
+
+		// StoryState -5, before embrace cinematic
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"-5"
+			"Size"		"Small"
+			"Text"		"The Embrace:
+			The act of transforming a mortal into a vampire."
+		}
+
+		// StoryState -4, before the courtroom scene
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"-4"
+			"Size"		"Small"
+			"Text"		"Not only do vampires hide from mortals, they hide from themselves as well, pretending they are not the horrors they have truly become."
+		}
+
+		// StoryState -3, before the tutorial
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"-3"
+			"Size"		"Small"
+			"Text"		"Kindred:
+			The race of vampires as a whole, or a single vampire."
+		}
+
+		// StoryState -2, before the haven
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"-2"
+			"Size"		"Small"
+			"Text"		"Your Haven:
+		Prince LaCroix has arranged for you to use a Camarilla safehouse in Santa Monica as your haven. Here you will find some essentials, such as your computer for email. This will serve as your base of operations."	// changed by wesp
+		}
+
+		// StoryState -1, before SM proper
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"-1"
+			"Size"		"Small"
+			"Text"		"Violating the Masquerade by revealing aspects of supernatural existence to humankind puts you at risk of ambush by human vampire hunters, and invites the wrath of your fellow Kindred. Each breach of the Masquerade costs one Masquerade point. If you are reduced to zero Masquerade points, you will lose the game."
+		}
+
+		// StoryState 2, before first Elyisum
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"2"
+			"Size"		"Small"
+			"Text"		"Elysium:
+			You are entering Elysium. An Elysium area is the domain of a powerful vampire. Here, you will be unable to attack or use your vampiric Disciplines, with the exception of using Bloodbuff while lockpicking. You will occasionally have the opportunity to feed in Elysium areas however, and draining mortals dry will result in a loss of Humanity."	// changed by wesp
+		}
+
+		// StoryState 3, before first Combat
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"3"
+			"Size"		"Small"
+			"Text"		"Combat Area:
+			You are entering a combat area. In combat areas you are free to use the full force of your vampiric Disciplines without incurring any Masquerade violations. Likewise, there are often no \"innocents\" in a combat zone. You can never incur a Masquerade violation but sometimes lose Humanity in a combat area."		
+		}	// changed by wesp
+
+////////////////
+	// HelpTips for StoryState 0
+////////////////
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"0"
+			"Size"		"Large"
+			"Text"		"Vampires must step lightly and be ever mindful of the Masquerade; were the human race as a whole ever to turn its attention to the Kindred, the Children of Caine would be quickly wiped out. Superstition is the vampires' best weapon. By enforcing mortals' disbelief, by cultivating a smug belief in reason, by dismissing vampires' presence as the fancies of children and lunatics, the Kindred allow the mass of kine to do the work of shielding them from the few mortals who do know that vampires walk the night."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"0"
+			"Size"		"Large"
+			"Text"		"The largest sect of vampires in existence, the Camarilla, concerns itself with the Masquerade, thereby hoping to maintain a place for Kindred in the modern nights. The Camarilla is an open society; it claims all vampires as members (whether they want to belong or not), and any vampire may claim membership, regardless of lineage."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"0"
+			"Size"		"Large"
+			"Text"		"Rumored to have its origins in a medieval death cult, the Sabbat is greatly feared by Kindred who do not belong to it. The sect is monstrous and violent, and no longer clings to any trappings of human philosophy or morality. Members instead revel in their vampiric unlives. Sometimes referred to as the Black Hand, the Sabbat actively seeks the overthrow of the Traditions, the destruction of the Camarilla, and the subjugation of humankind."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"Prince:
+			The prince is, to put it simply, the vampire who has enough power to hold domain over a city, codify the laws for that city and keep the peace. Such a position is typically held by an elder, for who but an elder has the necessary personal charisma and power to take and hold domain in a metropolis?"
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"Clan:
+			A group of vampires who share common characteristics passed on by the Blood. There are 13 known clans, all of which were reputedly founded by members of the Third Generation."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"Humanity:
+			Humanity is a moral code that allows Kindred to retain their mortal sensibilities in the face of their transformation into parasitic monsters. In essence, it is what keeps a vampire from becoming a mindless animal, enslaved by their thirst for blood."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"Blood is all-important to the Kindred, for it is both the crux of their existence and the seat of their power. Mortal food, mortal air, mortal love - all of these things are meaningless to a vampire. Blood is the Kindred's only passion, and without it, they will quickly wither and fall dormant."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"0"
+			"Size"		"Large"
+			"Text"		"Vampires have long been feared as rapacious monsters of the night - terrible black forms sweeping out of the darkness to steal infants from their cribs and ravish the blood of innocents. Vampires are also creatures of deadly beauty, immense passion and predatory sensuality. The most important characteristic all vampires share, though, is their damnation. More important than any lineage, clan, sect or cause is the fact that all vampires are undead predators. Fealties and duties fall second to the inescapable urge of hunger."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"0"
+			"Size"		"Large"
+			"Text"		"Vampires are inherently creatures of the city, though some claim this is a matter of decision rather than nature. Urban landscapes offer everything a Kindred could want: near-infinite supplies of blood, enough contact to satisfy the most social of vampires (and enough seclusion to satisfy the most isolationist), and refuge from the werewolves who linger in the rural lands beyond the city lights."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"0"
+			"Size"		"Large"
+			"Text"		"Kindred in need of powerful servitors often cultivate ghouls. Created by giving a mortal or animals a sip of vampiric vitae without first draining their blood, ghouls most commonly serve as minions of their vampiric masters. Although not so powerful as Kindred, ghouls may use the ingested vitae to become preternaturally strong and resilient."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"0"
+			"Size"		"Large"
+			"Text"		"Clan Malkavian:
+			Even other Damned fear the Malkavians. The cursed blood of their clan has polluted their minds, with the result that every last Malkavian across the world is incurably insane. What's worse, a Malkavian's madness can take nearly any form, from overpowering homicidal tendencies to near-catatonia."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"0"
+			"Size"		"Large"
+			"Text"		"Clan Nosferatu:
+			While other vampires still look human and may travel in mortal society, Nosferatu are twisted and deformed by the curse of vampirism. As such, Nosferatu find themselves loathed and ostracized by the other Children of Caine, who consider them disgusting and interact with them only when they must."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"Any Kindred who wishes to blend into mortal society must obey its laws. Criminal acts - assault, burglary, murder - are met with brutal force from human law enforcement."
+		}
+
+//		//Game tips
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"Experience is gained by completing quests. Extra experience may be awarded during the course of a quest, for completing individual goals, finding special routes or alternate solutions."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"Refer to your Quest Log (default key: L) to track where you need to go and to whom you need to speak."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"The Combat Defense feat and Bashing Soak feat both add to your defense against bullets. Additionally, all damage you receive from bullets is automatically reduced by fifty percent."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Large"
+			"Text"		"Use the Feed key (default key: F) to feed on an unwilling victim. If the victim is in combat with you, he will have a chance to defend. Otherwise, your feed attempt will automatically succeed.
+A high Unarmed Combat feat makes it harder for enemy combatants to defend against your feed attack."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"New dialog options will appear if your Persuasion feat is high enough. These options will be displayed in blue text. Selecting these Persuasion lines will present you with further dialog options, all geared toward advancing your agenda."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"You can use the Seduction feat in dialog to feed and otherwise get what you want from people. If you seduce a human you may feed without fear of violating the Masquerade.
+Seduction lines appear in special pink print."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"A high Intimidate feat will give you special dialog options. These will be displayed in green text. Certain characters are more easily intimidated than others."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"The Melee Combat feat directly affects how much damage you can do with melee weapons. It also determines how easily an opponent may block, dodge, or counter your melee strikes."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"The Ranged Combat feat directly affects how much damage you can do with firearms. It also determines how easily vampires and other supernaturals can defend against your ranged attacks."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Large"
+			"Text"		"To sneak, Crouch (default key: CTRL), stay in the shadows, and watch the light meter. The higher your Sneaking feat, the harder it will be for enemies to hear and see you.
+You must be crouched to gain any benefit from Sneaking."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"Your Combat Defense feat is checked automatically every time you are attacked. As a vampire, you may defend against melee, unarmed attacks, and even bullets with your Combat Defense feat."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"Many factors contribute to your defense in combat. Spending experience to raise your Wits, Dodge, or Stamina will reduce the damage you take in combat. Clothing and body armor also help reduce damage."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"Killing innocent humans will result in a loss of Humanity. A lower Humanity rating puts you at greater risk of frenzy. Additionally, your dialog options may change as you sink further into your monstrous nature."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"Humans are the primary source of sustenance for Kindred. You can also get a small amount of blood from rats, except when you are a Ventrue. Blood packs can be used as well, if you can find them."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"One of the vampire's greatest feats is the ability to reconstitute their broken body. By focusing the blood they can close buckshot wounds and regrow lost appendages.
+The vampiric body heals all wounds over time. Feeding or Bloodheal will speed this process."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"Urban areas have maps located on bus stops. Use the maps to see an overhead view of the area."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"Frenzy occurs when the Beast within takes control. A frenzied vampire is a ferocious killing machine, desperate for survival.
+Frenzy will give you tremendous destructive power, but you will lose all control of your actions."
+		}
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"If you find yourself pursued by human law enforcement, hide. Police will hunt you, but will give up if they cannot find you.
+You will receive a message when police give up the hunt."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"Sewers offer great protection and secrecy to vampires who wish it."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Small"
+			"Text"		"Take great care when feeding in the midst of mortals. You must not be seen, lest you betray the Masquerade."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Large"
+			"Text"		"In the Character Editor (default key: C) hover the mouse pointer over a feat you wish to increase. The Attributes and Abilities that contribute to that feat will appear highlighted. Increasing these Attributes and Abilities will increase the feat."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Large"
+			"Text"		"Tomes of knowledge can be found throughout the game. Using these manuals will permanently increase one of your stats.
+Each manual has requirements for use. Your Research feat, as well as the stat to be raised, will need to meet these requirements before you can use the manual."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"0"
+			"Size"		"Large"
+			"Text"		"The vampire may push its body to the peak of human prowess for a short time, for a price in blood. Bloodbuff represents the vampire's innate ability to enhance the physical attributes.
+If you fail to pick a lock, use Bloodbuff. The temporary increase in Dexterity will boost your Lockpicking feat."	// changed by wesp
+		}
+	/////////////////////////
+/////////////////////////
+	// HelpTips for StoryState 5
+/////////////////////////
+	//World Tips
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"5"
+			"Size"		"Large"
+			"Text"		"The Sabbat has recently increased its activity, actively vying for Chicago, Atlanta, Washington DC, and other elder-controlled cities. Animalistic and monstrous, the sect has swarmed like locusts over the East Coast and southern borders of the United States. Its influence in Canada has also increased, and it appears as if the Sabbat is realizing a grand enfilade, surrounding the United States and cutting off all access except that which it grants."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"5"
+			"Size"		"Large"
+			"Text"		"Reputedly the \"father of all vampires\", Caine is more myth than reality in the modern nights. Some of the Methuselahs, as well as certain members of the Sabbat, claim to have met a being who referred to himself as Caine, but the story has filtered through so many individuals and layers of the Jyhad that no one can precisely tell where truth ends and fabrication begins."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"5"
+			"Size"		"Large"
+			"Text"		"Whispers in Sabbat covens and Camarilla salons alike speak of turmoil in the East, of armies of clanless rabble, of vampires whose blood is so thin that they cannot Embrace, of meetings with mysterious elders whose vast power betrays no discernable lineage, of black crescent moons and full moons red as blood. All, say the believers, are omens that the Final Nights are approaching, and that the end of all things is nigh."
+		}
+
+//	//Game Tips
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"5"
+			"Size"		"Small"
+			"CharTemplate"	"Player_Brujah"
+			"Text"		"Use a cab to travel between cities and other distant locales.
+As new areas become available, they will be added to the cab map."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"5"
+			"Size"		"Small"
+			"CharTemplate"	"Player_Gangrel"
+			"Text"		"Use a cab to travel between cities and other distant locales.
+As new areas become available, they will be added to the cab map."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"5"
+			"Size"		"Small"
+			"CharTemplate"	"Player_Malkavian"
+			"Text"		"Use a cab to travel between cities and other distant locales.
+As new areas become available, they will be added to the cab map."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"5"
+			"Size"		"Small"
+			"CharTemplate"	"Player_Toreador"
+			"Text"		"Use a cab to travel between cities and other distant locales.
+As new areas become available, they will be added to the cab map."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"5"
+			"Size"		"Small"
+			"CharTemplate"	"Player_Tremere"
+			"Text"		"Use a cab to travel between cities and other distant locales.
+As new areas become available, they will be added to the cab map."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"5"
+			"Size"		"Small"
+			"CharTemplate"	"Player_Ventrue"
+			"Text"		"Use a cab to travel between cities and other distant locales.
+As new areas become available, they will be added to the cab map."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"5"
+			"Size"		"Small"
+			"CharTemplate"	"Player_Nosferatu"
+			"Text"		"Use the maps in the sewers to travel between cities and other distant locales.
+As new areas become available, they will be added to the sewer maps."
+		}
+
+/////////////////////////
+	// HelpTips for StoryState 10
+/////////////////////////
+	//World Tips
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"The Sabbat has recently increased its activity, actively vying for Chicago, Atlanta, Washington DC, and other elder-controlled cities. Animalistic and monstrous, the sect has swarmed like locusts over the East Coast and southern borders of the United States. Its influence in Canada has also increased, and it appears as if the Sabbat is realizing a grand enfilade, surrounding the United States and cutting off all access except that which it grants."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"Reputedly the \"father of all vampires\", Caine is more myth than reality in the modern nights. Some of the Methuselahs, as well as certain members of the Sabbat, claim to have met a being who referred to himself as Caine, but the story has filtered through so many individuals and layers of the Jyhad that no one can precisely tell where truth ends and fabrication begins."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"Whispers in Sabbat covens and Camarilla salons alike speak of turmoil in the East, of armies of clanless rabble, of vampires whose blood is so thin that they cannot Embrace, of meetings with mysterious elders whose vast power betrays no discernable lineage, of black crescent moons and full moons red as blood. All, say the believers, are omens that the Final Nights are approaching, and that the end of all things is nigh."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Small"
+			"Text"		"Childe:
+			A vampire created through the Embrace - the childe is the progeny of the sire. This term is often used derogatorily, indicating inexperience. Plural: childer."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Small"
+			"Text"		"Fledgling:
+			A newly created vampire."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Small"
+			"Text"		"Antediluvian:
+			A member of the dreaded Third Generation, one of the eldest Kindred in existence."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"A prince does not \"reign\" over a city. His role is more like that of an overseer or magistrate than that of a monarch. He is the judge who settles disputes between Kindred, the ultimate authority on the Traditions as they relate to his city, and the keeper of the peace. Above all, his concern is the Masquerade and its preservation."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Small"
+			"Text"		"Most mortals, enshrouded in superstition and science, remain blind to the vampires in their midst - but some do know, and fear. Mortals who hunt the Kindred are known as witch-hunters, after the Inquisitors of old."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Small"
+			"Text"		"While the job description may vary from city to city, the sheriff's prime job is to be the prince's \"enforcer\", the vampire who hauls offenders off to court, keeps order in the streets, and generally stands ready to assist with the \"muscle\" of ruling."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"Anarchs are vampires who reject the Traditions of Caine and the dictates of the elders who enforce them. Ironically, elders grudgingly afford Anarchs some degree of status, due to the Anarchs' ability to obtain power in spite of the elders' opposition. Anarchs are also respected for their passion and drive, which few elder Kindred, mired as they are in their age and dissatisfaction, can muster. Ultimately, however, most Kindred see Anarchs as jackals, scavenging their unlives from what slips through the elders' fingers."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"Primogen:
+			The primogen are the assembled elders of each clan in a city. In theory, primogen represent their clans among the political body of the elders, but in practice the primogen are more often an \"old vampires' club\" and an incestuous nest of treachery and favor-currying."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Small"
+			"Text"		"Whispers circulate through the Kindred world about \"lesser\" clans or \"bloodlines\" that branched off from their parent genealogies somewhere in the nights of history. One of these are the flesh eating Nagaraja."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"Caitiff:
+			The Caitiff are the clanless vampires, outcast by other Kindred and despised by those who bother to notice them at all. Vampires may become clanless either by having no idea of their sires' identities (and thus having no sense of lineage) or by being of such weak generation that no identifying clan characteristics are discernable. Caitiff are almost universally regarded as bastard children and orphans, though some rise to a degree of prominence among the Anarchs."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"Some Kindred believe that a Reckoning is at hand, that the powers of Heaven are preparing at last to judge the vampires and what they have made of the world. Others speak of the Winnowing, or Gehenna - the night when the most ancient vampires will rise to consume their progeny, taking their lessers' cursed blood to sate their own hunger."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"One of the most wondrous and terrible properties of Kindred vitae is its ability to enslave nearly any being who drinks of it three times. Each sip of a particular Kindred's blood gives the Kindred in question a greater emotional hold over the drinker. If a victim drinks three times from the same Kindred, she falls victim to the state known as the \"blood bond\". Put simply, blood bond is one of the most potent emotional sensations known."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"Clan Brujah:
+			Largely composed of rebels, both with and without causes. Individualistic, outspoken and turbulent, Brujah hold social change near to their undead hearts, and the clan's ranks contain some of the most violent of the Camarilla Kindred. Most other vampires perceive the Brujah as nothing more than punks and miscreants, but the truth of the matter is that genuine passion lies behind their polemics."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"Clan Tremere:
+			Whether dreaded, mistrusted, feared or reviled, the insular vampires of Clan Tremere are anything but ignored. Those who have heard of the clan's doings are typically suspicious of the Tremere, and with good reason. Through their own artifice, they have mastered a form of vampiric sorcery, complete with rituals and spells, that is as potent - if not more so - than any other power of the Blood."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"Clan Ventrue:
+			From time out of mind, Ventrue has been the clan of leadership, enforcing the ancient Traditions and seeking to shape the destiny of the Kindred. In nights of old, Ventrue were chosen from nobles, merchant princes or other wielders of power. In modern times the clan recruits from wealthy \"old money\" families, ruthless corporate climbers, and politicians. Whatever the origin, Ventrue preserve stability and maintain order for the Camarilla."
+		}
+
+		//Game Tips
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"The Unarmed Combat feat determines how easily you may feed on the unwilling. A higher Unarmed Combat feat will make it easier for you to feed during battle.
+The Unarmed Combat feat also directly affects how much damage you can do with your fists and claws, and how easily an opponent may block, dodge, or counter these blows."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"The Haggle feat modifies all buy and sell prices. Vendor prices are automatically adjusted based on your Haggle feat. With a higher Haggle feat you will be able to sell items for more money, and buy items for less.
+When financial matters are being discussed, a high Haggle feat might allow you special dialog options."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"Hunger can induce frenzy, as can the fear and anger caused by taking physical damage.
+The risk of frenzy relates directly to your Humanity. A vampire in touch with their former humanity can keep the Beast at bay; a craven undead killer will succumb more frequently. This risk is compounded by hunger.
+Feed often and maintain your Humanity to prevent frenzy."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"10"
+			"Size"		"Small"
+			"Text"		"If a Discipline timer is running, activating the Discipline again will add the full time on top of the remaining time."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"10"
+			"Size"		"Small"
+			"Text"		"Use the \"End Disciplines\" key (default key: F8) to shut off a Discipline while it is running."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"10"
+			"Size"		"Small"
+			"Text"		"Stamina adds to the Bashing Soak feat. As a vampire, each point of Bashing Soak reduces the damage you receive from bullets and blunt melee weapons."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"Disciplines typically have a lesser effect on vampires and other supernaturals. The exact effect varies from being to being. You can expect more powerful supernaturals to have a higher degree of resistance."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"10"
+			"Size"		"Small"
+			"Text"		"While in melee combat, you can block (default key: Tab) to give yourself a bonus to Combat Defense. This bonus is equal to your Dexterity."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"10"
+			"Size"		"Small"
+			"Text"		"The Lethality of a weapon can be used to gauge its effectiveness against vampires. The higher the Lethality, the more difficult it will be for vampires to defend against the weapon."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"Holding down the different directional movement keys while attacking will trigger different melee attacks. Each directional movement key triggers a different combination of melee attacks. 
+Varying your melee attacks will keep a defender off-balance. If you use the same attack repeatedly, the defender will learn to anticipate your attack, and is more likely to deflect your blows."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"10"
+			"Size"		"Small"
+			"Text"		"You can raise your Humanity like any other character stat, by spending experience."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"The Damage Potential of a weapon is how much damage the weapon can do in your hands. This number is adjusted by your Ranged or Melee Combat feat. The higher your combat feat, the more damage you can do."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+			"StoryState"	"10"
+			"Size"		"Large"
+			"Text"		"Vampires are extraordinarily resilient to gunfire. Use blades and your vampiric Disciplines to combat vampires and other supernaturals more effectively."
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+			"StoryState"	"10"
+			"Size"		"Small"
+			"Text"		"Return to the Character Editor often (default key: C) and spend the experience you've gained to improve your character."
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+			"StoryState"	"10"
+			"Size"		"Small"
+			"Text"		"Blood packs provide a small amount of blood and healing. While harder to obtain and less potent than fresh blood, blood packs can save you when other sustenance is in short supply."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"10"
+			"Size"		"Small"
+			"Text"		"Bladed weapons are as deadly to vampires as they are to humans. The Combat Defense feat and Lethal Soak feat both add to your defense against blades."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// added by wesp
+			"StoryState"	"10"
+			"Size"		"Small"
+			"Text"		"Email addressed to you is sent to the computer in your haven. Return to your haven frequently to check your email."
+		}
+
+/////////////////////////
+	// HelpTips for StoryState 15
+/////////////////////////
+	//World Tips
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"The Sabbat has recently increased its activity, actively vying for Chicago, Atlanta, Washington DC, and other elder-controlled cities. Animalistic and monstrous, the sect has swarmed like locusts over the East Coast and southern borders of the United States. Its influence in Canada has also increased, and it appears as if the Sabbat is realizing a grand enfilade, surrounding the United States and cutting off all access except that which it grants."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"Reputedly the \"father of all vampires\", Caine is more myth than reality in the modern nights. Some of the Methuselahs, as well as certain members of the Sabbat, claim to have met a being who referred to himself as Caine, but the story has filtered through so many individuals and layers of the Jyhad that no one can precisely tell where truth ends and fabrication begins."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"Whispers in Sabbat covens and Camarilla salons alike speak of turmoil in the East, of armies of clanless rabble, of vampires whose blood is so thin that they cannot Embrace, of meetings with mysterious elders whose vast power betrays no discernable lineage, of black crescent moons and full moons red as blood. All, say the believers, are omens that the Final Nights are approaching, and that the end of all things is nigh."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Small"
+			"Text"		"Childe:
+			A vampire created through the Embrace - the childe is the progeny of the sire. This term is often used derogatorily, indicating inexperience. Plural: childer."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Small"
+			"Text"		"Fledgling:
+			A newly created vampire."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Small"
+			"Text"		"Antediluvian:
+			A member of the dreaded Third Generation, one of the eldest Kindred in existence."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"A prince does not \"reign\" over a city. His role is more like that of an overseer or magistrate than that of a monarch. He is the judge who settles disputes between Kindred, the ultimate authority on the Traditions as they relate to his city, and the keeper of the peace. Above all, his concern is the Masquerade and its preservation."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Small"
+			"Text"		"Most mortals, enshrouded in superstition and science, remain blind to the vampires in their midst - but some do know, and fear. Mortals who hunt the Kindred are known as witch-hunters, after the Inquisitors of old."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Small"
+			"Text"		"While the job description may vary from city to city, the sheriff's prime job is to be the prince's \"enforcer\", the vampire who hauls offenders off to court, keeps order in the streets, and generally stands ready to assist with the \"muscle\" of ruling."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"Anarchs are vampires who reject the Traditions of Caine and the dictates of the elders who enforce them. Ironically, elders grudgingly afford Anarchs some degree of status, due to the Anarchs' ability to obtain power in spite of the elders' opposition. Anarchs are also respected for their passion and drive, which few elder Kindred, mired as they are in their age and dissatisfaction, can muster. Ultimately, however, most Kindred see Anarchs as jackals, scavenging their unlives from what slips through the elders' fingers."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"Primogen:
+			The primogen are the assembled elders of each clan in a city. In theory, primogen represent their clans among the political body of the elders, but in practice the primogen are more often an \"old vampires' club\" and an incestuous nest of treachery and favor-currying."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Small"
+			"Text"		"Whispers circulate through the Kindred world about \"lesser\" clans or \"bloodlines\" that branched off from their parent genealogies somewhere in the nights of history. One of these are the flesh eating Nagaraja."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"Caitiff:
+			The Caitiff are the clanless vampires, outcast by other Kindred and despised by those who bother to notice them at all. Vampires may become clanless either by having no idea of their sires' identities (and thus having no sense of lineage) or by being of such weak generation that no identifying clan characteristics are discernable. Caitiff are almost universally regarded as bastard children and orphans, though some rise to a degree of prominence among the Anarchs."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"Some Kindred believe that a Reckoning is at hand, that the powers of Heaven are preparing at last to judge the vampires and what they have made of the world. Others speak of the Winnowing, or Gehenna - the night when the most ancient vampires will rise to consume their progeny, taking their lessers' cursed blood to sate their own hunger."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"One of the most wondrous and terrible properties of Kindred vitae is its ability to enslave nearly any being who drinks of it three times. Each sip of a particular Kindred's blood gives the Kindred in question a greater emotional hold over the drinker. If a victim drinks three times from the same Kindred, she falls victim to the state known as the \"blood bond\". Put simply, blood bond is one of the most potent emotional sensations known."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"Clan Brujah:
+			Largely composed of rebels, both with and without causes. Individualistic, outspoken and turbulent, Brujah hold social change near to their undead hearts, and the clan's ranks contain some of the most violent of the Camarilla Kindred. Most other vampires perceive the Brujah as nothing more than punks and miscreants, but the truth of the matter is that genuine passion lies behind their polemics."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"Clan Tremere:
+			Whether dreaded, mistrusted, feared or reviled, the insular vampires of Clan Tremere are anything but ignored. Those who have heard of the clan's doings are typically suspicious of the Tremere, and with good reason. Through their own artifice, they have mastered a form of vampiric sorcery, complete with rituals and spells, that is as potent - if not more so - than any other power of the Blood."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"Clan Ventrue:
+			From time out of mind, Ventrue has been the clan of leadership, enforcing the ancient Traditions and seeking to shape the destiny of the Kindred. In nights of old, Ventrue were chosen from nobles, merchant princes or other wielders of power. In modern times the clan recruits from wealthy \"old money\" families, ruthless corporate climbers, and politicians. Whatever the origin, Ventrue preserve stability and maintain order for the Camarilla."
+		}
+
+		//Game Tips
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"The Unarmed Combat feat determines how easily you may feed on the unwilling. A higher Unarmed Combat feat will make it easier for you to feed during battle.
+The Unarmed Combat feat also directly affects how much damage you can do with your fists and claws, and how easily an opponent may block, dodge, or counter these blows."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"The Haggle feat modifies all buy and sell prices. Vendor prices are automatically adjusted based on your Haggle feat. With a higher Haggle feat you will be able to sell items for more money, and buy items for less.
+When financial matters are being discussed, a high Haggle feat might allow you special dialog options."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"Hunger can induce frenzy, as can the fear and anger caused by taking physical damage.
+The risk of frenzy relates directly to your Humanity. A vampire in touch with their former humanity can keep the Beast at bay; a craven undead killer will succumb more frequently. This risk is compounded by hunger.
+Feed often and maintain your Humanity to prevent frenzy."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"15"
+			"Size"		"Small"
+			"Text"		"If a Discipline timer is running, activating the Discipline again will add more time to the timer."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"15"
+			"Size"		"Small"
+			"Text"		"Use the \"End Disciplines\" key (default key: F8) to shut off a Discipline while it is running."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"15"
+			"Size"		"Small"
+			"Text"		"Stamina adds to Bashing Soak feat. As a vampire, each point of Bashing Soak reduces the damage you receive from bullets and blunt melee weapons."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"Disciplines typically have a lesser effect on vampires and other supernaturals. The exact effect varies from being to being. You can expect more powerful supernaturals to have a higher degree of resistance."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"15"
+			"Size"		"Small"
+			"Text"		"While in melee combat, you can block (default key: Tab) to give yourself a bonus to Combat Defense. This bonus is equal to your Dexterity."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"15"
+			"Size"		"Small"
+			"Text"		"The Lethality of a weapon can be used to gauge its effectiveness against vampires. The higher the Lethality, the more difficult it will be for vampires to defend against the weapon."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"Holding down the different directional movement keys while attacking will trigger different melee attacks. Each directional movement key triggers a different combination of melee attacks. 
+Varying your melee attacks will keep a defender off-balance. If you use the same attack repeatedly, the defender will learn to anticipate your attack, and is more likely to deflect your blows."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"15"
+			"Size"		"Small"
+			"Text"		"You can raise your Humanity like any other character stat, by spending experience."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"The Damage Potential of a weapon is how much damage the weapon can do in your hands. This number is adjusted by your Ranged or Melee Combat feat. The higher your combat feat, the more damage you can do."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+
+			"StoryState"	"15"
+			"Size"		"Large"
+			"Text"		"Vampires are extraordinarily resilient to gunfire. Use blades and your vampiric Disciplines to combat vampires and other supernaturals more effectively."
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+			"StoryState"	"15"
+			"Size"		"Small"
+			"Text"		"Return to the Character Editor often (default key: C) and spend the experience you've gained to improve your character."
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+			"StoryState"	"15"
+			"Size"		"Small"
+			"Text"		"Blood packs provide a small amount of blood and healing. While harder to obtain and less potent than fresh blood, blood packs can save you when other sustenance is in short supply."
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+			"StoryState"	"15"
+			"Size"		"Small"
+			"Text"		"Bladed weapons are as deadly to vampires as they are to humans. The Combat Defense feat and Lethal Soak feat both add to your defense against blades."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"15"
+			"Size"		"Small"
+			"Text"		"Email addressed to you is sent to the computer in your haven. Return to your haven frequently to check your email."
+		}
+
+/////////////////////////
+	// HelpTips for StoryState 20
+/////////////////////////
+	//World Tips
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"The Sabbat has recently increased its activity, actively vying for Chicago, Atlanta, Washington DC, and other elder-controlled cities. Animalistic and monstrous, the sect has swarmed like locusts over the East Coast and southern borders of the United States. Its influence in Canada has also increased, and it appears as if the Sabbat is realizing a grand enfilade, surrounding the United States and cutting off all access except that which it grants."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"Reputedly the \"father of all vampires\", Caine is more myth than reality in the modern nights. Some of the Methuselahs, as well as certain members of the Sabbat, claim to have met a being who referred to himself as Caine, but the story has filtered through so many individuals and layers of the Jyhad that no one can precisely tell where truth ends and fabrication begins."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"Whispers in Sabbat covens and Camarilla salons alike speak of turmoil in the East, of armies of clanless rabble, of vampires whose blood is so thin that they cannot Embrace, of meetings with mysterious elders whose vast power betrays no discernable lineage, of black crescent moons and full moons red as blood. All, say the believers, are omens that the Final Nights are approaching, and that the end of all things is nigh."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"20"
+			"Size"		"Small"
+			"Text"		"Antediluvian:
+			A member of the dreaded Third Generation, one of the eldest Kindred in existence."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"A prince does not \"reign\" over a city. His role is more like that of an overseer or magistrate than that of a monarch. He is the judge who settles disputes between Kindred, the ultimate authority on the Traditions as they relate to his city, and the keeper of the peace. Above all, his concern is the Masquerade and its preservation."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"20"
+			"Size"		"Small"
+			"Text"		"Most mortals, enshrouded in superstition and science, remain blind to the vampires in their midst - but some do know, and fear. Mortals who hunt the Kindred are known as witch-hunters, after the Inquisitors of old."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"20"
+			"Size"		"Small"
+			"Text"		"While the job description may vary from city to city, the sheriff's prime job is to be the prince's \"enforcer\", the vampire who hauls offenders off to court, keeps order in the streets, and generally stands ready to assist with the \"muscle\" of ruling."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"Anarchs are vampires who reject the Traditions of Caine and the dictates of the elders who enforce them. Ironically, elders grudgingly afford Anarchs some degree of status, due to the Anarchs' ability to obtain power in spite of the elders' opposition. Anarchs are also respected for their passion and drive, which few elder Kindred, mired as they are in their age and dissatisfaction, can muster. Ultimately, however, most Kindred see Anarchs as jackals, scavenging their unlives from what slips through the elders' fingers."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"Primogen:
+			The primogen are the assembled elders of each clan in a city. In theory, primogen represent their clans among the political body of the elders, but in practice the primogen are more often an \"old vampires' club\" and an incestuous nest of treachery and favor-currying."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"20"
+			"Size"		"Small"
+			"Text"		"Whispers circulate through the Kindred world about \"lesser\" clans or \"bloodlines\" that branched off from their parent genealogies somewhere in the nights of history. One of these are the flesh eating Nagaraja."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"Caitiff:
+			The Caitiff are the clanless vampires, outcast by other Kindred and despised by those who bother to notice them at all. Vampires may become clanless either by having no idea of their sires' identities (and thus having no sense of lineage) or by being of such weak generation that no identifying clan characteristics are discernable. Caitiff are almost universally regarded as bastard children and orphans, though some rise to a degree of prominence among the Anarchs."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"Some Kindred believe that a Reckoning is at hand, that the powers of Heaven are preparing at last to judge the vampires and what they have made of the world. Others speak of the Winnowing, or Gehenna, the night when the most ancient vampires will rise to consume their progeny, taking their lessers' cursed blood to sate their own hunger."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"One of the most wondrous and terrible properties of Kindred vitae is its ability to enslave nearly any being who drinks of it three times. Each sip of a particular Kindred's blood gives the Kindred in question a greater emotional hold over the drinker. If a victim drinks three times from the same Kindred, she falls victim to the state known as the \"blood bond\". Put simply, blood bond is one of the most potent emotional sensations known."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"Clan Brujah:
+			Largely composed of rebels, both with and without causes. Individualistic, outspoken and turbulent, Brujah hold social change near to their undead hearts, and the clan's ranks contain some of the most violent of the Camarilla Kindred. Most other vampires perceive the Brujah as nothing more than punks and miscreants, but the truth of the matter is that genuine passion lies behind their polemics."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"Clan Tremere:
+			Whether dreaded, mistrusted, feared or reviled, the insular vampires of Clan Tremere are anything but ignored. Those who have heard of the clan's doings are typically suspicious of the Tremere, and with good reason. Through their own artifice, they have mastered a form of vampiric sorcery, complete with rituals and spells, that is as potent - if not more so - than any other power of the Blood."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"Clan Ventrue:
+			From time out of mind, Ventrue has been the clan of leadership, enforcing the ancient Traditions and seeking to shape the destiny of the Kindred. In nights of old, Ventrue were chosen from nobles, merchant princes or other wielders of power. In modern times the clan recruits from wealthy \"old money\" families, ruthless corporate climbers, and politicians. Whatever the origin, Ventrue preserve stability and maintain order for the Camarilla."
+		}
+
+		//Game Tips
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"The Unarmed Combat feat determines how easily you may feed on the unwilling. A higher Unarmed Combat feat will make it easier for you to feed during battle.
+The Unarmed Combat feat also directly affects how much damage you can do with your fists and claws, and how easily an opponent may block, dodge, or counter these blows."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"The Haggle feat modifies all buy and sell prices. Vendor prices are automatically adjusted based on your Haggle feat. With a higher Haggle feat you will be able to sell items for more money, and buy items for less.
+When financial matters are being discussed, a high Haggle feat might allow you special dialog options."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"Hunger can induce frenzy, as can the fear and anger caused by taking physical damage.
+The risk of frenzy relates directly to your Humanity. A vampire in touch with their former humanity can keep the Beast at bay; a craven undead killer will succumb more frequently. This risk is compounded by hunger.
+Feed often and maintain your Humanity to prevent frenzy."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"20"
+			"Size"		"Small"
+			"Text"		"If a Discipline timer is running, activating the Discipline again will add the full time on top of the remaining time."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"20"
+			"Size"		"Small"
+			"Text"		"Use the \"End Disciplines\" key (default key: F8) to shut off a Discipline while it is running."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"20"
+			"Size"		"Small"
+			"Text"		"Stamina adds to Bashing Soak feat. As a vampire, each point of Bashing Soak reduces the damage you receive from bullets and blunt melee weapons."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"Disciplines typically have a lesser effect on vampires and other supernaturals. The exact effect varies from being to being. You can expect more powerful supernaturals to have a higher degree of resistance."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"20"
+			"Size"		"Small"
+			"Text"		"While in melee combat, you can block (default key: Tab) to give yourself a bonus to Combat Defense. This bonus is equal to your Dexterity."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"20"
+			"Size"		"Small"
+			"Text"		"The Lethality of a weapon can be used to gauge its effectiveness against vampires. The higher the Lethality, the more difficult it will be for vampires to defend against the weapon."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"Holding down the different directional movement keys while attacking will trigger different melee attacks. Each directional movement key triggers a different combination of melee attacks. 
+Varying your melee attacks will keep a defender off-balance. If you use the same attack repeatedly, the defender will learn to anticipate your attack, and is more likely to deflect your blows."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"20"
+			"Size"		"Small"
+			"Text"		"You can raise your Humanity like any other character stat, by spending experience."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"The Damage Potential of a weapon is how much damage the weapon can do in your hands. This number is adjusted by your Ranged or Melee Combat feat. The higher your combat feat, the more damage you can do."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+			"StoryState"	"20"
+			"Size"		"Large"
+			"Text"		"Vampires are extraordinarily resilient to gunfire. Use blades and your vampiric Disciplines to combat vampires and other supernaturals more effectively."
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+			"StoryState"	"20"
+			"Size"		"Small"
+			"Text"		"Return to the Character Editor often (default key: C) and spend the experience you've gained to improve your character."
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+			"StoryState"	"20"
+			"Size"		"Small"
+			"Text"		"Blood packs provide a small amount of blood and healing. While harder to obtain and less potent than fresh blood, blood packs can save you when other sustenance is in short supply."
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+			"StoryState"	"20"
+			"Size"		"Small"
+			"Text"		"Bladed weapons are as deadly to vampires as they are to humans. The Combat Defense feat and Lethal Soak feat both add to your defense against blades."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"20"
+			"Size"		"Small"
+			"Text"		"Email addressed to you is sent to the computer in your haven. Return to your haven frequently to check your email."
+		}
+
+/////////////////////////
+	// HelpTips for StoryState 25
+/////////////////////////
+	//World Tips
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"Reputedly the \"father of all vampires\", Caine is more myth than reality in the modern nights. Some of the Methuselahs, as well as certain members of the Sabbat, claim to have met a being who referred to himself as Caine, but the story has filtered through so many individuals and layers of the Jyhad that no one can precisely tell where truth ends and fabrication begins."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"Whispers in Sabbat covens and Camarilla salons alike speak of turmoil in the East, of armies of clanless rabble, of vampires whose blood is so thin that they cannot Embrace, of meetings with mysterious elders whose vast power betrays no discernable lineage, of black crescent moons and full moons red as blood. All, say the believers, are omens that the Final Nights are approaching, and that the end of all things is nigh."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"25"
+			"Size"		"Small"
+			"Text"		"Antediluvian:
+			A member of the dreaded Third Generation, one of the eldest Kindred in existence."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"A prince does not \"reign\" over a city. His role is more like that of an overseer or magistrate than that of a monarch. He is the judge who settles disputes between Kindred, the ultimate authority on the Traditions as they relate to his city, and the keeper of the peace. Above all, his concern is the Masquerade and its preservation."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"25"
+			"Size"		"Small"
+			"Text"		"Most mortals, enshrouded in superstition and science, remain blind to the vampires in their midst - but some do know, and fear. Mortals who hunt the Kindred are known as witch-hunters, after the Inquisitors of old."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"25"
+			"Size"		"Small"
+			"Text"		"While the job description may vary from city to city, the sheriff's prime job is to be the prince's \"enforcer\", the vampire who hauls offenders off to court, keeps order in the streets, and generally stands ready to assist with the \"muscle\" of ruling."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"Anarchs are vampires who reject the Traditions of Caine and the dictates of the elders who enforce them. Ironically, elders grudgingly afford Anarchs some degree of status, due to the Anarchs' ability to obtain power in spite of the elders' opposition. Anarchs are also respected for their passion and drive, which few elder Kindred, mired as they are in their age and dissatisfaction, can muster. Ultimately, however, most Kindred see Anarchs as jackals, scavenging their unlives from what slips through the elders' fingers."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"Primogen:
+			The primogen are the assembled elders of each clan in a city. In theory, primogen represent their clans among the political body of the elders, but in practice the primogen are more often an \"old vampires' club\" and an incestuous nest of treachery and favor-currying."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"25"
+			"Size"		"Small"
+			"Text"		"Whispers circulate through the Kindred world about \"lesser\" clans or \"bloodlines\" that branched off from their parent genealogies somewhere in the nights of history. One of these are the flesh eating Nagaraja."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"Caitiff:
+			The Caitiff are the clanless vampires, outcast by other Kindred and despised by those who bother to notice them at all. Vampires may become clanless either by having no idea of their sires' identities (and thus having no sense of lineage) or by being of such weak generation that no identifying clan characteristics are discernable. Caitiff are almost universally regarded as bastard children and orphans, though some rise to a degree of prominence among the Anarchs."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"Some Kindred believe that a Reckoning is at hand, that the powers of Heaven are preparing at last to judge the vampires and what they have made of the world. Others speak of the Winnowing, or Gehenna, the night when the most ancient vampires will rise to consume their progeny, taking their lessers' cursed blood to sate their own hunger."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"One of the most wondrous and terrible properties of Kindred vitae is its ability to enslave nearly any being who drinks of it three times. Each sip of a particular Kindred's blood gives the Kindred in question a greater emotional hold over the drinker. If a victim drinks three times from the same Kindred, she falls victim to the state known as the \"blood bond\". Put simply, blood bond is one of the most potent emotional sensations known."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"Clan Brujah:
+			Largely composed of rebels, both with and without causes. Individualistic, outspoken and turbulent, Brujah hold social change near to their undead hearts, and the clan's ranks contain some of the most violent of the Camarilla Kindred. Most other vampires perceive the Brujah as nothing more than punks and miscreants, but the truth of the matter is that genuine passion lies behind their polemics."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"Clan Tremere:
+			Whether dreaded, mistrusted, feared or reviled, the insular vampires of Clan Tremere are anything but ignored. Those who have heard of the clan's doings are typically suspicious of the Tremere, and with good reason. Through their own artifice, they have mastered a form of vampiric sorcery, complete with rituals and spells, that is as potent - if not more so - than any other power of the Blood."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"Clan Ventrue:
+			From time out of mind, Ventrue has been the clan of leadership, enforcing the ancient Traditions and seeking to shape the destiny of the Kindred. In nights of old, Ventrue were chosen from nobles, merchant princes or other wielders of power. In modern times the clan recruits from wealthy \"old money\" families, ruthless corporate climbers, and politicians. Whatever the origin, Ventrue preserve stability and maintain order for the Camarilla."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"Gehenna Cults:
+			Gehenna cults exist to prepare for, or prevent, the end of the world. Fearing the culmination of the Jyhad and the return of the Antediluvians, the cults prepare either to serve the Ancients (thus hopefully averting their own destruction when the end comes) or to discover the Antediluvians' hidden havens (thus striking preemptively against them and averting Gehenna outright)."
+		}
+
+		//Game Tips
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"The Unarmed Combat feat determines how easily you may feed on the unwilling. A higher Unarmed Combat feat will make it easier for you to feed during battle.
+The Unarmed Combat feat also directly affects how much damage you can do with your fists and claws, and how easily an opponent may block, dodge, or counter these blows."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"The Haggle feat modifies all buy and sell prices. Vendor prices are automatically adjusted based on your Haggle feat. With a higher Haggle feat you will be able to sell items for more money, and buy items for less.
+When financial matters are being discussed, a high Haggle feat might allow you special dialog options."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"Hunger can induce frenzy, as can the fear and anger caused by taking physical damage.
+The risk of frenzy relates directly to your Humanity. A vampire in touch with their former humanity can keep the Beast at bay; a craven undead killer will succumb more frequently. This risk is compounded by hunger.
+Feed often and maintain your Humanity to prevent frenzy."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"25"
+			"Size"		"Small"
+			"Text"		"If a Discipline timer is running, activating the Discipline again will add the full time on top of the remaining time."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"25"
+			"Size"		"Small"
+			"Text"		"Use the \"End Disciplines\" key (default key: F8) to shut off a Discipline while it is running."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"25"
+			"Size"		"Small"
+			"Text"		"Stamina adds to Bashing Soak feat. As a vampire, each point of Bashing Soak reduces the damage you receive from bullets and blunt melee weapons."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"Disciplines typically have a lesser effect on vampires and other supernaturals. The exact effect varies from being to being. You can expect more powerful supernaturals to have a higher degree of resistance."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"25"
+			"Size"		"Small"
+			"Text"		"While in melee combat, you can block (default key: Tab) to give yourself a bonus to Combat Defense. This bonus is equal to your Dexterity."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"25"
+			"Size"		"Small"
+			"Text"		"The Lethality of a weapon can be used to gauge its effectiveness against vampires. The higher the Lethality, the more difficult it will be for vampires to defend against the weapon."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"Holding down the different directional movement keys while attacking will trigger different melee attacks. Each directional movement key triggers a different combination of melee attacks. 
+Varying your melee attacks will keep a defender off-balance. If you use the same attack repeatedly, the defender will learn to anticipate your attack, and is more likely to deflect your blows."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"25"
+			"Size"		"Small"
+			"Text"		"You can raise your Humanity like any other character stat, by spending experience."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"The Damage Potential of a weapon is how much damage the weapon can do in your hands. This number is adjusted by your Ranged or Melee Combat feat. The higher your combat feat, the more damage you can do."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+			"StoryState"	"25"
+			"Size"		"Large"
+			"Text"		"Vampires are extraordinarily resilient to gunfire. Use blades and your vampiric Disciplines to combat vampires and other supernaturals more effectively."
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+			"StoryState"	"25"
+			"Size"		"Small"
+			"Text"		"Return to the Character Editor often (default key: C) and spend the experience you've gained to improve your character."
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+			"StoryState"	"25"
+			"Size"		"Small"
+			"Text"		"Blood packs provide a small amount of blood and healing. While harder to obtain and less potent than fresh blood, blood packs can save you when other sustenance is in short supply."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"25"
+			"Size"		"Small"
+			"Text"		"Bladed weapons are as deadly to vampires as they are to humans. The Combat Defense feat and Lethal Soak feat both add to your defense against blades."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"25"
+			"Size"		"Small"
+			"Text"		"Email addressed to you is sent to the computer in your haven. Return to your haven frequently to check your email."
+		}
+
+/////////////////////////
+	// HelpTips for StoryState 30
+/////////////////////////
+	//World Tips
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"The Sabbat has recently increased its activity, actively vying for Chicago, Atlanta, Washington DC, and other elder-controlled cities. Animalistic and monstrous, the sect has swarmed like locusts over the East Coast and southern borders of the United States. Its influence in Canada has also increased, and it appears as if the Sabbat is realizing a grand enfilade, surrounding the United States and cutting off all access except that which it grants."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"Reputedly the \"father of all vampires\", Caine is more myth than reality in the modern nights. Some of the Methuselahs, as well as certain members of the Sabbat, claim to have met a being who referred to himself as Caine, but the story has filtered through so many individuals and layers of the Jyhad that no one can precisely tell where truth ends and fabrication begins."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"Whispers in Sabbat covens and Camarilla salons alike speak of turmoil in the East, of armies of clanless rabble, of vampires whose blood is so thin that they cannot Embrace, of meetings with mysterious elders whose vast power betrays no discernable lineage, of black crescent moons and full moons red as blood. All, say the believers, are omens that the Final Nights are approaching, and that the end of all things is nigh."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Small"
+			"Text"		"Antediluvian:
+			A member of the dreaded Third Generation, one of the eldest Kindred in existence."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"A prince does not \"reign\" over a city. His role is more like that of an overseer or magistrate than that of a monarch. He is the judge who settles disputes between Kindred, the ultimate authority on the Traditions as they relate to his city, and the keeper of the peace. Above all, his concern is the Masquerade and its preservation."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Small"
+			"Text"		"Most mortals, enshrouded in superstition and science, remain blind to the vampires in their midst - but some do know, and fear. Mortals who hunt the Kindred are known as witch-hunters, after the Inquisitors of old."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Small"
+			"Text"		"While the job description may vary from city to city, the sheriff's prime job is to be the prince's \"enforcer\", the vampire who hauls offenders off to court, keeps order in the streets, and generally stands ready to assist with the \"muscle\" of ruling."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"Anarchs are vampires who reject the Traditions of Caine and the dictates of the elders who enforce them. Ironically, elders grudgingly afford Anarchs some degree of status, due to the Anarchs' ability to obtain power in spite of the elders' opposition. Anarchs are also respected for their passion and drive, which few elder Kindred, mired as they are in their age and dissatisfaction, can muster. Ultimately, however, most Kindred see Anarchs as jackals, scavenging their unlives from what slips through the elders' fingers."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"Primogen:
+			The primogen are the assembled elders of each clan in a city. In theory, primogen represent their clans among the political body of the elders, but in practice the primogen are more often an \"old vampires' club\" and an incestuous nest of treachery and favor-currying."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Small"
+			"Text"		"Whispers circulate through the Kindred world about \"lesser\" clans or \"bloodlines\" that branched off from their parent genealogies somewhere in the nights of history. One of these are the flesh eating Nagaraja."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"Caitiff:
+			The Caitiff are the clanless vampires, outcast by other Kindred and despised by those who bother to notice them at all. Vampires may become clanless either by having no idea of their sires' identities (and thus having no sense of lineage) or by being of such weak generation that no identifying clan characteristics are discernable. Caitiff are almost universally regarded as bastard children and orphans, though some rise to a degree of prominence among the Anarchs."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"Some Kindred believe that a Reckoning is at hand, that the powers of Heaven are preparing at last to judge the vampires and what they have made of the world. Others speak of the Winnowing, or Gehenna, the night when the most ancient vampires will rise to consume their progeny, taking their lessers' cursed blood to sate their own hunger."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"One of the most wondrous and terrible properties of Kindred vitae is its ability to enslave nearly any being who drinks of it three times. Each sip of a particular Kindred's blood gives the Kindred in question a greater emotional hold over the drinker. If a victim drinks three times from the same Kindred, she falls victim to the state known as the \"blood bond\". Put simply, blood bond is one of the most potent emotional sensations known."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"Clan Brujah:
+			Largely composed of rebels, both with and without causes. Individualistic, outspoken and turbulent, Brujah hold social change near to their undead hearts, and the clan's ranks contain some of the most violent of the Camarilla Kindred. Most other vampires perceive the Brujah as nothing more than punks and miscreants, but the truth of the matter is that genuine passion lies behind their polemics."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"Clan Tremere:
+			Whether dreaded, mistrusted, feared or reviled, the insular vampires of Clan Tremere are anything but ignored. Those who have heard of the clan's doings are typically suspicious of the Tremere, and with good reason. Through their own artifice, they have mastered a form of vampiric sorcery, complete with rituals and spells, that is as potent - if not more so - than any other power of the Blood."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"Clan Ventrue:
+			From time out of mind, Ventrue has been the clan of leadership, enforcing the ancient Traditions and seeking to shape the destiny of the Kindred. In nights of old, Ventrue were chosen from nobles, merchant princes or other wielders of power. In modern times the clan recruits from wealthy \"old money\" families, ruthless corporate climbers, and politicians. Whatever the origin, Ventrue preserve stability and maintain order for the Camarilla."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"Gehenna Cults:
+			Gehenna cults exist to prepare for, or prevent, the end of the world. Fearing the culmination of the Jyhad and the return of the Antediluvians, the cults prepare either to serve the Ancients (thus hopefully averting their own destruction when the end comes) or to discover the Antediluvians' hidden havens (thus striking preemptively against them and averting Gehenna outright)."
+		}
+
+		//Game Tips
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"The Unarmed Combat feat determines how easily you may feed on the unwilling. A higher Unarmed Combat feat will make it easier for you to feed during battle.
+The Unarmed Combat feat also directly affects how much damage you can do with your fists and claws, and how easily an opponent may block, dodge, or counter these blows."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"The Haggle feat modifies all buy and sell prices. Vendor prices are automatically adjusted based on your Haggle feat. With a higher Haggle feat you will be able to sell items for more money, and buy items for less.
+When financial matters are being discussed, a high Haggle feat might allow you special dialog options."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"Hunger can induce frenzy, as can the fear and anger caused by taking physical damage.
+The risk of frenzy relates directly to your Humanity. A vampire in touch with their former humanity can keep the Beast at bay; a craven undead killer will succumb more frequently. This risk is compounded by hunger.
+Feed often and maintain your Humanity to prevent frenzy."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"30"
+			"Size"		"Small"
+			"Text"		"If a Discipline timer is running, activating the Discipline again will add the full time on top of the remaining time."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"30"
+			"Size"		"Small"
+			"Text"		"Use the \"End Disciplines\" key (default key: F8) to shut off a Discipline while it is running."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"30"
+			"Size"		"Small"
+			"Text"		"Stamina adds to Bashing Soak feat. As a vampire, each point of Bashing Soak reduces the damage you receive from bullets and blunt melee weapons."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"Disciplines typically have a lesser effect on vampires and other supernaturals. The exact effect varies from being to being. You can expect more powerful supernaturals to have a higher degree of resistance."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"30"
+			"Size"		"Small"
+			"Text"		"While in melee combat, you can block (default key: Tab) to give yourself a bonus to Combat Defense. This bonus is equal to your Dexterity."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"30"
+			"Size"		"Small"
+			"Text"		"The Lethality of a weapon can be used to gauge its effectiveness against vampires. The higher the Lethality, the more difficult it will be for vampires to defend against the weapon."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"Holding down the different directional movement keys while attacking will trigger different melee attacks. Each directional movement key triggers a different combination of melee attacks. 
+Varying your melee attacks will keep a defender off-balance. If you use the same attack repeatedly, the defender will learn to anticipate your attack, and is more likely to deflect your blows."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"30"
+			"Size"		"Small"
+			"Text"		"You can raise your Humanity like any other character stat, by spending experience."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"The Damage Potential of a weapon is how much damage the weapon can do in your hands. This number is adjusted by your Ranged or Melee Combat feat. The higher your combat feat, the more damage you can do."
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+			"StoryState"	"30"
+			"Size"		"Large"
+			"Text"		"Vampires are extraordinarily resilient to gunfire. Use blades and your vampiric Disciplines to combat vampires and other supernaturals more effectively."
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+			"StoryState"	"30"
+			"Size"		"Small"
+			"Text"		"Return to the Character Editor often (default key: C) and spend the experience you've gained to improve your character."
+		}
+
+		Tip
+		{
+			"Type"		"Game"	// changed by wesp
+			"StoryState"	"30"
+			"Size"		"Small"
+			"Text"		"Blood packs provide a small amount of blood and healing. While harder to obtain and less potent than fresh blood, blood packs can save you when other sustenance is in short supply."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"30"
+			"Size"		"Small"
+			"Text"		"Bladed weapons are as deadly to vampires as they are to humans. The Combat Defense feat and Lethal Soak feat both add to your defense against blades."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"30"
+			"Size"		"Small"
+			"Text"		"Email addressed to you is sent to the computer in your haven. Return to your haven frequently to check your email."
+		}
+
+/////////////////////////
+	// HelpTips for StoryState 35
+/////////////////////////
+	//World Tips
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"35"
+			"Size"		"Small"
+			"Text"		"Baron:
+			An Anarch \"prince\"; a Kindred who claims a domain but is a member of the Anarch Movement."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"35"
+			"Size"		"Large"
+			"Text"		"The civilization of the undead is a manipulative and poisonous dance, and few vampires are left entirely untouched. Since the nights of antiquity, the Kindred have struggled for supremacy, in an ancient and many-layered struggle known as the Jyhad. Leaders, cultures, nations and armies have all been pawns in the secret war, and vampiric conspiracies have influenced much of human history."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"35"
+			"Size"		"Small"
+			"Text"		"Antediluvians:
+			These ancient vampires, if they exist at all, are likely the most powerful creatures in the world. Members of the Third Generation, the Antediluvians are only two steps removed from the First Vampire, Caine."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"35"
+			"Size"		"Large"
+			"Text"		"According to the few fractured accounts of their doings, Antediluvians possess virtually godlike power. According to Kindred legend, there were 13 original Antediluvians, though some have allegedly been destroyed. Their eternal struggle, the Jyhad, touches all Kindred, and innumerable layers of manipulation and deception make the plots of these Ancients almost imperceptible."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"35"
+			"Size"		"Large"
+			"Text"		"Clan Tzimisce:
+			Possessed of a peculiar nobility, coupled with an evil that transcends mortal perception, Clan Tzimisce leads the Sabbat in its rejection of all things human. More so than any other vampires, the Tzimisce revel in their monstrousness. They practice a \"fleshcrafting\" Discipline that they use to disfigure their foes and sculpt themselves into beings of terrible beauty."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"35"
+			"Size"		"Large"
+			"Text"		"Clan Toreador:
+			Of all the clans, Toreador are the vampires most connected to the mortal world. While other vampires view the kine as pawns or simple sustenance, Toreador glide gracefully and effortlessly through the society of mortals, sampling the delights of each age as a gourmand savors rare delicacies."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"35"
+			"Size"		"Large"
+			"Text"		"Once there were few Caitiff, but the post-WWII period has seen a sharp increase in their numbers. Some elders whisper direfully of the \"Time of Thin Blood\" that signifies the imminence of Gehenna."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"35"
+			"Size"		"Large"
+			"Text"		"Meetings with demons, immortal mummies, zombie-like walking dead, mystical spirits, shapeshifting animals, sentient gargoyles, angels and less definable entities have been claimed and sometimes documented. The only certainty to emerge from these statements, however, is that the World of Darkness is as terrifying as it is cosmopolitan."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"35"
+			"Size"		"Small"
+			"Text"		"Gehenna, so the Kindred say, will presage the end of the world, as vampires and mortals alike are consumed in an inexorable tide of blood."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"35"
+			"Size"		"Small"
+			"Text"		"Officially, the Camarilla does not recognize the existence of the Antediluvians or Caine. It reasons that these vampires, if they ever existed at all, have long since suffered the Final Death, and those who allude to them are publicly derided."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"35"
+			"Size"		"Large"
+			"Text"		"Unlike the Camarilla, the Sabbat recognizes the existence of the Antediluvians, though it rabidly opposes them. According to Sabbat propaganda, the Antediluvians pull the strings of the entire world, and it is this malignant control they oppose. They see the Camarilla as pawns of the Ancients, and oppose its members politically as well as physically."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"35"
+			"Size"		"Large"
+			"Text"		"Clan Nosferatu:
+			Nosferatu are survivors par excellence. Few creatures, mortal or vampire, know a city's back alleys and dark corners like the Nosferatu do. Additionally, Nosferatu have mastered the crafts of sneaking and eavesdropping; they make a point of keeping up with current gossip and affairs, not merely for pleasure, but for survival. Information brokers without peer, they can command high prices for their knowledge."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"35"
+			"Size"		"Large"
+			"Text"		"Clan Gangrel:
+			Gangrel are fierce warriors. Gangrel ferocity does not stem from Anarchic rage, but from animalistic instinct. They are among the most predatory Kindred, and love to lose themselves in the thrill of the hunt. Gangrel have a keen understanding of the Beast in their souls, and prefer to spend their nights in communion with the animals whom they so emulate."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"35"
+			"Size"		"Large"
+			"Text"		"For millennia the Tzimisce have explored and refined their understanding of the vampiric condition, bending their bodies and thoughts into new and alien patterns. Should it prove necessary, enlightening or simply enjoyable, Tzimisce do not hesitate to bend victims in similar fashion. While younger fiends might be described as merciless or sadistic, elders of the line simply fail to comprehend mercy or suffering."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"35"
+			"Size"		"Large"
+			"Text"		"Few things are as they seem in the vampires' nocturnal world; a political coup, economic crash, or social trend may be merely the surface manifestation veiling a centuries-old struggle. Vampire elders command from the shadows, manipulating mortals and other vampires alike - and the elders are often manipulated in turn. Indeed, most combatants may not even realize for whom they fight, or why."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"35"
+			"Size"		"Small"
+			"Text"		"Most Sabbat express bilious contempt for the vampires of the Camarilla, whom they see as cowardly wretches unable to accept their predatory natures."
+		}
+
+		//Game Tips
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"35"
+			"Size"		"Large"
+			"Text"		"You can toggle fire modes by using the attack Mode toggle (default key: TAB). Some scoped firearms have a level of zoom that can be accessed by using the alt-fire toggle.
+Not all firearms have alternate fire modes."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"35"
+			"Size"		"Small"
+			"Text"		"The Feat Adjustment is the difference between your skill (feat score) and the requirement of a weapon. This adjustment is applied to the weapon's Lethality."
+		}
+
+/////////////////////////
+	// HelpTips for StoryState 40
+/////////////////////////
+	//World Tips
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"40"
+			"Size"		"Small"
+			"Text"		"Baron:
+			An Anarch \"prince\"; a Kindred who claims a domain but is a member of the Anarch Movement."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"40"
+			"Size"		"Large"
+			"Text"		"The civilization of the undead is a manipulative and poisonous dance, and few vampires are left entirely untouched. Since the nights of antiquity, the Kindred have struggled for supremacy, in an ancient and many-layered struggle known as the Jyhad. Leaders, cultures, nations and armies have all been pawns in the secret war, and vampiric conspiracies have influenced much of human history."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"40"
+			"Size"		"Small"
+			"Text"		"Antediluvians:
+			These ancient vampires, if they exist at all, are likely the most powerful creatures in the world. Members of the Third Generation, the Antediluvians are only two steps removed from the First Vampire, Caine."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"40"
+			"Size"		"Large"
+			"Text"		"According to the few fractured accounts of their doings, Antediluvians possess virtually godlike power. According to Kindred legend, there were 13 original Antediluvians, though some have allegedly been destroyed. Their eternal struggle, the Jyhad, touches all Kindred, and innumerable layers of manipulation and deception make the plots of these Ancients almost imperceptible."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"40"
+			"Size"		"Large"
+			"Text"		"Clan Tzimisce:
+			Possessed of a peculiar nobility, coupled with an evil that transcends mortal perception, Clan Tzimisce leads the Sabbat in its rejection of all things human. More so than any other vampires, the Tzimisce revel in their monstrousness. They practice a \"fleshcrafting\" Discipline that they use to disfigure their foes and sculpt themselves into beings of terrible beauty."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"40"
+			"Size"		"Large"
+			"Text"		"Clan Toreador:
+			Of all the clans, Toreador are the vampires most connected to the mortal world. While other vampires view the kine as pawns or simple sustenance, Toreador glide gracefully and effortlessly through the society of mortals, sampling the delights of each age as a gourmand savors rare delicacies."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"40"
+			"Size"		"Large"
+			"Text"		"Once there were few Caitiff, but the post-WWII period has seen a sharp increase in their numbers. Some elders whisper direfully of the \"Time of Thin Blood\" that signifies the imminence of Gehenna."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"40"
+			"Size"		"Large"
+			"Text"		"Meetings with demons, immortal mummies, zombie-like walking dead, mystical spirits, shapeshifting animals, sentient gargoyles, angels and less definable entities have been claimed and sometimes documented. The only certainty to emerge from these statements, however, is that the World of Darkness is as terrifying as it is cosmopolitan."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"40"
+			"Size"		"Small"
+			"Text"		"Gehenna, so the Kindred say, will presage the end of the world, as vampires and mortals alike are consumed in an inexorable tide of blood."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"40"
+			"Size"		"Small"
+			"Text"		"Officially, the Camarilla does not recognize the existence of the Antediluvians or Caine. It reasons that these vampires, if they ever existed at all, have long since suffered the Final Death, and those who allude to them are publicly derided."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"40"
+			"Size"		"Large"
+			"Text"		"Unlike the Camarilla, the Sabbat recognizes the existence of the Antediluvians, though it rabidly opposes them. According to Sabbat propaganda, the Antediluvians pull the strings of the entire world, and it is this malignant control they oppose. They see the Camarilla as pawns of the Ancients, and oppose its members politically as well as physically."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"40"
+			"Size"		"Large"
+			"Text"		"Clan Nosferatu:
+			Nosferatu are survivors par excellence. Few creatures, mortal or vampire, know a city's back alleys and dark corners like the Nosferatu do. Additionally, Nosferatu have mastered the crafts of sneaking and eavesdropping; they make a point of keeping up with current gossip and affairs, not merely for pleasure, but for survival. Information brokers without peer, they can command high prices for their knowledge."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"40"
+			"Size"		"Large"
+			"Text"		"Clan Gangrel:
+			Gangrel are fierce warriors. Gangrel ferocity does not stem from Anarchic rage, but from animalistic instinct. They are among the most predatory Kindred, and love to lose themselves in the thrill of the hunt. Gangrel have a keen understanding of the Beast in their souls, and prefer to spend their nights in communion with the animals whom they so emulate."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"40"
+			"Size"		"Large"
+			"Text"		"For millennia the Tzimisce have explored and refined their understanding of the vampiric condition, bending their bodies and thoughts into new and alien patterns. Should it prove necessary, enlightening or simply enjoyable, Tzimisce do not hesitate to bend victims in similar fashion. While younger fiends might be described as merciless or sadistic, elders of the line simply fail to comprehend mercy or suffering."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"40"
+			"Size"		"Large"
+			"Text"		"Few things are as they seem in the vampires' nocturnal world; a political coup, economic crash, or social trend may be merely the surface manifestation veiling a centuries-old struggle. Vampire elders command from the shadows, manipulating mortals and other vampires alike - and the elders are often manipulated in turn. Indeed, most combatants may not even realize for whom they fight, or why."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"40"
+			"Size"		"Small"
+			"Text"		"Most Sabbat express bilious contempt for the vampires of the Camarilla, whom they see as cowardly wretches unable to accept their predatory natures."
+		}
+
+		//Game Tips
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"40"
+			"Size"		"Large"
+			"Text"		"You can toggle fire modes by using the attack Mode toggle (default key: TAB). Some scoped firearms have a level of zoom that can be accessed by using the alt-fire toggle.
+Not all firearms have alternate fire modes."
+		}
+
+		Tip
+		{
+			"Type"		"Game"
+			"StoryState"	"40"
+			"Size"		"Small"
+			"Text"		"The Feat Adjustment is the difference between your skill (feat score) and the requirement of a weapon. This adjustment is applied to the weapon's Lethality."
+		}
+
+/////////////////////////
+	// HelpTips for StoryState 45
+/////////////////////////
+	//World Tips
+
+		Tip	// added by wesp
+		{
+			"Type"		"World"
+			"StoryState"	"45"
+			"Size"		"Large"
+			"Text"		"Clan Lasombra:
+			Firm believers in the worthy ruling and the unworthy serving, the Clan Lasombra have maintained their ancient traditions even as they direct the Sabbat to their own purposes. Due to their penchant for darkness and control of shadows, the Lasombra cast no reflections. Their careless atrocities lend credence to the idea that it's easier to live with your actions when you don't have to face yourself in the mirror."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"45"
+			"Size"		"Small"
+			"Text"		"The Jyhad:
+			The secret, self-destructive war waged between the generations. Elder vampires manipulate their lessers, using them as pawns in a terrible game whose rules defy comprehension."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"45"
+			"Size"		"Small"
+			"Text"		"Kuei-jin:
+			The Children of Caine have spread throughout the world, but they find themselves thwarted in the Far East by the mysterious Kuei-jin or Cathayan, non-Kindred vampires native to the Orient."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"45"
+			"Size"		"Small"
+			"Text"		"The Kuei-jin seem to have little in common with their Western brethren. Rumors of demonic powers surround these Asian visitors, and their enigmatic behavior and foreign mind-set leave many Western Kindred ill at ease."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"45"
+			"Size"		"Large"
+			"Text"		"The Book of Nod:
+			A loose collection of Kindred legendry and history. The Book of Nod chronicles the origin of the Kindred, though it has never been published in its entirety. Fragments of the document and its many partial transcriptions circulate among certain strata of Kindred society."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"45"
+			"Size"		"Large"
+			"Text"		"The verbal history of the Kindred - though some insist that it is more legendry than history - occupies a position of great reverence in vampire society. The most popular and widely accepted myth is that of Caine, the First Vampire and slayer of his brother. An elusive text known as The Book of Nod chronicles Caine's exile and his subsequent journeys eastward."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"45"
+			"Size"		"Large"
+			"Text"		"Werewolves are universally feared by vampires as ruthless, efficient killers, and more than one vampire claims to have witnessed a single angered werewolf bring down an entire coterie of Kindred. Insular and xenophobic, the werewolves despise the Kindred; the precise reason behind this loathing is unknown, but a vampire caught by a werewolf is assuredly in dire peril."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"45"
+			"Size"		"Large"
+			"Text"		"A woeful modern development, thin-blooded Kindred have appeared in recent years. The blood of Caine is so weak in them that some are rumored to be able to bear the light of the sun and partake in mortal food. Many Kindred scholars look upon the influx of these vampires with fear, remembering passages in The Book of Nod that make reference to the \"Time of Thin Blood\". This time is said to presage the coming of Gehenna."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"45"
+			"Size"		"Large"
+			"Text"		"Blood Hunt:
+			The precept is simple: Those who break the laws are slain. A vampire who violates the Traditions and brings the wrath of the elders on his head is hunted down and destroyed. All who hear the call are expected to participate and assist. The most common name for this action is the blood hunt."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"45"
+			"Size"		"Large"
+			"Text"		"Fanatics to the last, Sabbat vampires gladly throw themselves into the fire for their sect, falling on their foes in legions, tearing their enemies apart just as a pack of wolves brings down its prey."
+		}
+
+/////////////////////////
+	// HelpTips for StoryState 50
+/////////////////////////
+	//World Tips
+
+		Tip	// added by wesp
+		{
+			"Type"		"World"
+			"StoryState"	"50"
+			"Size"		"Large"
+			"Text"		"Clan Lasombra:
+			Firm believers in the worthy ruling and the unworthy serving, the Clan Lasombra have maintained their ancient traditions even as they direct the Sabbat to their own purposes. Due to their penchant for darkness and control of shadows, the Lasombra cast no reflections. Their careless atrocities lend credence to the idea that it's easier to live with your actions when you don't have to face yourself in the mirror."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"50"
+			"Size"		"Small"
+			"Text"		"The Jyhad:
+			The secret, self-destructive war waged between the generations. Elder vampires manipulate their lessers, using them as pawns in a terrible game whose rules defy comprehension."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"50"
+			"Size"		"Small"
+			"Text"		"Kuei-jin:
+			The Children of Caine have spread throughout the world, but they find themselves thwarted in the Far East by the mysterious Kuei-jin or Cathayan, non-Kindred vampires native to the Orient."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"50"
+			"Size"		"Small"
+			"Text"		"The Kuei-jin seem to have little in common with their Western brethren. Rumors of demonic powers surround these Asian visitors, and their enigmatic behavior and foreign mindset leave many Western Kindred ill at ease."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"50"
+			"Size"		"Large"
+			"Text"		"The Book of Nod:
+			A loose collection of Kindred legendry and history. The Book of Nod chronicles the origin of the Kindred, though it has never been published in its entirety. Fragments of the document and its many partial transcriptions circulate among certain strata of Kindred society."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"50"
+			"Size"		"Large"
+			"Text"		"The verbal history of the Kindred - though some insist that it is more legendry than history - occupies a position of great reverence in vampire society. The most popular and widely accepted myth is that of Caine, the First Vampire and slayer of his brother. An elusive text known as The Book of Nod chronicles Caine's exile and his subsequent journeys eastward."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"50"
+			"Size"		"Large"
+			"Text"		"Werewolves are universally feared by vampires as ruthless, efficient killers, and more than one vampire claims to have witnessed a single angered werewolf bring down an entire coterie of Kindred. Insular and xenophobic, the werewolves despise the Kindred; the precise reason behind this loathing is unknown, but a vampire caught by a werewolf is assuredly in dire peril."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"50"
+			"Size"		"Large"
+			"Text"		"A woeful modern development, thin-blooded Kindred have appeared in recent years. The blood of Caine is so weak in them that some are rumored to be able to bear the light of the sun and partake in mortal food. Many Kindred scholars look upon the influx of these vampires with fear, remembering passages in The Book of Nod that make reference to the \"Time of Thin Blood\". This time is said to presage the coming of Gehenna."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"50"
+			"Size"		"Large"
+			"Text"		"Blood Hunt:
+			The precept is simple: Those who break the laws are slain. A vampire who violates the Traditions and brings the wrath of the elders on his head is hunted down and destroyed. All who hear the call are expected to participate and assist. The most common name for this action is the blood hunt."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"50"
+			"Size"		"Large"
+			"Text"		"Fanatics to the last, Sabbat vampires gladly throw themselves into the fire for their sect, falling on their foes in legions, tearing their enemies apart just as a pack of wolves brings down its prey."
+		}
+
+/////////////////////////
+	// HelpTips for StoryState 55
+/////////////////////////
+	//World Tips
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"55"
+			"Size"		"Large"
+			"Text"		"Clan Giovanni:
+			The Giovanni are as much a family as they are a clan; the majority of their neonates are Embraced from clan members' mortal descendants. These insular Necromancers avidly pursue two goals: accumulating material wealth, and learning the secrets of Death itself."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"55"
+			"Size"		"Large"
+			"Text"		"The Giovanni are respectable, genteel and well-mannered. Affluent beyond imagination, Clan Giovanni traces its roots back to before the Renaissance, to a family of merchant princes. No other Clan makes such a spectacle of humility and propriety as do the Giovanni. And no other clan hides its blasphemous secrets as well."	// changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"55"
+			"Size"		"Small"
+			"Text"		"According to whispered tales, the Giovanni's money spoiled the family, and they turned to Necromancy out of perverse boredom."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"55"
+			"Size"		"Small"
+			"Text"		"Most Giovanni come from the ranks of the Venetian family and have spent much of their mortal lives as ghouls in service to another family member."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"55"
+			"Size"		"Small"
+			"Text"		"Incest, necrophilia, favor-currying, ancestor worship and carefully cultivated guilt riddle the family; by the time most Giovanni Kindred are Embraced, they've seen more than enough to inure them to the vagaries of undead existence."
+		}
+
+/////////////////////////
+	// HelpTips for StoryState 60
+/////////////////////////
+	//World Tips
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"60"
+			"Size"		"Large"
+			"Text"		"Clan Giovanni:
+			The Giovanni are as much a family as they are a clan; the majority of their neonates are Embraced from clan members' mortal descendants. These insular Necromancers avidly pursue two goals: accumulating material wealth, and learning the secrets of Death itself."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"60"
+			"Size"		"Large"
+			"Text"		"The Giovanni are respectable, genteel and well-mannered. Affluent beyond imagination, Clan Giovanni traces its roots back to before the Renaissance, to a family of merchant princes. No other Clan makes such a spectacle of humility and propriety as do the Giovanni. And no other clan hides its blasphemous secrets as well." // changed by wesp
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"60"
+			"Size"		"Small"
+			"Text"		"According to whispered tales, the Giovanni's money spoiled the family, and they turned to Necromancy out of perverse boredom."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"60"	// changed by wesp
+			"Size"		"Small"
+			"Text"		"Most Giovanni come from the ranks of the Venetian family and have spent much of their mortal lives as ghouls in service to another family member."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"60"
+			"Size"		"Small"
+			"Text"		"Incest, necrophilia, favor-currying, ancestor worship and carefully cultivated guilt riddle the family; by the time most Giovanni Kindred are Embraced, they've seen more than enough to inure them to the vagaries of undead existence."
+		}
+
+/////////////////////////
+	// HelpTips for StoryState 65
+/////////////////////////
+	//World Tips
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"65"
+			"Size"		"Large"
+			"Text"		"The Society of Leopold:
+			The Inquisition exists today, though no official Church records speak of it. The Inquisition of the modern world is known as the Society of Leopold. Many of its members are researchers and occultists, but some are fanatic vampire-hunters who, in true Torquemada-esque fashion, mercilessly root out and destroy the \"spawn of Satan\"."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"65"
+			"Size"		"Large"
+			"Text"		"Most Inquisitors are fanatic but spottily educated and trained, seldom posing any real threat. Likewise, most Inquisitors are mere mortals, with none of the supernatural powers attributed to saints. A few Inquisitors, though, actually manifest sufficient Faith to repel or even wound the Damned with their holy auras."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"65"
+			"Size"		"Large"
+			"Text"		"In the Middle Ages, an Inquisition-led population alerted to vampires' depredations nearly wiped out the Kindred's millennia-old society. How much more easily, the Inner Circle shudderingly wonders, could a human population of six billion, armed with napalm, phosphorus rounds and nuclear weapons, dispose of the parasites in its midst?"
+		}
+
+/////////////////////////
+	// HelpTips for StoryState 70
+/////////////////////////
+	//World Tips
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"70"
+			"Size"		"Large"
+			"Text"		"Some Sabbat vampires openly involve in Satanism, paganism, or other deviant faiths to spite the propriety of those who stand against them. Perversion and brutality are the Sabbat's tools, and the sect uses them with merciless cunning."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"70"
+			"Size"		"Large"
+			"Text"		"Composed of several Sabbat vampires, packs ensure their members' loyalty through a requirement that each vampire regularly drinks a mixture of all the other members' blood. Thus mystically bound, Sabbat packs are among the tightest and most vicious groups of vampires in existence."
+		}
+
+/////////////////////////
+	// HelpTips for StoryState 75
+/////////////////////////
+	//World Tips
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"75"
+			"Size"		"Large"
+			"Text"		"Some Sabbat vampires openly involve in Satanism, paganism, or other deviant faiths to spite the propriety of those who stand against them. Perversion and brutality are the Sabbat's tools, and the sect uses them with merciless cunning."
+		}
+
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"75"
+			"Size"		"Large"
+			"Text"		"Composed of several Sabbat vampires, packs ensure their members' loyalty through a requirement that each vampire regularly drinks a mixture of all the other members' blood. Thus mystically bound, Sabbat packs are among the tightest and most vicious groups of vampires in existence."
+		}
+
+////////////////
+	// Special Tip for when you've lost all 5 masquerade points
+////////////////
+		Tip
+		{
+			"Type"		"World"
+			"StoryState"	"666"
+			"Size"		"Large"
+			"Text"		"You've become known as a serial violator of the Masquerade, a threat to all Kindred, and are summoned to account for your transgressions."
+		}
+	}
+}

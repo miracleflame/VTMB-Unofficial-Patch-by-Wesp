@@ -1,0 +1,23 @@
+Particle
+{
+	loop "1"
+	fps "20"
+	frames "70"
+
+	spawn
+	{
+		particle "RainDrops2"
+		rate "40"
+		radius "0"
+		theta "0~360"
+	}
+
+	spawn
+	{
+		particle    "rainfog"
+		rate        "1"
+		radius      "800"
+		theta       "0~360"
+		phi         "0"
+	}
+}

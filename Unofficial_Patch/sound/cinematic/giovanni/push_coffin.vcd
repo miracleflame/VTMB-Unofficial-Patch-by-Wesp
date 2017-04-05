@@ -1,0 +1,27 @@
+// Choreo version 1
+actor "!playercontroller"
+{
+  channel "SFX"	// added by wesp
+  {
+    event speak "SFX"
+    {
+      time 0.0 2.0
+      param "cinematic\giovanni\load sarcophagus stereo.wav"
+      fixedlength
+    }
+  }
+  channel "Anim"
+  {
+    event sequence "push_coffin"
+    {
+      time 0.000000 1.967
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+
+fps 60
+snap off

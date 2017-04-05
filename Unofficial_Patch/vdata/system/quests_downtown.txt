@@ -1,0 +1,1146 @@
+QuestTable
+{
+//	Quest
+//	{
+//		"Title"		This is a simple text title, and what will be used to refer to it in dialog.
+//
+//		"DisplayName"	This is what will be displayed as the heading for this journal entry
+//				LOCALIZE THIS FIELD
+//
+//		CompletionState
+//		{
+//			"ID"		Each completion state must have a UNIQUE, NUMERIC ID. By default, a player is considered to be at
+//					completion state 0, when the quest is unassigned. The quest will not be displayed in the journal
+//					unless the player has a valid ID for the quest.
+//
+//			"Description"	This is what will be displayed as the journal entry for this quest
+//					LOCALIZE THIS FIELD
+//
+//			"Type"		This controls the font, colors, etc, for the quest. MUST be "success, failure, incomplete"
+//
+//			"AwardXP"	This is how many experience points to award to a character when they reach this quest
+//					completion level. defaults to 0.
+//
+//			"AwardMoney"	This is how much money to award to a character when they reach this quest completion
+//					level. defaults to 0.
+//
+//			"Event"		This is script data, such as a flag assignment or a function call, that will be passed to
+//					the script interpreter. by default, there is no event script.
+//		}
+//	}
+
+	Quest
+	{
+		"Title"		"Plague"
+		"DisplayName"	"Fun With Pestilence"
+
+		CompletionState
+		{
+			"ID"		"1" // Regent 211
+			"Description"	"The regent has asked you to find the cause of the LA epidemic and put an end to it. He has suggested you speak with the anarchs at the Last Round to get more information."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Damsel 221
+			"Description"	"Damsel has set you on the trail of the plaguebearer, the Kindred responsible for the outbreak of the LA epidemic. She has suggested going to speak with the ghoul Paul at the Skyeline Apartments, or talking to some of the bums around the city."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // heard Hannah's message on Paul's answering machine
+			"Description"	"Paul the ghoul is dead, presumably another victim of the epidemic sweeping LA. You heard a message from someone named Hannah on his answering machine, asking him to come to her apartment, also in the Skyeline building. Her key code is 1203."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // Hannah 141, 146
+			"Description"	"Hannah has pointed you in the direction of one Jezebel Locke as a possible link in the plaguebearer chain. She makes her residence at the Empire Arms hotel."
+			"Type"		"incomplete"
+			"AwardXP"	"Plague01"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" // bum_disease_male/female 31,61
+			"Description"	"A helpful homeless person has pointed out Tin Can Bill as a possible link in the plaguebearer chain. He can be found in the alley across from the Last Round."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"6" // Tin Can Bill 91,151, changed by wesp
+			"Description"	"Tin Can Bill has pointed you in the direction of the sewers near where he took his last breath as the possible home of the plaguebearer."
+			"Type"		"incomplete"
+			"AwardXP"	"Plague04"
+		}
+
+		CompletionState
+		{
+			"ID"		"7"
+			"Description"	"You have killed Jezebel Locke."
+			"Type"		"incomplete"
+			"AwardXP"	"Plague03"
+		}
+
+		CompletionState
+		{
+			"ID"		"8"
+			"Description"	"You have killed Brother Kanker."
+			"Type"		"incomplete"
+			"AwardXP"	"Plague05"
+		}
+
+		CompletionState
+		{
+			"ID"		"9" // Damsel 261, changed by wesp
+			"Description"	"You have reported back to Damsel that you have killed the plaguebearer, but she has informed you that there are others...."
+			"Type"		"success"
+		}
+
+		CompletionState
+		{
+			"ID"		"10"
+			"Description"	"You have so pissed off Damsel that she won't talk to you. Dumbshit."
+			"Type"		"failure"
+		}
+
+		CompletionState
+		{
+			"ID"		"11"
+			"Description"	"You have killed Brother Kanker and Jezebel Locke. Report back to Damsel."
+			"Type"		"incomplete"
+			"AwardXP"	"Plague06"
+		}
+
+		CompletionState
+		{
+			"ID"		"12"
+			"Description"	"You have killed Brother Kanker. Report back to Damsel."
+			"Type"		"incomplete"
+			"AwardXP"	"Plague05"
+		}
+
+		CompletionState
+		{
+			"ID"		"13"
+			"Description"	"You have killed Jezebel Locke. Report back to Damsel."
+			"Type"		"incomplete"
+			"AwardXP"	"Plague03"
+		}
+
+		CompletionState
+		{
+			"ID"		"14"
+			"Description"	"You have killed Brother Kanker and Jezebel Locke, and found a flyer with a strange symbol on it. You should go talk to Damsel about this."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"15" // first time feeding on diseased bum
+			"Description"	"You became ill after feeding on a bum who turned out to be diseased. You wonder if this has anything to do with the CDC guys dressed in their blue containment suits scattered around downtown."
+			"Type"		"incomplete"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"AllPlague"
+		"DisplayName"	"More Fun With Pestilence"
+
+		CompletionState
+		{
+			"ID"		"1" // Damsel 261
+			"Description"	"Damsel has informed you that there is more than one plaguebearer in the city - and they all need to be destroyed."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Damsel 271
+			"Description"	"Damsel has told you that the symbol on the flyer you found when you killed the second plaguebearer is also on one of the buildings in town."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // killed Vick
+			"Description"	"You have killed Bishop Vick, the head of the plaguebearer doomsday cult, thus ending their disease spreading religion. Report back to Damsel."
+			"Type"		"incomplete"
+			"AwardXP"	"AllPlague03"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // damsel 281
+			"Description"	"You have eradicated the plaguebearers from Los Angeles."
+			"Type"		"success"
+			"AwardXP"	"AllPlague04"
+		}
+
+		CompletionState
+		{
+			"ID"		"5"
+			"Description"	"You have so pissed off Damsel that she won't talk to you. Dumbshit."
+			"Type"		"failure"
+		}
+
+		CompletionState
+		{
+			"ID"		"6" // changed by wesp
+			"Description"	"Damsel has informed you that there is more than one plaguebearer in the city - and they all need to be destroyed. She had previously suggested going to speak with the ghoul Paul at the Skyeline Apartments."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"7" // changed by wesp
+			"Description"	"Damsel has informed you that there is more than one plaguebearer in the city - and they all need to be destroyed. She had previously suggested talking to some of the bums around the city."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"8" // heard Hannah's message on Paul's answering machine
+			"Description"	"Paul the ghoul is dead, presumably another victim of the epidemic sweeping LA. You heard a message from someone named Hannah on his answering machine, asking him to come to her apartment, also in the Skyeline building. Her key code is 1203."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"9" // Hannah 141, 146
+			"Description"	"Hannah has pointed you in the direction of one Jezebel Locke as a possible link in the plaguebearer chain. She makes her residence at the Empire Arms hotel."
+			"Type"		"incomplete"
+			"AwardXP"	"Plague01"
+		}
+
+		CompletionState
+		{
+			"ID"		"10" // bum_disease_male/female 31,61
+			"Description"	"A helpful homeless person has pointed out Tin Can Bill as a possible link in the plaguebearer chain. He can be found in the alley across from the Last Round."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"11" // Tin Can Bill 91,151, changed by wesp
+			"Description"	"Tin Can Bill has pointed you in the direction of the sewers near where he took his last breath as the possible home of the plaguebearer."
+			"Type"		"incomplete"
+			"AwardXP"	"Plague04"
+		}
+
+		CompletionState
+		{
+			"ID"		"12"
+			"Description"	"You've killed a second plaguebearer and found a flyer with a strange symbol on it. You should go talk to Damsel about this."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"13"
+			"Description"	"You've killed a second plaguebearer."
+			"Type"		"incomplete"
+			"AwardXP"	"Plague06"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Traffik"
+		"DisplayName"	"Traffik"
+
+		CompletionState
+		{
+			"ID"		"1" // Larry 121, changed by wesp
+			"Description"	"Fat Larry, businessman extraordinaire, wants you to acquire a briefcase being exchanged between the Tong and a local gang. The exchange will take place in a nearby parking garage. Get the briefcase undetected if possible."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Got Briefcase, changed by wesp
+			"Description"	"You have acquired the briefcase Larry sent you for. Time for a special delivery to Fat Larry."
+			"Type"		"incomplete"
+			"AwardXP"	"Traffik01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Larry 181,191, changed by wesp
+			"Description"	"You have delivered the stolen briefcase to Larry."
+			"Type"		"success"
+			"AwardXP"	"Traffik02"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // Larry death, changed by wesp
+			"Description"	"Larry is dead, no need anymore of delivering his briefcase."
+			"Type"		"failure"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Confession"
+		"DisplayName"	"A Confession"
+
+		CompletionState
+		{
+			"ID"		"1" // Larry 221
+			"Description"	"Fat Larry told you that the owner of the club Confession is looking for someone with your mad skills."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Venus 71
+			"Description"	"Venus Dare wants you to go to the parking lot next to the Empire Arms hotel and tell the Russians that she doesn't have their money."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Igor 41, changed by wesp
+			"Description"	"You convinced the Russian to come back next month for Venus' money."
+			"Type"		"incomplete"
+			"AwardXP"	"Confession01"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // kill Igor, changed by wesp
+			"Description"	"You killed the Russian, thereby fixing Venus' money problem."
+			"Type"		"incomplete"
+			"AwardXP"	"Confession01"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" // Venus, changed by wesp
+			"Description"	"You solved Venus' money problems with the Russians."
+			"Type"		"success"
+			"AwardXP"	"Confession02"
+		}
+
+		CompletionState
+		{
+			"ID"		"6" // Kill Venus
+			"Description"	"You killed Venus, thereby making it rather difficult to conclude your business with her."
+			"Type"		"failure"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Venus"
+		"DisplayName"	"And Her Name Was Venus"
+
+		CompletionState
+		{
+			"ID"		"1" // Venus 201
+			"Description"	"Venus wants you to \"persuade\" Boris so she won't have to pay his \"late fee\" any more. He is in the penthouse level of the Empire Arms hotel."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Boris 141
+			"Description"	"You have persuaded Boris to call off Venus' debt."
+			"Type"		"incomplete"
+			"AwardXP"	"Venus01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // kill Boris
+			"Description"	"You have killed Boris, thereby nullifying Venus' debt to him."
+			"Type"		"incomplete"
+			"AwardXP"	"Venus01"
+		}
+
+		CompletionState
+		{
+			"ID"		"4"
+			"Description"	"You have successfully solved Venus' Boris problem. Don't forget to visit her periodically to get your share of the club's profits."
+			"Type"		"success"
+			"AwardXP"	"Venus02"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" // kill Venus
+			"Description"	"You have killed Venus, thereby making her request of you irrelevant."
+			"Type"		"failure"
+		}
+
+		CompletionState
+		{
+			"ID"		"6" // told Venus you accepted Boris offer to kill her
+			"Description"	"You have informed Venus that Boris made you a better offer."
+			"Type"		"failure"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Kill Venus"
+		"DisplayName"	"Venucide"
+
+		CompletionState
+		{
+			"ID"		"1" // Boris 91
+			"Description"	"Boris wants you to turn the tables on Venus and kill her."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // kill Venus
+			"Description"	"You have killed Venus for Boris."
+			"Type"		"incomplete"
+			"AwardXP"	"Kill01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Boris 181
+			"Description"	"You have killed Venus and told Boris about it."
+			"Type"		"success"
+			"AwardXP"	"Kill02"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // kill boris
+			"Description"	"You have killed Boris before your business with him was completed."
+			"Type"		"failure"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" // boris 191
+			"Description"	"You have pissed Boris off before your business with him was completed."
+			"Type"		"failure"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Junky"
+		"DisplayName"	"Attention Whore"
+
+		CompletionState
+		{
+			"ID"		"1" // Skelter 251
+			"Description"	"Skelter wants you to make Patty disappear. She's a ghoul who has been bugging everyone about her master and won't believe them when they tell her he's dead. Not only is she getting tiresome, Skelter is concerned about the implications for the Masquerade if she keeps shooting her mouth off. She can usually be found whining at the club Confession to anyone unfortunate enough to talk to her."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Patty 91 (PC responses set) or kill Patty
+			"Description"	"You have \"solved\" the Patty problem. Report back to Skelter."
+			"Type"		"incomplete"
+			"AwardXP"	"Junky01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Skelter 271, changed by wesp
+			"Description"	"You have informed Skelter that Patty will no longer be a problem."
+			"Type"		"success"
+			"AwardXP"	"Junky03"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // Skelter 576
+			"Description"	"You tried to tell Skelter you'd taken care of Patty, but she's still shooting her mouth off around town."
+			"Type"		"failure"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" // Patty 91 San Diego, added by wesp
+			"Description"	"You have convinced Patty to leave town. Report back to Skelter."
+			"Type"		"incomplete"
+			"AwardXP"	"Junky02"
+		}
+
+		CompletionState
+		{
+			"ID"		"6" // added by wesp
+			"Description"	"You have convinced Patty to leave town but then killed her. Report back to Skelter."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"7" // Patty 91 alley, added by wesp
+			"Description"	"You have convinced Patty to go to some dark back alley. Now what?"
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"8" // added by wesp
+			"Description"	"You have pissed off Skelter to the point where he won't talk to you anymore."
+			"Type"		"failure"
+		}
+
+	}
+
+	Quest
+	{
+		"Title"		"Necromantic"
+		"DisplayName"	"Necromantic"
+
+		CompletionState
+		{
+			"ID"		"1" // Pisha 111, changed by wesp
+			"Description"	"Pisha, the flesh eating, uh, woman in the basement of the abandoned hospital wants you to send the TV \"reporter\" down to her lair so she can kill him, as he's seen too much."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // getting Milligan's business card
+			"Description"	"Milligan, the reporter Pisha wants sent down to her, is gone, but you have found his business card. It seems he resides in the Skyeline Apartments."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Milligan 71,91, 111, 151 / killing Milligan, changed by wesp
+			"Description"	"You have dealt with the reporter for Pisha."
+			"Type"		"incomplete"
+			"AwardXP"	"Necro01"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // Pisha, changed by wesp
+			"Description"	"You told Pisha that the reporter has been dealt with."
+			"Type"		"success"
+			"AwardXP"	"Necro02"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" // Pisha going hostile/ being killed
+			"Description"	"Pisha is in no state to communicate with you any more, so any arrangements you had with her are no longer relevant."
+			"Type"		"failure"
+		}
+
+		CompletionState
+		{
+			"ID"		"6" // Pisha 161
+			"Description"	"You have failed to eliminate Milligan for Pisha, thereby putting the Masquerade at risk."
+			"Type"		"failure"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Occult"
+		"DisplayName"	"Occultish Personality"
+
+		CompletionState
+		{
+			"ID"		"1" // Pisha
+			"Description"	"Pisha wants you to find two occult items and bring them back to her. One of them is a fetish in the museum, and the other is a book located in the Giovanni mansion."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // got fetish, don't have Giovanni book
+			"Description"	"You have retrieved the fetish from the museum for Pisha. You still need to find the book from the Giovanni mansion."
+			"Type"		"incomplete"
+			"AwardXP"	"Occult01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // got Voce del Morte book from Giovanni, don't have fetish
+			"Description"	"You have retrieved the \"Voce della Morte\" tome from the Giovanni mansion for Pisha. You still need to find the fetish from the museum."
+			"Type"		"incomplete"
+			"AwardXP"	"Occult01"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // got both items, changed by wesp
+			"Description"	"You have retrieved both occult items for Pisha. You should visit her again."
+			"Type"		"incomplete"
+			"AwardXP"	"Occult03"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" // Pisha
+			"Description"	"You have brought Pisha her occult items and received yours in return."
+			"Type"		"success"
+			"AwardXP"	"Occult02"
+		}
+
+		CompletionState
+		{
+			"ID"		"6" // Pisha going hostile/ being killed
+			"Description"	"Pisha is in no state to communicate with you any more, so any arrangements you had with her are no longer relevant."
+			"Type"		"failure"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Regent"
+		"DisplayName"	"A Plague For The Angels"
+
+		CompletionState
+		{
+			"ID"		"1" // Regent 211
+			"Description"	"The regent has asked you to find the cause of the LA epidemic and put an end to it. He has suggested you speak with the anarchs at the Last Round to get more information."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Damsel 221
+			"Description"	"You have spoken with the anarchs and they have put you on the trail of the plaguebearer."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"3"
+			"Description"	"You have dispatched the plaguebearer."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // Damsel 261
+			"Description"	"You must kill all the plaguebearers."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"5"
+			"Description"	"You have killed all the plaguebearers. Report back to the regent."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"6" // Regent 331
+			"Description"	"You have killed all the plaguebearers and reported back to the regent."
+			"Type"		"success"
+		}
+
+		CompletionState
+		{
+			"ID"		"7"
+			"Description"	"You have been forbidden to enter the Tremere chantry ever again."
+			"Type"		"failure"
+		}
+
+		CompletionState
+		{
+			"ID"		"8" // Regent 194, 203
+			"Description"	"You are looking into the cause of the epidemic for the Camarilla as well as the anarchs."
+			"Type"		"incomplete"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Tutorial"	
+		"DisplayName"	"Jyhad For Beginners"
+
+		CompletionState
+		{
+			"ID"		"1"	// changed by wesp
+			"Description"	"You have survived the vampire gathering."
+			"Type"		"success"
+		}
+
+		CompletionState
+		{
+			"ID"		"2"
+			"Description"	"You have survived the Sabbat assault."
+			"Type"		"success"
+			"AwardXP"	"Tutor01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3"
+			"Description"	"Feed on the mortal around the corner and return to Jack."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"4"
+			"Description"	"Head inside the building, meet Jack upstairs."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"5"	// changed by wesp
+			"Description"	"A vicious vampire faction known as the Sabbat has launched an assault on the secret Camarilla gathering downtown. You and Jack are caught in the middle. To escape you must obtain entry into the office."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"6"
+			"Description"	"Find a key to the door."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"7"
+			"Description"	"Go outside and meet Jack around back."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"8"
+			"Description"	"Feed on the bum at the bottom of the stairs."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"9"
+			"Description"	"Feed on some rats."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"10"
+			"Description"	"Sneak past the lone Sabbat member and go through the double doors."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"11"
+			"Description"	"Kill the Sabbat member outside."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"12"
+			"Description"	"Head downstairs and through the building."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"13"
+			"Description"	"Make your way past the Sabbat inside the building."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"14"	// changed by wesp
+			"Description"	"Ride elevator up and fight the gang members."
+			"Type"		"incomplete"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Dane"
+		"DisplayName"	"Elizabethan Rendezvous"
+
+		CompletionState
+		{
+			"ID"		"1" // Prince 1 231, Nines 101
+			"Description"	"The prince wants you to investigate the Elizabeth Dane. You need to go to the beach in Santa Monica where a boat will be waiting to take you out to the ship. You are to examine the Ankaran Sarcophagus, find out what the police have discovered, and take the cargo manifest for the ship. And above all, try not to go on a killing spree."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // completed requirements for quest
+			"Description"	"You have successfully completed your tasks aboard the Elizabeth Dane. Report back to the prince."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Prince 1 571
+			"Description"	"You have successfully completed your tasks aboard the Elizabeth Dane and reported back to the prince."
+			"Type"		"success"
+			"AwardXP"	"Dane04"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // Prince 282 283
+			"Description"	"The prince wants you to investigate the Elizabeth Dane, but before you do, he wants you to contact Nines Rodriguez at the bar called the Last Round and find out why he wants to talk to you."
+			"Type"		"incomplete"
+		}
+
+		CompletionState	// added by wesp
+		{
+			"ID"		"5" // Nines 102 103
+			"Description"	"You contacted Nines. After you are finished talking to him report back to the prince before you go on investigating the Elizabeth Dane."
+			"Type"		"incomplete"
+		}
+
+		CompletionState	// added by wesp
+		{
+			"ID"		"6" // Prince 1 233
+			"Description"	"The prince wants you to investigate the Elizabeth Dane. Tell him when you are ready to go."
+			"Type"		"incomplete"
+		}
+
+	}
+
+	Quest
+	{
+		"Title"		"Grout"
+		"DisplayName"	"Calling Dr. Grout"
+
+		CompletionState
+		{
+			"ID"		"1" // Prince 1 651, changed by wesp
+			"Description"	"The prince wishes you to contact Alistair Grout, the Malkavian Primogen. You should try looking for him at his mansion on the outskirts of town."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Saw Grout ashes
+			"Description"	"You have viewed the charred remains of Alistair Grout. You should probably inform the prince about his demise."
+			"Type"		"incomplete"
+			"AwardXP"	"Grout01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Prince 1 701
+			"Description"	"You have viewed the charred remains of Alistair Grout and informed the prince of his demise."
+			"Type"		"success"
+			"AwardXP"	"Grout02"
+		}
+
+		CompletionState
+		{
+			"ID"		"4"	// Talked to Ming-as-Nines
+			"Description"	"You encountered Nines at Grout's mansion, and he seemed a bit out of sorts."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"5"	// Entered Mansion
+			"Description"	"You just entered Grout's mansion and something about it doesn't feel quite right."
+			"Type"		"incomplete"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Museum"
+		"DisplayName"	"Patron Of The Ancient Arts"
+
+		CompletionState
+		{
+			"ID"		"1" // Prince 1 811, changed by wesp
+			"Description"	"The prince would appreciate your taking the Ankaran Sarcophagus from the museum and bringing it to him for safekeeping. And do it without killing anyone if possible."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Beckett 131
+			"Description"	"You have found where the sarcophagus was being stored - but someone got there first. It has been stolen. You'd best tell the prince of this turn of events."
+			"Type"		"incomplete"
+			"AwardXP"	"Museum02"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Prince 2 91
+			"Description"	"You told the prince the sarcophagus had been stolen from the museum."
+			"Type"		"success"
+			"AwardXP"	"Museum03"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // added by wesp
+			"Description"	"You have discovered that the keycode to the area where the Ankaran Sarcophagus is kept at the museum is 2358. Now get it from there and bring it to the prince."
+			"Type"		"incomplete"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Sarcophagus"
+		"DisplayName"	"The Epic Of The Ankaran Sarcophagus"
+
+		CompletionState
+		{
+			"ID"		"1" // Prince 2 161
+			"Description"	"The prince wants the sarcophagus NOW! First step: Find Gary. The prince has suggested speaking with Isaac Abrams, the Baron of Hollywood. Isaac can usually be found in his jewelry store."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Gary 1
+			"Description"	"The prince wants the sarcophagus NOW!"
+			"Type"		"incomplete"
+			"AwardXP"	"Sarc01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Gary 431
+			"Description"	"Gary has informed you that the sarcophagus is at the Giovanni mansion. He's even drawn you a map. How sweet."
+			"Type"		"incomplete"
+			"AwardXP"	"Sarc02"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // Prince 2 171, 181
+			"Description"	"You have returned the Ankaran Sarcophagus to the prince."
+			"Type"		"success"
+			"AwardXP"	"Sarc03"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" // added by wesp
+			"Description"	"You have killed Bruno Giovanni. You still need to deliver the Ankaran Sarcophagus to the prince."
+			"Type"		"incomplete"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Johansen"
+		"DisplayName"	"Society For The Preservation Of Professors"
+
+		CompletionState
+		{
+			"ID"		"1" // Beckett 561
+			"Description"	"Beckett wants you to find Professor Johansen, who is being held by the Society of Leopold. You'll need to find a way to get inside and locate him."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Johansen 101,371
+			"Description"	"You have spoken with Johansen and found out about the sarcophagus key. You should report your findings to the prince."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Johansen 101,371
+			"Description"	"You have spoken with Johansen and found out about the sarcophagus key. You also saved the professor from the cave-in at the Society of Leopold. You should report your findings to the prince."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // Prince 541
+			"Description"	"You have reported back to the prince what Johansen told you about the sarcophagus key."
+			"Type"		"success"
+			"AwardXP"	"Society02"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Shangrila"
+		"DisplayName"	"Hell At The Hallowbrook Hotel"
+
+		CompletionState
+		{
+			"ID"		"1" // Prince 2 501
+			"Description"	"The prince has bidden you to kill the leader of the Sabbat (and any other Sabbat that may get in the way). They have made their headquarters in the old burned-out Hallowbrook hotel in downtown Los Angeles."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2"
+			"Description"	"You have located the lair of the Sabbat leader."
+			"Type"		"incomplete"
+			"AwardXP"	"Shangrila01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3"	// changed by wesp
+			"Description"	"You have brought the Sabbat leader's pitiful existence to a violent end. The prince will be as happy as a little girl when you tell him."
+			"Type"		"incomplete"
+			"AwardXP"	"Shangrila02"
+		}
+
+		CompletionState
+		{
+			"ID"		"4"	// changed by wesp
+			"Description"	"You have told the prince that the Sabbat leader is dead. And, as predicted, he is as happy as a little girl."
+			"Type"		"success"
+			"AwardXP"	"Shangrila03"
+		}
+
+		CompletionState
+		{
+			"ID"		"5"	// added by wesp
+			"Description"	"You have struck a deal with the Sabbat leader. The prince will be as happy as a little girl when you lie about this to him."
+			"Type"		"incomplete"
+			"AwardXP"	"Shangrila04"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Alliance"
+		"DisplayName"	"The Enemy Of My Enemy"
+
+		CompletionState
+		{
+			"ID"		"1" // Prince 2 771
+			"Description"	"The prince has sent you to the Last Round to find out where Nines Rodriguez is hiding out. His plan is to have you find Nines and unite the anarchs and the Camarilla in a war against the Kuei-jin."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Damsel 681, 691
+			"Description"	"Damsel has revealed to you that Nines is hiding in Griffith Park. You need to go there and find him to unite the anarchs with the Camarilla in a war against the Kuei-jin."
+			"Type"		"incomplete"
+			"AwardXP"	"Alliance01"
+		}
+		CompletionState
+		{
+			"ID"		"3" // Nines 521, 531, 541
+			"Description"	"You have made contact with Nines Rodriguez in Griffith Park. But something's wrong."
+			"Type"		"incomplete"
+			"AwardXP"	"Alliance02"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // got to tram
+			"Description"	"Against all odds, you have made it out of Griffith Park alive. Someone set you and Nines up."
+			"Type"		"success"
+			"AwardXP"	"Alliance03"
+		}
+	}
+
+	Quest	// added by wesp
+	{
+		"Title"		"Ash"
+		"DisplayName"	"Ash To Ashes"
+
+		CompletionState
+		{
+			"ID"		"1"
+			"Description"	"You found Ash captured and tortured at the Society of Leopold. Why don't you help him once more?"
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2"
+			"Description"	"You have rescued Ash from the hunters... again."
+			"Type"		"success"
+			"AwardXP"		"Ash01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3"
+			"Description"	"Ash died at the Society of Leopold."
+			"Type"		"failure"
+		}
+	}
+
+	Quest	// added by wesp
+	{
+		"Title"		"Library"
+		"DisplayName"	"Night At The Library"
+
+		CompletionState
+		{
+			"ID"		"1"
+			"Description"	"Beckett asked you to check out what the Sabbat is doing in the downtown library. First you need to meet his friend in the Santa Monica Smoke Shop."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2"
+			"Description"	"You went to the Smoke Shop but Beckett's friend wasn't there. You did find a note though suggesting to check out the abandoned Coffee Shop nearby."
+			"Type"		"incomplete"
+		}
+		CompletionState
+		{
+			"ID"		"3"
+			"Description"	"You found the laptop of Beckett's friend Scott in the Coffee Shop and it seems he is following the new Sabbat recruit to the end of the Santa Monica pier."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"4"
+			"Description"	"You didn't find anyone at the end of the Santa Monica pier, only a lot of blood and a note telling you that you can enter the downtown library via the sewers. Time to do that now."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"5"
+			"Description"	"You have repaired the elevator up into the main library area. Now you can continue to look for trouble, but better refrain from attracting attention by killing everyone."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"6"
+			"Description"	"The backroom library computer unlocked a hidden switch. Sounds like this could open a secret entrance nearby!"
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"7"
+			"Description"	"You discovered a ritual chamber below the downtown public library. What is going on here?"
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"8"
+			"Description"	"You have stopped the Sabbat ritual and saved Beckett's friend too."
+			"Type"		"success"
+			"AwardXP"		"Library01"
+		}
+	}
+}

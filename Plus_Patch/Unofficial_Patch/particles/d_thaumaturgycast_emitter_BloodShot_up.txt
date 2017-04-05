@@ -1,0 +1,28 @@
+Particle	// changed by EntenSchreck
+{
+	loop "0"
+	fps "30"
+	frames	"45"
+
+	spawn
+	{
+		particle "d_thaum_hand_part1"
+		loop "1"
+		rate "30"	//"100"
+		radius "0"
+		theta "0~360"
+		phi	"-180~180"
+		z	"2"
+	}
+
+	spawn
+	{
+		particle "d_thaum_hand_part2"
+		rate "10"
+		radius "0"
+		phi "-180~180"
+		theta "0~360"
+		z	"2"
+	}
+}
+

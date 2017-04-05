@@ -1,0 +1,26 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "concrete/ohsidewalka"
+	"$surfaceprop" "concrete"
+	"$envmap" "env_cubemap"
+	"$envmapmask" "concrete/ohsidewalka_ref"
+
+	"Proxies"
+	{
+		"GlobalWetness"
+		{
+			"resultVar"	"$envmaptint[0]"
+			"scale"		 1.0
+		}
+		"GlobalWetness"
+		{
+			"resultVar"	"$envmaptint[1]"
+			"scale"		 1.0
+		}
+		"GlobalWetness"
+		{
+			"resultVar"	"$envmaptint[2]"
+			"scale"		 1.0
+		}
+	}
+}

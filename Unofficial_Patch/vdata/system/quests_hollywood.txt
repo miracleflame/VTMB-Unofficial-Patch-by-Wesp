@@ -1,0 +1,810 @@
+QuestTable
+{
+//	Quest
+//	{
+//		"Title"		This is a simple text title, and what will be used to refer to it in dialog.
+//
+//		"DisplayName"	This is what will be displayed as the heading for this journal entry
+//				LOCALIZE THIS FIELD
+//
+//		CompletionState
+//		{
+//			"ID"		Each completion state must have a UNIQUE, NUMERIC ID. By default, a player is considered to be at
+//					completion state 0, when the quest is unassigned. The quest will not be displayed in the journal
+//					unless the player has a valid ID for the quest.
+//
+//			"Description"	This is what will be displayed as the journal entry for this quest
+//					LOCALIZE THIS FIELD
+//
+//			"Type"		This controls the font, colors, etc, for the quest. MUST be "success, failure, incomplete"
+//
+//			"AwardXP"	This is how many experience points to award to a character when they reach this quest
+//					completion level. defaults to 0.
+//
+//			"AwardMoney"	This is how much money to award to a character when they reach this quest completion
+//					level. defaults to 0.
+//
+//			"Event"		This is script data, such as a flag assignment or a function call, that will be passed to
+//					the script interpreter. by default, there is no event script.
+//		}
+//	}
+
+	Quest
+	{
+		"Title"		"Courier"
+		"DisplayName"	"Dead Ex"
+
+		CompletionState
+		{
+			"ID"		"1"
+			"Description"	"Isaac is demanding tribute from you before he will help in your search for the Nosferatu. He has sent you to Ground 0, the Internet café, to get directions on where to meet his contact. You are to find a computer with the directory named \"josefk\" and use the password \"kafka\" to access it."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // set on Internet café computer
+			"Description"	"You are to meet with Isaac's contact in the alley behind the Fast Buck to pick up an item for Isaac."
+			"Type"		"incomplete"
+			"AwardXP"	"Dead01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Courier 81
+			"Description"	"You met with Isaac's courier, who was a bit freaked out. He told you he stashed the tape someplace safe, but the only clue you have are the words \"Ginger Swans\"."
+			"Type"		"incomplete"
+			"AwardXP"	"Dead02"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" //	set on Internet café computer
+			"Description"	"Isaac's courier told you he stashed the tape someplace safe, but the only clue you have are the words \"Ginger Swans\". You have since discovered that Ginger Swan is a deceased movie star."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" // got tape from tomb
+			"Description"	"You have discovered the tape Isaac has been looking for, hidden in Ginger Swan's tomb. It is extremely worn, and the only discernable markings on it say \"Devilspawn Fleshfeast\" and \"DMP\". Bring the tape back to Isaac."
+			"Type"		"incomplete"
+			"AwardXP"	"Dead03"
+		}
+
+		CompletionState
+		{
+			"ID"		"6" // Isaac 381, changed by wesp
+			"Description"	"You have brought Isaac the tape he has been looking for."
+			"Type"		"success"
+			"AwardXP"	"Dead04"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Gargoyle"
+		"DisplayName"	"Gargoyle Removal Service"
+
+		CompletionState
+		{
+			"ID"		"1" //	Isaac 521
+			"Description"	"Isaac wants you to \"take care of\" the Gargoyle that has taken up residence in the old Asian Theater."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Gargoyle 121 changed by wesp
+			"Description"	"You have convinced the Gargoyle to ally himself with Isaac Abrams against the Camarilla, thereby removing the threat to the Kindred of Hollywood. Go tell him."
+			"Type"		"incomplete"
+			"AwardXP"	"Gargoyle02"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // killed gargoyle
+			"Description"	"You have destroyed the Gargoyle at the request of the Baron of Hollywood, Isaac Abrams. Go tell him."
+			"Type"		"incomplete"
+			"AwardXP"	"Gargoyle01"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" //	Isaac 521
+			"Description"	"Isaac wants you to \"take care of\" the Gargoyle that has taken up residence in the old Asian Theater. You picked up a book about Gargoyles at the Tremere chantry downtown. Perhaps you should pay Maximillian Strauss, the Tremere regent, a visit."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" // added by wesp
+			"Description"	"You told Isaac Abrams that you solved his Gargoyle problem."
+			"Type"		"success"
+		}
+
+		CompletionState
+		{
+			"ID"		"6" // added by wesp
+			"Description"	"You have destroyed the Gargoyle after you already convinced him to ally with Isaac Abrams. What a waste! Go tell him."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"7" // added by wesp
+			"Description"	"You told Isaac Abrams that you solved his Gargoyle problem. Maybe you should tell the Tremere regent about this too."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"8" // added by wesp
+			"Description"	"You told Isaac Abrams that you solved his Gargoyle problem. No need to tell the Tremere regent now that you betrayed him."
+			"Type"		"success"
+		}
+
+		CompletionState
+		{
+			"ID"		"9" // added by wesp
+			"Description"	"You told the Tremere regent that you solved the Gargoyle problem. Don't forget Isaac Abrams."
+			"Type"		"incomplete"
+		}
+
+	}
+
+	Quest
+	{
+		"Title"		"Strip"
+		"DisplayName"	"Hot Stripper Assassin Action!"
+
+		CompletionState
+		{
+			"ID"		"1" //	VV 311
+			"Description"	"VV has discovered a hunter in Hollywood, working as a stripper by the name of Chastity at the Sin Bin. She wants you to take care of her, but not kill any innocents if possible."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Kill Chastity
+			"Description"	"You have eliminated the hunter, Chastity, for VV at the Vesuvius. She will want to know."
+			"Type"		"incomplete"
+			"AwardXP"	"Strip01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // VV 331, 631, 891
+			"Description"	"You have told VV that the hunter, Chastity, has been eliminated."
+			"Type"		"success"
+			"AwardXP"	"Strip02"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Writer"
+		"DisplayName"	"B-Rated Writer"
+
+		CompletionState
+		{
+			"ID"		"1" //	VV 591
+			"Description"	"David Hatter is a writer who works as the night clerk at the Luckee Star motel. He has written a screenplay about Kindred society with an unknown collaborator. The manuscript and the collaborator must be destroyed, but VV wants you to spare Hatter."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Hatter 131, 141, 271
+			"Description"	"You have been successful in your quest to obtain David Hatter's collaborator's name. It's Julius, one of the thin-bloods that hangs out on the beach in Santa Monica."
+			"Type"		"incomplete"
+			"AwardXP"	"Writer02"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // VV 761, 881
+			"Description"	"You killed David Hatter and were stupid enough to tell VV about it. She will no longer speak with you."
+			"Type"		"failure"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // Killed Hatter
+			"Description"	"You killed David Hatter before getting his collaborator's name. Good going, ace."
+			"Type"		"failure"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" // Killed Julius
+			"Description"	"You killed Julius, David Hatter's collaborator. You should tell VV about this."
+			"Type"		"incomplete"
+			"AwardXP"	"Writer03"
+		}
+
+		CompletionState
+		{
+			"ID"		"6" // VV 741
+			"Description"	"You killed Julius, David Hatter's collaborator, thereby protecting the Masquerade."
+			"Type"		"success"
+			"AwardXP"	"Writer04"
+		}
+
+		CompletionState
+		{
+			"ID"		"7" // VV 731
+			"Description"	"You delivered the manuscript to VV, but refused to kill Hatter's collaborator."
+			"Type"		"success"
+			"AwardXP"	"Writer05"
+		}
+
+		CompletionState
+		{
+			"ID"		"8" // Hatter 101, 111, 151, 161, 341
+			"Description"	"You got the manuscript from David Hatter. Now you must get him to tell you the name of his collaborator."
+			"Type"		"incomplete"
+			"AwardXP"	"Writer01"
+		}
+
+		CompletionState
+		{
+			"ID"		"9" // Julius 111, changed by wesp
+			"Description"	"You allowed Hatter's collaborator, Julius, to flee town with the understanding he is never to return. You should inform VV that he's been taken care of."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"10" // VV 741
+			"Description"	"You allowed Hatter's collaborator, Julius, to flee town with the understanding he is never to return, thereby protecting the Masquerade in Los Angeles."
+			"Type"		"success"
+			"AwardXP"	"Writer04"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Hunters"
+		"DisplayName"	"Hunters Hunting"
+
+		CompletionState
+		{
+			"ID"		"1" //	Ash 304, 305, 324, 325
+			"Description"	"You have offered to help Ash escape the hunters by leading him through the Hollywood sewers."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Ash 302, 322
+			"Description"	"You have offered to help Ash avoid the hunters by convincing a look-alike to switch clothes with him."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Ash 441
+			"Description"	"You were successful in your attempt to fool Ash's hunters by having Ash change clothes with some poor chump."
+			"Type"		"success"
+			"AwardXP"	"Hunters01"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // Ash 491
+			"Description"	"You were successful at leading Ash through the Hollywood sewers to evade the hunters."
+			"Type"		"success"
+			"AwardXP"	"Hunters01"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Romero"
+		"DisplayName"	"You Only Die Once A Night"
+
+		CompletionState
+		{
+			"ID"		"1" // Romero	161
+			"Description"	"Romero wants you to watch the cemetery for five minutes while he takes care of important business. Don't let the zombies break through the gates!"
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Romero 211
+			"Description"	"You successfully kept the zombies from spilling out into Hollywood."
+			"Type"		"success"
+			"AwardXP"	"Romero01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Romero 171
+			"Description"	"You let the zombies break through the gates and eat people in Hollywood."
+			"Type"		"failure"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Tommy"
+		"DisplayName"	"A Dish Best Served Cold"
+
+		CompletionState
+		{
+			"ID"		"1" // Email
+			"Description"	"The prince has contacted you through email and asked that you convince food critic Tommy Flayton to give the Café Cavoletti a bad review."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Tommy 71, 91, 101, changed by wesp
+			"Description"	"You were successful in your attempt to get Tommy Flayton to give the Café Cavoletti a bad review. Better check your email some time soon."
+			//changed by dan_upright 29/11/04
+			"Type"		"incomplete"
+			//changes end
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Tommy 179, 149, or kill Tommy, changed by wesp
+			"Description"	"You have failed to make Tommy Flayton give the Café Cavoletti a bad review."
+			"Type"		"failure"
+		}
+
+		//changed by dan_upright 29/11/04
+		CompletionState
+		{
+			"ID"		"4" // Tommy 71, 91, 101, changed by wesp
+			"Description"	"LaCroix has sent you a reward for getting Tommy Flayton to give the Café Cavoletti a bad review."
+			"Type"		"success"
+			"AwardXP"		"Tommy01"
+		}
+		//changes end
+	}
+
+	Quest
+	{
+		"Title"		"Imalia"
+		"DisplayName"	"Model Citizen"
+
+		CompletionState
+		{
+			"ID"		"1" // Imalia 141
+			"Description"	"Imalia wants you to plant and activate cameras in Tawni Sessions' apartment in Hollywood - one in her bedroom, one in her bathroom, and one in her kitchen."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // plant cameras
+			"Description"	"You successfully planted the cameras in Tawni's apartment for Imalia. Login to Tawni's computer using the password \"cleopatra\" to activate the cameras."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // activate cameras
+			"Description"	"You have activated the cameras in Tawni's apartment for Imalia. Return to her and report your progress."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // killed Tawny
+			"Description"	"You killed Imalia's rival, Tawni, even though you were instructed not to."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" // Imalia 231
+			"Description"	"Imalia is overjoyed that you were able to plant the cameras for her to dig up dirt on Tawni Sessions."
+			"Type"		"success"
+			"AwardXP"	"Imalia01"
+		}
+
+		CompletionState
+		{
+			"ID"		"6" // Imalia 251
+			"Description"	"Imalia is rather upset with you for killing Tawni Sessions and making a \"martyr\" out of her. Though she did admit that Tawni being dead is better than nothing."
+			"Type"		"success"
+			"AwardXP"	"Imalia02"
+		}
+
+		CompletionState
+		{
+			"ID"		"7" // Imalia 311, 331, changed by Wesp
+			"Description"	"You botched the setup for Imalia because you were noticed."
+			"Type"		"failure"
+		}
+
+		CompletionState
+		{
+			"ID"		"8" // Imalia (various)
+			"Description"	"You have pissed off Imalia to the point where she will no longer speak with you."
+			"Type"		"failure"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Guy"
+		"DisplayName"	"Cover Girl"
+
+		CompletionState
+		{
+			"ID"		"1" // Imalia 361, changed by Wesp
+			"Description"	"Imalia wants you to find her a copy of Guy magazine."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Flynn 431, changed by Wesp
+			"Description"	"You got Imalia's copy of Guy magazine."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Imalia 326, changed by Wesp
+			"Description"	"You gave Imalia a copy of her issue of Guy magazine."
+			"Type"		"success"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // Imalia (various)
+			"Description"	"You have pissed off Imalia to the point where she will no longer speak with you."
+			"Type"		"failure"
+		}
+		CompletionState
+		{
+			"ID"		"5" // Flynn killed, added by wesp
+			"Description"	"You have killed your only source to get Imalia's magazine."
+			"Type"		"failure"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Mitnick"
+		"DisplayName"	"A Tangled Web"
+
+		CompletionState
+		{
+			"ID"		"1"
+			"Description"	"You have agreed to help Mitnick set up a new Nosferatu network. He will be contacting you with instructions via your email account back at your haven."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2"
+			"Description"	"You have received instructions on how to activate the Santa Monica network hub. You need to find Megahurtz Computing at the end of 2nd Street, and enter through the alleyway behind the building. Mitnick has left you the key in your mailbox. Power up the terminal, find the \"Net Security\" folder and run the \"schrecknet\" command. The password on the folder is \"Gil Bates\"."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"3"
+			"Description"	"You have successfully activated the Santa Monica hub for the Nosferatu network. Mitnick will be contacting you shortly via email with new instructions."
+			"Type"		"incomplete"
+			"AwardXP"	"Web01"
+		}
+
+		CompletionState
+		{
+			"ID"		"4"
+			"Description"	"You have received instructions on how to activate the downtown network hub. You need to enter the Nocturne Theatre through the sewers, mount a wireless camera near the red X, and activate it through the network terminal (which is in the basement of the theater). Mitnick has left you the camera in your mailbox. After it is activated, login to the \"Net Security\" folder and run \"schrecknet\". The password is \"Break a Leg\". It is VERY important that you are not seen while you are there."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"5"
+			"Description"	"You have successfully activated the downtown hub for the Nosferatu network. Mitnick will be contacting you shortly via email with new instructions."
+			"Type"		"incomplete"
+			"AwardXP"	"Web02"
+		}
+
+		CompletionState
+		{
+			"ID"		"6"	// changed by wesp
+			"Description"	"You have received instructions on how to activate the Hollywood hub for the Nosferatu network. You need to enter Metalhead Industries in Hollywood (Mitnick has left the key in your mailbox), and activate the terminal. Mitnick said that the terminal is in \"Operations\", which is on the second floor of the warehouse. It is VERY important that you are not seen while you are there and don't kill anyone."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"7"
+			"Description"	"You have successfully activated the Hollywood hub for the Nosferatu network. Mitnick will be contacting you shortly via email with new instructions."
+			"Type"		"incomplete"
+			"AwardXP"	"Web03"
+		}
+
+		CompletionState
+		{
+			"ID"		"8"	// changed by wesp
+			"Description"	"You have received instructions on how to activate the Chinatown hub for the Nosferatu network. You need to enter a company named Kamikazi Zen (Mitnick has left the key in your mailbox) and activate the terminal, which is in the server room. An inside agent has put a virus named \"hooligan\" on one of the office terminals. Find the file and execute it. This will shut down the power, allowing you to get past the heavy security door. Somewhere behind this door is the server room. You better also steal something out of the electronic safe to throw investigators off the scent."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"9"
+			"Description"	"You have successfully activated all of the hubs for Mitnick. The new Nosferatu network is up and operational."
+			"Type"		"success"
+			"AwardXP"	"Web04"
+		}
+
+		CompletionState
+		{
+			"ID"		"10"
+			"Description"	"You have failed to set up the Nosferatu network."
+			"Type"		"failure"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Loser"
+		"DisplayName"	"Pimpin' For Romero"
+
+		CompletionState
+		{
+			"ID"		"1" // Romero 621
+			"Description"	"Romero is in dire need of some illicit lovin'. You have offered to bring a lady of the evening to his luxurious digs in the cemetery."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Prostitute
+			"Description"	"Now that you've convinced a sleazy streetwalker to give it up for Romero, you need to deliver her to his shack of love."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Romero 701
+			"Description"	"You have given up on the near impossible task of finding someone to give Romero some lovin'."
+			"Type"		"failure"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // Romero Death
+			"Description"	"You have killed Romero, thereby making his yearnin' for love inconsequential."
+			"Type"		"failure"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" // Romero 641
+			"Description"	"You have successfully pimped for Romero. Your mother would be proud."
+			"Type"		"success"
+			"AwardXP"	"Pimp01"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Tape"
+		"DisplayName"	"Snuff Is Enough"
+
+		CompletionState
+		{
+			"ID"		"1" // Isaac 461
+			"Description"	"Isaac wants a complete version of the snuff film. He has suggested you talk to smut peddlers in Hollywood for a lead on its whereabouts."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Flynn 191
+			"Description"	"Flynn, the proprietor of the Sin Bin, has given you the secret message to relay to the anonymous caller who calls on one of the payphones down the street by the Red Spot. Then you will be told where to pick up the tape."
+			"Type"		"incomplete"
+			"AwardXP"	"Tape01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // hacked Flynn's computer
+			"Description"	"You have hacked Flynn's computer and found the secret message to relay to the anonymous caller, who calls on one of the payphones down the street by the Red Spot. Then you will be told where to pick up the tape."
+			"Type"		"incomplete"
+			"AwardXP"	"Tape01"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // got tape
+			"Description"	"You have acquired the complete snuff film from the video company. Return and show it to Isaac."
+			"Type"		"incomplete"
+			"AwardXP"	"Tape02"
+		}
+
+		CompletionState
+		{
+			"ID"		"5" // Isaac 791
+			"Description"	"You have brought the complete snuff film back to Isaac."
+			"Type"		"success"
+			"AwardXP"	"Tape03"
+		}
+
+		CompletionState
+		{
+			"ID"		"6" // Anon_Caller
+			"Description"	"The anonymous caller has told you to go to the Hollywood Luckee Star motel, Room 2."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"7" // Got key to Internet café
+			"Description"	"There was no one waiting for you at the Hollywood Luckee Star motel, but you did find a key to the Internet café."
+			"Type"		"incomplete"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Kings Way"
+		"DisplayName"	"Going The Way Of Kings"
+
+		CompletionState
+		{
+			"ID"		"1" // Isaac 801
+			"Description"	"Isaac has identified the house in the snuff film as a house in the hills on King's Way. He has also surmised that you will need to confront the film's creator to gain access to the Nosferatu."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // "killing" Andrei, changed by wesp
+			"Description"	"You have defeated the Tzimisce in his lair at 609 King's Way, and gained access to the sewers that will hopefully lead you to the Nosferatu. Now go on and find them! You should also tell Isaac about this later."
+			"Type"		"incomplete"
+			"AwardXP"	"Kings01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // added by wesp
+			"Description"	"You have told Isaac that you defeated the Tzimisce in his lair at 609 King's Way, and he promised you a gift in return."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // added by wesp
+			"Description"	"You have told Isaac that you defeated the Tzimisce in his lair at 609 King's Way, and he gave you a gift for your help."
+			"Type"		"success"
+		}
+
+	}
+
+	Quest
+	{
+		"Title"		"Barabus"
+		"DisplayName"	"I Spy Barabus"
+
+		CompletionState
+		{
+			"ID"		"1" // Gary 621
+			"Description"	"Gary wants you to find his spy Barabus, who was sent to Chinatown and disappeared. He has also told you your first stop should be to talk to Ming-Xiao at the Golden Temple."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2" // Barabus
+			"Description"	"You have rescued Barabus from the Fu Syndicate. Find the payphone outside to get Gary's call."
+			"Type"		"incomplete"
+			"AwardXP"	"Barabus01"
+		}
+
+		CompletionState
+		{
+			"ID"		"3" // Gary
+			"Description"	"You have rescued Barabus from the Fu Syndicate and received Gary's call."
+			"Type"		"success"
+			"AwardXP"	"Barabus02"
+		}
+
+		CompletionState
+		{
+			"ID"		"4" // Ming-Xiao
+			"Description"	"Ming-Xiao has suggested you look for a businessman named Wong Ho at the Red Dragon restaurant. He may have information that could lead you to Barabus, Gary's spy."
+			"Type"		"incomplete"
+		}
+	}
+
+	Quest	// added by wesp
+	{
+		"Title"		"Gary"
+		"DisplayName"	"Poster Session"
+
+		CompletionState
+		{
+			"ID"		"1"
+			"Description"	"Gary will swap a poster of Jeanette Voerman for a tape of an old movie of his called Tap Hotel. Just put the tape in the mailbox and check your haven and emails later."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2"
+			"Description"	"Gary offers a poster of VV in exchange for a revealing photo he saw on Haunted LA. Just put the photo in the mailbox and check your haven and emails later."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"3"
+			"Description"	"Gary will trade a poster of Ming-Xiao for a tape of last year's Jock Shot magazine's swimsuit shoot. Just put the tape in the mailbox and check your haven and emails later."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"4"
+			"Description"	"Gary offers a poster of Damsel in exchange for a wooden pull toy that might be in Metalhead Industries. Just put the toy in the mailbox and check your haven and emails later."
+			"Type"		"incomplete"
+		}
+
+CompletionState
+		{
+			"ID"		"5"
+			"Description"	"Gary will swap a poster of Tawni Sessions for a name plate with transponder. Just put the plate in the mailbox and check your haven and emails later."
+			"Type"		"incomplete"
+		}
+
+CompletionState
+		{
+			"ID"		"6"
+			"Description"	"Gary offers a poster of Imalia for a squashed Odious Chalice. Just put the thing in the mailbox and check your haven and emails later."
+			"Type"		"incomplete"
+		}
+
+CompletionState
+		{
+			"ID"		"7"
+			"Description"	"Gary will trade a poster of a sweet girl for a throwing star. Just put the star in the mailbox and check your haven and emails later."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"8"
+			"Description"	"You found all the items Gary was looking for."
+			"Type"		"success"
+			"AwardXP"	"Poster01"
+		}
+	}
+
+	Quest
+	{
+		"Title"		"Gift"
+		"DisplayName"	"Haxxor"
+
+		CompletionState
+		{
+			"ID"		"1"
+			"Description"	"Mitnick offered you an occult item for mailing him a LA library card."
+			"Type"		"incomplete"
+		}
+
+		CompletionState
+		{
+			"ID"		"2"
+			"Description"	"You have mailed a LA library card to Mitnick and got the reward for it."
+			"Type"		"success"
+			"AwardXP"	"Gift01"
+		}
+	}
+}

@@ -1,0 +1,29 @@
+Particle
+{
+	sprite		"Ember"
+	max_frames	"200"
+	X_speed		"5~20,5~20,5~20,5~20,5~20,5~20"
+	Y_speed		"5~20,5~20,5~20,5~20,5~20,5~20"
+	Z_speed		"-60"
+	size		"2"
+	red			"255"
+	green		"80"
+	blue		"60"
+	color		"0~255,0~255,0~255,0~255,0~255,0~255,0~255,0~255,0~255,0~255,0~255,0~255,0~255,0~255,0~255"
+	mask		"0"
+
+	collide
+	{
+		self
+		{
+			friction 	"0"
+			Bounce		"0"
+		}
+		spawn
+		{
+			particle 	"EmberSmokeDummy"
+			friction 	"0"
+			Bounce		"0"
+		}
+	}
+}

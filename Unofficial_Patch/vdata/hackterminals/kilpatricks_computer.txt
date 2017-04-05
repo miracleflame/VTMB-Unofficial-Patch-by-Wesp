@@ -1,0 +1,42 @@
+TerminalDefinition
+{
+	"screen saver"		"Kilpatrick's"		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Kilpatrick's Bail Bonds"  
+		"line1"		"The price of freedom"
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+	SubDir
+	{
+		"name"			"Bonds"				// This is what is displayed as the name of this menu, and what the player must type to enter the menu (128 characters)
+		"password"		"money"				// password required to run commands in this menu (16 characters)
+		"description"		"currently outstanding bonds" 	// This is printed each time the user enters this menu (128 characters)
+
+		Function
+		{
+			"name"		"Muddy"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Info on Muddy"		// this is a description of this function  (128 characters)
+			"runtext"	"I don't want to know why he's called Muddy."
+									// this text is printed when the player triggers this function.  (128 characters)
+		}
+		
+	}
+
+	Email
+	{
+		"subject"	"Your Father"
+		"sender"	"Mom"	
+		"body"		"Arthur, your father wanted me to write you to tell you that he has a boil that is three inches across! You really need to come visit and see this thing. Love, mom"
+
+	}
+
+}

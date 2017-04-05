@@ -1,0 +1,60 @@
+// Written
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	
+	"infomodel"			"models/items/beckett_book/info/item_i_beckett_book.mdl"
+	"playermodel"		"models/items/beckett_book/ground/item_g_beckett_book.mdl"
+
+	"anim_prefix"		" "
+
+	"printname"			"Scarlet Torkelson: Circus Performer"
+	"description"		"Biography of 1930s circus performer Scarlet \"the perforated lady\" Torkelson. Best known as the assistant to \"Shakey Sil\" Manfretti, the notorious epileptic knife-thrower. This book raises your Dodge talent."	// changed by wesp
+
+	"camera_class"		"noswitch"
+	"is_wieldable"		"0"
+	"weight"			"3"
+	"item_flags"		"1"
+	"item_type"			"powerup"
+	"item_worth"		"30"
+
+	"knowledge_min"		"2"
+	"grade"			"low"
+	"upgrade_ability"		"dodge"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Book/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/beckett_book_sel"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/beckett_book"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

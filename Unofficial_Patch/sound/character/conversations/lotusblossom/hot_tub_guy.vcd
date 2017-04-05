@@ -1,0 +1,24 @@
+// Choreo version 1
+actor "Tub_Guy_1"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.186667 1.285216
+      param "character/male/asian/target_suspect_4.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Animation"
+  {
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

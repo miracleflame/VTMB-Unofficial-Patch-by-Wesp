@@ -1,0 +1,85 @@
+
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	
+	"infomodel"	"models/items/Diary/Info/Info_Diary.mdl"
+	"playermodel"	"models/items/Diary/Ground/Diary.mdl"
+	
+	"anim_prefix"	" "
+
+	"printname"	"Diary"
+	"description"	"This seems to be a woman's diary:
+			4/30/03 - I met a guy today at The Asylum. He's SO beautiful, oh my god. His name is Rolf and he is from Germany. European men are just so classy compared to boring California boys. He asked to see me tomorrow night. I wonder if he's rich. He looks rich. I'm going to go shopping tomorrow and pick up something that won't make me look like a big, fat pig. Can't wait to see him.
+
+			5/21/03 - I think it's getting serious with Rolf. He told me he wanted to give me something very special next week and if it's what I think it is, it's about damn time. I thought Europeans were supposed to be less uptight about this sort of thing.
+			
+			6/06/03 - I woke up at 9 PM today. That would be strange in itself, except I don't remember going to sleep last night. In fact, I don't remember anything since last Saturday night when Rolf was over....
+			
+			6/10/03 - I woke up late again. I haven't eaten anything in four days. I don't know what's wrong with me....
+			
+			6/11/03 - Rolf came over last night. He said the reason I hadn't eaten anything was because I needed blood. He said it was all I could eat now, that I wouldn't feel hungry any more if I drank some. He had a bag of it from the local blood bank. I tried to refuse but I couldn't. What's happening to me?
+			
+			7/26/03 - Rolf said he's going to have to leave soon. He said people are trying to force him out of the country. He didn't say anything about taking me with him.
+			
+			8/22/03 - I had to bail Rolf out of jail today. He was arrested because his visa expired. He looked frightened. I'm afraid he's going to leave.
+			
+			12/07/03 - I haven't seen or heard from Rolf since the night I bailed him out. I don't know what to do. I thought he cared about me. Why did he do this to me...?
+			
+			4/15/04 - I talked with this guy I met in the Surfside until five this morning. When I told him I had to go, I felt like Cinderella. He seemed like a prince.
+			
+			4/16/04 - I met that guy from the Surfside again. He has no idea what I am....
+			
+			4/24/04 - I brought E, the guy from the Surfside, back to my apartment last night. He said he's going back to Australia in a few days, now that the tournament's coming to an end. I don't want him to leave. I've never felt this way about someone before, not even Rolf.
+			
+			4/25/04 - E kissed me last night and I couldn't stop myself from biting into his neck. But I drank too much and... I gave him my blood to save him. When I explained it all to him, he said he never wanted to see me again. What have I done?
+			
+			5/08/04 - I haven't been able to feed since that night with E. I'm afraid of what will happen. I remember Rolf brought blood from the blood bank. Maybe if I can sneak in, I can grab a few bags and get out before anyone catches me."
+
+	"bucket"		"1"
+	"bucket_position"	"2"
+
+	"camera_class"		"noswitch"
+	"is_wieldable"		"0"
+	"weight"		"1"
+	"item_flags"		"1"
+	"item_type"		"powerup"
+	"item_worth"		"-1"
+	"is_visible_in_hud"		"1"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Book/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/Diary_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/Diary"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

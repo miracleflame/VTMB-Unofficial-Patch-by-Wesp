@@ -1,0 +1,37 @@
+// Choreo version 1
+actor "Hostess"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 1.203220
+      param "character/dlg/chinatown/hostess/line21_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 0.510000 0.640000
+      param "0.130"
+    }
+    event silence "Silence"
+    {
+      time 1.590000 1.220000
+      param "0.330"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

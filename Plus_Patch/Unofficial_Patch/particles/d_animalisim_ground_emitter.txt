@@ -1,0 +1,27 @@
+//Attach Type: Origin
+
+Particle
+{
+loop "1"	
+	spawn
+	{
+		particle "D_Animalisim_Spiders"
+//		rate "20" //Level 1
+//		rate "200" //Level 5
+		rate "100"
+		theta "0~360"
+		z	"0"
+
+	}
+
+
+	spawn
+	{
+		particle "D_Animalisim_GroundFog"
+		rate "75"	//"150"
+		radius "5"
+		theta "0~360"
+		z	"7"
+
+	}
+}

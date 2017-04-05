@@ -1,0 +1,133 @@
+// Choreo version 1
+actor "prince2"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time -0.000000 12.383106
+      param "character/dlg/downtown la/prince2/line391_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"	// changed by wesp
+  {
+    event gesture "Lacroix2_Line391_col_E"
+    {
+      time 0.000000 12.266666
+      param "Lacroix2_Line391_col_E"
+    }
+  }
+  channel "Expressions"
+  {
+    event expression "Laugh No Deform 01"
+    {
+      time 0.013333 3.153334
+      param "lacroix_expressions"
+      param2 "Laugh No Deform"
+      event_ramp
+      {
+        0.1667 0.6183
+        0.2222 0.6183
+        2.8793 0.6183
+        2.9530 0.6183
+      }
+    }
+    event expression "Laugh 01"
+    {
+      time 6.666667 7.386668
+      param "lacroix_expressions"
+      param2 "Laugh"
+      event_ramp
+      {
+        0.2579 0.5621
+        0.5947 0.4403
+      }
+    }
+    event expression "shock 01"
+    {
+      time 11.626667 12.033334
+      param "lacroix_expressions"
+      param2 "shock"
+      event_ramp
+      {
+        0.1947 0.6511
+      }
+    }
+  }
+  channel "brows"
+  {
+    event expression "Joy 01"
+    {
+      time 0.013334 3.153334
+      param "lacroix_expressions"
+      param2 "Joy"
+      event_ramp
+      {
+        0.1316 0.6440
+        0.1789 0.6440
+        2.8842 0.6440
+        2.9842 0.6440
+      }
+    }
+    event expression "Raised Both 01"
+    {
+      time 5.886666 7.413333
+      param "lacroix_expressions"
+      param2 "Raised Both"
+      event_ramp
+      {
+        0.1579 0.9532
+        1.3530 0.9742
+      }
+    }
+    event expression "Squint 01"
+    {
+      time 9.160000 12.346666
+      param "lacroix_expressions"
+      param2 "Squint"
+      event_ramp
+      {
+        0.2158 0.9766
+        2.4105 0.9813
+        2.7211 0.1967
+        2.9211 0.9977
+        3.0674 0.9672
+      }
+    }
+  }
+  channel "extras"
+  {
+    event expression "Anger 01"
+    {
+      time 3.013334 6.020001
+      param "lacroix_expressions"
+      param2 "Anger"
+      event_ramp
+      {
+        0.2000 0.9672
+        2.7989 0.9438
+      }
+    }
+    event expression "Laugh No Deform 02"
+    {
+      time 7.293334 9.346667
+      param "lacroix_expressions"
+      param2 "Laugh No Deform"
+      event_ramp
+      {
+        0.2263 0.7752
+        0.3000 0.8009
+        0.3316 0.8033
+        1.6947 0.8033
+        1.7316 0.8033
+        1.8368 0.7611
+      }
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

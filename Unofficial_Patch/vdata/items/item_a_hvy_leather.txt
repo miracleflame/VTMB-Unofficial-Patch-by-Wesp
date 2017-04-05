@@ -1,0 +1,64 @@
+// Armor
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"		"models/weapons/pistol/view/v_pistol.mdl"
+	"playermodel"	"models/armor3.mdl"
+	"wieldmodel_f"	"models/weapons/w_null.mdl" // changed by wesp
+	"wieldmodel_m"	"models/weapons/w_null.mdl" // changed by wesp
+	"infomodel"		"models/scenery/misc/armor/LeatherHeavy/LeatherHeavy.mdl"
+	"anim_prefix"	"hvy_leather"
+
+	"printname"		"Heavy Leather"
+	"description"	"This is a set of heavy leather clothing. Heavy leather clothing has an armor rating of 3, but hinders movement, resulting in a -1 penalty to Dexterity. Some examples of heavy leather clothing are studded or reinforced leather jackets, girded leather pants, and hard leather gloves and boots." // changed by wesp
+
+	"bucket"		"0"
+	"bucket_position"	"2"
+
+	"weight"		"0"
+	"item_flags"	"1"
+	"item_type"		"armor"
+	"item_worth"	"285"
+	"item_class_discount" "1"
+	"wield_effect"	"Item (Heavy Leather)"
+	"equip_mask"	"Normal"
+	"permanent_inventory"	"1"	// added by wesp
+	"is_droppable"			"0"
+
+	SoundData	// added by wesp
+	{
+		"pickup"
+		{
+			"sound1"	"items/Book/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		// For now, these need to be here to be "correct" armor indexes for the code (clan doesn't matter)
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Armors/BrujahM/Brujah_M_A3"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Armors/BrujahM/Brujah_M_A3"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

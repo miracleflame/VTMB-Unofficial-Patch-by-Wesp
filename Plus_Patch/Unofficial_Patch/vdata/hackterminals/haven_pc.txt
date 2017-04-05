@@ -1,0 +1,451 @@
+TerminalDefinition
+{
+	"screen saver"		"Have a nice day!"	// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		"[]"			// these surround the command prompt (2 characters)
+	"email_username"	"suckhead"		// printed at the top of the email window, not used for log in. 
+	"email_password"	"sunrise"		// printed at the top of the email window, not used for log in. 
+
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"LaCroix Foundation"
+		"line1"		"Secure Intranet"
+	}
+
+	Email
+	{
+		"subject"	"A reminder"
+		"sender"	"LaCroix"
+		"body"		"Mercurio will contact you when you arrive in Santa Monica. Waste no time in meeting with him. - SL"
+	}
+
+	Email
+	{
+		"subject"	"DANG! It's big you know!!!111"
+		"sender"	"HungLow@trojanbotnet.vtm"		
+		"body"		"PENIS ENLARGEMENT! Watch the girls come running! Call today! 1-800-555-STICK!"
+		"autodelete"	"1"
+	}
+
+	Email
+	{
+		"subject"	"Kilpatrick's Krime-Puter!"
+		"sender"	"arthur@dirtcheapinternet.vtm"
+		"body"		"Looking for that lazy ass ex-husband who's late on his alimony payments? How about that jerk who knocked you up? Look no further! With Arthur Kilpatrick's Amazing Krime-Puter, you can find almost anyone with a record, and these days that's just about everyone! So come on down to Arthur Kilpatrick's Bail Bonds! If you've got the dead beat, we've got the technology to find him!"
+	}
+
+	Email
+	{		
+		"subject"	"Welcome"
+		"sender"	"Mercurio"
+		"body"		"Hey. Welcome to town. Come on over to my place once you get situated, and we'll talk about what you'll need to get the job done. I'm going to pick up explosives right now, some Astrolite... I should be back by the time you come over. I'm at 24 Main Street, in number 4. Walk to the end of the alley and my building is the next one on the right. - M"
+		"runscript"	"G.Read_Email = 1"
+	}
+
+	Email
+	{
+		"subject"	"A favor"
+		"sender"	"LaCroix"
+		"body"		"It has come to our attention that a sample of werewolf blood has made it into the hands of the local tabloid, and that they have sent it on to the clinic in Santa Monica for testing. The responsible party has been dealt with (most painfully, I can assure you), but for obvious reasons we can't have anyone testing the blood. Please retrieve the blood sample from the clinic and leave it in your mailbox. You will be compensated accordingly. - SL"	// changed by wesp
+		"dependency"	"G.Mercurio_Quest == 2"
+		"runscript"	"werewolfBloodQuestAssigned()"
+	}
+
+	Email
+	{
+		"subject"	"Nicely done"
+		"sender"	"LaCroix"
+		"body"		"Your assistance was much appreciated in regards to the werewolf blood. Please find your payment in the mailbox, if you haven't already done so. - SL"
+		"dependency"	"G.Werewolf_Quest == 4"
+		"runscript"	"werewolfBloodQuestDone()"
+	}
+
+	Email
+	{
+		"subject"	"The opening"
+		"sender"	"a friend"
+		"body"		"The game begins. A pawn is moved."
+		"dependency"	"G.Story_State < 5"	// changed by wesp
+	}
+
+	Email
+	{
+		"subject"	"The first move"
+		"sender"	"a friend"
+		"body"		"The white king moves to protect his pawn."
+		"dependency"	"G.Story_State >= 5 and G.Story_State < 20"	// changed by wesp
+	}
+
+	Email
+	{
+		"subject"	"Repaid favors"
+		"sender"	"Mercurio"
+		"body"		"Stop by my apartment when you get a chance, I'll set you up. - M"
+		"dependency"	"G.Story_State >= 15 and G.Mercurio_Dead == 0"	// changed by wesp
+	}
+
+	Email
+	{
+		"subject"	"DON'T TOUCH THE BUTTER!"
+		"sender"	"Brock-Fu@SillyLittlePuppy.vtm"
+		"body"		"DON'T TOUCH THE BUTTER! The new extreme sport that's sweeping the nation is now on a limited edition DVD. Watch superstars Iron Will McMan, Brock \"Dry Hands\" Heinz, and Margarine Mike Davenport as they use every bit of restraint in their body to NOT TOUCH THE BUTTER! One bowl of butter, two contestants, three judges, and a hell of a lot of willpower! To order, log onto www.donttouchthebutter.vtm."
+		"dependency"	"G.Story_State >= 15"
+		"autodelete"	"1"
+	}
+
+	Email
+	{
+		"subject"	"A sacrifice"
+		"sender"	"a friend"
+		"body"		"A bishop is sacrificed for the king."
+		"dependency"	"G.Story_State >= 20 and G.Story_State < 30"
+	}
+
+	Email
+	{
+		"subject"	"A gambit"
+		"sender"	"a friend"
+		"body"		"A gambit has been played. The king leaves himself open."
+		"dependency"	"G.Story_State >= 30 and G.Story_State < 40"
+	}
+
+	Email
+	{
+		"subject"	"Open Immediately, Kitten!"
+		"sender"	"jeanette@theasylum.vtm"
+		"body"		"Dear, dear Duckling,
+HI! Guess who! No, guess! Because it's more fun that way, that's why! Oh, kitten, have you already forgotten? It's me, Jeanette! I was just sitting here in my big, boring bedroom, all by my lonely self, when I noticed I was missing something - you. Amuse me. Please?
+Wading for you, Duckling,
+Jeanette "
+		"dependency"	"G.Story_State >= 30 and G.Therese_Dead == 1"
+	}
+
+	Email
+	{
+		"subject"	"Business in Hollywood"
+		"sender"	"LaCroix"
+		"body"		"I have a certain financial interest in a restaurant in Hollywood called the Cavoletti Cafe. I have made an offer on the establishment that is more than generous, but it seems that the owners are remiss to accept. It is my understanding that a renowned food critic named Tommy Flayton will be writing an article about the restaurant very soon. Please intercept him there and make sure the review is unfavorable. - SL"	// changed by wesp
+		"dependency"	"G.Story_State > 30"
+		"runscript"	"tomSetQuest()"
+	}
+
+	Email
+	{
+		"subject"	"Tommy Flayton's Review"
+		"sender"	"LaCroix"
+		"body"		"I recently read Mr. Flayton's scathing review of the Cavoletti Cafe in the Sun, and I must tell you that I am extremely happy with his conclusions. You have done well. Please accept the payment I've left you in your mailbox. We will no doubt be seeing each other soon. - SL"
+		"dependency"	"G.Tommy_Disgusted == 1 or G.Tommy_Review == 1"
+		// changed by dan_upright 29/11/04
+		"runscript"	"tomSetQuestFour()"
+		// changes end
+	}
+
+	Email
+	{
+		"subject"	"Tommy Flayton's Review"
+		"sender"	"LaCroix"
+		"body"		"I recently read Mr. Flayton's glowing review of the Cavoletti Cafe in the Sun, and I must tell you that I am extremely unhappy with his conclusions. You disappoint me, neonate. Obviously, you can't be trusted with even the most menial of tasks. - SL"
+		"dependency"	"G.Tommy_Hostile == 1 or G.Tommy_Fail == 1"	// changed by wesp
+	}
+
+	Email		// added by wesp written by Malkav
+	{
+	"subject"	"Tommy Flayton"
+	"sender"	"LaCroix"
+	"body"	"I recently read Mr. Flayton's obituary in the Sun, and I must tell you that I am extremely unhappy with his untimely demise. I distinctly remember asking you for a deadly review, not a dead reviewer. You disappoint me, neonate. Obviously, you can't be trusted with even the most menial of tasks. - SL"
+	"dependency"	"G.Tommy_Review == 2"
+	"runscript"	"G.Prince_Reaction = G.Prince_Reaction -1"
+	}
+
+	Email
+	{
+		"subject"	"The cost"
+		"sender"	"a friend"
+		"body"		"The cost of an attack is often paid later."
+		"dependency"	"G.Story_State >= 40 and G.Story_State < 50"
+	}
+
+	Email
+	{
+		"subject"	"First Network Hub"
+		"sender"	"m1tn1ck@yo-mama.vtm"
+		"body"		"Mitnick here. I've got the information on the first of the network hubs. The terminal is in Santa Monica, in an old place called Megahurtz Computing (I'll send another email with recon). Power up the terminal, find the \"Net Security\" folder and run the \"schrecknet\" command. The password on the folder is \"Gil Bates\". Don't ask. I'll message you when I see the hub activated."
+		"dependency"	"G.Mitnick_Quest == 2 and G.Shubs_Act == 0"
+		"runscript"	"G.Shubs_Email = 1; mitSetQuestTwo(); putStuffInMailBox()"
+	}
+
+	Email
+	{
+		"subject"	"Megahurtz Computing Recon"
+		"sender"	"m1tn1ck@big-tool.vtm"
+		"body"		"Megahurtz Computing is at the end of 2nd Street in Santa Monica, next to The Asylum. The only entrance is through the back door, so you'll have to find an alley to get back there. I'm leaving you a key for the door in your mailbox. Good luck, kid. This one should be easy."
+		"dependency"	"G.Mitnick_Quest == 2 and G.Shubs_Act == 0"
+		"runscript"	"G.Shubs_Email = 1; mitSetQuestTwo(); putStuffInMailBox()"
+	}
+
+	Email
+	{
+		"subject"	"Second Network Hub"
+		"sender"	"m1tn1ck@DOD.vtm"
+		"body"		"The next terminal is in the basement of the Nocturne Theatre in downtown (recon to follow). NO ONE CAN KNOW YOU WERE THERE. Stay out of sight. And no killing. I need you to set up a wireless cam (I'll send you instructions on how to activate it). Once it's in place and activated, login to the \"Net Security\" folder (password \"Break a Leg\") and run \"schrecknet\"."
+		"dependency"	"G.Shubs_Act == 1"
+		"runscript"	"G.Shubs_Email = 2; mitSetQuestFour(); putStuffInMailBox()"
+	}
+
+	Email
+	{
+		"subject"	"Nocturne Theatre Recon"
+		"sender"	"m1tn1ck@arcanum1.vtm"
+		"body"		"The Nocturne Theatre is downtown, just across from the Empire Arms hotel. I couldn't get a key to the front door, so you'll have to enter through the sewers. Sorry... that's the best I could do."
+		"dependency"	"G.Shubs_Act == 1"
+		"runscript"	"G.Shubs_Email = 2; mitSetQuestFour(); putStuffInMailBox()"
+	}
+
+	Email
+	{
+		"subject"	"Wireless Camera"
+		"sender"	"m1tn1ck@junktown.vtm"
+		"body"		"I put the camera down in your mailbox. I had an operative scope out the joint beforehand, and he marked the best place for the camera with a red X. Find it (it's probably someplace high) and mount the camera. Once you've put it in place, login to the terminal downstairs, find the \"Camera\" folder and activate \"net cam\". You won't be able to activate the hub until the camera is in place."
+		"dependency"	"G.Shubs_Act == 1"
+		"runscript"	"G.Shubs_Email = 2; mitSetQuestFour(); putStuffInMailBox()"
+	}
+
+	Email
+	{
+		"subject"	"Third Network Hub (recon)"
+		"sender"	"m1tn1ck@3-eyed-snake.vtm"
+		"body"		"Not a lot of time right now. Gotta make this quick. Metalhead Industries. Hollywood. Warehouse operation. Key is in your mailbox. Set up the hub. The terminal is in \"Operations\", back of the warehouse, top of some stairs. Probably locked electronically. Work the problem. They're gonna have tight security but you gotta keep it dark. They can't know you were there. Same drill. See ya."
+		"dependency"	"G.Shubs_Act == 2"
+		"runscript"	"G.Shubs_Email = 3; mitSetQuestSix(); putStuffInMailBox()"
+	}
+
+	Email
+	{
+		"subject"	"Final Network Hub"
+		"sender"	"m1tn1ck@ImpeachBush.vtm"
+		"body"		"Okay. This is the big one. Kuei-jin front in Chinatown called \"Kamikazi Zen\". Yeah, I know it's Japanese. Don't ask. They've got a heavy-duty security system. Recon's coming. Once you're in, find the server room and activate the hub. ONE MORE THING. They have a vault where they keep software, etc. You better break into it and take something. Put 'em off the scent. This one can be messy. It's your ass."	// changed by wesp
+		"dependency"	"G.Shubs_Act == 3"
+		"runscript"	"G.Shubs_Email = 4; mitSetQuestEight(); putStuffInMailBox()"
+	}
+
+	Email
+	{
+		"subject"	"Kamikazi Zen Recon"
+		"sender"	"m1tn1ck@TheFlow.vtm"
+		"body"		"The key to the front door is in your mailbox. Our inside man put a file called \"hooligan\" on one of the office terminals. It's a virus. Find it and execute it. This will shut down the power, and allow you to get past the first REAL security door. I never got any blueprints to the inner sanctum, so once you're past the first door, you're on your own to find the server room and the vault. Good luck."
+		"dependency"	"G.Shubs_Act == 3"
+		"runscript"	"G.Shubs_Email = 4; mitSetQuestEight(); putStuffInMailBox()"
+	}
+
+	Email	// added by wesp
+	{
+		"subject"	"Searching"
+		"sender"	"m1tn1ck@infocom.vtm"
+		"body"		"Mitnick again. I can offer you a special occult item if you find me a LA library card. Just put it in the mailbox and I'll swap it with the reward."
+		"dependency"	"G.Shubs_Act == 100 and G.Mitnick_Gift == 0"
+		"runscript"	"G.Gift_Email = 1; mitSetQuest()"
+	}
+
+	Email	// added by wesp
+	{
+		"subject"	"Received"
+		"sender"	"m1tn1ck@legend.vtm"
+		"body"		"Got it. Find the reward in your mailbox."
+		"dependency"	"G.Mitnick_Gift == 1"
+		"runscript"	"mitSetQuestFinish()"
+	}
+
+	Email	// added by wesp
+	{
+		"subject"	"Library"
+		"sender"	"beckett@legend.vtm"
+		"body"	"Hello young one, a fellow Gangrel named Scott suspects that there is a Lasombra here in LA recruiting kindred for the Sabbat. He saw him disappearing inside the LA public library! As I'm preoccupied right now, please meet him in the Santa Monica Smoke Shop to learn about the details. After all we wouldn't want anything bad happening to all the precious knowledge, would we? 
+Beckett"
+		"dependency"	"G.Library_Ready == 1"
+		"runscript"	"librarySetQuest()"
+	}
+
+	Email	// added by wesp
+	{
+		"subject"	"Excellent"
+		"sender"	"beckett@legend.vtm"
+		"body"	"Hello again... my friend told me that you interrupted the Sabbat initiation ritual at the library that almost got him killed. He will arrange that there won't be another chance for something like this there. Needless to explain that it might not be that astute to tell anyone about the affair.
+Beckett"
+		"dependency"	"G.Jumbles_Removed == 2"
+		"runscript"	"G.Library_Open = 2; librarySetQuest()"
+	}
+
+	Email
+	{
+		"subject"	"You still around?"
+		"sender"	"bertram@schrecknet.vtm"
+		"body"		"If you're reading this, I guess you're still among the undead. Got a proposition for you, if you're not too busy. You know where to find me. Won't be too difficult this time.
+Bertram"
+		"dependency"	"G.CD_Quest == 1"
+		"runscript"	"bertramSetQuest()"	// added by wesp
+	}
+
+	Email
+	{
+		"subject"	"Thank You"
+		"sender"	"VV@Vesuvius.vtm"
+		"body"		"Sweet Kindred,
+Thank you again for all you did for me. I want you to know that I meant it when I said I adored you. You made me feel that the world was not nearly so dark and desperate. I hope to see you again in my club... and in my dreams.
+All my love,
+VV"
+		"dependency"	"G.Velvet_Email == 1 and G.Story_State >= 45"
+	}
+
+	Email
+	{
+		"subject"	"Prince is promoting you!"
+		"sender"	"gary@schrecknet.vtm"
+		"body"		"Hey, boss, did some spring-cleaning today - came across something that might tickle you. A kid used to live here had an unhealthy crush on everyone's favorite psycho pin-up, Jeanette Voerman. I got a touch of nostalgia, so, you find a copy of Tap Hotel, starring me, I'll trade you a poster of that luscious lunatic for it. Put the video tape in your mailbox and I'll deliver it to your haven."
+		"dependency"	"G.Story_State >= 45 and G.Gary_Voerman == 0"
+		"runscript"	"garySetQuestOne()"	// added by wesp
+	}
+
+	Email
+	{
+		"subject"	"Rocket Launcher for Sale"
+		"sender"	"gary@schrecknet.vtm"
+		"body"		"Boss, got another poster just collecting dust, if you want to trade. Looks like one of the Anarchs did some \"art\" photos before she got Embraced. It's all yours for the low, low price of the wooden pull toy prop from The Glittering. Might be in Metalhead Industries. You've talked to Mitnick, right? In the mailbox, like before."	// changed by wesp
+		"dependency"	"G.Gary_Photochop == 1 and G.Gary_Damsel == 0"	// changed by wesp
+		"runscript"	"garySetQuestFour()"	// added by wesp
+	}
+
+	Email
+	{
+		"subject"	"Cheat Codes"
+		"sender"	"gary@schrecknet.vtm"
+		"body"		"Enjoying the film, boss, but I think I've really let myself go over the years. Alright, this seems to be your bag, so, here's the deal. Know that Toreador in Vesuvius, \"Miss Velour\"? Back when she was breathing, it was more like \"Miss Anything For Three Hundred\". And I got a poster. Will trade for a revealing photo I saw on Haunted LA."
+		"dependency"	"G.Gary_Voerman == 1 and G.Velvet_Poster == 0"	// changed by wesp
+		"runscript"	"garySetQuestTwo()"	// added by wesp
+	}
+
+	Email
+	{
+		"subject"	"Want to Learn Vicissitude?"
+		"sender"	"gary@schrecknet.vtm"
+		"body"		"How ya been, boss? Same drill as before. Got a surveillance shot of a certain Kuei-jin. It would be degrading to photochop it into a tacky poster, so that's what I did. Yours for a song - actually a tape - something Imalia did before I put the bite on her. I like to keep the kids in check. Last year's Jock Shot magazine's swimsuit shoot. Two hard, pointy reasons they pulled it off retail shelves."
+		"dependency"	"G.Velvet_Poster == 1 and G.Gary_Photochop == 0"	// changed by wesp
+		"runscript"	"garySetQuestThree()"	// added by wesp
+	}
+
+	Email	// added by wesp
+	{
+		"subject"	"Confidential Nigerian Proposal"
+		"sender"	"gary@schrecknet.vtm"
+		"body"		"Are you tech savy, boss? Because Mitnick wants a special name plate with an integrated transponder chip. Don't know what he needs it for, but will swap for a poster of Tawni Sessions that Imalia hasn't got her angry claws on yet."
+		"dependency"	"G.Gary_Damsel == 1 and G.Gary_Tawni == 0"
+		"runscript"	"garySetQuestFive()"
+	}
+
+	Email	// added by wesp
+	{
+		"subject"	"Replica Stakes"
+		"sender"	"gary@schrecknet.vtm"
+		"body"		"Hey boss, got another job for you. One of our researchers into the occult would like to get his hands on a squashed Odious Chalice seen in Chinatown. Would offer a poster of Imalia in her full beauty, before I gave her my special treatment! The usual way like before."
+		"dependency"	"G.Gary_Tawni == 1 and G.Gary_Imalia == 0"
+		"runscript"	"garySetQuestSix()"
+	}
+
+	Email	// added by wesp
+	{
+		"subject"	"World of Darkness Gold fast!"
+		"sender"	"gary@schrecknet.vtm"
+		"body"		"Been busy, boss? Because I heard another famous movie prop has gone missing. The throwing star of the Whirlwind from \"A Touch of Xen\". I'll swap it for the poster of a sweet girl, whom you certainly won't look in the eyes!"
+		"dependency"	"G.Gary_Imalia == 1 and G.Gary_Blind == 0"
+		"runscript"	"garySetQuestSeven()"
+	}
+
+	Email
+	{
+		"subject"	"The queen"
+		"sender"	"a friend"
+		"body"		"Beware the black queen."
+		"dependency"	"G.Story_State >= 50 and G.Story_State < 65"
+	}
+
+	Email	// added by wesp
+	{
+		"subject"	"CHEAP ROLEX..."
+		"sender"	"larry@neighborhood.vtm"
+		"body"		"...ain't the only stuff that we got, man! We got much hotter, much deadlier stuff, you know? And like all other quality LA proprietors we get new stock in all the time, so check it out!!!"
+		"dependency"	"G.Story_State >= 45"
+		"autodelete"	"1"
+	}
+
+	Email
+	{
+		"subject"	"The Muse's Muse"
+		"sender"	"VV@Vesuvius.vtm"
+		"body"		"Oh, I do hope the nights have been kind. You were on my mind, tonight, and, I must admit, it was inspiring. I wrote this for you:
+Death cannot smother love         Dead hearts are not always broken   Plant a kiss on my corpse         Love blossoms
+Did you love it?
+VV"
+		"dependency"	"G.Velvet_Email == 1 and G.Story_State >= 60"
+	}
+
+	Email
+	{
+		"subject"	"The campaign"
+		"sender"	"a friend"
+		"body"		"The success of a campaign is weighed by the commitment of your opponent."
+		"dependency"	"G.Story_State >= 65 and G.Story_State < 70"
+	}
+
+	Email
+	{
+		"subject"	"The white bishop"
+		"sender"	"a friend"
+		"body"		"The white bishop falls."
+		"dependency"	"G.Story_State >= 70 and G.Story_State < 80"
+	}
+
+	Email
+	{
+		"subject"	"Your Bloody Valentine"
+		"sender"	"VV@Vesuvius.vtm"
+		"body"		"It felt so liberating to open up to you in that last email so... I dipped my pen in my soul again to write another for you.
+Father, I never knew you           Mother, I ran away from you        Sire, you forgot me                But lover...                     you are forever in my heart.
+Think my looks will stop me from being taken seriously as a poet?
+VV"
+		"dependency"	"G.Velvet_Email == 1 and G.Story_State >= 70"
+	}
+
+	Email
+	{
+		"subject"	"About The Other Night"
+		"sender"	"Romero@DeadHead.vtm"
+		"body"		"Hey, I just wanted to let you know that what happened between us, that was really special. You're a super girl - I mean it - but you and I, we're from different worlds, and, I'm not saying I wouldn't be down for whatever if the mood hits, but I think we should keep our relationship professional. I think, deep down, you'll see it's for the best.
+Stay beautiful,
+Romero"
+		"dependency"	"G.Romero_Boink >= 1 and G.Story_State >=70"
+	}
+
+	Email
+	{
+		"subject"	"The endgame"
+		"sender"	"a friend"
+		"body"		"The position of your pieces is the key to the endgame."
+		"dependency"	"G.Story_State >= 80 and G.Story_State < 90"
+	}
+
+	Email
+	{
+		"subject"	"The master"
+		"sender"	"a friend"
+		"body"		"A true master has played the entire game before the first move."
+		"dependency"	"G.Story_State >= 90 and G.Story_State < 100"
+	}
+
+	Email
+	{
+		"subject"	"Some advice"
+		"sender"	"a friend"
+		"body"		"Don't open it."
+		"dependency"	"G.Story_State >= 100"
+	}
+}

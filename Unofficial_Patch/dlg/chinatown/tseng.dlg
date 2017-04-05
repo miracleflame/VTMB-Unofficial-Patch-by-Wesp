@@ -1,0 +1,205 @@
+{	1	}{	[Barked like a soldier]Hai! Welcome to Tseng's Herbal Remedies! I am Tseng! How may I assist you?	}{	[Barked like a soldier]Hai! Welcome to Tseng's Herbal Remedies! I am Tseng! How may I assist you?	}{	#	}{	npc.SetDisposition("BehindBack", 1)	}{	G.Tseng_Know = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	You don't seem like the type to sell herbal remedies.	}{	You don't seem like the type to sell herbal remedies.	}{	11	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	You could start by spitting less.	}{	You could start by spitting less.	}{	21	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	I need a remedy for a Tong problem.	}{	I need a remedy for a Tong problem.	}{	41	}{	not IsClan(pc,"Malkavian") and G.Tong_Known == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	You want to tell me something...?	}{	You want to tell me something...?	}{	141	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	You want to tell me something...?	}
+{	6	}{	Assist me the only way you know how.	}{	Assist me the only way you know how.	}{	141	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	Selling remedies is honest work! I came to America after discharge from Chinese Arm- uh... herbal remedies forces, to help aging parents with store. Definitely I am now American citizen! God bless the allegiance flag!	}{	Selling remedies is honest work! I came to America after discharge from Chinese Arm- uh... herbal remedies forces, to help aging parents with store. Definitely I am now American citizen! God bless the allegiance flag!	}{	#	}{	npc.SetDisposition("BehindBack", 1)	}{	G.Tseng_Bio = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	C'mon, I know you were in the military.	}{	C'mon, I know you were in the military.	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	13	}{	I need a remedy for a Tong problem.	}{	I need a remedy for a Tong problem.	}{	41	}{	G.Tong_Known == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	I didn't ask for your bio.	}{	I didn't ask for your bio.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	Excuse me!	}{	Excuse me!	}{	#	}{	npc.SetDisposition("BehindBack", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	You don't seem like the type to sell herbal remedies.	}{	You don't seem like the type to sell herbal remedies.	}{	11	}{	G.Tseng_Bio == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	23	}{	C'mon, I know you were in the military.	}{	C'mon, I know you were in the military.	}{	31	}{	G.Tseng_Bio == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	I need a remedy for a Tong problem.	}{	I need a remedy for a Tong problem.	}{	41	}{	G.Tong_Known == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	<Coughs>	}{	<Coughs>	}{	#	}{	npc.SetDisposition("BehindBack", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Know anything about guns?	}{	Know anything about guns?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	33	}{	I need a remedy for a Tong problem.	}{	I need a remedy for a Tong problem.	}{	41	}{	G.Tong_Known == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Tong? Did you try diplomacy?	}{	Tong? Did you try diplomacy?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	Didn't work. Got anything else?	}{	Didn't work. Got anything else?	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	43	}{	I didn't think they would listen. Got any peacemakers?	}{	I didn't think they would listen. Got any peacemakers?	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	I'll go try that, thanks. Bye.	}{	I'll go try that, thanks. Bye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Hold on please!	}{	Hold on please!	}{	#	}{	npc.SetDisposition("BehindBack", 1)	}{	G.Tseng_Guns = 1; tsengsShowGuns()	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	(Auto-Link)	}{	(Auto-Link)	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	53	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	These are good remedies for many problems! No credit cards.	}{	These are good remedies for many problems! No credit cards.	}{	#	}{	npc.SetDisposition("BehindBack", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Excellent. Let's see what you got.	}{	Excellent. Let's see what you got.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Gimme!	}
+{	63	}{	Lot of sick people in this city. I may need a few.	}{	Lot of sick people in this city. I may need a few.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Weapons never solved any problems. I'll take twelve.	}
+{	64	}{	Maybe later. I have some questions first.	}{	Maybe later. I have some questions first.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	First, I shop for answers from you.	}
+{	65	}{	I'll get some cash and come back. See you, Tseng.	}{	I'll get some cash and come back. See you, Tseng.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	If I buy new weapons, my old ones may get jealous. I am gone.	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Chinese invented gunpowder! Yes, I know guns!	}{	Chinese invented gunpowder! Yes, I know guns!	}{	#	}{	npc.SetDisposition("BehindBack", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	Got any?	}{	Got any?	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	73	}{	Then why are you holding out on me?	}{	Then why are you holding out on me?	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	[Affirmative grunt]Hmmm...!	}{	[Affirmative grunt]Hmmm...!	}{	#	}{	npc.SetDisposition("BehindBack", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	Forget it, let me see the weapons.	}{	Forget it, let me see the weapons.	}{	0	}{	G.Guns_Tseng == 1 and G.Tseng_Guns == 1	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Gimme!	}
+{	83	}{	Forget it, let me see the weapons.	}{	Forget it, let me see the weapons.	}{	0	}{	G.Guns_Tseng == 0 and G.Tseng_Guns == 1	}{	tsengsShowGuns(); npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Gimme!	}
+{	84	}{	Do you know Wong Ho?	}{	Do you know Wong Ho?	}{	91	}{	G.Tseng_Wong < 2 and G.Ming_Wongho == 1	}{	}{	}{	}{	}{	}{	}{	}{	The Red Dragon has a man named Wong Ho inside, did you know this?	}
+{	85	}{	I'm looking for a missing person named Barabus. Know anything?	}{	I'm looking for a missing person named Barabus. Know anything?	}{	111	}{	G.Tseng_Barabus == 0 and G.Story_State < 55	}{	}{	}{	}{	}{	}{	}{	}{	You know of Barabus, admit it!	}
+{	86	}{	The word "hengeyôkai" mean anything to you?	}{	The word "hengeyôkai" mean anything to you?	}{	121	}{	G.Yukie_Quest == 1 and G.Tseng_Henge == 0	}{	}{	}{	}{	}{	}{	}{	}{	Hengeyôkai! Have you ever said this?	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	Forget it. I'll see you later, Tseng.	}{	Forget it. I'll see you later, Tseng.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	And with that, I disappear.	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	Hmm, yes!	}{	Hmm, yes!	}{	#	}{	npc.SetDisposition("BehindBack", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Anything specific I should know?	}{	Anything specific I should know?	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	Now you make a sentence about Wong Ho.	}
+{	93	}{	Good guy, huh?	}{	Good guy, huh?	}{	91	}{	G.Tseng_Wong == 0	}{	G.Tseng_Wong = 1	}{	}{	}{	}{	}{	}{	}{	Yes!	}
+{	94	}{	I had another question.	}{	I had another question.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	I shop for more answers.	}
+{	95	}{	You've been a big help. Bye.	}{	You've been a big help. Bye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	And with that, I disappear.	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	[Said furtively]Yes. If you go to his restaurant on Tuesday... after six o'clock... if you ask nicely... they make you hot pot bean curd. Delicious!	}{	[Said furtively]Yes. If you go to his restaurant on Tuesday... after six o'clock... if you ask nicely... they make you hot pot bean curd. Delicious!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Tseng_Wong = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	I had another question.	}{	I had another question.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	I shop for more answers.	}
+{	103	}{	You've been a big help. Bye.	}{	You've been a big help. Bye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	And with that, I disappear.	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	No, I do not! Maybe you should ask Wong Ho at Red Dragon. He know many people!	}{	No, I do not! Maybe you should ask Wong Ho at Red Dragon. He know many people!	}{	#	}{	npc.SetDisposition("BehindBack", 1)	}{	G.Tseng_Barabus = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	I'll do that. Another question.	}{	I'll do that. Another question.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	I shop for more answers.	}
+{	113	}{	Maybe I'll head over there. Bye.	}{	Maybe I'll head over there. Bye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	And with that, I disappear.	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	Is that kind of herb? Prob'ly I'm out.	}{	Is that kind of herb? Prob'ly I'm out.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	G.Tseng_Henge = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	Right. Another question.	}{	Right. Another question.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	I shop for more answers.	}
+{	123	}{	You're obviously not the guy to ask for these things. Bye.	}{	You're obviously not the guy to ask for these things. Bye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	And with that, I disappear.	}
+{	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	Welcome back!	}{	Welcome back!	}{	#	}{	npc.SetDisposition("BehindBack", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	Were you in the military?	}{	Were you in the military?	}{	31	}{	G.Tseng_Guns == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	133	}{	I need a remedy for a Tong problem.	}{	I need a remedy for a Tong problem.	}{	41	}{	G.Tseng_Guns == 0 and G.Tong_Known == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	134	}{	I need a remedy. Something in a large caliber maybe.	}{	I need a remedy. Something in a large caliber maybe.	}{	0	}{	G.Guns_Tseng == 1 and G.Tseng_Guns == 1	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	Let's see your inventory.	}{	Let's see your inventory.	}{	0	}{	G.Guns_Tseng == 1 and G.Tseng_Guns == 1	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Gimme!	}
+{	136	}{	I need a remedy. Something in a large caliber maybe.	}{	I need a remedy. Something in a large caliber maybe.	}{	0	}{	G.Guns_Tseng == 0 and G.Tseng_Guns == 1	}{	tsengsShowGuns(); npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	Let's see your inventory.	}{	Let's see your inventory.	}{	0	}{	G.Guns_Tseng == 0 and G.Tseng_Guns == 1	}{	tsengsShowGuns(); npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Gimme!	}
+{	138	}{	I had a question.	}{	I had a question.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	First, I shop for answers from you.	}
+{	139	}{	Sorry, Tseng, don't need anything today. See you.	}{	Sorry, Tseng, don't need anything today. See you.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	If I buy new weapons, my old ones may get jealous. I am gone.	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	[Softer, concerned]Are you with... immigration?	}{	[Softer, concerned]Are you with... immigration?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	I don't think so.	}{	I don't think so.	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	Umm, I don't think so.	}
+{	143	}{	What do you think?	}{	What do you think?	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	Are you... police?	}{	Are you... police?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	No, but I do enjoy harassing people.	}{	No, but I do enjoy harassing people.	}{	51	}{	}{	G.Tseng_Guns = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	153	}{	I put the "ill" in illegal.	}{	I put the "ill" in illegal.	}{	51	}{	}{	G.Tseng_Guns = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	154	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	[Barked like a soldier]Welcome to Tseng's Herbal Remedies! I am Tseng! How may I - [Notices the player's skin is grey and disgusting]eugh! Umm... Tseng is not, eh, licensed to medical advice but uh, I don't think herbs will help your - uh, ooh, "special" condition.	}{	[Barked like a soldier]Welcome to Tseng's Herbal Remedies! I am Tseng! How may I - [Notices the player's skin is grey and disgusting]eugh! Umm... Tseng is not, eh, licensed to medical advice but uh, I don't think herbs will help your - uh, ooh, "special" condition.	}{	#	}{	npc.SetDisposition("BehindBack", 1)	}{	G.Tseng_Know = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	No kidding... that all you sell here?	}{	No kidding... that all you sell here?	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	163	}{	I need a remedy for a Tong problem.	}{	I need a remedy for a Tong problem.	}{	41	}{	G.Tong_Known == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	164	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	173	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	174	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	183	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	184	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	185	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	193	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	194	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	195	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	201	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	203	}{	(Starting Condition)	}{	}{	131	}{	G.Tseng_Know == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	204	}{	(Starting Condition)	}{	}{	161	}{	IsClan(pc,"Nosferatu") and npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	205	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

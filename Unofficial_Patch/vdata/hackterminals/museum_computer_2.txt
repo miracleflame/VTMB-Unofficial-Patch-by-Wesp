@@ -1,0 +1,73 @@
+TerminalDefinition
+{
+	"screen saver"		"Natural Museum of History"// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt and subdirector names(2 characters), changed by wesp
+
+	"email_password"	"iluvgabe"		// the user must type this to access email from this terminal
+	"email_username"	"Janice"		// printed at the top of the email window, not used for log in. 
+	"difficulty"		"3"
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Natural Museum of History"	//(any number of characters, but must fit in the screen
+	}
+
+	Email
+	{
+		"subject"	"Reminder"
+		"sender"	"C. Marshall"
+		"body"		"Just a reminder, Dr. Anders Johansen - AKA the sarcophagus guy - will be working at the museum for the next few days. Show him the professional courtesy we show all our guests.
+-CM"
+	}
+
+	Email
+	{
+		"subject"	"Fetish"
+		"sender"	"pking@nmh.vtm"
+		"body"		"That statue on Daryl's workstation is creeping me out. I was working late the other night and I swear I thought I saw it move. This isn't another gag is it? If it is, I don't think it's funny.
+-Pam"
+	}
+
+	Email
+	{
+		"subject"	"VIRUS ALERT: read me!"
+		"sender"	"adcxu@mail.vtm"
+		"body"		"MAV has detected a virus in the attachment of this message. The virus has been quarantined and a notice sent to adcxu@mail.net."
+	}
+
+	Email
+	{
+		"subject"	"thanks"
+		"sender"	"JJ Elmster"
+		"body"		"Those keys you found? They're Larry's. I'll tell him you left them in the lost and found."
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+	SubDir
+	{
+		"name"			"Sales"				// This is what is displayed as the name of this menu, and what the player must type to enter the menu (128 characters)
+		"password"		"griff"				// password required to run commands in this menu (16 characters), changed by wesp
+		"description"		"Sales Figures"	// This is printed each time the user enters this menu (128 characters)
+		"difficulty"		"6"
+	//	"runtext"	"Sales figures are unavailable at this time."		// this text is printed when the player triggers this function.  (128 characters)
+
+		Function	// fixed by psycho-a
+		{
+			"name"		"View"
+			"description"	"View Sales Figures"
+			"runtext"	"Sales figures are unavailable at this time."
+		}
+//	removed by wesp
+//		Function
+//		{
+//			"name"		"Print"			// this is what the player must type in to trigger this function. (16 characters)
+//			"description"	"Print Sales Figures"		// this is a description of this function  (128 characters)
+//			"runtext"	"Printing...."		// this text is printed when the player triggers this function.  (128 characters)
+//		}
+	}
+}

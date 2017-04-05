@@ -1,0 +1,37 @@
+// Choreo version 1
+actor "Gargoyle"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 15.649524
+      param "character/dlg/hollywood/gargoyle/line1_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "gargoyle_line171_col_E"
+    {
+     time 0.000000 15.584000
+     param "gargoyle_line171_col_E"
+    }
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event loud "Loud"
+    {
+      time 0.050000 0.160000
+      param "0.110"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

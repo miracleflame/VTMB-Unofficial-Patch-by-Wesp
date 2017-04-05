@@ -1,0 +1,27 @@
+// Choreo version 1
+actor "Smoke_Vendor"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 3.056
+      param "character/dlg/santa monica/smoke/line41_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

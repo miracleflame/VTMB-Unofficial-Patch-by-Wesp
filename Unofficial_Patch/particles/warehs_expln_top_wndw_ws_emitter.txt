@@ -1,0 +1,65 @@
+Particle	// restored by wesp
+{
+
+	spawn
+	{
+		particle	"EX_center"
+		loop		"1"
+		rate		"30,0(15)!"
+		radius		"50"
+		theta		"-60~60"
+		phi		"-60~60"
+	}
+
+	spawn
+	{
+		particle	"EX_Sparks"
+		loop		"1"
+		rate		"20,0(10)!"
+		radius		"60"
+		theta		"-60~60"
+		phi		"-60~60"
+	}
+
+	spawn
+	{
+		particle	"EX_OuterRim"
+		loop		"1"
+		rate		"20,0(10)!"
+		radius		"15"
+		theta		"-60~60"
+		phi		"-60~60"
+	}
+
+	spawn
+	{
+		particle	"EX_Flare"
+		loop		"1"
+		rate		"0"
+		burst		"1"
+		radius		"0"
+		theta		"-60~60"
+		phi		"-60~60"
+	}
+
+	spawn
+	{
+		particle	"EX_OuterRim2"
+		loop		"1"
+		rate		"20,0(10)!"
+		radius		"30"
+		theta		"-60~60"
+		phi		"-60~60"
+	}
+
+	spawn
+	{
+		particle	"Debries"
+		loop		"1"
+		burst		"0~4"
+		rate		"0"
+		radius		"0"
+		theta		"-45~45"
+		phi		"-45~45"
+	}
+}

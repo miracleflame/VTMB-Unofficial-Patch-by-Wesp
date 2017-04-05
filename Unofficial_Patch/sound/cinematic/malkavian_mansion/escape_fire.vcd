@@ -1,0 +1,28 @@
+// Choreo version 1
+actor "!playercontroller"
+{
+  channel "SFX"	// added by wesp
+  {
+    event speak "SFX"
+    {
+      time 1.5 2.0
+      param "impact\physics\metal\hit_hard1.wav"
+      fixedlength
+    }
+  }
+
+  channel "animations"
+  {
+    event sequence "jump"
+    {
+      time 0.000000 2.3
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+  
+
+fps 60
+snap off

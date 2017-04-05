@@ -1,0 +1,70 @@
+
+//Particle
+//{
+//	frames 		"5"
+//	sprite		"blueflamespray"	//"aura_blue"
+//	size		"40,0"
+//	//size		"50,40,30,20,10,0"
+//	Depth_offset	"-6"
+//	theta_speed 	"0"
+//	phi_speed 	"0"
+//	radius_speed	"0"
+//	//Rotation 	"0~360"
+//
+//	Parent_speed	"1"
+//
+//	red		"0,0,0"
+//	green		"150,40"	//"0,100"
+//	blue		"255,65"
+//
+//	color		"255,0"
+//	mask		"100"
+//
+//}
+
+Particle
+{
+	frames 		"10"	//"10"
+	sprite		"blueflamespray"
+	size		"30,25,0"
+	Depth_offset	"-6"	//"5"
+	Rotation 	"0~360"
+	parent_speed	"1"
+
+	z_speed		"0"
+
+	red		"30,255,255"
+	green		"30,255,255"
+	blue		"255,255,255"	//"255,255,0,0,0"
+
+	color		"255,0"
+
+	mask		"255,0"
+}
+
+
+
+
+
+
+
+
+//-------------------------------------------------------------
+Particle
+{ 
+
+	frames 		"20"
+	sprite		"ring_normal"
+	color		"0,64"
+	mask		"0"
+	rotation	"0~360"
+
+	size		"20,0"
+
+	Depth_offset	"-6"
+
+	normal		"ring_normal"
+	refract		"0,~1,0"
+}
+
+

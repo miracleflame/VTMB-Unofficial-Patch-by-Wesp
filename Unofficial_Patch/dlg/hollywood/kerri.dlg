@@ -1,0 +1,146 @@
+{	1	}{	[tired]Yeah? What are looking for, honey?	}{	[tired]Yeah? What are looking for, honey?	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	Me and you in a private room for ten minutes.	}{	Me and you in a private room for ten minutes.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	A provocative, private party.	}
+{	3	}{	I want you to leave this room and wait in the other one for me.	}{	I want you to leave this room and wait in the other one for me.	}{	11	}{	Dominate 3 & IsClan(pc,"Ventrue")	}{	G.Chastity_Attack = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	Bloom in another room, little flower, until I fly to you!	}{	Bloom in another room, little flower, until I fly to you!	}{	11	}{	Dementation 3	}{	G.Chastity_Attack = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	How about a freebie for me in the other room?	}{	How about a freebie for me in the other room?	}{	11	}{	Persuasion 6	}{	G.Chastity_Attack = 1	}{	}{	}{	}{	}{	}{	}{	How about a free ride for an old friend in that other room?	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	Nothing. See ya.	}{	Nothing. See ya.	}{	0	}{	}{	G.Kerri_NoBiz = 1	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	11	}{	[a little dreamily]Oh. Okay. I'll just go back into the pleasure palace.	}{	[a little dreamily]Oh. Okay. I'll just go back into the pleasure palace.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Kerri_Mesmerize = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	13	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	Okay, 200 bucks for 10 minutes. Anything you want - you just gotta make it quick, alright?	}{	Okay, 200 bucks for 10 minutes. Anything you want - you just gotta make it quick, alright?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	200 bucks? For a regular like me? How about a freebie?	}{	200 bucks? For a regular like me? How about a freebie?	}{	11	}{	Persuasion 6	}{	G.Chastity_Attack = 1	}{	}{	}{	}{	}{	}{	}{	How about a free ride for an old friend?	}
+{	23	}{	How about 150? Times are tough, you know.	}{	How about 150? Times are tough, you know.	}{	31	}{	Haggle 6 & pc.CurrentMoney() >= 150	}{	pc.MoneyRemove( 150 )	}{	}{	}{	}{	}{	}{	}{	The number 150 has a sweeter ring.	}
+{	24	}{	Fine. Here's the money.	}{	Fine. Here's the money.	}{	31	}{	pc.CurrentMoney() >= 200	}{	pc.MoneyRemove( 200 )	}{	}{	}{	}{	}{	}{	}{	Take your green and get lost.	}
+{	25	}{	I don't have the cash right now.	}{	I don't have the cash right now.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	My pockets are as empty as my head.	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	Whatever. I'm leaving.	}{	Whatever. I'm leaving.	}{	0	}{	}{	G.Kerri_NoBiz = 1	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	31	}{	Alright. Just meet me in the pleasure palace... the room at the back of the hall. Your time just started....	}{	Alright. Just meet me in the pleasure palace... the room at the back of the hall. Your time just started....	}{	#	}{	}{	G.Kerri_Biz = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Alright, alright. Go back and get ready. I'll be there in just a second.	}{	Alright, alright. Go back and get ready. I'll be there in just a second.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will meet you in that carnal kingdom.	}
+{	33	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Then come back when you do, sweetheart.	}{	Then come back when you do, sweetheart.	}{	#	}{	}{	G.Kerri_NoBiz = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	43	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Yeah? You need something else?	}{	Yeah? You need something else?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	I was hoping you and I could get some alone time.	}{	I was hoping you and I could get some alone time.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps you and I in twisted tumble or a tryst?	}
+{	53	}{	I want you to leave this room and wait in the other one for me.	}{	I want you to leave this room and wait in the other one for me.	}{	11	}{	Dominate 3 & IsClan(pc,"Ventrue")	}{	G.Chastity_Attack = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	Bloom in another room, little flower, until I fly to you!	}{	Bloom in another room, little flower, until I fly to you!	}{	11	}{	Dementation 3	}{	G.Chastity_Attack = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	How about a freebie for me in the other room?	}{	How about a freebie for me in the other room?	}{	11	}{	Persuasion 6	}{	G.Chastity_Attack = 1	}{	}{	}{	}{	}{	}{	}{	How about a free ride for an old friend in that other room?	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	Nothing. See ya.	}{	Nothing. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	61	}{	Well, here we are. You got something specific in mind? Cuz the clock's tickin', honey....	}{	Well, here we are. You got something specific in mind? Cuz the clock's tickin', honey....	}{	#	}{	}{	G.Kerri_Biz = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Actually, I have a secret to tell you. Come here....	}{	Actually, I have a secret to tell you. Come here....	}{	0	}{	Seduction 6	}{	G.Seductive_Feed = 1; pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	I have sweet words to whisper in your ear....	}
+{	63	}{	Hmmm. Give me a couple a seconds, I'll get back to you.	}{	Hmmm. Give me a couple a seconds, I'll get back to you.	}{	71	}{	G.Kerri_Mesmerize == 0	}{	}{	}{	}{	}{	}{	}{	}{	Wait here, my limpid little flower.	}
+{	64	}{	Hmmm. Give me a couple a seconds, I'll get back to you.	}{	Hmmm. Give me a couple a seconds, I'll get back to you.	}{	0	}{	G.Kerri_Mesmerize == 1	}{	}{	}{	}{	}{	}{	}{	}{	Wait here, my limpid little flower.	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Alright. It's your dollar.	}{	Alright. It's your dollar.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	73	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Hey! I was waiting in there for ten minutes! What's your problem?	}{	Hey! I was waiting in there for ten minutes! What's your problem?	}{	#	}{	npc.SetDisposition("Angry", 1)	}{	G.Kerri_Biz = 0; G.Kerri_TimesUp = 0; G.Kerri_Mesmerize = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	Go back in there, I'll be there in a second.	}{	Go back in there, I'll be there in a second.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Return and I will be your shadow.	}
+{	83	}{	I want you to leave this room and wait in the other one for me.	}{	I want you to leave this room and wait in the other one for me.	}{	11	}{	Dominate 3 & IsClan(pc,"Ventrue")	}{	G.Chastity_Attack = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	84	}{	Bloom in another room, little flower, until I fly to you!	}{	Bloom in another room, little flower, until I fly to you!	}{	11	}{	Dementation 3	}{	G.Chastity_Attack = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	Care to join me in a private room?	}{	Care to join me in a private room?	}{	11	}{	Presence 3 & (G.Patch_Plus == 1 and IsClan(pc,"Toreador"))	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	How about a freebie for me in the other room?	}{	How about a freebie for me in the other room?	}{	11	}{	Persuasion 6	}{	G.Chastity_Attack = 1	}{	}{	}{	}{	}{	}{	}{	How about a free ride for an old friend in that other room?	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	}{	G.Kerri_NoBiz = 1	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	91	}{	It's gonna cost you another 200.	}{	It's gonna cost you another 200.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Fine. Take it. Now get back in there, and I'll be there in a second.	}{	Fine. Take it. Now get back in there, and I'll be there in a second.	}{	71	}{	pc.CurrentMoney() >= 200	}{	G.Kerri_Biz = 1; pc.MoneyRemove( 200 )	}{	}{	}{	}{	}{	}{	}{	Take your green and get lost.	}
+{	93	}{	Come on. I come in here all the time. A free one won't kill you.	}{	Come on. I come in here all the time. A free one won't kill you.	}{	11	}{	Persuasion 6	}{	G.Chastity_Attack = 1	}{	}{	}{	}{	}{	}{	}{	How about a free ride for an old friend?	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	I don't have that kind of green. I'm outta here.	}{	I don't have that kind of green. I'm outta here.	}{	0	}{	}{	G.Kerri_NoBiz = 1	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	101	}{	[frightened]Uh... yeah. Sorry. I don't - I-I-I-I-I-I-I-I-I don't do your kind of... I mean, uh, I-I - yeah... I really n-nnn- I really need to get out of here.... Not feeling too well... maybe Chastity... bye.	}{	[frightened]Uh... yeah. Sorry. I don't - I-I-I-I-I-I-I-I-I don't do your kind of... I mean, uh, I-I - yeah... I really n-nnn- I really need to get out of here.... Not feeling too well... maybe Chastity... bye.	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	G.Chastity_Attack = 1 ; G.Kerri_Nos = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	103	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	113	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	Hey, how ya doin'?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	Yeah?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	123	}{	What do you want?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	Get out of my face.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	Mm-hmm.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	Nope.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	Uh, thanks.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	What?!?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	What'd you just say to me?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	I dunno.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	Sorry, can't help you.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	Oh. That's cool.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	133	}{	By the way...	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	134	}{	Here.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	I'll send you an email about it.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	143	}{	(Starting Condition)	}{	}{	101	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	144	}{	(Starting Condition)	}{	}{	81	}{	G.Kerri_TimesUp == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	(Starting Condition)	}{	}{	61	}{	G.Kerri_Biz == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	(Starting Condition)	}{	}{	51	}{	G.Kerri_NoBiz == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

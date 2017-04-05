@@ -1,0 +1,57 @@
+// Written
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	
+	"infomodel"	"models/items/MoneyClip/Info/Info_MoneyClip.mdl"
+	"playermodel"	"models/items/MoneyClip/Ground/MoneyClip.mdl"
+	
+	"anim_prefix"	" "
+
+	"printname"	"Money Clip"
+	"description"	"A wad of money left lying around. Funny, that."	//This was changed because we now display the actual amount.  "A money clip with an indeterminate amount of cash."
+
+	"bucket"		"1"
+	"bucket_position"	"2"
+
+	"weight"		"3"
+	"item_flags"		"1"
+	"item_type"		"generic"
+	"item_worth"		"0"
+
+	SoundData	// added by wesp
+	{
+		"pickup"
+		{
+			"sound1"	"Interface/Infobar/Money_Gained.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/MoneyClip_sel"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/MoneyClip"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

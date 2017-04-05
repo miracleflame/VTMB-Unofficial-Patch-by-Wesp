@@ -1,0 +1,193 @@
+// Choreo version 1
+actor "!playercontroller"
+{
+  channel "Anim"
+  {
+    event sequence "lily_scene"
+    {
+      time 0.000000 28.867001
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  channel "Events"
+  {
+    event firetrigger "trigger one"
+    {
+      time 7.000000 -1.000000
+      param "1"
+    }
+    event speak "Clamp1First"
+    {
+      time 7.987000 8.009132
+      param "Area\Santa_Monica\Clinic\click2.wav"
+      fixedlength
+    }
+    event speak "Clamp1Second"
+    {
+      time 8.013332 8.433831
+      param "Area\Santa_Monica\Clinic\click1.wav"
+      param2 "20dB"
+      fixedlength
+    }
+    event speak "Clamp2First"
+    {
+      time 9.600334 9.633532
+      param "Area\Santa_Monica\Clinic\click3.wav"
+      fixedlength
+    }
+    event speak "Clamp2Second"
+    {
+      time 9.626668 9.859049
+      param "Area\Santa_Monica\Clinic\click4.wav"
+      param2 "60dB"
+      fixedlength
+    }
+    event speak "Clamp2Third"
+    {
+      time 9.753334 10.173833
+      param "Area\Santa_Monica\Clinic\click5.wav"
+      fixedlength
+    }
+    event speak "WallJump"
+    {
+      time 11.256667 11.511180
+      param "Character\Monster\TC_Spider\Special\spi_footstep_indiv_2.wav"
+      fixedlength
+    }
+    event speak "Bodyfall"
+    {
+      time 11.576667 12.561520
+      param "Surfaces\Flesh\Impact5.wav"
+      fixedlength
+    }
+    event speak "Step1"
+    {
+      time 25.186668 25.385853
+      param "Surfaces\stepright1.wav"
+      fixedlength
+    }
+    event speak "Breath1"
+    {
+      time 1.026666 2.686530
+      param "Character\Female\Disorientated_1.wav"
+      fixedlength
+    }
+    event speak "Breath2"
+    {
+      time 3.386667 3.873560
+      param "Character\Female\Disorientated_2.wav"
+      fixedlength
+    }
+    event speak "Breath3"
+    {
+      time 5.180000 5.677959
+      param "Character\Female\Disorientated_3.wav"
+      fixedlength
+    }
+  }
+  channel "Events2"
+  {
+    event speak "DoorClose"
+    {
+      time 7.400770 8.374557
+      param "Usable\Openable\standard_door\open.wav"
+      param2 "80dB"
+      fixedlength
+    }
+    event speak "JumpImpact"
+    {
+      time 10.986666 12.369885
+      param "Surfaces\Flesh\Impact4.wav"
+      fixedlength
+    }
+    event speak "FeedingEnd"
+    {
+      time 18.026667 20.029570
+      param "Character\Female\Feed_On_Loop.wav"
+      fixedlength
+    }
+    event speak "Step2"
+    {
+      time 25.606668 25.816917
+      param "Surfaces\stepleft1.wav"
+      fixedlength
+    }
+    event speak "FeedingHiss"
+    {
+      time 12.446668 13.453651
+      param "Character\Female\Feed_On_Animal_Start.wav"
+      fixedlength
+    }
+    event speak "FeedingHiss2"
+    {
+      time 13.620001 15.622904
+      param "Character\Female\Feed_On_Animal_Loop.wav"
+      fixedlength
+    }
+    event speak "Feed3"
+    {
+      time 15.699998 17.702900
+      param "Character\Female\Feed_On_Animal_Loop.wav"
+      fixedlength
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+actor "Lily"
+{
+  channel "Anim"
+  {
+    event sequence "lily_scene"
+    {
+      time 0.000000 28.867001
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  channel "Expression"
+  {
+    event expression "Frenzied"
+    {
+      time 0.000000 28.867001
+      param "lily_expressions"
+      param2 "Frenzied"
+    }
+  }
+  bonerename "Bip02" "Bip01"
+}
+
+actor "PhilDummy"
+{
+  channel "Anim"
+  {
+    event sequence "lily_scene"
+    {
+      time 0.000000 28.867001
+      param "entire_scene"
+      fixedlength
+    }
+  }
+
+  channel "Events"
+  {
+    event speak "Dont Look Well"
+    {
+      time 7.752137 8.990050
+      param "Character\Male\blue_blood\comfort_5_wesp.wav"
+      fixedlength
+    }
+    event speak "sweet"
+    {
+      time 9.015388 12.173302
+      param "Character\Male\blue_blood\flee_4_wesp.wav"
+      fixedlength
+    }
+  }
+
+  bonerename "Bip03" "Bip01"
+}
+
+fps 60
+snap off

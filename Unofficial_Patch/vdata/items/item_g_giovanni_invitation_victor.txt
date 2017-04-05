@@ -1,0 +1,62 @@
+// Written
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"	"models/w_null.mdl"
+	"infomodel"	"models/items/invitation/info/info_invitation.mdl"
+	"playermodel"	"models/items/invitation/ground/invitation.mdl"
+	"wieldmodel_f"	"models/w_null.mdl"
+	"wieldmodel_m"	"models/w_null.mdl"
+	"anim_prefix"	" "
+
+	"printname"	"Giovanni Invitation"
+	"description"	"Victor Rossellini's invitation."	// changed by wesp
+
+	"bucket"		"1"
+	"bucket_position"	"2"
+
+	"camera_class"		"noswitch"
+	"weight"		"3"
+	"item_flags"		"1"
+	"item_type"		"generic"
+	"item_worth"		"0"
+	"is_visible_in_hud"		"1"
+	"is_droppable"			"1"
+	"is_wieldable"			"0"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Card/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/invitation_sel"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/invitation"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

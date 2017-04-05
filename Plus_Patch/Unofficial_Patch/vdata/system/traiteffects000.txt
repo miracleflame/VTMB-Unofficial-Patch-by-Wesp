@@ -1,0 +1,3405 @@
+// Primary TraitEffects Doc
+
+TraitEffectsData
+{
+
+//
+//	Trait-Effects are things that modify a character's Stats (Attributes/Abilities/etc.) or related game-system rules,
+// Such as Stat Buy/Sell Costs.
+//
+//	There are 5 Categories: Clan, History, Discipline, Numina and Item, used to separate the different types of effects.
+//	Inside each category, there are multiple Trait-Effect Groups, that may contain any number of Trait-Effects.  So a
+// given Trait-Effect Group may actually do multiple things.  A Trait-Effect Group is what you actually map to via its
+// "InternalName".
+//	Each Trait-Effect is specified as in:
+//
+//	TraitEffect
+//	{
+//		"Trait"	-- The Trait (Attribute/Ability/etc.) to modify
+//		"Modify"	-- How to modify the Trait:
+//					"+" or "-"	-- Add or subtract to the base value
+//					"*"		-- Multiply the base value
+//					"/"		-- Divide the base value
+//					"Max"		-- The Maximum possible value is this
+//					"Min"		-- The Minimum possible value is this
+//					"%"		--
+//					"Value"	-- Ignore the base value.  Use this instead.
+//					"Cost"	-- Use this cost structure instead of the default.
+//					"BloodCost"	-- Modify the BloodCost to activate this (discipline) by a given value (+/-).
+//					"Damage"	-- Modify the Damage from this (discipline) by a given %.
+//					"Duration"	-- Modify the Duration of this (discipline) by a given %.
+//	}
+//
+//	Note that for changing Buy/Sell costs, you can skip the "Modify" field, but you need to add the Cost structure:
+//
+//	TraitEffect
+//	{
+//		"Trait"	-- The Trait (Attribute/Ability/etc.) to modify
+//		Costs
+//		{
+//			"New"		"5"				-- Optional, only needed if you can sell down to "0".  This is the initial cost to buy (from 0->1).
+//			"Raise"	"Current_Rating * 1"	-- This is the cost of the Trait
+//		}
+//	}
+//
+//
+
+
+	// Do *NOT* Localize *ANY* of these fields!
+//	TraitEffectCategory
+//	{
+//		"InternalName"	"Invalid"
+//		"Name"		"Invalid"
+//	}
+
+	TraitEffectCategory
+	{
+		"InternalName"	"Clan"
+		"Name"		"Clan"
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Clan (Brujah)"
+
+			TraitEffect  // added by wesp
+			{
+				"Trait"	"VampHeal_Type"
+				"Modifier"	"Duration 200%"
+			}  
+
+			TraitEffect
+			{
+				"Trait"	"Close_Combat_Brawl"	// Feat
+				"Modifier"	"+1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Frenzy_Check_Mod"
+				"Modifier"	"-2"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Animalism"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Animalism"
+				"Modifier"	"Max 3"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Fortitude"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Fortitude"
+				"Modifier"	"Max 3"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Protean"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Protean"
+				"Modifier"	"Max 3"
+			}
+
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Clan (Gangrel)"
+
+//			TraitEffect
+//			{
+//				"Trait"	"Frenzy_Strength_Mod"
+//				"Modifier"	"+2"
+//			}
+//
+			TraitEffect  // added by wesp
+			{
+				"Trait"	"VampHeal_Type"
+				"Modifier"	"Duration 200%"
+			}  
+
+			TraitEffect
+			{
+				"Trait"	"Frenzy_Check_Mod"
+				"Modifier"	"-1"
+			}
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Celerity"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Celerity"
+				"Modifier"	"Max 3"
+			}
+
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Frenzy (Gangrel)"
+
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+10"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"+10"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"+10"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Excluded_Equipment"
+				"Modifier"	"Value Clawed_Form"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"item_w_fists"
+				"Modifier"	"-1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"item_w_claws"	// changed by wesp
+				"Modifier"	"+1"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Close_Combat_Brawl"
+				"Modifier"	"+4"
+			}
+		}
+
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Frenzy (Kindred)"
+
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+5"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"+5"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"+5"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Excluded_Equipment"
+				"Modifier"	"Value Clawed_Form"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"item_w_fists"
+				"Modifier"	"-1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"item_w_claws"
+				"Modifier"	"+1"
+			}
+
+		}
+
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Clan (Nosferatu)"
+
+///			TraitEffect
+///			{
+///				"Trait"	"Animal_Ken"
+///				"Modifier"	"+1"
+///			}
+
+			TraitEffect  // added by wesp
+			{
+				"Trait"	"VampHeal_Type"
+				"Modifier"	"Duration 200%"
+			}  
+
+			TraitEffect
+			{
+				"Trait"	"Appearance"
+				"Modifier"	"Max 0"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Subterfuge"
+				"Modifier"	"Max 0"
+			}
+
+			TraitEffect
+			{
+				"Trait"		"FX_Increased_Rat_Feed"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect
+			{
+				"Trait"		"Seduction"	// Feat
+				"Modifier"		"Max 0"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Fortitude"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Fortitude"
+				"Modifier"	"Max 3"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Protean"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Protean"
+				"Modifier"	"Max 3"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Clan (Malkavian)"
+
+			TraitEffect  // added by wesp
+			{
+				"Trait"	"VampHeal_Type"
+				"Modifier"	"Duration 200%"
+			}  
+
+			TraitEffect
+			{
+				"Trait"	"Inspection"	// Feat
+				"Modifier"	"+2"
+			}
+
+//			TraitEffect
+//			{
+//				"Trait"	"Perception"
+//				"Modifier"	"+1"
+//			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Animalism"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Animalism"
+				"Modifier"	"Max 3"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Fortitude"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Fortitude"
+				"Modifier"	"Max 3"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Protean"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Protean"
+				"Modifier"	"Max 3"
+			}
+
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Clan (Toreador)"
+
+			TraitEffect  // added by wesp
+			{
+				"Trait"	"VampHeal_Type"
+				"Modifier"	"Duration 200%"
+			}  
+
+			TraitEffect
+			{
+				"Trait"	"Fx_Humanity_Mods_Doubled"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Humanity"
+				Costs
+				{
+					"Raise"	"Current_Rating * 1"
+				}
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Animalism"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Animalism"
+				"Modifier"	"Max 3"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Fortitude"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Fortitude"
+				"Modifier"	"Max 3"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Protean"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Protean"
+				"Modifier"	"Max 3"
+			}
+
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Clan (Tremere)"
+
+			TraitEffect  // added by wesp
+			{
+				"Trait"	"VampHeal_Type"
+				"Modifier"	"Duration 200%"
+			}  
+
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"Max 4"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Dexterity"
+				"Modifier"	"Max 4"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"Max 4"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Animalism"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Animalism"
+				"Modifier"	"Max 3"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Fortitude"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Fortitude"
+				"Modifier"	"Max 3"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Protean"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Protean"
+				"Modifier"	"Max 3"
+			}
+
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Clan (Ventrue)"
+
+			TraitEffect  // added by wesp
+			{
+				"Trait"	"VampHeal_Type"
+				"Modifier"	"Duration 200%"
+			}  
+
+			TraitEffect
+			{
+				"Trait"	"Fx_Cannot_Rat_Feed"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Animalism"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Animalism"
+				"Modifier"	"Max 3"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Protean"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Protean"
+				"Modifier"	"Max 3"
+			}
+
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Clan (TzimisceCreation1)"
+
+			TraitEffect
+			{
+				"Trait"	    "Soak_Pool"
+				"Modifier"  "+10"
+			}
+		}
+	}
+
+	TraitEffectCategory
+	{
+		"InternalName"	"History"
+		"Name"		"History"
+
+// =======-------------- Stat Shufflers -------------========
+//             ----------- Attributes ------------
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Stats PSM)"
+			TraitEffect
+			{
+				"Trait"	"Attrib_Order"
+				"Modifier"	"Value Physical_Social_Mental"
+			}
+		}
+		
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Stats PMS)"
+			TraitEffect
+			{
+				"Trait"	"Attrib_Order"
+				"Modifier"	"Value Physical_Mental_Social"
+			}
+		}
+		
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Stats MPS)"
+			TraitEffect
+			{
+				"Trait"	"Attrib_Order"
+				"Modifier"	"Value Mental_Physical_Social"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Stats MSP)"
+			TraitEffect
+			{
+				"Trait"	"Attrib_Order"
+				"Modifier"	"Value Mental_Social_Physical"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Stats SPM)"
+			TraitEffect
+			{
+				"Trait"	"Attrib_Order"
+				"Modifier"	"Value Social_Physical_Mental"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Stats SMP)"
+			TraitEffect
+			{
+				"Trait"	"Attrib_Order"
+				"Modifier"	"Value Social_Mental_Physical"
+			}
+		}
+
+//             ----------- Abilities ------------
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Stats SKT)"
+			TraitEffect
+			{
+				"Trait"	"Ability_Order"
+				"Modifier"	"Value Skills_Knowledges_Talents"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Stats STK)"
+			TraitEffect
+			{
+				"Trait"	"Ability_Order"
+				"Modifier"	"Value Skills_Talents_Knowledges"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Stats KST)"
+			TraitEffect
+			{
+				"Trait"	"Ability_Order"
+				"Modifier"	"Value Knowledges_Skills_Talents"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Stats KTS)"
+			TraitEffect
+			{
+				"Trait"	"Ability_Order"
+				"Modifier"	"Value Knowledges_Talents_Skills"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Stats TKS)"
+			TraitEffect
+			{
+				"Trait"	"Ability_Order"
+				"Modifier"	"Value Talents_Knowledges_Skills"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Stats TSK)"
+			TraitEffect
+			{
+				"Trait"	"Ability_Order"
+				"Modifier"	"Value Talents_Skills_Knowledges"
+			}
+		}
+
+// =======-------------- Common -------------========
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Blunt Fangs)"
+			TraitEffect
+			{
+				"Trait"	"Experience_Modifier"	// This is for 3 or more experience gained at a given time
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"BloodPool"	// This is a "Feeding" penalty
+				"Modifier"	"Damage -2"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Ex-Cop)"
+			TraitEffect
+			{
+				"Trait"	"Firearms"
+				"Modifier"	"+1"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Intimidation"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"Max 3"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Perv)"
+			TraitEffect
+			{
+				"Trait"	"BloodPool"
+				"Modifier"	"+2"
+			}
+			TraitEffect
+			{	// Restrict it to only the opposite gender
+				"Trait"	"Fx_Feed_Bonus_Opp_Gender"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Subterfuge"
+				"Modifier"	"Max 1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Slut)"
+			TraitEffect
+			{
+				"Trait"	"BloodPool"
+				"Modifier"	"+2"
+			}
+			TraitEffect
+			{	// Restrict it to only the opposite gender
+				"Trait"	"Fx_Feed_Bonus_Opp_Gender"
+				"Modifier"	"+1"
+			}
+//			Mental Advancement Penalty
+			TraitEffect
+			{
+				"Trait"	"Perception"
+				Costs
+				{
+					"Raise"	"Table: 3, 6, 10, 16, 20"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Intelligence"
+				Costs
+				{
+					"Raise"	"Table: 3, 6, 10, 16, 20"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				Costs
+				{
+					"Raise"	"Table: 3, 6, 10, 16, 20"
+				}
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Chunk)"
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"+2"
+			}
+//			Mental Advancement Penalty
+			TraitEffect
+			{
+				"Trait"	"Perception"
+				Costs
+				{
+					"Raise"	"Table: 3, 6, 10, 16, 20"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Intelligence"
+				Costs
+				{
+					"Raise"	"Table: 3, 6, 10, 16, 20"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				Costs
+				{
+					"Raise"	"Table: 3, 6, 10, 16, 20"
+				}
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Glass Eye)"
+			TraitEffect
+			{
+				"Trait"	"Intimidation"
+				"Modifier"	"+2"
+			}
+			TraitEffect
+			{
+				"Trait"	"Perception"
+				"Modifier"	"Max 3"	// changed by wesp
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Long Foot)"
+			TraitEffect
+			{
+				"Trait"	"Humanity"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Charisma"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Dexterity"
+				"Modifier"	"Max 1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Lowborn)"
+			TraitEffect
+			{
+				"Trait"	"Fx_Feed_Bonus_Tramps"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"BloodPool"	// This is a "Feeding" Bonus (Constrained by the above flag to only work for Tramps)
+				"Modifier"	"Damage 2"
+			}
+//			Knowledge Advancement Penalty
+			TraitEffect
+			{
+				"Trait"	"Computer"
+				Costs
+				{
+					"Raise"	"Table: 3, 4, 8, 12, 16"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Finance"
+				Costs
+				{
+					"Raise"	"Table: 3, 4, 8, 12, 16"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Investigation"
+				Costs
+				{
+					"Raise"	"Table: 3, 4, 8, 12, 16"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Academics"
+				Costs
+				{
+					"Raise"	"Table: 3, 4, 8, 12, 16"
+				}
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Runaway)"
+			TraitEffect
+			{
+				"Trait"	"Stealth"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Brawl"
+				Costs
+				{
+					"Raise"	"Table: 3, 4, 8, 12, 16"
+				}
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Chica)"
+			TraitEffect
+			{
+				"Trait"	"Firearms"
+				"Modifier"	"+1"
+			}
+//			TraitEffect
+//			{
+// removed			// Add thirtyeight
+// by wesp			"Trait"	"Starting_Equipment"
+//				"Modifier"	"Value Player_Chica"
+//			}
+//			Knowledge Advancement Penalty
+			TraitEffect
+			{
+				"Trait"	"Computer"
+				Costs
+				{
+					"Raise"	"Table: 3, 4, 8, 12, 16"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Finance"
+				Costs
+				{
+					"Raise"	"Table: 3, 4, 8, 12, 16"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Investigation"
+				Costs
+				{
+					"Raise"	"Table: 3, 4, 8, 12, 16"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Academics"
+				Costs
+				{
+					"Raise"	"Table: 3, 4, 8, 12, 16"
+				}
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Drifter)"
+			TraitEffect
+			{
+				"Trait"	"Melee"
+				"Modifier"	"+1"
+			}
+//			TraitEffect
+//			{
+// removed			// Add knife
+// by wesp			"Trait"	"Starting_Equipment"
+//				"Modifier"	"Value Player_Drifter"
+//			}
+			TraitEffect
+			{
+				"Trait"	"Humanity"
+				Costs
+				{
+					"Raise"	"Current_Rating * 4" // is this a penalty? Dunno how much Humanity costs to raise.
+				}	
+			}
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Frenzy_Check_Mod"
+				"Modifier"	"-1"
+			}
+
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Burnout)"
+			TraitEffect
+			{
+				"Trait"	"Frenzy_Check_Mod"
+				"Modifier"	"+3"
+			}
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"Max 3"	// changed by wesp
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Cadaverous Flesh)"
+
+//			Physical Advancement Bonus
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				Costs
+				{
+					"Raise"	"Table: 2, 3, 6, 10, 12"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Dexterity"
+				Costs
+				{
+					"Raise"	"Table: 2, 3, 6, 10, 12"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				Costs
+				{
+					"Raise"	"Table: 2, 3, 6, 10, 12"
+				}
+			}
+			TraitEffect  
+			{
+				"Trait"	"Charisma"
+				"Modifier"	"Max 3"	// changed by wesp
+			}  
+//			Altered Healing Rate
+			TraitEffect  
+			{
+				"Trait"	"VampHeal_Type"
+				"Modifier"	"Duration 300%"	// 180, changed by wesp
+			}  
+			// could use a penalty to feedheal, if we get support for it -TJP
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Eerie Presence)"
+//			Mental Advancement Bonus, changed by wesp
+			TraitEffect
+			{
+				"Trait"	"Intelligence"
+				Costs
+				{
+					"Raise"	"Table: 2, 3, 6, 10, 12"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Perception"
+				Costs
+				{
+					"Raise"	"Table: 2, 3, 6, 10, 12"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				Costs
+				{
+					"Raise"	"Table: 2, 3, 6, 10, 12"
+				}
+			}
+//			Social Advancement Penalty
+			TraitEffect
+			{
+				"Trait"	"Charisma"
+				Costs
+				{
+					"Raise"	"Table: 3, 6, 10, 16, 20"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Manipulation"
+				Costs
+				{
+					"Raise"	"Table: 3, 6, 10, 16, 20"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Appearance"
+				Costs
+				{
+					"Raise"	"Table: 3, 6, 10, 16, 20"
+				}
+			}
+//			Stealth Advancement Penalty
+			TraitEffect
+			{
+				"Trait"	"Stealth"
+				Costs
+				{
+					"Raise"	"Table: 3, 4, 8, 12, 16"
+				}
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Transcendental)"
+			TraitEffect
+			{
+				"Trait"	"Corpus_Vampirus"
+				"Modifier"	"Duration 150%"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Dexterity"
+				"Modifier"	"Max 3"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Perception"
+				"Modifier"	"Max 3"	// changed by wesp
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Rapacious)"
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Brawl"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Frenzy_Check_Mod"
+				"Modifier"	"-1"
+			}
+//			Stealth Advancement Penalty
+			TraitEffect
+			{
+				"Trait"	"Stealth"
+				Costs
+				{
+					"Raise"	"Table: 3, 4, 8, 12, 16"
+				}
+			}
+		}
+
+// =======-------------- Clan-Specific Discipline Tweakers -------------========
+
+//		Brujah
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Quickling)"
+			TraitEffect
+			{
+				"Trait"	"Celerity"
+				"Modifier"	"Duration 125%"			
+			}
+			TraitEffect
+			{
+				"Trait"	"Potence"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Anti Paladin)"
+			TraitEffect
+			{
+				"Trait"	"Presence"
+				Costs
+				{
+					"Raise"	"Table: 2, 4, 8, 12, 16"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Melee"
+				"Modifier"	"+1"
+			}			
+			TraitEffect	// changed by wesp
+			{
+				"Trait"	"Humanity"
+				Costs
+				{
+					"Raise"	"Current_Rating * 2" // is this a penalty? Dunno how much Humanity costs to raise.
+				}	
+			}
+			TraitEffect
+			{
+				"Trait"	"Celerity"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+		}
+
+//		Gangrel
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Chupacabra)"
+			TraitEffect
+			{
+				"Trait"	"Protean"
+				"Modifier"	"+1"			
+			}
+			TraitEffect
+			{
+				"Trait"	"Fortitude"
+				"Modifier"	"Max 3"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Beastmistress)"
+			TraitEffect
+			{
+				"Trait"	"Animalism"
+				"Modifier"	"Damage 135%"			
+			}
+			TraitEffect
+			{
+				"Trait"	"Animalism"
+				"Modifier"	"Duration 150%"
+			}
+			TraitEffect
+			{
+				"Trait"	"Protean"
+				"Modifier"	"Duration 75%"		
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Insectoid)"
+			TraitEffect
+			{
+				"Trait"	"Protean"
+				"Modifier"	"Duration 120%"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Fortitude"
+				"Modifier"	"Duration 120%"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"Max 3"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Charisma"
+				"Modifier"	"Max 3"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Appearance"
+				"Modifier"	"Max 3"	// changed by wesp
+			}
+//			TraitEffect	// changed by wesp
+//			{
+//				"Trait"	"Animalism"
+//				"Modifier"	"-1"
+//			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Anda)"
+			TraitEffect
+			{
+				"Trait"	"Fortitude"
+				"Modifier"	"+1"			
+			}
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"+1"			
+			}
+//			TraitEffect	// changed by wesp
+//			{
+//				"Trait"	"Animalism"
+//				"Modifier"	"-1"
+//			}
+			TraitEffect
+			{
+				"Trait"	"Animalism"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}			
+			}
+		}
+
+//		Malk
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Ninja)"
+			TraitEffect
+			{
+				"Trait"	"Brawl"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Melee"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Firearms"
+				"Modifier"	"Max 0"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Doomseer)"
+			TraitEffect
+			{
+				"Trait"	"Auspex"
+				"Modifier"	"Duration 120%"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Obfuscate"
+				"Modifier"	"Duration 80%"	// changed by wesp
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Batshit)"
+			TraitEffect
+			{
+				"Trait"	"Dementation"	// changed by wesp
+				"Modifier"	"Duration 200%"
+			}
+			TraitEffect
+			{
+				"Trait"	"Dementation"	// changed by wesp
+				"Modifier"	"Damage 140%"
+			}
+			TraitEffect
+			{
+				"Trait"	"Obfuscate"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}	
+			}
+
+		}
+//		Nos
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Boogeyman)"
+			TraitEffect
+			{
+				"Trait"	"Obfuscate"
+				"Modifier"	"Duration 130%"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Potence"
+				"Modifier"	"Max 3"	// changed by wesp
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Cleopatra)"
+			TraitEffect
+			{
+				"Trait"	"Stealth"	// changed by wesp
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Obfuscate"
+				"Modifier"	"Duration 120%"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Animalism"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}	
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Leatherface)"
+			TraitEffect
+			{
+				"Trait"	"Melee"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Potence"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Humanity"
+				Costs
+				{
+					"Raise"	"Current_Rating * 4" // is this a penalty? Dunno how much Humanity costs to raise.
+				}	
+			}
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Frenzy_Check_Mod"
+				"Modifier"	"-2"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Shepherd)"
+			TraitEffect
+			{
+				"Trait"	"Animalism"
+				"Modifier"	"Damage 135%"			
+			}
+			TraitEffect
+			{
+				"Trait"	"Animalism"
+				"Modifier"	"Duration 150%"
+			}
+			TraitEffect
+			{
+				"Trait"	"Potence"
+				"Modifier"	"Duration 75%"		
+			}
+		}
+//		Tor
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Enchantress)"
+			TraitEffect
+			{
+				"Trait"	"Appearance"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Subterfuge"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Celerity"
+				"Modifier"	"Duration 80%"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Monster)"
+			TraitEffect
+			{
+				"Trait"	"Presence"
+				"Modifier"	"Duration 120%"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"Max 3"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Frenzy_Check_Mod"
+				"Modifier"	"-1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Awareness)"
+			TraitEffect
+			{
+				"Trait"	"Auspex"
+				"Modifier"	"Duration 120%"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Celerity"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}	
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Faelike)"
+			TraitEffect
+			{
+				"Trait"	"Presence"
+				"Modifier"	"Duration 120%"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Celerity"
+				"Modifier"	"Duration 120%"	// changed by wesp
+			}
+//			Stat Advancement Penalties
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				Costs
+				{
+					"Raise"	"Table: 3, 6, 10, 16, 20"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				Costs
+				{
+					"Raise"	"Table: 3, 6, 10, 16, 20"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Intimidation"
+				Costs
+				{
+					"Raise"	"Table: 3, 6, 10, 16, 20"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Firearms"
+				Costs
+				{
+					"Raise"	"Table: 3, 6, 10, 16, 20"
+				}
+			}
+		}
+//		Tremere
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Eldritch Prodigy)"
+			TraitEffect
+			{
+				"Trait"	"Thaumaturgy"
+				"Modifier"	"+1"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Experience_Modifier"	// This is for 3 or more experience gained at a given time
+				"Modifier"	"-1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Infernal)"
+			TraitEffect
+			{
+				"Trait"	"Thaumaturgy"
+				Costs
+				{
+					"Raise"	"Table: 2, 4, 8, 12, 16"
+				}	
+			}
+			TraitEffect
+			{
+				"Trait"	"Dominate"
+				"Modifier"	"Max 3"
+			}
+			TraitEffect
+			{
+				"Trait"	"Auspex"
+				"Modifier"	"Duration 50%"
+			}
+		}
+
+//		Ventrue
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Dominatrix)"
+			TraitEffect
+			{
+				"Trait"	"Dominate"
+				"Modifier"	"Damage 140%"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Dominate"
+				"Modifier"	"Duration 200%"
+			}
+			TraitEffect
+				{
+				"Trait"	"Subterfuge"
+				"Modifier"	"+1"
+			}
+//			Skill Advancement Penalty
+			TraitEffect
+			{
+				"Trait"	"Firearms"
+				Costs
+				{
+					"Raise"	"Table: 3, 4, 8, 12, 16"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Melee"
+				Costs
+				{
+					"Raise"	"Table: 3, 4, 8, 12, 16"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Stealth"
+				Costs
+				{
+					"Raise"	"Table: 3, 4, 8, 12, 16"
+				}
+			}
+			TraitEffect
+			{
+				"Trait"	"Security"
+				Costs
+				{
+					"Raise"	"Table: 3, 4, 8, 12, 16"
+				}
+			}
+
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Diabolic)"
+			TraitEffect
+			{
+				"Trait"	"Presence"
+				"Modifier"	"Duration 120%"	// changed by wesp
+			}
+			TraitEffect	// changed by wesp
+			{
+				"Trait"	"Humanity"
+				Costs
+				{
+					"Raise"	"Current_Rating * 2" // is this a penalty? Dunno how much Humanity costs to raise.
+				}	
+			}
+			TraitEffect
+			{
+				"Trait"	"Frenzy_Check_Mod"
+				"Modifier"	"-1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Cleaner)"
+			TraitEffect
+			{
+				"Trait"	"Fortitude"
+				"Modifier"	"Duration 120%"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Presence"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}	
+			}
+		}
+
+// =======-------------- XXXXXXXXXXXXXXXXXXX -------------========
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Old Timer)"
+			TraitEffect
+			{
+				"Trait"	"Computer"
+				Costs
+				{
+					"New"		"5"
+//					"Raise"	"Current_Rating * 5"
+					"Raise"	"Table: 5, 10, 15, 25, 50"
+				}
+
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Academics"
+				"Modifier"	"+1"
+			}
+
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (TEST Discipline Mods)"
+			TraitEffect
+			{
+				"Trait"	"Fortitude"
+//				"Modifier"	"BloodCost 2"
+				"Modifier"	"Duration 200"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Thaumaturgy"
+				"Modifier"	"BloodCost 2"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Thaumaturgy"
+				"Modifier"	"Damage 200%"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Thaumaturgy"
+				"Modifier"	"Duration 200%"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"BloodPool"
+//				"Modifier"	"Damage 2"
+				"Modifier"	"Damage -2"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"VampHeal_Type"
+//				"Modifier"	"Value 1"
+				"Modifier"	"Value 2"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Megalomaniac)"
+			// Double NPC reactions
+//			TraitEffect
+//			{
+//				"Trait"	"Reaction (Megalomaniac)"
+//				"Modifier"	"+1"
+//			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Charisma"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Subterfuge"
+				"Modifier"	"Max 4"
+			}
+
+		}
+
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (All-Star Athlete)"
+///			TraitEffect
+///			{
+///				"Trait"	"Athletics"
+///				"Modifier"	"+1"
+///			}
+
+			TraitEffect	// changed by wesp
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Intelligence"
+				"Modifier"	"Max 4"	// changed by wesp
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Close to the Beast)"
+			TraitEffect
+			{
+				"Trait"	"Protean"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Appearance"
+				"Modifier"	"Max 3"
+			}
+
+//			TraitEffect
+//			{
+//				"Trait"	"Reaction (Close to the Beast)"
+//				"Modifier"	"+1"
+//			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Subtly Insane)"
+// Modifies (Overrides) Malkavian-specific dialog to *normal*
+// Hallucinate during combat
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Dementation"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Dodge"
+				"Modifier"	"Max 3"
+			}
+
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Well Educated)"
+// Susceptible to Dominate & Intimidate, Frenzy does less damage
+///			TraitEffect
+///			{
+///				"Trait"	"Athletics"
+///				"Modifier"	"+1"
+///			}
+
+//			TraitEffect
+//			{
+//				"Trait"	"Firearms"
+//				"Modifier"	"+1"
+//			}
+
+			TraitEffect
+			{
+				"Trait"	"Computer"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Finance"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Investigation"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Academics"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Dominate"
+				"Modifier"	"Max 3"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Intimidation"
+				"Modifier"	"Max 3"
+			}
+
+///			TraitEffect
+///			{
+///				"Trait"	"Occult"
+///				"Modifier"	"+1"
+///			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Affinity for Magic)"
+//			TraitEffect
+// 			{
+// removed				"Trait"	"Intelligence"
+// by wesp				"Modifier"	"+1"
+//			}
+// Learn Thaumaturgy Discipline more easily ((5*RANK)-1)
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Thaumaturgy"
+				Costs
+				{
+					"Raise"	"Table: 2, 4, 8, 12, 16"
+				}	
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Experience_Modifier"
+				"Modifier"	"-1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Presentable)"
+			TraitEffect
+			{
+				"Trait"	"Charisma"		// changed by wesp
+				"Modifier"	"+1"			// changed by wesp
+			}
+            	TraitEffect	// added by wesp
+            	{
+				"Trait"	"scarednpc_count"
+				"Modifier"	"Value 5"
+            	}
+            	TraitEffect	// added by wesp
+            	{
+				"Trait"	"scarednpc_time"
+				"Modifier"	"Value 300"
+            	}
+// All Disciplines cost more to raise (6*RANK)
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Obfuscate"
+				Costs
+				{
+					"Raise"	"Table: 6, 8, 12, 18, 24"
+				}	
+			}
+
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Starving Artist)"
+//			TraitEffect
+//			{
+// removed				// Starting money only $5
+// by wesp				// No equipment restrictions -- Overrides default Ventrue
+//				"Trait"	"Starting_Equipment"
+//				"Modifier"	"Value Player_Starving_Artist"
+//			}
+
+			TraitEffect
+			{
+// BONUS: CHANGE IS PENDING...?
+				"Trait"	"Excluded_Equipment"
+				"Modifier"	"Value Default"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Appearance"
+				"Modifier"	"Max 4"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Perception"
+				"Modifier"	"+1"
+			}
+
+
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Black-Hearted)"
+			TraitEffect
+			{
+				"Trait"	"Humanity"
+				"Modifier"	"-2"
+			}
+
+//			TraitEffect
+//			{
+// removed				// Give starting gun
+// by wesp				"Trait"	"Starting_Equipment"
+//				"Modifier"	"Value Player_Black_Hearted"
+//			}
+
+			TraitEffect
+			{
+				"Trait"	"Firearms"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Occult Nut)"
+///			TraitEffect
+///			{
+///				"Trait"	"Occult"
+///				"Modifier"	"+1"
+///			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Academics"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Experience_Modifier"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Charisma"
+				"Modifier"	"Max 3"
+			}
+
+//			TraitEffect
+//			{
+//				"Trait"	"Reaction (Occult Nut)"
+//				"Modifier"	"+1"
+//			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Academic)"
+			TraitEffect
+			{
+				"Trait"	"Attrib_Order"
+				"Modifier"	"Value Mental_Social_Physical"	// changed by wesp
+			}
+		}
+
+		TraitEffectGroup	// added by wesp
+		{
+			"InternalName"	"History (Eco-Terrorist Hacker)"
+			TraitEffect
+			{
+				"Trait"	"Ability_Order"
+				"Modifier"	"Value Knowledges_Skills_Talents"
+			}
+		}
+
+		TraitEffectGroup	// added by wesp
+		{
+			"InternalName"	"History (Generalissimo)"
+			TraitEffect
+			{
+				"Trait"	"Attrib_Order"
+				"Modifier"	"Value Physical_Mental_Social"
+			}
+		}
+
+		TraitEffectGroup	// added by wesp
+		{
+			"InternalName"	"History (Ex-SWAT)"
+			TraitEffect
+			{
+				"Trait"	"Firearms"
+				"Modifier"	"+2"
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Dexterity"
+				"Modifier"	"Max 1"
+			}
+
+		}
+
+
+		TraitEffectGroup	// added by wesp
+		{
+			"InternalName"	"History (Tom)"
+			TraitEffect
+			{
+				"Trait"	"BloodPool"
+				"Modifier"	"+2"
+			}
+			TraitEffect
+			{	// Restrict it to only the opposite gender
+				"Trait"	"Fx_Feed_Bonus_Opp_Gender"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Charisma"
+				"Modifier"	"Max 3"
+			}
+		}
+
+		TraitEffectGroup	// added by wesp
+		{
+			"InternalName"	"History (Pot Head)"
+			TraitEffect
+			{
+				"Trait"	"Frenzy_Check_Mod"
+				"Modifier"	"+3"
+			}
+			TraitEffect
+			{
+				"Trait"	"Intelligence"
+				"Modifier"	"Max 3"	// changed by wesp
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"History (Deaf)"
+			TraitEffect
+			{
+				"Trait"	"Humanity"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Perception"
+				"Modifier"	"Max 3"
+			}
+
+//// Deafness?  (-Perception?)
+//// Luck modifier?
+		}
+	}
+
+	TraitEffectCategory
+	{
+		"InternalName"	"Discipline"
+		"Name"		"Discipline"
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Animalism: Nightwisp Ravens)"
+			TraitEffect
+			{
+				"Trait"	"Defensive_Maneuvers"	// Feat
+				"Modifier"	"-2"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Hacking"	// Feat
+				"Modifier"	"-2"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Auspex1)"
+			UNUSED_TraitEffect
+			{
+				"Trait"	"default_fov"
+//				"Modifier"	"Value 75"  // Default  (default_fov)
+				"Modifier"	"+6"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Auspex2)"
+			UNUSED_TraitEffect
+			{
+				"Trait"	"default_fov"
+				"Modifier"	"+12"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Perception"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Auspex3)"
+			UNUSED_TraitEffect
+			{
+				"Trait"	"default_fov"
+				"Modifier"	"+18"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Auspex4)"
+			UNUSED_TraitEffect
+			{
+				"Trait"	"default_fov"
+				"Modifier"	"+24"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Perception"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Auspex5)"
+			UNUSED_TraitEffect
+			{
+				"Trait"	"default_fov"
+				"Modifier"	"+30"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Perception"
+				"Modifier"	"+1"
+			}
+		}
+
+
+// Note: Blood Buffs are no longer used:
+//		TraitEffectGroup
+//		{
+//			"InternalName"	"Discipline (Blood_Buff_Dexterity)"
+//			TraitEffect
+//			{
+//				"Trait"	"Dexterity"
+//				"Modifier"	"+1"
+//			}
+//		}
+
+//		TraitEffectGroup
+//		{
+//			"InternalName"	"Discipline (Blood_Buff_Stamina)"
+//			TraitEffect
+//			{
+//				"Trait"	"Stamina"
+//				"Modifier"	"+1"
+//			}
+//		}
+
+//		TraitEffectGroup
+//		{
+//			"InternalName"	"Discipline (Blood_Buff_Strength)"
+//			TraitEffect
+//			{
+//				"Trait"	"Strength"
+//				"Modifier"	"+1"
+//			}
+//		}
+
+		TraitEffectGroup	// added by wesp
+		{
+			"InternalName"	"Discipline (Blood_Heal)"
+			TraitEffect  
+			{
+				"Trait"	"VampHeal_Type"
+				"Modifier"	"Duration 8%"	
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Corpus_Vampirus)"
+			TraitEffect
+			{
+				"Trait"	"Dexterity"
+				"Modifier"	"Max 10"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"Max 10"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"Max 10"	// changed by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Dexterity"
+				"Modifier"	"+2"	// added by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"+2"	// added by wesp
+			}
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+2"	// added by wesp
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Celerity1)"
+			TraitEffect
+			{
+				"Trait"	"Fx_Motion_Trail"
+				"Modifier"	"+1"
+			}
+		}
+
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Celerity2)"
+			TraitEffect
+			{
+				"Trait"	"Fx_Motion_Trail"
+				"Modifier"	"+2"
+			}
+		}
+
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Celerity3)"
+			TraitEffect
+			{
+				"Trait"	"Fx_Motion_Trail"
+				"Modifier"	"+3"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Celerity4)"
+			TraitEffect
+			{
+				"Trait"	"Fx_Motion_Trail"
+				"Modifier"	"+4"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Celerity5)"
+			TraitEffect
+			{
+				"Trait"	"Fx_Motion_Trail"
+				"Modifier"	"+5"
+			}
+		}
+
+// WARNING: Old Discipline FX?
+//		TraitEffectGroup
+//		{
+//			"InternalName"	"Discipline (Dementation-Passion)"
+//			TraitEffect
+//			{
+//				"Trait"	"Reaction (Dementation-Passion)"
+//				"Modifier"	"+1"
+//			}
+//		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Dementation-Hysteria)"
+			TraitEffect
+			{
+				"Trait"	"Defensive_Maneuvers"	// Feat
+				"Modifier"	"-2"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Hacking"	// Feat
+				"Modifier"	"-2"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Dementation-Mass_Hallucination)"
+			TraitEffect
+			{
+				"Trait"	"Perception"
+				"Modifier"	"-2"
+			}
+
+			TraitEffect
+			{
+				// Changed 6/26/04 for TJ by JLR
+//				"Trait"	"Dexterity"
+				"Trait"	"Strength"
+				"Modifier"	"-2"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"-2"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Hacking"	// Feat
+				"Modifier"	"-2"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Dementation-Berserk)"
+			TraitEffect
+			{
+				"Trait"	"Fx_No_Resist_Feeding"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Dominate-Possession)"
+			TraitEffect
+			{
+				"Trait"	"Fx_No_Resist_Feeding"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Fortitude)"
+			TraitEffect
+			{
+				"Trait"	"Automatic_Soak_Successes"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (FortitudeFX)"
+			TraitEffect
+			{
+				"Trait"	"Fx_Fortitude"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Obfuscate1)"
+			TraitEffect
+			{
+				"Trait"	"Fx_Translucency"
+				"Modifier"	"+10"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Obfuscate2)"
+			TraitEffect
+			{
+				"Trait"	"Fx_Translucency"
+				"Modifier"	"+30"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Obfuscate3)"
+			TraitEffect
+			{
+				"Trait"	"Fx_Translucency"
+				"Modifier"	"+50"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Obfuscate4)"
+			TraitEffect
+			{
+				"Trait"	"Fx_Translucency"
+				"Modifier"	"+70"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Obfuscate5)"
+			TraitEffect
+			{
+				"Trait"	"Fx_Translucency"
+				"Modifier"	"+90"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Potence)"
+			TraitEffect
+			{
+				"DisplayOverride"		"0"	// Don't actually show this...
+				// Changed for TJ (via Steve S) 6/26/04 by JLR  ;)
+				"Trait"	"Automatic_Str_Successes"	// changed by wesp
+				"Modifier"	"+1"
+			}
+
+			TraitEffect	// seperated by wesp
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+1"
+			}
+
+		}
+
+// WARNING: Old Discipline FX?
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Presence-Awe)"
+			TraitEffect
+			{
+				"Trait"	"Reaction (Presence-Awe)"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Fx_Presence"
+				"Modifier"	"+1"
+			}
+		}
+
+// WARNING: Old Discipline FX?
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Presence-General)"
+			TraitEffect
+			{
+				"Trait"	"Reaction (Presence-General)"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Presence-Dazed)"
+			TraitEffect
+			{
+				"Trait"	"Dexterity"
+				"Modifier"	"-1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"-1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Perception"
+				"Modifier"	"-1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Presence-Dazed2)"
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"-2"
+			}
+		}
+
+		// New Presence 4/22/04
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Presence-Level1)"
+			TraitEffect
+			{
+				// Changed 6/26/04 for TJ by JLR
+//				"Trait"	"Dexterity"
+				"Trait"	"Strength"
+				"Modifier"	"-1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"-1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Perception"
+				"Modifier"	"-1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Presence-Level2)"
+			TraitEffect
+			{
+				// Changed 6/26/04 for TJ by JLR
+//				"Trait"	"Dexterity"
+				"Trait"	"Strength"
+				"Modifier"	"-2"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"-2"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Perception"
+				"Modifier"	"-2"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Presence-Level3)"
+			TraitEffect
+			{
+				// Changed 6/26/04 for TJ by JLR
+//				"Trait"	"Dexterity"
+				"Trait"	"Strength"
+				"Modifier"	"-3"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"-3"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Perception"
+				"Modifier"	"-3"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Presence-Level4)"
+			TraitEffect
+			{
+				// Changed 6/26/04 for TJ by JLR
+//				"Trait"	"Dexterity"
+				"Trait"	"Strength"
+				"Modifier"	"-4"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"-4"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Perception"
+				"Modifier"	"-4"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"-2"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Presence-Level5)"
+			TraitEffect
+			{
+				// Changed 6/26/04 for TJ by JLR
+//				"Trait"	"Dexterity"
+				"Trait"	"Strength"
+				"Modifier"	"-5"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"-5"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Perception"
+				"Modifier"	"-5"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"-4"
+			}
+		}
+
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Protean-Eyes_of_the_Beast)"
+
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Protean-Feral_Claws)"
+
+			TraitEffect
+			{
+				"Trait"	"Excluded_Equipment"
+				"Modifier"	"Value Clawed_Form"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"item_w_fists"
+				"Modifier"	"-1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"item_w_claws"
+				"Modifier"	"+1"
+			}
+
+// Q: Change critter model?  NO, this can be done entirely via the "Claw" weapon model (& character model)!
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Protean-Feral_Claws-Toreador)"
+
+			TraitEffect
+			{
+				"Trait"	"Excluded_Equipment"
+				"Modifier"	"Value Clawed_Form_Toreador"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"item_w_fists"
+				"Modifier"	"-1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"item_w_claws"
+				"Modifier"	"+1"
+			}
+
+// Q: Change critter model?  NO, this be done entirely via the "Claw" weapon model (& character model)!
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Protean-Will_of_the_Wolf)"
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"+2"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Protean-Hunter_of_Night)"
+
+			TraitEffect	// changed by wesp
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+4"
+			}
+
+//			TraitEffect
+//			{
+//				"Trait"	"Excluded_Equipment"
+//				"Modifier"	"Value Wolf_Form"
+//			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Protean-Wolf_Form)"
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Close_Combat_Brawl"
+				"Modifier"	"+8"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"Fx_Model_Wolf"
+				"Modifier"	"+1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"item_w_claws"
+				"Modifier"	"-1"
+			}
+
+			TraitEffect
+			{
+				"Trait"	"item_w_claws"
+				"Modifier"	"+1"
+			}
+
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Thaumaturgy)"
+			TraitEffect
+			{
+				"Trait"	"Fx_Mild_Shake"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Thaumaturgy-Blood Malady)"
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"-1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Dexterity"
+				"Modifier"	"-1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"-1"
+			}
+		}
+
+
+		// New Disciplines 4/5/04
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Thaumaturgy-Bloodshield)"
+//			TraitEffect
+//			{
+//				"Trait"	"Health_Buffer"
+//				"Modifier"	"+1"	// 40-80
+//			}
+			TraitEffect
+			{
+				"Trait"	"Fx_Bloodshield"
+				"Modifier"	"+1"
+			}
+            	TraitEffect	// added by wesp
+            	{
+				"Trait"	"vamplight_enabled"
+				"Modifier"	"Value 1"
+            	}
+            	TraitEffect	// added by wesp
+            	{
+				"Trait"	"vamplight_exponent"
+				"Modifier"	"Value 1"
+            	}
+		}
+
+		// New Disciplines 4/5/04
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Thaumaturgy-BloodBoil)"
+			TraitEffect
+			{
+				"Trait"	"Fx_Bloodthrob"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup // added by EntenSchreck
+		{
+			"InternalName"	"Discipline (Cast)"	// (Dominate, Dementation, Thaumaturgy 1-3, Animalism 1-4)
+			TraitEffect
+			{
+				"Trait"	"Excluded_Equipment"
+				"Modifier"	"Value Clawed_Form"
+			}
+			TraitEffect
+			{
+				"Trait"	"item_w_tzimisce2_head"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"vdebug_wpn_anims_cycle"
+				"Modifier"	"Value 1"
+			}
+		}
+
+		TraitEffectGroup // added by EntenSchreck
+		{
+			"InternalName"	"Discipline (Cast_Alt)" // (Thaumaturgy 4+5, Animalism 5)
+			TraitEffect
+			{
+				"Trait"	"Excluded_Equipment"
+				"Modifier"	"Value Clawed_Form"
+			}
+			TraitEffect
+			{
+				"Trait"	"item_w_tzimisce2_head"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"item_i_written"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"vdebug_wpn_anims_cycle"
+				"Modifier"	"Value 1"
+			}
+			//TraitEffect
+			//{
+			//	"Trait"	"Fx_Mild_Shake"
+			//	"Modifier"	"+1"
+			//}
+		}
+	}
+
+	TraitEffectCategory
+	{
+		"InternalName"	"Numina"
+		"Name"		"Numina"
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Numina (Divine_Vision1)"
+			TraitEffect
+			{
+				"Trait"	"default_fov"
+//				"Modifier"	"Value 75"  // Default  (default_fov)
+				"Modifier"	"+6"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Numina (Divine_Vision2)"
+			TraitEffect
+			{
+				"Trait"	"default_fov"
+				"Modifier"	"+12"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Numina (Divine_Vision3)"
+			TraitEffect
+			{
+				"Trait"	"default_fov"
+				"Modifier"	"+18"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Numina (Divine_Vision4)"
+			TraitEffect
+			{
+				"Trait"	"default_fov"
+				"Modifier"	"+24"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Numina (Divine_Vision5)"
+			TraitEffect
+			{
+				"Trait"	"default_fov"
+				"Modifier"	"+30"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Numina (Shield_of_Faith)"
+			TraitEffect
+			{
+				"Trait"	"Soak_Pool"
+				"Modifier"	"+1"
+			}
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"DisciplineStrata"
+				"Modifier"	"+1"
+			}
+		}
+	}
+
+	TraitEffectCategory
+	{
+		"InternalName"	"Item"
+		"Name"		"Item"
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Heavy Cloth)"
+			TraitEffect
+			{
+				"Trait"	"Armor_Rating"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Light Leather)"
+			TraitEffect
+			{
+				"Trait"	"Armor_Rating"
+				"Modifier"	"+2"
+			}
+			TraitEffect
+			{
+				"Trait"	"Dexterity"
+				"Modifier"	"-1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Heavy Leather)"
+			TraitEffect
+			{
+				"Trait"	"Armor_Rating"
+				"Modifier"	"+3"
+			}
+			TraitEffect
+			{
+				"Trait"	"Dexterity"
+				"Modifier"	"-1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Body Armor)"
+			TraitEffect
+			{
+				"Trait"	"Armor_Rating"
+				"Modifier"	"+4"
+			}
+			TraitEffect
+			{
+				"Trait"	"Dexterity"
+				"Modifier"	"-2"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Flak Jacket)"
+			TraitEffect
+			{
+				"Trait"	"Armor_Rating"
+				"Modifier"	"+4"
+			}
+			TraitEffect
+			{
+				"Trait"	"Dexterity"
+				"Modifier"	"-2"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Riot Gear)"
+			TraitEffect
+			{
+				"Trait"	"Armor_Rating"
+				"Modifier"	"+5"
+			}
+			TraitEffect
+			{
+				"Trait"	"Dexterity"
+				"Modifier"	"-3"
+			}
+		}
+
+
+// Occult Items:
+//---- newer ;P
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Occult Heal Rate)"
+		//	Altered Healing Rate
+			TraitEffect  
+			{
+				"Trait"	"VampHeal_Type"
+				"Modifier"	"Duration 160%"	// 80, changed by wesp
+			}  
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Occult Long Durations)"
+			TraitEffect
+			{
+				"Trait"	"Celerity"
+				"Modifier"	"Duration 125%"			
+			}
+			TraitEffect
+			{
+				"Trait"	"Potence"
+				"Modifier"	"Duration 125%"			
+			}
+			TraitEffect
+			{
+				"Trait"	"Fortitude"
+				"Modifier"	"Duration 125%"			
+			}
+			TraitEffect
+			{
+				"Trait"	"Obfuscate"
+				"Modifier"	"Duration 125%"			
+			}
+			TraitEffect
+			{
+				"Trait"	"Presence"
+				"Modifier"	"Duration 125%"			
+			}
+			TraitEffect
+			{
+				"Trait"	"Protean"
+				"Modifier"	"Duration 125%"			
+			}
+			TraitEffect
+			{
+				"Trait"	"Auspex"
+				"Modifier"	"Duration 125%"			
+			}
+
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Occult Thaumaturgy)"
+			TraitEffect
+			{
+				"Trait"	"Thaumaturgy"
+				"Modifier"	"Damage 140%"	// changed by wesp from 138%
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Occult Dodge)"
+			TraitEffect
+			{
+				"Trait"		"Defensive_Maneuvers"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Occult Strength)"
+			TraitEffect
+			{
+ 				"Trait"		"Close_Combat_Melee"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Occult Dexterity)"
+			TraitEffect
+			{
+				"Trait"		"Dexterity"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Occult Blood Buff)"
+			TraitEffect
+			{
+				"Trait"	"Corpus_Vampirus"
+				"Modifier"	"Duration 200%"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Occult Experience)"
+			TraitEffect
+			{
+				"Trait"	"Experience_Modifier"	// This is for 3 or more experience gained at a given time
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Occult Obfuscate)"
+			TraitEffect
+			{
+				"Trait"	"Obfuscate"
+				"Modifier"	"Duration 140%"
+			}
+		}
+
+//----
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Occult Frenzy)"
+			TraitEffect
+			{
+				"Trait"	"Frenzy_Check_Mod"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Occult Presence)"
+			TraitEffect
+			{
+				"Trait"	"Soak_Pool"
+				"Modifier"	"+1"
+			}
+		}
+
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Occult Hacking)"
+			TraitEffect
+			{
+//				"Trait"	"Hacking"	// Feat
+				"Trait"	"Wits"	// changed by wesp
+				"Modifier"	"+1"
+			}
+		}
+
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Item (Occult Lockpicking)"
+			TraitEffect
+			{
+//				"Trait"	"Intrusion"	// Feat
+				"Trait"	"Security"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup	// restored by wesp
+		{
+			"InternalName"	"Item (Occult Celerity)"
+			TraitEffect
+			{
+				"Trait"	"Charisma"		// changed by wesp from ???
+				"Modifier"	"+1"
+			}
+		}
+
+	}
+}

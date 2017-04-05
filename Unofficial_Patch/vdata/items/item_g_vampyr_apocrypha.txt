@@ -1,0 +1,66 @@
+
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	
+	"infomodel"	"models/items/Diary/Info/Info_Diary.mdl"
+	"playermodel"	"models/items/Diary/Ground/Diary.mdl"
+	
+	"anim_prefix"	" "
+
+	"printname"	"Vampyr Apocrypha"
+	"description"	"This book is titled \"Vampyr Apocrypha\":
+			Unidentified Sarcophagus
+			Discovered by Julius of Gaul, 1068 AD
+			Near Ankara, Ottoman Empire
+
+			The origin of this dark and mysterious talisman is largely unknown, and is mostly considered a myth. If not for the etchings of Julius of Gaul, who first discovered and then subsequently re-entombed the artifact, there would be almost no historical record of the artifact, save for various unfounded legends of its evilness scattered throughout the writings of the brotherhood. Historians and theologians alike have been unable to ascertain its exact age or place of origin, although the symbols and inscriptions seem to hint that the artifact is from the area of ancient Sumer or Mesopotamia. It has never been opened, and therefore any myths pertaining to who or what might be encased in it are total speculation. Vampiric origins have not been ruled out, although many scholars within the Church seem to think that it may hold the remains of an ancient king, whose name so far has been lost to the ages. Let it be said, though, that the writings of Julius Gaul describe the artifact as being \"a nefarious and dread thing, full of some ancient and undeniable evil\". He attributes the death of his scribe to the artifact, who, upon setting his eyes on it for the first time, began convulsing uncontrollably and promptly died."
+
+
+	"bucket"		"1"
+	"bucket_position"	"2"
+
+	"camera_class"		"noswitch"
+	"is_wieldable"		"0"
+	"weight"		"1"
+	"item_flags"		"1"
+	"item_type"		"powerup"
+	"item_worth"		"-1"
+	"is_visible_in_hud"	"1"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Magazine/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/Diary_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"		"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/Diary"
+				"x"		"0"
+				"y"		"0"
+				"width"		"100"
+				"height"	"64"
+			}
+		}
+	}
+}

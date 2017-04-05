@@ -1,0 +1,56 @@
+// Choreo version 1
+actor "Prince1"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 5.851429
+      param "character/dlg/downtown la/prince1/line511_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "Lacroix_line511_col_e"	// added by wesp
+    {
+      time 0.000000 5.851429
+      param "Lacroix_line511_col_e"
+    }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 2.500000 3.010000
+      param "0.510"
+    }
+    event silence "Silence"
+    {
+      time 3.680000 3.820000
+      param "0.140"
+    }
+    event silence "Silence"
+    {
+      time 5.690000 5.870000
+      param "0.180"
+    }
+    event loud "Loud"
+    {
+      time 3.120000 3.230000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 4.060000 4.190000
+      param "0.130"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

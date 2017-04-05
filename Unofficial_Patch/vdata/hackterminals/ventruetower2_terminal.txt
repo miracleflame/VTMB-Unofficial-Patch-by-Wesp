@@ -1,0 +1,48 @@
+TerminalDefinition
+{
+	"screen saver"		"Monte Blanc Tower Systems"	// Bounces around on the screen when the terminal is not being used, changed by wesp. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp.
+	"email_username"	"ventrue"		// printed at the top of the email window, not used for log in), changed by wesp. 
+	"email_password"	"ghouls"		// printed at the top of the email window, not used for log in. 
+
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Monte Blanc Tower Systems"
+		"line1"		"Administration Offices"
+		// "line2"		"Glenn Cass, Tower Security Administrator"
+
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+
+
+	SubDir
+	{
+		"name"			"Lights"	// This is what is displayed as the name of this menu, and what the player must type to enter the menu (128 characters)
+		"password"		"hitthelights"	// password required to run commands in this menu (16 characters)
+		"description"		"Office lights"	// This is printed each time the user enters this menu (128 characters)
+		"difficulty"		"8"
+
+		Function
+		{
+			"name"		"Enable"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Turn on the lights."		// this is a description of this function  (128 characters)
+			"runtext"	"Lights on."	// this text is printed when the player triggers this function.  (128 characters)
+			"trigger"	"0"				// fires entity output 0 when this command is run
+		}
+
+		Function
+		{
+			"name"		"Disable"
+			"description"	"Turn off the lights."
+			"runtext"	"Lights out."
+			"trigger"	"1"
+		}
+	}	
+}

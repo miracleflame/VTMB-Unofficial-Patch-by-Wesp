@@ -1,0 +1,162 @@
+// Choreo version 1
+actor "Mercurio"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 17.571724
+      param "character/dlg/santa monica/mercurio/line31_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "MercurioDamaged_Line31_Col_E"	// added by wesp
+    {
+      time 0.000000 17.571724
+      param "MercurioDamaged_Line31_Col_E"
+    }
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 0.000000 0.110000
+      param "0.110"
+    }
+    event silence "Silence"
+    {
+      time 0.430000 0.740000
+      param "0.310"
+    }
+    event silence "Silence"
+    {
+      time 1.090000 1.920000
+      param "0.830"
+    }
+    event silence "Silence"
+    {
+      time 3.020000 3.620000
+      param "0.600"
+    }
+    event silence "Silence"
+    {
+      time 4.250000 4.480000
+      param "0.230"
+    }
+    event silence "Silence"
+    {
+      time 4.760000 5.330000
+      param "0.570"
+    }
+    event silence "Silence"
+    {
+      time 7.310000 7.550000
+      param "0.240"
+    }
+    event silence "Silence"
+    {
+      time 8.370000 8.570000
+      param "0.200"
+    }
+    event silence "Silence"
+    {
+      time 8.690000 8.860000
+      param "0.170"
+    }
+    event silence "Silence"
+    {
+      time 9.389999 9.670000
+      param "0.280"
+    }
+    event silence "Silence"
+    {
+      time 9.690000 10.240000
+      param "0.550"
+    }
+    event silence "Silence"
+    {
+      time 11.509999 11.780000
+      param "0.270"
+    }
+    event silence "Silence"
+    {
+      time 12.210000 12.450000
+      param "0.240"
+    }
+    event silence "Silence"
+    {
+      time 12.929999 13.389999
+      param "0.460"
+    }
+    event silence "Silence"
+    {
+      time 13.700000 13.820000
+      param "0.120"
+    }
+    event silence "Silence"
+    {
+      time 13.900000 14.049999
+      param "0.150"
+    }
+    event silence "Silence"
+    {
+      time 14.250000 15.139999
+      param "0.890"
+    }
+    event silence "Silence"
+    {
+      time 15.740000 15.860000
+      param "0.120"
+    }
+    event silence "Silence"
+    {
+      time 15.950000 16.100000
+      param "0.150"
+    }
+    event silence "Silence"
+    {
+      time 16.949999 17.090000
+      param "0.140"
+    }
+    event silence "Silence"
+    {
+      time 17.389999 17.619999
+      param "0.230"
+    }
+    event loud "Loud"
+    {
+      time 0.810000 0.920000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 7.920000 8.030000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 10.809999 10.929999
+      param "0.120"
+    }
+    event loud "Loud"
+    {
+      time 12.090000 12.200000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 13.549999 13.660000
+      param "0.110"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

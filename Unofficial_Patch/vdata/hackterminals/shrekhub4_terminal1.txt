@@ -1,0 +1,72 @@
+TerminalDefinition
+{
+	"screen saver"		"Kamikazi Zen"					// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""						// these surround the command prompt (2 characters), changed by wesp
+
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Kamikazi Zen: Operations Center"
+	}
+	
+	
+	SubDir
+	{
+		"name"			"Power"	//(128 characters)
+		"password"		"gwailo"
+		"description"		"Access to Power Grid"
+
+		Function
+		{
+			"name"		"hooligan"
+			"description"	"virus"
+			"runtext"	"Virus enabled: system shutting down."
+// wesp			"dependency"	"G.Shubs_Botch == 0"
+			"runscript"	"G.Shubfour_Virus = 1"
+			"trigger"	"0"
+
+		}
+
+		Function
+		{
+			"name"		"systemxxx"
+			"description"	"WARNING!"
+			"runtext"	"POWER OFFLINE!"
+			"dependency"	"G.Shubfour_Virus == 1"
+
+		}
+
+		Function	// added by wesp
+		{
+			"name"		"goodies!"
+			"description"	"reward"
+			"runtext"	"Find a powerful item nearby as reward for your help. >m1tn1ck<"
+			"dependency"	"G.Shubfour_Virus == 1 and G.Patch_Plus == 1"
+
+		}
+	}
+
+	SubDir
+	{
+		"name"			"Status"	//(128 characters)
+		"description"		"Current System Status"
+
+		Function
+		{
+			"name"		"status1"
+			"description"	"systat"
+			"runtext"	"System Normal."
+			"dependency"	"G.Shubfour_Virus == 0"
+
+		}
+
+		Function
+		{
+			"name"		"status2"
+			"description"	"systat"
+			"runtext"	"Virus Detected!!! Shutting Down System!!!"
+			"dependency"	"G.Shubfour_Virus == 1"
+		}
+	}
+}

@@ -1,0 +1,49 @@
+// Choreo version 1
+actor "Nines"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 1.452698
+      param "character/dlg/main characters/nines/line221_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+    event speak "Deagle Reload"
+    {
+      time 0.000000 1.452698
+      param "weapons/ranged/desert_eagle/reload.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "deserteagle_reload"
+    {
+      time 0.000000 2.500000
+      param "deserteagle_reload"
+    }
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 1.330000 1.460000
+      param "0.130"
+    }
+    event loud "Loud"
+    {
+      time 0.140000 0.260000
+      param "0.120"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

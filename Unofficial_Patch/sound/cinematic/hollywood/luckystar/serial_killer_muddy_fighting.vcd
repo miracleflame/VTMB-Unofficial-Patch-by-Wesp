@@ -1,0 +1,45 @@
+// Choreo version 1
+actor "Killer"
+{
+  channel "SFX"	// added by wesp
+  {
+    event speak "SFX"
+    {
+      time 0.0 1.0
+      param "character\male\flee_5.wav"
+      fixedlength
+    }
+    event speak "SFX"
+    {
+      time 1.5 2.5
+      param "character\dlg\santa monica\killer\line21_col_e.mp3"
+      fixedlength
+    }
+  }
+  channel "Anim"
+  {
+    event sequence "Kill"
+    {
+      time 0.000000 2.967
+      param "entire_scene"
+    }
+  }
+
+  bonerename "Bip01" "Bip01"
+}
+
+actor "Muddy"
+{
+  channel "Anim"
+  {
+    event sequence "Kill"
+    {
+      time 0.000000 2.967
+      param "entire_scene"
+    }
+  }
+  bonerename "Bip02" "Bip01"
+}
+
+fps 60
+snap off

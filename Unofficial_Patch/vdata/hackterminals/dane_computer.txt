@@ -1,0 +1,239 @@
+TerminalDefinition
+{
+	"screen saver"		"EEP Shipping"	// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"EEP Shipping"
+		"line1"		"NZ Elizabeth Dane"
+	}
+
+	SubDir
+	{
+		"name"			"Reports"
+		"description"		"Ship Reports"
+
+		Function
+		{
+			"name"		"Weather"
+			"description"	"SHIP STATUS" // RM: Old coordinates had it smack dab in the middle of Long Beach Airport
+			"runtext"	"Location   33.98N,118.60W
+					Seas       CALM
+					Air Temp   65F
+					Sea Temp   43F
+					"
+		}
+
+		Function
+		{
+			"name"		"Status"
+			"description"	"SHIP STATUS"
+			"runtext"	"Engines    OFF
+					Deck Cams  OFF
+					Locks      LOCKED
+					"
+			"dependency"	"G.Dane_Cams == 0 and G.Dane_Locks == 0 and G.Dane_Engines == 0"
+		}
+
+		Function
+		{
+			"name"		"Status"
+			"description"	"SHIP STATUS"
+			"runtext"	"Engines    OFF
+					Deck Cams  ON
+					Locks      LOCKED
+					"
+			"dependency"	"G.Dane_Cams == 1 and G.Dane_Locks == 0 and G.Dane_Engines == 0"
+		}
+
+		Function
+		{
+			"name"		"Status"
+			"description"	"SHIP STATUS"
+			"runtext"	"Engines    OFF
+					Deck Cams  OFF
+					Locks      OPEN
+					"
+			"dependency"	"G.Dane_Cams == 0 and G.Dane_Locks == 1 and G.Dane_Engines == 0"
+		}
+
+		Function
+		{
+			"name"		"Status"
+			"description"	"SHIP STATUS"
+			"runtext"	"Engines    ON
+					Deck Cams  OFF
+					Locks      LOCKED
+					"
+			"dependency"	"G.Dane_Cams == 0 and G.Dane_Locks == 0 and G.Dane_Engines == 1"
+		}
+
+		Function
+		{
+			"name"		"Status"
+			"description"	"SHIP STATUS"
+			"runtext"	"Engines    OFF
+					Deck Cams  ON
+					Locks      OPEN
+					"
+			"dependency"	"G.Dane_Cams == 1 and G.Dane_Locks == 1 and G.Dane_Engines == 0"
+		}
+
+		Function
+		{
+			"name"		"Status"
+			"description"	"SHIP STATUS"
+			"runtext"	"Engines    ON
+					Deck Cams  ON
+					Locks      LOCKED
+					"
+			"dependency"	"G.Dane_Cams == 1 and G.Dane_Locks == 0 and G.Dane_Engines == 1"
+		}
+
+		Function
+		{
+			"name"		"Status"
+			"description"	"SHIP STATUS"
+			"runtext"	"Engines    ON
+					Deck Cams  OFF
+					Locks      OPEN
+					"
+			"dependency"	"G.Dane_Cams == 0 and G.Dane_Locks == 1 and G.Dane_Engines == 1"
+		}
+
+		Function
+		{
+			"name"		"Status"
+			"description"	"SHIP STATUS"
+			"runtext"	"Engines    ON
+					Deck Cams  ON
+					Locks      OPEN
+					"
+			"dependency"	"G.Dane_Cams == 1 and G.Dane_Locks == 1 and G.Dane_Engines == 1"
+		}
+	}
+
+	SubDir
+	{
+		"name"			"Log"
+		"password"		"AntonioBay"
+		"difficulty"		"6"	// changed by wesp from 9
+		"description"		"Captain's Log"
+
+		Function
+		{
+			"name"		"10.10.04"
+			"description"	"Captain's Log: October 10th, 2004"
+			"runtext"	"Waters calm as we head out of Istanbul. Professor Johansen seemed very worried about the safety of the sarcophagus and various other artifacts from his dig, but I assured him that all was well."
+		}
+
+		Function
+		{
+			"name"		"10.14.04"
+			"description"	"Captain's Log: October 14th, 2004"
+			"runtext"	"Rough waters last evening. Operations normal, but the crew seems restless. One of the Turks has been telling them ghost stories. I had Lt. Stygian take him aside and speak with him."
+		}
+
+		Function
+		{
+			"name"		"10.15.04"
+			"description"	"Captain's Log: October 15th, 2004"
+			"runtext"	"Nothing to report. Situation normal."
+		}
+
+		Function
+		{
+			"name"		"10.17.04"
+			"description"	"Captain's Log: October 17th, 2004"
+			"runtext"	"Two of the crew have gone missing, and I fear they may have fallen overboard sometime during the night. No trace of either. Lt. Stygian has tried to contact their families, but something seems to have gone wrong with the radio.
+We may have a saboteur on board... the crate holding the sarcophagus seems to have been opened."
+		}
+
+		Function
+		{
+			"name"		"10.19.04"
+			"description"	"Captain's Log: October 17th, 2004"
+			"runtext"	"We have found blood on the upper and lower decks, and it seems that at least three more of the crew are missing. The men are hysterical. I found the Turk in his cabin, curled up into a ball, muttering something indecipherable to himself. Lt. Stygian is one of the missing crew, as well as the radio technician.
+One of the men had a short wave radio, but all calls for help have gone unanswered."
+		}
+
+		Function
+		{
+			"name"		"10.20.04"
+			"description"	"Captain's Log: October 20th, 2004"
+			"runtext"	"I leave this to whoever may find it. THIS SHIP IS CURSED. May it sink to the crushing depths of Davy Jones' Locker before therhbnkhjljsdlkajkl"
+		}
+	}
+
+	Subdir
+	{
+		"name"			"Control"
+		"password"		"lighthouse"
+		"difficulty"		"4"	// changed by wesp from 7
+		"description"		"Ship Functions"
+
+		Function
+		{
+			"name"		"Start Engines"
+			"description"	"Starting Engines"
+			"runtext"	"Engines primed and engaged. Control routed to Helm."
+			"dependency"	"G.Dane_Engines == 0"
+			"runscript"	"daneSetEngines()"
+		}
+
+		Function
+		{
+			"name"		"Stop Engines"
+			"description"	"Shutting Down Engines"
+			"runtext"	"Engines disengaged. Helm control deactivated."
+			"dependency"	"G.Dane_Engines == 1"
+			"runscript"	"daneSetEngines()"
+		}
+
+		Function
+		{
+			"name"		"Sound Horn"
+			"description"	"Sound Horn"
+			"runtext"	"Sounding horn."
+			"runscript"	"daneSoundHorn()"
+		}
+
+		Function
+		{
+			"name"		"Deck Cams ON"
+			"description"	"Deck Security Cameras"
+			"runtext"	"Deck security enabled."
+			"dependency"	"G.Dane_Cams == 0"
+			"runscript"	"daneSetCams()"
+		}
+
+		Function
+		{
+			"name"		"Deck Cams OFF"
+			"description"	"Deck Security Cameras"
+			"runtext"	"Deck security disabled."
+			"dependency"	"G.Dane_Cams == 1"
+			"runscript"	"daneSetCams()"
+		}
+
+		Function
+		{
+			"name"		"Unlock Doors"
+			"description"	"Bulkhead Locks"
+			"runtext"	"All bulkheads open."
+			"dependency"	"G.Dane_Locks == 0"
+			"runscript"	"daneSetLocks()"
+		}
+
+		Function
+		{
+			"name"		"Lock Doors"
+			"description"	"Bulkhead Locks"
+			"runtext"	"All bulkheads locked."
+			"dependency"	"G.Dane_Locks == 1"
+			"runscript"	"daneSetLocks()"
+		}
+	}
+}

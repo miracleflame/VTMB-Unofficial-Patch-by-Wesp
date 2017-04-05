@@ -1,0 +1,126 @@
+// Choreo version 1
+actor "Prince1"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 12.289161
+      param "character/dlg/downtown la/prince1/line111_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "Lacroix_line111_col_e"	// added by wesp
+    {
+      time 0.000000 12.289161
+      param "Lacroix_line111_col_e"
+    }
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 2.600000 3.690000
+      param "1.090"
+    }
+    event silence "Silence"
+    {
+      time 5.330000 5.750000
+      param "0.420"
+    }
+    event silence "Silence"
+    {
+      time 7.770000 8.820000
+      param "1.050"
+    }
+    event silence "Silence"
+    {
+      time 9.889999 10.610000
+      param "0.720"
+    }
+    
+  }
+  channel "Expressions"
+  {
+    event expression "Sad 01"
+    {
+      time 0.000000 1.080000
+      param "lacroix_expressions"
+      param2 "Sad"
+      event_ramp
+      {
+        0.1750 0.5644
+        0.3063 0.5644
+        0.7879 0.5644
+        0.8754 0.5644
+      }
+    }
+    event expression "Raised Both 01"
+    {
+      time 3.546666 4.520000
+      param "lacroix_expressions"
+      param2 "Raised Both"
+      event_ramp
+      {
+        0.1375 0.9906
+        0.8254 0.9906
+      }
+    }
+    event expression "Raised Both 02"
+    {
+      time 5.733334 6.440000
+      param "lacroix_expressions"
+      param2 "Raised Both"
+      event_ramp
+      {
+        0.1313 0.9953
+        0.5567 0.9859
+      }
+    }
+    event expression "Squint 01"
+    {
+      time 8.680000 10.620000
+      param "lacroix_expressions"
+      param2 "Squint"
+      event_ramp
+      {
+        0.2250 0.9930
+        1.7646 0.9836
+      }
+    }
+  }
+  channel "brows"
+  {
+    event expression "Concern No Deform 01"
+    {
+      time 4.373333 5.840000
+      param "lacroix_expressions"
+      param2 "Concern No Deform"
+      event_ramp
+      {
+        0.2987 1.0000
+        0.3696 1.0000
+        1.1391 1.0000
+        1.2259 1.0000
+      }
+    }
+    event expression "Raised Both 03"
+    {
+      time 10.513333 12.273334
+      param "lacroix_expressions"
+      param2 "Raised Both"
+      event_ramp
+      {
+        0.1563 0.9977
+        1.5688 0.9977
+      }
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

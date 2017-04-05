@@ -1,0 +1,105 @@
+{	1	}{	Who are you? Uh, what are you doin' back here?	}{	Who are you? Uh, what are you doin' back here?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	You're getting sleepy....	}{	You're getting sleepy....	}{	11	}{	Dominate 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	You're getting sleepy....	}{	You're getting sleepy....	}{	11	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	If you don't know, you shouldn't be asking.	}{	If you don't know, you shouldn't be asking.	}{	21	}{	Persuasion 4 & G.Phil_Persuade == 0	}{	}{	}{	}{	}{	}{	}{	}{	My reasons are solid and secret.	}
+{	5	}{	Are you saying you want me to leave?	}{	Are you saying you want me to leave?	}{	51	}{	Seduction 6 & ( not IsMale(pc) and G.Phil_Seduce < 2 and G.Patch_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	I came back here to play doctor.	}
+{	6	}{	I want the passcode to the freezer.	}{	I want the passcode to the freezer.	}{	71	}{	G.Bank_Computer == 1 and G.Phil_Code == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need the word-key to the binary box.	}
+{	7	}{	Uh...	}{	Uh...	}{	41	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	Those are both excellent questions.	}{	Those are both excellent questions.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	There is an answer to that question, but it's not in my brain.	}
+{	9	}{	Are you saying you want me to leave?	}{	Are you saying you want me to leave?	}{	51	}{	Seduction 6 & (G.Phil_Seduce < 2 and G.Patch_Plus == 1)	}{	}{	}{	}{	}{	}{	}{	}{	I came back here to play doctor.	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	I f-f- ... I feel [mutters as falls asleep]asleep.	}{	I f-f- ... I feel [mutters as falls asleep]asleep.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	G.Phil_Asleep = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	G.Phil_Drop == 0	}{	philDropNote()	}{	}{	}{	}{	}{	}{	}{	}
+{	13	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	G.Phil_Drop == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	Oh... you here for the special sauce?	}{	Oh... you here for the special sauce?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	The password is "grimace".	}{	The password is "grimace".	}{	41	}{	}{	G.Phil_Persuade = 2	}{	}{	}{	}{	}{	}{	}{	The bird flies at midnight.	}
+{	23	}{	What do you think?	}{	What do you think?	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yes. And how special it is!	}
+{	24	}{	Special sauce?	}{	Special sauce?	}{	41	}{	not IsClan(pc,"Malkavian")	}{	G.Phil_Persuade = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	I don't have time for this.	}{	I don't have time for this.	}{	31	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	Okay... stupid question, Phil. She's in the freezer. Today's code is... think, Phil... it's uh... moon landing... uh - 1969.	}{	Okay... stupid question, Phil. She's in the freezer. Today's code is... think, Phil... it's uh... moon landing... uh - 1969.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Phil_Persuade = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Right, thanks.	}{	Right, thanks.	}{	0	}{	G.Phil_Code == 0 and G.Phil_Drop == 0	}{	pc.AwardExperience("Thinned05")	}{	}{	}{	}{	}{	}{	}{	Just like the summer. Farewell.	}
+{	33	}{	1969. Got it.	}{	1969. Got it.	}{	0	}{	not IsClan(pc,"Malkavian") and G.Phil_Code == 0 and G.Phil_Drop == 0	}{	pc.AwardExperience("Thinned05")	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	Right, thanks.	}{	Right, thanks.	}{	0	}{	G.Phil_Code == 1 or G.Phil_Drop == 1	}{	}{	}{	}{	}{	}{	}{	}{	Just like the summer. Farewell.	}
+{	35	}{	1969. Got it.	}{	1969. Got it.	}{	0	}{	not IsClan(pc,"Malkavian") and (G.Phil_Code == 1 or G.Phil_Drop == 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	I think you want the clinic upstairs. Are you sure you're supposed to be here?	}{	I think you want the clinic upstairs. Are you sure you're supposed to be here?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Phil_Start = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	I'm here for the "special sauce". Why else would I be in a blood bank at night?	}{	I'm here for the "special sauce". Why else would I be in a blood bank at night?	}{	31	}{	Persuasion 6 & G.Phil_Persuade == 2	}{	}{	}{	}{	}{	}{	}{	}{	I'm here for that sauce most special.	}
+{	43	}{	You're getting sleepy....	}{	You're getting sleepy....	}{	11	}{	Dominate 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	You're getting sleepy....	}{	You're getting sleepy....	}{	11	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	Are you saying you want me to leave?	}{	Are you saying you want me to leave?	}{	51	}{	Seduction 6 & ( not IsMale(pc) and G.Phil_Seduce < 2 and G.Patch_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	I came back here to play doctor.	}
+{	46	}{	I want the passcode to the freezer.	}{	I want the passcode to the freezer.	}{	71	}{	G.Bank_Computer == 1	}{	}{	}{	}{	}{	}{	}{	}{	I need the word-key to the binary box.	}
+{	47	}{	Maybe not. Excuse me.	}{	Maybe not. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	48	}{	No, I guess not. And now I have to make sure you don't tell anyone else.	}{	No, I guess not. And now I have to make sure you don't tell anyone else.	}{	0	}{	}{	npc.SetRelationship("player D_FR 5")	}{	}{	}{	}{	}{	}{	}{	I am, but you are not. Prepare for final sleep, blood-lackey.	}
+{	49	}{	Are you saying you want me to leave?	}{	Are you saying you want me to leave?	}{	51	}{	Seduction 6 & (G.Phil_Seduce < 2 and G.Patch_Plus == 1)	}{	}{	}{	}{	}{	}{	}{	}{	I came back here to play doctor.	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Well, I- um... [to self]alright, Phil, be cool.... Um, I don't know if you're supposed to be here... down here... yeah.	}{	Well, I- um... [to self]alright, Phil, be cool.... Um, I don't know if you're supposed to be here... down here... yeah.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	Do I look like I'd lie to you?	}{	Do I look like I'd lie to you?	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	I just love doing things I'm not supposed to do.	}
+{	53	}{	So what?	}{	So what?	}{	41	}{	}{	G.Phil_Seduce = 2	}{	}{	}{	}{	}{	}{	}{	Grow a backbone, limp little jellyfish.	}
+{	54	}{	My eyes are up here, buddy.	}{	My eyes are up here, buddy.	}{	41	}{	not IsClan(pc,"Malkavian")	}{	G.Phil_Seduce = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	You just want me to turn around, don't you?	}{	You just want me to turn around, don't you?	}{	61	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Are you for real?	}{	Are you for real?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	G.Phil_Seduce = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Why don't you touch me and find out.	}{	Why don't you touch me and find out.	}{	0	}{	G.Phil_Drop == 0	}{	G.Seductive_Feed = 1; philDropNote(); pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	As real as edible underwear.	}
+{	63	}{	Oh, baby, I'm unreal.	}{	Oh, baby, I'm unreal.	}{	0	}{	not IsClan(pc,"Malkavian") and G.Phil_Drop == 0	}{	G.Seductive_Feed = 1; philDropNote(); pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	}
+{	64	}{	Why don't you touch me and find out.	}{	Why don't you touch me and find out.	}{	0	}{	G.Phil_Drop == 1	}{	G.Seductive_Feed = 1; pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	As real as edible underwear.	}
+{	65	}{	Oh, baby, I'm unreal.	}{	Oh, baby, I'm unreal.	}{	0	}{	not IsClan(pc,"Malkavian") and G.Phil_Drop == 1	}{	G.Seductive_Feed = 1; pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Oh boy, uh... I can't give that out. You're gonna have to leave.	}{	Oh boy, uh... I can't give that out. You're gonna have to leave.	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	Not without the passcode, which I'd rather not beat out of you.	}{	Not without the passcode, which I'd rather not beat out of you.	}{	81	}{	Intimidate 5	}{	}{	}{	}{	}{	}{	}{	}{	Give it to me, or I'll dig it out of your gray matter with my teeth.	}
+{	73	}{	You're getting sleepy....	}{	You're getting sleepy....	}{	11	}{	Dominate 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	You're getting sleepy....	}{	You're getting sleepy....	}{	11	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	Are you saying you want me to leave?	}{	Are you saying you want me to leave?	}{	51	}{	Seduction 6 & ( not IsMale(pc) and G.Phil_Seduce < 2 and G.Patch_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	I came back here to play doctor.	}
+{	76	}{	If you don't know, you shouldn't be asking.	}{	If you don't know, you shouldn't be asking.	}{	21	}{	Persuasion 4 & G.Phil_Persuade == 0	}{	}{	}{	}{	}{	}{	}{	}{	My reasons are solid and secret.	}
+{	77	}{	Fine. But I just may be back.	}{	Fine. But I just may be back.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will cast my shadow elsewhere. Farewell.	}
+{	78	}{	Now that you've seen me, I can't let you live.	}{	Now that you've seen me, I can't let you live.	}{	0	}{	}{	npc.SetRelationship("player D_FR 5")	}{	}{	}{	}{	}{	}{	}{	I'm going to make a meal of your inner liquids, male nurse.	}
+{	79	}{	Are you saying you want me to leave?	}{	Are you saying you want me to leave?	}{	51	}{	Seduction 6 & (G.Phil_Seduce < 2 and G.Patch_Plus == 1)	}{	}{	}{	}{	}{	}{	}{	}{	I came back here to play doctor.	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Take it, take it! O-oh... boy, Phil, you did it now - I dropped it! I - uh... sorry![flees]	}{	Take it, take it! O-oh... boy, Phil, you did it now - I dropped it! I - uh... sorry![flees]	}{	#	}{	npc.SetDisposition("Fear", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	G.Phil_Drop == 0	}{	philDropNote(); npc.SetRelationship("player D_FR 5")	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	83	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	G.Phil_Drop == 1	}{	npc.SetRelationship("player D_FR 5")	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	It's 1969... that's all I know.	}{	It's 1969... that's all I know.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	93	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	103	}{	(Starting Condition)	}{	}{	91	}{	G.Phil_Persuade == 1 or G.Phil_Drop == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	(Starting Condition)	}{	}{	41	}{	G.Phil_Start == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

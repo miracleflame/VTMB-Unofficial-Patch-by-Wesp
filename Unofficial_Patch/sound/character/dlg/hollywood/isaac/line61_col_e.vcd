@@ -1,0 +1,47 @@
+// Choreo version 1
+actor "Isaac"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 5.688000
+      param "character/dlg/hollywood/isaac/line61_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 0.164000 0.284000
+      param "0.300"
+    }
+    event silence "Silence"
+    {
+      time 3.992000 4.454000
+      param "0.550"
+    }
+    event silence "Silence"
+    {
+      time 2.840000 5.688000
+      param "0.900"
+    }
+    event loud "Loud"
+    {
+      time 0.888000 1.640000
+      param "0.120"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

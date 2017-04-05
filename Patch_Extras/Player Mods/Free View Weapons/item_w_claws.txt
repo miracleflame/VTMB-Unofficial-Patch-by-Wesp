@@ -1,0 +1,148 @@
+// Claws
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"	"models/weapons/w_null.mdl"
+	"playermodel"	"models/weapons/w_null.mdl"
+	"wieldmodel_f"	"models/weapons/claw/wield/w_f_claws.mdl"
+	"wieldmodel_m"	"models/weapons/claw/wield/w_m_claws.mdl"
+	"infomodel"		"models/weapons/claws/info/i_claws.mdl"	// added by wesp
+	"anim_prefix"	"claw"
+
+	"impact_snd_group"	"fist"
+
+	"printname"		"Claws"	// added by wesp
+	"description"	"Deadly vampiric claws."	// added by wesp
+
+	"bucket"		"0"
+	"bucket_position"	"0"
+
+	"camera_class"		"noswitch"	// changed by wesp
+	"weight"		"10"
+	"item_flags"	"0"
+	"item_type"	"weapon_melee hidden"	// changed by wesp
+	"item_worth"	"0"
+	"sound_group"	"Claws"
+	"equip_mask"	"ClawedForm"
+
+	"is_visible_in_hud"	"1"	// changed by wesp
+	"is_droppable"		"0"	// added by wesp
+	"BitFlag_CantBeLast"	"1"
+	"permanent_inventory"	"1"	// added by wesp
+	"knockback_chance"	"0.1"
+
+	// Sounds...
+	SoundData
+	{
+		"swish"
+		{
+			"sound1"	"Weapons/Melee/Claws/Swish_1.wav"
+			"sound2"	"Weapons/Melee/Claws/Swish_2.wav"
+			"sound3"	"Weapons/Melee/Claws/Swish_3.wav"
+		}
+		"pickup"
+		{
+			"sound1"	"Weapons\Melee\Claws\Deploy.wav"
+		}
+	}
+
+
+	Activation
+	{
+		"Tag"			"Primary"
+
+		"Type"		"Attack"
+		"Ammo_Type"	"None"
+		"Ammo_Cost"	"0"
+		"Botch_Table"	"Fists_Claws_Bite"
+		"Attack_Rate"	"0.5"
+		"Range"		"1"	// changed by wesp
+		"CriminalLevel"	"0"
+
+		"SkillRequirement"	"1"		// min. skill requirement used in dmg calculations
+		"BaseLethality"		"8"		// base lethality used in dmg calculations
+		"Dmg"			"2 Aggravated Close_Combat_Brawl DMG_SUPERCLAWBITE"
+
+
+		// Sounds...
+		SoundData
+		{
+			"attack"
+			{
+				"sound1"	"Weapons/Melee/Claws/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Claws/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Claws/Swish_3.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Melee/Claws/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Claws/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Claws/Swish_3.wav"
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Melee/Claws/Deploy.wav"
+			}
+			"put_away"
+			{
+				"sound1"	"Weapons/Melee/Claws/Put_Away.wav"
+			}
+			"fidget"
+			{
+				"sound1"	"Weapons/Melee/Claws/Fidget.wav"
+			}
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Melee/Claws_sel"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Melee/Claws"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"crosshair"
+		{
+			"640"
+			{
+				"file"		"hud/crosshairs/unarmed"
+				"x"			"0"
+				"y"			"0"
+				"width"		"16"
+				"height"	"16"
+			}
+		}
+		"crosshair2"
+		{
+			"640"
+			{
+				"file"		"hud/crosshairs/unarmed_lit"
+				"x"			"0"
+				"y"			"0"
+				"width"		"16"
+				"height"	"16"
+			}
+		}
+	}
+}

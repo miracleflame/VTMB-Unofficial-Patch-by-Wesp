@@ -1,0 +1,57 @@
+// Choreo version 1
+actor "Ji"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 3.773243
+      param "character/dlg/chinatown/ji/line15_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 1.500000 1.880000
+      param "0.380"
+    }
+    event loud "Loud"
+    {
+      time 0.220000 0.330000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 0.600000 0.730000
+      param "0.130"
+    }
+    event loud "Loud"
+    {
+      time 1.020000 1.130000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 3.080000 3.190000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 3.290000 3.400000
+      param "0.110"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

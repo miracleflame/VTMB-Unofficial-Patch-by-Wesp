@@ -1,0 +1,208 @@
+TerminalDefinition
+{
+	"screen saver"		"Hollywood Celebrity Database"		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Hollywood Celebrity Database"  
+		"line1"		"Begin Your Search"
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+	SubDir
+	{
+		"name"			"A-F"
+		"password"		""
+		"description"		"Fame at your fingertips!"
+
+		Function
+		{
+			"name"		"Alonzo, Alfredo"
+			"description"	"Alfredo Alonzo"
+			"runtext"	"Hunky action star of syndicated TV detective show \"Beef Bartlow\". Now serves up sandwiches named after his character at Jeremy's Famous Deli in nearby Beverly Hills."
+		}
+
+		Function
+		{
+			"name"		"Amore, Sapphy"
+			"description"	"Sapphy Amore"
+			"runtext"	"A former dancer at the local Vesuvius club, Sapphy is one of the few active adult film stars who also occasionally appears in mainstream media. Known to drop in from time to time at the club where she made her name."
+		}
+
+		Function
+		{
+			"name"		"Blingo"
+			"description"	"Blingo"
+			"runtext"	"Rap superstar and entrepreneur best known for his platinum albums, \"I69 - Blingo!\" and \"Weed Metaphor\", Blingo owns several sweat shops in the area that turn out urban wear for his clothing line \"All Up On Ya\"."
+		}
+
+		Function
+		{
+			"name"		"Captain Bananas"
+			"description"	"Captain Bananas"
+			"runtext"	"Known as the Olivier of chimp actors, Captain Bananas began his career as Trent Taylor's sidekick in the \"C.I.Ape\" film series. Now stars in the popular TV drama \"Ape Detective\". Part-owner in Hollywood hotspot \"Fling\"."
+		}
+	}
+
+	SubDir
+	{
+		"name"			"G-M"				// This is what is displayed as the name of this menu, and what the player must type to enter the menu (128 characters)
+		"password"		""				// password required to run commands in this menu (16 characters)
+		"description"		"Fame at your fingertips!" 	// This is printed each time the user enters this menu (128 characters)
+
+		Function
+		{
+			"name"		"Golden, Gary"
+			"description"	"Gary Golden"
+			"runtext"	"\"Gorgeous\" Gary Golden was the star of such 30's classics as \"Tap Hotel\" and \"Singing Honeymooners\". He later became a popular dramatic character actor in films such as \"Skies of Nevada\". Shortly after his last film in 1960, Golden disappeared and was legally declared dead in 1965."
+		}
+
+		Function
+		{
+			"name"		"Imalia"
+			"description"	"Imalia"
+			"runtext"	"Model famous for her racy covers and high lifestyle, Imalia claimed residence in Hollywood for several years. Tragically, her career was cut short in its prime. Her car was found wrecked at the base of the Hollywood Hills, her remains burned beyond recognition."
+		}
+
+		Function
+		{
+			"name"		"Jerkass, Johnny"
+			"description"	"Johnny Jerkass"
+			"runtext"	"Johnny Jerkass, host of popular prank show \"Psyche!\" films most of his show on the streets of Hollywood. Famous pranks filmed on this very street were the \"wife hit by bus\", the \"stripper is really a dude\", and \"that's not really beer\"."
+		}
+
+		Function
+		{
+			"name"		"Kross, Natalia"
+			"description"	"Natalia Kross"
+			"runtext"	"Superstar of the late 50s to late 60s, known for her class and natural beauty. In 1968, Kross was brutally murdered at her house in the Hollywood Hills. She is buried in the Hollywood Forever Cemetery."
+		}
+
+		Function
+		{
+			"name"		"Lungfish, Zed"
+			"description"	"Zed Lungfish"
+			"runtext"	"The Lungfish, infamous for his onstage debauchery during his concerts, owns and operates the Crematorium here in Hollywood."
+		}
+	}
+
+	SubDir
+	{
+		"name"			"N-R"
+		"password"		""
+		"description"		"Fame at your fingertips!" 
+
+		Function
+		{
+			"name"		"Nivbed"
+			"description"	"Nivbed"
+			"runtext"	"If you want to spot this artist, try West Hollywood, but approach with caution - he's easily provoked to dangerous levels of sass."
+		}
+
+		Function
+		{
+			"name"		"Openheimer, Jason"
+			"description"	"Jason Openheimer"
+			"runtext"	"Producer of such films as \"Guy Fawkes Day\", \"Explosion Every Sixty Seconds\", and \"Boston Harbor\". Gets his hair done at local salon \"Jump Cuts\" and has been spotted buying music at local record store \"Sappy Ballads\"."
+		}
+
+		Function
+		{
+			"name"		"Revolta, Jim"
+			"description"	"Jim Revolta"
+			"runtext"	"Removed from database at request of Church of Solicitology."
+		}
+
+		Function
+		{
+			"name"		"Rivers, Ash"
+			"description"	"Ash Rivers"
+			"runtext"	"After his breakout performance in the film \"Negative Zero\", Rivers garnered huge critical and commercial success in three more films before a shocking early retirement. Rivers spends most of his time these days managing his club, the Asp Hole, found right here in the heart of Hollywood."
+		"dependency"	"G.Story_State < 65"	// added by wesp
+		}
+
+		Function
+		{
+			"name"		"Rivers, Ash"
+			"description"	"Ash Rivers"
+			"runtext"	"After his breakout performance in the film \"Negative Zero\", Rivers garnered huge critical and commercial success in three more films before a shocking early retirement. Rivers spend most of his time managing his club, the Asp Hole, until he was staked to death right there by a mad man."
+		"dependency"	"G.Ash_Leave == 0 and G.Story_State >= 65"	// added by wesp
+		}
+
+		Function
+		{
+			"name"		"Rivers, Ash"
+			"description"	"Ash Rivers"
+			"runtext"	"After his breakout performance in the film \"Negative Zero\", Rivers garnered huge critical and commercial success in three more films before a shocking early retirement. Rivers spend most of his time managing his club, the Asp Hole, until he was staked to death right there by a mad man."
+		"dependency"	"G.Ash_Switch == 2 and G.Story_State >= 65"	// added by wesp
+		}
+
+		Function
+		{
+			"name"		"Rivers, Ash"
+			"description"	"Ash Rivers"
+			"runtext"	"After his breakout performance in the film \"Negative Zero\", Rivers garnered huge critical and commercial success in three more films before a shocking early retirement. Rivers spend most of his time managing his club, the Asp Hole, until he mysteriously disappeared a short time ago."
+		"dependency"	"G.Ash_Leave == 1 and G.Story_State >= 65"	// added by wesp
+		}
+
+	}
+
+	SubDir
+	{
+		"name"			"S-Z"
+		"password"		""
+		"description"		"Fame at your fingertips!" 
+
+		Function
+		{
+			"name"		"Sammy, Frankie"
+			"description"	"Frankie Sammy"
+			"runtext"	"Wisecracking star of 70s TV show \"What's the Word?\", Sammy was found bludgeoned to death at the local Luckee Star two years after his popular show was cancelled."
+		}
+
+		Function
+		{
+			"name"		"Sessions, Tawni"
+			"description"	"Tawni Sessions"
+			"runtext"	"Ubermodel Tawni Sessions has an apartment right here in Hollywood, and can often be found window-shopping in Beverly Hills."
+		"dependency"	"G.Imalia_Quest < 4"	// added by wesp	
+		}
+
+		Function
+		{
+			"name"		"Sessions, Tawni"
+			"description"	"Tawni Sessions"
+			"runtext"	"Ubermodel Tawni Sessions had an apartment right here in Hollywood, and could often be found window-shopping in Beverly Hills until she killed herself."
+		"dependency"	"G.Imalia_Quest == 4"	// added by wesp
+		}
+
+		Function
+		{
+			"name"		"Sessions, Tawni"
+			"description"	"Tawni Sessions"
+			"runtext"	"Ubermodel Tawni Sessions had an apartment right here in Hollywood, and could often be found window-shopping in Beverly Hills until she was killed by a maniac."
+		"dependency"	"G.Imalia_Quest == 5"	// added by wesp
+		}
+
+		Function
+		{
+			"name"		"Swan, Ginger"
+			"description"	"Ginger Swan"
+			"runtext"	"Swan, a name synonymous with beauty and glamour to this day, was a great celebrity of the late forties and early fifties. Her credits included such movies as \"Gilded Hummingbirds\" and \"When No Means Yes\". After her passing in 1954, she was interred in the Hollywood Forever Cemetery mausoleum."	// changed by wesp
+			"runscript"	"OnGingerSwanEntry()"
+		}
+
+		Function
+		{
+			"name"		"Tang, Margaret"
+			"description"	"Margaret Tang"
+			"runtext"	"The most in-demand voice director in town. Margaret is known for coaxing brilliant performances (and sometimes tears) out of her actors. She is currently working in Hollywood on several A-list titles, including \"The Animated Adventures of Fowl Mouth the Friggin' Chicken\" and \"Frankenstein: Breadlust\"."	// changed by wesp
+		}
+	}
+}

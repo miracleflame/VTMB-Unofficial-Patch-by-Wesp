@@ -1,0 +1,99 @@
+TerminalDefinition
+{
+	"screen saver"		"The adventures of Monacles!"		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Empire Hotel"
+		"line1"		"Suite Registration and Services"
+
+	}
+
+	SubDir
+	{
+		"name"			"suites"
+		"password"		"wealth"
+		"description"		"Suite availability"
+		
+		Function
+		{
+			"name"		"Albany Suite"
+			"description"	"Available"
+			"runtext"	"The Albany Suite (1st floor) is AVAILABLE. Next reservation: SUNDAY"		// changed by wesp
+		}
+		
+		Function	// added by wesp
+		{
+			"name"		"Queens Suite"
+			"description"	"Occupied"
+			"runtext"	"The Queens Suite (2nd floor) is OCCUPIED. Guest: Anders Johansen. Booked until: ON NOTICE"
+		}
+
+		Function
+		{
+			"name"		"Manhattan Suite"
+			"description"	"AVAILABLE"
+			"runtext"	"The Manhattan Suite (3rd floor) is AVAILABLE. Next Reservation: MONDAY"	// changed by wesp
+		}
+
+		Function
+		{
+			"name"		"Ithaca Suite"
+			"description"	"Occupied"
+			"runtext"	"The Ithaca Suite (4th floor) is OCCUPIED. Guest: Ashley Jones. Booked until: TOMORROW"		// changed by wesp
+		}
+
+
+		Function
+		{
+			"name"		"Brooklyn Suite"
+			"description"	"Occupied"
+			"runtext"	"The Brooklyn Suite (5th floor) is OCCUPIED. Guest: Jezebel Locke. Booked until: NEXT MONTH"	// changed by wesp
+		"runscript"	"cardPrinterEnablePlus()"
+		}
+
+		Function
+		{
+			"name"		"Buffalo Suite"
+			"description"	"Occupied"
+			"runtext"	"The Buffalo Suite (6th floor) is OCCUPIED. Guest: Boris Chekhov. Booked until: INDEFINITELY"	// changed by wesp
+		}
+	}
+
+	SubDir
+	{
+		"name"			"Guest Logs"
+		"password"		"power"
+		"description"		"Current Transaction History"
+		
+		Function
+		{
+			"name"		"Checkov, B"
+			"description"	"Transactions"
+			"runtext"	"PPV: \"Planet La Femme\": $10. Steak and Lobster: $80."
+		}
+
+		Function	// added by wesp
+		{
+			"name"		"Johansen, A"
+			"description"	"Transactions"
+			"runtext"	"None"
+		}
+		
+		Function
+		{
+			"name"		"Jones, A"
+			"description"	"Transactions"
+			"runtext"	"Bottle of Champ de Châtré: $290"
+		}
+
+		Function
+		{
+			"name"		"Locke, J"
+			"description"	"Transactions"
+			"runtext"	"None"
+		}
+	}
+}

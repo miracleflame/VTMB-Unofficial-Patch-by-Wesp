@@ -1,0 +1,38 @@
+// Choreo version 1
+actor "Pisha"
+{
+  channel "SFX"	// added by wesp
+  {
+    event speak "SFX"
+    {
+      time 0.8 4.0
+      param "character\monster\tc_runner\vomit_end.wav"
+      fixedlength
+    }
+  }
+  channel "Anim"
+  {
+    event sequence "Pisha_Feed"
+    {
+      time 0.000000 4.000000
+      param "entire_scene"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+actor "Corpse"
+{
+  channel "Anim"
+  {
+    event sequence "Pisha_feed"
+    {
+      time 0.000000 4.000000
+      param "entire_scene"
+    }
+  }
+  bonerename "Bip02" "Bip01"
+}
+
+fps 60
+snap off

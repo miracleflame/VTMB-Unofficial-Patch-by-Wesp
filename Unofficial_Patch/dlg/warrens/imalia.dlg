@@ -1,0 +1,429 @@
+{	1	}{	Bitch! I can't believe she got the cover of Glamorella this month!	}{	Bitch! I can't believe she got the cover of Glamorella this month!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Imalia_Talked = 1; G.No_Idle = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	What? What are you talking about?	}{	What? What are you talking about?	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your words are wobbly.	}
+{	3	}{	Who got the cover of what?	}{	Who got the cover of what?	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	Glamour fades, bitterness petrifies.	}
+{	4	}{	Sorry... maybe I came at a bad time.	}{	Sorry... maybe I came at a bad time.	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	Shall I leave you to lament?	}
+{	5	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	I mean, just look at her! Too fat, big teeth, and her complexion! Does she wash her face with a cheese grater?	}{	I mean, just look at her! Too fat, big teeth, and her complexion! Does she wash her face with a cheese grater?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	Slow down, cowgirl. Who exactly are we talking about here?	}{	Slow down, cowgirl. Who exactly are we talking about here?	}{	21	}{	}{	ImaliaTurn()	}{	}{	}{	}{	}{	}{	}{	Who is this cheese queen?	}
+{	13	}{	Wow. I didn't know vampires had "that time of the month".	}{	Wow. I didn't know vampires had "that time of the month".	}{	21	}{	}{	ImaliaTurn()	}{	}{	}{	}{	}{	}{	}{	Your monthly curse rears its ugly head.	}
+{	14	}{	Um... I'm not sure you should be talking about anyone's complexion.	}{	Um... I'm not sure you should be talking about anyone's complexion.	}{	21	}{	}{	ImaliaTurn()	}{	}{	}{	}{	}{	}{	}{	Complexion seems not your close companion.	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	I mean, like anyone ever knew who Tawni Sessions was before I left the scene. She'd still be a fluff girl at Vivisexion, making ten bucks a stiffy if I was still around. Arrgggh!	}{	I mean, like anyone ever knew who Tawni Sessions was before I left the scene. She'd still be a fluff girl at Vivisexion, making ten bucks a stiffy if I was still around. Arrgggh!	}{	#	}{	}{	Whisper("Crying")	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	Who the hell is Tawni Sessions?	}{	Who the hell is Tawni Sessions?	}{	31	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	23	}{	And who exactly are you?	}{	And who exactly are you?	}{	51	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	Often I enjoy a fluffing with my vivisections.	}{	Often I enjoy a fluffing with my vivisections.	}{	291	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	Tawni Sessions is a wanna-be face-girl with no talent whatsoever and scabby little knees. Do you know she got Model of the Year? Before I got here, she would have had a hard time making the catalog for "Jacque Penney".	}{	Tawni Sessions is a wanna-be face-girl with no talent whatsoever and scabby little knees. Do you know she got Model of the Year? Before I got here, she would have had a hard time making the catalog for "Jacque Penney".	}{	#	}{	npc.SetDisposition("Angry", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	That's a good one. Uh, who are you, by the way?	}{	That's a good one. Uh, who are you, by the way?	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	And who might you be?	}
+{	33	}{	Oh! THAT Tawni Sessions. She's so hot right now.	}{	Oh! THAT Tawni Sessions. She's so hot right now.	}{	41	}{	IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	What? You've got to be kidding me! She is soooo Katie Smith before the nose job. Uggh. I want to peel her face off with a nail file.	}{	What? You've got to be kidding me! She is soooo Katie Smith before the nose job. Uggh. I want to peel her face off with a nail file.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	I was kidding. Why don't you tell me who you are.	}{	I was kidding. Why don't you tell me who you are.	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	43	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Oh, right. You probably don't recognize me with this whole Texas Chainsaw Massacre thing I've got goin' on here. My name is... [dramatically]Imalia.	}{	Oh, right. You probably don't recognize me with this whole Texas Chainsaw Massacre thing I've got goin' on here. My name is... [dramatically]Imalia.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	Hey, Imalia. How come you hate Tawni Sessions so much?	}{	Hey, Imalia. How come you hate Tawni Sessions so much?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why this terrible hatred of Tawni?	}
+{	53	}{	Just Imalia? What's your last name?	}{	Just Imalia? What's your last name?	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	Do you have a name after your name?	}
+{	54	}{	I'm looking for Gary. Do you know where he is?	}{	I'm looking for Gary. Do you know where he is?	}{	191	}{	G.Story_State < 45	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	Nice to meet you, but I've got places to go. See ya.	}{	Nice to meet you, but I've got places to go. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I assume a state of invisibility. Farewell.	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Last name? God, that's so blue-collar it makes me want to puke. I don't have a last name. Imalia is a look, an attitude, a state of being.	}{	Last name? God, that's so blue-collar it makes me want to puke. I don't have a last name. Imalia is a look, an attitude, a state of being.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Uh, whatever. What's your beef with Tawni Sessions?	}{	Uh, whatever. What's your beef with Tawni Sessions?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why this terrible hatred of Tawni?	}
+{	63	}{	Looks more like a state of personal horror.	}{	Looks more like a state of personal horror.	}{	341	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your current state is sickening. Talk to me of this Tawni.	}
+{	64	}{	My state of being is absent from here. Later.	}{	My state of being is absent from here. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I assume a state of invisibility. Farewell.	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Before this neat little makeover, I used to be a model. I was all over the place... TV, magazines, billboards. I mean, I was hot - super hot - and I knew it. Which is why Gary decided to invite me into his freaky little family.	}{	Before this neat little makeover, I used to be a model. I was all over the place... TV, magazines, billboards. I mean, I was hot - super hot - and I knew it. Which is why Gary decided to invite me into his freaky little family.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	Well, why not just kill Tawni? It'd probably make you feel better.	}{	Well, why not just kill Tawni? It'd probably make you feel better.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why not just kill this fluffy little kitten?	}
+{	73	}{	So you hate Tawni because she's the next big thing, and you're, well, uh...	}{	So you hate Tawni because she's the next big thing, and you're, well, uh...	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tawni is a cracked mirror, reflecting the shards of your former life.	}
+{	74	}{	Maybe you should just let it go. You'd probably be happier.	}{	Maybe you should just let it go. You'd probably be happier.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	Cut free this burden, and let your sickened spirit soar.	}
+{	75	}{	What do you mean, Gary "invited" you?	}{	What do you mean, Gary "invited" you?	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of this illicit invitation.	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Spare me your head-shrink bullshit. You've got no idea what I'm goin' through here. I mean, I can't sit here and let the world think she's better than me. I've got to do somethin'.	}{	Spare me your head-shrink bullshit. You've got no idea what I'm goin' through here. I mean, I can't sit here and let the world think she's better than me. I've got to do somethin'.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	Fine. Just off her and get it over with.	}{	Fine. Just off her and get it over with.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why not just kill this fluffy little kitten?	}
+{	83	}{	In case you didn't notice, I've got some complexion problems of my own.	}{	In case you didn't notice, I've got some complexion problems of my own.	}{	86	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	84	}{	Have you tried exfoliating?	}{	Have you tried exfoliating?	}{	341	}{	G.Imalia_Pissed < 1 and G.Imalia_Gotmag == 0 and G.Imalia_Quest < 2	}{	}{	}{	}{	}{	}{	}{	}{	Exfoliation might be your net endeavor.	}
+{	85	}{	Have you thought about shock therapy?	}{	Have you thought about shock therapy?	}{	351	}{	G.Imalia_Pissed == 1 and G.Imalia_Gotmag == 0 and G.Imalia_Quest < 2	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps a session of shock therapy?	}
+{	86	}{	Okay, maybe you can kind of understand on a certain level. But not really on the I-was-an-international-phenomenon-and-now-I-look-like-the-crypt-keeper level. No offense, but it's a little different.	}{	Okay, maybe you can kind of understand on a certain level. But not really on the I-was-an-international-phenomenon-and-now-I-look-like-the-crypt-keeper level. No offense, but it's a little different.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	Whatever. Just kill Tawni and be done with it.	}{	Whatever. Just kill Tawni and be done with it.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why not just kill this fluffy little kitten?	}
+{	88	}{	I'm seeing this on a you're-a-shallow-bitter-bitch level.	}{	I'm seeing this on a you're-a-shallow-bitter-bitch level.	}{	341	}{	G.Imalia_Pissed < 1 and G.Imalia_Gotmag == 0 and G.Imalia_Quest < 2	}{	}{	}{	}{	}{	}{	}{	}{	Don't choke on that bitter bile.	}
+{	89	}{	Man, I'm surprised that chip hasn't dislocated your shoulder.	}{	Man, I'm surprised that chip hasn't dislocated your shoulder.	}{	351	}{	G.Imalia_Pissed == 1 and G.Imalia_Gotmag == 0 and G.Imalia_Quest < 2	}{	}{	}{	}{	}{	}{	}{	}{	Your shoulder seems strained under that chunky chip.	}
+{	90	}{	This place is beat. I'm outta here.	}{	This place is beat. I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your hyphenations are horrendous. Farewell.	}
+{	91	}{	I don't wanna kill her. That's too quick and painless. I wanna ruin her name in the business for good. I wanna dig up somethin' on her that smells so bad even the tabloids will think twice about printing it.	}{	I don't wanna kill her. That's too quick and painless. I wanna ruin her name in the business for good. I wanna dig up somethin' on her that smells so bad even the tabloids will think twice about printing it.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Sounds cool. So what's stopping you?	}{	Sounds cool. So what's stopping you?	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	What is stopping this tabloidian tenacity?	}
+{	93	}{	Can I ask you a few more questions?	}{	Can I ask you a few more questions?	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Might I mine your gray matter?	}
+{	94	}{	Whoa! Your bitterness is bringing me down.	}{	Whoa! Your bitterness is bringing me down.	}{	341	}{	G.Imalia_Pissed < 1 and G.Imalia_Gotmag == 0 and G.Imalia_Quest < 2	}{	}{	}{	}{	}{	}{	}{	}{	Bitterness is a beverage best enjoyed alone.	}
+{	95	}{	Would it smell as bad as that rotting flesh on your face?	}{	Would it smell as bad as that rotting flesh on your face?	}{	351	}{	G.Imalia_Pissed == 1 and G.Imalia_Gotmag == 0 and G.Imalia_Quest < 2	}{	}{	}{	}{	}{	}{	}{	}{	Bad smells seem your new speciality!	}
+{	96	}{	I've heard enough of this story. Later.	}{	I've heard enough of this story. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	Gary says that everyone has to lay low until this thing with the prince cools down. Until then, I'm stuck here watchin' the whole world kiss Tawni's big, fat ass.	}{	Gary says that everyone has to lay low until this thing with the prince cools down. Until then, I'm stuck here watchin' the whole world kiss Tawni's big, fat ass.	}{	#	}{	}{	G.Imalia_KillTawni = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	Hmmm. Maybe I could help you out. What would I need to do?	}{	Hmmm. Maybe I could help you out. What would I need to do?	}{	121	}{	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps I might extend a helping hand.	}
+{	103	}{	Too bad. See ya.	}{	Too bad. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	113	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	I have some wireless cameras that I need you to set up in her apartment. One in her bedroom, one in her bathroom, and one in her kitchen. I'm sure you'll see good places to hide them once you're there.	}{	I have some wireless cameras that I need you to set up in her apartment. One in her bedroom, one in her bathroom, and one in her kitchen. I'm sure you'll see good places to hide them once you're there.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	What else?	}{	What else?	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	What more?	}
+{	123	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	Once the cameras are in place, you'll need to hook them up to the network. Log in to her computer using the password "cleopatra". From there, you'll be able to activate the cameras.	}{	Once the cameras are in place, you'll need to hook them up to the network. Log in to her computer using the password "cleopatra". From there, you'll be able to activate the cameras.	}{	#	}{	}{	G.Imalia_Quest = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	What's in it for me?	}{	What's in it for me?	}{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	And my reward for this wretched little recon?	}
+{	133	}{	What do you think you're going to see?	}{	What do you think you're going to see?	}{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	What do you hope to capture on these lascivious lenses?	}
+{	134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	Who cares? Sex, drugs, bad hygiene... everyone's gets a little dirty when the doors close. Tawni's no different, and probably worse than most.	}{	Who cares? Sex, drugs, bad hygiene... everyone's gets a little dirty when the doors close. Tawni's no different, and probably worse than most.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	What's in it for me?	}{	What's in it for me?	}{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	And my reward for this wretched little recon?	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	You will? Great. Here are the cameras. She lives in Hollywood, an apartment building right across from the Luckee Star motel. I had someone here dig up a spare key to her apartment for me. Take that, too.	}{	You will? Great. Here are the cameras. She lives in Hollywood, an apartment building right across from the Luckee Star motel. I had someone here dig up a spare key to her apartment for me. Take that, too.	}{	#	}{	}{	pc.SetQuest("Imalia",1); pc.GiveItem("item_k_tawni_apartment_key"); pc.GiveItem("item_g_wireless_camera_1"); pc.GiveAmmo("item_g_wireless_camera_1",2); G.Imalia_Quest = 2; G.Tawni_Spotted = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	Cool. Can I ask you a few more questions?	}{	Cool. Can I ask you a few more questions?	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Might I mine your gray matter?	}
+{	143	}{	Thanks. I'll take care of it. See ya.	}{	Thanks. I'll take care of it. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
+{	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	Look, I'll definitely make it worth your while if you do it right. But listen... I don't want her dead, I want her to suffer. Get in and get out without her knowing about it. Understand?	}{	Look, I'll definitely make it worth your while if you do it right. But listen... I don't want her dead, I want her to suffer. Get in and get out without her knowing about it. Understand?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	Fine. I'll do it.	}{	Fine. I'll do it.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	This deed I will do.	}
+{	148	}{	I'll think about it. Can I ask you a few more questions?	}{	I'll think about it. Can I ask you a few more questions?	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Might I mine your gray matter?	}
+{	149	}{	I don't know. I'll get back to you. Later.	}{	I don't know. I'll get back to you. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	Hey.	}{	Hey.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	What's up, Imalia. You got a few minutes to talk?	}{	What's up, Imalia. You got a few minutes to talk?	}{	161	}{	G.Imalia_Pissed < 2 and pc.GetQuestState("Guy") < 1	}{	}{	}{	}{	}{	}{	}{	}{	Might I mine your gray matter?	}
+{	153	}{	Hey! What's up, girl?	}{	Hey! What's up, girl?	}{	371	}{	pc.GetQuestState("Guy") == 1 and not pc.HasItem("item_g_guy_magazine")	}{	}{	}{	}{	}{	}{	}{	}{	Greetings, Cleopatra!	}
+{	154	}{	Look... I found the magazine you wanted!	}{	Look... I found the magazine you wanted!	}{	326	}{	pc.GetQuestState("Guy") > 1 and pc.GetQuestState("Guy") < 3 and pc.HasItem("item_g_guy_magazine") and G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	I have your prize, cover girl!	}
+{	155	}{	Look... I found the magazine you wanted!	}{	Look... I found the magazine you wanted!	}{	326	}{	pc.GetQuestState("Guy") > 1 and pc.GetQuestState("Guy") < 3 and pc.HasItem("item_g_guy_magazine") and G.Patch_Plus == 1	}{	pc.AwardExperience("Cover01")	}{	}{	}{	}{	}{	}{	}{	I have your prize, cover girl!	}
+{	156	}{	Later.	}{	Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	Sure. Whatever.	}{	Sure. Whatever.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	Tell me again why you hate Tawni Sessions.	}{	Tell me again why you hate Tawni Sessions.	}{	171	}{	G.Imalia_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	Why this terrible hatred for Tawni?	}
+{	163	}{	Tell me again about what you want to do to Tawni Sessions.	}{	Tell me again about what you want to do to Tawni Sessions.	}{	121	}{	G.Imalia_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	Tell me again of your mischievous machinations.	}
+{	164	}{	I still haven't set up those cameras in Tawni Sessions' place.	}{	I still haven't set up those cameras in Tawni Sessions' place.	}{	181	}{	G.Imalia_Quest == 2	}{	}{	}{	}{	}{	}{	}{	}{	I have yet to plant your picture-takers.	}
+{	165	}{	Tell me about how you came to be here.	}{	Tell me about how you came to be here.	}{	201	}{	G.Imalia_Story == 0	}{	G.Imalia_Story = 1	}{	}{	}{	}{	}{	}{	}{	How came you to our cursed condition?	}
+{	166	}{	I'm looking for Gary. You know where he is?	}{	I'm looking for Gary. You know where he is?	}{	191	}{	G.Story_State < 45	}{	}{	}{	}{	}{	}{	}{	}{	I seek Gary, king of this crypt.	}
+{	167	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	Uh... because she's a bitch with zero talent who the world seems to think has taken MY place as the hottest supermodel of all time. Could I be any more clear?	}{	Uh... because she's a bitch with zero talent who the world seems to think has taken MY place as the hottest supermodel of all time. Could I be any more clear?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	Oh, right. So why not just kill her and get it over with?	}{	Oh, right. So why not just kill her and get it over with?	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why not kill this fluffy little kitten?	}
+{	173	}{	Only if you wore a shirt that said "Ugly, bitter, and proud of it!"	}{	Only if you wore a shirt that said "Ugly, bitter, and proud of it!"	}{	341	}{	G.Imalia_Pissed < 1 and G.Imalia_Gotmag == 0 and G.Imalia_Quest < 2	}{	}{	}{	}{	}{	}{	}{	}{	Self-pity is a solitary sauce.	}
+{	174	}{	Sorry? I couldn't hear you over that little violin.	}{	Sorry? I couldn't hear you over that little violin.	}{	351	}{	G.Imalia_Pissed == 1 and G.Imalia_Gotmag == 0 and G.Imalia_Quest < 2	}{	}{	}{	}{	}{	}{	}{	}{	Have you a hanky for this sorrowful song?	}
+{	175	}{	I doubt it. Could I ask you a few more questions?	}{	I doubt it. Could I ask you a few more questions?	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Might I mine your gray matter?	}
+{	176	}{	Whoa. That's enough for me. See ya.	}{	Whoa. That's enough for me. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your envy hangs like a sickened albatross. Farewell.	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	Well, hurry up! If I see her picture on one more magazine cover, I'm gonna start peeling off my own face.	}{	Well, hurry up! If I see her picture on one more magazine cover, I'm gonna start peeling off my own face.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	I don't want to see that. Can I ask you a few more questions?	}{	I don't want to see that. Can I ask you a few more questions?	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Might I mine your gray matter?	}
+{	183	}{	Wait until I leave, please. See ya.	}{	Wait until I leave, please. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Peel after I depart. Farewell.	}
+{	184	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	185	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	His room is just down the hall. You might be able to find him in there.	}{	His room is just down the hall. You might be able to find him in there.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	Can I ask you a few more questions?	}{	Can I ask you a few more questions?	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Might I mine your gray matter?	}
+{	193	}{	I'll go find him. See ya.	}{	I'll go find him. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I shall seek his shadow. Farewell.	}
+{	194	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	195	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	201	}{	Nosferatu have a sick sense of humor. Sometimes they feel that their victims - namely moi in this particular case - have an overabundance of vanity and need to be taught an important [dripping with sarcasm]"life lesson".	}{	Nosferatu have a sick sense of humor. Sometimes they feel that their victims - namely moi in this particular case - have an overabundance of vanity and need to be taught an important [dripping with sarcasm]"life lesson".	}{	#	}{	}{	G.Imalia_Lifelesson = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	I see. So what happened?	}{	I see. So what happened?	}{	211	}{	}{	}{	}{	}{	}{	}{	}{	}{	And then?	}
+{	203	}{	Let's get back to Tawni Sessions. Why not just ace her?	}{	Let's get back to Tawni Sessions. Why not just ace her?	}{	91	}{	G.Imalia_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	Let us talk more of Tawni.	}
+{	204	}{	Oh. Anyway... can I ask you a few more questions?	}{	Oh. Anyway... can I ask you a few more questions?	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Might I mine your gray matter?	}
+{	205	}{	I hope you've learned it. I'm outta here.	}{	I hope you've learned it. I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My mind has left, my body follows.	}
+{	206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	208	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	211	}{	Well, I had just won Guy magazine's "The Most Ridiculously Hot Chick in the Known Universe" award, and when I came home after the ceremony, lo and behold Gary was sitting there on my couch with a martini in his hand. You fill in the blanks.	}{	Well, I had just won Guy magazine's "The Most Ridiculously Hot Chick in the Known Universe" award, and when I came home after the ceremony, lo and behold Gary was sitting there on my couch with a martini in his hand. You fill in the blanks.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	So... have you learned your "life lesson"?	}{	So... have you learned your "life lesson"?	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	Fate is often a harsh headmaster.	}
+{	213	}{	Let's get back to Tawni Sessions. Why not just smoke her?	}{	Let's get back to Tawni Sessions. Why not just smoke her?	}{	91	}{	G.Imalia_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	Let us trade words about Tawni.	}
+{	214	}{	Right. Can I ask you a few more questions?	}{	Right. Can I ask you a few more questions?	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Might I mine your gray matter?	}
+{	215	}{	Bummer. See ya.	}{	Bummer. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	217	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	221	}{	Yeah. The lesson is, "life is a cold-hearted bitch, so now I get to be one, too." You get that? You need to write it down?	}{	Yeah. The lesson is, "life is a cold-hearted bitch, so now I get to be one, too." You get that? You need to write it down?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	Let's get back to Tawni Sessions. Why not just kill her?	}{	Let's get back to Tawni Sessions. Why not just kill her?	}{	91	}{	G.Imalia_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	Let us trade words about Tawni.	}
+{	223	}{	Loud and clear. Can I ask you a few more questions?	}{	Loud and clear. Can I ask you a few more questions?	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Might I mine your gray matter?	}
+{	224	}{	Write this down... "YOU BETTER GET SOME SKIN CREAM."	}{	Write this down... "YOU BETTER GET SOME SKIN CREAM."	}{	341	}{	G.Imalia_Pissed < 1 and G.Imalia_Gotmag == 0 and G.Imalia_Quest < 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	225	}{	Or, in your case, "Life is a cold-hearted, REPULSIVE bitch...."	}{	Or, in your case, "Life is a cold-hearted, REPULSIVE bitch...."	}{	351	}{	G.Imalia_Pissed == 1 and G.Imalia_Gotmag == 0 and G.Imalia_Quest < 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	226	}{	Bummer. See ya.	}{	Bummer. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains. Farewell.	}
+{	227	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	228	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	231	}{	[Laughs maniacally]Ha ha ha ha! Did you see the papers? She killed herself! Can you believe it? After the story hit the tabloids, she swallowed half a bottle of valium and washed it down with a fifth of gin! It couldn't have been more perfect!	}{	[Laughs maniacally]Ha ha ha ha! Did you see the papers? She killed herself! Can you believe it? After the story hit the tabloids, she swallowed half a bottle of valium and washed it down with a fifth of gin! It couldn't have been more perfect!	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Imalia_Quest = 4; pc.SetQuest("Imalia",5)	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	I tried to be thorough. Now hand over the cash.	}{	I tried to be thorough. Now hand over the cash.	}{	241	}{	Humanity 3 & G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	My hands are blood red. Now where is the green?	}
+{	233	}{	I tried to be thorough. Now hand over the cash.	}{	I tried to be thorough. Now hand over the cash.	}{	241	}{	Humanity 3 & G.Patch_Plus == 1	}{	FindPlayer().HumanityAdd( -1 )	}{	}{	}{	}{	}{	}{	}{	My hands are blood red. Now where is the green?	}
+{	234	}{	You make me sick. Of course, I'll take the money you owe me.	}{	You make me sick. Of course, I'll take the money you owe me.	}{	241	}{	Humanity 3 & not IsClan(pc,"Malkavian") and G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	235	}{	You make me sick. Of course, I'll take the money you owe me.	}{	You make me sick. Of course, I'll take the money you owe me.	}{	241	}{	Humanity 3 & not IsClan(pc,"Malkavian") and G.Patch_Plus == 1	}{	FindPlayer().HumanityAdd( -1 )	}{	}{	}{	}{	}{	}{	}{	}
+{	236	}{	Cheer up, why don't you. Just give me what you owe me.	}{	Cheer up, why don't you. Just give me what you owe me.	}{	241	}{	Humanity -3	}{	}{	}{	}{	}{	}{	}{	}{	Your happiness is a dark stain. Now give me my gold.	}
+{	237	}{	On second thought, I don't want your blood money. See ya.	}{	On second thought, I don't want your blood money. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Keep your thirty pieces of silver. I leave you to your karmic doom.	}
+{	238	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	241	}{	Here... you definitely earned it.	}{	Here... you definitely earned it.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.MoneyAdd( 400 )	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	Thanks. See ya.	}{	Thanks. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Life is the rich and the dead. I leave you.	}
+{	243	}{	You're sicker than I thought. Later.	}{	You're sicker than I thought. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	This money was bought with blood. Farewell.	}
+{	244	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	245	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	246	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	247	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	248	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	250	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	251	}{	You idiot! I told you I didn't want you to kill her! Did you read the papers? They've gone and turned her into some kind of martyr! You ruined everything!	}{	You idiot! I told you I didn't want you to kill her! Did you read the papers? They've gone and turned her into some kind of martyr! You ruined everything!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Imalia_Quest = 5; pc.SetQuest("Imalia",6)	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	253	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	254	}{	But at least she's dead, right? That should be worth something.	}{	But at least she's dead, right? That should be worth something.	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	Her death merits no reward?	}
+{	255	}{	Bummer. See ya.	}{	Bummer. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains. Farewell.	}
+{	256	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	Well... yeah, I guess. It's against my better judgment, but I guess I'll give you a little somethin' for the effort. Take this.	}{	Well... yeah, I guess. It's against my better judgment, but I guess I'll give you a little somethin' for the effort. Take this.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.MoneyAdd( 200 ); G.Imalia_Pissed = 0; G.Imalia_Paid = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	I'll try not to spend it all in one place. See ya.	}{	I'll try not to spend it all in one place. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will savor this turnip sauce. Farewell.	}
+{	263	}{	So maybe we can have a little pow-wow? Can I ask you a few questions?	}{	So maybe we can have a little pow-wow? Can I ask you a few questions?	}{	161	}{	G.Tawni_Dead == 0 and G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	May I now mine your gray matter?	}
+{	264	}{	Thank you very much, it cost me double that!	}{	Thank you very much, it cost me double that!	}{	0	}{	G.Imalia_Gotmag == 1	}{	}{	}{	}{	}{	}{	}{	}{	But I lost more green pieces of paper for this!	}
+{	265	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	268	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	270	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	271	}{	Thanks again for the help.	}{	Thanks again for the help.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	272	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	273	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	274	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	275	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	276	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	277	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	278	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	281	}{	Are you still here?	}{	Are you still here?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	283	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	284	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	285	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	286	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	287	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	288	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	291	}{	What? Oh no. You've got to be kidding. You're a Malkavian? Gary actually lets you guys in here? My day just went from bad to coach class.	}{	What? Oh no. You've got to be kidding. You're a Malkavian? Gary actually lets you guys in here? My day just went from bad to coach class.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	Tell me of this Tawni Sessions.	}{	Tell me of this Tawni Sessions.	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	293	}{	I bow to your greatness, Cleopatra.	}{	I bow to your greatness, Cleopatra.	}{	301	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	294	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	295	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	296	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	297	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	298	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	300	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	301	}{	Cleopatra? Hey, that's my password on my...! How did you...? Whatever. I'm not even gonna ask. The name is Imalia, so I'd appreciate it if you'd use it.	}{	Cleopatra? Hey, that's my password on my...! How did you...? Whatever. I'm not even gonna ask. The name is Imalia, so I'd appreciate it if you'd use it.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	302	}{	Why this terrible hatred for Tawni, great Cleopatra?	}{	Why this terrible hatred for Tawni, great Cleopatra?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	303	}{	I seek Gary, king of this crypt.	}{	I seek Gary, king of this crypt.	}{	191	}{	G.Story_State < 45	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	304	}{	Farewell, your highness.	}{	Farewell, your highness.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	305	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	306	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	307	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	308	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	309	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	310	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	311	}{	You idiot! What were you thinking?!? You break in, you get caught, and then don't even finish her off? Now security is so tight around her that you couldn't even give her a mean look. You should have just killed her!	}{	You idiot! What were you thinking?!? You break in, you get caught, and then don't even finish her off? Now security is so tight around her that you couldn't even give her a mean look. You should have just killed her!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	312	}{	But you told me not to kill her!	}{	But you told me not to kill her!	}{	321	}{	}{	}{	}{	}{	}{	}{	}{	}{	But you said not to scrag her!	}
+{	313	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	314	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	315	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	316	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	317	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	318	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	319	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	320	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	321	}{	Whatever. You're useless! Get out of here. I've got to go find a nail file and start peelin' off my face.	}{	Whatever. You're useless! Get out of here. I've got to go find a nail file and start peelin' off my face.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Imalia_Quest = 5	}{	}{	}{	}{	}{	}{	}{	}
+{	322	}{	Hold on! I found this old "Guy" magazine! You're on the cover!	}{	Hold on! I found this old "Guy" magazine! You're on the cover!	}{	326	}{	pc.HasItem("item_g_guy_magazine") and G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	I found this magazine! Your melon-mounds are on the cover!	}
+{	323	}{	Hold on! I found this old "Guy" magazine! You're on the cover!	}{	Hold on! I found this old "Guy" magazine! You're on the cover!	}{	326	}{	pc.HasItem("item_g_guy_magazine") and G.Patch_Plus == 1	}{	pc.AwardExperience("Cover01")	}{	}{	}{	}{	}{	}{	}{	I found this magazine! Your melon-mounds are on the cover!	}
+{	324	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	not pc.HasItem("item_g_guy_magazine")	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	325	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	326	}{	You did? Oh my god! I can't believe you found it. I've been trying to get a copy of that for years!	}{	You did? Oh my god! I can't believe you found it. I've been trying to get a copy of that for years!	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	pc.SetQuest("Guy",3); pc.RemoveItem("item_g_guy_magazine"); G.Imalia_Gotmag = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	327	}{	C'mon... that's got be worth something!	}{	C'mon... that's got be worth something!	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	Can I get some simoleons for this skin-mag?	}
+{	328	}{	So maybe we can have a little pow-wow? Can I ask you a few questions?	}{	So maybe we can have a little pow-wow? Can I ask you a few questions?	}{	161	}{	G.Imalia_Pissed > 0	}{	G.Imalia_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	May I now mine your gray matter?	}
+{	329	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	330	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	331	}{	You idiot! What were you thinking?!? You break in, kill her boyfriend, and then leave her breathing?!? Now security is so tight around her that you couldn't even give her a mean look. You should have just killed her!	}{	You idiot! What were you thinking?!? You break in, kill her boyfriend, and then leave her breathing?!? Now security is so tight around her that you couldn't even give her a mean look. You should have just killed her!	}{	#	}{	npc.SetDisposition("Anger", 1); pc.SetQuest("Imalia",7)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	332	}{	But you told me not to kill her!	}{	But you told me not to kill her!	}{	321	}{	}{	}{	}{	}{	}{	}{	}{	}{	But you said not to scrag her!	}
+{	333	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	334	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	335	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	336	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	337	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	338	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	339	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	340	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	341	}{	What did you say? Nobody talks that way to me! I'm Imalia! Do you hear me? IMALIA!	}{	What did you say? Nobody talks that way to me! I'm Imalia! Do you hear me? IMALIA!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Imalia_Pissed = G.Imalia_Pissed + 1	}{	}{	}{	}{	}{	}{	}{	}
+{	342	}{	These are jokes! C'mon... let me ask you a few more questions.	}{	These are jokes! C'mon... let me ask you a few more questions.	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	I apoplectically apologize. May I mine more of your gray matter?	}
+{	343	}{	No... you're A-NNOYING.	}{	No... you're A-NNOYING.	}{	381	}{	pc.GetQuestState("Imalia") > 0 and pc.GetQuestState("Imalia") < 5	}{	pc.SetQuest("Imalia",8)	}{	}{	}{	}{	}{	}{	}{	You mean I-GUANA...?	}
+{	344	}{	No... you're A-NNOYING.	}{	No... you're A-NNOYING.	}{	381	}{	pc.GetQuestState("Guy") > 0 and pc.GetQuestState("Guy") < 3	}{	pc.SetQuest("Guy",4)	}{	}{	}{	}{	}{	}{	}{	You mean I-GUANA...?	}
+{	345	}{	No... you're A-NNOYING.	}{	No... you're A-NNOYING.	}{	381	}{	pc.GetQuestState("Imalia") == 0 and pc.GetQuestState("Guy") == 0	}{	}{	}{	}{	}{	}{	}{	}{	You mean I-GUANA...?	}
+{	346	}{	No... you're A-NNOYING.	}{	No... you're A-NNOYING.	}{	381	}{	pc.GetQuestState("Imalia") >= 5 and pc.GetQuestState("Guy") >= 3	}{	}{	}{	}{	}{	}{	}{	}{	You mean I-GUANA...?	}
+{	347	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	348	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	349	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	350	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	351	}{	That's it! As if I have to take this bullshit from some low-life Camarilla gopher-boy. Hit the road, asshole.	}{	That's it! As if I have to take this bullshit from some low-life Camarilla gopher-girl. Hit the road, bitch.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	352	}{	Hold on! I was kidding! Can't you take a joke? Let's keep talking.	}{	Hold on! I was kidding! Can't you take a joke? Let's keep talking.	}{	361	}{	G.Flynn_Dead == 0	}{	}{	}{	}{	}{	}{	}{	}{	These jibes are merely jokes, Cleopatra! Grace me with more words.	}
+{	353	}{	Gladly. By the way... even for a Nosferatu, you're pretty disgusting.	}{	Gladly. By the way... even for a Nosferatu, you're pretty disgusting.	}{	381	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your skin is like a putrid pizza.	}
+{	354	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	355	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	356	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	357	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	358	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	359	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	360	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	361	}{	Hmmm. Okay. You want to get back on my good side? Then don't come back here until you've got last year's copy of "Guy" magazine where I'm on the cover. You know... the one where I was wearing the gum wrapper and the two bottlecaps.	}{	Hmmm. Okay. You want to get back on my good side? Then don't come back here until you've got last year's copy of "Guy" magazine where I'm on the cover. You know... the one where I was wearing the gum wrapper and the two bottlecaps.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.SetQuest("Guy",1); G.Imalia_Guymag = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	362	}{	Fine. I'll find one and bring it back. See ya.	}{	Fine. I'll find one and bring it back. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I shall find this sultry skin-mag! Farewell.	}
+{	363	}{	I'll think about it. Later.	}{	I'll think about it. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps I shall ponder it.	}
+{	364	}{	What, so you can sit around wallowing in self-pity?	}{	What, so you can sit around wallowing in self-pity?	}{	381	}{	}{	pc.SetQuest("Guy",4)	}{	}{	}{	}{	}{	}{	}{	You wallow in self-piteous whinings.	}
+{	365	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	366	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	367	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	368	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	369	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	370	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	371	}{	Until you've got my magazine, you may as well just turn your ass around and go spelunking. Nothin' for you in here.	}{	Until you've got my magazine, you may as well just turn your ass around and go spelunking. Nothin' for you in here.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	372	}{	Wow. That hurts. See ya.	}{	Wow. That hurts. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	373	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	374	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	375	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	376	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	377	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	378	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	379	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	380	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	381	}{	What?!? I want you to get the hell out of here right now and never come back!	}{	What?!? I want you to get the hell out of here right now and never come back!	}{	#	}{	}{	G.Imalia_Pissed = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	382	}{	Say it, don't spray it. See ya.	}{	Say it, don't spray it. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I don't savor the saliva shower. Farewell.	}
+{	383	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	384	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	385	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	386	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	387	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	388	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	389	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	390	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	391	}{	OUT! GET OUT!	}{	OUT! GET OUT!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	392	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	393	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	394	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	395	}{	You want to get on my good side? Then don't come back here until you've got last year's copy of "Guy" magazine where I'm on the cover. You know... the one where I was wearing the gum wrapper and the two bottlecaps.	}{	You want to get on my good side? Then don't come back here until you've got last year's copy of "Guy" magazine where I'm on the cover. You know... the one where I was wearing the gum wrapper and the two bottlecaps.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.SetQuest("Guy",1); G.Imalia_Guymag = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	396	}{	Fine. I'll find one and bring it back. See ya.	}{	Fine. I'll find one and bring it back. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I shall find this sultry skin-mag! Farewell.	}
+{	397	}{	I'll think about it. Later.	}{	I'll think about it. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps I shall ponder it.	}
+{	398	}{	What, so you can sit around wallowing in self-pity?	}{	What, so you can sit around wallowing in self-pity?	}{	381	}{	}{	pc.SetQuest("Guy",4)	}{	}{	}{	}{	}{	}{	}{	You wallow in self-piteous whinings.	}
+{	399	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	400	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	401	}{	Hey, what's up?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	402	}{	Yeah?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	403	}{	What are you doing here?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	404	}{	Get the hell away from me!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	405	}{	Yes.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	406	}{	No way.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	407	}{	Thanks a lot.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	408	}{	What did you just say?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	409	}{	What?!?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	410	}{	I have no fucking idea!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	411	}{	Can't help you with that.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	412	}{	That's cool.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	413	}{	By the way...	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	414	}{	This is for you.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	415	}{	I'll send you an email about it.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	416	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	417	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	418	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	419	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	420	}{	(Starting Condition)	}{	}{	391	}{	G.Imalia_Pissed == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	421	}{	(Starting Condition)	}{	}{	395	}{	G.Imalia_Quest > 3 and G.Imalia_Guymag == 0 and G.Flynn_Dead == 0 and G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	422	}{	(Starting Condition)	}{	}{	281	}{	G.Tawni_Dead == 1 and G.Imalia_Paid == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	423	}{	(Starting Condition)	}{	}{	281	}{	G.Imalia_Quest == 5 and G.Imalia_Gotmag == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	424	}{	(Starting Condition)	}{	}{	271	}{	G.Imalia_Quest == 4 and G.Imalia_Gotmag == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	425	}{	(Starting Condition)	}{	}{	251	}{	G.Tawni_Dead == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	426	}{	(Starting Condition)	}{	}{	331	}{	G.Tawni_Boy_Dead == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	427	}{	(Starting Condition)	}{	}{	311	}{	G.Imalia_Quest > 0 and G.Tawni_Spotted == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	428	}{	(Starting Condition)	}{	}{	231	}{	G.Imalia_Quest == 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	429	}{	(Starting Condition)	}{	}{	151	}{	G.Imalia_Talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

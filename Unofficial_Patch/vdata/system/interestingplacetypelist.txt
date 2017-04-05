@@ -1,0 +1,1342 @@
+InterestingPlaceTypeList
+{
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//	Identifier				Value
+			"Name"				"Idle"
+		}
+
+		Activities
+		{
+		//	One of these will be chosen at random.  The NPC will play that
+		//	activity until the animation finishes and then randomly choose another one.
+		//	The frequency determines the chance each activity will be picked.
+		//	The higher the frequency, the more likely that activity is to be chosen.
+
+		//	Activity				Frequency
+			"ACT_IDLE"				"10.0"
+		}
+
+		AcceptedClasses
+		{
+		//	Only these classes will go to this place.
+		//	The higher the frequency, the more likely
+		//	that class is to go there.
+		//	The class names are the same as those found
+		//	in World Craft.
+		//	You may also use Stat_Template names if you
+		//	require more precise control over who can use
+		//	a location.
+
+		//	Class/Stat_Template		Frequency
+			"npc_VBrujah"			"1.0"
+			"npc_VGangrel"			"1.0"
+			"npc_VPedestrian"		"10.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+			"Name"				"Citizen_Idle"
+		}
+
+		Activities
+		{
+			"ACT_IDLE"				"10.0"
+		}
+
+		AcceptedClasses
+		{
+			"npc_VPedestrian"		"10.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+			"Name"					"Doorknock"
+		}
+		Activities
+		{
+			"ACT_IDLE"					"5.0"
+			"ACT_DOORKNOCK"				"1.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+			"Name"					"zombie_bang_gate"
+		}
+		Activities
+		{
+			"ACT_IDLE"					"1.0"
+			"ACT_MELEE_ATTACK_HEAVY"		"5.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+			"Name"					"zombie_reach_gate"
+		}
+		Activities
+		{
+			"ACT_IDLE_ANGRY"			"1.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//	Identifier					Value
+			"Name"					"Dance"
+		}
+
+		Activities
+		{
+		//	One of these will be chosen at random.  The NPC will play that
+		//	activity until the animation finishes and then randomly choose another one.
+		//	The frequency determines the chance each activity will be picked.
+		//	The higher the frequency, the more likely that activityi is to be chosen.
+
+		//	Activity					Frequency
+			"ACT_DANCE"				"1.0"
+		}
+
+		AcceptedClasses
+		{
+		//	Only these classes will go to this place.
+		//	The higher the frequency, the more likely
+		//	that class is to go there.
+		//	The class names are the same as those found
+		//	in World Craft.
+		//	You may also use Stat_Template names if you
+		//	require more precise control over who can use
+		//	a location.
+
+		//	Class/Stat_Template		Frequency
+			"npc_VBrujah"			"1.0"
+			"npc_VPedestrian"		"10.0"
+		}
+	}
+ 
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//	Identifier				Value
+			"Name"				"Cars"
+		}
+
+		Activities
+		{
+		//	Activity				Frequency
+			"ACT_TOOL_LOCKPICK"		"100.0"	// ACT_TECH, changed by wesp
+		}
+
+		AcceptedClasses
+		{
+		//	Class/Stat_Template		Frequency
+			"npc_VPedestrian"		"50.0" 	// changed by wesp
+		}
+	}
+
+	InterestingPlaceType	// added by wesp
+	{
+		Identifiers
+		{
+		//	Identifier				Value
+			"Name"				"Doors"
+		}
+
+		Activities
+		{
+		//	Activity				Frequency
+			"ACT_PLACE_BOMB"		"100.0"
+		}
+
+		AcceptedClasses
+		{
+		//	Class/Stat_Template		Frequency
+			"npc_VPedestrian"		"50.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//	Identifier				Value
+			"Name"				"Drama"
+		}
+
+		Activities
+		{
+		//	Activity				Frequency
+			"ACT_DISPOSITION"		"60.0"
+//			"ACT_DIE"				"10.0"
+		}
+
+		AcceptedClasses
+		{
+		//	Class/Stat_Template		Frequency
+			"npc_VPedestrian"		"10.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//	Identifier				Value
+			"Name"				"bum_rest"
+		}
+
+		Activities
+		{
+		//	Activity				Frequency
+//			"ACT_IDLE"				"30.0"	// changed by wesp
+			"ACT_HUDDLE"			"100.0"	// changed by wesp
+//			"ACT_SLEEP"			"10.0"
+		}
+
+		AcceptedClasses
+		{
+		//	Class/Stat_Template		Frequency
+			"npc_VPedestrian"		"10.0"
+		}
+	}
+
+	InterestingPlaceType	// added by wesp
+	{
+		Identifiers
+		{
+		//	Identifier				Value
+			"Name"				"bum_sleep"
+		}
+
+		Activities
+		{
+		//	Activity				Frequency
+			"ACT_SLEEP"			"100.0"
+		}
+
+		AcceptedClasses
+		{
+		//	Class/Stat_Template		Frequency
+			"npc_VPedestrian"		"50.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//	Identifier				Value
+			"Name"				"bum_idle"
+		}
+
+		Activities
+		{
+		//	Activity				Frequency
+			"ACT_IDLE"				"4.0"
+			"ACT_LIKE_A_BUM"		"1.0"
+		}
+
+		AcceptedClasses
+		{
+		//	Class/Stat_Template		Frequency
+			"npc_VPedestrian"		"1.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//	Identifier				Value
+			"Name"				"Doggy"
+		}
+
+		Activities
+		{
+		//	Activity				Frequency
+			"ACT_DISPOSITION"		"60.0"
+		}
+
+		AcceptedClasses
+		{
+		//	Class/Stat_Template		Frequency
+			"npc_VDog"				"10.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier                      Value
+			"Name"                          "diner_booth_back_left"
+		}
+
+		Into_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITBACK_LEFT"              "100.0"
+		}
+
+		Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITBACK_IDLE_LEFT"         "100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITBACK_UPFAST_LEFT"       "100.0"
+		}
+
+		Death_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITBACK_UPFAST_LEFT"       "100.0"
+		}
+
+		AcceptedClasses
+		{
+		//  Class/Stat_Template             Frequency
+			"npc_VPedestrian"               "1.0"
+			"npc_VBrujah"				"1.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier                      Value
+			"Name"                          "diner_booth_back_left_deep"
+		}
+
+		Into_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITBACK_LEFT_DEEP"         "100.0"
+		}
+
+		Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITBACK_IDLE_LEFT_DEEP"    "100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITBACK_UPFAST_LEFT_DEEP"  "100.0"
+		}
+
+		Death_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITBACK_UPFAST_LEFT_DEEP"  "100.0"
+		}
+
+		AcceptedClasses
+		{
+		//  Class/Stat_Template             Frequency
+			"npc_VPedestrian"               "1.0"
+			"npc_VBrujah"				"1.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier                      Value
+			"Name"                          "diner_booth_back_right"
+		}
+
+		Into_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITBACK_RIGHT"             "100.0"
+		}
+
+		Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITBACK_IDLE_RIGHT"        "100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITBACK_UPFAST_RIGHT"      "100.0"
+		}
+
+		Death_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITBACK_UPFAST_RIGHT"      "100.0"
+		}
+
+		AcceptedClasses
+		{
+		//  Class/Stat_Template             Frequency
+			"npc_VPedestrian"               "1.0"
+			"npc_VBrujah"				"1.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier                      Value
+			"Name"                          "diner_booth_back_right_deep"
+		}
+
+		Into_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITBACK_RIGHT_DEEP"        "100.0"
+		}
+
+		Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITBACK_IDLE_RIGHT_DEEP"   "100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITBACK_UPFAST_RIGHT_DEEP" "100.0"
+		}
+
+		Death_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITBACK_UPFAST_RIGHT_DEEP" "100.0"
+		}
+
+		AcceptedClasses
+		{
+		//  Class/Stat_Template             Frequency
+			"npc_VPedestrian"               "1.0"
+			"npc_VBrujah"				"1.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier                      Value
+			"Name"                          "diner_booth_forward_left"
+		}
+
+		Into_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_LEFT"              "100.0"
+		}
+
+		Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_IDLE_LEFT"         "100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_UPFAST_LEFT"       "100.0"
+		}
+
+		Death_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_UPFAST_LEFT"       "100.0"
+		}
+
+		AcceptedClasses
+		{
+		//  Class/Stat_Template             Frequency
+			"npc_VPedestrian"               "1.0"
+			"npc_VBrujah"				"1.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier                      Value
+			"Name"                          "diner_booth_forward_left_deep"
+		}
+
+		Into_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_LEFT_DEEP"         "100.0"
+		}
+
+		Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_IDLE_LEFT_DEEP"    "100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_UPFAST_LEFT_DEEP"  "100.0"
+		}
+
+		Death_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_UPFAST_LEFT_DEEP"  "100.0"
+		}
+
+		AcceptedClasses
+		{
+		//  Class/Stat_Template             Frequency
+			"npc_VPedestrian"               "1.0"
+			"npc_VBrujah"				"1.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier                      Value
+			"Name"                          "diner_booth_forward_right"
+		}
+
+		Into_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_RIGHT"             "100.0"
+		}
+
+		Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_IDLE_RIGHT"        "100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_UPFAST_RIGHT"      "100.0"
+		}
+
+		Death_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_UPFAST_RIGHT"      "100.0"
+		}
+
+		AcceptedClasses
+		{
+		//  Class/Stat_Template             Frequency
+			"npc_VPedestrian"               "1.0"
+			"npc_VBrujah"				"1.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier                      Value
+			"Name"                          "diner_booth_forward_right_deep"
+		}
+
+		Into_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_RIGHT_DEEP"        "100.0"
+		}
+
+		Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_IDLE_RIGHT_DEEP"   "100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_UPFAST_RIGHT_DEEP" "100.0"
+		}
+
+		Death_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_UPFAST_RIGHT_DEEP" "100.0"
+		}
+
+		AcceptedClasses
+		{
+		//  Class/Stat_Template             Frequency
+			"npc_VPedestrian"               "1.0"
+			"npc_VBrujah"				"1.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier                      Value
+			"Name"                          "wall_lean"
+		}
+
+		Into_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_WALL_LEAN_INTO"			"100.0"
+		}
+
+		Activities
+		{
+		//  Activity                        Frequency
+			"ACT_WALL_LEAN_IDLE"			"100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_WALL_LEAN_OUTOF"			"100.0"
+		}
+
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//	Identifier				Value
+			"Name"				"conversation_normal"
+		}
+
+		Activities
+		{
+		//	Activity				Frequency
+			"ACT_IDLE"				"100.0"
+		}
+
+		Talker_Activities
+		{
+		//	Activity				Frequency
+			"ACT_CONVERSE_NORMAL_TALK"		"100.0"
+		}
+
+		Listener_Activities
+		{
+		//	Activity				Frequency
+			"ACT_CONVERSE_NORMAL_LISTEN"	"100.0"
+		}
+
+		AcceptedClasses
+		{
+		//	Class/Stat_Template		Frequency
+			"npc_VPedestrian"		"10.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//	Identifier				Value
+			"Name"				"conversation_wine"
+		}
+
+		Activities
+		{
+		//	Activity				Frequency
+			"ACT_IDLE"				"90.0"
+			"ACT_WINE_DRINK"		"10"
+		}
+
+		Talker_Activities
+		{
+		//	Activity				Frequency
+			"ACT_PARTY_TALK_IDLE"		"90"
+			"ACT_PARTY_LAUGH"		"5"
+			"ACT_WINE_DRINK"		"5"
+		}
+
+		Listener_Activities
+		{
+		//	Activity				Frequency
+			"ACT_PARTY_LISTEN_IDLE"	"30.0"
+			"ACT_PARTY_LAUGH"		"5"
+			"ACT_WINE_DRINK"		"5"
+		}
+
+		AcceptedClasses
+		{
+		//	Class/Stat_Template		Frequency
+			"npc_VPedestrian"		"10.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier			Value
+			"Name"			"cigarette"
+		}
+
+		Into_Activities
+		{
+		//  Activity			Frequency
+			"ACT_CIGARETTE_INTO"	"100.0"
+		}
+
+		Activities
+		{
+		//  Activity			Frequency
+			"ACT_CIGARETTE_IDLE"	"100.0"
+		}
+
+//WIP NEEDS TO BE ADD ONCE ANIMS ARE DONE
+//		Outof_Activities
+//		{
+		//  Activity			Frequency
+//			""				"100.0"
+//		}
+
+		Flags
+		{
+			"InstantDeathPreference"	"0"
+		}
+
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier			Value
+			"Name"			"piss"
+		}
+
+		Into_Activities
+		{
+		//  Activity			Frequency
+			"ACT_PISS_INTO"		"100.0"
+		}
+
+		Activities
+		{
+		//  Activity			Frequency
+			"ACT_PISS_IDLE"		"100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity			Frequency
+			"ACT_PISS_OUTOF"	"100.0"
+		}
+
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier			Value
+			"Name"			"cellphone"
+		}
+
+		Into_Activities
+		{
+		//  Activity			Frequency
+			"ACT_CELLPHONE_INTO"	"100.0"
+		}
+
+		Activities
+		{
+		//  Activity			Frequency
+			"ACT_CELLPHONE_IDLE"	"100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity			Frequency
+			"ACT_CELLPHONE_OUTOF"	"100.0"
+		}
+
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier                      Value
+			"Name"                          "cards_forward_right"
+		}
+
+		Into_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_RIGHT"   	          "100.0"
+		}
+
+		Activities
+		{
+		//	Activity				Frequency
+			"ACT_CARDS_SITFORWARD_RIGHT_IDLE"	"100.0"
+		}
+
+		Talker_Activities
+		{
+		//	Activity				Frequency
+			"ACT_CARDS_SITFORWARD_RIGHT_PLAY"	"100.0"
+		}
+
+		Listener_Activities
+		{
+		//	Activity				Frequency
+			"ACT_CARDS_SITFORWARD_RIGHT_FIDGET"	"10.0"
+			"ACT_CARDS_SITFORWARD_RIGHT_IDLE"	"10.0"
+		}
+		Outof_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_UPFAST_RIGHT"	      "100.0"
+		}
+
+		Death_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_UPFAST_RIGHT" 	     "100.0"
+		}
+
+	}
+	
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier                      Value
+			"Name"                          "cards_forward_left"
+		}
+
+		Into_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_LEFT"      	       "100.0"
+		}
+
+		Activities
+		{
+		//	Activity				Frequency
+			"ACT_CARDS_SITFORWARD_LEFT_IDLE"	"100.0"
+		}
+
+		Talker_Activities
+		{
+		//	Activity				Frequency
+			"ACT_CARDS_SITFORWARD_LEFT_PLAY"	"100.0"
+		}
+
+		Listener_Activities
+		{
+		//	Activity				Frequency
+			"ACT_CARDS_SITFORWARD_LEFT_FIDGET"	"10.0"
+			"ACT_CARDS_SITFORWARD_LEFT_IDLE"	"10.0"
+		}
+		Outof_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_UPFAST_LEFT" 	     "100.0"
+		}
+
+		Death_Activities
+		{
+		//  Activity                        Frequency
+			"ACT_SITFORWARD_UPFAST_LEFT" 	     "100.0"
+		}
+
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"guard_drunk"
+		}
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_BLOOD_MALADY_LOOP"	"100.0"
+		}
+	}
+
+// WIP NEED ANIMS FROM MARK. JDA
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"guard_whistling"
+		}
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_WHISTLING_IDLE"		"70.0"
+			"ACT_WHISTLING_FIDGET"	"30.0"
+		}
+	}
+
+// WIP NEED ANIMS FROM MARK. JDA
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"arms_crossed"
+		}
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_ARMSCROSSED_IDLE"	"70.0"
+			"ACT_ARMSCROSSED_FIDGET"	"30.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"operate_panel"
+		}
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_TOOL_HACKPANEL"		"100.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"operate_computer"
+		}
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_TOOL_KEYBOARD"		"100.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"praying"
+		}
+
+		Into_Activities
+		{
+		//  Activity				Frequency
+			"ACT_PRAYING_BEGIN"		"100.0"
+		}
+
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_PRAYING_IDLE"		"100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity				Frequency
+			"ACT_PRAYING_END"		"100.0"
+		}
+
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"can_drink"
+		}
+
+		Into_Activities
+		{
+		//  Activity				Frequency
+			"ACT_DRINK_INTO"		"100.0"
+		}
+
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_DRINK_IDLE"		"70.0"
+			"ACT_DRINK_TAKE"		"20.0"
+			"ACT_DRINK_LOOKAROUND"	"10.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity				Frequency
+			"ACT_DRINK_OUTOF"		"100.0"
+		}
+
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"ready_onehanded_weapon"
+		}
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_ONEHANDED_CROUCH_IDLE"		"100.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"ready_twohanded_weapon"
+		}
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_TWOHANDED_CROUCH_IDLE"		"100.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"couch_sit"
+		}
+
+		Into_Activities
+		{
+		//  Activity				Frequency
+			"ACT_COUCH_SIT_INTO"		"100.0"
+		}
+
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_COUCH_SIT_IDLE"		"100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity				Frequency
+			"ACT_COUCH_SIT_OUTOF"		"100.0"
+		}
+
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"bed_sleep_left"
+		}
+
+		Into_Activities
+		{
+		//  Activity				Frequency
+			//"ACT_BED_LEFT"		"100.0"
+		}
+
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_BED_LEFT"			"100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity				Frequency
+			"ACT_BED_LEFT_OUTOF"		"100.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"bed_sleep_right"
+		}
+
+		Into_Activities
+		{
+		//  Activity				Frequency
+			//"ACT_BED_RIGHT"		"100.0"
+		}
+
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_BED_RIGHT"			"100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity				Frequency
+			"ACT_BED_RIGHT_OUTOF"		"100.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"madness"
+		}
+
+		Into_Activities
+		{
+		//  Activity				Frequency
+			"ACT_MADNESS_INTO"		"100.0"
+		}
+
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_MADNESS_IDLE"		"100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity				Frequency
+			"ACT_MADNESS_GETOUT"		"100.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"bloodvomit"
+		}
+
+		Into_Activities
+		{
+		//  Activity				Frequency
+			"ACT_VOMIT_INTO"		"100.0"
+		}
+
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_VOMIT_IDLE"		"100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity				Frequency
+			"ACT_VOMIT_GETOUT"		"100.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"graffiti"
+		}
+
+		Into_Activities
+		{
+		//  Activity				Frequency
+			"ACT_GRAFFITI_INTO"		"100.0"
+		}
+
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_GRAFFITI_IDLE"		"100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity				Frequency
+			"ACT_GRAFFITI_OUTOF"		"100.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"payphone"
+		}
+
+		Into_Activities
+		{
+		//  Activity				Frequency
+			"ACT_PAY_PHONE_PICKUP"		"100.0"
+		}
+
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_PAY_PHONE_IDLE"		"100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity				Frequency
+			"ACT_PAY_PHONE_HANGUP"	"100.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"cower1"
+		}
+
+		Into_Activities
+		{
+		//  Activity				Frequency
+			"ACT_COWER_INTO"		"100.0"
+		}
+
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_COWER"			"100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity				Frequency
+			"ACT_COWER_OUTOF"		"100.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"cower2"
+		}
+
+		Into_Activities
+		{
+		//  Activity				Frequency
+			"ACT_COWER2_INTO"		"100.0"
+		}
+
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_COWER2"			"100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity				Frequency
+			"ACT_COWER2_OUTOF"		"100.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"cower3"
+		}
+
+		Into_Activities
+		{
+		//  Activity				Frequency
+			"ACT_COWER3_INTO"		"100.0"
+		}
+
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_COWER3"			"100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity				Frequency
+			"ACT_COWER3_OUTOF"		"100.0"
+		}
+	}
+
+	InterestingPlaceType
+	{
+		Identifiers
+		{
+		//  Identifier				Value
+			"Name"				"Barstool"
+		}
+
+		Into_Activities
+		{
+		//  Activity				Frequency
+			"ACT_SIT_BARSTOOL_INTO"	"100.0"
+		}
+
+		Activities
+		{
+		//  Activity				Frequency
+			"ACT_SIT_BARSTOOL_IDLE"	"100.0"
+		}
+
+		Outof_Activities
+		{
+		//  Activity				Frequency
+			"ACT_SIT_BARSTOOL_OUTOF"	"100.0"
+		}
+	}
+
+}

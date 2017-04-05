@@ -1,0 +1,155 @@
+{	1	}{	I'm sorry, sir, but you're going to have to wait outside like everyone else. No exceptions.	}{	I'm sorry, miss, but you're going to have to wait outside like everyone else. No exceptions.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	But there's this girl over there, and I think she's going to die.	}{	But there's this girl over there, and I think she's going to die.	}{	11	}{	G.Heather_Know == 1 and G.Heather_Drank == 0 and G.Malcolm_Bother == 0 and not IsClan(pc,"Malkavian")	}{	G.Malcolm_Bother = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	A saintly little morsel is teetering on death's razor edge.	}{	A saintly little morsel is teetering on death's razor edge.	}{	101	}{	G.Heather_Know == 1 and G.Heather_Drank == 0 and G.Malcolm_Bother == 0 and IsClan(pc,"Malkavian")	}{	G.Malcolm_Bother = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	You Malcolm? Your wife know about your affair?	}{	You Malcolm? Your wife know about your affair?	}{	61	}{	G.Malcolm_Affair == 3 and G.Malcolm_Wife == 1	}{	}{	}{	}{	}{	}{	}{	}{	Are you the doctor who likes to play doctor with his nurses?	}
+{	5	}{	Fine.	}{	Fine.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	See here now, I'm the only physician here at the moment. We got twice as many people as usual waiting for treatment. I'll look at her soon as possible. Try to talk to her, keep her awake.	}{	See here now, I'm the only physician here at the moment. We got twice as many people as usual waiting for treatment. I'll look at her soon as possible. Try to talk to her, keep her awake.	}{	#	}{	npc.SetDisposition("Anger", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	But...	}{	But...	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	13	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	I got a man in there with a bullet in his head. My nurse paged Doctor Roberts a half-hour ago; he'll be here anytime. Till then, stay with your friend and make sure she doesn't go into shock. I must go.	}{	I got a man in there with a bullet in his head. My nurse paged Doctor Roberts a half-hour ago; he'll be here anytime. Till then, stay with your friend and make sure she doesn't go into shock. I must go.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	Okay.	}{	Okay.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	23	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	I told you, I will get to you when I can. Please take a seat.	}{	I told you, I will get to you when I can. Please take a seat.	}{	#	}{	npc.SetDisposition("Anger", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	The little will-o-the-wisp is fading into the night.	}{	The little will-o-the-wisp is fading into the night.	}{	101	}{	G.Heather_Know == 1 and G.Heather_Drank == 0 and G.Malcolm_Bother == 0 and IsClan(pc,"Malkavian")	}{	G.Malcolm_Bother = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	33	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	But there's this girl over there, and I think she's going to die.	}{	But there's this girl over there, and I think she's going to die.	}{	11	}{	G.Heather_Know == 1 and G.Heather_Drank == 0 and G.Malcolm_Bother == 0 and not IsClan(pc,"Malkavian")	}{	G.Malcolm_Bother = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	You Malcolm? Your wife know about your affair?	}{	You Malcolm? Your wife know about your affair?	}{	61	}{	G.Malcolm_Affair == 3 and G.Malcolm_Wife == 1	}{	}{	}{	}{	}{	}{	}{	}{	Are you the doctor who likes to play doctor with his nurses?	}
+{	36	}{	...	}{	...	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Oh my! Your skin! We have to treat those burns stat!	}{	Oh my! Your skin! We have to treat those burns stat!	}{	#	}{	npc.SetDisposition("Disgust", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	What burns?	}{	What burns?	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	43	}{	Hey, there's this girl over there -	}{	Hey, there's this girl over there -	}{	11	}{	G.Heather_Know == 1 and G.Heather_Drank == 0 and G.Malcolm_Bother == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	You Malcolm? Your wife know about your affair?	}{	You Malcolm? Your wife know about your affair?	}{	61	}{	G.Malcolm_Affair == 3 and G.Malcolm_Wife == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Can you hear me? You're going into shock! Nurse!	}{	Can you hear me? You're going into shock! Nurse!	}{	#	}{	npc.SetDisposition("Anger", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	Hey, there's this girl over there -	}{	Hey, there's this girl over there -	}{	11	}{	G.Heather_Know == 1 and G.Heather_Drank == 0 and G.Malcolm_Bother == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	53	}{	You Malcolm? Your wife know about your affair?	}{	You Malcolm? Your wife know about your affair?	}{	61	}{	G.Malcolm_Affair == 3 and G.Malcolm_Wife == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	I'll be fine. Excuse me.	}{	I'll be fine. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Get out of here! Can't you see I'm with a patient?	}{	Get out of here! Can't you see I'm with a patient?	}{	#	}{	npc.SetDisposition("Anger", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	I guess you don't care if your wife finds out then.	}{	I guess you don't care if your wife finds out then.	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your malpracticings will interest your wife.	}
+{	63	}{	Divorce is expensive. All I'm asking for's a few bucks.	}{	Divorce is expensive. All I'm asking for's a few bucks.	}{	71	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	64	}{	I'll come back later.	}{	I'll come back later.	}{	71	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Are you trying to blackmail me? You don't know who my wife is - she wouldn't believe you. Now get out!	}{	Are you trying to blackmail me? You don't know who my wife is - she wouldn't believe you. Now get out!	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	Then I'll go forward that email from "Paige" to Trina@SOL.vtm.	}{	Then I'll go forward that email from "Paige" to Trina@SOL.vtm.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps "Trina" and "Paige" should trade doctor stories.	}
+{	73	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Wait, now. What do you want?	}{	Wait, now. What do you want?	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	$75	}{	$75	}{	91	}{	}{	G.Malcolm_Affair = 4	}{	}{	}{	}{	}{	}{	}{	$75	}
+{	83	}{	$150	}{	$150	}{	91	}{	Intimidate 3	}{	G.Malcolm_Affair = 5	}{	}{	}{	}{	}{	}{	}{	$150	}
+{	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	Deal. But I'm in the middle of something, I'll have to drop it off later. Now never speak to me about that again.	}{	Deal. But I'm in the middle of something, I'll have to drop it off later. Now never speak to me about that again.	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Put it in the mailbox for 508 in the apartments over the pawnshop, doctor.	}{	Put it in the mailbox for 508 in the apartments over the pawnshop, doctor.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Drop my simoleons over the place of pawns. Farewell.	}
+{	93	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	[Confused]Uh... are you sure you're in the right place? Psychiatrics are on the third floor.	}{	[Confused]Uh... are you sure you're in the right place? Psychiatrics are on the third floor.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	My vision is as clear as the murk-muddled rain water.	}{	My vision is as clear as the murk-muddled rain water.	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	103	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	I have no idea what you're talking about, and to be honest, I don't have the time to figure it out. I'm the only doctor here right now, and we have twice as many people as usual waiting for treatment.	}{	I have no idea what you're talking about, and to be honest, I don't have the time to figure it out. I'm the only doctor here right now, and we have twice as many people as usual waiting for treatment.	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	But the little angel is sliding further into that great, black abyss.	}{	But the little angel is sliding further into that great, black abyss.	}{	121	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	113	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	Listen, I think you're telling me about that girl over there, and I hear you. But right now I have a man with a bullet hole in his head, and he needs me more than she does. Just stay with her and make sure she doesn't go into shock, and I'll be there soon.	}{	Listen, I think you're telling me about that girl over there, and I hear you. But right now I have a man with a bullet hole in his head, and he needs me more than she does. Just stay with her and make sure she doesn't go into shock, and I'll be there soon.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	Okay.	}{	Okay.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	123	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	133	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	143	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	(Starting Condition)	}{	}{	51	}{	IsClan(pc,"Nosferatu") and npc.times_talked >= 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	153	}{	(Starting Condition)	}{	}{	31	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	154	}{	(Starting Condition)	}{	}{	41	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

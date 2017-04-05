@@ -1,0 +1,32 @@
+// Choreo version 1
+actor "Ox"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 2.272
+      param "character/dlg/chinatown/ox/line321_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "Mr_Ox_line321_col_e"
+    {
+     time 0.000000 2.272
+     param "Mr_Ox_line321_col_e"
+    }
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off

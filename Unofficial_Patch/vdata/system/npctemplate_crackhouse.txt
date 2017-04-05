@@ -1,0 +1,196 @@
+//////////////////////////////////////////////////
+// NPC Stat Templates (Packages)	- Vampire
+//
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!	
+//
+//	LA CRACKHOUSE ONLY IN THIS FILE PLEASE
+//	
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!	
+
+ClanDataTables
+{
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"BishopVick"
+			"ParentTemplateName"		""	// changed by wesp
+			"Name"				"Bishop Vick"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"				"None"
+			"Body"				"Vampire"
+			"Kindred"			"1"
+			"Supernatural"			"1"
+			"DisciplineStrata"		"5"
+			"Boss"				"1"
+			"SoundGroup"			""
+			"NoBiting"			"1"
+			"Disallow_Knockbacks"		"1"
+			"DamageFilterBashing"		"0.60"
+			"DamageFilterLethal"		"0.60"
+			"DamageFilterAggravated"	"0.75"
+
+		        "HasTrueSight" "1"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"		"Physical_Mental_Social"
+			"Strength"		"1"
+			"Dexterity"		"2"
+			"Stamina"		"5"
+			"Charisma"		"2"
+			"Manipulation"		"2"
+			"Appearance"		"2"
+			"Perception"		"3"
+			"Intelligence"		"2"
+			"Wits"			"3"
+			"Armor_Rating"		"2"
+			"Max_Health"		"280"
+
+			"BloodPool"		"10"
+			"FaithPoints"		"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"			"0"
+			"Brawl"				"3"
+			"Dodge"				"2"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"			"2"
+			"Melee"				"2"
+			"Security"			"0"
+			"Stealth"			"0"
+			"Computer"			"5"     // Defense vs pc feeding
+			"Finance"			"0"
+			"Investigation"			"0"
+//			"Occult"			"0"
+		}
+
+		Disciplines
+		{
+			"Celerity"	"3"
+			"Thaumaturgy"	"3"
+		}
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"CrackhousePlagueVictim"
+			"ParentTemplateName"		""	// changed by wesp
+			"Name"				"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"				"None"
+//			"ClanEffect"			""
+			"Kindred"			"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"FastFood"			"1"	// ensures feeding always succeeds
+			"Has_Badblood"			"1"	// makes the feeder vomit
+			"SoundGroup"			""
+			"DeathGibParticle"		"D_Thaum_Bld_Cauldron_Explode_Tgt_Emitter"	// NOTE: currently ignored!!
+			"DeathGib"			"models/gibs/hgibs.mdl"
+			"GibsCollide"			"0"
+		}
+
+		Attributes	// changed by wesp
+		{
+			"Charisma"				"1"
+			"Manipulation"				"1"
+			"Appearance"				"1"
+			"Perception"				"1"
+			"Intelligence"				"1"
+			"Wits"					"1"
+			"Max_Health"				"52" 
+ 
+			"BloodPool"				"3"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"Civilian"
+			"Excluded_Equipment"	"Default"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+			"Brawl"				"0"
+			"Dodge"				"0"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+			"Firearms"			"0"
+			"Melee"				"0"
+			"Security"			"0"
+			"Stealth"			"0"
+			"Computer"			"0"     // Defense vs pc feeding
+			"Finance"			"0"
+			"Investigation"			"0"
+		}
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+}
+
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!	
+//
+//	LA CRACKHOUSE ONLY IN THIS FILE PLEASE
+//	
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!	

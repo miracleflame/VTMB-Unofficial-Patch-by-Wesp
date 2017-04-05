@@ -1,0 +1,77 @@
+
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	
+	"infomodel"	"models/items/dayplanner/info/Info_dayplanner.mdl"
+	"playermodel"	"models/items/dayplanner/ground/dayplanner.mdl"
+	
+	"anim_prefix"	" "
+
+	"printname"	"Ledger"
+	"description"	"This looks to be the weekly log of the Los Angeles Department of Water and Power, 1972:
+
+			03/03/72 - Reports concerning the recent \"hauntings\" in the sewer system have prompted the mayor to request a weekly log of all operations in the lower sewer sections 453 - 500. Log begins today. Nothing to note, although I will say that I find the stories to be unsubstantiated and ridiculous.
+
+			03/10/72 - Both investigative teams this week reported nothing of note, although one individual (who may be apt to nip at the flask more often than not) noted that he heard what he could only describe as whispers in one of his sweeps along section 476. Undoubtedly these were the product of an overactive and throughly soused imagination.
+			
+			03/17/72 - Nothing to report. Operations normal.
+			
+			03/24/72 - Things have been hectic with the recent rash of \"sightings\" in sections 498 and 499. Although mostly described as \"shadowy figures\", the reports come from men whose word I trust. Discounting the usual stories about underground societies of displaced vagrants and rabid, blind pets, I am at a loss to explain these observations. I will join the teams tomorrow to see for myself what is going on down there.
+			
+			04/01/72 - I have traveled with a team down into the sections in question, and I must admit that I saw and heard things that I could not explain. More than once I heard the same whispers as described before, and I chased what I thought to be a figure down a corridor, only to turn the corner and find myself facing a brick wall... what looked to be an older section of the sewers that had been sealed up. There was no one in sight, although I could have sworn I heard laughter echoing in the darkness around me. I will be forced to report my findings to the mayor himself on Friday.
+			
+			04/08/72 - The mayor has sworn us all to silence concerning these new sightings, but has promised us an answer concerning a course of action within the week. Inquiries about previous LADWP records and reports have met with strange resistance... it seems they have been sealed for official reasons. Something is amiss down here.
+			
+			04/15/72 - We received word from the mayor today that sections 475 - 500 will be sealed off permanently, and that no further inquiry into the matter will be tolerated. I have a few connections at the front office, and it seems that something like this has happened before... it's something that the city council doesn't want to become public. My contact said he couldn't say any more, and that if I said anything to anyone, he would deny any knowledge whatsoever.
+			
+			04/22/72 - The sewer sections close tomorrow, and the city engineers have bricked up the corridors that lead to them. This office falls within section 482, so it will be closed as well. As no one has requested the ledgers, all materials and records concerning this will be left down here to rot with the ghosts. Sorry about that, but as no official eyes will ever see this, I figured I could wax dramatic on this last day. Log closed."
+			
+			
+	"bucket"		"1"
+	"bucket_position"	"2"
+
+	"camera_class"		"noswitch"
+	"is_wieldable"		"0"
+	"weight"		"1"
+	"item_flags"		"1"
+	"item_type"		"powerup"
+	"item_worth"		"-1"
+	"is_visible_in_hud"		"1"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Magazine/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/dayplanner_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/dayplanner"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

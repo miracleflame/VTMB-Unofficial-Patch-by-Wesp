@@ -1,0 +1,530 @@
+// Primary Sound Schemes
+
+SoundSchemeTables
+{
+	SoundScheme
+	{
+		"Name"			"Character"
+		"InternalName"		"Character"
+
+
+// Each can have multiples "_#"
+// Basic Sub-folders "Female", "Male", "Monster"
+// Each can be overridden by sub-directories ( "Guard", "Ghost", "TC_Spider" for instance )
+//    and sub-sub directories ( "Female_PC_Override" for instance )
+
+//SoundName( pEntity, "Comatose_Start", pPlayer )
+//{
+//	int gender	= pEntity->IsMale();
+//// what about monsters?
+//	char *sz	= pEntity->SoundSchemeName();
+//}
+
+		SoundList
+		{
+			Sound
+			{
+				"Name"	"Comatose_Start"
+				"Activity"	"ACT_COMATOSE_INTO"
+			}
+
+			Sound
+			{
+				"Name"	"Comatose_Loop"
+				"Activity"	"ACT_COMATOSE_IDLE"
+			}
+
+			Sound
+			{
+				"Name"	"Comatose_End"
+				"Activity"	"ACT_COMATOSE_GETOUT"
+			}
+
+			Sound
+			{
+				"Name"	"Comfort"
+				"Activity"	"ACT_COMFORT_INTO"
+				"Activity"	"ACT_COMFORT2_INTO"
+				"Activity"	"ACT_COMFORT3_INTO"
+			}
+
+			Sound
+			{
+				"Name"	"Crying_Start"
+				"Activity"	"ACT_SOBBING_PRE_INTO"
+				"Activity"	"ACT_SOBBING_INTO"
+			}
+
+			Sound
+			{
+				"Name"	"Crying_Loop"
+				"Activity"	"ACT_DISPOSITION_CRYING"
+				"Activity"	"ACT_SOBBING_IDLE"
+			}
+
+			Sound
+			{
+				"Name"	"Crying_End"
+				"Activity"	"ACT_SOBBING_GETOUT"
+			}
+
+			Sound
+			{
+				"Name"	"Death"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Disorientated"
+				"Activity"	"ACT_DISORIENTED"
+			}
+
+			Sound
+			{
+				"Name"	"Exert_Heavy"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Exert_Light"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"EyeBleed_Start"
+				"Activity"	"ACT_BLEEDINGEYES_INTO"
+			}
+
+			Sound
+			{
+				"Name"	"EyeBleed_Loop"
+				"Activity"	"ACT_BLEEDINGEYES_IDLE"
+			}
+
+			Sound
+			{
+				"Name"	"EyeBleed_End"
+				"Activity"	"ACT_BLEEDINGEYES_GETOUT"
+			}
+
+			Sound
+			{
+				"Name"	"Fear_Start"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Fear_Loop"
+				"Activity"	"ACT_COWER"
+				"Activity"	"ACT_COWER2"
+				"Activity"	"ACT_COWER3"
+			}
+
+			Sound
+			{
+				"Name"	"Fear_End"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"		"Fed_Upon_Start"
+				"Activity"	"ACT_FEEDING_BITE_VICTIM_SHORTATTACKER_FRONT"
+				"Activity"	"ACT_FEEDING_BITE_VICTIM_TALLATTACKER_FRONT"
+				"Activity"	"ACT_FEEDING_BITE_VICTIM_SHORTATTACKER_BACK"
+				"Activity"	"ACT_FEEDING_BITE_VICTIM_TALLATTACKER_BACK"
+			}
+
+			Sound
+			{
+				"Name"		"Fed_Upon_Loop"
+				"Activity"	"ACT_FEEDING_FEED_LOOP_VICTIM_SHORTATTACKER_FRONT"
+				"Activity"	"ACT_FEEDING_FEED_LOOP_VICTIM_TALLATTACKER_FRONT"
+				"Activity"	"ACT_FEEDING_FEED_LOOP_VICTIM_SHORTATTACKER_BACK"
+				"Activity"	"ACT_FEEDING_FEED_LOOP_VICTIM_TALLATTACKER_BACK"
+			}
+
+			Sound
+			{
+				"Name"		"Fed_Upon_End"
+				"Activity"	"ACT_FEEDING_RELEASE_VICTIM_SHORTATTACKER_FRONT"
+				"Activity"	"ACT_FEEDING_RELEASE_VICTIM_TALLATTACKER_FRONT"
+				"Activity"	"ACT_FEEDING_RELEASE_VICTIM_SHORTATTACKER_BACK"
+				"Activity"	"ACT_FEEDING_RELEASE_VICTIM_TALLATTACKER_BACK"
+			}
+
+			Sound
+			{
+				"Name"		"Feed_On_Start"
+				"Activity"	"ACT_FEEDING_BITE_ATTACKER_SHORTVICTIM_FRONT"
+				"Activity"	"ACT_FEEDING_BITE_ATTACKER_TALLVICTIM_FRONT"
+				"Activity"	"ACT_FEEDING_BITE_ATTACKER_SHORTVICTIM_BACK"
+				"Activity"	"ACT_FEEDING_BITE_ATTACKER_TALLVICTIM_BACK"
+			}
+
+			Sound
+			{
+				"Name"		"Feed_On_Loop"
+				"Activity"	"ACT_FEEDING_FEED_LOOP_ATTACKER_SHORTVICTIM_FRONT"
+				"Activity"	"ACT_FEEDING_FEED_LOOP_ATTACKER_TALLVICTIM_FRONT"
+				"Activity"	"ACT_FEEDING_FEED_LOOP_ATTACKER_SHORTVICTIM_BACK"
+				"Activity"	"ACT_FEEDING_FEED_LOOP_ATTACKER_TALLVICTIM_BACK"
+			}
+
+			Sound
+			{
+				"Name"		"Feed_On_End"
+				"Activity"	"ACT_FEEDING_RELEASE_ATTACKER_SHORTVICTIM_FRONT"
+				"Activity"	"ACT_FEEDING_RELEASE_ATTACKER_TALLVICTIM_FRONT"
+				"Activity"	"ACT_FEEDING_RELEASE_ATTACKER_SHORTVICTIM_BACK"
+				"Activity"	"ACT_FEEDING_RELEASE_ATTACKER_TALLVICTIM_BACK"
+			}
+
+			Sound
+			{
+				"Name"		"Feed_On_Animal_Start"
+				"Activity"	"ACT_RAT_FEED_ENGAGE_ATTACKER_SHORTVICTIM_FRONT"
+				"Activity"	"ACT_RAT_FEED_ENGAGE_ATTACKER_TALLVICTIM_FRONT"
+				"Activity"	"ACT_RAT_FEED_ENGAGE_ATTACKER_SHORTVICTIM_BACK"
+				"Activity"	"ACT_RAT_FEED_ENGAGE_ATTACKER_TALLVICTIM_BACK"
+			}
+
+			Sound
+			{
+				"Name"		"Feed_On_Animal_Loop"
+				"Activity"	"ACT_RAT_FEED_LOOP_ATTACKER_SHORTVICTIM_FRONT"
+				"Activity"	"ACT_RAT_FEED_LOOP_ATTACKER_TALLVICTIM_FRONT"
+				"Activity"	"ACT_RAT_FEED_LOOP_ATTACKER_SHORTVICTIM_BACK"
+				"Activity"	"ACT_RAT_FEED_LOOP_ATTACKER_TALLVICTIM_BACK"
+			}
+
+			Sound
+			{
+				"Name"		"Feed_On_Animal_End"
+				"Activity"	"ACT_RAT_FEED_RELEASE_ATTACKER_SHORTVICTIM_FRONT"
+				"Activity"	"ACT_RAT_FEED_RELEASE_ATTACKER_TALLVICTIM_FRONT"
+				"Activity"	"ACT_RAT_FEED_RELEASE_ATTACKER_SHORTVICTIM_BACK"
+				"Activity"	"ACT_RAT_FEED_RELEASE_ATTACKER_TALLVICTIM_BACK"
+			}
+
+			Sound
+			{
+				"Name"	"Fidget"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Flee"
+				"Activity"	""
+//				"LinkSound"	"PanicRun_Loop"
+			}
+
+			Sound
+			{
+				"Name"	"Float"
+				"Activity"	""
+				"MaxRange"	"12"
+			}
+
+			Sound
+			{
+				"Name"	"Idle_Agitated"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Idle_Calm"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Laugh_Insane_Start"
+				"Activity"	"ACT_LAUGH_INTO"
+			}
+
+			Sound
+			{
+				"Name"	"Laugh_Insane_Loop"
+				"Activity"	"ACT_LAUGH_IDLE"
+			}
+
+			Sound
+			{
+				"Name"	"Laugh_Insane_End"
+				"Activity"	"ACT_LAUGH_GETOUT"
+			}
+
+			Sound
+			{
+				"Name"	"Lost"
+				"Activity"	"ACT_LOST"
+			}
+
+			Sound
+			{
+				"Name"	"Madness_Start"
+				"Activity"	"ACT_MADNESS_PRE_INTO"
+				"Activity"	"ACT_MADNESS_INTO"
+			}
+
+			Sound
+			{
+				"Name"	"Madness_Loop"
+				"Activity"	"ACT_MADNESS_IDLE"
+			}
+
+			Sound
+			{
+				"Name"	"Madness_End"
+				"Activity"	"ACT_MADNESS_GETOUT"
+			}
+
+			Sound
+			{
+				"Name"	"Pain"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"PanicRun_Loop"
+				"Activity"	"ACT_PANIC_RUN"
+				"Activity"	"ACT_PANIC_RUN_TRIP"
+				"Activity"	"ACT_PANIC_RUN_LOOKLEFT"
+				"Activity"	"ACT_PANIC_RUN_LOOKRIGHT"
+			}
+
+			Sound
+			{
+				"Name"	"Riled"
+				"Activity"	""
+			}
+
+// Not Imp'd yet.  Not in Design doc.
+//			Sound
+//			{
+//				"Name"	"Scream_Death_Short"
+////				"Activity"	"ACT__INTO"
+//			}
+
+			Sound
+			{
+				"Name"	"Scream_Start"
+//				"Activity"	"ACT__INTO"
+			}
+
+			Sound
+			{
+				"Name"	"Scream_Loop"
+				"Activity"	"ACT_CAULDRON_PAIN"
+			}
+
+			Sound
+			{
+				"Name"	"Scream_End"
+//				"Activity"	"ACT__GETOUT"
+			}
+
+			Sound
+			{
+				"Name"	"Scream_Death"
+//"Activity"	"ACT_MADNESS_DEATH"
+				"Activity"	"ACT_CAULDRON_DEATH"
+			}
+
+			Sound
+			{
+				"Name"	"Snore_Start"
+				"Activity"	"ACT_SLEEP_FALL_INTO"
+			}
+
+			Sound
+			{
+				"Name"	"Snore_Loop"
+				"Activity"	"ACT_SLEEP_IDLE"
+			}
+
+			Sound
+			{
+				"Name"	"Snore_End"
+				"Activity"	"ACT_SLEEP_GETUP"
+			}
+
+//			Sound
+//			{
+//				"Name"	"Stealth_Killed_*****"
+//				"Activity"	""
+//			}
+
+			Sound
+			{
+				"Name"	"Stealth_Killed_Bat"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Stealth_Killed_Bush_Hook"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Stealth_Killed_Claws"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Stealth_Killed_Fist"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Stealth_Killed_Katana"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Stealth_Killed_Knife"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Stealth_Killed_Stake"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Stealth_Killed_Tire_Iron"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"StruggleMental_Loop"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"StruggleSickend_Loop"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Surprised"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Suspect_Giveup"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Target_Acquired"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Target_GiveUp"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Target_Lost"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Target_Reacquired"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Target_Suspect"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"TheftOfVitae_Start"
+				"Activity"	"ACT_THEFTPAIN_PRE_INTO"	//changed by Entenschreck
+				"Activity"	"ACT_THEFTPAIN_INTO"		//changed by Entenschreck
+			}
+
+			Sound
+			{
+				"Name"	"TheftOfVitae_Loop"
+				"Activity"	"ACT_THEFTPAIN_IDLE"		//changed by Entenschreck
+			}
+
+			Sound
+			{
+				"Name"	"TheftOfVitae_End"
+				"Activity"	"ACT_THEFTPAIN_GETOUT"		//changed by Entenschreck
+			}
+
+			Sound
+			{
+				"Name"	"Upset"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Vomit_Start"
+				"Activity"	"ACT_VOMIT_INTO"
+			}
+
+			Sound
+			{
+				"Name"	"Vomit_Loop"
+				"Activity"	"ACT_VOMIT_IDLE"
+			}
+
+			Sound
+			{
+				"Name"	"Vomit_End"
+				"Activity"	"ACT_VOMIT_GETOUT"
+			}
+
+			Sound
+			{
+				"Name"	"Animal_Kened"
+				"Activity" "ACT_SIT"
+			}
+
+			Sound
+			{
+				"Name"	"Alarmed_Loop"
+				"Activity"	""
+			}
+
+			Sound
+			{
+				"Name"	"Warning_Loop"
+				"Activity"	"ACT_SNARL"
+			}
+		}
+	}
+}

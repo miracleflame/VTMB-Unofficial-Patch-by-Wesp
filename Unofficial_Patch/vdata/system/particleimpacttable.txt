@@ -1,0 +1,433 @@
+ParticleImpactTable
+{
+	//////////////////////////////////////////////
+	// Material types for reference
+	//
+
+	//	"concrete"               'C'
+	//	"metal"                  'M'
+	//	"dirt"                   'D'
+	//	"vent"                   'V'
+	//	"grate"                  'G'
+	//	"tile"                   'T'
+	//	"slosh"                  'S'
+	//	"wood"                   'W'
+	//	"computer"               'P'
+	//	"glass"                  'Y'	
+	//	"flesh"                  'F'
+	//	"flesh_soak"             'K'
+	//	"clip"                   'I'
+	//	"antlion"                'L'
+	//	"hidden"                 'X'
+	//	"stone"                  's'
+	//	"gargoyle"               'A'
+	//	"gargoyle_soak"          'B'
+	//	"fortitude_soak"         'f'
+	//	"bloodshield_soak"       'b'
+	//	"special_dmg_soak"       'd'
+	//	"ming_xiao"              'm'
+	//	"ming_xiao_tentacle"     't'            
+
+	//////////////////////////////////////////////
+	// Weapon names for reference
+	//		name is part after "item_w_" in weapon
+	//		file names.
+	//
+	//	broadsword
+	//	bush_hook
+	//	claws
+	//	colt_anaconda
+	//	crossbow
+	//	dragons_breath
+	//	dual_pistols
+	//	fists
+	//	glock_17c
+	//	grenade_concussion
+	//	grenade_frag
+	//	grenade_smoke
+	//	ithaca_m_37
+	//	katana
+	//	knife
+	//	mac_10
+	//	panic_rifle
+	//	remington_m_700
+	//	sig_p220
+	//	stake
+	//	steyr_aug
+	//	straight_razor
+	//	striker
+	//	sw_m64
+	//	tire_iron
+	//	uzi
+	//	wolf_head
+	//	dogattack
+
+	Table
+	{
+		// ***************************************************
+		// ***************************************************
+		// *  Material - concrete
+		// *
+		Material
+		{
+			"Name"					"concrete"
+			"Default_Effect"		"Impact_Concrete_Emitter"
+
+			Weapon
+			{
+				"striker"			"ImpactShotGun_Concrete_Emitter"
+				"ithaca_m_37"			"ImpactShotGun_Concrete_Emitter"
+				"mac_10"			"ImpactMac10_Concrete_Emitter"
+				"supershotgun"			"Impact_FX_Explosion"
+			}
+		}
+		// *
+		// *  End Material - concrete
+		// ***************************************************
+		// ***************************************************
+
+		// ***************************************************
+		// ***************************************************
+		// *  Material - metal
+		// *
+		Material
+		{
+			"Name"					"metal"
+			"Default_Effect"			"Impact_Metal_Emitter"
+			Weapon
+			{
+			"crossbow_flaming"			"Impact_FX_Explosion"
+			}
+		}
+		// *
+		// *  End Material - metal
+		// ***************************************************
+		// ***************************************************
+
+
+		// ***************************************************
+		// ***************************************************
+		// *  Material - vent
+		// *
+		Material
+		{
+			"Name"					"vent"
+			"Default_Effect"			"Impact_Metal_Emitter"
+
+			Weapon
+			{
+			"crossbow_flaming"			"Impact_FX_Explosion"
+			}
+		}
+		// *
+		// *  End Material - vent
+		// ***************************************************
+		// ***************************************************
+
+
+		// ***************************************************
+		// ***************************************************
+		// *  Material - grate
+		// *
+		Material
+		{
+			"Name"					"grate"
+			"Default_Effect"		"Impact_Metal_Emitter"
+
+			Weapon
+			{
+			"crossbow_flaming"		"Impact_FX_Explosion"
+			}
+		}
+		// *
+		// *  End Material - grate
+		// ***************************************************
+		// ***************************************************
+
+
+		// ***************************************************
+		// ***************************************************
+		// *  Material - wood
+		// *
+		Material
+		{
+			"Name"					"wood"
+			"Default_Effect"		"Impact_Wood_Emitter"
+
+			Weapon
+			{
+				"striker"			"ImpactShotGun_Wood_Emitter"
+				"ithaca_m_37"			"ImpactShotGun_Wood_Emitter"
+				"mac_10"			"ImpactMac10_Wood_Emitter"
+				"supershotgun"			"ImpactShotGun_Wood_Emitter"
+			}
+		}
+		// *
+		// *  End Material - wood
+		// ***************************************************
+		// ***************************************************
+
+
+		// ***************************************************
+		// ***************************************************
+		// *  Material - dirt
+		// *
+		Material
+		{
+			"Name"					"dirt"
+			"Default_Effect"		"Impact_dirt_Emitter"
+
+			Weapon
+			{
+				"striker"			"ImpactShotGun_dirt_Emitter"
+				"ithaca_m_37"			"ImpactShotGun_dirt_Emitter"
+				"supershotgun"			"ImpactShotGun_dirt_Emitter"
+				"mac_10"			"ImpactMac10_Dirt_Emitter"
+				"crossbow_flaming"		"Impact_FX_Explosion"
+			}
+		}
+		// *
+		// *  End Material - dirt
+		// ***************************************************
+		// ***************************************************
+
+
+		// ***************************************************
+		// ***************************************************
+		// *  Material - glass
+		// *
+		Material
+		{
+			"Name"					"glass"
+			"Default_Effect"		"Impact_Glass_Emitter"
+
+			Weapon
+			{
+			}
+		}
+		// *
+		// *  End Material - glass
+		// ***************************************************
+		// ***************************************************
+
+
+		// ***************************************************
+		// ***************************************************
+		// *  Material - flesh
+		// *
+		Material
+		{
+			"Name"				"flesh"
+			"Default_Effect"		"Impact_Flesh_Emitter"
+
+			Weapon
+			{
+			"avamp_blade"			"ImpactFX_Melee_Generic"	// added by wesp
+			"baseball_bat"			"ImpactFX_Melee_Generic"	// added by wesp
+			"baton"				"ImpactFX_Melee_Generic"	// added by wesp
+			"broadsword"			"ImpactFX_Melee_Generic"
+			"bush_hook"				"ImpactFX_Melee_Generic"
+			"chang_blade"			"ImpactFX_Melee_Generic"	// added by wesp
+			"chang_claw"			"ImpactClaws_flesh_Emitter"	// added by wesp
+			"claws"				"ImpactClaws_flesh_Emitter"
+			"claws_ghoul"			"ImpactClaws_flesh_Emitter"	// added by wesp
+			"claws_protean4"			"ImpactClaws_flesh_Emitter"	// added by wesp
+			"claws_protean5"			"ImpactClaws_flesh_Emitter"	// added by wesp
+			"colt_anaconda"			"ImpactFX_Ranged_Generic"
+			"deserteagle"			"ImpactFX_Ranged_Generic"	// added by wesp
+			"crossbow"				"ImpactFX_Melee_Generic"
+			"crossbow_flaming"		"Impact_FX_Explosion"
+			"dragons_breath"			"ImpactFX_Ranged_Generic"
+			"dual_pistols"			"ImpactFX_Ranged_Generic"
+			"fireaxe"				"ImpactFX_Melee_Generic"	// added by wesp
+			"fists"				"ImpactFX_Melee_Generic"
+			"flamethrower"			"flamethrower_hit_flame-emitter"	// added by wesp
+			"gargoyle_fist"			"ImpactFX_Melee_Generic"	// added by wesp
+			"glock_17c"				"ImpactFX_Ranged_Generic"
+			"grenade_concussion"		"ImpactFX_Ranged_Generic"
+			"grenade_frag"			"ImpactFX_Ranged_Generic"
+			"grenade_smoke"			"ImpactFX_Ranged_Generic"
+			"hengeyokai_fist"			"ImpactFX_Melee_Generic"	// added by wesp
+			"ithaca_m_37"			"ImpactFX_Ranged_Generic"
+			"katana"				"ImpactFX_Melee_Generic"
+			"knife"				"ImpactFX_Melee_Generic"
+			"mac_10"				"ImpactFX_Ranged_Generic"
+			"manbat_claw"			"ImpactClaws_flesh_Emitter"	// added by wesp
+			"occultblade"			"ImpactFX_Melee_Generic"	// added by wesp
+			"rem_m_700_bach"			"ImpactFX_Ranged_Generic"	// added by wesp
+			"remington_m_700"			"ImpactFX_Ranged_Generic"
+			"sabbatleader_attack"		"ImpactClaws_flesh_Emitter"	// added by wesp
+			"severed_arm"			"ImpactFX_Melee_Generic"	// added by wesp
+			"sheriff_sword"			"ImpactFX_Melee_Generic"	// added by wesp
+			"sledgehammer"			"ImpactFX_Melee_Generic"	// added by wesp
+			"stake"				"ImpactFX_Melee_Generic"
+			"steyr_aug"				"ImpactFX_Ranged_Generic"
+			"supershotgun"			"ImpactFX_Ranged_Generic"
+			"thirtyeight"			"ImpactFX_Ranged_Generic"
+			"tzimisce3_claw"			"ImpactClaws_flesh_Emitter"
+			"tzimisce2_claw"			"ImpactClaws_flesh_Emitter"	// added by wesp
+			"tire_iron"				"ImpactFX_Melee_Generic"
+			"torch"				"flamethrower_hit_flame-emitter"	// added by wesp
+			"uzi"					"ImpactFX_Ranged_Generic"
+			"werewolf_attacks"		"ImpactClaws_flesh_Emitter"	// added by wesp
+			"zombie_fists"			"ImpactFX_Melee_Generic"	// added by wesp
+			"wolf_head"				"ImpactFX_Ranged_Generic"
+			"dogattack"				"ImpactClaws_flesh_Emitter"
+		}
+
+		}
+		// *
+		// *  End Material - flesh
+		// ***************************************************
+		// ***************************************************
+
+
+		// ***************************************************
+		// ***************************************************
+		// *  Material - computer
+		// *
+		Material
+		{
+			"Name"					"computer"
+			"Default_Effect"		"Impact_Metal_Emitter"
+
+			Weapon
+			{
+			"crossbow_flaming"		"Impact_FX_Explosion"
+			}
+		}
+		// *
+		// *  End Material - computer
+		// ***************************************************
+		// ***************************************************
+
+
+		// ***************************************************
+		// ***************************************************
+		// *  Material - flesh soak
+		// *
+		Material
+		{
+			"Name"					"flesh_soak"
+			"Default_Effect"		"Impact_Soak_Emitter"
+		}
+		// *
+		// *  End Material - flesh soak
+		// ***************************************************
+		// ***************************************************
+
+
+		// ***************************************************
+		// ***************************************************
+		// *  Material - gargoyle
+		// *
+		Material
+		{
+			"Name"					"gargoyle"
+			"Default_Effect"		"Impact_Gargoyle_Emitter"
+
+			Weapon
+			{
+			"crossbow_flaming"		"Impact_FX_Explosion"
+			}
+		}
+		// *
+		// *  End Material - gargoyle
+		// ***************************************************
+		// ***************************************************
+
+
+		// ***************************************************
+		// ***************************************************
+		// *  Material - gargoyle_soak
+		// *
+		Material
+		{
+			"Name"					"gargoyle_soak"
+			"Default_Effect"		"Impact_Metal_Emitter"
+
+			Weapon
+			{
+			}
+		}
+		// *
+		// *  End Material - gargoyle_soak
+		// ***************************************************
+		// ***************************************************
+
+
+		// ***************************************************
+		// ***************************************************
+		// *  Material - fortitude soak
+		// *
+		Material
+		{
+			"Name"					"fortitude_soak"
+			"Default_Effect"		"Impact_Fortitude_Soak_Emitter"
+		}
+		// *
+		// *  End Material - fortitude soak
+		// ***************************************************
+		// ***************************************************
+
+
+		// ***************************************************
+		// ***************************************************
+		// *  Material - bloodshield soak
+		// *
+		Material
+		{
+			"Name"					"bloodshield_soak"
+			"Default_Effect"		"Impact_Bloodshield_Soak_Emitter"
+		}
+		// *
+		// *  End Material - bloodshield soak
+		// ***************************************************
+		// ***************************************************
+
+
+		// ***************************************************
+		// ***************************************************
+		// *  Material - Special Dmg soak
+		// *
+		Material
+		{
+			"Name"					"special_dmg_soak"
+			"Default_Effect"		"Impact_Bloodshield_Soak_Emitter"
+		}
+		// *
+		// *  End Material - Special Dmg soak
+		// ***************************************************
+		// ***************************************************
+
+
+		// ***************************************************
+		// ***************************************************
+		// *  Material - Ming Xiao
+		// *
+		Material
+		{
+			"Name"					"ming_xiao"
+			"Default_Effect"		"Ming_Xiao_Hit_Emmitter"
+		}
+		// *
+		// *  End Material - Ming Xiao
+		// ***************************************************
+		// ***************************************************
+
+
+		// ***************************************************
+		// ***************************************************
+		// *  Material - Ming Xiao Tentacle / Grub
+		// *
+		Material
+		{
+			"Name"					"ming_xiao_tentacle"
+			"Default_Effect"		"Ming_Xiao_Baby_Hit_Emmitter"
+		}
+		// *
+		// *  End Material - Ming Xiao Tentacle / Grub
+		// ***************************************************
+		// ***************************************************
+	}
+}

@@ -1,0 +1,846 @@
+{	1	}{	Oooh, what do we have here? Another scrumptious young plaything straight out of life and into my club? Mmm... you smell new, little boy, like fabric softener dew on freshly mowed Astroturf. Oh, I'm not frightening you, am I, duckling?	}{	What do we have here? Another scrumptious young plaything straight out of life and into my club? You smell new, little girl, like fabric softener dew on freshly mowed Astroturf. Ooh, I'm not frightening you, am I, duckling?	}{	#	}{	}{	G.Jeanette_Know = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	Who are you?	}{	Who are you?	}{	11	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	Frightening isn't the word I'd use... exciting is more like it.	}{	Frightening isn't the word I'd use... exciting is more like it.	}{	21	}{	Seduction 2 & not IsClan(pc,"Malkavian")	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	What the hell's your problem?	}{	What the hell's your problem?	}{	41	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	Leave me alone.	}{	Leave me alone.	}{	51	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	I see before me a beauty who shares the madness of my mind.	}{	I see before me a beauty who shares the madness of my mind.	}{	751	}{	IsClan(pc,"Malkavian")	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	Your words are a cracked symphony of profundity and consonance.	}{	Your words are a cracked symphony of profundity and consonance.	}{	751	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	I'm the finger down your spine when all the lights are out. I'm the name on all the men's room walls. When I pout, the whole world tries to make me smile. And everyone always wants to know, who... is... that girl?	}{	I'm the finger down your spine when all the lights are out. I'm the name on all the men's room walls. When I pout, the whole world tries to make me smile. And everyone always wants to know, who... is... that girl?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	Do you have a name?	}{	Do you have a name?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me your name.	}
+{	13	}{	Aren't you the tease? Got a name I can remember you by?	}{	Aren't you the tease? Got a name I can remember you by?	}{	71	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	My heart beats like a thousand primal drums. Give me the gift of your name.	}
+{	14	}{	You know what - forget it - I don't care.	}{	You know what - forget it - I don't care.	}{	51	}{	G.Jeanette_Curious == 0	}{	}{	}{	}{	}{	}{	}{	}{	Your games give me cold willies.	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	[Giggles]I can tell you and I are going to get along just like fire hoses.	}{	[Giggles]I can tell you and I are going to get along just like fire hoses.	}{	#	}{	npc.SetDisposition("Flirt",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	Fire hoses?	}{	Fire hoses?	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	You mean we're both rolled up and twisted?	}
+{	23	}{	Whatever, who are you?	}{	Whatever, who are you?	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	Just your name and none of your nonsense.	}
+{	24	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	When we get turned on, there's bound to be flames.	}{	When we get turned on, there's bound to be flames.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Who are you?	}{	Who are you?	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me your name.	}
+{	33	}{	That's what I was thinking. What's your name?	}{	That's what I was thinking. What's your name?	}{	11	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	Burn, baby, burn. Give me the pleasure of your label.	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Oh, I was just thinking about this delicious little pancake who came into my club and wasn't so sweet because he was soaked in vinegar.	}{	Oh, I was just thinking about this delicious little pancake who came into my club and wasn't so sweet because she was soaked in vinegar.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	Okay.... Who are you?	}{	Okay.... Who are you?	}{	11	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	43	}{	You're insane, you know that?	}{	You're insane, you know that?	}{	61	}{	not IsClan(pc,"Malkavian")	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	Whatever. Just leave me alone.	}{	Whatever. Just leave me alone.	}{	51	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	One woman's vinegar is another's wine. Tell me your name.	}{	One woman's vinegar is another's wine. Tell me your name.	}{	11	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	Your twisted mind makes mine look smooth and flawless.	}{	Your twisted mind makes mine look smooth and flawless.	}{	781	}{	IsClan(pc,"Malkavian")	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	I want no more of your mental pawings.	}{	I want no more of your mental pawings.	}{	51	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Aren't you just the teeniest bit curious about me? Come on, don't be shy. Say the right thing and I just might bare my soul... or something else.	}{	Aren't you just the teeniest bit curious about me? Come on, don't be shy. Say the right thing and I just might bare my soul... or something else.	}{	#	}{	}{	G.Jeanette_Curious = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	53	}{	Well, when you put it that way... by all means, tell me your name.	}{	Well, when you put it that way... by all means, tell me your name.	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	Take the clothes off your name.	}
+{	54	}{	Like I said, leave me alone, I couldn't care less about who you are.	}{	Like I said, leave me alone, I couldn't care less about who you are.	}{	81	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	Even the dead and desperate would pass on your well-used facilities.	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	So's the world, but we all keep riding on this moonlit carousel regardless.	}{	So's the world, but we all keep riding on this moonlit carousel regardless.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Who are you?	}{	Who are you?	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	63	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	64	}{	Beat it, lunatic.	}{	Beat it, lunatic.	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	I... am... Jeanette. And this bit of chaos crammed in a certifiable giggle is my club. Oh, I'd just love to give you funny feelings all night, sweetheart, but I really must trouble with some business. We'll reunite sweet and soon, I promise.	}{	I... am... Jeanette. And this bit of chaos crammed in a certifiable giggle is my club. Oh, I'd just love to give you funny feelings all night, sweetheart, but I really must trouble with some business. We'll reunite sweet and soon, I promise.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	Okay. Goodbye.	}{	Okay. Goodbye.	}{	0	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	You make madness feel like my last sunrise.	}
+{	73	}{	Soon can't come soon enough. Goodbye.	}{	Soon can't come soon enough. Goodbye.	}{	0	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	Until our shattered selves once again collide.	}
+{	74	}{	Whatever. Later.	}{	Whatever. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I know. Goodbye.	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	Well, since you don't care I'll tell you anyway. My name is Jeanette, this is my club, and you should play nice because I can be really fun when someone's not trying hard to piss me off. Better bring the butter the next time we toast.	}{	Well, since you don't care I'll tell you anyway. My name is Jeanette, this is my club, and you should play nice because I can be really fun when someone's not trying hard to piss me off. Better bring the butter the next time we toast.	}{	#	}{	npc.SetDisposition("anger",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	Whatever.	}{	Whatever.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Blah, blah, blah.	}
+{	83	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	How odd, I was just having naughty thoughts about you. You made quite an impression earlier. Did you come up just to cheer lonely, little me?	}{	How odd, I was just having naughty thoughts about you. You made quite an impression earlier. Did you come up just to cheer lonely, little me?	}{	#	}{	npc.SetDisposition("flirt",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	I brought this for Therese.	}{	I brought this for Therese.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	I stole this from a spirit for the dark daughter.	}
+{	93	}{	Actually, I need to see Therese.	}{	Actually, I need to see Therese.	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	I seek the dark daughter, she of obsidian.	}
+{	94	}{	Yes, as a matter of fact, I did. I couldn't stop thinking about you.	}{	Yes, as a matter of fact, I did. I couldn't stop thinking about you.	}{	121	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	All of my selves are intoxicated with you, white mistress.	}
+{	95	}{	You're the last person I wanted to run into.	}{	You're the last person I wanted to run into.	}{	131	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	I tried to avoid your gropings, but you have more hands than I have eyes.	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	Not even a knock? I could have been undressing, and who knows what I would've had to do to you. You're here to see her royal majesty Queen Victoria, aren't you?	}{	Not even a knock? I could have been undressing, and who knows what I would've had to do to you. You're here to see her royal majesty Queen Victoria, aren't you?	}{	#	}{	npc.SetDisposition("apathy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	I brought this for Therese.	}{	I brought this for Therese.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	I stole this from a spirit for the dark daughter.	}
+{	103	}{	Yeah, I need to see Therese.	}{	Yeah, I need to see Therese.	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	I seek the dark daughter, she of obsidian.	}
+{	104	}{	Actually, I was hoping I'd run into you.	}{	Actually, I was hoping I'd run into you.	}{	121	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	All of my selves are intoxicated with you, white mistress.	}
+{	105	}{	I'm sure as hell not here to see you.	}{	I'm sure as hell not here to see you.	}{	131	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	I tried to avoid your gropings, but you have more hands than I have eyes.	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	Therese is out making a show of how well her lips fit on the pants seat of the Camarilla. Did you happen to find her chastity belt or something?	}{	Therese is out making a show of how well her lips fit on the pants seat of the Camarilla. Did you happen to find her chastity belt or something?	}{	#	}{	npc.SetDisposition("apathy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	I need to give something to Therese. It's from the hotel.	}{	I need to give something to Therese. It's from the hotel.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	I have a bauble for the daughter of darkness.	}
+{	113	}{	I'd rather discuss this with Therese.	}{	I'd rather discuss this with Therese.	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	I can speak only with your other face, daughter of Janus.	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	Really? Do I often pogostick through your thoughts wearing nothing but a smile? Be honest... or don't.	}{	Really? Do I often pogostick through your thoughts wearing nothing but a smile? Be honest... or don't.	}{	#	}{	npc.SetDisposition("joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	Don't you find me a little... ugly?	}{	Don't you find me a little... ugly?	}{	591	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	123	}{	Right. I need to see Therese.	}{	Right. I need to see Therese.	}{	111	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	Like bingo without the chips. Just take me to your sister.	}
+{	124	}{	Therese around?	}{	Therese around?	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need to see your dark sister.	}
+{	125	}{	All the time, Jeanette. What do I do in your thoughts?	}{	All the time, Jeanette. What do I do in your thoughts?	}{	571	}{	Seduction 2	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	You haunt my dark dreams, but what deeds do I do in your own?	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	I'd be kinder to me, if I were you. What a gruesome thought, though, me being you. I suppose that'd mean you'd be inside me, and that's definitely never going to happen if you don't change your attitude.	}{	I'd be kinder to me, if I were you. What a gruesome thought, though, me being you. I suppose that'd mean you'd be inside me, and that's definitely never going to happen if you don't change your attitude.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	Whatever. I need to speak to Therese.	}{	Whatever. I need to speak to Therese.	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	Like bingo without the chips. Just take me to your sister.	}
+{	133	}{	That's a revolting thought. Where's Therese?	}{	That's a revolting thought. Where's Therese?	}{	111	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	The perfect chance to plant my foot in it. Now where is the dark daughter?	}
+{	134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	Ooh, can I see it?	}{	Ooh, can I see it?	}{	#	}{	npc.SetDisposition("flirt",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	Of course. Here, take it.	}{	Of course. Here, take it.	}{	191	}{	}{	pc.RemoveItem("item_g_ghost_pendant")	}{	}{	}{	}{	}{	}{	}{	Please bestow this gift, white mistress.	}
+{	143	}{	I'd rather give it to Therese.	}{	I'd rather give it to Therese.	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Only for the eyes of your sister.	}
+{	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	[Seductively]So... Therese told me you might be back with something for her. Do you have it with you?	}{	[Seductively]So... Therese told me you might be back with something for her. Do you have it with you?	}{	#	}{	npc.SetDisposition("flirt",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	Of course. Here, take it.	}{	Of course. Here, take it.	}{	191	}{	}{	pc.RemoveItem("item_g_ghost_pendant")	}{	}{	}{	}{	}{	}{	}{	Yes. Here is the ghostly locket.	}
+{	153	}{	I'm not giving it to anyone but Therese.	}{	I'm not giving it to anyone but Therese.	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your sister only receives this treasure.	}
+{	154	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	I'm not just some silly doll, you know. [Sobs]All my life my sister's made me out to be a joke. She told you I was an embarrassment, didn't she? That I couldn't tie my shoes, let alone hold on to something for her. Is that it?	}{	I'm not just some silly doll, you know. [Sobs]All my life my sister's made me out to be a joke. She told you I was an embarrassment, didn't she? That I couldn't tie my shoes, let alone hold on to something for her. Is that it?	}{	#	}{	npc.SetDisposition("sad",3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	Not at all. Here, take it.	}{	Not at all. Here, take it.	}{	191	}{	}{	pc.RemoveItem("item_g_ghost_pendant")	}{	}{	}{	}{	}{	}{	}{	I seek not to harm your heart. Take this little offering.	}
+{	163	}{	No. Please, calm down.	}{	No. Please, calm down.	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	You stole the words from my head.	}
+{	164	}{	I wouldn't give you the time of day, you crazy bitch.	}{	I wouldn't give you the time of day, you crazy bitch.	}{	171	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	Hold on to the knowledge that you mean nothing to me.	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	[Sobbing]She's always belittling me. She's the smart one, she's the favorite, she's the successful one. Well, it's not fair! I'm not a fool! This club's success is just as much my doing as it is hers!	}{	[Sobbing]She's always belittling me. She's the smart one, she's the favorite, she's the successful one. Well, it's not fair! I'm not a fool! This club's success is just as much my doing as it is hers!	}{	#	}{	npc.SetDisposition("sad",3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	Whoa, it's alright. Here, here's the thing from the hotel.	}{	Whoa, it's alright. Here, here's the thing from the hotel.	}{	191	}{	}{	pc.RemoveItem("item_g_ghost_pendant")	}{	}{	}{	}{	}{	}{	}{	No tears, daughter of Janus. Take the locket.	}
+{	173	}{	You've made your point, drama queen. Take it.	}{	You've made your point, drama queen. Take it.	}{	191	}{	}{	pc.RemoveItem("item_g_ghost_pendant")	}{	}{	}{	}{	}{	}{	}{	Your sobbings are driving me crazy... er, crazier. Take it and be silent.	}
+{	174	}{	Would you stop? You're driving me nuts, now.	}{	Would you stop? You're driving me nuts, now.	}{	181	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	These pathetic warblings fall on undead ears.	}
+{	175	}{	I understand. But I still can't give it to you.	}{	I understand. But I still can't give it to you.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	My heart is open, but your hand will not contain your desire.	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	[Sobbing]Do you understand what it's like to have your own flesh and blood ripping you apart on a daily basis for two lifetimes? Can you?	}{	[Sobbing]Do you understand what it's like to have your own flesh and blood ripping you apart on a daily basis for two lifetimes? Can you?	}{	#	}{	npc.SetDisposition("sad",3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	Here, please take it.	}{	Here, please take it.	}{	191	}{	}{	pc.RemoveItem("item_g_ghost_pendant")	}{	}{	}{	}{	}{	}{	}{	Spectacular tantrum! The child gets the toy.	}
+{	183	}{	If I give you this will you stop your insanity? Take it.	}{	If I give you this will you stop your insanity? Take it.	}{	191	}{	}{	pc.RemoveItem("item_g_ghost_pendant")	}{	}{	}{	}{	}{	}{	}{	I can take no more of this. Accept this and stop your wailings.	}
+{	184	}{	I'm sorry to hear that, Jeanette, but I really need to give it to Therese.	}{	I'm sorry to hear that, Jeanette, but I really need to give it to Therese.	}{	581	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	Forgiveness, white daughter, but this is for the other only.	}
+{	185	}{	Shut up already. I'm only giving it to Therese and that's final.	}{	Shut up already. I'm only giving it to Therese and that's final.	}{	581	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	Your sister and none other, harlot.	}
+{	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	Ah! It's beautiful. Like a knight in shining armor... dangling at the end of a noose.	}{	Ah! It's beautiful. Like a knight in shining armor... dangling at the end of a noose.	}{	#	}{	npc.SetDisposition("joy",1)	}{	pc.SetQuest("Hotel",4)	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	Right. Therese was supposed to call off the feud with Tung.	}{	Right. Therese was supposed to call off the feud with Tung.	}{	221	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	Yes! Neck-wrung and armored! The other said she would forgive the worm.	}
+{	193	}{	Make sure Therese gets it. She said she'd call off the feud with Tung.	}{	Make sure Therese gets it. She said she'd call off the feud with Tung.	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	And for the dark daughter. She promised to pardon the worm in exchange.	}
+{	194	}{	It would look good on you. I'm sure anything does.	}{	It would look good on you. I'm sure anything does.	}{	201	}{	Seduction 2 & not IsClan(pc,"Malkavian")	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	}
+{	195	}{	I would like to see it glistening against your bloodless pale heart-place.	}{	I would like to see it glistening against your bloodless pale heart-place.	}{	801	}{	Seduction 2 & IsClan(pc,"Malkavian")	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	201	}{	That was cliché and predictable, but you can say it anytime and I'll act like you were the first and only.	}{	That was cliché and predictable, but you can say it anytime and I'll act like you were the first and only.	}{	#	}{	npc.SetDisposition("joy",3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	Listen, Therese told me she'd call off the feud with Tung.	}{	Listen, Therese told me she'd call off the feud with Tung.	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	203	}{	I'm sure you say that to all the guys. All eight dozen.	}{	I'm sure you say that to all the girls. All eight dozen.	}{	211	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	}
+{	204	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	205	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	208	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	211	}{	Are you sure that's the kind of thing you want to say to me? Keep bending me and I'm bound to snap.	}{	Are you sure that's the kind of thing you want to say to me? Keep bending me and I'm bound to snap.	}{	#	}{	npc.SetDisposition("anger",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	Sorry. Therese told me if I got that for her, she'd call off the feud with Tung.	}{	Sorry. Therese told me if I got that for her, she'd call off the feud with Tung.	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	Forgive my forked tongue. The dark daughter promised the worm's release.	}
+{	213	}{	Whatever. Therese said she'd call off the feud with Tung.	}{	Whatever. Therese said she'd call off the feud with Tung.	}{	221	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	I only follow the script the voices write. The other promised me the worm.	}
+{	214	}{	I'm sure you're used to being bent over. Therese said she'd call off the feud.	}{	I'm sure you're used to being bent over. Therese said she'd call off the feud.	}{	221	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	You're a body used to bendings. I want the worm! Dark daughter gave her word!	}
+{	215	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	217	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	221	}{	Oh, did she now? I spend a few nights with Bertram and all of a sudden he's the pox of Santa Monica. Ha ha! Paranoia and Therese have been bedfellows for longer than I can remember. Indulge my curiosity... what did you really think of Therese?	}{	Oh, did she now? I spend a few nights with Bertram and all of a sudden he's the pox of Santa Monica. Ha ha! Paranoia and Therese have been bedfellows for longer than I can remember. Indulge my curiosity... what did you really think of Therese?	}{	#	}{	npc.SetDisposition("joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	I don't really know. About the feud...	}{	I don't really know. About the feud...	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will say nothing of my visions. The worm needs forgiveness.	}
+{	223	}{	She's not a pest. Listen, about the feud...	}{	She's not a pest. Listen, about the feud...	}{	261	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	She is beautiful like the edge of a knife. Now, the worm....	}
+{	224	}{	She's not very attractive, that's for sure.	}{	She's not very attractive, that's for sure.	}{	231	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	Her beauty is forgettable. Please, call the worm.	}
+{	225	}{	I can't stand her type.	}{	I can't stand her type.	}{	241	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	Nightmares and needles. She sickens my very skin.	}
+{	226	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	227	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	228	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	231	}{	[Not amused]We're identical twins.	}{	[Not amused]We're identical twins.	}{	#	}{	npc.SetDisposition("pissed",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	Whatever. About calling off the feud...	}{	Whatever. About calling off the feud...	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell the worm he can come out of his black bath.	}
+{	233	}{	Really? I thought you were the pretty one. Now, about the feud...	}{	Really? I thought you were the pretty one. Now, about the feud...	}{	261	}{	Seduction 4	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 2	}{	}{	}{	}{	}{	}{	}{	Identical as day is to night. You are my forbidden sun. Now please, the worm....	}
+{	234	}{	I meant she looks much less slutty. About the feud...	}{	I meant she looks much less slutty. About the feud...	}{	251	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	How then does she still wear her dignity and you are naked?	}
+{	235	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	236	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	238	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	241	}{	There are nuns that sin more often than her. In fact, she won't even feed unless it's poured into a glass for her. Myself... I like to bite.	}{	There are nuns that sin more often than her. In fact, she won't even feed unless it's poured into a glass for her. Myself... I like to bite.	}{	#	}{	npc.SetDisposition("neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	Okay. About the feud...	}{	Okay. About the feud...	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	Please, white mistress, end this petty feud.	}
+{	243	}{	As do I. Now, about the feud...	}{	As do I. Now, about the feud...	}{	261	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	You and me both, my pale moon-maiden. Will you help me, please?	}
+{	244	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	245	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	246	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	247	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	248	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	250	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	251	}{	Mmm... that is unfortunate, isn't it?	}{	Mmm... that is unfortunate, isn't it?	}{	#	}{	npc.SetDisposition("apathy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	Just tell me what I have to do to call off the feud.	}{	Just tell me what I have to do to call off the feud.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	Patience is for hospitals. Tell me what I must do.	}
+{	253	}{	Yes. And Therese said she would call it off for me.	}{	Yes. And Therese said she would call it off for me.	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	The other said she would forgive the worm.	}
+{	254	}{	I don't care. I need to see Tung.	}{	I don't care. I need to see Tung.	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need to see the worm.	}
+{	255	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	256	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	I wish I could do something about it, but Bertram won't believe it's off until he hears Therese say it's off. And as I told you, I'm really not sure where Therese is. However...	}{	I wish I could do something about it, but Bertram won't believe it's off until he hears Therese say it's off. And as I told you, I'm really not sure where Therese is. However...	}{	#	}{	npc.SetDisposition("neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	What?	}{	What?	}{	311	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	Yes, white mistress?	}
+{	263	}{	What is it this time?	}{	What is it this time?	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	I cannot travel in straight lines.	}
+{	264	}{	Therese promised me! I don't care where she is, get her back here now!	}{	Therese promised me! I don't care where she is, get her back here now!	}{	271	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	The dark daughter made promises. You will find her and bring her to me.	}
+{	265	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	268	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	270	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	271	}{	Would if I could, kitten, so sorry, but she doesn't tell me much about her business. But I do know something you could do for us in the meantime... something that would make us very grateful.	}{	Would if I could, kitten, so sorry, but she doesn't tell me much about her business. But I do know something you could do for us in the meantime... something that would make us very grateful.	}{	#	}{	npc.SetDisposition("neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	272	}{	What is it?	}{	What is it?	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me, white mistress.	}
+{	273	}{	That wasn't the deal.	}{	That wasn't the deal.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will do nothing until the scale is balanced.	}
+{	274	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	275	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	276	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	277	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	278	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	281	}{	I know.... You've got my sympathy, really you do. I do need your help for something - and I can show my appreciation in a lot more creative ways than Therese ever could.	}{	I know.... You've got my sympathy, really you do. I do need your help for something - and I can show my appreciation in a lot more creative ways than Therese ever could.	}{	#	}{	npc.SetDisposition("sad",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	I like the sound of that. What do you have in mind?	}{	I like the sound of that. What do you have in mind?	}{	311	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	I see wondrous configurations. What need have you, ivory princess?	}
+{	283	}{	Why not. What do you want me to do?	}{	Why not. What do you want me to do?	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	It seems my plate is empty. Tell me of your wantings.	}
+{	284	}{	Forget it.	}{	Forget it.	}{	291	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	I would rather wake with the sun in my eyes.	}
+{	285	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	286	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	287	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	288	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	291	}{	Mmm... pretty please? For me?	}{	Mmm... pretty please? For me?	}{	#	}{	npc.SetDisposition("sad",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	Fine. What is it?	}{	Fine. What is it?	}{	311	}{	G.Jeanette_Refuse == 0	}{	}{	}{	}{	}{	}{	}{	}{	Boredom and evil are ugly stepbrothers. Tell me what you need.	}
+{	293	}{	Especially not for you. Goodbye.	}{	Especially not for you. Goodbye.	}{	301	}{	G.Jeanette_Refuse == 0	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1; G.Jeanette_Refuse = 1	}{	}{	}{	}{	}{	}{	}{	For you, a wooden stake and the kiss of the flame. Farewell.	}
+{	294	}{	Alright... fine.	}{	Alright... fine.	}{	361	}{	G.Jeanette_Refuse == 2	}{	G.Jeanette_Refuse = 0	}{	}{	}{	}{	}{	}{	}{	Worn down, I submit to you, white mistress.	}
+{	295	}{	Destroying art's where I draw the line. Forget it. Goodbye.	}{	Destroying art's where I draw the line. Forget it. Goodbye.	}{	0	}{	G.Jeanette_Refuse == 2 and G.Jeanette_Knife == 0	}{	G.Jeanette_Refuse = 1; G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	I cannot kill paintings. It is my weakness. Farewell.	}
+{	296	}{	Do it yourself, psycho-bitch. I'm nobody's tool. The hell with you and your sister.	}{	Do it yourself, psycho-bitch. I'm nobody's tool. The hell with you and your sister.	}{	0	}{	G.Jeanette_Refuse == 2 and G.Jeanette_Knife == 0	}{	G.Jeanette_Refuse = 1; G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	I rid myself of the daughters of Janus. You are the rot on this world's corpse.	}
+{	297	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	298	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	300	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	301	}{	Leave now and Bertram will never help you. I'll see to that. So you can make believe you adore my every word and help me, or you can go back to the prince with your head in your hands.	}{	Leave now and Bertram will never help you. I'll see to that. So you can make believe you adore my every word and help me, or you can go back to the prince with your head in your hands.	}{	#	}{	npc.SetDisposition("anger",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	302	}{	When you put it that way. What do I have to do?	}{	When you put it that way. What do I have to do?	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	Choice is an illusion created by the powerful. Tell me what needs be done.	}
+{	303	}{	I'll do it, but I don't like being blackmailed. I'll remember this.	}{	I'll do it, but I don't like being blackmailed. I'll remember this.	}{	311	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	Cry wolf, little mistress, and for now I heed. Just pray that I am not the wolf.	}
+{	304	}{	I'll take my chances. Goodbye.	}{	I'll take my chances. Goodbye.	}{	0	}{	}{	G.Jeanette_Refuse = 1; G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	Your threats are like your virginity, short-lived and ephemeral.	}
+{	305	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	306	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	307	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	308	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	309	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	310	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	311	}{	Do you know Gallery Noir, down the street? I happen to know there's a charity event being organized there. Lots of the influential Santa Monicans slithering in for token appearances. But there's one thing they don't know...	}{	Do you know Gallery Noir, down the street? I happen to know there's a charity event being organized there. Lots of the influential Santa Monicans slithering in for token appearances. But there's one thing they don't know...	}{	#	}{	npc.SetDisposition("neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	312	}{	(Auto-Link)	}{	(Auto-Link)	}{	321	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-Link)	}
+{	313	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	314	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	315	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	316	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	317	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	318	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	319	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	320	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	321	}{	The whole event's been set up by a Kindred trying to establish their own power clique in our city. And we can't let that happen, can we? So I need some brilliant young upstart to spoil the milk.	}{	The whole event's been set up by a Kindred trying to establish their own power clique in our city. And we can't let that happen, can we? So I need some brilliant young upstart to spoil the milk.	}{	#	}{	npc.SetDisposition("neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	322	}{	What do I do?	}{	What do I do?	}{	351	}{	}{	}{	}{	}{	}{	}{	}{	}{	What dastardly deed for this shattered mind?	}
+{	323	}{	For you, anything.	}{	For you, anything.	}{	351	}{	Seduction 2	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	For you I would face the flame at noontime.	}
+{	324	}{	Please tell me I get to kill somebody?	}{	Please tell me I get to kill somebody?	}{	331	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	I want to grind someone to gristle.	}
+{	325	}{	I need to talk to Tung. This isn't helping.	}{	I need to talk to Tung. This isn't helping.	}{	341	}{	}{	}{	}{	}{	}{	}{	}{	}{	It's the worm I need to see.	}
+{	326	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	327	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	328	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	329	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	330	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	331	}{	You don't need more enemies this early in the game. Give it a few years, they'll come.	}{	You don't need more enemies this early in the game. Give it a few years, they'll come.	}{	#	}{	npc.SetDisposition("joy",3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	332	}{	What do I do?	}{	What do I do?	}{	351	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	Tell me what needs to be done.	}
+{	333	}{	I like adversity... keeps me on my toes. Go on.	}{	I like adversity... keeps me on my toes. Go on.	}{	351	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	334	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	335	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	336	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	337	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	338	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	339	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	340	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	341	}{	I thought we went over this? Therese isn't here. Until he hears it from her, Bertram's like a windshield in the deep blue sea - invisible.	}{	I thought we went over this? Therese isn't here. Until he hears it from her, Bertram's like a windshield in the deep blue sea - invisible.	}{	#	}{	npc.SetDisposition("anger",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	342	}{	Fine. What do I have to do?	}{	Fine. What do I have to do?	}{	351	}{	}{	}{	}{	}{	}{	}{	}{	}{	What deeds need be done?	}
+{	343	}{	I'm listening.	}{	I'm listening.	}{	351	}{	}{	}{	}{	}{	}{	}{	}{	}{	My ears are open, white mistress.	}
+{	344	}{	This is it. You understand? The last thing I'm doing for either of you.	}{	This is it. You understand? The last thing I'm doing for either of you.	}{	351	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will wander no further once this is finished.	}
+{	345	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	346	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	347	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	348	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	349	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	350	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	351	}{	I promise this won't take long. Take this knife. Give the paintings in the gallery a good slashing. Don't get caught and don't turn it into a massacre. And steal the charity box, would you? Buy yourself something velvet.	}{	I promise this won't take long. Take this knife. Give the paintings in the gallery a good slashing. Don't get caught and don't turn it into a massacre. And steal the charity box, would you? Buy yourself something velvet.	}{	#	}{	npc.SetDisposition("joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	352	}{	Alright, I'll go slash the paintings.	}{	Alright, I'll go slash the paintings.	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	Slashing is now my existence.	}
+{	353	}{	Fine. I'll be back when it's finished. And this time the feud will be called off?	}{	Fine. I'll be back when it's finished. And this time the feud will be called off?	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	You free the worm after these slashings?	}
+{	354	}{	I'm not going to steal charity money.	}{	I'm not going to steal charity money.	}{	371	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	I don't steal the offerings of innocents.	}
+{	355	}{	I'm just going to start slashing, and if someone should get in the way...	}{	I'm just going to start slashing, and if someone should get in the way...	}{	381	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	My knife will slash both canvas and flesh.	}
+{	356	}{	Slashing paintings? Forget it. That's too much! I'm out of here.	}{	Slashing paintings? Forget it. That's too much! I'm out of here.	}{	291	}{	not IsClan(pc,"Toreador")	}{	G.Jeanette_Refuse = 2; G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	I will not destroy the brainchild of another. Farewell.	}
+{	357	}{	Destroy art? I perish the thought of such odious deeds! I refuse! Farewell!	}{	Destroy art? I perish the thought of such odious deeds! I refuse! Farewell!	}{	291	}{	IsClan(pc,"Toreador")	}{	G.Jeanette_Refuse = 2; G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	}
+{	358	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	359	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	360	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	361	}{	I'm sure Therese will be thrilled to honor your agreement when you get back. But in the meantime, get to the museum and ruin those paintings, then pay me a visit. I want to hear all about it.... Hurry up, I can only amuse myself for so long.	}{	I'm sure Therese will be thrilled to honor your agreement when you get back. But in the meantime, get to the museum and ruin those paintings, then pay me a visit. I want to hear all about it.... Hurry up, I can only amuse myself for so long.	}{	#	}{	npc.SetDisposition("joy",1)	}{	G.Jeanette_Refuse = 0; G.Jeanette_Quest = 1; pc.SetQuest("Slashterpiece",1); pc.GiveItem("item_w_knife")	}{	}{	}{	}{	}{	}{	}{	}
+{	362	}{	Be back soon. Goodbye.	}{	Be back soon. Goodbye.	}{	811	}{	}{	}{	}{	}{	}{	}{	}{	}{	No canvas will escape my blade.	}
+{	363	}{	I'd never intentionally keep you waiting, Jeanette. Goodbye.	}{	I'd never intentionally keep you waiting, Jeanette. Goodbye.	}{	811	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	I will think of you only as I slash these splatterings.	}
+{	364	}{	If I don't get to see Tung when I get back, I'm taking it out on both of you. Bye.	}{	If I don't get to see Tung when I get back, I'm taking it out on both of you. Bye.	}{	811	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	We will finish worm business when I return, or you will be my next painting.	}
+{	365	}{	We may amuse ourselves together. But I'm not sure it's possible.	}{	We may amuse ourselves together. But I'm not sure it's possible.	}{	541	}{	Seduction 4 & pc.bloodpool > 1 and G.Jeanette_Seduce >= 3 and G.Patch_Plus == 1	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	I remember sweet things together. But can we enjoy them undead?	}
+{	366	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	367	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	368	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	369	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	370	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	371	}{	It's not what you think. Every pretty penny dropped in that box is going right into some other Kindred's purse. You'd be crooking from a dirty steal.	}{	It's not what you think. Every pretty penny dropped in that box is going right into some other Kindred's purse. You'd be crooking from a dirty steal.	}{	#	}{	npc.SetDisposition("neutral",1); G.Charity_Know = 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	372	}{	Fine, I'll do it. Then you'll call off the feud, right?	}{	Fine, I'll do it. Then you'll call off the feud, right?	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	If these paintings go under the blade, then you free the worm?	}
+{	373	}{	I'm not stealing charity money but I'll do the rest. Then you'll call off the feud?	}{	I'm not stealing charity money but I'll do the rest. Then you'll call off the feud?	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will slash canvas, but steal no green.	}
+{	374	}{	I refuse. I'm not a criminal. Find someone else. Goodbye.	}{	I refuse. I'm not a criminal. Find someone else. Goodbye.	}{	0	}{	}{	G.Jeanette_Refuse = 2; G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	I am no dark-hearted errand-boy. Farewell.	}
+{	375	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	376	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	377	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	378	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	379	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	380	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	381	}{	Ah-ah! Leave the wine in the cask. I'll harvest that blood when it's time. Tonight there is no harvest moon, got it?	}{	Ah-ah! Leave the wine in the cask. I'll harvest that blood when it's time. Tonight there is no harvest moon, got it?	}{	#	}{	npc.SetDisposition("joy",3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	382	}{	Fine, I'll do it. Then you'll call off the feud, right?	}{	Fine, I'll do it. Then you'll call off the feud, right?	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	Will the worm be set free after this dark deed?	}
+{	383	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	384	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	385	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	386	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	387	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	388	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	389	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	390	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	391	}{	[Rapidly, frightened]Oh, I'm so relieved you're safe! I wanted to warn you when I heard it was a setup, but Therese pulled a gun on me and I locked myself in the bathroom and she's threatening to kill me an-and you have to help me!	}{	[Rapidly, frightened]Oh, I'm so relieved you're safe! I wanted to warn you when I heard it was a setup, but Therese pulled a gun on me and I locked myself in the bathroom and she's threatening to kill me an-and you have to help me!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	392	}{	Slow down. Tell me what happened.	}{	Slow down. Tell me what happened.	}{	411	}{	}{	}{	}{	}{	}{	}{	}{	}{	Patience, white mistress. Tell me what troubles you.	}
+{	393	}{	Of course I'll save you. But first, tell me what happened.	}{	Of course I'll save you. But first, tell me what happened.	}{	411	}{	Seduction 2	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	I shall be your white knight, ivory goddess. First tell me your tale.	}
+{	394	}{	Why should I help you?	}{	Why should I help you?	}{	421	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	You are biblically known to many. Call another.	}
+{	395	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	396	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	397	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	398	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	399	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	400	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	401	}{	[Rapidly, frightened]It was a setup! Listen, I know we've had our differences, but you have to trust me! Therese tried to have you killed! I had to lock myself in the bathroom because now she's got a gun and - please, you have to help me!	}{	[Rapidly, frightened]It was a setup! Listen, I know we've had our differences, but you have to trust me! Therese tried to have you killed! I had to lock myself in the bathroom because now she's got a gun and - please, you have to help me!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	402	}{	Slow down. Tell me what happened.	}{	Slow down. Tell me what happened.	}{	411	}{	}{	}{	}{	}{	}{	}{	}{	}{	Patience, white mistress. Tell me what troubles you.	}
+{	403	}{	Why should I help you?	}{	Why should I help you?	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	What need have I of a used saddle?	}
+{	404	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	405	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	406	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	407	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	408	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	409	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	410	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	411	}{	Therese knew it was you at the gallery all along. She set you up and... heh![Sound of gunfire] Did you hear that? She's crazy! She paid those thieves for a hit. She'll kill anyone who gets in the way of her becoming the top dog of Santa Monica.	}{	Therese knew it was you at the gallery all along. She set you up and... heh![Sound of gunfire] Did you hear that? She's crazy! She paid those thieves for a hit. She'll kill anyone who gets in the way of her becoming the top dog of Santa Monica.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	412	}{	Alright. I'm coming over. Goodbye.	}{	Alright. I'm coming over. Goodbye.	}{	431	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will come to right this wrong.	}
+{	413	}{	Don't worry, Jeanette, I'll deal with Therese. I've got a score to settle.	}{	Don't worry, Jeanette, I'll deal with Therese. I've got a score to settle.	}{	431	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will deal with the dark daughter, ivory goddess.	}
+{	414	}{	Well, thanks for getting me into this, Jeanette!	}{	Well, thanks for getting me into this, Jeanette!	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	White mistress, why did you bind me to these railroad tracks?	}
+{	415	}{	I hope you two kill each other, goodbye.	}{	I hope you two kill each other, goodbye.	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	Let fate deliver us two piles of ash. Farewell.	}
+{	416	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	417	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	418	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	419	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	420	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	421	}{	Therese is going to kill us! Without me you'll never get out of Santa Monica alive.	}{	Therese is going to kill us! Without me you'll never get out of Santa Monica alive.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	422	}{	Why is Therese trying to kill me?	}{	Why is Therese trying to kill me?	}{	431	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why does the dark daughter curse me?	}
+{	423	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	424	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	425	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	426	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	427	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	428	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	429	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	430	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	431	}{	Hurry! I don't know how much longer I have!	}{	Hurry! I don't know how much longer I have!	}{	#	}{	}{	pc.SetQuest("Tourette",1)	}{	}{	}{	}{	}{	}{	}{	}
+{	432	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	433	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	434	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	435	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	436	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	437	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	438	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	439	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	440	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	441	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	442	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	443	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	444	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	445	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	446	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	447	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	448	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	449	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	450	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	451	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	452	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	453	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	454	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	455	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	456	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	457	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	458	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	459	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	460	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	461	}{	[Melancholy]Oh, it's you. I'm surprised you returned to the scene of the crime, without your girlfriend Therese here. Come to bury the bitterness between us? That time's past. Way in the past. So, be a b-e-e and buzz off. I've got no honey for you.	}{	[Melancholy]Oh, it's you. I'm surprised you returned to the scene of the crime, without your girlfriend Therese here. Come to bury the bitterness between us? That time's past. Way in the past. So, be a b-e-e and buzz off. I've got no honey for you.	}{	#	}{	npc.SetDisposition("apathy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	462	}{	Fine. Goodbye.	}{	Fine. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your disregard is a sweet blessing, ivory she-dog.	}
+{	463	}{	I'm sorry about Therese. Goodbye.	}{	I'm sorry about Therese. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will miss the dark daughter. Farewell.	}
+{	464	}{	If only Therese had been a better shot. Goodbye.	}{	If only Therese had been a better shot. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	If only I was speaking to a pile of smoking ash.	}
+{	465	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	466	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	467	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	468	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	469	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	470	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	471	}{	Hello, kitten. Didja come back for me? Even if you didn't, just nod your head. I'm all gooey - I didn't think you'd be back so soon. Any particular reason for this unexpected visit? Although...	}{	Hello, kitten. Didja come back for me? Even if you didn't, just nod your head. I'm all gooey - I didn't think you'd be back so soon. Any particular reason for this unexpected visit? Although...	}{	#	}{	npc.SetDisposition("joy",1)	}{	G.Jeanette_Baron = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	472	}{	(Auto-Link)	}{	(Auto-Link)	}{	481	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-Link)	}
+{	473	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	474	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	475	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	476	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	477	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	478	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	479	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	480	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	481	}{	It is pleasure, I mean, a pleasure to see you again.	}{	It is pleasure, I mean, a pleasure to see you again.	}{	#	}{	npc.SetDisposition("flirt",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	482	}{	Are you lonely?	}{	Are you lonely?	}{	511	}{	G.Jeanette_Seduce >= 8 and G.Jeanette_Mail == 0	}{	}{	}{	}{	}{	}{	}{	}{	Do you swim in a sea of solitude, ivory princess?	}
+{	483	}{	I got your email. So, you're lonely, huh?	}{	I got your email. So, you're lonely, huh?	}{	511	}{	G.Jeanette_Mail == 1	}{	}{	}{	}{	}{	}{	}{	}{	This duckling has come waddling back. Lonely, still?	}
+{	484	}{	What's going on in Santa Monica?	}{	What's going on in Santa Monica?	}{	491	}{	G.Story_State > 10	}{	}{	}{	}{	}{	}{	}{	}{	What's going on in the lady by the sea?	}
+{	485	}{	Anything new?	}{	Anything new?	}{	501	}{	G.Story_State > 40	}{	}{	}{	}{	}{	}{	}{	}{	What news, white goddess?	}
+{	486	}{	Good to see you, as always, Jeanette. Goodbye.	}{	Good to see you, as always, Jeanette. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Always a pleasure to my many minds, my sweet paleness.	}
+{	487	}{	Don't ever change, you lunatic. Goodbye.	}{	Don't ever change, you lunatic. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your insanity is mother's milk. Farewell.	}
+{	488	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	489	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	490	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	491	}{	The tide goes out, the tide comes in, and then it waves goodbye again. It'll take me a few years to wake this city up.	}{	The tide goes out, the tide comes in, and then it waves goodbye again. It'll take me a few years to wake this city up.	}{	#	}{	npc.SetDisposition("neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	492	}{	Are you lonely?	}{	Are you lonely?	}{	511	}{	G.Jeanette_Seduce >= 8 or G.Jeanette_Invite == 1	}{	}{	}{	}{	}{	}{	}{	}{	Do you swim in a sea of solitude, ivory princess?	}
+{	493	}{	Good to see you. Goodbye.	}{	Good to see you. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Always a pleasure to my many minds, my sweet paleness.	}
+{	494	}{	Right. Goodbye.	}{	Right. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	495	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	496	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	497	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	498	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	499	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	500	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	501	}{	The Camarilla tried to get its hand down my skirt, so I slapped them in the face. Prince - ha! The only title I want is for a cherry-red Porsche. I'm sure they're out for blood, but I have a few new sugar daddies - Nines and Isaac, know 'em?	}{	The Camarilla tried to get its hand down my skirt, so I slapped them in the face. Prince - ha! The only title I want is for a cherry-red Porsche. I'm sure they're out for blood, but I have a few new sugar daddies - Nines and Isaac, know 'em?	}{	#	}{	npc.SetDisposition("neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	502	}{	Yeah, I do. Glad to see you didn't join the Cam. Goodbye.	}{	Yeah, I do. Glad to see you didn't join the Cam. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I too fly the Anarch flag. Farewell.	}
+{	503	}{	I think you're making a mistake. You should've joined with the prince. Goodbye.	}{	I think you're making a mistake. You should've joined with the prince. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Follow the Camarilla, wild one, lest you all perish in the fires of your indiscretion.	}
+{	504	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	505	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	506	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	507	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	508	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	509	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	510	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	511	}{	Oh, sweetheart, desperately, these nights. I'm just a lonely, little girl on a rainy day. Know any games we can play?	}{	Oh, sweetheart, desperately, these nights. I'm just a lonely, little girl on a rainy day. Know any games we can play?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	512	}{	Got any board games?	}{	Got any board games?	}{	521	}{	}{	}{	}{	}{	}{	}{	}{	}{	I seek to pass go, get out of jail free, take a ride on the Reading...	}
+{	513	}{	I know something we can do. But I'm not sure it's possible.	}{	I know something we can do. But I'm not sure it's possible.	}{	541	}{	G.Jeanette_Boink == 0 and pc.bloodpool > 1	}{	}{	}{	}{	}{	}{	}{	}{	I remember sweet, human things. But can we enjoy them undead?	}
+{	514	}{	I remember something we already did. Is it possible again?	}{	I remember something we already did. Is it possible again?	}{	541	}{	G.Jeanette_Boink == 2 and pc.bloodpool > 1	}{	}{	}{	}{	}{	}{	}{	}{	I remember a sweet thing we did. But can we enjoy it again?	}
+{	515	}{	Killing's fun. Let's go down to the beach, find a vagrant and...	}{	Killing's fun. Let's go down to the beach, find a vagrant and...	}{	531	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	Let us hunt together, enjoying the sweet redness of runaways and vagrants.	}
+{	516	}{	I'll give it some thought. Bye, Jeanette.	}{	I'll give it some thought. Bye, Jeanette.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	None that I can think of. Farewell.	}
+{	517	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	518	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	519	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	520	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	521	}{	Think harder and dirtier.	}{	Think harder and dirtier.	}{	#	}{	npc.SetDisposition("joy",3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	522	}{	Cards?	}{	Cards?	}{	531	}{	}{	}{	}{	}{	}{	}{	}{	}{	Fifty-two card pick-up? Pinochle and Parcheesi?	}
+{	523	}{	I know something we can do. But I'm not sure it's possible.	}{	I know something we can do. But I'm not sure it's possible.	}{	541	}{	G.Jeanette_Boink == 0 and pc.bloodpool > 1	}{	}{	}{	}{	}{	}{	}{	}{	I remember sweet, human things. But can we enjoy them undead?	}
+{	524	}{	I remember something we already did. Is it possible again?	}{	I remember something we already did. Is it possible again?	}{	541	}{	G.Jeanette_Boink == 2 and pc.bloodpool > 1	}{	}{	}{	}{	}{	}{	}{	}{	I remember a sweet thing we did. But can we enjoy it again?	}
+{	525	}{	Killing's fun. Let's go down to the beach, find a vagrant and...	}{	Killing's fun. Let's go down to the beach, find a vagrant and...	}{	531	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	Let us hunt together, enjoying the sweet redness of runaways and vagrants.	}
+{	526	}{	I'll give it some thought. Bye, Jeanette.	}{	I'll give it some thought. Bye, Jeanette.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	None that I can think of. Farewell.	}
+{	527	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	528	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	529	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	530	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	531	}{	I'm not into that kind of thing. Maybe you should go.	}{	I'm not into that kind of thing. Maybe you should go.	}{	#	}{	npc.SetDisposition("apathy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	532	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	533	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	534	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	535	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	536	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	537	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	538	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	539	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	540	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	541	}{	Oh, well, it's a little different, but entirely possible. Come sit next to me on the bed. I'll show you.	}{	Oh, well, it's a little different, but entirely possible. Come sit next to me on the bed. I'll show you.	}{	#	}{	npc.SetDisposition("joy",3)	}{	G.Jeanette_Boink = 1; pc.Bloodloss(1)	}{	}{	}{	}{	}{	}{	}{	}
+{	542	}{	...	}{	...	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	543	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	544	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	545	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	546	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	547	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	548	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	549	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	550	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	551	}{	Should I draw a map for you? The gallery's right down the street.	}{	Should I draw a map for you? The gallery's right down the street.	}{	#	}{	npc.SetDisposition("neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	552	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	553	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	554	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	555	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	556	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	557	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	558	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	559	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	560	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	561	}{	Hello, sunrise, back to burn me?	}{	Hello, sunrise, back to burn me?	}{	#	}{	npc.SetDisposition("anger",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	562	}{	What do you need me to do?	}{	What do you need me to do?	}{	311	}{	G.Jeanette_Refuse == 1	}{	}{	}{	}{	}{	}{	}{	}{	Tell me what to do.	}
+{	563	}{	Like I had a choice.	}{	Like I had a choice.	}{	311	}{	G.Jeanette_Refuse == 1	}{	}{	}{	}{	}{	}{	}{	}{	Choice is an illusion permitted by those in power.	}
+{	564	}{	I thought about the museum - I'll do it.	}{	I thought about the museum - I'll do it.	}{	361	}{	G.Jeanette_Refuse == 2	}{	}{	}{	}{	}{	}{	}{	}{	I will slash your canvas dream, white mistress.	}
+{	565	}{	You've left me no choice. I'll do the museum.	}{	You've left me no choice. I'll do the museum.	}{	361	}{	G.Jeanette_Refuse == 2	}{	}{	}{	}{	}{	}{	}{	}{	My only choice is the blade and the paintings.	}
+{	566	}{	Indeed. Goodbye.	}{	Indeed. Goodbye.	}{	0	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	One can wish. Farewell.	}
+{	567	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	568	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	569	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	570	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	571	}{	What all suede kittens do... on hands and knees, you lap up the milk of me... and we purr, kitten, like dragonflies buzzing around frog bellies.	}{	What all suede kittens do... on hands and knees, you lap up the milk of me... and we purr, kitten, like dragonflies buzzing around frog bellies.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	572	}{	Uh, okay.	}{	Uh, okay.	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your words make me blood crazy and feverish, lost in a remembered life lust.	}
+{	573	}{	Kinky.	}{	Kinky.	}{	151	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	Purrr....	}
+{	574	}{	That's pretty goddamn crazy, Jeanette.	}{	That's pretty goddamn crazy, Jeanette.	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	Those are my words.	}
+{	575	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	576	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	577	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	578	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	579	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	580	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	581	}{	Fine. You hold on to it. Hmm... since you were so willing to brave that big, spooky place for my darling sister, how about doing a teensy, tiny favor for little, troubled me?	}{	Fine. You hold on to it. Hmm... since you were so willing to brave that big, spooky place for my darling sister, how about doing a teensy, tiny favor for little, troubled me?	}{	#	}{	npc.SetDisposition("neutral",1)	}{	G.Jeanette_Scorn = 1; pc.AwardExperience("Haunted04") ; pc.SetQuest("Hotel",5)	}{	}{	}{	}{	}{	}{	}{	}
+{	582	}{	That depends on what it is.	}{	That depends on what it is.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	What deed do you propose?	}
+{	583	}{	Cut the schoolgirl act and just tell me what the hell it is.	}{	Cut the schoolgirl act and just tell me what the hell it is.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	The girlish charade annoys me - speak true.	}
+{	584	}{	No. Forget it. I'm sick of running errands for you bitches. I'm out of here.	}{	No. Forget it. I'm sick of running errands for you bitches. I'm out of here.	}{	301	}{	}{	}{	}{	}{	}{	}{	}{	}{	I do nothing more for the daughters of Janus.	}
+{	585	}{	What would put a smile on that face?	}{	What would put a smile on that face?	}{	311	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	What deed could I do to amuse the rainy-day child?	}
+{	586	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	587	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	588	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	589	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	590	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	591	}{	On the inside, we're all dead meat, kitten.	}{	On the inside, we're all dead meat, kitten.	}{	#	}{	npc.SetDisposition("joy",3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	592	}{	I guess.	}{	I guess.	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	593	}{	If your inside's anything like your outside, you're anything but dead.	}{	If your inside's anything like your outside, you're anything but dead.	}{	151	}{	Seduction 2	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	}
+{	594	}{	Glad someone understands.	}{	Glad someone understands.	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	595	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	596	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	597	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	598	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	599	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	600	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	601	}{	She's crazy! HELP!	}{	She's crazy! HELP!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	602	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	603	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	604	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	605	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	606	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	607	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	608	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	609	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	610	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	611	}{	I wasn't sticking my fingers in anyone's pie, dear sister.	}{	I wasn't sticking my fingers in anyone's pie, dear sister.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	612	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	613	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	614	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	615	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	616	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	617	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	618	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	619	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	620	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	621	}{	Your city? Last time I looked it was called Santa Monica, not Stuck-up Bitch.	}{	Your city? Last time I looked it was called Santa Monica, not Stuck-up Bitch.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	622	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	623	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	624	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	625	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	626	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	627	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	628	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	629	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	630	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	631	}{	Oh, Therese, you really do paint a flattering portrait of me with your turn-of-the-century barbs. I always assumed you could do nothing but look down on me.	}{	Oh, Therese, you really do paint a flattering portrait of me with your turn-of-the-century barbs. I always assumed you could do nothing but look down on me.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	632	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	633	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	634	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	635	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	636	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	637	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	638	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	639	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	640	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	641	}{	[Laughs]Let she who is without sin, cast the fierce tone.	}{	[Laughs]Let she who is without sin, cast the fierce tone.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	642	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	643	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	644	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	645	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	646	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	647	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	648	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	649	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	650	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	651	}{	[Upset]Don't you call me that!	}{	[Upset]Don't you call me that!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	652	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	653	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	654	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	655	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	656	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	657	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	658	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	659	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	660	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	661	}{	I'm your sister! How can you treat me like this?	}{	I'm your sister! How can you treat me like this?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	662	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	663	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	664	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	665	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	666	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	667	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	668	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	669	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	670	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	671	}{	Father? Oh, Therese... you poor, deluded dear... I treated father exactly the way he deserved to be treated... and he treated you like a -	}{	Father? Oh, Therese... you poor, deluded dear... I treated father exactly the way he deserved to be treated... and he treated you like a -	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	672	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	673	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	674	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	675	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	676	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	677	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	678	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	679	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	680	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	681	}{	Your heart still belongs to Daddy after all these years, eh, sister?	}{	Your heart still belongs to Daddy after all these years, eh, sister?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	682	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	683	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	684	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	685	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	686	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	687	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	688	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	689	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	690	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	691	}{	You take that back, you bitch!	}{	You take that back, you bitch!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	692	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	693	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	694	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	695	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	696	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	697	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	698	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	699	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	700	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	701	}{	Hello, kitten.	}{	Hello, kitten.	}{	#	}{	npc.SetDisposition("joy",3)	}{	G.Jeanette_Float = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	702	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	703	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	704	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	705	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	706	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	707	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	708	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	709	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	710	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	711	}{	Hmm... mmm, heh-heh.	}{	Hmm... mmm, heh-heh.	}{	#	}{	npc.SetDisposition("joy",3)	}{	G.Jeanette_Float = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	712	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	713	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	714	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	715	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	716	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	717	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	718	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	719	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	720	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	721	}{	Here kitty, kitty, kitty, kitty.	}{	Here kitty, kitty, kitty, kitty.	}{	#	}{	npc.SetDisposition("joy",3)	}{	G.Jeanette_Float = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	722	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	723	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	724	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	725	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	726	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	727	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	728	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	729	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	730	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	731	}{	[Hiss.]	}{	}{	#	}{	npc.SetDisposition("anger",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	732	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	733	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	734	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	735	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	736	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	737	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	738	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	739	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	740	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	741	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	742	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	743	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	744	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	745	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	746	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	747	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	748	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	749	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	750	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	751	}{	What? Oh my! A Malkavian! This ought to be absolutely delicious! Two minds as crazy as ours, and who knows just what might happen.	}{	What? Oh my! A Malkavian! This ought to be absolutely delicious! Two minds as crazy as ours, and who knows just what might happen.	}{	#	}{	npc.SetDisposition("joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	752	}{	Greetings, daughter of Janus.	}{	Greetings, daughter of Janus.	}{	761	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	753	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	754	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	755	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	756	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	757	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	758	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	759	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	760	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	761	}{	[Laughing]Oh! But you've got it bad, little boy! Not sure exactly what is real and what isn't? Janus... let's see... isn't that a two-faced Roman god? Of course, you're right. You just happened to meet the prettier face first.	}{	[Laughing]Oh! But you've got it bad, little girl! Not sure exactly what is real and what isn't? Janus... let's see... isn't that a two-faced Roman god? Of course, you're right. You just happened to meet the prettier face first.	}{	#	}{	npc.SetDisposition("joy",3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	762	}{	You are the whiteness, she of alabaster and ivory.	}{	You are the whiteness, she of alabaster and ivory.	}{	771	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	763	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	764	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	765	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	766	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	767	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	768	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	769	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	770	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	771	}{	Ha! Wait until Therese hears that! I am white to her black. She'll be absolutely furious. Of course, I won't be wearing white to any weddings, but... we can talk about that later.	}{	Ha! Wait until Therese hears that! I am white to her black. She'll be absolutely furious. Of course, I won't be wearing white to any weddings, but... we can talk about that later.	}{	#	}{	npc.SetDisposition("joy",3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	772	}{	Tell me your name, daughter of Janus.	}{	Tell me your name, daughter of Janus.	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	773	}{	Fear and love are two sides of the same coin.	}{	Fear and love are two sides of the same coin.	}{	21	}{	Seduction 2	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	}
+{	774	}{	Only with the smell of many suitors.	}{	Only with the smell of many suitors.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	775	}{	I've no interest in your pheromones.	}{	I've no interest in your pheromones.	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	776	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	777	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	778	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	779	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	780	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	781	}{	The world is a bubbling blood cauldron, and yet we all just keep going in for a dip. Does that make any more sense?	}{	The world is a bubbling blood cauldron, and yet we all just keep going in for a dip. Does that make any more sense?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	782	}{	Tell me your name.	}{	Tell me your name.	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	783	}{	Leave this fractured mind to itself, white mistress.	}{	Leave this fractured mind to itself, white mistress.	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	784	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	785	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	786	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	787	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	788	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	789	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	790	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	791	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	792	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	793	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	794	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	795	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	796	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	797	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	798	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	799	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	800	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	801	}{	Mmmm. No one flirts like a Malkavian. Your compliments make me positively tingly.	}{	Mmmm. No one flirts like a Malkavian. Your compliments make me positively tingly.	}{	#	}{	npc.SetDisposition("joy",3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	802	}{	Your father's darker daughter said she would forgive the hiding worm.	}{	Your father's darker daughter said she would forgive the hiding worm.	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	803	}{	Unfortunately, your tinglings are not a rare privilege.	}{	Unfortunately, your tinglings are not a rare privilege.	}{	211	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	}
+{	804	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	805	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	806	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	807	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	808	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	809	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	810	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	811	}{	Oh, and there was something about the paintings.... [Thinking to self]Hmm, what was it...? [gives up]I can't remember. Oh well, have fun, duckling!	}{	Oh, and there was something about the paintings.... [Thinking to self]Hmm, what was it...? [gives up]I can't remember. Oh well, have fun, duckling!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	812	}{	I will.	}{	I will.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	We will.	}
+{	813	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	814	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	815	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	816	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	817	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	818	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	819	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	820	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	821	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	822	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	823	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	824	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	825	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	826	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	827	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	828	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	829	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	830	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	831	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	832	}{	(Starting Condition)	}{	}{	481	}{	G.Jeanette_Baron == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	833	}{	(Starting Condition)	}{	}{	461	}{	G.Therese_Dead == 1 and G.Jeanette_Side < 4	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	834	}{	(Starting Condition)	}{	}{	471	}{	G.Therese_Dead == 1 and G.Jeanette_Side >= 4	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	835	}{	(Starting Condition)	}{	}{	401	}{	G.Therese_Quest == 4 and G.Jeanette_Seduce < 8	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	836	}{	(Starting Condition)	}{	}{	391	}{	G.Therese_Quest == 4 and G.Jeanette_Seduce >= 8	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	837	}{	(Starting Condition)	}{	}{	551	}{	G.Jeanette_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	838	}{	(Starting Condition)	}{	}{	561	}{	G.Jeanette_Refuse == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	839	}{	(Starting Condition)	}{	}{	561	}{	G.Jeanette_Refuse == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	840	}{	(Starting Condition)	}{	}{	101	}{	G.Therese_Quest == 2 and G.Jeanette_Seduce < 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	841	}{	(Starting Condition)	}{	}{	91	}{	G.Therese_Quest == 2 and G.Jeanette_Seduce >= 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	842	}{	(Starting Condition)	}{	}{	721	}{	G.Jeanette_Float == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	843	}{	(Starting Condition)	}{	}{	711	}{	G.Jeanette_Float == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	844	}{	(Starting Condition)	}{	}{	701	}{	npc.times_talked > 1 and G.Jeanette_Seduce >= 0 and G.Jeanette_Float == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	845	}{	(Starting Condition)	}{	}{	731	}{	npc.times_talked > 1 and G.Jeanette_Seduce < 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	846	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

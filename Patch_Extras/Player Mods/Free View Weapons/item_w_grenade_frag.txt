@@ -1,0 +1,362 @@
+// Fragmentation Grenade
+
+WeaponData
+{
+	"printname"			"Fragmentation Grenade"
+	"description"			"Pull pin for fun and profit."
+	"item_worth"			"0"		// changed by wesp
+
+	"viewmodel"		"models/weapons/grenade/pineapple/view/v_pineapple.mdl"
+	"playermodel"		"models/weapons/grenade/pineapple/ground/g_pineapple.mdl"
+	"wieldmodel_f"		"models/weapons/grenade/pineapple/wield/w_f_pineapple.mdl"
+	"wieldmodel_m"		"models/weapons/grenade/pineapple/wield/w_m_pineapple.mdl"
+	"infomodel"		"models/weapons/grenade/pineapple/info/i_pineapple.mdl"
+
+	// This should match the viewmodel QC file offset:
+	"origin_x"				"3"	// changed by Lenuska
+	"origin_y"				"0"	// changed by Lenuska
+	"origin_z"				"62"	// changed by Lenuska
+	"anim_prefix"				"grenade"
+	"impact_snd_group"			"bullet"	// changed by Lenuska
+
+	"activation0"				"Single"	// changed by Lenuska
+	"activation1"				"Error"
+	"jammed0"				"Jammed"	// changed by Lenuska
+	"jammed1"				"Jammed"	// changed by Lenuska
+	"bucket"				"1"
+	"bucket_position"			"4"		// changed by Lenuska
+	"camera_class"				"noswitch"	// changed by wesp
+	"weight"				"3"
+	"item_flags"				"0"
+	"item_type"				"weapon_thrown"	// changed by wesp
+	"impact_force"				"10000"	// changed by wesp
+// Lenuska	"throwing_weapon"			"1"	
+	"sound_group"				"Grenade_Pineapple"
+	"uses_accuracycursors"			"1"
+
+
+	"knockback_chance"			"1.0"
+
+	SoundData
+	{
+		"swish"
+		{
+			"sound1"	"Weapons\Ranged\Grenade\Pull_Pin.wav"
+			"sound2"	"Weapons\Ranged\Grenade\Pull_Pin.wav"
+			"sound3"	"Weapons\Ranged\Grenade\Pull_Pin.wav"
+		}
+		"pickup"
+		{
+			"sound1"	"Weapons\Ranged\Grenade\Deploy.wav"	// changed by wesp
+		}
+	}
+
+//Ammo
+	Magazine
+	{
+		//printname description and ammo_worth should be the same as in WeaponData
+		"ammoprintname"			"Fragmentation Grenade"
+		"ammodescription"		"Pull pin for fun and profit."
+		"ammo_worth"			"0"	// changed by wesp
+		"ammoinfomodel"			"models/weapons/grenade/pineapple/info/i_pineapple.mdl"	// changed by Lenuska
+
+		"Size"				"1"
+		"Default_Size"			"1"
+		"Type"				"FragGrenade"
+		"ReloadTime"			"3.5"
+
+
+		SoundData
+		{
+			"reload"
+			{
+				"sound1"	"Weapons\Ranged\Grenade\Pull_Pin.wav"
+			}
+
+			"reload_npc"
+			{
+				"sound1"	"Weapons\Ranged\Grenade\Pull_Pin.wav"
+			}
+		}
+	}
+
+//Primary Attack
+	Activation
+	{
+		"Tag"				"Primary"
+		"Type"				"Attack"
+		"Ammo_Type"			"FragGrenade"
+		"Ammo_Cost"			"1"
+		"Botch_Table"			"Pistols"
+		"Attack_Rate"			"3.5"
+		"Range"				"60"	// changed by Lenuska
+		"CriminalLevel"			"5"
+		"allow_autofire" 		"0"	// changed by Lenuska
+
+		"Accuracy"			"6"
+
+		"SkillRequirement"		"1"			// min. skill requirement used in dmg calculations, added by Lenuska		
+		"BaseLethality"		"100"			// base lethality used in dmg calculationn, changed by wesp
+		"Dmg"			"100 Aggravated Throwing DMG_BLAST"	// changed by wesp
+
+		// SKS_RANGED, changed by wesp
+		"KickPitchMin"			"0.0"		//"-1.75"
+		"KickPitchMax"			"0.0"		//"-10.00"
+		"KickYawMin"			"0.0"		//"-0.2"
+		"KickYawMax"			"0.0"		//"-2.5"
+		"KickTime"			"0.0"		//"0.02"
+		"CrosshairMinSize"		"1.0"		//"15" smallest crosshair size for this activation [0-99]
+		"CrosshairFireSize"		"1"		//"90" size of the crosshair when the gun is fired [0-99]
+		"CrosshairWalkSizeMin"	"1"			//"15" min size of the crosshair when the player is walking [0-99]
+		"CrosshairWalkSizeMax"	"1"			//"35" max size of the crosshair when the player is walking [0-99]
+		"CrosshairRunSizeMin"	"1"			//"20" min size of the crosshair when the player is running [0-99]
+		"CrosshairRunSizeMax"	"1"			//"55" max size of the crosshair when the player is running [0-99]
+		"CrosshairIncSpeedMin"	"0"			//"40" min speed at which to increase bloom
+		"CrosshairIncSpeedMax"	"0"			//"70" max speed at which to increase bloom
+		"CrosshairDecSpeedMin"	"99"			//"10" min speed at which to decrease bloom
+		"CrosshairDecSpeedMax"	"99"			//"70" max speed at which to decrease bloom
+		"CrosshairFirePercent"	"0.01"			//"0.7" percent to bloom to crosshair upon firing a bullet
+
+		"SpreadAngle"			"3.0"
+
+		"MajorKnockbackDist"	"100.0"			// changed by wesp
+		"MinorKnockbackDist"	"1000.0"			// changed by wesp
+
+		SoundData
+		{
+			"empty"
+			{
+				"sound1"	"weapons/grenade/empty.wav"
+			}
+
+			"attack"
+			{
+				"sound1"	"Weapons\Ranged\Grenade\Projectile.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons\Ranged\Grenade\Projectile.wav"	
+			}
+
+			"botch"
+			{
+				"sound1"	"Weapons\Ranged\Grenade\Detonation.wav"
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons\Ranged\Grenade\Pull_Pin.wav"
+			}
+
+			"put_away"
+			{
+				"sound1"	"Weapons/Ranged/Put_Away.wav"
+			}			
+			
+			"fidget"
+			{
+				"sound1"	"Weapons/Ranged/Fidget.wav"
+			}
+		}
+
+		Tables
+		{
+			Table
+			{
+				"Name"          "WeaponRanges"
+				"InternalName"  "WeaponRanges"
+
+				"Clamping"      "1"
+
+				"0"             "400"         // 5 (bonus)
+				"1"             "363"         // 4 (bonus)
+				"2"             "325"         // 3 (bonus)
+				"3"             "288"         // 2 (bonus)
+				"4"             "250"     // 1 (bonus)
+				"5"             "225"     // 0 (neutral)
+				"6"             "200"     //-1 (penalty)
+				"7"             "175"     //-2 (penalty)
+				"8"             "150"     //-3 (penalty)
+				"9"             "1"     //-4 (penalty)
+			}
+			Table
+			{
+				"Name"          "GrossPointBlank"
+				"InternalName"  "GrossPointBlank"
+
+				"Clamping"      "1"
+
+
+				// percentage from 1-12 feet out
+
+				"0"             "10"
+				"1"             "20"
+				"2"             "30"
+				"3"             "40"
+				"4"             "50"
+				"5"             "60"
+				"6"             "70"
+				"7"             "80"
+				"8"             "90"
+				"9"             "100"
+			}
+			
+		}
+	}
+
+//Secondary Attack
+	Activation
+	{
+		"Tag"				"PrimaryMode2"
+		"Type"			"Attack"
+		"Ammo_Type"		"FragGrenade"
+		"Ammo_Cost"		"1"
+		"Dmg"			"10 Lethal Throwing"
+		"Botch_Table"		"Pistols"
+		"Attack_Rate"		"3.5"
+		"Range"			"20"
+		"CriminalLevel"	"5"
+		"allow_autofire" "0"	// changed by Lenuska
+		"Accuracy"		"6"
+
+		SoundData
+		{
+			"empty"
+			{
+				"sound1"	"weapons/grenade/empty.wav"
+			}
+
+			"attack"
+			{
+				"sound1"	"Weapons\Ranged\Grenade\Projectile.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons\Ranged\Grenade\Projectile.wav"
+			}
+
+			"botch"
+			{
+				"sound1"	"Weapons\Ranged\Grenade\Detonation.wav"
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons\Ranged\Grenade\Pull_Pin.wav"
+			}
+		}
+	}
+
+//Toggle Fireing Mode
+	Activation
+	{
+		"Tag"		"Secondary"
+		"Type"		"Toggle_Primary_Mode"
+		"Attack_Rate"	".3"
+
+		SoundData
+		{
+			"to-mode1"
+			{
+				"sound1"	"weapons/grenade/empty.wav"	// changed by wesp
+			}
+
+			"to_mode2"
+			{
+				"sound1"	"weapons/grenade/empty.wav"	// changed by wesp
+
+			}
+
+		}
+	}
+
+
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_ranged/grenade_frag_sel"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"		"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_ranged/grenade_frag"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"		"100"
+				"height"	"64"
+			}
+		}
+		"ammo"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_ranged/grenade_frag"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"		"100"
+				"height"	"64"
+			}
+		}
+		"ammo2"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_ranged/grenade_frag_sel"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"		"100"
+				"height"	"64"
+			}
+		}
+		"zoom"
+		{
+			"640"
+			{
+				"file"		"crosshairs"
+				"x"		"0"
+				"y"		"48"
+				"width"		"48"
+				"height"	"48"
+			}
+		}
+
+
+// Disabled because it uses Accuracy Crosshairs
+//		"crosshair"
+//		{
+//			"640"
+//			{
+//				"file"		"crosshairs"
+//				"x"		"0"
+//				"y"		"48"
+//				"width"		"24"
+//				"height"	"24"
+//			}
+
+
+
+		// Accuracy Crosshairs
+		"Acc_Crosshair00"		"hud/Crosshairs/Crosshair_01"
+		"Acc_Crosshair01"		"hud/Crosshairs/Crosshair_02"
+		"Acc_Crosshair02"		"hud/Crosshairs/Crosshair_03"
+		"Acc_Crosshair03"		"hud/Crosshairs/Crosshair_04"
+		"Acc_Crosshair04"		"hud/Crosshairs/Crosshair_05"
+		"Acc_Crosshair05"		"hud/Crosshairs/Crosshair_06"
+		"Acc_Crosshair06"		"hud/Crosshairs/Crosshair_07"
+		"Acc_Crosshair07"		"hud/Crosshairs/Crosshair_08"
+		"Acc_Crosshair08"		"hud/Crosshairs/Crosshair_09"
+		"Acc_Crosshair09"		"hud/Crosshairs/Crosshair_10"
+		"Interactive_Crosshair"		"hud/Crosshairs/Crosshair_Interactive"
+		}
+}

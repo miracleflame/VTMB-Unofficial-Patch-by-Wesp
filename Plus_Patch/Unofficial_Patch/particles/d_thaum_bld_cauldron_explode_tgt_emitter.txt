@@ -1,0 +1,76 @@
+Particle
+{
+	spawn
+	{
+		particle "BloodExplosion_Spray"
+		burst "15"	//"0"
+	}
+
+	spawn
+	{
+		particle	"BloodExplosion_Projectiles"
+		loop		"1"
+		burst		"25"	//"0"
+		theta		"0~360"
+		phi		"180~-180"
+	}
+
+	spawn	// added by EntenSchreck
+	{
+		particle	"bloodexplosion_trails"
+		loop		"1"
+		burst		"20"	//"0"
+		theta		"0~360"
+		phi		"180~-180"
+	}
+	spawn
+	{
+		particle "BloodExplosion_Cloud"
+		burst 		"10"
+		radius		"0~10"
+		theta		"0~360"
+		phi		"180~-180"
+	}
+	spawn	// added by EntenSchreck
+	{
+		particle "BloodExplosion_Cloud2"
+		burst 		"10"
+		radius		"0~10"
+		theta		"0~360"
+		phi		"180~-180"
+	}
+
+	spawn
+	{
+		particle "BloodExplosion_Spatter"
+		burst 		"400"
+		radius		"0~10"
+		theta		"0~360"
+		phi			"90~-90"
+
+	}
+	spawn
+	{
+		particle	"D_Thaumaturgy_Exlpode-Fx1"
+		burst		"15"	//"0"
+		radius		"10"
+		theta		"0~360"
+		phi		"90~-90"
+	}
+	spawn
+	{
+		particle	"D_Thaumaturgy_Exlpode-Fx2"
+		burst		"15"	//"0"
+		
+	}
+	spawn
+	{
+		particle	"D_Thaumaturgy_Exlpode-Fx3"
+		rate		"15"	//"0"
+		radius		"0~20"
+		theta		"0~360"
+		phi		"90~-90"
+
+	}
+
+}

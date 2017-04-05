@@ -1,0 +1,51 @@
+TerminalDefinition
+{
+	"screen saver"		"Abrams Jewelry, Inc."	// 64	<localizable>
+	"brackets"		""			// 2 changed by wesp
+
+	"email_password"	"letmein"		// 32
+	"email_username"	"Abrams Jewelry"	// 32	<localizable>
+
+	LogonScreen	
+	{
+		//	Any number of lines are acceptable, but too many may look bad if you have
+		//	many menus / functions viewable at once. 
+		//	Usually 3 lines max is a good rule of thumb
+		"line0"		"Abrams Jewelry, Inc., L.L.C."		// 32 per logon screen line	<localizable>
+		"line1"		"Invoice and Inventory Management"
+	}
+
+
+	SubDir
+	{
+		"name"			"Safe"				// 16	<localizable>
+		"password"		"griff"				// 16	<localizable>
+		"description"		"Safe Security Controls"	// 32	<localizable>
+		"dependency"		"G.SomeFlag > 0"		// 16
+
+
+		Function
+		{
+			"name"		"Unlock"			// 16	<localizable>
+			"description"	"Unlock Safe"			// 32	<localizable>
+			"runtext"	"Safe doors unlocked."		// 512	<localizable>
+			"trigger"	"0"				// 1 (this is a number from 0..7)
+			"runscript"	"G.Safe_Locked = 0"		// 64	
+			"dependency"	"G.Jeanette_Know > 0"		// 64
+		}
+
+	}
+
+
+	Email
+	{
+		"subject"	"DANG! It's big you know!!!111"		// 32	<localizable>
+		"sender"	"Hung Low"				// 32	<localizable>
+		"body"		"PENIS ENLARGEMENT! 1-800-BIG-STICK!"	// 512	<localizable>
+		"runscript"	"G.Safe_Locked = 0"			// 64	
+		"dependency"	"G.Jeanette_Know > 0"			// 64	
+		"autodelete"	"1"					// 1 ( must be 0 or 1 )
+	}
+
+
+}

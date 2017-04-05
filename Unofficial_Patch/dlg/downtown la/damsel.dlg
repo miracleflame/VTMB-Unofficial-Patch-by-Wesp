@@ -1,0 +1,912 @@
+{	1	}{	Sabbat chase you in here, Cammy?	}{	Sabbat chase you in here, Cammy?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	What are you talking about?	}{	What are you talking about?	}{	11	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	What are you talking about?	}
+{	3	}{	Why do you ask?	}{	Why do you ask?	}{	11	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	Why do you ask?	}
+{	4	}{	What the fuck's your problem?	}{	What the fuck's your problem?	}{	61	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	What the fuck's your problem?	}
+{	5	}{	You are the damsel of distress, yes?	}{	You are the damsel of distress, yes?	}{	461	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	You are the damsel of distress, yes?	}
+{	6	}{	Damn Sail, are you a stubborn boat?	}{	Damn Sail, are you a stubborn boat?	}{	461	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	Damn Sail, are you a stubborn boat?	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	Heard Nines saved your ass again. You think LaCroix would've stopped counting his money long enough to get your back, jack?	}{	Heard Nines saved your ass again. You think LaCroix would've stopped counting his money long enough to get your back, jack?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	What do you mean "again"?	}{	What do you mean "again"?	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	13	}{	I could have handled that myself.	}{	I could have handled that myself.	}{	51	}{	IsClan(pc,"Brujah")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	I could have handled that myself.	}{	I could have handled that myself.	}{	41	}{	not IsClan(pc,"Brujah")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	15	}{	What the fuck's your problem?	}{	What the fuck's your problem?	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	23	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	Cammy, you'd have a whole lot less above your neck if it hadn't been for Nines calling the prince out in that courtroom. Shit! Looks like things worked out for LaCroix anyway - got himself a new errand boy out of it.	}{	Cammy, you'd have a whole lot less above your neck if it hadn't been for Nines calling the prince out in that courtroom. Shit! Looks like things worked out for LaCroix anyway - got himself a new errand girl out of it.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Did I do something to piss you off?	}{	Did I do something to piss you off?	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	33	}{	What the fuck's your problem?	}{	What the fuck's your problem?	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Ha. What were you going to break out, huh? Some Tae-bo? This ain't paintball with your jerkoff friends on the weekend, Cammy, it's the mean streets. Show some goddamn gratitude.	}{	Ha. What were you going to break out, huh? Some Tae-bo? This ain't paintball with your jerkoff friends on the weekend, Cammy, it's the mean streets. Show some goddamn gratitude.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	Did I say something to piss you off?	}{	Did I say something to piss you off?	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	43	}{	What's with the attitude?	}{	What's with the attitude?	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	44	}{	What the fuck's your problem?	}{	What the fuck's your problem?	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Let me give you a little advice, blood. Next time someone pins you to the ground, you better whisper sweet nothings in their ear cuz they're about to fuck you.	}{	Let me give you a little advice, blood. Next time someone pins you to the ground, you better whisper sweet nothings in their ear cuz they're about to fuck you.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	Did I say something to piss you off?	}{	Did I say something to piss you off?	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	53	}{	What's with the attitude?	}{	What's with the attitude?	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	What the fuck's your problem?	}{	What the fuck's your problem?	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	61	}{	Oh, ho, ho... you want to know what my problem is? Alright, I'll tell you what my problem is! You ready? YOU are my goddamn problem. Anyone who would lay it down for some cape in an ivory tower deserves what they get.	}{	Oh, ho, ho... you want to know what my problem is? Alright, I'll tell you what my problem is! You ready? YOU are my goddamn problem. Anyone who would lay it down for some cape in an ivory tower deserves what they get.	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Cape?	}{	Cape?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	63	}{	I like to play for the winning team.	}{	I like to play for the winning team.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	64	}{	I make my own fate.	}{	I make my own fate.	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	What alternative do I have?	}{	What alternative do I have?	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Cape, Cammy. Camarilla elders? The ones that've been around so long they think candlelight's a keen invention? You're doing their dirty work and you don't even know it.	}{	Cape, Cammy. Camarilla elders? The ones that've been around so long they think candlelight's a keen invention? You're doing their dirty work and you don't even know it.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Damsel_Cape = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	I like to play for the winning team.	}{	I like to play for the winning team.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	73	}{	I make my own fate.	}{	I make my own fate.	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	What alternative do I have?	}{	What alternative do I have?	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	As long as you're a tool for some cape, you don't have to say a word to start pissing me off.	}{	As long as you're a tool for some cape, you don't have to say a word to start pissing me off.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	What's a cape?	}{	What's a cape?	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	83	}{	What the fuck's your problem?	}{	What the fuck's your problem?	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	91	}{	Winning? More like festering! What the hell do you know anyway? Just woke up dead and think you already know the score? Please!	}{	Winning? More like festering! What the hell do you know anyway? Just woke up dead and think you already know the score? Please!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Care to enlighten me?	}{	Care to enlighten me?	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	93	}{	I could put a good word in for you with the prince.	}{	I could put a good word in for you with the prince.	}{	101	}{	}{	G.Damsel_Like = G.Damsel_Like -1	}{	}{	}{	}{	}{	}{	}{	}
+{	94	}{	I may be new to all this, but even I know the Anarchs are a lost cause.	}{	I may be new to all this, but even I know the Anarchs are a lost cause.	}{	101	}{	}{	G.Damsel_Like = G.Damsel_Like -1	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	Oh, that's real...	}{	Oh, that's real...	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	(Auto-Link)	}{	(Auto-Link)	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	103	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	111	}{	Let me put in perspective for you: the Camarilla claims every Kindred's part of the organization, regardless. You do something they don't like, well, you're Camarilla, so you get punished under their laws, like it or not.	}{	Let me put in perspective for you: the Camarilla claims every Kindred's part of the organization, regardless. You do something they don't like, well, you're Camarilla, so you get punished under their laws, like it or not.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Is there a point to all this?	}{	Is there a point to all this?	}{	121	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	113	}{	Enlightening.	}{	Enlightening.	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	114	}{	I've heard enough!	}{	I've heard enough!	}{	121	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	121	}{	You need to start listening or you're going to wind up just like your sire.	}{	You need to start listening or you're going to wind up just like your sire.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Damsel_Like = G.Damsel_Like -1	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	And who the hell might you be?	}{	And who the hell might you be?	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	123	}{	Damn, you're annoying! You head of the pep squad around here?	}{	Damn, you're annoying! You head of the pep squad around here?	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	I'm Damsel, den mother of these mothers and one pissed bitch since LaCroix rolled in.	}{	I'm Damsel, den mother of these mothers and one pissed bitch since LaCroix rolled in.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Damsel_Know = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	The Tremere regent says an Anarch is responsible for a local epidemic.	}{	The Tremere regent says an Anarch is responsible for a local epidemic.	}{	511	}{	G.Regent_Pestilence >= 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	133	}{	Pissed? You don't say? Drink some bad blood or something?	}{	Pissed? You don't say? Drink some bad blood or something?	}{	151	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	134	}{	I don't know about LaCroix. I'm cool with Nines though.	}{	I don't know about LaCroix. I'm cool with Nines though.	}{	161	}{	}{	G.Damsel_Like = G.Damsel_Like +1	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	You want an alternative? Being here, that's a step in the right direction.	}{	You want an alternative? Being here, that's a step in the right direction.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	(Auto-Link)	}{	(Auto-Link)	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	143	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	151	}{	Oh, don't even joke about bad blood at a time like this! Don't you know we've got a plaguebearer around here?	}{	Oh, don't even joke about bad blood at a time like this! Don't you know we've got a plaguebearer around here?	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Damsel_Plague = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	Plaguebearer?	}{	Plaguebearer?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	153	}{	I upset you. How unusual. What's a plaguebearer?	}{	I upset you. How unusual. What's a plaguebearer?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	154	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	Hey, Cammy. I don't apologize often, but... it's just with all the shit's been going down lately - and on top of it this plaguebearer getting the CDC's attention - maybe I misjudged you's all I'm saying.	}{	Hey, Cammy. I don't apologize often, but... it's just with all the shit's been going down lately - and on top of it this plaguebearer getting the CDC's attention - maybe I misjudged you's all I'm saying.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Damsel_Plague = 1; G.Damsel_Like = G.Damsel_Like +2	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	Plaguebearer?	}{	Plaguebearer?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	163	}{	Understandable. Please tell me what a plaguebearer is.	}{	Understandable. Please tell me what a plaguebearer is.	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	164	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	A plaguebearer's a fool that doesn't care who they feed from. Yeah, I know what you're thinking, we can't get sick - but the kine can, and Kindred that feed on them start spreading disease. Enough get sick, it's an epidemic, CDC's in town as we speak.	}{	A plaguebearer's a fool that doesn't care who they feed from. Yeah, I know what you're thinking, we can't get sick - but the kine can, and Kindred that feed on them start spreading disease. Enough get sick, it's an epidemic, CDC's in town as we speak.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Damsel_Plague = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	So how do you get rid of one?	}{	So how do you get rid of one?	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	Can't you just shoo the dirty carrier pigeon away?	}
+{	173	}{	Sounds like an Anarch problem.	}{	Sounds like an Anarch problem.	}{	191	}{	}{	}{	}{	}{	}{	}{	}{	}{	This mess is the Anarchs' alone to sweep under the rug.	}
+{	174	}{	Good luck with that. Excuse me.	}{	Good luck with that. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My mind wanders elsewhere. I am gone.	}
+{	175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	181	}{	Seen "Old Yeller"? May sound cruel, but it's necessary.	}{	Seen "Old Yeller"? May sound cruel, but it's necessary.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	(Auto-Link)	}{	(Auto-Link)	}{	191	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	183	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	184	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	185	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	If someone puts together two and two as to the real cause of an outbreak of bloodborne diseases, guess what happens? So the plaguebearer's gotta be found and put down. If the Camarilla really gives a damn, they'll help us out.	}{	If someone puts together two and two as to the real cause of an outbreak of bloodborne diseases, guess what happens? So the plaguebearer's gotta be found and put down. If the Camarilla really gives a damn, they'll help us out.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Damsel_Plague = 3	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	The Anarchs helped me out before. Where do I start?	}{	The Anarchs helped me out before. Where do I start?	}{	201	}{	}{	G.Damsel_Like = G.Damsel_Like +1	}{	}{	}{	}{	}{	}{	}{	My neck owes a debt to the Anarchs. What shall I do?	}
+{	193	}{	I'll do it, but only because I'm bored.	}{	I'll do it, but only because I'm bored.	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	My body bloats with boredom. I will do this.	}
+{	194	}{	The Anarchs make a mess, I suppose I have to clean it up.	}{	The Anarchs make a mess, I suppose I have to clean it up.	}{	211	}{	}{	G.Damsel_Like = G.Damsel_Like -1	}{	}{	}{	}{	}{	}{	}{	When the children make a mess, it is up to the parent to clean it up.	}
+{	195	}{	I'll think about doing it. I have another question first.	}{	I'll think about doing it. I have another question first.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will roll it down my brain and see if it sticks. Another question.	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	201	}{	One of our boys' ghouls, name's Paul, lives nearby in the Skyeline apartments. Been a stranger lately. Looked like death last time he was here. Said he didn't get bit but... maybe you can get more info out of him.	}{	One of our boys' ghouls, name's Paul, lives nearby in the Skyeline apartments. Been a stranger lately. Looked like death last time he was here. Said he didn't get bit but... maybe you can get more info out of him.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Damsel_Quest = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	I'll go check it out.	}{	I'll go check it out.	}{	221	}{	pc.GetQuestState("Regent") != 3	}{	}{	}{	}{	}{	}{	}{	}{	I will touch this ghoul in his mind's secret places.	}
+{	203	}{	Ghouls. Why is it always ghouls? Fine, I'll check it out when I can.	}{	Ghouls. Why is it always ghouls? Fine, I'll check it out when I can.	}{	221	}{	pc.GetQuestState("Regent") != 3	}{	}{	}{	}{	}{	}{	}{	}{	Does anyone in this city not drink our blood? This ghoul I will see.	}
+{	204	}{	Hope this guy's upfront. Be a shame if I had to beat it out of him. I'm off.	}{	Hope this guy's upfront. Be a shame if I had to beat it out of him. I'm off.	}{	221	}{	pc.GetQuestState("Regent") != 3	}{	}{	}{	}{	}{	}{	}{	}{	If he will not listen to reason, perhaps he will listen to the crack of my hand.	}
+{	205	}{	I'll go check it out.	}{	I'll go check it out.	}{	221	}{	pc.GetQuestState("Regent") == 3	}{	pc.SetQuest("Regent",2)	}{	}{	}{	}{	}{	}{	}{	I will touch this ghoul in his mind's secret places.	}
+{	206	}{	Ghouls. Why is it always ghouls? Fine, I'll check it out when I can.	}{	Ghouls. Why is it always ghouls? Fine, I'll check it out when I can.	}{	221	}{	pc.GetQuestState("Regent") == 3	}{	pc.SetQuest("Regent",2)	}{	}{	}{	}{	}{	}{	}{	Does anyone in this city not drink our blood? This ghoul I will see.	}
+{	207	}{	Hope this guy's upfront. Be a shame if I had to beat it out of him. I'm off.	}{	Hope this guy's upfront. Be a shame if I had to beat it out of him. I'm off.	}{	221	}{	pc.GetQuestState("Regent") == 3	}{	pc.SetQuest("Regent",2)	}{	}{	}{	}{	}{	}{	}{	If he will not listen to reason, perhaps he will listen to the crack of my hand.	}
+{	208	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	211	}{	Our mess? For all I know, this could be some Camarilla plot!	}{	Our mess? For all I know, this could be some Camarilla plot!	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	Calm down, tart and tiny. So what do you know so far?	}{	Calm down, tart and tiny. So what do you know so far?	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	Little firecracker, do not explode in my face. Reveal your knowledge to me.	}
+{	213	}{	If it was, would I volunteer to help? No, so shut up and tell me what you know.	}{	If it was, would I volunteer to help? No, so shut up and tell me what you know.	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	I did not want a solution so bad as to create a problem. Tell me more.	}
+{	214	}{	Forget I offered. I'm out of here.	}{	Forget I offered. I'm out of here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I withdraw all interest and myself as well.	}
+{	215	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	217	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	221	}{	Wait. If Paul's not talking, you might want to start questioning the homeless pop. So many have been dying lately that it takes the city a few days to pick up the bodies.	}{	Wait. If Paul's not talking, you might want to start questioning the homeless pop. So many have been dying lately that it takes the city a few days to pick up the bodies.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.SetQuest("Plague",2)	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	I'll ask around right now. Bye, Damsel.	}{	I'll ask around right now. Bye, Damsel.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will spread my mind around the city of angels. Sea you, Damn Sail.	}
+{	223	}{	Sounds like a bag of laughs. Maybe I'll get to it. Later.	}{	Sounds like a bag of laughs. Maybe I'll get to it. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	The broken brains of the city's forgotten, I shall play there.	}
+{	224	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	225	}{	Before I go, I have a question.	}{	Before I go, I have a question.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind first.	}
+{	226	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	227	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	228	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	231	}{	[Happy to see player]S'up?	}{	[Happy to see player]S'up?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	I've had it with LaCroix. I want to join the Anarchs.	}{	I've had it with LaCroix. I want to join the Anarchs.	}{	561	}{	G.Prince_Refuse == 1 and G.Player_Anarch == 0 and G.Story_State < 70	}{	}{	}{	}{	}{	}{	}{	}{	I do not like the jester-prince; I would become one of the children.	}
+{	233	}{	You said earlier the plaguebearer is a danger to us all. Why is that?	}{	You said earlier the plaguebearer is a danger to us all. Why is that?	}{	191	}{	G.Damsel_Plague == 2	}{	}{	}{	}{	}{	}{	}{	}{	Why must we fear the carrier pigeons?	}
+{	234	}{	I've decided to go after the plaguebearer. How do I find him?	}{	I've decided to go after the plaguebearer. How do I find him?	}{	201	}{	G.Damsel_Plague == 3 and G.Damsel_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	I will hunt this carrier pigeon for you. Where do I point my arrow?	}
+{	235	}{	About Paul... he's dead... for a few days. It wasn't pretty.	}{	About Paul... he's dead... for a few days. It wasn't pretty.	}{	251	}{	G.Damsel_Paul == 0 and G.Message_Play == 1	}{	}{	}{	}{	}{	}{	}{	}{	Paul is dead.... It is not a rumor.	}
+{	236	}{	The plaguebearer's dead.	}{	The plaguebearer's dead.	}{	261	}{	(G.Kanker_Dead == 1 and G.Jezebel_Dead == 0 and G.Vick_Dead == 0 and G.Damsel_Quest < 2) or (G.Kanker_Dead == 0 and G.Jezebel_Dead == 1 and G.Vick_Dead == 0 and G.Damsel_Quest < 2)	}{	}{	}{	}{	}{	}{	}{	}{	The carrier pigeon is extinct.	}
+{	237	}{	Do you know what this symbol is?	}{	Do you know what this symbol is?	}{	271	}{	pc.HasItem("item_g_brotherhood_flyer")	}{	}{	}{	}{	}{	}{	}{	}{	Does this symbol speak to your mind?	}
+{	238	}{	All the plaguebearers are dead.	}{	All the plaguebearers are dead.	}{	281	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 1 and IsDead("Bishop Vick") and G.Damsel_Quest < 3	}{	}{	}{	}{	}{	}{	}{	}{	The king of the carrier pigeons and all his filthy chicks are finally extinct.	}
+{	239	}{	I have some questions.	}{	I have some questions.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind.	}
+{	240	}{	Be back later.	}{	Be back later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am already gone.	}
+{	241	}{	[Distant, disinterested, disgusted]Ugh, Cammy!	}{	[Distant, disinterested, disgusted]Ugh, Cammy!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	I have some questions.	}{	I have some questions.	}{	531	}{	G.Damsel_Like < -3	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind.	}
+{	243	}{	You said earlier the plaguebearer is a danger to us all. Why is that?	}{	You said earlier the plaguebearer is a danger to us all. Why is that?	}{	191	}{	G.Damsel_Plague == 2	}{	}{	}{	}{	}{	}{	}{	}{	Why must we fear the carrier pigeons?	}
+{	244	}{	I've decided to go after the plaguebearer. How do I find him?	}{	I've decided to go after the plaguebearer. How do I find him?	}{	201	}{	G.Damsel_Plague == 3 and G.Damsel_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	I will hunt this carrier pigeon for you. Where do I point my arrow?	}
+{	245	}{	About Paul... he's dead... for a few days. It wasn't pretty.	}{	About Paul... he's dead... for a few days. It wasn't pretty.	}{	251	}{	G.Damsel_Paul == 0 and G.Message_Play == 1	}{	}{	}{	}{	}{	}{	}{	}{	Paul is dead.... It is not a rumor.	}
+{	246	}{	The plaguebearer's dead.	}{	The plaguebearer's dead.	}{	261	}{	(G.Kanker_Dead == 1 and G.Jezebel_Dead == 0 and G.Vick_Dead == 0 and G.Damsel_Quest < 2) or (G.Kanker_Dead == 0 and G.Jezebel_Dead == 1 and G.Vick_Dead == 0 and G.Damsel_Quest < 2)	}{	}{	}{	}{	}{	}{	}{	}{	The carrier pigeon is extinct.	}
+{	247	}{	Do you know what the symbol on this flyer is?	}{	Do you know what the symbol on this flyer is?	}{	271	}{	pc.HasItem("item_g_brotherhood_flyer")	}{	}{	}{	}{	}{	}{	}{	}{	Does this paper symbol speak to your mind?	}
+{	248	}{	All the plaguebearers are dead.	}{	All the plaguebearers are dead.	}{	281	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 1 and IsDead("Bishop Vick") and G.Damsel_Quest < 3	}{	}{	}{	}{	}{	}{	}{	}{	The king of the carrier pigeons and all his filthy chicks are finally extinct.	}
+{	249	}{	I have some questions.	}{	I have some questions.	}{	311	}{	G.Damsel_Like > -4	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind.	}
+{	250	}{	Be back later.	}{	Be back later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am already gone.	}
+{	251	}{	We told him to burn the blood and go to the hospital. Said he thought he'd get over it. Men are stubborn that way. Just proves the plaguebearer's gotta be found.	}{	We told him to burn the blood and go to the hospital. Said he thought he'd get over it. Men are stubborn that way. Just proves the plaguebearer's gotta be found.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Damsel_Paul = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	The plaguebearer's dead.	}{	The plaguebearer's dead.	}{	261	}{	(G.Kanker_Dead == 1 and G.Jezebel_Dead == 0 and G.Vick_Dead == 0 and G.Damsel_Quest < 2) or (G.Kanker_Dead == 0 and G.Jezebel_Dead == 1 and G.Vick_Dead == 0 and G.Damsel_Quest < 2)	}{	}{	}{	}{	}{	}{	}{	}{	The carrier pigeon is extinct.	}
+{	253	}{	Do you know what the symbol on this flyer is?	}{	Do you know what the symbol on this flyer is?	}{	271	}{	pc.HasItem("item_g_brotherhood_flyer")	}{	}{	}{	}{	}{	}{	}{	}{	Does this paper symbol speak to your mind?	}
+{	254	}{	All the plaguebearers are dead.	}{	All the plaguebearers are dead.	}{	281	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 1 and IsDead("Bishop Vick") and G.Damsel_Quest < 3	}{	}{	}{	}{	}{	}{	}{	}{	The king of the carrier pigeons and all his filthy chicks are finally extinct.	}
+{	255	}{	Yeah, but love killed Paul, look here.	}{	Yeah, but love killed Paul, look here.	}{	701	}{	G.Patch_Plus == 1 and pc.HasItem("item_g_hannahs_appt_book")	}{	pc.RemoveItem("item_g_hannahs_appt_book")	}{	}{	}{	}{	}{	}{	}{	Love killed your pet, see?	}
+{	256	}{	I'll keep looking.	}{	I'll keep looking.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will flush out the pigeon, wait and see.	}
+{	257	}{	Before I go, I had a question.	}{	Before I go, I had a question.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind first.	}
+{	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	Right on, 'cept we dusted a second one over near the convention center. They're part of some doomsday cult, apparently. No telling how many there are, but it's open season on all these sick sons of bitches!	}{	Right on, 'cept we dusted a second one over near the convention center. They're part of some doomsday cult, apparently. No telling how many there are, but it's open season on all these sick sons of bitches!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Damsel_Quest = 2; pc.SetQuest("Plague",9)	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	I'll start looking for the rest. Bye, Damsel.	}{	I'll start looking for the rest. Bye, Damsel.	}{	0	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 1	}{	pc.SetQuest("AllPlague",1)	}{	}{	}{	}{	}{	}{	}{	More pigeons for this cat to catch. I begin my prowl.	}
+{	263	}{	Now you're talking. Hope they're more of a challenge than the last one. Later.	}{	Now you're talking. Hope they're more of a challenge than the last one. Later.	}{	0	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 1	}{	pc.SetQuest("AllPlague",1)	}{	}{	}{	}{	}{	}{	}{	Their tainted blood will clog the gutters of the city. My hunt begins.	}
+{	264	}{	Do you know what the symbol on this flyer is?	}{	Do you know what the symbol on this flyer is?	}{	271	}{	pc.HasItem("item_g_brotherhood_flyer")	}{	pc.SetQuest("AllPlague",1)	}{	}{	}{	}{	}{	}{	}{	Does this paper symbol speak to your mind?	}
+{	265	}{	I'll start looking for the rest. Bye, Damsel.	}{	I'll start looking for the rest. Bye, Damsel.	}{	0	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 0	}{	pc.SetQuest("AllPlague",6)	}{	}{	}{	}{	}{	}{	}{	More pigeons for this cat to catch. I begin my prowl.	}
+{	266	}{	Now you're talking. Hope they're more of a challenge than the last one. Later.	}{	Now you're talking. Hope they're more of a challenge than the last one. Later.	}{	0	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 0	}{	pc.SetQuest("AllPlague",6)	}{	}{	}{	}{	}{	}{	}{	Their tainted blood will clog the gutters of the city. My hunt begins.	}
+{	267	}{	Before I go, I had a question.	}{	Before I go, I had a question.	}{	311	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 0	}{	pc.SetQuest("AllPlague",6)	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind first.	}
+{	268	}{	I'll start looking for the rest. Bye, Damsel.	}{	I'll start looking for the rest. Bye, Damsel.	}{	0	}{	G.Kanker_Dead == 0 and G.Jezebel_Dead == 1	}{	pc.SetQuest("AllPlague",7)	}{	}{	}{	}{	}{	}{	}{	More pigeons for this cat to catch. I begin my prowl.	}
+{	269	}{	Now you're talking. Hope they're more of a challenge than the last one. Later.	}{	Now you're talking. Hope they're more of a challenge than the last one. Later.	}{	0	}{	G.Kanker_Dead == 0 and G.Jezebel_Dead == 1	}{	pc.SetQuest("AllPlague",7)	}{	}{	}{	}{	}{	}{	}{	Their tainted blood will clog the gutters of the city. My hunt begins.	}
+{	270	}{	Before I go, I had a question.	}{	Before I go, I had a question.	}{	311	}{	G.Kanker_Dead == 0 and G.Jezebel_Dead == 1	}{	pc.SetQuest("AllPlague",7)	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind first.	}
+{	271	}{	Yeah, I've seen this. Pretty sure I've seen it around here somewhere - one of the buildings, I think.	}{	Yeah, I've seen this. Pretty sure I've seen it around here somewhere - one of the buildings, I think.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.SetQuest("AllPlague",2)	}{	}{	}{	}{	}{	}{	}{	}
+{	272	}{	I'll look for it.	}{	I'll look for it.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I trust your eyes' memory and seek it nearby.	}
+{	273	}{	Before I go, I had a question.	}{	Before I go, I had a question.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind first.	}
+{	274	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	275	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	276	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	277	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	278	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	281	}{	You killed all of them? You? Huh. So, I guess you want me to thank you or something. Damn it! Thanks... okay? We're cool, for now, but just don't go bragging to everybody about it.	}{	You killed all of them? You? Huh. So, I guess you want me to thank you or something. Damn it! Thanks... okay? We're cool, for now, but just don't go bragging to everybody about it.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Damsel_Quest = 3; G.Damsel_Like = G.Damsel_Like +2; pc.SetQuest("AllPlague",4); FindPlayer().ChangeMasqueradeLevel( -1 )	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	Kindred or kine, I just wanted to help the community.	}{	Kindred or kine, I just wanted to help the community.	}{	291	}{	pc.GetQuestState("Plague") != 9	}{	G.Damsel_Like = G.Damsel_Like +1; pc.SetQuest("Plague",9)	}{	}{	}{	}{	}{	}{	}{	I only sought to pull the weeds and allow flowers to blossom once again.	}
+{	283	}{	You're not so bad either, Damsel. Still a bitch, but in a good way.	}{	You're not so bad either, Damsel. Still a bitch, but in a good way.	}{	291	}{	pc.GetQuestState("Plague") != 9	}{	G.Damsel_Like = G.Damsel_Like +1; pc.SetQuest("Plague",9)	}{	}{	}{	}{	}{	}{	}{	You are a thorny and fire-breathing damsel, but I would still rescue you.	}
+{	284	}{	Just thought I'd prove a point. You Anarchs need the Camarilla.	}{	Just thought I'd prove a point. You Anarchs need the Camarilla.	}{	301	}{	pc.GetQuestState("Plague") != 9	}{	G.Damsel_Like = G.Damsel_Like -1; pc.SetQuest("Plague",9)	}{	}{	}{	}{	}{	}{	}{	Did the children learn they need their parents the Camarilla?	}
+{	285	}{	Kindred or kine, I just wanted to help the community.	}{	Kindred or kine, I just wanted to help the community.	}{	291	}{	pc.GetQuestState("Plague") == 9	}{	G.Damsel_Like = G.Damsel_Like +1	}{	}{	}{	}{	}{	}{	}{	I only sought to pull the weeds and allow flowers to blossom once again.	}
+{	286	}{	You're not so bad either, Damsel. Still a bitch, but in a good way.	}{	You're not so bad either, Damsel. Still a bitch, but in a good way.	}{	291	}{	pc.GetQuestState("Plague") == 9	}{	G.Damsel_Like = G.Damsel_Like +1	}{	}{	}{	}{	}{	}{	}{	You are a thorny and fire-breathing damsel, but I would still rescue you.	}
+{	287	}{	Just thought I'd prove a point. You Anarchs need the Camarilla.	}{	Just thought I'd prove a point. You Anarchs need the Camarilla.	}{	301	}{	pc.GetQuestState("Plague") == 9	}{	G.Damsel_Like = G.Damsel_Like -1	}{	}{	}{	}{	}{	}{	}{	Did the children learn they need their parents the Camarilla?	}
+{	288	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	291	}{	Righteous. You know, you just may have an Anarch soul. I'll let you chew on that, Cammy. Some of the boys might have overheard our conversation and gotten the impression I've gone soft. Somebody in this joint's got to lack the restraint to keep their mouth shut.	}{	Righteous. You know, you just may have an Anarch soul. I'll let you chew on that, Cammy. Some of the boys might have overheard our conversation and gotten the impression I've gone soft. Somebody in this joint's got to lack the restraint to keep their mouth shut.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	Maybe.... See you, Damsel.	}{	Maybe.... See you, Damsel.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	293	}{	Wait.... What if I said I'm sick of LaCroix and I want to join the Anarchs?	}{	Wait.... What if I said I'm sick of LaCroix and I want to join the Anarchs?	}{	561	}{	}{	G.Damsel_Like = G.Damsel_Like +1	}{	}{	}{	}{	}{	}{	}{	}
+{	294	}{	Hey, Damsel, you seem resourceful... why don't you join me in the Camarilla?	}{	Hey, Damsel, you seem resourceful... why don't you join me in the Camarilla?	}{	301	}{	}{	G.Damsel_Like = G.Damsel_Like -1	}{	}{	}{	}{	}{	}{	}{	}
+{	295	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	296	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	297	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	298	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	300	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	301	}{	[Stifles her rage]Know what I just said about being alright? I take it back! You're as rotten as the rest! Go crawl back into your ivory tower, we'll handle our own shit from now on!	}{	[Stifles her rage]Know what I just said about being alright? I take it back! You're as rotten as the rest! Go crawl back into your ivory tower, we'll handle our own shit from now on!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Damsel_Like = G.Damsel_Like -3	}{	}{	}{	}{	}{	}{	}{	}
+{	302	}{	I doubt you can.	}{	I doubt you can.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	303	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	304	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	305	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	306	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	307	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	308	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	309	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	310	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	311	}{	Yeah?	}{	Yeah?	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	312	}{	I have some questions.	}{	I have some questions.	}{	531	}{	G.Damsel_Like < -3	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind.	}
+{	313	}{	You know anything about the regent? He blames you for the plaguebearers.	}{	You know anything about the regent? He blames you for the plaguebearers.	}{	511	}{	G.Regent_Pestilence >= 1 and G.Damsel_Regent == 0	}{	}{	}{	}{	}{	}{	}{	}{	Do you know the warlock chief? He says you children spread disease.	}
+{	314	}{	Tell me about Nines.	}{	Tell me about Nines.	}{	321	}{	G.Story_State < 25 and G.Damsel_Nines == 0	}{	}{	}{	}{	}{	}{	}{	}{	The number for a name.	}
+{	315	}{	Tell me about Nines.	}{	Tell me about Nines.	}{	351	}{	G.Story_State >= 25 and G.Damsel_Nines < 2	}{	}{	}{	}{	}{	}{	}{	}{	The number for a name.	}
+{	316	}{	Your thoughts on LaCroix?	}{	Your thoughts on LaCroix?	}{	371	}{	G.Damsel_Prince == 0	}{	}{	}{	}{	}{	}{	}{	}{	The jester in his ivory tower.	}
+{	317	}{	Tell me about Smiling Jack.	}{	Tell me about Smiling Jack.	}{	391	}{	G.Damsel_Jack == 0	}{	}{	}{	}{	}{	}{	}{	}{	The jack-in-the-box that smiles incessantly.	}
+{	318	}{	Tell me about the Anarchs.	}{	Tell me about the Anarchs.	}{	411	}{	G.Damsel_Anarchs == 0	}{	}{	}{	}{	}{	}{	}{	}{	The children of the Camarilla.	}
+{	319	}{	Your thoughts on the Camarilla?	}{	Your thoughts on the Camarilla?	}{	431	}{	G.Damsel_Cam == 0	}{	}{	}{	}{	}{	}{	}{	}{	The parents of the Anarchs.	}
+{	320	}{	Nothing right now. Excuse me.	}{	Nothing right now. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My curiosity wanes. I'm already gone.	}
+{	321	}{	No one like him in this world or the next. He's to the Anarchs what George Washington was to the colonies, what Ho Chi Minh was to Vietnam. He is the LA Anarchs personified. He's a great leader and yet... he's humble. I'd die for him.	}{	No one like him in this world or the next. He's to the Anarchs what George Washington was to the colonies, what Ho Chi Minh was to Vietnam. He is the LA Anarchs personified. He's a great leader and yet... he's humble. I'd die for him.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Damsel_Nines = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	322	}{	I owe him my life. Seems like one of the only decent people I've met yet.	}{	I owe him my life. Seems like one of the only decent people I've met yet.	}{	331	}{	}{	G.Damsel_Like = G.Damsel_Like +1	}{	}{	}{	}{	}{	}{	}{	He wears no face but his own in a city of masks.	}
+{	323	}{	What crap. He's an elevated street thug. A gang leader.	}{	What crap. He's an elevated street thug. A gang leader.	}{	341	}{	}{	G.Damsel_Like = G.Damsel_Like -1	}{	}{	}{	}{	}{	}{	}{	He is a brutal beast - the one-eyed king in the land of the blind.	}
+{	324	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	325	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	326	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	327	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	328	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	329	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	330	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	331	}{	No one like him in the Camarilla or otherwise. Anything else?	}{	No one like him in the Camarilla or otherwise. Anything else?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	332	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	333	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	334	}{	Your thoughts on LaCroix?	}{	Your thoughts on LaCroix?	}{	371	}{	G.Damsel_Prince == 0	}{	}{	}{	}{	}{	}{	}{	}{	The jester in his ivory tower.	}
+{	335	}{	Tell me about Smiling Jack.	}{	Tell me about Smiling Jack.	}{	391	}{	G.Damsel_Jack == 0	}{	}{	}{	}{	}{	}{	}{	}{	The jack-in-the-box that smiles incessantly.	}
+{	336	}{	Tell me about the Anarchs.	}{	Tell me about the Anarchs.	}{	411	}{	G.Damsel_Anarchs == 0	}{	}{	}{	}{	}{	}{	}{	}{	The children of the Camarilla.	}
+{	337	}{	Your thoughts on the Camarilla?	}{	Your thoughts on the Camarilla?	}{	431	}{	G.Damsel_Cam == 0	}{	}{	}{	}{	}{	}{	}{	}{	The parents of the Anarchs.	}
+{	338	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	339	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	340	}{	I'm tapped. Later, Damsel.	}{	I'm tapped. Later, Damsel.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I ship off, Damn Sail.	}
+{	341	}{	And LaCroix's like Nixon with a hundred year term of office. Fucking eurotrash fop! You deserve the government you get! Get the fuck out of here!	}{	And LaCroix's like Nixon with a hundred year term of office. Fucking eurotrash fop! You deserve the government you get! Get the fuck out of here!	}{	#	}{	npc.SetDisposition("Anger", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	342	}{	I'm going.	}{	I'm going.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	343	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	344	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	345	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	346	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	347	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	348	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	349	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	350	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	351	}{	I think you'd better go. No one wants to talk about this right now.	}{	I think you'd better go. No one wants to talk about this right now.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Damsel_Nines = 2	}{	}{	}{	}{	}{	}{	}{	}
+{	352	}{	I understand. I'll come back later.	}{	I understand. I'll come back later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	The frustration looms like cigarette smoke. I have no place here.	}
+{	353	}{	He's guilty, I saw him myself. It's only a matter of time before he's found.	}{	He's guilty, I saw him myself. It's only a matter of time before he's found.	}{	361	}{	G.Story_State < 80	}{	G.Damsel_Like = G.Damsel_Like -1	}{	}{	}{	}{	}{	}{	}{	Shout your doubt on the highest hill - my eyes know better than you.	}
+{	354	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	355	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	356	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	357	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	358	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	359	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	360	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	361	}{	I don't care what you saw, Nines is innocent! Nines wouldn't do something like that without a reason. He'd never start a war. This is - this is... it's bullshit! Take your ass back to your tower, Cammy, before you get hurt!	}{	I don't care what you saw, Nines is innocent! Nines wouldn't do something like that without a reason. He'd never start a war. This is - this is... it's bullshit! Take your ass back to your tower, Cammy, before you get hurt!	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	362	}{	I will.	}{	I will.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	363	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	364	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	365	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	366	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	367	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	368	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	369	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	370	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	371	}{	Who the hell does he think he is coming into town claiming Camarilla authority over the city? We kicked them out sixty years ago! It's like England coming back and telling the U.S. how they should do things. Fuck LaCroix!	}{	Who the hell does he think he is coming into town claiming Camarilla authority over the city? We kicked them out sixty years ago! It's like England coming back and telling the U.S. how they should do things. Fuck LaCroix!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Damsel_Prince = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	372	}{	I had no idea the Anarchs had been in control that long. I had another question.	}{	I had no idea the Anarchs had been in control that long. I had another question.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	The children have played in this yard for longer than I knew. Another question.	}
+{	373	}{	You scared the Camarilla might siphon off more of your members?	}{	You scared the Camarilla might siphon off more of your members?	}{	381	}{	}{	G.Damsel_Like = G.Damsel_Like -1	}{	}{	}{	}{	}{	}{	}{	You fear the lost children will return to their parents.	}
+{	374	}{	Not a fan, huh? I'll see you later.	}{	Not a fan, huh? I'll see you later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	How can you not like a jester? My mind ponders this elsewhere.	}
+{	375	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	376	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	377	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	378	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	379	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	380	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	381	}{	I'd be more worried about us kicking you out again. And this time, it'll be five hundred years before you scrape up enough soldiers to cross the city limit.	}{	I'd be more worried about us kicking you out again. And this time, it'll be five hundred years before you scrape up enough soldiers to cross the city limit.	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	382	}{	Whatever, I had another question.	}{	Whatever, I had another question.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	While I laugh, I wonder something else.	}
+{	383	}{	Sure. I'll go pack my bags.	}{	Sure. I'll go pack my bags.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I must make travel arrangements.	}
+{	384	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	385	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	386	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	387	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	388	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	389	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	390	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	391	}{	Jack? Jack's Jack. Kind of a legend amongst Anarchs. There's not an Anarch in the world that wouldn't stand in rockstar awe of Jack. Even the Camarilla doesn't mess with him.	}{	Jack? Jack's Jack. Kind of a legend amongst Anarchs. There's not an Anarch in the world that wouldn't stand in rockstar awe of Jack. Even the Camarilla doesn't mess with him.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Damsel_Jack = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	392	}{	Really? I had no idea. Jack's one of the cooler people I've met.	}{	Really? I had no idea. Jack's one of the cooler people I've met.	}{	401	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yes, his beard is hypnotic.	}
+{	393	}{	That old bum? You're kidding, right?	}{	That old bum? You're kidding, right?	}{	401	}{	}{	}{	}{	}{	}{	}{	}{	}{	Once you've wound the jack-in-the-box, you are no longer surprised.	}
+{	394	}{	Interesting. I've got to go.	}{	Interesting. I've got to go.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My curiosity is sated. I am gone.	}
+{	395	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	396	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	397	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	398	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	399	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	400	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	401	}{	He's been around a long time. He used to be a pirate, so the rumor goes. Talk to Jack, he's never short on chat.	}{	He's been around a long time. He used to be a pirate, so the rumor goes. Talk to Jack, he's never short on chat.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	402	}{	I had another question.	}{	I had another question.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something else.	}
+{	403	}{	Maybe I'll go do that.	}{	Maybe I'll go do that.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will go wind him up.	}
+{	404	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	405	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	406	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	407	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	408	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	409	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	410	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	411	}{	We're about passion, Cammy, and freedom... things most Camarilla types just can't understand. I could go on and on... but Skelter says it takes too long to get me off my soapbox. Ask him, or even Jack.	}{	We're about passion, Cammy, and freedom... things most Camarilla types just can't understand. I could go on and on... but Skelter says it takes too long to get me off my soapbox. Ask him, or even Jack.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Damsel_Anarchs = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	412	}{	No, go on. Tell me what you think.	}{	No, go on. Tell me what you think.	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	Please continue rambling at my expense.	}
+{	413	}{	Maybe I'll do that. I had another question.	}{	Maybe I'll do that. I had another question.	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something else from you.	}
+{	414	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	415	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	416	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	417	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	418	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	419	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	420	}{	I'll go ask them. Bye.	}{	I'll go ask them. Bye.	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will attempt to eat their mind candy.	}
+{	421	}{	I mean, geez, it just makes sense. Power should be redistributed amongst all of us, not just the few. Communism would actually work for Kindred, where it fails with humans. It's just common sense, you know!	}{	I mean, geez, it just makes sense. Power should be redistributed amongst all of us, not just the few. Communism would actually work for Kindred, where it fails with humans. It's just common sense, you know!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	422	}{	Okay. I did have a question about something else though.	}{	Okay. I did have a question about something else though.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something else from you.	}
+{	423	}{	I'm going to stand over there, but keep talking, I'll be listening.	}{	I'm going to stand over there, but keep talking, I'll be listening.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your mouth is a crack in a dam, I must escape the flood.	}
+{	424	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	425	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	426	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	427	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	428	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	429	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	430	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	431	}{	It's a sham - a pyramid scheme! Nothing but musty, withdrawn elders waging power struggles for no other reason than to keep their own ass alive for one more century. You think you have any real power in the Cam? You're kidding yourself.	}{	It's a sham - a pyramid scheme! Nothing but musty, withdrawn elders waging power struggles for no other reason than to keep their own ass alive for one more century. You think you have any real power in the Cam? You're kidding yourself.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Damsel_Cam = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	432	}{	I really don't understand it myself. I'm kind of new to this.	}{	I really don't understand it myself. I'm kind of new to this.	}{	441	}{	}{	}{	}{	}{	}{	}{	}{	}{	Its architecture is still mysterious to me. Shards of insight are all I gather.	}
+{	433	}{	I guess when the alternative is you or the Sabbat, I'll take the Camarilla.	}{	I guess when the alternative is you or the Sabbat, I'll take the Camarilla.	}{	451	}{	}{	G.Damsel_Like = G.Damsel_Like -1	}{	}{	}{	}{	}{	}{	}{	I would rather grow up, than play with the children of Never-Never Land.	}
+{	434	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	435	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	436	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	437	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	438	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	439	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	440	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	441	}{	You'd be better off without them... you'll see.	}{	You'd be better off without them... you'll see.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	442	}{	I had another question.	}{	I had another question.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something else from you.	}
+{	443	}{	Maybe you're right. See you later.	}{	Maybe you're right. See you later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	That may be insightful, or not. I will return when I'm sure.	}
+{	444	}{	I don't think so. Later.	}{	I don't think so. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Unsupervised children get into trouble. Behave yourself.	}
+{	445	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	446	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	447	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	448	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	449	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	450	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	451	}{	They deserve you.	}{	They deserve you.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	452	}{	I had another question.	}{	I had another question.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something else from you.	}
+{	453	}{	I don't think so. Later.	}{	I don't think so. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Unsupervised children get into trouble. Behave yourself.	}
+{	454	}{	Think I'll go curry some favor. Bye.	}{	Think I'll go curry some favor. Bye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I must play with the other grown-ups now, excuse me.	}
+{	455	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	456	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	457	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	458	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	459	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	460	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	461	}{	I'm Damsel! Someone talking shit about me over in that ivory tower? Who said it, huh? I'll kick their ass!	}{	I'm Damsel! Someone talking shit about me over in that ivory tower? Who said it, huh? I'll kick their ass!	}{	#	}{	npc.SetDisposition("Anger", 2); G.Damsel_Know = 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	462	}{	The only words spoken were in my head.	}{	The only words spoken were in my head.	}{	471	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	463	}{	Kicking them in the head would be more effective.	}{	Kicking them in the head would be more effective.	}{	471	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	464	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	465	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	466	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	467	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	468	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	469	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	470	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	471	}{	Lunatic.... I'd give you a piece of my mind, seeing as how you're just another do boy for the Camarilla, but shit, no amount of good sense penetrates that white noise you Malks call a brain, does it?	}{	Lunatic.... I'd give you a piece of my mind, seeing as how you're just another do girl for the Camarilla, but shit, no amount of good sense penetrates that white noise you Malks call a brain, does it?	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	472	}{	The warlock chief says you children spread disease.	}{	The warlock chief says you children spread disease.	}{	511	}{	G.Regent_Pestilence >= 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	473	}{	Something is plaguing you.	}{	Something is plaguing you.	}{	501	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	474	}{	The words of sevens and eights I ignored, but to Nines I listened.	}{	The words of sevens and eights I ignored, but to Nines I listened.	}{	481	}{	}{	G.Damsel_Like = G.Damsel_Like +1	}{	}{	}{	}{	}{	}{	}{	}
+{	475	}{	Those words from an Anarch ooze with hypocrisy.	}{	Those words from an Anarch ooze with hypocrisy.	}{	491	}{	}{	G.Damsel_Like = G.Damsel_Like -1	}{	}{	}{	}{	}{	}{	}{	}
+{	476	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	477	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	478	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	479	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	480	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	481	}{	Alright, maybe you're not completely batshit.	}{	Alright, maybe you're not completely batshit.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	482	}{	The warlock chief says you children spread disease.	}{	The warlock chief says you children spread disease.	}{	511	}{	G.Regent_Pestilence >= 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	483	}{	Something is plaguing you.	}{	Something is plaguing you.	}{	501	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	484	}{	Black death, smallpox, influenza, syphilis, cholera...	}{	Black death, smallpox, influenza, syphilis, cholera...	}{	501	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	485	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	486	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	487	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	488	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	489	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	490	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	491	}{	Fuck you, whack job! That get through your skull?	}{	Fuck you, whack job! That get through your skull?	}{	#	}{	npc.SetDisposition("Anger", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	492	}{	The warlock chief says you children spread disease.	}{	The warlock chief says you children spread disease.	}{	511	}{	G.Regent_Pestilence >= 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	493	}{	Something is plaguing you.	}{	Something is plaguing you.	}{	501	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	494	}{	Black death, smallpox, influenza, syphilis, cholera...	}{	Black death, smallpox, influenza, syphilis, cholera...	}{	501	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	495	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	496	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	497	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	498	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	499	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	500	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	501	}{	What? Weird you say that. Yeah... you might say something is plaguing me, a plaguebearer as a matter of fact.	}{	What? Weird you say that. Yeah... you might say something is plaguing me, a plaguebearer as a matter of fact.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	502	}{	Plaguebearer? This word is unfamiliar to me.	}{	Plaguebearer? This word is unfamiliar to me.	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	503	}{	Help my mind digest this creature.	}{	Help my mind digest this creature.	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	504	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	505	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	506	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	507	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	508	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	509	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	510	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	511	}{	That goddamn blood witch told you what?!? He thinks we're responsible for that plaguebearer? If I hadn't promised Nines I'd keep my nose clean, I'd go over right now and rip him a new wizard chute - magic missile casting motherfucker.	}{	That goddamn blood witch told you what?!? He thinks we're responsible for that plaguebearer? If I hadn't promised Nines I'd keep my nose clean, I'd go over right now and rip him a new wizard chute - magic missile casting motherfucker.	}{	#	}{	npc.SetDisposition("Anger", 3)	}{	G.Damsel_Regent = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	512	}{	What's a plaguebearer?	}{	What's a plaguebearer?	}{	171	}{	G.Damsel_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	Plaguebearer? This word is unfamiliar to me.	}
+{	513	}{	Sure you would. Tell me about this plaguebearer.	}{	Sure you would. Tell me about this plaguebearer.	}{	171	}{	G.Damsel_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	A firecracker versus dynamite, hmm.... Tell me of plaguebearers, firecracker.	}
+{	514	}{	Something else about the plaguebearer.	}{	Something else about the plaguebearer.	}{	521	}{	G.Damsel_Quest >= 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	515	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	516	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	517	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	518	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	519	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	520	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	521	}{	[Getting pissed, growls]What?	}{	[Getting pissed, growls]What?	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	522	}{	I have some questions.	}{	I have some questions.	}{	531	}{	G.Damsel_Like < -3	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind.	}
+{	523	}{	You said earlier the plaguebearer is a danger to us all. Why is that?	}{	You said earlier the plaguebearer is a danger to us all. Why is that?	}{	191	}{	G.Damsel_Plague == 2	}{	}{	}{	}{	}{	}{	}{	}{	Why must we fear the carrier pigeons?	}
+{	524	}{	I've decided to go after the plaguebearer. How do I find him?	}{	I've decided to go after the plaguebearer. How do I find him?	}{	201	}{	G.Damsel_Plague == 3 and G.Damsel_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	I will hunt this carrier pigeon for you. Where do I point my arrow?	}
+{	525	}{	About Paul... he's dead... for a few days. It wasn't pretty.	}{	About Paul... he's dead... for a few days. It wasn't pretty.	}{	251	}{	G.Damsel_Paul == 0 and G.Message_Play == 1	}{	}{	}{	}{	}{	}{	}{	}{	Paul is dead.... It is not a rumor.	}
+{	526	}{	The plaguebearer's dead.	}{	The plaguebearer's dead.	}{	261	}{	(G.Kanker_Dead == 1 and G.Jezebel_Dead == 0 and G.Vick_Dead == 0 and G.Damsel_Quest < 2) or (G.Kanker_Dead == 0 and G.Jezebel_Dead == 1 and G.Vick_Dead == 0 and G.Damsel_Quest < 2)	}{	}{	}{	}{	}{	}{	}{	}{	The carrier pigeon is extinct.	}
+{	527	}{	Do you know what this symbol is?	}{	Do you know what this symbol is?	}{	271	}{	pc.HasItem("item_g_brotherhood_flyer")	}{	}{	}{	}{	}{	}{	}{	}{	Does this paper symbol speak to your mind?	}
+{	528	}{	All the plaguebearers are dead.	}{	All the plaguebearers are dead.	}{	281	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 1 and IsDead("Bishop Vick") and G.Damsel_Quest < 3	}{	}{	}{	}{	}{	}{	}{	}{	The king of the carrier pigeons and all his filthy chicks are finally extinct.	}
+{	529	}{	I have some questions.	}{	I have some questions.	}{	311	}{	G.Damsel_Like > -4	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind.	}
+{	530	}{	Be back later.	}{	Be back later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am already gone.	}
+{	531	}{	No! No more questions! Everytime I talk to you, I just want to smack you. It's like talking to a wall that you wanna take down with a sledgehammer!	}{	No! No more questions! Everytime I talk to you, I just want to smack you. It's like talking to a wall that you wanna take down with a sledgehammer!	}{	#	}{	npc.SetDisposition("Anger", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	532	}{	Sorry.	}{	Sorry.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	533	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	534	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	535	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	536	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	537	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	538	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	539	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	540	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	541	}{	[Enraged, full of despite]I'm not saying another word to you, you grating fascist Cammy do-boy bastard! Argh... you just make me wanna rip out your teeth and stick them in your eyes! Get back into your ivory tower and stay there, asshole!	}{	[Enraged, full of despite]I'm not saying another word to you, you grating fascist Cammy do-girl bitch! Argh... you just make me wanna rip out your teeth and stick them in your eyes! Get back into your ivory tower and stay there, whore!	}{	#	}{	npc.SetDisposition("Anger", 3)	}{	G.Damsel_Hate = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	542	}{	You mean it? You'll never talk to me again? Best news I've heard since I died.	}{	You mean it? You'll never talk to me again? Best news I've heard since I died.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ah, at last my ears are free from the torment that is your voice.	}
+{	543	}{	That's too bad, I found our conversations so stimulating.	}{	That's too bad, I found our conversations so stimulating.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	The little firecracker finally explodes! I am a happy flame.	}
+{	544	}{	You're lucky this is Elysium, bitch.	}{	You're lucky this is Elysium, bitch.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	If not for Elysium's shield, my sword would penetrate your heart, child.	}
+{	545	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	546	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	547	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	548	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	549	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	550	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	551	}{	[Pissed off growl through teeth]Ngrh....	}{	[Pissed off growl through teeth]Ngrh....	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	552	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	553	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	554	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	555	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	556	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	557	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	558	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	559	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	560	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	561	}{	I don't know, you seem pretty tight with nancy pants up there.	}{	I don't know, you seem pretty tight with nancy pants up there.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	562	}{	What're you trying to imply, Damsel?	}{	What're you trying to imply, Damsel?	}{	571	}{	}{	}{	}{	}{	}{	}{	}{	}{	I tried on nancy pants, I didn't like them.	}
+{	563	}{	I'm playing him. But Nines showed me the way. I want to be here, with you guys.	}{	I'm playing him. But Nines showed me the way. I want to be here, with you guys.	}{	571	}{	}{	}{	}{	}{	}{	}{	}{	}{	"Yes, sir, of course, sir!" Hee hee... he's a glutton for it. Now, sign me up.	}
+{	564	}{	Wait.... I can't get involved with the Anarchs. I'm sorry. I have to go.	}{	Wait.... I can't get involved with the Anarchs. I'm sorry. I have to go.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I cannot rebel against my parents. I'm a good child. I am gone.	}
+{	565	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	566	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	567	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	568	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	569	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	570	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	571	}{	Say... you really want to help us out? Stay close to LaCroix. Smooch his ass, play ball. Keep an eye on him for us. You hear anything spicy, you come talk to me. Don't advertise! For all anyone in that tower'll know, you're still a worthless bootlicking Cammy do-boy.	}{	Say... you really want to help us out? Stay close to LaCroix. Smooch his ass, play ball. Keep an eye on him for us. You hear anything spicy, you come talk to me. Don't advertise! For all anyone in that tower'll know, you're still a worthless bootlicking Cammy do-girl.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Player_Anarch = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	572	}{	Okay, I'll keep my affiliation a secret. I'll humor LaCroix, for now.	}{	Okay, I'll keep my affiliation a secret. I'll humor LaCroix, for now.	}{	581	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will wear my Camarilla uniform, and underneath that, my combat fatigues.	}
+{	573	}{	Screw LaCroix! That's why I'm here! I'm through, hear me?	}{	Screw LaCroix! That's why I'm here! I'm through, hear me?	}{	591	}{	}{	}{	}{	}{	}{	}{	}{	}{	NO MORE LACROIX!	}
+{	574	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	575	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	576	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	577	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	578	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	579	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	580	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	581	}{	Cool! With someone on the inside, we should be able to eject his candyass a whole lot sooner. Keep us conscious, [tongue in cheek]"Cammy".	}{	Cool! With someone on the inside, we should be able to eject his candyass a whole lot sooner. Keep us conscious, [tongue in cheek]"Cammy".	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	582	}{	Will do.	}{	Will do.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will whisper all my secrets to you.	}
+{	583	}{	It's not a revolution without me. See you, Damsel.	}{	It's not a revolution without me. See you, Damsel.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am the revolution. And no longer here.	}
+{	584	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	585	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	586	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	587	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	588	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	589	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	590	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	591	}{	Check that shit! I don't need another jeans commercial dicking around here with the rest of the pack. You got the in... hell, you can get close enough to tell what kind of froofy hair conditioner LaCroix's using. That's where we need you, if you're really committed.	}{	Check that shit! I don't need another jeans commercial dicking around here with the rest of the pack. You got the in... hell, you can get close enough to tell what kind of froofy hair conditioner LaCroix's using. That's where we need you, if you're really committed.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	592	}{	Alright, I get it. I'll go make nice, keep my ears open.	}{	Alright, I get it. I'll go make nice, keep my ears open.	}{	581	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll smell his hair, but I'll be thinking of you.	}
+{	593	}{	Nrgh... fine! I just hope I don't clock the son of a bitch.	}{	Nrgh... fine! I just hope I don't clock the son of a bitch.	}{	581	}{	}{	}{	}{	}{	}{	}{	}{	}{	Fiiiiine.... But if he should drop dead, my will is the killer.	}
+{	594	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	595	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	596	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	597	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	598	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	599	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	600	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	601	}{	Heard anything?	}{	Heard anything?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	602	}{	The prince is really interested in getting the Ankaran Sarcophagus.	}{	The prince is really interested in getting the Ankaran Sarcophagus.	}{	611	}{	G.Story_State > 30 and G.Damsel_Rolls == 0	}{	}{	}{	}{	}{	}{	}{	}{	LaCroix wants that old box from the boat real bad.	}
+{	603	}{	The Kuei-jin told me they have an alliance with LaCroix.	}{	The Kuei-jin told me they have an alliance with LaCroix.	}{	621	}{	G.Story_State >= 60 and G.Damsel_Chang == 0	}{	}{	}{	}{	}{	}{	}{	}{	LaCroix courts the lady from the East. I think they are made for each other.	}
+{	604	}{	The leader of the Kuei-jin recently told me of an alliance with LaCroix.	}{	The leader of the Kuei-jin recently told me of an alliance with LaCroix.	}{	641	}{	G.Story_State >= 80 and G.Griffith_Open == 0	}{	}{	}{	}{	}{	}{	}{	}{	From the lips of the lady herself - they danced together under our noses.	}
+{	605	}{	LaCroix wants to go to war with the Kuei-jin. He needs an alliance with the Anarchs.	}{	LaCroix wants to go to war with the Kuei-jin. He needs an alliance with the Anarchs.	}{	651	}{	G.Story_State >= 85 and G.Griffith_Open == 0	}{	}{	}{	}{	}{	}{	}{	}{	LaCroix wants to dance with us now, dance all over the lady's grave.	}
+{	606	}{	There are rumors he is into field hockey players.	}{	There are rumors he is into field hockey players.	}{	701	}{	IsClan(pc,"Malkavian") and G.Rumor_Field == 0	}{	G.Rumor_Field = 1	}{	}{	}{	}{	}{	}{	}{	There are rumors he is into field hockey players.	}
+{	607	}{	The plaguebearer's dead.	}{	The plaguebearer's dead.	}{	261	}{	pc.GetQuestState("Regent") != 3 and ((G.Kanker_Dead == 1 and G.Jezebel_Dead == 0 and G.Vick_Dead == 0 and G.Damsel_Quest < 2) or (G.Kanker_Dead == 0 and G.Jezebel_Dead == 1 and G.Vick_Dead == 0 and G.Damsel_Quest < 2))	}{	}{	}{	}{	}{	}{	}{	}{	The carrier pigeon is extinct.	}
+{	608	}{	The plaguebearer's dead.	}{	The plaguebearer's dead.	}{	821	}{	pc.GetQuestState("Regent") == 3 and ((G.Kanker_Dead == 1 and G.Jezebel_Dead == 0 and G.Vick_Dead == 0 and G.Damsel_Quest < 2) or (G.Kanker_Dead == 0 and G.Jezebel_Dead == 1 and G.Vick_Dead == 0 and G.Damsel_Quest < 2))	}{	}{	}{	}{	}{	}{	}{	}{	The carrier pigeon is extinct.	}
+{	609	}{	All the plaguebearers are dead.	}{	All the plaguebearers are dead.	}{	281	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 1 and IsDead("Bishop Vick") and G.Damsel_Quest < 3	}{	}{	}{	}{	}{	}{	}{	}{	The king of the carrier pigeons and all his filthy chicks are finally extinct.	}
+{	610	}{	I'll let you know when I have.	}{	I'll let you know when I have.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Many voices, speaking loud, saying nothing.	}
+{	611	}{	It's probably just like the Rolls of coffins or something... lousy aristocrat bastard.	}{	It's probably just like the Rolls of coffins or something... lousy aristocrat bastard.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Damsel_Rolls = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	612	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	613	}{	The Kuei-jin told me they have an alliance with LaCroix.	}{	The Kuei-jin told me they have an alliance with LaCroix.	}{	621	}{	G.Story_State >= 60 and G.Damsel_Chang == 0	}{	}{	}{	}{	}{	}{	}{	}{	LaCroix courts the lady from the East. I think they are made for each other.	}
+{	614	}{	The leader of the Kuei-jin recently told me of an alliance with LaCroix.	}{	The leader of the Kuei-jin recently told me of an alliance with LaCroix.	}{	641	}{	G.Story_State >= 80 and G.Damsel_Open == 0	}{	}{	}{	}{	}{	}{	}{	}{	From the lips of the lady herself - they danced together under our noses.	}
+{	615	}{	LaCroix wants to go to war with the Kuei-jin. He needs an alliance with the Anarchs.	}{	LaCroix wants to go to war with the Kuei-jin. He needs an alliance with the Anarchs.	}{	651	}{	G.Prince_Truce == 1 and G.Griffith_Open == 0	}{	}{	}{	}{	}{	}{	}{	}{	LaCroix wants to dance with us now, dance all over the lady's grave.	}
+{	616	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	617	}{	I'll let you know when I have more news.	}{	I'll let you know when I have more news.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Many voices, speaking loud, saying nothing more.	}
+{	618	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	619	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	620	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	621	}{	WHAT?!? Who said it?	}{	WHAT?!? Who said it?	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	622	}{	Some Kuei-jin, right before I killed him.	}{	Some Kuei-jin, right before I killed him.	}{	631	}{	}{	}{	}{	}{	}{	}{	}{	}{	This guy, right before I killed him.	}
+{	623	}{	Some recently deceased Kuei-jin.	}{	Some recently deceased Kuei-jin.	}{	631	}{	}{	}{	}{	}{	}{	}{	}{	}{	It blew in from the East, then I blew it away.	}
+{	624	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	625	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	626	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	627	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	628	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	629	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	630	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	631	}{	[Full of rage]That... uh... urgh! If this is true.... Listen, I can't believe even LaCroix's that low but, keep an eye on this. If there's anything I hate more than Cammies, it's the goddamn Kuei-jin.	}{	[Full of rage]That... uh... urgh! If this is true.... Listen, I can't believe even LaCroix's that low but, keep an eye on this. If there's anything I hate more than Cammies, it's the goddamn Kuei-jin.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Damsel_Chang = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	632	}{	The prince is really interested in getting the Ankaran Sarcophagus.	}{	The prince is really interested in getting the Ankaran Sarcophagus.	}{	611	}{	G.Story_State > 30 and G.Damsel_Rolls == 0	}{	}{	}{	}{	}{	}{	}{	}{	LaCroix wants that old box from the boat real bad.	}
+{	633	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	634	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	635	}{	The leader of the Kuei-jin recently told me of an alliance with LaCroix.	}{	The leader of the Kuei-jin recently told me of an alliance with LaCroix.	}{	641	}{	G.Story_State >= 80 and G.Damsel_Open == 0	}{	}{	}{	}{	}{	}{	}{	}{	From the lips of the lady herself - they danced together under our noses.	}
+{	636	}{	LaCroix wants to go to war with the Kuei-jin. He needs an alliance with the Anarchs.	}{	LaCroix wants to go to war with the Kuei-jin. He needs an alliance with the Anarchs.	}{	651	}{	G.Prince_Truce == 1 and G.Griffith_Open == 0	}{	}{	}{	}{	}{	}{	}{	}{	LaCroix wants to dance with us now, dance all over the lady's grave.	}
+{	637	}{	I'll let you know when I have more news.	}{	I'll let you know when I have more news.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Many voices, speaking loud, saying nothing more.	}
+{	638	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	639	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	640	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	641	}{	That BASTARD! He sold us out?!?	}{	That BASTARD! He sold us out?!?	}{	#	}{	npc.SetDisposition("Anger", 3)	}{	G.Damsel_Open = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	642	}{	LaCroix wants to go to war with them. He needs an alliance with the Anarchs.	}{	LaCroix wants to go to war with them. He needs an alliance with the Anarchs.	}{	651	}{	G.Prince_Truce == 1 and G.Griffith_Open == 0	}{	}{	}{	}{	}{	}{	}{	}{	LaCroix wants to dance with us now, dance all over the lady's grave.	}
+{	643	}{	I don't know. I need to talk to Nines. LaCroix wants to make an alliance.	}{	I don't know. I need to talk to Nines. LaCroix wants to make an alliance.	}{	651	}{	G.Prince_Truce == 1 and G.Griffith_Open == 0	}{	}{	}{	}{	}{	}{	}{	}{	It is unknown. I must unite Nines with LaCroix, and see what happens.	}
+{	644	}{	I'll let you know when I have more news.	}{	I'll let you know when I have more news.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Many voices, speaking loud, saying nothing more.	}
+{	645	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	646	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	647	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	648	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	649	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	650	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	651	}{	LaCroix... an alliance with us? Ha! [Insulted highly amused]Has he- The Ca- You're fucking with me, right? Do I look like a goddamn source of amusement for you?	}{	LaCroix... an alliance with us? Ha! [Insulted highly amused]Has he- The Ca- You're fucking with me, right? Do I look like a goddamn source of amusement for you?	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	652	}{	The bloodhunt with Nines is off. Xiao killed Grout - she's a shapeshifter.	}{	The bloodhunt with Nines is off. Xiao killed Grout - she's a shapeshifter.	}{	661	}{	}{	}{	}{	}{	}{	}{	}{	}{	The lady is an actor. She played Nines. It is her blood that is hunted now.	}
+{	653	}{	Settle down, tart and tiny, he called off the bloodhunt. Xiao framed Nines.	}{	Settle down, tart and tiny, he called off the bloodhunt. Xiao framed Nines.	}{	661	}{	}{	}{	}{	}{	}{	}{	}{	}{	YES! But know the bloodhunt is over. It was Xiao who killed a part of us.	}
+{	654	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	655	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	656	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	657	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	658	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	659	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	660	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	661	}{	WE TOLD HIM NINES DIDN'T DO IT! That son of a.... And that Kuei-jin bitch! If I ever get my hands on her, I'll tie her eyelashes to her ass hairs and bowl her ass into a car compactor! Demon... [pauses, fills with rage]whore!	}{	WE TOLD HIM NINES DIDN'T DO IT! That son of a.... And that Kuei-jin bitch! If I ever get my hands on her, I'll tie her eyelashes to her ass hairs and bowl her ass into a car compactor! Demon... [pauses, fills with rage]whore!	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	662	}{	Now you see why I need to talk to Nines. Where is he?	}{	Now you see why I need to talk to Nines. Where is he?	}{	671	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yes, I need these words to reach the ninth one. Where are his ears?	}
+{	663	}{	Anyone ever tell you, your buttons are easily pushed? Shh.... Now, Nines...?	}{	Anyone ever tell you, your buttons are easily pushed? Shh.... Now, Nines...?	}{	671	}{	}{	}{	}{	}{	}{	}{	}{	}{	You should be a cherry bomb. Oh, that's good, I want to tell it to Nines.	}
+{	664	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	665	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	666	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	667	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	668	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	669	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	670	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	671	}{	[A little less seething, calming down]Okay... alright... I'm fine! Nines... yeah... I can't believe it's come to this, but, ugh, I hate those goddamn devils even more than I hate that fascist dandy prince! [Getting off track, talking to self]Goddamn Xiao! If Nines hadn't told me to watch this place, I'd be over there right now making skank sushi.	}{	[A little less seething, calming down]Okay... alright... I'm fine! Nines... yeah... I can't believe it's come to this, but, ugh, I hate those goddamn devils even more than I hate that fascist dandy prince! [Getting off track, talking to self]Goddamn Xiao! If Nines hadn't told me to watch this place, I'd be over there right now making skank sushi.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	672	}{	I get it. Where's Nines, I need to see him tonight.	}{	I get it. Where's Nines, I need to see him tonight.	}{	681	}{	G.Player_Anarch == 0	}{	}{	}{	}{	}{	}{	}{	}{	Yes, yes, I know you can explode. I could watch it all night, but I must see Nines.	}
+{	673	}{	Damsel? Over here, just tell me where Nines is.	}{	Damsel? Over here, just tell me where Nines is.	}{	681	}{	G.Player_Anarch == 0	}{	}{	}{	}{	}{	}{	}{	}{	If you were on TV, I'd watch that show. But tonight I need to see channel Nines.	}
+{	674	}{	I get it. Where's Nines, I need to see him tonight.	}{	I get it. Where's Nines, I need to see him tonight.	}{	691	}{	G.Player_Anarch == 1	}{	}{	}{	}{	}{	}{	}{	}{	Yes, yes, I know you can explode. I could watch it all night, but I must see Nines.	}
+{	675	}{	Damsel? Over here, just tell me where Nines is.	}{	Damsel? Over here, just tell me where Nines is.	}{	691	}{	G.Player_Anarch == 1	}{	}{	}{	}{	}{	}{	}{	}{	If you were on TV, I'd watch that show. But tonight I need to see channel Nines.	}
+{	676	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	677	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	678	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	679	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	680	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	681	}{	Nines is... oh I still don't know if I should be telling anyone but... Nines is hiding out in Griffith Park. If Nines agrees to the alliance, guess that means me and the Cam'll be on the same side. Think I'll go eat something so I can vomit!	}{	Nines is... oh I still don't know if I should be telling anyone but... Nines is hiding out in Griffith Park. If Nines agrees to the alliance, guess that means me and the Cam'll be on the same side. Think I'll go eat something so I can vomit!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	G.Griffith_Open = 1; pc.SetQuest("Alliance",2)	}{	}{	}{	}{	}{	}{	}{	}
+{	682	}{	Griffith Park. Thanks, Damsel.	}{	Griffith Park. Thanks, Damsel.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Griffith Park. I am gone.	}
+{	683	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	684	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	685	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	686	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	687	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	688	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	689	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	690	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	691	}{	I know you're cool, so... Nines is hiding out in Griffith Park. I don't know about this alliance stuff, though.... Think I'll go eat something so I can vomit!	}{	I know you're cool, so... Nines is hiding out in Griffith Park. I don't know about this alliance stuff, though.... Think I'll go eat something so I can vomit!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Griffith_Open = 1; pc.SetQuest("Alliance",2)	}{	}{	}{	}{	}{	}{	}{	}
+{	692	}{	Griffith Park. Thanks, Damsel.	}{	Griffith Park. Thanks, Damsel.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Griffith Park. I am gone.	}
+{	693	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	694	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	695	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	696	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	697	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	698	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	699	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	700	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	701	}{	Got it! Keep it up.	}{	Got it! Keep it up.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	702	}{	You got it. I'll be back.	}{	You got it. I'll be back.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will bring you more secrets later.	}
+{	703	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	704	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	705	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	706	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	707	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	708	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	709	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	710	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	711	}{	You are so lucky this is Elysium, Cammy!	}{	You are so lucky this is Elysium, Cammy!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	712	}{	I need to talk to Nines. The prince wants an alliance with the Anarchs.	}{	I need to talk to Nines. The prince wants an alliance with the Anarchs.	}{	651	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why must we always fight? I come from LaCroix to bring us together in alliance.	}
+{	713	}{	Cram it. Where's Nines, I gotta talk to him about an alliance with the prince.	}{	Cram it. Where's Nines, I gotta talk to him about an alliance with the prince.	}{	651	}{	}{	}{	}{	}{	}{	}{	}{	}{	Always so mad, but not the good kind. We are allies soon, so hopes LaCroix.	}
+{	714	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	715	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	716	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	717	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	718	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	719	}{	I'll send you an email.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	720	}{	Yeah.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	721	}{	No.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	722	}{	Thanks.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	723	}{	WHAT?!?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	724	}{	I don't know.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	725	}{	Can't help you.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	726	}{	Cool.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	727	}{	By the way...	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	728	}{	Here.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	729	}{	Fascist!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	730	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	731	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	732	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	733	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	734	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	735	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	736	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	737	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	738	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	739	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	740	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	741	}{	Ohh, Cammy! What the hell are you doing here?!?	}{	Ohh, Cammy! What the hell are you doing here?!?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	742	}{	I've made up my mind to join the Anarchs.	}{	I've made up my mind to join the Anarchs.	}{	791	}{	}{	}{	}{	}{	}{	}{	}{	}{	I hate my parents and I want a divorce.	}
+{	743	}{	Cool it, Damsel. I'm on your side.	}{	Cool it, Damsel. I'm on your side.	}{	791	}{	}{	}{	}{	}{	}{	}{	}{	}{	I've finally worked up the nerve to ask you out. PSYCHE! I'm an Anarch now.	}
+{	744	}{	Can I get in there?	}{	Can I get in there?	}{	771	}{	}{	}{	}{	}{	}{	}{	}{	}{	Trying to get inside.... DUH!	}
+{	745	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	746	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	747	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	748	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	749	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	750	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	751	}{	Hey... you're alive! Wow! The way Nines said things went down, I figured a werewolf'd be crapping you out about now.	}{	Hey... you're alive! Wow! The way Nines said things went down, I figured a werewolf'd be crapping you out about now.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	752	}{	I need to see Nines. We need to finish this.	}{	I need to see Nines. We need to finish this.	}{	761	}{	}{	}{	}{	}{	}{	}{	}{	}{	I and the ninth one must write an ending to this story.	}
+{	753	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	754	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	755	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	756	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	757	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	758	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	759	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	760	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	761	}{	Nines'll be happy to see you made it out. I guess I am too... but that's between you and I, got it?	}{	Nines'll be happy to see you made it out. I guess I am too... but that's between you and I, got it?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	762	}{	Got it.	}{	Got it.	}{	781	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yup.	}
+{	763	}{	Aw, I love you too, Damsel.	}{	Aw, I love you too, Damsel.	}{	781	}{	}{	}{	}{	}{	}{	}{	}{	}{	You are a candy-heart with the words "fuck you" written upon it.	}
+{	764	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	765	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	766	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	767	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	768	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	769	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	770	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	771	}{	Yeah. But I'm out here, so.... Look, do I even have to say at this point I'll kick your ass?	}{	Yeah. But I'm out here, so.... Look, do I even have to say at this point I'll kick your ass?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	772	}{	I'll keep it cordial.	}{	I'll keep it cordial.	}{	801	}{	}{	}{	}{	}{	}{	}{	}{	}{	You just did.	}
+{	773	}{	In your own way, you're quite the charmer, Damsel.	}{	In your own way, you're quite the charmer, Damsel.	}{	801	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'd buy your action figure. And do secret things with it.	}
+{	774	}{	Whatever.	}{	Whatever.	}{	801	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why am I not inside yet?	}
+{	775	}{	Whatever, I killed a werewolf.	}{	Whatever, I killed a werewolf.	}{	811	}{	IsDead("Werewolf")	}{	}{	}{	}{	}{	}{	}{	}{	Hee hee.... Cherry bomb, I slay wolves now - that's worth a hundred of you.	}
+{	776	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	777	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	778	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	779	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	780	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	781	}{	Yeah, yeah, yeah, just don't get him started on that damn werewolf again. Ugh, you'd think he'd stop at telling me the story twice.	}{	Yeah, yeah, yeah, just don't get him started on that damn werewolf again. Ugh, you'd think he'd stop at telling me the story twice.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	782	}{	I'll try not to mention it.	}{	I'll try not to mention it.	}{	801	}{	}{	}{	}{	}{	}{	}{	}{	}{	I hate reruns too.	}
+{	783	}{	Yeah? You know I killed one too.	}{	Yeah? You know I killed one too.	}{	811	}{	IsDead("Werewolf")	}{	}{	}{	}{	}{	}{	}{	}{	Let me tell you a story. Once upon a time, I killed the shit out of a werewolf.	}
+{	784	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	785	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	786	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	787	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	788	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	789	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	790	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	791	}{	[Disbelief]Really?	}{	[Disbelief]Really?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	792	}{	Yeah, really. Can I go in now?	}{	Yeah, really. Can I go in now?	}{	771	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yup. So, do I pass?	}
+{	793	}{	You make it a hard sell, but yeah, I've made up my mind. I'm going in.	}{	You make it a hard sell, but yeah, I've made up my mind. I'm going in.	}{	771	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'm just joining for the free beret. They are free, right? Can I go in and get one?	}
+{	794	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	795	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	796	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	797	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	798	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	799	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	800	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	801	}{	Alright, go on in. I'll make sure no one interrupts. But man, I HOPE somebody tries!	}{	Alright, go on in. I'll make sure no one interrupts. But man, I HOPE somebody tries!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Damsel_Watchdog = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	802	}{	I bet.	}{	I bet.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	We hope it too!	}
+{	803	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	804	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	805	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	806	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	807	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	808	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	809	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	810	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	811	}{	Not you too! Arrgh! Am I the only one in town that didn't get to waste a werewolf?	}{	Not you too! Arrgh! Am I the only one in town that didn't get to waste a werewolf?	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	812	}{	Not that I'm bragging or anything.	}{	Not that I'm bragging or anything.	}{	801	}{	}{	}{	}{	}{	}{	}{	}{	}{	I could've killed twenty. Alright, maybe only nineteen and a really small one.	}
+{	813	}{	We can't all be awesome.	}{	We can't all be awesome.	}{	801	}{	}{	}{	}{	}{	}{	}{	}{	}{	We can't all be awesome.	}
+{	814	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	815	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	816	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	817	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	818	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	819	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	820	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	821	}{	Right on, 'cept we dusted a second one over near the convention center. They're part of some doomsday cult, apparently. No telling how many there are, but it's open season on all these sick sons of bitches!	}{	Right on, 'cept we dusted a second one over near the convention center. They're part of some doomsday cult, apparently. No telling how many there are, but it's open season on all these sick sons of bitches!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Damsel_Quest = 2; pc.SetQuest("Plague",9); pc.SetQuest("Regent",4)	}{	}{	}{	}{	}{	}{	}{	}
+{	822	}{	I'll start looking for the rest. Bye, Damsel.	}{	I'll start looking for the rest. Bye, Damsel.	}{	0	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 1	}{	pc.SetQuest("AllPlague",1)	}{	}{	}{	}{	}{	}{	}{	More pigeons for this cat to catch. I begin my prowl.	}
+{	823	}{	Now you're talking. Hope they're more of a challenge than the last one. Later.	}{	Now you're talking. Hope they're more of a challenge than the last one. Later.	}{	0	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 1	}{	pc.SetQuest("AllPlague",1)	}{	}{	}{	}{	}{	}{	}{	Their tainted blood will clog the gutters of the city. My hunt begins.	}
+{	824	}{	Do you know what the symbol on this flyer is?	}{	Do you know what the symbol on this flyer is?	}{	0	}{	pc.HasItem("item_g_brotherhood_flyer")	}{	pc.SetQuest("AllPlague",1)	}{	}{	}{	}{	}{	}{	}{	Does this paper symbol speak to your mind?	}
+{	825	}{	I'll start looking for the rest. Bye, Damsel.	}{	I'll start looking for the rest. Bye, Damsel.	}{	0	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 0	}{	pc.SetQuest("AllPlague",6)	}{	}{	}{	}{	}{	}{	}{	More pigeons for this cat to catch. I begin my prowl.	}
+{	826	}{	Now you're talking. Hope they're more of a challenge than the last one. Later.	}{	Now you're talking. Hope they're more of a challenge than the last one. Later.	}{	0	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 0	}{	pc.SetQuest("AllPlague",6)	}{	}{	}{	}{	}{	}{	}{	Their tainted blood will clog the gutters of the city. My hunt begins.	}
+{	827	}{	Before I go, I had a question.	}{	Before I go, I had a question.	}{	311	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 0	}{	pc.SetQuest("AllPlague",6)	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind first.	}
+{	828	}{	I'll start looking for the rest. Bye, Damsel.	}{	I'll start looking for the rest. Bye, Damsel.	}{	0	}{	G.Kanker_Dead == 0 and G.Jezebel_Dead == 1	}{	pc.SetQuest("AllPlague",7)	}{	}{	}{	}{	}{	}{	}{	More pigeons for this cat to catch. I begin my prowl.	}
+{	829	}{	Now you're talking. Hope they're more of a challenge than the last one. Later.	}{	Now you're talking. Hope they're more of a challenge than the last one. Later.	}{	0	}{	G.Kanker_Dead == 0 and G.Jezebel_Dead == 1	}{	pc.SetQuest("AllPlague",7)	}{	}{	}{	}{	}{	}{	}{	Their tainted blood will clog the gutters of the city. My hunt begins.	}
+{	830	}{	Before I go, I had a question.	}{	Before I go, I had a question.	}{	311	}{	G.Kanker_Dead == 0 and G.Jezebel_Dead == 1	}{	pc.SetQuest("AllPlague",7)	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind first.	}
+{	831	}{	[Happy to see player]S'up?	}{	[Happy to see player]S'up?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	832	}{	I've had it with LaCroix. I want to join the Anarchs.	}{	I've had it with LaCroix. I want to join the Anarchs.	}{	561	}{	G.Prince_Refuse == 1 and G.Player_Anarch == 0 and G.Story_State < 70	}{	}{	}{	}{	}{	}{	}{	}{	I do not like the jester-prince; I would become one of the children.	}
+{	833	}{	You said earlier the plaguebearer is a danger to us all. Why is that?	}{	You said earlier the plaguebearer is a danger to us all. Why is that?	}{	191	}{	G.Damsel_Plague == 2	}{	}{	}{	}{	}{	}{	}{	}{	Why must we fear the carrier pigeons?	}
+{	834	}{	I've decided to go after the plaguebearer. How do I find him?	}{	I've decided to go after the plaguebearer. How do I find him?	}{	201	}{	G.Damsel_Plague == 3 and G.Damsel_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	I will hunt this carrier pigeon for you. Where do I point my arrow?	}
+{	835	}{	About Paul... he's dead... for a few days. It wasn't pretty.	}{	About Paul... he's dead... for a few days. It wasn't pretty.	}{	251	}{	G.Damsel_Paul == 0 and G.Message_Play == 1	}{	}{	}{	}{	}{	}{	}{	}{	Paul is dead.... It is not a rumor.	}
+{	836	}{	The plaguebearer's dead.	}{	The plaguebearer's dead.	}{	261	}{	pc.GetQuestState("Regent") != 3 and ((G.Kanker_Dead == 1 and G.Jezebel_Dead == 0 and G.Vick_Dead == 0 and G.Damsel_Quest < 2) or (G.Kanker_Dead == 0 and G.Jezebel_Dead == 1 and G.Vick_Dead == 0 and G.Damsel_Quest < 2))	}{	}{	}{	}{	}{	}{	}{	}{	The carrier pigeon is extinct.	}
+{	837	}{	The plaguebearer's dead.	}{	The plaguebearer's dead.	}{	821	}{	pc.GetQuestState("Regent") == 3 and ((G.Kanker_Dead == 1 and G.Jezebel_Dead == 0 and G.Vick_Dead == 0 and G.Damsel_Quest < 2) or (G.Kanker_Dead == 0 and G.Jezebel_Dead == 1 and G.Vick_Dead == 0 and G.Damsel_Quest < 2))	}{	}{	}{	}{	}{	}{	}{	}{	The carrier pigeon is extinct.	}
+{	838	}{	Do you know what this symbol is?	}{	Do you know what this symbol is?	}{	271	}{	pc.HasItem("item_g_brotherhood_flyer")	}{	}{	}{	}{	}{	}{	}{	}{	Does this symbol speak to your mind?	}
+{	839	}{	All the plaguebearers are dead.	}{	All the plaguebearers are dead.	}{	281	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 1 and IsDead("Bishop Vick") and G.Damsel_Quest < 3	}{	}{	}{	}{	}{	}{	}{	}{	The king of the carrier pigeons and all his filthy chicks are finally extinct.	}
+{	840	}{	I have some questions.	}{	I have some questions.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind.	}
+{	841	}{	Be back later.	}{	Be back later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am already gone.	}
+{	842	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	843	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	844	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	845	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	846	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	847	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	848	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	849	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	850	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	851	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	852	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	853	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	854	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	855	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	856	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	857	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	858	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	859	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	860	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	861	}{	[Distant, disinterested, disgusted]Ugh, Cammy!	}{	[Distant, disinterested, disgusted]Ugh, Cammy!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	862	}{	I have some questions.	}{	I have some questions.	}{	531	}{	G.Damsel_Like < -3	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind.	}
+{	863	}{	You said earlier the plaguebearer is a danger to us all. Why is that?	}{	You said earlier the plaguebearer is a danger to us all. Why is that?	}{	191	}{	G.Damsel_Plague == 2	}{	}{	}{	}{	}{	}{	}{	}{	Why must we fear the carrier pigeons?	}
+{	864	}{	I've decided to go after the plaguebearer. How do I find him?	}{	I've decided to go after the plaguebearer. How do I find him?	}{	201	}{	G.Damsel_Plague == 3 and G.Damsel_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	I will hunt this carrier pigeon for you. Where do I point my arrow?	}
+{	865	}{	About Paul.... He's dead. For a few days - it wasn't pretty.	}{	About Paul.... He's dead. For a few days - it wasn't pretty.	}{	251	}{	G.Damsel_Paul == 0 and G.Message_Play == 1	}{	}{	}{	}{	}{	}{	}{	}{	Paul is dead.... It is not a rumor.	}
+{	866	}{	The plaguebearer's dead.	}{	The plaguebearer's dead.	}{	261	}{	pc.GetQuestState("Regent") != 3 and ((G.Kanker_Dead == 1 and G.Jezebel_Dead == 0 and G.Vick_Dead == 0 and G.Damsel_Quest < 2) or (G.Kanker_Dead == 0 and G.Jezebel_Dead == 1 and G.Vick_Dead == 0 and G.Damsel_Quest < 2))	}{	}{	}{	}{	}{	}{	}{	}{	The carrier pigeon is extinct.	}
+{	867	}{	The plaguebearer's dead.	}{	The plaguebearer's dead.	}{	821	}{	pc.GetQuestState("Regent") == 3 and ((G.Kanker_Dead == 1 and G.Jezebel_Dead == 0 and G.Vick_Dead == 0 and G.Damsel_Quest < 2) or (G.Kanker_Dead == 0 and G.Jezebel_Dead == 1 and G.Vick_Dead == 0 and G.Damsel_Quest < 2))	}{	}{	}{	}{	}{	}{	}{	}{	The carrier pigeon is extinct.	}
+{	868	}{	Do you know what the symbol on this flyer is?	}{	Do you know what the symbol on this flyer is?	}{	271	}{	pc.HasItem("item_g_brotherhood_flyer")	}{	}{	}{	}{	}{	}{	}{	}{	Does this paper symbol speak to your mind?	}
+{	869	}{	All the plaguebearers are dead.	}{	All the plaguebearers are dead.	}{	281	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 1 and IsDead("Bishop Vick") and G.Damsel_Quest < 3	}{	}{	}{	}{	}{	}{	}{	}{	The king of the carrier pigeons and all his filthy chicks are finally extinct.	}
+{	870	}{	I have some questions.	}{	I have some questions.	}{	311	}{	G.Damsel_Like > -4	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind.	}
+{	871	}{	Be back later.	}{	Be back later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am already gone.	}
+{	872	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	873	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	874	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	875	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	876	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	877	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	878	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	879	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	880	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	881	}{	[Getting pissed, growls]What?	}{	[Getting pissed, growls]What?	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	882	}{	I have some questions.	}{	I have some questions.	}{	531	}{	G.Damsel_Like < -3	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind.	}
+{	883	}{	You said earlier the plaguebearer is a danger to us all. Why is that?	}{	You said earlier the plaguebearer is a danger to us all. Why is that?	}{	191	}{	G.Damsel_Plague == 2	}{	}{	}{	}{	}{	}{	}{	}{	Why must we fear the carrier pigeons?	}
+{	884	}{	I've decided to go after the plaguebearer. How do I find him?	}{	I've decided to go after the plaguebearer. How do I find him?	}{	201	}{	G.Damsel_Plague == 3 and G.Damsel_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	I will hunt this carrier pigeon for you. Where do I point my arrow?	}
+{	885	}{	About Paul... he's dead... for a few days. It wasn't pretty.	}{	About Paul... he's dead... for a few days. It wasn't pretty.	}{	251	}{	G.Damsel_Paul == 0 and G.Message_Play == 1	}{	}{	}{	}{	}{	}{	}{	}{	Paul is dead.... It is not a rumor.	}
+{	886	}{	The plaguebearer's dead.	}{	The plaguebearer's dead.	}{	261	}{	pc.GetQuestState("Regent") != 3 and ((G.Kanker_Dead == 1 and G.Jezebel_Dead == 0 and G.Vick_Dead == 0 and G.Damsel_Quest < 2) or (G.Kanker_Dead == 0 and G.Jezebel_Dead == 1 and G.Vick_Dead == 0 and G.Damsel_Quest < 2))	}{	}{	}{	}{	}{	}{	}{	}{	The carrier pigeon is extinct.	}
+{	887	}{	The plaguebearer's dead.	}{	The plaguebearer's dead.	}{	821	}{	pc.GetQuestState("Regent") == 3 and ((G.Kanker_Dead == 1 and G.Jezebel_Dead == 0 and G.Vick_Dead == 0 and G.Damsel_Quest < 2) or (G.Kanker_Dead == 0 and G.Jezebel_Dead == 1 and G.Vick_Dead == 0 and G.Damsel_Quest < 2))	}{	}{	}{	}{	}{	}{	}{	}{	The carrier pigeon is extinct.	}
+{	888	}{	Do you know what this symbol is?	}{	Do you know what this symbol is?	}{	271	}{	pc.HasItem("item_g_brotherhood_flyer")	}{	}{	}{	}{	}{	}{	}{	}{	Does this paper symbol speak to your mind?	}
+{	889	}{	All the plaguebearers are dead.	}{	All the plaguebearers are dead.	}{	281	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 1 and IsDead("Bishop Vick") and G.Damsel_Quest < 3	}{	}{	}{	}{	}{	}{	}{	}{	The king of the carrier pigeons and all his filthy chicks are finally extinct.	}
+{	890	}{	I have some questions.	}{	I have some questions.	}{	311	}{	G.Damsel_Like > -4	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind.	}
+{	891	}{	Be back later.	}{	Be back later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am already gone.	}
+{	892	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	893	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	894	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	895	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	896	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	897	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	898	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	899	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	900	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	901	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	902	}{	(Starting Condition)	}{	}{	801	}{	G.Damsel_Watchdog == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	903	}{	(Starting Condition)	}{	}{	741	}{	G.Player_Anarch == 0 and G.Story_State == 115	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	904	}{	(Starting Condition)	}{	}{	751	}{	G.Player_Anarch == 1 and G.Story_State == 115	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	905	}{	(Starting Condition)	}{	}{	711	}{	G.Prince_Truce == 1 and G.Player_Anarch == 0 and G.Griffith_Open == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	906	}{	(Starting Condition)	}{	}{	601	}{	G.Player_Anarch == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	907	}{	(Starting Condition)	}{	}{	551	}{	G.Damsel_Hate == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	908	}{	(Starting Condition)	}{	}{	541	}{	G.Damsel_Like < -5	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	909	}{	(Starting Condition)	}{	}{	881	}{	G.Damsel_Like < -2 and G.Damsel_Like >= -5	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	910	}{	(Starting Condition)	}{	}{	831	}{	G.Damsel_Like >= 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	911	}{	(Starting Condition)	}{	}{	861	}{	G.Damsel_Know == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	912	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

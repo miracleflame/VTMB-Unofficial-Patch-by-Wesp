@@ -1,0 +1,59 @@
+// Written
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"			"models/w_null.mdl"
+	"infomodel"			"models/items/beckett_book/info/item_i_beckett_book.mdl"
+	"playermodel"		"models/items/beckett_book/ground/item_g_beckett_book.mdl"
+	"wieldmodel_f"		"models/w_null.mdl"
+	"wieldmodel_m"		"models/w_null.mdl"
+	"anim_prefix"		" "
+
+	"printname"		"Peepin' - A Voyeur's Field Guide"
+	"description"		"Peeping's not just for lonely, perverted losers any more. In fact, at least three psychologists say it's a healthy form of sexual expression. Every good voyeur needs to develop a sneaking game. Get used to crouching and evenly distributing the weight as you walk. Stick to shadows and behind cover. You'll be taping tittays in no time. This book raises your Stealth skill."
+
+	"weight"			"3"
+	"item_flags"		"1"
+	"item_type"			"powerup"
+	"item_worth"		"30"
+
+	"knowledge_min"		"2"
+	"grade"			"low"
+	"upgrade_ability"		"stealth"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Book/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/beckett_book_sel"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/beckett_book"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

@@ -1,0 +1,62 @@
+// Written
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"	"models/w_null.mdl"
+	"infomodel"	"models/items/locket/info/info_locket.mdl"
+	"playermodel"	"models/items/locket/ground/locket.mdl"
+	"wieldmodel_f"	"models/w_null.mdl"
+	"wieldmodel_m"	"models/w_null.mdl"
+	"anim_prefix"	" "
+
+	"printname"	"Antique Locket"
+	"description"	"This locket is old and slightly tarnished. It might be your imagination, but it seems to radiate an unnatural heat, which quickens your fingers. Wearing it increases your Security skill by one."	// changed by wesp
+
+//	"camera_class"		"noswitch"
+	"weight"		"3"
+	"item_flags"		"1"
+	"item_type"		"powerup"	// changed by wesp
+	"item_worth"		"50"
+//	"is_visible_in_hud"		"1"
+	"is_droppable"			"1"
+	"is_wieldable"			"0"
+	"occult_min"		"3"	// changed by wesp
+	"occult_power"		"lockpicking"	// changed by wesp
+	"equip_effect"		"Item (Occult LockPicking)"	// changed by wesp
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Key/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/general_items/locket_sel"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/general_items/locket"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

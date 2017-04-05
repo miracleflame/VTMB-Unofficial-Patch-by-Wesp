@@ -1,0 +1,57 @@
+// Choreo version 1
+actor "Andrei"
+{
+  channel "Wave"
+  {
+    event speak "wave"
+    {
+      time 0.006667 34.211338
+      param "Character\Boss\Andrei\Take2.wav"
+      fixedlength
+    }
+  }
+  channel "Exp1"
+  {
+    event expression "Joy"
+    {
+      time 15.453333 20.720001
+      param "dialog"
+      param2 "Joy"
+      event_ramp
+      {
+        1.0480 0.9198
+      }
+    }
+  }
+  channel "Exp2"
+  {
+    event expression "Mad"
+    {
+      time 20.800001 23.586666
+      param "dialog"
+      param2 "Mad"
+      event_ramp
+      {
+        0.9393 0.9500
+      }
+    }
+    event expression "Mad"
+    {
+      time 24.533335 33.726669
+      param "dialog"
+      param2 "Mad"
+    }
+  }
+  channel "Animation"
+  {
+    event sequence "animation"
+    {
+      time 0.193333 34.226665
+      param "Andrei_Dialogue"
+      fixedlength
+    }
+  }
+}
+
+fps 60
+snap off

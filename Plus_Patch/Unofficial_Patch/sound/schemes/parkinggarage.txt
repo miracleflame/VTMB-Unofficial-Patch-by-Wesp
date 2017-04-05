@@ -1,0 +1,39 @@
+SoundScheme
+{
+	Music
+	{
+		"Filename"	"music/This World then the Next (Unused).mp3"  //placeholder until compressed sound files are available, changed by wesp
+		"Volume"	"25"
+		"NoPause" "0"	// added by wesp
+	}
+
+	Combat
+	{
+		"Filename"	"music/Dangerous_Places_Combat.mp3"  //placeholder until compressed sound files are available
+		"Volume"	"25"
+		"NoPause" "0"	// added by wesp
+	}
+
+	Ambient
+	{
+
+		"Filename"	"Environmental\Spooky\wind2.wav"
+		"Volume"	"15"
+	}
+
+	RandomSound
+	{
+		"Filename"	"\Environmental\Animals\rat squeak 02.wav"
+		"PitchMin"	"95"	
+		"PitchMax"	"110"
+		"Volume"	"70"
+		"Frequency"	"3"
+		
+		"AudibleRadius"		"2000"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"400"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"2000"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"0"		// the sound will be played no higher than these many units above the sound scheme entity
+	}
+
+}

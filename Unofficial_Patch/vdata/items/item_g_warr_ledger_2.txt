@@ -1,0 +1,73 @@
+
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	
+	"infomodel"	"models/items/dayplanner/info/Info_dayplanner2.mdl"
+	"playermodel"	"models/items/dayplanner/ground/dayplanner2.mdl"
+	
+	"anim_prefix"	" "
+
+	"printname"	"Ledger"
+	"description"	"This looks to be the weekly log of Douglas Streets, foreman of the Los Angeles Department of Water and Power, 1957:
+
+			07/09/57 - The disappearance of sewermen Whitman, Price and Haddad has launched an attack in the papers on the Department. It has fallen to me to try and ascertain their fate. I will do so to the best of my ability.
+
+			07/10/57 - Forays into the uncharted regions of the sewers have been fruitless as of yet. City Hall has been unable to produce blueprints of these sections, and so we continue forth blindly.
+			
+			07/11/57 - I have been witness to many strange and inexplicable sounds and events in what can only be the very oldest sections of the Los Angeles sewers. I found a rusted plaque that read \"LADWP, 1902\". The events I can only describe as otherwordly, both in sound and texture, as well as in the feeling it gave upon my skin. A coldness. Shadows and whispers. I have no explanation for these, except, perhaps, the creations of my own overtaxed mind. We will continue tomorrow.
+			
+			07/12/57 - Still no sign of the missing men, but the fear grows in my mind that something truly evil resides in the lowest sections of those sewers. Though I wish not to tell some Lovecraftian tale, I can only say what lies in my heart. I wish no longer to travel down those dark corridors, and my opinion is that those poor men fell victim to some old and ancient evil that resides there. I will tell the mayor what I have seen, and pray that he does not take me for a madman.
+			
+			07/15/57 - The mayor has listened to my report with the utmost earnestness, and has decided, most wisely, to brick up those lowest sections of the sewers in which I witnessed those frightening, phantasmal events. The public will be told that Whitman, Price and Haddad were lost to these sections because they were old and unsafe, and therefore he will justify his closing of them through the unfortunate vehicle of their unexplained deaths. So be it. I pray their souls find safe haven in some lighter refuge of the afterlife. I, myself, have resigned from the Department. I no longer have the wish to delve into the dark places of the earth. I leave this ledger here, unseen and bricked away from human eyes, so that perhaps the memory of these things will disappear as well.
+				
+				   Sincerely, Douglas Streets, Foreman, LADWP"
+			
+			
+	"bucket"		"1"
+	"bucket_position"	"2"
+
+	"camera_class"		"noswitch"
+	"is_wieldable"		"0"
+	"weight"		"1"
+	"item_flags"		"1"
+	"item_type"		"powerup"
+	"item_worth"		"-1"
+	"is_visible_in_hud"		"1"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Magazine/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/dayplanner2_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/dayplanner2"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

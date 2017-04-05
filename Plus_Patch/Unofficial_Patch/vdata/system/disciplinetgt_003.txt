@@ -1,0 +1,2739 @@
+// Presence:
+DisciplineTgtList
+{
+
+
+
+// ---------------------
+
+
+
+// Presence: Level 1
+DisciplineTgt
+{
+	"Name"		"Presence-1"
+	"InternalName"	"Presence_Level1"
+
+	"Discipline"	"Presence"
+	"Level"		"1"
+
+	"BloodCost"		"1"
+	"Overt"		"0"
+	"SupernaturalLvl"	"0"
+	"RecoveryTime"	"0.5"
+
+	AoE
+	{
+		"Range"	"150"
+		"Source"	"Self"		// Self/Target
+		"Affects"	"Radius"		// Target/Radius:#/Cone:#
+		"MaxRadius"	"150"
+		Affects_Filters
+		{
+			"Critter"		"1"
+			"No_Self"		"1"
+			"No_Friends"	"1"
+		}
+
+
+		// Tables:
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Invulnerable"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+				"Player"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"Player"		"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Supernatural"
+			}
+		}
+
+//
+// ADD DISCIPLINESTRATA EFFECTS BELOW THIS LINE
+//
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"0"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_1"
+			}
+		}		
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"2"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_2"
+			}
+		}		
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"3"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_3"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"4"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_4"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"5"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_5"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"6"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_6"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"7"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_7"
+			}
+		}	
+
+//
+// ADD DISCIPLINESTRATA EFFECTS ABOVE THIS LINE
+//
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"No_Boss"		"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Boss"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Boss_NoEffect"
+			}
+		}
+	}
+
+	Effect_Src_Instant
+	{
+		Particle_ThirdPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Presence_Cast_Emitter1"
+			"AttachType"	"BoneTree"
+			"AttachName"	""
+		}
+
+		Particle_ThirdPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Presence_Nova_Emitter1"
+			"AttachType"	"BoneSinglePoint"
+			"AttachName"	"Bip01 Spine"
+		}
+
+		Particle_FirstPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Presence_Hud_Emitter2"
+			"AttachType"	"ScreenCenter"
+			"AttachName"	""
+		}
+
+		Particle_FirstPerson	// restored by wesp
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"d_presenceview_emitter"
+			"AttachType"	"ScreenBorder"
+			"AttachName"	""
+		}
+
+	}
+
+
+	// Effects:
+	Hit_Invulnerable
+	{
+	}
+
+	Hit_Player_Human
+	{
+		"Duration"			"-1"
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"1.00" //"2.45"	// restored by wesp
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level1)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Player_Supernatural
+	{
+		"Duration"			"-1"
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"1.00" //"2.45"	// restored by wesp
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level1)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Human
+	{
+		"Duration"			"-1"
+		"AI_Schedule"		"SCHED_TROIKA_D_DAZE"	// restored by wesp
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"1.00" //"2.45"
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level1)"
+		}
+
+		Effect_Tgt_Instant
+		{
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Supernatural_NoEffect
+	{
+		"Duration"			"3"	// In order to play particles/etc.
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Thaum_Emitter"
+				"AttachType"	"BoneTreeWithColors"
+				"AttachName"	""
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Generic_Emitter"
+				"AttachType"	"BoneTree"
+				"AttachName"	""
+			}
+		}
+	}
+
+	Hit_Strata_1
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_2
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_3
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_4
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_5
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_6
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_7
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Boss_NoEffect
+	{
+		"Duration"			"-1"
+	}
+}
+
+
+
+// ---------------------
+
+
+
+// Presence: Level 2
+DisciplineTgt
+{
+	"Name"		"Presence-2"
+	"InternalName"	"Presence_Level2"
+
+	"Discipline"	"Presence"
+	"Level"		"2"
+
+	"BloodCost"		"1"
+	"Overt"		"0"
+	"SupernaturalLvl"	"0"
+	"RecoveryTime"	"0.5"
+
+	AoE
+	{
+		"Range"	"250"
+		"Source"	"Self"		// Self/Target
+		"Affects"	"Radius"		// Target/Radius:#/Cone:#
+		"MaxRadius"	"250"
+		Affects_Filters
+		{
+			"Critter"		"1"
+			"No_Self"		"1"
+			"No_Friends"	"1"
+		}
+
+
+		// Tables:
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Invulnerable"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+				"Player"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"Player"		"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Supernatural"
+			}
+		}
+
+//
+// ADD DISCIPLINESTRATA EFFECTS BELOW THIS LINE
+//
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"0"
+			}
+
+			Mapping
+			{
+				"Chance"	"10%"
+				"HitTable"	"Hit_Human_Mesmerized"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_1"
+			}
+		}		
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"2"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_2"
+			}
+		}		
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"3"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_3"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"4"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_4"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"5"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_5"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"6"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_6"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"7"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_7"
+			}
+		}	
+
+//
+// ADD DISCIPLINESTRATA EFFECTS ABOVE THIS LINE
+//
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"10%"
+				"HitTable"	"Hit_Human_Mesmerized"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"No_Boss"		"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Boss"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Boss_NoEffect"
+			}
+		}
+	}
+
+	Effect_Src_Instant
+	{
+		Particle_ThirdPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Presence_Cast_Emitter2"
+			"AttachType"	"BoneTree"
+			"AttachName"	""
+		}
+
+		Particle_ThirdPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Presence_Nova_Emitter2"
+			"AttachType"	"BoneSinglePoint"
+			"AttachName"	"Bip01 Spine"
+		}
+
+		Particle_FirstPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Presence_Hud_Emitter2"
+			"AttachType"	"ScreenCenter"
+			"AttachName"	""
+		}
+
+		Particle_FirstPerson	// restored by wesp
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"d_presenceview_emitter"
+			"AttachType"	"ScreenBorder"
+			"AttachName"	""
+		}
+	}
+
+
+
+	// Effects:
+	Hit_Invulnerable
+	{
+	}
+
+	Hit_Player_Human
+	{
+		"Duration"			"-1"
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"2.45"	// restored by wesp
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level2)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Player_Supernatural
+	{
+		"Duration"			"-1"
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"2.45"	// restored by wesp
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level2)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Human
+	{
+		"Duration"			"-1"
+		"AI_Schedule"		"SCHED_TROIKA_D_DAZE"	// restored by wesp
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"2.45"
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level2)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Human_Mesmerized
+	{
+		"InheritFrom"		"Hit_Human"
+
+		"AI_Schedule"		"SCHED_TROIKA_D_MESMERIZE"
+		"AI_NPCFlag"		"D_CALM"
+		"Knockback"	"50%"
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Mezmerize_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+
+		OnInterruptSchedule
+		{
+			Effect_Tgt_Hit
+			{
+				Particle_ThirdPerson
+				{
+					"Entity"		"env_particle"
+					"RateMin"		"1.0"
+					"OpacityMin"	"1.0"
+					"SizeMin"		"1.0"
+					"ParticleName"	"D_Presence_Mezmerize_Broke_Emitter"
+					"AttachType"	"BoneSinglePoint"
+					"AttachName"	"Bip01 Head"
+
+					"Detach"		"1"
+				}
+
+				SoundFX
+				{
+//					"Sound"		"Disciplines/Presence/Mesmerize_Broke.wav"
+				}
+			}
+		}
+	}
+
+	Hit_Supernatural_NoEffect
+	{
+		"Duration"			"3"	// In order to play particles/etc.
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Thaum_Emitter"
+				"AttachType"	"BoneTreeWithColors"
+				"AttachName"	""
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Generic_Emitter"
+				"AttachType"	"BoneTree"
+				"AttachName"	""
+			}
+		}
+	}
+
+	Hit_Strata_1
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_2
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_3
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_4
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_5
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_6
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_7
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Boss_NoEffect
+	{
+		"Duration"			"-1"
+	}
+}
+
+
+
+// ---------------------
+
+
+
+// Presence: Level 3
+DisciplineTgt
+{
+	"Name"		"Presence-3"
+	"InternalName"	"Presence_Level3"
+
+	"Discipline"	"Presence"
+	"Level"		"3"
+
+	"BloodCost"		"2"
+	"Overt"		"1"
+	"SupernaturalLvl"	"0"
+	"RecoveryTime"	"0.5"
+
+	AoE
+	{
+		"Range"	"350"
+		"Source"	"Self"		// Self/Target
+		"Affects"	"Radius"		// Target/Radius:#/Cone:#
+		"MaxRadius"	"350"
+		Affects_Filters
+		{
+			"Critter"		"1"
+			"No_Self"		"1"
+			"No_Friends"	"1"
+		}
+
+
+		// Tables:
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Invulnerable"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+				"Player"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"Player"		"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Supernatural"
+			}
+		}
+
+//
+// ADD DISCIPLINESTRATA EFFECTS BELOW THIS LINE
+//
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"0"
+			}
+
+			Mapping
+			{
+				"Chance"	"15%"	// changed by wesp
+				"HitTable"	"Hit_Human_Mesmerized"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_1"
+			}
+		}		
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"2"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_2"
+			}
+		}		
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"3"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_3"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"4"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_4"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"5"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_5"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"6"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_6"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"7"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_7"
+			}
+		}	
+
+//
+// ADD DISCIPLINESTRATA EFFECTS ABOVE THIS LINE
+//
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"15%"	// changed by wesp
+				"HitTable"	"Hit_Human_Mesmerized"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"No_Boss"		"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Boss"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Boss_NoEffect"
+			}
+		}
+	}
+
+	Effect_Src_Instant
+	{
+		Particle_ThirdPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Presence_Cast_Emitter3"
+			"AttachType"	"BoneTree"
+			"AttachName"	""
+		}
+
+		Particle_ThirdPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Presence_Nova_Emitter3"
+			"AttachType"	"BoneSinglePoint"
+			"AttachName"	"Bip01 Spine"
+		}
+
+		Particle_FirstPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Presence_Hud_Emitter3"
+			"AttachType"	"ScreenCenter"
+			"AttachName"	""
+		}
+
+		Particle_FirstPerson	// restored by wesp
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"d_presenceview_emitter"
+			"AttachType"	"ScreenBorder"
+			"AttachName"	""
+		}
+
+	}
+
+
+	// Effects:
+	Hit_Invulnerable
+	{
+	}
+
+	Hit_Player_Human
+	{
+		"Duration"			"-1"
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"2.45"	// restored by wesp
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level3)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Player_Supernatural
+	{
+		"Duration"			"-1"
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"2.45"	// restored by wesp
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level3)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Human
+	{
+		"Duration"			"-1"
+		"AI_Schedule"		"SCHED_TROIKA_D_DAZE"	// restored by wesp
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"2.45"	// restored by wesp
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level3)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Human_Mesmerized
+	{
+		"InheritFrom"		"Hit_Human"
+
+		"AI_Schedule"		"SCHED_TROIKA_D_MESMERIZE"
+		"AI_NPCFlag"		"D_CALM"
+		"Knockback"	"50%"
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Mezmerize_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+
+		OnInterruptSchedule
+		{
+			Effect_Tgt_Hit
+			{
+				Particle_ThirdPerson
+				{
+					"Entity"		"env_particle"
+					"RateMin"		"1.0"
+					"OpacityMin"	"1.0"
+					"SizeMin"		"1.0"
+					"ParticleName"	"D_Presence_Mezmerize_Broke_Emitter"
+					"AttachType"	"BoneSinglePoint"
+					"AttachName"	"Bip01 Head"
+
+					"Detach"		"1"
+				}
+
+				SoundFX
+				{
+//					"Sound"		"Disciplines/Presence/Mesmerize_Broke.wav"
+				}
+			}
+		}
+	}
+
+	Hit_Supernatural
+	{
+		"Duration"			"-1"
+		"AI_Schedule"		"SCHED_TROIKA_D_DAZE"	// restored by wesp
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"2.45"	// restored by wesp
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level1)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Supernatural_NoEffect
+	{
+		"Duration"			"3"	// In order to play particles/etc.
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Thaum_Emitter"
+				"AttachType"	"BoneTreeWithColors"
+				"AttachName"	""
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Generic_Emitter"
+				"AttachType"	"BoneTree"
+				"AttachName"	""
+			}
+		}
+	}
+
+	Hit_Strata_1
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_2
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_3
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_4
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_5
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_6
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_7
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Boss_NoEffect
+	{
+		"Duration"			"-1"
+	}
+}
+
+
+
+// ---------------------
+
+
+
+// Presence: Level 4
+DisciplineTgt
+{
+	"Name"		"Presence-4"
+	"InternalName"	"Presence_Level4"
+
+	"Discipline"	"Presence"
+	"Level"		"4"
+
+	"BloodCost"		"3"
+	"Overt"		"1"
+	"SupernaturalLvl"	"0"
+	"RecoveryTime"	"0.5"
+
+	AoE
+	{
+		"Range"	"500"
+		"Source"	"Self"		// Self/Target
+		"Affects"	"Radius"		// Target/Radius:#/Cone:#
+		"MaxRadius"	"500"
+		Affects_Filters
+		{
+			"Critter"		"1"
+			"No_Self"		"1"
+			"No_Friends"	"1"
+		}
+
+
+		// Tables:
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Invulnerable"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+				"Player"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"Player"		"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Supernatural"
+			}
+		}
+
+//
+// ADD DISCIPLINESTRATA EFFECTS BELOW THIS LINE
+//
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"0"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"	// changed by wesp
+				"HitTable"	"Hit_Human_Mesmerized"
+			}
+
+			Mapping	// restored by wesp
+			{
+				"Chance"	"15%"
+				"HitTable"	"Hit_Human_Afraid"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"10%"
+				"HitTable"	"Hit_Supernatural_Mesmerized"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_1"
+			}
+		}		
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"2"
+			}
+
+			Mapping
+			{
+				"Chance"	"10%"
+				"HitTable"	"Hit_Supernatural_Mesmerized"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_2"
+			}
+		}		
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"3"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_3"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"4"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_4"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"5"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_5"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"6"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_6"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"7"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_7"
+			}
+		}	
+
+//
+// ADD DISCIPLINESTRATA EFFECTS ABOVE THIS LINE
+//
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Human_Mesmerized"
+			}
+
+			Mapping	// restored by wesp
+			{
+				"Chance"	"10%"
+				"HitTable"	"Hit_Human_Afraid"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"No_Boss"		"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"10%"
+				"HitTable"	"Hit_Supernatural_Mesmerized"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Boss"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Boss_NoEffect"
+			}
+		}
+	}
+
+	Effect_Src_Instant
+	{
+		Particle_ThirdPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Presence_Cast_Emitter4"
+			"AttachType"	"BoneTree"
+			"AttachName"	""
+		}
+
+		Particle_ThirdPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Presence_Nova_Emitter4"
+			"AttachType"	"BoneSinglePoint"
+			"AttachName"	"Bip01 Spine"
+		}
+
+		Particle_FirstPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Presence_Hud_Emitter4"
+			"AttachType"	"ScreenCenter"
+			"AttachName"	""
+		}
+
+		Particle_FirstPerson	// restored by wesp
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"d_presenceview_emitter"
+			"AttachType"	"ScreenBorder"
+			"AttachName"	""
+		}
+
+	}
+
+
+	// Effects:
+	Hit_Invulnerable
+	{
+	}
+
+	Hit_Player_Human
+	{
+		"Duration"			"-1"
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"2.45"	// restored by wesp
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level4)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Player_Supernatural
+	{
+		"Duration"			"-1"
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"2.45"	// restored by wesp
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level4)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Human
+	{
+		"Duration"			"-1"
+		"AI_Schedule"		"SCHED_TROIKA_D_DAZE"	// restored by wesp
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"2.45"	// restored by wesp
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level4)"
+		}
+
+		Effect_Tgt_Instant
+		{
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Human_Mesmerized
+	{
+		"InheritFrom"		"Hit_Human"
+
+		"AI_Schedule"		"SCHED_TROIKA_D_MESMERIZE"
+		"AI_NPCFlag"		"D_CALM"
+		"Knockback"	"50%"
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Mezmerize_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+
+		OnInterruptSchedule
+		{
+			Effect_Tgt_Hit
+			{
+				Particle_ThirdPerson
+				{
+					"Entity"		"env_particle"
+					"RateMin"		"1.0"
+					"OpacityMin"	"1.0"
+					"SizeMin"		"1.0"
+					"ParticleName"	"D_Presence_Mezmerize_Broke_Emitter"
+					"AttachType"	"BoneSinglePoint"
+					"AttachName"	"Bip01 Head"
+
+					"Detach"		"1"
+				}
+
+				SoundFX
+				{
+//					"Sound"		"Disciplines/Presence/Mesmerize_Broke.wav"
+				}
+			}
+		}
+	}
+
+	Hit_Human_Afraid
+	{
+		"InheritFrom"		"Hit_Human"
+
+		"AI_Schedule"		"SCHED_TROIKA_D_AFRAID"
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Afraid_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Supernatural
+	{
+		"Duration"			"-1"
+		"AI_Schedule"		"SCHED_TROIKA_D_DAZE"	// restored by wesp
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"2.45"	// restored by wesp
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level2)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Supernatural_Mesmerized
+	{
+		"InheritFrom"		"Hit_Supernatural"
+
+		"AI_Schedule"		"SCHED_TROIKA_D_MESMERIZE"
+		"AI_NPCFlag"		"D_CALM"
+		"Knockback"	"50%"
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Mezmerize_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+
+		OnInterruptSchedule
+		{
+			Effect_Tgt_Hit
+			{
+				Particle_ThirdPerson
+				{
+					"Entity"		"env_particle"
+					"RateMin"		"1.0"
+					"OpacityMin"	"1.0"
+					"SizeMin"		"1.0"
+					"ParticleName"	"D_Presence_Mezmerize_Broke_Emitter"
+					"AttachType"	"BoneSinglePoint"
+					"AttachName"	"Bip01 Head"
+
+					"Detach"		"1"
+				}
+
+				SoundFX
+				{
+//					"Sound"		"Disciplines/Presence/Mesmerize_Broke.wav"
+				}
+			}
+		}
+	}
+
+	Hit_Supernatural_NoEffect
+	{
+		"Duration"			"3"	// In order to play particles/etc.
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Thaum_Emitter"
+				"AttachType"	"BoneTreeWithColors"
+				"AttachName"	""
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Generic_Emitter"
+				"AttachType"	"BoneTree"
+				"AttachName"	""
+			}
+		}
+	}
+
+	Hit_Strata_1
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_2
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_3
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_4
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_5
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_6
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_7
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Boss_NoEffect
+	{
+		"Duration"			"-1"
+	}
+}
+
+
+
+// ---------------------
+
+
+
+// Presence: Level 5
+DisciplineTgt
+{
+	"Name"		"Presence-5"
+	"InternalName"	"Presence_Level5"
+
+	"Discipline"	"Presence"
+	"Level"		"5"
+
+	"BloodCost"		"3"
+	"Overt"		"1"
+	"SupernaturalLvl"	"0"
+	"RecoveryTime"	"10"
+
+	AoE
+	{
+		"Range"	"700"
+		"Source"	"Self"		// Self/Target
+		"Affects"	"Radius"		// Target/Radius:#/Cone:#
+		"MaxRadius"	"700"
+		Affects_Filters
+		{
+			"Critter"		"1"
+			"No_Self"		"1"
+			"No_Friends"	"1"
+		}
+
+
+		// Tables:
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Invulnerable"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+				"Player"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"Player"		"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Supernatural"
+			}
+		}
+
+//
+// ADD DISCIPLINESTRATA EFFECTS BELOW THIS LINE
+//
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"0"
+			}
+
+			Mapping
+			{
+				"Chance"	"25%"
+				"HitTable"	"Hit_Human_Mesmerized"
+			}
+
+			Mapping	// restored by wesp
+			{
+				"Chance"	"15%"
+				"HitTable"	"Hit_Human_Afraid"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"25%"
+				"HitTable"	"Hit_Human_Mesmerized"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_1"
+			}
+		}		
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"2"
+			}
+
+			Mapping
+			{
+				"Chance"	"25%"
+				"HitTable"	"Hit_Human_Mesmerized"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_2"
+			}
+		}		
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"3"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_3"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"4"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_4"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"5"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_5"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"6"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_6"
+			}
+		}	
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"7"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_7"
+			}
+		}	
+
+//
+// ADD DISCIPLINESTRATA EFFECTS ABOVE THIS LINE
+//
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"		"1"
+				"NonCombatant"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"25%"
+				"HitTable"	"Hit_Human_Mesmerized"
+			}
+
+			Mapping	// restored by wesp
+			{
+				"Chance"	"15%"
+				"HitTable"	"Hit_Human_Afraid"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"		"1"
+				"Combatant"		"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"25%"
+				"HitTable"	"Hit_Human_Mesmerized"
+			}
+
+			Mapping	// restored by wesp
+			{
+				"Chance"	"15%"
+				"HitTable"	"Hit_Human_Afraid"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"No_Boss"		"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Supernatural_Mesmerized"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Boss"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Boss_NoEffect"
+			}
+		}
+	}
+
+	Effect_Src_Instant
+	{
+		Particle_ThirdPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Presence_Cast_Emitter5"
+			"AttachType"	"BoneTree"
+			"AttachName"	""
+		}
+
+		Particle_ThirdPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Presence_Nova_Emitter5"
+			"AttachType"	"BoneSinglePoint"
+			"AttachName"	"Bip01 Spine"
+		}
+
+		Particle_FirstPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Presence_Hud_Emitter5"
+			"AttachType"	"ScreenCenter"
+			"AttachName"	""
+		}
+
+		Particle_FirstPerson	// restored by wesp
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"d_presenceview_emitter"
+			"AttachType"	"ScreenBorder"
+			"AttachName"	""
+		}
+
+	}
+
+
+	// Effects:
+	Hit_Invulnerable
+	{
+	}
+
+	Hit_Player_Human
+	{
+		"Duration"			"-1"
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"2.45"	// restored by wesp
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level5)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Player_Supernatural
+	{
+		"Duration"			"-1"
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"2.45"	// restored by wesp
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level5)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Human
+	{
+		"Duration"			"-1"
+		"AI_Schedule"		"SCHED_TROIKA_D_DAZE"	// restored by wesp
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"2.45"	// restored by wesp
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level5)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Human_Mesmerized
+	{
+		"InheritFrom"		"Hit_Human"
+		"Knockback"	"50%"
+
+		"AI_Schedule"		"SCHED_TROIKA_D_MESMERIZE"
+		"AI_NPCFlag"		"D_CALM"
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Mezmerize_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+
+		OnInterruptSchedule
+		{
+			Effect_Tgt_Hit
+			{
+				Particle_ThirdPerson
+				{
+					"Entity"		"env_particle"
+					"RateMin"		"1.0"
+					"OpacityMin"	"1.0"
+					"SizeMin"		"1.0"
+					"ParticleName"	"D_Presence_Mezmerize_Broke_Emitter"
+					"AttachType"	"BoneSinglePoint"
+					"AttachName"	"Bip01 Head"
+
+					"Detach"		"1"
+				}
+
+				SoundFX
+				{
+//					"Sound"		"Disciplines/Presence/Mesmerize_Broke.wav"
+				}
+			}
+		}
+	}
+
+	Hit_Human_Afraid
+	{
+		"InheritFrom"		"Hit_Human"
+
+		"AI_Schedule"		"SCHED_TROIKA_D_AFRAID"
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Afraid_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Supernatural
+	{
+		"Duration"			"-1"
+		"AI_Schedule"		"SCHED_TROIKA_D_DAZE"	// restored by wesp
+		"Gesture_Anim"		"ACT_PRESENCE_DAZED"	// restored by wesp
+		"Gesture_Duration"	"1.00" //"2.45"	// restored by wesp
+		"Flinch"	"50%"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Presence-Level3)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Daze_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Supernatural_Mesmerized
+	{
+		"InheritFrom"		"Hit_Supernatural"
+
+		"AI_Schedule"		"SCHED_TROIKA_D_MESMERIZE"
+		"AI_NPCFlag"		"D_CALM"
+		"Knockback"	"50%"
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Presence_Mezmerize_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+
+		OnInterruptSchedule
+		{
+			Effect_Tgt_Hit
+			{
+				Particle_ThirdPerson
+				{
+					"Entity"		"env_particle"
+					"RateMin"		"1.0"
+					"OpacityMin"	"1.0"
+					"SizeMin"		"1.0"
+					"ParticleName"	"D_Presence_Mezmerize_Broke_Emitter"
+					"AttachType"	"BoneSinglePoint"
+					"AttachName"	"Bip01 Head"
+
+					"Detach"		"1"
+				}
+
+				SoundFX
+				{
+//					"Sound"		"Disciplines/Presence/Mesmerize_Broke.wav"
+				}
+			}
+		}
+	}
+
+	Hit_Supernatural_NoEffect
+	{
+		"Duration"			"3"	// In order to play particles/etc.
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Thaum_Emitter"
+				"AttachType"	"BoneTreeWithColors"
+				"AttachName"	""
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Full_Resist_Generic_Emitter"
+				"AttachType"	"BoneTree"
+				"AttachName"	""
+			}
+		}
+	}
+
+	Hit_Strata_1
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_2
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_3
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_4
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_5
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_6
+	{
+		"InheritFrom"		"Hit_Human"
+	}
+
+	Hit_Strata_7
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Boss_NoEffect
+	{
+		"Duration"			"-1"
+	}
+}
+
+
+
+// ---------------------
+}

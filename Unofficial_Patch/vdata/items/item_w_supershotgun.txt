@@ -1,0 +1,422 @@
+// Super Shotgun
+
+WeaponData
+{
+	"printname"		"Jaegerspas XV"
+	"description"		"The Jaegerspas automatic shotgun looks and fires more like an assault rifle than a traditional shotgun. It delivers bursts of deadly shot at a devastating pace. The Jaegerspas has both semi-automatic and pump action functionality."
+	"viewmodel"		"models/weapons/supershotgun/view/v_supershotgun.mdl"
+	"playermodel"		"models/weapons/supershotgun/ground/g_supershotgun.mdl"
+	"wieldmodel_f"		"models/weapons/supershotgun/wield/w_f_supershotgun.mdl"
+	"wieldmodel_m"		"models/weapons/supershotgun/wield/w_m_supershotgun.mdl"
+	"infomodel"		"models/weapons/supershotgun/info/i_supershotgun.mdl"
+
+	// This should match the viewmodel QC file offset:
+	"origin_x"		"0"
+	"origin_y"		"4"
+	"origin_z"		"68"
+
+	"anim_prefix"		"supershotgun"
+	"impact_snd_group"	"bullet"
+
+	"activation0"		"Single Pump"
+	"activation1"		"Full Auto"
+	"jammed0"		"Jammed"
+	"jammed1"		"Jammed"
+	"bucket"		"1"
+	"bucket_position"	"8"
+	"camera_class"		"ranged"
+	"weight"		"3"
+	"item_flags"		"0"
+	"item_type"		"weapon_firearm"
+	"allow_autofire"	"1"
+	"impact_force"		"2000"	// an impulse measured in kg*in/s
+	"sound_group"	"Super_Shotgun"
+	"uses_accuracycursors"	"1"
+
+	"muzzleflash_particle" 		"W_SuperShotgun_Emitter"
+	"muzzlesmoke_particle" 		"Blank_emitter"
+	"viewmuzzleflash_particle" 	"W_SuperShotgun_View_Emitter"
+	"viewmuzzlesmoke_particle" 	"Blank_emitter"
+
+	"item_worth"		"285"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"Weapons\Ranged\Super_Shotgun\Deploy.wav"
+		}
+	}
+
+
+//Weapon Ammo
+	Magazine
+	{
+		"ammoprintname"		"12 Gauge Shell"
+		"ammodescription"	"This magazine holds 12 gauge shells for the Jaegerspas XV."
+		"ammo_worth"		"12"//"18"
+		"ammoinfomodel"		"models/weapons/ammo/supershotgun/i_supershotgun_ammo.mdl"
+
+		"Size"			"6"
+		"Default_Size"		"0"
+		"Dropped_Ammo"		"4"
+		"Type"			"Super_ShotgunRound"
+		"ReloadTime"		"4.0"
+		
+		SoundData
+		{
+			"reload"
+			{
+				"sound1"	"Weapons/Ranged/Super_Shotgun/Reload.wav"
+			}
+
+			"reload_npc"
+			{
+				"sound1"	"Weapons/Ranged/Super_Shotgun/Reload.wav"
+			}
+		}
+	}
+
+//Primary Attack
+	Activation
+	{
+		"Tag"			"Primary"
+		"Type"			"Attack"
+		"Ammo_Type"		"Super_ShotgunRound"
+		"Ammo_Cost"		"1"
+		"Ammo_Fired"		"8"
+		"Botch_Table"		"Shotguns"
+		"Range"			"20"
+
+		"SkillRequirement"	"7"		// min. skill requirement used in dmg calculations
+		"BaseLethality"		"18"		// base lethality used in dmg calculations
+		"Dmg"			"3 Lethal Ranged_Combat DMG_BUCKSHOT"
+
+		"Attack_Rate"		"1.0"
+		"NPC_Attack_Rate_Min"		"2.0"		// The range of times for NPCs using this weapon to pause between
+		"NPC_Attack_Rate_Max"		"3.0"		//   attacks when at a distance of NPC_Attack_Rate_Base_Range inches. 
+		"NPC_Attack_Rate_Base_Range"	"120"	//   Attack times scale down to Attack_Rate at a range of 0, and up
+							//   proportionally as the range increases. If NPC_Attack_Rate_Base_Range
+							//   is 0, the delay will not be scaled based on distance.
+
+		// SKS_RANGED
+		"KickPitchMin"			"-1.0"
+		"KickPitchMax"			"-18.00"
+		"KickYawMin"			"-0.5"
+		"KickYawMax"			"-3.0"
+		"KickTime"				"0.04"
+		"CrosshairMinSize"		"18"		// smallest crosshair size for this activation [0-99]
+		"CrosshairFireSize"		"66"		// MAXIMUM size (Firearms 1) of the crosshair when the gun is fired [0-99] scales to Min as player's firearms increases
+		"CrosshairFireSizeMin"		"66"		// MIN size (Firearms 10) of the crosshair when the gun is fired [0-99]
+		"CrosshairWalkSizeMin"	"18"			// min size of the crosshair when the player is walking [0-99]
+		"CrosshairWalkSizeMax"	"18"		//"90"	// max size of the crosshair when the player is walking [0-99]
+		"CrosshairRunSizeMin"	"40"			// min size of the crosshair when the player is running [0-99]
+		"CrosshairRunSizeMax"	"66"		//"90"	// max size of the crosshair when the player is running [0-99]
+
+		"CrosshairIncSpeedMin"	"40"	//"60"min speed(10 Firearm Feat) at which to increase bloom -low # slower
+		"CrosshairIncSpeedMax"	"40"	//"60"max speed(1 Firearm Feat) at which to increase bloom -high # faster
+		"CrosshairDecSpeedMin"	"8"	//min speed(1 Firearm Feat) at which to decrease bloom -low # slower
+		"CrosshairDecSpeedMax"	"20"	//"40"max speed(10 Firearm Feat) at which to decrease bloom -high # faster
+
+		"CrosshairFirePercent"	"0.8"			// percent to bloom to crosshair upon firing a bullet
+
+		"MajorKnockbackDist"	"105.0"			// maximum distance to cause major knockback
+		"MinorKnockbackDist"	"250.0"			// maximum distance to cause minor knockback
+
+
+
+		"SpreadAngle"		"7.0"
+		"CriminalLevel"	"4"
+		"Accuracy"		"6"
+
+		SoundData
+		{
+			"empty"
+			{
+				"sound1"	"Weapons/Ranged/Super_Shotgun/Empty.wav"
+			}
+
+			"attack"
+			{
+				"sound1"	"Weapons/Ranged/Super_Shotgun/Attack_1.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Ranged/Super_Shotgun/Attack_1.wav"	
+
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Ranged/Deploy.wav"
+			}
+
+			"put_away"
+			{
+				"sound1"	"Weapons/Ranged/Put_Away.wav"
+			}			
+			
+			"fidget"
+			{
+				"sound1"	"Weapons/Ranged/Super_Shotgun/Fidget.wav"
+			}
+		}
+
+		Tables
+		{
+			Table
+			{
+				"Name"          "WeaponRanges"
+				"InternalName"  "WeaponRanges"
+
+				"Clamping"      "1"
+				// point blank 0-80, close 80-110, short/medium 110-220,
+				// meduim 220-370, long 370-650, great 650+
+
+				"0"             "0"         // 5 (bonus)
+				"1"             "0"         // 4 (bonus)
+				"2"             "0"         // 3 (bonus)
+				"3"             "110"       // 2 (bonus)
+				"4"             "220"       // 1 (bonus)
+				"5"             "300"       // 0 (neutral)
+				"6"             "500"       //-1 (penalty)
+				"7"             "800"       //-2 (penalty)
+				"8"             "30000"     //-3 (penalty)
+				"9"             "30000"     //-4 (penalty)
+			}
+			Table
+			{
+				"Name"          "GrossPointBlank"
+				"InternalName"  "GrossPointBlank"
+
+				"Clamping"      "1"
+
+
+				// percentage from 1-12 feet out
+
+				"0"             "100"
+				"1"             "90"
+				"2"             "80"
+				"3"             "70"
+				"4"             "60"
+				"5"             "50"
+				"6"             "40"
+				"7"             "30"
+				"8"             "20"
+				"9"             "10"
+			}
+			
+		}
+	}
+
+
+//Secondary Attack
+	Activation
+	{
+		"Tag"			"PrimaryMode2"
+		"Type"			"Attack"
+		"Ammo_Type"		"Super_ShotgunRound"
+		"Ammo_Cost"		"1"
+		"Ammo_Fired"		"8"
+		"Botch_Table"		"Shotguns"
+		"Range"			"20"
+
+		"SkillRequirement"	"7"		// min. skill requirement used in dmg calculations
+		"BaseLethality"		"18"		// base lethality used in dmg calculations
+		"Dmg"			"3 Lethal Ranged_Combat DMG_BUCKSHOT"
+		
+		"Attack_Rate"		".2"	// The minimum allowable time between pulls of the trigger
+		"NPC_Attack_Rate_Min"		"1.0"	// The range of times for NPCs using this weapon to pause between
+		"NPC_Attack_Rate_Max"		"2.8"	//   attacks when at a distance of NPC_Attack_Rate_Base_Range inches. 
+		"NPC_Attack_Rate_Base_Range"	"120"	//   Attack times scale down to Attack_Rate at a range of 0, and up
+							//   proportionally as the range increases. If NPC_Attack_Rate_Base_Range
+							//   is 0, the delay will not be scaled based on distance.
+
+		// SKS_RANGED
+		"KickPitchMin"			"-3.0"
+		"KickPitchMax"			"-14.00"
+		"KickYawMin"			"-1.0"
+		"KickYawMax"			"-4.0"
+		"KickTime"				"0.04"
+		"CrosshairMinSize"		"25"		// smallest crosshair size for this activation [0-99]
+		"CrosshairFireSize"		"55"		// MAXIMUM size (Firearms 1) of the crosshair when the gun is fired [0-99] scales to Min as player's firearms increases
+		"CrosshairFireSizeMin"		"55"		// MIN size (Firearms 10) of the crosshair when the gun is fired [0-99]
+		"CrosshairWalkSizeMin"	"40"			// min size of the crosshair when the player is walking [0-99]
+		"CrosshairWalkSizeMax"	"55"		//"90"	// max size of the crosshair when the player is walking [0-99]
+		"CrosshairRunSizeMin"	"40"			// min size of the crosshair when the player is running [0-99]
+		"CrosshairRunSizeMax"	"55"		//"90"	// max size of the crosshair when the player is running [0-99]
+
+		"CrosshairIncSpeedMin"	"20"	//"60"min speed(10 Firearm Feat) at which to increase bloom -low # slower
+		"CrosshairIncSpeedMax"	"20"	//"60"max speed(1 Firearm Feat) at which to increase bloom -high # faster
+		"CrosshairDecSpeedMin"	"8"	//min speed(1 Firearm Feat) at which to decrease bloom -low # slower
+		"CrosshairDecSpeedMax"	"18"	//"40"max speed(10 Firearm Feat) at which to decrease bloom -high # faster
+
+		"CrosshairFirePercent"	"0.4"			// percent to bloom to crosshair upon firing a bullet
+
+		"MinorKnockbackDist"	"250.0"			// maximum distance to cause minor knockback
+
+		"SpreadAngle"		"7.0"
+		"allow_autofire"	"1"
+		"CriminalLevel"	"4"
+		"Accuracy"		"6"
+
+		SoundData
+		{
+			"empty"
+			{
+				"sound1"	"Weapons/Ranged/Super_Shotgun/Empty.wav"
+			}
+
+			"attack"
+			{
+				"sound1"	"Weapons/Ranged/Super_Shotgun/Attack_2.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Ranged/Super_Shotgun/Attack_2.wav"	
+
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Ranged/Deploy.wav"
+			}
+
+			"put_away"
+			{
+				"sound1"	"Weapons/Ranged/Put_Away.wav"
+			}			
+			
+			"fidget"
+			{
+				"sound1"	"Weapons/Ranged/Super_Shotgun/Fidget.wav"
+			}
+		}
+
+		Tables
+		{
+			Table
+			{
+				"Name"          "WeaponRanges"
+				"InternalName"  "WeaponRanges"
+
+				"Clamping"      "1"
+
+				// point blank 0-80, close 80-110, short/medium 110-220,
+				// meduim 220-370, long 370-650, great 650+
+
+				"0"             "0"         // 5 (bonus)
+				"1"             "0"         // 4 (bonus)
+				"2"             "0"         // 3 (bonus)
+				"3"             "110"       // 2 (bonus)
+				"4"             "220"       // 1 (bonus)
+				"5"             "300"       // 0 (neutral)
+				"6"             "500"       //-1 (penalty)
+				"7"             "800"       //-2 (penalty)
+				"8"             "30000"     //-3 (penalty)
+				"9"             "30000"     //-4 (penalty)
+			}
+		}
+	}
+
+//Toggle Fireing Mode
+	Activation
+	{
+		"Tag"		"Secondary"
+		"Type"		"Toggle_Primary_Mode"
+		"Attack_Rate"	".3"
+
+		SoundData
+		{
+			"to-mode1"
+			{
+				"sound1"	"Weapons/Ranged/To_Mode1.wav"
+			}
+
+			"to_mode2"
+			{
+				"sound1"	"Weapons/Ranged/To_Mode2.wav"
+
+			}
+
+		}
+	}
+
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/supershotgun_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/supershotgun"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_ranged/ammo/supershotgun_ammo"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo2"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_ranged/ammo/supershotgun_ammo_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+
+
+// Disabled because it uses Accuracy Crosshairs
+//		"crosshair"
+//		{
+//			"640"
+//			{
+//				"file"		"crosshairs"
+//				"x"			"0"
+//				"y"			"48"
+//				"width"		"24"
+//				"height"	"24"
+//			}
+
+
+
+		// Accuracy Crosshairs
+		"Acc_Crosshair00"		"hud/Crosshairs/Crosshair_01"
+		"Acc_Crosshair01"		"hud/Crosshairs/Crosshair_02"
+		"Acc_Crosshair02"		"hud/Crosshairs/Crosshair_03"
+		"Acc_Crosshair03"		"hud/Crosshairs/Crosshair_04"
+		"Acc_Crosshair04"		"hud/Crosshairs/Crosshair_05"
+		"Acc_Crosshair05"		"hud/Crosshairs/Crosshair_06"
+		"Acc_Crosshair06"		"hud/Crosshairs/Crosshair_07"
+		"Acc_Crosshair07"		"hud/Crosshairs/Crosshair_08"
+		"Acc_Crosshair08"		"hud/Crosshairs/Crosshair_09"
+		"Acc_Crosshair09"		"hud/Crosshairs/Crosshair_10"
+		"Interactive_Crosshair"	"hud/Crosshairs/Crosshair_Interactive"
+	}
+}

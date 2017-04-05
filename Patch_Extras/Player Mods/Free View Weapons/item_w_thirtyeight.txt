@@ -1,0 +1,287 @@
+// Big Revolver
+
+WeaponData
+{
+	"printname"		"Colt Police Positive Special"	// changed by wesp
+	"description"		"This is a cheap, small-caliber handgun used by start-up hoods in alleys across the country. Also known as a purse gun."
+
+	"viewmodel"		"models/weapons/ThirtyEight/view/v_ThirtyEight.mdl"
+	"playermodel"		"models/weapons/ThirtyEight/ground/g_ThirtyEight.mdl"
+	"wieldmodel_f"		"models/weapons/ThirtyEight/wield/w_f_ThirtyEight.mdl"
+	"wieldmodel_m"		"models/weapons/ThirtyEight/wield/w_m_ThirtyEight.mdl"
+	"infomodel"		"models/weapons/ThirtyEight/info/i_ThirtyEight.mdl"
+
+	// This should match the viewmodel QC file offset:
+	"origin_x"		"6"
+	"origin_y"		"6"
+	"origin_z"		"68"
+
+	"anim_prefix"		"thirtyeight"
+	"impact_snd_group"	"bullet"
+
+
+	"activation0"		"Single"
+	"activation1"		"Fan"
+	"jammed0"		"Jammed"
+	"jammed1"		"Jammed"
+	"bucket"		"1"
+	"bucket_position"	"1"
+	"camera_class"		"noswitch"	// changed by wesp
+	"weight"		"3"
+	"item_flags"		"0"
+	"item_type"		"weapon_firearm"
+	"reload_single"		"0"	// add in 1 shell at a time
+	"sound_group"		"Thirty_Eight"
+	"uses_accuracycursors"	"1"
+
+	"muzzleflash_particle" 		"W_ThirtyEight_Emitter"
+	"muzzlesmoke_particle" 		"W_ThirtyEight_Emitter-Smoke"
+	"viewmuzzleflash_particle" 	"W_ThirtyEight_Emitter"
+	"viewmuzzlesmoke_particle" 	"W_ThirtyEight_Emitter-Smoke"
+
+	"item_worth"		"70"
+	"player_sell"		"15"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"Weapons\Ranged\Thirty_Eight\Deploy.wav"
+		}
+	}
+
+
+//Weapon Ammo
+	Magazine
+	{
+		"ammoprintname"		".38 Ammo"
+		"ammodescription"	"Six rounds for your Saturday night special."
+		"ammo_worth"		"5"	// changed by wesp
+		"ammoinfomodel"		"models/weapons/ammo/thirtyeight/i_thirtyeight_ammo.mdl"
+
+		"Type"			"ThirtyeightRound"
+		"Size"			"6"
+		"Default_Size"		"6"	// changed by wesp
+		"Dropped_Ammo"		"6"	// changed by wesp
+		"ReloadTime"		"3.5"
+		
+		SoundData
+		{
+			"reload"
+			{
+				"sound1"	"Weapons/Ranged/Thirty_Eight/Reload.wav"
+			}
+
+			"reload_npc"
+			{
+				"sound1"	"Weapons/Ranged/Thirty_Eight/Reload.wav"
+			}
+		}
+	}
+
+//Primary Attack
+	Activation
+	{
+		"Tag"			"Primary"
+		"Type"			"Attack"
+		"Ammo_Type"		"ThirtyeightRound"
+		"Ammo_Cost"		"1"
+		"Botch_Table"		"Revolvers"
+		"Range"			"35"
+		"SpreadAngle"		"7.0"
+		"CriminalLevel"		"3"
+		"Accuracy"		"4"
+
+		"SkillRequirement"	"4"		// min. skill requirement used in dmg calculations
+		"BaseLethality"		"7"		// base lethality used in dmg calculations
+		"Dmg"			"2 Lethal Ranged_Combat DMG_BULLET"
+
+		"Attack_Rate"		".8"	//".6" The minimum allowable time between pulls of the trigger
+		"NPC_Attack_Rate_Min"		"1.0"	// The range of times for NPCs using this weapon to pause between
+		"NPC_Attack_Rate_Max"		"2.5"	//   attacks when at a distance of NPC_Attack_Rate_Base_Range inches. 
+		"NPC_Attack_Rate_Base_Range"	"120"	//   Attack times scale down to Attack_Rate at a range of 0, and up
+							//   proportionally as the range increases. If NPC_Attack_Rate_Base_Range
+							//   is 0, the delay will not be scaled based on distance.
+
+		// SKS_RANGED
+		"KickPitchMin"			"0.0"		//"-2.25"		
+		"KickPitchMax"			"0.0"		//"-7.00"		
+		"KickYawMin"			"0.0"		//"-0.2"		//"-0.0"
+		"KickYawMax"			"0.0"		//"-1.0"		//"-0.5"
+		"KickTime"			"0.00"		//"0.02"
+		"CrosshairMinSize"		"17"		// smallest crosshair size for this activation [0-99]
+		"CrosshairFireSize"		"48"		// MAXIMUM size (Firearms 1) of the crosshair when the gun is fired [0-99] scales to Min as player's firearms increases
+		"CrosshairFireSizeMin"		"40"		// MIN size (Firearms 10) of the crosshair when the gun is fired [0-99], changed by wesp
+		"CrosshairWalkSizeMin"	"17"			// min size of the crosshair when the player is walking [0-99], changed by wesp
+		"CrosshairWalkSizeMax"	"17"			// max size of the crosshair when the player is walking [0-99], changed by wesp
+		"CrosshairRunSizeMin"	"40"			// min size of the crosshair when the player is running [0-99]
+		"CrosshairRunSizeMax"	"48"			// max size of the crosshair when the player is running [0-99]
+
+		"CrosshairIncSpeedMin"	"66"	//"80" min speed(10 Firearm Feat) at which to increase bloom -low # slower
+		"CrosshairIncSpeedMax"	"75"	//"95" max speed(1 Firearm Feat) at which to increase bloom -high # faster
+		"CrosshairDecSpeedMin"	"10"	//min speed(1 Firearm Feat) at which to decrease bloom -low # slower
+		"CrosshairDecSpeedMax"	"15"	//"40"max speed(10 Firearm Feat) at which to decrease bloom -high # faster
+
+		"CrosshairFirePercent"	"0.8"			//"0.5" percent to bloom to crosshair upon firing a bullet
+
+
+		SoundData
+		{
+			"empty"
+			{
+				"sound1"	"Weapons/Ranged/Thirty_Eight/Empty.wav"
+			}
+
+			"attack"
+			{
+				"sound1"	"Weapons/Ranged/Thirty_Eight/Attack_1.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Ranged/Thirty_Eight/Attack_1.wav"	
+
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Ranged/Thirty_Eight/Deploy.wav"
+			}
+
+			"put_away"
+			{
+				"sound1"	"Weapons/Ranged/Put_Away.wav"
+			}			
+			
+			"fidget"
+			{
+				"sound1"	"Weapons/Ranged/Thirty_Eight/Fidget.wav"
+			}
+		}
+
+		Tables
+		{
+			Table
+			{
+				"Name"          "WeaponRanges"
+				"InternalName"  "WeaponRanges"
+
+				"Clamping"      "1"
+
+
+				// point blank 0-80, close 80-110, short/medium 110-220,
+				// meduim 220-370, long 370-650, great 650+
+
+				"0"             "0"         // 5 (bonus)
+				"1"             "0"         // 4 (bonus)
+				"2"             "50"         // 3 (bonus)
+				"3"             "283"        // 2 (bonus)
+				"4"             "517"        // 1 (bonus)
+				"5"             "750"     // 0 (neutral)
+				"6"             "900"     //-1 (penalty)
+				"7"             "1050"     //-2 (penalty)
+				"8"             "1200"     //-3 (penalty)
+				"9"             "0"     //-4 (penalty)
+			}
+			
+			Table
+			{
+				"Name"          "GrossPointBlank"
+				"InternalName"  "GrossPointBlank"
+
+				"Clamping"      "1"
+
+
+				// percentage from 1-12 feet out
+
+				"0"             "100"
+				"1"             "90"
+				"2"             "80"
+				"3"             "70"
+				"4"             "60"
+				"5"             "50"
+				"6"             "40"
+				"7"             "30"
+				"8"             "20"
+				"9"             "10"
+			}
+			
+		}
+	}
+
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/Thirtyeight_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/Thirtyeight"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_ranged/ammo/thirtyeight_Ammo"
+				"x"		"0"
+				"y"		"0"
+				"width"		"100"
+				"height"	"64"
+			}
+		}
+		"ammo2"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_ranged/ammo/thirtyeight_ammo_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"		"100"
+				"height"	"64"
+			}
+		}
+
+
+// Disabled because it uses Accuracy Crosshairs
+//		"crosshair"
+//		{
+//			"640"
+//			{
+//				"file"		"crosshairs"
+//				"x"			"0"
+//				"y"			"48"
+//				"width"		"24"
+//				"height"	"24"
+//			}
+
+
+
+		// Accuracy Crosshairs
+		"Acc_Crosshair00"		"hud/Crosshairs/Crosshair_01"
+		"Acc_Crosshair01"		"hud/Crosshairs/Crosshair_02"
+		"Acc_Crosshair02"		"hud/Crosshairs/Crosshair_03"
+		"Acc_Crosshair03"		"hud/Crosshairs/Crosshair_04"
+		"Acc_Crosshair04"		"hud/Crosshairs/Crosshair_05"
+		"Acc_Crosshair05"		"hud/Crosshairs/Crosshair_06"
+		"Acc_Crosshair06"		"hud/Crosshairs/Crosshair_07"
+		"Acc_Crosshair07"		"hud/Crosshairs/Crosshair_08"
+		"Acc_Crosshair08"		"hud/Crosshairs/Crosshair_09"
+		"Acc_Crosshair09"		"hud/Crosshairs/Crosshair_10"
+		"Interactive_Crosshair"	"hud/Crosshairs/Crosshair_Interactive"
+	}
+}

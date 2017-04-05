@@ -1,0 +1,150 @@
+// Choreo version 1
+actor "!playercontroller"
+{
+  channel "animations"
+  {
+    event sequence "sabbat part 1"
+    {
+      time 0.000000 24.500000
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+actor "Prince2"
+{
+  channel "animations"
+  {
+    event sequence "sabbat part 1"
+    {
+      time 0.000000 24.500000
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  channel "Expressions"
+  {
+    event expression "hurt 01"
+    {
+      time 11.506666 15.700000
+      param "lacroix_expressions"
+      param2 "hurt"
+    }
+  }
+  bonerename "Bip02" "Bip01"
+}
+
+actor "Andrei"
+{
+  channel "animations"
+  {
+    event sequence "sabbat part 1"
+    {
+      time 0.000000 24.500000
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  channel "dlg"
+  {
+    event speak "Andrei Speaks"
+    {
+      time 0.873333 14.797664
+      param "Character\dlg\hollywood\Andrei\line291_col_e.mp3"
+      fixedlength
+    }
+  }
+  channel "Expressions"
+  {
+    event expression "Raised Both 01"
+    {
+      time 0.826667 1.953333
+      param "regent_expressions"
+      param2 "Raised Both"
+      event_ramp
+      {
+        0.1547 0.3732
+        0.2250 0.3897
+        0.8713 0.3897
+        0.9227 0.3732
+      }
+    }
+    event expression "Raised Both 02"
+    {
+      time 6.633334 8.786668
+      param "expressions"
+      param2 "Raised Both"
+      event_ramp
+      {
+        0.3350 0.4671
+        0.4500 0.4671
+        1.6900 0.4671
+        1.8200 0.4671
+      }
+    }
+    event expression "Concern No Deform 02"
+    {
+      time 19.680000 21.740000
+      param "regent_expressions"
+      param2 "Concern No Deform"
+      event_ramp
+      {
+        0.2550 0.7183
+        0.3200 0.7183
+        1.7917 0.7183
+        1.8467 0.7183
+      }
+    }
+  }
+  channel "Expressions2"
+  {
+    event expression "Concern No Deform 01"
+    {
+      time 3.060000 6.800001
+      param "regent_expressions"
+      param2 "Concern No Deform"
+      event_ramp
+      {
+        0.1281 0.6268
+        0.2300 0.6737
+        0.2600 0.6761
+        3.3750 0.6737
+        3.4094 0.6714
+        3.5369 0.6150
+      }
+    }
+    event expression "Raised Both 03"
+    {
+      time 18.119999 19.893333
+      param "regent_expressions"
+      param2 "Raised Both"
+      event_ramp
+      {
+        0.1800 0.4648
+        0.2700 0.4648
+        1.4567 0.4648
+        1.5517 0.4648
+      }
+    }
+  }
+  bonerename "Bip03" "Bip01"
+}
+
+actor "Sabbat_Guard_1"
+{
+  channel "animations"
+  {
+    event sequence "sabbat part 1"
+    {
+      time 0.000000 24.500000
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  bonerename "Bip04" "Bip01"
+}
+
+fps 60
+snap off

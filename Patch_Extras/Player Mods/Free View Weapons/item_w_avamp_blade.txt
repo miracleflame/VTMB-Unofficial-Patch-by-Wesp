@@ -1,0 +1,204 @@
+// Asian Vampire Blade
+
+WeaponData
+{
+	"printname"		"Shin Gunto"	// changed by wesp
+	"description"	"This is a mass-produced version of the traditional Japanese katana. Not as effective as a real one but quite dangerous nevertheless."	// changed by wesp
+
+	"viewmodel"		"models/weapons/w_null.mdl"
+	"playermodel"	"models/weapons/katana/world/g_katana.mdl"
+	"wieldmodel_f"	"models/weapons/katana/wield/w_f_katana.mdl"
+	"wieldmodel_m"	"models/weapons/katana/wield/w_m_katana.mdl"
+	"infomodel"		"models/weapons/katana/info/i_katana.mdl"
+
+//	"viewmodel"		"models/weapons/w_null.mdl"
+//	"playermodel"	"models/weapons/w_null.mdl"
+//	"wieldmodel_f"	"models/weapons/w_null.mdl"
+//	"wieldmodel_m"	"models/weapons/w_null.mdl"
+	"anim_prefix"	"katana"
+
+	"impact_snd_group"	"blade"
+
+	"activation0"	"Attack"
+	"activation1"	""
+	"bucket"		"0"
+	"bucket_position"	"6"
+	"camera_class"		"noswitch"	// changed by wesp
+	"weight"		"2"
+	"item_flags"	"0"
+	"item_type"		"weapon_melee"
+	"item_worth"	"100"	// changed by wesp
+	"player_sell"	"15"	// added by wesp
+	"sound_group"	"Katana"
+	"can_stakedmg"	"1"
+	"is_stackable" "0"	// changed by wesp
+
+	// Sounds..., changed by wesp
+	SoundData
+	{
+		"swish"
+		{
+			"sound1"	"Weapons/Melee/Katana/Swish_1.wav"
+			"sound2"	"Weapons/Melee/Katana/Swish_2.wav"
+			"sound3"	"Weapons/Melee/Katana/Swish_3.wav"
+		}
+		"pickup"
+		{
+			"sound1"	"Weapons\Melee\Katana\Deploy.wav"
+		}
+		"stealth_kill_success"
+		{
+			"sound1"	"Weapons/Melee/Katana/Stealth_Katana.wav"
+		}
+
+		"stealth_kill_failure"
+		{
+			"sound1"	"Weapons/Melee/Fists/Stealth_Kill_Failure.wav"
+		}
+	}
+
+	Activation
+	{
+		"Tag"			"Primary"
+
+		"Type"		"Attack"
+		"Ammo_Type"		"None"
+		"Ammo_Cost"		"0"
+		"Botch_Table"	"Melee_Weapons"
+		"Attack_Rate"	"1.0"
+		"Range"		"0"
+		"CriminalLevel"	"3"
+
+		"SkillRequirement"	"5"		// min. skill requirement used in dmg calculations
+		"BaseLethality"		"11"		// base lethality used in dmg calculations
+		"Dmg"			"2 Lethal Close_Combat_Melee DMG_SLASH"		
+
+		// Sounds..., changed by wesp
+		SoundData
+		{
+			"attack"
+			{
+				"sound1"	"Weapons/Melee/Katana/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Katana/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Katana/Swish_3.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Melee/Katana/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Katana/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Katana/Swish_3.wav"
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Melee/Katana/Deploy.wav"
+			}
+			"put_away"
+			{
+				"sound1"	"Weapons/Melee/Katana/Put_Away.wav"
+			}
+			"fidget"
+			{
+				"sound1"	"Weapons/Melee/Katana/Fidget.wav"
+			}
+		}
+	}
+
+	Activation
+	{
+		"Tag"			"Secondary"
+
+		"Type"		"Secondary_Attack"
+		"Ammo_Type"		"None"
+		"Ammo_Cost"		"0"
+		"Botch_Table"	"Melee_Weapons"
+		"Attack_Rate"	"1.0"
+		"Range"		"0"
+		"CriminalLevel"	"3"
+
+		"SkillRequirement"	"8"		// min. skill requirement used in dmg calculations, changed by wesp
+		"BaseLethality"		"7"		// base lethality used in dmg calculations
+		"Dmg"			"3 Lethal Close_Combat_Melee DMG_SLASH"		
+
+		// Sounds..., changed by wesp
+		SoundData
+		{
+			"attack"
+			{
+				"sound1"	"Weapons/Melee/Katana/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Katana/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Katana/Swish_3.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Melee/Katana/Swish_1.wav"
+				"sound2"	"Weapons/Melee/Katana/Swish_2.wav"
+				"sound3"	"Weapons/Melee/Katana/Swish_3.wav"
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Melee/Katana/Deploy.wav"
+			}
+			"put_away"
+			{
+				"sound1"	"Weapons/Melee/Katana/Put_Away.wav"
+			}
+			"fidget"
+			{
+				"sound1"	"Weapons/Melee/Katana/Fidget.wav"
+			}
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Melee/Katana_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Melee/Katana"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"crosshair"
+		{
+			"640"
+			{
+				"file"		"hud/crosshairs/unarmed"
+				"x"			"0"
+				"y"			"0"
+				"width"		"16"
+				"height"	"16"
+			}
+		}
+		"crosshair2"
+		{
+			"640"
+			{
+				"file"		"hud/crosshairs/unarmed_lit"
+				"x"			"0"
+				"y"			"0"
+				"width"		"16"
+				"height"	"16"
+			}
+		}
+	}
+}

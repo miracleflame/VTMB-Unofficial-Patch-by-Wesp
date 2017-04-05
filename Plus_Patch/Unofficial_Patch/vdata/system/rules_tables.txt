@@ -1,0 +1,348 @@
+// Rule Doc
+
+RuleData
+{
+	// Misc
+	Tables
+	{
+		Table
+		{
+			"Name"		"Item Reload Str Mapping"
+			"InternalName"	"Item_Reload_Str_Mapping"
+
+			"Clamping"		"1"
+
+			"0"			"0"	// Short
+			"1"			"3.0"	// Medium
+			"2"			"4.0"	// Fast
+		}
+
+		Table
+		{
+			"Name"		"Item Range Str Mapping"
+			"InternalName"	"Item_Range_Str_Mapping"
+
+			"Clamping"		"1"
+
+			"0"			"0"	// Short
+			"1"			"20"	// Medium
+			"2"			"100"	// Long
+		}
+
+		Table
+		{
+			"Name"		"Item FireRate Str Mapping"
+			"InternalName"	"Item_FireRate_Str_Mapping"
+
+			"Clamping"		"1"
+
+			"0"			"0.0"	// Very High
+			"1"			"0.5"	// High
+			"2"			"0.8"	// Medium
+			"3"			"1.5"	// Low
+		}
+		
+		Table
+		{
+			"Name"			"Barter_Sell_Adjustment"
+			"InternalName"	"Barter_Sell_Adjustment"
+			
+			"Clamping"		"1"
+			
+			"0"				"0.50" //"0.75"
+			"1"				"0.56" //"0.76"
+			"2"				"0.61" //"0.77"
+			"3"				"0.67" //"0.79"
+			"4"				"0.72" //"0.81"
+			"5"				"0.78" //"0.84"
+			"6"				"0.83" //"0.87"
+			"7"				"0.89" //"0.91"
+			"8"				"0.94" //"0.95"
+			"9"				"1.00" //"1.0"
+		}
+
+		Table
+		{
+			"Name"			"Barter_Buy_Adjustment"
+			"InternalName"	"Barter_Buy_Adjustment"
+			
+			"Clamping"		"1"
+			
+			"0"				"1.80" //"1.50"
+			"1"				"1.71" //"1.48"
+			"2"				"1.62" //"1.46"
+			"3"				"1.53" //"1.43"
+			"4"				"1.44" //"1.39"
+			"5"				"1.36" //"1.33"
+			"6"				"1.27" //"1.26"
+			"7"				"1.18" //"1.18"
+			"8"				"1.09" //"1.09"
+			"9"				"1.00" //"1.0"
+		}
+
+		Table
+		{
+			"Name"			"Throwing_Angle_Adjustment"
+			"InternalName"	"Throwing_Angle_Adjustment"
+
+			"Clamping"		"1"
+
+			"0"				"35.0"
+			"1"				"28.0"
+			"2"				"22.0"
+			"3"				"16.0"
+			"4"				"12.0"
+			"5"				"8.0"
+			"6"				"5.0"
+			"7"				"3.0"
+			"8"				"2.0"
+			"9"				"1.0"
+			"10"			"0.1"
+		}
+
+
+		Table
+		{
+			"Name"			"Barter_Class_Discount"
+			"InternalName"	"Barter_Class_Discount"
+			
+			"Clamping"		"1"
+			
+			"0"				"1.0"	//Brujah	
+			"1"				"1.0"	//Gangrel   
+			"2"				"1.0"	//Malkavian
+			"3"				"1.0"   //"0.7"	//Nosferatu  
+			"4"				"1.0"	//Toreador
+			"5"				"1.0"	//Tremere
+			"6"				"1.0"	//Ventrue
+		}
+
+
+
+		//
+		// NOTE: These aren't really "used" anymore (but *ARE* referenced in code), but they are still here in case
+		//	we need to do clan-specific balancing...Note that the Discipline table *IS* being used...
+		//
+
+		Table
+		{
+			"Name"			"Subpool_Physical"
+			"InternalName"	"Subpool_Physical"
+			"Clamping"		"1"
+			"0"				"0"
+			"1"				"0"
+			"2"				"0"	//"3"		//Brujah	
+			"3"				"0"	//"3"		//Gangrel   
+			"4"				"0"	//"1"		//Malkavian
+			"5"				"0"	//"2"		//Nosferatu  
+			"6"				"0"	//"1"		//Toreador
+			"7"				"0"	//"2"		//Tremere
+			"8"				"0"	//"1"		//Ventrue
+			"9"				"0"	//"1"		//Condotierre
+			"10"				"0"	//"1"		//Inquisitor
+			"11"				"0"	//"1"		//Leopold#3
+		}
+
+		Table
+		{
+			"Name"			"Subpool_Social"
+			"InternalName"	"Subpool_Social"
+			"Clamping"		"1"
+			"0"				"0"
+			"1"				"0"
+			"2"				"0"	//"1"		//Brujah	
+			"3"				"0"	//"1"		//Gangrel   
+			"4"				"0"	//"2"		//Malkavian
+			"5"				"0"	//"1"		//Nosferatu  
+			"6"				"0"	//"3"		//Toreador
+			"7"				"0"	//"1"		//Tremere
+			"8"				"0"	//"3"		//Ventrue
+			"9"				"0"	//"1"		//Condotierre
+			"10"				"0"	//"1"		//Inquisitor
+			"11"				"0"	//"1"		//Leopold#3
+		}
+
+		Table
+		{
+			"Name"			"Subpool_Mental"
+			"InternalName"	"Subpool_Mental"
+			"Clamping"		"1"
+			"0"				"0"
+			"1"				"0"
+			"2"				"0"	//"2"		//Brujah	
+			"3"				"0"	//"2"		//Gangrel   
+			"4"				"0"	//"3"		//Malkavian
+			"5"				"0"	//"3"		//Nosferatu  
+			"6"				"0"	//"2"		//Toreador
+			"7"				"0"	//"3"		//Tremere
+			"8"				"0"	//"2"		//Ventrue
+			"9"				"0"	//"1"		//Condotierre
+			"10"				"0"	//"1"		//Inquisitor
+			"11"				"0"	//"1"		//Leopold#3
+		}
+
+		Table
+		{
+			"Name"			"Subpool_Talents"
+			"InternalName"	"Subpool_Talents"
+			"Clamping"		"1"
+			"0"				"0"
+			"1"				"0"
+			"2"				"0"	//"4"		//Brujah	
+			"3"				"0"	//"3"		//Gangrel   
+			"4"				"0"	//"2"		//Malkavian
+			"5"				"0"	//"2"		//Nosferatu  
+			"6"				"0"	//"4"		//Toreador
+			"7"				"0"	//"3"		//Tremere
+			"8"				"0"	//"3"		//Ventrue
+			"9"				"0"	//"1"		//Condotierre
+			"10"				"0"	//"1"		//Inquisitor
+			"11"				"0"	//"1"		//Leopold#3
+		}
+
+		Table
+		{
+			"Name"			"Subpool_Skills"
+			"InternalName"	"Subpool_Skills"
+			"Clamping"		"1"
+			"0"				"0"
+			"1"				"0"
+			"2"				"0"	//"3"		//Brujah	
+			"3"				"0"	//"4"		//Gangrel   
+			"4"				"0"	//"3"		//Malkavian
+			"5"				"0"	//"4"		//Nosferatu  
+			"6"				"0"	//"2"		//Toreador
+			"7"				"0"	//"2"		//Tremere
+			"8"				"0"	//"2"		//Ventrue
+			"9"				"0"	//"1"		//Condotierre
+			"10"				"0"	//"1"		//Inquisitor
+			"11"				"0"	//"1"		//Leopold#3
+		}
+
+		Table
+		{
+			"Name"			"Subpool_Knowledges"
+			"InternalName"	"Subpool_Knowledges"
+			"Clamping"		"1"
+			"0"				"0"
+			"1"				"0"
+			"2"				"0"	//"2"		//Brujah	
+			"3"				"0"	//"2"		//Gangrel   
+			"4"				"0"	//"4"		//Malkavian
+			"5"				"0"	//"3"		//Nosferatu  
+			"6"				"0"	//"3"		//Toreador
+			"7"				"0"	//"4"		//Tremere
+			"8"				"0"	//"4"		//Ventrue
+			"9"				"0"	//"1"		//Condotierre
+			"10"				"0"	//"1"		//Inquisitor
+			"11"				"0"	//"1"		//Leopold#3
+		}
+
+		Table
+		{
+			"Name"			"Subpool_Disciplines"
+			"InternalName"	"Subpool_Disciplines"
+			"Clamping"		"1"
+			"0"				"0"
+			"1"				"0"
+			"2"				"1"		//Brujah	
+			"3"				"1"		//Gangrel   
+			"4"				"1"		//Malkavian
+			"5"				"1"		//Nosferatu  
+			"6"				"1"		//Toreador
+			"7"				"1"		//Tremere
+			"8"				"1"		//Ventrue
+			"9"				"1"		//Condotierre
+			"10"				"1"		//Inquisitor
+			"11"				"1"		//Leopold#3
+		}
+
+		Table	// changed by wesp from 0,1,250,750,2000
+		{
+			"Name"			"Wallet_Scale"
+			"InternalName"	"Wallet_Scale"
+			
+			"Clamping"		"1"
+			
+			"0"				"0"
+			"1"				"1"
+			"2"				"50"
+			"3"				"1000"
+			"4"				"5000"
+		}
+
+		Table
+		{
+			"Name"			"Physics_Lift_Supernatural_Value"
+			"InternalName"	"Physics_Lift_Supernatural_Value"
+
+			"Clamping"		"1"
+
+			"0"			"   0.0"	// Supernatural level 0 (none)
+			"1"			" 300.0"	// Supernatural level 1
+			"2"			" 975.0"	// Supernatural level 2
+			"3"			"1650.0"	// Supernatural level 3
+			"4"			"2325.0"	// Supernatural level 4
+			"5"			"3000.0"	// Supernatural level 5
+		}
+
+		Table
+		{
+			"Name"			"Physics_Drag_Supernatural_Value"
+			"InternalName"	"Physics_Drag_Supernatural_Value"
+
+			"Clamping"		"1"
+
+			"0"			"   0.0"	// Supernatural level 0 (none)
+			"1"			" 975.0"	// Supernatural level 1
+			"2"			"1650.0"	// Supernatural level 2
+			"3"			"2325.0"	// Supernatural level 3
+			"4"			"3000.0"	// Supernatural level 4
+			"5"			"4500.0"	// Supernatural level 5
+		}
+
+		Table
+		{
+			"Name"			"Physics_Throw_Criminal_Value"
+			"InternalName"	"Physics_Throw_Criminal_Value"
+
+			"Clamping"		"1"
+
+			"0"			"  0.0"		// Criminal level 0 (none)
+			"1"			" 10.0"		// Criminal level 1
+			"2"			" 82.5"		// Criminal level 2
+			"3"			"155.0"		// Criminal level 3
+			"4"			"227.5"		// Criminal level 4
+			"5"			"300.0"		// Criminal level 5
+		}
+
+		Table
+		{
+			"Name"			"NPC_Cover_Distance_Scalar"
+			"InternalName"	"NPC_Cover_Distance_Scalar"
+
+			"Clamping"		"1"
+		
+			"0"			"8.0"		// "Last resort"
+			"1"			"3.5"		// "Very Poor"
+			"2"			"3.0"		// "Poor"
+			"3"			"2.5"		// "Average"
+			"4"			"2.0"		// "Good"
+			"5"			"1.5"		// "Very Good"
+			"6"			"1.0"		// "Superb"
+		}
+
+		Table
+		{
+			"Name"		"Float Sound Info"
+			"InternalName"	"Float_Sound_Info"
+
+			"Clamping"		"1"
+
+			"0"			"50.0"		// FloatSoundDistance  -- Maximum distance to player to play float sounds. NPCs will not float if the player is FARTHER than this distance. 
+			"1"			"5.0"		// FloatSoundMinDelay  -- Minimum delay in seconds before next float sound
+			"2"			"0"		// FloatSoundFrequency -- The sound will play 1 time in 'X'
+			"3"			"250.0"	// Zombie FloatSoundDistance  -- Maximum distance to player to play float sounds. NPCs will not float if the player is FARTHER than this distance. 
+		}
+	}
+}

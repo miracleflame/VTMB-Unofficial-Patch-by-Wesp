@@ -1,0 +1,79 @@
+// Choreo version 1
+actor "Jeanette"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 15.465896
+      param "character/dlg/santa monica/jeanette/line81_col_e.wav"
+      param2 "60dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "Jeanette_Line81_Col_E"	// added by wesp
+    {
+      time 0.000000 15.465896
+      param "Jeanette_Line81_Col_E"
+    }
+  }
+  channel "expression 1"
+  {
+    event expression "Neutral"
+    {
+      time 0.246667 1.933333
+      param "jeanette"
+      param2 "Neutral"
+      event_ramp
+      {
+        1.0071 0.9768
+      }
+    }
+    event expression "Lowered Left"
+    {
+      time 2.186666 5.173334
+      param "jeanette"
+      param2 "Lowered Left"
+      event_ramp
+      {
+        0.9429 0.9768
+        1.6286 0.9838
+      }
+    }
+    event expression "eyes narrowed"
+    {
+      time 5.620000 8.046666
+      param "jeanette"
+      param2 "eyes narrowed"
+      event_ramp
+      {
+        1.0714 0.9745
+      }
+    }
+    event expression "Meloncholy_NoDeform"
+    {
+      time 9.460000 11.026666
+      param "jeanette"
+      param2 "Meloncholy_NoDeform"
+      event_ramp
+      {
+        0.9714 0.9838
+      }
+    }
+    event expression "piss me off"
+    {
+      time 11.300001 11.866668
+      param "jeanette"
+      param2 "eyes narrowed"
+      event_ramp
+      {
+        0.3071 0.9768
+      }
+    }
+  }
+}
+
+fps 60
+snap off

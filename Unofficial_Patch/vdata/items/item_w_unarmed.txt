@@ -1,0 +1,76 @@
+// Unarmed (no weapon
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+//	"viewmodel"	""
+"viewmodel"	"models/weapons/w_null.mdl"
+	"playermodel"	"models/weapons/w_null.mdl"
+//	"playermodel"	"models/missing.mdl"
+	"wieldmodel_f"	"models/weapons/w_null.mdl"
+	"wieldmodel_m"	"models/weapons/w_null.mdl"
+	"anim_prefix"	""
+
+	"printname"		"Unarmed"
+	"description"	"No weapon readied."
+	"activation0"	"Attack"
+	"activation1"	""
+
+	"camera_class"		"noswitch"
+	"bucket"		"0"
+	"bucket_position"	"0"
+
+	"weight"		"1"
+	"item_flags"		"0"
+	"item_type"		"hidden"
+	"item_worth"		"0"
+
+	"is_visible_in_hud"	"0"
+	"shows_view_model"	"0"
+
+	SoundData
+	{
+		"swish"
+		{
+			"sound1"	"Weapons/Melee/Fists/Swish_1.wav"
+			"sound2"	"Weapons/Melee/Fists/Swish_2.wav"
+			"sound3"	"Weapons/Melee/Fists/Swish_3.wav"
+		}
+
+		"stealth_kill_success"
+		{
+			"sound1"	"Weapons/Melee/Fists/Stealth_Fists.wav"
+		}
+
+		"stealth_kill_failure"
+		{
+			"sound1"	"Weapons/Melee/Fists/Stealth_Kill_Failure.wav"
+		}
+	}
+
+	SpriteData
+	{
+		"crosshair"
+		{
+			"640"
+			{
+				"file"		"hud/crosshairs/unarmed"
+				"x"			"0"
+				"y"			"0"
+				"width"		"16"
+				"height"	"16"
+			}
+		}
+		"crosshair2"
+		{
+			"640"
+			{
+				"file"		"hud/crosshairs/unarmed_lit"
+				"x"			"0"
+				"y"			"0"
+				"width"		"16"
+				"height"	"16"
+			}
+		}
+	}
+}

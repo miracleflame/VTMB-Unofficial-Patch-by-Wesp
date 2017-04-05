@@ -1,0 +1,265 @@
+{	1	}{	S'up? ... Oh. ... Welcome to Red Spot, home of the Monstro-Chug, 72 ounces of your favorite beverage for 89 cents, blah blah. You need some help or something?	}{	S'up? ... Oh. ... Welcome to Red Spot, home of the Monstro-Chug, 72 ounces of your favorite beverage for 89 cents, blah blah. You need some help or something?	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	G.Slater_Know = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	Yeah. What's going on around here? Anything exciting or unusual?	}{	Yeah. What's going on around here? Anything exciting or unusual?	}{	11	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	You hear anything new about the serial killer?	}{	You hear anything new about the serial killer?	}{	51	}{	not IsClan(pc,"Malkavian") and pc.GetQuestState("Serial") < 8	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	4	}{	Maybe you can help - I'm looking for a tape.	}{	Maybe you can help - I'm looking for a tape.	}{	21	}{	G.Isaac_Movie > 1 and G.Isaac_Show == 0 and G.Slater_Flynn == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	What is this city hiding from me?	}{	What is this city hiding from me?	}{	201	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	What is this city hiding from me?	}
+{	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	10	}{	Nope, just looking around. Later.	}{	Nope, just looking around. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need no help... it is you that needs it. Farewell.	}
+{	11	}{	Always. You should come out and see my band Ebola Cereal - we're playing tomorrow night at the Crematorium. Five bucks, two drink min. We're gonna RUIN the place.	}{	Always. You should come out and see my band Ebola Cereal - we're playing tomorrow night at the Crematorium. No cover for chicks. We're gonna RUIN the place.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Slater_Exciting = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	Listen, I'm looking for a tape.	}{	Listen, I'm looking for a tape.	}{	21	}{	G.Isaac_Movie > 1 and G.Isaac_Show == 0 and G.Slater_Flynn == 0 }{	}{	}{	}{	}{	}{	}{	}{	I seek a tape full of nameless atrocity.	}
+{	13	}{	Interesting. Anything else I should know about?	}{	Interesting. Anything else I should know about?	}{	41	}{	G.Slater_Vesuvius == 0	}{	}{	}{	}{	}{	}{	}{	}{	Are there other situations I must place myself in?	}
+{	14	}{	You hear anything new about the serial killer?	}{	You hear anything new about the serial killer?	}{	51	}{	G.Slater_Serial == 0 and pc.GetQuestState("Serial") < 8	}{	}{	}{	}{	}{	}{	}{	}{	Has the killer that walks these streets bloodied his hands again?	}
+{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	20	}{	I bet. I'll see you later. Goodbye.	}{	I bet. I'll see you later. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	21	}{	You mean like hardcore girl-on-girl-on-kangaroo action and stuff? Yeah, yeah - my man Flynn at the Sin Bin hooks me and my crew up for all the stuff they don't even allow on the internet, man.	}{	You mean like hardcore girl-on-girl-on-kangaroo action and stuff? Yeah, yeah - my man Flynn at the Sin Bin hooks me and my crew up for all the stuff they don't even allow on the internet, man.	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	22	}{	Actually, it's more of a horror snuff tape.	}{	Actually, it's more of a horror snuff tape.	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	It smears the blood of the innocent in perverted eyes.	}
+{	23	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	24	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	31	}{	Oh, that?!? Man, that's supposed to be some hardcore shit! I heard this one guy, like, died right after watching it!	}{	Oh, that?!? Man, that's supposed to be some hardcore shit! I heard this one guy, like, died right after watching it!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Know where I can get a copy?	}{	Know where I can get a copy?	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	Where may my hands lay themselves on it?	}
+{	33	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Yeah. The Vesuvius rocks! They don't let me in anymore, but damn, the girls in there, dude - it's like a midget smuggling ring in there.	}{	Yeah. The Vesuvius rocks! They don't let me in anymore, but damn, the girls in there, dude - it's like a midget smuggling ring in there, uh, if you're into that kind of thing, I mean.	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	G.Slater_Vesuvius = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	Great - maybe I'll go check it out.	}{	Possibly.	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will enter the volcano later.	}
+{	43	}{	No thanks, I'm not into that sort of thing.	}{	No thanks, I'm not into that sort of thing.	}{	71	}{	}{	}{	}{	}{	}{	}{	}{	}{	The volcano blows....	}
+{	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Uh... this isn't going to turn out to be... ironic, is it? You're not, like, a serial killer, are you?	}{	Uh... this isn't going to turn out to be... ironic, is it? You're not, like, a serial killer, are you?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	G.Slater_Serial = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	No.... What else goes on around here? Anything interesting?	}{	No.... What else goes on around here? Anything interesting?	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	Is the city of stars on fire?	}
+{	53	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	54	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	57	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	58	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	60	}{	Exactly. Well, I'll be going now.	}{	Exactly. Well, I'll be going now.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You have nothing to fear except every other thing. Farewell.	}
+{	61	}{	Like I said, Flynn's the man. You should talk to him.	}{	Like I said, Flynn's the man. You should talk to him.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	G.Slater_Flynn = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	Alright. Anything else I should know about?	}{	Alright. Anything else I should know about?	}{	41	}{	G.Slater_Vesuvius == 0	}{	}{	}{	}{	}{	}{	}{	}{	There are other situations I must place myself in.	}
+{	63	}{	Thanks. I'll ask him. Goodbye.	}{	Thanks. I'll ask him. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will ask this Flynn, after I am gone.	}
+{	64	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	67	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Uh, hey, y'know, you should REALLY ask me about the special, y'know.	}{	Uh, hey, y'know, you should REALLY ask me about the special, y'know.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Special_Heard = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	72	}{	Okay, I'll bite, what's the special?	}{	Okay, I'll bite, what's the special?	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	Special? What is so special?	}
+{	73	}{	I have no interest in your special.	}{	I have no interest in your special.	}{	101	}{	}{	}{	}{	}{	}{	}{	}{	}{	I have no need for the jerkies and gin of the living.	}
+{	74	}{	No, but I have another question or two for you.	}{	No, but I have another question or two for you.	}{	121	}{	}{	}{	}{	}{	}{	}{	}{	}{	I seek other things.	}
+{	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	80	}{	No. Actually, I'm no longer here. Goodbye.	}{	No. Actually, I'm no longer here. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	81	}{	I'm glad you asked that, bro, seeing as how you look... trustworthy or something. I got this special where you buy some really expensive burrito-tots or Grapple juice, you get a free weapon of your choice, bro. You interested?	}{	I'm glad you asked that, baby, seeing as how you look... trustworthy or something. I got this special where you buy some really expensive burrito-tots or Grapple juice, you get a free weapon of your choice, bro. You interested?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Slater_Weapons = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	82	}{	Of course. Show me what you got.	}{	Of course. Show me what you got.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Here are my eyes, show them your courtesy.	}
+{	83	}{	Wait - you're selling weapons out of a convenience store?	}{	Wait - you're selling weapons out of a convenience store?	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Jerky, snack cakes, vodka, bullets. One of these things is not like the other.	}
+{	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	90	}{	Not at the moment, thanks. I'm outta here.	}{	Not at the moment, thanks. I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I can deal death quite readily at the moment. I am gone.	}
+{	91	}{	Yo, keep it down, shh. It's just my side gig, y'know. New amps and lap dances don't pay for themselves, dude.	}{	Yo, keep it down, shh. It's just my side gig, y'know. New amps and lap dances don't pay for themselves, dude.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	Alright. Show me what you've got.	}{	Alright. Show me what you've got.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Here are my eyes, show them your courtesy.	}
+{	93	}{	I'll come back if I need anything.	}{	I'll come back if I need anything.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will return when my instruments of death need replenishing.	}
+{	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	100	}{	I think I'll be leaving. Goodbye.	}{	I think I'll be leaving. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need nothing you have. I am gone.	}
+{	101	}{	No, no, no, man, you should REALLY ask me about the special. You got that look about you.	}{	No, no, no, man, you should REALLY ask me about the special. You got that look about you.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	Okay, I'll bite. What's the special?	}{	Okay, I'll bite. What's the special?	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	Special? What is so special?	}
+{	103	}{	Look, I don't want your special! Leave me alone!	}{	Look, I don't want your special! Leave me alone!	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	You pester forces beyond your comprehension!	}
+{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	110	}{	I'm leaving. Goodbye.	}{	I'm leaving. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You may speak your specials, but I am gone.	}
+{	111	}{	Woah dude! Chill. Get over it! My mistake.	}{	Woah dude! Chill. Get over it! My mistake.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Okay, okay. Can I ask you a question?	}{	Okay, okay. Can I ask you a question?	}{	121	}{	}{	G.Slater_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	I seek other things.	}
+{	113	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	I'm outta here.	}{	I'm outta here.	}{	245	}{	}{	G.Slater_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	I need nothing you have. I am gone.	}
+{	121	}{	Yeah, what is it?	}{	Yeah, what is it?	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	What's going on around here? Anything exciting or unusual?	}{	What's going on around here? Anything exciting or unusual?	}{	11	}{	G.Slater_Exciting == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me more of the city of stars.	}
+{	123	}{	You hear anything new about the serial killer?	}{	You hear anything new about the serial killer?	}{	51	}{	G.Slater_Serial == 0 and pc.GetQuestState("Serial") < 8	}{	}{	}{	}{	}{	}{	}{	}{	Has the killer that walks these streets bloodied his hands again?	}
+{	124	}{	I'm looking for a tape.	}{	I'm looking for a tape.	}{	21	}{	G.Isaac_Movie > 1 and G.Isaac_Show == 0 and G.Slater_Flynn == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek a tape full of nameless atrocity.	}
+{	125	}{	What exactly is your special?	}{	What exactly is your special?	}{	81	}{	G.Special_Heard == 1 and G.Slater_Weapons == 0 and G.Slater_Pissed == 0	}{	}{	}{	}{	}{	}{	}{	}{	Special? What is so special?	}
+{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	130	}{	Nothing. Goodbye.	}{	Nothing. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need nothing you have. I am gone.	}
+{	131	}{	Hola.	}{	Hola.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	What's going on around here? Anything exciting or unusual?	}{	What's going on around here? Anything exciting or unusual?	}{	11	}{	G.Slater_Exciting == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me more of the city of stars.	}
+{	133	}{	You hear anything new about the serial killer?	}{	You hear anything new about the serial killer?	}{	51	}{	G.Slater_Serial == 0 and pc.GetQuestState("Serial") < 8	}{	}{	}{	}{	}{	}{	}{	}{	Has the killer that walks these streets bloodied his hands again?	}
+{	134	}{	I'm looking for a tape.	}{	I'm looking for a tape.	}{	21	}{	G.Isaac_Movie > 1 and G.Isaac_Show == 0 and G.Slater_Flynn == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek a tape full of nameless atrocity.	}
+{	135	}{	What exactly is your special?	}{	What exactly is your special?	}{	81	}{	G.Special_Heard == 1 and G.Slater_Weapons == 0	}{	}{	}{	}{	}{	}{	}{	}{	Special? What is so special?	}
+{	136	}{	I'd like the special.	}{	I'd like the special.	}{	0	}{	G.Slater_Weapons == 1	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Special me.	}
+{	137	}{	Nothing much. How about you?	}{	Nothing much. How about you?	}{	71	}{	G.Slater_Exciting == 1 and G.Slater_Serial == 1 and G.Special_Heard == 0	}{	}{	}{	}{	}{	}{	}{	}{	The children are up, and soon the adults will put them to bed.	}
+{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	140	}{	Nothing. I'm gone. Later.	}{	Nothing. I'm gone. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need nothing you have. I am gone.	}
+{	141	}{	You're back, huh? [Sincerely]They pull that sea urchin out of your butt?	}{	[Sincerely]So, uh, you take that pill to combat Aunt Flow, right?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	I'm sorry about that. I get a little testy at times.	}{	I'm sorry about that. I get a little testy at times.	}{	151	}{	}{	G.Slater_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	My mood was swinging, but now it slides. My apologies.	}
+{	143	}{	Why, you got something to say about it?	}{	Why, you got something to say about it?	}{	191	}{	}{	}{	}{	}{	}{	}{	}{	}{	You wish matters to go beyond meager words?	}
+{	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	150	}{	No, that'll have to wait until later. Goodbye.	}{	No, that'll have to wait until later. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am not back, I am gone.	}
+{	151	}{	Not a prob, bro.	}{	Not a prob, bro.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	What's going on around here? Anything exciting or unusual?	}{	What's going on around here? Anything exciting or unusual?	}{	11	}{	G.Slater_Exciting == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me more of the city of stars.	}
+{	153	}{	You hear anything new about the serial killer?	}{	You hear anything new about the serial killer?	}{	51	}{	G.Slater_Serial == 0 and pc.GetQuestState("Serial") < 8	}{	}{	}{	}{	}{	}{	}{	}{	Has the killer that walks these streets bloodied his hands again?	}
+{	154	}{	I'm looking for a tape.	}{	I'm looking for a tape.	}{	21	}{	G.Isaac_Movie > 1 and G.Isaac_Show == 0 and G.Slater_Flynn == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek a tape full of nameless atrocity.	}
+{	155	}{	What exactly is your special?	}{	What exactly is your special?	}{	81	}{	G.Special_Heard == 1 and G.Slater_Weapons == 0	}{	}{	}{	}{	}{	}{	}{	}{	Special? What is so special?	}
+{	156	}{	I'd like to look at your special inventory.	}{	I'd like to look at your special inventory.	}{	0	}{	G.Slater_Weapons == 1	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Special me.	}
+{	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	160	}{	Nothing. I'm gone. Later.	}{	Nothing. I'm gone. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need nothing you have. I am gone.	}
+{	161	}{	[Somewhat shocked]Oh, uh, welcome to Red Spot, home of the Monstro-face, I mean, he he, Monstro-chug, 72 ounces of your favorite beverage for 89.... Dude, I'm sorry, but WHAT is the deal with your mug?!?	}{	[Somewhat shocked]Oh... hoh! Uh, welcome to Red Spot, home of the Monstro-face, I mean, uh, Monstro-chug, 72 ounces of your favorite beverage for... 89.... Damn! I'm sorry, I just can't get over your face, dude!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Slater_Know = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	162	}{	It's alright, I get that all the time.	}{	It's alright, I get that all the time.	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	163	}{	I get into a lot of fights, with people who ask me about my face.	}{	I get into a lot of fights, with people who ask me about my face.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	164	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	168	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	170	}{	I'm outta here. Later.	}{	I'm outta here. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	171	}{	So... you need face? I mean, uh, my bad - duh, uh, I mean, do you need anything?	}{	So... you need face? I mean, uh, my bad - duh, uh, I mean, do you need anything?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	Yeah. What's going on around here? Anything exciting or unusual?	}{	Yeah. What's going on around here? Anything exciting or unusual?	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me more of the city of stars.	}
+{	173	}{	You hear anything new about the serial killer?	}{	You hear anything new about the serial killer?	}{	51	}{	pc.GetQuestState("Serial") < 8	}{	}{	}{	}{	}{	}{	}{	}{	Has the killer that walks these streets bloodied his hands again?	}
+{	174	}{	Maybe you can help - I'm looking for a tape.	}{	Maybe you can help - I'm looking for a tape.	}{	21	}{	G.Isaac_Movie > 1 and G.Isaac_Show == 0 and G.Slater_Flynn == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek a tape full of nameless atrocity.	}
+{	175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	180	}{	Nope, just looking around. Later.	}{	Nope, just looking around. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need nothing you have. I am gone.	}
+{	181	}{	Dude, sorry bro. I did NOT mean to offend you, man. Totally my bad! You need something?	}{	Dude, sorry bro. I did NOT mean to offend you, man. Totally my bad! You need something?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	Yeah. What's going on around here? Anything exciting or unusual?	}{	Yeah. What's going on around here? Anything exciting or unusual?	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	183	}{	You hear anything new about the serial killer?	}{	You hear anything new about the serial killer?	}{	51	}{	pc.GetQuestState("Serial") < 8	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	184	}{	Maybe you can help - I'm looking for a tape.	}{	Maybe you can help - I'm looking for a tape.	}{	21	}{	G.Isaac_Movie > 1 and G.Isaac_Show == 0 and G.Slater_Flynn == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	185	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	190	}{	Nope, just looking around. Later.	}{	Nope, just looking around. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	No. Just that I think you should leave... the management reserves the right to deny service or whatever and, like, that's you, man, you're denied.	}{	Uh... uh... the management reserves the right to, like, deny service to anyone... and... that's you, babe, you're denied.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	Alright. I'm sorry I got in your face.	}{	Alright. I'm sorry I got in your face.	}{	151	}{	}{	G.Slater_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	I will trade my apology for your denial.	}
+{	193	}{	Just like your place among the living - denied!	}{	Just like your place among the living - denied!	}{	0	}{	}{	npc.SetRelationship("player D_FR 5")	}{	}{	}{	}{	}{	}{	}{	Denying rhymes with dying, which you shall now be doing!	}
+{	194	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	195	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	200	}{	Fine. I'm leaving.	}{	Fine. I'm leaving.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Then I am no longer here.	}
+{	201	}{	Um... humility? Seriously... you want some orange juice or somethin' to help you come down? Cuz, like, you're wiggin'.	}{	Um... humility? Seriously... you want some orange juice or somethin' to help you come down? Cuz, like, you're wiggin'.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	202	}{	I seek only the blood of the living.	}{	I seek only the blood of the living.	}{	211	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	203	}{	I seek a tape full of nameless atrocity.	}{	I seek a tape full of nameless atrocity.	}{	21	}{	G.Isaac_Movie > 1 and G.Isaac_Show == 0 and G.Slater_Flynn == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	204	}{	Has the killer that walks these streets bloodied his hands again?	}{	Has the killer that walks these streets bloodied his hands again?	}{	51	}{	pc.GetQuestState("Serial") > 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	205	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	208	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	211	}{	Oh... are you that lawyer? You're gonna have to talk to the manager, dude, because, like, that sexual harassment case... I, like, don't even know, okay - and, like, it wasn't my ass he grabbed.	}{	Oh... are you that lawyer? You're gonna have to talk to the manager, dude, because, like, that sexual harassment case... I, like, don't even know, okay - and, like, it wasn't my ass he grabbed.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	I seek a tape full of nameless atrocity.	}{	I seek a tape full of nameless atrocity.	}{	21	}{	G.Isaac_Movie > 1 and G.Isaac_Show == 0 and G.Slater_Flynn == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	213	}{	Has the killer that walks these streets bloodied his hands again?	}{	Has the killer that walks these streets bloodied his hands again?	}{	51	}{	pc.GetQuestState("Serial") > 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	214	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	215	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	217	}{	You can not understand, so you can not know your error. Farewell.	}{	You can not understand, so you can not know your error. Farewell.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	221	}{	Yeah?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	[Kind of pissed]What, dude?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	223	}{	Yeah.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	224	}{	No.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	225	}{	Thanks.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	226	}{	What?!?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	227	}{	I don't know, dude.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	228	}{	Whatever.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	229	}{	By the way...	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	230	}{	Here.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	231	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	232	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	233	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	234	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	235	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	236	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	238	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	241	}{	Uh... you must be at least as high as this counter to buy alcohol, porn, and/or cigarettes, bro.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	You don't like my stoop?	}{	You don't like my stoop?	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	243	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	244	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	245	}{	You gonna buy something? This ain't your momma's house, okay, we ain't giving it away for free, alright?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	246	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	247	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	248	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	250	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	251	}{	You gonna buy something? This ain't your momma's house, okay, we ain't giving it away for free, alright?	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	252	}{	[Singing, death metal]Razor blades, strawberries, scorpions, marshmallows, cyanide, cookie dough - HELL'S JELLO MOULD!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	253	}{	[Singing, death metal]Crack you on the ass, cut you with broken glass, choke you until you gasp.[makes guitar noises] We gonna have a babyyyy.	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	254	}{	[Singing, death metal]Death, death, death. Spend, spend, spend. Sex, sex, sex. Happy Mother's Day!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	255	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	256	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	261	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	(Starting Condition)	}{	}{	141	}{	G.Slater_Pissed == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	263	}{	(Starting Condition)	}{	}{	131	}{	G.Slater_Know == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	264	}{	(Starting Condition)	}{	}{	241	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	265	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

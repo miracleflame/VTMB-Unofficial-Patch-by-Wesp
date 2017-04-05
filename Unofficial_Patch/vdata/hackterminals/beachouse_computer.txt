@@ -1,0 +1,79 @@
+TerminalDefinition
+{
+	"screen saver"		"Surf's Up!"		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+	
+	"email_password"	"hang10"		// the user must type this to access email from this terminal
+	"email_username"	"dennis"
+	
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Santa Monica, CA"  
+	}
+
+	// you can have up to 5 subdirs per terminal
+	// and up to 6 functions per sub dir
+	// there are 8 total outputs per terminal, (0...7)
+	// talk to Brock if you'd like this number increased. 
+
+	SubDir
+	{
+		"name"			"Surf Report"			// password required to run commands in this menu (16 characters)
+		"description"		"Surf Report, Southern CA"	 	// This is printed each time the user enters this menu (128 characters)
+
+		Function
+		{
+			"name"		"Malibu"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Malibu Surf Report"		// this is a description of this function  (128 characters)
+			"runtext"	"2-3 feet, occasional larger sets, water temperature 62."
+									// this text is printed when the player triggers this function.  (128 characters)
+		}
+
+		Function
+		{
+			"name"		"SantaMonica"
+			"description"	"Santa Monica Surf Report"		
+			"runtext"	"3-4 feet, good, water temperature 63."
+		}
+
+		Function
+		{
+			"name"		"Dockweiler"
+			"description"	"Dockweiler Surf Report"		
+			"runtext"	"2-3 feet, riptide, water temperature 64."
+		}
+
+		Function
+		{
+			"name"		"El Porto"
+			"description"	"El Porto Surf Report"		
+			"runtext"	"3-4 feet, riptide, water temperature 64."
+		}
+
+		Function
+		{
+			"name"		"Hermosa"
+			"description"	"Hermosa Surf Report"		
+			"runtext"	"5-6 feet, great conditions, water temperature 64."
+		}
+
+		Function
+		{
+			"name"		"Redondo"
+			"description"	"Redondo Surf Report"		
+			"runtext"	"5-6 feet, great conditions, water temperature 65."
+		}
+
+
+	}
+
+	Email
+	{
+		"subject"	"Keep your board riding smooth"
+		"sender"	"Shark Lube"	
+		"body"		"Shark Lube keeps your board riding smooth when things get wet!"
+	}
+
+	
+}

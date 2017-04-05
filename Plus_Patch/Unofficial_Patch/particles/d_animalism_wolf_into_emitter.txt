@@ -1,0 +1,41 @@
+Particle
+{
+	loop	"0"
+	frames	"30"
+	
+	spawn
+	{
+		particle	"d_animalism_wolf_into_fx1"
+		burst		"30"
+		radius		"10"
+		phi		"0"
+		theta		"0~360"
+		z		"20"
+		//Unofficial Patch
+		x		"-95"
+	}
+
+	spawn
+	{
+		particle	"d_animalism_wolf_into_fx2"
+		rate		"70"
+		radius		"30"
+		phi		"0"
+		theta		"0~360"
+		z		"0"
+		//Unofficial Patch
+		x		"-95"
+	}
+
+	spawn
+	{
+		particle	"d_animalism_wolf_into_fx3"
+		burst		"4"
+		radius		"0"
+		phi		"0"
+		theta		"0"
+		z		"15"
+		//Unofficial Patch
+		x		"-95"
+	}
+}

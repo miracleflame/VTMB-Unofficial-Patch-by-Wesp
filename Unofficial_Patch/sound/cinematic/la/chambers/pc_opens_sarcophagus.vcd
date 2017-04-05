@@ -1,0 +1,73 @@
+// Choreo version 1
+actor "Prince2"
+{
+  channel "anims"
+  {
+    event sequence "PC Opens Sarcophagus"
+    {
+      time 0.000000 49.132999
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  channel "dlg"
+  {
+    event speak "Prince_1111"
+    {
+      time 16.506667 20.592632
+      param "Character\dlg\Downtown LA\prince2\line1111_col_e.mp3"
+      fixedlength
+    }
+    event speak "Prince_1121"
+    {
+      time 1.006664 4.269772
+      param "Character\dlg\Downtown LA\prince2\line1121_col_e.mp3"
+      fixedlength
+    }
+    event speak "Prince_1255"
+    {
+      time 27.753334 29.411541
+      param "Character\dlg\Downtown LA\prince2\line1255_col_e.mp3"
+      fixedlength
+    }
+    event speak "Prince_1131"
+    {
+      time 31.753334 35.411541
+      param "Character\dlg\Downtown LA\prince2\line1131_col_e.mp3"
+      fixedlength
+    }
+  }
+  channel "Expressions"
+  {
+    event expression "Agony Recover 01"
+    {
+      time 0.013333 49.113342
+      param "lacroix_expressions"
+      param2 "Agony Recover"
+      event_ramp
+      {
+        0.0240 1.0000
+        0.0857 1.0000
+        49.0620 0.9883
+      }
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+actor "!playercontroller"
+{
+  channel "anims"
+  {
+    event sequence "PC Opens Sarcophagus"
+    {
+      time 0.000000 49.132999
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  bonerename "Bip02" "Bip01"
+}
+
+fps 60
+snap off

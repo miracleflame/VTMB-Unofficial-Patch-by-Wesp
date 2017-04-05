@@ -1,0 +1,438 @@
+// Big Revolver
+
+WeaponData
+{
+	"printname"		"Colt Anaconda"
+	"description"		"A .44 magnum revolver. Feelin' lucky, punk? A large caliber monster with the power to stop almost anyone dead in his tracks. Alternate Fire Mode: Fan."	// changed by wesp
+	"viewmodel"		"models/weapons/anaconda/view/v_anaconda.mdl"
+	"playermodel"		"models/weapons/anaconda/ground/g_anaconda.mdl"
+	"wieldmodel_f"		"models/weapons/anaconda/wield/w_f_anaconda.mdl"
+	"wieldmodel_m"		"models/weapons/anaconda/wield/w_m_anaconda.mdl"
+	"infomodel"		"models/weapons/anaconda/info/i_anaconda.mdl"
+
+	// This should match the viewmodel QC file offset:
+	"origin_x"		"6"
+	"origin_y"		"4"
+	"origin_z"		"69"
+
+	"anim_prefix"		"anaconda"
+	"activation0"		"Single"
+	"activation1"		"Fan"
+	"jammed0"		"Jammed"
+	"jammed1"		"Jammed"
+	"bucket"		"1"
+	"bucket_position"	"1"
+	"camera_class"		"noswitch"	// changed by wesp
+	"weight"		"3"
+	"item_flags"		"0"
+	"item_type"		"weapon_firearm"
+	"sound_group"		"Anaconda"
+	"equip_mask"		"Normal"
+	"uses_accuracycursors"	"1"
+	"impact_snd_group"	"bullet"
+
+	"muzzleflash_particle" 		"W_ThirtyEight_Emitter"
+	"muzzlesmoke_particle" 		"W_ThirtyEight_Emitter-Smoke"
+	"viewmuzzleflash_particle" 	"W_ThirtyEight_Emitter"
+	"viewmuzzlesmoke_particle" 	"W_ThirtyEight_Emitter-Smoke"
+
+	"item_worth"		"250"
+	"player_sell"		"50"	// added by wesp
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"Weapons\Ranged\Anaconda\Deploy.wav"
+		}
+	}
+
+//Weapon Ammo
+	Magazine
+	{
+		"ammoprintname"		"Colt Anaconda .44 Magnum Rounds"	// changed by wesp
+		"ammodescription"	"A speedloader containing several rounds of Colt Anaconda .44 magnum ammunition."	// changed by wesp
+		"ammo_worth"		"12"	// changed by wesp
+		"ammoinfomodel"		"models/weapons/ammo/anaconda/i_anaconda_ammo.mdl"
+
+		"Type"			"AnacondaRound"
+		"Size"			"6"
+		"Default_Size"		"6"	// changed by wesp
+		"Dropped_Ammo"		"6"	// changed by wesp
+		"ReloadTime"		"3.5"
+		
+		SoundData
+		{
+			"reload"
+			{
+				"sound1"	"Weapons/Ranged/Anaconda/Reload.wav"
+			}
+
+			"reload_npc"
+			{		
+				"sound1"	"Weapons/Ranged/Anaconda/Reload.wav"
+			}
+		}
+	}
+
+//Primary Attack
+	Activation
+	{
+		"Tag"			"Primary"
+		"Type"			"Attack"
+		"Ammo_Type"		"AnacondaRound"
+		"Ammo_Cost"		"1"
+
+		"SkillRequirement"	"5"				// min. skill requirement used in dmg calculations
+		"BaseLethality"		"14"				// base lethality used in dmg calculations
+		"Dmg"			"3 Lethal Ranged_Combat DMG_BULLET"
+
+		"Botch_Table"		"Revolvers"
+		"Attack_Rate"		"0.7"
+		"NPC_Attack_Rate_Min"		"1.0"		// The range of times for NPCs using this weapon to pause between
+		"NPC_Attack_Rate_Max"		"2.5"		//   attacks when at a distance of NPC_Attack_Rate_Base_Range inches. 
+		"NPC_Attack_Rate_Base_Range"	"120"	//   Attack times scale down to Attack_Rate at a range of 0, and up
+							//   proportionally as the range increases. If NPC_Attack_Rate_Base_Range
+							//   is 0, the delay will not be scaled based on distance.
+
+
+		"Range"			"35"
+		"SpreadAngle"		"6.0"
+		"CriminalLevel"	"3"
+		"Accuracy"		"5"
+
+		// SKS_RANGED
+		"KickPitchMin"			"-1.75"		//"-0.75"
+		"KickPitchMax"			"-15.00"	//"-10.00"
+		"KickYawMin"			"-1.5"		//"-0.2"
+		"KickYawMax"			"-2.0"		//"-1.5"
+		"KickTime"			"0.04"		//"0.02"
+
+		"CrosshairMinSize"		"7"		// smallest crosshair size for this activation [0-99]
+		"CrosshairFireSize"		"40"		// MAXIMUM size (Firearms 1) of the crosshair when the gun is fired [0-99] scales to Min as player's firearms increases
+		"CrosshairFireSizeMin"		"20"		// MIN size (Firearms 10) of the crosshair when the gun is fired [0-99], changed by wesp
+		"CrosshairWalkSizeMin"	"7"	//"20"		// min size of the crosshair when the player is walking [0-99]
+		"CrosshairWalkSizeMax"	"7"	//"40"		// max size of the crosshair when the player is walking [0-99]
+		"CrosshairRunSizeMin"	"20" //"35"			// min size of the crosshair when the player is running [0-99]
+		"CrosshairRunSizeMax"	"40" //"35"			// max size of the crosshair when the player is running [0-99]
+
+		"CrosshairIncSpeedMin"	"66"	//"80" min speed(10 Firearm Feat) at which to increase bloom -low # slower
+		"CrosshairIncSpeedMax"	"75"	//"95" max speed(1 Firearm Feat) at which to increase bloom -high # faster
+		"CrosshairDecSpeedMin"	"4"	//min speed(1 Firearm Feat) at which to decrease bloom -low # slower
+		"CrosshairDecSpeedMax"	"14"	//"40"max speed(10 Firearm Feat) at which to decrease bloom -high # faster
+
+		"CrosshairFirePercent"	"0.8"			//"0.7" percent to bloom to crosshair upon firing a bullet
+
+		"MinorKnockbackDist"	"400.0"			// maximum distance to cause minor knockback
+		
+//		"CrosshairMinSize"		"10"		//"15" smallest crosshair size for this activation [0-99]
+//		"CrosshairFireSize"		"90"		//"70" size of the crosshair when the gun is fired [0-99]
+//		"CrosshairWalkSizeMin"	"10"			//"15" min size of the crosshair when the player is walking [0-99]
+//		"CrosshairWalkSizeMax"	"40"			//"40" max size of the crosshair when the player is walking [0-99]
+//		"CrosshairRunSizeMin"	"25"			//"25" min size of the crosshair when the player is running [0-99]
+//		"CrosshairRunSizeMax"	"80"			//"60" max size of the crosshair when the player is running [0-99]
+//		"CrosshairIncSpeedMin"	"40"			//"60" min speed at which to increase bloom
+//		"CrosshairIncSpeedMax"	"70"			//"60" max speed at which to increase bloom
+//		"CrosshairDecSpeedMin"	"10"			//"10" min speed at which to decrease bloom
+//		"CrosshairDecSpeedMax"	"70"			//"70" max speed at which to decrease bloom
+//		"CrosshairFirePercent"	"0.8"			//"0.7" percent to bloom to crosshair upon firing a bullet
+
+
+		SoundData
+		{
+			"empty"
+			{
+				"sound1"	"Weapons/Ranged/Anaconda/Empty.wav"
+			}
+
+			"attack"
+			{
+				"sound1"	"Weapons/Ranged/Anaconda/Attack_1.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Ranged/Anaconda/Attack_1.wav"	
+
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Ranged/Anaconda/Deploy.wav"
+			}
+
+			"put_away"
+			{
+				"sound1"	"Weapons/Ranged/Put_Away.wav"
+			}			
+			
+			"fidget"
+			{
+				"sound1"	"Weapons/Ranged/Anaconda/Fidget.wav"
+			}
+		}
+
+		Tables
+		{
+			Table
+			{
+				"Name"          "WeaponRanges"
+				"InternalName"  "WeaponRanges"
+
+				"Clamping"      "1"
+
+				// point blank 0-80, close 80-110, short/medium 110-220,
+				// meduim 220-370, long 370-650, great 650+
+
+				"0"             "0"         // 5 (bonus)
+				"1"             "150"         // 4 (bonus)
+				"2"             "288"         // 3 (bonus)
+				"3"             "425"        // 2 (bonus)
+				"4"             "563"        // 1 (bonus)
+				"5"             "700"     // 0 (neutral)
+				"6"             "900"     //-1 (penalty)
+				"7"             "1100"     //-2 (penalty)
+				"8"             "1300"     //-3 (penalty)
+				"9"             "1500"     //-4 (penalty)
+			}
+			Table
+			{
+				"Name"          "GrossPointBlank"
+				"InternalName"  "GrossPointBlank"
+
+				"Clamping"      "1"
+
+
+				// percentage from 1-12 feet out
+
+				"0"             "100"
+				"1"             "90"
+				"2"             "80"
+				"3"             "70"
+				"4"             "60"
+				"5"             "50"
+				"6"             "40"
+				"7"             "30"
+				"8"             "20"
+				"9"             "10"
+			}
+			
+		}
+	}
+
+//Secondary Attack
+	Activation
+	{
+		"Tag"			"PrimaryMode2"
+		"Type"			"Attack"
+		"Ammo_Type"		"AnacondaRound"
+		"Ammo_Cost"		"1"
+
+		"SkillRequirement"	"5"				// min. skill requirement used in dmg calculations
+		"BaseLethality"		"14"				// base lethality used in dmg calculations
+		"Dmg"			"3 Lethal Ranged_Combat DMG_BULLET"
+
+		"Botch_Table"		"Revolvers"
+		"Attack_Rate"		"0.35"
+		"NPC_Attack_Rate_Min"		"1.0"		// The range of times for NPCs using this weapon to pause between
+		"NPC_Attack_Rate_Max"		"2.5"		//   attacks when at a distance of NPC_Attack_Rate_Base_Range inches. 
+		"NPC_Attack_Rate_Base_Range"	"120"	//   Attack times scale down to Attack_Rate at a range of 0, and up
+							//   proportionally as the range increases. If NPC_Attack_Rate_Base_Range
+							//   is 0, the delay will not be scaled based on distance.
+
+		"Range"			"35"
+		"SpreadAngle"		"7"
+		"allow_autofire"	"1"
+		"CriminalLevel"		"3"
+		"Accuracy"		"2"
+
+		// SKS_RANGED
+		"KickPitchMin"			"-1.75"		//"-0.75"
+		"KickPitchMax"			"-15.00"	//"-10.00"
+		"KickYawMin"			"-1.5"		//"-0.2"
+		"KickYawMax"			"-2.0"		//"-1.5"
+		"KickTime"			"0.04"		//"0.02"
+
+		"CrosshairMinSize"		"10"		// smallest crosshair size for this activation [0-99]
+		"CrosshairFireSize"		"40"		// MAXIMUM size (Firearms 1) of the crosshair when the gun is fired [0-99] scales to Min as player's firearms increases
+		"CrosshairFireSizeMin"		"20"		// MIN size (Firearms 10) of the crosshair when the gun is fired [0-99], changed by wesp
+		"CrosshairWalkSizeMin"	"10"	//"20"		// min size of the crosshair when the player is walking [0-99]
+		"CrosshairWalkSizeMax"	"10"	//"40"		// max size of the crosshair when the player is walking [0-99]
+		"CrosshairRunSizeMin"	"20" //"35"			// min size of the crosshair when the player is running [0-99]
+		"CrosshairRunSizeMax"	"40" //"35"			// max size of the crosshair when the player is running [0-99]
+
+		"CrosshairIncSpeedMin"	"66"	//"80" min speed(10 Firearm Feat) at which to increase bloom -low # slower
+		"CrosshairIncSpeedMax"	"75"	//"95" max speed(1 Firearm Feat) at which to increase bloom -high # faster
+		"CrosshairDecSpeedMin"	"4"	//min speed(1 Firearm Feat) at which to decrease bloom -low # slower
+		"CrosshairDecSpeedMax"	"12"	//"40"max speed(10 Firearm Feat) at which to decrease bloom -high # faster
+
+		"CrosshairFirePercent"	"0.6"			//"0.7" percent to bloom to crosshair upon firing a bullet
+
+		"MinorKnockbackDist"	"350.0"			// maximum distance to cause minor knockback
+
+
+
+		SoundData
+		{
+			"empty"
+			{
+				"sound1"	"Weapons/Ranged/Anaconda/Empty.wav"
+			}
+
+			"attack"
+			{
+				"sound1"	"Weapons/Ranged/Anaconda/Attack_1.wav"
+			}
+
+			"attack_npc"
+			{
+				"sound1"	"Weapons/Ranged/Anaconda/Attack_1.wav"	
+
+			}
+
+			"deploy"
+			{
+				"sound1"	"Weapons/Ranged/Anaconda/Deploy.wav"
+			}
+
+			"put_away"
+			{
+				"sound1"	"Weapons/Ranged/Put_Away.wav"
+			}			
+			
+			"fidget"
+			{
+				"sound1"	"Weapons/Ranged/Anaconda/Fidget.wav"
+			}
+		}
+		Tables
+		{
+			Table
+			{
+				"Name"          "WeaponRanges"
+				"InternalName"  "WeaponRanges"
+
+				"Clamping"      "1"
+
+
+				// point blank 0-80, close 80-110, short/medium 110-220,
+				// meduim 220-370, long 370-650, great 650+
+
+				"0"             "0"         // 5 (bonus)
+				"1"             "200"         // 4 (bonus)
+				"2"             "219"         // 3 (bonus)
+				"3"             "238"       // 2 (bonus)
+				"4"             "256"       // 1 (bonus)
+				"5"             "275"       // 0 (neutral)
+				"6"             "294"       //-1 (penalty)
+				"7"             "313"       //-2 (penalty)
+				"8"             "331"     //-3 (penalty)
+				"9"             "350"     //-4 (penalty)
+			}
+		}
+	}
+
+//Toggle Fireing Mode
+	Activation
+	{
+		"Tag"		"Secondary"
+		"Type"		"Toggle_Primary_Mode"
+		"Attack_Rate"	".3"
+
+		SoundData
+		{
+			"to_mode1"
+			{
+				"sound1"	"null.wav"
+			}
+
+			"to_mode2"
+			{
+				"sound1"	"null.wav"
+
+			}
+
+		}
+	}
+
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/Anaconda_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/Weapons_Ranged/Anaconda"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_ranged/ammo/anaconda_Ammo"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"ammo2"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/weapons_ranged/ammo/anaconda_ammo_SEL"
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+
+// Disabled because it uses Accuracy Crosshairs
+//		"crosshair"
+//		{
+//			"640"
+//			{
+//				"file"		"crosshairs"
+//				"x"			"0"
+//				"y"			"48"
+//				"width"		"24"
+//				"height"	"24"
+//			}
+
+
+
+		// Accuracy Crosshairs
+		"Acc_Crosshair00"		"hud/Crosshairs/Crosshair_01"
+		"Acc_Crosshair01"		"hud/Crosshairs/Crosshair_02"
+		"Acc_Crosshair02"		"hud/Crosshairs/Crosshair_03"
+		"Acc_Crosshair03"		"hud/Crosshairs/Crosshair_04"
+		"Acc_Crosshair04"		"hud/Crosshairs/Crosshair_05"
+		"Acc_Crosshair05"		"hud/Crosshairs/Crosshair_06"
+		"Acc_Crosshair06"		"hud/Crosshairs/Crosshair_07"
+		"Acc_Crosshair07"		"hud/Crosshairs/Crosshair_08"
+		"Acc_Crosshair08"		"hud/Crosshairs/Crosshair_09"
+		"Acc_Crosshair09"		"hud/Crosshairs/Crosshair_10"
+		"Interactive_Crosshair"	"hud/Crosshairs/Crosshair_Interactive"
+
+		// Dynamic Crosshairs
+		"Crosshair_LF"			"hud/Crosshairs/Crosshair_LF"
+		"Crosshair_RT"			"hud/Crosshairs/Crosshair_RT"
+		"Crosshair_UP"			"hud/Crosshairs/Crosshair_UP"
+		"Crosshair_DN"			"hud/Crosshairs/Crosshair_DN"
+	}
+}
