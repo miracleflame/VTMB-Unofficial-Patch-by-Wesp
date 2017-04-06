@@ -256,124 +256,6 @@ def unhidePlus():
     c  = __main__.ccmd
     c.patchtype=""
 
-#Toggle walking/running, added by wesp
-def toggleSpeed():
-	G = __main__.G
-	c = __main__.ccmd
-	if(G.Walk == 1):
-		c.run=""
-		G.Walk = 0
-	else:
-		c.walk=""
-		G.Walk = 1
-
-#Toggle automatic moving, added by wesp
-def toggleMove():
-	G = __main__.G
-	c = __main__.ccmd
-	if(G.Go == 1):
-		c.stop=""
-		G.Go = 0
-	else:
-		c.go=""
-		G.Go = 1
-
-#Particles for dialogue Domination and Presence, added by wesp
-def dialogParticles():
-    if __main__.G.Dialog_Presence == 1:
-        __main__.npc.SpawnTempParticle("presence_particles")
-        __main__.G.Dialog_Presence = 0
-    else:
-        __main__.npc.SpawnTempParticle("dominate_particles")
-
-#Humanity loss on killing civilians, added by wesp
-def civilianDeath():
-    pc = __main__.FindPlayer()
-    if (pc.humanity >= 4 and __main__.G.Patch_Plus == 1):
-        pc.HumanityAdd( -1 )
-
-#Masquerade violation for killing kindred in public, added by Malkav and wesp
-def checkFieryDeath(name):
-    masq = 0
-    dist = 600      #normal vision range for open spaces
-    p1 = Find(name).GetCenter()
-    alleys = FindList("Trigger_Prostitut*") + FindList("jewbkdr")
-    for alley in alleys:
-        p2 = alley.GetCenter()
-        if (distanceSquared(p1, p2) < 40000): dist = 150     #40000 -> 200 around trigger, 150 reduced visibility in alleys
-    distsq = dist * dist
-    guys = FindClass("npc_VCop") + FindClass("npc_VDialogPedestrian") + FindClass("npc_VPedestrian") + FindClass("npc_VHuman") + FindClass("npc_VHumanCombatant")
-    for guy in guys:
-        p2 = guy.GetCenter()
-        if (distanceSquared(p1, p2) < distsq): masq = 1
-    if (masq == 1 and __main__.G.Patch_Plus == 1): __main__.FindPlayer().ChangeMasqueradeLevel(1)
-
-#Checking Research for occult items, added by wesp
-def checkOccult():
-    pc = __main__.FindPlayer()
-    __main__.G.Player_Research = pc.CalcFeat("research")
-    #print(__main__.G.Player_Research)
-    if pc.HasItem("item_w_zombie_fists") and __main__.G.Player_Research >= 4:
-        pc.RemoveItem("item_w_zombie_fists")
-        pc.GiveItem("item_p_occult_passive_durations")
-        print "Galdjum swapped"
-    if pc.HasItem("item_w_werewolf_attacks") and __main__.G.Player_Research >= 6:
-        pc.RemoveItem("item_w_werewolf_attacks")
-        pc.GiveItem("item_p_occult_obfuscate")
-        print "Zharalketh swapped"
-    if pc.HasItem("item_w_tzimisce3_claw") and __main__.G.Player_Research >= 2:
-        pc.RemoveItem("item_w_tzimisce3_claw")
-        pc.GiveItem("item_p_occult_frenzy")
-        print "Tarulfang swapped"
-    if pc.HasItem("item_w_tzimisce_melee") and __main__.G.Player_Research >= 8:
-        pc.RemoveItem("item_w_tzimisce_melee")
-        pc.GiveItem("item_p_occult_experience")
-        print "Saulocept swapped"
-    if pc.HasItem("item_w_sabbatleader_attack") and __main__.G.Player_Research >= 8:
-        pc.RemoveItem("item_w_sabbatleader_attack")
-        pc.GiveItem("item_p_occult_hacking")
-        print "Braid Talisman swapped"
-    if pc.HasItem("item_w_manbat_claw") and __main__.G.Player_Research >= 2:
-        pc.RemoveItem("item_w_manbat_claw")
-        pc.GiveItem("item_p_occult_dodge")
-        print "Weekapaug Thistle swapped"
-    if pc.HasItem("item_w_hengeyokai_fist") and __main__.G.Player_Research >= 6:
-        pc.RemoveItem("item_w_hengeyokai_fist")
-        pc.GiveItem("item_p_occult_heal_rate")
-        print "Mummywrap Fetish swapped"
-    if pc.HasItem("item_w_gargoyle_fist") and __main__.G.Player_Research >= 4:
-        pc.RemoveItem("item_w_gargoyle_fist")
-        pc.GiveItem("item_p_occult_thaum_damage")
-        print "Daimonori swapped"
-
-#Player learns new Discipline, added by Entenschreck
-def newDiscipline(x):
-    c  = __main__.ccmd
-    pc=__main__.FindPlayer()
-    if x == 1:
-        c.incAnimalism=""
-    elif x == 2:
-        c.incAuspex=""
-    elif x == 3:
-        c.incCelerity=""
-    elif x == 4:
-        c.incDementate=""
-    elif x == 5:
-        c.incDominate=""
-    elif x == 6:
-        c.incFortitude=""
-    elif x == 7:
-        c.incObfuscate=""
-    elif x == 8:
-        c.incPotence=""
-    elif x == 9:
-        c.incPresence=""
-    elif x == 10:
-        c.incProtean=""
-    elif x == 11:
-        c.incThaumaturgy=""    #should actually never get this
-    c.showDiscipline=""
-
 #609: Andrei intro for Tremere, added by EntenSchreck
 def WhatIsThatSmell():
     pc = __main__.FindPlayer()
@@ -1278,6 +1160,124 @@ def checkCD():
     if (__main__.G.Patch_Plus == 1 and __main__.G.Bertram_RAM == 1):
         pc = __main__.FindPlayer()
         pc.SetQuest("BertramCD", 2)
+
+#Toggle walking/running, added by wesp
+def toggleSpeed():
+	G = __main__.G
+	c = __main__.ccmd
+	if(G.Walk == 1):
+		c.run=""
+		G.Walk = 0
+	else:
+		c.walk=""
+		G.Walk = 1
+
+#Toggle automatic moving, added by wesp
+def toggleMove():
+	G = __main__.G
+	c = __main__.ccmd
+	if(G.Go == 1):
+		c.stop=""
+		G.Go = 0
+	else:
+		c.go=""
+		G.Go = 1
+
+#Particles for dialogue Domination and Presence, added by wesp
+def dialogParticles():
+    if __main__.G.Dialog_Presence == 1:
+        __main__.npc.SpawnTempParticle("presence_particles")
+        __main__.G.Dialog_Presence = 0
+    else:
+        __main__.npc.SpawnTempParticle("dominate_particles")
+
+#Humanity loss on killing civilians, added by wesp
+def civilianDeath():
+    pc = __main__.FindPlayer()
+    if (pc.humanity >= 4 and __main__.G.Patch_Plus == 1):
+        pc.HumanityAdd( -1 )
+
+#Masquerade violation for killing kindred in public, added by Malkav and wesp
+def checkFieryDeath(name):
+    masq = 0
+    dist = 600      #normal vision range for open spaces
+    p1 = Find(name).GetCenter()
+    alleys = FindList("Trigger_Prostitut*") + FindList("jewbkdr")
+    for alley in alleys:
+        p2 = alley.GetCenter()
+        if (distanceSquared(p1, p2) < 40000): dist = 150     #40000 -> 200 around trigger, 150 reduced visibility in alleys
+    distsq = dist * dist
+    guys = FindClass("npc_VCop") + FindClass("npc_VDialogPedestrian") + FindClass("npc_VPedestrian") + FindClass("npc_VHuman") + FindClass("npc_VHumanCombatant")
+    for guy in guys:
+        p2 = guy.GetCenter()
+        if (distanceSquared(p1, p2) < distsq): masq = 1
+    if (masq == 1 and __main__.G.Patch_Plus == 1): __main__.FindPlayer().ChangeMasqueradeLevel(1)
+
+#Checking Research for occult items, added by wesp
+def checkOccult():
+    pc = __main__.FindPlayer()
+    __main__.G.Player_Research = pc.CalcFeat("research")
+    #print(__main__.G.Player_Research)
+    if pc.HasItem("item_w_zombie_fists") and __main__.G.Player_Research >= 4:
+        pc.RemoveItem("item_w_zombie_fists")
+        pc.GiveItem("item_p_occult_passive_durations")
+        print "Galdjum swapped"
+    if pc.HasItem("item_w_werewolf_attacks") and __main__.G.Player_Research >= 6:
+        pc.RemoveItem("item_w_werewolf_attacks")
+        pc.GiveItem("item_p_occult_obfuscate")
+        print "Zharalketh swapped"
+    if pc.HasItem("item_w_tzimisce3_claw") and __main__.G.Player_Research >= 2:
+        pc.RemoveItem("item_w_tzimisce3_claw")
+        pc.GiveItem("item_p_occult_frenzy")
+        print "Tarulfang swapped"
+    if pc.HasItem("item_w_tzimisce_melee") and __main__.G.Player_Research >= 8:
+        pc.RemoveItem("item_w_tzimisce_melee")
+        pc.GiveItem("item_p_occult_experience")
+        print "Saulocept swapped"
+    if pc.HasItem("item_w_sabbatleader_attack") and __main__.G.Player_Research >= 8:
+        pc.RemoveItem("item_w_sabbatleader_attack")
+        pc.GiveItem("item_p_occult_hacking")
+        print "Braid Talisman swapped"
+    if pc.HasItem("item_w_manbat_claw") and __main__.G.Player_Research >= 2:
+        pc.RemoveItem("item_w_manbat_claw")
+        pc.GiveItem("item_p_occult_dodge")
+        print "Weekapaug Thistle swapped"
+    if pc.HasItem("item_w_hengeyokai_fist") and __main__.G.Player_Research >= 6:
+        pc.RemoveItem("item_w_hengeyokai_fist")
+        pc.GiveItem("item_p_occult_heal_rate")
+        print "Mummywrap Fetish swapped"
+    if pc.HasItem("item_w_gargoyle_fist") and __main__.G.Player_Research >= 4:
+        pc.RemoveItem("item_w_gargoyle_fist")
+        pc.GiveItem("item_p_occult_thaum_damage")
+        print "Daimonori swapped"
+
+#Player learns new Discipline, added by Entenschreck
+def newDiscipline(x):
+    c  = __main__.ccmd
+    pc=__main__.FindPlayer()
+    if x == 1:
+        c.incAnimalism=""
+    elif x == 2:
+        c.incAuspex=""
+    elif x == 3:
+        c.incCelerity=""
+    elif x == 4:
+        c.incDementate=""
+    elif x == 5:
+        c.incDominate=""
+    elif x == 6:
+        c.incFortitude=""
+    elif x == 7:
+        c.incObfuscate=""
+    elif x == 8:
+        c.incPotence=""
+    elif x == 9:
+        c.incPresence=""
+    elif x == 10:
+        c.incProtean=""
+    elif x == 11:
+        c.incThaumaturgy=""    #should actually never get this
+    c.showDiscipline=""
 
 #Animations for firstperson Thaumaturgy hand, added by Entenschreck, improved by wesp
 def checkDiscipline():

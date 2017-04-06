@@ -12,7 +12,7 @@
 {	12	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	13	}{	I'd like to sell something.	}{	I'd like to sell something.	}{	301	}{	}{	}{	}{	}{	}{	}{	}{	}{	I have goods that need your gold.	}
 {	14	}{	I heard this is the place to pick up some weapons.	}{	A little bird told me this is the place to pick up some weapons.	}{	21	}{	G.Trip_Know > 0 and G.Trip_Know < 4	}{	}{	}{	}{	}{	}{	}{	}{	The voices tell me you have a boom-stick with my name on it.	}
-{	15	}{	What's your name?	}{	What's your name?	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	What is your true name, Death Dealer?	}
+{	15	}{	What's your name?	}{	What's your name?	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	What is your true name, Death Dealer?		}
 {	16	}{	Do you sell weapons?	}{	Do you sell weapons?	}{	51	}{	G.Trip_Know == 0 and G.Trip_Guns == 0	}{	}{	}{	}{	}{	}{	}{	}{	Do you sell boom-sticks?	}
 {	17	}{	I'd like to buy something.	}{	I'd like to buy something.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	How much gold for your goods?	}
 {	18	}{	Just looking, thanks.	}{	Just looking, thanks.	}{	0	}{	}{	G.Trip_Bye = 1	}{	}{	}{	}{	}{	}{	}{	I'm looking to find where my brain went.	}
@@ -278,8 +278,8 @@
 {	278	}{	No thanks. I'll be on my way now.	}{	No thanks. I'll be on my way now.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'm not here anymore.	}
 {	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	281	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	282	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	281	}{	One, two... ah, damn it! One, two, three, four, ah whatever, dude... ah.	}{	One, two... ah, damn it! One, two, three, four, ah whatever, dude... ah.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs)	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
 {	283	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	284	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	285	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -288,8 +288,8 @@
 {	288	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	291	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	292	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	291	}{	Nice pants, dude... ah.	}{	Nice pants, dude... ah.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs)	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
 {	293	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	294	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	295	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -300,8 +300,8 @@
 {	300	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	301	}{	Uh, really? Let me see what you got.	}{	Uh, really? Let me see what you got.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	302	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	G.Trip_Discount < 3 or G.Trip_Drugs == 1	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs)	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
-{	303	}{	I know it's not what you wanted, but you'll have a hard time with that! Now for my discount...	}{	I know it's not what you wanted, but you'll have a hard time with that! Now for my discount...	}{	311	}{	G.Trip_Discount == 3 }{	pc.RemoveItem("item_g_drugs_drug_box"); pc.SetQuest("Trip Drugs", 3); G.Trip_Drugs = 1; pc.BumpStat("finance", 1)	}{	}{	}{	}{	}{	}{	}{	You wanted something else, but I brought you some hard stuff! Now make everything cheaper...	}
-{	304	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	303	}{	I know it's not what you wanted, but you'll have a hard time with that! Now for my discount...	}{	I know it's not what you wanted, but you'll have a hard time with that! Now for my discount...	}{	281	}{	G.Trip_Discount == 3 and not IsMale(pc)	}{	pc.RemoveItem("item_g_drugs_drug_box"); pc.SetQuest("Trip Drugs", 3); G.Trip_Delivered = 1; G.Trip_Drugs = 1; pc.BumpStat("finance", 1)	}{	}{	}{	}{	}{	}{	}{	You wanted something else, but I brought you some hard stuff! Now make everything cheaper...	}
+{	304	}{	I know it's not what you wanted, but you'll have a hard time with that! Now for my discount...	}{	I know it's not what you wanted, but you'll have a hard time with that! Now for my discount...	}{	291	}{	G.Trip_Discount == 3 and IsMale(pc)	}{	pc.RemoveItem("item_g_drugs_drug_box"); pc.SetQuest("Trip Drugs", 3); G.Trip_Delivered = 1; G.Trip_Drugs = 1; pc.BumpStat("finance", 1)	}{	}{	}{	}{	}{	}{	}{	You wanted something else, but I brought you some hard stuff! Now make everything cheaper...	}
 {	305	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	306	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	307	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
