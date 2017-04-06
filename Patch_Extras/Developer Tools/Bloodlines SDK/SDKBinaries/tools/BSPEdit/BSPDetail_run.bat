@@ -24,9 +24,8 @@ if exist "..\..\service\sfk.exe" (
 
 :fix_issue
 for /f %%a in ('call %sfk% strlen "%Program%"') do if %%~a GTR 126 (
-	if not exist "%TEMP%" md "%TEMP%"
-	copy /y "%Program%" "%TEMP%\"> nul
-	set "Program=%TEMP%\%AppFile%"
+	copy /y "%Program%" "%~d0\"> nul
+	set "Program=%~d0\%AppFile%"
 	set "Delete=1"
 	set "RunKey=/w"
 )

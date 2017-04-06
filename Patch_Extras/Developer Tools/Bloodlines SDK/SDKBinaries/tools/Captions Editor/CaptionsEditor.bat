@@ -1,7 +1,7 @@
 @echo off
 title Captions Editor Console
 rem Written by: Psycho-A
-rem Build: 6:22 04.02.2017 {beta}
+rem Build: 3:10 10.03.2017 {beta}
 setlocal EnableExtensions
 set "PATH=%SystemRoot%\System32;%SystemRoot%;%SystemRoot%\System32\Wbem"
 set "PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"
@@ -34,27 +34,22 @@ if "%~1"=="" (
 	set "LipName=%~nx1"
 )
 if not defined LipFile exit
-echo - File: "%LipName%"
+%Sfk% echo [green]- File: "%LipName%"
 
 :: Normalize Lip files
 echo Pre-formatting file...
-if not exist "%Temp%\" md "%Temp%"
-copy /y "%LipFile%" "%Temp%\%LipName%"> nul
-%Sfk% replace "%Temp%\%LipName%" -spat "|\x00||" "|\r\n|\n|" "| \n|\n|" "|\|/|" "|\q|~|" -quiet=2 -yes
+copy /y "%LipFile%" "%CD%\TempFile.lip"> nul
+%Sfk% replace "%CD%\TempFile.lip" -spat "|\x00||" "|\r\n|\n|" "| \n|\n|" "|\|/|" "|\q|~|" -quiet=2 -yes
 
 :: Process Lip file to get text
 echo Reading source data...
-set "Sentence=<None>"
-set "Phrase=<None>"
-set "PhraseLen=0"
-set "speaker_name=<None>"
-for /f "usebackq eol=/ tokens=1,2,3,*" %%a in ("%Temp%\%LipName%") do (
+for /f "usebackq eol=/ tokens=1,2,3,*" %%a in ("%CD%\TempFile.lip") do (
 rem Obtain sentence text
 	call :GetSentenceText "%%~a" "%%~b" "%%~c" "%%~d"
 rem Get Phrase's duration
 	if "%%~a"=="WORD" call :SetPhraseDuration "%%~c" "%%~d"
 rem Obtain phrase text
-	if "%%~a"=="PHRASE" call :GetPhraseText "%Temp%\%LipName%" "%%~b" "%%~c"
+	if "%%~a"=="PHRASE" call :GetPhraseText "%CD%\TempFile.lip" "%%~b" "%%~c"
 rem Obtain speaker name
 	if "%%~a"=="speaker_name" if not "%%~b"=="" (
 		set "speaker_name=%%~b"
@@ -62,6 +57,12 @@ rem Obtain speaker name
 		if not "%%~d"=="" set "speaker_name=%%~b %%~c %%~d"
 	)
 )
+if defined Sentence (set "SentenceInfo=%Sentence%") else (set "SentenceInfo=<None>")
+if defined Phrase (set "PhraseInfo=%Phrase%") else (set "PhraseInfo=<None>")
+if defined speaker_name (set "SpeakerInfo=%speaker_name%") else (set "SpeakerInfo=<None>")
+if not defined PhraseLen (set "PhraseLen=0")
+if not defined StartTime (set "StartTime=0.000")
+if not defined FinalTime (set "FinalTime=0.000")
 
 :: Compute InputBox height
 set IBHeight=155
@@ -70,54 +71,96 @@ set /a IBHeight=%IBHeight%+(%PhraseLen%/3)
 :: Edit Captions text
 echo Editing captions text...
 set PhraseEdited=0
+set PhraseOutput=0
 for /f "delims=" %%a in (
-'%InputBox% "Enter new captions text.\n\nSentence text: ''%Sentence%''\n\nCaptions text: ''%Phrase%''" "Captions Editor (%LipName%)" "%Phrase%" /N /W:440 /H:%IBHeight%'
+'%InputBox% "Enter new captions text.\n\nSentence text: ''%SentenceInfo%''\n\nCaptions text: ''%PhraseInfo%''" "Captions Editor (%LipName%)" "%PhraseInfo%" /N /L:"OK=Submit;Cancel=Turn subs off" /W:440 /H:%IBHeight%'
 ) do (
-	if not "%%~a"=="%Phrase%" set "PhraseEdited=1"
-	set "Phrase=%%~a"
+	set PhraseOutput=1
+	if not "%%~a"=="%PhraseInfo%" (
+		set PhraseEdited=1
+		set "Phrase=%%~a"
+	)
 )
-if "%PhraseEdited%"=="0" (
-	echo - Text not changed.
+if "%PhraseOutput%"=="1" (
+	if "%PhraseEdited%"=="0" (
+		%Sfk% echo [blue]- Text not changed.
+	) else (
+		%Sfk% echo [cyan]- Editing done.
+	)
 ) else (
-	echo - Editing done.
+	set PhraseEdited=1
+	set Phrase=
+	%Sfk% echo [yellow]- Captions disabled.
 )
 
 :: Edit Speaker name
 echo Editing speaker name...
-set speaker_edited=0
+:edit_speaker_name
+set SpeakerEdited=0
+set SpeakerOutput=0
 for /f "delims=" %%a in (
-'%InputBox% "Enter new speaker name.\nCurrent name: ''%speaker_name%''." "Captions Editor (%LipName%)" "%speaker_name%" /N /W:250 /H:122'
+'%InputBox% "Enter new speaker name.\nCurrent name: ''%SpeakerInfo%''." "Captions Editor (%LipName%)" "%SpeakerInfo%" /N /L:"OK=Submit;Cancel=Disable" /W:250 /H:122'
 ) do (
-	if not "%%~a"=="%speaker_name%" set "speaker_edited=1"
-	set "speaker_name=%%~a"
+	set SpeakerOutput=1
+	if not "%%~a"=="%SpeakerInfo%" (
+		set SpeakerEdited=1
+		set "speaker_name=%%~a"
+	)
 )
-if "%speaker_edited%"=="0" (
-	echo - Text not changed.
+if "%SpeakerOutput%"=="1" (
+	if "%SpeakerEdited%"=="0" (
+		%Sfk% echo [blue]- Text not changed.
+	) else (
+		%Sfk% echo [cyan]- Editing done.
+	)
 ) else (
-	echo - Editing done.
+	set SpeakerEdited=1
+	set speaker_name=
+	%Sfk% echo [yellow]- Speaker disabled.
+)
+if not defined speaker_name if defined Phrase (
+	%Sfk% echo [red]- Captions found, set speaker!
+	set "SpeakerInfo=<None>"
+	goto edit_speaker_name
 )
 
 :: Check edit conditions
-if "%PhraseEdited%/%speaker_edited%"=="0/0" (
-	echo Editing wasn't made. Exiting...
-	del /f /q "%Temp%\%LipName%"> nul
-	exit
+if "%PhraseEdited%/%SpeakerEdited%"=="0/0" (
+	echo Editing wasn't commit!
+	del /f /q "%CD%\TempFile.lip"> nul
+	goto exit
 ) else echo Saving changes to file...
 
 :: Count new phrase's length
-set "PhraseLen=0"
 for /f "delims=" %%a in ('%Sfk% strlen "%Phrase%"') do set /a "PhraseLen=%%~a+2"
 
 :: Append new text
-if not defined StartTime set "StartTime=0.000"
-if not defined FinalTime set "FinalTime=0.000"
-%Sfk% filter  "%Temp%\%LipName%" -spat -lswhere "PHRASE " -lsrep "|PHRASE *|PHRASE char %PhraseLen% \q$PhraseText$\q %StartTime% %FinalTime%|" -write -yes -quiet=2
-%Sfk% filter  "%Temp%\%LipName%" -spat -lsrep "|~||" -lerep "|~||" -lswhere "speaker_name " -lsrep "|speaker_name *|speaker_name %speaker_name%|" -write -yes -quiet=2
-%Sfk% replace "%Temp%\%LipName%" -spat "|\q$PhraseText$\q|\q%Phrase%\q|" -yes -quiet=2
-move /y "%Temp%\%LipName%" "%LipFile%"> nul
+%Sfk% filter  "%CD%\TempFile.lip" -spat -lsrep "|~||" -lerep "|~||" -rep "|~|\q|" -write -yes -quiet=2
+if defined Phrase (
+	%Sfk% replace "%CD%\TempFile.lip" -spat "|\nCLOSECAPTION\n{\n}|\nCLOSECAPTION\n{\nenglish\n{\nPHRASE char 2 \q\q 0.000 0.000\n}\n}|" -yes -quiet=2
+	%Sfk% replace "%CD%\TempFile.lip" -spat "|\nCLOSECAPTION\n{\nenglish\n{\n}\n}|\nCLOSECAPTION\n{\nenglish\n{\nPHRASE char 2 \q\q 0.000 0.000\n}\n}|" -yes -quiet=2
+	%Sfk% replace "%CD%\TempFile.lip" -spat "|\nEMPHASIS\n{\n}\nOPTIONS\n|\nEMPHASIS\n{\n}\nCLOSECAPTION\n{\nenglish\n{\nPHRASE char 2 \q\q 0.000 0.000\n}\n}\nOPTIONS\n|" -yes -quiet=2
+	%Sfk% filter  "%CD%\TempFile.lip" -spat -lsrep "|PHRASE *|PHRASE char %PhraseLen% \q$PhraseText$\q %StartTime% %FinalTime%|" -write -yes -quiet=2
+	%Sfk% replace "%CD%\TempFile.lip" -spat "|\r\n|\n|" -spat "|\q$PhraseText$\q|\q%Phrase%\q|" -yes -quiet=2
+) else (
+	%Sfk% filter  "%CD%\TempFile.lip" -spat -ls!"PHRASE ????" -write -yes -quiet=2
+	%Sfk% replace "%CD%\TempFile.lip" -spat "|\r\n|\n|" -spat "|\nCLOSECAPTION\n{\nenglish\n{\n}\n}|\nCLOSECAPTION\n{\n}|" -yes -quiet=2
+)
+if defined speaker_name (
+	%Sfk% replace "%CD%\TempFile.lip" -spat "|\nvoice_duck 0\n}|\nvoice_duck 0\nspeaker_name Somebody\n}|" -yes -quiet=2
+	%Sfk% replace "%CD%\TempFile.lip" -spat "|\nvoice_duck 1\n}|\nvoice_duck 1\nspeaker_name Somebody\n}|" -yes -quiet=2
+	%Sfk% filter  "%CD%\TempFile.lip" -lsrep "|speaker_name *|speaker_name Somebody|" -write -yes -quiet=2
+	%Sfk% replace "%CD%\TempFile.lip" -spat "|\r\n|\n|" -spat "|speaker_name Somebody|speaker_name %speaker_name%|" -yes -quiet=2
+) else (
+	%Sfk% filter  "%CD%\TempFile.lip" -spat -ls!"speaker_name" -write -yes -quiet=2
+	%Sfk% replace "%CD%\TempFile.lip" -spat "|\r\n|\n|" -yes -quiet=2
+)
+move /y "%CD%\TempFile.lip" "%LipFile%"> nul
 
 :: Exit program
+:exit
 echo Exiting program...
+ping>nul 127.0.0.1 -n 1
 exit
 
 
@@ -149,7 +192,7 @@ exit /b
 
 :NormalizeSentence
 	set "Sentence=%~1 %~2 %~3 %~4"
-	if "%~2"=="}" set "Sentence=<None>"
+	if "%~2"=="}" set "Sentence="
 	for /f "delims=" %%a in (
 	'%Sfk% echo -lit "%Sentence%" +filter -lerep "| ||" -lerep "| ||" -lerep "| ||" -rep "|~||"'
 	) do set "Sentence=%%~a"

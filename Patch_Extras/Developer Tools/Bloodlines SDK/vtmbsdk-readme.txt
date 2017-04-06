@@ -1,5 +1,5 @@
 --------------------
-Bloodlines SDK v1.65
+Bloodlines SDK v1.66+
 --------------------
 
 This is an unofficial software developer's kit (SDK) for Vampire - The Masquerade: 
@@ -308,7 +308,16 @@ Global changes for the last year:
 
 --------------------
 
-1.65 (12.02.2017):
+1.66 (25.03.2017):
+- Generic: Fixed working some tools and scripts on Windows 10 and non-admin user accounts.
+- Hammer/Shell: Fixed miss of current project/game configuraion in some cases.
+- Hammer/FGD: Fixed description for NPCs "Allow_Alert_Lookaround" parameter.
+- Hammer/FGD: Fixed description and data type for "TakeDamage" output command.
+- Captions Editor: Added ability to fully disable subtitles and speaker inside .lip files.
+- Captions Editor: Fixed appending new captions and speaker-name if source data is empty.
+- A few other various minor fixes.
+
+1.65 (21.02.2017):
 - LipSync Editor: Fixed working on some machines and added console window with process log.
 - LipSync Editor: Fixed Editor window not-showing and improved "Enter Speaker name" dialog.
 - LipSync Editor: Fixed opening .lip files if they're not inside of sound/ folder.

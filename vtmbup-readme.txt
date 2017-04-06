@@ -101,17 +101,21 @@ Bloodlines_loader.sh: Wine / Linux script, check txt, thanks SCO.
 Version Changelog:
 ------------------
 
-v9.7                                                     02.03.2017
+v9.7                                                     30.03.2017
 ----
 +Restored Chateau Hotel to ending, thanks EntenSchreck and Psycho-A.
 +Swapped clone Brujah at solo ending with Toreador for male Brujah.
 +Made Gary gift different bloodpacks and fixed missing Kathayan bug.
 +Stopped shaking Malkavian lines in Ocean House and at observatory.
-+Made crypt ghosts vanish and added missing door to Chinese Theatre.
++Removed radio 5 duplicates and added missing vcds, thanks Psycho-A.
 +Fixed map details, cleaned files and updated SDK, thanks Psycho-A.
 +Removed Lotus Blossom patron with bad shadow and fixed green drips.
 +Restored missing song to Venture Tower and another to Asylum door.
-+Removed radio 5 duplicates and added missing vcds, thanks Psycho-A.
++Made crypt ghosts vanish and added missing door to Chinese Theatre.
++Removed cast ammo and unused Thaumaturgy particles, thanks maxoku.
++Recreated missing Dane cops conversation, thanks to Zeno and Stosh.
+Corrected freeze during Beckett's "Wait" cutscene when Obfuscated.
+Fixed lights and textures in SM clinic and Asylum, thanks Psycho-A.
 Improved badly fixed missing Tommy line and minor dialogue issues.
 Prevented restarting of Carson quest and added missing steps sound.
 Recreated floats and subtitles, thanks miracle.flame and Psycho-A.
@@ -131,7 +135,7 @@ Disabled low poly model LOD in engine.dll, thanks Drog Black Tooth.
 Fixed camera after endgame Cabbie discussion and his cut-off line.
 Moved Milligan flee script and added model tutorial, thanks Icicle.
 Repaired broken Asylum door music and two Blood Hunt Asylum holes.
-Improved Sabbat issues in the tutorial and restored one Chunk line.
+Improved tutorial Sabbat gunfire and restored Chunk and Trip lines.
 Put 4GB patch in Patch_Extras/Player Mods, thanks Daniel Pistelli.
 Fixed invincible burning Lasombra and signs and curtain at theatre.
 
@@ -2257,6 +2261,7 @@ Corrected no floats for females bug, croucher laughs and many floats.
 Removed other clans whispers in tutorial, warrens and Ocean House.
 Fixed sewer sound transitions in SM, Hollywood and Chinatown hubs.
 Removed character sheet music overlaying and unified keypad sounds.
+Added unused floats of Trip's dialogue and lowered idle sound rate.
 
 Stats:
 +Included the unused histories so that each clan has ten plus none.
@@ -2439,7 +2444,7 @@ Fixed morgue computer mentioning Crumb and locked morgue freezers.
 Made Vandal acknowledge quest payment and corrected two wrong auras.
 Swapped Lily cutscene Phil with scrubs model Bill if Phil is dead.
 Prevented asking Malcolm about Heather when you already saved her.
-Added option to pay Vandal instead of replacement and fixed monitor.
+Added option to pay Vandal and fixed bad lighting and other details.
 Made Phil only refer to clinic computer if you already accessed it.
 Fixed clinic guard not dropping key if killed by seductive feeding.
 Made it possible to continue E's quest after visiting Vandal often.
@@ -3045,10 +3050,13 @@ Restored models:
 +- Colt Anaconda and Desert Eagle magazine models.
 
 Other restorations:
+
 + Flynn as normal vendor.
 + Nosferatu and Pisha eyes.
 + Discipline inventory slot.
++ Voiced conversation on Dane.
 + Over fifty dialogue gestures.
++ Voiced tutorial guard dialogue.
 + Pause and camera keydefinitions.
 + Auto-moving and walk/run toggles.
 + Sixteen HUD and five vendor icons.
@@ -3635,7 +3643,7 @@ Don't leave the building of the murder before talking to the bum.
 Occasionally mailboxes do not receive rewards or objects drop out.
 There is a way to exploit armors and stats, but that is a secret.
 In some cutscenes people look or move strangely and bodies vanish.
-Sometimes the player might stand up during the endgame taxi ride.
+Sometimes the slow down effect of Tzimisce fatguys stays, reload.
 Selling too much to vendors makes goods unavailable or game crash.
 Sometimes the black inside of tunnels or manholes will disappear.
 Occasionally Ash will talk with you while a hunter is still alive.
@@ -3651,7 +3659,7 @@ Occasionally you may not be able to throw the grenade from Nines.
 Sometimes you can hear rain sounds although it not actually rains.
 If the passive discipline timer is not working wait for cutscene.
 Game may crash in cutscenes if you are Obfuscated, so turn it off.
-Enemy death may open doors and give items, Disciplines might not.
+Enemy death can open doors and give items, disciplines usage not.
 If LaCroix ignores a delivered sarcophagus set G.Story_State = 60.
 Don't feed on quest NPCs and attack them to break feeding trance.
 If game crashes when entering certain levels drop inventory items.

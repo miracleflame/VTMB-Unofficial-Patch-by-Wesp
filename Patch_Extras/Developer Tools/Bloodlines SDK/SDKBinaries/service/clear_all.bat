@@ -7,7 +7,7 @@ del /f /s /q /a *.vdf
 del /f /s /q /a *.log
 del /f /a /q ..\*.log
 del /f /s /q GameCfg.ini
-rd /s /q ..\Vampire
+if not exist ..\Vampire.exe rd /s /q ..\Vampire
 copy /y "service\cmdseq.init" "cmdseq.wc"
 
 exit

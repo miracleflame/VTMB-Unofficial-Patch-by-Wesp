@@ -101,6 +101,7 @@
 "StartDisabled" "0"
 "Solidity" "0"
 "climbable" "0"
+"origin" "1613.46 -12.64 197.5"
 }
 {
 "classname" "light"
@@ -123,6 +124,7 @@
 "StartDisabled" "0"
 "Solidity" "0"
 "climbable" "0"
+"origin" "1599.37 -0.58 186.5"
 }
 {
 "model" "*3"
@@ -137,12 +139,13 @@
 "StartDisabled" "0"
 "Solidity" "0"
 "climbable" "0"
+"origin" "1575.31 25.42 182.5"
 }
 {
 "classname" "logic_auto"
 "spawnflags" "1"
-"OnMapLoad" "newscaster,SetFakeSilence,1,0,-1,,"
 "OnMapLoad" "newscaster,SetSoundOverrideEnt,tv_prop,0,-1,,"
+"OnMapLoad" "newscaster,SetFakeSilence,1,0,-1,,"
 "origin" "1348 124 139"
 }
 {
@@ -359,9 +362,9 @@
 "soundgroup" "standard_door"
 "use_icon" "10"
 "locked_icon" "3"
-"OnOpen" "door1_light,FadeToPattern,z,0,-1,,"
-"OnFullyClosed" "door1_light,FadeToPattern,a,0.1,-1,,"
 "OnFullyClosed" "door2_light,FadeToPattern,a,0.1,-1,,"
+"OnFullyClosed" "door1_light,FadeToPattern,a,0.1,-1,,"
+"OnOpen" "door1_light,FadeToPattern,z,0,-1,,"
 }
 {
 "model" "*5"
@@ -385,9 +388,9 @@
 "soundgroup" "standard_door"
 "use_icon" "10"
 "locked_icon" "3"
-"OnOpen" "door2_light,FadeToPattern,z,0,-1,,"
-"OnFullyClosed" "door1_light,FadeToPattern,a,0.1,-1,,"
 "OnFullyClosed" "door2_light,FadeToPattern,a,0.1,-1,,"
+"OnFullyClosed" "door1_light,FadeToPattern,a,0.1,-1,,"
+"OnOpen" "door2_light,FadeToPattern,z,0,-1,,"
 }
 {
 "classname" "light_spot"
@@ -446,6 +449,7 @@
 "StartDisabled" "0"
 "Solidity" "0"
 "climbable" "0"
+"origin" "396 650.97 131"
 }
 {
 "model" "*7"
@@ -459,6 +463,7 @@
 "StartDisabled" "0"
 "Solidity" "0"
 "climbable" "0"
+"origin" "396 778.98 131"
 }
 {
 "model" "*8"
@@ -472,6 +477,7 @@
 "StartDisabled" "0"
 "Solidity" "0"
 "climbable" "0"
+"origin" "396.02 522.99 131"
 }
 {
 "model" "*9"
@@ -593,17 +599,18 @@
 "follower_type" "Default"
 "is_bossmonster" "1"
 "base_gender" "1"
+"soundgroup" "Unique/Mercurio"
 "ignore_detected_attack" "1"
-"OnDialogBegin" ",,,0,-1,mercurioCamera(),"
-"OnDialogEnd" ",,,0,-1,mercurioDialog(),"
 "OnDeath" ",,,0,-1,mercurioDeath(),"
+"OnDialogEnd" ",,,0,-1,mercurioDialog(),"
+"OnDialogBegin" ",,,0,-1,mercurioCamera(),"
 "origin" "273 651.956 39"
 }
 {
 "classname" "logic_auto"
 "spawnflags" "0"
-"OnMapLoad" ",,,0.1,-1,finishElysiumTip(),"
 "OnMapLoad" ",,,0,-1,mercurioFight(),"
+"OnMapLoad" ",,,0.1,-1,finishElysiumTip(),"
 "origin" "23.7628 151.524 45"
 }
 {
@@ -880,9 +887,9 @@
 "StartDisabled" "0"
 "targetname" "cops_relay"
 "spawnflags" "0"
-"OnTrigger" "cops_yell,PlaySound,1,9,-1,,"
-"OnTrigger" "cops_outside,FadeIn,1,9,-1,,"
 "OnTrigger" "cops_arrive,PlaySound,,0,-1,,"
+"OnTrigger" "cops_outside,FadeIn,1,9,-1,,"
+"OnTrigger" "cops_yell,PlaySound,1,9,-1,,"
 "origin" "19.88 105.933 65"
 }
 {
@@ -939,13 +946,6 @@
 "origin" "22.3 123.119 65"
 }
 {
-"classname" "events_world"
-"targetname" "world"
-"StartHidden" "1"
-"OnCopsOutside" "cops_relay,Trigger,,0,-1,,"
-"origin" "-16.63 108.864 65"
-}
-{
 "model" "*12"
 "classname" "func_door_rotating"
 "renderfx" "0"
@@ -967,10 +967,10 @@
 "soundgroup" "standard_door"
 "use_icon" "10"
 "locked_icon" "3"
-"OnFullyClosed" "emptyroomdoor2_light,FadeToPattern,a,0.1,-1,,"
-"OnFullyClosed" "emptyroomdoor1_light,FadeToPattern,a,0.1,-1,,"
-"OnOpen" "emptyroomdoor1_light,FadeToPattern,z,0,-1,,"
 "OnOpen" "emptyroomdoor2_light,FadeToPattern,z,0,-1,,"
+"OnOpen" "emptyroomdoor1_light,FadeToPattern,z,0,-1,,"
+"OnFullyClosed" "emptyroomdoor1_light,FadeToPattern,a,0.1,-1,,"
+"OnFullyClosed" "emptyroomdoor2_light,FadeToPattern,a,0.1,-1,,"
 }
 {
 "model" "*13"
@@ -994,9 +994,9 @@
 "soundgroup" "standard_door"
 "use_icon" "10"
 "locked_icon" "3"
-"OnOpen" "emptyroomdoor2_light,FadeToPattern,z,0,-1,,"
-"OnFullyClosed" "emptyroomdoor1_light,FadeToPattern,a,0.1,-1,,"
 "OnFullyClosed" "emptyroomdoor2_light,FadeToPattern,a,0.1,-1,,"
+"OnFullyClosed" "emptyroomdoor1_light,FadeToPattern,a,0.1,-1,,"
+"OnOpen" "emptyroomdoor2_light,FadeToPattern,z,0,-1,,"
 }
 {
 "classname" "light_spot"
@@ -1055,6 +1055,7 @@
 "StartDisabled" "0"
 "Solidity" "0"
 "climbable" "0"
+"origin" "-396.01 524 131"
 }
 {
 "model" "*15"
@@ -1068,6 +1069,7 @@
 "StartDisabled" "0"
 "Solidity" "0"
 "climbable" "0"
+"origin" "-396.02 395.98 131"
 }
 {
 "model" "*16"
@@ -1081,6 +1083,7 @@
 "StartDisabled" "0"
 "Solidity" "0"
 "climbable" "0"
+"origin" "-396.01 652.03 131"
 }
 {
 "classname" "light_spot"
@@ -1439,13 +1442,13 @@
 "soundgroup" "small_metal_switch"
 "use_icon" "7"
 "locked_icon" "12"
-"OnOut" "tv_screen,ScriptHide,,0,-1,,"
-"OnIn" "tv_light,SetPattern,zxzzxzxxzzxzxzzzxz,0,-1,,"
-"OnIn" "newscaster,SetSoundOverrideEnt,tv_prop,0,-1,,"
-"OnOut" "newscaster,SetFakeSilence,1,0,-1,,"
-"OnOut" "tv_light,TurnOff,,0,-1,,"
-"OnIn" "tv_screen,ScriptUnhide,,0,-1,,"
 "OnIn" "newscaster,SetFakeSilence,0,0,-1,,"
+"OnIn" "tv_screen,ScriptUnhide,,0,-1,,"
+"OnOut" "tv_light,TurnOff,,0,-1,,"
+"OnOut" "newscaster,SetFakeSilence,1,0,-1,,"
+"OnIn" "newscaster,SetSoundOverrideEnt,tv_prop,0,-1,,"
+"OnIn" "tv_light,SetPattern,zxzzxzxxzzxzxzzzxz,0,-1,,"
+"OnOut" "tv_screen,ScriptHide,,0,-1,,"
 }
 {
 "model" "*19"
@@ -1467,10 +1470,10 @@
 "origin" "-292.04 599 75.68"
 "locked_sound" "environmental/electronic/deny_beep.wav"
 "unlocked_sound" "environmental/electronic/button_beep.wav"
-"OnOut" "tape_sound,Volume,0,0,-1,,"
-"OnPressed" "tape_sparklies,Kill,,0,1,,"
-"OnPressed" ",,,0,-1,G.Tape_Played = 1,"
 "OnIn" "tape_sound,PlaySound,,0,-1,,"
+"OnPressed" ",,,0,-1,G.Tape_Played = 1,"
+"OnPressed" "tape_sparklies,Kill,,0,1,,"
+"OnOut" "tape_sound,Volume,0,0,-1,,"
 }
 {
 "classname" "ambient_generic"
@@ -1600,6 +1603,7 @@
 "model" "*20"
 "classname" "trigger_once"
 "spawnflags" "1"
+"origin" "-25 262.5 125.8"
 "OnStartTouch" "LaughFemale,PlaySound,,0,-1,,"
 }
 {
@@ -1618,6 +1622,7 @@
 "model" "*21"
 "classname" "trigger_once"
 "spawnflags" "1"
+"origin" "27 397 108.5"
 "OnStartTouch" "Shower,PlaySound,,4,-1,,"
 }
 {
@@ -1625,8 +1630,8 @@
 "targetname" "mercurio_journal"
 "StartHidden" "1"
 "angles" "0 0 0"
-"OnPlayerPickup" ",,,0,-1,journalPickup(),"
 "OnPlayerPickup" ",,,0,-1,G.Journal_Taken = 1,"
+"OnPlayerPickup" ",,,0,-1,journalPickup(),"
 "origin" "260 560 72"
 }
 {
@@ -1644,6 +1649,7 @@
 "targetname" "mercurio_angry_talk_trigger"
 "StartDisabled" "1"
 "spawnflags" "1"
+"origin" "134 648 96"
 "OnStartTouch" "Mercurio,StartPlayerDialog,,0,-1,,"
 }
 {
@@ -2014,6 +2020,7 @@
 "InputFilter" "0"
 "Solidity" "0"
 "climbable" "0"
+"origin" "1596.99 -0.87 205.5"
 }
 {
 "style" "34"
@@ -2253,6 +2260,7 @@
 "InputFilter" "0"
 "Solidity" "2"
 "climbable" "0"
+"origin" "-213.07 524.76 57.5"
 }
 {
 "classname" "light_spot"
@@ -2295,10 +2303,10 @@
 "spawnflags" "1057"
 "origin" "-100 582.5 89.5"
 "targetname" "mcgee room switch"
-"OnIn" "emptyroomlamp,ScriptHide,,0,-1,,"
-"OnIn" "mcgee room light,TurnOn,,0,-1,,"
-"OnOut" "emptyroomlamp,ScriptUnhide,,0,-1,,"
 "OnOut" "mcgee room light,TurnOff,,0,-1,,"
+"OnOut" "emptyroomlamp,ScriptUnhide,,0,-1,,"
+"OnIn" "mcgee room light,TurnOn,,0,-1,,"
+"OnIn" "emptyroomlamp,ScriptHide,,0,-1,,"
 }
 {
 "model" "*27"
@@ -2308,9 +2316,10 @@
 "wait" "1"
 "spawnflags" "1"
 "targetname" "emptyroomdoor_light_trigger"
-"OnEndTouch" "emptyroomdoor1_light,FadeToPattern,a,5,-1,,"
-"OnEndTouch" "emptyroomdoor2_light,FadeToPattern,a,5,-1,,"
+"origin" "-121 524 83.5"
 "OnEndTouch" "emptyroomdoor1,Close,,5,-1,,"
+"OnEndTouch" "emptyroomdoor2_light,FadeToPattern,a,5,-1,,"
+"OnEndTouch" "emptyroomdoor1_light,FadeToPattern,a,5,-1,,"
 }
 {
 "classname" "light"
@@ -2355,9 +2364,10 @@
 "wait" "1"
 "spawnflags" "1"
 "targetname" "door_light_trigger"
-"OnEndTouch" "door1_light,FadeToPattern,a,5,-1,,"
-"OnEndTouch" "door2_light,FadeToPattern,a,5,-1,,"
+"origin" "121 651 83.5"
 "OnEndTouch" "door1,Close,,5,-1,,"
+"OnEndTouch" "door2_light,FadeToPattern,a,5,-1,,"
+"OnEndTouch" "door1_light,FadeToPattern,a,5,-1,,"
 }
 {
 "classname" "prop_dynamic"
@@ -2441,6 +2451,7 @@
 "climbable" "0"
 "targetname" "merc_bloodstains"
 "parentname" "door2"
+"origin" "77.5 667 96"
 }
 {
 "model" "*30"
@@ -2457,6 +2468,7 @@
 "climbable" "0"
 "targetname" "merc_bloodstains"
 "parentname" "door1"
+"origin" "77.5 635 96"
 }
 {
 "model" "*31"
@@ -2472,6 +2484,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "258 632 37.5"
 }
 {
 "model" "*32"
@@ -2487,6 +2500,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "255 639 37.5"
 }
 {
 "model" "*33"
@@ -2502,6 +2516,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "264 673 37.5"
 }
 {
 "model" "*34"
@@ -2517,6 +2532,7 @@
 "Solidity" "1"
 "climbable" "0"
 "targetname" "merc_bloodstains"
+"origin" "255.5 691.5 37.5"
 }
 {
 "model" "*35"
@@ -2532,6 +2548,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "232 656 37.5"
 }
 {
 "model" "*36"
@@ -2547,6 +2564,7 @@
 "Solidity" "1"
 "climbable" "0"
 "targetname" "merc_bloodstains"
+"origin" "226.5 661.5 37.5"
 }
 {
 "model" "*37"
@@ -2562,6 +2580,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "215 641 37.5"
 }
 {
 "model" "*38"
@@ -2577,6 +2596,7 @@
 "Solidity" "1"
 "climbable" "0"
 "targetname" "merc_bloodstains"
+"origin" "193.5 640.5 37.5"
 }
 {
 "model" "*39"
@@ -2592,6 +2612,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "177 666 36.5"
 }
 {
 "model" "*40"
@@ -2607,6 +2628,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "165 656 36.5"
 }
 {
 "model" "*41"
@@ -2622,6 +2644,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "176 646 36.5"
 }
 {
 "model" "*42"
@@ -2637,6 +2660,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "146 631 36.5"
 }
 {
 "model" "*43"
@@ -2652,6 +2676,7 @@
 "Solidity" "1"
 "climbable" "0"
 "targetname" "merc_bloodstains"
+"origin" "134.5 657.5 36.5"
 }
 {
 "model" "*44"
@@ -2667,6 +2692,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "108 679 36.5"
 }
 {
 "model" "*45"
@@ -2682,6 +2708,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "91 675 36.5"
 }
 {
 "model" "*46"
@@ -2697,6 +2724,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "82 646 36.5"
 }
 {
 "model" "*47"
@@ -2712,6 +2740,7 @@
 "Solidity" "1"
 "climbable" "0"
 "targetname" "merc_bloodstains"
+"origin" "56.5 650.5 36.5"
 }
 {
 "model" "*48"
@@ -2727,6 +2756,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "60.82 662.38 36.5"
 }
 {
 "model" "*49"
@@ -2742,6 +2772,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "32.82 635.38 36.5"
 }
 {
 "model" "*50"
@@ -2757,6 +2788,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "23.82 634.38 36.5"
 }
 {
 "model" "*51"
@@ -2772,6 +2804,7 @@
 "Solidity" "1"
 "climbable" "0"
 "targetname" "merc_bloodstains"
+"origin" "8.5 622 36.5"
 }
 {
 "model" "*52"
@@ -2787,6 +2820,7 @@
 "Solidity" "1"
 "climbable" "0"
 "targetname" "merc_bloodstains"
+"origin" "-0.5 603 36.5"
 }
 {
 "model" "*53"
@@ -2802,6 +2836,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "9.82 621.38 36.5"
 }
 {
 "model" "*54"
@@ -2817,6 +2852,7 @@
 "Solidity" "1"
 "climbable" "0"
 "targetname" "merc_bloodstains"
+"origin" "3.5 618.5 36.5"
 }
 {
 "model" "*55"
@@ -2832,6 +2868,7 @@
 "Solidity" "1"
 "climbable" "0"
 "targetname" "merc_bloodstains"
+"origin" "-9.5 552.5 36.5"
 }
 {
 "model" "*56"
@@ -2847,6 +2884,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "0.27 510.05 36.5"
 }
 {
 "model" "*57"
@@ -2862,6 +2900,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "1.37 123.5 36.5"
 }
 {
 "model" "*58"
@@ -2877,6 +2916,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "-10.5 437.5 36.5"
 }
 {
 "model" "*59"
@@ -2892,6 +2932,7 @@
 "InputFilter" "0"
 "Solidity" "1"
 "climbable" "0"
+"origin" "-5.5 388.5 36.5"
 }
 {
 "model" "*60"
@@ -2907,6 +2948,7 @@
 "Solidity" "1"
 "climbable" "0"
 "targetname" "merc_bloodstains"
+"origin" "-12 379.5 36.5"
 }
 {
 "model" "*61"
@@ -2922,6 +2964,7 @@
 "Solidity" "1"
 "climbable" "0"
 "targetname" "merc_bloodstains"
+"origin" "8.5 289 36.5"
 }
 {
 "model" "*62"
@@ -2937,6 +2980,7 @@
 "climbable" "0"
 "targetname" "merc_bloodstains"
 "StartHidden" "0"
+"origin" "98.5 593.5 80.5"
 }
 {
 "classname" "prop_dynamic"
@@ -2997,14 +3041,15 @@
 "classname" "events_player"
 "targetname" "events_player_plus"
 "enabled" "0"
+"origin" "0 0 0"
 "OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
 "OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
 "OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
 "OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
 "OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
 "OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
-"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
-"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
+"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
+"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
 "OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
 "OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
 "OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
@@ -3015,8 +3060,37 @@
 "OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
 "OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
 "OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
-"OnFrenzyEnd" ",,,0,-1,OnActivateEnd(),"
+"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
 "OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
 "OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
+}
+{
+"classname" "events_world"
+"targetname" "world"
+"StartHidden" "0"
 "origin" "0 0 0"
+"OnCopsOutside" "cops_relay,Trigger,,0,-1,,"
+"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
+"OnCopsComing" ",,,0,-1,OnCopsComing(),"
+"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
+"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
+"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
+"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
+"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
+"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
+"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
+"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
+"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
+"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
+"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
+"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
+"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
+"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
+"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
+"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
+"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
+"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
+"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
+"OnUseBegin" ",,,0,-1,OnUseBegin(),"
+"OnUseEnd" ",,,0,-1,OnUseEnd(),"
 }

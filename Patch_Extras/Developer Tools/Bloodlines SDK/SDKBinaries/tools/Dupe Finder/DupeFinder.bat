@@ -16,7 +16,8 @@ echo.
 :SetBasePaths
 
 pushd "%~dp0"
-set "WhiteListPack=%cd%\service\WhiteList-packs.7z"
+set "DFHome=%cd%"
+set "WhiteListPack=%DFHome%\service\WhiteList-packs.7z"
 set "WhiteListDirs=WhiteList-v1.0-Dirs.lst"
 set "WhiteListVpks=WhiteList-v1.0-Vpks.lst"
 
@@ -69,6 +70,7 @@ if not exist "%TargetDir%" (
 	%Sfk% echo "[Red]  "Please, specify another one by setting right project in the SDK.
 	goto Finish
 )
+call :DelTemps
 
 echo   Vampire directory:  "%SourceDir%"
 echo   User mod directory: "%TgDirName%"
@@ -84,18 +86,17 @@ cls
 echo.
 echo   Please, wait...
 
-call :DelTemps
 if /i "%ProcDirTree%"=="No" (
 goto ParseWhitelist)
 
 :DumpFileTree
 echo.
 echo   Processing file tree...
-dir /b /s /a-d "%TargetDir%"> "%TEMP%\targetdir.lst"
-%Sfk% replace "%TEMP%\targetdir.lst" "|%TargetDir%\||" -quiet -yes> nul
+dir /b /s /a-d "%TargetDir%"> "%DFHome%\TargetDir.lst"
+%Sfk% replace "%DFHome%\TargetDir.lst" "|%TargetDir%\||" -quiet -yes> nul
 
 :ParseFileTree
-for /f "usebackq delims=" %%a in ("%TEMP%\targetdir.lst") do (
+for /f "usebackq delims=" %%a in ("%DFHome%\TargetDir.lst") do (
 	if exist "%SourceDir%\%%~a" call :CompareDT "%%~a"
 )
 
@@ -103,28 +104,28 @@ for /f "usebackq delims=" %%a in ("%TEMP%\targetdir.lst") do (
 if /i "%ProcWhiteList%"=="No" (
 goto CheckIfFound)
 
-%Arc% x "%WhiteListPack%" -o"%TEMP%" -aoa -y "%WhiteListDirs%"> nul
-if exist "%TEMP%\%WhiteListDirs%" (
+%Arc% x "%WhiteListPack%" -o"%DFHome%" -aoa -y "%WhiteListDirs%"> nul
+if exist "%DFHome%\%WhiteListDirs%" (
 	echo   Processing whitelist for directory tree...
 	if /i not "%SourceDir%"=="%TgDirName%" (
-		for /f "eol=# usebackq delims=	| tokens=1,2" %%a in ("%TEMP%\%WhiteListDirs%") do (
+		for /f "eol=# usebackq delims=	| tokens=1,2" %%a in ("%DFHome%\%WhiteListDirs%") do (
 		if exist "%TargetDir%\%%~a" call :CompareWL "%%~a" "%%~b")
-		del /f /q /a "%TEMP%\%WhiteListDirs%"> nul
+		del /f /q /a "%DFHome%\%WhiteListDirs%"> nul
 	) else (
 		%Sfk% echo "[cyan]    "Source directory equals target directory:
 		%Sfk% echo "[cyan]    "[\"%SourceDir%\" = \"%TgDirName%\"]. Scanning denied.
 	)
 )
-%Arc% x "%WhiteListPack%" -o"%TEMP%" -aoa -y "%WhiteListVpks%"> nul
-if exist "%TEMP%\%WhiteListVpks%" (
+%Arc% x "%WhiteListPack%" -o"%DFHome%" -aoa -y "%WhiteListVpks%"> nul
+if exist "%DFHome%\%WhiteListVpks%" (
 	echo   Processing whitelist for packed content...
-	for /f "eol=# usebackq delims=	| tokens=1,2" %%a in ("%TEMP%\%WhiteListVpks%") do (
+	for /f "eol=# usebackq delims=	| tokens=1,2" %%a in ("%DFHome%\%WhiteListVpks%") do (
 	if exist "%TargetDir%\%%~a" call :CompareWL "%%~a" "%%~b")
-	del /f /q /a "%TEMP%\%WhiteListVpks%"> nul
+	del /f /q /a "%DFHome%\%WhiteListVpks%"> nul
 )
 
 :CheckIfFound
-if not exist "%TEMP%\todelete.lst" (
+if not exist "%DFHome%\ToDelete.lst" (
 	echo.
 	%Sfk% echo "[Yellow]  "Duplicated files not found in specified dirs.
 	goto Finish
@@ -148,7 +149,7 @@ goto AskRepeat))
 cls
 echo.
 echo   Deleting files...
-for /f "usebackq delims=" %%a in ("%TEMP%\todelete.lst") do (
+for /f "usebackq delims=" %%a in ("%DFHome%\ToDelete.lst") do (
 	call :DelDupes "%%~a"
 )
 pushd "%TargetDir%"
@@ -173,7 +174,7 @@ for /f %%c in ('call %Sha% "%%~s"') do set "TSha1=%%~c")
 if "%SSize%:%SSha1%"=="%TSize%:%TSha1%" (
 	for %%x in (%ExcludeExts%) do if /i "%~x1"=="%%~x" (exit /b)
 	%Sfk% echo "[cyan]    "Duplicate: \"%~1\"
-	echo "%~1">> "%TEMP%\todelete.lst"
+	echo "%~1">> "%DFHome%\ToDelete.lst"
 )
 exit /b
 
@@ -185,13 +186,12 @@ for /f %%c in ('call %Sha% "%%~s"') do set "TSha1=%%~c")
 if "%TSize%:%TSha1%"=="%~2" (
 	for %%x in (%ExcludeExts%) do if /i "%~x1"=="%%~x" (exit /b)
 	%Sfk% echo "[cyan]    "Duplicate: \"%~1\"
-	echo "%~1">> "%TEMP%\todelete.lst"
+	echo "%~1">> "%DFHome%\ToDelete.lst"
 )
 exit /b
 
 :DelTemps
-if not exist "%TEMP%\" md "%TEMP%\"> nul
-for %%m in ("%TEMP%\targetdir.lst*" "%TEMP%\todelete.lst*") do del /f /q /a "%%~m"> nul
+for %%m in ("%DFHome%\*.lst") do del /f /q /a "%%~m"> nul
 exit /b
 
 :DelDupes

@@ -22,7 +22,7 @@ if not exist "service\VExtract?.exe" (
 :prepare
 echo Preparing...
 start "" "%MsgBox%" Content will be extracted into directory "%TargetDir%". First, the basic content (textures, models and sounds) will be extracted. See console window for current progress. Don't close it! /c:Note /t:MB_ICONASTERISK
-if exist "%TEMP%\vpkindex.ls?" del /a /q "%TEMP%\vpkindex.ls?"> nul
+if exist "%AppData%\vpkindex.ls?" del /a /q "%AppData%\vpkindex.ls?"> nul
 
 :setsrcdirs
 set SrcPaths="%VampireDir%"
@@ -62,8 +62,8 @@ echo.
 
 :=======================================================================
 :finalize
-if exist "%TEMP%\vpkindex.ls?" (
-del /f /a /q "%TEMP%\vpkindex.ls?"> nul)
+if exist "%AppData%\vpkindex.ls?" (
+del /a /q "%AppData%\vpkindex.ls?"> nul)
 
 exit /b
 
@@ -86,8 +86,8 @@ exit /b
 	for %%e in (%~4) do (
 		if not exist "%%~p\pack%%~t??.vpk" (exit /b)
 		service\vextract%%~t.exe -d "%%~p" -i -q> nul
-		if exist "%TEMP%\vpkindex.ls%%~t" (
-			copy /b "%TEMP%\vpkindex.ls%%~t" + "service\vpkindex.fix" "%TEMP%\vpkindex.ls%%~t"> nul)
+		if exist "%AppData%\vpkindex.ls%%~t" (
+			copy /b "%AppData%\vpkindex.ls%%~t" + "service\vpkindex.fix" "%AppData%\vpkindex.ls%%~t"> nul)
 		service\vextract%%~t.exe "%~3/*.%%~e" -d "%%~p" -o "%TargetDir%" -q> nul
 	)))
 exit /b

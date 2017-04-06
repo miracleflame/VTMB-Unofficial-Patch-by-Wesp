@@ -16,10 +16,10 @@ if not exist "GameCfg.ini" (
 
 :: Read game config data
 for /f "usebackq delims== tokens=1,*" %%a in ("GameCfg.ini") do (
-	if /i "%%~a"=="GameExe"     (set "%%~a=%%~b")
-	if /i "%%~a"=="GameExeDir"  (set "%%~a=%%~b")
-	if /i "%%~a"=="ModDir"     (set "%%~a=%%~nb")
-	if /i "%%~a"=="ModDir"  (set "VProject=%%~b")
+	if /i "%%~a"=="GameExe"    (set "%%~a=%%~b")
+	if /i "%%~a"=="GameExeDir" (set "%%~a=%%~b")
+	if /i "%%~a"=="ModDir"    (set "%%~a=%%~nb")
+	if /i "%%~a"=="ModDir" (set "VProject=%%~b")
 )
 
 :: Check obtained paths

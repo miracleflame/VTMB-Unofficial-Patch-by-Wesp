@@ -1,7 +1,7 @@
 //====== Copyright © 2003-2016, Troika Games, Inc. All rights reserved. =======
 //
 // Purpose: Vampire Bloodlines game definition file (.fgd) 
-// Version: 1.5 beta
+// Version: 1.51 beta
 // Edition: Original VtMB
 // Written: Psycho-A
 //
@@ -5721,7 +5721,7 @@ studioprop()
 		8 : "Type 8 (unknown yet)" 
 	]
 	Flag_ViewCone(choices) : "Flag: View Cone" : 1 : "Applies the selected property." = [ 0 : "False" 1 : "True" ]
-	allow_alert_lookaround(choices) : "Allow Alert on Lookaround" : 0 : "Defines, can NPC be alert if sees player at looks around [not tested]." =
+	allow_alert_lookaround(choices) : "Allow Lookaround on Alert" : 0 : "Defines, should NPC be able to look around when alerted, or not." =
 	[
 		0 : "No"
 		1 : "Yes"
@@ -6837,7 +6837,7 @@ studioprop()
 		"    D_LI [0-10] --> Likes Player (Will Defend)\n"+
 		"    D_NU [0-10] --> Neutral (Default)"+
 		"    D_HT [0-10] --> Hates Player (Will Attack)" =	[]
-	allow_alert_lookaround(choices) : "Allow Alert on Lookaround" : 0 : "Defines, can NPC be alert if sees player at looks around [not tested]." =	[]
+	allow_alert_lookaround(choices) : "Allow Lookaround on Alert" : 0 : "Defines, should NPC be able to look around when alerted, or not." =	[]
 	hearing(float) : "Hearing Radius" : "0.4" : "NPC's hearing radius [0...100]. Set '-1' as default [not tested]."
 	vision(float) : "Vision Radius" : "1000" : "NPC's vision radius (units). Set '-1' as default [not tested]."
 ]
@@ -7042,7 +7042,6 @@ studioprop()
 		"    D_LI [0-10] --> Likes Player (Will Defend)\n"+
 		"    D_NU [0-10] --> Neutral (Default)"+
 		"    D_HT [0-10] --> Hates Player (Will Attack)" =	[]
-	allow_alert_lookaround(choices) : "Allow Alert on Lookaround" : 0 : "Defines, can NPC be alert if sees player at looks around [not tested]." =	[]
 
 	sep_npcrel(string) readonly: "------------------------------------"
 	

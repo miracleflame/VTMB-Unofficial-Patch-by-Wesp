@@ -33,6 +33,10 @@ set "NirCmd=service\nircmd.exe"
 :checkconfig
 if exist "GameCfg.ini" (
 	for /f "usebackq delims== tokens=1,*" %%a in ("GameCfg.ini") do (
+		if /i "%%~a=%%~b"=="NumConfigs=0" (
+			service\sfk.exe replace "GameCfg.ini" "|NumConfigs=0|NumConfigs=1|" -yes -quiet=2
+			call :hammerfix -single
+		)
 		for %%p in (GameData0 BSP Vis Light GameDir GameExeDir GameExe) do (
 		if /i "%%~a"=="%%~p" (
 		if not exist "%%~b" (
@@ -117,6 +121,7 @@ if exist "GameCfg.ini" (
  reg add "HKCU\Software\Troika\Hammer\Splitter"         /v "WindowPlacement"  /t REG_SZ    /d "(-1 -1) (-1 -1) (-1 -1 -1 -1) 3" /f
  reg add "HKCU\Software\Troika\Hammer\Splitter"         /v "DrawType0,0"      /t REG_DWORD /d "5" /f
  reg add "HKCU\Software\Tools\PackfileExplorer"         /v "LastPath"         /t REG_SZ    /d "%ModDir%" /f
+ if /i "%~1"=="-single" exit /b
 )> nul
 
 :installplugins

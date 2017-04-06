@@ -13,6 +13,7 @@ set "MsgBox=..\..\service\msgbox.exe"
 set "OpenDlg=..\..\service\OpenDlg.exe"
 set "FileTypes=service\filetypes.bat"
 set "OpenFile=call %OpenDlg% /f"
+set "TempDir=%cd%\temp"
 
 :CheckFiles
 for %%m in (
@@ -75,11 +76,11 @@ if not exist "%~dpn1.vtt" (
 	start %MsgBox% Error opening file. /c:Error /t:MB_ICONERROR
 	exit
 ) else (
-	if not exist "%TEMP%\" md "%TEMP%\"> nul
-	move /y "%~dpn1.vtt" "%TEMP%\%~n1.vtf"> nul
+	if not exist "%TempDir%\" md "%TempDir%"
+	move /y "%~dpn1.vtt" "%TempDir%\%~n1.vtf"> nul
 )
 
 :view
-	VTFEdit.exe "%TEMP%\%~n1.vtf"
-	del /q /a "%TEMP%\%~n1.vtf"> nul
+	VTFEdit.exe "%TempDir%\%~n1.vtf"
+	rd /s /q "%TempDir%"> nul
 exit /b

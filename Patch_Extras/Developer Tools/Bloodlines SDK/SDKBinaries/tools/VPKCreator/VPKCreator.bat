@@ -1,12 +1,12 @@
 :: written by: psycho-a
-:: program version: 2.6
-:: build date: 08.07.15
+:: program version: 2.7
+:: build date: 03.03.17
 
 @echo off
 setlocal ENABLEEXTENSIONS
 set "PATH=%SystemRoot%\System32;%SystemRoot%;%SystemRoot%\System32\Wbem"
 set "PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"
-set "ProgVersion=2.6"
+set "ProgVersion=2.7"
 title Bloodlines VPK Creator v%ProgVersion%  (c) Psycho-A
 color 06
 pushd "%~dp0"
@@ -40,9 +40,7 @@ set "VCHome=%CD%"
 set "VCConfig=%VCHome%\Config.ini"
 set "SfkTool=%VCHome%\..\..\service\sfk.exe"
 set "VBuilder=%VCHome%\service\vpkbuilder.exe"
-
-set "PackDirsList=%TEMP%\pack_dirs.txt"
-if not exist "%TEMP%\" md "%TEMP%"
+set "PackDirsList=%VCHome%\pack_dirs.txt"
 
 set Wait=call :WaitFunc
 set ViewReadme=start "" "%VCHome%\Readme.txt"
@@ -632,9 +630,6 @@ if not exist "%CD%\zzz_?*.vpk" (
 	goto StartMenu
 ) else (call :ProcessFiles)
 exit /b
-
-pause
-pause
 
 :ProcessFiles
 	set FinalPackNames=

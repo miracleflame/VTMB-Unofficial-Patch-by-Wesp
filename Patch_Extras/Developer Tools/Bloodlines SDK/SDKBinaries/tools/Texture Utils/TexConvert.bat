@@ -1,5 +1,5 @@
 @echo off
-set ProgVersion=1.8-beta
+set ProgVersion=1.9-beta
 
 setlocal ENABLEEXTENSIONS
 set "PATH=%SystemRoot%\System32;%SystemRoot%;%SystemRoot%\System32\Wbem"
@@ -36,6 +36,7 @@ set ZLib="service\zlib1.exe"
 set TtzDec="service\Ttz2Vtf.exe"
 set VtfCmd="VtfCmd.exe"
 set Templates="Templates.ini"
+set "TempDir=%cd%\temp"
 
 set Validate=call :Validate
 set OpenFile=call %OpenDlg% /f /m
@@ -48,7 +49,7 @@ for %%m in (
 	echo Cant find "%%~m"!
 	echo>>"..\..\..\sdk_errors.log" [%date% %time%] TexConvert Error: Missing "%cd%\%%~m" file.
 	ping>nul "127.0.0.1" -n 2
-	exit
+	goto Exit
 )
 
 :AssignFiles
@@ -59,6 +60,7 @@ if "%~1%~2"=="" call "%FileTypes%" -int
 :================================================
 :Initialize
 call :ShowLogo
+if not exist "%TempDir%\" md "%TempDir%"
 
 if /i "%~1"=="-shellmode" set "ShellMode=1"
 if /i "%~2"=="-tovtf" set "ConvertMode=ToVtf"
@@ -101,7 +103,7 @@ echo.
 echo Finished.
 if not "%ShellMode%"=="1" (
 ping>nul -n 4 "127.0.0.1" )
-exit
+goto Exit
 
 
 
@@ -129,7 +131,7 @@ if /i "%ErrorsFound%"=="Yes" (
 	%MsgBox% All textures successfully converted. Select other files? /c:Texture Converter - Information /t:MB_SYSTEMMODAL,MB_ICONINFORMATION,MB_YESNO
 )
 if "%ErrorLevel%"=="6" goto Initialize
-if "%ErrorLevel%"=="7" exit
+if "%ErrorLevel%"=="7" goto Exit
 
 
 
@@ -145,27 +147,26 @@ set "ClrStScDone=Yes"
 set "ConvProcRan=Yes"
 
 rem Check & prepare...
-if not exist "%TEMP%\" (mkdir "%TEMP%"> nul)
 if exist "error.init" (del /f /q "error.init")
 echo Converting "%~nx1"...
 call :ReadTemplates
 
 rem Run VTFCmd tool...
 echo   Pre-compiling to VTF..
-call :MakeVtf "%~1" "%TEMP%"
-%Validate% "%TEMP%\%~n1.vtf"
+call :MakeVtf "%~1" "%TempDir%"
+%Validate% "%TempDir%\%~n1.vtf"
 if exist "error.init" goto QuitFunc
 
 rem Compile to TTZ...
 echo   Compiling to TTh+TTz..
-call :VTF2TTZ "%TEMP%\%~n1.vtf" -noinfo
-%Validate% "%TEMP%\%~n1.tth"
-%Validate% "%TEMP%\%~n1.ttz"
+call :VTF2TTZ "%TempDir%\%~n1.vtf" -noinfo
+%Validate% "%TempDir%\%~n1.tth"
+%Validate% "%TempDir%\%~n1.ttz"
 if exist "error.init" goto QuitFunc
 
 rem Move to source folder...
-move /y "%TEMP%\%~n1.tth" "%~dp1\"> nul
-move /y "%TEMP%\%~n1.ttz" "%~dp1\"> nul
+move /y "%TempDir%\%~n1.tth" "%~dp1\"> nul
+move /y "%TempDir%\%~n1.ttz" "%~dp1\"> nul
 %Validate% "%~dpn1.tth"
 %Validate% "%~dpn1.ttz"
 if exist "error.init" goto QuitFunc
@@ -345,7 +346,6 @@ if %~z1 LSS 65 (
 	set "ErrorsFound=Yes"
 	%Sfk% echo "[Yellow]  "INVALID VTF FILE!
 	goto QuitFunc)
-if not exist "%TEMP%\" (mkdir "%TEMP%"> nul)
 if exist "error.init" (del /f /q "error.init")
 
 
@@ -365,15 +365,15 @@ if "%AutoFixVtfVersion%"=="1" (
 			if "%%~v"=="%VtfDfHdrSz%" goto fixvtfverfinish
 			rem Construct new VTF...
 			for %%m in ("%VtfFile%") do (
-				%Sfk% echo %VtfDfVrStr% +hextobin "%TEMP%\%%~nm.new.p1"> nul
-				%Sfk% partcopy "%%~m" -fromto 16 %VtfDfHdrSz% "%TEMP%\%%~nm.new.p2" -yes> nul
-				%Sfk% partcopy "%%~m" -allfrom %%~v "%TEMP%\%%~nm.new.p3" -yes> nul
-				%Validate% "%TEMP%\%%~nm.new.p1"
-				%Validate% "%TEMP%\%%~nm.new.p2"
-				%Validate% "%TEMP%\%%~nm.new.p3"
+				%Sfk% echo %VtfDfVrStr% +hextobin "%TempDir%\%%~nm.new.p1"> nul
+				%Sfk% partcopy "%%~m" -fromto 16 %VtfDfHdrSz% "%TempDir%\%%~nm.new.p2" -yes> nul
+				%Sfk% partcopy "%%~m" -allfrom %%~v "%TempDir%\%%~nm.new.p3" -yes> nul
+				%Validate% "%TempDir%\%%~nm.new.p1"
+				%Validate% "%TempDir%\%%~nm.new.p2"
+				%Validate% "%TempDir%\%%~nm.new.p3"
 				if exist "error.init" goto QuitFunc
-				copy /y /b "%TEMP%\%%~nm.new.p1" + "%TEMP%\%%~nm.new.p2" + "%TEMP%\%%~nm.new.p3" "%%~m"> nul
-				del  /f /q "%TEMP%\%%~nm.new.p?"> nul
+				copy /y /b "%TempDir%\%%~nm.new.p1" + "%TempDir%\%%~nm.new.p2" + "%TempDir%\%%~nm.new.p3" "%%~m"> nul
+				del  /f /q "%TempDir%\%%~nm.new.p?"> nul
 				goto fixvtfverfinish
 			)
 		)
@@ -483,14 +483,14 @@ for /f %%h in ('call %Sfk% hex %VChkSz% -digits=2') do set "VtfChunkSz=%%~h00000
 rem Process heads/tails...
 for %%m in ("%VtfFile%") do (
 rem Split VTF chunks...
-	%Sfk% partcopy "%%~m" -fromto 0 %VChkSz% "%TEMP%\%%~nxm.head" -yes> nul
-	%Sfk% partcopy "%%~m" -allfrom  %VChkSz% "%TEMP%\%%~nxm.tail" -yes> nul
-	%Validate% "%TEMP%\%%~nxm.head"
-	%Validate% "%TEMP%\%%~nxm.tail"
+	%Sfk% partcopy "%%~m" -fromto 0 %VChkSz% "%TempDir%\%%~nxm.head" -yes> nul
+	%Sfk% partcopy "%%~m" -allfrom  %VChkSz% "%TempDir%\%%~nxm.tail" -yes> nul
+	%Validate% "%TempDir%\%%~nxm.head"
+	%Validate% "%TempDir%\%%~nxm.tail"
 	if exist "error.init" goto QuitFunc
 rem Compress VTF tail...
-	%ZLib% -c "%TEMP%\%%~nxm.tail" "%%~dpnm.ttz" "8"> nul
-	del /f /q "%TEMP%\%%~nxm.tail"> nul
+	%ZLib% -c "%TempDir%\%%~nxm.tail" "%%~dpnm.ttz" "8"> nul
+	del /f /q "%TempDir%\%%~nxm.tail"> nul
 	%Validate% "%%~dpnm.ttz"
 	if exist "error.init" goto QuitFunc
 rem Get obtained TTZ size...
@@ -538,8 +538,8 @@ for %%m in ("%VtfFile%") do (
 		if exist "%%~dpnm.ttz" del /f /q "%%~dpnm.ttz"> nul
 		copy /b "%%~dpnm.tth" + "%%~m" "%%~dpnm.tth"> nul
 	) else (
-		copy /b "%%~dpnm.tth" + "%TEMP%\%%~nxm.head" "%%~dpnm.tth"> nul
-		del /f /q "%TEMP%\%%~nxm.head"> nul
+		copy /b "%%~dpnm.tth" + "%TempDir%\%%~nxm.head" "%%~dpnm.tth"> nul
+		del /f /q "%TempDir%\%%~nxm.head"> nul
 	)
 	%Validate% "%%~dpnm.tth"
 	if exist "error.init" goto QuitFunc
@@ -588,7 +588,9 @@ set "SomeSuccess=Yes"
 if not "%~2"=="-noinfo" (
 if "%DeleteSourceVtfs%"=="1" (
 	del /f /q "%VtfFile%"> nul
-))
+)) else (
+	del /f /q "%VtfFile%"> nul
+)
 
 goto QuitFunc
 
@@ -712,9 +714,14 @@ exit /b
 :ShellModeProcs
 	rem Info Message
 	start "" %MsgBox% Usage modes:  1) Run "%~nx0" to choose converting files;	2) Use "SdkBinaries\Tools\Texture Utils\%~nx0" "anyfile.vtf";	3) Use the Explorer context menu item (if the Bloodlines SDK installed);	4) Drag'n'drop VTFs to %~nx0 file.  You may convert multiple files at once. /c:Texture Converter - Information /t:MB_SYSTEMMODAL,MB_ICONINFORMATION
-exit
+goto Exit
 
 :QuitFunc
 set SMode=
 if /i not "%~2"=="-noinfo" echo.
 exit /b
+
+:Exit
+if exist "%TempDir%\" (
+rd /s /q "%TempDir%\" )
+exit
