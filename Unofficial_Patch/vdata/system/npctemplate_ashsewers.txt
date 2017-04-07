@@ -1,0 +1,151 @@
+//////////////////////////////////////////////////
+// NPC Stat Templates (Packages)
+//
+//	Hunters in hw_ash_sewer_1
+
+ClanDataTables
+{
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"HunterHuntingAshCrossbows"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+//			"ClanEffect"			""
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"SoundGroup"	"Hunter"	// changed by wesp
+			"NpcFakeReloadCountMin"		"2.0" // crossbow
+			"NeverInnocent"			"1"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"2"
+			"Dexterity"				"2"
+			"Stamina"				"3"
+			"Charisma"			"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"5"
+			"Intelligence"			"1"
+			"Wits"					"4"
+
+			"BloodPool"				"8"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"NPCGeneric"
+			"Excluded_Equipment"	"Default"
+			"Max_Health"		"100"
+			"Armor_Rating"		"2"
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"3"
+			"Dodge"					"1"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"2"
+			"Melee"					"3"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"6"   // defense vs pc feeding
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+			Disciplines
+			{
+				"shield_of_faith"		"3"
+			}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"HunterHuntingAsh38"
+			"ParentTemplateName"	"HunterHuntingAshCrossbows"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"NpcFakeReloadCountMin"		"6.0" // thirty-eight
+			"SoundGroup"	"Hunter"	// changed by wesp	
+		}
+
+		Abilities
+		{
+			"Dodge"					"0"
+			"Firearms"				"4"
+			"Computer"				"3"   // defense vs pc feeding
+		}
+
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"HunterHuntingAshElite"
+			"ParentTemplateName"	"HunterHuntingAshCrossbows"
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"SoundGroup"	"Hunter"	// changed by wesp		
+		}
+
+		Attributes
+		{
+			"Max_Health"		"140"
+		}
+
+		Abilities
+		{
+			"Computer"				"8"   // defense vs pc feeding
+		}
+
+	}
+}
