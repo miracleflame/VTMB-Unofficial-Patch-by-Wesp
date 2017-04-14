@@ -101,12 +101,13 @@ Bloodlines_loader.sh: Wine / Linux script, check txt, thanks SCO.
 Version Changelog:
 ------------------
 
-v9.8                                                     06.04.2017
+v9.8                                                     10.04.2017
 ----
 +Added Blood Boil explosion sound and increased decal view distance.
-+Corrected wrong auras of plus vampires at junkyard and in library.
-+Modified enemy behaviour in maze mausoleum and added Tourette line.
-Fixed mirrored textures of crates in museum cellar and Foxy Boxes.
++Corrected wrong auras of NPCs at Confession, junkyard and library.
++Modified enemies in maze mausoleum and added a connection to Patty.
++Tried once more to fix dead dog hurting and added a Tourette line.
+Fixed mirrored textures of crates in museum storage and Foxy Boxes.
 
 v9.7                                                     30.03.2017
 ----
@@ -3191,11 +3192,11 @@ Others:
 
 Open weapons to items:
 * item_w_claws_ghoul
-* item_w_tzimisce2_claw
 * item_w_mingxiao_spit
 * item_w_mingxiao_melee
 * item_w_mingxiao_tentacle
 * item_w_chang_energy_ball
+* item_w_chang_ghost (blue lights)
 
 
 Occult Items:
