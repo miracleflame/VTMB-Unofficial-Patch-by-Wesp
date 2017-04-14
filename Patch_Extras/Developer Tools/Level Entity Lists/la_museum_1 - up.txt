@@ -2280,6 +2280,7 @@
 "upperright" "960 -1312 312"
 "origin" "872 -1315 352"
 "spawnflags" "256"
+"targetname" "glass0"
 "OnBreak" "sound_glass,PlaySound,,0,-1,,"
 }
 {
@@ -4388,6 +4389,7 @@
 "follower_type" "Default"
 "base_gender" "1"
 "soundgroup" "None"
+"floatfreq" "2"
 "OnDeath" "logic_kill_camguard,Trigger,,0,-1,,"
 "OnDeath" "inc_kill_count,Trigger,,0,-1,,"
 "OnFoundPlayer" "alert_event,Trigger,,0,-1,,"
@@ -7808,6 +7810,7 @@
 "follower_type" "Default"
 "base_gender" "1"
 "soundgroup" "None"
+"floatfreq" "2"
 "OnDeath" "inc_kill_count,Trigger,,0,-1,,"
 "origin" "-614.136 -1173.84 5.15131"
 }
@@ -7888,6 +7891,7 @@
 "follower_type" "Default"
 "base_gender" "1"
 "soundgroup" "None"
+"floatfreq" "2"
 "OnDeath" "inc_kill_count,Trigger,,0,-1,,"
 "OnFoundPlayer" "alert_event,Trigger,,0,-1,,"
 "origin" "5.30902 -1012 4"
@@ -7978,6 +7982,7 @@
 "follower_type" "Default"
 "base_gender" "1"
 "soundgroup" "None"
+"floatfreq" "2"
 "OnDeath" "inc_kill_count,Trigger,,0,-1,,"
 "OnFoundPlayer" "alert_event,Trigger,,0,-1,,"
 "OnFoundPlayer" "spawn_guard_down,Trigger,,0,-1,,"
@@ -8170,6 +8175,7 @@
 "follower_type" "Default"
 "base_gender" "1"
 "allow_alert_lookaround" "1"
+"floatfreq" "2"
 "OnDeath" "inc_kill_count,Trigger,,0,-1,,"
 "origin" "1432 -1472 4"
 }
@@ -8228,6 +8234,7 @@
 "follower_type" "Default"
 "base_gender" "1"
 "allow_alert_lookaround" "1"
+"floatfreq" "2"
 "OnDeath" "inc_kill_count,Trigger,,0,-1,,"
 "origin" "779 -129 -284"
 }
@@ -8280,6 +8287,7 @@
 "follower_type" "Default"
 "base_gender" "1"
 "allow_alert_lookaround" "1"
+"floatfreq" "2"
 "OnDeath" "inc_kill_count,Trigger,,0,-1,,"
 "origin" "-352 -640 -286"
 }
@@ -8522,6 +8530,7 @@
 "follower_type" "Default"
 "base_gender" "1"
 "allow_alert_lookaround" "1"
+"floatfreq" "2"
 "OnDeath" "inc_kill_count,Trigger,,0,-1,,"
 "origin" "127 -320 594"
 }
@@ -8574,6 +8583,7 @@
 "follower_type" "Default"
 "base_gender" "1"
 "allow_alert_lookaround" "1"
+"floatfreq" "2"
 "origin" "1306 -503 5"
 }
 {
@@ -8625,6 +8635,7 @@
 "follower_type" "Default"
 "base_gender" "1"
 "soundgroup" "None"
+"floatfreq" "2"
 "OnDeath" "inc_kill_count,Trigger,,0,-1,,"
 "OnFoundPlayer" "alert_event,Trigger,,0,-1,,"
 "OnFoundPlayer" "spawn_guard_up,Trigger,,0,-1,,"
@@ -10953,6 +10964,7 @@
 "follower_type" "Default"
 "base_gender" "1"
 "soundgroup" "None"
+"floatfreq" "2"
 "OnDeath" "inc_kill_count,Trigger,,0,-1,,"
 "OnFoundPlayer" "alert_event,Trigger,,0,-1,,"
 "OnFoundPlayer" "spawn_guard_down,Trigger,,0,-1,,"
@@ -22963,9 +22975,9 @@
 "targetname" "museum_teleport"
 "StartDisabled" "1"
 "target" "museum_teleport_destination"
-"OnEndTouch" "world,SetSafeArea,1,0,-1,,"
 "spawnflags" "1"
 "crossfade" "0.5"
+"OnEndTouch" "world,SetSafeArea,1,0,-1,,"
 }
 {
 "classname" "env_sprite"
@@ -23103,6 +23115,7 @@
 "follower_type" "Default"
 "base_gender" "1"
 "allow_alert_lookaround" "1"
+"floatfreq" "2"
 "OnDialogEnd" ",,,0,-1,toCaineTaxi(),"
 "origin" "333.536 -4123.94 -183.295"
 }

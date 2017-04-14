@@ -101,6 +101,13 @@ Bloodlines_loader.sh: Wine / Linux script, check txt, thanks SCO.
 Version Changelog:
 ------------------
 
+v9.8                                                     06.04.2017
+----
++Added Blood Boil explosion sound and increased decal view distance.
++Corrected wrong auras of plus vampires at junkyard and in library.
++Modified enemy behaviour in maze mausoleum and added Tourette line.
+Fixed mirrored textures of crates in museum cellar and Foxy Boxes.
+
 v9.7                                                     30.03.2017
 ----
 +Restored Chateau Hotel to ending, thanks EntenSchreck and Psycho-A.
@@ -2234,7 +2241,7 @@ Added many missing inspection nodes and fixed many misplaced props.
 Fixed bad fire particle files and badly placed or flickering decals.
 Repaired clipping, holes, necks and other issues of various models.
 Adjusted health bar frame and weapon/discpline highlight graphics.
-Doubled the distance in which detail models will visibly fade away.
+Increased distance in which detail models and decals will fade away.
 Hid invisible Ocean House and Grout's mansion blocks by furniture.
 Fixed three mirrored keycard backsides and centered the area icons.
 Added native widescreen support and centered tutorial popups for it.
@@ -2261,7 +2268,7 @@ Corrected no floats for females bug, croucher laughs and many floats.
 Removed other clans whispers in tutorial, warrens and Ocean House.
 Fixed sewer sound transitions in SM, Hollywood and Chinatown hubs.
 Removed character sheet music overlaying and unified keypad sounds.
-Added unused floats of Trip's dialogue and lowered idle sound rate.
+Lowered idle sound rate and missing sound to Blood Boil explosion.
 
 Stats:
 +Included the unused histories so that each clan has ten plus none.
@@ -2538,9 +2545,8 @@ Corrected some downtown NPCs stats connected to Nosferatu and more.
 Made Igor attack the player if his friends are killed or attacked.
 Restored plaguebearer quest log, Regent line and cool Nines gesture.
 Fixed suitcase exchange at the parking garage and added one poster.
-Made abandoned warehouse bum leave later if you didn't talk to him.
-Switched badly fixed missing Tommy line with better fitting float.
-Made crackhouse girl leave and hid two mirrored theatre door signs.
+Made abandoned warehouse bum and crackhouse girl leave after a time.
+Fixed two theatre door signs and discipline removal in crackhouse.
 
 Confession:
 +Restored Venus' laptop, turnstile, gestures and three cage dancers.
@@ -2640,6 +2646,7 @@ Made celebrity database update and stopped VV from sending poster.
 Stopped dead Tommy writing review and fixed slanting streetlights.
 Restored three King's Way headrunners and fixed Red Spot door bug.
 Corrected netcafe sound schemes switch and fixed many streetlights.
+Switched badly fixed missing Tommy line with better fitting float.
 
 Asp Hole:
 +Made you loose a Humanity point for making Ash exchange his clothes.
