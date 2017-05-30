@@ -1,6 +1,6 @@
 {	1	}{	S'up? ... Oh. ... Welcome to Red Spot, home of the Monstro-Chug, 72 ounces of your favorite beverage for 89 cents, blah blah. You need some help or something?	}{	S'up? ... Oh. ... Welcome to Red Spot, home of the Monstro-Chug, 72 ounces of your favorite beverage for 89 cents, blah blah. You need some help or something?	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	G.Slater_Know = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	2	}{	Yeah. What's going on around here? Anything exciting or unusual?	}{	Yeah. What's going on around here? Anything exciting or unusual?	}{	11	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	3	}{	You hear anything new about the serial killer?	}{	You hear anything new about the serial killer?	}{	51	}{	not IsClan(pc,"Malkavian") and pc.GetQuestState("Serial") < 8	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	You hear anything new about the serial killer?	}{	You hear anything new about the serial killer?	}{	51	}{	G.Slater_Serial == 0 and not IsClan(pc,"Malkavian") and pc.GetQuestState("Serial") < 8	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	4	}{	Maybe you can help - I'm looking for a tape.	}{	Maybe you can help - I'm looking for a tape.	}{	21	}{	G.Isaac_Movie > 1 and G.Isaac_Show == 0 and G.Slater_Flynn == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	5	}{	What is this city hiding from me?	}{	What is this city hiding from me?	}{	201	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	What is this city hiding from me?	}
 {	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -170,7 +170,7 @@
 {	170	}{	I'm outta here. Later.	}{	I'm outta here. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	171	}{	So... you need face? I mean, uh, my bad - duh, uh, I mean, do you need anything?	}{	So... you need face? I mean, uh, my bad - duh, uh, I mean, do you need anything?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	172	}{	Yeah. What's going on around here? Anything exciting or unusual?	}{	Yeah. What's going on around here? Anything exciting or unusual?	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tell me more of the city of stars.	}
-{	173	}{	You hear anything new about the serial killer?	}{	You hear anything new about the serial killer?	}{	51	}{	pc.GetQuestState("Serial") < 8	}{	}{	}{	}{	}{	}{	}{	}{	Has the killer that walks these streets bloodied his hands again?	}
+{	173	}{	You hear anything new about the serial killer?	}{	You hear anything new about the serial killer?	}{	51	}{	G.Slater_Serial == 0 and pc.GetQuestState("Serial") < 8	}{	}{	}{	}{	}{	}{	}{	}{	Has the killer that walks these streets bloodied his hands again?	}
 {	174	}{	Maybe you can help - I'm looking for a tape.	}{	Maybe you can help - I'm looking for a tape.	}{	21	}{	G.Isaac_Movie > 1 and G.Isaac_Show == 0 and G.Slater_Flynn == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek a tape full of nameless atrocity.	}
 {	175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -180,7 +180,7 @@
 {	180	}{	Nope, just looking around. Later.	}{	Nope, just looking around. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need nothing you have. I am gone.	}
 {	181	}{	Dude, sorry bro. I did NOT mean to offend you, man. Totally my bad! You need something?	}{	Dude, sorry bro. I did NOT mean to offend you, man. Totally my bad! You need something?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	182	}{	Yeah. What's going on around here? Anything exciting or unusual?	}{	Yeah. What's going on around here? Anything exciting or unusual?	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	183	}{	You hear anything new about the serial killer?	}{	You hear anything new about the serial killer?	}{	51	}{	pc.GetQuestState("Serial") < 8	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	183	}{	You hear anything new about the serial killer?	}{	You hear anything new about the serial killer?	}{	51	}{	G.Slater_Serial == 0 and pc.GetQuestState("Serial") < 8	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	184	}{	Maybe you can help - I'm looking for a tape.	}{	Maybe you can help - I'm looking for a tape.	}{	21	}{	G.Isaac_Movie > 1 and G.Isaac_Show == 0 and G.Slater_Flynn == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	185	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -201,7 +201,7 @@
 {	201	}{	Um... humility? Seriously... you want some orange juice or somethin' to help you come down? Cuz, like, you're wiggin'.	}{	Um... humility? Seriously... you want some orange juice or somethin' to help you come down? Cuz, like, you're wiggin'.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	202	}{	I seek only the blood of the living.	}{	I seek only the blood of the living.	}{	211	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	203	}{	I seek a tape full of nameless atrocity.	}{	I seek a tape full of nameless atrocity.	}{	21	}{	G.Isaac_Movie > 1 and G.Isaac_Show == 0 and G.Slater_Flynn == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	204	}{	Has the killer that walks these streets bloodied his hands again?	}{	Has the killer that walks these streets bloodied his hands again?	}{	51	}{	pc.GetQuestState("Serial") > 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	204	}{	Has the killer that walks these streets bloodied his hands again?	}{	Has the killer that walks these streets bloodied his hands again?	}{	51	}{	G.Slater_Serial == 0 and pc.GetQuestState("Serial") > 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	205	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -210,7 +210,7 @@
 {	210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	211	}{	Oh... are you that lawyer? You're gonna have to talk to the manager, dude, because, like, that sexual harassment case... I, like, don't even know, okay - and, like, it wasn't my ass he grabbed.	}{	Oh... are you that lawyer? You're gonna have to talk to the manager, dude, because, like, that sexual harassment case... I, like, don't even know, okay - and, like, it wasn't my ass he grabbed.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	212	}{	I seek a tape full of nameless atrocity.	}{	I seek a tape full of nameless atrocity.	}{	21	}{	G.Isaac_Movie > 1 and G.Isaac_Show == 0 and G.Slater_Flynn == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	213	}{	Has the killer that walks these streets bloodied his hands again?	}{	Has the killer that walks these streets bloodied his hands again?	}{	51	}{	pc.GetQuestState("Serial") > 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	213	}{	Has the killer that walks these streets bloodied his hands again?	}{	Has the killer that walks these streets bloodied his hands again?	}{	51	}{	G.Slater_Serial == 0 and pc.GetQuestState("Serial") > 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	214	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	215	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
