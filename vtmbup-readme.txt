@@ -104,7 +104,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v9.8                                                     15.05.2017
+v9.8                                                     22.05.2017
 ----
 +Lowered damage of both rifles and restored original stats to basic.
 +Corrected wrong auras of NPCs at Confession, junkyard and library.
@@ -112,12 +112,15 @@ v9.8                                                     15.05.2017
 +Fixed dead dog biting, some map details and added a Tourette line.
 +Removed civilian Humanity losses and increased Dementation 2 range.
 +Improved stat messages for Auspex, Fortidude, Potence and Protean.
++Updated radio subtitles and SDK, thanks miracle.flame and Psycho-A.
++Fixed Andrei problems when you meet him in the Hallowbrook Atrium.
 Restored a Milligan line and created necessary license item for it.
 Corrected infamous Skyeline bug and Giovanni crypt map transition.
 Added Blood Boil explosion sound and increased decal view distance.
 Replaced Python update with map sources and improved other Extras.
 Corrected mirrored crate textures and fixed buggy warrens stairway.
 Fixed eyes in Lily cutscene and raised club outside music volumes.
+Reset clothing using console and improved werewolf blood quest log.
 
 v9.7                                                     30.03.2017
 ----
@@ -2258,7 +2261,7 @@ Fixed three mirrored keycard backsides and centered the area icons.
 Added native widescreen support and centered tutorial popups for it.
 Corrected some areaportals in Leopold Society and Giovanni Mansion.
 Disabled low poly model LOD in engine.dll and made bump mapping on.
-Corrected mirrored crate textures in Foxy Boxes and museum storage.
+Corrected mirrored crate textures and reset clothing using console.
 
 Sounds:
 +Added subtitles for Malkavian whispers and Deb of Night radio show.
@@ -3738,6 +3741,8 @@ Leonard Boyarsky in an interview by Sebastian Thor from Eurogamer
 
 Wesp5 Projects:
 ---------------
+The Dark Mod oil lamp patch
+The Dark Mod missions patch
 The Precursors Unofficial Patch
 White Gold: War in Paradise Unofficial Patch
 Babylon 5 - Star Fury Pilot Unofficial Patch
