@@ -104,20 +104,20 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v9.8                                                     08.05.2017
+v9.8                                                     15.05.2017
 ----
 +Lowered damage of both rifles and restored original stats to basic.
 +Corrected wrong auras of NPCs at Confession, junkyard and library.
 +Modified enemies in maze mausoleum and added a connection to Patty.
 +Fixed dead dog biting, some map details and added a Tourette line.
-+Removed some civilian Humanity losses and fixed bad warrens stairs.
++Removed civilian Humanity losses and increased Dementation 2 range.
 +Improved stat messages for Auspex, Fortidude, Potence and Protean.
-Corrected Giovanni Mansion map transition if you return from crypt.
-Fixed infamous Skyeline random item swap bug by recompiling level.
+Restored a Milligan line and created necessary license item for it.
+Corrected infamous Skyeline bug and Giovanni crypt map transition.
 Added Blood Boil explosion sound and increased decal view distance.
-Removed Python 2.7.2 update and added Hammer sources and trailers.
-Corrected mirrored crate textures in Foxy Boxes and museum storage.
-Restored one Milligan line and created license item for it to fit.
+Replaced Python update with map sources and improved other Extras.
+Corrected mirrored crate textures and fixed buggy warrens stairway.
+Fixed eyes in Lily cutscene and raised club outside music volumes.
 
 v9.7                                                     30.03.2017
 ----
@@ -2468,6 +2468,7 @@ Added option to pay Vandal and fixed bad lighting and other details.
 Made Phil only refer to clinic computer if you already accessed it.
 Fixed clinic guard not dropping key if killed by seductive feeding.
 Made it possible to continue E's quest after visiting Vandal often.
+Fixed eyes in Lily cutscene and raised club outside music volumes.
 
 Elizabeth Dane:
 +Added boat model and many props and fixed some missing door sounds.
@@ -2619,15 +2620,14 @@ Skyeline Apartments:
 +Restored security guard with scenes and fixed elevator and monitor.
 +Provided a Humanity point for not telling Hannah that Paul is dead.
 +Rewarded one Humanity for Dominating Milligan and added toileteries.
-Restored lost Milligan line and created license item for it to fit.
-Fixed infamous Skyeline random model swap bug by recompiling level.
+Restored a Milligan line and created necessary license item for it.
+Fixed infamous Skyeline bug and Milligan stuck bug by recompilation.
 Corrected Milligan not leaving his apartment in case you were loud.
 Adjusted Hannah's dates, forced her lines and made her actually die.
 Modified XP and log for plague quest state and made CDC stay longer.
 Added missing XP for plague quest and fixed Hannah quest state bug.
 Lessened vents fade outs, loud humming sound and fixed a wrong decal.
 Made Hannah's apartment vent doors unlock on entering the password.
-Tried to fix Milligan stuck bug by moving his flee script position.
 
 Venture Tower:
 +Added a new discipline, Celerity/Fortidude/Animalism, from Beckett.
@@ -2840,7 +2840,6 @@ Stopped wrong invitations being dropped and corrected names on them.
 Swapped unique car, fixed it's texture and improved Nadia sequence.
 Prevented spoiling secrets of all candidates and fixed Victor loop.
 Fixed claw brother being susceptible to one-hit-kill by Possession.
-Corrected Giovanni Mansion map transition if you return from crypt.
 
 Society of Leopold:
 +Placed the flamethrower near Bach and Ash's cell key in big cave.
@@ -3662,7 +3661,7 @@ Occasionally Beckett stays in wolf form when meeting him, reload.
 If the Odius Chalice is not working move it to the left inventory.
 Loading will remove Bach's holy light effect and reset the radio.
 All enemies drop only one weapon, some exit-map icons are missing.
-Don't leave the building of the murder before talking to the bum.
+If containers auto-close, right-click the objects to choose them.
 Occasionally mailboxes do not receive rewards or objects drop out.
 There is a way to exploit armors and stats, but that is a secret.
 In some cutscenes people look or move strangely and bodies vanish.
@@ -3686,7 +3685,7 @@ Enemy death can open doors and give items, disciplines usage not.
 If LaCroix ignores a delivered sarcophagus set G.Story_State = 60.
 Don't feed on quest NPCs and attack them to break feeding trance.
 If game crashes when entering certain levels drop inventory items.
-If containers auto-close, right-click the objects to choose them.
+Sometimes unknown occult items identify only after level changes.
 
 
 Open Technical Issues:
