@@ -1330,6 +1330,7 @@ def VMHelper():
 def IsIdling():
     checkOccult()
     checkBomb()
+    __main__.ccmd.clothes=""
     pc = __main__.FindPlayer()
     G  = __main__.G
     G.Pos_One = pc.GetOrigin()
