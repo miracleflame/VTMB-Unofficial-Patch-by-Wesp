@@ -859,8 +859,8 @@
 {	859	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	860	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	861	}{	[Therese]Be my guest.	}{	[Therese]Be my guest.	}{	#	}{	pc.SetCamera("tTherese") or npc.SetDisposition("neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	862	}{	(Auto-Link)	}{	(Auto-Link)	}{	871	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	863	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	862	}{	(Auto-Link)	}{	(Auto-Link)	}{	871	}{	pc.GetQuestState("Release the Spirit") == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	863	}{	(Auto-Link)	}{	(Auto-Link)	}{	931	}{	pc.GetQuestState("Release the Spirit") == 3	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	864	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	865	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	866	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -869,8 +869,8 @@
 {	869	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	870	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	871	}{	[Jeanette]Therese has officially sided with the Camarilla. Could be a prince, one day. And I -	}{	[Jeanette]Therese has officially sided with the Camarilla. Could be a prince, one day. And I -	}{	#	}{	pc.SetCamera("tJeanette") or npc.SetDisposition("joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	872	}{	(Auto-Link)	}{	(Auto-Link)	}{	881	}{	pc.GetQuestState("Release the Spirit") == 3	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	873	}{	(Auto-Link)	}{	(Auto-Link)	}{	881	}{	pc.GetQuestState("Release the Spirit") == 2	}{	pc.SetQuest("Release the Spirit",4); pc.SetQuest("Hotel",7)	}{	}{	}{	}{	}{	}{	}{	}
+{	872	}{	(Auto-Link)	}{	(Auto-Link)	}{	881	}{	}{	pc.SetQuest("Release the Spirit",4); pc.SetQuest("Hotel",7)	}{	}{	}{	}{	}{	}{	}{	}
+{	873	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	874	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	875	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	876	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -882,7 +882,7 @@
 {	882	}{	How are you two getting along?	}{	How are you two getting along?	}{	811	}{	G.Story_State >= 10 and G.Tourette_1 == 0	}{	G.Tourette_1 = 1	}{	}{	}{	}{	}{	}{	}{	Did you find room for two in your pale skin?	}
 {	883	}{	Congratulations. If you ever need a favor, find me. Goodbye.	}{	Congratulations. If you ever need a favor, find me. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Call on me anytime, daughters of Janus.	}
 {	884	}{	Finishing the other's sentence - it's really creepy. Goodbye.	}{	Finishing the other's sentence - it's really creepy. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your madness is divine. Farewell.	}
-{	885	}{	Did Jeanette misplace it or what? Never mind, goodbye.	}{	Did Jeanette misplace it or what? Never mind, goodbye.	}{	0	}{	G.Jeanette_Scorn == 1	}{	}{	}{	}{	}{	}{	}{	}{	Did the white mistress loose it? Who cares? I'm gone.	}
+{	885	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	886	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	887	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	888	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -928,10 +928,10 @@
 {	928	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	929	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	930	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	931	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	932	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	933	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	934	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	931	}{	[Jeanette]Therese has officially sided with the Camarilla. Could be a prince, one day.	}{	[Jeanette]Therese has officially sided with the Camarilla. Could be a prince, one day.	}{	#	}{	pc.SetCamera("tJeanette") or npc.SetDisposition("joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	932	}{	How are you two getting along?	}{	How are you two getting along?	}{	811	}{	G.Story_State >= 10 and G.Tourette_1 == 0	}{	G.Tourette_1 = 1	}{	}{	}{	}{	}{	}{	}{	Did you find room for two in your pale skin?	}
+{	933	}{	Congratulations. If you ever need a favor, find me. Goodbye.	}{	Congratulations. If you ever need a favor, find me. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Call on me anytime, daughters of Janus.	}
+{	934	}{	Finishing the other's sentence - it's really creepy. Goodbye.	}{	Finishing the other's sentence - it's really creepy. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your madness is divine. Farewell.	}
 {	935	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	936	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	937	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

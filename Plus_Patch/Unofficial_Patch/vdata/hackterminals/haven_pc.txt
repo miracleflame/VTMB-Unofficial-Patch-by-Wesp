@@ -240,24 +240,6 @@ Jeanette "
 
 	Email	// added by wesp
 	{
-		"subject"	"Searching"
-		"sender"	"m1tn1ck@infocom.vtm"
-		"body"		"Mitnick again. I can offer you a special occult item if you find me a LA library card. Just put it in the mailbox and I'll swap it with the reward."
-		"dependency"	"G.Shubs_Act == 100 and G.Mitnick_Gift == 0"
-		"runscript"	"G.Gift_Email = 1; mitSetQuest()"
-	}
-
-	Email	// added by wesp
-	{
-		"subject"	"Received"
-		"sender"	"m1tn1ck@legend.vtm"
-		"body"		"Got it. Find the reward in your mailbox."
-		"dependency"	"G.Mitnick_Gift == 1"
-		"runscript"	"mitSetQuestFinish()"
-	}
-
-	Email	// added by wesp
-	{
 		"subject"	"Library"
 		"sender"	"beckett@legend.vtm"
 		"body"	"Hello young one, a fellow Gangrel named Scott suspects that there is a Lasombra here in LA recruiting kindred for the Sabbat. He saw him disappearing inside the LA public library! As I'm preoccupied right now, please meet him in the Santa Monica Smoke Shop to learn about the details. After all we wouldn't want anything bad happening to all the precious knowledge, would we? 
@@ -301,7 +283,7 @@ VV"
 	{
 		"subject"	"Prince is promoting you!"
 		"sender"	"gary@schrecknet.vtm"
-		"body"		"Hey, boss, did some spring-cleaning today - came across something that might tickle you. A kid used to live here had an unhealthy crush on everyone's favorite psycho pin-up, Jeanette Voerman. I got a touch of nostalgia, so, you find a copy of Tap Hotel, starring me, I'll trade you a poster of that luscious lunatic for it. Put the video tape in your mailbox and I'll deliver it to your haven."
+		"body"		"Hey boss, did some spring-cleaning today - came across something that might tickle you. A kid used to live here had an unhealthy crush on everyone's favorite psycho pin-up, Jeanette Voerman. I got a touch of nostalgia, so, you find a copy of Tap Hotel, starring me, I'll trade you a poster of that luscious lunatic for it. Put the video tape in your mailbox and I'll deliver it to your haven."
 		"dependency"	"G.Story_State >= 45 and G.Gary_Voerman == 0"
 		"runscript"	"garySetQuestOne()"	// added by wesp
 	}
@@ -310,7 +292,7 @@ VV"
 	{
 		"subject"	"Rocket Launcher for Sale"
 		"sender"	"gary@schrecknet.vtm"
-		"body"		"Boss, got another poster just collecting dust, if you want to trade. Looks like one of the Anarchs did some \"art\" photos before she got Embraced. It's all yours for the low, low price of the wooden pull toy prop from The Glittering. Might be in Metalhead Industries. You've talked to Mitnick, right? In the mailbox, like before."	// changed by wesp
+		"body"		"Boss, got another poster just collecting dust, if you want to trade. Looks like one of the anarchs did some \"art\" photos before she got Embraced. It's all yours for the low, low price of the wooden pull toy prop from The Glittering. Might be in Metalhead Industries. You've talked to Mitnick, right? In the mailbox, like before."	// changed by wesp
 		"dependency"	"G.Gary_Photochop == 1 and G.Gary_Damsel == 0"	// changed by wesp
 		"runscript"	"garySetQuestFour()"	// added by wesp
 	}
@@ -346,7 +328,7 @@ VV"
 	{
 		"subject"	"Replica Stakes"
 		"sender"	"gary@schrecknet.vtm"
-		"body"		"Hey boss, got another job for you. One of our researchers into the occult would like to get his hands on a squashed Odious Chalice seen in Chinatown. Would offer a poster of Imalia in her full beauty, before I gave her my special treatment! The usual way like before."
+		"body"		"Hey boss, got another job for you. One of our researchers into the occult would like to get his hands on a squashed Odious Chalice seen in Chinatown. Would offer a poster of Imalia in her full beauty, before I gave her my special treatment."
 		"dependency"	"G.Gary_Tawni == 1 and G.Gary_Imalia == 0"
 		"runscript"	"garySetQuestSix()"
 	}
@@ -355,9 +337,18 @@ VV"
 	{
 		"subject"	"World of Darkness Gold fast!"
 		"sender"	"gary@schrecknet.vtm"
-		"body"		"Been busy, boss? Because I heard another famous movie prop has gone missing. The throwing star of the Whirlwind from \"A Touch of Xen\". I'll swap it for the poster of a sweet girl, whom you certainly won't look in the eyes!"
+		"body"		"Been busy, boss? Because I heard another famous movie prop has gone missing. The throwing star of the Whirlwind from \"A Touch of Xen\". I'll swap it for the poster of a sweet girl, whom you certainly won't look too deep into the eyes."
 		"dependency"	"G.Gary_Imalia == 1 and G.Gary_Blind == 0"
 		"runscript"	"garySetQuestSeven()"
+	}
+
+	Email	// added by wesp
+	{
+		"subject"	"Looking for dates?"
+		"sender"	"gary@schrecknet.vtm"
+		"body"		"Are you lonely, boss? Then maybe finding one of these weird fleshy Tzimisce balls for me will stop you from wallowing in self pity. I'll give you a poster in return of a girl hanging out for you."
+		"dependency"	"G.Gary_Blind == 1 and G.Gary_Cross == 0"
+		"runscript"	"garySetQuestEight()"
 	}
 
 	Email

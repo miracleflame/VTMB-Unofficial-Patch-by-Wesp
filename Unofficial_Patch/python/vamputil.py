@@ -2637,10 +2637,8 @@ def mailboxExitCheck():
         if(container.HasItem("item_g_wireless_camera_4") and G.Gary_Imalia == 1 and G.Gary_Blind == 0):
             container.RemoveItem("item_g_wireless_camera_4")
             G.Gary_Blind = 1
-        if(container.HasItem("item_w_claws_protean4") and G.Gift_Email == 1 and G.Mitnick_Gift == 0):
-            container.RemoveItem("item_w_claws_protean4")
-            container.AddEntityToContainer("gift_reward")
-            G.Mitnick_Gift = 1
+        if(container.HasItem("item_w_mingxiao_tentacle") and G.Gary_Blind == 1 and G.Gary_Cross == 0):
+            container.RemoveItem("item_w_mingxiao_tentacle")
 
 #HAVEN: Updates the player's quest when he gets the email about werewolf blood
 def werewolfBloodQuestAssigned():
@@ -2652,14 +2650,6 @@ def werewolfBloodQuestAssigned():
 #HAVEN: Updates the player's quest when he takes the reward for the werewolf blood
 def werewolfBloodQuestDone():
     __main__.FindPlayer().SetQuest("Werewolf Blood", 4)
-
-#HAVEN: Setting Quest State for Gift Quest, added by wesp
-def mitSetQuest():
-    __main__.FindPlayer().SetQuest("Gift", 1)
-
-#HAVEN: Setting Quest State for Gift Quest, added by wesp
-def mitSetQuestFinish():
-    __main__.FindPlayer().SetQuest("Gift", 2)
 
 #HAVEN: Setting Quest State Two for Mitnick Quest
 def mitSetQuestTwo():
@@ -2721,6 +2711,10 @@ def garySetQuestSix():
 #HAVEN: Setting Quest State Seven for Gary Quest, added by wesp
 def garySetQuestSeven():
     __main__.FindPlayer().SetQuest("Gary", 7)
+
+#HAVEN: Setting Quest State Seven for Gary Quest, added by wesp
+def garySetQuestEight():
+    __main__.FindPlayer().SetQuest("Gary", 8)
 
 #HAVEN: Setting Quest State One for Bertram Quest, added by wesp
 def bertramSetQuest():

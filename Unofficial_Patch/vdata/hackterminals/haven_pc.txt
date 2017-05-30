@@ -240,24 +240,6 @@ Jeanette "
 
 	Email	// added by wesp
 	{
-		"subject"	"Searching"
-		"sender"	"m1tn1ck@infocom.vtm"
-		"body"		"Mitnick again. I can offer you a special occult item if you find me a LA library card. Just put it in the mailbox and I'll swap it with the reward."
-		"dependency"	"G.Shubs_Act == 100 and G.Mitnick_Gift == 0"
-		"runscript"	"G.Gift_Email = 1; mitSetQuest()"
-	}
-
-	Email	// added by wesp
-	{
-		"subject"	"Received"
-		"sender"	"m1tn1ck@legend.vtm"
-		"body"		"Got it. Find the reward in your mailbox."
-		"dependency"	"G.Mitnick_Gift == 1"
-		"runscript"	"mitSetQuestFinish()"
-	}
-
-	Email	// added by wesp
-	{
 		"subject"	"Library"
 		"sender"	"beckett@legend.vtm"
 		"body"	"Hello young one, a fellow Gangrel named Scott suspects that there is a Lasombra here in LA recruiting kindred for the Sabbat. He saw him disappearing inside the LA public library! As I'm preoccupied right now, please meet him in the Santa Monica smoke shop to learn about the details. After all we wouldn't want anything bad happening to all the precious knowledge, would we? 
@@ -358,6 +340,15 @@ VV"
 		"body"		"Been busy, boss? Because I heard another famous movie prop has gone missing. The throwing star of the Whirlwind from \"A Touch of Xen\". I'll swap it for the poster of a sweet girl, whom you certainly won't look in the eyes!"
 		"dependency"	"G.Gary_Imalia == 1 and G.Gary_Blind == 10"	// basic
 		"runscript"	"garySetQuestSeven()"
+	}
+
+	Email	// added by wesp
+	{
+		"subject"	"Looking for dates?"
+		"sender"	"gary@schrecknet.vtm"
+		"body"		"Are you lonely, boss? Then maybe finding one of these weird fleshy Tzimisce balls for me will stop you from wallowing in self pity. I'll give you a poster in return of a girl hanging out for you."
+		"dependency"	"G.Gary_Blind == 1 and G.Gary_Cross == 10"		// basic
+		"runscript"	"garySetQuestEight()"
 	}
 
 	Email

@@ -104,7 +104,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v9.8                                                     22.05.2017
+v9.8                                                     25.05.2017
 ----
 +Lowered damage of both rifles and restored original stats to basic.
 +Corrected wrong auras of NPCs at Confession, junkyard and library.
@@ -114,6 +114,8 @@ v9.8                                                     22.05.2017
 +Improved stat messages for Auspex, Fortidude, Potence and Protean.
 +Updated radio subtitles and SDK, thanks miracle.flame and Psycho-A.
 +Fixed Andrei problems when you meet him in the Hallowbrook Atrium.
++Added new poster quest from Gary and improved portal at King's Way.
+Fixed Slater dialogue loop and other minor dialogue and text bugs.
 Restored a Milligan line and created necessary license item for it.
 Corrected infamous Skyeline bug and Giovanni crypt map transition.
 Added Blood Boil explosion sound and increased decal view distance.
@@ -121,6 +123,7 @@ Replaced Python update with map sources and improved other Extras.
 Corrected mirrored crate textures and fixed buggy warrens stairway.
 Fixed eyes in Lily cutscene and raised club outside music volumes.
 Reset clothing using console and improved werewolf blood quest log.
+Added drop_type1or2MDL decompressor for models, thanks to DDLullu.
 
 v9.7                                                     30.03.2017
 ----
@@ -2933,6 +2936,7 @@ Quests:
 + Library quest from Beckett.
 + Drug getting quest from Trip.
 + Gary poster quest for name plate.
++ Gary poster quest for fleshy ball.
 + Gary poster quest for throwing star.
 + Gary poster quest for squashed chalice.
 
@@ -3207,12 +3211,9 @@ Others:
 * Different HUD user interface (graphics found).
 * Lockpicking and discipline crosshairs (graphics found).
 
-Open weapons to items:
+Open weapons for items:
 * item_w_mingxiao_spit
 * item_w_mingxiao_melee
-* item_w_mingxiao_tentacle
-* item_w_chang_energy_ball
-* item_w_chang_ghost (blue light effects)
 
 
 Occult Items:

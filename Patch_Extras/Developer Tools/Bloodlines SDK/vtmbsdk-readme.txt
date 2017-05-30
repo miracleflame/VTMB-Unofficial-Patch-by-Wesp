@@ -193,8 +193,7 @@ Official project pages:
 * Planet-Vampire Community: 
   https://planetvampire.com/modules/files/index.php?id=31
   https://forums.planetvampire.com/index.php?topic=5797.0
-* V-Bloodlines/CS-Mapping/VK (Russian Communities):
-  http://forum.v-bloodlines.info/topic8100.html [x]
+* CS-Mapping/VK.com (Russian Communities):
   http://cs-mapping.com.ua/forum/showthread.php?t=37053
   http://vk.com/vtm_bloodlines [game public]
 
@@ -213,7 +212,8 @@ to do something youeself, please, read notes below.
 [Preparation]
 
 To make able to manage SDK applications, please download the latest version of source code.
-This can be found here: http://yadi.sk/d/vs3nqIRxEHd8N After, unpack it inside SDK root directory.
+This can be found here: http://www.planetvampire.com/modules/files/view.php?id=764 or here: 
+http://yadi.sk/d/vs3nqIRxEHd8N (mirrored link). After, unpack it inside SDK root directory.
 
 Next, to compile something, you need to install (in specified order):
 
@@ -227,7 +227,7 @@ If you confused with software incompatiblity warnings on Windows 7 or later OS -
 There are ready Batch files presented to quickly build certain applications/commons set.
 
 Note: Since SDK version 1.52, the "portable" version of Visual Studio (with SP5+PP5) is available.
-That means you don't need legacy installing as said before - instead you just unpack "vc_studio" folder
+That means you don't need legacy installing as said above - instead you just unpack "vc_studio" folder
 near the code's "src_main" folder, so the compiling with batch scripts will be workable immediately.
 You can download it together with Code at the same link (legacy VS installers are no longer required).
 
@@ -307,6 +307,10 @@ Global changes for the last year:
 * Improved and updated SDK interface, instructions, file system, some tools and other aspects.
 
 --------------------
+
+1.66-hotfix (17.05.2017):
+- Swapped cmdow.exe for LipSync Editor with scripted workaround, so Google shoudn't panic more.
+- The SDK source code has been uploaded onto the Planet-Vampire servers for wider user access.
 
 1.66 (25.03.2017):
 - Generic: Fixed working some tools and scripts on Windows 10 and non-admin user accounts.

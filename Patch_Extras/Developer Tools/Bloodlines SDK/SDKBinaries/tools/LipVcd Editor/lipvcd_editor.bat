@@ -1,6 +1,6 @@
 @echo off
 rem Written by: Psycho-A
-rem Build: 0:51 12.02.2017 {beta}
+rem Build: 13:17 17.05.2017 {beta}
 color 80
 mode con cols=42 lines=15
 echo Initializing...
@@ -25,7 +25,6 @@ set LipFormatHl2=patterns\lips_hl2.lst
 set LipFormatVtM=patterns\lips_vtm.lst
 set LipWavMeta=patterns\wav_meta.bin
 set SoX=soxconverter\sox.exe
-set WinMan=cmdow.exe
 
 :: Check required files
 for %%m in (
@@ -34,7 +33,6 @@ for %%m in (
 	%OpenDlg%
 	%Sfk%
 	%SoX%
-	%WinMan%
 	%FPConfigGen%
 	%FPConfigVCD%
 	%FPApp%
@@ -131,12 +129,16 @@ rem Run FacePoser executable...
 %NirCmd% win activate etitle "Editor Console"
 start %FPApp% -game projectbase -nop4 -novconfig -noshaderapi
 
-rem Fit and Title the program window. [fixme!]
+rem Fit and Title the program window [fixme!]
+set appshow_stp=0
+set loop_count=10
 :appwinshow_loop
+%NirCmd% wait 100
 %NirCmd% win center process hlfaceposer.exe
 %NirCmd% win settext process hlfaceposer.exe "Lip/VCD/Captions Editor"
-%WinMan% "Lip/VCD/Captions Editor" /ACT > nul 2>&1
-if not "%ErrorLevel%"=="0" goto appwinshow_loop
+%NirCmd% win activate ititle "Lip/VCD/Captions Editor"
+set /a appshow_stp=%appshow_stp%+1
+if %appshow_stp% LSS %loop_count% goto appwinshow_loop
 
 rem Show FacePoser usage tutorials...
 echo - Showing usage notes...
