@@ -10330,15 +10330,15 @@
 "fright_duration" "5.0"
 "conflict_range" "100"
 "warn_range" "200"
-"OnDeath" "plus_butch_hurt,Kill,,0,-1,,"
+"OnDeath" "plus_butch_hurt,Kill,,0.05,-1,,"
 "OnDeath" "plus_butch_bite,Kill,,0,-1,,"
-"OnDeath" "plus_butch_attack,Kill,,0,-1,,"
 "OnDeath" "plus_butch_bark,Kill,,0.15,-1,,"
+"OnDeath" "plus_butch_attack,Kill,,0,-1,,"
 "OnFoundPlayer" "plus_butch_bark,PlaySound,,0,-1,,"
 "OnFoundPlayer" "plus_butch,SetRelationship,player D_HT 5,0,-1,,"
 "OnDeath" "plus_butch_hurt,ScriptHide,,0.1,-1,,"
-"OnDeath" "plus_butch_hurt,Disable,,0.2,-1,,"
-"OnDeath" "plus_butch_hurt,SetDamage,0,0.3,-1,,"
+"OnDeath" "plus_butch_hurt,Disable,,0,-1,,"
+"OnDeath" "plus_butch_hurt,SetDamage,0,0.03,-1,,"
 "origin" "2949.55 -2810.45 -132.578"
 }
 {
@@ -12427,7 +12427,7 @@
 "crossfade_skin_time" "2.0"
 "combat_start_activity" "-1"
 "follower_type" "Default"
-"soundgroup" "Unique/E"
+"soundgroup" "Citizen"
 "origin" "3075.75 -1103.74 -603.52"
 }
 {

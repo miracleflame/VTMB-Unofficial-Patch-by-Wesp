@@ -104,7 +104,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v9.8                                                     01.05.2017
+v9.8                                                     08.05.2017
 ----
 +Lowered damage of both rifles and restored original stats to basic.
 +Corrected wrong auras of NPCs at Confession, junkyard and library.
@@ -116,7 +116,7 @@ Corrected Giovanni Mansion map transition if you return from crypt.
 Fixed infamous Skyeline random item swap bug by recompiling level.
 Added Blood Boil explosion sound and increased decal view distance.
 Removed Python 2.7.2 update and added Hammer sources and trailers.
-Corrected mirrored crates in Foxy Boxes, museum and Indiana ending.
+Corrected mirrored crate textures in Foxy Boxes and museum storage.
 Restored one Milligan line and created license item for it to fit.
 
 v9.7                                                     30.03.2017
@@ -2258,7 +2258,7 @@ Fixed three mirrored keycard backsides and centered the area icons.
 Added native widescreen support and centered tutorial popups for it.
 Corrected some areaportals in Leopold Society and Giovanni Mansion.
 Disabled low poly model LOD in engine.dll and made bump mapping on.
-Corrected mirrored crates in Foxy Boxes, museum and Indiana ending.
+Corrected mirrored crate textures in Foxy Boxes and museum storage.
 
 Sounds:
 +Added subtitles for Malkavian whispers and Deb of Night radio show.

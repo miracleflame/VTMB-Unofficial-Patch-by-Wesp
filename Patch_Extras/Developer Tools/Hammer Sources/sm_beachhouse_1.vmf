@@ -56502,15 +56502,15 @@ entity
 	"warn_range" "200"
 	connections
 	{
-		"OnDeath" "plus_butch_hurt,Kill,,0,-1,,"
+		"OnDeath" "plus_butch_hurt,Kill,,0.05,-1,,"
 		"OnDeath" "plus_butch_bite,Kill,,0,-1,,"
-		"OnDeath" "plus_butch_attack,Kill,,0,-1,,"
 		"OnDeath" "plus_butch_bark,Kill,,0.15,-1,,"
+		"OnDeath" "plus_butch_attack,Kill,,0,-1,,"
 		"OnFoundPlayer" "plus_butch_bark,PlaySound,,0,-1,,"
 		"OnFoundPlayer" "plus_butch,SetRelationship,player D_HT 5,0,-1,,"
 		"OnDeath" "plus_butch_hurt,ScriptHide,,0.1,-1,,"
-		"OnDeath" "plus_butch_hurt,Disable,,0.2,-1,,"
-		"OnDeath" "plus_butch_hurt,SetDamage,0,0.3,-1,,"
+		"OnDeath" "plus_butch_hurt,Disable,,0,-1,,"
+		"OnDeath" "plus_butch_hurt,SetDamage,0,0.03,-1,,"
 	}
 	"origin" "2949.55 -2810.45 -132.578"
 	editor
@@ -96714,7 +96714,6 @@ entity
 	"crossfade_skin_time" "2.0"
 	"combat_start_activity" "-1"
 	"follower_type" "Default"
-	connections
 	"origin" "5592 -768 -288.578"
 	editor
 	{
@@ -97098,8 +97097,7 @@ entity
 	"crossfade_skin_time" "2.0"
 	"combat_start_activity" "-1"
 	"follower_type" "Default"
-	"soundgroup" "Unique/E"
-	connections
+	"soundgroup" "Citizen"
 	"origin" "3075.75 -1103.74 -603.52"
 	editor
 	{
@@ -116599,8 +116597,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[2988.49 -2878.31 -73.7841]"
-		"look" "[-7142.88 9370.12 -5438.7]"
+		"position" "[3662.18 -1074.04 -184.317]"
+		"look" "[5163.92 15416 -2880.98]"
 	}
 }
 cordon
