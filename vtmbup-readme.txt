@@ -104,15 +104,16 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v9.8                                                     20.04.2017
+v9.8                                                     25.04.2017
 ----
-+Added Blood Boil explosion sound and increased decal view distance.
++Lowered damage of both rifles and restored original stats to basic.
 +Corrected wrong auras of NPCs at Confession, junkyard and library.
 +Modified enemies in maze mausoleum and added a connection to Patty.
 +Fixed dead dog hurting, new map details and added a Tourette line.
-Corrected mirrored crate textures in museum storage and Foxy Boxes.
+Added Blood Boil explosion sound and increased decal view distance.
 Removed Python 2.7.2 update and added Hammer sources and trailers.
-Restored lost Milligan line and created license item for it to fit.
+Corrected mirrored crate textures in museum storage and Foxy Boxes.
+Restored one Milligan line and created license item for it to fit.
 
 v9.7                                                     30.03.2017
 ----
@@ -3198,12 +3199,11 @@ Others:
 * Lockpicking and discipline crosshairs (graphics found).
 
 Open weapons to items:
-* item_w_claws_ghoul
 * item_w_mingxiao_spit
 * item_w_mingxiao_melee
 * item_w_mingxiao_tentacle
 * item_w_chang_energy_ball
-* item_w_chang_ghost (blue lights)
+* item_w_chang_ghost (blue light effects)
 
 
 Occult Items:
