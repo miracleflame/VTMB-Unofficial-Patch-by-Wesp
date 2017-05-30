@@ -104,15 +104,19 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v9.8                                                     25.04.2017
+v9.8                                                     01.05.2017
 ----
 +Lowered damage of both rifles and restored original stats to basic.
 +Corrected wrong auras of NPCs at Confession, junkyard and library.
 +Modified enemies in maze mausoleum and added a connection to Patty.
-+Fixed dead dog hurting, new map details and added a Tourette line.
++Fixed dead dog biting, some map details and added a Tourette line.
++Removed some civilian Humanity losses and fixed bad warrens stairs.
++Improved stat messages for Auspex, Fortidude, Potence and Protean.
+Corrected Giovanni Mansion map transition if you return from crypt.
+Fixed infamous Skyeline random item swap bug by recompiling level.
 Added Blood Boil explosion sound and increased decal view distance.
 Removed Python 2.7.2 update and added Hammer sources and trailers.
-Corrected mirrored crate textures in museum storage and Foxy Boxes.
+Corrected mirrored crates in Foxy Boxes, museum and Indiana ending.
 Restored one Milligan line and created license item for it to fit.
 
 v9.7                                                     30.03.2017
@@ -2254,7 +2258,7 @@ Fixed three mirrored keycard backsides and centered the area icons.
 Added native widescreen support and centered tutorial popups for it.
 Corrected some areaportals in Leopold Society and Giovanni Mansion.
 Disabled low poly model LOD in engine.dll and made bump mapping on.
-Corrected mirrored crate textures in museum storage and Foxy Boxes.
+Corrected mirrored crates in Foxy Boxes, museum and Indiana ending.
 
 Sounds:
 +Added subtitles for Malkavian whispers and Deb of Night radio show.
@@ -2307,6 +2311,7 @@ Disciplines:
 +Disabled true sight for Vick, Killer, Cathayan and Blood Guardian.
 +Adjusted Blood Shot and Boil damages and added missing Boil sound.
 +Changed active discpline durations to fit better to graphic effect.
++Improved stat messages for Auspex, Fortidude, Potence and Protean.
 Made indirect disciplines not traceable and NPCs comfort loud ones.
 Fixed disciplines for non-humans and Protean claw effects and icons.
 Renamed Bloodsuckers' to Bats' Communion and Purge to Blood Purge.
@@ -2615,6 +2620,7 @@ Skyeline Apartments:
 +Provided a Humanity point for not telling Hannah that Paul is dead.
 +Rewarded one Humanity for Dominating Milligan and added toileteries.
 Restored lost Milligan line and created license item for it to fit.
+Fixed infamous Skyeline random model swap bug by recompiling level.
 Corrected Milligan not leaving his apartment in case you were loud.
 Adjusted Hannah's dates, forced her lines and made her actually die.
 Modified XP and log for plague quest state and made CDC stay longer.
@@ -2721,7 +2727,7 @@ Changed camera spot icons at Tawni's place and removed notice timer.
 
 Warrens:
 +Added unused rat crowd model and removed bad warrens re-entry sound.
-+Restored three female body parts and two blockades in sewers levels.
++Restored three female body parts and two blockades and fixed stairs.
 +Placed GLOCK near killed sewerworker and extended spiderchick scene.
 +Restored two unseen newspaper cuts and made web cameras stackable.
 +Improved corpse variety in warrens lair and the first start location.
@@ -2834,6 +2840,7 @@ Stopped wrong invitations being dropped and corrected names on them.
 Swapped unique car, fixed it's texture and improved Nadia sequence.
 Prevented spoiling secrets of all candidates and fixed Victor loop.
 Fixed claw brother being susceptible to one-hit-kill by Possession.
+Corrected Giovanni Mansion map transition if you return from crypt.
 
 Society of Leopold:
 +Placed the flamethrower near Bach and Ash's cell key in big cave.
@@ -3665,7 +3672,7 @@ Sometimes the black inside of tunnels or manholes will disappear.
 Occasionally Ash will talk with you while a hunter is still alive.
 Feeding on rats may trigger melee mode and their bodies levitate.
 Don't save or leave levels with disciplines active or on a ladder.
-On Skyeline being full of props and the PC inaccessible, restart.
+The blood bar may freeze and the health bar may look translucent.
 The news will not always fit to your actual actions but that's TV.
 Some buildings look differently from the inside than the outside.
 Occasionally enemies do not show weapons or move into solid stuff.
@@ -3679,9 +3686,7 @@ Enemy death can open doors and give items, disciplines usage not.
 If LaCroix ignores a delivered sarcophagus set G.Story_State = 60.
 Don't feed on quest NPCs and attack them to break feeding trance.
 If game crashes when entering certain levels drop inventory items.
-On encountering a hard to climb warrens staircase, just use jump.
-If a container auto-closes right-click the objects to choose them.
-The blood bar may freeze and the health bar may look translucent.
+If containers auto-close, right-click the objects to choose them.
 
 
 Open Technical Issues:

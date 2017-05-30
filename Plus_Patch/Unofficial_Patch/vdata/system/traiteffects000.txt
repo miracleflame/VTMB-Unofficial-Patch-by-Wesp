@@ -2271,11 +2271,18 @@ TraitEffectsData
 				"Modifier"	"+12"
 			}
 
+			TraitEffect	// added by wesp			
+			{ 						
+				"Trait"	"Wits" 		
+				"Modifier"	"+1"
+			}
+
 			TraitEffect
 			{
 				"Trait"	"Perception"
 				"Modifier"	"+1"
 			}
+
 		}
 
 		TraitEffectGroup
@@ -2290,6 +2297,12 @@ TraitEffectsData
 			TraitEffect
 			{
 				"Trait"	"Wits"
+				"Modifier"	"+2"	// changed by wesp
+			}
+
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Perception"
 				"Modifier"	"+1"
 			}
 		}
@@ -2303,10 +2316,16 @@ TraitEffectsData
 				"Modifier"	"+24"
 			}
 
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Wits"
+				"Modifier"	"+2"
+			}
+
 			TraitEffect
 			{
 				"Trait"	"Perception"
-				"Modifier"	"+1"
+				"Modifier"	"+2"	// changed by wesp
 			}
 		}
 
@@ -2322,13 +2341,13 @@ TraitEffectsData
 			TraitEffect
 			{
 				"Trait"	"Wits"
-				"Modifier"	"+1"
+				"Modifier"	"+3"	// changed by wesp
 			}
 
 			TraitEffect
 			{
 				"Trait"	"Perception"
-				"Modifier"	"+1"
+				"Modifier"	"+3"	// changed by wesp
 			}
 		}
 
@@ -2540,17 +2559,79 @@ TraitEffectsData
 
 		TraitEffectGroup
 		{
-			"InternalName"	"Discipline (Fortitude)"
+			"InternalName"	"Discipline (Fortitude1)"
 			TraitEffect
 			{
 				"Trait"	"Automatic_Soak_Successes"
 				"Modifier"	"+1"
 			}
+//		}
+//
+// wesp	TraitEffectGroup
+//		{
+//			"InternalName"	"Discipline (FortitudeFX)"
+			TraitEffect
+			{
+				"Trait"	"Fx_Fortitude"
+				"Modifier"	"+1"
+			}
 		}
 
+// added by wesp
 		TraitEffectGroup
 		{
-			"InternalName"	"Discipline (FortitudeFX)"
+			"InternalName"	"Discipline (Fortitude2)"
+
+			TraitEffect
+			{
+				"Trait"	"Automatic_Soak_Successes"
+				"Modifier"	"+2"
+			}
+			TraitEffect
+			{
+				"Trait"	"Fx_Fortitude"
+				"Modifier"	"+1"
+			}
+		}
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Fortitude3)"
+
+			TraitEffect
+			{
+				"Trait"	"Automatic_Soak_Successes"
+				"Modifier"	"+3"
+			}
+			TraitEffect
+			{
+				"Trait"	"Fx_Fortitude"
+				"Modifier"	"+1"
+			}
+		}
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Fortitude4)"
+
+			TraitEffect
+			{
+				"Trait"	"Automatic_Soak_Successes"
+				"Modifier"	"+4"
+			}
+			TraitEffect
+			{
+				"Trait"	"Fx_Fortitude"
+				"Modifier"	"+1"
+			}
+		}
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Fortitude5)"
+
+			TraitEffect
+			{
+				"Trait"	"Automatic_Soak_Successes"
+				"Modifier"	"+5"
+			}
 			TraitEffect
 			{
 				"Trait"	"Fx_Fortitude"
@@ -2610,7 +2691,7 @@ TraitEffectsData
 
 		TraitEffectGroup
 		{
-			"InternalName"	"Discipline (Potence)"
+			"InternalName"	"Discipline (Potence1)"	// changed by wesp
 			TraitEffect
 			{
 				"DisplayOverride"		"0"	// Don't actually show this...
@@ -2624,7 +2705,71 @@ TraitEffectsData
 				"Trait"	"Strength"
 				"Modifier"	"+1"
 			}
+		}
+// added by wesp
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Potence2)"
 
+			TraitEffect
+			{
+				"DisplayOverride"		"0"
+				"Trait"	"Automatic_Str_Successes"
+				"Modifier"	"+2"
+			}
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+2"
+			}
+		}
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Potence3)"
+
+			TraitEffect
+			{
+				"DisplayOverride"		"0"
+				"Trait"	"Automatic_Str_Successes"
+				"Modifier"	"+3"
+			}
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+3"
+			}
+		}
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Potence4)"
+
+			TraitEffect
+			{
+				"DisplayOverride"		"0"
+				"Trait"	"Automatic_Str_Successes"
+				"Modifier"	"+4"
+			}
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+4"
+			}
+		}
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Potence5)"
+
+			TraitEffect
+			{
+				"DisplayOverride"		"0"
+				"Trait"	"Automatic_Str_Successes"
+				"Modifier"	"+5"
+			}
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+5"
+			}
 		}
 
 // WARNING: Old Discipline FX?
@@ -2854,6 +2999,12 @@ TraitEffectsData
 				"Modifier"	"+1"
 			}
 
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Wits"
+				"Modifier"	"+1"
+			}
+
 // Q: Change critter model?  NO, this can be done entirely via the "Claw" weapon model (& character model)!
 		}
 
@@ -2879,6 +3030,12 @@ TraitEffectsData
 				"Modifier"	"+1"
 			}
 
+			TraitEffect	// added by wesp
+			{
+				"Trait"	"Wits"
+				"Modifier"	"+1"
+			}
+
 // Q: Change critter model?  NO, this be done entirely via the "Claw" weapon model (& character model)!
 		}
 
@@ -2890,6 +3047,27 @@ TraitEffectsData
 				"Trait"	"Stamina"
 				"Modifier"	"+2"
 			}
+// added by wesp
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Excluded_Equipment"
+				"Modifier"	"Value Clawed_Form"
+			}
+			TraitEffect
+			{
+				"Trait"	"item_w_fists"
+				"Modifier"	"-1"
+			}
+			TraitEffect
+			{
+				"Trait"	"item_w_claws"
+				"Modifier"	"+1"
+			}
 		}
 
 		TraitEffectGroup
@@ -2900,6 +3078,32 @@ TraitEffectsData
 			{
 				"Trait"	"Strength"
 				"Modifier"	"+4"
+			}
+// added by wesp
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"+2"
+			}
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Excluded_Equipment"
+				"Modifier"	"Value Clawed_Form"
+			}
+			TraitEffect
+			{
+				"Trait"	"item_w_fists"
+				"Modifier"	"-1"
+			}
+			TraitEffect
+			{
+				"Trait"	"item_w_claws"
+				"Modifier"	"+1"
 			}
 
 //			TraitEffect
@@ -2924,6 +3128,27 @@ TraitEffectsData
 				"Trait"	"Fx_Model_Wolf"
 				"Modifier"	"+1"
 			}
+// added by wesp
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+4"
+			}
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"+2"
+			}
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Excluded_Equipment"
+				"Modifier"	"Value Clawed_Form"
+			}
 
 			TraitEffect
 			{
@@ -2937,6 +3162,119 @@ TraitEffectsData
 				"Modifier"	"+1"
 			}
 
+		}
+// added by wesp
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Protean-Will_of_the_Wolf-Toreador)"
+
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"+2"
+			}
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Excluded_Equipment"
+				"Modifier"	"Value Clawed_Form_Toreador"
+			}
+			TraitEffect
+			{
+				"Trait"	"item_w_fists"
+				"Modifier"	"-1"
+			}
+			TraitEffect
+			{
+				"Trait"	"item_w_claws"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Protean-Hunter_of_Night-Toreador)"
+
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+4"
+			}
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"+2"
+			}
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Excluded_Equipment"
+				"Modifier"	"Value Clawed_Form_Toreador"
+			}
+			TraitEffect
+			{
+				"Trait"	"item_w_fists"
+				"Modifier"	"-1"
+			}
+			TraitEffect
+			{
+				"Trait"	"item_w_claws"
+				"Modifier"	"+1"
+			}
+		}
+
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Protean-Wolf_Form-Toreador)"
+
+			TraitEffect
+			{
+				"Trait"	"Close_Combat_Brawl"
+				"Modifier"	"+8"
+			}
+			TraitEffect
+			{
+				"Trait"	"Fx_Model_Wolf"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+4"
+			}
+			TraitEffect
+			{
+				"Trait"	"Stamina"
+				"Modifier"	"+2"
+			}
+			TraitEffect
+			{
+				"Trait"	"Wits"
+				"Modifier"	"+1"
+			}
+			TraitEffect
+			{
+				"Trait"	"Excluded_Equipment"
+				"Modifier"	"Value Clawed_Form_Toreador"
+			}
+			TraitEffect
+			{
+				"Trait"	"item_w_fists"
+				"Modifier"	"-1"
+			}
+			TraitEffect
+			{
+				"Trait"	"item_w_claws"
+				"Modifier"	"+1"
+			}
 		}
 
 		TraitEffectGroup

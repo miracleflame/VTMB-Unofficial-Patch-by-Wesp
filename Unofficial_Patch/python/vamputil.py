@@ -431,6 +431,16 @@ def spawnGold():
 
 #GIOVANNI MANSION 3: Keep door open, added by wesp
 def changeLevelCheck():
+    map2a = Find("giovanni_2a")
+    map2b = Find("giovanni_2b")
+    if (__main__.G.GioBotchedOutside == 1 ):
+        map2a.Disable()
+        map2b.Enable()
+        print "2a disabled"
+    else:
+        map2b.Disable()
+        map2a.Enable()
+        print "2b disabled"
     if (__main__.G.Nadia_Fright == 1 ):
         print ( "********* cleaning up *************" )
         door = Find("door_fake")
