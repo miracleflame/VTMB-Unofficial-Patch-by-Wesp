@@ -1,0 +1,388 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033\deflangfe1033{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fmodern\fprq1\fcharset0 Courier New;}{\f2\fnil\fcharset2 Symbol;}}
+{\colortbl ;\red255\green0\blue0;\red128\green0\blue0;\red0\green0\blue0;}
+{\*\generator Msftedit 5.41.15.1515;}\viewkind4\uc1\pard\nowidctlpar\tx360\cf1\b\f0\fs32 ZVTool\par
+\cf2\b0\fs20 De\cf1 vel\cf2 oper \cf1 t\cf2 oo\cf1 ls\cf2  for u\cf0 se\cf2  with VtM: Blo\cf0 odlines\cf2\par
+vers\cf1 i\cf2 on 0.4 Beta - 15 June 20\cf0 08\cf2\par
+\cf3 b\cf2 y\cf3  Z\cf2 ylo\cf3 nBa\cf2 n\cf3 e\par
+Map \cf2 d\cf3 ynamic \cf0 e\cf3 ntity \cf2 re\cf3 ading/writing routines based on VPKTool, by Turvy.\par
+\cf0\par
+\b\fs28 Installation Instructions\b0\par
+\fs20 0. If you've previously installed ZTOOLS, remove all traces of it.\par
+1. Extract this archive into the root of the Vampire install folder, using folder names.\par
+2. Open \f1 vamputil.py\f0  in a text editor.\par
+3. Add the line "\f1 from zvtool.zvtool import *\f0 " at the end (without the quotes).\par
+4. Save and close.\par
+\par
+A quick-reference sheet will be located in the Tools folder. I highly recommended that you print a copy.\par
+\par
+\b\fs28 Overview\par
+\fs24 What is it?\b0\par
+\fs20 ZVTool is an object editing toolset for the game Vampire: The Masquerade - Bloodlines, created to attempt to compensate for the lack of a true graphical editor.\par
+\par
+\b\fs24 Yeah okay, but what is it really?\b0\par
+\fs20 ZVTool is a massive conglomeration of custom Python (the scripting language that Bloodlines uses) code that gets loaded at runtime. You use the toolset by bringing up the console during gameplay and typing commands at the prompt, which are actually just raw Python function calls. Most of these functions are dedicated to manipulating map entities in-game. Since it's all command-line based, using ZVTool is a lot like using the computers in the game itself. It's a pain, but it works.\par
+\par
+\b\fs24 Vocabulary\par
+\b0\fs20 Common terms used in this documentation:\par
+\b BSP\b0 : The actual level map files.\par
+\b lump\b0 : The technical term for all the various chunks of a BSP file.\par
+\b live map\b0 : The incarnation of a map that exists in RAM, as opposed to the BSP version on your hard drive.\par
+\b entity\b0 : Catch-all term for every kind of object in the game, both physical and non-physical (triggers, sounds, etc).\par
+\b dynamic entities\b0 : These are the entities that can move, change, appear, disappear, etc. during gameplay.\par
+\b static entities\b0 : These are prop models that never move (signs, park benches, etc), so they're baked into the map.\par
+\b grabee\b0 : Any entity that you've "grabbed" for manipulation by ZVTool.\par
+\par
+\b\fs24 Using ZVTool\par
+\b0\fs20 Open the console. Type the ZVTool function name. Hope it does what you wanted it to. In general, the ZVTool workflow is:\par
+\par
+1. Find the entity you want to edit with \f1 znear\f0 .\par
+2. Grab it with \f1 zgrab()\f0 .\par
+3. Make your changes using any of the entity manipulation functions.\par
+4. Save your changes with \f1 zsave\f0 .\par
+\par
+That's it!\par
+\par
+Since all interaction is via typing into the console, function names have been kept as short as possible (Linux fans should feel right at home). All function names start with "z" to avoid possible conflicts with the built-in console commands. When passing a parameter to a function, you need to type the function name, an open-parentheses, the parameter (in quotes if it's text, no quotes if it's a number), then a close-parentheses. If no parameter is needed, just type the function name.\par
+\par
+If while using ZVTool you accidentally generate any Python errors (and trust me, you will), this will probably freeze the game. To un-freeze things, close the console and then open and close any of the interface screens (inventory, quest log, etc).\par
+\par
+Oh, and one more thing: \b Always make backups of the BSP files before changing them!\b0\par
+\fs28\par
+\b Entity Grabbing Functions\par
+\b0\fs20 "Entity" is the technical term for pretty much everything in the game beyond the raw level architecture (known as "brushes"). Sound emitters, particle emitters, doors, lifts, NPCs, traps, triggers... these are all entities. There are two types of entities in the Source engine-- static and dynamic. Static entities are baked into the map, and cannot be accessed by scripting. Dynamic entities, however, can be manipulated with scripting. ZVTool therefore only allows manipulation of a map's dynamic entities.\par
+\par
+"Grabbing" refers to the act of selecting a particular map entity as the subject of your machinations.\par
+\par
+\b\f1 znear\par
+znear(\i class\i0 )\par
+\b0\f0 This is the single most important ZVTool function. \f1 znear()\f0  generates a short list of the entities that are closest to the player, sorted by distance. Here's an excerpt from a list generated in the Santa Monica haven:\par
+\par
+\f1 ENTITIES NEAR PLAYER\par
+1. prop_sign, regent_invite, monogram.mdl, "-1812.0 -2472.0 185.51"\par
+2. prop_hacking, haven_pc, laptop2.mdl, "-1788.7 -2475.69 187.63"\par
+3. prop_sign, [no targetname], LinedPaper.mdl, "-1824.0 -2472.0 182.88"\f0\par
+\par
+Each line has five pieces of information. From left to right:\par
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\nowidctlpar\fi-270\li270\tx360 Entity list number. Used by \f1 zgrab()\f0 .\par
+{\pntext\f2\'B7\tab}Entity class name. The class indicates what kind of entity this is. \par
+{\pntext\f2\'B7\tab}Entity targetname. If the entity doesn't have a targetname, \f1 [no targetname]\f0  will display here.\par
+{\pntext\f2\'B7\tab}Entity model name. If the entity doesn't have a model, \f1 [no model]\f0  will display here.\par
+{\pntext\f2\'B7\tab}Entity origin point. Displayed X, Y, and Z coordinates are rounded to the nearest hundredth.\par
+\pard\nowidctlpar\tx360\par
+This function optionally accepts a class name (must be in quotes!). For example, typing:\par
+\f1\tab znear("prop_sign")\f0\par
+Would only list \f1 prop_sign\f0  entities.\par
+\par
+You can also add an asterisk to the end of a partial class name to list multiple similar classes. For example:\par
+\f1\tab znear("npc*")\f0\par
+Would only list NPCs. And:\par
+\f1\tab znear("item*")\f0\par
+Would only list items.\par
+\par
+For brevity, you can type \f1 zn\f0  instead of \f1 znear\f0 .\par
+\par
+\b\f1 zlist\par
+\b0\f0 Re-displays the last list generated by \f1 znear().\f0  This is useful if you've moved to a different part of the level, but want to access the same list of entities.\par
+For brevity, you can type \f1 zl\f0  instead of \f1 zlist\f0 .\par
+\par
+\b\f1 zgrab\par
+zgrab(\i n\i0 )\par
+zgrab(\i targetname\i0 )\par
+\b0\f0 Once you've generated an entity list, the next step is to "grab" an entity for manipulation. In ZVTool, a grabbed entity is referred to as the "grabee" (you, the user, are the grabber). To grab an entity, give the function the item number from the \f1 znear()\f0  list. For example:\par
+\tab\f1 zgrab(2)\f0\par
+Would grab the second item from the current list.\par
+\par
+Alternatively, if you already know the targetname for a specific entity in the level that you'd like to grab, you can pass that directly (in quotes!). For example:\par
+\tab\f1 zgrab("haven_pc")\par
+\f0 Would grab the computer entity in whichever haven you happen to be in.\par
+\par
+If you type \f1 zgrab()\f0  with no parameters, information about the currently grabbed entity will be displayed.\par
+For brevity, you can type \f1 zg()\f0  instead of \f1 zgrab()\f0 .\par
+\par
+\b\f1 zinfo\par
+\b0\f0 Displays detailed information about the grabee.\par
+For brevity, you can type \f1 zi\f0  instead of \f1 zinfo\f0 .\par
+\fs28\par
+\b Entity Positioning Functions\par
+\b0\fs20 Once you've grabbed an entity, these functions let you change its position and orientation. There's a lot of them, but the naming follows a simple, predictable pattern.\par
+By using any of these commands, the grabbed entity is automatically tagged as changed.\par
+\par
+\b\fs24 Origin-Setting\par
+\b0\fs20 These functions let you change the grabee origin. "Origin" is engine-speak for where something is located in the level.\par
+\b\fs24\par
+\f1\fs20 zorg(\i x, y, z\i0 )\par
+\b0\f0 Sets the grabee origin. Must provide an X, Y, and Z coordinate. Example:\par
+\f1\tab zorg(154, -1000, 12.3)\par
+\f0\par
+\b\f1 zx(\i x\i0 )\par
+\b0\f0 Sets the grabee X coordinate. Example:\par
+\f1\tab zx(154)\par
+\f0\par
+\b\f1 zix(\i n\i0 )\par
+\b0\f0 Increments the grabee X coordinate. Example:\par
+\f1\tab zix(-5)\par
+\f0\par
+\b\f1 zy(\i y\i0 )\par
+\b0\f0 Sets the grabee Y coordinate. Example:\par
+\f1\tab zy(-1000)\par
+\f0\par
+\b\f1 ziy(\i n\i0 )\par
+\b0\f0 Increments the grabee Y coordinate. Example:\par
+\f1\tab ziy(1)\par
+\f0\par
+\b\f1 zz(\i z\i0 )\par
+\b0\f0 Sets the grabee Z coordinate. Example:\par
+\f1\tab zz(12.3)\par
+\f0\par
+\b\f1 ziz(\i n\i0 )\par
+\b0\f0 Increments the grabee Z coordinate. Example:\par
+\f1\tab ziz(-5)\par
+\f0\par
+\b\fs24 Angle-Setting\par
+\b0\fs20 These functions let you change the grabee angles.\par
+\par
+\b\f1 zang(\i p, w, r\i0 )\par
+\b0\f0 Sets the grabee angles. Must provide a Pitch, yaW, and Roll angle. Yaw is the direction the object is facing on the X/Y plane, which is what you'll usually be adjusting. Sorry about "w" instead of "y" for yaw, but "y" was already taken for setting the Y coordinates. Example:\par
+\f1\tab zang(4, 180, 0)\par
+\f0\par
+\b\f1 zp(\i p\i0 )\par
+\b0\f0 Sets the grabee pitch angle. Example:\par
+\f1\tab zp(4)\par
+\f0\par
+\b\f1 zip(\i n\i0 )\par
+\b0\f0 Increments the grabee pitch angle. Example:\par
+\f1\tab zip(1)\par
+\f0\fs24\par
+\b\f1\fs20 zw(\i w\i0 )\par
+\b0\f0 Sets the grabee yaw angle. Example:\par
+\f1\tab zw(180)\par
+\f0\par
+\b\f1 ziw(\i n\i0 )\par
+\b0\f0 Increments the grabee yaw angle. Example:\par
+\f1\tab ziw(45)\par
+\f0\par
+\b\f1 zr(\i r\i0 )\par
+\b0\f0 Sets the grabee roll angle. Example:\par
+\f1\tab zr(4)\par
+\f0\par
+\b\f1 zir(\i n\i0 )\par
+\b0\f0 Increments the grabee roll angle. Example:\par
+\f1\tab zir(-5)\par
+\f0\par
+\b\fs24 Other Stuff\par
+\b0\fs20 These functions let you change the grabee position in various novel ways.\par
+\b\f1\par
+zbe\par
+\b0\f0 You "become" the grabee, and may move around freely as it. This is occasionally actually useful. Type \f1 zbe\f0  again or grab another entity to un-become the grabee. Your current position and facing will be copied to the grabee. Do not perform any attack actions in this mode. Great fun when used on NPCs.\par
+\par
+\b\f1 zhere\par
+\b0\f0 Centers the grabee on the player ("Get over here!"). Unless you're in noclip mode, this will probably pin you in place.\par
+\par
+\b\f1 zthere\par
+\b0\f0 Performs the opposite of \f1 zhere()\f0 -- teleports the player to the grabee. See above comment regarding noclip. Most useful if you've grabbed an entity by directly specifying the targetname, and want to instantly move to where it is.\par
+\par
+\b\f1 zpull\par
+\b0\f0 Pulls the grabee halfway toward the player.\par
+\par
+\par
+\b\fs28 Entity Miscellaneous Functions\par
+\b0\fs20 Various functions that don't have anything to do with origins or angles.\par
+\par
+\b\f1 zhide\par
+zhide(\i class\i0 )\par
+\b0\f0 With no parameters, hides the grabee. When passed a full or partial class name, will hide all matching entities. For example:\par
+\f1\tab zhide("npc*")\f0\par
+Would hide all NPCs. Going ever further:\par
+\f1\tab zhide("*")\f0\par
+Would hide \b every\b0  dynamic entity on the map. This can useful as a quick way to determine which props are dynamic and which ones are static. Hiding objects with this function is not considered an entity change.\par
+\par
+\b\f1 zunhide\par
+zunhide(\i class\i0 )\par
+\b0\f0 With no parameters, unhides the grabee. When passed a full or partial class name, will unhide all matching entities. Syntax is identical to \f1 zhide()\f0 . For fun, try typing this in the Santa Monica haven:\par
+\f1\tab zunhide("npc*")\par
+\f0\par
+\b\f1 zmark()\par
+zmark(\i class\i0 )\par
+\b0\f0 With no parameters, adds inspection sparkles to the grabee. When passed a full or partial class name, adds sparkles to all matching entities. This is really, really useful with invisible entities like triggers and sound emitters. These sparkles are not counted as entity changes.\par
+\par
+\b\f1 zunmark\par
+zunmark(\i class\i0 )\par
+\b0\f0 With no parameters, removes inspection sparkles added by \f1 zmark()\f0 . When passed a full or partial class name, will unmark all matching entities. Does not remove inspection sparkles placed in the map normally.\par
+\par
+\pard\nowidctlpar\tx1620\b\f1 zcha\b0\par
+\f0 Flags the grabee as changed. Useful if you want to save the position of an object that you've moved without using ZVTool commands. For example, picking up a chair and throwing it somewhere. Could also be useful to mark an entity that you want to hand-edit later (all changed entities are tagged with the date and time they were last updated).\par
+\par
+\b\f1 zundo\b0\par
+\f0 Reverts grabee state to what's stored in the BSP and marks as unchanged. Note that this may have unexpected results when used with NPCs or physics objects.\par
+\pard\nowidctlpar\tx360\fs28\par
+\b File/Map Functions\par
+\b0\fs20 These functions actually do stuff to your hard drive. Don't worry, they're mostly harmless.\par
+\pard\nowidctlpar\tx1620\b\f1\par
+zsave\par
+\b0\f0 Saves any changes to the current map. Same as doing \f1 zdumpchanges\f0  and then \f1 zupdatemap\f0 .\par
+\par
+\b\f1 zdumpchanges\par
+\pard\nowidctlpar\tx360\b0\f0 Creates a text file in the \f1 Vampire\\maps\f0  folder containing a dump of the current map BSP's dynamic entity lump, but with all changed entities updated with their status at the moment you issue this command. The file generated is used by \f1 zupdatemap\f0 .\par
+\par
+\b\f1 zupdatemap\par
+\b0\f0 Updates the current map BSP's dynamic entity lump from a \f1 .txt\f0  file of the same name in the \f1 Vampire\\maps\f0  folder. The results are identical to VPKTool when using the \f1 Map tools -> WRITE NEW DATA\f0  function.\par
+\par
+\b\f1 zinitmap\b0\f0\par
+ZVTool tries really hard to automatically detect when the map has changed, so that it can reinitialize all the various data structures it maintains. This is easy when moving between different maps, but when you're reloading the same map, sometimes it doesn't detect the change and you start getting weird errors about missing things. If this happens, use this command to manually reinitialize.\par
+\b\par
+\f1 zdumpg\par
+\b0\f0 All of the game's global event flags are stored in __main__.G. This function dumps that database to a text file in the root of the Vampire install folder. Once you get near the endgame this list will contain several hundred entries.\par
+\par
+\b\f1 zdumpmap\par
+\b0\f0 Creates a text file in the \f1 Vampire\\maps\f0  folder containing a dump of the current map BSP's dynamic entity lump. The output is identical to VPKTool when using the \f1 Map tools -> Open file\f0  function. The output does \b NOT\b0  reflect any changes made in game mode. The file generated is used by \f1 zupdatemap\f0 .\par
+\par
+It's \b really, really important\b0  to understand exactly how this function works. To track which things you've messed with, ZVTool assigns a "changed" flag to every entity in the map. When you use any of the positioning functions on an entity, the "changed" flag is set. Then when you use the \f1 zdumpmap\f0  command, \b only\b0  entities that are flagged as changed will be updated in the BSP. All other entity data is left alone. Furthermore, the position of a changed entity will be saved as it is at the precise moment that you issue this command. So if you move an NPC to a particular spot, then the NPC wanders somewhere else, when you save changes the NPC's starting position will be updated to wherever he happens to be.\par
+\fs28\par
+\b NPC Manipulation Functions\par
+\b0\fs20 These functions affect the NPCs on the current map.\par
+\par
+\b\f1 zkill\par
+\b0\f0 Destroys all NPCs.\par
+\par
+\b\f1 zhate\par
+\b0\f0 Makes all NPCs become hostile to you.\par
+\par
+\b\f1 zlove\par
+\b0\f0 Makes all NPCs become friendly to you. If an NPC is currently attacking you, this won't immediately take effect.\par
+\fs28\par
+\b Player Manipulation Functions\par
+\b0\fs20 These functions affect you, the player.\par
+\par
+\b\f1 zpos\par
+\b0\f0 Display the player's current position, center, and orientation.\par
+\par
+\b\f1 ztaxi\par
+\b0\f0 Opens all taxi destinations. Unfortunately you still have to track down a taxi (or sewer map, if Nosferatu) to bring up the travel screen.\par
+\par
+\b\f1 zhum(\i n\i0 )\par
+\b0\f0 Sets Humanity to specified level in the range 0-10.\par
+\par
+\b\f1 zmas(\i n\i0 )\par
+\b0\f0 Sets Masquerade violations to specified level in the range 0-5. Be warned that setting the violations to 5 will immediately end the game.\par
+\par
+\b\f1 zbuff\par
+\b0\f0 Maximizes your Masquerade level, Humanity, stats, and disciplines. Gives you every armor, every key, some blood packs, and as many ranged and melee weapons as you can carry, with full ammo for the ranged weapons.\par
+\par
+\b\f1 zammo\par
+\b0\f0 Gives player full ammo for all ranged weapons.\par
+\par
+\b\f1 zhelp\par
+\b0\f0 Displays a short summary of most ZVTool commands.\par
+\fs28\par
+\b Useful Console Commands\par
+\b0\fs20 These aren't ZVTool commands, but they are useful when used in conjunction with it.\par
+\par
+\b\f1 clear\b0\f0  - Clears the console window.\par
+\b\f1 exit\b0\f0  - Immediately exits the game.\par
+\b\f1 giftxp\b0  \f0 - Gives some XP to the player. For example, "\f1 giftxp 999\f0 ".\par
+\b\f1 god\b0\f0  - Toggles invulnerability.\par
+\b\f1 map\b0  \f0 - Loads any map. For example, "\f1 map sm_pawnshop_1\f0 ".\par
+\b\f1 noclip\b0  \f0 - Toggles the ability to fly anywhere in the current map.\par
+\b\f1 ai_show_interesting\b0\f0  - Displays all "intersting_place" AI nodes.\par
+\par
+\b\i\f1 Ctrl-C\b0\i0\f0  - You can select and then copy any text in the console to the Windows clipboard.\par
+\b\i\f1 Up-Arrow\b0\i0\f0  - Command history. Very useful for the coordinate increment functions.\par
+\fs28\par
+\b Adding Entities\par
+\b0\fs20 To add new entities to a map, first generate a plaintext dump of the map's dynamic entity lump, using \f1 zdumpmap \f0 or the equivalent functionality in VPKTool. Then, open the entity dump in a text editor and add the following at the end:\par
+\par
+\f1\{\par
+"classname" "prop_dynamic"\par
+\b "model" "models/scenery/furniture/blankets02/blankets02.mdl"\par
+"targetname" "security_blanket"\par
+"origin" "-2352 2052 -530"\par
+"angles" "0 45 0"\par
+"solid" "0"\par
+\b0 "StartHidden" "0"\par
+"skin" "0"\par
+"disableshadows" "1"\par
+"collideable_gibs" "0"\par
+"health" "0"\par
+"demo_sequence" "None"\par
+"npc_transparent" "1"\par
+"RandomAnimation" "0"\par
+"MinAnimTime" "5"\par
+"MaxAnimTime" "10"\par
+"LoopSequence" "idle"\par
+"crossfade_skin_time" "2.0"\par
+\}\par
+\f0\par
+The fields marked in bold are the ones that you customize. Set the \f1 "solid"\f0  value as follows:\par
+\pard\nowidctlpar\tx540\f1 "0"\f0\tab Not solid. Use this for purely decorative items that you don't want to block player movement.\par
+\f1 "2"\f0\tab Use bounding box. This is the least CPU-intensive collision model, but also the least accurate.\par
+\f1 "6"\f0\tab Use VPhysics. This is the most accurate collision model.\par
+\pard\nowidctlpar\tx360\par
+Don't mess with the other stuff unless you really know what you're doing.\par
+\fs28\par
+\b Knowing What You're Really Doing\par
+\b0\fs20 Valve's Source Engine wiki is an excellent resource for understanding the inner workings of the various entity types:\par
+\f1 http://developer.valvesoftware.com/wiki/Category:Entities\par
+\f0\par
+And here's a great resource for understanding all that Python code:\par
+\f1 http://www.python.org/doc/2.4.1/tut/tut.html\f0\par
+\pard\nowidctlpar\tx1440\b\fs28\par
+ZVTool Quick Reference Sheet\b0\par
+\fs8\par
+\ul\b\fs18 Entity Grabbing Functions\par
+\ulnone\f1 znear\b0\tab\f0 Display entities near player. May optionally specify a full or partial class name. \f1 zn\f0  for short.\par
+\b\f1 zlist\b0\tab\f0 Re-display last list generated by \f1 znear\f0 . \f1 zl\f0  for short.\par
+\b\f1 zgrab(\i n\i0 )\b0\tab\f0 Grab an entity by \f1 znear\f0  item number or \f1 targetname\f0 . \f1 zg()\f0  for short.\b\f1\par
+zinfo\tab\b0\f0 Display detailed information about the current grabee. \f1 zi\f0  for short.\par
+\fs12\par
+\ul\b\fs18 Entity Positioning Functions\par
+\ulnone\f1 zorg(\i x,y,z\i0 )\tab\b0\f0 Set grabee origin. Must provide an X, Y, and Z coordinate.\f1\par
+\b zx(\i x\i0 )\tab\b0\f0 Set grabee X coordinate.\par
+\b\f1 zy(\i y\i0 )\tab\b0\f0 Set grabee Y coordinate.\par
+\b\f1 zz(\i z\i0 )\tab\b0\f0 Set grabee Z coordinate.\par
+\b\f1 zix(\i n\i0 )\tab\b0\f0 Increment grabee X coordinate.\par
+\b\f1 ziy(\i n\i0 )\tab\b0\f0 Increment grabee Y coordinate.\par
+\b\f1 ziz(\i n\i0 )\tab\b0\f0 Increment grabee Z coordinate.\par
+\b\f1 zang(\i p,w,r\i0 )\tab\b0\f0 Set grabee angles. Must provide a Pitch, yaW, and Roll angle.\par
+\b\f1 zp(\i p\i0 )\tab\b0\f0 Set grabee pitch angle.\par
+\b\f1 zw(\i w\i0 )\b0\tab\f0 Set grabee yaw angle.\par
+\b\f1 zr(\i r\i0 )\b0\tab\f0 Set grabee roll angle.\par
+\b\f1 zip(\i n\i0 )\b0\tab\f0 Increment grabee pitch angle.\par
+\b\f1 ziw(\i n\i0 )\b0\tab\f0 Increment grabee yaw angle.\par
+\b\f1 zir(\i n\i0 )\b0\tab\f0 Increment grabee roll angle.\f1\par
+\b zbe\b0\tab\f0 "Become" the grabee, and move around as it. \f1 zbe\f0  again to un-become.\par
+\b\f1 zhere\b0\tab\f0 Move grabee to the player.\par
+\b\f1 zthere\b0\tab\f0 Move player to the grabee.\par
+\b\f1 zpull\b0\tab\f0 Pull grabee halfway toward player.\par
+\fs12\par
+\ul\b\fs18 Entity Miscellaneous Functions\par
+\ulnone\f1 zhide\b0\tab\f0 Hide the grabee. When passed a full or partial class name, hide all matching entities.\par
+\b\f1 zunhide\b0\tab\f0 Unhide the grabee. When passed a full or partial class name, unhide all matching entities.\par
+\b\f1 zmark\b0\tab\f0 Add sparkles to grabee. When passed a full or partial class name, mark all matching entities.\par
+\b\f1 zunmark\b0\tab\f0 Remove sparkles from grabee. When passed a full or partial class name, unmark all matching entities.\par
+\b\f1 zcha\b0\tab\f0 Flag the grabee as changed.\par
+\b\f1 zundo\b0\tab\f0 Revert grabee state to what's stored in the BSP.\par
+\fs12\par
+\ul\b\fs18 File/Map Functions\par
+\ulnone\f1 zdumpmap\tab\b0\f0 Dump dynamic entity lump from current map's BSP file to the \f1 Vampire\\maps\f0  folder.\par
+\b\f1 zdumpchanges\tab\b0\f0 Dump dynamic entity lump \i with user changes\i0  from current map to the \f1 Vampire\\maps\f0  folder.\par
+\b\f1 zupdatemap\b0\tab\f0 Update current BSP's dynamic entity lump from a like-named \f1 .txt\f0  file.\par
+\b\f1 zsave\tab\b0\f0 Save any changes to the current map. Same as doing \f1 zdumpchanges\f0 , then \f1 zupdatemap\f0 .\par
+\b\f1 zdumpg\b0\tab\f0 Dump __main__.G to a text file in the root of the Vampire install folder.\par
+\b\f1 zinitmap\b0\tab\f0 Manually inform ZVTool of new map, in case auto-detect doesn't work.\par
+\fs12\par
+\ul\b\fs18 NPC Functions\par
+\ulnone\f1 zkill\tab\b0\f0 Kill all NPCs.\par
+\b\f1 zhate\tab\b0\f0 Make all NPCs become hostile to you.\par
+\b\f1 zlove\tab\b0\f0 Make all NPCs become friendly to you (may not take immediate effect).\par
+\fs12\par
+\ul\b\fs18 Player Functions\par
+\ulnone\f1 zpos\tab\b0\f0 Display player's current position, center, and orientation.\par
+\b\f1 ztaxi\tab\b0\f0 Open all taxi destinations.\par
+\b\f1 zhum(\i n\i0 )\tab\b0\f0 Set Humanity to specified level in the range 0-10.\par
+\b\f1 zmas(\i n\i0 )\tab\b0\f0 Set Masquerade violations to specified level in the range 0-5.\par
+\b\f1 zbuff\tab\b0\f0 Max all stats, give all keys, all armor, best weapons.\par
+\b\f1 zammo\tab\b0\f0 Give full ammo for all ranged weapons.\par
+\b\f1 zhelp\tab\b0\f0 Display a short summary of most ZVTool commands.\par
+\pard\nowidctlpar\tx360\fs20\par
+}
+ 

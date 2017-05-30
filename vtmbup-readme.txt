@@ -76,38 +76,43 @@ VTMB Walkthrough: Walkthrough & Guide by vampyri_lestat and Wesp5.
 
 Bloodlines SDK: Full SDK with many tools, by Psycho-A and Fire64.
 Game Mod Loader: Combined .dll fixes and -game support, by Behar.
+Hammer Sources: VMF files used to compile all new maps, by Wesp5.
 Level Entity Lists: Original and UP levels, by Wesp5 and Offkorn.
 Model Tools: Blender, others and tutorial, by DDLullu and Icicle.
 Original Python Files: scripts of the original release, by Wesp5.
-Python 2.7.2 Update: For Python incompatibility, by ColonelAlias.
 
-VTMB ModDev Guide: Bloodlines Mod Development Guide, done by Dheu.
-VTMB Restoration Pics: Concept art and beta screenshots, by Wesp5.
-VTMB Soundtrack Info: List of the game soundtrack by Rik Schaffer.
-VTMB ZVTool Readme: Readme for console edit scripts, by ZylonBane.
+Bloodlines Trailer E3 2003: Showing cut content, by Troika Games.
+Bloodlines Trailer E3 2004: Showing cut content, by Troika Games.
+ModDev Guide: Bloodlines Mod Development Guide, compiled by Dheu.
+Restoration Doc: Used concept art and beta screenshots, by Wesp5.
+Soundtrack Info: For music soundtrack, by Rik Schaffer and Wesp5.
+ZVTool Readme: For dynamic console editing scripts, by ZylonBane.
 
 Concept Art: Collection of various Troika art, compiled by Wesp5.
 ENBSeries: Shader suite, copy to game folder, by Boris Vorontsov.
 Free View Weapons: Copy to vampire/vdata/items, created by Wesp5.
 SweetFX: Different shader suite, use ReShade Setup, by CeeJay.dk.
-Install64: 64bit Windows installation patcher, by Iain Patterson.
-ResPatch: Widescreen resolution kit, by Wabbite (.NET 2+ needed).
-Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
-ScreenWindowedOn/Off.reg: To switch fullscreen mode, by Psycho-A.
-Bloodlines_loader.sh: Wine / Linux script, check txt, thanks SCO.
+
 4GB Patch: Patches up the exe for 64 bit, thanks Daniel Pistelli.
+Install64: 64bit Windows installation patcher, by Iain Patterson.
+Linux_loader.sh: Wine script, check the txt for info, thanks SCO.
+ResPatch: Widescreen resolution kit, by Wabbite (.NET 2+ needed).
+ScreenWindowedOn/Off.reg: To switch fullscreen mode, by Psycho-A.
+Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 
 
 Version Changelog:
 ------------------
 
-v9.8                                                     10.04.2017
+v9.8                                                     20.04.2017
 ----
 +Added Blood Boil explosion sound and increased decal view distance.
 +Corrected wrong auras of NPCs at Confession, junkyard and library.
 +Modified enemies in maze mausoleum and added a connection to Patty.
-+Tried once more to fix dead dog hurting and added a Tourette line.
-Fixed mirrored textures of crates in museum storage and Foxy Boxes.
++Fixed dead dog hurting, new map details and added a Tourette line.
+Corrected mirrored crate textures in museum storage and Foxy Boxes.
+Removed Python 2.7.2 update and added Hammer sources and trailers.
+Restored lost Milligan line and created license item for it to fit.
 
 v9.7                                                     30.03.2017
 ----
@@ -2248,6 +2253,7 @@ Fixed three mirrored keycard backsides and centered the area icons.
 Added native widescreen support and centered tutorial popups for it.
 Corrected some areaportals in Leopold Society and Giovanni Mansion.
 Disabled low poly model LOD in engine.dll and made bump mapping on.
+Corrected mirrored crate textures in museum storage and Foxy Boxes.
 
 Sounds:
 +Added subtitles for Malkavian whispers and Deb of Night radio show.
@@ -2298,7 +2304,7 @@ Disciplines:
 +Made Potence fit description and changed Eldritch Prodigy history.
 +Lowered Bloodbuff effect to two points and corrected info symbol.
 +Disabled true sight for Vick, Killer, Cathayan and Blood Guardian.
-+Adjusted Blood Shot and Boil damages and added missing cabbie auras.
++Adjusted Blood Shot and Boil damages and added missing Boil sound.
 +Changed active discpline durations to fit better to graphic effect.
 Made indirect disciplines not traceable and NPCs comfort loud ones.
 Fixed disciplines for non-humans and Protean claw effects and icons.
@@ -2607,6 +2613,7 @@ Skyeline Apartments:
 +Restored security guard with scenes and fixed elevator and monitor.
 +Provided a Humanity point for not telling Hannah that Paul is dead.
 +Rewarded one Humanity for Dominating Milligan and added toileteries.
+Restored lost Milligan line and created license item for it to fit.
 Corrected Milligan not leaving his apartment in case you were loud.
 Adjusted Hannah's dates, forced her lines and made her actually die.
 Modified XP and log for plague quest state and made CDC stay longer.
@@ -3609,6 +3616,7 @@ This map was enhanced because many outside textures for the museum
 were found and two beta screenshot content could be recreated too.
 
 Restored assets:
+models/scenery/plants/populus/populus.mdl
 models/scenery/structural/musarch/musarchext.mdl
 models/scenery/street/lamppost_tall/lamppost_tall.mdl
 plaster/musdoora, plaster/musdoorb, plaster/musdoord
