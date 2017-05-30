@@ -290,15 +290,6 @@ VV"
 
 	Email
 	{
-		"subject"	"Rocket Launcher for Sale"
-		"sender"	"gary@schrecknet.vtm"
-		"body"		"Boss, got another poster just collecting dust, if you want to trade. Looks like one of the anarchs did some \"art\" photos before she got Embraced. It's all yours for the low, low price of the wooden pull toy prop from The Glittering. Might be in Metalhead Industries. You've talked to Mitnick, right? In the mailbox, like before."	// changed by wesp
-		"dependency"	"G.Gary_Photochop == 1 and G.Gary_Damsel == 0"	// changed by wesp
-		"runscript"	"garySetQuestFour()"	// added by wesp
-	}
-
-	Email
-	{
 		"subject"	"Cheat Codes"
 		"sender"	"gary@schrecknet.vtm"
 		"body"		"Enjoying the film, boss, but I think I've really let myself go over the years. Alright, this seems to be your bag, so, here's the deal. Know that Toreador in Vesuvius, \"Miss Velour\"? Back when she was breathing, it was more like \"Miss Anything For Three Hundred\". And I got a poster. Will trade for a revealing photo I saw on Haunted LA."
@@ -315,21 +306,31 @@ VV"
 		"runscript"	"garySetQuestThree()"	// added by wesp
 	}
 
+	Email
+	{
+		"subject"	"Rocket Launcher for Sale"
+		"sender"	"gary@schrecknet.vtm"
+		"body"		"Boss, got another poster just collecting dust, if you want to trade. Looks like one of the anarchs did some \"art\" photos before she got Embraced. It's all yours for the low, low price of the wooden pull toy prop from The Glittering. Might be in Metalhead Industries. You've talked to Mitnick, right? In the mailbox, like before."	// changed by wesp
+		"dependency"	"G.Gary_Photochop == 1 and G.Gary_Damsel == 0"	// changed by wesp
+		"runscript"	"garySetQuestFour()"	// added by wesp
+	}
+
 	Email	// added by wesp
 	{
-		"subject"	"Confidential Nigerian Proposal"
+		"subject"	"Looking for dates?"
 		"sender"	"gary@schrecknet.vtm"
-		"body"		"Are you tech savy, boss? Because Mitnick wants a special name plate with an integrated transponder chip. Don't know what he needs it for, but will swap for a poster of Tawni Sessions that Imalia hasn't got her angry claws on yet."
-		"dependency"	"G.Gary_Damsel == 1 and G.Gary_Tawni == 0"
+		"body"		"Are you lonely, boss? Then maybe finding one of these weird fleshy Tzimisce balls for me will stop you from wallowing in self pity. Would offer a poster of Imalia in her full beauty, before I gave her my special treatment."
+
+		"dependency"	"G.Gary_Damsel == 1 and G.Gary_Imalia == 0"
 		"runscript"	"garySetQuestFive()"
 	}
 
 	Email	// added by wesp
 	{
-		"subject"	"Replica Stakes"
+		"subject"	"Confidential Nigerian Proposal"
 		"sender"	"gary@schrecknet.vtm"
-		"body"		"Hey boss, got another job for you. One of our researchers into the occult would like to get his hands on a squashed Odious Chalice seen in Chinatown. Would offer a poster of Imalia in her full beauty, before I gave her my special treatment."
-		"dependency"	"G.Gary_Tawni == 1 and G.Gary_Imalia == 0"
+		"body"		"Are you tech savy, boss? Because Mitnick wants a special name plate with an integrated transponder chip. Don't know what he needs it for, but will swap for a poster of Tawni Sessions that Imalia hasn't got her angry claws on yet."
+		"dependency"	"G.Gary_Imalia == 1 and G.Gary_Tawni == 0"
 		"runscript"	"garySetQuestSix()"
 	}
 
@@ -337,16 +338,16 @@ VV"
 	{
 		"subject"	"World of Darkness Gold fast!"
 		"sender"	"gary@schrecknet.vtm"
-		"body"		"Been busy, boss? Because I heard another famous movie prop has gone missing. The throwing star of the Whirlwind from \"A Touch of Xen\". I'll swap it for the poster of a sweet girl, whom you certainly won't look too deep into the eyes."
-		"dependency"	"G.Gary_Imalia == 1 and G.Gary_Blind == 0"
+		"body"		"Been busy, boss? Because I heard another famous movie prop has gone missing. The throwing star of the Whirlwind from \"A Touch of Xen\". I'll swap it for the poster of a sweet girl, whom you certainly won't look too deep into the eyes." 
+		"dependency"	"G.Gary_Tawni == 1 and G.Gary_Blind == 0"
 		"runscript"	"garySetQuestSeven()"
 	}
 
 	Email	// added by wesp
 	{
-		"subject"	"Looking for dates?"
+		"subject"	"Replica Stakes"
 		"sender"	"gary@schrecknet.vtm"
-		"body"		"Are you lonely, boss? Then maybe finding one of these weird fleshy Tzimisce balls for me will stop you from wallowing in self pity. I'll give you a poster in return of a girl hanging out for you."
+		"body"		"Hey boss, got an last job for you. One of our researchers into the occult would like to get his hands on a squashed Odious Chalice seen in Chinatown. I'll give you a poster in return of a girl just hanging out for you."
 		"dependency"	"G.Gary_Blind == 1 and G.Gary_Cross == 0"
 		"runscript"	"garySetQuestEight()"
 	}

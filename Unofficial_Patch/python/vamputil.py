@@ -2585,8 +2585,11 @@ def posterCheck():
     if(G.Gary_Blind):
         poster = Find("poster_blind")
         poster.ScriptUnhide()
+    if(G.Gary_Cross):
+        poster = Find("poster_cross")
+        poster.ScriptUnhide()
         if(G.Gary_Complete == 0):
-            __main__.FindPlayer().SetQuest("Gary", 8)
+            __main__.FindPlayer().SetQuest("Gary", 9)
             G.Gary_Complete = 1
 
 #HAVEN: Updates the player's mailbox and flags if he has sent the blood in the mail, changed by wesp
@@ -2609,36 +2612,29 @@ def mailboxExitCheck():
         if(container.HasItem("item_g_garys_film") and G.Story_State >= 45):
             container.RemoveItem("item_g_garys_film")
             G.Gary_Voerman = 1
-        if(container.HasItem("item_g_garys_cd") and G.Gary_Voerman == 1 and G.Gary_Damsel == 0 and G.Patch_Plus == 0):
-            container.RemoveItem("item_g_garys_cd")
-            G.Gary_Damsel = 1
-        if(container.HasItem("item_g_garys_tape") and G.Velvet_Poster == 1 and G.Gary_Photochop == 0 and G.Patch_Plus == 0):
-            container.RemoveItem("item_g_garys_tape")
-            G.Gary_Photochop = 1
-        if(container.HasItem("item_g_garys_photo") and G.Gary_Damsel == 1 and G.Velvet_Poster == 0 and G.Patch_Plus == 0):
+        if(container.HasItem("item_g_garys_photo") and G.Gary_Voerman == 1 and G.Velvet_Poster == 0):
             container.RemoveItem("item_g_garys_photo")
             G.Velvet_Poster = 1
-        if(container.HasItem("item_g_garys_cd") and G.Gary_Photochop == 1 and G.Gary_Damsel == 0 and G.Patch_Plus == 1):
-            container.RemoveItem("item_g_garys_cd")
-            G.Gary_Damsel = 1
-        if(container.HasItem("item_g_garys_tape") and G.Velvet_Poster == 1 and G.Gary_Photochop == 0 and G.Patch_Plus == 1):
+            if G.Patch_Plus == 1:
+                pc.ChangeMasqueradeLevel(-1)
+        if(container.HasItem("item_g_garys_tape") and G.Velvet_Poster == 1 and G.Gary_Photochop == 0):
             container.RemoveItem("item_g_garys_tape")
             G.Gary_Photochop = 1
-        if(container.HasItem("item_g_garys_photo") and G.Gary_Voerman == 1 and G.Velvet_Poster == 0 and G.Patch_Plus == 1):
-            container.RemoveItem("item_g_garys_photo")
-            G.Velvet_Poster = 1
-            pc.ChangeMasqueradeLevel(-1)
-        if(container.HasItem("item_g_wireless_camera_2") and G.Gary_Damsel == 1 and G.Gary_Tawni == 0):
+        if(container.HasItem("item_g_garys_cd") and G.Gary_Photochop == 1 and G.Gary_Damsel == 0):
+            container.RemoveItem("item_g_garys_cd")
+            G.Gary_Damsel = 1
+        if(container.HasItem("item_w_mingxiao_tentacle") and G.Gary_Damsel == 1 and G.Gary_Imalia == 0):
+            container.RemoveItem("item_w_mingxiao_tentacle")
+            G.Gary_Imalia = 1
+        if(container.HasItem("item_g_wireless_camera_2") and G.Gary_Imalia == 1 and G.Gary_Tawni == 0):
             container.RemoveItem("item_g_wireless_camera_2")
             G.Gary_Tawni = 1
-        if(container.HasItem("item_g_wireless_camera_3") and G.Gary_Tawni == 1 and G.Gary_Imalia == 0):
-            container.RemoveItem("item_g_wireless_camera_3")
-            G.Gary_Imalia = 1
-        if(container.HasItem("item_g_wireless_camera_4") and G.Gary_Imalia == 1 and G.Gary_Blind == 0):
+        if(container.HasItem("item_g_wireless_camera_4") and G.Gary_Tawni == 1 and G.Gary_Blind == 0):
             container.RemoveItem("item_g_wireless_camera_4")
             G.Gary_Blind = 1
-        if(container.HasItem("item_w_mingxiao_tentacle") and G.Gary_Blind == 1 and G.Gary_Cross == 0):
-            container.RemoveItem("item_w_mingxiao_tentacle")
+        if(container.HasItem("item_g_wireless_camera_3") and G.Gary_Blind == 1 and G.Gary_Cross == 0):
+            container.RemoveItem("item_g_wireless_camera_3")
+            G.Gary_Cross = 1
 
 #HAVEN: Updates the player's quest when he gets the email about werewolf blood
 def werewolfBloodQuestAssigned():

@@ -66,7 +66,7 @@ TerminalDefinition
 		"subject"	"The opening"
 		"sender"	"a friend"
 		"body"		"The game begins. A pawn is moved."
-		"dependency"	"G.Story_State < 2"
+		"dependency"	"G.Story_State < 5"	// changed by wesp
 	}
 
 	Email
@@ -74,7 +74,7 @@ TerminalDefinition
 		"subject"	"The first move"
 		"sender"	"a friend"
 		"body"		"The white king moves to protect his pawn."
-		"dependency"	"G.Story_State == 5"
+		"dependency"	"G.Story_State >= 5 and G.Story_State < 20"	// changed by wesp
 	}
 
 	Email
@@ -136,9 +136,9 @@ Jeanette "
 		"sender"	"LaCroix"
 		"body"		"I recently read Mr. Flayton's scathing review of the Cavoletti Cafe in the Sun, and I must tell you that I am extremely happy with his conclusions. You have done well. Please accept the payment I've left you in your mailbox. We will no doubt be seeing each other soon. - SL"
 		"dependency"	"G.Tommy_Disgusted == 1 or G.Tommy_Review == 1"
-		//changed by dan_upright 29/11/04
+		// changed by dan_upright 29/11/04
 		"runscript"	"tomSetQuestFour()"
-		//changes end
+		// changes end
 	}
 
 	Email
@@ -154,7 +154,7 @@ Jeanette "
 	"subject"	"Tommy Flayton"
 	"sender"	"LaCroix"
 	"body"	"I recently read Mr. Flayton's obituary in the Sun, and I must tell you that I am extremely unhappy with his untimely demise. I distinctly remember asking you for a deadly review, not a dead reviewer. You disappoint me, neonate. Obviously, you can't be trusted with even the most menial of tasks. - SL"
-	"dependency"	"G.Tommy_Review == 20"	// basic
+	"dependency"	"G.Tommy_Review == 2"
 	"runscript"	"G.Prince_Reaction = G.Prince_Reaction -1"
 	}
 
@@ -242,9 +242,9 @@ Jeanette "
 	{
 		"subject"	"Library"
 		"sender"	"beckett@legend.vtm"
-		"body"	"Hello young one, a fellow Gangrel named Scott suspects that there is a Lasombra here in LA recruiting kindred for the Sabbat. He saw him disappearing inside the LA public library! As I'm preoccupied right now, please meet him in the Santa Monica smoke shop to learn about the details. After all we wouldn't want anything bad happening to all the precious knowledge, would we? 
+		"body"	"Hello young one, a fellow Gangrel named Scott suspects that there is a Lasombra here in LA recruiting kindred for the Sabbat. He saw him disappearing inside the LA public library! As I'm preoccupied right now, please meet him in the Santa Monica Smoke Shop to learn about the details. After all we wouldn't want anything bad happening to all the precious knowledge, would we? 
 Beckett"
-		"dependency"	"G.Library_Ready == 10"	// basic
+		"dependency"	"G.Library_Ready == 1"
 		"runscript"	"librarySetQuest()"
 	}
 
@@ -252,9 +252,9 @@ Beckett"
 	{
 		"subject"	"Excellent"
 		"sender"	"beckett@legend.vtm"
-		"body"	"Hello again... my contact told me that you interrupted one Sabbat initiation ritual at the library that almost got him killed. He will arrange that there won't be another chance for something like this there. Needless to explain that it might not be that astute to tell anyone about the affair.
+		"body"	"Hello again... my friend told me that you interrupted the Sabbat initiation ritual at the library that almost got him killed. He will arrange that there won't be another chance for something like this there. Needless to explain that it might not be that astute to tell anyone about the affair.
 Beckett"
-		"dependency"	"G.Jumbles_Removed == 20"	// basic
+		"dependency"	"G.Jumbles_Removed == 2"
 		"runscript"	"G.Library_Open = 2; librarySetQuest()"
 	}
 
@@ -264,7 +264,7 @@ Beckett"
 		"sender"	"bertram@schrecknet.vtm"
 		"body"		"If you're reading this, I guess you're still among the undead. Got a proposition for you, if you're not too busy. You know where to find me. Won't be too difficult this time.
 Bertram"
-		"dependency"	"G.CD_Quest == 1 and __main__.FindPlayer().clan == 5"	// basic
+		"dependency"	"G.CD_Quest == 1"
 		"runscript"	"bertramSetQuest()"	// added by wesp
 	}
 
@@ -283,18 +283,9 @@ VV"
 	{
 		"subject"	"Prince is promoting you!"
 		"sender"	"gary@schrecknet.vtm"
-		"body"		"Hey, boss, did some spring-cleaning today - came across something that might tickle you. A kid used to live here had an unhealthy crush on everyone's favorite psycho pin-up, Jeanette Voerman. I got a touch of nostalgia, so, you find a copy of Tap Hotel, starring me, I'll trade you a poster of that luscious lunatic for it. Put the video tape in your mailbox and I'll deliver it to your haven."
+		"body"		"Hey boss, did some spring-cleaning today - came across something that might tickle you. A kid used to live here had an unhealthy crush on everyone's favorite psycho pin-up, Jeanette Voerman. I got a touch of nostalgia, so, you find a copy of Tap Hotel, starring me, I'll trade you a poster of that luscious lunatic for it. Put the video tape in your mailbox and I'll deliver it to your haven."
 		"dependency"	"G.Story_State >= 45 and G.Gary_Voerman == 0"
-// basic		"runscript"	"garySetQuestOne()"	// added by wesp
-	}
-
-	Email
-	{
-		"subject"	"Rocket Launcher for Sale"
-		"sender"	"gary@schrecknet.vtm"
-		"body"		"Boss, got another poster just collecting dust, if you want to trade. Looks like one of the Anarchs did some \"art\" photos before she got Embraced. It's all yours for the low, low price of one data CD. Might be in Metalhead Industries. You've talked to Mitnick, right? In the mailbox, like before."	// changed by wesp
-		"dependency"	"G.Gary_Voerman == 1 and G.Gary_Damsel == 0"	// changed by wesp
-// basic		"runscript"	"garySetQuestFour()"	// added by wesp
+		"runscript"	"garySetQuestOne()"	// added by wesp
 	}
 
 	Email
@@ -302,8 +293,8 @@ VV"
 		"subject"	"Cheat Codes"
 		"sender"	"gary@schrecknet.vtm"
 		"body"		"Enjoying the film, boss, but I think I've really let myself go over the years. Alright, this seems to be your bag, so, here's the deal. Know that Toreador in Vesuvius, \"Miss Velour\"? Back when she was breathing, it was more like \"Miss Anything For Three Hundred\". And I got a poster. Will trade for a revealing photo I saw on Haunted LA."
-		"dependency"	"G.Gary_Damsel == 1 and G.Velvet_Poster == 0"	// changed by wesp
-// basic		"runscript"	"garySetQuestTwo()"	// added by wesp
+		"dependency"	"G.Gary_Voerman == 1 and G.Velvet_Poster == 0"	// changed by wesp
+		"runscript"	"garySetQuestTwo()"	// added by wesp
 	}
 
 	Email
@@ -312,7 +303,26 @@ VV"
 		"sender"	"gary@schrecknet.vtm"
 		"body"		"How ya been, boss? Same drill as before. Got a surveillance shot of a certain Kuei-jin. It would be degrading to photochop it into a tacky poster, so that's what I did. Yours for a song - actually a tape - something Imalia did before I put the bite on her. I like to keep the kids in check. Last year's Jock Shot magazine's swimsuit shoot. Two hard, pointy reasons they pulled it off retail shelves."
 		"dependency"	"G.Velvet_Poster == 1 and G.Gary_Photochop == 0"	// changed by wesp
-// basic		"runscript"	"garySetQuestThree()"	// added by wesp
+		"runscript"	"garySetQuestThree()"	// added by wesp
+	}
+
+	Email
+	{
+		"subject"	"Rocket Launcher for Sale"
+		"sender"	"gary@schrecknet.vtm"
+		"body"		"Boss, got another poster just collecting dust, if you want to trade. Looks like one of the anarchs did some \"art\" photos before she got Embraced. It's all yours for the low, low price of the wooden pull toy prop from The Glittering. Might be in Metalhead Industries. You've talked to Mitnick, right? In the mailbox, like before."	// changed by wesp
+		"dependency"	"G.Gary_Photochop == 1 and G.Gary_Damsel == 0"	// changed by wesp
+		"runscript"	"garySetQuestFour()"	// added by wesp
+	}
+
+	Email	// added by wesp
+	{
+		"subject"	"Looking for dates?"
+		"sender"	"gary@schrecknet.vtm"
+		"body"		"Are you lonely, boss? Then maybe finding one of these weird fleshy Tzimisce balls for me will stop you from wallowing in self pity. Would offer a poster of Imalia in her full beauty, before I gave her my special treatment."
+
+		"dependency"	"G.Gary_Damsel == 1 and G.Gary_Imalia == 0"
+		"runscript"	"garySetQuestFive()"
 	}
 
 	Email	// added by wesp
@@ -320,16 +330,7 @@ VV"
 		"subject"	"Confidential Nigerian Proposal"
 		"sender"	"gary@schrecknet.vtm"
 		"body"		"Are you tech savy, boss? Because Mitnick wants a special name plate with an integrated transponder chip. Don't know what he needs it for, but will swap for a poster of Tawni Sessions that Imalia hasn't got her angry claws on yet."
-		"dependency"	"G.Gary_Damsel == 1 and G.Gary_Tawni == 10"	// basic
-		"runscript"	"garySetQuestFive()"
-	}
-
-	Email	// added by wesp
-	{
-		"subject"	"Replica Stakes"
-		"sender"	"gary@schrecknet.vtm"
-		"body"		"Hey boss, got another job for you. One of our researchers into the occult would like to get his hands on a squashed Odious Chalice seen in Chinatown. Would offer a poster of Imalia in her full beauty, before I gave her my special treatment! The usual way like before."
-		"dependency"	"G.Gary_Tawni == 1 and G.Gary_Imalia == 10"	// basic
+		"dependency"	"G.Gary_Imalia == 1 and G.Gary_Tawni == 0"
 		"runscript"	"garySetQuestSix()"
 	}
 
@@ -337,17 +338,17 @@ VV"
 	{
 		"subject"	"World of Darkness Gold fast!"
 		"sender"	"gary@schrecknet.vtm"
-		"body"		"Been busy, boss? Because I heard another famous movie prop has gone missing. The throwing star of the Whirlwind from \"A Touch of Xen\". I'll swap it for the poster of a sweet girl, whom you certainly won't look in the eyes!"
-		"dependency"	"G.Gary_Imalia == 1 and G.Gary_Blind == 10"	// basic
+		"body"		"Been busy, boss? Because I heard another famous movie prop has gone missing. The throwing star of the Whirlwind from \"A Touch of Xen\". I'll swap it for the poster of a sweet girl, whom you certainly won't look too deep into the eyes." 
+		"dependency"	"G.Gary_Tawni == 1 and G.Gary_Blind == 0"
 		"runscript"	"garySetQuestSeven()"
 	}
 
 	Email	// added by wesp
 	{
-		"subject"	"Looking for dates?"
+		"subject"	"Replica Stakes"
 		"sender"	"gary@schrecknet.vtm"
-		"body"		"Are you lonely, boss? Then maybe finding one of these weird fleshy Tzimisce balls for me will stop you from wallowing in self pity. I'll give you a poster in return of a girl hanging out for you."
-		"dependency"	"G.Gary_Blind == 1 and G.Gary_Cross == 10"		// basic
+		"body"		"Hey boss, got an last job for you. One of our researchers into the occult would like to get his hands on a squashed Odious Chalice seen in Chinatown. I'll give you a poster in return of a girl just hanging out for you."
+		"dependency"	"G.Gary_Blind == 1 and G.Gary_Cross == 0"
 		"runscript"	"garySetQuestEight()"
 	}
 
@@ -364,7 +365,7 @@ VV"
 		"subject"	"CHEAP ROLEX..."
 		"sender"	"larry@neighborhood.vtm"
 		"body"		"...ain't the only stuff that we got, man! We got much hotter, much deadlier stuff, you know? And like all other quality LA proprietors we get new stock in all the time, so check it out!!!"
-		"dependency"	"G.Story_State >= 450"	// basic
+		"dependency"	"G.Story_State >= 45"
 		"autodelete"	"1"
 	}
 
