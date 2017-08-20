@@ -1,7 +1,7 @@
 //====== Copyright © 2003-2016, Troika Games, Inc. All rights reserved. =======
 //
 // Purpose: Vampire Bloodlines game definition file (.fgd) 
-// Version: 1.51 beta
+// Version: 1.53 beta
 // Edition: Original VtMB
 // Written: Psycho-A
 //
@@ -323,7 +323,7 @@ studioprop()
 @ItemClass base(Item) studio("models/weapons/thaumaturgy/view/v_thaumaturgy.mdl")= item_d_thaumaturgy : "Thaumaturgy discipline." []
 
 // equipment
-@ItemClass base(Item) studio("models/items/bloodpack/ground/bloodpack.mdl")= item_g_bluebloodpack : "Blood Pack.\n\nA bag of blood routinely used in hospitals for transfusions. Using it restores blood points." []
+@ItemClass base(Item) studio("models/items/bloodpack/ground/bloodpack.mdl")= item_g_bloodpack : "Blood Pack.\n\nA bag of blood routinely used in hospitals for transfusions. Using it restores blood points." []
 @ItemClass base(Item) studio("models/items/bloodpack/ground/bloodpack.mdl")= item_g_bluebloodpack : "Blue Blood Pack.\n\nA bag of blood from only the finest human specimens. Drinking it restores blood points." []
 @ItemClass base(Item) studio("models/items/bloodpack/ground/bloodpack.mdl")= item_g_eldervitaepack : "Elder Vitae.\n\nThis bag contains extremely potent blood. The hows and wheres of its origin are probably best left unexplored." []
 @ItemClass base(Item) studio("models/items/Key/Ground/Key.mdl")= item_g_keyring : "Keyring.\n\nRing that saves all found keys." []
@@ -4486,9 +4486,9 @@ studioprop()
 	sep_pprpmdls(string) readonly: "------------------------------------"
 
 	// damage models
-	dmg_model_1(studio) : "Damage Model 1" : "models/scenery/misc/BoxesBreakable/BoxesBreakable_D1.mdl" : "Spawn random of these models when entity damaged."
-	dmg_model_2(studio) : "Damage Model 2" : "models/scenery/misc/BoxesBreakable/BoxesBreakable_D2.mdl" : "Spawn random of these models when entity damaged."
-	dmg_model_3(studio) : "Damage Model 3" : "models/scenery/misc/BoxesBreakable/BoxesBreakable_D3.mdl" : "Spawn random of these models when entity damaged."
+	dmg_model_1(studio) : "Damage Model 1" :  : "Spawn random of these models when entity damaged." = [ "models/scenery/misc/BoxesBreakable/BoxesBreakable_D1.mdl" : "models/scenery/misc/BoxesBreakable/BoxesBreakable_D1.mdl"]
+	dmg_model_2(studio) : "Damage Model 2" :  : "Spawn random of these models when entity damaged." = [ "models/scenery/misc/BoxesBreakable/BoxesBreakable_D2.mdl" : "models/scenery/misc/BoxesBreakable/BoxesBreakable_D2.mdl"]
+	dmg_model_3(studio) : "Damage Model 3" :  : "Spawn random of these models when entity damaged." = [ "models/scenery/misc/BoxesBreakable/BoxesBreakable_D3.mdl" : "models/scenery/misc/BoxesBreakable/BoxesBreakable_D3.mdl"]
 	dmg_model_4(studio) : "Damage Model 4" :  : "Spawn random of these models when entity damaged."
 	dmg_model_5(studio) : "Damage Model 5" :  : "Spawn random of these models when entity damaged."
 	dmg_model_6(studio) : "Damage Model 6" :  : "Spawn random of these models when entity damaged."

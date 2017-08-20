@@ -1,5 +1,5 @@
 --------------------
-Bloodlines SDK v1.66+
+Bloodlines SDK v1.67
 --------------------
 
 This is an unofficial software developer's kit (SDK) for Vampire - The Masquerade: 
@@ -66,6 +66,7 @@ This SDK includes various third-party tools, in particular:
 * Photoshop and Paint.NET texture plugins (the crew of authors)
 * LipSync/VCD Editor (Valve's FacePoser modification, extended by Psycho-A)
 * Create a New Mod Wizard (custom script, written by Psycho-A)
+* 4GB Exe Patcher (patch for 64-bit OS, developed by NTCore)
 
 --------------------
 
@@ -82,8 +83,8 @@ to be installed on your system:
 
 * Model Decompiler
 * BSPSource Decompiler
-* BSPInfo Tool [disabled for now]
 * EntSpy BSP Tool
+* BSPInfo Tool [disabled for now]
 * PakRat Tool [disabled for now]
 
 --------------------
@@ -97,10 +98,10 @@ Usage notes:
   To edit some asset from here (material, model, etc), you need to copy it to your project's 
   folder first with saving original folder structure. Next, make your editions at this place,
   otherwise, your changes won't be applied for other people who'll get your work.
-* If the map crashes on/after loading in Hammer, then on launching editor wait until appearing
-  the "Messages" window with showing the project paths! This means editor assers loaded fully.
 * To create new mod 'from scratch', use "Create a New Mod" option in the Main menu. This will
   create appropriate launcher and mod folder with basic subdirs inside that have descriptions.
+* If the map crashes on/after loading in Hammer, then on launching editor wait until appearing
+  the "Messages" window with showing the project paths! This means editor assers loaded fully.
 * The Administrator rights may be required for installing texture plugins or work some tools.
 
 [Lighting]
@@ -115,8 +116,8 @@ Usage notes:
   the model's "Lighting Origin" parameter. This will override mdl's troubled lighting coords.
 
 [Texturing]
-* No more need VPKTool and creating DDS for getting game's tth/ttz's since the advanced tool,
-  "Texture Converter", included to the SDK. It supports tth,ttz,vtf,tga,dds,bmp,jpg or gifs
+* No more need VPKTool and creating DDS for getting game's tth/ttz's since new advanced tool
+  "Texture Converter" included to the SDK. It supports tth,ttz,vtf,tga,dds,bmp,jpeg or gifs
   conversion in both directions (convert/de-convert) in single or batch mode as well.
 * Since version 1.4 you able to convert game's texture formats into vtf or tga directly from
   Windows Explorer context menu. Also, you may create tth and ttz using the same options for
@@ -142,6 +143,8 @@ Usage notes:
   For managing them, goto "Map -> Map Properties" in the Hammer menu and look bottom several 
   strings. Now there are four parameters presented which allow you to tweak map lighting or
   overall compiling time (each parameter have descriptions so no reason to describe it here).
+* BSP Decompiler have problem decompiling original game's ladders, so on editing such map, 
+  you need to manually turn ladder's brushes to "func_ladder" in Hammer.
 * Tool texture "toolsinvisible" slows VVIS full compiling, use "toolsclip" when possible.
 * Tool texture "noviz" isn't supported by the SDK, create func_details in its volume instead.
 * Func_detail entities may add junk planes, in that case turn them back to world.
@@ -193,9 +196,9 @@ Official project pages:
 * Planet-Vampire Community: 
   https://planetvampire.com/modules/files/index.php?id=31
   https://forums.planetvampire.com/index.php?topic=5797.0
-* CS-Mapping/VK.com (Russian Communities):
+* Russian Communities:
   http://cs-mapping.com.ua/forum/showthread.php?t=37053
-  http://vk.com/vtm_bloodlines [game public]
+  http://vk.com/vtm_bloodlines [game's public page]
 
 --------------------
 
@@ -308,9 +311,15 @@ Global changes for the last year:
 
 --------------------
 
-1.66-hotfix (17.05.2017):
+1.67 (16.07.2017):
 - Swapped cmdow.exe for LipSync Editor with scripted workaround, so Google shoudn't panic more.
-- The SDK source code has been uploaded onto the Planet-Vampire servers for wider user access.
+- Texture Utils: Changed system context menus assignment behavior to fix issues on some systems.
+- Hammer: Func_areaportalwindow's brushes doesn't appends origins now, so no more need to fix it to 0 0 0.
+- Hammer: Fixed typo in FGD file not allowed to normally use item_g_bloodpack item class.
+- Hammer: Fixed non-desirable Damage Model values appearing in prop_destructable.
+- Added 4GB Exe Patcher to use on 64-bit OS for expanding game's or SDK tools RAM usage to 4 GB.
+- Added important ladders-issue note to this readme's SDK usage notes.
+- The full SDK source code has been uploaded onto the Planet-Vampire servers for wider user access.
 
 1.66 (25.03.2017):
 - Generic: Fixed working some tools and scripts on Windows 10 and non-admin user accounts.

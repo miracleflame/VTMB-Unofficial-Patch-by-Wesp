@@ -104,7 +104,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v9.8                                                     25.05.2017
+v9.8                                                     24.07.2017
 ----
 +Lowered damage of both rifles and restored original stats to basic.
 +Corrected wrong auras of NPCs at Confession, junkyard and library.
@@ -114,16 +114,22 @@ v9.8                                                     25.05.2017
 +Improved stat messages for Auspex, Fortidude, Potence and Protean.
 +Updated radio subtitles and SDK, thanks miracle.flame and Psycho-A.
 +Fixed Andrei problems when you meet him in the Hallowbrook Atrium.
-+Added new poster quest from Gary and improved portal at King's Way.
++Added fleshy ball to King's Way for a final poster quest from Gary.
++Improved Lasombra and other minor model issues, thanks to DDLullu.
++Changed Copper quest to success when you intimidated him for money.
+Fixed bad dripping sound at endings and misleading Jeanette email.
+Disabled the background music when you talk to Gary in the warrens.
 Fixed Slater dialogue loop and other minor dialogue and text bugs.
 Restored a Milligan line and created necessary license item for it.
 Corrected infamous Skyeline bug and Giovanni crypt map transition.
 Added Blood Boil explosion sound and increased decal view distance.
 Replaced Python update with map sources and improved other Extras.
-Corrected mirrored crate textures and fixed buggy warrens stairway.
+Corrected mirrored crates textures and fixed two warrens stairways.
 Fixed eyes in Lily cutscene and raised club outside music volumes.
 Reset clothing using console and improved werewolf blood quest log.
 Added drop_type1or2MDL decompressor for models, thanks to DDLullu.
+Fixed basic Potence not stacking and removed second effect in plus.
+Added missing ladder-climbing sounds to several recompiled levels.
 
 v9.7                                                     30.03.2017
 ----
@@ -1577,7 +1583,7 @@ Corrected several tutorial popups and mentioned camera adjustment.
 Repaired critical basic patch bugs and restored overlooked changes.
 Fixed clinic guard Humanity loss and some other minor text issues.
 Removed Masquerade redemption and double XP for sending Patty away.
-Made Potence fit description and finally fixed npctemplate* files.
+Made Potence stack with strength and fixed the npctemplate* files.
 Corrected Arthur's $201 reward, Vandal, Ji and Slater lines issues.
 Removed player knowing the names of Ox's patron and Asian vampire.
 Prevented picking of two temple doors and repaired Hollywood music.
@@ -2312,10 +2318,10 @@ Disciplines:
 +Added Presence in dialogue and improved Presence combat effects.
 +Restored Domination Command and Sleep, Dementation Veil and Voice.
 +Changed Cadaverous Flesh history and occult heal rate accordingly.
-+Made Potence fit description and changed Eldritch Prodigy history.
 +Lowered Bloodbuff effect to two points and corrected info symbol.
 +Disabled true sight for Vick, Killer, Cathayan and Blood Guardian.
 +Adjusted Blood Shot and Boil damages and added missing Boil sound.
++Restored Potence effects and made it stack correctly with strength.
 +Changed active discpline durations to fit better to graphic effect.
 +Improved stat messages for Auspex, Fortidude, Potence and Protean.
 Made indirect disciplines not traceable and NPCs comfort loud ones.
@@ -2378,7 +2384,7 @@ Vendors:
 +Made Tseng not offer blood and hide his special inventory better.
 
 Tutorial:
-+Added SM haven key, unused quest logs, muzzle flashes and fade out.
++Added unused quest logs, Sabbat goon muzzle flashes and a fade out.
 +Made keeping Jack's .38 gun possible and repaired missing hands bug.
 +Restored tutorial dialogue guard and removed Ventrue's rat feeding.
 Fixed some popups issues, restored one and mentioned camera commands.
@@ -2394,7 +2400,7 @@ Haven:
 +Made Malkavians loose Humanity when sending McFly to threaten cops.
 +Added option to keep Heather alive and added a humane farewell line.
 +Made Larry send spam email and improved two friend emails timings.
-+Created three new Gary poster quests for several unused item models.
++Created four new Gary poster quests for several unused item models.
 +Made SM haven stay always active and added door to haven bathroom.
 Corrected Mercurio sending wrong timed emails and fixed email order.
 Repaired VV and Jeanette sending you their emails at the wrong time.
@@ -2455,6 +2461,7 @@ Corrected Ocean House quests not closing if you refused the gallery.
 Made Ocean House quest failure update when reconciling the sisters.
 Removed Chunk after you met him downtown and restored female raver.
 Corrected wrong Jeanette quest update and made Cal getting re-hired.
+Fixed misleading emails and lines for whoever did get the pendant.
 
 Medical Clinic:
 +Restored bisexual Phil, fixed him dropping note and made him stay.
@@ -2492,7 +2499,7 @@ Prevented talking with Chunk when someone else attacked the Gallery.
 Made police always investigate crime and locked gallery front then.
 Corrected wrong painting positions after slashing then re-entering. 
 
-Serial killer:
+Serial Killer:
 +Lowered Humanity points gainable during the serial killer dialogue.
 +Restored two dog models to and fixed sounds and actions at junkyard.
 Removed Masquerade violation and failure for convincing the killer.
@@ -2595,7 +2602,7 @@ Stopped Empire hotel TV from being turned off because of lighting.
 Added floor number to suite names in computer and numbers to floors.
 Improved Empire Hotel mafia TV room sound switch and music radius.
 
-Grout's mansion:
+Malkavian Mansion:
 +Restored leaf, smoke, maze room and bed trigger to Grout's mansion.
 +Added taxi to maps and fixed jars transparency at Grout's mansion.
 Fixed possible crash on leaving, Obfuscate freeze and candle skins.
@@ -2724,7 +2731,7 @@ Fixed bug after escorting Ash before reporting Chastity back to VV.
 Added magazine quest state on killing Flynn and aborted getting it.
 Made Sin Bin ATM machine not vanish and Romero sit after boinking.
 
-Tawni's flat:
+Hollywood Apts.:
 Moved a Tawni quest camera into kitchen and showed stealth ratings.
 Made quest log and laptop show failure and fixed being noticed early.
 Prevented continuing the Tawni quest after you have been detected.
@@ -2747,15 +2754,14 @@ Corrected a wrong sign in warrens and removed icon of Mitnick's PC.
 Restored missing Bertram CD quest state update and fixed a cutscene.
 Added missing lamps to several levels and blocked pipe with barrel.
 
-Nosferatu lair:
+Nosferatu Lair:
 +Granted occult Perception powerup as reward during Mitnick's quest.
 +Made you lose Humanity for taking money as reward of Imalia's quest.
 +Awarded an XP for getting Imalia's magazine to compensate for money.
 +Imalia's magazine quest is now also available after her Tawni quest.
 +Added new quest logs and an XP for Gary's posters and changed order.
-+Created three new Gary's poster quests and one quest from Mitnick.
-+Added Masquerade redemption for sending the Nosferatu photo to Gary.
 +Restored unused models to the Nosferatu warrens to fix a map hole.
++Added Masquerade redemption for sending the Nosferatu photo to Gary.
 +Made Gary give different bloodpacks as the protection talked about.
 Repaired bug that could make Imalia angry before getting her quest.
 Prevented Imalia's newspaper from appearing when you fail her quest.
@@ -2824,7 +2830,7 @@ Mr. Ox will react correctly when you already have acquired the eyes.
 Yukie:
 +Restored evasion and corrected Obfuscate bug on entering fishmarket.
 Fixed bad door sound and restored Yukie to Ramen shop from the start.
-Restored shop stats, fixed quest issuesa and made her use her sword.
+Restored shop stats, fixed quest issues and made her use her sword.
 
 Giovanni Mansion:
 +Restored missing Dodge II manual and a Domination option for Luca.
@@ -2878,7 +2884,7 @@ Blood Hunt:
 +Added observatory inspections and fixed taxi TV icon and triggers.
 +Restored Skelter and grenade to Luckee Star and delayed Nines line.
 +Added helicopter to rooftop, missing doors and fixed cop cars issue.
-Corrected bad bus stops, not solid poles and removed buggy potence.
+Corrected bad bus stops, not solid poles and removed buggy Potence.
 Turned haven into Elysium area and placed females at the Blood Hunt.
 Swapped wrecks on Blood Hunt map and repaired helipad SWAT texture.
 Repaired Trip and Vandal not choosable at endgame in special cases.
@@ -2886,7 +2892,7 @@ Prevented taxi from driving you to Mercurio when he is already dead.
 Removed Jack from haven at taxi ride and improved observatory scene.
 Fixed weird camera after endgame Cabbie discussion and his cut line.
 
-Ming's temple:
+Temple:
 +Restored Yukie as companion to temple and Ming endgame camera shot.
 Disabled arrow chest spawning and fixed facing Ming while Obfuscated.
 Corrected temple maps start orientation, inspections and a tin can.
@@ -2897,7 +2903,7 @@ Added missing temple door sound and restored Chang and buddha skins.
 Removed unusable Ming temple doorknobs and gave guards Shin Guntos.
 Reduced slime particle spawning in temple and fixed clipping columns.
 
-Venture Tower:
+Endgame:
 +Restored Sheriff conjuring Bat's Communion and added his sword too.
 +Made Ventrue enemies use disciplines and SWAT in armor not biteable.
 +Restored wolf-ending easter egg and a added timer to elevator bomb.
@@ -2967,9 +2973,13 @@ Powerups:
 + Occult Security powerup as reward from Mr. Ox.
 
 Items:
++ Fleshy ball in King's Way.
 + Charity money box in gallery.
 + Name plate in Kamikaze Zen safe.
 + Throwing star on Red Dragon desk.
++ Driver's license in Malkavian Maze.
++ Eight at first unknown occult items.
++ Driver's license from Simon Milligan.
 + Wooden pulltoy in Metalhead Industries.
 + Library card found in the new library level.
 + Chewing gum sellable to Copper found on pier.
@@ -3079,7 +3089,6 @@ Restored models:
 +- Colt Anaconda and Desert Eagle magazine models.
 
 Other restorations:
-
 + Flynn as normal vendor.
 + Nosferatu and Pisha eyes.
 + Discipline inventory slot.
@@ -3211,37 +3220,65 @@ Others:
 * Different HUD user interface (graphics found).
 * Lockpicking and discipline crosshairs (graphics found).
 
-Open weapons for items:
-* item_w_mingxiao_spit
-* item_w_mingxiao_melee
 
+Modified items:
+---------------
+To create new items, unused, duplicates and NPC weapons were 
+modified, the latter items can not be taken from containers.
 
-Occult Items:
--------------
+-item_d_holy_light -> is not shown in inventory
+item_g_garys_cd (Tung's CD duplicate) -> Pull Toy
+item_g_jumbles_flyer (flyer duplicate) -> Fleshy Ball
+item_g_ring_serial_killer_1 (unused) -> Bubble Bum
+item_g_wireless_camera_2 (camera duplicate) -> Name Plate
+item_g_wireless_camera_3 (camera duplicate) -> Squashed Chalice
+item_g_wireless_camera_4 (camera duplicate) -> Throwing Star
+-item_i_written -> is not shown in inventory
+item_k_key_generic (unused) -> Museum Keys
+item_p_occult_hacking (unused) -> Braid Talisman
+item_p_occult_lockpicking (unused) -> Antique Locket
+item_p_occult_obfuscate (unused) -> Zharalketh (just restored)
+item_w_avamp_blade (not obtainable) -> Shin Gunto
+item_w_chang_blade (not obtainable) -> Broadsword
+item_w_chang_claw (not obtainable) -> Tiger's Claws
+-item_w_chang_energy_ball -> is not shown in inventory
+-item_w_chang_ghost -> is not shown in inventory, blue lights
+item_w_claws_ghoul (NPC) -> Driver's License
+item_w_claws_protean4 (claw duplicate) -> Library Card 
+item_w_claws_protean5 (claw duplicate) -> Vacuum Tubes
+item_w_gargoyle_fist (NPC) -> item_p_occult_thaum_damage Daimonori
+item_w_hengeyokai_fist (NPC) -> item_p_occult_heal_rate Mummywrap
+item_w_manbat_claw (NPC) -> item_p_occult_dodge Weekapaug Thistle
+item_w_mingxiao_melee (NPC) -> Pearl of Dubai
+-item_w_mingxiao_spit (NPC) -> Ming won't attack if changed
+-item_w_mingxiao_tentacle (NPC) -> Ming won't attack if changed
+item_w_rem_m_700_bach (not obtainable) -> SWAT Rifle
+item_w_sabbatleader_attack (NPC) -> item_p_occult_hacking Braid
+item_w_sheriff_sword (not obtainable) -> Sheriff Sword
+item_w_tzimisce_melee (NPC) -> item_p_occult_experience Saulocept
+item_w_tzimisce2_claw (NPC) -> Driver's License
+item_w_tzimisce2_head (NPC) -> Thaumaturgy Casting
+item_w_tzimisce3_claw (NPC) -> item_p_occult_frenzy Tarulfang
+item_w_werewolf_attacks (NPC) -> item_p_occult_obfuscate Zharalketh
+item_w_zombie_fists (NPC) -> item_p_occult_passive_durations Galdjum
+-weapon_physcannon (manipulation) -> hand don't work if changed
+
 The Occult Ability was intended to be the requirement for using
 occult items. If it wasn't met, these messages were randomized:
 
-Maybe if you were a bit more goth you would have a clue what this 
-thingie is.
- (item_w_tzimisce3_claw -> item_p_occult_frenzy = Tarulfang)
-If Ozzy were here, I'm sure he could tell you what this is.
- (item_w_tzimisce_melee -> item_p_occult_experience = Saulocept)
-You can't identify this item, but it has a "Made in Hell" label on
-the bottom.
- (item_w_gargoyle_fist -> item_p_occult_thaum_damage = Daimonori)
+  You can't identify this item, but it has a "Made in Hell" 
+  label on the bottom.
 You have no clue what this thing is, but it looks eeeeeevil.
- (item_w_hengeyokai_fist -> item_p_occult_heal_rate = Mummywrap)
-You cannot identify this item, perhaps you should finish eating 
-the soul doughnut?
- (item_w_manbat_claw -> item_p_occult_dodge = Weekapaug Thistle)
+  You cannot identify this item, perhaps you should finish 
+  eating the soul doughnut?
 It isn't a WWJD bracelet, so you have no idea what it could be.
- (item_w_sabbatleader_attack -> item_p_occult_hacking = Braid)
-You haven't seen one of these before, but Bun Bun left it here, so
-it can't be good news.
- (item_w_werewolf_attacks -> item_p_occult_obfuscate = Zharalketh)
+  If Ozzy were here, I'm sure he could tell you what this is.
+Maybe if you were a bit more goth you would have a clue what 
+this thingie is.
+  You haven't seen one of these before, but Bun Bun left it here, 
+  so it can't be good news.
 Hmm, when you gaze upon this object, the skies darken and lightning 
 flashes. Those aren't good clues to what this is though.
- (item_w_zombie_fists -> item_p_occult_passive_durations = Galdjum)
 
 
 Context Icons:

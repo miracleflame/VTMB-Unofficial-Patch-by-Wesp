@@ -16,7 +16,7 @@
 "wetness_fadetarget" "0.0"
 "wetness_fadein" "5.0"
 "wetness_fadeout" "10.0"
-"comment" "Decompiled by BSPSource v1.2.1 from la_skyline_1.bsp"
+"comment" "Edited by Wesp5 for Unofficial Patch"
 }
 {
 "classname" "light_spot"
@@ -470,9 +470,9 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "call_button_3,Lock,,0,-1,,"
-"OnSetState2" "skyelev,GotoFloor,3,0,-1,,"
 "OnSetState2" "onsecond,Trigger,,0,-1,,"
+"OnSetState2" "skyelev,GotoFloor,3,0,-1,,"
+"OnSetState2" "call_button_3,Lock,,0,-1,,"
 "origin" "387.936 -232.103 338.919"
 }
 {
@@ -489,9 +489,9 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "call_button_3,Lock,,0,-1,,"
-"OnSetState2" "skyelev,GotoFloor,3,0,-1,,"
 "OnSetState2" "onsecond,Trigger,,0,-1,,"
+"OnSetState2" "skyelev,GotoFloor,3,0,-1,,"
+"OnSetState2" "call_button_3,Lock,,0,-1,,"
 "origin" "387.936 -232.103 342.285"
 }
 {
@@ -508,9 +508,9 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "call_button_4,Lock,,0,-1,,"
-"OnSetState2" "skyelev,GotoFloor,4,0,-1,,"
 "OnSetState2" "onthird,Trigger,,0,-1,,"
+"OnSetState2" "skyelev,GotoFloor,4,0,-1,,"
+"OnSetState2" "call_button_4,Lock,,0,-1,,"
 "origin" "387.747 -232.103 643.016"
 }
 {
@@ -527,9 +527,9 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "call_button_4,Lock,,0,-1,,"
-"OnSetState2" "skyelev,GotoFloor,4,0,-1,,"
 "OnSetState2" "onthird,Trigger,,0,-1,,"
+"OnSetState2" "skyelev,GotoFloor,4,0,-1,,"
+"OnSetState2" "call_button_4,Lock,,0,-1,,"
 "origin" "387.747 -232.103 646.381"
 }
 {
@@ -546,9 +546,9 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "call_button_5,Lock,,0,-1,,"
-"OnSetState2" "skyelev,GotoFloor,5,0,-1,,"
 "OnSetState2" "onfourth,Trigger,,0,-1,,"
+"OnSetState2" "skyelev,GotoFloor,5,0,-1,,"
+"OnSetState2" "call_button_5,Lock,,0,-1,,"
 "origin" "387.868 -232.103 950.491"
 }
 {
@@ -565,9 +565,9 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "call_button_5,Lock,,0,-1,,"
-"OnSetState2" "skyelev,GotoFloor,5,0,-1,,"
 "OnSetState2" "onfourth,Trigger,,0,-1,,"
+"OnSetState2" "skyelev,GotoFloor,5,0,-1,,"
+"OnSetState2" "call_button_5,Lock,,0,-1,,"
 "origin" "387.868 -232.103 947.125"
 }
 {
@@ -584,9 +584,9 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "skyelev,GotoFloor,6,0,-1,,"
-"OnSetState2" "call_button_6,Lock,,0,-1,,"
 "OnSetState2" "onfifth,Trigger,,0,-1,,"
+"OnSetState2" "call_button_6,Lock,,0,-1,,"
+"OnSetState2" "skyelev,GotoFloor,6,0,-1,,"
 "origin" "387.61 -232.103 1254.35"
 }
 {
@@ -603,9 +603,9 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "call_button_6,Lock,,0,-1,,"
-"OnSetState2" "skyelev,GotoFloor,6,0,-1,,"
 "OnSetState2" "onfifth,Trigger,,0,-1,,"
+"OnSetState2" "skyelev,GotoFloor,6,0,-1,,"
+"OnSetState2" "call_button_6,Lock,,0,-1,,"
 "origin" "387.61 -232.103 1250.99"
 }
 {
@@ -726,8 +726,8 @@
 {
 "classname" "logic_auto"
 "spawnflags" "1"
-"OnMapLoad" "newscaster,SetSoundOverrideEnt,tv_prop,0,-1,,"
 "OnMapLoad" "newscaster,SetFakeSilence,1,0,-1,,"
+"OnMapLoad" "newscaster,SetSoundOverrideEnt,tv_prop,0,-1,,"
 "origin" "1632 -2380 1691"
 }
 {
@@ -749,18 +749,18 @@
 "floor5" "974"
 "floor6" "1278"
 "floor7" "1584"
-"OnReachFloorAny" "button_reverter,Trigger,,0,-1,,"
-"OnReachFloorAny" "elev_interior_door,Open,,1,-1,,"
-"OnReachFloor1" "elev_door_1,Open,,1,-1,,"
-"OnReachFloor2" "elev_door_2,Open,,1,-1,,"
-"OnMoveStart" "elevator_shake,StartShake,,0,-1,,"
-"OnReachFloorAny" "elevator_shake,StopShake,,0,-1,,"
-"OnReachFloorAny" "elevarr,Skin,0,1.1,-1,,"
-"OnReachFloor3" "elev_door_3,Open,,1,-1,,"
-"OnReachFloor4" "elev_door_4,Open,,1,-1,,"
-"OnReachFloor5" "elev_door_5,Open,,1,-1,,"
-"OnReachFloor6" "elev_door_6,Open,,1,-1,,"
 "OnReachFloor7" "elev_door_7,Open,,1,-1,,"
+"OnReachFloor6" "elev_door_6,Open,,1,-1,,"
+"OnReachFloor5" "elev_door_5,Open,,1,-1,,"
+"OnReachFloor4" "elev_door_4,Open,,1,-1,,"
+"OnReachFloor3" "elev_door_3,Open,,1,-1,,"
+"OnReachFloorAny" "elevarr,Skin,0,1.1,-1,,"
+"OnReachFloorAny" "elevator_shake,StopShake,,0,-1,,"
+"OnMoveStart" "elevator_shake,StartShake,,0,-1,,"
+"OnReachFloor2" "elev_door_2,Open,,1,-1,,"
+"OnReachFloor1" "elev_door_1,Open,,1,-1,,"
+"OnReachFloorAny" "elev_interior_door,Open,,1,-1,,"
+"OnReachFloorAny" "button_reverter,Trigger,,0,-1,,"
 }
 {
 "classname" "light_dynamic"
@@ -816,8 +816,8 @@
 "targetname" "elev_interior_door"
 "use_icon" "10"
 "locked_icon" "3"
-"OnFullyClosed" "skyelev,Unlock,,0,-1,,"
 "OnOpen" "skyelev,Lock,,0,-1,,"
+"OnFullyClosed" "skyelev,Unlock,,0,-1,,"
 }
 {
 "model" "*10"
@@ -841,8 +841,8 @@
 "targetname" "elev_interior_door"
 "use_icon" "10"
 "locked_icon" "3"
-"OnFullyClosed" "skyelev,Unlock,,0,-1,,"
 "OnOpen" "skyelev,Lock,,0,-1,,"
+"OnFullyClosed" "skyelev,Unlock,,0,-1,,"
 }
 {
 "model" "*11"
@@ -866,10 +866,10 @@
 "use_override" "call_button_2"
 "use_icon" "10"
 "locked_icon" "3"
-"OnFullyClosed" "call_button_2,Unlock,,0,-1,,"
-"OnFullyClosed" "button_2,Unlock,,0,-1,,"
-"OnOpen" "button_2,Lock,,0,-1,,"
 "OnOpen" "call_button_2,Lock,,0,-1,,"
+"OnOpen" "button_2,Lock,,0,-1,,"
+"OnFullyClosed" "button_2,Unlock,,0,-1,,"
+"OnFullyClosed" "call_button_2,Unlock,,0,-1,,"
 }
 {
 "model" "*12"
@@ -893,10 +893,10 @@
 "use_override" "call_button_2"
 "use_icon" "10"
 "locked_icon" "3"
-"OnFullyClosed" "call_button_2,Unlock,,0,-1,,"
-"OnFullyClosed" "button_2,Unlock,,0,-1,,"
-"OnOpen" "button_2,Lock,,0,-1,,"
 "OnOpen" "call_button_2,Lock,,0,-1,,"
+"OnOpen" "button_2,Lock,,0,-1,,"
+"OnFullyClosed" "button_2,Unlock,,0,-1,,"
+"OnFullyClosed" "call_button_2,Unlock,,0,-1,,"
 }
 {
 "classname" "light_spot"
@@ -1474,10 +1474,10 @@
 "use_override" "call_button_1"
 "use_icon" "10"
 "locked_icon" "3"
-"OnFullyClosed" "call_button_1,Unlock,,0,-1,,"
-"OnFullyClosed" "button_1,Unlock,,0,-1,,"
-"OnOpen" "button_1,Lock,,0,-1,,"
 "OnOpen" "call_button_1,Lock,,0,-1,,"
+"OnOpen" "button_1,Lock,,0,-1,,"
+"OnFullyClosed" "button_1,Unlock,,0,-1,,"
+"OnFullyClosed" "call_button_1,Unlock,,0,-1,,"
 }
 {
 "model" "*20"
@@ -1501,10 +1501,10 @@
 "use_override" "call_button_1"
 "use_icon" "10"
 "locked_icon" "3"
-"OnOpen" "call_button_1,Lock,,0,-1,,"
-"OnOpen" "button_1,Lock,,0,-1,,"
-"OnFullyClosed" "button_1,Unlock,,0,-1,,"
 "OnFullyClosed" "call_button_1,Unlock,,0,-1,,"
+"OnFullyClosed" "button_1,Unlock,,0,-1,,"
+"OnOpen" "button_1,Lock,,0,-1,,"
+"OnOpen" "call_button_1,Lock,,0,-1,,"
 }
 {
 "classname" "prop_dynamic"
@@ -1654,7 +1654,7 @@
 "spawnflags" "1"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"origin" "274 -43 -217.739"
+"origin" "274 -43 -225"
 }
 {
 "classname" "prop_dynamic"
@@ -2642,10 +2642,10 @@
 "use_override" "call_button_3"
 "use_icon" "10"
 "locked_icon" "3"
-"OnFullyClosed" "call_button_3,Unlock,,0,-1,,"
-"OnFullyClosed" "button_3,Unlock,,0,-1,,"
-"OnOpen" "button_3,Lock,,0,-1,,"
 "OnOpen" "call_button_3,Lock,,0,-1,,"
+"OnOpen" "button_3,Lock,,0,-1,,"
+"OnFullyClosed" "button_3,Unlock,,0,-1,,"
+"OnFullyClosed" "call_button_3,Unlock,,0,-1,,"
 }
 {
 "model" "*34"
@@ -2669,10 +2669,10 @@
 "use_override" "call_button_3"
 "use_icon" "10"
 "locked_icon" "3"
-"OnFullyClosed" "call_button_3,Unlock,,0,-1,,"
-"OnFullyClosed" "button_3,Unlock,,0,-1,,"
-"OnOpen" "button_3,Lock,,0,-1,,"
 "OnOpen" "call_button_3,Lock,,0,-1,,"
+"OnOpen" "button_3,Lock,,0,-1,,"
+"OnFullyClosed" "button_3,Unlock,,0,-1,,"
+"OnFullyClosed" "call_button_3,Unlock,,0,-1,,"
 }
 {
 "classname" "light_spot"
@@ -3345,10 +3345,10 @@
 "use_override" "call_button_4"
 "use_icon" "10"
 "locked_icon" "3"
-"OnFullyClosed" "call_button_4,Unlock,,0,-1,,"
-"OnFullyClosed" "button_4,Unlock,,0,-1,,"
-"OnOpen" "button_4,Lock,,0,-1,,"
 "OnOpen" "call_button_4,Lock,,0,-1,,"
+"OnOpen" "button_4,Lock,,0,-1,,"
+"OnFullyClosed" "button_4,Unlock,,0,-1,,"
+"OnFullyClosed" "call_button_4,Unlock,,0,-1,,"
 }
 {
 "model" "*45"
@@ -3372,10 +3372,10 @@
 "use_override" "call_button_4"
 "use_icon" "10"
 "locked_icon" "3"
-"OnFullyClosed" "call_button_4,Unlock,,0,-1,,"
-"OnFullyClosed" "button_4,Unlock,,0,-1,,"
-"OnOpen" "button_4,Lock,,0,-1,,"
 "OnOpen" "call_button_4,Lock,,0,-1,,"
+"OnOpen" "button_4,Lock,,0,-1,,"
+"OnFullyClosed" "button_4,Unlock,,0,-1,,"
+"OnFullyClosed" "call_button_4,Unlock,,0,-1,,"
 }
 {
 "classname" "light_spot"
@@ -3953,8 +3953,8 @@
 "targetname" "living_room_vent"
 "use_icon" "10"
 "locked_icon" "3"
-"OnOpen" "livingroom_vent_stealth_bonus,Disable,,0,-1,,"
 "OnClose" "livingroom_vent_stealth_bonus,Enable,,0,-1,,"
+"OnOpen" "livingroom_vent_stealth_bonus,Disable,,0,-1,,"
 }
 {
 "model" "*53"
@@ -3978,8 +3978,8 @@
 "targetname" "closet_vent"
 "use_icon" "10"
 "locked_icon" "3"
-"OnClose" "closet_vent_stealth_bonus,Enable,,0,-1,,"
 "OnOpen" "closet_vent_stealth_bonus,Disable,,0,-1,,"
+"OnClose" "closet_vent_stealth_bonus,Enable,,0,-1,,"
 }
 {
 "classname" "light"
@@ -4111,12 +4111,12 @@
 "use_override" "call_button_5"
 "use_icon" "10"
 "locked_icon" "3"
-"OnFullyClosed" "call_button_5,Unlock,,0,-1,,"
-"OnFullyClosed" "button_5,Unlock,,0,-1,,"
-"OnOpen" "button_5,Lock,,0,-1,,"
-"OnOpen" "call_button_5,Lock,,0,-1,,"
-"OnOpen-wesp" "tv_screen,ScriptHide,,0,-1,,"
 "OnOpen" "newscaster,SetFakeSilence,1,0,-1,,"
+"OnOpen-wesp" "tv_screen,ScriptHide,,0,-1,,"
+"OnOpen" "call_button_5,Lock,,0,-1,,"
+"OnOpen" "button_5,Lock,,0,-1,,"
+"OnFullyClosed" "button_5,Unlock,,0,-1,,"
+"OnFullyClosed" "call_button_5,Unlock,,0,-1,,"
 }
 {
 "model" "*56"
@@ -4140,12 +4140,12 @@
 "use_override" "call_button_5"
 "use_icon" "10"
 "locked_icon" "3"
-"OnFullyClosed" "call_button_5,Unlock,,0,-1,,"
-"OnFullyClosed" "button_5,Unlock,,0,-1,,"
-"OnOpen" "button_5,Lock,,0,-1,,"
-"OnOpen" "call_button_5,Lock,,0,-1,,"
-"OnOpen-wesp" "tv_screen,ScriptHide,,0,-1,,"
 "OnOpen" "newscaster,SetFakeSilence,1,0,-1,,"
+"OnOpen-wesp" "tv_screen,ScriptHide,,0,-1,,"
+"OnOpen" "call_button_5,Lock,,0,-1,,"
+"OnOpen" "button_5,Lock,,0,-1,,"
+"OnFullyClosed" "button_5,Unlock,,0,-1,,"
+"OnFullyClosed" "call_button_5,Unlock,,0,-1,,"
 }
 {
 "classname" "item_container_animated"
@@ -4747,8 +4747,8 @@
 "use_icon" "10"
 "locked_icon" "3"
 "targetname" "haven_vent_1"
-"OnOpen" "havenventcover,Kill,,0,-1,,"
 "OnOpen" ",,,0,-1,toTaxi(),"
+"OnOpen" "havenventcover,Kill,,0,-1,,"
 }
 {
 "model" "*64"
@@ -4772,8 +4772,8 @@
 "use_icon" "10"
 "locked_icon" "3"
 "targetname" "haven_vent_2"
-"OnOpen" "havenventcover,Kill,,0,-1,,"
 "OnOpen" ",,,0,-1,toTaxi(),"
+"OnOpen" "havenventcover,Kill,,0,-1,,"
 }
 {
 "classname" "light"
@@ -4895,9 +4895,9 @@
 "targetname" "haven_door"
 "use_icon" "10"
 "locked_icon" "3"
-"OnOpen" "haven_vent_2,Unlock,,0,1,,"
-"OnOpen" "haven_vent_1,Unlock,,0,1,,"
 "OnOpen" ",,,0,-1,toTaxi(),"
+"OnOpen" "haven_vent_1,Unlock,,0,1,,"
+"OnOpen" "haven_vent_2,Unlock,,0,1,,"
 }
 {
 "model" "*66"
@@ -4921,10 +4921,10 @@
 "use_override" "call_button_6"
 "use_icon" "10"
 "locked_icon" "3"
-"OnFullyClosed" "call_button_6,Unlock,,0,-1,,"
-"OnFullyClosed" "button_6,Unlock,,0,-1,,"
-"OnOpen" "button_6,Lock,,0,-1,,"
 "OnOpen" "call_button_6,Lock,,0,-1,,"
+"OnOpen" "button_6,Lock,,0,-1,,"
+"OnFullyClosed" "button_6,Unlock,,0,-1,,"
+"OnFullyClosed" "call_button_6,Unlock,,0,-1,,"
 }
 {
 "model" "*67"
@@ -4948,10 +4948,10 @@
 "use_override" "call_button_6"
 "use_icon" "10"
 "locked_icon" "3"
-"OnFullyClosed" "call_button_6,Unlock,,0,-1,,"
-"OnFullyClosed" "button_6,Unlock,,0,-1,,"
-"OnOpen" "button_6,Lock,,0,-1,,"
 "OnOpen" "call_button_6,Lock,,0,-1,,"
+"OnOpen" "button_6,Lock,,0,-1,,"
+"OnFullyClosed" "button_6,Unlock,,0,-1,,"
+"OnFullyClosed" "call_button_6,Unlock,,0,-1,,"
 }
 {
 "model" "*68"
@@ -5582,10 +5582,10 @@
 "use_override" "call_button_7"
 "use_icon" "10"
 "locked_icon" "3"
-"OnFullyClosed" "call_button_7,Unlock,,0,-1,,"
-"OnFullyClosed" "button_7,Unlock,,0,-1,,"
-"OnOpen" "button_7,Lock,,0,-1,,"
 "OnOpen" "call_button_7,Lock,,0,-1,,"
+"OnOpen" "button_7,Lock,,0,-1,,"
+"OnFullyClosed" "button_7,Unlock,,0,-1,,"
+"OnFullyClosed" "call_button_7,Unlock,,0,-1,,"
 }
 {
 "model" "*78"
@@ -5609,10 +5609,10 @@
 "use_override" "call_button_7"
 "use_icon" "10"
 "locked_icon" "3"
-"OnFullyClosed" "call_button_7,Unlock,,0,-1,,"
-"OnFullyClosed" "button_7,Unlock,,0,-1,,"
-"OnOpen" "button_7,Lock,,0,-1,,"
 "OnOpen" "call_button_7,Lock,,0,-1,,"
+"OnOpen" "button_7,Lock,,0,-1,,"
+"OnFullyClosed" "button_7,Unlock,,0,-1,,"
+"OnFullyClosed" "call_button_7,Unlock,,0,-1,,"
 }
 {
 "model" "*79"
@@ -6331,41 +6331,15 @@
 {
 "portalnumber" "1"
 "classname" "func_areaportalwindow"
-"targetname" "vent1"
-"StartHidden" "0"
-"FadeStartDist" "128"
-"FadeDist" "256"
-"TranslucencyLimit" "0"
-"target" "vent1brush"
-}
-{
-"model" "*94"
-"classname" "func_brush"
-"targetname" "vent1brush"
-"StartHidden" "0"
-"renderfx" "0"
-"rendermode" "0"
-"renderamt" "255"
-"rendercolor" "255 255 255"
-"disableshadows" "1"
-"InputFilter" "0"
-"StartDisabled" "0"
-"Solidity" "1"
-"climbable" "0"
-"origin" "32 9.5 40"
-}
-{
-"portalnumber" "2"
-"classname" "func_areaportalwindow"
 "targetname" "vent2"
 "StartHidden" "0"
-"FadeStartDist" "128"
-"FadeDist" "256"
+"FadeStartDist" "1280"
+"FadeDist" "2560"
 "TranslucencyLimit" "0"
 "target" "vent2brush"
 }
 {
-"model" "*95"
+"model" "*94"
 "classname" "func_brush"
 "targetname" "vent2brush"
 "StartHidden" "0"
@@ -6378,20 +6352,20 @@
 "StartDisabled" "0"
 "Solidity" "1"
 "climbable" "0"
-"origin" "32 9.5 344"
+"origin" "0 0 0"
 }
 {
-"portalnumber" "3"
+"portalnumber" "2"
 "classname" "func_areaportalwindow"
 "targetname" "vent3"
 "StartHidden" "0"
-"FadeStartDist" "128"
-"FadeDist" "256"
+"FadeStartDist" "1280"
+"FadeDist" "2560"
 "TranslucencyLimit" "0"
 "target" "vent3brush"
 }
 {
-"model" "*96"
+"model" "*95"
 "classname" "func_brush"
 "targetname" "vent3brush"
 "StartHidden" "0"
@@ -6404,20 +6378,20 @@
 "StartDisabled" "0"
 "Solidity" "1"
 "climbable" "0"
-"origin" "32 9.5 648"
+"origin" "0 0 0"
 }
 {
-"portalnumber" "4"
+"portalnumber" "3"
 "classname" "func_areaportalwindow"
 "targetname" "vent4"
 "StartHidden" "0"
-"FadeStartDist" "128"
-"FadeDist" "256"
+"FadeStartDist" "1280"
+"FadeDist" "2560"
 "TranslucencyLimit" "0"
 "target" "vent4brush"
 }
 {
-"model" "*97"
+"model" "*96"
 "classname" "func_brush"
 "targetname" "vent4brush"
 "StartHidden" "0"
@@ -6430,20 +6404,20 @@
 "StartDisabled" "0"
 "Solidity" "1"
 "climbable" "0"
-"origin" "32 9.5 952"
+"origin" "0 0 0"
 }
 {
-"portalnumber" "5"
+"portalnumber" "4"
 "classname" "func_areaportalwindow"
 "targetname" "vent5"
 "StartHidden" "0"
-"FadeStartDist" "128"
-"FadeDist" "256"
+"FadeStartDist" "1280"
+"FadeDist" "2560"
 "TranslucencyLimit" "0"
 "target" "vent5brush"
 }
 {
-"model" "*98"
+"model" "*97"
 "classname" "func_brush"
 "targetname" "vent5brush"
 "StartHidden" "0"
@@ -6456,20 +6430,20 @@
 "StartDisabled" "0"
 "Solidity" "1"
 "climbable" "0"
-"origin" "32 9.5 1256"
+"origin" "0 0 0"
 }
 {
-"portalnumber" "6"
+"portalnumber" "5"
 "classname" "func_areaportalwindow"
 "targetname" "vent6"
 "StartHidden" "0"
-"FadeStartDist" "128"
-"FadeDist" "256"
+"FadeStartDist" "1280"
+"FadeDist" "2560"
 "TranslucencyLimit" "0"
 "target" "vent6brush"
 }
 {
-"model" "*99"
+"model" "*98"
 "classname" "func_brush"
 "targetname" "vent6brush"
 "StartHidden" "0"
@@ -6482,20 +6456,20 @@
 "StartDisabled" "0"
 "Solidity" "1"
 "climbable" "0"
-"origin" "32 9.5 1560"
+"origin" "0 0 0"
 }
 {
-"portalnumber" "7"
+"portalnumber" "6"
 "classname" "func_areaportalwindow"
 "targetname" "vent6b"
 "StartHidden" "0"
-"FadeStartDist" "128"
-"FadeDist" "256"
+"FadeStartDist" "1280"
+"FadeDist" "2560"
 "TranslucencyLimit" "0"
 "target" "vent6bbrush"
 }
 {
-"model" "*100"
+"model" "*99"
 "classname" "func_brush"
 "targetname" "vent6bbrush"
 "StartHidden" "0"
@@ -6508,20 +6482,20 @@
 "StartDisabled" "0"
 "Solidity" "1"
 "climbable" "0"
-"origin" "-326 9.5 1688"
+"origin" "0 0 0"
 }
 {
-"portalnumber" "8"
+"portalnumber" "7"
 "classname" "func_areaportalwindow"
 "targetname" "vent5b"
 "StartHidden" "0"
-"FadeStartDist" "128"
-"FadeDist" "256"
+"FadeStartDist" "1280"
+"FadeDist" "2560"
 "TranslucencyLimit" "0"
 "target" "vent5bbrush"
 }
 {
-"model" "*101"
+"model" "*100"
 "classname" "func_brush"
 "targetname" "vent5bbrush"
 "StartHidden" "0"
@@ -6534,20 +6508,20 @@
 "StartDisabled" "0"
 "Solidity" "1"
 "climbable" "0"
-"origin" "-326 9.5 1384"
+"origin" "0 0 0"
 }
 {
-"portalnumber" "9"
+"portalnumber" "8"
 "classname" "func_areaportalwindow"
 "targetname" "vent4b"
 "StartHidden" "0"
-"FadeStartDist" "128"
-"FadeDist" "256"
+"FadeStartDist" "1280"
+"FadeDist" "2560"
 "TranslucencyLimit" "0"
 "target" "vent4bbrush"
 }
 {
-"model" "*102"
+"model" "*101"
 "classname" "func_brush"
 "targetname" "vent4bbrush"
 "StartHidden" "0"
@@ -6560,20 +6534,20 @@
 "StartDisabled" "0"
 "Solidity" "1"
 "climbable" "0"
-"origin" "-326 9.5 1080"
+"origin" "0 0 0"
 }
 {
-"portalnumber" "10"
+"portalnumber" "9"
 "classname" "func_areaportalwindow"
 "targetname" "vent3b"
 "StartHidden" "0"
-"FadeStartDist" "128"
-"FadeDist" "256"
+"FadeStartDist" "1280"
+"FadeDist" "2560"
 "TranslucencyLimit" "0"
 "target" "vent3bbrush"
 }
 {
-"model" "*103"
+"model" "*102"
 "classname" "func_brush"
 "targetname" "vent3bbrush"
 "StartHidden" "0"
@@ -6586,20 +6560,20 @@
 "StartDisabled" "0"
 "Solidity" "1"
 "climbable" "0"
-"origin" "-326 9.5 776"
+"origin" "0 0 0"
 }
 {
-"portalnumber" "11"
+"portalnumber" "10"
 "classname" "func_areaportalwindow"
 "targetname" "vent2b"
 "StartHidden" "0"
-"FadeStartDist" "128"
-"FadeDist" "256"
+"FadeStartDist" "1280"
+"FadeDist" "2560"
 "TranslucencyLimit" "0"
 "target" "vent2bbrush"
 }
 {
-"model" "*104"
+"model" "*103"
 "classname" "func_brush"
 "targetname" "vent2bbrush"
 "StartHidden" "0"
@@ -6612,101 +6586,49 @@
 "StartDisabled" "0"
 "Solidity" "1"
 "climbable" "0"
-"origin" "-326 9.5 472"
+"origin" "0 0 0"
 }
 {
-"portalnumber" "12"
-"classname" "func_areaportalwindow"
-"targetname" "vent1b"
-"StartHidden" "0"
-"FadeStartDist" "128"
-"FadeDist" "256"
-"TranslucencyLimit" "0"
-"target" "vent1bbrush"
-}
-{
-"model" "*105"
-"classname" "func_brush"
-"targetname" "vent1bbrush"
-"StartHidden" "0"
-"renderfx" "0"
-"rendermode" "0"
-"renderamt" "255"
-"rendercolor" "255 255 255"
-"disableshadows" "1"
-"InputFilter" "0"
-"StartDisabled" "0"
-"Solidity" "1"
-"climbable" "0"
-"origin" "-326 9.5 168"
-}
-{
-"portalnumber" "13"
+"portalnumber" "11"
 "classname" "func_areaportal"
 "StartHidden" "0"
 "StartOpen" "0"
 "target" "milligan_door"
 }
 {
-"portalnumber" "14"
+"portalnumber" "12"
 "classname" "func_areaportal"
 "StartHidden" "0"
 "StartOpen" "0"
 "target" "victim_door"
 }
 {
-"portalnumber" "15"
+"portalnumber" "13"
 "classname" "func_areaportal"
 "StartHidden" "0"
 "StartOpen" "0"
 "target" "apt3"
 }
 {
-"portalnumber" "16"
+"portalnumber" "14"
 "classname" "func_areaportal"
 "StartHidden" "0"
 "StartOpen" "0"
 "target" "haven_door"
 }
 {
-"portalnumber" "17"
+"portalnumber" "15"
 "classname" "func_areaportal"
 "StartHidden" "0"
 "StartOpen" "0"
 "target" "paul_door"
 }
 {
-"portalnumber" "18"
+"portalnumber" "16"
 "classname" "func_areaportal"
 "StartHidden" "0"
 "StartOpen" "0"
 "target" "hannah_door"
-}
-{
-"portalnumber" "19"
-"classname" "func_areaportalwindow"
-"targetname" "basementvent"
-"StartHidden" "0"
-"FadeStartDist" "128"
-"FadeDist" "256"
-"TranslucencyLimit" "0"
-"target" "basementventbrush"
-}
-{
-"model" "*106"
-"classname" "func_brush"
-"targetname" "basementventbrush"
-"StartHidden" "0"
-"renderfx" "0"
-"rendermode" "0"
-"renderamt" "255"
-"rendercolor" "255 255 255"
-"disableshadows" "1"
-"InputFilter" "0"
-"StartDisabled" "0"
-"Solidity" "1"
-"climbable" "0"
-"origin" "249.5 -48 -200"
 }
 {
 "classname" "infodecal"
@@ -7742,7 +7664,7 @@
 "origin" "48.6757 -304.738 663"
 }
 {
-"model" "*107"
+"model" "*104"
 "classname" "func_illusionary"
 "StartHidden" "0"
 "renderfx" "0"
@@ -7919,7 +7841,7 @@
 "origin" "-216.017 -385.84 1592.15"
 }
 {
-"model" "*108"
+"model" "*105"
 "classname" "func_brush"
 "StartHidden" "0"
 "renderfx" "0"
@@ -8065,14 +7987,14 @@
 {
 "classname" "logic_auto"
 "spawnflags" "0"
-"OnMapLoad" ",,,0,-1,heatherHavenS(),"
-"OnMapLoad" ",,,0,-1,unlockHaven(),"
-"OnMapLoad" ",,,0,-1,posterCheck(),"
 "OnMapLoad" ",,,0,-1,malkTalkToTV(),"
+"OnMapLoad" ",,,0,-1,posterCheck(),"
+"OnMapLoad" ",,,0,-1,unlockHaven(),"
+"OnMapLoad" ",,,0,-1,heatherHavenS(),"
 "origin" "-56.3879 -37.2917 921"
 }
 {
-"model" "*109"
+"model" "*106"
 "classname" "func_monitor"
 "renderamt" "255"
 "rendercolor" "255 255 255"
@@ -8089,7 +8011,7 @@
 "StartHidden" "1"
 }
 {
-"model" "*110"
+"model" "*107"
 "classname" "func_button"
 "StartHidden" "0"
 "renderfx" "0"
@@ -8108,10 +8030,10 @@
 "locked_icon" "12"
 "locked_sound" "environmental/electronic/deny_beep.wav"
 "unlocked_sound" "environmental/electronic/button_beep.wav"
-"OnOut" "newscaster,SetFakeSilence,1,0,-1,,"
-"OnOut" "tv_screen,ScriptHide,,0,-1,,"
-"OnIn" "newscaster,SetFakeSilence,0,0,-1,,"
 "OnIn" "tv_screen,ScriptUnhide,,0,-1,,"
+"OnIn" "newscaster,SetFakeSilence,0,0,-1,,"
+"OnOut" "tv_screen,ScriptHide,,0,-1,,"
+"OnOut" "newscaster,SetFakeSilence,1,0,-1,,"
 }
 {
 "classname" "npc_VProneDialog"
@@ -8168,8 +8090,8 @@
 "no_alert_state" "1"
 "soundgroup" "Unique/Hannah"
 "base_gender" "1"
-"OnDialogEnd" ",,,0,-1,hannahDialog(),"
 "OnDialogEnd" "hannah_talk_trigger,Kill,,0,-1,,"
+"OnDialogEnd" ",,,0,-1,hannahDialog(),"
 "origin" "-228 -108 1676"
 }
 {
@@ -8191,16 +8113,16 @@
 "crossfade_skin_time" "2.0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnCorrectPassword" "vent6bdoor,Unlock,,0,1,,"
-"OnCorrectPassword" "vent6door,Unlock,,0,1,,"
 "OnCorrectPassword" "hannah_door,Unlock,,0,-1,,"
+"OnCorrectPassword" "vent6door,Unlock,,0,1,,"
+"OnCorrectPassword" "vent6bdoor,Unlock,,0,1,,"
 "origin" "256.286 -346.017 1581.48"
 }
 {
 "classname" "logic_auto"
 "spawnflags" "0"
-"OnMapLoad" "ManholeB2,Deactivate,,0,-1,,"
 "OnMapLoad" ",,,0,-1,residentCheck(),"
+"OnMapLoad" "ManholeB2,Deactivate,,0,-1,,"
 "origin" "509.219 -333.241 -127"
 }
 {
@@ -8220,7 +8142,7 @@
 "origin" "-187 -181 1240"
 }
 {
-"model" "*111"
+"model" "*108"
 "classname" "func_button"
 "renderamt" "255"
 "rendercolor" "255 255 255"
@@ -8240,12 +8162,12 @@
 "locked_icon" "12"
 "locked_sound" "environmental/electronic/deny_beep.wav"
 "unlocked_sound" "environmental/electronic/button_beep.wav"
-"OnPressed" "paul_machine_sparklies,Kill,,0,-1,,"
-"OnPressed" "hannah_keypad,ScriptUnhide,,0,-1,,"
-"OnPressed" "hannah_keypad_fake,ScriptHide,,0,-1,,"
-"OnPressed" ",,,0,-1,hannahMessageHeard(),"
-"OnPressed" "hannahs_message,PlaySound,,0,1,G.Message_Play = 1,"
 "OnPressed" "paul_answering_machine,Kill,,2,-1,,"
+"OnPressed" "hannahs_message,PlaySound,,0,1,G.Message_Play = 1,"
+"OnPressed" ",,,0,-1,hannahMessageHeard(),"
+"OnPressed" "hannah_keypad_fake,ScriptHide,,0,-1,,"
+"OnPressed" "hannah_keypad,ScriptUnhide,,0,-1,,"
+"OnPressed" "paul_machine_sparklies,Kill,,0,-1,,"
 }
 {
 "classname" "ambient_generic"
@@ -8272,7 +8194,7 @@
 "origin" "-48.3173 -247 1262.13"
 }
 {
-"model" "*112"
+"model" "*109"
 "classname" "func_button"
 "renderamt" "255"
 "rendercolor" "255 255 255"
@@ -8292,11 +8214,11 @@
 "locked_icon" "12"
 "locked_sound" "environmental/electronic/deny_beep.wav"
 "unlocked_sound" "environmental/electronic/button_beep.wav"
-"OnPressed" "killer_machine_sparklies,Kill,,0,-1,,"
-"OnPressed" "victim_message,StopSound,,0,-1,,"
-"OnPressed" ",,,0,1,G.Killer_Message = 1,"
-"OnPressed" "victim_message,PlaySound,,0.1,-1,,"
 "OnPressed" ",,,0,1,killerMessageHeard(),"
+"OnPressed" "victim_message,PlaySound,,0.1,-1,,"
+"OnPressed" ",,,0,1,G.Killer_Message = 1,"
+"OnPressed" "victim_message,StopSound,,0,-1,,"
+"OnPressed" "killer_machine_sparklies,Kill,,0,-1,,"
 }
 {
 "classname" "ambient_generic"
@@ -8377,8 +8299,8 @@
 "soundgroup" "Unique/Milligan"
 "level_reset_type" "1"
 "base_gender" "1"
-"OnDeath" ",,,0,-1,milliganDeath(),"
 "OnDialogEnd" ",,,0,-1,milliganSkylineDialog(),"
+"OnDeath" ",,,0,-1,milliganDeath(),"
 "origin" "-280 -28 136"
 }
 {
@@ -8488,7 +8410,7 @@
 "origin" "353 28 -258"
 }
 {
-"model" "*113"
+"model" "*110"
 "classname" "func_monitor"
 "renderamt" "255"
 "rendercolor" "255 255 255"
@@ -8506,7 +8428,7 @@
 "StartHidden" "1"
 }
 {
-"model" "*114"
+"model" "*111"
 "classname" "func_button"
 "renderamt" "255"
 "rendercolor" "255 255 255"
@@ -8528,7 +8450,7 @@
 "OnPressed" ",,,0,-1,skylineCameraSwitch(),"
 }
 {
-"model" "*115"
+"model" "*112"
 "classname" "func_button"
 "renderamt" "255"
 "rendercolor" "255 255 255"
@@ -8550,7 +8472,7 @@
 "OnPressed" ",,,0,-1,skylineCameraSwitch(),"
 }
 {
-"model" "*116"
+"model" "*113"
 "classname" "func_button"
 "renderamt" "255"
 "rendercolor" "255 255 255"
@@ -8572,7 +8494,7 @@
 "OnPressed" ",,,0,-1,skylineCameraSwitch(),"
 }
 {
-"model" "*117"
+"model" "*114"
 "classname" "func_button"
 "renderamt" "255"
 "rendercolor" "255 255 255"
@@ -8633,14 +8555,14 @@
 "classname" "logic_relay"
 "targetname" "door_closer"
 "StartDisabled" "0"
-"OnTrigger" "elev_door_7,Close,,0,-1,,"
-"OnTrigger" "elev_door_6,Close,,0,-1,,"
-"OnTrigger" "elev_door_5,Close,,0,-1,,"
-"OnTrigger" "elev_door_4,Close,,0,-1,,"
-"OnTrigger" "elev_door_3,Close,,0,-1,,"
-"OnTrigger" "elev_door_2,Close,,0,-1,,"
-"OnTrigger" "elev_door_1,Close,,0,-1,,"
 "OnTrigger" "elev_interior_door,Close,,0,-1,,"
+"OnTrigger" "elev_door_1,Close,,0,-1,,"
+"OnTrigger" "elev_door_2,Close,,0,-1,,"
+"OnTrigger" "elev_door_3,Close,,0,-1,,"
+"OnTrigger" "elev_door_4,Close,,0,-1,,"
+"OnTrigger" "elev_door_5,Close,,0,-1,,"
+"OnTrigger" "elev_door_6,Close,,0,-1,,"
+"OnTrigger" "elev_door_7,Close,,0,-1,,"
 "origin" "297.816 -207 -59.2323"
 }
 {
@@ -8734,15 +8656,15 @@
 "origin" "418.295 -168.01 -76"
 }
 {
-"model" "*118"
+"model" "*115"
 "classname" "trigger_multiple"
 "StartDisabled" "0"
 "wait" "1"
 "spawnflags" "1"
 "origin" "354 -48 -247.8"
-"OnStartTouch-wesp" "tv_screen,ScriptHide,,0,-1,,"
-"OnEndTouch" "security_monitor,ScriptHide,,0,-1,,"
 "OnStartTouch" "security_monitor,ScriptUnhide,,0.1,-1,,"
+"OnEndTouch" "security_monitor,ScriptHide,,0,-1,,"
+"OnStartTouch-wesp" "tv_screen,ScriptHide,,0,-1,,"
 }
 {
 "classname" "prop_hacking"
@@ -8762,10 +8684,10 @@
 "crossfade_skin_time" "2.0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnTrigger3" "player_looting_relay,Trigger,,0,-1,,"
-"OnTrigger3" "apt_3_safe_lock,Unlock,,0,-1,,"
-"OnTrigger4" "apt_3_safe_lock,Unlock,,0,-1,,"
 "OnTrigger5" "apt_3_safe_lock,Lock,,0,-1,,"
+"OnTrigger4" "apt_3_safe_lock,Unlock,,0,-1,,"
+"OnTrigger3" "apt_3_safe_lock,Unlock,,0,-1,,"
+"OnTrigger3" "player_looting_relay,Trigger,,0,-1,,"
 "origin" "-47.278 -358.439 787.85"
 }
 {
@@ -9025,14 +8947,14 @@
 "classname" "logic_relay"
 "targetname" "player_looting_relay"
 "StartDisabled" "0"
-"OnTrigger" "backup_into_apt,BeginSequence,,11,-1,,"
-"OnTrigger-wesp" "safe,Lock,,0,-1,,"
-"OnTrigger" "apt3,Unlock,,10,-1,,"
-"OnTrigger" "apt3,Lock,,0,-1,,"
-"OnTrigger" "skyline_guard,ScriptHide,,0,-1,,"
-"OnTrigger" "skyelev,GotoFloor,4,0,-1,,"
-"OnTrigger" "onthird,Trigger,,0,-1,,"
 "OnTrigger" "backup,ScriptUnhide,,0,-1,,"
+"OnTrigger" "onthird,Trigger,,0,-1,,"
+"OnTrigger" "skyelev,GotoFloor,4,0,-1,,"
+"OnTrigger" "skyline_guard,ScriptHide,,0,-1,,"
+"OnTrigger" "apt3,Lock,,0,-1,,"
+"OnTrigger" "apt3,Unlock,,10,-1,,"
+"OnTrigger-wesp" "safe,Lock,,0,-1,,"
+"OnTrigger" "backup_into_apt,BeginSequence,,11,-1,,"
 "origin" "-151.017 -63.1279 824.273"
 }
 {
@@ -9176,8 +9098,8 @@
 "m_iszEntity" "backup"
 "angles" "0 180 0"
 "radius" "10"
-"OnEndSequence" "backup,FollowPatrolPath,p0 p1 p2 p3 p4 p5 p5a p6 p7 p8 p9,1,-1,,"
 "OnEndSequence" "backup,SetupPatrolType,0 0 FOLLOW_PATROL_PATH_HUNT,0,-1,,"
+"OnEndSequence" "backup,FollowPatrolPath,p0 p1 p2 p3 p4 p5 p5a p6 p7 p8 p9,1,-1,,"
 "origin" "172 -373.871 608"
 }
 {
@@ -9287,8 +9209,8 @@
 "rating" "3"
 "testflags" "4"
 "enabled" "1"
-"OnNPCArrived" "skyelev,GotoFloor,4,0,-1,,"
 "OnNPCArrived" "onthird,Trigger,,0,-1,,"
+"OnNPCArrived" "skyelev,GotoFloor,4,0,-1,,"
 "origin" "396 -256 613"
 }
 {
@@ -9307,10 +9229,10 @@
 "rating" "3"
 "testflags" "4"
 "enabled" "1"
-"OnNPCArrived" "door_closer,Trigger,,0,-1,,"
-"OnNPCArrived" "skyelev,GotoFloor,1,2,-1,,"
-"OnNPCArrived" "onground,Trigger,,0,-1,,"
 "OnNPCArrived" "backup,Kill,,3,-1,,"
+"OnNPCArrived" "onground,Trigger,,0,-1,,"
+"OnNPCArrived" "skyelev,GotoFloor,1,2,-1,,"
+"OnNPCArrived" "door_closer,Trigger,,0,-1,,"
 "origin" "355.233 -163.82 604"
 }
 {
@@ -9349,11 +9271,11 @@
 "testflags" "4"
 "enabled" "0"
 "targetname" "panel_spot"
-"OnNPCLeft" "elevator_script,BeginSequence,,1,1,,"
-"OnNPCLeft" "interior_cam,Disable,,0,1,,"
-"OnNPCLeft" "exterior_cam,Disable,,0,1,,"
-"OnNPCLeft" "apt3,Lock,,0,1,,"
 "OnNPCLeft" "panel_spot,Disable,,0,1,,"
+"OnNPCLeft" "apt3,Lock,,0,1,,"
+"OnNPCLeft" "exterior_cam,Disable,,0,1,,"
+"OnNPCLeft" "interior_cam,Disable,,0,1,,"
+"OnNPCLeft" "elevator_script,BeginSequence,,1,1,,"
 "origin" "288.194 -328.327 613"
 }
 {
@@ -9363,7 +9285,7 @@
 "origin" "124 -181 617"
 }
 {
-"model" "*119"
+"model" "*116"
 "classname" "trigger_multiple"
 "targetname" "closet_trigger"
 "StartDisabled" "0"
@@ -9719,7 +9641,7 @@
 "origin" "520 53 -62.1104"
 }
 {
-"model" "*120"
+"model" "*117"
 "classname" "trigger_player_activity_level"
 "StartDisabled" "0"
 "supernatural_level" "-1"
@@ -9728,7 +9650,7 @@
 "spawnflags" "33"
 }
 {
-"model" "*121"
+"model" "*118"
 "classname" "trigger_stealth_mod"
 "targetname" "livingroom_vent_stealth_bonus"
 "StartDisabled" "0"
@@ -9736,7 +9658,7 @@
 "spawnflags" "1"
 }
 {
-"model" "*122"
+"model" "*119"
 "classname" "trigger_stealth_mod"
 "targetname" "closet_vent_stealth_bonus"
 "StartDisabled" "0"
@@ -9751,14 +9673,14 @@
 "origin" "464 -348 -127"
 }
 {
-"model" "*123"
+"model" "*120"
 "classname" "trigger_changelevel"
 "targetname" "skyline_trigger"
 "map" "la_hub_1"
 "landmark" "skyline"
 "spawnflags" "2"
-"OnChangeLevel" "button_reverter,Trigger,,0,-1,,"
 "OnChangeLevel" ",,,0,-1,mailboxExitCheck(),"
+"OnChangeLevel" "button_reverter,Trigger,,0,-1,,"
 }
 {
 "classname" "prop_button"
@@ -9775,9 +9697,9 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "call_button_1,Lock,,0,-1,,"
-"OnSetState2" "skyelev,GotoFloor,1,0,-1,,"
 "OnSetState2" "onground,Trigger,,0,-1,,"
+"OnSetState2" "skyelev,GotoFloor,1,0,-1,,"
+"OnSetState2" "call_button_1,Lock,,0,-1,,"
 "origin" "387 -233 -97.131"
 }
 {
@@ -9816,10 +9738,10 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "button_6,Lock,,0,-1,,"
-"OnPressed" "skyelev,GotoFloor,6,2,-1,,"
-"OnPressed" "door_closer,Trigger,,0,-1,,"
 "OnPressed" ",,,0,-1,callbuttonfive(),"
+"OnPressed" "door_closer,Trigger,,0,-1,,"
+"OnPressed" "skyelev,GotoFloor,6,2,-1,,"
+"OnSetState2" "button_6,Lock,,0,-1,,"
 "origin" "304 -215 -78"
 }
 {
@@ -9838,10 +9760,10 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "button_7,Lock,,0,-1,,"
-"OnPressed" "skyelev,GotoFloor,7,2,-1,,"
-"OnPressed" "door_closer,Trigger,,0,-1,,"
 "OnPressed" ",,,0,-1,callbuttonsix(),"
+"OnPressed" "door_closer,Trigger,,0,-1,,"
+"OnPressed" "skyelev,GotoFloor,7,2,-1,,"
+"OnSetState2" "button_7,Lock,,0,-1,,"
 "origin" "299 -215 -78"
 }
 {
@@ -9860,10 +9782,10 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "button_5,Lock,,0,-1,,"
-"OnPressed" "skyelev,GotoFloor,5,2,-1,,"
-"OnPressed" "door_closer,Trigger,,0,-1,,"
 "OnPressed" ",,,0,-1,callbuttonfour(),"
+"OnPressed" "door_closer,Trigger,,0,-1,,"
+"OnPressed" "skyelev,GotoFloor,5,2,-1,,"
+"OnSetState2" "button_5,Lock,,0,-1,,"
 "origin" "299 -215 -83"
 }
 {
@@ -9882,10 +9804,10 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "button_4,Lock,,0,-1,,"
-"OnPressed" "skyelev,GotoFloor,4,2,-1,,"
-"OnPressed" "door_closer,Trigger,,0,-1,,"
 "OnPressed" ",,,0,-1,callbuttonthree(),"
+"OnPressed" "door_closer,Trigger,,0,-1,,"
+"OnPressed" "skyelev,GotoFloor,4,2,-1,,"
+"OnSetState2" "button_4,Lock,,0,-1,,"
 "origin" "304 -215 -83"
 }
 {
@@ -9904,10 +9826,10 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "button_3,Lock,,0,-1,,"
-"OnPressed" "skyelev,GotoFloor,3,2,-1,,"
-"OnPressed" "door_closer,Trigger,,0,-1,,"
 "OnPressed" ",,,0,-1,callbuttontwo(),"
+"OnPressed" "door_closer,Trigger,,0,-1,,"
+"OnPressed" "skyelev,GotoFloor,3,2,-1,,"
+"OnSetState2" "button_3,Lock,,0,-1,,"
 "origin" "299 -215 -88"
 }
 {
@@ -9926,10 +9848,10 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "button_2,Lock,,0,-1,,"
-"OnPressed" "door_closer,Trigger,,0,-1,,"
-"OnPressed" "skyelev,GotoFloor,2,2,-1,,"
 "OnPressed" ",,,0,-1,callbuttonone(),"
+"OnPressed" "skyelev,GotoFloor,2,2,-1,,"
+"OnPressed" "door_closer,Trigger,,0,-1,,"
+"OnSetState2" "button_2,Lock,,0,-1,,"
 "origin" "304 -215 -88"
 }
 {
@@ -10068,10 +9990,10 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "button_1,Lock,,0,-1,,"
-"OnPressed" "door_closer,Trigger,,0,-1,,"
-"OnPressed" "skyelev,GotoFloor,1,2,-1,,"
 "OnPressed" ",,,0,-1,callbuttonground(),"
+"OnPressed" "skyelev,GotoFloor,1,2,-1,,"
+"OnPressed" "door_closer,Trigger,,0,-1,,"
+"OnSetState2" "button_1,Lock,,0,-1,,"
 "origin" "301.48 -215 -92.9806"
 }
 {
@@ -10109,9 +10031,9 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "call_button_2,Lock,,0,-1,,"
-"OnSetState2" "skyelev,GotoFloor,2,0,-1,,"
 "OnSetState2" "onfirst,Trigger,,0,-1,,"
+"OnSetState2" "skyelev,GotoFloor,2,0,-1,,"
+"OnSetState2" "call_button_2,Lock,,0,-1,,"
 "origin" "387.592 -232.103 38.3654"
 }
 {
@@ -10128,9 +10050,9 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "call_button_2,Lock,,0,-1,,"
-"OnSetState2" "skyelev,GotoFloor,2,0,-1,,"
 "OnSetState2" "onfirst,Trigger,,0,-1,,"
+"OnSetState2" "skyelev,GotoFloor,2,0,-1,,"
+"OnSetState2" "call_button_2,Lock,,0,-1,,"
 "origin" "387.592 -232.103 35"
 }
 {
@@ -10147,43 +10069,43 @@
 "locked_icon" "0"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"OnSetState2" "call_button_7,Lock,,0,-1,,"
-"OnSetState2" "skyelev,GotoFloor,7,0,-1,,"
 "OnSetState2" "onsixth,Trigger,,0,-1,,"
+"OnSetState2" "skyelev,GotoFloor,7,0,-1,,"
+"OnSetState2" "call_button_7,Lock,,0,-1,,"
 "origin" "387.829 -232.103 1555.46"
 }
 {
 "classname" "logic_relay"
 "targetname" "button_reverter"
 "StartDisabled" "0"
-"OnTrigger" "button_1,SetState,1,0,-1,,"
-"OnTrigger" "button_7,SetState,1,0,-1,,"
-"OnTrigger" "button_6,SetState,1,0,-1,,"
-"OnTrigger" "button_5,SetState,1,0,-1,,"
-"OnTrigger" "button_4,SetState,1,0,-1,,"
-"OnTrigger" "button_3,SetState,1,0,-1,,"
-"OnTrigger" "button_2,SetState,1,0,-1,,"
-"OnTrigger" "call_button_2,SetState,1,0,-1,,"
-"OnTrigger" "call_button_3,SetState,1,0,-1,,"
-"OnTrigger" "call_button_4,SetState,1,0,-1,,"
-"OnTrigger" "call_button_5,SetState,1,0,-1,,"
-"OnTrigger" "call_button_6,SetState,1,0,-1,,"
-"OnTrigger" "call_button_7,SetState,1,0,-1,,"
-"OnTrigger" "call_button_1,SetState,1,0,-1,,"
-"OnTrigger" "call_button_1,Unlock,,0,-1,,"
-"OnTrigger" "call_button_7,Unlock,,0,-1,,"
-"OnTrigger" "call_button_6,Unlock,,0,-1,,"
-"OnTrigger" "call_button_5,Unlock,,0,-1,,"
-"OnTrigger" "call_button_4,Unlock,,0,-1,,"
-"OnTrigger" "call_button_3,Unlock,,0,-1,,"
-"OnTrigger" "call_button_2,Unlock,,0,-1,,"
-"OnTrigger" "button_2,Unlock,,0,-1,,"
-"OnTrigger" "button_3,Unlock,,0,-1,,"
-"OnTrigger" "button_4,Unlock,,0,-1,,"
-"OnTrigger" "button_5,Unlock,,0,-1,,"
-"OnTrigger" "button_6,Unlock,,0,-1,,"
-"OnTrigger" "button_7,Unlock,,0,-1,,"
 "OnTrigger" "button_1,Unlock,,0,-1,,"
+"OnTrigger" "button_7,Unlock,,0,-1,,"
+"OnTrigger" "button_6,Unlock,,0,-1,,"
+"OnTrigger" "button_5,Unlock,,0,-1,,"
+"OnTrigger" "button_4,Unlock,,0,-1,,"
+"OnTrigger" "button_3,Unlock,,0,-1,,"
+"OnTrigger" "button_2,Unlock,,0,-1,,"
+"OnTrigger" "call_button_2,Unlock,,0,-1,,"
+"OnTrigger" "call_button_3,Unlock,,0,-1,,"
+"OnTrigger" "call_button_4,Unlock,,0,-1,,"
+"OnTrigger" "call_button_5,Unlock,,0,-1,,"
+"OnTrigger" "call_button_6,Unlock,,0,-1,,"
+"OnTrigger" "call_button_7,Unlock,,0,-1,,"
+"OnTrigger" "call_button_1,Unlock,,0,-1,,"
+"OnTrigger" "call_button_1,SetState,1,0,-1,,"
+"OnTrigger" "call_button_7,SetState,1,0,-1,,"
+"OnTrigger" "call_button_6,SetState,1,0,-1,,"
+"OnTrigger" "call_button_5,SetState,1,0,-1,,"
+"OnTrigger" "call_button_4,SetState,1,0,-1,,"
+"OnTrigger" "call_button_3,SetState,1,0,-1,,"
+"OnTrigger" "call_button_2,SetState,1,0,-1,,"
+"OnTrigger" "button_2,SetState,1,0,-1,,"
+"OnTrigger" "button_3,SetState,1,0,-1,,"
+"OnTrigger" "button_4,SetState,1,0,-1,,"
+"OnTrigger" "button_5,SetState,1,0,-1,,"
+"OnTrigger" "button_6,SetState,1,0,-1,,"
+"OnTrigger" "button_7,SetState,1,0,-1,,"
+"OnTrigger" "button_1,SetState,1,0,-1,,"
 "origin" "297 -170.19 -65.6848"
 }
 {
@@ -10211,14 +10133,14 @@
 "origin" "120 -424 912.115"
 }
 {
-"model" "*124"
+"model" "*121"
 "classname" "trigger_multiple"
 "StartDisabled" "0"
 "wait" "1"
 "spawnflags" "1"
 "origin" "102 48 952"
-"OnStartTouch-wesp" "tv_screen,ScriptHide,,0,-1,,"
 "OnStartTouch" "newscaster,SetFakeSilence,1,0,-1,,"
+"OnStartTouch-wesp" "tv_screen,ScriptHide,,0,-1,,"
 }
 {
 "classname" "info_landmark"
@@ -10228,7 +10150,7 @@
 "origin" "303 -306 -287"
 }
 {
-"model" "*125"
+"model" "*122"
 "classname" "trigger_changelevel"
 "targetname" "trig_sewer"
 "map" "la_hub_1"
@@ -10696,8 +10618,8 @@
 "angles" "0 0 0"
 "spawnflags" "0"
 "radius" "10"
-"OnEndSequence" "Milligan,Kill,,0,-1,,"
 "OnEndSequence" "milligan_camera,RestoreCameraToPlayerControl,,0,-1,,"
+"OnEndSequence" "Milligan,Kill,,0,-1,,"
 "origin" "353.033 -296.41 9"
 }
 {
@@ -10741,18 +10663,18 @@
 "targetname" "milligan_leaves_relay"
 "StartDisabled" "0"
 "spawnflags" "0"
-"OnTrigger" "milligan_scared,CancelSequence,,0,-1,,"
-"OnTrigger" "milligan_camera,PlayAsCameraPosition,,0,-1,,"
-"OnTrigger" "milligan_target,PlayAsCameraTarget,,0,-1,,"
-"OnTrigger" "milligan_teleport,Teleport,,0,-1,,"
-"OnTrigger" "milligan_flee,BeginSequence,,1.1,-1,,"
-"OnTrigger" "milligan_teleport_player,Kill,,1,-1,,"
-"OnTrigger" "milligan_teleport_player,Enable,,0,-1,,"
 "OnTrigger" "milligan_doorknob,Unlock,,0,-1,,"
+"OnTrigger" "milligan_teleport_player,Enable,,0,-1,,"
+"OnTrigger" "milligan_teleport_player,Kill,,1,-1,,"
+"OnTrigger" "milligan_flee,BeginSequence,,1.1,-1,,"
+"OnTrigger" "milligan_teleport,Teleport,,0,-1,,"
+"OnTrigger" "milligan_target,PlayAsCameraTarget,,0,-1,,"
+"OnTrigger" "milligan_camera,PlayAsCameraPosition,,0,-1,,"
+"OnTrigger" "milligan_scared,CancelSequence,,0,-1,,"
 "origin" "239 -317.677 193.184"
 }
 {
-"model" "*126"
+"model" "*123"
 "classname" "trigger_teleport"
 "targetname" "milligan_teleport_player"
 "StartDisabled" "1"
@@ -11388,7 +11310,7 @@
 "origin" "150.563 -203 934.983"
 }
 {
-"model" "*127"
+"model" "*124"
 "classname" "trigger_multiple"
 "StartDisabled" "0"
 "wait" "1"
@@ -11397,7 +11319,7 @@
 "OnStartTouch-wesp" "Radio1,Deactivate,,0,-1,,"
 }
 {
-"model" "*128"
+"model" "*125"
 "classname" "trigger_multiple"
 "spawnflags" "1"
 "wait" "1"
@@ -11407,7 +11329,7 @@
 "OnStartTouch-wesp" "Radio1,Activate,,0,-1,,"
 }
 {
-"model" "*129"
+"model" "*126"
 "classname" "trigger_multiple"
 "wait" "1"
 "spawnflags" "1"
@@ -11415,7 +11337,7 @@
 "OnStartTouch-wesp" "Radio1,Activate,,0,-1,,"
 }
 {
-"model" "*130"
+"model" "*127"
 "classname" "trigger_multiple"
 "wait" "1"
 "spawnflags" "1"
@@ -11621,17 +11543,17 @@
 "origin" "-132 -120 76"
 }
 {
-"model" "*131"
+"model" "*128"
 "classname" "trigger_once"
 "targetname" "malk_tv_trigger"
 "StartHidden" "1"
 "StartDisabled" "0"
 "spawnflags" "1"
 "origin" "113.63 -267.23 936"
-"OnStartTouch" "newscaster,SetSoundOverrideEnt,tv_prop,0,-1,,"
-"OnStartTouch" "tv_screen,ScriptUnhide,,0,-1,,"
-"OnStartTouch" "newscaster,SetFakeSilence,0,0,-1,,"
 "OnStartTouch" "newscaster,StartPlayerDialogRemote,,0.1,-1,,"
+"OnStartTouch" "newscaster,SetFakeSilence,0,0,-1,,"
+"OnStartTouch" "tv_screen,ScriptUnhide,,0,-1,,"
+"OnStartTouch" "newscaster,SetSoundOverrideEnt,tv_prop,0,-1,,"
 }
 {
 "classname" "camera_cinematic"
@@ -11704,11 +11626,11 @@
 "spawnflags" "8204"
 "dialogname" "dlg/Generic/Newscaster.dlg"
 "base_gender" "1"
-"OnDialogEnd" "malk_tv_camera,EndShot,,0,-1,,"
-"OnDialogEnd" "newscaster,SetFakeSilence,1,0,-1,,"
-"OnDialogEnd" "tv_screen,ScriptHide,,0,-1,,"
-"OnDialogEnd" ",,,0,-1,malkTvDone(),"
 "OnDialogBegin" "malk_tv_camera,StartShot,,0,-1,,"
+"OnDialogEnd" ",,,0,-1,malkTvDone(),"
+"OnDialogEnd" "tv_screen,ScriptHide,,0,-1,,"
+"OnDialogEnd" "newscaster,SetFakeSilence,1,0,-1,,"
+"OnDialogEnd" "malk_tv_camera,EndShot,,0,-1,,"
 "origin" "1872 -2480 1696"
 }
 {
@@ -11719,7 +11641,7 @@
 "origin" "224.164 -382.075 921"
 }
 {
-"model" "*132"
+"model" "*129"
 "classname" "trigger_changelevel"
 "Tip_Size" "0"
 "targetname" "caine_transition"
@@ -11815,10 +11737,10 @@
 "targetname" "heather_leaves_relay"
 "StartDisabled" "0"
 "spawnflags" "1"
-"OnTrigger" "heather_fade,Fade,,0,-1,,"
-"OnTrigger" "Heather,Kill,,3,-1,,"
-"OnTrigger" "controller,CreateControllerNPC,,0,-1,,"
 "OnTrigger" "controller,RemoveControllerNPC,,4,-1,,"
+"OnTrigger" "controller,CreateControllerNPC,,0,-1,,"
+"OnTrigger" "Heather,Kill,,3,-1,,"
+"OnTrigger" "heather_fade,Fade,,0,-1,,"
 "origin" "-162.121 -300.396 1004"
 }
 {
@@ -11870,10 +11792,10 @@
 "targetname" "mcfly_leaves_relay"
 "StartDisabled" "0"
 "spawnflags" "1"
-"OnTrigger" "heather_fade,Fade,,0,-1,,"
-"OnTrigger" "McFly,Kill,,3,-1,,"
-"OnTrigger" "controller,CreateControllerNPC,,0,-1,,"
 "OnTrigger" "controller,RemoveControllerNPC,,4,-1,,"
+"OnTrigger" "controller,CreateControllerNPC,,0,-1,,"
+"OnTrigger" "McFly,Kill,,3,-1,,"
+"OnTrigger" "heather_fade,Fade,,0,-1,,"
 "origin" "-148 -300 1004"
 }
 {
@@ -12039,15 +11961,15 @@
 "origin" "-129.821 -285.711 918.462"
 }
 {
-"model" "*133"
+"model" "*130"
 "classname" "trigger_multiple"
 "StartDisabled" "0"
 "wait" "1"
 "spawnflags" "1"
 "origin" "-122 -114 1716"
 "targetname" "hannah_talk_trigger"
-"OnEndTouch" "Hannah,WillTalk,1,0,-1,,"
 "OnStartTouch" "Hannah,WillTalk,0,0,-1,,"
+"OnEndTouch" "Hannah,WillTalk,1,0,-1,,"
 }
 {
 "classname" "info_node"
@@ -12163,7 +12085,7 @@
 "origin" "-247 -327 1091"
 }
 {
-"model" "*134"
+"model" "*131"
 "classname" "trigger_look"
 "targetname" "trig_hannah"
 "target" "Hannah"
@@ -12177,13 +12099,13 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "onground"
-"OnTrigger" "glowsix,skin,0,3.6,-1,,"
-"OnTrigger" "glowfive,skin,0,3.6,-1,,"
-"OnTrigger" "glowfour,skin,0,3.6,-1,,"
-"OnTrigger" "glowthree,skin,0,3.6,-1,,"
-"OnTrigger" "glowtwo,skin,0,3.6,-1,,"
-"OnTrigger" "glowone,skin,0,3.6,-1,,"
 "OnTrigger" "glowzero,skin,1,3.6,-1,,"
+"OnTrigger" "glowone,skin,0,3.6,-1,,"
+"OnTrigger" "glowtwo,skin,0,3.6,-1,,"
+"OnTrigger" "glowthree,skin,0,3.6,-1,,"
+"OnTrigger" "glowfour,skin,0,3.6,-1,,"
+"OnTrigger" "glowfive,skin,0,3.6,-1,,"
+"OnTrigger" "glowsix,skin,0,3.6,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12191,13 +12113,13 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "onfirst"
-"OnTrigger" "glowsix,skin,0,3.6,-1,,"
-"OnTrigger" "glowfive,skin,0,3.6,-1,,"
-"OnTrigger" "glowfour,skin,0,3.6,-1,,"
-"OnTrigger" "glowthree,skin,0,3.6,-1,,"
-"OnTrigger" "glowtwo,skin,0,3.6,-1,,"
-"OnTrigger" "glowone,skin,1,3.6,-1,,"
 "OnTrigger" "glowzero,skin,0,3.6,-1,,"
+"OnTrigger" "glowone,skin,1,3.6,-1,,"
+"OnTrigger" "glowtwo,skin,0,3.6,-1,,"
+"OnTrigger" "glowthree,skin,0,3.6,-1,,"
+"OnTrigger" "glowfour,skin,0,3.6,-1,,"
+"OnTrigger" "glowfive,skin,0,3.6,-1,,"
+"OnTrigger" "glowsix,skin,0,3.6,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12205,13 +12127,13 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "onsecond"
-"OnTrigger" "glowsix,skin,0,3.6,-1,,"
-"OnTrigger" "glowfive,skin,0,3.6,-1,,"
-"OnTrigger" "glowfour,skin,0,3.6,-1,,"
-"OnTrigger" "glowthree,skin,0,3.6,-1,,"
-"OnTrigger" "glowtwo,skin,1,3.6,-1,,"
-"OnTrigger" "glowone,skin,0,3.6,-1,,"
 "OnTrigger" "glowzero,skin,0,3.6,-1,,"
+"OnTrigger" "glowone,skin,0,3.6,-1,,"
+"OnTrigger" "glowtwo,skin,1,3.6,-1,,"
+"OnTrigger" "glowthree,skin,0,3.6,-1,,"
+"OnTrigger" "glowfour,skin,0,3.6,-1,,"
+"OnTrigger" "glowfive,skin,0,3.6,-1,,"
+"OnTrigger" "glowsix,skin,0,3.6,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12219,13 +12141,13 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "onthird"
-"OnTrigger" "glowsix,skin,0,3.6,-1,,"
-"OnTrigger" "glowfive,skin,0,3.6,-1,,"
-"OnTrigger" "glowfour,skin,0,3.6,-1,,"
-"OnTrigger" "glowthree,skin,1,3.6,-1,,"
-"OnTrigger" "glowtwo,skin,0,3.6,-1,,"
-"OnTrigger" "glowone,skin,0,3.6,-1,,"
 "OnTrigger" "glowzero,skin,0,3.6,-1,,"
+"OnTrigger" "glowone,skin,0,3.6,-1,,"
+"OnTrigger" "glowtwo,skin,0,3.6,-1,,"
+"OnTrigger" "glowthree,skin,1,3.6,-1,,"
+"OnTrigger" "glowfour,skin,0,3.6,-1,,"
+"OnTrigger" "glowfive,skin,0,3.6,-1,,"
+"OnTrigger" "glowsix,skin,0,3.6,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12233,13 +12155,13 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "onfourth"
-"OnTrigger" "glowsix,skin,0,3.6,-1,,"
-"OnTrigger" "glowfive,skin,0,3.6,-1,,"
-"OnTrigger" "glowfour,skin,1,3.6,-1,,"
-"OnTrigger" "glowthree,skin,0,3.6,-1,,"
-"OnTrigger" "glowtwo,skin,0,3.6,-1,,"
-"OnTrigger" "glowone,skin,0,3.6,-1,,"
 "OnTrigger" "glowzero,skin,0,3.6,-1,,"
+"OnTrigger" "glowone,skin,0,3.6,-1,,"
+"OnTrigger" "glowtwo,skin,0,3.6,-1,,"
+"OnTrigger" "glowthree,skin,0,3.6,-1,,"
+"OnTrigger" "glowfour,skin,1,3.6,-1,,"
+"OnTrigger" "glowfive,skin,0,3.6,-1,,"
+"OnTrigger" "glowsix,skin,0,3.6,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12247,13 +12169,13 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "onfifth"
-"OnTrigger" "glowsix,skin,0,3.6,-1,,"
-"OnTrigger" "glowfive,skin,1,3.6,-1,,"
-"OnTrigger" "glowfour,skin,0,3.6,-1,,"
-"OnTrigger" "glowthree,skin,0,3.6,-1,,"
-"OnTrigger" "glowtwo,skin,0,3.6,-1,,"
-"OnTrigger" "glowone,skin,0,3.6,-1,,"
 "OnTrigger" "glowzero,skin,0,3.6,-1,,"
+"OnTrigger" "glowone,skin,0,3.6,-1,,"
+"OnTrigger" "glowtwo,skin,0,3.6,-1,,"
+"OnTrigger" "glowthree,skin,0,3.6,-1,,"
+"OnTrigger" "glowfour,skin,0,3.6,-1,,"
+"OnTrigger" "glowfive,skin,1,3.6,-1,,"
+"OnTrigger" "glowsix,skin,0,3.6,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12261,13 +12183,13 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "onsixth"
-"OnTrigger" "glowsix,skin,1,3.6,-1,,"
-"OnTrigger" "glowfive,skin,0,3.6,-1,,"
-"OnTrigger" "glowfour,skin,0,3.6,-1,,"
-"OnTrigger" "glowthree,skin,0,3.6,-1,,"
-"OnTrigger" "glowtwo,skin,0,3.6,-1,,"
-"OnTrigger" "glowone,skin,0,3.6,-1,,"
 "OnTrigger" "glowzero,skin,0,3.6,-1,,"
+"OnTrigger" "glowone,skin,0,3.6,-1,,"
+"OnTrigger" "glowtwo,skin,0,3.6,-1,,"
+"OnTrigger" "glowthree,skin,0,3.6,-1,,"
+"OnTrigger" "glowfour,skin,0,3.6,-1,,"
+"OnTrigger" "glowfive,skin,0,3.6,-1,,"
+"OnTrigger" "glowsix,skin,1,3.6,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12275,8 +12197,8 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "fourtosix"
-"OnTrigger" "onsixth,Trigger,,5.2,-1,,"
 "OnTrigger" "onfifth,Trigger,,1.8,-1,,"
+"OnTrigger" "onsixth,Trigger,,5.2,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12284,9 +12206,9 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "threetosix"
-"OnTrigger" "onsixth,Trigger,,8.6,-1,,"
-"OnTrigger" "onfifth,Trigger,,5.2,-1,,"
 "OnTrigger" "onfourth,Trigger,,1.8,-1,,"
+"OnTrigger" "onfifth,Trigger,,5.2,-1,,"
+"OnTrigger" "onsixth,Trigger,,8.6,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12294,10 +12216,10 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "twotosix"
-"OnTrigger" "onsixth,Trigger,,12,-1,,"
-"OnTrigger" "onfifth,Trigger,,8.6,-1,,"
-"OnTrigger" "onfourth,Trigger,,5.2,-1,,"
 "OnTrigger" "onthird,Trigger,,1.8,-1,,"
+"OnTrigger" "onfourth,Trigger,,5.2,-1,,"
+"OnTrigger" "onfifth,Trigger,,8.6,-1,,"
+"OnTrigger" "onsixth,Trigger,,12,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12305,11 +12227,11 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "onetosix"
-"OnTrigger" "onsixth,Trigger,,15.4,-1,,"
-"OnTrigger" "onfifth,Trigger,,12,-1,,"
-"OnTrigger" "onfourth,Trigger,,8.6,-1,,"
-"OnTrigger" "onthird,Trigger,,5.2,-1,,"
 "OnTrigger" "onsecond,Trigger,,1.8,-1,,"
+"OnTrigger" "onthird,Trigger,,5.2,-1,,"
+"OnTrigger" "onfourth,Trigger,,8.6,-1,,"
+"OnTrigger" "onfifth,Trigger,,12,-1,,"
+"OnTrigger" "onsixth,Trigger,,15.4,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12317,12 +12239,12 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "groundtosix"
-"OnTrigger" "onsixth,Trigger,,17,-1,,"
-"OnTrigger" "onfifth,Trigger,,13.6,-1,,"
-"OnTrigger" "onfourth,Trigger,,10.2,-1,,"
-"OnTrigger" "onthird,Trigger,,6.8,-1,,"
-"OnTrigger" "onsecond,Trigger,,3.4,-1,,"
 "OnTrigger" "onfirst,Trigger,,0,-1,,"
+"OnTrigger" "onsecond,Trigger,,3.4,-1,,"
+"OnTrigger" "onthird,Trigger,,6.8,-1,,"
+"OnTrigger" "onfourth,Trigger,,10.2,-1,,"
+"OnTrigger" "onfifth,Trigger,,13.6,-1,,"
+"OnTrigger" "onsixth,Trigger,,17,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12330,8 +12252,8 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "threetofive"
-"OnTrigger" "onfifth,Trigger,,5.2,-1,,"
 "OnTrigger" "onfourth,Trigger,,1.8,-1,,"
+"OnTrigger" "onfifth,Trigger,,5.2,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12339,9 +12261,9 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "twotofive"
-"OnTrigger" "onfifth,Trigger,,8.6,-1,,"
-"OnTrigger" "onfourth,Trigger,,5.2,-1,,"
 "OnTrigger" "onthird,Trigger,,1.8,-1,,"
+"OnTrigger" "onfourth,Trigger,,5.2,-1,,"
+"OnTrigger" "onfifth,Trigger,,8.6,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12349,10 +12271,10 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "onetofive"
-"OnTrigger" "onfifth,Trigger,,12,-1,,"
-"OnTrigger" "onfourth,Trigger,,8.6,-1,,"
-"OnTrigger" "onthird,Trigger,,5.2,-1,,"
 "OnTrigger" "onsecond,Trigger,,1.8,-1,,"
+"OnTrigger" "onthird,Trigger,,5.2,-1,,"
+"OnTrigger" "onfourth,Trigger,,8.6,-1,,"
+"OnTrigger" "onfifth,Trigger,,12,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12360,11 +12282,11 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "groundtofive"
-"OnTrigger" "onfifth,Trigger,,13.6,-1,,"
-"OnTrigger" "onfourth,Trigger,,10.2,-1,,"
-"OnTrigger" "onthird,Trigger,,6.8,-1,,"
-"OnTrigger" "onsecond,Trigger,,3.4,-1,,"
 "OnTrigger" "onfirst,Trigger,,0,-1,,"
+"OnTrigger" "onsecond,Trigger,,3.4,-1,,"
+"OnTrigger" "onthird,Trigger,,6.8,-1,,"
+"OnTrigger" "onfourth,Trigger,,10.2,-1,,"
+"OnTrigger" "onfifth,Trigger,,13.6,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12372,8 +12294,8 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "sixtofour"
-"OnTrigger" "onfourth,Trigger,,5.2,-1,,"
 "OnTrigger" "onfifth,Trigger,,1.8,-1,,"
+"OnTrigger" "onfourth,Trigger,,5.2,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12381,8 +12303,8 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "twotofour"
-"OnTrigger" "onfourth,Trigger,,5.2,-1,,"
 "OnTrigger" "onthird,Trigger,,1.8,-1,,"
+"OnTrigger" "onfourth,Trigger,,5.2,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12390,9 +12312,9 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "onetofour"
-"OnTrigger" "onfourth,Trigger,,8.6,-1,,"
-"OnTrigger" "onthird,Trigger,,5.2,-1,,"
 "OnTrigger" "onsecond,Trigger,,1.8,-1,,"
+"OnTrigger" "onthird,Trigger,,5.2,-1,,"
+"OnTrigger" "onfourth,Trigger,,8.6,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12400,10 +12322,10 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "groundtofour"
-"OnTrigger" "onfourth,Trigger,,10.2,-1,,"
-"OnTrigger" "onthird,Trigger,,6.8,-1,,"
-"OnTrigger" "onsecond,Trigger,,3.4,-1,,"
 "OnTrigger" "onfirst,Trigger,,0,-1,,"
+"OnTrigger" "onsecond,Trigger,,3.4,-1,,"
+"OnTrigger" "onthird,Trigger,,6.8,-1,,"
+"OnTrigger" "onfourth,Trigger,,10.2,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12411,9 +12333,9 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "sixtothree"
-"OnTrigger" "onthird,Trigger,,8.6,-1,,"
-"OnTrigger" "onfourth,Trigger,,5.2,-1,,"
 "OnTrigger" "onfifth,Trigger,,1.8,-1,,"
+"OnTrigger" "onfourth,Trigger,,5.2,-1,,"
+"OnTrigger" "onthird,Trigger,,8.6,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12421,8 +12343,8 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "fivetothree"
-"OnTrigger" "onthird,Trigger,,5.2,-1,,"
 "OnTrigger" "onfourth,Trigger,,1.8,-1,,"
+"OnTrigger" "onthird,Trigger,,5.2,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12430,8 +12352,8 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "onetothree"
-"OnTrigger" "onthird,Trigger,,5.2,-1,,"
 "OnTrigger" "onsecond,Trigger,,1.8,-1,,"
+"OnTrigger" "onthird,Trigger,,5.2,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12439,9 +12361,9 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "groundtothree"
-"OnTrigger" "onthird,Trigger,,6.8,-1,,"
-"OnTrigger" "onsecond,Trigger,,3.4,-1,,"
 "OnTrigger" "onfirst,Trigger,,0,-1,,"
+"OnTrigger" "onsecond,Trigger,,3.4,-1,,"
+"OnTrigger" "onthird,Trigger,,6.8,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12449,10 +12371,10 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "sixtotwo"
-"OnTrigger" "onsecond,Trigger,,12,-1,,"
-"OnTrigger" "onthird,Trigger,,8.6,-1,,"
-"OnTrigger" "onfourth,Trigger,,5.2,-1,,"
 "OnTrigger" "onfifth,Trigger,,1.8,-1,,"
+"OnTrigger" "onfourth,Trigger,,5.2,-1,,"
+"OnTrigger" "onthird,Trigger,,8.6,-1,,"
+"OnTrigger" "onsecond,Trigger,,12,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12460,9 +12382,9 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "fivetotwo"
-"OnTrigger" "onsecond,Trigger,,8.6,-1,,"
-"OnTrigger" "onthird,Trigger,,5.2,-1,,"
 "OnTrigger" "onfourth,Trigger,,1.8,-1,,"
+"OnTrigger" "onthird,Trigger,,5.2,-1,,"
+"OnTrigger" "onsecond,Trigger,,8.6,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12470,8 +12392,8 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "fourtotwo"
-"OnTrigger" "onsecond,Trigger,,5.2,-1,,"
 "OnTrigger" "onthird,Trigger,,1.8,-1,,"
+"OnTrigger" "onsecond,Trigger,,5.2,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12479,8 +12401,8 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "groundtotwo"
-"OnTrigger" "onsecond,Trigger,,3.4,-1,,"
 "OnTrigger" "onfirst,Trigger,,0,-1,,"
+"OnTrigger" "onsecond,Trigger,,3.4,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12488,11 +12410,11 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "sixtoone"
-"OnTrigger" "onfirst,Trigger,,15.4,-1,,"
-"OnTrigger" "onsecond,Trigger,,12,-1,,"
-"OnTrigger" "onthird,Trigger,,8.6,-1,,"
-"OnTrigger" "onfourth,Trigger,,5.2,-1,,"
 "OnTrigger" "onfifth,Trigger,,1.8,-1,,"
+"OnTrigger" "onfourth,Trigger,,5.2,-1,,"
+"OnTrigger" "onthird,Trigger,,8.6,-1,,"
+"OnTrigger" "onsecond,Trigger,,12,-1,,"
+"OnTrigger" "onfirst,Trigger,,15.4,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12500,10 +12422,10 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "fivetoone"
-"OnTrigger" "onfirst,Trigger,,12,-1,,"
-"OnTrigger" "onsecond,Trigger,,8.6,-1,,"
-"OnTrigger" "onthird,Trigger,,5.2,-1,,"
 "OnTrigger" "onfourth,Trigger,,1.8,-1,,"
+"OnTrigger" "onthird,Trigger,,5.2,-1,,"
+"OnTrigger" "onsecond,Trigger,,8.6,-1,,"
+"OnTrigger" "onfirst,Trigger,,12,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12511,9 +12433,9 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "fourtoone"
-"OnTrigger" "onfirst,Trigger,,8.6,-1,,"
-"OnTrigger" "onsecond,Trigger,,5.2,-1,,"
 "OnTrigger" "onthird,Trigger,,1.8,-1,,"
+"OnTrigger" "onsecond,Trigger,,5.2,-1,,"
+"OnTrigger" "onfirst,Trigger,,8.6,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12521,8 +12443,8 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "threetoone"
-"OnTrigger" "onfirst,Trigger,,5.2,-1,,"
 "OnTrigger" "onsecond,Trigger,,1.8,-1,,"
+"OnTrigger" "onfirst,Trigger,,5.2,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12530,12 +12452,12 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "sixtoground"
-"OnTrigger" "onground,Trigger,,17,-1,,"
-"OnTrigger" "onfirst,Trigger,,15.4,-1,,"
-"OnTrigger" "onsecond,Trigger,,12,-1,,"
-"OnTrigger" "onthird,Trigger,,8.6,-1,,"
-"OnTrigger" "onfourth,Trigger,,5.2,-1,,"
 "OnTrigger" "onfifth,Trigger,,1.8,-1,,"
+"OnTrigger" "onfourth,Trigger,,5.2,-1,,"
+"OnTrigger" "onthird,Trigger,,8.6,-1,,"
+"OnTrigger" "onsecond,Trigger,,12,-1,,"
+"OnTrigger" "onfirst,Trigger,,15.4,-1,,"
+"OnTrigger" "onground,Trigger,,17,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12543,11 +12465,11 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "fivetoground"
-"OnTrigger" "onground,Trigger,,13.6,-1,,"
-"OnTrigger" "onfirst,Trigger,,12,-1,,"
-"OnTrigger" "onsecond,Trigger,,8.6,-1,,"
-"OnTrigger" "onthird,Trigger,,5.2,-1,,"
 "OnTrigger" "onfourth,Trigger,,1.8,-1,,"
+"OnTrigger" "onthird,Trigger,,5.2,-1,,"
+"OnTrigger" "onsecond,Trigger,,8.6,-1,,"
+"OnTrigger" "onfirst,Trigger,,12,-1,,"
+"OnTrigger" "onground,Trigger,,13.6,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12555,10 +12477,10 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "fourtoground"
-"OnTrigger" "onground,Trigger,,10.2,-1,,"
-"OnTrigger" "onfirst,Trigger,,8.6,-1,,"
-"OnTrigger" "onsecond,Trigger,,5.2,-1,,"
 "OnTrigger" "onthird,Trigger,,1.8,-1,,"
+"OnTrigger" "onsecond,Trigger,,5.2,-1,,"
+"OnTrigger" "onfirst,Trigger,,8.6,-1,,"
+"OnTrigger" "onground,Trigger,,10.2,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12566,9 +12488,9 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "threetoground"
-"OnTrigger" "onground,Trigger,,6.8,-1,,"
-"OnTrigger" "onfirst,Trigger,,5.2,-1,,"
 "OnTrigger" "onsecond,Trigger,,1.8,-1,,"
+"OnTrigger" "onfirst,Trigger,,5.2,-1,,"
+"OnTrigger" "onground,Trigger,,6.8,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12576,8 +12498,8 @@
 "StartDisabled" "0"
 "spawnflags" "0"
 "targetname" "twotoground"
-"OnTrigger" "onground,Trigger,,3.4,-1,,"
 "OnTrigger" "onfirst,Trigger,,1.8,-1,,"
+"OnTrigger" "onground,Trigger,,3.4,-1,,"
 "origin" "297 -170 -66"
 }
 {
@@ -12744,6 +12666,100 @@
 "origin" "-248 -403 1129"
 }
 {
+"portalnumber" "17"
+"classname" "func_areaportalwindow"
+"targetname" "vent1"
+"StartHidden" "0"
+"FadeStartDist" "1280"
+"FadeDist" "2560"
+"TranslucencyLimit" "0"
+"target" "vent1brush"
+}
+{
+"portalnumber" "18"
+"classname" "func_areaportalwindow"
+"targetname" "vent1b"
+"StartHidden" "0"
+"FadeStartDist" "1280"
+"FadeDist" "2560"
+"TranslucencyLimit" "0"
+"target" "vent1bbrush"
+}
+{
+"model" "*132"
+"classname" "func_brush"
+"targetname" "vent1bbrush"
+"StartHidden" "0"
+"renderfx" "0"
+"rendermode" "0"
+"renderamt" "255"
+"rendercolor" "255 255 255"
+"disableshadows" "1"
+"InputFilter" "0"
+"StartDisabled" "0"
+"Solidity" "1"
+"climbable" "0"
+"origin" "0 0 0"
+}
+{
+"model" "*133"
+"classname" "func_brush"
+"targetname" "vent1brush"
+"StartHidden" "0"
+"renderfx" "0"
+"rendermode" "0"
+"renderamt" "255"
+"rendercolor" "255 255 255"
+"disableshadows" "1"
+"InputFilter" "0"
+"StartDisabled" "0"
+"Solidity" "1"
+"climbable" "0"
+"origin" "0 0 0"
+}
+{
+"classname" "env_sprite"
+"angles" "0 0 0"
+"disableshadows" "0"
+"framerate" "10.0"
+"model" "materials/sprites/glowb.vmt"
+"renderamt" "75"
+"rendercolor" "142 181 223"
+"renderfx" "14"
+"rendermode" "3"
+"scale" "1"
+"spawnflags" "1"
+"origin" "350.651 -228.661 -153.004"
+}
+{
+"classname" "env_sprite"
+"angles" "0 0 0"
+"disableshadows" "0"
+"framerate" "10.0"
+"model" "materials/sprites/glowb.vmt"
+"renderamt" "75"
+"rendercolor" "142 181 223"
+"renderfx" "14"
+"rendermode" "3"
+"scale" "1"
+"spawnflags" "1"
+"origin" "687.651 -158.661 -153.004"
+}
+{
+"classname" "env_sprite"
+"angles" "0 0 0"
+"disableshadows" "0"
+"framerate" "10.0"
+"model" "materials/sprites/glowb.vmt"
+"renderamt" "75"
+"rendercolor" "142 181 223"
+"renderfx" "14"
+"rendermode" "3"
+"scale" "1"
+"spawnflags" "1"
+"origin" "641.651 -382.661 -153.004"
+}
+{
 "classname" "logic_auto"
 "spawnflags" "0"
 "OnMapLoad" ",,,0,-1,unhidePlus(),"
@@ -12776,55 +12792,55 @@
 "classname" "events_player"
 "targetname" "events_player_plus"
 "enabled" "0"
-"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
-"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
-"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
-"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
-"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
-"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
-"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
-"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
-"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
-"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
-"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
-"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
-"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
-"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
-"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
-"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
-"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
-"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
-"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
-"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
 "OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
+"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
+"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
+"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
+"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
+"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
+"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
+"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
+"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
+"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
+"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
+"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
+"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
+"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
+"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
+"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
+"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
+"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
+"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
+"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
+"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
 "origin" "0 0 0"
 }
 {
 "classname" "events_world"
 "targetname" "world"
 "StartHidden" "0"
-"OnUseEnd" ",,,0,-1,OnUseEnd(),"
-"OnUseBegin" ",,,0,-1,OnUseBegin(),"
-"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
-"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
-"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
-"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
-"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
-"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
-"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
-"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
-"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
-"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
-"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
-"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
-"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
-"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
-"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
-"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
-"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
-"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
-"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
-"OnCopsComing" ",,,0,-1,OnCopsComing(),"
 "OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
+"OnCopsComing" ",,,0,-1,OnCopsComing(),"
+"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
+"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
+"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
+"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
+"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
+"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
+"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
+"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
+"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
+"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
+"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
+"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
+"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
+"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
+"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
+"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
+"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
+"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
+"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
+"OnUseBegin" ",,,0,-1,OnUseBegin(),"
+"OnUseEnd" ",,,0,-1,OnUseEnd(),"
 "origin" "0 0 0"
 }

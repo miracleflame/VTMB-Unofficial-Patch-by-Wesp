@@ -1,7 +1,7 @@
 //====== Copyright © 2003-2016, Troika Games, Inc. All rights reserved. =======
 //
 // Purpose: Vampire Bloodlines game definition file (.fgd) 
-// Version: 1.52 beta
+// Version: 1.53 beta
 // Edition: Original VtMB [Base]
 // Written: Psycho-A
 //
@@ -243,7 +243,7 @@
 
 @BaseClass = p_Origin
 [ 
-	origin(origin) : "Origin (X Y Z)" : : "The position of this entity's center in the world. Rotating entities typically rotate around their origin. \n\nWarning: if you're using func_brush that used as func_areaportalwindow's rendering target, necessarily set its Origin to 0 0 0 !"
+	origin(origin) : "Origin (X Y Z)" : : "The position of this entity's center in the world. Rotating entities typically rotate around their origin."
 ]
 
 
@@ -2885,7 +2885,6 @@ color(0 128 255)
 base (
 	Targetname,
 	Parentname,
-	p_Origin,
 	p_Global,
 	EnableDisable,
 	e_func_brush,
@@ -2901,7 +2900,8 @@ line (
 	"[VTMB] Adds additional properties to object that it would not normally have. \nFor example, makes something climbable, or usable or solid that is not normally so (e.g. making a cat statue usable).\n\n"+
 	"Warning: If you're using func_brush in the pair with func_areaportalwindow, necessarily set Origin to (0 0 0)!"
 [
-	// RF order fix
+	sep_brshorig(string) readonly: "------------------------------------"
+	origin(string) : "Origin (X Y Z)" : : "The position of this entity's center in the world. Rotating entities typically rotate around their origin. \n\nWarning: if the current brush used as func_areaportalwindow's rendering target, it's necessarily to clear Origin values to be empty, or set it to 0 0 0!"
 ]
 
 

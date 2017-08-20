@@ -2360,21 +2360,52 @@ TraitEffectsData
 
 		TraitEffectGroup
 		{
-			"InternalName"	"Discipline (Potence)"
+			"InternalName"	"Discipline (Potence1)"	// changed by wesp
 			TraitEffect
 			{
 				"DisplayOverride"		"0"	// Don't actually show this...
 				// Changed for TJ (via Steve S) 6/26/04 by JLR  ;)
-				"Trait"	"Automatic_Str_Successes"	// changed by wesp
-				"Modifier"	"+1"
-			}
-
-			TraitEffect	// seperated by wesp
-			{
+//				"Trait"	"Automatic_Str_Successes"
 				"Trait"	"Strength"
 				"Modifier"	"+1"
 			}
-
+		}
+// added by wesp
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Potence2)"
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+2"
+			}
+		}
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Potence3)"
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+3"
+			}
+		}
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Potence4)"
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+4"
+			}
+		}
+		TraitEffectGroup
+		{
+			"InternalName"	"Discipline (Potence5)"
+			TraitEffect
+			{
+				"Trait"	"Strength"
+				"Modifier"	"+5"
+			}
 		}
 
 // WARNING: Old Discipline FX?

@@ -109,10 +109,10 @@
 {	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	111	}{	Uh... o-okay. I-I guess. Here.	}{	Uh... o-okay. I-I guess. Here.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	112	}{	Don't worry, I'll come back when I have them.	}{	Don't worry, I'll come back when I have them.	}{	0	}{	G.Copper_Rob == 1	}{	pc.SetQuest("Copper", 3)	}{	}{	}{	}{	}{	}{	}{	A fool is better left broke. Farewell.	}
+{	112	}{	Don't worry, I'll come back when I have them.	}{	Don't worry, I'll come back when I have them.	}{	0	}{	G.Copper_Rob == 1	}{	pc.SetQuest("Copper", 4)	}{	}{	}{	}{	}{	}{	}{	A fool is better left broke. Farewell.	}
 {	113	}{	Now need any more unicorn blood?	}{	Now need any more unicorn blood?	}{	161	}{	G.Copper_Rob == 0 and G.Copper_Blood >=3 and G.Copper_Uni == 1 and pc.HasItem("item_g_bloodpack")	}{	}{	}{	}{	}{	}{	}{	}{	I have more one-horned horse blood.	}
 {	114	}{	Now do you need some unicorn blood?	}{	Now do you need some unicorn blood?	}{	141	}{	G.Copper_Rob == 0 and G.Copper_Blood < 3 and G.Copper_Uni == 1 and pc.HasItem("item_g_bloodpack")	}{	}{	}{	}{	}{	}{	}{	}{	I have the blood of the magical stallion. How much do you desire?	}
-{	115	}{	And here's the stake. You have $100?	}{	And here's the stake. You have $100?	}{	121	}{	G.Copper_Stake == 1 and pc.HasItem("item_g_stake")	}{	}{	}{	}{	}{	}{	}{	}{	And I have the Holy Stake if you've got the blessed $100.	}
+{	115	}{	And here's the stake. You have $100?	}{	And here's the stake. You have $100?	}{	121	}{	G.Copper_Rob == 0 and G.Copper_Stake == 1 and pc.HasItem("item_g_stake")	}{	}{	}{	}{	}{	}{	}{	}{	And I have the Holy Stake if you've got the blessed $100.	}
 {	116	}{	I'll return with more merchandise. Goodbye.	}{	I'll return with more merchandise. Goodbye.	}{	0	}{	G.Copper_Rob == 0 and G.Copper_Uni < 2	}{	}{	}{	}{	}{	}{	}{	}{	I have nothing more but my other personalities. Farewell.	}
 {	117	}{	Enjoy. Goodbye.	}{	Enjoy. Goodbye.	}{	0	}{	G.Copper_Uni == 2 and G.Copper_Stake == 0 and G.Patch_Plus == 1	}{	pc.SetQuest("Copper", 4)	}{	}{	}{	}{	}{	}{	}{	You sure do. I am gone.	}
 {	118	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

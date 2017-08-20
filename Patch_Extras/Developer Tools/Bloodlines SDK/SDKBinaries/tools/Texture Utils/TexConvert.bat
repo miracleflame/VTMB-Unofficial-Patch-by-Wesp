@@ -121,8 +121,7 @@ set "SomeSuccess=No"
 for /f "delims=" %%f in (
 '%OpenFile% "/e=*.vtf *.tth *.ttz *.tga *.dds *.bmp *.png *.jpg *.gif"'
 ) do (call :ConvertAll "%%~f")
-
-if /i "%ConvProcRan%"=="No" (exit)
+if /i "%ConvProcRan%"=="No" (goto Exit)
 
 if /i "%ErrorsFound%"=="Yes" (
 	if /i "%SomeSuccess%"=="Yes" (%MsgBox% Converting textures done. Some errors occured during this procedure, see the console window for details. Select other files? /c:Texture Converter - Information /t:MB_SYSTEMMODAL,MB_ICONWARNING,MB_YESNO)

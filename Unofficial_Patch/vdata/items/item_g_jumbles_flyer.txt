@@ -2,15 +2,14 @@
 
 WeaponData
 {
-	// Weapon data is loaded by both the Game and Client DLLs.
-	
-	"infomodel"	"models/items/pearl_of_dubai/Info/pearl_of_dubai.mdl"
-	"playermodel"	"models/items/pearl_of_dubai/Ground/pearl_of_dubai_g.mdl"
-	
-	"anim_prefix"	" "
+	"printname"	"Fleshy Ball"	// added by wesp
+	"description"	"A weird and disgusting fleshy ball."	// added by wesp
 
-	"printname"	"Pearl of Dubai"
-	"description"	"This jewel is the famous Pearl of Dubai. It's very precious and full of a magical vibrancy that gives you a boost to your Charisma."
+	// added by wesp
+	"playermodel"	"models/scenery/misc/changball/changball.mdl"
+	"infomodel"		"models/scenery/misc/changball/changball.mdl"
+
+	"anim_prefix"	" "
 
 	"bucket"		"1"
 	"bucket_position"	"2"
@@ -19,16 +18,15 @@ WeaponData
 	"is_wieldable"		"0"
 	"weight"		"3"
 	"item_flags"		"0"
-	"item_type"		"powerup"
-	"item_worth"		"120"
-	"equip_effect"		"Item (Occult Celerity)"
-	"is_stackable" "0"
+	"item_type"		"generic"
+	"item_worth"		"0"
+
 
 	SoundData	// added by wesp
 	{
 		"pickup"
 		{
-			"sound1"	"items/Key/Pickup.wav"
+			"sound1"	"Weapons\Melee\Claws\Deploy.wav"
 		}
 	}
 
@@ -39,7 +37,7 @@ WeaponData
 		{
 			"640"
 			{
-				"file"	"hud/Inventory_Images/General_Items/pearl_of_dubai_sel"
+				"file"		"hud/Inventory_Images/General_Items/ball_sel"	// changed by wesp
 				"x"		"0"
 				"y"		"0"
 				"width"	"100"
@@ -50,7 +48,7 @@ WeaponData
 		{
 			"640"
 			{
-				"file"	"hud/Inventory_Images/General_Items/pearl_of_dubai"
+				"file"		"hud/Inventory_Images/General_Items/ball"	// changed by wesp
 				"x"		"0"
 				"y"		"0"
 				"width"	"100"

@@ -96,7 +96,15 @@ TerminalDefinition
 		"subject"	"re: Santa Monica is MY city!!"
 		"sender"	"Jeanette"
 		"body"		"No, your bitchy attitude is tearing us apart. You need to cool off, why don't you go swim in the Pacific and look for your pendant?"
-		"dependency"	"G.Therese_Quest > 2"	// changed by wesp
+		"dependency"	"G.Therese_Quest > 2 and G.Jeanette_Scorn == 0"	// changed by wesp
+	}
+
+	Email		// added by wesp
+	{
+		"subject"	"re: Santa Monica is MY city!!"
+		"sender"	"Jeanette"
+		"body"		"No, your bitchy attitude is tearing us apart. You need to cool off, why don't you go swim in the Pacific?"
+		"dependency"	"G.Therese_Quest > 2 and G.Jeanette_Scorn == 1"	// changed by wesp
 	}
 
 }

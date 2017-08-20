@@ -2,7 +2,7 @@
 {	2	}{	Fantastic party, huh?	}{	Fantastic party, huh?	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	This sure is a party.	}
 {	3	}{	What's your problem?	}{	What's your problem?	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	What's stirring?	}
 {	4	}{	Would you still be interested in some family gossip?	}{	Would you still be interested in some family gossip?	}{	161	}{	G.Chris_Gossip == 1	}{	}{	}{	}{	}{	}{	}{	}{	I thought I had issues, then I talked to your family.	}
-{	5	}{	Hello there. And what's your name?	}{	Hello there. And what's your name?	}{	51	}{	Seduction 7 & G.Chris_Seduce == 0 and not IsMale(pc)	}{	}{	}{	}{	}{	}{	}{	}{	Hi! I need a name, and yours is the one I want more than any.	}
+{	5	}{	Hello there. And what's your name?	}{	Hello there. And what's your name?	}{	51	}{	Seduction 7 & (G.Chris_Seduce == 0 and not IsMale(pc))	}{	}{	}{	}{	}{	}{	}{	}{	Hi! I need a name, and yours is the one I want more than any.	}
 {	6	}{	Something the matter?	}{	Something the matter?	}{	11	}{	Humanity 5 & G.Chris_Outdo == 0	}{	}{	}{	}{	}{	}{	}{	}{	Storm clouds overhead. Why?	}
 {	7	}{	So, know where the sarcophagus is?	}{	So, know where the sarcophagus is?	}{	91	}{	G.Chris_Sarcophagus == 0	}{	}{	}{	}{	}{	}{	}{	}{	I don't want to interrupt your sulk, I just want the sarcophagus.	}
 {	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -161,7 +161,7 @@
 {	161	}{	Yeah, I guess I would.	}{	Yeah, I guess I would.	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	162	}{	I talked to Mira. She's HIV positive from her heroin addiction.	}{	I talked to Mira. She's HIV positive from her heroin addiction.	}{	241	}{	G.Mira_Secret == 1 and G.Mira_Told == 0	}{	}{	}{	}{	}{	}{	}{	}{	Mira put the poison needle in her vein. She is positive.	}
 {	163	}{	Adam Dunsirn's flat broke. He's practically begging for money.	}{	Adam Dunsirn's flat broke. He's practically begging for money.	}{	251	}{	G.Adam_Secret == 1 and G.Adam_Told == 0	}{	}{	}{	}{	}{	}{	}{	}{	Adam's bank is a chasm. Roll a penny and watch him chase it.	}
-{	164	}{	That's not all that's troubling you, is it? You can trust me.	}{	That's not all that's troubling you, is it? You can trust me.	}{	171	}{	Persuasion 9 & G.Chris_Secret == 0 and G.Chris_Outdo == 0	}{	}{	}{	}{	}{	}{	}{	}{	That statement is a blanket over a fire.	}
+{	164	}{	That's not all that's troubling you, is it? You can trust me.	}{	That's not all that's troubling you, is it? You can trust me.	}{	171	}{	Persuasion 9 & (G.Chris_Secret == 0 and G.Chris_Outdo == 0)	}{	}{	}{	}{	}{	}{	}{	}{	That statement is a blanket over a fire.	}
 {	165	}{	If I hear anything I'll let you know.	}{	If I hear anything I'll let you know.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will rape the minds of this party and return.	}
 {	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

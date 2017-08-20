@@ -106,21 +106,21 @@ if exist "GameCfg.ini" (
 
 :hammerfix
 (reg delete "HKCU\Software\Troika\Hammer" /f
- reg add "HKCU\Software\Troika\Hammer\2D Views"         /v "AutoSelect"       /t REG_DWORD /d "1" /f
- reg add "HKCU\Software\Troika\Hammer\2D Views"         /v "Crosshairs"       /t REG_DWORD /d "1" /f
- reg add "HKCU\Software\Troika\Hammer\2D Views"         /v "CenterOnCamera"   /t REG_DWORD /d "1" /f
- reg add "HKCU\Software\Troika\Hammer\2D Views"         /v "Gridhigh64"       /t REG_DWORD /d "0" /f
- reg add "HKCU\Software\Troika\Hammer\2D Views"         /v "Nudge"            /t REG_DWORD /d "1" /f
- reg add "HKCU\Software\Troika\Hammer\2D Views"         /v "OrientPrimitives" /t REG_DWORD /d "1" /f
- reg add "HKCU\Software\Troika\Hammer\3D Views"         /v "AnimateModels"    /t REG_DWORD /d "0" /f
- reg add "HKCU\Software\Troika\Hammer\3D Views"         /v "BackPlane"        /t REG_DWORD /d "3000" /f
- reg add "HKCU\Software\Troika\Hammer\3D Views"         /v "ModelDistance"    /t REG_DWORD /d "1500" /f
- reg add "HKCU\Software\Troika\Hammer\3D Views"         /v "Reverse Y"        /t REG_DWORD /d "0" /f
- reg add "HKCU\Software\Troika\Hammer\Configured"       /v "Configured"       /t REG_DWORD /d "2" /f
- reg add "HKCU\Software\Troika\Hammer\General"          /v "Autosave Dir"     /t REG_SZ    /d "%MapSrcDir%\autosaves" /f
- reg add "HKCU\Software\Troika\Hammer\Splitter"         /v "WindowPlacement"  /t REG_SZ    /d "(-1 -1) (-1 -1) (-1 -1 -1 -1) 3" /f
- reg add "HKCU\Software\Troika\Hammer\Splitter"         /v "DrawType0,0"      /t REG_DWORD /d "5" /f
- reg add "HKCU\Software\Tools\PackfileExplorer"         /v "LastPath"         /t REG_SZ    /d "%ModDir%" /f
+ reg add "HKCU\Software\Troika\Hammer\2D Views"   /v "AutoSelect"       /t REG_DWORD /d "1" /f
+ reg add "HKCU\Software\Troika\Hammer\2D Views"   /v "Crosshairs"       /t REG_DWORD /d "1" /f
+ reg add "HKCU\Software\Troika\Hammer\2D Views"   /v "CenterOnCamera"   /t REG_DWORD /d "1" /f
+ reg add "HKCU\Software\Troika\Hammer\2D Views"   /v "Gridhigh64"       /t REG_DWORD /d "0" /f
+ reg add "HKCU\Software\Troika\Hammer\2D Views"   /v "Nudge"            /t REG_DWORD /d "1" /f
+ reg add "HKCU\Software\Troika\Hammer\2D Views"   /v "OrientPrimitives" /t REG_DWORD /d "1" /f
+ reg add "HKCU\Software\Troika\Hammer\3D Views"   /v "AnimateModels"    /t REG_DWORD /d "0" /f
+ reg add "HKCU\Software\Troika\Hammer\3D Views"   /v "BackPlane"        /t REG_DWORD /d "3000" /f
+ reg add "HKCU\Software\Troika\Hammer\3D Views"   /v "ModelDistance"    /t REG_DWORD /d "1500" /f
+ reg add "HKCU\Software\Troika\Hammer\3D Views"   /v "Reverse Y"        /t REG_DWORD /d "0" /f
+ reg add "HKCU\Software\Troika\Hammer\Configured" /v "Configured"       /t REG_DWORD /d "2" /f
+ reg add "HKCU\Software\Troika\Hammer\General"    /v "Autosave Dir"     /t REG_SZ    /d "%MapSrcDir%\autosaves" /f
+ reg add "HKCU\Software\Troika\Hammer\Splitter"   /v "WindowPlacement"  /t REG_SZ    /d "(-1 -1) (-1 -1) (-1 -1 -1 -1) 3" /f
+ reg add "HKCU\Software\Troika\Hammer\Splitter"   /v "DrawType0,0"      /t REG_DWORD /d "5" /f
+ reg add "HKCU\Software\Tools\PackfileExplorer"   /v "LastPath"         /t REG_SZ    /d "%ModDir%" /f
  if /i "%~1"=="-single" exit /b
 )> nul
 
@@ -158,7 +158,7 @@ if exist "GameCfg.ini" (
 	if exist "%%~b\*" (
 		set "VProject=%%~b"
 		setx VProject "%%~b"> nul
-		reg add "HKCU\Environment" /v "VProject" /t REG_SZ /d "%%~b" /f > nul
+		reg add "HKCU\Environment" /v "VProject" /d "%%~b" /f > nul
 		set "%%~a=%%~b"
 	))
 	if /i "%%~a"=="ModDir" (

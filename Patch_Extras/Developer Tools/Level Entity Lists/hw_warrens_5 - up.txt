@@ -5075,17 +5075,17 @@
 "locked_icon" "3"
 }
 {
-"classname" "infodecal"
+"classname" "infodecal-wesp"
 "texture" "decals/stains/sewersludgea"
 "origin" "-2823.62 809.102 374.028"
 }
 {
-"classname" "infodecal"
+"classname" "infodecal-wesp"
 "texture" "decals/stains/sewersludgea"
 "origin" "-2710.24 922.47 353.729"
 }
 {
-"classname" "infodecal"
+"classname" "infodecal-wesp"
 "texture" "decals/stains/sewersludgea"
 "origin" "-2749.21 883.499 384.916"
 }
@@ -8964,6 +8964,7 @@
 "spawnflags" "1"
 "origin" "-4884 492 381"
 "OnTrigger" "seq_gary_place,BeginSequence,,0,-1,,"
+"OnTrigger" "main_sndscheme,FadeIn,1,0,-1,,"
 }
 {
 "classname" "info_node"
@@ -9303,6 +9304,7 @@
 "origin" "-4997 692.49 475.93"
 "targetname" "dialog_w_gary"
 "OnTrigger" "Gary,StartPlayerDialogRemote,,0,-1,,"
+"OnTrigger" "main_sndscheme,FadeOut,1,0,-1,,"
 }
 {
 "classname" "point_target"
@@ -9557,6 +9559,7 @@
 {
 "classname" "ambient_soundscheme"
 "start_enabled" "1"
+"targetname" "main_sndscheme"
 "scheme_file" "sound/Schemes/HW_Warrens_5.txt"
 "origin" "-77 -2042 335.639"
 }

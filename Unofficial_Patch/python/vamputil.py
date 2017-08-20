@@ -23,6 +23,7 @@ def setBasic():
     G.Patch_Plus = 0
     __main__.ccmd.detailfade=""
     __main__.ccmd.detaildist=""
+    __main__.ccmd.clothes=""
     pc = __main__.FindPlayer()
     if not (pc.HasItem("item_w_fists")):
         pc.GiveItem("item_w_fists")
@@ -58,6 +59,7 @@ def setPlus():
     G.Patch_Plus = 1
     __main__.ccmd.detailfade=""
     __main__.ccmd.detaildist=""
+    __main__.ccmd.clothes=""
     pc = __main__.FindPlayer()
     if not (pc.HasItem("item_w_fists")):
         pc.GiveItem("item_w_fists")
@@ -1330,7 +1332,6 @@ def VMHelper():
 def IsIdling():
     checkOccult()
     checkBomb()
-    __main__.ccmd.clothes=""
     pc = __main__.FindPlayer()
     G  = __main__.G
     G.Pos_One = pc.GetOrigin()
@@ -2623,8 +2624,8 @@ def mailboxExitCheck():
         if(container.HasItem("item_g_garys_cd") and G.Gary_Photochop == 1 and G.Gary_Damsel == 0):
             container.RemoveItem("item_g_garys_cd")
             G.Gary_Damsel = 1
-        if(container.HasItem("item_w_mingxiao_tentacle") and G.Gary_Damsel == 1 and G.Gary_Imalia == 0):
-            container.RemoveItem("item_w_mingxiao_tentacle")
+        if(container.HasItem("item_g_jumbles_flyer") and G.Gary_Damsel == 1 and G.Gary_Imalia == 0):
+            container.RemoveItem("item_g_jumbles_flyer")
             G.Gary_Imalia = 1
         if(container.HasItem("item_g_wireless_camera_2") and G.Gary_Imalia == 1 and G.Gary_Tawni == 0):
             container.RemoveItem("item_g_wireless_camera_2")

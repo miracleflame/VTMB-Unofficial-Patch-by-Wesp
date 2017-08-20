@@ -409,8 +409,8 @@
 {	409	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	410	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	411	}{	[a little surprised]Gargoyles? Why are you asking about Gargoyles?	}{	[a little surprised]Gargoyles? Why are you asking about Gargoyles?	}{	#	}{	}{	pc.SetQuest("Gargoyle",1)	}{	}{	}{	}{	}{	}{	}{	}
-{	412	}{	It seems that one lives in an old theatre in Hollywood. I have some questions.	}{	It seems that one lives in an old theatre in Hollywood. I have some questions.	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	One haunts a theatre in Hollywood! Tell me more!	}
-{	413	}{	I'd heard that the Tremere clan knows a lot about them. Can you help me?	}{	I'd heard that the Tremere clan knows a lot about them. Can you help me?	}{	481	}{	IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	412	}{	It seems that one lives in an old theater in Hollywood. I have some questions.	}{	It seems that one lives in an old theater in Hollywood. I have some questions.	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	One haunts a theatre in Hollywood! Tell me more!	}
+{	413	}{	I'd heard that the Tremere clan knows a lot about them. Can you help me with one in Hollywood?	}{	I'd heard that the Tremere clan knows a lot about them. Can you help me with one in Hollywood?	}{	481	}{	IsClan(pc,"Tremere")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	414	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	415	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	416	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -569,7 +569,7 @@
 {	569	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	570	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	571	}{	It's a dangerous game you're playing, neonate. I trust you'll make the right decision. Farewell.	}{	It's a dangerous game you're playing, neonate. I trust you'll make the right decision. Farewell.	}{	#	}{	}{	G.Regent_QuestGargoyle = 4	}{	}{	}{	}{	}{	}{	}{	}
-{	572	}{	How can I fight the gargoyle?	}{	How can I fight the gargoyle?	}{	471	}{	not IsDead("Gargoyle") and G.Gargoyle_Convinced == 0 }{	}{	}{	}{	}{	}{	}{	}{	How do I destroy the demon?	}
+{	572	}{	How can I fight the Gargoyle?	}{	How can I fight the Gargoyle?	}{	471	}{	not IsDead("Gargoyle") and G.Gargoyle_Convinced == 0 }{	}{	}{	}{	}{	}{	}{	}{	How do I destroy the demon?	}
 {	573	}{	Actually I already resolved the issue with the Gargoyle.	}{	Actually I already resolved the issue with the Gargoyle.	}{	611	}{	(IsDead("Gargoyle") or G.Gargoyle_Convinced == 1)	}{	G.Regent_Gargoyle = 1	}{	}{	}{	}{	}{	}{	}{	I did ensure that the Blood Golem haunts Hollywood no more already.	}
 {	574	}{	Goodbye, Max.	}{	Goodbye, Max.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Farewell, wizard-king.	}
 {	575	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -579,7 +579,7 @@
 {	579	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	580	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	581	}{	Here... take this. It is an ancient ward that may help you in your battle with the Gargoyle. You need only carry it on your person to enjoy its protection.	}{	Here... take this. It is an ancient ward that may help you in your battle with the Gargoyle. You need only carry it on your person to enjoy its protection.	}{	#	}{	}{	pc.GiveItem("item_p_gargoyle_talisman")	}{	}{	}{	}{	}{	}{	}{	}
-{	582	}{	Thanks, but how do I best fight the gargoyle?	}{	Thanks, but how do I best fight the gargoyle?	}{	471	}{	not IsDead("Gargoyle") and G.Gargoyle_Convinced == 0 }{	}{	}{	}{	}{	}{	}{	}{	Gift appreciated, but how do I destroy the demon?	}
+{	582	}{	Thanks, but how do I best fight the Gargoyle?	}{	Thanks, but how do I best fight the Gargoyle?	}{	471	}{	not IsDead("Gargoyle") and G.Gargoyle_Convinced == 0 }{	}{	}{	}{	}{	}{	}{	}{	Gift appreciated, but how do I destroy the demon?	}
 {	583	}{	Thanks.	}{	Thanks.	}{	591	}{	}{	}{	}{	}{	}{	}{	}{	}{	My person appreciates this gift.	}
 {	584	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	585	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -589,7 +589,7 @@
 {	589	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	590	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	591	}{	Good luck, young one. When you succeed in destroying the Gargoyle, return and I will give you an appropriate reward.	}{	Good luck, young one. When you succeed in destroying the Gargoyle, return and I will give you an appropriate reward.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	592	}{	One question left, how can I fight the gargoyle?	}{	One question left, how can I fight the gargoyle?	}{	471	}{	not IsDead("Gargoyle") and G.Gargoyle_Convinced == 0 }{	}{	}{	}{	}{	}{	}{	}{	More knowledge needed. How do I destroy the demon?	}
+{	592	}{	One question left, how can I fight the Gargoyle?	}{	One question left, how can I fight the Gargoyle?	}{	471	}{	not IsDead("Gargoyle") and G.Gargoyle_Convinced == 0 }{	}{	}{	}{	}{	}{	}{	}{	More knowledge needed. How do I destroy the demon?	}
 {	593	}{	Actually I already resolved the issue with the Gargoyle.	}{	Actually I already resolved the issue with the Gargoyle.	}{	611	}{	(IsDead("Gargoyle") or G.Gargoyle_Convinced == 1)	}{	G.Regent_Gargoyle = 1	}{	}{	}{	}{	}{	}{	}{	I did ensure that the Blood Golem haunts Hollywood no more already.	}
 {	594	}{	Hold on. There was something else I needed.	}{	Hold on. There was something else I needed.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	One thing more...	}
 {	595	}{	I'll do that. See ya.	}{	I'll do that. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}

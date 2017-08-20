@@ -2,18 +2,14 @@
 
 WeaponData
 {
-	"printname"	"Fleshy ball"	// added by wesp
-	"description"	"A weird and disgusting fleshy ball."	// added by wesp
-
-	// added by wesp
-	"playermodel"	"models/scenery/misc/changball/changball.mdl"
-	"infomodel"		"models/scenery/misc/changball/changball.mdl"
+	"printname"	"Ming Far Melee"	// added by wesp
+	"description"	"Far tentacle attack by Ming."	// added by wesp
 
 	// Weapon data is loaded by both the Game and Client DLLs.
-//	"viewmodel"            "models/weapons/w_null.mdl"
-//	"playermodel"          "models/weapons/w_null.mdl"
-//	"wieldmodel_f"         "models/weapons/w_null.mdl"
-//	"wieldmodel_m"         "models/weapons/w_null.mdl"
+	"viewmodel"            "models/weapons/w_null.mdl"
+	"playermodel"          "models/weapons/w_null.mdl"
+	"wieldmodel_f"         "models/weapons/w_null.mdl"
+	"wieldmodel_m"         "models/weapons/w_null.mdl"
 	"anim_prefix"          ""
 
 	"impact_snd_group"	"fist"
@@ -21,13 +17,13 @@ WeaponData
 	"bucket"               "0"
 	"bucket_position"      "1"
 
-	"weight"               "3"	// changed by wesp
-	"item_flags"           "1"	// changed by wesp
-	"item_type"            "generic"	// changed by wesp
+	"weight"               "10"
+	"item_flags"           "0"
+	"item_type"            "weapon_melee hidden"
 	"item_worth"           "0"
 	"equip_mask"		"ClawedForm"
-	"is_wieldable"		"0"	// added by wesp
-	"is_visible_in_hud"    "1"	// changed by wesp
+
+	"is_visible_in_hud"    "0"
 
 	"BitFlag_CantBeLast"   "1"
 
@@ -99,7 +95,7 @@ WeaponData
 		{
 			"640"
 			{
-				"file"		"hud/Inventory_Images/General_Items/ball_sel"	// changed by wesp
+				"file"	"hud/Inventory_Images/Temp_Inven"
 				"x"		"0"
 				"y"		"0"
 				"width"	"100"
@@ -110,7 +106,7 @@ WeaponData
 		{
 			"640"
 			{
-				"file"		"hud/Inventory_Images/General_Items/ball"	// changed by wesp
+				"file"	"hud/Inventory_Images/Temp_Inven"
 				"x"		"0"
 				"y"		"0"
 				"width"	"100"

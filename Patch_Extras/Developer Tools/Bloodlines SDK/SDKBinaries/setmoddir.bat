@@ -7,7 +7,7 @@ pushd "%~dp0"
 
 set "MsgBox=service\msgbox.exe"
 set "Sfk=service\sfk.exe"
-set "SelectFolder=service\setdirdlg.exe /d"
+set "ChooseDir=service\setdirdlg.exe /d"
 
 :: Check Assets
 for %%m in (setdirdlg msgbox sfk) do if not exist "service\%%~m.exe" (
@@ -30,7 +30,7 @@ for /f "usebackq delims== tokens=1,*" %%a in ("GameCfg.ini") do (
 :ChangeModDir
 set ProcDirRan=0
 set DirIsValid=0
-for /f "delims=" %%a in ('%SelectFolder%') do (
+for /f "delims=" %%a in ('%ChooseDir%') do (
 if not "%%~a"=="" (call :ProcessModDir "%%~a"))
 if "%ProcDirRan%"=="0" (exit)
 
@@ -43,7 +43,7 @@ if "%DirIsValid%"=="0" (
 )
 
 :Finalize
-reg add "HKCU\Software\Tools\PackfileExplorer" /v "LastPath"  /t REG_SZ /d "%ModDir%" /f
+reg add "HKCU\Software\Tools\PackfileExplorer" /v "LastPath" /d "%ModDir%" /f
 
 if /i "%ModDir%"=="%ModDirPrev%" if /i not "%~1"=="-first" (
 	%MsgBox% Selected game directory is the same as previous: "%ModDir%". /c:Bloodlines SDK /t:MB_SYSTEMMODAL,MB_ICONWARNING
