@@ -188,11 +188,12 @@ class MuseumBeams :
 
 mb = MuseumBeams()
 
-#MUSEUM: End level
+#MUSEUM: End level, changed by wesp
 def BeckettDialogEnd():
     if G.Museum_Kill == 0:
         __main__.FindPlayer().AwardExperience('Museum04')
-#    if G.Beckett_Goodbye == 1:
+    if G.Patch_Plus == 1:
+        G.Museum_Open = 1
     if __main__.IsClan(__main__.FindPlayer(), "Nosferatu"):
         __main__.ChangeMap(2.5, "sewer_map_landmark", "trig_museum_exit_sewer")
     else:

@@ -49,10 +49,12 @@ def imaliaCheckQuest():
         if highlight: highlight.ScriptHide()
     #changes end
 
-#WARRENS: Fires the relay that unlocks the door in Gary's room
+#WARRENS: Fires the relay that unlocks the door in Gary's room, changed by wesp
 def garyInteractionEnd():
     relay = Find("Relay_Gary_Interaction_End")
     relay.Trigger()
+    if G.Ball_Taken == 0: G.Ball_Taken = 2
+    if G.Ball_Taken == 1: G.Ball_Taken = 3
 
 #WARRENS: Gary Scripts
 def garyAppear():

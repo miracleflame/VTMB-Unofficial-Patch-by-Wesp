@@ -35,7 +35,7 @@ def charityMoneyStolen():
     pc.MoneyAdd(250)
     box_spark = Find("box_sparklies")
     box_spark.ScriptHide()
-    if (pc.humanity >= 6 and G.Charity_Know == 0):
+    if (pc.humanity >= 6 and (G.Charity_Know == 0 or G.Patch_Plus == 0)):
         pc.HumanityAdd(-1)
 
 #GALLERY: Disables security in the Gallery if Chunk allows the player to enter, changed by wesp

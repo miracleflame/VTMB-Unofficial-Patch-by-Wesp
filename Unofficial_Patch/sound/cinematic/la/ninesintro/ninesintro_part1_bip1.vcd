@@ -1,0 +1,366 @@
+// Choreo version 1
+actor "!playercontroller"
+{
+  channel "Anim"
+  {
+    event sequence "ninesintro_part1_bip1"
+    {
+      time 0.000000 60.966999
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  channel "triggers"
+  {
+    event firetrigger "headbat"
+    {
+      time 7.400000 -1.000000
+      param "1"
+    }
+    event firetrigger "Grunt"
+    {
+      time 42.000000 -1.000000
+      param "3"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+  active "0"
+}
+
+actor "sabbat1"
+{
+  channel "Anim"
+  {
+    event sequence "ninesintro_part1_bip1"
+    {
+      time 0.000000 60.966999
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  channel "VO"
+  {
+    event speak "sabbat1_line491"
+    {
+      time 19.073334 27.747051
+      param "Character\dlg\GENERIC\Sabbat1\line491_col_e.mp3"
+      fixedlength
+    }
+    event speak "sabbat2_line3"
+    {
+      time 37.586662 40.147728
+      param "Character\dlg\GENERIC\Sabbat2\line3_col_e.mp3"
+      fixedlength
+    }
+    event speak "sabbat1_line492"
+    {
+      time 40.513332 42.081745
+      param "Character\dlg\GENERIC\Sabbat1\line492_col_e.mp3"
+      fixedlength
+    }
+    event speak "sabbat1_line493"
+    {
+      time 43.500008 47.915768
+      param "Character\dlg\GENERIC\Sabbat1\line493_col_e.mp3"
+      fixedlength
+    }
+    event speak "sabbat1_line494"
+    {
+      time 48.493336 54.398075
+      param "Character\dlg\GENERIC\Sabbat1\line494_col_e.mp3"
+      fixedlength
+    }
+    event speak "sabbat1_line495"
+    {
+      time 57.340000 59.718208
+      param "Character\dlg\GENERIC\Sabbat1\line495_col_e.mp3"
+      fixedlength
+    }
+    event speak "gunshot"
+    {
+      time 56.513329 57.122307
+      param "Weapons\Ranged\Anaconda\Attack_1.wav"
+      fixedlength
+    }
+  }
+  channel "triggers"
+  {
+    event firetrigger "headblast"
+    {
+      time 56.606335 -1.000000
+      param "2"
+    }
+  }
+  channel "Expressions_S1_1"
+  {
+    event expression "greedy s101"
+    {
+      time 11.973332 18.833332
+      param "sabbat_henchman_expressions"
+      param2 "greedy"
+      event_ramp
+      {
+        0.1389 0.9882
+        6.6421 0.9588
+      }
+    }
+    event expression "Anger_No Deform  s101"
+    {
+      time 22.880001 26.453327
+      param "sabbat_henchman_expressions"
+      param2 "Anger_No Deform "
+      event_ramp
+      {
+        0.2789 0.9676
+        3.3533 0.9647
+      }
+    }
+    event expression "Anger_No Deform s102"
+    {
+      time 27.073332 28.186663
+      param "sabbat_henchman_expressions"
+      param2 "Anger_No Deform "
+      event_ramp
+      {
+        0.1632 0.9706
+        0.8166 0.9324
+      }
+    }
+    event expression "Enraged s101"
+    {
+      time 40.373333 42.513329
+      param "sabbat_henchman_expressions"
+      param2 "Anger_No Deform "
+      event_ramp
+      {
+        0.2105 0.9324
+        0.5860 0.9922
+        1.0460 0.8073
+        1.2220 0.9948
+        1.7541 0.9353
+      }
+    }
+    event expression "greedy_NoDeform s102"
+    {
+      time 47.693336 52.633331
+      param "sabbat_henchman_expressions"
+      param2 "greedy_NoDeform"
+      event_ramp
+      {
+        0.2143 0.9509
+        4.6710 0.9386
+      }
+    }
+    event expression "greedy_NoDeform s103"
+    {
+      time 53.653332 54.706665
+      param "sabbat_henchman_expressions"
+      param2 "greedy_NoDeform"
+      event_ramp
+      {
+        0.2105 0.9582
+        0.9001 0.9509
+      }
+    }
+    event expression "Mouth Open s101"
+    {
+      time 55.926666 56.699997
+      param "sabbat_henchman_expressions"
+      param2 "Mouth Open"
+      event_ramp
+      {
+        0.6759 0.9386
+      }
+    }
+    event expression "Enraged s103"
+    {
+      time 56.706669 60.933334
+      param "sabbat_henchman_expressions"
+      param2 "Enraged"
+    }
+    event expression "greedy s104"
+    {
+      time 33.266666 40.006668
+      param "sabbat_henchman_expressions"
+      param2 "greedy"
+      event_ramp
+      {
+        0.2800 0.9582
+        6.3933 0.9607
+      }
+    }
+  }
+  channel "Expressions_S1_2"
+  {
+    event expression "greedy_NoDeform s101"
+    {
+      time 18.620001 23.140003
+      param "sabbat_henchman_expressions"
+      param2 "greedy_NoDeform"
+      event_ramp
+      {
+        0.2158 0.9618
+        4.2626 0.9500
+      }
+    }
+    event expression "Raised Both s101"
+    {
+      time 26.266666 27.220001
+      param "sabbat_henchman_expressions"
+      param2 "Raised Both"
+      event_ramp
+      {
+        0.1711 0.7353
+        0.2105 0.7471
+        0.7486 0.7471
+        0.7882 0.7353
+      }
+    }
+    event expression "snarl s101"
+    {
+      time 27.833338 33.493336
+      param "sabbat_henchman_expressions"
+      param2 "snarl"
+      event_ramp
+      {
+        0.4267 0.9533
+        4.9867 0.8993
+        5.4467 0.4717
+      }
+    }
+    event expression "Raised Both s102"
+    {
+      time 52.346668 53.893337
+      param "sabbat_henchman_expressions"
+      param2 "Raised Both"
+      event_ramp
+      {
+        0.2357 0.9853
+        1.3037 0.9803
+      }
+    }
+    event expression "snarl s102"
+    {
+      time 54.540001 56.526669
+      param "sabbat_henchman_expressions"
+      param2 "snarl"
+      event_ramp
+      {
+        0.1632 0.9681
+        1.9261 0.5676
+      }
+    }
+  }
+  bonerename "Bip04" "Bip01"
+}
+
+actor "sabbat2"
+{
+  channel "Anim"
+  {
+    event sequence "ninesintro_part1_bip1"
+    {
+      time 0.000000 60.966999
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  channel "VO"
+  {
+    event speak "sabbat2_line1"
+    {
+      time 16.559999 19.643515
+      param "Character\dlg\GENERIC\Sabbat2\line1_col_e.mp3"
+      fixedlength
+    }
+    event speak "sabbat2_line2"
+    {
+      time 28.539995 34.079021
+      param "Character\dlg\GENERIC\sabbat2\line2_col_e.mp3"
+      fixedlength
+    }
+    event speak "sabbat3_line11"
+    {
+      time 32.586666 37.028549
+      param "Character\dlg\GENERIC\Sabbat3\line11_col_e.mp3"
+      fixedlength
+    }
+  }
+  channel "Expressions_S2_1"
+  {
+    event expression "laugh s201"
+    {
+      time 28.153334 33.113331
+      param "shovelhead_short_expressions"
+      param2 "laugh"
+      event_ramp
+      {
+        0.2550 0.9509
+        4.7008 0.9337
+      }
+    }
+    event expression "Anger s208"
+    {
+      time 11.700001 20.553335
+      param "shovelhead_short_expressions"
+      param2 "Anger"
+      event_ramp
+      {
+        0.2282 0.9583
+        8.6083 0.9557
+      }
+    }
+    event expression "Sly Smile s208"
+    {
+      time 21.966669 24.540003
+      param "shovelhead_short_expressions"
+      param2 "Sly Smile"
+      event_ramp
+      {
+        0.3625 0.9766
+        2.3250 0.9896
+      }
+    }
+  }
+  channel "Expressions_S2_2"
+  {
+    event expression "Anger s209"
+    {
+      time 24.320000 28.126669
+      param "shovelhead_short_expressions"
+      param2 "Anger"
+      event_ramp
+      {
+        0.2500 0.9688
+        3.5684 0.9740
+      }
+    }
+  }
+  bonerename "Bip02" "Bip01"
+}
+
+actor "sabbat3"
+{
+  channel "Anim"
+  {
+    event sequence "ninesintro_part1_bip1"
+    {
+      time 0.000000 60.966999
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  channel "VO"
+  {
+    event speak "sabbat3_line1"
+    {
+      time 13.593334 15.292359
+      param "Character\dlg\GENERIC\Sabbat3\line1_col_e.mp3"
+      fixedlength
+    }
+  }
+  bonerename "Bip03" "Bip01"
+}
+
+fps 60
+snap off

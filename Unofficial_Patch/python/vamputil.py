@@ -20,7 +20,12 @@ FindClass = __main__.FindEntitiesByClass
 
 def setBasic():
     G  = __main__.G
+    G.PP = 0
     G.Patch_Plus = 0
+    G.Jack_Extra = 0
+    G.Flynn_Extra = 0
+    G.Extra_Lines = 0
+    G.Linux_Wine = 1
     __main__.ccmd.detailfade=""
     __main__.ccmd.detaildist=""
     __main__.ccmd.clothes=""
@@ -56,7 +61,12 @@ def setBasic():
 
 def setPlus():
     G  = __main__.G
+    G.PP = 1
     G.Patch_Plus = 1
+    G.Jack_Extra = 1
+    G.Flynn_Extra = 1
+    G.Extra_Lines = 1
+    G.Linux_Wine = 1
     __main__.ccmd.detailfade=""
     __main__.ccmd.detaildist=""
     __main__.ccmd.clothes=""
@@ -75,6 +85,8 @@ def setPlus():
         for b in basic:
             b.ScriptHide()
         cop = Find("Cop_Deck1_Guard2")
+        IsIdling()
+        G.No_Idle = 0
         if cop: cop.SetModel("models/character/npc/common/Cop_Variant/rookied_cop/Rookied_Cop.mdl")
         cop = Find("Cop_Deck3_Guard2")
         if cop: cop.SetModel("models/character/npc/common/Cop_Variant/rookied_cop/Rookied_Cop.mdl")
@@ -119,16 +131,37 @@ def setPlus():
         flunky4 = Find("flunky4")
         if flunky4 and (IsClan(pc,"Brujah")): flunky4.SetModel("models/character/pc/male/toreador/armor0/Toreador_Male_Armor_0.mdl")
         flunky5 = Find("flunky5")
-        if flunky5 and (IsClan(pc,"Brujah")): flunky5.SetModel("models/character/pc/male/toreador/armor0/Toreador_Male_Armor_0.mdl")
+        if flunky5 and (IsDead("Sweeper")):
+            if (IsClan(pc,"Toreador")): flunky5.SetModel("models/character/pc/male/gangrel/armor_1/Gangrel_Male_Armor_1.mdl")
+            else: flunky5.SetModel("models/character/pc/male/toreador/armor1/Toreador_Male_Armor_1.mdl")
         flunky6 = Find("flunky6")
-        if flunky6 and (IsDead("Sweeper")):
-            if (IsClan(pc,"Toreador")): flunky6.SetModel("models/character/pc/male/gangrel/armor_0/Gangrel_Male_Armor_0.mdl")
-            else: flunky6.SetModel("models/character/pc/male/toreador/armor0/Toreador_Male_Armor_0.mdl")
+        if (flunky6 and G.Copper_Nines == 0):
+            if (IsClan(pc,"Brujah")): flunky6.SetModel("models/character/pc/male/gangrel/armor_1/Gangrel_Male_Armor_1.mdl")
+            else: flunky6.SetModel("models/character/pc/male/brujah/armor1/Brujah_Male_Armor_1.mdl")
         flunky7 = Find("flunky7")
-        if flunky7 and (IsClan(pc,"Toreador") and not pc.IsMale()): flunky7.SetModel("models/character/pc/female/brujah/armor0/Brujah_Female_Armor_0.mdl")
+        if (flunky7 and G.Killer_Nines == 0):
+            if (IsClan(pc,"Malkavian")): flunky7.SetModel("models/character/pc/male/gangrel/armor_1/Gangrel_Male_Armor_1.mdl")
+            else: flunky7.SetModel("models/character/pc/male/malkavian/armor1/Malkavian_Male_Armor_1.mdl")
+        flunky8 = Find("flunky8")
+        if flunky8 and (IsClan(pc,"Toreador") and not pc.IsMale()): flunky8.SetModel("models/character/pc/female/brujah/armor0/Brujah_Female_Armor_0.mdl")
+        gargoyleguard = Find("gargoyleguard")
+        if (gargoyleguard and G.Gargoyle_Convinced == 0):
+            gargoyleguard.ScriptHide()
+        clothes = Find("plus_clothing")
+        condoms = Find("plus_condoms")
+        if clothes and G.Player_Homo == 1:
+            gender = pc.IsMale()
+            if gender: clothes.ScriptHide()
+            else: condoms.ScriptHide()
         box = Find("plus_cigarbox")
         money = Find("basic_money")
         if box: box.AddEntityToContainer("basic_money")
+        tub = Find("plus_tub")
+        if (tub and (G.Killer_Hostile > 0 or G.Killer_Freed > 0)):
+            junkteleport = Find("JunkyardTeleport2")
+            junkteleport.ScriptHide()
+            junkdoor = Find("jnkshkb")
+            junkdoor.Unlock()
         asianvamp = Find("AsianVamp")
         if asianvamp and G.Asian_Swap == 0:
             asianvamp.ScriptHide()
@@ -137,6 +170,23 @@ def setPlus():
             asianvampplus.ScriptUnhide()
             asianvampplus.SetName("AsianVamp")
             G.Asian_Swap = 1
+        copperremains = Find("wesp_copper")
+        copperstake = Find("wesp_stake") 
+        if (copperremains and G.Copper_Prince == 1 and G.Copper_Seen == 0):
+            copperremains.ScriptUnhide()
+            copperstake.ScriptUnhide()
+            G.Copper_Seen = 1
+        elif (copperremains and G.Copper_Seen == 1):
+            copperremains.Kill()
+            copperstake.Kill()
+        locke = Find("Jezebel_Locke")
+        if locke and G.Locke_Swap == 0:
+            locke.ScriptHide()
+            locke.SetName("Jezebel_Locke_basic")
+            lockeplus = Find("Jezebel_Locke_plus")
+            lockeplus.ScriptUnhide()
+            lockeplus.SetName("Jezebel_Locke")
+            G.Locke_Swap = 1
         bladebros = Find("ChangBrosBlade_plus")
         if bladebros and G.Chang_Swap == 0:
             bladebros.SetName("ChangBrosBlade")
@@ -147,13 +197,39 @@ def setPlus():
             clawbrosbasic = Find("Chang_basic")
             clawbrosbasic.Kill()
             G.Chang_Swap = 1
-        museumcabbie = Find("museum_cabbie")
-        if museumcabbie:
+        sarc = Find("sarc_plus")
+        if sarc and G.Story_State >= 65:
+            sarc.ScriptHide()
+            sarcbasic = Find("sarc_basic")
+            sarcbasic.ScriptHide()
+        museummanhole = Find("Manhole_Museum")
+        if museummanhole:
+            museumcabbie = Find("cabbie")
             museumcabbie.WillTalk(0)
             doorfire = Find("door_fire")
             doorfire.Unlock()
             museumteleport = Find("museum_teleport")
             museumteleport.Enable()
+            if G.Story_State >= 30:
+                beckett = Find("Beckett")
+                beckett.ScriptHide()
+                if IsClan(pc,"Nosferatu"):
+                    manholefake = Find("Manhole_Museum_Fake")
+                    manhole = Find("Manhole_Museum")
+                    manholefake.ScriptHide()
+                    manhole.ScriptUnhide()
+                else: museumcabbie.WillTalk(1)
+        giovannimanhole = Find("Manhole_Giovanni")
+        if giovannimanhole:
+            giovannicabbie = Find("cabbie")
+            giovannicabbie.WillTalk(0)
+            if G.Story_State >= 65:
+                if IsClan(pc,"Nosferatu"):
+                    manholefake = Find("Manhole_Giovanni_Fake")
+                    manhole = Find("Manhole_Giovanni")
+                    manholefake.ScriptHide()
+                    manhole.ScriptUnhide()
+                else: giovannicabbie.WillTalk(1)
         shortcut = Find("shortcut_open")
         shortcut_off = Find("shortcut_closed")
         if G.Shortcut_Unlocked == 1:
@@ -173,13 +249,13 @@ def setPlus():
             if smokenote: smokenote.ScriptHide()
             if smokenotenode: smokenotenode.ScriptHide()
         coffeedoor = Find("plus_coffee_door")
-        if G.Library_Coffee == 1:
+        if G.Library_Coffee > 0:
             if coffeedoor: coffeedoor.Unlock()
         else:
             if coffeedoor: coffeedoor.Lock()
         libraryopen = Find("library_open")
         libraryclosed = Find("library_closed")
-        if G.Library_Open == 1:
+        if G.Library_Open > 0:
             if libraryopen: libraryopen.ScriptUnhide()
             if libraryclosed: libraryclosed.ScriptHide()
         else:
@@ -194,10 +270,6 @@ def setPlus():
             andreisabbat.ScriptUnhide()
             triggertrap = Find("Trigger_Trap")
             triggertrap.ScriptHide()
-            dooropen = Find("bradbury_door_open")
-            dooropen.ScriptHide()
-            doorclose = Find("bradbury_door_close")
-            doorclose.ScriptUnhide()
         watchman = Find("watchman")
         if (watchman and G.LaSombra_Seen == 0):
             Find("watchman").ScriptUnhide()
@@ -226,6 +298,24 @@ def setPlus():
         #Changes v_thaumaturgy.mdl to match clan and gender, added by Entenschreck, changed by wesp
         pc = __main__.FindPlayer()
         gender = pc.IsMale()
+        #copies male version
+        if gender and G.File_Copied_Male == 0:
+            print "Changing v_thaumaturgy.mdl to male one"
+            src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\models\\weapons\\thaumaturgy\\view_male\\v_thaumaturgy.mdl"
+            dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\models\\weapons\\thaumaturgy\\view\\v_thaumaturgy.mdl"
+            fileutil.copyfile(src, dst)
+            G.File_Copied_Nos = 0
+            G.File_Copied_Male = 1
+            G.File_Copied_Female = 0
+        #copies female version
+        if not gender and G.File_Copied_Female == 0:
+            print "Changing v_thaumaturgy.mdl to female one"
+            src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\models\\weapons\\thaumaturgy\\view_female\\v_thaumaturgy.mdl"
+            dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\models\\weapons\\thaumaturgy\\view\\v_thaumaturgy.mdl"
+            fileutil.copyfile(src, dst)
+            G.File_Copied_Nos = 0
+            G.File_Copied_Male = 0
+            G.File_Copied_Female = 1
         #copies Nosferatu version
         if IsClan(pc, "Nosferatu") and G.File_Copied_Nos == 0:
             print "Changing v_thaumaturgy.mdl to Nosferatu one"
@@ -235,24 +325,6 @@ def setPlus():
             G.File_Copied_Nos = 1
             G.File_Copied_Male = 0
             G.File_Copied_Female = 0
-        #copies male version
-        elif gender and G.File_Copied_Male == 0:
-            print "Changing v_thaumaturgy.mdl to male one"
-            src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\models\\weapons\\thaumaturgy\\view_male\\v_thaumaturgy.mdl"
-            dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\models\\weapons\\thaumaturgy\\view\\v_thaumaturgy.mdl"
-            fileutil.copyfile(src, dst)
-            G.File_Copied_Nos = 0
-            G.File_Copied_Male = 1
-            G.File_Copied_Female = 0
-        #copies female version
-        elif not gender and G.File_Copied_Female == 0 and pc.clan == 7:
-            print "Changing v_thaumaturgy.mdl to female one"
-            src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\models\\weapons\\thaumaturgy\\view_female\\v_thaumaturgy.mdl"
-            dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\models\\weapons\\thaumaturgy\\view\\v_thaumaturgy.mdl"
-            fileutil.copyfile(src, dst)
-            G.File_Copied_Nos = 0
-            G.File_Copied_Male = 0
-            G.File_Copied_Female = 1
 
 def unhidePlus():
     c  = __main__.ccmd
@@ -1175,25 +1247,25 @@ def checkCD():
 
 #Toggle walking/running, added by wesp
 def toggleSpeed():
-	G = __main__.G
-	c = __main__.ccmd
-	if(G.Walk == 1):
-		c.run=""
-		G.Walk = 0
-	else:
-		c.walk=""
-		G.Walk = 1
+    G = __main__.G
+    c = __main__.ccmd
+    if(G.Walk == 1):
+        c.run=""
+        G.Walk = 0
+    else:
+        c.walk=""
+        G.Walk = 1
 
 #Toggle automatic moving, added by wesp
 def toggleMove():
-	G = __main__.G
-	c = __main__.ccmd
-	if(G.Go == 1):
-		c.stop=""
-		G.Go = 0
-	else:
-		c.go=""
-		G.Go = 1
+    G = __main__.G
+    c = __main__.ccmd
+    if(G.Go == 1):
+        c.stop=""
+        G.Go = 0
+    else:
+        c.go=""
+        G.Go = 1
 
 #Particles for dialogue Domination and Presence, added by wesp
 def dialogParticles():
@@ -1348,10 +1420,10 @@ def IsIdling():
             music.Volume (8)
             scheme1.FadeIn(0)
             scheme2.FadeOut(0)
-    __main__.ScheduleTask(3.0,"AThingOfSomeKind()")
+    __main__.ScheduleTask(1.0,"AThingOfSomeKind()")
     #__main__.ScheduleTask(1.0,"game_mechanics.AnotherThingOfSomeKind()")
-    timer = __main__.FindEntityByName("idle_timer")
-    if timer: timer.Disable()
+    #timer = __main__.FindEntityByName("idle_timer")
+    #if timer: timer.Disable()
     #Animal Friendship
     #if G.FeatValue == G.FeatValueHelper: pass
     #else: game_mechanics.GetFeatValue() 
@@ -1626,8 +1698,8 @@ def AThingOfSomeKind():
         elif(i == 6): c.Alert_Lookaround=""
     elif G.Delay != 0:
         G.Delay = G.Delay - 1
-    timer = __main__.FindEntityByName("idle_timer")
-    if timer: timer.Enable()
+#    timer = __main__.FindEntityByName("idle_timer")
+#    if timer: timer.Enable()
 
 #Adds random whispers to malkavian lookaround animation, "Ambiguous" or "Danger", added by Entenschreck, changed by wesp
 def RandomWhisper():
@@ -2610,7 +2682,7 @@ def mailboxExitCheck():
             G.Werewolf_Quest = 4
             pc.SetQuest("Werewolf Blood", 3)
             pc.ChangeMasqueradeLevel(-1)
-        if(container.HasItem("item_g_garys_film") and G.Story_State >= 45):
+        if(container.HasItem("item_g_garys_film") and G.Ball_Taken == 2):
             container.RemoveItem("item_g_garys_film")
             G.Gary_Voerman = 1
         if(container.HasItem("item_g_garys_photo") and G.Gary_Voerman == 1 and G.Velvet_Poster == 0):
@@ -2624,10 +2696,11 @@ def mailboxExitCheck():
         if(container.HasItem("item_g_garys_cd") and G.Gary_Photochop == 1 and G.Gary_Damsel == 0):
             container.RemoveItem("item_g_garys_cd")
             G.Gary_Damsel = 1
-        if(container.HasItem("item_g_jumbles_flyer") and G.Gary_Damsel == 1 and G.Gary_Imalia == 0):
+        if(container.HasItem("item_g_jumbles_flyer") and G.Ball_Taken == 3 and G.Gary_Imalia == 0):
             container.RemoveItem("item_g_jumbles_flyer")
             G.Gary_Imalia = 1
-        if(container.HasItem("item_g_wireless_camera_2") and G.Gary_Imalia == 1 and G.Gary_Tawni == 0):
+            G.Ball_Taken = 2
+        if(container.HasItem("item_g_wireless_camera_2") and G.Gary_Damsel == 1 and G.Gary_Tawni == 0):
             container.RemoveItem("item_g_wireless_camera_2")
             G.Gary_Tawni = 1
         if(container.HasItem("item_g_wireless_camera_4") and G.Gary_Tawni == 1 and G.Gary_Blind == 0):
@@ -2776,9 +2849,12 @@ def setArea( s ):
         print ( "*** In Chinatown ***" )
         G.In_Chinatown = 1
 
-#EMBRACE: Determines which models the sire and stakers should use.
+#EMBRACE: Determines which models the sire and stakers should use, changed by wesp
 def chooseSire():
     pc = __main__.FindPlayer()
+    if(pc.HasItem("item_i_written")):
+        pc.RemoveItem("item_i_written")
+        __main__.G.Player_Homo = 1
     gender = pc.IsMale()
     clan = pc.clan
     sire = Find("Sire")
@@ -2805,72 +2881,100 @@ def chooseSire():
             sire.SetModel(brujah_female)
             staker1.SetModel(malkavian_male)
             staker2.SetModel(toreador_male)
+            if __main__.G.Player_Homo == 1:
+                sire.SetModel(gangrel_male)
         #GANGREL
         elif(clan == 3):
             sire.SetModel(gangrel_female)
             staker1.SetModel(nosferatu_male)
             staker2.SetModel(tremere_male)
+            if __main__.G.Player_Homo == 1:
+                sire.SetModel(brujah_male)
         #MALKAVIAN
         elif(clan == 4):
             sire.SetModel(malkavian_female)
             staker1.SetModel(toreador_male)
             staker2.SetModel(ventrue_male)
+            if __main__.G.Player_Homo == 1:
+                sire.SetModel(toreador_male)
         #NOSFERATU
         elif(clan == 5):
             sire.SetModel(toreador_female)
             staker1.SetModel(tremere_male)
             staker2.SetModel(brujah_male)
+            if __main__.G.Player_Homo == 1:
+                sire.SetModel(toreador_male)
         #TOREADOR
         elif(clan == 6):
             sire.SetModel(toreador_female)
             staker1.SetModel(ventrue_male)
             staker2.SetModel(gangrel_male)
+            if __main__.G.Player_Homo == 1:
+                sire.SetModel(malkavian_male)
         #TREMERE
         elif(clan == 7):
             sire.SetModel(tremere_female)
             staker1.SetModel(brujah_male)
             staker2.SetModel(malkavian_male)
+            if __main__.G.Player_Homo == 1:
+                sire.SetModel(ventrue_male)
         #VENTRUE
         elif(clan == 8):
             sire.SetModel(ventrue_female)
             staker1.SetModel(gangrel_male)
             staker2.SetModel(nosferatu_male)
+            if __main__.G.Player_Homo == 1:
+                sire.SetModel(tremere_male)
     else:
         #BRUJAH
         if(clan == 2):
             sire.SetModel(brujah_male)
             staker1.SetModel(malkavian_male)
             staker2.SetModel(toreador_male)
+            if __main__.G.Player_Homo == 1:
+                sire.SetModel(gangrel_female)
         #GANGREL
         elif(clan == 3):
             sire.SetModel(gangrel_male)
             staker1.SetModel(nosferatu_male)
             staker2.SetModel(tremere_male)
+            if __main__.G.Player_Homo == 1:
+                sire.SetModel(brujah_female)
         #MALKAVIAN
         elif(clan == 4):
             sire.SetModel(malkavian_male)
             staker1.SetModel(toreador_male)
             staker2.SetModel(ventrue_male)
+            if __main__.G.Player_Homo == 1:
+                sire.SetModel(toreador_female)
         #NOSFERATU
         elif(clan == 5):
             sire.SetModel(toreador_male)
             staker1.SetModel(tremere_male)
             staker2.SetModel(brujah_male)
+            if __main__.G.Player_Homo == 1:
+                sire.SetModel(toreador_female)
         #TOREADOR
         elif(clan == 6):
             sire.SetModel(toreador_male)
             staker1.SetModel(ventrue_male)
             staker2.SetModel(gangrel_male)
+            if __main__.G.Player_Homo == 1:
+                sire.SetModel(malkavian_female)
         #TREMERE
         elif(clan == 7):
             sire.SetModel(tremere_male)
             staker1.SetModel(brujah_male)
             staker2.SetModel(malkavian_male)
+            if __main__.G.Player_Homo == 1:
+                sire.SetModel(ventrue_female)
         #VENTRUE
         elif(clan == 8):
             sire.SetModel(ventrue_male)
             staker1.SetModel(gangrel_male)
             staker2.SetModel(nosferatu_male)
+            if __main__.G.Player_Homo == 1:
+                sire.SetModel(tremere_female)
     #FINISH THIS FUNCTION
 
 #PROSTITUTES: Called when initiating dialogue with a prostitute to change her name to "prostitute"

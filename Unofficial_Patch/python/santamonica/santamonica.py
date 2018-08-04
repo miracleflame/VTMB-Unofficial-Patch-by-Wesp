@@ -467,10 +467,14 @@ def beachhouseStatus():
     cop_patrol_pier = Find("cop_patrol_pier")
     if __main__.IsDead("cop_patrol_pier"):
         cop_patrol_pier.Kill()
-    if(G.Beachhouse_Hostile):
+    if(G.Beachhouse_Hostile == 1):
         dudes = __main__.FindEntitiesByClass("npc_VHumanCombatant")
         for dude in dudes:
             dude.SetRelationship("player D_HT 5")
+    if(G.Beach_Dead == 1):
+        dudes = __main__.FindEntitiesByClass("npc_VHumanCombatant")
+        for dude in dudes:
+            dude.Kill()
 
 #BEACHHOUSE: Enforces the results of talking to brian at the beachouse
 def brianDialogResults():
@@ -954,7 +958,7 @@ def stairsKeyCheck():
 
 #CLINIC: Updates the user's journal for drug stealing quest, changed by wesp
 def updateDrugQuest():
-    if G.Patch_Plus == 1 and G.Trip_Discount == 1:
+    if G.Patch_Plus == 1 and G.Trip_Discount == 1 and __main__.FindPlayer().HasItem("item_g_drugs_drug_box"):
         G.Trip_Discount = 2
         __main__.FindPlayer().SetQuest("Trip Drugs", 2)
 
@@ -1350,12 +1354,12 @@ def pawnshopLeave():
     else:
         __main__.ChangeMap(2.5, "pawnshop1", "PawnshopTeleport1")        
 
-#PIER: Determines whether the player can access the beachhouse or not
+#PIER: Determines whether the player can access the beachhouse or not, changed by wesp
 def beachHouseOpen():
     gate = Find("beachhousegate")
     if(G.Mercurio_Quest == 1):
         gate.Unlock()
-    elif(G.Mercurio_Quest > 1):
+    elif(G.Mercurio_Quest > 1 and G.Patch_Plus == 0):
         gate.Lock()
 
 #PIER: Determines the state of Mercurio/Beachhouse guys on the beach
@@ -1376,6 +1380,7 @@ def beachVisitors():
             mercurio.ScriptHide()
         #thugs maybe
         if((IsDead("Mercurio") or G.Prince_Mercurio) and G.Beach_Dead == 0 and state == 2):
+            G.Beach_Dead = 1 
             if(G.Dennis_Alone and not IsDead("Dennis") and dennis and carl and mike and brian):
                 hideThinBloods()
                 dennis.ScriptUnhide()
@@ -1791,9 +1796,9 @@ def galleryWitnessed():
     G.Jeanette_Fire = 3
     #__main__.FindPlayer().SetQuest("Slashterpiece", 4)
 
-#SANTAMONICA: Locks gimble after quest
+#SANTAMONICA: Locks gimble after quest, changed by wesp
 def gimbleQuestDone():
-    if G.Gimble_Dead == 1:
+    if (G.Gimble_Dead == 1 and G.Patch_Plus == 0):
         door = Find("basementdr")
         door.Close()
         door.Lock()
@@ -1961,7 +1966,7 @@ def toWarehouse():
 
 #SEWER: Hides the ocean house from the sewer after the quest, changed by wesp
 def oceanHouseQuest():
-    if(G.Therese_Quest > 1):
+    if(G.Therese_Quest > 1 and G.Patch_Plus == 0):
         guy = Find("ManholeB7")
         guy.ScriptHide()
 

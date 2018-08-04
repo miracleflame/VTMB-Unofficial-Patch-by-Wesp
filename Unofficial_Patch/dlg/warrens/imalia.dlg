@@ -138,16 +138,16 @@
 {	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	141	}{	You will? Great. Here are the cameras. She lives in Hollywood, an apartment building right across from the Luckee Star motel. I had someone here dig up a spare key to her apartment for me. Take that, too.	}{	You will? Great. Here are the cameras. She lives in Hollywood, an apartment building right across from the Luckee Star motel. I had someone here dig up a spare key to her apartment for me. Take that, too.	}{	#	}{	}{	pc.SetQuest("Imalia",1); pc.GiveItem("item_k_tawni_apartment_key"); pc.GiveItem("item_g_wireless_camera_1"); pc.GiveAmmo("item_g_wireless_camera_1",2); G.Imalia_Quest = 2; G.Tawni_Spotted = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	You will? Great. Here are the cameras. She lives in Hollywood, an apartment building right across from the Luckee Star motel. I had someone here dig up a spare key to her apartment for me. Take that, too.	}{	You will? Great. Here are the cameras. She lives in Hollywood, an apartment building right across from the Luckee Star motel. I had someone here dig up a spare key to her apartment for me. Take that, too.	}{	#	}{	}{	pc.SetQuest("Imalia",1); G.Imalia_Quest = 2; G.Tawni_Spotted = 0	}{	}{	}{	}{	}{	}{	}{	}
 {	142	}{	Cool. Can I ask you a few more questions?	}{	Cool. Can I ask you a few more questions?	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Might I mine your gray matter?	}
 {	143	}{	Thanks. I'll take care of it. See ya.	}{	Thanks. I'll take care of it. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
 {	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	146	}{	Look, I'll definitely make it worth your while if you do it right. But listen... I don't want her dead, I want her to suffer. Get in and get out without her knowing about it. Understand?	}{	Look, I'll definitely make it worth your while if you do it right. But listen... I don't want her dead, I want her to suffer. Get in and get out without her knowing about it. Understand?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	147	}{	Fine. I'll do it.	}{	Fine. I'll do it.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	This deed I will do.	}
-{	148	}{	I'll think about it. Can I ask you a few more questions?	}{	I'll think about it. Can I ask you a few more questions?	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Might I mine your gray matter?	}
-{	149	}{	I don't know. I'll get back to you. Later.	}{	I don't know. I'll get back to you. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
-{	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	147	}{	Fine. I'll do it.	}{	Fine. I'll do it.	}{	141	}{	not pc.HasItem("item_g_wireless_camera_1")	}{	pc.GiveItem("item_k_tawni_apartment_key"); pc.GiveItem("item_g_wireless_camera_1"); pc.GiveAmmo("item_g_wireless_camera_1",2)	}{	}{	}{	}{	}{	}{	}{	This deed I will do.	}
+{	148	}{	Fine. I'll do it.	}{	Fine. I'll do it.	}{	141	}{	pc.HasItem("item_g_wireless_camera_1")	}{	pc.GiveItem("item_k_tawni_apartment_key"); pc.GiveAmmo("item_g_wireless_camera_1",3)	}{	}{	}{	}{	}{	}{	}{	This deed I will do.	}
+{	149	}{	I'll think about it. Can I ask you a few more questions?	}{	I'll think about it. Can I ask you a few more questions?	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Might I mine your gray matter?	}
+{	150	}{	I don't know. I'll get back to you. Later.	}{	I don't know. I'll get back to you. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}^
 {	151	}{	Hey.	}{	Hey.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	152	}{	What's up, Imalia. You got a few minutes to talk?	}{	What's up, Imalia. You got a few minutes to talk?	}{	161	}{	G.Imalia_Pissed < 2 and pc.GetQuestState("Guy") < 1	}{	}{	}{	}{	}{	}{	}{	}{	Might I mine your gray matter?	}
 {	153	}{	Hey! What's up, girl?	}{	Hey! What's up, girl?	}{	371	}{	pc.GetQuestState("Guy") == 1 and not pc.HasItem("item_g_guy_magazine")	}{	}{	}{	}{	}{	}{	}{	}{	Greetings, Cleopatra!	}
