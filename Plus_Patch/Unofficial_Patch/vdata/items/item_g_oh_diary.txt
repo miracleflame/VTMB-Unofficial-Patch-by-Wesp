@@ -1,0 +1,76 @@
+
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	
+	"infomodel"	"models/items/Diary/Info/Info_Diari.mdl"	// changed by wesp
+	"playermodel"	"models/items/Diary/Ground/Diari.mdl"	// changed by wesp
+	
+	"anim_prefix"	" "
+
+	"printname"	"Diary"
+	"description"	"This is the charred remains of what looks like a diary:
+
+			05/30/1958 - Just arrived here, at the Ocean House. We have a week-long holiday here in Santa Monica, and Ed has booked us a room for the hotel's grand opening. It's a wonderful place, almost magical. The children have been swimming all afternoon.
+
+			05/31/1958 - The first two days have been almost perfect, except that Ed can't seem to stop asking about the locket I received from my mother. He seems to think it was sent to me by some other admirer. Ed can be sweet, but sometimes his jealousy can get the better of him. Hopefully he'll feel better tomorrow.
+
+			06/01/1958 - Sun is out today, not a cloud in the sky. Ed seems a little on edge, keeps guessing as to who my \"new boyfriend\" is. Silly Ed.
+
+			06/03/1958 - There was a picnic for the hotel guests this morning... quite a grand affair. Ed is in a dark mood. I don't know what I can do to reassure him that he is my one and only love. The only time he seemed to brighten up was when he was speaking to the groundskeeper. Boys and their tools....
+
+			06/04/1958 - We only have two days left, and thank God we're finally going home. Ed won't speak to me or the children, and I've found him more than once in the bathroom holding the locket and staring at it. I'm afraid he's suffered some sort of breakdown. I've told him we can go home, but he just shakes his head. He won't look at me. I just want to go home.
+
+			06/05/1958 - Ed left early this morning, and I haven't seem him since. If I haven't seen him in another hour, I'm going to call the hotel manager. Against my better wishes, Ed Jr. went to look for him downstairs in the basement. I'm going to send Tiffany down to fetch him, if... wait... someone is knocking at the door....
+
+			Oh my God, Ed covered in blood... coming to kill me... locked myself in the bathroom... he's gone crazy... he keeps shouting we'll be together forever and he'll never let me go... someone please hel... (The writing trails off the end of the page.)"
+
+
+
+	"bucket"		"1"
+	"bucket_position"	"2"
+
+	"camera_class"		"noswitch"
+	"is_wieldable"		"0"
+	"weight"		"1"
+	"item_flags"		"1"
+	"item_type"		"powerup"
+	"item_worth"		"-1"
+	"is_visible_in_hud"		"1"
+
+	SoundData
+	{
+		"pickup"
+		{
+			"sound1"	"items/Book/Pickup.wav"
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/Diari_SEL"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"	"hud/Inventory_Images/General_Items/Diari"	// changed by wesp
+				"x"		"0"
+				"y"		"0"
+				"width"	"100"
+				"height"	"64"
+			}
+		}
+	}
+}

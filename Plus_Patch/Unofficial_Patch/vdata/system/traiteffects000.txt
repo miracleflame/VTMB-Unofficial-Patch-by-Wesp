@@ -607,6 +607,16 @@ TraitEffectsData
 		"InternalName"	"History"
 		"Name"		"History"
 
+		TraitEffectGroup	// added by wesp
+		{
+			"InternalName"	"History (Homo)"
+			TraitEffect
+			{
+				"Trait"	"item_i_written"
+				"Modifier"	"+1"
+			}
+		}
+
 // =======-------------- Stat Shufflers -------------========
 //             ----------- Attributes ------------
 
@@ -775,7 +785,7 @@ TraitEffectsData
 			TraitEffect
 			{
 				"Trait"	"BloodPool"
-				"Modifier"	"+2"
+				"Modifier"	"Damage 2"	// changed by wesp
 			}
 			TraitEffect
 			{	// Restrict it to only the opposite gender
@@ -795,7 +805,7 @@ TraitEffectsData
 			TraitEffect
 			{
 				"Trait"	"BloodPool"
-				"Modifier"	"+2"
+				"Modifier"	"Damage 2"	// changed by wesp
 			}
 			TraitEffect
 			{	// Restrict it to only the opposite gender
@@ -915,7 +925,7 @@ TraitEffectsData
 			TraitEffect
 			{
 				"Trait"	"BloodPool"	// This is a "Feeding" Bonus (Constrained by the above flag to only work for Tramps)
-				"Modifier"	"Damage 2"
+				"Modifier"	"Damage 2"	// changed by wesp
 			}
 //			Knowledge Advancement Penalty
 			TraitEffect
@@ -1882,7 +1892,10 @@ TraitEffectsData
 			TraitEffect
 			{
 				"Trait"	"Protean"
-				"Modifier"	"+1"
+				Costs		// changed by wesp
+				{
+					"Raise"	"Table: 2, 4, 8, 12, 16"
+				}
 			}
 
 			TraitEffect	// added by wesp
@@ -2175,7 +2188,7 @@ TraitEffectsData
 			TraitEffect
 			{
 				"Trait"	"BloodPool"
-				"Modifier"	"+2"
+				"Modifier"	"Damage 2"	// changed by wesp
 			}
 			TraitEffect
 			{	// Restrict it to only the opposite gender
@@ -2222,6 +2235,7 @@ TraitEffectsData
 //// Deafness?  (-Perception?)
 //// Luck modifier?
 		}
+
 	}
 
 	TraitEffectCategory

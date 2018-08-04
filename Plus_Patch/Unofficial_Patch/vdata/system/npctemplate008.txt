@@ -1,0 +1,298 @@
+//////////////////////////////////////////////////
+// NPC Stat Templates (Packages)
+//
+//	NPCs in worldcraft are assigned one of these which determines their statistics.
+
+ClanDataTables
+{
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Bum"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"					"None"
+//			"ClanEffect"			""
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"SoundGroup"	"Bum"
+			"FastFood"			"1"	// ensures feeding always succeeds
+			"Tramp"				"1"
+			"AlwaysInnocent"		"1"	// added by wesp
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"2"
+			"Dexterity"				"1"
+			"Stamina"				"1"
+			"Charisma"				"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"2"
+			"Intelligence"			"1"
+			"Wits"					"2"
+
+			"BloodPool"				"3"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"Civilian"
+			"Excluded_Equipment"	"Default"
+
+			"Max_Health"		"28"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"0"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"BumFastFood"
+			"ParentTemplateName"		"Bum"
+			"Name"				"None"
+			"Description"			"Mmmmm... filthy"
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"SoundGroup"	"Bum"
+			"FastFood"			"1"
+			"Tramp"				"1"
+			"AlwaysInnocent"		"1"	// added by wesp
+		}
+		
+		Attributes
+		{
+			"Bloodpool"				"5"
+		}
+
+	}
+
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Hooker"
+			"ParentTemplateName"		""	// changed by wesp
+			"Name"				"None"
+			"Description"			"Like Julia Roberts, only like a real hooker."
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"SoundGroup"	""
+			"Tramp"				"1"
+			"FastFood"			"1"
+			"AlwaysInnocent"		"1"	// added by wesp
+		}
+		
+		Attributes
+		{
+			"Bloodpool"				"7"
+			"Max_Health"		"16"
+		}
+
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Blueblood"
+			"ParentTemplateName"		""	// changed by wesp
+			"Name"				"None"
+			"Description"			"Queen Elizabeth, Thurston Howell III, Waldorf and that other muppet, etc."
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"FastFood"			"1"
+			"Is_BlueBlood"	"1"
+			"SoundGroup"	""
+			"AlwaysInnocent"		"1"	// added by wesp
+		}
+		
+		Attributes
+		{
+			"Bloodpool"				"9"
+		}
+
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"BluebloodFastfood"
+			"ParentTemplateName"		"Blueblood"
+			"Name"				"None"
+			"Description"			"Queen Elizabeth, Thurston Howell III, Waldorf and that other muppet, etc."
+		}
+
+		General
+		{
+			"Clan"					"None"
+			"Is_BlueBlood"	"1"
+			"FastFood"			"1"
+			"AlwaysInnocent"		"1"	// added by wesp
+		}
+
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Plague-Bum"
+			"ParentTemplateName"		"Bum"
+			"Name"				"None"
+			"Description"			""
+		}
+
+		General
+		{
+			"Clan"				"None"
+//			"ClanEffect"			""
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"SoundGroup"			"Bum"
+			"FastFood"			"1"	// ensures feeding always succeeds
+			"Has_Badblood"			"1"
+			"Tramp"				"1"
+			"AlwaysInnocent"		"1"	// added by wesp
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"			"Physical_Mental_Social"
+			"Strength"				"2"
+			"Dexterity"				"1"
+			"Stamina"				"1"
+			"Charisma"				"1"
+			"Manipulation"			"1"
+			"Appearance"			"1"
+			"Perception"			"2"
+			"Intelligence"			"1"
+			"Wits"					"2"
+
+			"BloodPool"				"3"
+			"FaithPoints"			"0"
+			"Starting_Equipment"	"Civilian"
+			"Excluded_Equipment"	"Default"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"0"
+			"Intimidation"			"0"
+			"Subterfuge"			"0"
+//			"Animal_Ken"			"0"
+			"Firearms"				"0"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"
+			"Finance"				"0"
+			"Investigation"			"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+}
+
