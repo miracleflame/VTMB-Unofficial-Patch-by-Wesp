@@ -86,7 +86,7 @@ def DialogPostProcess():
         #changes end
 
     # the first time
-    elif (G.Tut_Jack == 1 and G.Tutorial_Blueblood == 0):
+    elif (G.Tut_Jack == 1 and G.Tutorial_Blueblood == 0 and G.Tutorial_Feeding == 0):
 #        popup.SetValue(2)
 #        popup = Find("popup_2")
 #        popup.OpenWindow()
@@ -97,6 +97,7 @@ def DialogPostProcess():
         if ip: ip.Enable()
         trig = Find("trig_off_porch")
         if trig: trig.Kill()
+        G.Tutorial_Feeding = 1 
 
     # outside the chopshop door, after the blueblood
     elif (G.Tut_Jack == 2 and G.Tutorial_Blueblood == 1):
@@ -195,9 +196,9 @@ def DialogPostProcess():
 
     # end of tutorial, changed by wesp
     elif G.Tut_Jack >= 15:
-        __main__.ScheduleTask(13, "__main__.FindEntityByName(\'popup_58\').OpenWindow()")
+        __main__.ScheduleTask(5, "__main__.FindEntityByName(\'popup_58\').OpenWindow()")
 #        Find("popup_58").OpenWindow()
-        __main__.ScheduleTask(10, "__main__.FindEntityByName(\"end_fade\").Fade()")
+        __main__.ScheduleTask(2, "__main__.FindEntityByName(\"end_fade\").Fade()")
         jack = Find("Jack")
         jack.WillTalk(0)
 
@@ -303,7 +304,7 @@ def SetClanPopups():
         popup = Find("popup_59")
         popup.ChangeFile(popuppath + "dialogue_dominate.txt")
 
-#TUTORIAL: Leave tutorial with pretty fade
+#TUTORIAL: Leave tutorial with pretty fade, changed by wesp
 def LeaveTutorial():
     G.Story_State = -2
     __main__.ChangeMap(2.5, "newgame", "trig_leave_tutorial")
