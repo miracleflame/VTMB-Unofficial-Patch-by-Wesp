@@ -129,10 +129,10 @@
 {	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	131	}{	Uh, you know, I know you're technically dead and all, but... goddamn you are one striking looking piece of ass. Where were you when you were still breathing, huh? I don't suppose you'd still be interested in a little, uh -	}{	Uh, you know, I know you're technically dead and all, but... goddamn you are one striking looking piece of ass. Where were you when you were still breathing, huh? I don't suppose you'd still be interested in a little, uh -	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	G.Romero_Crush = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	132	}{	I can slick my parts with blood as you thrust up against my corpse. Okay?	}{	I can slick my parts with blood as you thrust up against my corpse. Okay?	}{	341	}{	IsClan(pc,"Malkavian")	}{	G.Romero_Crush = 0	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	I can slick my parts with blood as you thrust up against my corpse. Okay?	}{	I can slick my parts with blood as you thrust up against my corpse. Okay?	}{	341	}{	IsClan(pc,"Malkavian") and G.Player_Homo == 0	}{	G.Romero_Crush = 0	}{	}{	}{	}{	}{	}{	}{	}
 {	133	}{	Stick to the subject at hand, Romero.	}{	Stick to the subject at hand, Romero.	}{	511	}{	}{	G.Romero_Crush = 0	}{	}{	}{	}{	}{	}{	}{	I'd rather speak of your other love for the undead.	}
 {	134	}{	Even if I were alive the answer'd still be no. Let's get back on track.	}{	Even if I were alive the answer'd still be no. Let's get back on track.	}{	521	}{	not IsClan(pc,"Malkavian")	}{	G.Romero_Crush = 0	}{	}{	}{	}{	}{	}{	}{	}
-{	135	}{	I just might, but let's get back to business first.	}{	I just might, but let's get back to business first.	}{	531	}{	}{	}{	}{	}{	}{	}{	}{	}{	Fleshy pleasure? Sounds like a laugh... but fleshy business first.	}
+{	135	}{	I just might, but let's get back to business first.	}{	I just might, but let's get back to business first.	}{	531	}{	 G.Player_Homo == 0	}{	}{	}{	}{	}{	}{	}{	}{	Fleshy pleasure? Sounds like a laugh... but fleshy business first.	}
 {	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

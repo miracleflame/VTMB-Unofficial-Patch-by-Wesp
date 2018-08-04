@@ -275,12 +275,6 @@ TraitEffectsData
 				"Modifier"	"+1"
 			}
 
-//			TraitEffect	// added by wesp
-//			{
-// basic			"Trait"	"Appearance"
-//				"Modifier"	"+1"
-//			}
-
 			TraitEffect
 			{
 				"Trait"	"Humanity"
@@ -327,12 +321,6 @@ TraitEffectsData
 // basic			"Trait"	"VampHeal_Type"
 //				"Modifier"	"Duration 200%"
 //			}  
-
-//			TraitEffect	// added by wesp
-//			{
-// basic			"Trait"	"Charisma"
-//				"Modifier"	"+1"
-//			}
 
 			TraitEffect
 			{
@@ -526,7 +514,7 @@ TraitEffectsData
 			TraitEffect
 			{
 				"Trait"	"BloodPool"
-				"Modifier"	"+2"
+				"Modifier"	"Damage 2"	// changed by wesp
 			}
 			TraitEffect
 			{	// Restrict it to only the opposite gender
@@ -546,7 +534,7 @@ TraitEffectsData
 			TraitEffect
 			{
 				"Trait"	"BloodPool"
-				"Modifier"	"+2"
+				"Modifier"	"Damage 2"	// changed by wesp
 			}
 			TraitEffect
 			{	// Restrict it to only the opposite gender
@@ -666,7 +654,7 @@ TraitEffectsData
 			TraitEffect
 			{
 				"Trait"	"BloodPool"	// This is a "Feeding" Bonus (Constrained by the above flag to only work for Tramps)
-				"Modifier"	"Damage 2"
+				"Modifier"	"Damage 2"	// changed by wesp
 			}
 //			Knowledge Advancement Penalty
 			TraitEffect
@@ -1632,7 +1620,10 @@ TraitEffectsData
 			TraitEffect
 			{
 				"Trait"	"Protean"
-				"Modifier"	"+1"
+				Costs		// changed by wesp
+				{
+					"Raise"	"Table: 2, 4, 8, 12, 16"
+				}
 			}
 
 			TraitEffect	// added by wesp
@@ -1925,7 +1916,7 @@ TraitEffectsData
 			TraitEffect
 			{
 				"Trait"	"BloodPool"
-				"Modifier"	"+2"
+				"Modifier"	"Damage 2"	// changed by wesp
 			}
 			TraitEffect
 			{	// Restrict it to only the opposite gender
@@ -2290,7 +2281,7 @@ TraitEffectsData
 
 		TraitEffectGroup
 		{
-			"InternalName"	"Discipline (Fortitude)"
+			"InternalName"	"Discipline (Fortitude1)"	// changed by wesp
 			TraitEffect
 			{
 				"Trait"	"Automatic_Soak_Successes"

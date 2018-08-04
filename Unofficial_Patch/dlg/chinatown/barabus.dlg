@@ -19,8 +19,8 @@
 {	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	21	}{	Wait. We can't go yet. There are servers here. We need to hack in and delete all of their research. Should be a mainframe on this floor.	}{	Wait. We can't go yet. There are servers here. We need to hack in and delete all of their research. Should be a mainframe on this floor.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	22	}{	Leave it to me. Not a computer made I can't crack.	}{	Leave it to me. Not a computer made I can't crack.	}{	41	}{	Computer 5	}{	}{	}{	}{	}{	}{	}{	}{	Computers and I are both a little buggy, so we get along swell.	}
-{	23	}{	Hacking? I can barely type.	}{	Hacking? I can barely type.	}{	51	}{	Computer -5	}{	}{	}{	}{	}{	}{	}{	}{	Computers cannot understand me, even when I shout at them for hours.	}
+{	22	}{	Leave it to me. Not a computer made I can't crack.	}{	Leave it to me. Not a computer made I can't crack.	}{	41	}{	pc.CalcFeat("Hacking") > 5 }{	}{	}{	}{	}{	}{	}{	}{	Computers and I are both a little buggy, so we get along swell.	}
+{	23	}{	Hacking? I can barely type.	}{	Hacking? I can barely type.	}{	51	}{	pc.CalcFeat("Hacking") < 6 }{	}{	}{	}{	}{	}{	}{	}{	Computers cannot understand me, even when I shout at them for hours.	}
 {	24	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

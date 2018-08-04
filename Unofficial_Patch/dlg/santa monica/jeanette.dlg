@@ -362,7 +362,7 @@
 {	362	}{	Be back soon. Goodbye.	}{	Be back soon. Goodbye.	}{	811	}{	}{	}{	}{	}{	}{	}{	}{	}{	No canvas will escape my blade.	}
 {	363	}{	I'd never intentionally keep you waiting, Jeanette. Goodbye.	}{	I'd never intentionally keep you waiting, Jeanette. Goodbye.	}{	811	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	I will think of you only as I slash these splatterings.	}
 {	364	}{	If I don't get to see Tung when I get back, I'm taking it out on both of you. Bye.	}{	If I don't get to see Tung when I get back, I'm taking it out on both of you. Bye.	}{	811	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	We will finish worm business when I return, or you will be my next painting.	}
-{	365	}{	We may amuse ourselves together. But I'm not sure it's possible.	}{	We may amuse ourselves together. But I'm not sure it's possible.	}{	541	}{	Seduction 4 & pc.bloodpool > 1 and G.Jeanette_Seduce >= 3 and G.Patch_Plus == 1	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	I remember sweet things together. But can we enjoy them undead?	}
+{	365	}{	We may amuse ourselves together. But I'm not sure it's possible.	}{	We may amuse ourselves together. But I'm not sure it's possible.	}{	541	}{	Seduction 4 & pc.bloodpool > 1 and G.Jeanette_Seduce >= 3 and G.Patch_Plus == 1 and (not pc.IsMale() or G.Player_Homo == 0)	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	I remember sweet things together. But can we enjoy them undead?	}
 {	366	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	367	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	368	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -510,7 +510,7 @@
 {	510	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	511	}{	Oh, sweetheart, desperately, these nights. I'm just a lonely, little girl on a rainy day. Know any games we can play?	}{	Oh, sweetheart, desperately, these nights. I'm just a lonely, little girl on a rainy day. Know any games we can play?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	512	}{	Got any board games?	}{	Got any board games?	}{	521	}{	}{	}{	}{	}{	}{	}{	}{	}{	I seek to pass go, get out of jail free, take a ride on the Reading...	}
-{	513	}{	I know something we can do. But I'm not sure it's possible.	}{	I know something we can do. But I'm not sure it's possible.	}{	541	}{	G.Jeanette_Boink == 0 and pc.bloodpool > 1	}{	}{	}{	}{	}{	}{	}{	}{	I remember sweet, human things. But can we enjoy them undead?	}
+{	513	}{	I know something we can do. But I'm not sure it's possible.	}{	I know something we can do. But I'm not sure it's possible.	}{	541	}{	G.Jeanette_Boink == 0 and pc.bloodpool > 1 and (not pc.IsMale() or G.Player_Homo == 0)	}{	}{	}{	}{	}{	}{	}{	}{	I remember sweet, human things. But can we enjoy them undead?	}
 {	514	}{	I remember something we already did. Is it possible again?	}{	I remember something we already did. Is it possible again?	}{	541	}{	G.Jeanette_Boink == 2 and pc.bloodpool > 1	}{	}{	}{	}{	}{	}{	}{	}{	I remember a sweet thing we did. But can we enjoy it again?	}
 {	515	}{	Killing's fun. Let's go down to the beach, find a vagrant and...	}{	Killing's fun. Let's go down to the beach, find a vagrant and...	}{	531	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	Let us hunt together, enjoying the sweet redness of runaways and vagrants.	}
 {	516	}{	I'll give it some thought. Bye, Jeanette.	}{	I'll give it some thought. Bye, Jeanette.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	None that I can think of. Farewell.	}
@@ -520,7 +520,7 @@
 {	520	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	521	}{	Think harder and dirtier.	}{	Think harder and dirtier.	}{	#	}{	npc.SetDisposition("joy",3)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	522	}{	Cards?	}{	Cards?	}{	531	}{	}{	}{	}{	}{	}{	}{	}{	}{	Fifty-two card pick-up? Pinochle and Parcheesi?	}
-{	523	}{	I know something we can do. But I'm not sure it's possible.	}{	I know something we can do. But I'm not sure it's possible.	}{	541	}{	G.Jeanette_Boink == 0 and pc.bloodpool > 1	}{	}{	}{	}{	}{	}{	}{	}{	I remember sweet, human things. But can we enjoy them undead?	}
+{	523	}{	I know something we can do. But I'm not sure it's possible.	}{	I know something we can do. But I'm not sure it's possible.	}{	541	}{	G.Jeanette_Boink == 0 and pc.bloodpool > 1 and (not pc.IsMale() or G.Player_Homo == 0)	}{	}{	}{	}{	}{	}{	}{	}{	I remember sweet, human things. But can we enjoy them undead?	}
 {	524	}{	I remember something we already did. Is it possible again?	}{	I remember something we already did. Is it possible again?	}{	541	}{	G.Jeanette_Boink == 2 and pc.bloodpool > 1	}{	}{	}{	}{	}{	}{	}{	}{	I remember a sweet thing we did. But can we enjoy it again?	}
 {	525	}{	Killing's fun. Let's go down to the beach, find a vagrant and...	}{	Killing's fun. Let's go down to the beach, find a vagrant and...	}{	531	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	Let us hunt together, enjoying the sweet redness of runaways and vagrants.	}
 {	526	}{	I'll give it some thought. Bye, Jeanette.	}{	I'll give it some thought. Bye, Jeanette.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	None that I can think of. Farewell.	}

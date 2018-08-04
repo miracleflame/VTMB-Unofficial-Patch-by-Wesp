@@ -3,23 +3,23 @@
 HistoryDataTables
 {
 
-//	UNUSED_HistoryData
-//	{
-//		Text
-//		{
-//			"Name"				"Test Discipline Cost Modifier"
-//			"Description"			"<NEEDS DESCRIPTION.>"
-//			"ShortDescription"		"<NEEDS DESCRIPTION.>"
-//			"ShortPenaltyDescription"	"<NEEDS DESCRIPTION.>"
-//		}
-//
-//		General
-//		{
-//			"InternalName"	"Test_Discipline_Cost_Mod"
-//			"CritterScope"	"ALL()"
-//			"Effect"		"History (TEST Discipline Mods)"
-//		}
-//	}
+	HistoryData	// added by wesp
+	{
+		Text
+		{
+			"Name"				"Homosexual"
+			"Description"			"You always found your own gender much more attractive than the other sex, although many people still have issues dealing with this. Maybe vampiric society is different..."
+			"ShortDescription"		"Start as a homosexual."
+			"ShortPenaltyDescription"	""
+		}
+
+		General
+		{
+			"InternalName"	"Homosexual_Player"
+			"CritterScope"	"ALL()"
+			"Effect"		"History (Homo)"
+		}
+	}
 
 	HistoryData	// added by wesp
 	{
@@ -1373,7 +1373,8 @@ Swap the priority order of your Attributes to Mental, Social, Physical."	// adde
 			"Description"			"You've always been persuasive, but as a vampire, few can deny your will.
 			You start with one point in Subterfuge and your Dominate effects are stronger and last longer. As someone who is used to having others serve her, you must spend more experience to raise your Skills."
 			"ShortDescription"		"Advantage: +1 to Subterfuge, Dominate duration 200%, Dominate damage 140%."
-			"ShortPenaltyDescription"	"Penalty: Raising Skills costs more."
+			"ShortPenaltyDescription"	"
+Penalty: Raising Skills costs more."
 		}
 		General
 		{
@@ -1464,8 +1465,8 @@ Swap the priority order of your Attributes to Mental, Social, Physical."	// adde
 		Text
 		{
 			"Name"		"Close to the Beast"
-			"Description"	"After you were Embraced, you were naturally more in tune with the Beast within and that affinity is now physically apparent. You start with one level more in Protean, but others, especially kine, will find your appearance distasteful."	// changed by wesp
-			"ShortDescription"	"Advantage: +1 to Protean."
+			"Description"	"After you were Embraced, you were naturally more in tune with the Beast within and that affinity is now physically apparent. You can advance easier in Protean, but others, especially kine, will find your appearance distasteful."	// changed by wesp
+			"ShortDescription"	"Advantage: Raising Protean costs less."	// changed by wesp
 			"ShortPenaltyDescription"	"Penalty: Appearance maximum of 3."
 		}
 

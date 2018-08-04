@@ -188,7 +188,7 @@
 {	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	191	}{	Evenin' there. ... [sniffs the air]Something burnin'? Ugh, smells like someone burnt the burgers.	}{	Evenin' there. ... [sniffs the air]Something burnin'? Ugh, smells like someone burnt the burgers.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	191	}{	Evenin' there.... [sniffs the air]Something burnin'? Ugh, smells like someone burnt the burgers.	}{	Evenin' there.... [sniffs the air]Something burnin'? Ugh, smells like someone burnt the burgers.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	192	}{	I don't smell anything. I've got an appointment with LaCroix.	}{	I don't smell anything. I've got an appointment with LaCroix.	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	My nose knows no such thing. Send me to LaCroix.	}
 {	193	}{	Never mind that. I need to see LaCroix.	}{	Never mind that. I need to see LaCroix.	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	Pluck it from your mind, I should already be upstairs.	}
 {	194	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -198,7 +198,7 @@
 {	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	201	}{	Ah, sure, I'll open her up for you. ... [Sniffs air, to self]Aw geez, I could go for one of them double Space Burgers... with the onions and the cheese and some bacon and that guacamole[guac-a-mole]....	}{	Ah, sure, I'll open her up for you. ... [Sniffs air, to self]Aw geez, I could go for one of them double Space Burgers... with the onions and the cheese and some bacon and that guacamole[guac-a-mole]....	}{	#	}{	}{	G.Chunk_Open = 3	}{	}{	}{	}{	}{	}{	}{	}
+{	201	}{	Ah, sure, I'll open her up for you.... [Sniffs air, to self]Aw geez, I could go for one of them double Space Burgers... with the onions and the cheese and some bacon and that guacamole[guac-a-mole]....	}{	Ah, sure, I'll open her up for you.... [Sniffs air, to self]Aw geez, I could go for one of them double Space Burgers... with the onions and the cheese and some bacon and that guacamole[guac-a-mole]....	}{	#	}{	}{	G.Chunk_Open = 3	}{	}{	}{	}{	}{	}{	}{	}
 {	202	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	203	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	204	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -366,7 +366,7 @@
 {	366	}{	Ask yourself, what's more important, my life or my low-paying job?	}{	Ask yourself, what's more important, my life or my low-paying job?	}{	0	}{	Persuasion 9	}{	G.Chunk_Run = 1	}{	}{	}{	}{	}{	}{	}{	If death gave you a second chance, would you flee or fight?	}
 {	367	}{	Run away.	}{	Run away.	}{	0	}{	Dominate 1	}{	G.Chunk_Run = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	368	}{	Piggy, don't you know this is a barbecue pit? It's getting hot in here.	}{	Piggy, don't you know this is a barbecue pit? It's getting hot in here.	}{	0	}{	Dementation 1	}{	G.Chunk_Run = 1	}{	}{	}{	}{	}{	}{	}{	Piggy, don't you know this is a barbecue pit? It's getting hot in here.	}
-{	369	}{	Here's your big chance to be a hero. Try and stop me.	}{	Here's your big chance to be a hero. Try and stop me.	}{	381	}{	}{	}{	}{	}{	}{	}{	}{	}{	Be a wall if you must, but I warn you I am a wrecking ball.	}
+{	369	}{	Flee, mortal!	}{	Flee, mortal!	}{	0	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles(); G.Chunk_Run = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	370	}{	Run away.	}{	Run away.	}{	0	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles(); G.Chunk_Run = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	371	}{	I'm sorry, crumb cake. I-It's nothing personal you understand, but... Mr. LaCroix, he tells me I can't let you in here anymore, and uh, I'm supposed to escort you out. I hope you understand.	}{	I'm sorry, crumb cake. I-It's nothing personal you understand, but... Mr. LaCroix, he tells me I can't let you in here anymore, and uh, I'm supposed to escort you out. I hope you understand.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	372	}{	I don't want to hurt you. So go... now.	}{	I don't want to hurt you. So go... now.	}{	381	}{	}{	}{	}{	}{	}{	}{	}{	}{	I do not want to spill your jelly, powdered doughnut.	}
@@ -386,7 +386,7 @@
 {	386	}{	Piggy, don't you know this is a barbecue pit? It's getting hot in here.	}{	Piggy, don't you know this is a barbecue pit? It's getting hot in here.	}{	0	}{	Dementation 1	}{	G.Chunk_Run = 1	}{	}{	}{	}{	}{	}{	}{	Piggy, don't you know this is a barbecue pit? It's getting hot in here.	}
 {	387	}{	Run away.	}{	Run away.	}{	0	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles(); G.Chunk_Run = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	388	}{	Flee, mortal!	}{	Flee, mortal!	}{	0	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles(); G.Chunk_Run = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	389	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	389	}{	Here's your big chance to be a hero. Try and stop me.	}{	Here's your big chance to be a hero. Try and stop me.	}{	401	}{	}{	}{	}{	}{	}{	}{	}{	}{	Be a wall if you must, but I warn you I am a wrecking ball.	}
 {	390	}{	You'll be a fine snack before the main course.	}{	You'll be a fine snack before the main course.	}{	391	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	391	}{	What?	}{	What?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	392	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	G.Chunk_Attack = 1	}{	}{	}{	}{	}{	}{	}{	}
@@ -399,8 +399,8 @@
 {	399	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	400	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	401	}{	If you won't go, then I've... I've got no choice.	}{	If you won't go, then I've... I've got no choice.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	402	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	G.Chunk_Attack = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	403	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	402	}{	Yes, you choose to die.	}{	Yes, you choose to die.	}{	0	}{	}{	G.Chunk_Attack = 1	}{	}{	}{	}{	}{	}{	}{ To die to die, this is the question.	}
+{	403	}{	What if I just went to visit the roof and not LaCroix?	}{	What if I just went to visit the roof and not LaCroix?	}{	421	}{	Persuasion 10 & G.Patch_Plus == 1	}{	G.Chunk_Skip = 1	}{	}{	}{	}{	}{	}{	}{ But if my mind longed for a view from the roof instead?	}
 {	404	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	405	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	406	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -419,8 +419,8 @@
 {	419	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	420	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	421	}{	Well, uh... I guess it's alright. Eh... go on up. Oh sheesh, I hope I don't lose my flashlight privileges for this.	}{	Well, uh... I guess it's alright. Eh... go on up. Oh sheesh, I hope I don't lose my flashlight privileges for this.	}{	#	}{	}{	G.Chunk_Open = 6	}{	}{	}{	}{	}{	}{	}{	}
-{	422	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	423	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	422	}{	Thanks!	}{	Thanks!	}{	0	}{	G.Chunk_Skip == 0	}{	}{	}{	}{	}{	}{	}{	}{	Thanks, thanks, thanks.	}
+{	423	}{	Thanks!	}{	Thanks!	}{	0	}{	G.Chunk_Skip == 1	}{	G.Chunk_Skip = 2	}{	}{	}{	}{	}{	}{	}{	Thanks, thanks, thanks.	}
 {	424	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	425	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	426	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

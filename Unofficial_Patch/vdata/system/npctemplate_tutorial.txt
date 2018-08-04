@@ -1,0 +1,297 @@
+//////////////////////////////////////////////////
+// NPC Stat Templates (Packages)
+//
+// Tutorial guys
+//
+
+ClanDataTables
+{
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"TutorialThug"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			"Firearms 2, Melee 1, Def 0"
+		}
+
+		General
+		{
+			"Clan"				"None"
+//			"ClanEffect"			""
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"SoundGroup"			"Sabbat_Thug"
+
+			"NormalFootfallDist"			"1000"
+			"HeavyFootfallDist"			"800"
+			"NormalFootfallVol"			"0.85"
+			"HeavyFootfallVol"			"0.45"
+			"NpcFakeReloadCountMin"		"6.0" // thirtyeight
+			"AlwaysInnocent"		"0"	// added by wesp
+			"DamageFilterBashing"		"1.00"
+			"DamageFilterLethal"		"1.00"
+			"DamageFilterAggravated"	"1.00"
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"				"Physical_Mental_Social"
+			"Strength"				"2"
+			"Dexterity"				"1"
+			"Stamina"				"1"
+			"Charisma"				"1"
+			"Manipulation"				"1"
+			"Appearance"				"1"
+			"Perception"				"2"
+			"Intelligence"				"1"
+			"Wits"					"2"
+			"Max_Health"				"20"
+
+			"BloodPool"				"5"
+			"FaithPoints"				"0"
+			"Starting_Equipment"			"Civilian"
+			"Excluded_Equipment"			"Default"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"0"
+			"Intimidation"				"0"
+			"Subterfuge"				"0"
+//			"Animal_Ken"				"0"
+			"Firearms"				"1"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"     // Defense vs pc feeding
+			"Finance"				"0"
+			"Investigation"				"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"TutorialShovelhead"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			"Firearms 1, Melee 2, Def 1"
+		}
+
+		General
+		{
+			"Clan"				"None"
+//			"ClanEffect"			""
+			"Kindred"				"1"
+			"Supernatural"			"1"
+			"Boss"				"0"
+			"DisciplineStrata"		"0"	// added by wesp
+			"NoBiting"				"1"	// added by wesp
+			"Monster"				"1"
+			"SoundGroup"			"shovel_head"
+
+			"NormalFootfallDist"			"1000"
+			"HeavyFootfallDist"			"800"
+			"NormalFootfallVol"			"0.85"
+			"HeavyFootfallVol"			"0.45"
+			"NpcFakeReloadCountMin"		"6.0" // none
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"				"Physical_Mental_Social"
+			"Strength"				"2"
+			"Dexterity"				"1"
+			"Stamina"				"1"
+			"Charisma"				"1"
+			"Manipulation"				"1"
+			"Appearance"				"1"
+			"Perception"				"2"
+			"Intelligence"				"1"
+			"Wits"					"1"
+			"Max_Health"				"24"
+
+			"BloodPool"				"5"
+			"FaithPoints"				"0"
+			"Starting_Equipment"			"Civilian"
+			"Excluded_Equipment"			"Default"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"1"
+			"Intimidation"				"0"
+			"Subterfuge"				"0"
+//			"Animal_Ken"				"0"
+			"Firearms"				"0"
+			"Melee"					"1"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"     // Defense vs pc feeding
+			"Finance"				"0"
+			"Investigation"				"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"			"Tutorial_Jack"
+			"ParentTemplateName"	""	// changed by wesp
+			"Name"					"None"
+			"Description"			"Firearms 2, Melee 1, Def 0"
+		}
+
+		General
+		{
+			"Clan"				"None"
+//			"ClanEffect"			""
+			"Kindred"			"1"
+			"Supernatural"			"1"
+			"Boss"				"0"
+			"SoundGroup"			""
+			"Disallow_Knockbacks"		"1"
+			"NoBiting"			"1"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"				"Physical_Mental_Social"
+			"Strength"				"2"
+			"Dexterity"				"1"
+			"Stamina"				"1"
+			"Charisma"				"1"
+			"Manipulation"				"1"
+			"Appearance"				"1"
+			"Perception"				"2"
+			"Intelligence"				"1"
+			"Wits"					"2"
+			"Max_Health"				"819"
+
+			"BloodPool"				"5"
+			"FaithPoints"				"0"
+			"Starting_Equipment"			"Civilian"
+			"Excluded_Equipment"			"Default"
+
+//"Experience"		"40"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"			"Skills_Knowledges_Talents"
+//			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"0"
+			"Intimidation"				"0"
+			"Subterfuge"				"0"
+//			"Animal_Ken"				"0"
+			"Firearms"				"1"
+			"Melee"					"0"
+			"Security"				"0"
+			"Stealth"				"0"
+			"Computer"				"0"     // Defense vs pc feeding
+			"Finance"				"0"
+			"Investigation"				"0"
+//			"Occult"				"0"
+		}
+
+		//	Disciplines
+		Disciplines
+		{
+			"Potence"				"5"
+			"Celerity"				"1"
+		}
+
+		//	Numina
+
+		//	Reactions
+		Reactions
+		{
+			To
+			{
+				"None"				"0"
+				"Brujah"			"0"
+				"Gangrel"			"0"
+				"Malkavian"			"0"
+				"Nosferatu"			"0"
+				"Toreador"			"0"
+				"Tremere"			"0"
+				"Ventrue"			"0"
+			}
+
+			// Note: This would be used for clans added later (via user mods/etc.), to extend the original clans...
+			From
+			{
+			}
+		}
+	}
+
+}

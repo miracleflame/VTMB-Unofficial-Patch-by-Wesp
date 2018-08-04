@@ -231,7 +231,7 @@
 {	231	}{	Insurance. They lied to you in case you lived through the encounter. They hoped to create dissension in the ranks, rumors. It's a trick older than you or I.	}{	Insurance. They lied to you in case you lived through the encounter. They hoped to create dissension in the ranks, rumors. It's a trick older than you or I.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	232	}{	I believe you. Let's open the sarcophagus.	}{	I believe you. Let's open the sarcophagus.	}{	0	}{	}{	G.Prince_Reaction = G.Prince_Reaction +1	}{	}{	}{	}{	}{	}{	}{	Paranoia, again. Let's open the box.	}
 {	233	}{	I still don't know what to believe. Let's open the sarcophagus.	}{	I still don't know what to believe. Let's open the sarcophagus.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hmm.... The box waits.	}
-{	234	}{	I don't believe you.	}{	I don't believe you.	}{	1260	}{	}{	G.Prince_Reaction = G.Prince_Reaction -1	}{	}{	}{	}{	}{	}{	}{	Lies! ... I mean your words.	}
+{	234	}{	I don't believe you.	}{	I don't believe you.	}{	1260	}{	}{	G.Prince_Reaction = G.Prince_Reaction -1	}{	}{	}{	}{	}{	}{	}{	Lies! I mean your words.	}
 {	235	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	236	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -1028,7 +1028,7 @@
 {	1028	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1029	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1030	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	1031	}{	[Smirks, giggles to self. Domination line]Give - me - the key.	}{	[Smirks, giggles to self. Domination line]Give - me - the key.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1031	}{	[Smirks, giggles to self. Domination line]Give - me - the key.	}{	[Smirks, giggles to self. Domination line]Give - me - the key.	}{	#	}{	}{	dominatePlayer()	}{	}{	}{	}{	}{	}{	}{	}
 {	1032	}{	I won't.	}{	I won't.	}{	1041	}{	}{	}{	}{	}{	}{	}{	}{	}{	Nope.	}
 {	1033	}{	Never.	}{	Never.	}{	1041	}{	}{	}{	}{	}{	}{	}{	}{	}{	HAH HAH HA.	}
 {	1034	}{	Fuck you.	}{	Fuck you.	}{	1041	}{	}{	}{	}{	}{	}{	}{	}{	}{	Not going to happen.	}
@@ -1038,7 +1038,7 @@
 {	1038	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1039	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1040	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	1041	}{	[Domination line, angry]I said, give - me - the - key!	}{	[Domination line, angry]I said, give - me - the - key!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1041	}{	[Domination line, angry]I said, give - me - the - key!	}{	[Domination line, angry]I said, give - me - the - key!	}{	#	}{	}{	dominatePlayer()	}{	}{	}{	}{	}{	}{	}{	}
 {	1042	}{	Don't waste your time trying to dominate me.	}{	Don't waste your time trying to dominate me.	}{	0	}{	G.Story_State != 120 and G.Story_State != 105	}{	G.Prince_Decision = 1	}{	}{	}{	}{	}{	}{	}{	Uh-uh, not gonna work.	}
 {	1043	}{	Sit down, LaCroix.	}{	Sit down, LaCroix.	}{	0	}{	G.Story_State != 120 and G.Story_State != 105	}{	G.Prince_Decision = 1	}{	}{	}{	}{	}{	}{	}{	HAH HAH HA.... Sit.	}
 {	1044	}{	Get this!	}{	Get this!	}{	0	}{	G.Story_State != 120 and G.Story_State != 105	}{	G.Prince_Decision = 1	}{	}{	}{	}{	}{	}{	}{	Give you a massive chest wound? My pleasure!	}
@@ -1313,8 +1313,8 @@
 {	1313	}{	(Starting Condition)	}{	}{	1011	}{	G.Story_State == 115 and G.Prince_Reaction >= 5	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1314	}{	(Starting Condition)	}{	}{	1001	}{	G.Story_State == 115 and G.Prince_Reaction < 5	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1315	}{	(Starting Condition)	}{	}{	1181	}{	G.Story_State == 110 and G.Ming_Dead == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	1316	}{	(Starting Condition)	}{	}{	811	}{	G.Story_State == 110 and G.Prince_Reaction >= 5	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	1317	}{	(Starting Condition)	}{	}{	801	}{	G.Story_State == 110 and G.Prince_Reaction < 5	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1316	}{	(Starting Condition)	}{	}{	801	}{	G.Story_State == 110 and G.Prince_Reaction >= 5	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1317	}{	(Starting Condition)	}{	}{	811	}{	G.Story_State == 110 and G.Prince_Reaction < 5	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1318	}{	(Starting Condition)	}{	}{	791	}{	G.Story_State == 85	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1319	}{	(Starting Condition)	}{	}{	591	}{	G.Story_State == 80	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1320	}{	(Starting Condition)	}{	}{	581	}{	G.Prince_Sabbat == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
