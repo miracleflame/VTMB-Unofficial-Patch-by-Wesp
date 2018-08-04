@@ -8,7 +8,7 @@
 {	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	11	}{	[laughing at something no one else thinks is funny]What a scene, man! Hoo-wee! Then they just plop ya out here like a naked baby in the woods. [chuckle]How 'bout that? Ah... look, kiddo, this is probably a lot for you to take in, so uh, why don't you let me show you the ropes. Whaddya say?	}{	[laughing at something no one else thinks is funny]What a scene, man! Hoo-wee! Then they just plop ya out here like a naked baby in the woods. [chuckle]How 'bout that? Ah... look, kiddo, this is probably a lot for you to take in, so uh, why don't you let me show you the ropes. Whaddya say?	}{	#	}{	G.Story_State = -3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	11	}{	[laughing at something no one else thinks is funny]What a scene, man! Hoo-wee! Then they just plop ya out here like a naked baby in the woods. [chuckle]How 'bout that? Ah... look, kiddo, this is probably a lot for you to take in, so uh, why don't you let me show you the ropes. Whaddya say?	}{	[laughing at something no one else thinks is funny]What a scene, man! Hoo-wee! Then they just plop ya out here like a naked baby in the woods. [chuckle]How 'bout that? Ah... look, kiddo, this is probably a lot for you to take in, so uh, why don't you let me show you the ropes. Whaddya say?	}{	#	}{	G.Extra_Lines = 1; G.Jack_Extra = 1; G.Flynn_Extra = 1; G.Story_State = -3	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	12	}{	Who are you?	}{	Who are you?	}{	21	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	13	}{	The rain of ages plots again to wash away revelation.	}{	The rain of ages plots again to wash away revelation.	}{	1011	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	14	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -880,7 +880,7 @@
 {	880	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	881	}{	If you make it back, stop in at the Last Round - it's this bar downtown here - I'll fill you in on the politics. [chuckle]Now that's the stuff that'll kill ya. [laugh]Good luck.	}{	If you make it back, stop in at the Last Round - it's this bar downtown here - I'll fill you in on the politics. [chuckle]Now that's the stuff that'll kill ya. [laugh]Good luck.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	882	}{	I'll see you there.	}{	I'll see you there.	}{	0	}{	G.Patch_Plus == 0	}{	G.Tut_Jack = 15	}{	}{	}{	}{	}{	}{	}{	We will be there soon.	}
-{	883	}{	I'll see you there after I got a good day's sleep.	}{	I'll see you there after I got a good day's sleep.	}{	0	}{	G.Patch_Plus == 1	}{	G.Tut_Jack = 15	}{	}{	}{	}{	}{	}{	}{	We will be there after we close our eyes during the daylight.	}
+{	883	}{	I'll see you there.	}{	I'll see you there.	}{	0	}{	G.Patch_Plus == 1	}{	G.Tut_Jack = 16	}{	}{	}{	}{	}{	}{	}{	We will be there soon.	}
 {	884	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	885	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	886	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -929,8 +929,8 @@
 {	929	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	930	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	931	}{	Righteous. Now, ship off like a good little soldier. If you pull this off, come downtown to the Last Round and I'll tell you how jacked this whole situation is. Until then, [chuckles]good luck! Or maybe I should just say, uh... nice knowin' ya, kiddo![laughs at his joke]	}{	Righteous. Now, ship off like a good little soldier. If you pull this off, come downtown to the Last Round and I'll tell you how jacked this whole situation is. Until then, [chuckles]good luck! Or maybe I should just say, uh... nice knowin' ya, kiddo![laughs at his joke]	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	932	}{	See ya.	}{	See ya.	}{	0	}{	G.Patch_Plus == 0	}{	LeaveTutorialShort()	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains. Farewell.	}
-{	933	}{	That's funny. I'll sleep the day off and laugh later. See ya.	}{	That's funny. I'll sleep the day off and laugh later. See ya.	}{	0	}{	G.Patch_Plus == 1	}{	LeaveTutorialShort(); pc.Bloodloss(1)	}{	}{	}{	}{	}{	}{	}{	Your humor is hokey. I am no longer here because I need to close my eyes when the sun shines.	}
+{	932	}{	See ya.	}{	See ya.	}{	0	}{	}{	LeaveTutorialShort()	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains. Farewell.	}
+{	933	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	934	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	935	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	936	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -1029,8 +1029,8 @@
 {	1029	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1030	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1031	}{	If you pull this off, come downtown to the Last Round and I'll tell you how jacked this whole situation is. Until then, [chuckles]good luck! Or maybe I should just say, uh... nice knowin' ya, kiddo![laughs at his joke]	}{	If you pull this off, come downtown to the Last Round and I'll tell you how jacked this whole situation is. Until then, [chuckles]good luck! Or maybe I should just say, uh... nice knowin' ya, kiddo![laughs at his joke]	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	1032	}{	That's funny. See ya.	}{	That's funny. See ya.	}{	0	}{	G.Patch_Plus == 0	}{	LeaveTutorialShort()	}{	}{	}{	}{	}{	}{	}{	Your humor is hokey. I am no longer here.	}
-{	1033	}{	That's funny. I'll sleep the day off and laugh later. See ya.	}{	That's funny. I'll sleep the day off and laugh later. See ya.	}{	0	}{	G.Patch_Plus == 1	}{	LeaveTutorialShort(); pc.Bloodloss(1)	}{	}{	}{	}{	}{	}{	}{	Your humor is hokey. I am no longer here because I will close my eyes when the sun shines.	}
+{	1032	}{	That's funny. See ya.	}{	That's funny. See ya.	}{	0	}{	}{	LeaveTutorialShort()	}{	}{	}{	}{	}{	}{	}{	Your humor is hokey. I am no longer here.	}
+{	1033	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1034	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1035	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1036	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

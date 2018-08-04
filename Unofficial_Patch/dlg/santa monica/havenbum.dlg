@@ -1,13 +1,13 @@
 {	1	}{	Y-you got - you got some change, mister?	}{	Hey - hey lady, y-you got some change, lady?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	2	}{	Here, it's not much, but I hope it helps.	}{	Here, it's not much, but I hope it helps.	}{	11	}{	pc.CurrentMoney() >= 1 and G.Patch_Plus == 0	}{	pc.MoneyRemove(1)	}{	}{	}{	}{	}{	}{	}{	Here, let me put some fortune in your misfortune.	}
-{	3	}{	Here, it's not much, but I hope it helps.	}{	Here, it's not much, but I hope it helps.	}{	11	}{	pc.CurrentMoney() >= 10 and G.Patch_Plus == 1	}{	pc.MoneyRemove(10); pc.HumanityAdd(1)	}{	}{	}{	}{	}{	}{	}{	Here, let me put some fortune in your misfortune.	}
-{	4	}{	I do. But not for you.	}{	I do. But not for you.	}{	51	}{	not IsClan(pc,"Ventrue") and not IsClan(pc,"Nosferatu")	}{	G.Bum_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	I am the fattest piggy bank in the world, but I will not break for you.	}
-{	5	}{	Get a job, pissant.	}{	Get a job, pissant.	}{	21	}{	IsClan(pc,"Ventrue") and pc.IsMale()	}{	G.Bum_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	6	}{	Get a job, pissant.	}{	Get a job, pissant.	}{	31	}{	IsClan(pc,"Ventrue") and not pc.IsMale()	}{	G.Bum_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	7	}{	I do. But not for you.	}{	I do. But not for you.	}{	41	}{	IsClan(pc,"Nosferatu") and not pc.IsMale()	}{	G.Bum_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	8	}{	I do. But not for you.	}{	I do. But not for you.	}{	51	}{	IsClan(pc,"Nosferatu") and pc.IsMale()	}{	G.Bum_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	9	}{	You hungry? I am too. Hmmm... we do seem to be all alone in this alley.	}{	You hungry? I am too. Hmmm... we do seem to be all alone in this alley.	}{	0	}{	not IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	You cannot quench your thirst here in the lonely dark.... Who could? Hmm....	}
-{	10	}{	You're not exactly what I wanted, but choosers can eat beggars.	}{	You're not exactly what I wanted, but choosers can eat beggars.	}{	0	}{	G.Extra_Lines == 1 and not IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	What should appear on the doorstop of my web but a nice, juicy fly.	}
+{	3	}{	I do. But not for you.	}{	I do. But not for you.	}{	51	}{	not IsClan(pc,"Ventrue") and not IsClan(pc,"Nosferatu")	}{	G.Bum_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	I am the fattest piggy bank in the world, but I will not break for you.	}
+{	4	}{	Get a job, pissant.	}{	Get a job, pissant.	}{	21	}{	IsClan(pc,"Ventrue") and pc.IsMale()	}{	G.Bum_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	5	}{	Get a job, pissant.	}{	Get a job, pissant.	}{	31	}{	IsClan(pc,"Ventrue") and not pc.IsMale()	}{	G.Bum_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	6	}{	I do. But not for you.	}{	I do. But not for you.	}{	41	}{	IsClan(pc,"Nosferatu") and not pc.IsMale()	}{	G.Bum_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	7	}{	I do. But not for you.	}{	I do. But not for you.	}{	51	}{	IsClan(pc,"Nosferatu") and pc.IsMale()	}{	G.Bum_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	8	}{	You hungry? I am too. Hmmm... we do seem to be all alone in this alley.	}{	You hungry? I am too. Hmmm... we do seem to be all alone in this alley.	}{	0	}{	not IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	You cannot quench your thirst here in the lonely dark.... Who could? Hmm....	}
+{	9	}{	You're not exactly what I wanted, but choosers can eat beggars.	}{	You're not exactly what I wanted, but choosers can eat beggars.	}{	0	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	What should appear on the doorstop of my web but a nice, juicy fly.	}
+{	10	}{	Here, it's not much, but I hope it helps.	}{	Here, it's not much, but I hope it helps.	}{	11	}{	pc.CurrentMoney() >= 10 and G.Patch_Plus == 1	}{	pc.MoneyRemove(10); pc.HumanityAdd(1)	}{	}{	}{	}{	}{	}{	}{	Here, let me put some fortune in your misfortune.	}
 {	11	}{	That's very nice, thank you.	}{	That's very nice, thank you.	}{	#	}{	}{	G.Bum_Gift = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	12	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	13	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

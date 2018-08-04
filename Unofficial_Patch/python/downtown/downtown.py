@@ -445,12 +445,12 @@ def SetBradbury():
                 trigger_plus.SetName("bradburyroof_trigger")
                 G.Trigger_Swap = 1
 
-#DOWNTOWN: Set parking garage accessibility, changed by wesp
+#DOWNTOWN: Set parking garage accessibility
 def SetParkingGarage():
     gate = Find("garagegate_closed")
     if gate:
         state = __main__.FindPlayer().GetQuestState("Traffik")
-        if G.Larry_Quest >= 1 and (state < 3 or G.Patch_Plus == 1):
+        if G.Larry_Quest == 1 and state < 3:
             gate.ScriptHide()
         else:
             gate.ScriptUnhide()
@@ -477,15 +477,12 @@ def SetChantryDoors():
         for knob in knobs:
             knob.Unlock()
 
-#DOWNTOWN: Lock/unlock doors, changed by wesp
+#DOWNTOWN: Lock/unlock doors
 def SetDoors():
     SetBradbury()
     SetParkingGarage()
     SetVentrueTransition()
     SetChantryDoors()
-    if (G.Jumbles_Removed > 0 and G.Patch_Plus == 1):
-        crackdoor = Find("crackdr2")
-        crackdoor.Unlock()
 
 #DOWNTOWN: Change ming xiao to nines, changed by Wesp.
 def ChangeMingXiaoToNines():

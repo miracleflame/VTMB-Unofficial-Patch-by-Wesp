@@ -125,7 +125,7 @@ def fillSeats():
         chick3.SetModel(nosferatu_female)
         chick4.SetModel(tremere_female)
 
-#THEATRE: Changes the sire's model to nos if appropriate, changed by wesp
+#THEATRE: Changes the sire's model to nos if appropriate
 def nosferatuRevealer():
     clan = __main__.FindPlayer().clan
     if(clan == 5):
@@ -133,13 +133,9 @@ def nosferatuRevealer():
         fade.Fade()
         sire = Find("Sire2")
         if(__main__.FindPlayer().IsMale()):
-            sire.SetModel("models/character/pc/female/nosferatu/armor0/nosferatu_female_armor_0.mdl")
-            if __main__.G.Player_Homo == 1:
-                sire.SetModel("models/character/pc/male/nosferatu/armor2/nosferatu_male_armor_2.mdl")
+            sire.SetModel("models/character/pc/female/nosferatu/armor0/nosferatu_Female_Armor_0.mdl")
         else:
             sire.SetModel("models/character/pc/male/nosferatu/armor0/Nosferatu.mdl")
-            if __main__.G.Player_Homo == 1:
-                sire.SetModel("models/character/pc/female/nosferatu/armor2/nosferatu_female_armor_2.mdl")
 
 #MASQUERADE: Setup the actors to avoid clan duplicates
 def setupMasqueradeActors():
@@ -194,7 +190,7 @@ def nosferatuTransform():
         else:
             understudy.SetModel("models/character/pc/female/nosferatu/armor0/nosferatu_Female_Armor_0.mdl")
 
-#COURTROOM SCENE: Choose sire for the courtroom scene, changed by wesp
+#COURTROOM SCENE: Choose sire for the courtroom scene
 def courtroomSire():
     pc = __main__.FindPlayer()
     gender = pc.IsMale()
@@ -223,100 +219,72 @@ def courtroomSire():
             sire.SetModel(brujah_female)
             staker1.SetModel(malkavian_male)
             staker2.SetModel(toreador_male)
-            if __main__.G.Player_Homo == 1:
-                sire.SetModel(gangrel_male)
         #GANGREL
         elif(clan == 3):
             sire.SetModel(gangrel_female)
             staker1.SetModel(nosferatu_male)
             staker2.SetModel(tremere_male)
-            if __main__.G.Player_Homo == 1:
-                sire.SetModel(brujah_male)
         #MALKAVIAN
         elif(clan == 4):
             sire.SetModel(malkavian_female)
             staker1.SetModel(toreador_male)
             staker2.SetModel(ventrue_male)
-            if __main__.G.Player_Homo == 1:
-                sire.SetModel(toreador_male)
         #NOSFERATU
         elif(clan == 5):
             sire.SetModel(toreador_female)
             staker1.SetModel(tremere_male)
             staker2.SetModel(brujah_male)
-            if __main__.G.Player_Homo == 1:
-                sire.SetModel(toreador_male)
         #TOREADOR
         elif(clan == 6):
             sire.SetModel(toreador_female)
             staker1.SetModel(ventrue_male)
             staker2.SetModel(gangrel_male)
-            if __main__.G.Player_Homo == 1:
-                sire.SetModel(malkavian_male)
         #TREMERE
         elif(clan == 7):
             sire.SetModel(tremere_female)
             staker1.SetModel(brujah_male)
             staker2.SetModel(malkavian_male)
-            if __main__.G.Player_Homo == 1:
-                sire.SetModel(ventrue_male)
         #VENTRUE
         elif(clan == 8):
             sire.SetModel(ventrue_female)
             staker1.SetModel(gangrel_male)
             staker2.SetModel(nosferatu_male)
-            if __main__.G.Player_Homo == 1:
-                sire.SetModel(tremere_male)
     else:
         #BRUJAH
         if(clan == 2):
             sire.SetModel(brujah_male)
             staker1.SetModel(malkavian_male)
             staker2.SetModel(toreador_male)
-            if __main__.G.Player_Homo == 1:
-                sire.SetModel(gangrel_female)
         #GANGREL
         elif(clan == 3):
             sire.SetModel(gangrel_male)
             staker1.SetModel(nosferatu_male)
             staker2.SetModel(tremere_male)
-            if __main__.G.Player_Homo == 1:
-                sire.SetModel(brujah_female)
         #MALKAVIAN
         elif(clan == 4):
             sire.SetModel(malkavian_male)
             staker1.SetModel(toreador_male)
             staker2.SetModel(ventrue_male)
-            if __main__.G.Player_Homo == 1:
-                sire.SetModel(toreador_female)
         #NOSFERATU
         elif(clan == 5):
             sire.SetModel(toreador_male)
             staker1.SetModel(tremere_male)
             staker2.SetModel(brujah_male)
-            if __main__.G.Player_Homo == 1:
-                sire.SetModel(toreador_female)
         #TOREADOR
         elif(clan == 6):
             sire.SetModel(toreador_male)
             staker1.SetModel(ventrue_male)
             staker2.SetModel(gangrel_male)
-            if __main__.G.Player_Homo == 1:
-                sire.SetModel(malkavian_female)
         #TREMERE
         elif(clan == 7):
             sire.SetModel(tremere_male)
             staker1.SetModel(brujah_male)
             staker2.SetModel(malkavian_male)
-            if __main__.G.Player_Homo == 1:
-                sire.SetModel(ventrue_female)
         #VENTRUE
         elif(clan == 8):
             sire.SetModel(ventrue_male)
             staker1.SetModel(gangrel_male)
             staker2.SetModel(nosferatu_male)
-            if __main__.G.Player_Homo == 1:
-                sire.SetModel(tremere_female)
     #FINISH THIS FUNCTION
 
 print "levelscript loaded"

@@ -293,11 +293,6 @@ def onGio1Load():
         print ( "***************** Playing Loading Movie *****************" )
         return
     checkNosferatu()
-    if ( G.Story_State >= 65 ):
-        truck = Find("truck1")
-        truck.ScriptHide()
-        transition = Find("trig_to_chambers")
-        transition.ScriptHide()
     if ( G.BochedGio == 1 ):
         print ( "***************** Botched Setting Hostile *****************" )
         relay = Find( "Relay_Boched_Level" )
@@ -402,9 +397,6 @@ def gio3_checkNadiaUnhide():
         float = Find("choreo_InHere")
         if float: float.ScriptHide()
         float = Find("choreo_PointRight1")
-    if ( G.Story_State >= 60 ):
-        Nadia = Find( "Nadia" )
-        Nadia.ScriptHide()
 
 #GIOVANNI MANSION 1: Set alarm state for g_1
 def gio1_setAlarm():
@@ -518,8 +510,6 @@ def zombieKillCounter():
 def gio5_changDefeated():
     G.Story_State = 60
     G.Chunk_Open = 4
-    trigger = Find("trig_from_4")
-    trigger.ScriptUnhide()
     __main__.ChangeMap(3, "truckmark", "trig_shortcut")
 
 #Fix way back from 3 to 2 if started combat on 2
@@ -542,7 +532,7 @@ def cutscene():
         __main__.ScheduleTask(1.0, "__main__.FindEntityByName(\'logic_scene\').Trigger()")
         world = Find("world")
         world.SetNoFrenzyArea(1)
-        if G.Patch_Plus == 0: G.Giovanni_Open = 0
+        G.Giovanni_Open = 0
 
 #GIOVANNI MANSION: Bodyguard init DLG, changed by wesp
 def bodyguardChangeName(name):

@@ -2113,7 +2113,7 @@ Scheme
 			"1"
 			{
 				"name"		"Vamp_Dialog_Malkavian"
-				"tall"		"37"
+				"tall"		"30"	// changed by wesp
 				"weight"	"900"
 //				"range"		"0x0000 0x007F"	//	Basic Latin
 				"range"		"0x0000 0x00ff" //	Vampire fonts should be ANSI-1252 compliant

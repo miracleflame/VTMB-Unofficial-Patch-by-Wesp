@@ -38,7 +38,7 @@
 {	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	40	}{	I'll be on my way then.	}{	I'll be on my way then.	}{	0	}{	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	We all wear the night like a serrated shawl. Farewell.	}
-{	41	}{	'Fraid I'm a little short on cash right now, so sorry.	}{	'Fraid I'm a little short on cash right now, so sorry.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	'Fraid I'm a little short on cash right now, so sorry.	}{	'Fraid I'm a little short on cash right now, so sorry.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	G.Smblue_Persuade = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	42	}{	Just a few bucks? I'm a little down on my luck right now. Help me out.	}{	Just a few bucks? I'm a little down on my luck right now. Help me out.	}{	71	}{	Intimidate 3	}{	}{	}{	}{	}{	}{	}{	}{	Fortune smiles on you. You will share your rewards. NOW.	}
 {	43	}{	Oh. Well, maybe you're looking for a little company?	}{	Oh. Well, maybe you're looking for a little company?	}{	61	}{	Seduction 4	}{	G.Smblue_Seduced = 1	}{	}{	}{	}{	}{	}{	}{	Perhaps we might make a sweet, streetside rendezvous.	}
 {	44	}{	Oh. Well, maybe you're looking for a little company?	}{	Oh. Well, maybe you're looking for a little company?	}{	131	}{	Seduction -4 & not (IsClan(pc,"Ventrue") or IsClan(pc,"Toreador"))	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps we might make a sweet, streetside rendezvous.	}

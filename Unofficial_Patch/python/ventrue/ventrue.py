@@ -168,9 +168,6 @@ def checkEnding():
 #VENTRUETOWER: Called after talking to Chunk, opening the elevator to the Prince, changed by wesp
 def chunkResults():
     chunk = Find("Chunk2")
-    if(G.Chunk_Skip == 2):
-        trigger = Find("chamber_transition")
-        trigger.Enable()
 #    killSafeArea = Find("setcombat")
     if(G.Chunk_Run == 1):
         cower = Find("chunk_cowers_run_1")

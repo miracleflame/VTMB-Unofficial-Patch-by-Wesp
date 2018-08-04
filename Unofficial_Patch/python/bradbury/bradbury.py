@@ -65,7 +65,7 @@ def deadLasombra():
 
 #HALLOBROOK HOTEL 2: Enables the appropriate encounter based upon whether or not the player has kept Heather as a ghoul, changed by Wesp
 def heatherCheck():
-    if(G.Heather_Drank == 1 and G.Heather_Haven == 1 and G.Heather_Gone == 0 and G.Heather_Kill == 0 and G.Heather_Indoors == 0 and G.Heather_Scene == 0 and not __main__.IsDead("Heather")):
+    if(G.Heather_Drank == 1 and G.Heather_Haven == 1 and G.Heather_Gone == 0 and G.Heather_Kill == 0 and G.Heather_Indoors == 0 and not __main__.IsDead("Heather")):
         #Heather gets to die now
         print "incoming heather"
         heather = Find("Heather")
@@ -75,7 +75,7 @@ def heatherCheck():
         if(heather):
             if G.Patch_Plus == 1:  
                 heather_dead = Find("heather_dead")
-                heather_dead.ScriptUnhide()
+                heather_dead.WillTalk(1)
             if(G.Heather_Outfit == 1):
                 heather.SetModel("models/character/npc/unique/Santa_Monica/Heather/Heather_goth.mdl")
             elif(G.Heather_Outfit == 2):

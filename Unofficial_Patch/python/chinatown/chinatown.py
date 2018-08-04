@@ -83,14 +83,14 @@ def SetLotusBlossum():
         door = Find("lotusdrc")
         door.Unlock()
 
-#CHINATOWN HUB: Set Fishmarket doors, changed by wesp
+#CHINATOWN HUB: Set Fishmarket doors
 def SetFishmarket():
-    if (__main__.FindPlayer().GetQuestState("Yukie") == 4) or (IsDead("Zygaena") and G.Zyg_Human == 0 and G.Patch_Plus == 1):
+    if __main__.FindPlayer().GetQuestState("Yukie") == 4:
         door = Find("fishmarket_door")
         door.Unlock()
     else:
         door = Find("fishmarket_door")
-        door.Lock() 
+        door.Lock()
 
 #CHINATOWN HUB: Set Zhaos doors, changed by wesp
 def SetZhaos():
