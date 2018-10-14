@@ -2862,8 +2862,6 @@
 "model" "models/character/monster/tzimisce/creation1/creation1_unused.mdl"
 "follower_type" "Default"
 "base_gender" "0"
-"OnDeath" "bradbury_basement_close,ScriptHide,,0,-1,,"
-"OnDeath" "bradbury_basement_open,ScriptUnhide,,0,-1,,"
 "origin" "2272.29 -3550.47 -169"
 }
 {
@@ -2945,6 +2943,8 @@
 "spawnflags" "4"
 "follower_type" "Default"
 "base_gender" "1"
+"OnDeath" "bradbury_basement_close,ScriptHide,,0,-1,,"
+"OnDeath" "bradbury_basement_open,ScriptUnhide,,0,-1,,"
 "origin" "1925 -2200 720"
 }
 {
@@ -4083,21 +4083,6 @@
 "origin" "2272.29 -3550.47 -169"
 }
 {
-"classname" "item_w_sabbatleader_attack"
-"StartHidden" "1"
-"targetname" "wesp_braid"
-"angles" "90 160 90"
-"origin" "2058 -3050 -170"
-}
-{
-"classname" "inspection_node"
-"parentname" "wesp_braid"
-"start_enabled" "1"
-"StartHidden" "1"
-"inspection" "5"
-"origin" "2058 -3050 -170"
-}
-{
 "classname" "item_w_flamethrower"
 "StartHidden" "0"
 "targetname" "thrower"
@@ -4106,11 +4091,20 @@
 }
 {
 "classname" "inspection_node"
-"parentname" "eagle"
+"parentname" "thrower"
 "start_enabled" "1"
 "StartHidden" "0"
 "inspection" "5"
 "origin" "2045 -3060 -170"
+}
+{
+"classname" "inspection_node"
+"parentname" "bradbury_basement_open"
+"start_enabled" "1"
+"StartHidden" "0"
+"inspection" "8"
+"targetname" "bradbury_door_node"
+"origin" "1965 -2413 -170"
 }
 {
 "classname" "info_node"

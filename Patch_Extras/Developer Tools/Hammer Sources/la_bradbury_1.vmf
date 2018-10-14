@@ -1,8 +1,8 @@
 versioninfo
 {
 	"editorversion" "400"
-	"editorbuild" "7215"
-	"mapversion" "292"
+	"editorbuild" "7999"
+	"mapversion" "294"
 	"prefab" "0"
 }
 visgroups
@@ -25,7 +25,7 @@ viewsettings
 world
 {
 	"id" "0"
-	"mapversion" "292"
+	"mapversion" "294"
 	"classname" "worldspawn"
 	"angles" "0 0 0"
 	"skyname" "warehouse3"
@@ -27303,7 +27303,7 @@ world
 			"id" "6883"
 			"plane" "(1487 -2173 1486) (1487 -2173 1014) (1487 -4085 1014)"
 			"material" "TOOLS/TOOLSSKYBOX"
-			"uaxis" "[0 -1 0 65] 0.25"
+			"uaxis" "[0 -1 0 1] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -27336,8 +27336,8 @@ world
 			"id" "6886"
 			"plane" "(1480 -2173 1014) (1480 -4085 1014) (1487 -4085 1014)"
 			"material" "TOOLS/TOOLSSKYBOX"
-			"uaxis" "[-1 0 0 72] 0.25"
-			"vaxis" "[0 1 0 -88] 0.25"
+			"uaxis" "[-1 0 0 8] 0.25"
+			"vaxis" "[0 1 0 -24] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -27347,8 +27347,8 @@ world
 			"id" "6887"
 			"plane" "(1480 -4085 1486) (1480 -2173 1486) (1487 -2173 1486)"
 			"material" "TOOLS/TOOLSSKYBOX"
-			"uaxis" "[-1 0 0 72] 0.25"
-			"vaxis" "[0 1 0 -88] 0.25"
+			"uaxis" "[-1 0 0 8] 0.25"
+			"vaxis" "[0 1 0 -24] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -27485,7 +27485,7 @@ world
 			"plane" "(2367 -2165 1014) (2367 -4093 1014) (2375 -4093 1014)"
 			"material" "TOOLS/TOOLSSKYBOX"
 			"uaxis" "[1 0 0 -52] 0.25"
-			"vaxis" "[0 -1 0 104] 0.25"
+			"vaxis" "[0 -1 0 40] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -27496,7 +27496,7 @@ world
 			"plane" "(2367 -4093 1486) (2367 -2165 1486) (2375 -2165 1486)"
 			"material" "TOOLS/TOOLSSKYBOX"
 			"uaxis" "[1 0 0 -52] 0.25"
-			"vaxis" "[0 -1 0 104] 0.25"
+			"vaxis" "[0 -1 0 40] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -27514,7 +27514,7 @@ world
 			"id" "6900"
 			"plane" "(1480 -4093 1486) (1480 -4085 1486) (2367 -4085 1486)"
 			"material" "TOOLS/TOOLSSKYBOX"
-			"uaxis" "[0 -1 0 120] 0.25"
+			"uaxis" "[0 -1 0 56] 0.25"
 			"vaxis" "[-1 0 0 -20] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -27536,7 +27536,7 @@ world
 			"id" "6902"
 			"plane" "(2367 -4085 1486) (2367 -4085 1014) (2367 -4093 1014)"
 			"material" "TOOLS/TOOLSSKYBOX"
-			"uaxis" "[0 1 0 -120] 0.25"
+			"uaxis" "[0 1 0 -56] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -27569,7 +27569,7 @@ world
 			"id" "6905"
 			"plane" "(1480 -4085 1014) (1480 -4093 1014) (2367 -4093 1014)"
 			"material" "TOOLS/TOOLSSKYBOX"
-			"uaxis" "[0 -1 0 120] 0.25"
+			"uaxis" "[0 -1 0 56] 0.25"
 			"vaxis" "[-1 0 0 -20] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -35374,22 +35374,22 @@ entity
 	"origin" "1964 -3097.5 -8.5"
 	connections
 	{
-		"OnTrigger" "world,SetSafeArea,0,0,-1,,"
-		"OnTrigger" "TriggerMabellene,ScriptUnhide,,0.5,-1,,"
-		"OnTrigger" "Evelyn,ScriptUnhide,,0,-1,,"
-		"OnTrigger" "particles_Evelyn,TurnOn,,0,-1,,"
-		"OnTrigger" "sEvelyn,BeginSequence,,0.1,-1,,"
-		"OnTrigger" "Evelyn_hiss,PlaySound,,1,1,,"
-		"OnTrigger" ",,,3,1,EvelynModel(),"
-		"OnTrigger" "Evelyn,MakeInvincible,0,3.1,-1,,"
-		"OnTrigger" "Evelyn,SetRelationship,player D_HT 10,3.1,-1,,"
-		"OnTrigger" "SabbatGoons*,ScriptUnhide,,3,-1,,"
-		"OnTrigger" "SabbatGoonsPresence,SetScriptedDiscipline,presence 3,5,-1,,"
-		"OnTrigger" "SabbatGoonsAuspex,SetScriptedDiscipline,auspex 3,5,-1,,"
-		"OnTrigger" "SabbatGoonsPotence,SetScriptedDiscipline,potence 3,5,-1,,"
-		"OnTrigger" "SabbatGoonsFortitude,SetScriptedDiscipline,fortitude 3,5,-1,,"
-		"OnTrigger" "SabbatGoonsProtean,SetScriptedDiscipline,protean 3,5,-1,,"
 		"OnTrigger" "Evelyn_target,Activate,,3.2,-1,,"
+		"OnTrigger" "SabbatGoonsProtean,SetScriptedDiscipline,protean 3,5,-1,,"
+		"OnTrigger" "SabbatGoonsFortitude,SetScriptedDiscipline,fortitude 3,5,-1,,"
+		"OnTrigger" "SabbatGoonsPotence,SetScriptedDiscipline,potence 3,5,-1,,"
+		"OnTrigger" "SabbatGoonsAuspex,SetScriptedDiscipline,auspex 3,5,-1,,"
+		"OnTrigger" "SabbatGoonsPresence,SetScriptedDiscipline,presence 3,5,-1,,"
+		"OnTrigger" "SabbatGoons*,ScriptUnhide,,3,-1,,"
+		"OnTrigger" "Evelyn,SetRelationship,player D_HT 10,3.1,-1,,"
+		"OnTrigger" "Evelyn,MakeInvincible,0,3.1,-1,,"
+		"OnTrigger" ",,,3,1,EvelynModel(),"
+		"OnTrigger" "Evelyn_hiss,PlaySound,,1,1,,"
+		"OnTrigger" "sEvelyn,BeginSequence,,0.1,-1,,"
+		"OnTrigger" "particles_Evelyn,TurnOn,,0,-1,,"
+		"OnTrigger" "Evelyn,ScriptUnhide,,0,-1,,"
+		"OnTrigger" "TriggerMabellene,ScriptUnhide,,0.5,-1,,"
+		"OnTrigger" "world,SetSafeArea,0,0,-1,,"
 	}
 	solid
 	{
@@ -35663,8 +35663,8 @@ entity
 	"base_gender" "1"
 	connections
 	{
-		"OnDialogEnd" "talk_result,Test,,0,-1,,"
 		"OnDialogEnd" "AndreiSabbat,WillTalk,0,0,1,,"
+		"OnDialogEnd" "talk_result,Test,,0,-1,,"
 	}
 	"origin" "1965 -3000 -169"
 	editor
@@ -35680,29 +35680,29 @@ entity
 	"python_script" "G.Player_Sabbat == 2"
 	connections
 	{
-		"OnTrue" "AndreiSabbat,TriggerCombat,0,0.3,-1,,"
-		"OnTrue" "world,SetSafeArea,0,0,-1,,"
-		"OnTrue" "bradbury_door_open,ScriptUnhide,,2,-1,,"
-		"OnTrue" "bradbury_door_close,ScriptHide,,2,-1,,"
-		"OnTrue" "Sound_Andrei_escape,PlaySound,,1,1,,"
-		"OnTrue" "AndreiSabbat,Kill,,3,-1,,"
-		"OnTrue" "TriggerMabellene,ScriptUnhide,,0.5,-1,,"
-		"OnTrue" "Evelyn,ScriptUnhide,,2,-1,,"
-		"OnTrue" "particles_Evelyn,TurnOn,,2,-1,,"
-		"OnTrue" "sEvelyn,BeginSequence,,2.1,-1,,"
-		"OnTrue" "Evelyn_hiss,PlaySound,,3,1,,"
-		"OnTrue" ",,,5,1,EvelynModel(),"
-		"OnTrue" "Evelyn,MakeInvincible,0,5.1,-1,,"
-		"OnTrue" "Evelyn,SetRelationship,player D_HT 10,5.1,-1,,"
-		"OnTrue" "Evelyn_target,Activate,,5.5,-1,,"
-		"OnTrue" "SabbatGoons*,ScriptUnhide,,3,-1,,"
-		"OnTrue" "SabbatGoonsPresence,SetScriptedDiscipline,presence 3,5,-1,,"
-		"OnTrue" "SabbatGoonsAuspex,SetScriptedDiscipline,auspex 3,5,-1,,"
-		"OnTrue" "SabbatGoonsPotence,SetScriptedDiscipline,potence 3,5,-1,,"
-		"OnTrue" "SabbatGoonsFortitude,SetScriptedDiscipline,fortitude 3,5,-1,,"
-		"OnTrue" "SabbatGoonsProtean,SetScriptedDiscipline,protean 3,5,-1,,"
-		"OnFalse" "exit_fade,Fade,,0,-1,,"
 		"OnFalse" "to_la2,ScriptUnhide,,2,-1,,"
+		"OnFalse" "exit_fade,Fade,,0,-1,,"
+		"OnTrue" "SabbatGoonsProtean,SetScriptedDiscipline,protean 3,5,-1,,"
+		"OnTrue" "SabbatGoonsFortitude,SetScriptedDiscipline,fortitude 3,5,-1,,"
+		"OnTrue" "SabbatGoonsPotence,SetScriptedDiscipline,potence 3,5,-1,,"
+		"OnTrue" "SabbatGoonsAuspex,SetScriptedDiscipline,auspex 3,5,-1,,"
+		"OnTrue" "SabbatGoonsPresence,SetScriptedDiscipline,presence 3,5,-1,,"
+		"OnTrue" "SabbatGoons*,ScriptUnhide,,3,-1,,"
+		"OnTrue" "Evelyn_target,Activate,,5.5,-1,,"
+		"OnTrue" "Evelyn,SetRelationship,player D_HT 10,5.1,-1,,"
+		"OnTrue" "Evelyn,MakeInvincible,0,5.1,-1,,"
+		"OnTrue" ",,,5,1,EvelynModel(),"
+		"OnTrue" "Evelyn_hiss,PlaySound,,3,1,,"
+		"OnTrue" "sEvelyn,BeginSequence,,2.1,-1,,"
+		"OnTrue" "particles_Evelyn,TurnOn,,2,-1,,"
+		"OnTrue" "Evelyn,ScriptUnhide,,2,-1,,"
+		"OnTrue" "TriggerMabellene,ScriptUnhide,,0.5,-1,,"
+		"OnTrue" "AndreiSabbat,Kill,,3,-1,,"
+		"OnTrue" "Sound_Andrei_escape,PlaySound,,1,1,,"
+		"OnTrue" "bradbury_door_close,ScriptHide,,2,-1,,"
+		"OnTrue" "bradbury_door_open,ScriptUnhide,,2,-1,,"
+		"OnTrue" "world,SetSafeArea,0,0,-1,,"
+		"OnTrue" "AndreiSabbat,TriggerCombat,0,0.3,-1,,"
 	}
 	"origin" "1944 -3008 -166"
 	editor
@@ -35876,14 +35876,14 @@ entity
 	"origin" "2075 -3556 -71.25"
 	connections
 	{
-		"OnTrigger" "Mabellene I Hofteholder,ScriptUnhide,,0,-1,,"
-		"OnTrigger" "particles_Mabellene,TurnOn,,0,-1,,"
-		"OnTrigger" "sMabellene,BeginSequence,,0.1,-1,,"
-		"OnTrigger" "Mabellene_hiss,PlaySound,,2,1,,"
-		"OnTrigger" ",,,3,1,MabelleneModel(),"
-		"OnTrigger" "Mabellene I Hofteholder,MakeInvincible,0,3.1,-1,,"
-		"OnTrigger" "Mabellene I Hofteholder,SetRelationship,player D_HT 10,3.1,-1,,"
 		"OnTrigger" "Mabellene_target,Activate,,3.2,-1,,"
+		"OnTrigger" "Mabellene I Hofteholder,SetRelationship,player D_HT 10,3.1,-1,,"
+		"OnTrigger" "Mabellene I Hofteholder,MakeInvincible,0,3.1,-1,,"
+		"OnTrigger" ",,,3,1,MabelleneModel(),"
+		"OnTrigger" "Mabellene_hiss,PlaySound,,2,1,,"
+		"OnTrigger" "sMabellene,BeginSequence,,0.1,-1,,"
+		"OnTrigger" "particles_Mabellene,TurnOn,,0,-1,,"
+		"OnTrigger" "Mabellene I Hofteholder,ScriptUnhide,,0,-1,,"
 	}
 	solid
 	{
@@ -36026,11 +36026,6 @@ entity
 	"model" "models/character/monster/tzimisce/creation1/creation1_unused.mdl"
 	"follower_type" "Default"
 	"base_gender" "0"
-	connections
-	{
-		"OnDeath" "bradbury_basement_close,ScriptHide,,0,-1,,"
-		"OnDeath" "bradbury_basement_open,ScriptUnhide,,0,-1,,"
-	}
 	"origin" "2272.29 -3550.47 -169"
 	editor
 	{
@@ -36130,6 +36125,11 @@ entity
 	"spawnflags" "4"
 	"follower_type" "Default"
 	"base_gender" "1"
+	connections
+	{
+		"OnDeath" "bradbury_basement_close,ScriptHide,,0,-1,,"
+		"OnDeath" "bradbury_basement_open,ScriptUnhide,,0,-1,,"
+	}
 	"origin" "1925 -2200 720"
 	editor
 	{
@@ -38557,26 +38557,13 @@ entity
 }
 entity
 {
-	"id" "3267"
-	"classname" "item_w_sabbatleader_attack"
-	"StartHidden" "1"
-	"targetname" "wesp_braid"
-	"angles" "90 160 90"
-	"origin" "2058 -3050 -170"
-	editor
-	{
-		"color" "0 0 200"
-	}
-}
-entity
-{
 	"id" "3268"
 	"classname" "inspection_node"
-	"parentname" "wesp_braid"
+	"parentname" "bradbury_basement_open"
 	"start_enabled" "1"
 	"StartHidden" "1"
-	"inspection" "5"
-	"origin" "2058 -3050 -170"
+	"inspection" "8"
+	"origin" "1965 -2413 -170"
 	editor
 	{
 		"color" "220 30 220"
@@ -38599,7 +38586,7 @@ entity
 {
 	"id" "3270"
 	"classname" "inspection_node"
-	"parentname" "eagle"
+	"parentname" "thrower"
 	"start_enabled" "1"
 	"StartHidden" "0"
 	"inspection" "5"
@@ -38868,27 +38855,27 @@ entity
 	"enabled" "0"
 	connections
 	{
-		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
-		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
-		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
-		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
-		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
-		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
-		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
-		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
-		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
-		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
-		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
-		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
-		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
-		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
-		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
-		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
-		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
-		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
-		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
-		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
 		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
+		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
+		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
+		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
+		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
+		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
+		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
+		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
+		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
+		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
+		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
+		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
+		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
+		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
+		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
+		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
+		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
+		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
+		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
+		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
+		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -38904,29 +38891,29 @@ entity
 	"StartHidden" "0"
 	connections
 	{
-		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
-		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
-		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
-		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
-		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
-		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
-		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
-		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
-		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
-		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
-		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
-		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
-		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
-		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
-		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
-		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
-		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
-		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
-		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
-		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
-		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
-		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
 		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
+		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
+		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
+		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
+		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
+		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
+		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
+		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
+		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
+		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
+		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
+		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
+		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
+		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
+		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
+		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
+		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
+		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
+		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
+		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
+		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
+		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
+		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -59630,21 +59617,6 @@ entity
 }
 entity
 {
-	"id" "11948"
-	"classname" "inspection_node"
-	"parentname" "bradbury_door_open"
-	"start_enabled" "1"
-	"StartHidden" "0"
-	"inspection" "5"
-	"targetname" "bradbury_door_node"
-	"origin" "1926 -2062 790"
-	editor
-	{
-		"color" "220 30 220"
-	}
-}
-entity
-{
 	"id" "2945"
 	"classname" "prop_dynamic"
 	"angles" "0 0 0"
@@ -64428,13 +64400,28 @@ entity
 		"color" "232 219 8"
 	}
 }
+entity
+{
+	"id" "11948"
+	"classname" "inspection_node"
+	"parentname" "bradbury_door_open"
+	"start_enabled" "1"
+	"StartHidden" "0"
+	"inspection" "5"
+	"targetname" "bradbury_door_node"
+	"origin" "1926 -2062 790"
+	editor
+	{
+		"color" "220 30 220"
+	}
+}
 cameras
 {
 	"activecamera" "0"
 	camera
 	{
-		"position" "[1965 -3035.93 -58.045]"
-		"look" "[1943.53 -2954.65 -310.76]"
+		"position" "[1959.41 -2284.97 759.385]"
+		"look" "[1922.91 -2025.24 805.633]"
 	}
 }
 cordon

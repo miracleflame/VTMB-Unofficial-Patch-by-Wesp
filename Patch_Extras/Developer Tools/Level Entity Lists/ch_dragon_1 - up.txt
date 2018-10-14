@@ -3116,7 +3116,7 @@
 "origin" "360 119 102.187"
 }
 {
-"classname" "npc_VVampire"
+"classname" "npc_VPedestrian"
 "angles" "0 25 0"
 "renderfx" "0"
 "rendermode" "0"
@@ -3596,7 +3596,7 @@
 "combat_start_activity" "-1"
 "usescript" "doll1dlg()"
 "follower_type" "Default"
-"level_reset_type" "1"
+"level_reset_type" "0"
 "OnDamaged" "Doll4,SetRelationship,player D_FR 10,0.5,-1,,"
 "origin" "12 364 1"
 }
@@ -4876,7 +4876,7 @@
 "dialogname" "dlg/Generic/Doll5.dlg"
 "additionalequipment" "item_w_fists"
 "follower_type" "Default"
-"level_reset_type" "1"
+"level_reset_type" "0"
 "OnDialogEnd" "plus_blooddoll_sit_male,BeginSequence,,1,-1,,"
 "OnDamaged" "plus_blooddoll_sit_male,CancelSequence,,0,-1,,"
 "OnDamaged" "plus_Doll5,SetRelationship,player D_HT 5,0.5,-1,,"

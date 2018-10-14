@@ -16,7 +16,7 @@ WeaponData
 	"description"	"Deadly vampiric claws."	// added by wesp
 
 	"bucket"		"0"
-	"bucket_position"	"0"
+	"bucket_position"	"1"
 
 	"camera_class"		"noswitch"	// changed by wesp
 	"weight"		"10"
@@ -28,7 +28,7 @@ WeaponData
 
 	"is_visible_in_hud"	"1"	// changed by wesp
 	"is_droppable"		"0"	// added by wesp
-	"BitFlag_CantBeLast"	"1"
+	"BitFlag_CantBeLast"	"0"
 	"permanent_inventory"	"1"	// added by wesp
 	"knockback_chance"	"0.1"
 
@@ -58,7 +58,7 @@ WeaponData
 		"Botch_Table"	"Fists_Claws_Bite"
 		"Attack_Rate"	"0.5"
 		"Range"		"1"	// changed by wesp
-		"CriminalLevel"	"0"
+		"CriminalLevel"	"2"	// changed by wesp
 
 		"SkillRequirement"	"1"		// min. skill requirement used in dmg calculations
 		"BaseLethality"		"8"		// base lethality used in dmg calculations
@@ -122,27 +122,16 @@ WeaponData
 				"height"	"64"
 			}
 		}
-		"crosshair"
-		{
-			"640"
-			{
-				"file"		"hud/crosshairs/unarmed"
-				"x"			"0"
-				"y"			"0"
-				"width"		"16"
-				"height"	"16"
-			}
-		}
-		"crosshair2"
-		{
-			"640"
-			{
-				"file"		"hud/crosshairs/unarmed_lit"
-				"x"			"0"
-				"y"			"0"
-				"width"		"16"
-				"height"	"16"
-			}
-		}
+//		"crosshair"
+//		{
+//			"640"
+//			{
+//				"file"		"crosshairs"
+//				"x"			"0"
+//				"y"			"48"
+//				"width"		"24"
+//				"height"	"24"
+//			}
+//		}
 	}
 }

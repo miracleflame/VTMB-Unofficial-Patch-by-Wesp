@@ -406,6 +406,23 @@
 "type" "Idle"
 "min_bounds" "-16 -16 0"
 "max_bounds" "16  16 72"
+"min_time" "25.0"
+"max_time" "50.0"
+"max_npcs" "1"
+"match_orientation" "1"
+"group_id" "1"
+"testflags" "4"
+"enabled" "1"
+"rating" "3"
+"OnNPCArrived" "plus_computer,Enable,,0,-1,,"
+"origin" "3250 1020 -311"
+}
+{
+"classname" "intersting_place"
+"angles" "0 90 0"
+"type" "Idle"
+"min_bounds" "-16 -16 0"
+"max_bounds" "16  16 72"
 "min_time" "5.0"
 "max_time" "10.0"
 "max_npcs" "1"
@@ -414,7 +431,8 @@
 "testflags" "4"
 "enabled" "1"
 "rating" "3"
-"origin" "3215.22 1004.1 -311"
+"OnNPCArrived" "plus_computer,Disable,,0,-1,,"
+"origin" "3075 900 -311"
 }
 {
 "classname" "logic_relay"
@@ -490,7 +508,7 @@
 "angles" "0 105 0"
 "model" "models/scenery/misc/GehtoBlaster1/GehtoBlaster1.mdl"
 "StartHidden" "0"
-"volume" "0"
+"volume" "0.5"
 "radius" "1000.0"
 "spawnflags" "1"
 "origin" "3251 839 -260"
@@ -665,9 +683,10 @@
 "follower_type" "Default"
 "level_reset_type" "1"
 "interesting_place_groups" "1"
+"OnDialogEnd" "Arthur,UseInteresting,1,0,-1,,"
 "OnDamaged" "Arthur,SetRelationship,player D_FR 5,0,-1,,"
 "OnDeath" ",,,0,-1,kilpatrickDeath(),"
-"origin" "3080 910 -319"
+"origin" "3080 900 -319"
 }
 {
 "classname" "npc_VDialogPedestrian"
@@ -742,7 +761,6 @@
 "OnEndSequence" "plus_chair,Kill,,7,-1,,"
 "OnEndSequence" "Arthur,ScriptUnhide,,7,-1,,"
 "OnEndSequence" "chair,ScriptUnhide,,7,-1,,"
-"OnEndSequence" "plus_computer,Enable,,7,-1,,"
 "origin" "3058 886 -319"
 }
 {
