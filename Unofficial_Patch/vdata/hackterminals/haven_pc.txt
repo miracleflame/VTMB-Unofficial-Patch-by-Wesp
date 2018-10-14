@@ -133,7 +133,7 @@ TerminalDefinition
 		"body"		"Dear, dear Duckling,
 HI! Guess who! No, guess! Because it's more fun that way, that's why! Oh, kitten, have you already forgotten? It's me, Jeanette! I was just sitting here in my big, boring bedroom, all by my lonely self, when I noticed I was missing something - you. Amuse me. Please?
 Wading for you, Duckling,
-Jeanette "
+Jeanette"
 		"dependency"	"G.Story_State >= 30 and G.Therese_Dead == 1"
 	}
 
@@ -309,7 +309,7 @@ VV"
 		"subject"	"Prince is promoting you!"
 		"sender"	"gary@schrecknet.vtm"
 		"body"		"Hey boss, did some spring-cleaning today - came across something that might tickle you. A kid used to live here had an unhealthy crush on everyone's favorite psycho pin-up, Jeanette Voerman. I got a touch of nostalgia, so, you find a copy of Tap Hotel, starring me, I'll trade you a poster of that luscious lunatic for it. Put the video tape in your mailbox and I'll deliver it to your haven."
-		"dependency"	"G.Ball_Taken == 2 and G.Gary_Voerman == 0 and G.PP == 0"	// changed by wesp
+		"dependency"	"G.PQ == 1 and G.Gary_Voerman == 0 and G.PP == 0"	// changed by wesp
 	}
 
 	Email
@@ -317,7 +317,7 @@ VV"
 		"subject"	"Prince is promoting you!"
 		"sender"	"gary@schrecknet.vtm"
 		"body"		"Hey boss, did some spring-cleaning today - came across something that might tickle you. A kid used to live here had an unhealthy crush on everyone's favorite psycho pin-up, Jeanette Voerman. I got a touch of nostalgia, so, you find a copy of Tap Hotel, starring me, I'll trade you a poster of that luscious lunatic for it. Put the video tape in your mailbox and I'll deliver it to your haven."
-		"dependency"	"G.Ball_Taken == 2 and G.Gary_Voerman == 0 and G.PP == 1"	// changed by wesp
+		"dependency"	"G.PQ == 1 and G.Gary_Voerman == 0 and G.PP == 1"	// changed by wesp
 		"runscript"	"garySetQuestOne()"	// added by wesp
 	}
 
@@ -374,27 +374,27 @@ VV"
 
 	Email	// added by wesp
 	{
-		"subject"	"Looking for dates?"
-		"sender"	"gary@schrecknet.vtm"
-		"body"		"Are you lonely, boss? Then maybe sending me a weird fleshy Tzimisce ball will stop you from wallowing in self pity. I bet you got one when you flushed these creatures out. Just put it in your mailbox and I will put up a poster in your haven as a reward. Imalia in her full beauty, before I gave her my special treatment."
-		"dependency"	"G.Ball_Taken == 3 and G.Gary_Imalia == 0"
-		"runscript"	"garySetQuestFive()"
-	}
-
-	Email	// added by wesp
-	{
 		"subject"	"Confidential Nigerian Proposal"
 		"sender"	"gary@schrecknet.vtm"
-		"body"		"Are you tech savy, boss? Because Mitnick wants a special name plate with an integrated transponder chip. Don't know what he needs it for, but will swap for a poster of Tawni Sessions that Imalia hasn't got her angry claws on yet."
-		"dependency"	"G.Gary_Damsel == 1 and G.Gary_Tawni == 0 and G.PP == 1"
-		"runscript"	"garySetQuestSix()"
+		"body"		"Are you tech savy, boss? Because Mitnick wants a special name plate with an integrated transponder chip. Don't know what he needs it for, but will swap for a poster of Imalia in her full beauty, before I gave her my special treatment."
+		"dependency"	"G.Gary_Damsel == 1 and G.Gary_Imalia == 0 and G.PP == 1"
+		"runscript"	"garySetQuestFive()"
 	}
 
 	Email	// added by wesp
 	{
 		"subject"	"World of Darkness Gold fast!"
 		"sender"	"gary@schrecknet.vtm"
-		"body"		"Been busy, boss? Because I heard another famous movie prop has gone missing. The throwing star of the Whirlwind from \"A Touch of Xen\". I'll swap it for the poster of Claira Killenbach and her favorite drink." 
+		"body"		"Been busy, boss? Because I heard another famous movie prop has gone missing. The throwing star of the Whirlwind from \"A Touch of Xen\". I'll swap it for a poster of Tawni Sessions that Imalia hasn't got her angry claws on yet."
+		"dependency"	"G.Gary_Imalia == 1 and G.Gary_Tawni == 0 and G.PP == 1"
+		"runscript"	"garySetQuestSix()"
+	}
+
+	Email	// added by wesp
+	{
+		"subject"	"Looking for dates?"
+		"sender"	"gary@schrecknet.vtm"
+		"body"		"Are you lonely, boss? Then maybe sending a squashed Odious Chalice will stop you from wallowing in self pity. Barabus spotted one at the Fu Syndicate. I will put up a poster in your haven as reward, of Claira Killenbach and her favorite drink."
 		"dependency"	"G.Gary_Tawni == 1 and G.Gary_Cross == 0 and G.PP == 1"
 		"runscript"	"garySetQuestSeven()"
 	}
@@ -403,8 +403,8 @@ VV"
 	{
 		"subject"	"Replica Stakes"
 		"sender"	"gary@schrecknet.vtm"
-		"body"		"Hey boss, got one last job for you. Barabus told me he spotted a squashed Odious Chalice at the Fu Syndicate. I'll give you a poster of a sweet girl, whom you certainly won't look too deep in the eyes."
-		"dependency"	"G.Gary_Cross == 1 and G.Gary_Blind == 0 and G.PP == 1"
+		"body"		"Hey boss, got one last job for you. I'm lookiong for a weird fleshy Tzimisce ball, I bet you got one when you flushed these creatures out of Hollywood. I'll give you a poster of a girl whom you won't look too deep in the eyes."
+		"dependency"	"G.Gary_Cross == 1 and G.Ball_Taken == 1 and G.PP == 1"
 		"runscript"	"garySetQuestEight()"
 	}
 

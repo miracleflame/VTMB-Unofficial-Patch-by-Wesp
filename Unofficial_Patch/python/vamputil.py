@@ -713,7 +713,7 @@ def killWerewolf():
     dead_werewolf.SetModel("models/character/monster/werewolf/werewolf.mdl")
     dead_werewolf.SetName("dead_werewolf")
     __main__.CallEntitySpawn(dead_werewolf)
-    G.Werewolf_Dead = 1
+    __main__.G.Werewolf_Dead = 1
     werewolf.Kill()
 
 #OCEANHOUSE: Swaps Dodge powerup and book, added by wesp
@@ -2662,21 +2662,24 @@ def posterCheck():
     if(G.Gary_Damsel):
         poster = Find("poster_damsel")
         poster.ScriptUnhide()
-    if(G.Gary_Tawni):
-        poster = Find("poster_tawni")
-        poster.ScriptUnhide()
     if(G.Gary_Imalia):
         poster = Find("poster_imalia")
+        poster.ScriptUnhide()
+    if(G.Gary_Tawni):
+        poster = Find("poster_tawni")
         poster.ScriptUnhide()
     if(G.Gary_Cross):
         poster = Find("poster_cross")
         poster.ScriptUnhide()
+        if(G.Ball_Taken == 0):
+            __main__.FindPlayer().SetQuest("Gary", 9)
+            G.Ball_Taken = 2
     if(G.Gary_Blind):
         poster = Find("poster_blind")
         poster.ScriptUnhide()
-        if(G.Gary_Complete == 0):
+        if(G.Ball_Taken == 1):
             __main__.FindPlayer().SetQuest("Gary", 9)
-            G.Gary_Complete = 1
+            G.Ball_Taken = 2
 
 #HAVEN: Updates the player's mailbox and flags if he has sent the blood in the mail, changed by wesp
 def mailboxExitCheck():
@@ -2695,7 +2698,7 @@ def mailboxExitCheck():
             G.Werewolf_Quest = 4
             pc.SetQuest("Werewolf Blood", 3)
             pc.ChangeMasqueradeLevel(-1)
-        if(container.HasItem("item_g_garys_film") and G.Ball_Taken == 2):
+        if(container.HasItem("item_g_garys_film") and G.PQ == 1 and G.Gary_Voerman == 0):
             container.RemoveItem("item_g_garys_film")
             G.Gary_Voerman = 1
         if(container.HasItem("item_g_garys_photo") and G.Gary_Voerman == 1 and G.Velvet_Poster == 0):
@@ -2709,19 +2712,18 @@ def mailboxExitCheck():
         if(container.HasItem("item_g_garys_cd") and G.Gary_Photochop == 1 and G.Gary_Damsel == 0):
             container.RemoveItem("item_g_garys_cd")
             G.Gary_Damsel = 1
-        if(container.HasItem("item_g_jumbles_flyer") and G.Ball_Taken == 3 and G.Gary_Imalia == 0):
-            container.RemoveItem("item_g_jumbles_flyer")
-            G.Gary_Imalia = 1
-            G.Ball_Taken = 2
-        if(container.HasItem("item_g_wireless_camera_2") and G.Gary_Damsel == 1 and G.Gary_Tawni == 0):
+        if(container.HasItem("item_g_wireless_camera_2") and G.Gary_Damsel == 1 and G.Gary_Imalia == 0):
             container.RemoveItem("item_g_wireless_camera_2")
-            G.Gary_Tawni = 1
-        if(container.HasItem("item_g_wireless_camera_4") and G.Gary_Tawni == 1 and G.Gary_Cross == 0):
+            G.Gary_Imalia = 1
+        if(container.HasItem("item_g_wireless_camera_4") and G.Gary_Imalia == 1 and G.Gary_Tawni == 0):
             container.RemoveItem("item_g_wireless_camera_4")
-            G.Gary_Cross = 1
-        if(container.HasItem("item_g_wireless_camera_3") and G.Gary_Cross == 1 and G.Gary_Blind == 0):
+            G.Gary_Tawni = 1
+        if(container.HasItem("item_g_wireless_camera_3") and G.Gary_Tawni == 1 and G.Gary_Cross == 0):
             container.RemoveItem("item_g_wireless_camera_3")
-            G.Gary_Blind = 1
+            G.Gary_Cross = 1
+        if(container.HasItem("item_g_jumbles_flyer") and G.Gary_Cross == 1 and G.Gary_Eyes == 0):
+            container.RemoveItem("item_g_jumbles_flyer")
+            G.Gary_Eyes = 1
 
 #HAVEN: Updates the player's quest when he gets the email about werewolf blood
 def werewolfBloodQuestAssigned():

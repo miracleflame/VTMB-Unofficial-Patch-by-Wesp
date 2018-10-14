@@ -168,6 +168,7 @@ def mercurioFight():
 
 #ASIAN VAMP ARENA: Called when vamp is killed, changed by wesp
 def asianVampDeath():
+    __main__.G.Kjspy_Dead = 1
     __main__.FindPlayer().SetQuest("Knox Asian", 3)
     if G.Patch_Plus == 2:
         shu = Find("AsianVamp")

@@ -549,7 +549,7 @@ def borisDeath():
     if(state > 0 and state != 3):
         pc.SetQuest("Kill Venus", 4)
 
-#EMPIRE: Called afer dialog with Boris, changed by wesp
+#EMPIRE: Called after dialog with Boris, changed by wesp
 def borisDialog():
     dema = Find("Dema")
     demawesp = Find("Dema_wesp")
