@@ -2691,7 +2691,7 @@
 "angles" "0 0 0"
 "model" "models/scenery/structural/doorknob_round/doorknob_round_brass.mdl"
 "parentname" "sew_door2"
-"difficulty" "0"
+"difficulty" "3"
 "skilltype" "1"
 "diceroll" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
@@ -7531,6 +7531,7 @@
 "OnTrigger" "Events_Player,CreateControllerNPC,,0,-1,,"
 "OnTrigger" "Shot1_player_sequence,BeginSequence,,0.5,-1,,"
 "OnTrigger" "door_block,ScriptUnhide,,0.6,-1,,"
+"OnTrigger" ",,,0,-1,FindPlayer().ClearActiveDisciplines(),"
 "origin" "519 2793.25 -596.606"
 }
 {
@@ -9641,6 +9642,7 @@
 "classname" "logic_auto"
 "OnMapLoad" "logic_scene,Trigger,,2,1,,"
 "OnMapLoad" "Events_Player,CreateControllerNPC,,0,1,,"
+"OnMapLoad" ",,,0,-1,FindPlayer().ClearActiveDisciplines(),"
 "OnMapLoad" "blackbox,Kill,,3,1,,"
 "origin" "22.89 -418 -476"
 }

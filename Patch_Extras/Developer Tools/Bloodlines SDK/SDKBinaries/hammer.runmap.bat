@@ -7,6 +7,7 @@ title %WinTitle%
 color 07
 pushd "%~dp0"
 set "RMCfg=%~n0.ini"
+if "%~1"=="" (exit)
 
 :========================================================================
 :GlobalUserDefs
@@ -23,8 +24,11 @@ set Priority=/normal
 :========================================================================
 
 :exec_stage
- if "%~1"=="" (exit)
- if /i "%~1"=="-executejob" (
+ if /i "%~1"=="execute" (
+ if /i "%~2"=="selected" (
+	start %~nx0 -execjob
+	exit ))
+ if /i "%~1"=="-execjob" (
 	goto ExecuteJob)
 
 :prep_stage
@@ -600,7 +604,7 @@ echo.
 :close_log
 (echo.
  echo.
- echo  ================ Log closed [%date%, %time:~0,-3%] =================
+ echo ================ Log closed [%date%, %time:~0,-3%] =================
 )>>"%MapFile%.log"
 %textcolor% green
 echo Finished.
@@ -657,7 +661,7 @@ exit /b
 	%textcolor% grey
 	(echo.
 	 echo.
-	 echo  ================ Log closed [%date%, %time:~0,-3%] =================
+	 echo ================ Log closed [%date%, %time:~0,-3%] =================
 	)>>"%MapFile%.log"
 	pause > nul
 	exit

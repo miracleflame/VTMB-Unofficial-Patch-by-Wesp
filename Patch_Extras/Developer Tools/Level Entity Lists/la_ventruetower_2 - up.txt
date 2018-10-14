@@ -8519,11 +8519,19 @@
 "is_bossmonster" "1"
 "OnDialogEnd" "bomberman,SetRelationship,!player D_HT 5,0.01,-1,,"
 "OnDialogEnd" ",,,0,-1,setupTimer(),"
+"OnDialogEnd" "zig!_soundcheck,Test,,0,1,,"
 "OnDeath" ",,,0,-1,spawnBomb(),"
 "OnDeath" "possession,TurnOff,,0,-1,,"
 "OnDialogBegin" "possession,TurnOn,,0,-1,,"
 "OnDialogBegin" "possession_sound,PlaySound,,0,-1,,"
 "origin" "-1080 224 2613"
+}
+{
+"classname" "logic_pythoncheck"
+"python_script" "G.Player_Malkavian == 1 and G.Patch_Plus == 1"
+"targetname" "zig!_soundcheck"
+"OnTrue" "zig!,PlaySound,,0,-1,,"
+"origin" "-1010.48 221.52 2680"
 }
 {
 "classname" "info_node_cover_corner"
@@ -8679,7 +8687,7 @@
 "classname" "prop_doorknob"
 "angles" "0 90 0"
 "model" "models/scenery/structural/doorknob_round/doorknob_round_brass.mdl"
-"difficulty" "0"
+"difficulty" "8"
 "skilltype" "1"
 "diceroll" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
@@ -15728,7 +15736,6 @@
 "OnStartTouch" "bomberman_shield,Kill,,0,-1,,"
 "OnStartTouch" "playerevents,RemoveDisciplinesNow,,0,-1,,"
 "OnStartTouch" "bomberman,StartPlayerDialogRemote,,0.1,-1,,"
-"OnStartTouch" "zig!,PlaySound,,0,1,,"
 }
 {
 "model" "*93"

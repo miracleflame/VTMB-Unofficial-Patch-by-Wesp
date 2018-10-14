@@ -1,0 +1,57 @@
+
+   /*-----------------------------------------------------------.
+  /              High-Pass Sharpening settings                  /
+  '-----------------------------------------------------------*/
+
+#define USE_HighPassSharpening 0 //[Sharp] // 0 = off, 1 = on.
+
+//>Sharpening Settings
+#define SharpMask			   2 //[1|2] //-1 = Sharpening, 2 = Mid-tone Sharpening
+#define CurveMask 			   0 //[0|1|2|3] //-0 = Off, 1 = On, 2 = Curve Dark Halos Only, 3 = Curve Bright Halos Only
+#define CurveStrength 	    0.20 //[0.00:3.00] //-Higher #'s = sharper image.
+#define SharpMaskPrecision  2.00 //[0.40:10.00] //-#'s > 1 = smaller radius, #'s < 1 = bigger radius. A small radius will sharpen small details, a large radius will sharpen large details.
+#define SharpMaskQuality	   2 //[0:2] //-0 = 3x3 mask, 1 = 5x5 mask, 2 = 7x7 mask.
+#define ViewSharpMask 		   0 //[0|1] //-Set to 1 to view the SharpMask. Helpful when adjusting CurveStrength, SharpMaskPrecision, and halo settings.                               
+#define BlendMode 			   3 //[1|2|3|4|5|6] //-1 = Soft Light(weak), 2 = Overlay(neutral), 3 = Multiply, 4 = Hard Light, 5 = Vivid Light, 6 = Screen(strong)
+#define HPSharpStrength  	1.30 //[-3.00:3.00] //-Strength of the sharpening effect. Negative values soften the image.
+
+//>Advanced Sharpening Settings
+#define ClampDarkHalos 	   0.30 //[0.00:0.50] //-Limits the amount of sharpening done to dark pixels. Setting to 0.50 = no sharpening to dark pixels.
+#define ClampLightHalos    0.55 //[0.50:1.00] //-Limits the amount of sharpening done to bright pixels. Setting to 0.50 = no sharpening to bright pixels.
+#define AdjustHaloStrength    0 //[0:1] //-0 = Off. 1 = On. Adjust the strength of the light and dark halos. Setting to 1 overrides CurveMask and CurveStrength settings.
+#define LightHaloStrength  0.10 //[0.00:3.00] //-
+#define DarkHaloStrength   0.70 //[0.00:3.00] //-
+#define MidMaskDark        0.35 //[0.00:1.00] //-Default = 0.35. Still experimenting with these settings. Higher values should increase the amount of sharpening done in dark areas. Sometimes it will do the opposite.
+#define MidMaskLight       0.90 //[0.00:2.00] //-Default = 0.90. Still experimenting with these settings. Higher values should increase the amount of sharpening done in dark areas. Sometimes it will do the opposite.
+#define ViewMidtoneMask      0 //[0:1] //-0 = Off, 1 = On. Areas covered in RED will be sharpened. Areas covered in BLUE will not be sharpened.
+
+
+   /*-----------------------------------------------------------.
+  /         High-Pass Contrast Enhancement settings             /
+  '-----------------------------------------------------------*/
+#define USE_HighPassContrastEnhancement 1 //[Sharp] // 0 = off, 1 = on.
+
+//>Contrast Enhancement Settings
+#define CE_Mask 		  	  2 //[1|2] // 1 = Contrast Enhancement, 2 = Mid-tone Contrast Enhancement
+#define CurveCE_Mask     	  0 //[0|1|2|3] //-0 = Off, 1 = On, 2 = Curve Dark Halos Only, 3 = Curve Light Halos Only.
+#define CurveCE_Strength   0.30 //[0.00:3.00] //-Higher #'s = stronger effect.
+#define CE_MaskWidth       8.00 //[0.00:10.00] //-#'s > 1 = bigger radius, #'s < 1 = smaller radius
+#define CE_MaskQuality        0 //[0:5] //-Higher #'s = more blur passes (Wider, smoother blur). Higher performance cost.
+#define ViewCE_Mask           0 //[0:1] //-Set to 1 to view the CE_Mask. Helpful when adjusting mask settings. 
+#define CE_BlendMode          2 //[1|2|3|5|6|7] //-1 = Soft Light(weak), 2 = Overlay(neutral), 3 = Multiply, 4 = Hard Light, 5 = Vivid Light, 6 = Soft Light#2(lighter), 7 = Soft Light#3(darker)
+#define CE_Strength        0.60 //[-3.00:3.00] //-Strength of the Contrast Enhancement effect.
+
+//>Advanced Contrast Enhancement Settings
+#define ClampDarkHalosCE      0.35 //[0.00:0.50] //-Limits the amount of contrast enhancement done to dark pixels. Setting to 0.50 = no contrast enhancement on dark pixels.
+#define ClampLightHalosCE     0.55 //[0.50:1.00] //-Limits the amount of contrast enhancement done to bright pixels. Setting to 0.50 = no contrast enhancement on bright pixels.
+#define AdjustHaloStrengthCE     0 //[0:1]       //-Adjust the strength of light and dark halos individually. Setting to 1 overrides CurveCE_Mask and CurveCE_Strength
+#define LightHaloStrengthCE   0.00 //[0.00:3.00] //-Adjust the strength of light halos. If the light halos are clamped, higher values may increase the radius but not the brightness. 
+#define DarkHaloStrengthCE    0.20 //[0.00:3.00] //-Adjust the strength of dark halos. If the dark halos are clamped, higher values may increase the radius but not the darkness. 
+#define MidMaskDarkCE         0.45 //[0.00:1.00] //-Default = 0.35. Still experimenting with these settings. Higher values should increase the amount of contrast enhancement done in dark areas. Sometimes it will do the opposite.
+#define MidMaskLightCE        0.95 //[0.00:2.00] //-Default = 0.95. Still experimenting with these settings. Lower values should decrease the amount of contrast enhancement done in bright areas. Sometimes it will do the opposite.
+#define ViewMidtoneMaskCE        0 //[0:1]       //-Areas covered in RED receive contrast enhancement, areas covered in BLUE do not. The stronger the color, the stronger the effect.
+
+//>Performance and Misc Settings
+#define CETextureFormat         0 //[0|1|2] //-0 = RGBA8, 1 = RGBA16F, 2 = RGBA32F. 
+#define CETexScale              2 //[0|1|2] //-0 = no scaling, 1 = 1/2 resolution, 2 = 1/4 resolution. Reduces performance cost.  
+#define Compatibility           1  //0 = off, 1 = SweetFX, 2 = MasterEffect

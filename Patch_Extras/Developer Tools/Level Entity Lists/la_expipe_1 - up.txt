@@ -4639,6 +4639,7 @@
 "spawnflags" "256"
 "origin" "4136.5 -3918.5 -7359.5"
 "soundgroup" "standard_door"
+"targetname" "entrancedoor"
 "use_icon" "10"
 "locked_icon" "3"
 "OnFullyOpen" "expipe_trigger,ChangeNow,,0.5,-1,,"
@@ -4745,7 +4746,7 @@
 "crossfade_skin_time" "2.0"
 "combat_start_activity" "-1"
 "follower_type" "Default"
-"soundgroup" "Unique/Damsel"
+"soundgroup" "Damsel"
 "floatfreq" "2"
 "origin" "4476 -3860 -7416"
 }
@@ -5635,6 +5636,24 @@
 "classname" "infodecal"
 "texture" "decals/signs/everett"
 "origin" "4390 -3727 -7200"
+}
+{
+"classname" "prop_doorknob"
+"angles" "0 270 0"
+"model" "models/scenery/structural/doorknoba/doorknoba.mdl"
+"difficulty" "0"
+"skilltype" "1"
+"locksnd" "environmental/electronic/button_click_1.wav"
+"delete_key" "0"
+"parentname" "entrancedoor"
+"use_icon" "10"
+"locked_icon" "3"
+"key_icon" "4"
+"crossfade_skin_time" "2.0"
+"diceroll" "1"
+"renderamt" "255"
+"rendercolor" "255 255 255"
+"origin" "4140 -3964 -7362"
 }
 {
 "classname" "npc_VPedestrian"

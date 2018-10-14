@@ -1004,6 +1004,22 @@
 "origin" "144 755 24.5"
 }
 {
+"classname" "info_landmark"
+"targetname" "chamber_transition_mark"
+"angles" "0 180 0"
+"spawnflags" "1"
+"origin" "141 751 26"
+}
+{
+"model" "*4"
+"classname" "trigger_changelevel"
+"targetname" "chamber_transition"
+"map" "la_ventruetower_1b"
+"landmark" "chamber_transition_mark"
+"spawnflags" "2"
+"origin" "144 755 24.5"
+}
+{
 "classname" "prop_dynamic"
 "angles" "0 270 0"
 "skin" "1"
@@ -5567,7 +5583,7 @@
 "origin" "10 -208 213"
 "angles" "0 90 0"
 "OnBeginSequence" ",,,0,-1,SheriffBatsSummon(),"
-"OnBeginSequence" "Sheriff_particles,TurnOn,,0,1,,"
+"OnBeginSequence" "Sheriff_particles,TurnOn,,1,1,,"
 "OnBeginSequence" "Sheriff_sound,PlaySound,,0,-1,,"
 "OnBeginSequence" "Sheriff_sound,StopSound,,5,-1,,"
 "OnBeginSequence" "bats_sound,PlaySound,,0,-1,,"
@@ -5616,7 +5632,7 @@
 "targetname" "Sheriff_particles"
 "parentname" "Sheriff"
 "angles" "0 0 0"
-"particle_definition" "particles/andrei_summon-emitter.txt"
+"particle_definition" "particles/d_animalism_bats_cast_emitter.txt"
 "active" "0"
 "attach_type" "2"
 "bounds" "512"
@@ -5630,7 +5646,7 @@
 "targetname" "Sheriff_particles"
 "parentname" "Sheriff"
 "angles" "0 0 0"
-"particle_definition" "particles/andrei_summon-emitter.txt"
+"particle_definition" "particles/d_animalism_bats_cast_emitter.txt"
 "active" "0"
 "attach_type" "2"
 "bounds" "512"

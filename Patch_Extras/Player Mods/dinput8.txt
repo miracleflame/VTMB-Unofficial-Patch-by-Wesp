@@ -1,0 +1,32 @@
+Description of the bug:
+
+When using the current version of Windows 10, the game stops responding to certain input, when the mouse buttons are clicked, until the mouse moves. It makes you unable to continuously attack or spam the same discipline without moving the mouse, breaking melee combos, and causing firearms to be stuck shooting.
+
+Why it happens:
+
+I don't know exactly. The game does a terrible job at handling input, it actually relies on standard windows messaging, instead of using one of the input APIs. When it receives a WM_LBUTTONUP or WM_RBUTTONUP message, it's WindowProc gets stuck, until it receives WM_MOUSEMOVE. It may be a Windows issue, or it may as well rely on some ancient bug Windows has recently fixed.
+
+How this mod works:
+
+I'm not a programmer, I have no idea how to properly fix it. What I did is hijacked its WindowProc, and whenever it receives the above mentioned messages, the mod fakes some momentarily mouse movement. It does not actually move the mouse, it's fake, but it gets the WindowProc unstuck, like real mouse movement.
+
+How to install:
+
+Just drop the extracted dinput8.dll into the main game directory, next to vampire.exe.
+
+Mod compatibility:
+
+It should not affect any mods, unless they're also implemented as a dinput8.dll hook. Note that the game relies on the title of the main game window, and if any other mod changes it, or it differs in localized versions, the game will get into an infinite loop. It is fixable, but at this point I don't know if it's worth the effort.
+
+Known issues:
+Nothing I know of, though I did not do thousands of hours of testing. The game seems to work just like in older versions of Windows. Of course, unexpected things may happen, as always. If you don't experience the bug, do not install this mod.
+
+Download link:
+https://drive.google.com/file/d/1L6l_1qTb3o8tnghfVqOpBurvm3QOf-6a/view?usp=sharing
+
+Source code:
+https://pastebin.com/JW8r2H5W
+
+Feel free to laugh at my code quality, feel free to share it, steal it, improve it, any way you see fit.
+
+21.12.2017 Dusk of Oolacile

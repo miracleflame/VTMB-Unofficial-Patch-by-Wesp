@@ -29,6 +29,8 @@ Media
 		"23" { index 23; image icon_khed }
 		"24" { index 24; image icon_pallete }
 		"25" { index 25; image icon_soundbrowser }
+		"26" { index 26; image icon_grepwin }
+		"27" { index 27; image icon_sheettool }
 	}
 
 	Sections
@@ -76,40 +78,10 @@ Media
 				Image			7
 			}
 		}
+
 		"2"
 		{
 			id		2
-			Name	"MODELING"
-			
-			hlmv
-			{
-				Title			"Model Viewer"
-				Program			"hlmv.exe"
-				Image			6
-			}
-			mdlcompiler
-			{
-				Title			"Model Compiler"
-				Program			"mdlcompiler.exe"
-				Image			9
-			}
-			mdldecompiler
-			{
-				Title			"Model Decompiler"
-				Program			"tools/Java-Based/Java_run.exe -jar \"mdl2smd.jar\""
-				Image			6
-			}
-			khed
-			{
-				Title			"kHED Editor 1.1.5"
-				Program			"tools/kHED 1.1.5/kHED.exe"
-				Image			23
-			}
-		}
-
-		"3"
-		{
-			id		3
 			Name	"CONTENT MANAGING"
 			
 			vamped
@@ -136,6 +108,61 @@ Media
 		//		Program 		"tools/Java-Based/Java_run.exe -jar \"pakrat.jar\""
 		//		Image			19
 		//	}
+		}
+
+		"3"
+		{
+			id		3
+			Name	"MODELING"
+			
+			hlmv
+			{
+				Title			"Model Viewer"
+				Program			"hlmv.exe"
+				Image			6
+			}
+			studiocompiler
+			{
+				Title			"Model Compiler"
+				Program			"tools/StudioCompiler/Launcher.exe"
+				Image			9
+			}
+			mdldecompiler
+			{
+				Title			"Model Decompiler"
+				Program			"tools/Java-Based/Java_run.exe -jar \"mdl2smd.jar\""
+				Image			11
+			}
+			khed
+			{
+				Title			"kHED Model Editor"
+				Program			"tools/kHED Editor/kHED_start.exe"
+				Image			23
+			}
+			qccompiler
+			{
+				Title			"QC Files Compiler"
+				Program			"mdlcompiler.exe"
+				Image			9
+			}
+			sheettool
+			{
+				Title			"CharSheet Injector"
+				Program			"tools/Sheet Tool/Sheet_Tool_run.exe"
+				Image			27
+			}
+			3dsplugins
+			{
+				Title			"3ds Max Plugins"
+				ShellExecute	"plugins\\3dsmax\\"
+				Image			13
+			}
+			sketchupplugins
+			{
+				Title			"SketchUp Plugins"
+				ShellExecute	"plugins\\sketchup\\"
+				Image			13
+			}
 		}
 
 		"4"
@@ -193,17 +220,23 @@ Media
 				Program			"tools\\Captions Editor\\CaptionsEditor.bat"
 				Image			8
 			}
+			soundbrpwser
+			{
+				Title			"Sound Browser"
+				Program			"soundbrowser.exe"
+				Image			25
+			}
 			dupefinder
 			{
 				Title			"Mods Dupe Finder"
 				Program			"tools\\Dupe Finder\\DupeFinder.bat"
 				Image			13
 			}
-			soundbrpwser
+			grepwin
 			{
-				Title			"Sound Browser"
-				Program			"soundbrowser.exe"
-				Image			25
+				Title			"grepWin Text Util"
+				Program			"tools\\GrepWin Tool\\grepWin.exe"
+				Image			26
 			}
 			4gbpatcher
 			{

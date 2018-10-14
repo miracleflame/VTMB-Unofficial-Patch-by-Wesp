@@ -8,6 +8,7 @@ if "%~1"=="" (
 	pause> nul
 	exit
 )
+chcp 850> nul
 
 :DefVars
 pushd "%~dp0.."
@@ -17,7 +18,7 @@ pushd "%~dp0"
 
 if exist "GameCfg.ini" (
 for /f "usebackq delims== tokens=1,*" %%a in ("GameCfg.ini") do (
-	if /i "%%~a"=="ModDir" (if exist "%%~b\*" (set "%%~a=%%~b"))
+	if /i "%%~a"=="ModDir" (if exist "%%~b\*" (set "%%~a=%%~b") )
 ))
 
 :ProcQcPath
@@ -28,26 +29,41 @@ set "QCFile=%%~m"))
 for /f "usebackq eol=/ tokens=1,*" %%a in ("%QCFile%") do (
 	if /i "%%~a"=="$modelname" if not "%%~b"=="" (
 		for %%m in ("%ModDir%\models\%%~b") do (
-			set "MdlFile=models/%%~b"
+			if /i "%%~xb"==".mdl" (
+				set "MdlFile=models/%%~b!"
+			) else (
+				set "MdlFile=models/%%~b.mdl!"
+			)
 			if not exist "%%~dpm" md "%%~dpm"> nul
 		)
 	)
 )
 
+:ParseCmdline
+set CmdLine=%*
+rem Fix StudioCompiler input...
+if /i "%~1"=="-game" set CmdLine=%4 %5 %6 %7 %8 %9 %3
+if /i "%~1"=="-cdir" set CmdLine=%4 %5 %6 %7 %8 %9 %3
+
 :ShowRoundup
 set "MdlFile=%MdlFile:/=\%"
+set "MdlFile=%MdlFile:.mdl!=%"
 echo ---------------------
-echo Project Dir: "%ModDir%"
-echo Target MDL: "%MdlFile%"
+echo Project-Dir: "%ModDir%"
+echo Target-MDL: "%MdlFile%.mdl"
 echo ---------------------
 
+:ClearOldFiles
+if exist "%ModDir%\%MdlFile%.??*" (
+del /f /q "%ModDir%\%MdlFile%.??*")> nul
+
 :RunCompiler
-call studiomdl.exe -game "%ModDir%" %*
-echo.
+call studiomdl.exe -game "%ModDir%" %CmdLine%
+echo. 
 
 :CheckResult
 echo ---------------------
-if not exist "%ModDir%\%MdlFile%" (
+if not exist "%ModDir%\%MdlFile%.mdl" (
 	echo An error occurred during compiling!
 	echo See StudioMDL log above for details.
 ) else (

@@ -408,7 +408,7 @@
 "classname" "point_explosion"
 "targetname" "1charhole_explosion_1"
 "angles" "0 0 0"
-"explosion_params" "wall_break_params"
+"explosion_params" "wall_^gh_params"
 "spawnflags" "1"
 "origin" "-188 -724 -229.153"
 }
@@ -8737,8 +8737,21 @@
 "OnTrigger" "midhole_broken_2,ScriptUnhide,,0,1,,"
 "OnTrigger" "midhole_unbroken_2,Kill,,0,1,,"
 "OnTrigger" "midhole_explosion_2,Explode,,0.01,1,,"
+"OnTrigger" "midhole_sound_2,PlaySound,,0.1,1,,"
 "OnTrigger" "f2_door_relay_1,Trigger,,5,-1,,"
 "origin" "327 -888 -207.976"
+}
+{
+"classname" "ambient_generic"
+"health" "10"
+"pitch" "100"
+"pitchstart" "100"
+"radius" "4000"
+"sound_event_level" "2"
+"targetname" "midhole_sound_2"
+"message" "Area/Downtown/Bradbury/wall_break.wav"
+"spawnflags" "16"
+"origin" "368 -888 -200"
 }
 {
 "classname" "point_explosion"
@@ -14686,6 +14699,7 @@
 "OnTrigger" "f4_m_ghoul_2,ScriptUnhide,,0,-1,,"
 "OnTrigger" ",,,0.2,-1,heatherScream1(),"
 "OnTrigger" ",,,2,-1,heatherCry(),"
+"OnTrigger" ",,,0,-1,FindPlayer().ClearActiveDisciplines(),"
 "origin" "-668.316 631 -662.708"
 }
 {

@@ -9,4 +9,4 @@ CZ localization project for Czech.
 Authors:
 Raptor & Charmer
 
-Unknown line names fixed by Psycho-A (18.01.2017).
+Unknown line names & Czech strings fixed by Psycho-A (15.08.2018).

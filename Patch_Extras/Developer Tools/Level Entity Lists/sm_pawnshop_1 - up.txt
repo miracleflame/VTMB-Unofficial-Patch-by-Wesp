@@ -4259,8 +4259,8 @@
 }
 {
 "classname" "prop_doorknob"
-"model" "models/scenery/structural/doorknoba/doorknoba.mdl"
-"angles" "0 270 0"
+"model" "models/scenery/structural/doorknob_round/doorknob_round_brass.mdl"
+"angles" "0 0 0"
 "StartHidden" "0"
 "difficulty" "0"
 "skilltype" "1"
@@ -4271,14 +4271,30 @@
 "use_icon" "10"
 "locked_icon" "3"
 "key_icon" "4"
-"origin" "-2080.01 -3050.14 69.5652"
+"origin" "-2083.5 -3051 65"
+}
+{
+"classname" "prop_doorknob"
+"model" "models/scenery/structural/doorknob_round/doorknob_round_brass.mdl"
+"angles" "0 180 0"
+"StartHidden" "0"
+"difficulty" "0"
+"skilltype" "1"
+"diceroll" "1"
+"locksnd" "environmental/electronic/button_click_1.wav"
+"delete_key" "0"
+"parentname" "nextdoor2"
+"use_icon" "10"
+"locked_icon" "3"
+"key_icon" "4"
+"origin" "-2085.5 -3051 65"
 }
 {
 "classname" "prop_dynamic"
 "health" "0"
 "ExplodeDamage" "0"
 "ExplodeRadius" "0"
-"angles" "0 90 0"
+"angles" "0 180 0"
 "demo_sequence" "None"
 "skin" "0"
 "disableshadows" "1"
@@ -4287,18 +4303,18 @@
 "MinAnimTime" "5"
 "MaxAnimTime" "10"
 "parentname" "havenrm"
-"model" "models/scenery/structural/doorknoba/doorknoba.mdl"
+"model" "models/scenery/structural/doorknob_round/doorknob_round_brass.mdl"
 "npc_opaque" "1"
 "npc_transparent" "1"
 "crossfade_skin_time" "2.0"
-"origin" "-2011.92 -2608.59 189.372"
+"origin" "-2009.5 -2609 184"
 }
 {
 "classname" "prop_dynamic"
 "health" "0"
 "ExplodeDamage" "0"
 "ExplodeRadius" "0"
-"angles" "0 270 0"
+"angles" "0 0 0"
 "demo_sequence" "None"
 "skin" "0"
 "disableshadows" "1"
@@ -4307,11 +4323,11 @@
 "MinAnimTime" "5"
 "MaxAnimTime" "10"
 "parentname" "havenrm"
-"model" "models/scenery/structural/doorknoba/doorknoba.mdl"
+"model" "models/scenery/structural/doorknob_round/doorknob_round_brass.mdl"
 "npc_opaque" "1"
 "npc_transparent" "1"
 "crossfade_skin_time" "2.0"
-"origin" "-2004.9 -2608.68 189.372"
+"origin" "-2007.5 -2609 184"
 }
 {
 "classname" "prop_doorknob"
@@ -4328,7 +4344,7 @@
 "use_icon" "10"
 "locked_icon" "3"
 "key_icon" "4"
-"origin" "-2082.99 -2606.65 184.221"
+"origin" "-2082.99 -2609 184"
 }
 {
 "classname" "prop_doorknob"
@@ -4343,7 +4359,7 @@
 "use_icon" "10"
 "locked_icon" "3"
 "key_icon" "4"
-"origin" "-2086.04 -2606.57 184.221"
+"origin" "-2086.04 -2609 184"
 }
 {
 "classname" "logic_auto"
@@ -5169,22 +5185,6 @@
 "targetname" "nextdoor2"
 "use_icon" "10"
 "locked_icon" "3"
-}
-{
-"classname" "prop_doorknob"
-"model" "models/scenery/structural/doorknoba/doorknoba.mdl"
-"angles" "0 90 0"
-"StartHidden" "0"
-"difficulty" "0"
-"skilltype" "1"
-"diceroll" "1"
-"locksnd" "environmental/electronic/button_click_1.wav"
-"delete_key" "0"
-"parentname" "nextdoor2"
-"use_icon" "10"
-"locked_icon" "3"
-"key_icon" "4"
-"origin" "-2087.77 -3050.24 69.5652"
 }
 {
 "model" "*32"
@@ -6124,7 +6124,7 @@
 {
 "classname" "prop_dynamic"
 "angles" "0 0 0"
-"model" "models/scenery/misc/poster/poster2a.mdl"
+"model" "models/scenery/misc/poster/poster1a.mdl"
 "targetname" "poster_cross"
 "StartHidden" "1"
 "collideable_gibs" "0"

@@ -5986,12 +5986,13 @@
 {
 "classname" "prop_doorknob"
 "angles" "0 90 0"
-"difficulty" "0"
+"difficulty" "1"
 "skilltype" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
 "delete_key" "0"
 "model" "models/scenery/structural/doorknoba/drknobantiquel.mdl"
 "parentname" "frontdoor1"
+"targetname" "frontdoor1lock"
 "use_icon" "10"
 "locked_icon" "3"
 "key_icon" "4"
@@ -6000,12 +6001,13 @@
 {
 "classname" "prop_doorknob"
 "angles" "0 90 0"
-"difficulty" "0"
+"difficulty" "1"
 "skilltype" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
 "delete_key" "0"
 "model" "models/scenery/structural/doorknoba/drknobantique.mdl"
 "parentname" "frontdoor2"
+"targetname" "frontdoor2lock"
 "use_icon" "10"
 "locked_icon" "3"
 "key_icon" "4"
@@ -6046,7 +6048,7 @@
 {
 "classname" "prop_doorknob"
 "angles" "0 315 0"
-"difficulty" "0"
+"difficulty" "9"
 "skilltype" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
 "delete_key" "0"
@@ -6060,7 +6062,7 @@
 {
 "classname" "prop_doorknob"
 "angles" "0 315 0"
-"difficulty" "0"
+"difficulty" "9"
 "skilltype" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
 "delete_key" "0"
@@ -6246,7 +6248,7 @@
 {
 "classname" "prop_doorknob"
 "angles" "0 270 0"
-"difficulty" "0"
+"difficulty" "10"
 "skilltype" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
 "delete_key" "0"
@@ -6260,7 +6262,7 @@
 {
 "classname" "prop_doorknob"
 "angles" "0 270 0"
-"difficulty" "0"
+"difficulty" "10"
 "skilltype" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
 "delete_key" "0"
@@ -6274,7 +6276,7 @@
 {
 "classname" "prop_doorknob"
 "angles" "0 45 0"
-"difficulty" "0"
+"difficulty" "8"
 "skilltype" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
 "delete_key" "0"
@@ -6288,7 +6290,7 @@
 {
 "classname" "prop_doorknob"
 "angles" "0 45 0"
-"difficulty" "0"
+"difficulty" "8"
 "skilltype" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
 "delete_key" "0"
@@ -6366,7 +6368,7 @@
 {
 "classname" "prop_doorknob"
 "angles" "0 45 0"
-"difficulty" "0"
+"difficulty" "8"
 "skilltype" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
 "delete_key" "0"
@@ -6380,7 +6382,7 @@
 {
 "classname" "prop_doorknob"
 "angles" "0 45 0"
-"difficulty" "0"
+"difficulty" "8"
 "skilltype" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
 "delete_key" "0"
@@ -6883,7 +6885,7 @@
 {
 "classname" "prop_doorknob"
 "angles" "0 0 0"
-"difficulty" "0"
+"difficulty" "9"
 "skilltype" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
 "delete_key" "0"
@@ -6912,7 +6914,7 @@
 {
 "classname" "prop_doorknob"
 "angles" "0 180 0"
-"difficulty" "0"
+"difficulty" "9"
 "skilltype" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
 "delete_key" "0"
@@ -11382,6 +11384,8 @@
 "classname" "logic_auto"
 "targetname" "logic_auto"
 "OnMapLoad" ",,,0,-1,onGio2bLoad(),"
+"OnMapLoad" "frontdoor1lock,Unlock,,0,-1,,"
+"OnMapLoad" "frontdoor2lock,Unlock,,0,-1,,"
 "origin" "-298.086 -761 155.796"
 }
 {

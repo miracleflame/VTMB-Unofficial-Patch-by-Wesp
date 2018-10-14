@@ -1,7 +1,7 @@
-//====== Copyright © 2003-2016, Troika Games, Inc. All rights reserved. =======
+//====== Copyright © 2003-2018, Troika Games, Inc. All rights reserved. =======
 //
 // Purpose: Vampire Bloodlines game definition file (.fgd) 
-// Version: 1.53 beta
+// Version: 1.70 beta
 // Edition: Original VtMB
 // Written: Psycho-A
 //
@@ -133,8 +133,8 @@ studioprop()
 	]
 
 	// Inputs
-	input AddEntityToContainer(void) : "Add selected entity to container."
-	input SpawnItemInContainer(void) : "Spawn selected entity in container."
+	input AddEntityToContainer(string) : "Add selected entity to container."
+	input SpawnItemInContainer(string) : "Spawn selected entity in container."
 	input DeleteItems(void) : "Delete selected items in container."
 	
 	// Outputs
@@ -1414,9 +1414,9 @@ studioprop("models/editor/camera.mdl")
 	duration(float) : "Duration (seconds)" : 2 : "Set floating duration, in seconds."
 	frequency(float) : "Frequency (per sec)" : 3 : "Set number of floatings per one second."
 
-	// Outputs
-	output StartWaves(void) : "Start camera's wave floating."
-	output StopWaves(void) : "Stop camera's wave floating."
+	// intputs
+	input StartWaves(void) : "Start camera's wave floating."
+	input StopWaves(void) : "Stop camera's wave floating."
 ]
 
 
@@ -1635,7 +1635,7 @@ base (
 	// inputs
 	input TurnOn(void): "Turns on the particle effect."
 	input TurnOff(void): "Turns off the particle effect."
-	input SetRateScale(void): "Sets particle rate scale."
+	input SetRateScale(float): "Sets particle rate scale."
 ]
 
 
@@ -1701,6 +1701,7 @@ sphere(spawnbounds)
 	// inputs
 	input SetAttachType(void): "Sets attaching type."
 	input SetRampTime(void): "Sets ramp time [not tested]."
+	input AttachToPlayerViewmodel(integer): "[VTMB: untested connection]."
 ]
 
 
@@ -2044,7 +2045,7 @@ iconsprite("editor/scripted_sentence.vmt")
 	input DisableOutputs(void) : "Disables all entity's I/O connections [not tested]."
 	input CreateControllerNPC(void) : "Creates NPC controller [not tested]."
 	input RemoveControllerNPC(void) : "Removes NPC controller [not tested]."
-	input AwardExp(integer) : "Awards player with defined experience points."
+	input AwardExp(string) : "Awards player with defined experience points."
 	input ClearDialogCombatTimers(void) : "Clears dialog combat timers [not tested]."
 	input ImmobilizePlayer(void) : "Denying the player movement [not tested]."
 	input MobilizePlayer(void) : "Allow player to move [not tested]."
@@ -2347,7 +2348,7 @@ base (
 	blockdamage(float) : "Block Damage" : 0 : "The amount of damage to do to any entity that blocks the brushes, per frame."
 
 	// inputs
-	input SnapToFloor(void) : "[VTMB: untested connection]"
+	input SnapToFloor(integer) : "[VTMB: untested connection]"
 	input GotoFloor(integer) : "Go to selected floor."
 	input Lock(void) : "Lock the elevator doors, preventing it from functioning."
 	input Unlock(void) : "Unlock the elevator doors, allowing it to function."
@@ -2558,6 +2559,8 @@ iconsprite("editor/logic_timer.vmt")
 @PointClass base(HintNode) studio("models/editor/ground_node.mdl") color(232 219 8) = info_node_crosswalk :
 	"[VTMB] Unrecognized info_node..."
 [
+	input Walk(void) : "[VTMB: untested connection]"
+	input DontWalk(void) : "[VTMB: untested connection]"
 ]
 
 
@@ -3018,6 +3021,9 @@ sphere(audible_dist)
 	output OnOneOffSoundComplete(void) : "Fired when sound stopped playing [not tested]."
 	output OnPlayerLeftRadius(void) : "Fired when player left given radius (what of?) [not tested]."
 	output OnPlayerTooClose(void) : "Fired when player is too close to target [not tested]."
+
+	// inputs
+	input PlayOneOffSound(void) : "[VTMB: untested connection]"
 ]
 
 
@@ -3232,7 +3238,7 @@ iconsprite("editor/logic_case.vmt")
 	InitialCase(integer) : "Initial Case (0-160)" : 1 : "Defines initial case from which toggle starts."
 
 	// inputs
-	input InValueDelta(string) : "[VTMB: untested connection]"
+	input InValueDelta(integer) : "[VTMB: untested connection]"
 ]
 
 
@@ -3614,9 +3620,8 @@ base (
 = trigger_checkvolume :
 	"[VTMB] A trigger that checks entities to be in trigger's volume [not tested]."
 [
-	// inputs
+	// connections
 	input CheckNow(void) : "Done checking an entity now [not tested]."
-	// outputs
 	output OnEntityInVolume(void) : "Fires input when entity is within trigger's volume."
 ]
 
@@ -4576,7 +4581,7 @@ studioprop()
 	textcolumns(choices) : "Num of Text Columns" : 36 : "The number of text columns located on screen." =
 	[
 		20 : "20 (keypad)"
-		20 : "24"
+		24 : "24"
 		36 : "36 (computer)"
 		42 : "42"
 		56 : "56"
@@ -4645,7 +4650,6 @@ studioprop()
 	[
 		"models/scenery/furniture/computer/monitor_useable.mdl" : "models/scenery/furniture/computer/monitor_useable.mdl"
 		"models/scenery/furniture/computer_new/largemonitor_hackable.mdl" : "models/scenery/furniture/computer_new/largemonitor_hackable.mdl"
-		"models/scenery/furniture/computer_new/monitor.mdl" : "models/scenery/furniture/computer_new/monitor.mdl"
 		"models/scenery/furniture/computer_new/monitor_hackable.mdl" : "models/scenery/furniture/computer_new/monitor_hackable.mdl"
 		"models/scenery/misc/laptop/laptop2.mdl" : "models/scenery/misc/laptop/laptop2.mdl"
 		"models/scenery/misc/laptop/laptop2clean.mdl" : "models/scenery/misc/laptop/laptop2clean.mdl"
@@ -5857,6 +5861,9 @@ studioprop()
 	AndreiPauseTime(integer) : "Andrei Pause Time [-?]" : 85 : "[VTMB] Unknown yet..."
 	AndreiPauseTime(integer) : "Andrei Pause Time [-?]" : 85 : "[VTMB] Unknown yet..."
 	KillToPause(integer) : "Kill tp Pause [-?]" : 6 : "[VTMB] Unknown yet..."
+
+	// inputs
+	input TriggerCombat(integer) : "[VTMB: untested connection]"
 ]
 
 
@@ -5908,6 +5915,11 @@ studioprop()
 	pl_criminal_attack(choices) : "Player Criminal Attack" : "1" : "A criminal level is set to the player for certain actions or by script. When the level is equal or greater thean the threshold, the apropriate action is triggered for the npc. \nFlee overrides attack and a value of 6 means no action because the max value is 5." =	[]
 	pl_supernatural_attack(choices) : "Player Supernatural Attack" : "1" : "A supernatural level is set to the player for certain actions or by script. When the level is equal or greater thean the threshold, the apropriate action is triggered for the npc." =	[]
 	hearing(float) : "Hearing Volume" : "3.0" : "NPC's hearing radius [0...100]. Set '-1' as default [not tested]."
+
+	// inputs
+	input GrenadeEnter(integer) : "[VTMB: untested connection]"
+	input GrenadeExit(integer) : "[VTMB: untested connection]"
+	input SignalVulnerable(integer) : "[VTMB: untested connection]"
 ]
 
 
@@ -6234,6 +6246,9 @@ studioprop()
 	is_bossmonster(choices) : "NPC is Boss Monter" : 1 : "If set, shows blood scale on screen and process this NPC as a monster." =	[]
 	stattemplate(choices) : "NPC Stat Template" : "Hengeyokai" : "Goes to data in 'vdata/system/npctemplate***.txt'. NPCs in Hammer are assigned one of these which determines their statistics." = []
 	pl_investigate(choices) : "Player Investigate [-?]" : "6" : "[VTMB] Unknown yet..." =	[]
+
+	// inputs
+	input StartTransformation(void) : "NPC starts body transforming."
 ]
 
 
@@ -6405,6 +6420,9 @@ studioprop()
 	is_bossmonster(choices) : "NPC is Boss Monter" : 1 : "If set, shows blood scale on screen and process this NPC as a monster." =	[]
 	stattemplate(choices) : "NPC Stat Template" : "ManBat" : "Goes to data in 'vdata/system/npctemplate***.txt'. NPCs in Hammer are assigned one of these which determines their statistics." = []
 	pl_investigate(choices) : "Player Investigate [-?]" : "6" : "[VTMB] Unknown yet..." =	[]
+
+	// inputs
+	input ManBatStun(void) : "[VTMB: untested connection]"
 ]
 
 
@@ -6428,6 +6446,9 @@ studioprop()
 	stattemplate(choices) : "NPC Stat Template" : "MingXiao" : "Goes to data in 'vdata/system/npctemplate***.txt'. NPCs in Hammer are assigned one of these which determines their statistics." = []
 	npc_perception(choices) : "NPC Perception Level" : 9 : "Defines NPC's Perception ability level [1...10]." = []
 	combat_start_activity(choices) : "Initial Combat Activity" : "ACT_INVALID" : "Defines NPC's combat animation when none of actions or outputs applied to him." =	[]
+
+	// inputs
+	input StartTransformation(void) : "NPC starts body transforming."
 ]
 
 
@@ -6646,6 +6667,9 @@ studioprop()
 	is_bossmonster(choices) : "NPC is Boss Monter" : 1 : "If set, shows blood scale on screen and process this NPC as a monster." =	[]
 	stattemplate(choices) : "NPC Stat Template" : "VampireSabbatLeader" : "Goes to data in 'vdata/system/npctemplate***.txt'. NPCs in Hammer are assigned one of these which determines their statistics." = []
 	npc_perception(choices) : "NPC Perception Level" : 10 : "Defines NPC's Perception ability level [1...10]." = []
+
+	// inputs
+	input StartTransformation(void) : "NPC starts body transforming."
 ]
 
 
@@ -6736,6 +6760,14 @@ studioprop()
 		4 : "Fall to ground (unchecked means *teleport* to ground)" : 1
 		8192: "Flag 8192 (unknown yet)" : 1
 	]
+
+	// inputs
+	input CampEnter(integer) : "[VTMB: untested connection]"
+	input CampExit(integer) : "[VTMB: untested connection]"
+	input StairsEnter(integer) : "[VTMB: untested connection]"
+	input StairsExit(integer) : "[VTMB: untested connection]"
+	input StartAttacking(void) : "[VTMB: untested connection]"
+	input StartTransformation(void) : "NPC starts body transforming."
 ]
 
 
@@ -6953,6 +6985,9 @@ studioprop()
 		"models/character/npc/unique/Santa_Monica/Beckett/Beckett.mdl" : "models/character/npc/unique/Santa_Monica/Beckett/Beckett.mdl"
 		"models/character/npc/unique/Downtown/Nines/Nines.mdl" : "models/character/npc/unique/Downtown/Nines/Nines.mdl"
 	]
+
+	// connections
+	input TransformModel(void) : "[VTMB: untested connection]"
 ]
 
 
@@ -6973,7 +7008,7 @@ studioprop()
 	]
 	
 	// connections
-	input ToggleDoorState(void) : "Toogle door state between 'can crush' and 'cannot crush'."
+	input ToggleDoorState(integer) : "Toogle door state between 'can crush' and 'cannot crush'."
 	output OnConditionDeathTriggered(void) : "[VTMB: untested connection]"
 	output OnBeginCrushAnimation(void) : "Fired when crush animation begins."
 	output OnFinishCrushAnimation(void) : "Fired when crush animation finish."
@@ -7063,6 +7098,9 @@ studioprop()
 	warn_range(integer) : "Warn Range" : 200 : "[VTMB] Unknown yet..."
 	remove_distance(integer) : "Remove Distance" : 1000 : "[VTMB] Unknown yet..."
 	should_ragdoll(choices) : "Should be Ragdolls [-?]" : 1 : "[VTMB] Unknown yet..." = [ 0 : "No" 1 : "Yes" ]
+
+	// inputs
+	input SetZombieAIType(string) : "[VTMB] Changes zombie's AI type between FearPlayer, FearFacing, Wander, AttackRandom, AttackNearestGate, AttackNextNearestGate, AttackPlayer."
 ]	
 
 

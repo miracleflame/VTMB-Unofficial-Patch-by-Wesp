@@ -1506,6 +1506,7 @@
 "use_icon" "10"
 "locked_icon" "3"
 "OnFullyClosed" "arena_lock_doors,Trigger,,0,-1,,"
+"OnFullyClosed" ",,,0,-1,reenterCheck(),"
 "OnOpen" "arena_entrance_relay,Trigger,,0.5,1,,"
 }
 {
@@ -2688,7 +2689,6 @@
 "combat_start_activity" "ACT_INVALID"
 "spawnflags" "4"
 "follower_type" "Default"
-"OnDeath" ",,,0,-1,civilianDeath(),"
 "origin" "48 528 9.28719"
 }
 {
@@ -2750,6 +2750,7 @@
 "StartHidden" "0"
 "follower_type" "Default"
 "OnDeath" "vick_death_relay,Trigger,,0,-1,,"
+"OnDeath" "arena_door_knobs,Unlock,,0,-1,,"
 "OnDialogEnd" "arena_combat_relay,Trigger,,0,-1,,"
 "origin" "-1364 -1824 244"
 }
@@ -3033,6 +3034,7 @@
 "OnTrigger" "floor1_plague_victim_spawner,Kill,,0,-1,,"
 "OnTrigger" "floor1_rat,Kill,,0,-1,,"
 "OnTrigger" "floor1_plague_victim,Kill,,0,-1,,"
+"OnTrigger" "arena_entrance_relay,Kill,,1,-1,,"
 "origin" "-1380 -1004 335"
 }
 {
@@ -5809,7 +5811,7 @@
 "angles" "0 270 0"
 "parentname" "battledoor2"
 "model" "models/scenery/structural/malkavian/doorhandle_left.mdl"
-"difficulty" "0"
+"difficulty" "10"
 "skilltype" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
 "delete_key" "0"
@@ -5824,7 +5826,7 @@
 "angles" "0 270 0"
 "parentname" "battledoor1"
 "model" "models/scenery/structural/malkavian/doorhandle.mdl"
-"difficulty" "0"
+"difficulty" "10"
 "skilltype" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
 "delete_key" "0"
@@ -7173,7 +7175,7 @@
 "spawnflags" "1"
 "OnTrigger" "battledoor2,Lock,,0,-1,,"
 "OnTrigger" "battledoor1,Lock,,0,-1,,"
-"OnTrigger" "arena_door_knobs,Kill,,0,-1,,"
+"OnTrigger" "arena_door_knobs,Lock,,0,-1,,"
 "origin" "-1398 -1004 336"
 }
 {

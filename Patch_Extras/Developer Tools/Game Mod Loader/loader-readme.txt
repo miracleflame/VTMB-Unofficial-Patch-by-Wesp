@@ -4,7 +4,6 @@ GAME MOD LOADER
 Author: Behar
 Support: Psycho-A
 
-
 Main features:
 --------------
 1. Native widescreen support for all monitor resolutions with 
@@ -59,3 +58,46 @@ Next search all Python scripts (fileutil.py, vamputil.py, etc.)
 for access to "vampire" folder and replace ("vampire/...") with
 (moddir + "/...") or (fileutil.moddir + "/..."), depending on 
 the script and import type.
+
+
+--------------------------
+linux-loader.sh [mod_name]
+--------------------------
+Script for running Bloodlines in a Wine / Linux environment.
+
+Place this script into the directory where Vampire.exe resides 
+or one of its subdirectories. It needs to be executable and the
+prefixes are essential, so don't remove them if you modify it. 
+To use it, you can either:
+
+- Click it in the file explorer. This requires the GUI builder 
+  Zenity installed.
+
+- From the command line: Open a console and execute the script. 
+  Zenity is not required or used.
+
+If there are mods installed, it will show the mods and allow 
+the user to select one; if not it will run the original game. 
+You can also use a mod name as a command-line argument to 
+directly start with this mod.
+
+Created by SCO; changed to work from subdirectories by Wrzlprmft
+(readme improved by Wesp5 and Wrzlprmft)
+
+
+This script from Uradamus runs Bloodlines directly from Steam:
+--------------------------------------------------------------
+#!/bin/bash
+
+# Change this to match your own prefix.
+PREFIX="$HOME/wine"
+
+# This assumes you installed Steam in its default location.
+cd "$PREFIX/drive_c/Program Files/Steam"
+
+export WINEARCH=win32
+export WINEPREFIX="$PREFIX"
+export WINEDLLOVERRIDES="dbghelp=n,b" #VTMB specific fix.
+
+wine Steam.exe -no-dwrite
+

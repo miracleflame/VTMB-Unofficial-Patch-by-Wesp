@@ -3332,6 +3332,7 @@
 "FocalLength" "20"
 "Roll" "0"
 "origin" "-16 340 -12"
+"OnReachedKeyframe" "plus_impact,TurnOn,,4.6,-1,,"
 }
 {
 "classname" "camera_keyframe"
@@ -3476,6 +3477,7 @@
 "FocalLength" "25"
 "Roll" "0"
 "OnReachedKeyframe" ",,,3,-1,Find('Sire2').TakeDamage(1000),"
+"OnReachedKeyframe" "plus_impact,TurnOff,,0,-1,,"
 "origin" "-488.508 412.016 -12"
 }
 {
@@ -8829,7 +8831,7 @@
 "OnStartTouch" ",,,0,-1,chooseSire(),"
 "OnStartTouch" ",,,0,-1,castUnderstudy(),"
 "OnStartTouch" "stake_player,Test,,1.1,-1,,"
-"OnStartTouch" "embrace_sound,PlaySound,,1.5,-1,,"
+"OnStartTouch" "embrace_check,Test,,1.5,-1,,"
 "OnStartTouch" "wineglass_2,SetAnimation,wineglass_2,1.1,-1,,"
 "OnStartTouch" "wineglass_1,SetAnimation,wineglass_1,1.1,-1,,"
 "OnStartTouch" "pre_embrace_fade,Fade,,0,-1,,"
@@ -8848,6 +8850,22 @@
 "OnStartTouch" "stake_impact2,TurnOn,,56.37,-1,,"
 "OnStartTouch" "stake_impact,TurnOn,,54.87,-1,,"
 "OnStartTouch" ",,,0,-1,G.Story_State = -4,"
+}
+{
+"classname" "logic_pythoncheck"
+"python_script" "FindPlayer().IsMale()"
+"targetname" "embrace_check"
+"OnFalse" "embrace_sound,PlaySound,,0,-1,,"
+"OnTrue" "embrace_male,Test,,0,-1,,"
+"origin" "-3996.62 1118.36 -180.849"
+}
+{
+"classname" "logic_pythoncheck"
+"python_script" "G.Player_Homo == 0"
+"targetname" "embrace_male"
+"OnFalse" "embrace_sound_male,PlaySound,,0,-1,,"
+"OnTrue" "embrace_sound,PlaySound,,0,-1,,"
+"origin" "-3996.62 1118.36 -180.849"
 }
 {
 "classname" "camera_track"
@@ -9825,6 +9843,34 @@
 "origin" "-3933.36 1140.72 -175.849"
 }
 {
+"classname" "ambient_generic"
+"targetname" "embrace_sound_male"
+"health" "10"
+"preset" "0"
+"volstart" "0"
+"fadein" "0"
+"fadeout" "0"
+"pitch" "100"
+"pitchstart" "100"
+"spinup" "0"
+"spindown" "0"
+"lfotype" "0"
+"lforate" "0"
+"lfomodpitch" "0"
+"lfomodvol" "0"
+"cspinup" "0"
+"radius" "1250"
+"sound_event" "0"
+"sound_event_level" "2"
+"flag_no_sfx" "0"
+"flag_no_voice_duck" "1"
+"flag_skip_collide" "1"
+"flag_force_looping" "0"
+"message" "cinematic/Santa_Monica/Haven/The Embrace male.mp3"
+"spawnflags" "49"
+"origin" "-3933.36 1140.72 -175.849"
+}
+{
 "classname" "camera_keyframe"
 "TimeControl" "1"
 "MoveSpeed" "1000.0"
@@ -10796,6 +10842,22 @@
 "classname" "logic_pythoncheck"
 "python_script" "FindPlayer().IsMale()"
 "targetname" "whisper"
+"OnFalse" "whisper_female,Test,,0,-1,,"
+"OnTrue" "whisper_male,Test,,0,-1,,"
+"origin" "-3996.62 1118.36 -180.849"
+}
+{
+"classname" "logic_pythoncheck"
+"python_script" "G.Player_Homo == 1"
+"targetname" "whisper_male"
+"OnFalse" "female_whisper,PlaySound,,0,-1,,"
+"OnTrue" "male_whisper,PlaySound,,0,-1,,"
+"origin" "-3996.62 1118.36 -180.849"
+}
+{
+"classname" "logic_pythoncheck"
+"python_script" "G.Player_Homo == 1"
+"targetname" "whisper_female"
 "OnFalse" "male_whisper,PlaySound,,0,-1,,"
 "OnTrue" "female_whisper,PlaySound,,0,-1,,"
 "origin" "-3996.62 1118.36 -180.849"
@@ -11370,6 +11432,11 @@
 "origin" "-514 664 23"
 }
 {
+"classname" "infodecal"
+"texture" "decals/signs/restrooms2"
+"origin" "-697 1024 12"
+}
+{
 "classname" "npc_VVampire"
 "targetname" "plus_Gary"
 "StartHidden" "1"
@@ -11598,6 +11665,27 @@
 "npc_transparent" "1"
 "crossfade_skin_time" "2.0"
 "origin" "-970 910 -31"
+}
+{
+"classname" "env_particle"
+"targetname" "plus_impact"
+"StartHidden" "1"
+"parentname" "Sire2"
+"angles" "0 0 0"
+"particle_definition" "prince_decapitation_emitter"
+"active" "0"
+"attach_type" "2"
+"bone" "Bip01 Neck"
+"bounds" "512"
+"ramp_scale" "1"
+"ramp_time" "0"
+"origin" "307.439 304.733 -123"
+}
+{
+"classname" "ambient_soundscheme"
+"scheme_file" "sound/schemes/sp_theatre.txt"
+"start_enabled" "1"
+"origin" "-284 -416 140"
 }
 {
 "classname" "logic_auto"

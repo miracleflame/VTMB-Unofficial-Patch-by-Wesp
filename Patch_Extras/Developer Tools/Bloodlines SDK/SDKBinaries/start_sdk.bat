@@ -120,8 +120,25 @@ if exist "GameCfg.ini" (
  reg add "HKCU\Software\Troika\Hammer\General"    /v "Autosave Dir"     /t REG_SZ    /d "%MapSrcDir%\autosaves" /f
  reg add "HKCU\Software\Troika\Hammer\Splitter"   /v "WindowPlacement"  /t REG_SZ    /d "(-1 -1) (-1 -1) (-1 -1 -1 -1) 3" /f
  reg add "HKCU\Software\Troika\Hammer\Splitter"   /v "DrawType0,0"      /t REG_DWORD /d "5" /f
- reg add "HKCU\Software\Tools\PackfileExplorer"   /v "LastPath"         /t REG_SZ    /d "%ModDir%" /f
  if /i "%~1"=="-single" exit /b
+)> nul
+
+:pfexplorerfix
+(reg add "HKCU\Software\Tools\PackfileExplorer" /v "LastPath"     /t REG_SZ    /d "%ModDir%" /f
+ reg add "HKCU\Software\Tools\PackfileExplorer" /v "ListViewMode" /t REG_DWORD /d "2" /f
+ reg add "HKCU\Software\Tools\PackfileExplorer" /v "WindowLayout" /t REG_DWORD /d "1" /f
+)> nul
+
+:studiocompfix
+(reg delete "HKCU\Software\CFApps\StudioCompiler" /f
+ reg add "HKCU\Software\CFApps\StudioCompiler\StudioCompiler" /v "TabSelect"       /t REG_DWORD /d "0" /f
+ reg add "HKCU\Software\CFApps\StudioCompiler\StudioCompiler" /v "SDKDirectory"    /t REG_SZ /d "%GameRoot%\SdkBinaries" /f
+ reg add "HKCU\Software\CFApps\StudioCompiler\StudioCompiler" /v "GameDirectory"   /t REG_SZ /d "%ModDir%" /f
+ reg add "HKCU\Software\CFApps\StudioCompiler\StudioCompiler" /v "Shader"          /t REG_SZ /d "VertexLitGeneric" /f
+ reg add "HKCU\Software\CFApps\StudioCompiler\StudioCompiler" /v "Model File"      /t REG_SZ /d "mymodels\model_01.mdl" /f
+ reg add "HKCU\Software\CFApps\StudioCompiler\StudioCompiler" /v "Materials Dir"   /t REG_SZ /d "mymodels\model_01" /f
+ reg add "HKCU\Software\CFApps\StudioCompiler\StudioCompiler" /v "Envmap Tint"     /t REG_SZ /d "\"[0.5 0.5 0.5]\"" /f
+ reg add "HKCU\Software\CFApps\StudioCompiler\MDLDecompiler"  /v "OutputDirectory" /t REG_SZ /d "%GameRoot%\SdkContent\ModelSrc" /f
 )> nul
 
 :installplugins
@@ -145,7 +162,7 @@ if exist "GameCfg.ini" (
  reg delete "HKCU\Software\Troika\hlmv" /f> nul
 
 :fisrstrun
- echo # This file needed to detect SDK first launch and run Wizard.>"FirstRun.ini"
+ echo # This file needed to detect SDK first launch and run Wizard.> "FirstRun.ini"
  taskkill /f /im "msgbox.exe"> nul
 
 :setmoddir
@@ -194,4 +211,15 @@ if exist "GameCfg.ini" (
  	%NirCmd% win settopmost process "sdklauncher.exe" 1
  )
  %NirCmd% win settopmost process "sdklauncher.exe" 0
+ rem Clear mod's material*/ lumps if empty...
+ for %%m in (materialsrc materials\maps) do (
+ 	if exist "%ModDir%\%%~m\" call :rememptydirs "%ModDir%\%%~m"
+ )
  exit
+
+:rememptydirs
+ for /d %%a in ("%~1\*") do (
+ 	call :rememptydirs "%%~fa"
+ )
+ rmdir "%~f1"> nul 2>&1
+ exit /b

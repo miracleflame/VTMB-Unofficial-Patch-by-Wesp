@@ -1,5 +1,5 @@
 --------------------
-Bloodlines SDK v1.67
+Bloodlines SDK v1.71
 --------------------
 
 This is an unofficial software developer's kit (SDK) for Vampire - The Masquerade: 
@@ -62,7 +62,8 @@ This SDK includes various third-party tools, in particular:
 * TTZ Viewer (developed by Psycho-A & Fire64)
 * Mods' Dupe Finder (custom script, written by Psycho-A)
 * Hammer Run Map Launcher (custom compile dialog, written by Psycho-A)
-* StudioMDL Compiler GUI (developed by InterWave Studios)
+* QC Models Compiler GUI (by InterWave Studios, modified by Psycho-A)
+* StudioCompiler Model Compiler v0.4 (by Cannonfodder, modified by Psycho-A)
 * Photoshop and Paint.NET texture plugins (the crew of authors)
 * LipSync/VCD Editor (Valve's FacePoser modification, extended by Psycho-A)
 * Create a New Mod Wizard (custom script, written by Psycho-A)
@@ -101,7 +102,7 @@ Usage notes:
 * To create new mod 'from scratch', use "Create a New Mod" option in the Main menu. This will
   create appropriate launcher and mod folder with basic subdirs inside that have descriptions.
 * If the map crashes on/after loading in Hammer, then on launching editor wait until appearing
-  the "Messages" window with showing the project paths! This means editor assers loaded fully.
+  the "Messages" window with showing the project paths! This means editor assets loaded fully.
 * The Administrator rights may be required for installing texture plugins or work some tools.
 
 [Lighting]
@@ -135,25 +136,66 @@ Usage notes:
   plugins allow you to create Normal maps, work with alpha-masks and tiling texture images.
 
 [Mapping/Compiling]
-* If you need to change the process priority for map compilers, walk inside SDKBinaries/ dir
-  and search "hammer.runmap.bat" file. Edit it with Notepad changing "set Priority=" string.
-  The priority values are: /low, /belownormal, /normal, /abovenormal, /high, /realtime.
+* Always check for entities outside the world, because they will cause leaks on compiling.
+* Always turn all detail brush objects which aren't the main world geometry to func_details.
+* Always use "nodraw" tool texture for non-viewable and edge-docking surfaces (optimization).
+* Func_details do not seal the world, use normal brushes to do that (including skyboxes).
+* BSP Decompiler have problem decompiling original game's ladders, so on editing such map, 
+  you shouldn't forget to manually turn ladder's brushes to "func_ladder" in Hammer.
+* Make sure that *all* vertexes of brushes are snapped to grid (at least on minimum step), 
+  otherwise it may occur lighting and geometry issues, leaks, and slowdown the compilers.
+  Use "Snap to Grid" (Ctrl+B) feature when pasting brush objects to your map from others.
+* The SDK compilers doesn't support rain effect made with env_partile, create func_particle
+  volumes around browsed areas instead ("scale" value must be set about 1/100 smaller).
+* The SDK compilers doesn't support water volumes made with "Water" shader. Use the regular
+  LightmappedGeneric textures with cubemap-based reflection and animated bump maps instead.
+* Tool texture "noviz" isn't supported in SDK, create func_details inside its volume instead.
+* Tool texture "toolsinvisible" may slow VVIS full compiling, use "toolsclip" when possible.
+* Tool texture "toolsclip" isn't supported on functional entities, use "toolsinvisible".
+* To fix bright reflections in dark areas, place extra cubemap there (not always needed).
+* To fix drastic reflection differences on brushes, join brushsides to certain env_cubemap.
+* Func_detail entities may add junk planes, in that case turn them back to world brushes.
+* For a valid map transition, landmark names on both maps must be the same.
+* For a valid map transition, landmark angles only matter if flag "1" is set.
 * Since version 1.15 you may able to set various map compiling settings for each individually.
   We used "worldspawn" entity class to write certain params which're readable by compilers.
   For managing them, goto "Map -> Map Properties" in the Hammer menu and look bottom several 
   strings. Now there are four parameters presented which allow you to tweak map lighting or
   overall compiling time (each parameter have descriptions so no reason to describe it here).
-* BSP Decompiler have problem decompiling original game's ladders, so on editing such map, 
-  you need to manually turn ladder's brushes to "func_ladder" in Hammer.
-* Tool texture "toolsinvisible" slows VVIS full compiling, use "toolsclip" when possible.
-* Tool texture "noviz" isn't supported by the SDK, create func_details in its volume instead.
-* Func_detail entities may add junk planes, in that case turn them back to world.
-* Func_details do not seal the world, use normal brushes to do that (including skyboxes).
-* Always turn all detail brush objects which aren't the main world geometry to func_details.
-* Always use "nodraw" tool textures for surfaces that the player can't see (optimization).
-* Always check for entities outside the world, because they will cause leaks on compiling.
-* For a valid map transition, landmark names on both maps must be the same.
-* For a valid map transition, landmark angles only matter if flag 1 is set.
+* If you need to change the process priority for map compilers, walk inside SDKBinaries/ dir
+  and search "hammer.runmap.bat" file. Edit it with Notepad changing "set Priority=" string.
+  The priority values are: /low, /belownormal, /normal, /abovenormal, /high, /realtime.
+
+[Modeling:Info]
+* You may create your own models (non-animated) or edit existing ones using kHED Editor.
+  To import existing model in SMD source format, use "File -> Import -> Valve SMD" option.
+  To export created/edited model back into SMD, use "File -> Export -> Valve SMD" option.
+  kHED also supports import from Maya's *.obj, 3ds Max *.max and MilkShape 3D's *.ms3d.
+* To compile the model directly from SMD, use "Studio Compiler" tool in the SDK. It also 
+  may compile from ready QC scripts, as well as "QC Files Compiler" utility in the SDK.
+* To learn more about QC, follow this link: https://developer.valvesoftware.com/wiki/QC
+  To learn about SMD, visit this: https://developer.valvesoftware.com/wiki/Studiomdl_Data
+* Many old Source Engine game's staticprop models can be decompiled using Studio Compiler's
+  "Model Decompiler" and then imported into Bloodlines using Model Compiler without editing.
+* Since version 1.7 the SDK includes SMD import/export plugins for 3ds Max v5 - 2019 and 
+  Google's Sketchup. This mean you may use this software for your modeling purposes.
+
+[Modeling:Troubleshooting]
+* Game may crash on models with poly count > 4000..8000, truncate it's polys before import!
+* You may *only* compile models with 1 bone and 1 frame in sequence data, so check it first!
+  Remove/merge bones before compiling, and strip animations or use the reference SMD on it.
+* Always compile models as "prop_static" no matter which way you're going to use them (use 
+  mentioned type in Studio Compiler or add $staticprop string inside of model's QC script).
+* Sometimes compiled model becomes half-sized in game. In this case, set $scale 2.0 param 
+  in "Model Options" of the Studio Compiler, or inside model's QC script before you compile.
+* If the model becomes rotated 90/180/270 degrees in game comparing the original, use the
+  $origin 0 0 0 # param inside of its QC script where # is the rotation degree number.
+* If compiled model has no bounding Hitbox (check this in the Model Viewer), define Hitbox 
+  manually inside of QC script before compiling, using this command (without brackets):
+  $hbox [group number] "bone name" [min x] [min y] [min z] [max x] [max y] [max z]
+* If compiled model becomes transparent (doesn't collide with player and NPCs), although the
+  physics model was defined, surround that model with bounding primitives using "toolsclip" 
+  or "toolsinvisible" textures in the Hammer Editor (this makes extranal collition).
 
 [Scoring/Authoring]
 * Since version 1.6 you can edit or create the closecaption and lip-syncing files (.lip) and
@@ -176,8 +218,8 @@ Usage limitations:
 <Advanced info>
 * No correct animation support in multi-bone models - it means that we can't handle the 
   animations in the Editor when creating maps.
-* No full-featured model compiler and decompiler - only Type 0 models with no animations 
-  can be compiled (basic prop models).
+* No full-featured model compiler and decompiler - only Type 0 models with single bone and
+  max one frame per animation can be compiled (basic prop models).
 * Not finalized FGD file (Hammer entity data) - there are still a lot of imprecisions and 
   lack of info on some entity parameters.
 
@@ -260,7 +302,23 @@ There are some issues in the project, which we're still not able to solve fully,
 07) Sometimes the random Hammer crashes occurs on loading or navigating Troika's maps. This may be related to not completely reversed MDL format or editor unstablity.
     Solution [Temp]: Waiting for loading all assets to editor (appearing "Messages" window) and loading map only after, may reduce the chance of such crashes for now.
 
-08) Other of that I could not remember currently...
+08) Game's entity data for using in Hammer (FGD files) were obtained just by way of learning existing guides and source .vmf files, so some entities and its properties are still unknown, excess or missing.
+    Solution [X]: To made it as objective as possible, the reversing of client and server DLLs data required which I can't do myself as well...
+
+09) For comfort work, the Hammer editor requires the next features from newer Source's versions:
+    - Auto VisGroups by entity types;
+    - Sound subsystem for quick listening and choosing sounds from game's file system;
+    - Built-in model browser for the same kind of purposes (it's really hard);
+    - Drawing model's wireframes in 2D-cameras.
+    Solution [X]: All of these goals have a source code from src2007, but it's hard for me to port this, especially using Visual Studio 6 (98) which is able to compile the SDK code only.
+
+10) The ability for Model Browser export models as SMD+QC (for compiler) or .X (for Blender editing) required.
+    Solution [X]: Need to integrate decompilers' codes.
+
+11) The native FacePoser doesn't work and can't load models with facial animations and gestures to directly manage .vcd and lipsync files.
+    Solution [Temp]: The hacked newer Faceposer used for editing VCDs or LIPs, but it can't load models.
+
+12) Other of that I could not remember currently, or just small and secondary...
 
 
 [Specific]
@@ -288,7 +346,7 @@ specified in the SDK readme file. You may also email me: psycho-a@rambler.ru, ps
 Version History:
 --------------------
 
-Global changes for the last year:
+Global changes:
 
 * SDK have been unbinded from main Vampire game directory and now supports custom mods and may be placed to any disc location.
 * Added new "Texture Converter" utility with shell extensions for quickly batch converting between tth/ttz/vtf and other image formats.
@@ -308,8 +366,54 @@ Global changes for the last year:
 * Made env_cubemap reflections displayed on brush surfaces, and bumpmaps not overbright textures in 3D-view more.
 * Improved Model Viewer rendering settings and default view.
 * Improved and updated SDK interface, instructions, file system, some tools and other aspects.
+* Added modified StudioCompiler, user-friendly tool for compiling any model from .SMD or .QC formats.
+* Added SMD models import+export plugins for Autodesk 3ds Max 9-2019 and Google SketchUp tool.
 
 --------------------
+
+1.71 (18.09.2018):
+- Hammer [cr]: Fixed X & Y axis rotation of non-static models (they were also displayed incorrectly as result).
+- Hammer/Assets: Fixed info_player_start origin (no more needs to lift) and angles of other editor-specific models.
+- Hammer/FGD: In prop_hacking entity removed wrong model from choice list and fixed typo in num of columns.
+- StudioMDL Compiler: Added auto-deleting old model files to prevent false positive on compiling.
+- Studio Compiler: Improved fields descriptions of Model Decompiler to better reflect its purpose.
+- Studio Compiler: Fixed default SDK paths assigning on auto-configuring.
+- PackFile Explorer: Fixed default window layout and file list view mode.
+- Added procedure to clear empty dumps of materialsrc/ or materials/maps/ inside mod on every SDK launching.
+- Added new tool "grepWin" text processor to quickly perform various tasks on text scripts or maps data.
+- Added new tool "Character Sheet Animation Injector" by DDLullu to add new animations to game's Character Sheet.
+- Added new [Modeling] sections with important info in SDK Readme's Usage notes - please, read carefully!!
+- Updated Source Code repository (for contributors).
+
+1.7 (9.09.2018):
+- Added modified StudioCompiler, an user-friendly tool for easy compiling models, features:
+  -- Compile any model directly from SMD with full options set (no writing .QC needed!);
+  -- Compile models with already existing QC data (legacy Model Compiler feature);
+  -- Import & compile all model textures in popular formats with proper materials editor;
+  -- Quickly view freshly compiled model as that'll look in game using Model Viewer;
+  -- Decompile any Source Engine game models to SMD+QC for quickly importing into your mod.
+- Added "3ds Max plugins" to import and export SMD models in Autodesk 3ds Max from v5 to 2019.
+- Added "SketchUp plugins" to import and export SMD models and maps in Google SketchUp tool.
+- kHED Editor: Added missing offline User Manual as the project's official site is dead.
+- The former "Model Compiler" tool renamed to "QC Files Compiler" to reflect its real purpose.
+- VTex Converter [cr]: Make it work on textures from *any* .../materials/ or .../materialsrc/ locations.
+- VTex Converter [cr]: Fixed creating destination dir and added overriding output dir with "-outdir <dir>" command.
+- Texture Converter: Fixed decals format to be compatible when using decal as a regular brush texture.
+- Updated usage notes in Readme and updated Source Code repository (for contributors).
+- Info: This version is ready to be included into Wesp's Unofficial Patch v10.1 & hotfixes.
+
+1.69 (03.08.2018):
+- Hammer/FGD: Removed Origin property from func_breakable_surf to prevent crack-material issue.
+- Create Mod Wizard: Added ability to import most useful assets from the Unofficial Patch (if found) into the mod dir.
+- Dialogue Editor: Removed Czech strings in File-open and File-save dialog.
+
+1.68 (21.10.2017):
+- Hammer/FGD: Fixed incorrect input types on some entities, and added missing ones.
+- Hammer/FGD: Made and fixed env_fog_controller to be usable since it may control fog values via inputs.
+- Hammer/FGD: Made func_dustmotes to be accessible (used on some maps, needs to be checked).
+- Hammer: Improved compiling modes descriptions in Run Map dialog.
+- Hammer: Fixed antiviruses false positive on hammer.runmap.exe/.bat element.
+- Improved some details on the SDK test_haven.vmf example tutorial map.
 
 1.67 (16.07.2017):
 - Swapped cmdow.exe for LipSync Editor with scripted workaround, so Google shoudn't panic more.
@@ -770,12 +874,12 @@ Global changes for the last year:
 - [cr] Fixed crash of high polygon models and models with flex animations.
 - [cr] Model can be rotated in HLMV on all 3 axes now.
 - [cr] Model in the Editor now has static angles and does not change the position on moving the camera.
-- Added beta FGD file with the VTMB entities.
+- Added beta FGD file with basic VTMB entities.
 - Added BAT file to automatically configure the editor.
 
 0.57:
 - [cr] In HLMV added partial support for models with a few bones (only for prop models, so far).
-- [cr] Added model displaying to the Vampire Map Editor.
+- [cr] Added model displaying to the Hammer Map Editor.
 - Fixed function of copying maps.
 
 0.55:
@@ -785,9 +889,9 @@ Global changes for the last year:
 - [cr] Added program to view prop models.
 
 0.5:
-- First public release.
+- First public release, inroduced Map Editor and Model Viewer.
 
-<0.5:
-- VampBSP tools betas (no Editor introduced).
+< 0.5:
+- VampBSP tools alphas (VBsp/VVis/VRad compilers only).
 
 * [cr] - source code-related changes.

@@ -7,10 +7,13 @@
   | ::   Shared Pass   :: |
   '----------------------*/
 
+// Fix for ReShade 2+
+#define USE_SHARED 1
+
 /* //didn't make it into 1.6
 #if (USE_PRINT == 1) //I could make this always on
   #include "SweetFX\Shaders\Print.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 */
 
@@ -18,100 +21,115 @@
 /*
 #if (USE_SWEETCRT == 1)
   #include "SweetFX\Shaders\SweetCRT.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 */
 
 #if (USE_LEVELS == 1)
   #include "SweetFX\Shaders\Levels.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 
 #if (USE_TECHNICOLOR == 1)
   #include "SweetFX\Shaders\Technicolor.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 
 #if (USE_TECHNICOLOR2 == 1)
   #include "SweetFX\Shaders\Technicolor2.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 
 #if (USE_DPX == 1)
   #include "SweetFX\Shaders\DPX.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 
 #if (USE_MONOCHROME == 1)
   #include "SweetFX\Shaders\Monochrome.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 
 #if (USE_COLORMATRIX == 1)
   #include "SweetFX\Shaders\ColorMatrix.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 
 #if (USE_LIFTGAMMAGAIN == 1)
   #include "SweetFX\Shaders\LiftGammaGain.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 
 #if (USE_TONEMAP == 1)
   #include "SweetFX\Shaders\Tonemap.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 
 #if (USE_VIBRANCE == 1)
   #include "SweetFX\Shaders\Vibrance.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 
 #if (USE_CURVES == 1)
   #include "SweetFX\Shaders\Curves.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 
 #if (USE_SEPIA == 1)
   #include "SweetFX\Shaders\Sepia.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 
 /* //didn't make it into 1.6	
 #if (USE_DALTONIZE == 1)
   #include "SweetFX\Shaders\Daltonize.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 */
 
 #if (USE_NOSTALGIA == 1)
   #include "SweetFX\Shaders\Nostalgia.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 
 #if (USE_VIGNETTE == 1)
   #include "SweetFX\Shaders\Vignette.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 
 #if (USE_FILMGRAIN == 1)
   #include "SweetFX\Shaders\FilmGrain.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 
 #if (USE_DITHER == 1)
   #include "SweetFX\Shaders\Dither.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 
 #if (USE_BORDER == 1)
   #include "SweetFX\Shaders\Border.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
 #endif
 
 #if (USE_SPLITSCREEN == 1)
   #include "SweetFX\Shaders\Splitscreen.h"
-  #define USE_SHARED 1
+  //#define USE_SHARED 1
+#endif
+
+#if (USE_SINCITY == 1)
+  #include "SweetFX\Shaders\SinCity.h"
+  #define Need_sRGB 1
+#endif
+
+#if (USE_FILMIC == 1)
+  #include "SweetFX\Shaders\Filmic.h"
+  #define Need_sRGB 1
+#endif
+
+#if (USE_CLARITY == 1)
+  #include "SweetFX\Shaders\Clarity.h"
+  //#define USE_SHARED 1
 #endif
 
 #if (USE_SHARED == 1)

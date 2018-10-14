@@ -1084,6 +1084,7 @@
 "OnScriptEvent02" "Music,PlaySound,,0,-1,,"
 "OnScriptEvent03" "tracka1,RestoreCameraToPlayerControl,0,3.5,-1,,"
 "OnEndSequence" "Gargoyle_sequence,Kill,,0,-1,,"
+"OnEndSequence" ",,,0,-1,G.No_Idle = 0,"
 "OnScriptEvent03" "Gargoyle_Roar,PlaySound,,0,-1,,"
 "OnScriptEvent02" "Gargoyle_Land,PlaySound,,0,-1,,"
 "OnEndSequence" "SoundScheme_COMBAT,FadeIn,1,0,-1,,"
@@ -1092,6 +1093,7 @@
 "OnScriptEvent01" "Skylight,Break,,0,-1,,"
 "OnBeginSequence" "Gargoyle_Land-Particles,TurnOn,,0.8,-1,,"
 "OnBeginSequence" "Skylight_Light,FadeToPattern,m,0,-1,,"
+"OnBeginSequence" ",,,0,-1,G.No_Idle = 1,"
 "OnScriptEvent03" "Gargoyle,StartPlayerDialogRemote,,3.5,-1,,"
 "origin" "-3.44386 381 1"
 }
@@ -3881,9 +3883,10 @@
 "targetname" "trigger_look"
 "target" "Gargoyle_Trigger_Look"
 "StartHidden" "1"
-"OnStartTouch" "Creak_Relay_Center,Trigger,,0,-1,,"
+"OnTrigger" "Creak_Relay_Center,Trigger,,0,-1,,"
 "OnTrigger" "Gargoyle,TeleportToEntity,Gargoyle_Start_Point,0,1,,"
 "OnTrigger" "Gargoyle_sequence,BeginSequence,,0.1,1,,"
+"OnTrigger" ",,,0,-1,FindPlayer().ClearActiveDisciplines(),"
 }
 {
 "model" "*46"
@@ -3895,6 +3898,7 @@
 "OnStartTouch" "Gargoyle_sequence,BeginSequence,,0.1,1,,"
 "OnStartTouch" "Gargoyle,TeleportToEntity,Gargoyle_Start_Point,0,1,,"
 "OnStartTouch" "Creak_Relay_Center,Trigger,,0,-1,,"
+"OnStartTouch" ",,,0,-1,FindPlayer().ClearActiveDisciplines(),"
 }
 {
 "classname" "camera_track"
@@ -4036,24 +4040,24 @@
 "locked_icon" "3"
 }
 {
-"classname" "prop_dynamic"
-"model" "models/items/test/curt.mdl"
-"angles" "0 270 0"
-"StartHidden" "1"
-"health" "100"
-"demo_sequence" "None"
-"skin" "0"
-"disableshadows" "0"
-"npc_transparent" "1"
-"solid" "6"
-"RandomAnimation" "0"
-"MinAnimTime" "5"
-"MaxAnimTime" "10"
-"targetname" "wesp_curtain"
-"spawnflags" "0"
-"collideable_gibs" "2"
-"crossfade_skin_time" "2.0"
-"origin" "0 2118 100"
+"classname" "infodecal"
+"texture" "decals/signs/women"
+"origin" "-448 266 210"
+}
+{
+"classname" "infodecal"
+"texture" "decals/signs/women"
+"origin" "-448 375 210"
+}
+{
+"classname" "infodecal"
+"texture" "decals/signs/men"
+"origin" "-448 522 210"
+}
+{
+"classname" "infodecal"
+"texture" "decals/signs/men"
+"origin" "-448 630 210"
 }
 {
 "classname" "logic_auto"

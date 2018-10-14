@@ -42,7 +42,7 @@
 	{
 		"ControlName"		"Label"
 		"fieldName"		"Patch"
-		"xpos"		"520"
+		"xpos"		"555"
 		"ypos"		"32"
 		"wide"		"360"
 		"tall"		"28"

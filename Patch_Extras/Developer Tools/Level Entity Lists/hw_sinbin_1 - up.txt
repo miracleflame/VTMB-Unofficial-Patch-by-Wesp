@@ -1096,6 +1096,7 @@
 "OnUseEnd" "peeper_3_event_hack_camera,ScriptHide,,0,-1,,"
 "OnUseBegin" "peeper_3_event_hack_camera,ScriptUnhide,,0,-1,,"
 "OnTrigger0" "Peeper_3-logic_window_shut_event,Trigger,,0,1,,"
+"OnTrigger0" ",,,0,-1,FindPlayer().ClearActiveDisciplines(),"
 "origin" "58.8423 81.3941 -136.629"
 }
 {
@@ -2016,7 +2017,7 @@
 {
 "classname" "prop_doorknob"
 "angles" "0 180 0"
-"difficulty" "0"
+"difficulty" "5"
 "skilltype" "1"
 "diceroll" "0"
 "locksnd" "environmental/electronic/button_click_1.wav"
@@ -2031,7 +2032,7 @@
 {
 "classname" "prop_doorknob"
 "angles" "0 0 0"
-"difficulty" "0"
+"difficulty" "5"
 "skilltype" "1"
 "diceroll" "0"
 "locksnd" "environmental/electronic/button_click_1.wav"
@@ -2583,7 +2584,7 @@
 {
 "classname" "prop_doorknob_electronic"
 "angles" "0 270 0"
-"difficulty" "0"
+"difficulty" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
 "delete_key" "0"
 "model" "models/scenery/misc/lock/lock.mdl"
@@ -3328,6 +3329,12 @@
 "MinAnimTime" "5"
 "MaxAnimTime" "10"
 "crossfade_skin_time" "2.0"
+"origin" "196 105 -142"
+}
+{
+"classname" "ambient_soundscheme"
+"start_enabled" "1"
+"scheme_file" "sound/Schemes/hw_sinbin.txt"
 "origin" "196 105 -142"
 }
 {

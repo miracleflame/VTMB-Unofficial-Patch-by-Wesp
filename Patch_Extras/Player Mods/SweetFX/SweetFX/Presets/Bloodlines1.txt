@@ -4,15 +4,10 @@
 
 Game: Vampire: Bloodlines
 Author: Psycho-A
-SweetFX: v2.0 Preview 8 by CeeJay.dk
+SweetFX version: 2.x, up to ReShade 3.x
 Preset: Enhanced shadowing, details, bloom, 'noir' colorcorrection...
+Date: 28.04.2017
 
-This is a preview release meant to allow users to beta test SweetFXs 2.0 new injector called ReShade.
-More features, bugfixes and performance optimizations will come before release.
-
-Hope you enjoy SweetFX and ReShade.
- - CeeJay.dk
- 
    /*-----------------------------------------------------------.
   /                      Choose effects                         /
   '-----------------------------------------------------------*/
@@ -49,6 +44,7 @@ Hope you enjoy SweetFX and ReShade.
 #define USE_BORDER        	0 //[0 or 1] Border : Can be used to create letterbox borders around the image.
 #define USE_SPLITSCREEN   	0 //[0 or 1] Splitscreen : Enables the before-and-after splitscreen comparison mode. (Only partially working right now)
 
+#define USE_CLARITY         1 //[0 or 1] High Pass Sharpening & Contrast Enhancement effects (use Clarity_settings.txt to configure!)
 #define USE_TRANSITION    	0 //[0 or 1] Transition : Shows a welcome screen and then transitions to the regularly scheduled programming
 #define USE_DEPTH         	0 //[0 or 1] Depth : Enables the possibility to display the depth buffer - You will still need to toogle it on/off with (*) in-game
 #define USE_FILMIC          0 //[0 or 1] Filmic Tonemapping
@@ -295,7 +291,7 @@ Hope you enjoy SweetFX and ReShade.
 
 #define Exposure    0.000  //[-1.000 to 1.000] Adjust exposure
 
-#define Saturation  0.000  //[-1.000 to 1.000] Adjust saturation
+#define Saturation -0.250  //[-1.000 to 1.000] Adjust saturation
 
 #define Bleach      0.000  //[0.000 to 1.000] Brightens the shadows and fades the colors
 
@@ -353,11 +349,11 @@ Hope you enjoy SweetFX and ReShade.
    /*-----------------------------------------------------------.
   /                       Vignette settings                     /
   '-----------------------------------------------------------*/
-#define VignetteType       2  //[1|2|3] 1 = Original, 2 = New, 3 = TV style
-#define VignetteRatio   1.00  //[0.15 to 6.00]  Sets a width to height ratio. 1.00 (1/1) is perfectly round, while 1.60 (16/10) is 60 % wider than it's high.
-#define VignetteRadius  1.00  //[-1.00 to 3.00] lower values = stronger radial effect from center
-#define VignetteAmount -1.00  //[-2.00 to 1.00] Strength of black. -2.00 = Max Black, 1.00 = Max White.
-#define VignetteSlope      8  //[2 to 16] How far away from the center the change should start to really grow strong (odd numbers cause a larger fps drop than even numbers)
+#define VignetteType       1  //[1|2|3] 1 = Original, 2 = New, 3 = TV style
+#define VignetteRatio   1.20  //[0.15 to 6.00]  Sets a width to height ratio. 1.00 (1/1) is perfectly round, while 1.60 (16/10) is 60 % wider than it's high.
+#define VignetteRadius -1.00  //[-1.00 to 3.00] lower values = stronger radial effect from center
+#define VignetteAmount -0.33  //[-2.00 to 1.00] Strength of black. -2.00 = Max Black, 1.00 = Max White.
+#define VignetteSlope     16  //[2 to 16] How far away from the center the change should start to really grow strong (odd numbers cause a larger fps drop than even numbers)
 #define VignetteCenter float2(0.500, 0.500)  //[0.000 to 1.000, 0.000 to 1.000] Center of effect for VignetteType 1. 2 and 3 do not obey this setting.
 
 

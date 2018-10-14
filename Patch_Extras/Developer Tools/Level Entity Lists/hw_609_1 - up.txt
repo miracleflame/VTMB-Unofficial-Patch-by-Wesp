@@ -788,6 +788,15 @@
 "OnClose" "ovenlight,Toggle,,0,-1,,"
 }
 {
+"classname" "inspection_node"
+"parentname" "plus_oven"
+"targetname" "plus_oven_inspection"
+"start_enabled" "1"
+"StartHidden" "1"
+"inspection" "0"
+"origin" "-492 -339 225"
+}
+{
 "style" "32"
 "classname" "light"
 "_light" "206 205 187 2"
@@ -802,16 +811,12 @@
 }
 {
 "classname" "item_g_jumbles_flyer"
-"targetname" "ball"
+"targetname" "plus_ball"
+"StartHidden" "1"
 "angles" "0 0 0"
 "origin" "-492 -339 225"
-}
-{
-"classname" "inspection_node"
-"parentname" "ball"
-"start_enabled" "1"
-"inspection" "4"
-"origin" "-492 -339 225"
+"OnPlayerPickup" ",,,0,-1,G.Ball_Taken = 1,"
+"OnPlayerPickup" "plus_oven_inspection,Kill,,0,-1,,"
 }
 {
 "classname" "light"
@@ -1617,23 +1622,6 @@
 "locked_icon" "3"
 "key_icon" "4"
 "origin" "-507.118 -222.932 394.848"
-}
-{
-"classname" "prop_dynamic"
-"angles" "0 270 0"
-"model" "models/scenery/structural/doorknoba/drknobantique.mdl"
-"health" "0"
-"demo_sequence" "None"
-"skin" "0"
-"disableshadows" "1"
-"npc_transparent" "1"
-"solid" "6"
-"RandomAnimation" "0"
-"MinAnimTime" "5"
-"MaxAnimTime" "10"
-"crossfade_skin_time" "2.0"
-"parentname" "room2door"
-"origin" "18 -17 394.848"
 }
 {
 "classname" "prop_dynamic"
@@ -3448,7 +3436,7 @@
 "model" "models/character/npc/common/freshcorpses/tortured_W_Eyes.mdl"
 "skin" "0"
 "disableshadows" "1"
-"solid" "6"
+"solid" "3"
 "StartHidden" "0"
 "demo_sequence" "None"
 "npc_transparent" "1"
@@ -3627,8 +3615,8 @@
 "angles" "0 0 0"
 "model" "models/character/npc/common/freshcorpses/tortured_W_Eyes.mdl"
 "skin" "0"
-"disableshadows" "0"
-"solid" "0"
+"disableshadows" "1"
+"solid" "2"
 "StartHidden" "0"
 "demo_sequence" "None"
 "npc_transparent" "1"
@@ -3646,7 +3634,7 @@
 "model" "models/character/npc/common/freshcorpses/tortured_W_Eyes.mdl"
 "skin" "0"
 "disableshadows" "1"
-"solid" "6"
+"solid" "3"
 "StartHidden" "0"
 "collideable_gibs" "0"
 "health" "0"
@@ -3664,7 +3652,7 @@
 "model" "models/character/npc/common/freshcorpses/tortured_W_Eyes.mdl"
 "skin" "0"
 "disableshadows" "1"
-"solid" "6"
+"solid" "2"
 "StartHidden" "0"
 "collideable_gibs" "0"
 "health" "0"
@@ -8656,16 +8644,6 @@
 "origin" "219.952 129.569 180.869"
 }
 {
-"classname" "infodecal-wesp"
-"texture" "decals/details/graf_03"
-"origin" "-180 1165 115"
-}
-{
-"classname" "infodecal-wesp"
-"texture" "decals/pictures/deadrise_poster1"
-"origin" "-180 1054 148"
-}
-{
 "classname" "prop_dynamic"
 "angles" "0 90 0"
 "targetname" "snuff_doors"
@@ -8682,6 +8660,16 @@
 "MinAnimTime" "5"
 "MaxAnimTime" "10"
 "origin" "45 370 30"
+}
+{
+"classname" "infodecal"
+"texture" "decals/stains/bloodbig"
+"origin" "32 -412 -256"
+}
+{
+"classname" "infodecal"
+"texture" "decals/stains/bloodbig"
+"origin" "-679 116 -256"
 }
 {
 "classname" "npc_VDog"
@@ -8837,7 +8825,7 @@
 "demo_sequence" "None"
 "npc_transparent" "1"
 "crossfade_skin_time" "2.0"
-"origin" "390 265 0"
+"origin" "390 275 0"
 }
 {
 "classname" "prop_dynamic"

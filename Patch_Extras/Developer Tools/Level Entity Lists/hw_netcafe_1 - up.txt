@@ -2657,7 +2657,7 @@
 {
 "classname" "prop_doorknob"
 "angles" "0 270 0"
-"difficulty" "0"
+"difficulty" "1"
 "skilltype" "1"
 "diceroll" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
@@ -2840,21 +2840,22 @@
 "OnOpen" "window_brush,ScriptUnhide,,0,-1,,"
 "OnOpen" "sBobInEditing,BeginSequence,,1,-1,,"
 "OnOpen" "sRedshirt,BeginSequence,,1,-1,,"
+"OnOpen" ",,,0.7,-1,FindPlayer().ClearActiveDisciplines(),"
 }
 {
 "classname" "prop_doorknob"
-"angles" "0 0 0"
+"angles" "0 90 0"
 "difficulty" "0"
 "skilltype" "1"
 "diceroll" "1"
 "locksnd" "environmental/electronic/button_click_1.wav"
 "delete_key" "0"
-"model" "models/scenery/structural/doorknoba/doorknoba.mdl"
+"model" "models/scenery/structural/doorknob_round/doorknob_round_brass.mdl"
 "parentname" "officedoor4"
 "use_icon" "10"
 "locked_icon" "3"
 "key_icon" "4"
-"origin" "581.598 725.77 -18.9722"
+"origin" "581.598 723.77 -26.5789"
 }
 {
 "classname" "prop_doorknob"
@@ -6017,7 +6018,7 @@
 "health" "0"
 "soundgroup" "standard_door"
 "angles" "0 0 0"
-"distance" "70"
+"distance" "64"
 "climbable" "0"
 "spawnflags" "274"
 "origin" "627 722.5 -12.5"
@@ -6329,7 +6330,7 @@
 "clothescolor1" "0 0 0 0"
 "clothescolor2" "0 0 0 0"
 "trimcolor" "0 0 0 0"
-"stattemplate" "NPCGeneric"
+"stattemplate" "HunterSafeArea"
 "player_reaction" "D_NU 0"
 "invincible" "0"
 "interesting_place_groups" "0"
@@ -8176,7 +8177,7 @@
 "clothescolor1" "0 0 0 0"
 "clothescolor2" "0 0 0 0"
 "trimcolor" "0 0 0 0"
-"stattemplate" "NPCGeneric"
+"stattemplate" "HunterSafeArea"
 "player_reaction" "D_NU 0"
 "invincible" "0"
 "interesting_place_groups" "0"
@@ -8743,25 +8744,6 @@
 }
 {
 "classname" "prop_dynamic"
-"angles" "0 90 0"
-"model" "models/scenery/misc/poster/poster2.mdl"
-"targetname" "plus_poster"
-"StartHidden" "1"
-"collideable_gibs" "0"
-"health" "5"
-"demo_sequence" "None"
-"skin" "0"
-"crossfade_skin_time" "2.0"
-"disableshadows" "1"
-"npc_transparent" "1"
-"solid" "6"
-"RandomAnimation" "0"
-"MinAnimTime" "5"
-"MaxAnimTime" "10"
-"origin" "320 1456 -130"
-}
-{
-"classname" "prop_dynamic"
 "angles" "0 0 0"
 "model" "models/scenery/misc/poster/poster4.mdl"
 "targetname" "plus_poster"
@@ -8781,8 +8763,8 @@
 }
 {
 "classname" "prop_dynamic"
-"angles" "0 90 0"
-"model" "models/scenery/misc/poster/poster5.mdl"
+"angles" "0 270 0"
+"model" "models/scenery/misc/poster/poster2a.mdl"
 "targetname" "plus_poster"
 "StartHidden" "1"
 "collideable_gibs" "0"
@@ -8796,7 +8778,7 @@
 "RandomAnimation" "0"
 "MinAnimTime" "5"
 "MaxAnimTime" "10"
-"origin" "150 998 -130"
+"origin" "76 742 -111"
 }
 {
 "classname" "prop_dynamic"
@@ -8820,7 +8802,7 @@
 {
 "classname" "prop_dynamic"
 "angles" "0 0 0"
-"model" "models/scenery/misc/poster/poster1a.mdl"
+"model" "models/scenery/misc/poster/posters7.mdl"
 "targetname" "plus_poster"
 "StartHidden" "1"
 "collideable_gibs" "0"
@@ -8834,7 +8816,7 @@
 "RandomAnimation" "0"
 "MinAnimTime" "5"
 "MaxAnimTime" "10"
-"origin" "713 960 0"
+"origin" "713 960 -1"
 }
 {
 "classname" "prop_dynamic"
@@ -9204,7 +9186,7 @@
 "clothescolor1" "0 0 0 0"
 "clothescolor2" "0 0 0 0"
 "trimcolor" "0 0 0 0"
-"stattemplate" "NPCGeneric"
+"stattemplate" "HunterSafeArea"
 "player_reaction" "D_NU 0"
 "invincible" "0"
 "interesting_place_groups" "0"
@@ -9274,7 +9256,7 @@
 "clothescolor1" "0 0 0 0"
 "clothescolor2" "0 0 0 0"
 "trimcolor" "0 0 0 0"
-"stattemplate" "NPCGeneric"
+"stattemplate" "HunterSafeArea"
 "player_reaction" "D_NU 0"
 "invincible" "0"
 "interesting_place_groups" "0"

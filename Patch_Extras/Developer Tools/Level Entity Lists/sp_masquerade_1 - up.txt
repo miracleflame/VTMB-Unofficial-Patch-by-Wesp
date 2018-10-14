@@ -329,7 +329,7 @@
 "position_end" "3"
 "hide_ents" "0"
 "force_lod" "1"
-"origin" "0 148.333 -64"
+"origin" "0 148.333 -66"
 }
 {
 "classname" "npc_VPedestrian"
@@ -572,7 +572,7 @@
 "Corner" "1"
 "Pause" "10"
 "OnReachedKeyframe" "sequence_end_relay,Trigger,,0,-1,,"
-"origin" "8.48782 459.572 -59.4997"
+"origin" "8.48782 459.572 -39.4997"
 }
 {
 "classname" "prop_dynamic"
@@ -716,12 +716,32 @@
 "OnTrigger" "Start_Masquerade,Kill,,2,-1,,"
 "OnTrigger" "Toreador,Kill,,2,-1,,"
 "OnTrigger" "Nosferatu,Kill,,2,-1,,"
-"OnTrigger" "its_over,Fade,,0.2,-1,,"
+"OnTrigger" "its_over,Fade,,1.0,-1,,"
 "OnTrigger" "playercontroller,RemoveControllerNPC,,2,-1,,"
 "OnTrigger" "end_game,ScriptUnhide,,3,-1,,"
 "OnTrigger" "Sheriff,Kill,,2,-1,,"
+"OnTrigger" "sheriff_sword,Kill,,2,-1,,"
+"OnTrigger" "plus_impact,TurnOn,,0.6,-1,,"
+"OnTrigger" "plus_impact,TurnOff,,2,-1,,"
+"OnTrigger" "world,PlayEndCredits,\"vdata/System/masquerade.txt\",0,-1,,"
 "origin" "25.4899 413.948 -59"
 }
+{
+"classname" "env_particle"
+"targetname" "plus_impact"
+"StartHidden" "0"
+"parentname" "sheriff"
+"angles" "0 0 0"
+"particle_definition" "prince_decapitation_emitter"
+"active" "0"
+"attach_type" "2"
+"bone" "Bip01 L Hand"
+"bounds" "512"
+"ramp_scale" "1"
+"ramp_time" "0"
+"origin" "307.439 304.733 -123"
+}
+
 {
 "classname" "info_landmark"
 "angles" "0 0 0"

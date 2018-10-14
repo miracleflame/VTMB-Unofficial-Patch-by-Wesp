@@ -1,7 +1,7 @@
-//====== Copyright © 2003-2016, Troika Games, Inc. All rights reserved. =======
+//====== Copyright © 2003-2017, Troika Games, Inc. All rights reserved. =======
 //
 // Purpose: Vampire Bloodlines game definition file (.fgd) 
-// Version: 1.53 beta
+// Version: 1.62 beta
 // Edition: Original VtMB [Base]
 // Written: Psycho-A
 //
@@ -543,7 +543,7 @@ base (
 	input SetHealth(integer) : "Sets a new value for the breakable's health. If the breakable's health reaches zero it will break."
 	input AddHealth(integer) : "Adds health to the breakable. If the breakable's health reaches zero it will break."
 	input RemoveHealth(integer) : "Removes health from the breakable. If the breakable's health reaches zero it will break."
-	input SetDebris(string) : "Set debris type spawned when entity breaks [not tested]."
+	input SetDebris(integer) : "Set debris type spawned when entity breaks [not tested]."
 
 	// outputs
 	output OnBreak(void) : "Fired when this breakable breaks."
@@ -1958,6 +1958,24 @@ iconsprite("editor/env_physexplosion.vmt")
 
 
 
+//===================================================================================================================
+// func_dustmotes [common]
+//===================================================================================================================
+// VTMB-adaptation:
+//  added: SpriteName
+
+@SolidClass base(BModelParticleSpawner) = func_dustmotes : 
+	"A brush entity that spawns sparkling dust motes within its volume. \nProbably doesn't work in VtMB (use func_particle instead)."
+[
+	SizeMin(string) : "Minimum Particle Size" : 7
+	SizeMax(string) : "Maximum Particle Size" : 12
+	Alpha(integer) : "Particle Alpha" : 100
+// vtmb ----
+	SpriteName(sprite) : "Sprite Name" : "particle/sparkles.vmt" : "[VTMB] Material of the sprite to be drawn."
+]
+
+
+
 
 
 
@@ -2131,7 +2149,6 @@ size(-4 -4 -4, 4 4 4)
 
 
 
-
 //===================================================================================================================
 // env_cubemap [common]
 //===================================================================================================================
@@ -2197,6 +2214,35 @@ iconsprite("editor/env_fade")
 	output OnBeginFade(void) : "Fired when the fade has begun."
 ]
 
+
+
+
+//====================================================================================================================
+// env_fog_controller [common]
+//====================================================================================================================
+// VTMB-adaptation
+//	removed: angles (unused)
+//  removed: DXLevelChoice (unused)
+//	removed: fogblend (moved to worldspawn)
+//	removed: fogcolor/2 (moved to worldspawn)
+//	removed: fogdir (moved to worldspawn)
+//	removed: fogenable (moved to worldspawn)
+//	removed: fogstart/end (moved to worldspawn)
+//	removed: farz (moved to worldspawn)
+
+@PointClass base(Targetname) iconsprite("editor/fog_controller.vmt") color(255 255 255) = env_fog_controller : 
+	"An entity that controls the fog and view distance in the map. \nIn VtMB all Fog values moved to Map properties (worldspawn), so using env_fog_controller you just may control them in real time via inputs."
+[
+	targetname(target_source) : "Name" : "fog_controller" : "The name that other entities refer to this entity by."
+
+	// Inputs
+	input SetStartDist(float) : "Sets fog start distance"
+	input SetEndDist(float) : "Sets fog end distance"
+	input TurnOn(void) : "Turns fog on"
+	input TurnOff(void) : "Turns fog off"
+	input SetColor(color255) : "Sets primary fog color."
+	input SetColorSecondary(color255) : "Sets secondary fog color."
+]
 
 
 
@@ -2897,11 +2943,10 @@ line (
 )
 = func_brush :
 	"An brush built entity with various features.\n"+
-	"[VTMB] Adds additional properties to object that it would not normally have. \nFor example, makes something climbable, or usable or solid that is not normally so (e.g. making a cat statue usable).\n\n"+
-	"Warning: If you're using func_brush in the pair with func_areaportalwindow, necessarily set Origin to (0 0 0)!"
+	"[VTMB] Adds additional properties to object that it would not normally have. \nFor example, makes something climbable, or usable or solid that is not normally so (e.g. making a cat statue usable)."
 [
 	sep_brshorig(string) readonly: "------------------------------------"
-	origin(string) : "Origin (X Y Z)" : : "The position of this entity's center in the world. Rotating entities typically rotate around their origin. \n\nWarning: if the current brush used as func_areaportalwindow's rendering target, it's necessarily to clear Origin values to be empty, or set it to 0 0 0!"
+	origin(string) : "Origin (X Y Z)" : : "The position of this entity's center in the world. Rotating entities typically rotate around their origin. \n\nWarning: if the current brush used as func_areaportalwindow's rendering target, it's necessarily to leave Origin values to be empty, or set it to 0 0 0!"
 ]
 
 
@@ -3769,9 +3814,8 @@ iconsprite("editor/info_target.vmt")
 		1 : "Teleport Home" : 0
 	]
 
-	// Inputs
+	// connections
 	input Teleport(void) : "Teleport the target entity."
-	// outputs (vtmb)
 	output OnEnterMapHere(void) : "Fired when player enters map in place of this entity [not tested]."
 ]
 
@@ -5091,7 +5135,7 @@ base (
 	]
 
 	// inputs
-	input SetDamageable(void) : "[VTMB] Set this entity as able to make damage [not tested]."
+	input SetDamageable(integer) : "[VTMB] Set this entity as able to make damage [not tested]."
 	input PhysDamageScale(float) : "Set the Physics Impact Damage Scale for this character. \nNote: 0 means this feature is disabled for backwards compatibility [not tested]."
 ]
 
@@ -5195,14 +5239,13 @@ sphere (
 	]
 
 	// inputs
-	input SetDamageable(void) : "[VTMB] Set this entity as able to make damage [not tested]."
+	input SetDamageable(integer) : "[VTMB] Set this entity as able to make damage [not tested]."
 ]
 
 @SolidClass
 base (
 	Targetname,
 	Parentname,
-	p_Origin,
 	p_Global,
 	e_func_breakable_surf,
 	o_VBreakable,
@@ -5316,7 +5359,7 @@ line (
 	rotate_damp(float) : "Rotate Damping" : "10" : "Rotate resistance."
 
 	// inputs
-	input SetDamageable(void) : "Set this entity as able to make damage."
+	input SetDamageable(integer) : "Set this entity as able to make damage."
 ]
 
 @SolidClass
@@ -5619,7 +5662,7 @@ base (
 	viewkick(float) : "View-kick" : "0.05" : "The amount to kick player's view if the player is in the trigger. \nProportional to magnitude (0-1)."
 
 	// Inputs
-	input Impact(float) : "Fire the impact, pushing all entities within the volume."
+	input Impact(void) : "Fire the impact, pushing all entities within the volume."
 	input SetMagnitude(float) : "Set the magnitude of the impact."
 
 	// Outputs
@@ -6787,36 +6830,36 @@ studioprop()
 	input pl_supernatural_flee(string) : "Set a supernatural flee level"
 	input pl_supernatural_attack(string) : "Set a supernatural attack level"
 	input WalkToNode(string) : "Makes NPC walk to selected node."
-	input TweakParam(void) : "[VTMB: untested connection]"
-	input SetupPatrolType(void) : "[VTMB: untested connection]"
-	input FollowPatrolPath(void) : "[VTMB: untested connection]"
+	input TweakParam(string) : "[VTMB: untested connection]"
+	input SetupPatrolType(string) : "[VTMB: untested connection]"
+	input FollowPatrolPath(string) : "[VTMB: untested connection]"
 	input ClearPatrolPath(void) : "[VTMB: untested connection]"
 	input StartPlayerDialog(void) : "[VTMB: untested connection]"
 	input StartPlayerDialogRemote(void) : "[VTMB: untested connection]"
 	input StartPlayerDialogUnforced(void) : "[VTMB: untested connection]"
 	input FleeAndDie(void) : "[VTMB: untested connection]"
 	input Faint(void) : "[VTMB: untested connection]"
-	input DisableThink(void) : "[VTMB: untested connection]"
-	input TeleportToEntity(void) : "[VTMB: untested connection]"
-	input TakeDamage(string) : "Take specified amount of damage to object."
-	input MakeInvincible(void) : "Make NPC invincible."
+	input DisableThink(integer) : "[VTMB: untested connection]"
+	input TeleportToEntity(string) : "[VTMB: untested connection]"
+	input TakeDamage(integer) : "Take specified amount of damage to object."
+	input MakeInvincible(integer) : "Make NPC invincible."
 	input UseInteresting(integer) : "Allow use Interesting Places feature."
-	input SetInvestigateMode(string) : "Set investigate mode [-?]."
-	input SetInvestigateModeCombat(string) : "Set investigate mode on combat [-?]."
+	input SetInvestigateMode(integer) : "Set investigate mode [-?]."
+	input SetInvestigateModeCombat(integer) : "Set investigate mode on combat [-?]."
 	input SetSpeechVolume(string) : "Set NPC's speech volume."
 	input PlayDialogFile(string) : "Play dialog file that will be aplied to this NPC."
 	input AllowAlertLookaround(void) : "[VTMB: untested connection]"
-	input StayEntrenched(void) : "[VTMB: untested connection]"
+	input StayEntrenched(integer) : "[VTMB: untested connection]"
 	input AllowKickHintUse(void) : "[VTMB: untested connection]"
 	input SetScriptedDiscipline(string) : "[VTMB: untested connection]"
-	input SetBloodShieldDiscipline(string) : "[VTMB: untested connection]"
+	input SetBloodShieldDiscipline(integer) : "[VTMB: untested connection]"
 	input SetFollowerBoss(string) : "[VTMB: untested connection]"
 	input SetFollowerType(string) : "Set the NPC follower type."
-	input SetFallToGround(string) : "[VTMB: untested connection]"
-	input ChangeSchedule(void) : "[VTMB: untested connection]"
-	input SetDontFacePlayerInDialog(void) : "[VTMB: untested connection]"
-	input SetBossMonster(void) : "Make this NPC to be a boss monster."
-	input AllowOpenDoors(void) : "Give the NPC ability to open doors."
+	input SetFallToGround(integer) : "[VTMB: untested connection]"
+	input ChangeSchedule(string) : "[VTMB: untested connection]"
+	input SetDontFacePlayerInDialog(integer) : "[VTMB: untested connection]"
+	input SetBossMonster(integer) : "Make this NPC to be a boss monster."
+	input AllowOpenDoors(integer) : "Give the NPC ability to open doors."
 	input SetMovementMultiplier(void) : "[VTMB: untested connection]"
 	input SetDefaultDialogCamera(void) : "Set camera shot to dialog-default."
 	input HumanityAdd(void) : "Add humanity point to player."
@@ -6836,16 +6879,16 @@ studioprop()
 	input PlayFloat(void) : "[VTMB: untested connection]"
 	input WillTalk(integer) : "Make NPC talk (0 - disables, 1 - enables)"
 	input ChangeMasqueradeLevel(void) : "Change player's Masquerade level. Positive number is a violation, and negative number is redemption."
-	input FadeHeadAsCameraTarget(void) : "[VTMB: untested connection]"
-	input FadeBodyAsCameraTarget(void) : "[VTMB: untested connection]"
+	input FadeHeadAsCameraTarget(string) : "[VTMB: untested connection]"
+	input FadeBodyAsCameraTarget(string) : "[VTMB: untested connection]"
 	input SetHeadAsCameraTarget(void) : "[VTMB: untested connection]"
 	input SetBodyAsCameraTarget(void) : "[VTMB: untested connection]"
-	input LookAtEntityEye(void) : "[VTMB: untested connection]"
-	input LookAtEntityCenter(void) : "[VTMB: untested connection]"
-	input LookAtEntityOrigin(void) : "[VTMB: untested connection]"
-	input LookAtEntityDefault(void) : "[VTMB: untested connection]"
+	input LookAtEntityEye(string) : "[VTMB: untested connection]"
+	input LookAtEntityCenter(string) : "[VTMB: untested connection]"
+	input LookAtEntityOrigin(string) : "[VTMB: untested connection]"
+	input LookAtEntityDefault(string) : "[VTMB: untested connection]"
 	input SetSoundOverrideEnt(string) : "Works for the radio, the newscaster, and any other npc dialog. \n[Not sure about ambient_generic..]"
-	input SetFakeSilence(void) : "Shuts off the newscaster? \n[I don't know if it has an effect on other sound entities. Seems it have no effect on prop_radio or ambient_generic.]"
+	input SetFakeSilence(integer) : "Shuts off the newscaster? \n[I don't know if it has an effect on other sound entities. Seems it have no effect on prop_radio or ambient_generic.]"
 
 	// Outputs
 	output OnDamaged(void) : "Fired when this NPC takes damage."

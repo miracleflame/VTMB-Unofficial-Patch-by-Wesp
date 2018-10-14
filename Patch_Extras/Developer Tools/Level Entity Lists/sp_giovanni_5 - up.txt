@@ -3070,8 +3070,25 @@
 "origin" "-435 73 64"
 }
 {
+"classname" "prop_dynamic"
+"angles" "0 0 0"
+"targetname" "sarc_basic"
+"model" "models/scenery/furniture/Sarcophagus/Sarcophagus.mdl"
+"skin" "0"
+"disableshadows" "1"
+"solid" "6"
+"health" "0"
+"RandomAnimation" "0"
+"MinAnimTime" "5"
+"MaxAnimTime" "10"
+"demo_sequence" "None"
+"npc_transparent" "1"
+"crossfade_skin_time" "2.0"
+"origin" "-500 75 25.477"
+}
+{
 "classname" "prop_switch"
-"targetname" "sarc_switch_plus"
+"targetname" "sarc_plus"
 "StartHidden" "1"
 "angles" "0 0 0"
 "use_icon" "1"
@@ -3088,7 +3105,7 @@
 "model" "models/scenery/furniture/Sarcophagus/Sarcophagus.mdl"
 "spawnflags" "1057"
 "OnUse" ",,,1,-1,gio5_changDefeated(),"
-"OnUse" "sarc_switch_plus,Lock,,0,-1,,"
+"OnUse" "sarc_plus,Lock,,0,-1,,"
 "origin" "-500 75 25.477"
 }
 {
@@ -3096,7 +3113,8 @@
 "targetname" "plus_check"
 "python_script" "G.Patch_Plus == 1"
 "OnFalse" ",,,1,-1,gio5_changDefeated(),"
-"OnTrue" "sarc_switch_plus,ScriptUnhide,,0,-1,,"
+"OnTrue" "sarc_basic,ScriptHide,,0,-1,,"
+"OnTrue" "sarc_plus,ScriptUnhide,,0,-1,,"
 "origin" "-500 75 25.477"
 }
 {

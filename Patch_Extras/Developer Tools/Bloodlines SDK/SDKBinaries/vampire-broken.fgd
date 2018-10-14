@@ -1,7 +1,7 @@
-//====== Copyright © 2003-2016, Troika Games, Inc. All rights reserved. =======
+//====== Copyright © 2003-2017, Troika Games, Inc. All rights reserved. =======
 //
 // Purpose: Vampire Bloodlines game definition file (.fgd) 
-// Version: 1.0 beta
+// Version: 1.2 beta
 // Edition: Original VtMB [Broken/NotWorking Entities]
 // Written: Psycho-A
 //
@@ -20,45 +20,6 @@
 //
 //*******************************************************************************************************************
 //*******************************************************************************************************************
-
-
-//====================================================================================================================
-// env_fog_controller [common]
-//====================================================================================================================
-// VTMB-adaptation
-//  removed: DXLevelChoice (unused)
-
-@PointClass base(TargetnameRot) iconsprite("editor/fog_controller.vmt") color(255 255 255) = env_fog_controller : 
-	"An entity that controls the fog and view distance in the map. \nDoesn't work in VtMB. Use worldspawn's settings instead."
-[
-	// Inputs
-	input SetStartDist(float) : "Sets fog start distance"
-	input SetEndDist(float) : "Sets fog end distance"
-	input TurnOn(void) : "Turns fog on"
-	input TurnOff(void) : "Turns fog off"
-	input SetColor(color255) : "Sets primary fog color."
-	input SetColorSecondary(color255) : "Sets secondary fog color."
-	
-	
-	// Starting fog parameters for the level. These are selectable per LOD.	
-	fogenable(choices) : "Fog Enable" : 0 =
-	[
-		0 : "No"
-		1 : "Yes"
-	]
-	fogblend(choices) : "Fog Blend" : 0 =
-	[
-		0 : "No"
-		1 : "Yes"
-	]
-	fogcolor(color255) : "Primary Fog Color" : "255 255 255"
-	fogcolor2(color255) : "Sec Fog Color" : "255 255 255"
-	fogdir(string) : "Primary Fog Dir" : "1 0 0"
-	fogstart(string) : "Fog Start" : "500.0"
-	fogend(string) : "Fog End" : "2000.0"
-	
-	farz(string) : "Far Z Clip Plane" : "-1"
-]
 
 
 //====================================================================================================================
@@ -315,23 +276,6 @@ iconsprite("editor/env_firesource") color(255 255 0) sphere(fireradius) = env_fi
 
 	SizeMin(string) : "Minimum Particle Size" : 100
 	SizeMax(string) : "Maximum Particle Size" : 200
-]
-
-
-//===================================================================================================================
-// func_dustmotes [common]
-//===================================================================================================================
-// VTMB-adaptation:
-//  added: SpriteName
-
-@SolidClass base(BModelParticleSpawner) = func_dustmotes : 
-	"A brush entity that spawns sparkling dust motes within its volume. \nDoesn't work in VtMB. Use func_particle instead."
-[
-	SizeMin(string) : "Minimum Particle Size" : 7
-	SizeMax(string) : "Maximum Particle Size" : 12
-	Alpha(integer) : "Particle Alpha" : 100
-// vtmb ----
-	SpriteName(sprite) : "Sprite Name" : "particle/sparkles.vmt" : "[VTMB] Material of the sprite to be drawn."
 ]
 	
 
