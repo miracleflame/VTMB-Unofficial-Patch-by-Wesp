@@ -1134,7 +1134,7 @@ DisciplineTgt
 			}
 		}
 
-		OnCallback
+		OnCallback		// seems not to work, changed everywhere by wesp	
 		{
 			"Dmg_Health"	"30-50%"
 		}
@@ -1145,6 +1145,7 @@ DisciplineTgt
 
 		"AI_Schedule"		"SCHED_TROIKA_DO_BLOODYEYE_ACTIVITY"
 		"Duration"			"3"
+// wesp, removed for hit stratas		"Dmg_Health"	"30-50%"
 
 		Trigger_Casting
 		{
@@ -1193,6 +1194,7 @@ DisciplineTgt
 	Hit_Supernatural_NoEffect
 	{
 		"Duration"			"3"	// In order to play particles/etc.
+		"Dmg_Health"	"2-3%"	// added by wesp
 
 		Effect_Tgt_Hit
 		{
@@ -1224,60 +1226,40 @@ DisciplineTgt
 	{
 		"InheritFrom"		"Hit_Human"
 // Populism		"Duration"		"3" //"2-3"
-		OnCallback
-		{
-			"Dmg_Health"	"20-35%"
-		}
+		"Dmg_Health"	"20-35%"
 	}
 
 	Hit_Strata_2
 	{
 		"InheritFrom"		"Hit_Human"
 // Populism		"Duration"		"1-2" //"2-3"
-		OnCallback
-		{
-			"Dmg_Health"	"20-25%"
-		}
+		"Dmg_Health"	"20-25%"
 	}
 
 	Hit_Strata_3
 	{
 		"InheritFrom"		"Hit_Human"
 // Populism		"Duration"		"3" //"2-3"
-		OnCallback
-		{
-			"Dmg_Health"	"20-35%"
-		}
+		"Dmg_Health"	"20-35%"
 	}
 
 	Hit_Strata_4
 	{
 		"InheritFrom"		"Hit_Human"
 // Populism		"Duration"		"1-2" //"2-3"
-		OnCallback
-		{
-			"Dmg_Health"	"20-25%"
-		}
+		"Dmg_Health"	"20-25%"
 	}
 
 	Hit_Strata_5
 	{
 		"InheritFrom"		"Hit_Supernatural_Partial"
-// Populism		"Dmg_Health"		"6-8%"
-		OnCallback	// added by Populism
-		{
-			"Dmg_Health"	"6-8%"
-		}
+		"Dmg_Health"		"6-8%"
 	}
 
 	Hit_Strata_6
 	{
 		"InheritFrom"		"Hit_Supernatural_Partial"
-// Populism		"Dmg_Health"		"3-4%"
-		OnCallback	// added by Populism
-		{
-			"Dmg_Health"	"3-4%"
-		}
+		"Dmg_Health"		"3-4%"
 	}
 
 //	Hit_Strata_5
@@ -2839,7 +2821,6 @@ DisciplineTgt
 	{
 		"InheritFrom"		"Hit_Supernatural"
 	}
-
 
 	Hit_Strata_3
 	{

@@ -1,4 +1,4 @@
-// Domination
+dmg// Domination
 DisciplineTgtList
 {
 
@@ -2334,7 +2334,6 @@ DisciplineTgt
 
 		Affects_Table	// added by Populism
 		{
-
 			Affects_Filters
 			{
 				"CharTemplate"		"Gargoyle"
@@ -2342,13 +2341,12 @@ DisciplineTgt
 
 			Default_Mapping
 			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
+				"HitTable"	"Hit_Supernatural_PartialEffect"	// changed by wesp
 			}
 		}
 
 		Affects_Table	// added by Populism
 		{
-
 			Affects_Filters
 			{
 				"CharTemplate"		"Hengeyokai"
@@ -2356,7 +2354,7 @@ DisciplineTgt
 
 			Default_Mapping
 			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
+				"HitTable"	"Hit_Supernatural_PartialEffect"	// changed by wesp
 			}
 		}
 
@@ -2369,7 +2367,7 @@ DisciplineTgt
 
 			Default_Mapping
 			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
+				"HitTable"	"Hit_Supernatural_PartialEffect"	// changed by wesp
 			}
 		}
 
@@ -2382,7 +2380,7 @@ DisciplineTgt
 
 			Default_Mapping
 			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
+				"HitTable"	"Hit_Supernatural_PartialEffect"	// changed by wesp
 			}
 		}
 
@@ -2395,56 +2393,53 @@ DisciplineTgt
 
 			Default_Mapping
 			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
+				"HitTable"	"Hit_Supernatural_PartialEffect"	// changed by wesp
 			}
 		}
 
             Affects_Table	// added by Populism
 		{
-		
-                  Affects_Filters
-	            {
+			Affects_Filters
+			{
 				"CharTemplate"	"TzimisceCreation1"
 			}
 
 			Default_Mapping
 			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
+				"HitTable"	"Hit_Supernatural_PartialEffect"	// changed by wesp
 			}
 		}
 
-            Affects_Table	// added by Populism
+		Affects_Table	// added by Populism
 		{
-		
-                  Affects_Filters
-	            {
+			Affects_Filters
+			{
 				"CharTemplate"	"TzimisceCreation2"
 			}
 
 			Default_Mapping
 			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
+				"HitTable"	"Hit_Supernatural_PartialEffect"	// changed by wesp
 			}
 		}
 
-            Affects_Table	// added by Populism
+		Affects_Table	// added by Populism
 		{
-		
-                  Affects_Filters
-	            {
+			Affects_Filters
+			{
 				"CharTemplate"	"TzimisceCreation3"
 			}
 
 			Default_Mapping
 			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
+				"HitTable"	"Hit_Supernatural_PartialEffect"	// changed by wesp
 			}
 		}
 
-            Affects_Table
-		{		
-                  Affects_Filters
-	            {
+		Affects_Table
+		{
+			Affects_Filters
+			{
 				"DisciplineStrata"	"0"
 			}
 
@@ -2753,16 +2748,16 @@ DisciplineTgt
 
 		Effect_Tgt_Hit
 		{
-			Particle_ThirdPerson
-			{
-				"Entity"		"disc_particle"
-				"RateMin"		"1.0"
-				"OpacityMin"	"1.0"
-				"SizeMin"		"1.0"
-				"ParticleName"	"D_Dominate_Suicide_Emitter"
-				"AttachType"	"BoneSinglePoint"
-				"AttachName"	"Bip01 Head"
-			}
+//			Particle_ThirdPerson
+//			{
+//				"Entity"		"disc_particle"
+// removed				"RateMin"		"1.0"
+// by wesp				"OpacityMin"	"1.0"
+// because				"SizeMin"		"1.0"
+// of ugly				"ParticleName"	"D_Dominate_Suicide_Emitter"
+// effects				"AttachType"	"BoneSinglePoint"
+//				"AttachName"	"Bip01 Head"
+//			}
 
 			Particle_ThirdPerson
 			{
@@ -2858,42 +2853,42 @@ DisciplineTgt
 	Hit_Strata_1
 	{
 		"InheritFrom"		"Hit_Supernatural_PartialEffect"
-		"Dmg_Health"		"0%"	// changed by Populism
+		"Dmg_Health"		"40%"
 		"Duration"		"2"	// How do we make this nothing?
 	}
 
 	Hit_Strata_2
 	{
 		"InheritFrom"		"Hit_Supernatural_PartialEffect"
-		"Dmg_Health"		"0%"	// changed by Populism
+		"Dmg_Health"		"30%"
 		"Duration"		"2"	// How do we make this nothing?
 	}
 
 	Hit_Strata_3
 	{
 		"InheritFrom"		"Hit_Supernatural_PartialEffect"
-		"Dmg_Health"		"0%"	// changed by Populism
+		"Dmg_Health"		"40%"
 		"Duration"		"2"	// How do we make this nothing?
 	}
 
 	Hit_Strata_4
 	{
 		"InheritFrom"		"Hit_Supernatural_PartialEffect"
-		"Dmg_Health"		"0%"	// changed by Populism
+		"Dmg_Health"		"30%"
 		"Duration"		"2"	// How do we make this nothing?
 	}
 
 	Hit_Strata_5
 	{
 		"InheritFrom"		"Hit_Supernatural_PartialEffect"
-		"Dmg_Health"		"0%"	// changed by Populism
+		"Dmg_Health"		"6-8%"
 		"Duration"		"2"	// How do we make this nothing?
 	}
 
 	Hit_Strata_6
 	{
 		"InheritFrom"		"Hit_Supernatural_PartialEffect"
-		"Dmg_Health"		"0%"	// changed by Populism
+		"Dmg_Health"		"4-5%"
 		"Duration"		"2"	// How do we make this nothing?
 	}
 

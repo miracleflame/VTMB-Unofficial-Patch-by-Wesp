@@ -1048,7 +1048,8 @@ TraitEffectsData
 				"Trait"	"Humanity"
 				Costs
 				{
-					"Raise"	"Current_Rating * 4" // is this a penalty? Dunno how much Humanity costs to raise.
+					"Raise"	"Table: 0, 4, 8, 12, 16, 20, 24, 28, 32, 36"	// added by wesp
+// removed by wesp		"Raise"	"Current_Rating * 4" // is this a penalty? Dunno how much Humanity costs to raise.
 				}	
 			}
 			TraitEffect	// added by wesp
@@ -1272,7 +1273,9 @@ TraitEffectsData
 				"Trait"	"Humanity"
 				Costs
 				{
-					"Raise"	"Current_Rating * 2" // is this a penalty? Dunno how much Humanity costs to raise.
+					"Raise"	"Table: 0, 3, 6, 9, 12, 15, 18, 21, 24, 27"	// added by wesp
+// removed by wesp		"Raise"	"Current_Rating * 2" // is this a penalty? Dunno how much Humanity costs to raise.
+
 				}	
 			}
 			TraitEffect
@@ -1292,7 +1295,7 @@ TraitEffectsData
 			TraitEffect
 			{
 				"Trait"	"Protean"
-				"Modifier"	"+1"			
+				"Modifier"	"Duration 120%"	// changed by wesp
 			}
 			TraitEffect
 			{
@@ -1324,11 +1327,11 @@ TraitEffectsData
 		TraitEffectGroup
 		{
 			"InternalName"	"History (Insectoid)"
-			TraitEffect
-			{
-				"Trait"	"Protean"
-				"Modifier"	"Duration 120%"	// changed by wesp
-			}
+//			TraitEffect
+// removed			{
+// by wesp				"Trait"	"Protean"
+//				"Modifier"	"Duration 120%"	// changed by wesp
+//			}
 			TraitEffect
 			{
 				"Trait"	"Fortitude"
@@ -1350,8 +1353,8 @@ TraitEffectsData
 				"Modifier"	"Max 3"	// changed by wesp
 			}
 //			TraitEffect	// changed by wesp
-//			{
-//				"Trait"	"Animalism"
+// removed			{
+// by wesp				"Trait"	"Animalism"
 //				"Modifier"	"-1"
 //			}
 		}
@@ -1500,7 +1503,9 @@ TraitEffectsData
 				"Trait"	"Humanity"
 				Costs
 				{
-					"Raise"	"Current_Rating * 4" // is this a penalty? Dunno how much Humanity costs to raise.
+					"Raise"	"Table: 0, 4, 8, 12, 16, 20, 24, 28, 32, 36"	// added by wesp
+// removed by wesp		"Raise"	"Current_Rating * 4" // is this a penalty? Dunno how much Humanity costs to raise.
+
 				}	
 			}
 			TraitEffect	// added by wesp
@@ -1744,7 +1749,9 @@ TraitEffectsData
 				"Trait"	"Humanity"
 				Costs
 				{
-					"Raise"	"Current_Rating * 2" // is this a penalty? Dunno how much Humanity costs to raise.
+					"Raise"	"Table: 0, 3, 6, 9, 12, 15, 18, 21, 24, 27"	// added by wesp
+// removed by wesp		"Raise"	"Current_Rating * 2" // is this a penalty? Dunno how much Humanity costs to raise.
+
 				}	
 			}
 			TraitEffect
@@ -2607,6 +2614,7 @@ TraitEffectsData
 				"Modifier"	"+1"
 			}
 		}
+
 		TraitEffectGroup
 		{
 			"InternalName"	"Discipline (Fortitude3)"
@@ -2622,6 +2630,7 @@ TraitEffectsData
 				"Modifier"	"+1"
 			}
 		}
+
 		TraitEffectGroup
 		{
 			"InternalName"	"Discipline (Fortitude4)"
@@ -2637,6 +2646,7 @@ TraitEffectsData
 				"Modifier"	"+1"
 			}
 		}
+
 		TraitEffectGroup
 		{
 			"InternalName"	"Discipline (Fortitude5)"
@@ -3130,13 +3140,11 @@ TraitEffectsData
 				"Trait"	"Excluded_Equipment"
 				"Modifier"	"Value Clawed_Form"
 			}
-
 			TraitEffect
 			{
-				"Trait"	"item_w_claws"
+				"Trait"	"item_w_fists"
 				"Modifier"	"-1"
 			}
-
 			TraitEffect
 			{
 				"Trait"	"item_w_claws"
