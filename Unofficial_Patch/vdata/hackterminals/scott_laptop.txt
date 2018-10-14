@@ -6,9 +6,7 @@ TerminalDefinition	// added by wesp
 	LogonScreen	// displayed when the user first logs on
 	{
 		// Any number of lines are acceptable
-		"line0"		"Secret LA public library"  
-		"line1"		""
-		"line2"		""
+		"line0"		"LA public library secrets"
 	}
 
 	// you can have up to 5 subdirs per terminal
@@ -18,42 +16,42 @@ TerminalDefinition	// added by wesp
 
 	SubDir
 	{
-		"name"			"Notes"				// This is what is displayed as the name of this menu, and what the player must type to enter the menu (128 characters)
+		"name"			"Journal"				// This is what is displayed as the name of this menu, and what the player must type to enter the menu (128 characters)
 		"password"		"gangrel"				// password required to run commands in this menu (16 characters)
 		"description"		"Lasombra activities" 	// This is printed each time the user enters this menu (128 characters)
 
 		Function
 		{
 			"name"		"First"			// this is what the player must type in to trigger this function. (16 characters)
-			"description"	"First note"		// this is a description of this function  (128 characters)
+			"description"	"First entry"		// this is a description of this function  (128 characters)
 			"runtext"	"Beckett asked me to research into an ancient sarcophagus in the LA public library. During one of my nightly sessions I noticed another vampire sneaking around who looked like a Lasombra to me. Luckily I recently learned Obfuscate and so could avoid being spotted. Curious about what he was doing here in LA and whether it's about our coffin I'll shadow him the next few days."
 		}
 		
 		Function
 		{
 			"name"		"Second"			// this is what the player must type in to trigger this function. (16 characters)
-			"description"	"Second note"		// this is a description of this function  (128 characters)
+			"description"	"Second entry"		// this is a description of this function  (128 characters)
 			"runtext"	"First the Lasombra went into this old house downtown showing a red symbol. I followed him in after a while, but only found a black guy who asked if I'd been enlightened. I left and some time later the new agent of the prince entered that building. Soon after the black guy ran out in panic and climbed down into the sewers where I lost him."
 		}
 
 		Function
 		{
 			"name"		"Third"			// this is what the player must type in to trigger this function. (16 characters)
-			"description"	"Third note"		// this is a description of this function  (128 characters)
+			"description"	"Third entry"		// this is a description of this function  (128 characters)
 			"runtext"	"In Santa Monica I watched how the Lasombra entered the old junkyard, probably to talk with the Caitiff living there. Before I could do something about it, the new agent of the prince arrived and suddenly the Lasombra teleported behind me! I hope I wasn't spotted. Then he took a cab back to the LA library."
 		}
 
 		Function
 		{
 			"name"		"Fourth"			// this is what the player must type in to trigger this function. (16 characters)
-			"description"	"Fourth note"		// this is a description of this function  (128 characters)
+			"description"	"Fourth entry"		// this is a description of this function  (128 characters)
 			"runtext"	"I suspect that the Lasombra tries to recruit vampires or ghouls to compliment the usual Sabbat cannon fodder. I'm pretty sure he failed turning the Caitiff, I don't know about the black guy. This doesn't affect the sarcophagus thing, but I still got a bad feeling with him always returning to the library. As I'm not a fighter myself I will contact and ask Beckett about it."
 		}
 
 		Function
 		{
 			"name"		"Fifth"			// this is what the player must type in to trigger this function. (16 characters)
-			"description"	"Fifth note"		// this is a description of this function  (128 characters)
+			"description"	"Fifth entry"		// this is a description of this function  (128 characters)
 			"runtext"	"I fixed a meeting with Beckett in the Santa Monica smoke shop as I shadowed the black guy there and he seems to be a regular customer. I overheard that he wants to meet someone at the end of the Santa Monica pier and this should be the Lasombra. I hope he'll start from the smoke shop so Beckett and I can easily trail him to the guy!"
 			"runscript"	"G.Library_Coffee = 2; librarySetQuest()"
 		}

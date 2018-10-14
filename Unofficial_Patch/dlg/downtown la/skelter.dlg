@@ -258,16 +258,16 @@
 {	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	259	}{	I'll find her and take care of it. See ya.	}{	I'll find her and take care of it. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I shall peruse the streets for this little Patty. Farewell.	}
 {	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	261	}{	Hmph. Well just keep this under your hat, ya hear?	}{	Hmph. Well just keep this under your hat, ya hear?	}{	#	}{	}{	G.Skelter_Quest = 2	}{	}{	}{	}{	}{	}{	}{	}
-{	262	}{	On second thought... I suppose I could.	}{	On second thought... I suppose I could.	}{	251	}{	}{	}{	}{	}{	}{	}{	}{	}{	Wait! I will punish ghoulish little Patty.	}
+{	261	}{	Hmph. Well just keep this under your hat, ya hear?	}{	Hmph. Well just keep this under your hat, ya hear?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	262	}{	On second thought... I suppose I could.	}{	On second thought... I suppose I could.	}{	251	}{	G.Skelter_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	Wait! I will punish ghoulish little Patty.	}
 {	263	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	264	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	265	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	268	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	270	}{	Sure. Goodbye.	}{	Sure. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	It will be the only thing under there. Farewell.	}
+{	269	}{	Sure. Goodbye.	}{	Sure. Goodbye.	}{	0	}{	G.Skelter_Quest == 1	}{	G.Skelter_Quest = 2	}{	}{	}{	}{	}{	}{	}{	It will be the only thing under there. Farewell.	}
+{	270	}{	Sure. Goodbye.	}{	Sure. Goodbye.	}{	0	}{	G.Skelter_Quest != 1	}{	}{	}{	}{	}{	}{	}{	}{	It will be the only thing under there. Farewell.	}
 {	271	}{	Good work. Man, ghouls ain't nothin' but trouble if you ask me. It's a weakness pure and simple.	}{	Good work. Man, ghouls ain't nothin' but trouble if you ask me. It's a weakness pure and simple.	}{	#	}{	}{	G.Skelter_Quest = 4; pc.SetQuest("Junky",3)	}{	}{	}{	}{	}{	}{	}{	}
 {	272	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	273	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -510,7 +510,7 @@
 {	510	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	511	}{	Yo, that's bullshit. I don't know if you were put up to this or what, but you best not be sayin' that shit too loud. I know what he's out doing and it doesn't have anything to do with the Camarilla. They're not our only concern, you know.	}{	Yo, that's bullshit. I don't know if you were put up to this or what, but you best not be sayin' that shit too loud. I know what he's out doing and it doesn't have anything to do with the Camarilla. They're not our only concern, you know.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	512	}{	Whatever. You got a couple of minutes?	}{	Whatever. You got a couple of minutes?	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	513	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	513	}{	Okay, but I also found this. Seems Grout killed that Toreador sugar daddy of Patty.	}{	Okay, but I also found this. Seems Grout killed that Toreador sugar daddy of Patty.	}{	261	}{	G.Patty_Known == 1 and pc.HasItem("item_w_tzimisce2_claw") 	}{	pc.RemoveItem("item_w_tzimisce2_claw"); G.Grout_Kent = 1	}{	}{	}{	}{	}{	}{	}{	Okydoky. And here get the picture of Patty's star that burned up there.	}
 {	514	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	515	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	516	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

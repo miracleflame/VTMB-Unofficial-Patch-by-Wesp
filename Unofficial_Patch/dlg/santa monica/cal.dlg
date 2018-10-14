@@ -3,7 +3,7 @@
 {	3	}{	I don't drink... alcohol.	}{	I don't drink... alcohol.	}{	11	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	4	}{	I seek the daughters of Janus.	}{	I seek the daughters of Janus.	}{	250	}{	IsClan(pc,"Malkavian") and G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	5	}{	I'm looking for Therese. Know where can I find her?	}{	I'm looking for Therese. Know where can I find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	6	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Knox_TT == 0	}{	}{	}{	}{	}{	}{	}{	}{	May I find Knox at your doors?	}
+{	6	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Mercurio_Quest >= 2	}{	}{	}{	}{	}{	}{	}{	}{	May I find Knox at your doors?	}
 {	7	}{	I don't drink your flavor of libation. Farewell.	}{	I don't drink your flavor of libation. Farewell.	}{	11	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

@@ -1130,7 +1130,7 @@ DisciplineTgt
 
 			Default_Mapping
 			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
+				"HitTable"	"Hit_Supernatural_PartialEffect"	// changed by wesp
 			}
 		}
 
@@ -1144,7 +1144,7 @@ DisciplineTgt
 
 			Default_Mapping
 			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
+				"HitTable"	"Hit_Supernatural_PartialEffect"	// changed by wesp
 			}
 		}
 
@@ -1157,7 +1157,7 @@ DisciplineTgt
 
 			Default_Mapping
 			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
+				"HitTable"	"Hit_Supernatural_PartialEffect"	// changed by wesp
 			}
 		}
 
@@ -1170,7 +1170,7 @@ DisciplineTgt
 
 			Default_Mapping
 			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
+				"HitTable"	"Hit_Supernatural_PartialEffect"	// changed by wesp
 			}
 		}
 
@@ -1183,7 +1183,7 @@ DisciplineTgt
 
 			Default_Mapping
 			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
+				"HitTable"	"Hit_Supernatural_PartialEffect"	// changed by wesp
 			}
 		}
 
@@ -1197,7 +1197,7 @@ DisciplineTgt
 
 			Default_Mapping
 			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
+				"HitTable"	"Hit_Supernatural_PartialEffect"	// changed by wesp
 			}
 		}
 
@@ -1211,7 +1211,7 @@ DisciplineTgt
 
 			Default_Mapping
 			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
+				"HitTable"	"Hit_Supernatural_PartialEffect"	// changed by wesp
 			}
 		}
 
@@ -1225,7 +1225,7 @@ DisciplineTgt
 
 			Default_Mapping
 			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
+				"HitTable"	"Hit_Supernatural_PartialEffect"	// changed by wesp
 			}
 		}
 
@@ -1517,16 +1517,16 @@ DisciplineTgt
 
 		Effect_Tgt_Hit
 		{
-			Particle_ThirdPerson
-			{
-				"Entity"		"disc_particle"
-				"RateMin"		"1.0"
-				"OpacityMin"	"1.0"
-				"SizeMin"		"1.0"
-				"ParticleName"	"D_Dominate_Suicide_Emitter"
-				"AttachType"	"BoneSinglePoint"
-				"AttachName"	"Bip01 Head"
-			}
+//			Particle_ThirdPerson
+//			{
+//				"Entity"		"disc_particle"
+// removed				"RateMin"		"1.0"
+// by wesp				"OpacityMin"	"1.0"
+// because				"SizeMin"		"1.0"
+// of ugly				"ParticleName"	"D_Dominate_Suicide_Emitter"
+// effects				"AttachType"	"BoneSinglePoint"
+//				"AttachName"	"Bip01 Head"
+//			}
 
 			Particle_ThirdPerson
 			{

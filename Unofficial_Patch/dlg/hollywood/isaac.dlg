@@ -722,7 +722,7 @@
 {	722	}{	King's Way - there was a Tzimisce. Notice I've used past tense.	}{	King's Way - there was a Tzimisce. Notice I've used past tense.	}{	831	}{	IsClan(pc,"Toreador") and G.Isaac_Gift == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	723	}{	King's Way - there was a Tzimisce. Notice I've used past tense.	}{	King's Way - there was a Tzimisce. Notice I've used past tense.	}{	61	}{	not IsClan(pc,"Toreador") and G.Isaac_Gift == 0	}{	}{	}{	}{	}{	}{	}{	}{	The fleshcrafter who walked with royalty is not so crafty now.	}
 {	724	}{	About that gift - can I have it now?	}{	About that gift - can I have it now?	}{	921	}{	G.Isaac_Gift == 2 and G.Patch_Plus == 0	}{	pc.MoneyAdd( 500 ) }{	}{	}{	}{	}{	}{	}{	}
-{	725	}{	About that gift - can I have it now?	}{	About that gift - can I have it now?	}{	921	}{	G.Isaac_Gift == 2 and G.Patch_Plus == 1	}{	pc.GiveItem("item_w_mingxiao_melee")	}{	}{	}{	}{	}{	}{	}{	}
+{	725	}{	About that gift - can I have it now?	}{	About that gift - can I have it now?	}{	921	}{	G.Isaac_Gift == 2 and G.Patch_Plus == 1	}{	pc.GiveItem("item_g_ring_serial_killer_1")	}{	}{	}{	}{	}{	}{	}{	}
 {	726	}{	I had a few questions.	}{	I had a few questions.	}{	491	}{	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something.	}
 {	727	}{	About that Gargoyle...	}{	About that Gargoyle...	}{	511	}{	G.Isaac_Gargoyle == 1 or G.Isaac_Gargoyle == 2	}{	}{	}{	}{	}{	}{	}{	}{	About the stone one...	}
 {	728	}{	I've killed the Gargoyle.	}{	I've killed the Gargoyle.	}{	731	}{	IsDead("Gargoyle") and G.Isaac_Gargoyle != 4	}{	}{	}{	}{	}{	}{	}{	}{	The stone one lies in pieces.	}

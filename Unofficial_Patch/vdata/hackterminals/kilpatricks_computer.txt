@@ -3,11 +3,14 @@ TerminalDefinition
 	"screen saver"		"Kilpatrick's"		// Bounces around on the screen when the terminal is not being used. 
 	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
 
+	"email_password"	"freedom"		// the user must type this to access email from this terminal, added by wesp
+	"email_username"	"Arthur"
+
 	LogonScreen	// displayed when the user first logs on
 	{
 		// Any number of lines are acceptable
 		"line0"		"Kilpatrick's Bail Bonds"  
-		"line1"		"The price of freedom"
+		"line1"		" The price of freedom"	// changed by wesp
 	}
 
 	// you can have up to 5 subdirs per terminal
@@ -27,6 +30,17 @@ TerminalDefinition
 			"description"	"Info on Muddy"		// this is a description of this function  (128 characters)
 			"runtext"	"I don't want to know why he's called Muddy."
 									// this text is printed when the player triggers this function.  (128 characters)
+		"dependency"		"G.Muddy_Dead == 0"	// added by wesp
+		}
+
+		Function	// added by wesp
+		{
+			"name"		"Muddy"			// this is what the player must type in to trigger this function. (16 characters)
+			"description"	"Info on Muddy"		// this is a description of this function  (128 characters)
+			"runtext"	"I don't want to know why he's called Muddy...
+... and I'll never know, because now he's dead!"
+									// this text is printed when the player triggers this function.  (128 characters)
+		"dependency"		"G.Muddy_Dead == 1"
 		}
 		
 	}
@@ -35,8 +49,8 @@ TerminalDefinition
 	{
 		"subject"	"Your Father"
 		"sender"	"Mom"	
-		"body"		"Arthur, your father wanted me to write you to tell you that he has a boil that is three inches across! You really need to come visit and see this thing. Love, mom"
-
+		"body"		"Arthur, your father wanted me to write you to tell you that he has a boil that is three inches across! You really need to come visit and see this thing. 
+Love, mom"
 	}
 
 }

@@ -62,7 +62,7 @@
 {	62	}{	It was a joke. They're all waiting for you in the hospital basement. Funny guys....	}{	It was a joke. They're all waiting for you in the hospital basement. Funny guys....	}{	71	}{	Persuasion 3 & pc.humanity >= 3	}{	FindPlayer().HumanityAdd( -1 )	}{	}{	}{	}{	}{	}{	}{	}
 {	63	}{	It was a joke. They're all waiting for you in the hospital basement. Funny guys....	}{	It was a joke. They're all waiting for you in the hospital basement. Funny guys....	}{	71	}{	Persuasion 3 & pc.humanity < 3	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	64	}{	You saw nothing tonight. Nothing happened. You will forget everything.	}{	You saw nothing tonight. Nothing happened. You will forget everything.	}{	91	}{	Dominate 3	}{	G.Mill_Dominated = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	65	}{	Give me your driver's license. I'm letting you go.	}{	Give me your driver's license. I'm letting you go.	}{	101	}{	Intimidate 6	}{	G.Mill_Intimidate = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	65	}{	Give me your driver's license. If you tell anyone about this, you will share their fate.	}{	Give me your driver's license. If you tell anyone about this, you will share their fate.	}{	101	}{	Intimidate 6	}{	G.Mill_Intimidate = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	66	}{	Dead? Yes. There are places that humans should never enter. This was one.	}{	Dead? Yes. There are places that humans should never enter. This was one.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	67	}{	Get out of here! Run faster then you ever have... before I change my mind.	}{	Get out of here! Run faster then you ever have... before I change my mind.	}{	0	}{	}{	G.Mill_Loose = 1; FindPlayer().HumanityAdd( 1 )	}{	}{	}{	}{	}{	}{	}{	}
 {	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -79,11 +79,11 @@
 {	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	81	}{	Dead? But... how did you...? What are you?	}{	Dead? But... how did you...? What are you?	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	82	}{	The last thing you'll ever see.	}{	The last thing you'll ever see.	}{	0	}{	}{	npc.SetRelationship("player D_FR 5")	}{	}{	}{	}{	}{	}{	}{	Your final sight.	}
-{	83	}{	I am your killer.	}{	I am your killer.	}{	0	}{	}{	npc.SetRelationship("player D_FR 5")	}{	}{	}{	}{	}{	}{	}{	The hand of death.	}
+{	82	}{	Give me your driver's license. I'm letting you go.	}{	Give me your driver's license. I'm letting you go.	}{	101	}{	Intimidate 6	}{	G.Mill_Intimidate = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	83	}{	You saw nothing tonight. Nothing happened. You will forget everything.	}{	You saw nothing tonight. Nothing happened. You will forget everything.	}{	91	}{	Dominate 3	}{	G.Mill_Dominated = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	84	}{	Run! Never come back to this city.	}{	Run! Never come back to this city.	}{	0	}{	}{	G.Mill_Loose = 1; FindPlayer().HumanityAdd( 1 )	}{	}{	}{	}{	}{	}{	}{	Spread your wings and fly away from this city forever! Hurry!	}
-{	85	}{	Give me your driver's license. I'm letting you go.	}{	Give me your driver's license. I'm letting you go.	}{	101	}{	Intimidate 6	}{	G.Mill_Intimidate = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	86	}{	You saw nothing tonight. Nothing happened. You will forget everything.	}{	You saw nothing tonight. Nothing happened. You will forget everything.	}{	91	}{	Dominate 3	}{	G.Mill_Dominated = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	85	}{	The last thing you'll ever see.	}{	The last thing you'll ever see.	}{	0	}{	}{	npc.SetRelationship("player D_FR 5")	}{	}{	}{	}{	}{	}{	}{	Your final sight.	}
+{	86	}{	I am your killer.	}{	I am your killer.	}{	0	}{	}{	npc.SetRelationship("player D_FR 5")	}{	}{	}{	}{	}{	}{	}{	The hand of death.	}
 {	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	88	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

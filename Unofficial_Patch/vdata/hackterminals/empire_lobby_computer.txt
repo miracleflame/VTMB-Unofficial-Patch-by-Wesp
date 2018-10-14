@@ -6,8 +6,8 @@ TerminalDefinition
 	LogonScreen	// displayed when the user first logs on
 	{
 		// Any number of lines are acceptable
-		"line0"		"Empire Hotel"
-		"line1"		"Suite Registration and Services"
+		"line0"		"         Empire Hotel"	// changed by wesp
+		"line1"		"Suite Registration and Service"
 
 	}
 
@@ -34,7 +34,7 @@ TerminalDefinition
 		Function
 		{
 			"name"		"Manhattan Suite"
-			"description"	"AVAILABLE"
+			"description"	"Available"
 			"runtext"	"The Manhattan Suite (3rd floor) is AVAILABLE. Next Reservation: MONDAY"	// changed by wesp
 		}
 
@@ -51,15 +51,34 @@ TerminalDefinition
 			"name"		"Brooklyn Suite"
 			"description"	"Occupied"
 			"runtext"	"The Brooklyn Suite (5th floor) is OCCUPIED. Guest: Jezebel Locke. Booked until: NEXT MONTH"	// changed by wesp
-		"runscript"	"cardPrinterEnablePlus()"
+			"runscript"	"cardPrinterEnablePlus()"
+			"dependency"		"G.Jumbles_Removed == 0 or G.PP == 0"	// added by wesp
 		}
 
+		Function	// added by wesp
+		{
+			"name"		"Brooklyn Suite"
+			"description"	"Closed"
+			"runtext"	"The Brooklyn Suite (5th floor) is CLOSED due to crime investigation."
+			"dependency"		"G.Jumbles_Removed > 0 and G.PP == 1"
+		}
+	
 		Function
 		{
 			"name"		"Buffalo Suite"
 			"description"	"Occupied"
 			"runtext"	"The Buffalo Suite (6th floor) is OCCUPIED. Guest: Boris Chekhov. Booked until: INDEFINITELY"	// changed by wesp
+			"dependency"		"G.Venus_Boris < 2 or G.PP == 0"	// added by wesp
 		}
+
+		Function	// added by wesp
+		{
+			"name"		"Buffalo Suite"
+			"description"	"Occupied"
+			"runtext"	"The Buffalo Suite (6th floor) is CLOSED due to crime investigation."
+			"dependency"		"G.Venus_Boris == 2 and G.PP == 1"
+		}
+
 	}
 
 	SubDir
@@ -70,7 +89,7 @@ TerminalDefinition
 		
 		Function
 		{
-			"name"		"Checkov, B"
+			"name"		"Chekhov, B"
 			"description"	"Transactions"
 			"runtext"	"PPV: \"Planet La Femme\": $10. Steak and Lobster: $80."
 		}

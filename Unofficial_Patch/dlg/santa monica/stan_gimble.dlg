@@ -1,6 +1,6 @@
 {	1	}{	Hello. Might I speak with Mr. McGee?	}{	Hello. Might I speak with Mr. McGee?	}{	#	}{	}{	G.Gimble_Phone = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	2	}{	He doesn't seem to be here at the moment. Can I help you?	}{	He doesn't seem to be here at the moment. Can I help you?	}{	11	}{	}{	}{	}{	}{	}{	}{	}{	}{	No. Can you solve the mystery of missing McGee?	}
-{	3	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	2	}{	He doesn't seem to be here at the moment. Can I help you?	}{	He doesn't seem to be here at the moment. Can I help you?	}{	11	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	No. Can you solve the mystery of missing McGee?	}
+{	3	}{	Oh, I'm using his phone, but he doesn't seem to be here at the moment. Can I help you?	}{	Oh, I'm using his phone, but he doesn't seem to be here at the moment. Can I help you?	}{	11	}{	G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	No, only with his phone. Can you solve the mystery of missing McGee?	}
 {	4	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	5	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -209,8 +209,8 @@
 {	209	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	211	}{	...	}{	...	}{	#	}{	}{	G.No_Idle = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	212	}{	Hello?	}{	Hello?	}{	1	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yes?	}
-{	213	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	212	}{	Hello?	}{	Hello?	}{	1	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	Yes?	}
+{	213	}{	Hi, is this Gimble's Prosthetics?	}{	Hi, is this Gimble's Prosthetics?	}{	1	}{	G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	Do I speak with the guy that cuts people up?	}
 {	214	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	215	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	216	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

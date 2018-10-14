@@ -6,7 +6,7 @@ TerminalDefinition
 	LogonScreen	// displayed when the user first logs on
 	{
 		// Any number of lines are acceptable
-		"line0"		"The Sin Bin"
+		"line0"		" The Sin Bin"	// changed by wesp
 		"line1"		"Mopped Weekly!"
 
 	}
@@ -15,7 +15,6 @@ TerminalDefinition
 	// and up to 6 functions per sub dir
 	// there are 8 total outputs per terminal, (0...7)
 	// talk to Brock if you'd like this number increased. 
-
 
 	SubDir
 	{
@@ -53,10 +52,10 @@ TerminalDefinition
 
 	}
 
-
 	SubDir
 	{
 		"name"			"Peepshow"	// changed by wesp
+		"password"		"sinner"	// added by wesp
 		"description"		"Peepshow Window Override"
 		"dependency"		"G.Velvet_Quest != 1"
 
@@ -64,10 +63,9 @@ TerminalDefinition
 		{
 			"name"		"Status"
 			"description"	"SYSTEM READOUT"
-			"runtext"	"Window Control Override.
-					 Software Status: Installed.
-					 Hardware Status: Malfunctioning.
-					 Notes: Handyman coming soon. - FB"
+			"runtext"	"Software Status: Installed.
+					Hardware Status: Malfunctioning.
+					Notes: Handyman coming soon. - FB"	// changed by wesp
 		}
 
 		Function
@@ -82,7 +80,6 @@ TerminalDefinition
 
 	}
 
-
 	SubDir
 	{
 		"name"			"Peepshow"
@@ -94,10 +91,10 @@ TerminalDefinition
 		{
 			"name"		"Status"
 			"description"	"SYSTEM READOUT"
-			"runtext"	"Window 1: MALFUNCTION. Override unavailable.
+			"runtext"	"Window 1: MALFUNCTION.
 					Window 2: Operational.
 					Window 3: Operational.
-					Notes: Parts on order for window 1. -FB"
+					Notes: Parts on order. - FB"	// changed by wesp
 		}
 
 		Function
@@ -124,10 +121,10 @@ TerminalDefinition
 
 	SubDir
 	{
-		"name"			"LogFile"
+		"name"			"Logfile"
 		"password"		"sinner"
 		"description"		"Yesterday's Totals"
-		"dependency"		"G.Velvet_Quest == 1"
+		"dependency"		"G.Velvet_Quest < 2"	// changed by wesp
 
 		Function
 		{
@@ -151,7 +148,6 @@ TerminalDefinition
 					"
 		}
 
-
 		Function
 		{
 			"name"		"Kerri"	// changed by wesp
@@ -170,12 +166,10 @@ TerminalDefinition
 
 	SubDir
 	{
-		"name"			"Log File"
+		"name"			"Logfile"	// changed by wesp
 		"password"		"sinner"
 		"description"		"Yesterday's Totals"
-		"dependency"		"G.Velvet_Quest != 1"
-
-
+		"dependency"		"G.Velvet_Quest > 1 and G.Patch_Plus == 0"	// changed by wesp
 
 		Function
 		{
@@ -199,6 +193,48 @@ TerminalDefinition
 					"
 		}
 
+		Function
+		{
+			"name"		"Kerri"
+			"runtext"	"Kerri's totals
+					-PS  $240
+					-CR  $350
+					-CR  $250
+					-CR  $500 
+					-CR  $250
+					"
+		}
+
+	}
+
+	SubDir
+	{
+		"name"			"Logfile"	// changed by wesp
+		"password"		"sinner"
+		"description"		"Yesterday's Totals"
+		"dependency"		"G.Velvet_Quest > 1 and G.PP == 1 and G.Sin_Innocent == 0"	// changed by wesp
+
+		Function
+		{
+			"name"		"Chastity"
+			"runtext"	"Chastity's totals
+					-PS  $80
+					"
+		}
+
+		Function
+		{
+			"name"		"Jennifer"
+			"runtext"	"Jen's totals ;-)
+					-CR  $100
+					-CR  $250
+					-CR  $250
+					-CR  $150
+					-CR  $250
+					-CR  $2500 (bachelor party)
+					-CR  $150
+					"
+		}
 
 		Function
 		{
@@ -210,6 +246,60 @@ TerminalDefinition
 					-CR  $500 
 					-CR  $250
 					"
+		}
+
+		Function
+		{
+			"name"		"Murder!!!"
+			"runtext"	"Somebody killed Chastity! What sicko would do that? Luckily the others are okay, but both want to take a leave now. I got a friend of mine to do a silent cleanup. Nobody knows who that prude bitch with her fake name was anyway!"	// changed by wesp
+		}
+	}
+
+	SubDir
+	{
+		"name"			"Logfile"	// changed by wesp
+		"password"		"sinner"
+		"description"		"Yesterday's Totals"
+		"dependency"		"G.Velvet_Quest > 1 and G.PP == 1 and G.Sin_Innocent == 1"	// changed by wesp
+
+		Function
+		{
+			"name"		"Chastity"
+			"runtext"	"Chastity's totals
+					-PS  $80
+					"
+		}
+
+		Function
+		{
+			"name"		"Jennifer"
+			"runtext"	"Jen's totals ;-)
+					-CR  $100
+					-CR  $250
+					-CR  $250
+					-CR  $150
+					-CR  $250
+					-CR  $2500 (bachelor party)
+					-CR  $150
+					"
+		}
+
+		Function
+		{
+			"name"		"Kerri"
+			"runtext"	"Kerri's totals
+					-PS  $240
+					-CR  $350
+					-CR  $250
+					-CR  $500 
+					-CR  $250
+					"
+		}
+
+		Function
+		{
+			"name"		"Murder!!!"
+			"runtext"	"There was a bloodbath downstairs at the peepshow with several dead. I don't know if I can cover that up without the damned cops closing me down, but I will try my best!"	// changed by wesp
 		}
 
 	}
@@ -234,7 +324,7 @@ Well, cash or whores. But that's a given."
 
 		Function
 		{
-			"name"		"Big John Farmer."	// changed by wesp
+			"name"		"Big John Farmer"	// changed by wesp
 			"description"	"Big John's Contact Info"
 			"runtext"	"John's finally left the acting side and has begun to produce films. As expected, he's stickin' to the farm stuff. He said to contact him at 1(888)555-0101.
 

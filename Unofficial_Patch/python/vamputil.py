@@ -713,6 +713,7 @@ def killWerewolf():
     dead_werewolf.SetModel("models/character/monster/werewolf/werewolf.mdl")
     dead_werewolf.SetName("dead_werewolf")
     __main__.CallEntitySpawn(dead_werewolf)
+    G.Werewolf_Dead = 1
     werewolf.Kill()
 
 #OCEANHOUSE: Swaps Dodge powerup and book, added by wesp
@@ -803,6 +804,18 @@ def nosCheck():
         nos.SetModel(nos_model)
     if (__main__.G.Patch_Plus == 1):
         nos.SetName("scenenos")
+
+#SEWERS: Gives Humanity on saving running Nosferatu, added by wesp
+def nosAlive():
+    nos = Find("scenenos")
+    pc = __main__.FindPlayer()
+    gender = pc.IsMale()
+    if __main__.G.Nossie_Dead == 0:
+        if (gender == 1):
+            nos.PlayDialogFile("\Character\dlg\warrens\imalia\line407_col_e.mp3")
+        else:
+            nos.PlayDialogFile("\Character\dlg\warrens\mitnick\line277_col_e.mp3")
+        __main__.FindPlayer().HumanityAdd( 1 )
 
 #SKYLINE: Called to add glow to elevator pointing arrows and mark floors, button G, added by vladdmaster
 def callbuttonground():
@@ -2655,11 +2668,11 @@ def posterCheck():
     if(G.Gary_Imalia):
         poster = Find("poster_imalia")
         poster.ScriptUnhide()
-    if(G.Gary_Blind):
-        poster = Find("poster_blind")
-        poster.ScriptUnhide()
     if(G.Gary_Cross):
         poster = Find("poster_cross")
+        poster.ScriptUnhide()
+    if(G.Gary_Blind):
+        poster = Find("poster_blind")
         poster.ScriptUnhide()
         if(G.Gary_Complete == 0):
             __main__.FindPlayer().SetQuest("Gary", 9)
@@ -2703,12 +2716,12 @@ def mailboxExitCheck():
         if(container.HasItem("item_g_wireless_camera_2") and G.Gary_Damsel == 1 and G.Gary_Tawni == 0):
             container.RemoveItem("item_g_wireless_camera_2")
             G.Gary_Tawni = 1
-        if(container.HasItem("item_g_wireless_camera_4") and G.Gary_Tawni == 1 and G.Gary_Blind == 0):
+        if(container.HasItem("item_g_wireless_camera_4") and G.Gary_Tawni == 1 and G.Gary_Cross == 0):
             container.RemoveItem("item_g_wireless_camera_4")
-            G.Gary_Blind = 1
-        if(container.HasItem("item_g_wireless_camera_3") and G.Gary_Blind == 1 and G.Gary_Cross == 0):
-            container.RemoveItem("item_g_wireless_camera_3")
             G.Gary_Cross = 1
+        if(container.HasItem("item_g_wireless_camera_3") and G.Gary_Cross == 1 and G.Gary_Blind == 0):
+            container.RemoveItem("item_g_wireless_camera_3")
+            G.Gary_Blind = 1
 
 #HAVEN: Updates the player's quest when he gets the email about werewolf blood
 def werewolfBloodQuestAssigned():

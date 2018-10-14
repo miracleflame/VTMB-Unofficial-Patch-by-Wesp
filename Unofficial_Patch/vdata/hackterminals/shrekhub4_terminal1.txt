@@ -32,16 +32,18 @@ TerminalDefinition
 		{
 			"name"		"systemxxx"
 			"description"	"WARNING!"
-			"runtext"	"POWER OFFLINE!"
+			"runtext"	"WARNING! POWER OFFLINE!"	// changed by wesp
 			"dependency"	"G.Shubfour_Virus == 1"
 
 		}
 
 		Function	// added by wesp
 		{
-			"name"		"goodies!"
+			"name"		"goodies"
 			"description"	"reward"
-			"runtext"	"Find a powerful item nearby as reward for your help. >m1tn1ck<"
+			"runtext"	"Find a powerful item nearby as reward for all your help.
+
+>m1tn1ck<"
 			"dependency"	"G.Shubfour_Virus == 1 and G.Patch_Plus == 1"
 
 		}
@@ -54,8 +56,8 @@ TerminalDefinition
 
 		Function
 		{
-			"name"		"status1"
-			"description"	"systat"
+			"name"		"systat"	// changed by wesp
+			"description"	"status1"	// changed by wesp
 			"runtext"	"System Normal."
 			"dependency"	"G.Shubfour_Virus == 0"
 
@@ -63,8 +65,8 @@ TerminalDefinition
 
 		Function
 		{
-			"name"		"status2"
-			"description"	"systat"
+			"name"		"systat"	// changed by wesp
+			"description"	"status2"	// changed by wesp
 			"runtext"	"Virus Detected!!! Shutting Down System!!!"
 			"dependency"	"G.Shubfour_Virus == 1"
 		}

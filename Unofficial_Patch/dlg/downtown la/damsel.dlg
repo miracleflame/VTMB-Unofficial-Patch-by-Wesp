@@ -772,7 +772,7 @@
 {	772	}{	I'll keep it cordial.	}{	I'll keep it cordial.	}{	801	}{	}{	}{	}{	}{	}{	}{	}{	}{	You just did.	}
 {	773	}{	In your own way, you're quite the charmer, Damsel.	}{	In your own way, you're quite the charmer, Damsel.	}{	801	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'd buy your action figure. And do secret things with it.	}
 {	774	}{	Whatever.	}{	Whatever.	}{	801	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why am I not inside yet?	}
-{	775	}{	Whatever, I killed a werewolf.	}{	Whatever, I killed a werewolf.	}{	811	}{	IsDead("Werewolf")	}{	}{	}{	}{	}{	}{	}{	}{	Hee hee.... Cherry bomb, I slay wolves now - that's worth a hundred of you.	}
+{	775	}{	Whatever, I killed a werewolf.	}{	Whatever, I killed a werewolf.	}{	811	}{	IsDead("Werewolf") or G.Werewolf_Dead == 1	}{	}{	}{	}{	}{	}{	}{	}{	Hee hee.... Cherry bomb, I slay wolves now - that's worth a hundred of you.	}
 {	776	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	777	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	778	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -780,7 +780,7 @@
 {	780	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	781	}{	Yeah, yeah, yeah, just don't get him started on that damn werewolf again. Ugh, you'd think he'd stop at telling me the story twice.	}{	Yeah, yeah, yeah, just don't get him started on that damn werewolf again. Ugh, you'd think he'd stop at telling me the story twice.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	782	}{	I'll try not to mention it.	}{	I'll try not to mention it.	}{	801	}{	}{	}{	}{	}{	}{	}{	}{	}{	I hate reruns too.	}
-{	783	}{	Yeah? You know I killed one too.	}{	Yeah? You know I killed one too.	}{	811	}{	IsDead("Werewolf")	}{	}{	}{	}{	}{	}{	}{	}{	Let me tell you a story. Once upon a time, I killed the shit out of a werewolf.	}
+{	783	}{	Yeah? You know I killed one too.	}{	Yeah? You know I killed one too.	}{	811	}{	IsDead("Werewolf") or G.Werewolf_Dead == 1	}{	}{	}{	}{	}{	}{	}{	}{	Let me tell you a story. Once upon a time, I killed the shit out of a werewolf.	}
 {	784	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	785	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	786	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

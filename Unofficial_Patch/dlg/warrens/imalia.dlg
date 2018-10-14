@@ -147,7 +147,7 @@
 {	147	}{	Fine. I'll do it.	}{	Fine. I'll do it.	}{	141	}{	not pc.HasItem("item_g_wireless_camera_1")	}{	pc.GiveItem("item_k_tawni_apartment_key"); pc.GiveItem("item_g_wireless_camera_1"); pc.GiveAmmo("item_g_wireless_camera_1",2)	}{	}{	}{	}{	}{	}{	}{	This deed I will do.	}
 {	148	}{	Fine. I'll do it.	}{	Fine. I'll do it.	}{	141	}{	pc.HasItem("item_g_wireless_camera_1")	}{	pc.GiveItem("item_k_tawni_apartment_key"); pc.GiveAmmo("item_g_wireless_camera_1",3)	}{	}{	}{	}{	}{	}{	}{	This deed I will do.	}
 {	149	}{	I'll think about it. Can I ask you a few more questions?	}{	I'll think about it. Can I ask you a few more questions?	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	Might I mine your gray matter?	}
-{	150	}{	I don't know. I'll get back to you. Later.	}{	I don't know. I'll get back to you. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}^
+{	150	}{	I don't know. I'll get back to you. Later.	}{	I don't know. I'll get back to you. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
 {	151	}{	Hey.	}{	Hey.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	152	}{	What's up, Imalia. You got a few minutes to talk?	}{	What's up, Imalia. You got a few minutes to talk?	}{	161	}{	G.Imalia_Pissed < 2 and pc.GetQuestState("Guy") < 1	}{	}{	}{	}{	}{	}{	}{	}{	Might I mine your gray matter?	}
 {	153	}{	Hey! What's up, girl?	}{	Hey! What's up, girl?	}{	371	}{	pc.GetQuestState("Guy") == 1 and not pc.HasItem("item_g_guy_magazine")	}{	}{	}{	}{	}{	}{	}{	}{	Greetings, Cleopatra!	}
@@ -393,7 +393,7 @@
 {	393	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	394	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	395	}{	You want to get on my good side? Then don't come back here until you've got last year's copy of "Guy" magazine where I'm on the cover. You know... the one where I was wearing the gum wrapper and the two bottlecaps.	}{	You want to get on my good side? Then don't come back here until you've got last year's copy of "Guy" magazine where I'm on the cover. You know... the one where I was wearing the gum wrapper and the two bottlecaps.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.SetQuest("Guy",1); G.Imalia_Guymag = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	396	}{	Fine. I'll find one and bring it back. See ya.	}{	Fine. I'll find one and bring it back. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I shall find this sultry skin-mag! Farewell.	}
+{	396	}{	Wow, didn't I help you enough already? I'll find one and bring it back. See ya.	}{	Wow, didn't I help you enough already? I'll find one and bring it back. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I shall find this sultry skin-mag! Farewell.	}
 {	397	}{	I'll think about it. Later.	}{	I'll think about it. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps I shall ponder it.	}
 {	398	}{	What, so you can sit around wallowing in self-pity?	}{	What, so you can sit around wallowing in self-pity?	}{	381	}{	}{	pc.SetQuest("Guy",4)	}{	}{	}{	}{	}{	}{	}{	You wallow in self-piteous whinings.	}
 {	399	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

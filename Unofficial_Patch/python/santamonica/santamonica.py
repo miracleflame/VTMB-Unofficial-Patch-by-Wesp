@@ -243,12 +243,18 @@ def elevatorConversation():
             insidebttn2 = Find("up_button_inside_elevator")
             insidebttn2.Lock()
 
-#ASYLUM: Determines whether or not Knox is present
+#ASYLUM: Determines whether or not Knox is present, changed by wesp
 def knoxPresence():
     IsDead = __main__.IsDead
     if (G.Mercurio_Quest >= 2 and not IsDead("Knox")):
-        knox = Find("Knox")
-        knox.ScriptUnhide()
+        if G.Patch_Plus == 1:
+            knox = Find("Knox_plus")
+            knox.ScriptUnhide()
+            knox.SetName("Knox")
+        else:
+            knox = Find("Knox_basic")
+            knox.ScriptUnhide()
+            knox.SetName("Knox")
 
 #ASYLUM: Called upon finishing dialogue with jeanette, changed by wesp
 def jeanetteDialog():
@@ -450,10 +456,10 @@ def astrolitePickup():
 #BEACHHOUSE: Called to check if the beachhouse should be hostile, changed by wesp
 def beachhouseStatus():
     thinblood = Find("E")
-    if __main__.IsDead("E"):
+    if (__main__.IsDead("E") or G.Story_State >= 35):
         thinblood.Kill()
     thinblood = Find("Rosa")
-    if __main__.IsDead("Rosa"):
+    if (__main__.IsDead("Rosa") or G.Story_State >= 35):
         thinblood.Kill()
     thinblood = Find("Copper")
     if (__main__.IsDead("Copper") or G.Copper_Slayer):
@@ -462,11 +468,10 @@ def beachhouseStatus():
     if __main__.IsDead("Julius"):
         thinblood.Kill()
     thinblood = Find("Lily")
-    if __main__.IsDead("Lily"):
+    if(G.E_Quest > 2 and not __main__.IsDead("E") and not G.Thin_Bloods_Hidden):
+        thinblood.ScriptUnhide()
+    if (__main__.IsDead("Lily") or G.Story_State >= 35):
         thinblood.Kill()
-    cop_patrol_pier = Find("cop_patrol_pier")
-    if __main__.IsDead("cop_patrol_pier"):
-        cop_patrol_pier.Kill()
     if(G.Beachhouse_Hostile == 1):
         dudes = __main__.FindEntitiesByClass("npc_VHumanCombatant")
         for dude in dudes:
@@ -475,6 +480,37 @@ def beachhouseStatus():
         dudes = __main__.FindEntitiesByClass("npc_VHumanCombatant")
         for dude in dudes:
             dude.Kill()
+    if(G.Story_State >= 10 and not G.Pier_Beach_Gone):
+        G.Pier_Beach_Gone = 1
+        blood = __main__.FindEntitiesByName("victimblooda")
+        for b in blood:
+            b.Kill()
+        blood = __main__.Find("victimbloodb")
+        if(blood):
+            blood.Kill()
+        cops = __main__.FindEntitiesByName("cop")
+        for cop in cops:
+            cop.Kill()
+        cop_patrol_pier = Find("cop_patrol_pier")
+        if(cop_patrol_pier):
+            cop_patrol_pier.Kill()
+        victim = Find("victim")
+        if(victim):
+            victim.Kill()
+        if G.Patch_Plus == 1:
+            trasha = Find("pier_trasha")
+            if(trasha): trasha.Kill()
+            trashb = Find("pier_trashb")
+            if(trashb): trashb.ScriptUnhide()
+            policelines = __main__.FindEntitiesByName("pierb*")
+            for policeline in policelines:
+                policeline.Kill()
+            policelines = __main__.FindEntitiesByName("piera*")
+            for policeline in policelines:
+                policeline.Kill()
+            piergate = __main__.Find("pier_gate_door")
+            piergate.Unlock()
+            piergate.Open()
 
 #BEACHHOUSE: Enforces the results of talking to brian at the beachouse
 def brianDialogResults():
@@ -1257,6 +1293,9 @@ def lockHaven():
         if(G.Gary_Imalia):
             poster = Find("poster_imalia")
             poster.ScriptHide()
+        if(G.Gary_Cross):
+            poster = Find("poster_cross")
+            poster.ScriptHide()
         if(G.Gary_Blind):
             poster = Find("poster_blind")
             poster.ScriptHide()
@@ -1520,6 +1559,11 @@ def murderCleanedUp():
         if(blood): blood.ScriptUnhide()
         bloodwall = Find("pierbloodwall")
         if(bloodwall): bloodwall.ScriptUnhide()
+    if G.Library_Note == 2:
+        note = Find("piernote")
+        if(note): note.ScriptHide()
+        trap = Find("trapobfuscator")
+        if(trap): trap.ScriptHide()
     if(G.Story_State >= 10 and not G.Pier_Scene_Gone):
         G.Pier_Scene_Gone = 1
         blood = __main__.FindEntitiesByName("victimblooda")

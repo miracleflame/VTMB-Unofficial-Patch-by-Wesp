@@ -465,10 +465,11 @@ def tsengsHideGuns():
         for shelf in shelves:
             shelf.SetAnimation("hideguns")
 
-#ZHAOS WAREHOUSE: Set special case camera shot
+#ZHAOS WAREHOUSE: Set special case camera shot, changed by wesp
 def zhaoDramaShot():
-    pc = __main__.FindPlayer()
-    pc.SetCamera("ZhaoFarHigh")
+    if G.Zhao_Know == 0:
+        pc = __main__.FindPlayer()
+        pc.SetCamera("ZhaoFarHigh")
 
 #ZHAOS WAREHOUSE: Set Zhao to hate Tongs
 def npcZhaoHateTong():

@@ -1,0 +1,74 @@
+TerminalDefinition
+{
+	"screen saver"		"Chateau Hotel"		// Bounces around on the screen when the terminal is not being used. 
+	"brackets"		""			// these surround the command prompt (2 characters), changed by wesp
+
+	"email_password"	"pearl"		// the user must type this to access email from this terminal, changed by wesp
+	"email_username"	"Steward"	// changed by wesp
+
+	LogonScreen	// displayed when the user first logs on
+	{
+		// Any number of lines are acceptable
+		"line0"		"Anarch Stronghold"	// changed by wesp
+	}
+
+ 	SubDir
+	{
+		"name"			"Important"	//(128 characters)
+		"password"		"master"
+		"description"		"Information about the Sabbat"	// changed by wesp
+
+		Function
+		{
+			"name"		"Sabbat1"
+			"description"	"Sabbat Gargoyle"
+			"runtext"	"We suspect the Sabbat have taken over the old Asian Theater, and placed a Gargoyle to guard it."	// changed by wesp
+		}
+
+		Function
+		{
+			"name"		"Sabbat2"
+			"description"	"Gargoyle Weakness"
+			"runtext"	"The Gargoyle seems to be nearly impervious to firearms. Perhaps a blunt instrument would be more effective."
+		}
+
+	}
+
+	Email
+	{
+		"subject"	"The Sabbat are here."
+		"sender"	"IAbrams@SMMCmail.vtm"
+		"body"		"Rumor has it that the Sabbat are infiltrating Los Angeles. I'll get you more information when I can."
+	}
+
+	Email
+	{
+		"subject"	"Re: The Sabbat are here."
+		"sender"	"IAbrams@SMMCmail.vtm"
+		"body"		"It is confirmed. They are located in the old subway tunnels or the sewers."	// changed by wesp
+	}
+
+	Email		// added by wesp
+	{
+		"subject"	"Re: The Sabbat are here."
+		"sender"	"IAbrams@SMMCmail.vtm"
+		"body"		"I found someone to clean them out of the underground. They dealt with the Gargoyle too and that wasn't even connected to the Sabbat."
+		"dependency"	"G.Gargoyle_Convinced == 0"
+	}
+
+	Email		// added by wesp
+	{
+		"subject"	"Re: The Sabbat are here."
+		"sender"	"IAbrams@SMMCmail.vtm"
+		"body"		"I found someone to clean them out of the underground. They even persuaded the Gargoyle to join us, as it wasn't connected to the Sabbat."
+		"dependency"	"G.Gargoyle_Convinced == 1"
+	}
+
+	Email		// added by wesp
+	{
+		"subject"	"Nines Rodriguez"
+		"sender"	"IAbrams@SMMCmail.vtm"
+		"body"		"Nines has been seriously wounded while fighting a werewolf. I have guaranteed to keep him save so defend the hotel at all cost!"
+	}
+
+}

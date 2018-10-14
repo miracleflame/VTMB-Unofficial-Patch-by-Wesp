@@ -152,10 +152,10 @@
 {	152	}{	I let him go. There's no way I was going to let you eat him.	}{	I let him go. There's no way I was going to let you eat him.	}{	161	}{	G.Mill_Loose == 1	}{	}{	}{	}{	}{	}{	}{	}{	I shooed the fly away. No meal for the wicked widow this night.	}
 {	153	}{	I dominated him. He won't remember this ever happened.	}{	I dominated him. He won't remember this ever happened.	}{	171	}{	G.Mill_Dominated == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	154	}{	Sanity no longer exists in his mind. No one will believe him.	}{	Sanity no longer exists in his mind. No one will believe him.	}{	171	}{	G.Mill_Dementated == 1	}{	}{	}{	}{	}{	}{	}{	}{	Sanity no longer exists in his mind. No one will believe him.	}
-{	155	}{	I dealt with him in my own way. He won't say a word. I put fear into him.	}{	I dealt with him in my own way. He won't say a word. I put fear into him.	}{	171	}{	G.Mill_Intimidate == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	156	}{	That guy I met upstairs? I took care of him.	}{	That guy I met upstairs? I took care of him.	}{	365	}{	IsDead("Milligan")	}{	}{	}{	}{	}{	}{	}{	}{	The fly has been swatted.	}
-{	157	}{	I'll go take care of it.	}{	I'll go take care of it.	}{	0	}{	G.Mill_Loose == 0	}{	}{	}{	}{	}{	}{	}{	}{	I will spread my honey for the fly.	}
-{	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	155	}{	I dealt with him in my own way. He won't say a word. I put fear into him.	}{	I dealt with him in my own way. He won't say a word. I put fear into him.	}{	171	}{	G.Mill_Intimidate == 1 and (G.Patch_Plus == 0 or not pc.HasItem("item_w_claws_ghoul"))	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	I dealt with him in my own way. He won't say a word. I put fear into him. If you don't believe me, you can find him here.	}{	I dealt with him in my own way. He won't say a word. I put fear into him. If you don't believe me, you can find him here.	}{	171	}{	G.Mill_Intimidate == 1 and G.Patch_Plus == 1 and pc.HasItem("item_w_claws_ghoul")	}{	pc.RemoveItem("item_w_claws_ghoul") }{	}{	}{	}{	}{	}{	}{	}
+{	157	}{	That guy I met upstairs? I took care of him.	}{	That guy I met upstairs? I took care of him.	}{	365	}{	IsDead("Milligan")	}{	}{	}{	}{	}{	}{	}{	}{	The fly has been swatted.	}
+{	158	}{	I'll go take care of it.	}{	I'll go take care of it.	}{	0	}{	G.Mill_Loose == 0	}{	}{	}{	}{	}{	}{	}{	}{	I will spread my honey for the fly.	}
 {	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	161	}{	Disappointing. He will bring others... law men... this will be an inconvenience. I should have known not to involve a novice in this matter. I go.	}{	Disappointing. He will bring others... law men... this will be an inconvenience. I should have known not to involve a novice in this matter. I go.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -260,7 +260,7 @@
 {	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	261	}{	The Voce del Morte. The Giovanni never willingly share their secrets... and I've had little success infiltrating their strongholds. How did you obtain this?	}{	The Voce del Morte. The Giovanni never willingly share their secrets... and I've had little success infiltrating their strongholds. How did you obtain this?	}{	#	}{	}{	pc.RemoveItem("item_g_pisha_book")	}{	}{	}{	}{	}{	}{	}{	}
 {	262	}{	They were a little distracted, so I was able to slip in under the radar.	}{	They were a little distracted, so I was able to slip in under the radar.	}{	271	}{	G.GioBotchedOutside == 0 and G.GioBotchedInside == 0	}{	}{	}{	}{	}{	}{	}{	}{	They never knew I was there. Nor did I. Where did I go?	}
-{	263	}{	The California Giovanni just made the endangered species list.	}{	The California Giovanni just made the endangered species list.	}{	271	}{	G.GioBotchedOutside == 1 or G.GioBotchedInside == 1	}{	}{	}{	}{	}{	}{	}{	}{	There are Giovanni left? I thought I sent them all to the other side.	}
+{	263	}{	The California Giovanni just made the endangered species list.	}{	The California Giovanni just made the endangered species list.	}{	271	}{	G.Bruno_Killed == 1	}{	}{	}{	}{	}{	}{	}{	}{	There are Giovanni left? I thought I sent them all to the other side.	}
 {	264	}{	Never mind, just give me what you promised.	}{	Never mind, just give me what you promised.	}{	271	}{	}{	}{	}{	}{	}{	}{	}{	}{	Where is my prize?	}
 {	265	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
