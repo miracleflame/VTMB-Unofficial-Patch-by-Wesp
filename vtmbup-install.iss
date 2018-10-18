@@ -1,16 +1,16 @@
 ; -- vtmbup-installer.iss --
 
 [Setup]
-AppName=Vampire: The Masquerade - Bloodlines Unofficial Patch 9.8
-AppVerName=Vampire: The Masquerade - Bloodlines Unofficial Patch 9.8
+AppName=Vampire: The Masquerade - Bloodlines Unofficial Patch 10.1
+AppVerName=Vampire: The Masquerade - Bloodlines Unofficial Patch 10.1
 VersionInfoDescription=Vampire: The Masquerade - Bloodlines Unofficial Patch
-VersionInfoVersion=9.8
+VersionInfoVersion=10.1
 AppPublisher=Werner Spahl
 DefaultDirName={reg:HKLM\Software\Activision\Vampire - Bloodlines,InstallPath|{pf}\Steam\steamapps\common\vampire the masquerade - bloodlines}
 AppendDefaultDirName=no
 DirExistsWarning=no
 EnableDirDoesntExistWarning=yes
-OutputBaseFilename=VTMBup98
+OutputBaseFilename=VTMBup101
 Uninstallable=no
 InfoBeforeFile=vtmbup-readme.txt
 InfoAfterFile=vtmbup-after.txt
@@ -31,13 +31,7 @@ Name: "basic"; Description: "Unofficial Patch"; Flags: iscustom
 Name: "basic"; Description: "Basic Patch"; Types: basic; Flags: fixed checkablealone
 Name: "readme"; Description: "Patch Readme"; Types: basic; Flags: fixed checkablealone
 Name: "plus"; Description: "Plus Patch (Restorations and Tweaks)"; Flags: checkablealone
-Name: "plus\audio"; Description: "No new audio (music pieces and random sounds)"; Flags: dontinheritcheck
-Name: "plus\particles"; Description: "No new particles (improved rain and cast effects)"; Flags: dontinheritcheck
-Name: "plus\graphics"; Description: "No new graphics (wolf Warform and improved eyes)"; Flags: dontinheritcheck
-Name: "plus\disciplines"; Description: "No new Disciplines (cast animations and replaced levels)"; Flags: dontinheritcheck
-Name: "extras"; Description: "Patch Extras (Transcripts and Walkthrough)"; Flags: checkablealone
-Name: "extras\play"; Description: "Player Mods (Shader suites, Linux script and more)"; Flags: dontinheritcheck
-Name: "extras\edit"; Description: "Developer Tools (Unofficial SDK, modding guide and more)"; Flags: dontinheritcheck
+Name: "extras"; Description: "Patch Extras (Walkthrough, Shaders, SDK and more)"; Flags: checkablealone
                                                                                                     
 [Code]
 function retail: Boolean; 
@@ -54,25 +48,34 @@ Source: "{app}\Unofficial_Patch\save\*"; DestDir: "{app}\Unofficial_Patch\save\o
 Source: "{app}\Unofficial_Patch\save\auto*"; DestDir: "{app}\Unofficial_Patch\save"; Components: basic; Flags: external deleteafterinstall skipifsourcedoesntexist
 Source: "{app}\Unofficial_Patch\save\quick*"; DestDir: "{app}\Unofficial_Patch\save"; Components: basic; Flags: external deleteafterinstall skipifsourcedoesntexist
 Source: "{app}\Unofficial_Patch\save\Vampire-0*"; DestDir: "{app}\Unofficial_Patch\save"; Components: basic; Flags: external deleteafterinstall skipifsourcedoesntexist
-Source: "vtmbup-readme.txt"; DestDir: "{app}"; Components: readme; Flags: isreadme
-Source: "Official_Patch\*"; DestDir: "{app}"; Components: basic; Flags: recursesubdirs ignoreversion
-Source: "Unofficial_Patch\cl_dlls\*"; DestDir: "{app}\vampire\cl_dlls"; Components: basic; Flags: recursesubdirs ignoreversion
-Source: "Unofficial_Patch\dlls\*"; DestDir: "{app}\vampire\dlls"; Components: basic; Flags: recursesubdirs ignoreversion
-Source: "Unofficial_Patch\*"; DestDir: "{app}\Unofficial_Patch"; Components: basic; Flags: recursesubdirs ignoreversion
-Source: "Plus_Patch\Unofficial_Patch\*"; DestDir: "{app}\Unofficial_Patch"; Components: plus; Flags: recursesubdirs ignoreversion
-Source: "Unofficial_Patch\sound\schemes\*"; DestDir: "{app}\Unofficial_Patch\sound\schemes"; Components: plus\audio; Flags: ignoreversion
-Source: "Unofficial_Patch\materials\models\character\eyes\*"; DestDir: "{app}\Unofficial_Patch\materials\models\character\eyes"; Components: plus\graphics; Flags: ignoreversion
-Source: "Unofficial_Patch\models\character\monster\animalism_beastform\animalism_beastform.mdl"; DestDir: "{app}\Unofficial_Patch\models\character\monster\animalism_beastform"; Components: plus\graphics; Flags: ignoreversion
-Source: "Unofficial_Patch\particles\*"; DestDir: "{app}\Unofficial_Patch\particles"; Components: plus\particles; Flags: ignoreversion
-Source: "Unofficial_Patch\vdata\system\disciplinetgt*"; DestDir: "{app}\Unofficial_Patch\vdata\system"; Components: plus\disciplines; Flags: ignoreversion
-Source: "Unofficial_Patch\vdata\system\stats.txt"; DestDir: "{app}\Unofficial_Patch\vdata\system"; Components: plus\disciplines; Flags: ignoreversion
+Source: "{app}\Bin\*"; DestDir: "{app}"; Components: basic; Flags: external skipifsourcedoesntexist overwritereadonly
+Source: "vtmbup-readme.txt"; DestDir: "{app}"; Components: readme; Flags: isreadme overwritereadonly
+Source: "Official_Patch\*"; DestDir: "{app}"; Components: basic; Flags: recursesubdirs ignoreversion overwritereadonly
+Source: "Basic_Patch\dlls\*"; DestDir: "{app}\vampire\dlls"; Components: basic; Flags: recursesubdirs ignoreversion overwritereadonly
+Source: "Basic_Patch\cl_dlls\*"; DestDir: "{app}\vampire\cl_dlls"; Components: basic; Flags: recursesubdirs ignoreversion overwritereadonly
 Source: "Patch_Extras\Developer Tools\Game Mod Loader\*"; DestDir: "{app}"; Components: basic; Flags: recursesubdirs ignoreversion
-Source: "Patch_Extras\*"; DestDir: "{app}\Patch_Extras"; Components: extras; Flags: ignoreversion
-Source: "Patch_Extras\Developer Tools\*"; DestDir: "{app}\Patch_Extras\Developer Tools"; Components: extras\edit; Flags: recursesubdirs ignoreversion
-Source: "Patch_Extras\Player Mods\*"; DestDir: "{app}\Patch_Extras\Player Mods"; Components: extras\play; Flags: recursesubdirs ignoreversion
+Source: "Basic_Patch\*"; DestDir: "{app}\Unofficial_Patch"; Components: basic; Flags: recursesubdirs ignoreversion overwritereadonly
+Source: "Basic_Local\*"; DestDir: "{app}\Unofficial_Patch"; Components: basic; Flags: recursesubdirs ignoreversion overwritereadonly
+Source: "Plus_Patch\*"; DestDir: "{app}\Unofficial_Patch"; Components: plus; Flags: recursesubdirs ignoreversion overwritereadonly
+Source: "Plus_Local\*"; DestDir: "{app}\Unofficial_Patch"; Components: plus; Flags: recursesubdirs ignoreversion overwritereadonly
+Source: "Patch_Extras\*"; DestDir: "{app}\Patch_Extras"; Components: extras; Flags: ignoreversion overwritereadonly
+Source: "Patch_Extras\Developer Tools\*"; DestDir: "{app}\Patch_Extras\Developer Tools"; Components: extras; Flags: recursesubdirs ignoreversion overwritereadonly
+Source: "Patch_Extras\Player Mods\*"; DestDir: "{app}\Patch_Extras\Player Mods"; Components: extras; Flags: recursesubdirs ignoreversion overwritereadonly
 
 [InstallDelete]
-Type: files; Name: "{app}\bin\loader\mods.*"
+Type: filesandordirs; Name: "{app}\*.log"
+Type: filesandordirs; Name: "{app}\vampire.dat"
+Type: filesandordirs; Name: "{app}\noseqence.txt"
+Type: filesandordirs; Name: "{app}\a_basetexture.tth"
+Type: filesandordirs; Name: "{app}\Vampire\hl2.tmp"
+Type: filesandordirs; Name: "{app}\Vampire\vidcfg.bin"
+Type: filesandordirs; Name: "{app}\Vampire\voice_ban.dt"
+Type: filesandordirs; Name: "{app}\Vampire\stats.txt"
+Type: filesandordirs; Name: "{app}\Unofficial_Patch\hl2.tmp"
+Type: filesandordirs; Name: "{app}\Unofficial_Patch\vidcfg.bin"
+Type: filesandordirs; Name: "{app}\Unofficial_Patch\voice_ban.dt"
+Type: filesandordirs; Name: "{app}\Unofficial_Patch\stats.txt"
+
 
 [Icons]
 Name: "{userdesktop}\VTM Bloodlines Unofficial Patch"; Filename: {app}\vampire.exe; Parameters: "-game Unofficial_Patch"

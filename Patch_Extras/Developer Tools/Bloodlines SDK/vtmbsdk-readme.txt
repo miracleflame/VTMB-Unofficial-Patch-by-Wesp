@@ -1,5 +1,5 @@
 --------------------
-Bloodlines SDK v1.71
+Bloodlines SDK v1.72
 --------------------
 
 This is an unofficial software developer's kit (SDK) for Vampire - The Masquerade: 
@@ -370,6 +370,13 @@ Global changes:
 * Added SMD models import+export plugins for Autodesk 3ds Max 9-2019 and Google SketchUp tool.
 
 --------------------
+
+1.72 (13.10.2018):
+- StudioMDL: Added important usage-limitations notes before launching Model Compiler and compiling process.
+- Studio Compiler: Optimized default settings for quick compiling from SMD files and fixed some messages.
+- Hammer/FGD: Fixed bad name of the parameter in ambient_generic.
+- Hammer [cr]: Improved "Justify" controls view in Face Edit Sheet tool, disabled Smoothing Groups as not supported.
+- Updated Source Code repository (for contributors).
 
 1.71 (18.09.2018):
 - Hammer [cr]: Fixed X & Y axis rotation of non-static models (they were also displayed incorrectly as result).

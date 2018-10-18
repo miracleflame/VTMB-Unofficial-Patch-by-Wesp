@@ -1,7 +1,7 @@
 //====== Copyright © 2003-2017, Troika Games, Inc. All rights reserved. =======
 //
 // Purpose: Vampire Bloodlines game definition file (.fgd) 
-// Version: 1.62 beta
+// Version: 1.63 beta
 // Edition: Original VtMB [Base]
 // Written: Psycho-A
 //
@@ -930,7 +930,7 @@ sphere(radius)
 	health(integer) : "Volume" : 10 : "Sound volume, expressed as a range from 0 to 10, where 10 is the loudest."
 	pitch(integer) : "Pitch" : 100 : "Sound pitch, expressed as a range from 1 to 255, where 100 is the sound's default pitch."
 	radius(string) : "Max Audible Distance" : 1250 : "Maximum distance at which this sound is audible."
-	SourceEntityName(target_destination) : "SourceEntityName" :  : "If an entity is specified, sound will come from this named entity instead of the location of ambient_generic."
+	SourceEntityName(target_destination) : "Source Entity Name" :  : "If an entity is specified, sound will come from this named entity instead of the location of ambient_generic."
 
 	sep_ambgmisc(string) readonly: "------------------------------------"
 

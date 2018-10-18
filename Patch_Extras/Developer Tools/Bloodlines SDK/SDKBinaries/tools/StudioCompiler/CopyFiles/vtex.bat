@@ -35,7 +35,7 @@ if /i "%%~xf"==".tga" (
 ))
 if not defined TgaFound (
 	echo -------------------------------------
-	echo ERROR! No input TGA images specified.
+	echo ERROR! No input TGA images specified.
 	echo -------------------------------------
 	if "%~1"=="" pause> nul
 	exit
@@ -55,8 +55,8 @@ for /f "delims=" %%a in (
 
 :ShowRoundup
 echo ------------------
-echo Project-Dir: "%ModDir%"
-echo Target-Tth: "%TtzFile%"
+echo Project Dir: "%ModDir%"
+echo Target Tth: "%TtzFile%"
 echo ------------------
 echo. 
 
@@ -75,10 +75,10 @@ echo.
 :CheckResult
 echo ------------------------------
 if not exist "%ModDir%\%TtzFile%" (
-	echo An error occurred during compiling!
-	echo See VTex log above for details.
+	echo An error occurred during compiling!
+	echo See VTex log above for details.
 ) else (
-	echo Compiling success.
+	echo Compiling success.
 )
 echo ------------------------------
 

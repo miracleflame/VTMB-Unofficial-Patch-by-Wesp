@@ -132,6 +132,8 @@ if exist "GameCfg.ini" (
 :studiocompfix
 (reg delete "HKCU\Software\CFApps\StudioCompiler" /f
  reg add "HKCU\Software\CFApps\StudioCompiler\StudioCompiler" /v "TabSelect"       /t REG_DWORD /d "0" /f
+ reg add "HKCU\Software\CFApps\StudioCompiler\StudioCompiler" /v "Anim SMD Check"  /t REG_DWORD /d "1" /f
+ reg add "HKCU\Software\CFApps\StudioCompiler\StudioCompiler" /v "Phy SMD Check"   /t REG_DWORD /d "1" /f
  reg add "HKCU\Software\CFApps\StudioCompiler\StudioCompiler" /v "SDKDirectory"    /t REG_SZ /d "%GameRoot%\SdkBinaries" /f
  reg add "HKCU\Software\CFApps\StudioCompiler\StudioCompiler" /v "GameDirectory"   /t REG_SZ /d "%ModDir%" /f
  reg add "HKCU\Software\CFApps\StudioCompiler\StudioCompiler" /v "Shader"          /t REG_SZ /d "VertexLitGeneric" /f
@@ -163,6 +165,8 @@ if exist "GameCfg.ini" (
 
 :fisrstrun
  echo # This file needed to detect SDK first launch and run Wizard.> "FirstRun.ini"
+ echo # This file needed to detect StudioMdl first launch and show Alpha-state Warning.> "service\mdlwarn.ini"
+ echo # This file needed to detect StudioCompiler first launch and show usage Warning.> "tools\StudioCompiler\Warning.ini"
  taskkill /f /im "msgbox.exe"> nul
 
 :setmoddir

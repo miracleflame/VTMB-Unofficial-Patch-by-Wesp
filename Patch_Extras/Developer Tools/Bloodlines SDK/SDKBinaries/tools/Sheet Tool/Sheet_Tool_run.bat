@@ -8,7 +8,7 @@ pushd "%~dp0"
 :set_vars
 set "AppFile=Sheet_Tool.exe"
 set "Program=%cd%\%AppFile%"
-set "Readme=%cd%\Readme.exe"
+set "Readme=%cd%\ShowReadme.exe"
 set "Delete="
 set "RunKey="
 

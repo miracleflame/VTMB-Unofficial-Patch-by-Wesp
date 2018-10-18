@@ -3879,6 +3879,7 @@
 "combat_start_activity" "-1"
 "spawnflags" "8196"
 "follower_type" "Default"
+"OnDeath" ",,,0,-1,G.Glaze_Kill = 1,"
 "OnStateFleeing" "ip_13a,Disable,,0,-1,,"
 "OnStateFleeing" "ip_13b,Enable,,0,-1,,"
 "OnHearCombat" "barkeep,FleeAndDie,,1,-1,,"
@@ -3939,7 +3940,7 @@
 "combat_start_activity" "-1"
 "spawnflags" "8196"
 "follower_type" "Default"
-"OnDeath" ",,,0,-1,civilianDeath(),"
+"OnDeath" ",,,0,-1,G.Glaze_Kill = 1,"
 "OnStateFleeing" "ip_13a,Disable,,0,-1,,"
 "OnStateFleeing" "ip_13b,Enable,,0,-1,,"
 "OnHearCombat" "barkeep,FleeAndDie,,1,-1,,"
@@ -4003,6 +4004,7 @@
 "team_name-wesp" "tong"
 "follower_type" "Default"
 "soundgroup" "Unique/Ricky"
+"OnDeath" ",,,0,-1,G.Glaze_Kill = 1,"
 "OnDeath" "logic_ricky_timer,Enable,,3,-1,,"
 "OnHearCombat" "logic_alert_guards,Trigger,,0,-1,,"
 "origin" "-538 835 0"
@@ -4064,6 +4066,7 @@
 "team_name-wesp" "tong"
 "alternateequipment" "item_w_mac_10"
 "follower_type" "Default"
+"OnDeath" ",,,0,-1,G.Glaze_Kill = 1,"
 "OnHearCombat" "logic_alert_guards,Trigger,,0,-1,,"
 "origin" "-467 889 5"
 }
@@ -4124,6 +4127,7 @@
 "team_name-wesp" "tong"
 "alternateequipment" "item_w_knife"
 "follower_type" "Default"
+"OnDeath" ",,,0,-1,G.Glaze_Kill = 1,"
 "OnHearCombat" "logic_alert_guards,Trigger,,0,-1,,"
 "origin" "-556 1169.74 4.19025"
 }
@@ -4393,6 +4397,7 @@
 "team_name-wesp" "tong"
 "alternateequipment" "item_w_knife"
 "follower_type" "Default"
+"OnDeath" ",,,0,-1,G.Glaze_Kill = 1,"
 "OnHearCombat" "logic_alert_guards,Trigger,,0,-1,,"
 "origin" "81 228 5"
 }
@@ -4453,6 +4458,7 @@
 "team_name-wesp" "tong"
 "alternateequipment" "item_w_knife"
 "follower_type" "Default"
+"OnDeath" ",,,0,-1,G.Glaze_Kill = 1,"
 "OnHearCombat" "logic_alert_guards,Trigger,,0,-1,,"
 "origin" "-79 229 5"
 }
@@ -4513,6 +4519,7 @@
 "dialogname" "dlg/Chinatown/Barry_R.dlg"
 "team_name-wesp" "tong"
 "follower_type" "Default"
+"OnDeath" ",,,0,-1,G.Glaze_Kill = 1,"
 "OnIncapacitatedStart" "logic_deny_access,Enable,,12,-1,,"
 "OnIncapacitatedStart" "logic_deny_access,Disable,,0,-1,,"
 "OnDialogEnd" "script_1,BeginSequence,,0.2,-1,,"
@@ -5176,6 +5183,7 @@
 "team_name-wesp" "tong"
 "alternateequipment" "item_w_katana"
 "follower_type" "Default"
+"OnDeath" ",,,0,-1,G.Glaze_Kill = 1,"
 "OnHearCombat" "logic_alert_guards,Trigger,,0,-1,,"
 "origin" "218 640 -11"
 }
@@ -5623,6 +5631,7 @@
 "team_name-wesp" "tong"
 "alternateequipment" "item_w_katana"
 "follower_type" "Default"
+"OnDeath" ",,,0,-1,G.Glaze_Kill = 1,"
 "OnHearCombat" "logic_alert_guards,Trigger,,0,-1,,"
 "origin" "520 680 5"
 }
@@ -5701,6 +5710,7 @@
 "team_name-wesp" "tong"
 "alternateequipment" "item_w_knife"
 "follower_type" "Default"
+"OnDeath" ",,,0,-1,G.Glaze_Kill = 1,"
 "OnHearCombat" "logic_alert_guards,Trigger,,0,-1,,"
 "origin" "357 1007 269"
 }
@@ -5761,6 +5771,7 @@
 "team_name-wesp" "tong"
 "alternateequipment" "item_w_thirtyeight"
 "follower_type" "Default"
+"OnDeath" ",,,0,-1,G.Glaze_Kill = 1,"
 "OnHearCombat" "logic_alert_guards,Trigger,,0,-1,,"
 "origin" "-242 302 269"
 }
@@ -6188,6 +6199,7 @@
 "additionalequipment" "item_w_uzi"
 "team_name-wesp" "tong"
 "follower_type" "Default"
+"OnDeath" ",,,0,-1,G.Glaze_Kill = 1,"
 "OnHearCombat" "logic_alert_guards,Trigger,,0,-1,,"
 "origin" "8 370 269"
 }
@@ -6247,6 +6259,7 @@
 "additionalequipment" "item_w_uzi"
 "team_name-wesp" "tong"
 "follower_type" "Default"
+"OnDeath" ",,,0,-1,G.Glaze_Kill = 1,"
 "OnHearCombat" "logic_alert_guards,Trigger,,0,-1,,"
 "origin" "-50 371 269"
 }
@@ -6335,7 +6348,6 @@
 "OnTrigger" ",,,0,-1,SetGlazeGuysToHate(),"
 "OnTrigger" "trig_stealth_johnny,Disable,,0,-1,,"
 "OnTrigger" "script_ricky,CancelSequence,,0,-1,,"
-"OnTrigger" ",,,0,-1,G.Glaze_Kill = 1,"
 "origin" "-55.6212 49 88.9406"
 }
 {
@@ -8133,12 +8145,12 @@
 {
 "classname" "infodecal"
 "texture" "decals/signs/men"
-"origin" "574 280 80"
+"origin" "574 256 80"
 }
 {
 "classname" "infodecal"
 "texture" "decals/signs/women"
-"origin" "574 312 80"
+"origin" "574 336 80"
 }
 {
 "classname" "logic_auto"
