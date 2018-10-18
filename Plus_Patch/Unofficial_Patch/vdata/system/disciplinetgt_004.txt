@@ -1194,7 +1194,6 @@ DisciplineTgt
 	Hit_Supernatural_NoEffect
 	{
 		"Duration"			"3"	// In order to play particles/etc.
-		"Dmg_Health"	"2-3%"	// added by wesp
 
 		Effect_Tgt_Hit
 		{
@@ -1618,6 +1617,32 @@ DisciplineTgt
 			}
 		}
 
+           Affects_Table	// added by wesp
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"Hengeyokai"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
+           Affects_Table	// added by wesp
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"Gargoyle"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
+			}
+		}
+
 		Affects_Table
 		{
 			Affects_Filters
@@ -2004,10 +2029,10 @@ DisciplineTgt
 
 	Hit_Supernatural_NoEffect
 	{
-		"AI_Schedule"		"SCHED_TROIKA_DO_THEFTOFVITAE_ACTIVITY"
+// wesp		"AI_Schedule"		"SCHED_TROIKA_DO_THEFTOFVITAE_ACTIVITY"
 		"Duration"			"3"
-		"Gesture_Anim"		"ACT_THEFTPAIN_PRE_INTO"
-		"Gesture_Duration"		"1.0"
+// wesp		"Gesture_Anim"		"ACT_THEFTPAIN_PRE_INTO"
+// wesp		"Gesture_Duration"		"1.0"
 
 		Trigger_Casting
 		{

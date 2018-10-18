@@ -60,7 +60,7 @@
 {	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	61	}{	Oh! Look who it is! It badass of Chinatown! You want fortune read, Mr. Superhero? Maybe you interested in making some cash?	}{	Oh! Look who it is! It badass of Chinatown! You want fortune read, Miss Superhero? Maybe you interested in making some cash?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Ji_Badass = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	62	}{	Money?	}{	Money?	}{	71	}{	G.Lu_Ji == 0	}{	}{	}{	}{	}{	}{	}{	}{	Almighty Dollars?	}
-{	63	}{	You Ji Wen Ja?	}{	You Ji Wen Ja?	}{	301	}{	G.Lu_Ji >= 1	}{	}{	}{	}{	}{	}{	}{	}{	Gee When Jaw?	}
+{	63	}{	You Ji Wen Ja?	}{	You Ji Wen Ja?	}{	301	}{	G.Lu_Ji >= 1 and G.Ji_Lu < 6	}{	}{	}{	}{	}{	}{	}{	}{	Gee When Jaw?	}
 {	64	}{	I'd like my fortune read.	}{	I'd like my fortune read.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am anxious about my fate.	}
 {	65	}{	Fortune telling is crap.	}{	Fortune telling is crap.	}{	11	}{	G.Lu_Ji == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -557,7 +557,7 @@
 {	557	}{	Sorry, not interested. Goodbye.	}{	Sorry, not interested. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I already know. I don't want to know.	}
 {	558	}{	This fortune booth, not information.	}{	This fortune booth, not information.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	559	}{	I'd like my fortune read.	}{	I'd like my fortune read.	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am anxious about my fate.	}
-{	560	}{	You Ji Wen Ja?	}{	You Ji Wen Ja?	}{	301	}{	G.Lu_Ji >= 1	}{	}{	}{	}{	}{	}{	}{	}{	Gee When Jaw?	}
+{	560	}{	You Ji Wen Ja?	}{	You Ji Wen Ja?	}{	301	}{	G.Lu_Ji >= 1 and G.Ji_Lu < 6	}{	}{	}{	}{	}{	}{	}{	}{	Gee When Jaw?	}
 {	561	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	562	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	563	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
