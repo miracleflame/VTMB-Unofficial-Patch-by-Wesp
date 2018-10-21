@@ -923,6 +923,8 @@ def milliganDeath():
 #SKYLINE: Called after talking to milligan at the skyline, changed by wesp
 def milliganSkylineDialog():
     if(G.Mill_Dementated or G.Mill_Loose or G.Mill_Persuaded or G.Mill_Dominated or G.Mill_Intimidate):
+        scared = Find("milligan_scared")
+        scared.Kill()
         relay = Find("Milligan_leaves_relay")
         relay.Trigger()
 
