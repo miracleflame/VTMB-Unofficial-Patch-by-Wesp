@@ -6304,14 +6304,6 @@
 "origin" "-743.833 1749 -159.915"
 }
 {
-"classname" "logic_auto"
-"targetname" "ligic_auto"
-"spawnflags" "1"
-"OnMapLoad" "Relay_Start_Patrols,Trigger,,0,-1,,"
-"OnMapLoad" ",,,0,-1,onGio1Load(),"
-"origin" "-804.632 1749 -144.733"
-}
-{
 "classname" "logic_relay"
 "StartDisabled" "0"
 "targetname" "Relay_Start_Patrols"
@@ -8833,6 +8825,8 @@
 "classname" "logic_auto"
 "spawnflags" "0"
 "OnMapLoad" ",,,0,-1,unhidePlus(),"
+"OnMapLoad" "Relay_Start_Patrols,Trigger,,0,-1,,"
+"OnMapLoad" ",,,0,-1,onGio1Load(),"
 "origin" "0 0 0"
 }
 {
