@@ -1097,8 +1097,7 @@ DisciplineTgt
 
 	Hit_Supernatural_Partial
 	{
-            "AI_Schedule"	"SCHED_TROIKA_D_PURGE"	// changed by Populism
-		"Duration"		"5" //"5-6"	// changed by wesp
+		"Duration"			"3"	// In order to play particles/etc.
 // wesp, removed for hit stratas		"Dmg_Health"	"30-50%"
 
 		Effect_Tgt_Hit
@@ -1161,40 +1160,28 @@ DisciplineTgt
 	{
 		"InheritFrom"		"Hit_Human"
 // Populism		"Duration"		"3" //"2-3"
-		OnCallback
-		{
-			"Dmg_Health"	"20-35%"
-		}
+		"Dmg_Health"	"20-35%"
 	}
 
 	Hit_Strata_2
 	{
 		"InheritFrom"		"Hit_Human"
 // Populism		"Duration"		"1-2" //"2-3"
-		OnCallback
-		{
-			"Dmg_Health"	"20-25%"
-		}
+		"Dmg_Health"	"20-25%"
 	}
 
 	Hit_Strata_3
 	{
 		"InheritFrom"		"Hit_Human"
 // Populism		"Duration"		"3" //"2-3"
-		OnCallback
-		{
-			"Dmg_Health"	"20-35%"
-		}
+		"Dmg_Health"	"20-35%"
 	}
 
 	Hit_Strata_4
 	{
 		"InheritFrom"		"Hit_Human"
 // Populism		"Duration"		"1-2" //"2-3"
-		OnCallback
-		{
-			"Dmg_Health"	"20-25%"
-		}
+		"Dmg_Health"	"20-25%"
 	}
 
 	Hit_Strata_5
