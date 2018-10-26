@@ -32,6 +32,7 @@ def setBasic():
     pc = __main__.FindPlayer()
     if not (pc.HasItem("item_w_fists")):
         pc.GiveItem("item_w_fists")
+        pc.GiveItem("item_w_unarmed")
         pc.GiveItem("weapon_physcannon")
         pc.GiveItem("item_g_wallet")
         pc.GiveItem("item_g_keyring")
@@ -73,6 +74,7 @@ def setPlus():
     pc = __main__.FindPlayer()
     if not (pc.HasItem("item_w_fists")):
         pc.GiveItem("item_w_fists")
+        pc.GiveItem("item_w_unarmed")
         pc.GiveItem("weapon_physcannon")
         pc.GiveItem("item_g_wallet")
         pc.GiveItem("item_g_keyring")
