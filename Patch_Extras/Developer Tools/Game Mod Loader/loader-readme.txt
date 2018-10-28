@@ -24,6 +24,7 @@ Installation:
 -------------
 Extract content into the Bloodlines game root directory (where 
 vampire.exe is) replacing any existing files. Loader is ready!
+[already installed into UP and Collector's Edition game bundle]
 
 Usage with mods:
 ----------------
@@ -97,7 +98,5 @@ cd "$PREFIX/drive_c/Program Files/Steam"
 
 export WINEARCH=win32
 export WINEPREFIX="$PREFIX"
-export WINEDLLOVERRIDES="dbghelp=n,b" #VTMB specific fix.
 
 wine Steam.exe -no-dwrite
-

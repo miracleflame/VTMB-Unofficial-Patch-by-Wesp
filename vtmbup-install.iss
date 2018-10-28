@@ -63,19 +63,18 @@ Source: "Patch_Extras\Developer Tools\*"; DestDir: "{app}\Patch_Extras\Developer
 Source: "Patch_Extras\Player Mods\*"; DestDir: "{app}\Patch_Extras\Player Mods"; Components: extras; Flags: recursesubdirs ignoreversion overwritereadonly
 
 [InstallDelete]
-Type: filesandordirs; Name: "{app}\*.log"
 Type: filesandordirs; Name: "{app}\vampire.dat"
 Type: filesandordirs; Name: "{app}\noseqence.txt"
+Type: filesandordirs; Name: "{app}\dbghelp.dll.12"
 Type: filesandordirs; Name: "{app}\a_basetexture.tth"
 Type: filesandordirs; Name: "{app}\Vampire\hl2.tmp"
+Type: filesandordirs; Name: "{app}\Vampire\stats.txt"
 Type: filesandordirs; Name: "{app}\Vampire\vidcfg.bin"
 Type: filesandordirs; Name: "{app}\Vampire\voice_ban.dt"
-Type: filesandordirs; Name: "{app}\Vampire\stats.txt"
 Type: filesandordirs; Name: "{app}\Unofficial_Patch\hl2.tmp"
+Type: filesandordirs; Name: "{app}\Unofficial_Patch\stats.txt"
 Type: filesandordirs; Name: "{app}\Unofficial_Patch\vidcfg.bin"
 Type: filesandordirs; Name: "{app}\Unofficial_Patch\voice_ban.dt"
-Type: filesandordirs; Name: "{app}\Unofficial_Patch\stats.txt"
-
 
 [Icons]
 Name: "{userdesktop}\VTM Bloodlines Unofficial Patch"; Filename: {app}\vampire.exe; Parameters: "-game Unofficial_Patch"

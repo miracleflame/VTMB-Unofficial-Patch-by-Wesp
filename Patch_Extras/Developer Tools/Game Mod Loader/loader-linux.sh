@@ -4,7 +4,6 @@ PREFIXES="$HOME/.local/share/wineprefixes"
 mkdir -p "$PREFIXES"
 export WINEARCH=win32
 export WINEPREFIX="$PREFIXES/Vampire the Masquerade - Bloodlines"
-export WINEDLLOVERRIDES="dbghelp=n,b" #mod loader dll hook
 
 # cd to the script’s directory
 GAME_PATH=$(dirname "$(readlink -f "$0")")
@@ -98,7 +97,3 @@ else #from file manager
 		fi
 	fi
 fi
-
-
-
-
