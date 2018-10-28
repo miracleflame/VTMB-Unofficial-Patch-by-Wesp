@@ -101,7 +101,7 @@ SweetFX: Different shader suite, use ReShade Setup, by CeeJay.dk.
 
 4GB Patch: Patches up the exe for 64 bit, thanks Daniel Pistelli.
 Dinput8.dll: Fixes Windows 10 mouse bug, thanks Dusk of Oolacile.
-Install64: 64bit Windows installation patcher, by Iain Patterson.
+Install64: Windows installer patch for 64 bit, by Iain Patterson.
 ResPatch: Widescreen resolution kit, by Wabbite (.NET 2+ needed).
 ScreenWindowedOn/Off.reg: To switch fullscreen mode, by Psycho-A.
 Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
@@ -110,7 +110,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.1                                                   18.10.2018
+v10.1                                                   28.10.2018
 -----
 +Fixed Gary giving packs if you already have some and made it plus.
 +Shortened Bat's Communion to work with Beastmistress history too.
@@ -131,17 +131,19 @@ v10.1                                                   18.10.2018
 +Corrected Auspex stats if you use "no changed disciplines" option.
 +Swapped final poster quest poster and restored it to Ground Zero.
 +Restored partial damage to supernaturals with several disciplines.
-+Improved library and made Red Spot gum ball machine destructable.
++Updated some entries in some computers to reflect NPC fatalities.
 +Fixed four Humanity cost altering histories, thanks miracle.flame.
 +Removed plus and extras installer sub-options to avoid confusion.
 +Improved snatching cutscene and made museum outside a combat area.
-+Updated some entries in some computers to reflect NPC fatalities.
-+Made Hengeyokai not freeze on Blood Theft and fixed Ji quest loop.
 +Fixed an ignoring-Sabbat-ending issue and sneaking out with Kiki.
-Made the patch copy all bin files into main folder to fix crashes.
-Added toilet doors to a few maps and fixed minor dialogue issues.
-Moved breakroom at the SM clinic so the geometry fits the outside.
-Made blood dolls reappear after killing to avoid staying corpses.
++Made Hengeyokai not freeze on Blood Theft and fixed Ji quest loop.
++Improved library and made Red Spot gum ball machine destructable.
++Finally fixed the dead-dog-still-hurting and Milligan freeze bugs.
+
++Added console key and all hotkeys into the controls options menu.
+Removed basic discipline changes and restored bump mapping option.
+
+Made sure beachhouse thugs are dead if Mercurio appears at beach.
 Prevented player from using idle animation during a few cutscenes.
 Added info to hacking popup and fixed minor map and text details.
 Fixed condition for telling Damsel that you killed a werewolf too.
@@ -154,7 +156,15 @@ Fixed Presence hair and cleared Disciplines before more cutscenes.
 Covered level holes in observatory, Red Dragon and Venture Tower.
 Fixed vanishing details downtown, at Ocean House, and in cemetery.
 Added missing monster sounds reacting to Dementation disciplines.
+Made the patch copy all bin files into main folder to fix crashes.
+Added toilet doors to a few maps and fixed minor dialogue issues.
+Moved breakroom at the SM clinic so the geometry fits the outside.
+Made blood dolls reappear after killing to avoid staying corpses.
 Moved sarcophagus loading scene to Giovanni mansion back entrance.
+Disabled bad icons and buttons for inactive Ocean House elevator.
+
+Improved python and loader file compatibility, thanks to Psycho-A.
+Added a few weapon drop sounds and fidget and upset sound groups.
 
 v10.0                                                   15.06.2018
 -----
@@ -2302,7 +2312,6 @@ General:
 +Updated some entries in some computers to reflect NPC fatalities.
 Made all enemies drop weapon except for balance or impossible cases.
 All illogical spawning and respawning is removed on several levels.
-Added widescreen support and fixed pause messages using engine.dll.
 Fixed refresh-rate, coronas, floats and > 2 GB memory bugs in dlls.
 Added about hundred missing facial expressions to about thirty NPCs.
 Swapped Colt Anacondas with Ithacas for cop crews arriving by car.
@@ -2358,6 +2367,7 @@ Interface:
 +Added seven missing infobar sounds and created seven infobar icons.
 +Mentioned Clan Lasombra and the Nagaraja in the world loading tips.
 +Improved title menu and character sheet clan symbols and fixed lag.
++Added console key and all hotkeys into the controls options menu.
 Adjusted fonts issues regarding Dementation and Tremere Domination.
 Added missing newspaper icons and increased the Obfuscate frame rate.
 Corrected the corrupted Intimidation font "W" at higher resolutions.
@@ -2365,7 +2375,6 @@ Standardized key names in options, loading tips and tutorial popups.
 Made all important sounds unique and fixed mixed up nosave messages.
 Renamed Auto-Level button and removed Ventrue clan popup test button.
 Added original Japanese and Russian words to translated subtitles.
-Disabled bump mapping option because of issues with improved water.
 Unified formatting of newspaper articles and improved GUI issues.
 
 Graphics:
@@ -2391,7 +2400,7 @@ Corrected many inside/outside door handles and background screen.
 Fixed three mirrored keycard backsides and centered the area icons.
 Added native widescreen support and centered tutorial popups for it.
 Corrected some areaportals in Leopold Society and Giovanni Mansion.
-Disabled low poly model LOD in engine.dll and set bump mapping on.
+Disabled low poly model LOD and fixed pause messages in engine.dll.
 Corrected mirrored crate textures and reset clothing using console.
 
 Sounds:
@@ -2653,6 +2662,7 @@ Restored ghost whispers, scenes, laughter and vent breaking sounds.
 Fixed railings, areaportals, shadows, vanishing junk and map holes.
 Swapped door handle that could be used too soon and fixed one icon.
 Fixed double ghost, elevator buttons, bad sprite and scary sounds.
+Disabled bad icons and buttons for inactive Ocean House elevator.
 
 Pier:
 +Made letting Julius go free for money end up with Humanity balanced.
@@ -2669,6 +2679,7 @@ Prevented Copper from suddenly having money and added bus to pier.
 Removed cop cars from the Santa Monica pier after the police left.
 Prevented doing E's quest for dead E and fixed rain through bridge.
 Showed thin bloods on beach when looking down from the beachhouse.
+Made sure beachhouse thugs are dead if Mercurio appears at beach.
 
 Warehouse:
 +Changed warehouse bonus XP to stealth and prevented re-entering it.
@@ -3427,6 +3438,9 @@ this thingie is.
 Hmm, when you gaze upon this object, the skies darken and lightning 
 flashes. Those aren't good clues to what this is though.
 
+The surfaceprop on-drop-sound classes available for *.phy files are: 
+flesh, kitchen_utensils, metal, paper, plastic, ring, stone or wood.
+
 
 Context Icons:
 --------------
@@ -3464,8 +3478,8 @@ Client:
 
 Console Commands:
 -----------------
-Add "-console" and "-dev" to the shortcut and open console with "~".
-Use it out of the menu only or type "chareditor" in case it freezes!
+Open the console (default key "~") from the main menu only, or type
+"chareditor" if it freezes! All commands can be added to cfg files.
 
 god               Godmode
 noclip            Flymode
@@ -3504,6 +3518,8 @@ picker            Displays object data
 showtrigger 1     Displays trigger areas
 ai_show_hints     Shows pathfinding hints for NPCs
 ai_show_interesting 1  Shows special places that NPCs will use
+surround 1        Enable surround sound
+snd_gain 2        Compensate for loudness loss in surround mode
 
 
 Story States:
@@ -3567,6 +3583,8 @@ might be helpful. Compile the release version with -final settings.
 * For a map transition landmark angles only matter if flag 1 is set.
 * Cubemap reflections are dependent on brushes, textures and groups.
 * Cubemap reflections of dynamic entities can be rebuild inside map.
+* NPC Entities that are killed are inaccessible, modify them before.
+* NPC Entities freeze if old animations can't play, kill them first.
 * "Physics Penetration Error": prop_physics mustn't intersect other.
 * "Bad Collision Data": clip brush in entity, use invisible instead.
 

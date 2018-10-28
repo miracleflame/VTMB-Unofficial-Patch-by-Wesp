@@ -24,8 +24,8 @@
 		"tall"		"28"
 		"autoResize"		"0"
 		"pinCorner"		"0"
-		"visible"		"0"	// changed by wesp
-		"enabled"		"0"	// changed by wesp
+		"visible"		"1"
+		"enabled"		"1"
 		"tabPosition"		"0"
 		"labelText"		"#GameUI_BumpMapping"
 		"textAlignment"		"west"
