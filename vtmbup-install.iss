@@ -48,7 +48,6 @@ Source: "{app}\Unofficial_Patch\save\*"; DestDir: "{app}\Unofficial_Patch\save\o
 Source: "{app}\Unofficial_Patch\save\auto*"; DestDir: "{app}\Unofficial_Patch\save"; Components: basic; Flags: external deleteafterinstall skipifsourcedoesntexist
 Source: "{app}\Unofficial_Patch\save\quick*"; DestDir: "{app}\Unofficial_Patch\save"; Components: basic; Flags: external deleteafterinstall skipifsourcedoesntexist
 Source: "{app}\Unofficial_Patch\save\Vampire-0*"; DestDir: "{app}\Unofficial_Patch\save"; Components: basic; Flags: external deleteafterinstall skipifsourcedoesntexist
-Source: "{app}\Bin\*"; DestDir: "{app}"; Components: basic; Flags: external skipifsourcedoesntexist overwritereadonly
 Source: "vtmbup-readme.txt"; DestDir: "{app}"; Components: readme; Flags: isreadme overwritereadonly
 Source: "Official_Patch\*"; DestDir: "{app}"; Components: basic; Flags: recursesubdirs ignoreversion overwritereadonly
 Source: "Basic_Patch\dlls\*"; DestDir: "{app}\vampire\dlls"; Components: basic; Flags: recursesubdirs ignoreversion overwritereadonly
@@ -61,6 +60,15 @@ Source: "Plus_Local\*"; DestDir: "{app}\Unofficial_Patch"; Components: plus; Fla
 Source: "Patch_Extras\*"; DestDir: "{app}\Patch_Extras"; Components: extras; Flags: ignoreversion overwritereadonly
 Source: "Patch_Extras\Developer Tools\*"; DestDir: "{app}\Patch_Extras\Developer Tools"; Components: extras; Flags: recursesubdirs ignoreversion overwritereadonly
 Source: "Patch_Extras\Player Mods\*"; DestDir: "{app}\Patch_Extras\Player Mods"; Components: extras; Flags: recursesubdirs ignoreversion overwritereadonly
+Source: "Patch_Extras\Developer Tools\Game Mod Loader\Vampire_x64.exe"; DestDir: "{app}"; DestName: "Vampire.exe"; Flags: ignoreversion overwritereadonly; Check: IsWin64
+Source: "{app}\*.exe";                          Flags: external dontcopy skipifdoesntexist; Attribs: readonly
+Source: "{app}\*.dll";                          Flags: external dontcopy skipifdoesntexist; Attribs: readonly
+Source: "{app}\Bin\*.dll";                      Flags: external dontcopy skipifdoesntexist; Attribs: readonly
+Source: "{app}\Unofficial_Patch\cl_dlls\*.dll"; Flags: external dontcopy skipifdoesntexist; Attribs: readonly
+Source: "{app}\Unofficial_Patch\dlls\*.dll";    Flags: external dontcopy skipifdoesntexist; Attribs: readonly
+Source: "{app}\Vampire\cl_dlls\*.dll";          Flags: external dontcopy skipifdoesntexist; Attribs: readonly
+Source: "{app}\Vampire\dlls\*.dll";             Flags: external dontcopy skipifdoesntexist; Attribs: readonly
+; disabled Source: "{app}\Bin\*"; DestDir: "{app}"; Components: basic; Flags: external skipifsourcedoesntexist overwritereadonly
 
 [InstallDelete]
 Type: filesandordirs; Name: "{app}\vampire.dat"

@@ -110,7 +110,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.1                                                   28.10.2018
+v10.1                                                   29.10.2018
 -----
 +Fixed Gary giving packs if you already have some and made it plus.
 +Shortened Bat's Communion to work with Beastmistress history too.
@@ -139,10 +139,8 @@ v10.1                                                   28.10.2018
 +Made Hengeyokai not freeze on Blood Theft and fixed Ji quest loop.
 +Improved library and made Red Spot gum ball machine destructable.
 +Finally fixed the dead-dog-still-hurting and Milligan freeze bugs.
-
 +Added console key and all hotkeys into the controls options menu.
 Removed basic discipline changes and restored bump mapping option.
-
 Made sure beachhouse thugs are dead if Mercurio appears at beach.
 Prevented player from using idle animation during a few cutscenes.
 Added info to hacking popup and fixed minor map and text details.
@@ -162,7 +160,6 @@ Moved breakroom at the SM clinic so the geometry fits the outside.
 Made blood dolls reappear after killing to avoid staying corpses.
 Moved sarcophagus loading scene to Giovanni mansion back entrance.
 Disabled bad icons and buttons for inactive Ocean House elevator.
-
 Improved python and loader file compatibility, thanks to Psycho-A.
 Added a few weapon drop sounds and fidget and upset sound groups.
 
@@ -3518,7 +3515,7 @@ picker            Displays object data
 showtrigger 1     Displays trigger areas
 ai_show_hints     Shows pathfinding hints for NPCs
 ai_show_interesting 1  Shows special places that NPCs will use
-surround 1        Enable surround sound
+surround 1        Enable surround sound mode
 snd_gain 2        Compensate for loudness loss in surround mode
 
 
