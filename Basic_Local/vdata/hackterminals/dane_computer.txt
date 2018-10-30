@@ -22,8 +22,7 @@ TerminalDefinition
 			"runtext"	"Location   33.98N,118.60W
 					Seas       CALM
 					Air Temp   65F
-					Sea Temp   43F
-					"	// changed by wesp
+					Sea Temp   43F"	// changed by wesp
 		}
 
 		Function
@@ -31,10 +30,9 @@ TerminalDefinition
 			"name"		"Status"
 			"description"	"SHIP STATUS"
 			"runtext"	"SHIP STATUS
-Engines    OFF
+					Engines    OFF
 					Deck Cams  OFF
-					Locks      LOCKED
-					"
+					Locks      LOCKED"
 			"dependency"	"G.Dane_Cams == 0 and G.Dane_Locks == 0 and G.Dane_Engines == 0"	// changed by wesp
 		}
 
@@ -43,10 +41,9 @@ Engines    OFF
 			"name"		"Status"
 			"description"	"SHIP STATUS"
 			"runtext"	"SHIP STATUS
-Engines    OFF
+					Engines    OFF
 					Deck Cams  ON
-					Locks      LOCKED
-					"
+					Locks      LOCKED"
 			"dependency"	"G.Dane_Cams == 1 and G.Dane_Locks == 0 and G.Dane_Engines == 0"	// changed by wesp
 		}
 
@@ -55,10 +52,9 @@ Engines    OFF
 			"name"		"Status"
 			"description"	"SHIP STATUS"
 			"runtext"	"SHIP STATUS
-Engines    OFF
+					Engines    OFF
 					Deck Cams  OFF
-					Locks      OPEN
-					"
+					Locks      OPEN"
 			"dependency"	"G.Dane_Cams == 0 and G.Dane_Locks == 1 and G.Dane_Engines == 0"	// changed by wesp
 		}
 
@@ -67,10 +63,9 @@ Engines    OFF
 			"name"		"Status"
 			"description"	"SHIP STATUS"
 			"runtext"	"SHIP STATUS
-Engines    ON
+					Engines    ON
 					Deck Cams  OFF
-					Locks      LOCKED
-					"
+					Locks      LOCKED"
 			"dependency"	"G.Dane_Cams == 0 and G.Dane_Locks == 0 and G.Dane_Engines == 1"	// changed by wesp
 		}
 
@@ -79,10 +74,9 @@ Engines    ON
 			"name"		"Status"
 			"description"	"SHIP STATUS"
 			"runtext"	"SHIP STATUS
-Engines    OFF
+					Engines    OFF
 					Deck Cams  ON
-					Locks      OPEN
-					"
+					Locks      OPEN"
 			"dependency"	"G.Dane_Cams == 1 and G.Dane_Locks == 1 and G.Dane_Engines == 0"	// changed by wesp
 		}
 
@@ -91,10 +85,9 @@ Engines    OFF
 			"name"		"Status"
 			"description"	"SHIP STATUS"
 			"runtext"	"SHIP STATUS
-Engines    ON
+					Engines    ON
 					Deck Cams  ON
-					Locks      LOCKED
-					"
+					Locks      LOCKED"
 			"dependency"	"G.Dane_Cams == 1 and G.Dane_Locks == 0 and G.Dane_Engines == 1"	// changed by wesp
 		}
 
@@ -103,10 +96,9 @@ Engines    ON
 			"name"		"Status"
 			"description"	"SHIP STATUS"
 			"runtext"	"SHIP STATUS
-Engines    ON
+					Engines    ON
 					Deck Cams  OFF
-					Locks      OPEN
-					"
+					Locks      OPEN"
 			"dependency"	"G.Dane_Cams == 0 and G.Dane_Locks == 1 and G.Dane_Engines == 1"	// changed by wesp
 		}
 
@@ -115,10 +107,9 @@ Engines    ON
 			"name"		"Status"
 			"description"	"SHIP STATUS"
 			"runtext"	"SHIP STATUS
-Engines    ON
+					Engines    ON
 					Deck Cams  ON
-					Locks      OPEN
-					"
+					Locks      OPEN"
 			"dependency"	"G.Dane_Cams == 1 and G.Dane_Locks == 1 and G.Dane_Engines == 1"	// changed by wesp
 		}
 	}
