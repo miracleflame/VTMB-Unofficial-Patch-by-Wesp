@@ -2,12 +2,12 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7999"
-	"mapversion" "1"
+	"mapversion" "5"
 	"prefab" "0"
 }
 viewsettings
 {
-	"bSnapToGrid" "1"
+	"bSnapToGrid" "0"
 	"bShowGrid" "1"
 	"nGridSpacing" "64"
 	"bShow3DGrid" "0"
@@ -15,7 +15,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "1"
+	"mapversion" "5"
 	"classname" "worldspawn"
 	"skyname" "santamonica"
 	"sounds" "1"
@@ -20749,10 +20749,10 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnTrigger0" "vaultdoor3a,Unlock,,0,-1,G.Shubs_Act = 4,"
-		"OnTrigger0" "vaultdoor3b,Unlock,,0,-1,,"
-		"OnTrigger1" "vaultdoor3b,Lock,,0,-1,,"
 		"OnTrigger1" "vaultdoor3a,Lock,,0,-1,,"
+		"OnTrigger1" "vaultdoor3b,Lock,,0,-1,,"
+		"OnTrigger0" "vaultdoor3b,Unlock,,0,-1,,"
+		"OnTrigger0" "vaultdoor3a,Unlock,,0,-1,G.Shubs_Act = 4,"
 	}
 	"origin" "804.485 2312.66 54"
 	editor
@@ -20807,10 +20807,10 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnTrigger0" "vaultdoor3b,Unlock,,0,-1,,"
-		"OnTrigger0" "vaultdoor3a,Unlock,,0,-1,G.Shubs_Act = 4,"
-		"OnTrigger1" "vaultdoor3a,Lock,,0,-1,,"
 		"OnTrigger1" "vaultdoor3b,Lock,,0,-1,,"
+		"OnTrigger1" "vaultdoor3a,Lock,,0,-1,,"
+		"OnTrigger0" "vaultdoor3a,Unlock,,0,-1,G.Shubs_Act = 4,"
+		"OnTrigger0" "vaultdoor3b,Unlock,,0,-1,,"
 	}
 	"origin" "814.515 2046.34 54"
 	editor
@@ -25331,16 +25331,16 @@ entity
 	"targetname" "poweroff"
 	connections
 	{
-		"OnTrigger" "virus_timer,RestartTimer,,0.5,-1,,"
-		"OnTrigger" "virus_timer,Show,,0,-1,,"
-		"OnTrigger" "vaultdoor1b,Unlock,,0,-1,,"
-		"OnTrigger" "vaultdoor1a,Unlock,,0,-1,,"
-		"OnTrigger" "flourecentlightmodel,Skin,1,0,-1,,"
-		"OnTrigger" "flourecentlight,TurnOff,,0,-1,,"
-		"OnTrigger" "circlelightmodel,Skin,1,0,-1,,"
-		"OnTrigger" "circlelight,TurnOff,,0,-1,,"
-		"OnTrigger" "circlelightsprite,ScriptHide,1,0,-1,,"
 		"OnTrigger" "power_off_sound,PlaySound,,0,-1,,"
+		"OnTrigger" "circlelightsprite,ScriptHide,1,0,-1,,"
+		"OnTrigger" "circlelight,TurnOff,,0,-1,,"
+		"OnTrigger" "circlelightmodel,Skin,1,0,-1,,"
+		"OnTrigger" "flourecentlight,TurnOff,,0,-1,,"
+		"OnTrigger" "flourecentlightmodel,Skin,1,0,-1,,"
+		"OnTrigger" "vaultdoor1a,Unlock,,0,-1,,"
+		"OnTrigger" "vaultdoor1b,Unlock,,0,-1,,"
+		"OnTrigger" "virus_timer,Show,,0,-1,,"
+		"OnTrigger" "virus_timer,RestartTimer,,0.5,-1,,"
 	}
 	"origin" "64 456 59"
 	editor
@@ -25581,14 +25581,14 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "vaultdoor1b,Lock,,0,-1,,"
-		"OnTrigger" "vaultdoor1a,Lock,,0,-1,,"
-		"OnTrigger" "flourecentlightmodel,Skin,0,0,-1,,"
-		"OnTrigger" "flourecentlight,TurnOn,,0,-1,,"
-		"OnTrigger" "circlelightmodel,Skin,0,0,-1,,"
-		"OnTrigger" "circlelight,TurnOn,,0,-1,,"
-		"OnTrigger" "circlelightsprite,ScriptUnhide,1,0,-1,,"
 		"OnTrigger" ",,,0,-1,G.Shubs_Act = 4,"
+		"OnTrigger" "circlelightsprite,ScriptUnhide,1,0,-1,,"
+		"OnTrigger" "circlelight,TurnOn,,0,-1,,"
+		"OnTrigger" "circlelightmodel,Skin,0,0,-1,,"
+		"OnTrigger" "flourecentlight,TurnOn,,0,-1,,"
+		"OnTrigger" "flourecentlightmodel,Skin,0,0,-1,,"
+		"OnTrigger" "vaultdoor1a,Lock,,0,-1,,"
+		"OnTrigger" "vaultdoor1b,Lock,,0,-1,,"
 	}
 	"origin" "48 456 59"
 	editor
@@ -25969,8 +25969,8 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnCorrectPassword" "vaultdoor2a,Unlock,,0,-1,,"
 		"OnCorrectPassword" "vaultdoor2b,Unlock,,0,-1,,"
+		"OnCorrectPassword" "vaultdoor2a,Unlock,,0,-1,,"
 	}
 	"origin" "465 1951.67 74.9739"
 	editor
@@ -25999,8 +25999,8 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnCorrectPassword" "vaultdoor2b,Unlock,,0,-1,,"
 		"OnCorrectPassword" "vaultdoor2a,Unlock,,0,-1,,"
+		"OnCorrectPassword" "vaultdoor2b,Unlock,,0,-1,,"
 	}
 	"origin" "371 1968.33 74.9739"
 	editor
@@ -26031,7 +26031,7 @@ entity
 	{
 		"OnPlayerPickup" ",,,0,-1,G.Shubfour_Cash = 1,"
 	}
-	"origin" "-51 2178 73"
+	"origin" "-51 2183 73"
 	editor
 	{
 		"color" "0 0 200"
@@ -26060,8 +26060,8 @@ entity
 	"angles" "0 0 0"
 	connections
 	{
-		"OnPlayerPickup" "pc,AwardExp,Web05,0,-1,,"
 		"OnPlayerPickup" ",,,0,-1,G.Shubfour_Cash = 1,"
+		"OnPlayerPickup" "pc,AwardExp,Web05,0,-1,,"
 	}
 	"origin" "0 2178 30"
 	editor
@@ -27029,8 +27029,8 @@ entity
 	"targetname" "guard_1_patrol"
 	connections
 	{
-		"OnTrigger" "guard_1_zen,SetupPatrolType,9999 0 FOLLOW_PATROL_PATH_WALK,0,-1,,"
 		"OnTrigger" "guard_1_zen,FollowPatrolPath,A2 A1 A2 A3 A4 A5 A6 A5 A4 A3,0.05,-1,,"
+		"OnTrigger" "guard_1_zen,SetupPatrolType,9999 0 FOLLOW_PATROL_PATH_WALK,0,-1,,"
 	}
 	"origin" "248.64 1717.56 25"
 	editor
@@ -27193,8 +27193,8 @@ entity
 	"targetname" "guard_2_patrol"
 	connections
 	{
-		"OnTrigger" "guard_2_zen,SetupPatrolType,9999 0 FOLLOW_PATROL_PATH_WALK,0,-1,,"
 		"OnTrigger" "guard_2_zen,FollowPatrolPath,B3 B4 B3 B2 B1 B2,0.05,-1,,"
+		"OnTrigger" "guard_2_zen,SetupPatrolType,9999 0 FOLLOW_PATROL_PATH_WALK,0,-1,,"
 	}
 	"origin" "101.216 1020.73 25"
 	editor
@@ -27209,9 +27209,9 @@ entity
 	"spawnflags" "2"
 	connections
 	{
-		"OnMapLoad" ",,,0,-1,checkTimer(),"
-		"OnMapLoad" "guard_1_patrol,Trigger,,0,-1,,"
 		"OnMapLoad" "guard_2_patrol,Trigger,,0,-1,,"
+		"OnMapLoad" "guard_1_patrol,Trigger,,0,-1,,"
+		"OnMapLoad" ",,,0,-1,checkTimer(),"
 	}
 	"origin" "-47.6005 455.003 25"
 	editor
@@ -28941,8 +28941,8 @@ entity
 	"targetname" "virus_timer"
 	connections
 	{
-		"OnTimerComplete" "poweron,Trigger,,0,-1,,"
 		"OnTimerComplete" "virus_timer,Hide,,0,-1,,"
+		"OnTimerComplete" "poweron,Trigger,,0,-1,,"
 	}
 	"origin" "484.081 1128.21 25"
 	editor
@@ -29424,27 +29424,27 @@ entity
 	"enabled" "0"
 	connections
 	{
-		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
-		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
-		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
-		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
-		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
-		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
-		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
-		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
-		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
-		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
-		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
-		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
-		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
-		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
-		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
-		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
-		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
-		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
-		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
-		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
 		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
+		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
+		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
+		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
+		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
+		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
+		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
+		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
+		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
+		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
+		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
+		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
+		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
+		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
+		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
+		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
+		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
+		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
+		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
+		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
+		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -29460,29 +29460,29 @@ entity
 	"StartHidden" "0"
 	connections
 	{
-		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
-		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
-		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
-		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
-		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
-		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
-		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
-		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
-		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
-		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
-		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
-		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
-		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
-		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
-		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
-		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
-		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
-		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
-		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
-		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
-		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
-		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
 		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
+		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
+		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
+		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
+		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
+		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
+		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
+		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
+		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
+		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
+		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
+		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
+		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
+		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
+		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
+		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
+		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
+		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
+		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
+		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
+		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
+		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
+		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -32414,154 +32414,289 @@ entity
 entity
 {
 	"id" "837"
-	"classname" "prop_static"
+	"classname" "prop_dynamic"
 	"angles" "-0.414188 0.715181 91.874702"
 	"skin" "0"
-	"fademindist" "-1"
-	"fademaxdist" "0"
 	"solid" "6"
 	"model" "models/scenery/furniture/Computer_New/case.mdl"
 	"disableshadows" "0"
+	"targetname" "plus_shelf"
+	"StartHidden" "1"
+	"crossfade_skin_time" "2.0"
+	"npc_transparent" "1"
+	"demo_sequence" "None"
+	"RandomAnimation" "0"
+	"MinAnimTime" "5"
+	"MaxAnimTime" "10"
+	"collideable_gibs" "0"
+	"health" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"blocks_traces" "0"
+	"renderfx" "0"
+	"rendermode" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
 	"origin" "-61 2199 51"
 	editor
 	{
-		"color" "144 160 112"
+		"color" "127 127 255"
 	}
 }
 entity
 {
 	"id" "838"
-	"classname" "prop_static"
+	"classname" "prop_dynamic"
 	"angles" "0.369756 359.260986 -91.625099"
 	"skin" "0"
-	"fademindist" "-1"
-	"fademaxdist" "0"
 	"solid" "6"
 	"model" "models/scenery/furniture/Computer_New/case.mdl"
 	"disableshadows" "0"
+	"targetname" "plus_shelf"
+	"StartHidden" "1"
+	"crossfade_skin_time" "2.0"
+	"npc_transparent" "1"
+	"demo_sequence" "None"
+	"RandomAnimation" "0"
+	"MinAnimTime" "5"
+	"MaxAnimTime" "10"
+	"collideable_gibs" "0"
+	"health" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"blocks_traces" "0"
+	"renderfx" "0"
+	"rendermode" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
 	"origin" "-62 2152 28"
 	editor
 	{
-		"color" "144 160 112"
+		"color" "127 127 255"
 	}
 }
 entity
 {
 	"id" "839"
-	"classname" "prop_static"
+	"classname" "prop_dynamic"
 	"angles" "0 81.5 0"
 	"skin" "0"
-	"fademindist" "-1"
-	"fademaxdist" "0"
 	"solid" "6"
 	"model" "models/scenery/furniture/Computer_New/keyboard.mdl"
 	"disableshadows" "0"
+	"targetname" "plus_shelf"
+	"StartHidden" "1"
+	"crossfade_skin_time" "2.0"
+	"npc_transparent" "1"
+	"demo_sequence" "None"
+	"RandomAnimation" "0"
+	"MinAnimTime" "5"
+	"MaxAnimTime" "10"
+	"collideable_gibs" "0"
+	"health" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"blocks_traces" "0"
+	"renderfx" "0"
+	"rendermode" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
 	"origin" "-64 2156 46"
 	editor
 	{
-		"color" "144 160 112"
+		"color" "127 127 255"
 	}
 }
 entity
 {
 	"id" "840"
-	"classname" "prop_static"
+	"classname" "prop_dynamic"
 	"angles" "0 111 0"
 	"skin" "0"
-	"fademindist" "-1"
-	"fademaxdist" "0"
 	"solid" "6"
 	"model" "models/scenery/furniture/Computer_New/mouse.mdl"
 	"disableshadows" "0"
-	"origin" "-63 2168 70"
+	"targetname" "plus_shelf"
+	"StartHidden" "1"
+	"crossfade_skin_time" "2.0"
+	"npc_transparent" "1"
+	"demo_sequence" "None"
+	"RandomAnimation" "0"
+	"MinAnimTime" "5"
+	"MaxAnimTime" "10"
+	"collideable_gibs" "0"
+	"health" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"blocks_traces" "0"
+	"renderfx" "0"
+	"rendermode" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"origin" "-62 2162 70"
 	editor
 	{
-		"color" "144 160 112"
+		"color" "127 127 255"
 	}
 }
 entity
 {
 	"id" "841"
-	"classname" "prop_static"
+	"classname" "prop_dynamic"
 	"angles" "0 84 0"
 	"skin" "0"
-	"fademindist" "-1"
-	"fademaxdist" "0"
 	"solid" "6"
 	"model" "models/scenery/furniture/Computer_New/pad.mdl"
 	"disableshadows" "0"
+	"targetname" "plus_shelf"
+	"StartHidden" "1"
+	"crossfade_skin_time" "2.0"
+	"npc_transparent" "1"
+	"demo_sequence" "None"
+	"RandomAnimation" "0"
+	"MinAnimTime" "5"
+	"MaxAnimTime" "10"
+	"collideable_gibs" "0"
+	"health" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"blocks_traces" "0"
+	"renderfx" "0"
+	"rendermode" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
 	"origin" "-68 2190 71"
 	editor
 	{
-		"color" "144 160 112"
+		"color" "127 127 255"
 	}
 }
 entity
 {
 	"id" "842"
-	"classname" "prop_static"
+	"classname" "prop_dynamic"
 	"angles" "0 275 0"
 	"skin" "0"
-	"fademindist" "-1"
-	"fademaxdist" "0"
 	"solid" "6"
 	"model" "models/scenery/furniture/Computer_New/monitor.mdl"
 	"disableshadows" "0"
+	"targetname" "plus_shelf"
+	"StartHidden" "1"
+	"crossfade_skin_time" "2.0"
+	"npc_transparent" "1"
+	"demo_sequence" "None"
+	"RandomAnimation" "0"
+	"MinAnimTime" "5"
+	"MaxAnimTime" "10"
+	"collideable_gibs" "0"
+	"health" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"blocks_traces" "0"
+	"renderfx" "0"
+	"rendermode" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
 	"origin" "-60 2197 22"
 	editor
 	{
-		"color" "144 160 112"
+		"color" "127 127 255"
 	}
 }
 entity
 {
 	"id" "843"
-	"classname" "prop_static"
+	"classname" "prop_dynamic"
 	"angles" "0 16 0"
 	"skin" "0"
-	"fademindist" "-1"
-	"fademaxdist" "0"
 	"solid" "6"
 	"model" "models/scenery/furniture/Computer_New/mouse.mdl"
 	"disableshadows" "0"
-	"origin" "-59 2163 70"
+	"targetname" "plus_shelf"
+	"StartHidden" "1"
+	"crossfade_skin_time" "2.0"
+	"npc_transparent" "1"
+	"demo_sequence" "None"
+	"RandomAnimation" "0"
+	"MinAnimTime" "5"
+	"MaxAnimTime" "10"
+	"collideable_gibs" "0"
+	"health" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"blocks_traces" "0"
+	"renderfx" "0"
+	"rendermode" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"origin" "-60 2155 70"
 	editor
 	{
-		"color" "144 160 112"
+		"color" "127 127 255"
 	}
 }
 entity
 {
 	"id" "844"
-	"classname" "prop_static"
+	"classname" "prop_dynamic"
 	"angles" "0 313.5 0"
 	"skin" "0"
-	"fademindist" "-1"
-	"fademaxdist" "0"
 	"solid" "6"
 	"model" "models/scenery/furniture/Computer_New/mouse.mdl"
 	"disableshadows" "0"
-	"origin" "-68 2158 70"
+	"targetname" "plus_shelf"
+	"StartHidden" "1"
+	"crossfade_skin_time" "2.0"
+	"npc_transparent" "1"
+	"demo_sequence" "None"
+	"RandomAnimation" "0"
+	"MinAnimTime" "5"
+	"MaxAnimTime" "10"
+	"collideable_gibs" "0"
+	"health" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"blocks_traces" "0"
+	"renderfx" "0"
+	"rendermode" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"origin" "-69 2158 70"
 	editor
 	{
-		"color" "144 160 112"
+		"color" "127 127 255"
 	}
 }
 entity
 {
 	"id" "845"
-	"classname" "prop_static"
+	"classname" "prop_dynamic"
 	"angles" "0 133.5 0"
 	"skin" "0"
-	"fademindist" "-1"
-	"fademaxdist" "0"
 	"solid" "6"
 	"model" "models/scenery/furniture/Computer_New/pad.mdl"
 	"disableshadows" "0"
-	"origin" "-58 2200 71"
+	"targetname" "plus_shelf"
+	"StartHidden" "1"
+	"crossfade_skin_time" "2.0"
+	"npc_transparent" "1"
+	"demo_sequence" "None"
+	"RandomAnimation" "0"
+	"MinAnimTime" "5"
+	"MaxAnimTime" "10"
+	"collideable_gibs" "0"
+	"health" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"blocks_traces" "0"
+	"renderfx" "0"
+	"rendermode" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"origin" "-56 2198 71"
 	editor
 	{
-		"color" "144 160 112"
+		"color" "127 127 255"
 	}
 }
 entity
@@ -32630,13 +32765,109 @@ entity
 		"color" "0 0 255"
 	}
 }
+entity
+{
+	"id" "2120"
+	"classname" "prop_dynamic"
+	"angles" "0 111 0"
+	"skin" "0"
+	"solid" "6"
+	"model" "models/items/cdcase/Ground/cdcase.mdl"
+	"disableshadows" "0"
+	"StartHidden" "1"
+	"crossfade_skin_time" "2.0"
+	"npc_transparent" "1"
+	"demo_sequence" "None"
+	"RandomAnimation" "0"
+	"MinAnimTime" "5"
+	"MaxAnimTime" "10"
+	"collideable_gibs" "0"
+	"health" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"blocks_traces" "0"
+	"renderfx" "0"
+	"rendermode" "0"
+	"renderamt" "255"
+	"rendercolor" "128 128 255"
+	"targetname" "plus_shelf"
+	"origin" "-62.649 2174.56 70"
+	editor
+	{
+		"color" "127 127 255"
+	}
+}
+entity
+{
+	"id" "3423"
+	"classname" "prop_dynamic"
+	"angles" "0 73 0"
+	"skin" "0"
+	"solid" "6"
+	"model" "models/items/cdcase/Ground/cdcase.mdl"
+	"disableshadows" "0"
+	"StartHidden" "1"
+	"crossfade_skin_time" "2.0"
+	"npc_transparent" "1"
+	"demo_sequence" "None"
+	"RandomAnimation" "0"
+	"MinAnimTime" "5"
+	"MaxAnimTime" "10"
+	"collideable_gibs" "0"
+	"health" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"blocks_traces" "0"
+	"renderfx" "0"
+	"rendermode" "0"
+	"renderamt" "255"
+	"rendercolor" "255 128 64"
+	"targetname" "plus_shelf"
+	"origin" "-61.649 2178.56 70.4883"
+	editor
+	{
+		"color" "127 127 255"
+	}
+}
+entity
+{
+	"id" "3461"
+	"classname" "prop_dynamic"
+	"angles" "0 82 0"
+	"skin" "0"
+	"solid" "6"
+	"model" "models/items/cdcase/Ground/cdcase.mdl"
+	"disableshadows" "0"
+	"StartHidden" "1"
+	"crossfade_skin_time" "2.0"
+	"npc_transparent" "1"
+	"demo_sequence" "None"
+	"RandomAnimation" "0"
+	"MinAnimTime" "5"
+	"MaxAnimTime" "10"
+	"collideable_gibs" "0"
+	"health" "0"
+	"ExplodeDamage" "0"
+	"ExplodeRadius" "0"
+	"blocks_traces" "0"
+	"renderfx" "0"
+	"rendermode" "0"
+	"renderamt" "255"
+	"rendercolor" "0 128 64"
+	"targetname" "plus_shelf"
+	"origin" "-57.649 2176.56 69.9765"
+	editor
+	{
+		"color" "127 127 255"
+	}
+}
 cameras
 {
 	"activecamera" "0"
 	camera
 	{
-		"position" "[-350.949 976.72 87.2132]"
-		"look" "[-521.057 1182.35 27.7757]"
+		"position" "[-34.6947 2178.27 83.2757]"
+		"look" "[-251.876 2187.38 -82.5642]"
 	}
 }
 cordon
