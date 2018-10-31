@@ -619,7 +619,7 @@ DisciplineTgt
 	"Overt"			"1"	// changed by wesp
 	"TriggerAISound"	"1"
 	"SupernaturalLvl"	"2"
-	"RecoveryTime"	"0.3"
+	"RecoveryTime"		"0.3"
 
 	AoE
 	{
@@ -1821,7 +1821,7 @@ DisciplineTgt
 	Hit_Strata_2_No_Wolf // TJP- Lesser solution
 	{
 		"InheritFrom"		"Hit_Supernatural_Partial_No_Wolf"
-		"Dmg_Health"		"0%"	// changed by Populism
+            "Dmg_Health"		"30%"
 	}
 
 
@@ -1846,7 +1846,7 @@ DisciplineTgt
 	Hit_Strata_5_No_wolf // TJP- Lesser solution
 	{
 		"InheritFrom"		"Hit_Supernatural_Partial_No_Wolf"
-		"Dmg_Health"		"0%"	// changed by Populism
+		"Dmg_Health"		"6-8%"
 	}
 
 
@@ -1859,7 +1859,7 @@ DisciplineTgt
 	Hit_Strata_6_No_Wolf // TJP- Lesser solution
 	{
 		"InheritFrom"		"Hit_Supernatural_Partial_No_Wolf"
-		"Dmg_Health"		"0%"	// changed by Populism
+		"Dmg_Health"		"3-4%"
 	}
 
 
@@ -2402,7 +2402,7 @@ DisciplineTgt
 		OnEnd
 		{
 			"Clear_Copy_Prop"	"1"
-			"Dmg_Health"		"50-110%"
+			"Dmg_Health"		"50-110%"	// added by EntenSchreck
 
 			//Disabled to free up DisciplineFx slot for Thaumaturgy
 			//Trigger_Casting
