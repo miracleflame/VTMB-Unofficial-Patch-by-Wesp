@@ -61,13 +61,13 @@ Source: "Patch_Extras\*"; DestDir: "{app}\Patch_Extras"; Components: extras; Fla
 Source: "Patch_Extras\Developer Tools\*"; DestDir: "{app}\Patch_Extras\Developer Tools"; Components: extras; Flags: recursesubdirs ignoreversion overwritereadonly
 Source: "Patch_Extras\Player Mods\*"; DestDir: "{app}\Patch_Extras\Player Mods"; Components: extras; Flags: recursesubdirs ignoreversion overwritereadonly
 Source: "Patch_Extras\Developer Tools\Game Mod Loader\Vampire_4GB_fixed.exe"; DestDir: "{app}"; DestName: "Vampire.exe"; Flags: ignoreversion overwritereadonly; Check: IsWin64
-Source: "{app}\*.exe";                          Flags: external dontcopy skipifdoesntexist; Attribs: readonly
-Source: "{app}\*.dll";                          Flags: external dontcopy skipifdoesntexist; Attribs: readonly
-Source: "{app}\Bin\*.dll";                      Flags: external dontcopy skipifdoesntexist; Attribs: readonly
-Source: "{app}\Unofficial_Patch\cl_dlls\*.dll"; Flags: external dontcopy skipifdoesntexist; Attribs: readonly
-Source: "{app}\Unofficial_Patch\dlls\*.dll";    Flags: external dontcopy skipifdoesntexist; Attribs: readonly
-Source: "{app}\Vampire\cl_dlls\*.dll";          Flags: external dontcopy skipifdoesntexist; Attribs: readonly
-Source: "{app}\Vampire\dlls\*.dll";             Flags: external dontcopy skipifdoesntexist; Attribs: readonly
+Source: "{app}\*.exe";                          Flags: external dontcopy skipifsourcedoesntexist; Attribs: readonly
+Source: "{app}\*.dll";                          Flags: external dontcopy skipifsourcedoesntexist; Attribs: readonly
+Source: "{app}\Bin\*.dll";                      Flags: external dontcopy skipifsourcedoesntexist; Attribs: readonly
+Source: "{app}\Unofficial_Patch\cl_dlls\*.dll"; Flags: external dontcopy skipifsourcedoesntexist; Attribs: readonly
+Source: "{app}\Unofficial_Patch\dlls\*.dll";    Flags: external dontcopy skipifsourcedoesntexist; Attribs: readonly
+Source: "{app}\Vampire\cl_dlls\*.dll";          Flags: external dontcopy skipifsourcedoesntexist; Attribs: readonly
+Source: "{app}\Vampire\dlls\*.dll";             Flags: external dontcopy skipifsourcedoesntexist; Attribs: readonly
 ; disabled Source: "{app}\Bin\*"; DestDir: "{app}"; Components: basic; Flags: external skipifsourcedoesntexist overwritereadonly
 
 [InstallDelete]

@@ -110,7 +110,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.1                                                   29.10.2018
+v10.1                                                   31.10.2018
 -----
 +Fixed Gary giving packs if you already have some and made it plus.
 +Shortened Bat's Communion to work with Beastmistress history too.
@@ -140,6 +140,8 @@ v10.1                                                   29.10.2018
 +Improved library and made Red Spot gum ball machine destructable.
 +Finally fixed the dead-dog-still-hurting and Milligan freeze bugs.
 +Added console key and all hotkeys into the controls options menu.
++Placed a dead dog into Fu Syndicate and filled Kamikaze Zen shelf.
+Fixed Giovanni crypt line artifacts and armored a Venture bridge.
 Removed basic discipline changes and restored bump mapping option.
 Made sure beachhouse thugs are dead if Mercurio appears at beach.
 Prevented player from using idle animation during a few cutscenes.
@@ -162,6 +164,7 @@ Moved sarcophagus loading scene to Giovanni mansion back entrance.
 Disabled bad icons and buttons for inactive Ocean House elevator.
 Improved python and loader file compatibility, thanks to Psycho-A.
 Added a few weapon drop sounds and fidget and upset sound groups.
+Corrected mirrors and textures on some levels, thanks to Psycho-A.
 
 v10.0                                                   15.06.2018
 -----
