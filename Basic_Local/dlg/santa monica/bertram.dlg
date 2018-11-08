@@ -549,9 +549,9 @@
 {	549	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	550	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	551	}{	[displeased]Huh, I wasn't expecting that. I thought you'd jump at the chance to learn at the foot of an elder.	}{	[displeased]Huh, I wasn't expecting that. I thought you'd jump at the chance to learn at the foot of an elder.	}{	#	}{	npc.SetDisposition("anger",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	552	}{	You're right.	}{	You're right.	}{	561	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will ROM this.	}
-{	553	}{	Doesn't sound like my thing.	}{	Doesn't sound like my thing.	}{	601	}{	}{	}{	}{	}{	}{	}{	}{	}{	Sorry. Not my goblet of Earl Grey.	}
-{	554	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	552	}{	You're right.	}{	You're right.	}{	561	}{	G.CD == 2	}{	}{	}{	}{	}{	}{	}{	}{	I will ROM this.	}
+{	553	}{	Doesn't sound like my thing.	}{	Doesn't sound like my thing.	}{	601	}{	G.CD == 2	}{	}{	}{	}{	}{	}{	}{	}{	Sorry. Not my goblet of Earl Grey.	}
+{	554	}{	Maybe I can make it up for you later.	}{	Maybe I can make it up for you later.	}{	0	}{	G.Knox_Killed == 1	}{	G.Knox_Killed = 2	}{	}{	}{	}{	}{	}{	}{	}
 {	555	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	556	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	557	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -712,7 +712,7 @@
 {	712	}{	It sure didn't seem like he was expecting me.	}{	It sure didn't seem like he was expecting me.	}{	721	}{	}{	}{	}{	}{	}{	}{	}{	}{	He played unawares.	}
 {	713	}{	But he needed my help. I killed an Asian vampire who was stalking him.	}{	But he needed my help. I killed an Asian vampire who was stalking him.	}{	731	}{	G.Knox_Quest > 5	}{	}{	}{	}{	}{	}{	}{	}{	But I vanquished the Asian nightmare in his stead!	}
 {	714	}{	Whatever. I saw right through Knox. Got him to tell me all about your plan.	}{	Whatever. I saw right through Knox. Got him to tell me all about your plan.	}{	751	}{	G.Knox_Fess == 1	}{	}{	}{	}{	}{	}{	}{	}{	The golden ghoul spilled his secrets like a child.	}
-{	715	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	715	}{	Then you will probably be sorry to hear that I killed him.	}{	Then you will probably be sorry to hear that I killed him.	}{	551	}{	IsDead("Knox")	}{	G.Knox_Killed = 1	}{	}{	}{	}{	}{	}{	}{	Sorry, but I fed him to the big death.	}
 {	716	}{	I have a few more questions.	}{	I have a few more questions.	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	I seek to pull questions from your bubbling dome.	}
 {	717	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	718	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
