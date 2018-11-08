@@ -309,7 +309,7 @@ VV"
 		"subject"	"Prince is promoting you!"
 		"sender"	"gary@schrecknet.vtm"
 		"body"		"Hey boss, did some spring-cleaning today - came across something that might tickle you. A kid used to live here had an unhealthy crush on everyone's favorite psycho pin-up, Jeanette Voerman. I got a touch of nostalgia, so, you find a copy of Tap Hotel, starring me, I'll trade you a poster of that luscious lunatic for it. Put the video tape in your mailbox and I'll deliver it to your haven."
-		"dependency"	"G.CD == 1 and G.Gary_Voerman == 0 and G.PP == 0"	// changed by wesp
+		"dependency"	"G.CD > 0 and G.Gary_Voerman == 0 and G.PP == 0"	// changed by wesp
 	}
 
 	Email
@@ -317,7 +317,7 @@ VV"
 		"subject"	"Prince is promoting you!"
 		"sender"	"gary@schrecknet.vtm"
 		"body"		"Hey boss, did some spring-cleaning today - came across something that might tickle you. A kid used to live here had an unhealthy crush on everyone's favorite psycho pin-up, Jeanette Voerman. I got a touch of nostalgia, so, you find a copy of Tap Hotel, starring me, I'll trade you a poster of that luscious lunatic for it. Put the video tape in your mailbox and I'll deliver it to your haven."
-		"dependency"	"G.CD == 1 and G.Gary_Voerman == 0 and G.PP == 1"	// changed by wesp
+		"dependency"	"G.CD > 0 and G.Gary_Voerman == 0 and G.PP == 1"	// changed by wesp
 		"runscript"	"garySetQuestOne()"	// added by wesp
 	}
 
