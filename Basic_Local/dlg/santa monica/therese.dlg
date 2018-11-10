@@ -290,10 +290,10 @@
 {	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	291	}{	Seldom life is. I should've never entrusted this with an amateur. Did you contemplate the consequences of your actions for even a moment? Did you? Well, if it's any consolation, you're not the first to be used by Jeanette.	}{	Seldom life is. I should've never entrusted this with an amateur. Did you contemplate the consequences of your actions for even a moment? Did you? Well, if it's any consolation, you're not the first to be used by Jeanette.	}{	#	}{	npc.SetDisposition("Anger",2)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	292	}{	Whatever. That doesn't have anything to do with OUR arrangement.	}{	Whatever. That doesn't have anything to do with OUR arrangement.	}{	301	}{	}{	}{	}{	}{	}{	}{	}{	}{	Carry the burden of your sister alone and honor our agreement.	}
-{	293	}{	Why would Jeanette do that to you?	}{	Why would Jeanette do that to you?	}{	331	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why would the white mistress betray you?	}
-{	294	}{	That bitch! I knew she was no good.	}{	That bitch! I knew she was no good.	}{	351	}{	}{	G.Therese_Seduce = G.Therese_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	I never should have listened to her honey-laced love lies!	}
-{	295	}{	You deserved it. You shouldn't underestimate her.	}{	You deserved it. You shouldn't underestimate her.	}{	341	}{	}{	G.Therese_Seduce = G.Therese_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	You wear your weakness like an old hat. You underestimated her.	}
-{	296	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	293	}{	Whatever. That doesn't have anything to do with OUR arrangement. At least I brought you this diary.	}{	Whatever. That doesn't have anything to do with OUR arrangement. At least I brought you this diary.	}{	301	}{	pc.HasItem("item_g_oh_diary") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_g_oh_diary")	}{	}{	}{	}{	}{	}{	}{	Carry the burden of your sister alone and honor our agreement. Also I got you some old words from there.	}
+{	294	}{	Why would Jeanette do that to you?	}{	Why would Jeanette do that to you?	}{	331	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why would the white mistress betray you?	}
+{	295	}{	That bitch! I knew she was no good.	}{	That bitch! I knew she was no good.	}{	351	}{	}{	G.Therese_Seduce = G.Therese_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	I never should have listened to her honey-laced love lies!	}
+{	296	}{	You deserved it. You shouldn't underestimate her.	}{	You deserved it. You shouldn't underestimate her.	}{	341	}{	}{	G.Therese_Seduce = G.Therese_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	You wear your weakness like an old hat. You underestimated her.	}
 {	297	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	298	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
