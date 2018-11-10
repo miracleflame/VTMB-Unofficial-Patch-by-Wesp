@@ -215,6 +215,12 @@ def danielleDialog():
         danielle = Find("Danielle")
         danielle.UseInteresting(1)
         danielle.WillTalk(0)
+    if G.Danielle_Dead == 1:
+        danielle = Find("Danielle")
+        if danielle: danielle.Kill()
+    if G.Doll1_Dead == 1:
+        doll1 = Find("Doll1")
+        if doll1: doll1.Kill()
 
 #ASYLUM: Plays the conversation between the Voermans the first time the PC uses the elevator, changed by vladdmaster
 def elevatorConversation():
@@ -844,8 +850,10 @@ def guardDialog():
 def heatherCheck():
     npc = Find("Heather")
     if npc:
-        if(G.Heather_Drank == 1 or G.Story_State >=10):
+        if(G.Heather_Drank == 1 or G.Story_State >= 10):
             npc.Kill()
+            if(G.Patch_Plus == 1 and G.Heather_Drank == 0):
+                heatherQuest3()
         else:
             npc.ScriptUnhide()
     if __main__.IsDead("Malcolm"):

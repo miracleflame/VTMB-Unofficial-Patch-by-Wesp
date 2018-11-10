@@ -140,6 +140,9 @@ def pattyGone():
         if venus: venus.Kill()
         goon = Find("Goon")
         if goon: goon.ScriptUnhide()
+    if G.Doll2_Dead == 1:
+        doll2 = Find("Doll2")
+        if doll2: doll2.Kill()
 
 #CONFESSION: Called if venus is killed
 def venusDeath():

@@ -87,6 +87,9 @@ def ashSituation():
             lookalike.Kill()
         if(hunter):
             hunter.Kill()
+    if G.Doll3_Dead == 1:
+        doll3 = Find("Doll3")
+        if doll3: doll3.Kill()
 
 #ASPHOLE: Determines whether Ash and lookalike have privacy, changed by Wesp
 def ashBathswitch():
@@ -548,6 +551,9 @@ def randomClubevents():
         eventtwo.Trigger()
         if G.Patch_Plus == 0:
             eventthree.Trigger()
+    if G.Misti_Dead == 1:
+        misti = Find("Misti")
+        if misti: misti.Kill()
 
 #HOLLYWOOD: Determines if the sweeper is on the streets and going to talk to the player, changed by wesp
 def sweeperPlacement():

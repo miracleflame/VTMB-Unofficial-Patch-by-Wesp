@@ -32093,6 +32093,10 @@ entity
 	"level_reset_type" "0"
 	"allow_alert_lookaround" "1"
 	"origin" "-798.259 431.681 -277"
+	connections
+	{
+		"OnDeath" ",,,0,-1,G.Doll1_Dead = 1,"
+	}
 	editor
 	{
 		"color" "214 143 140"
@@ -32970,6 +32974,7 @@ entity
 	"allow_alert_lookaround" "1"
 	connections
 	{
+		"OnDeath" ",,,0,-1,G.Danielle_Dead = 1,"
 		"OnDialogEnd" ",,,0,-1,danielleDialog(),"
 	}
 	"origin" "-768 452 -154"

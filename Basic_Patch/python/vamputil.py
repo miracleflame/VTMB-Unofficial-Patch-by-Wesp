@@ -32,7 +32,6 @@ def setBasic():
     pc = __main__.FindPlayer()
     if not (pc.HasItem("item_w_fists")):
         pc.GiveItem("item_w_fists")
-        pc.GiveItem("item_w_unarmed")
         pc.GiveItem("weapon_physcannon")
         pc.GiveItem("item_g_wallet")
         pc.GiveItem("item_g_keyring")
@@ -74,7 +73,6 @@ def setPlus():
     pc = __main__.FindPlayer()
     if not (pc.HasItem("item_w_fists")):
         pc.GiveItem("item_w_fists")
-        pc.GiveItem("item_w_unarmed")
         pc.GiveItem("weapon_physcannon")
         pc.GiveItem("item_g_wallet")
         pc.GiveItem("item_g_keyring")
@@ -181,6 +179,12 @@ def setPlus():
         elif (copperremains and G.Copper_Seen == 1):
             copperremains.Kill()
             copperstake.Kill()
+        doll6 = Find("plus_Doll6")
+        if doll6 and G.Doll6_Dead == 1:
+            doll6.Kill()
+        vendor = Find("Smoke_Vendor")
+        if vendor and G.Vendor_Dead == 1:
+            vendor.Kill()
         locke = Find("Jezebel_Locke")
         if locke and G.Locke_Swap == 0:
             locke.ScriptHide()
@@ -1238,7 +1242,7 @@ def HitCounter():
     if G.Patch_Plus == 1:
     	G.Sheriff_Hits = G.Sheriff_Hits + 1
     	print(__main__.G.Sheriff_Hits)
-    	i = randint(3, 5)
+    	i = randint(5, 7)
     	if G.Sheriff_Hits > i:
     	#if G.Sheriff_Hits == 1:	#TEST
 	    SheriffBatsIn()

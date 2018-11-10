@@ -3396,7 +3396,7 @@
 "crossfade_skin_time" "2.0"
 "combat_start_activity" "-1"
 "follower_type" "Default"
-"level_reset_type" "1"
+"level_reset_type" "0"
 "origin" "-95 316 2"
 }
 {
@@ -3597,6 +3597,7 @@
 "usescript" "doll1dlg()"
 "follower_type" "Default"
 "level_reset_type" "0"
+"OnDeath" ",,,0,-1,G.Doll4_Dead = 1,"
 "OnDamaged" "Doll4,SetRelationship,player D_FR 10,0.5,-1,,"
 "origin" "12 364 1"
 }
@@ -3654,7 +3655,8 @@
 "dialogname" "dlg/Chinatown/Hostess.dlg"
 "follower_type" "Default"
 "soundgroup" "Unique/Hostess"
-"level_reset_type" "1"
+"level_reset_type" "0"
+"OnDeath" ",,,0,-1,G.Hostess_Dead = 1,"
 "OnDialogEnd" "Hostess_Run_Away,Test,,0,-1,,"
 "OnDialogEnd" "hostess_check,Test,1,0,-1,,"
 "origin" "257 225 1"
@@ -4575,7 +4577,8 @@
 "follower_type" "Default"
 "soundgroup" "Unique/Hostess2"
 "StartHidden" "1"
-"level_reset_type" "1"
+"level_reset_type" "0"
+"OnDeath" ",,,0,-1,G.Hostess2_Dead = 1,"
 "OnDialogEnd" "Hostess_Run_Away,Test,,0,-1,,"
 "OnDialogEnd" "hostess_check,Test,1,0,-1,,"
 "origin" "256.05 225.087 1"
@@ -4882,8 +4885,9 @@
 "OnDamaged" "plus_Doll5,SetRelationship,player D_HT 5,0.5,-1,,"
 "OnDamaged" "doll_out,Teleport,,1,-1,,"
 "OnDamaged" "doll_out,Kill,,1.1,-1,,"
+"OnDeath" ",,,0,-1,G.Doll5_Dead = 1,"
 "OnDeath" "plus_blooddoll_sit_male,Kill,,0,-1,,"
-"origin" "100 273 1"
+"origin" "100 275 0"
 }
 {
 "classname" "scripted_sequence"

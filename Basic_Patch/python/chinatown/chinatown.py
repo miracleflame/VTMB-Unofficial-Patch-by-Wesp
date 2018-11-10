@@ -417,6 +417,18 @@ def nosCheck():
         if wong: wong.Kill()
         kiki = Find("Kiki")
         if kiki: kiki.Kill()
+    if G.Hostess_Dead == 1:
+        host1 = Find("Hostess")
+        if host1: host1.Kill()
+    if G.Hostess2_Dead == 1:
+        host2 = Find("Hostess2")
+        if host2: host2.Kill()
+    if G.Doll4_Dead == 1:
+        doll4 = Find("Doll4")
+        if doll4: doll4.Kill()
+    if G.Doll5_Dead == 1:
+        doll5 = Find("plus_Doll5")
+        if doll5: doll5.Kill()
 
 #RED DRAGON: Set quest states for Lu's death, changed by wesp
 def SetLuDeathQuestState():
@@ -446,9 +458,10 @@ def makeMalkHostess():
     if (__main__.IsClan(__main__.FindPlayer(), "Malkavian")):
         host1 = Find("Hostess")
         if host1: host1.Kill()
-        host2 = Find("Hostess2")
-        host2.ScriptUnhide()
-        host2.SetName("Hostess")
+        if G.Hostess2_Dead == 0:
+            host2 = Find("Hostess2")
+            host2.ScriptUnhide()
+            host2.SetName("Hostess")
 
 #TSENGS: Turn shelves around, changed by wesp
 def tsengsShowGuns():
