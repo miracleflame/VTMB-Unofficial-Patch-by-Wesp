@@ -2585,6 +2585,7 @@
 "OnTrigger" ",,,0,-1,FindPlayer().ClearActiveDisciplines(),"
 "OnTrigger" "fade_white,Fade,,0,-1,,"
 "OnTrigger" "pc,RemoveDisciplinesNow,,0,-1,,"
+"OnTrigger" "world,SetNoFrenzyArea,1,0,-1,,"
 "origin" "-367.106 485.622 459.98"
 }
 {
@@ -4387,6 +4388,7 @@
 "FemaleAnim" "models/cinematic/LA/VentrueTower/Manbat_Trans_Female.mdl"
 "OnCompletion" "pc,RemoveControllerNPC,,0,-1,,"
 "OnCompletion" "trackb1,RestoreCameraToPlayerControl,0,0,-1,,"
+"OnCompletion" "world,SetNoFrenzyArea,0,0,-1,,"
 "origin" "-1 159 21"
 }
 {
@@ -5569,6 +5571,7 @@
 "targetname" "plus_check"
 "python_script" "G.Patch_Plus == 1"
 "OnTrue" "Sheriff_Summon,BeginSequence,,0,-1,,"
+"OnTrue" "wesp_blade,ScriptUnhide,,1,-1,,"
 "origin" "126.812 244.227 31"
 }
 {
@@ -5586,6 +5589,8 @@
 "OnBeginSequence" "Sheriff_particles,TurnOn,,1,1,,"
 "OnBeginSequence" "Sheriff_sound,PlaySound,,0,-1,,"
 "OnBeginSequence" "Sheriff_sound,StopSound,,5,-1,,"
+"OnBeginSequence" "Sheriff_laughs,PlaySound,,4,-1,,"
+"OnBeginSequence" "Sheriff_laughs,StopSound,,5,-1,,"
 "OnBeginSequence" "bats_sound,PlaySound,,0,-1,,"
 "OnEndSequence" "Sheriff_particles,TurnOff,,0,1,,"
 "OnEndSequence" "sheriff_taunt,BeginSequence,,0,-1,,"
@@ -5600,6 +5605,30 @@
 "m_iszEntity" "sheriff"
 "m_iszPlay" "taunt"
 "spawnflags" "260"
+"origin" "10 -208 213"
+}
+{
+"classname" "ambient_generic"
+"targetname" "Sheriff_laughs"
+"message" "Environmental/People/laughter_male9.wav"
+"health" "10"
+"preset" "0"
+"volstart" "7"
+"fadein" "0.75"
+"fadeout" "1.50"
+"pitch" "100"
+"pitchstart" "100"
+"spinup" "0"
+"spindown" "0"
+"lfotype" "0"
+"lforate" "0"
+"lfomodpitch" "0"
+"lfomodvol" "0"
+"cspinup" "0"
+"radius" "1250"
+"sound_event" "0"
+"sound_event_level" "2"
+"spawnflags" "16"
 "origin" "10 -208 213"
 }
 {
@@ -6069,18 +6098,18 @@
 }
 {
 "classname" "item_w_sheriff_sword"
-"targetname" "plus_blade"
+"targetname" "wesp_blade"
 "StartHidden" "1"
-"angles" "0 45 0"
-"origin" "0 700 206"
+"angles" "90 45 90"
+"origin" "0 900 220"
 }
 {
 "classname" "inspection_node"
-"parentname" "plus_blade"
-"targetname" "plus_blade_node"
+"parentname" "wesp_blade"
+"targetname" "wesp_blade_node"
 "start_enabled" "1"
 "inspection" "7"
-"origin" "0 700 206"
+"origin" "0 900 220"
 }
 {
 "classname" "logic_auto"
