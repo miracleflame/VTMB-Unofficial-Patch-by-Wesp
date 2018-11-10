@@ -38,7 +38,7 @@
 {	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	41	}{	Nahaa- now that's what I like to hear. But it's like this: I save my best stuff for select clientele. Now that don't mean I don't appreciate your bu'ness, it's just, you know, bu'ness.	}{	Nahaa- now that's what I like to hear. But it's like this: I save my best stuff for select clientele. Now that don't mean I don't appreciate your bu'ness, it's just, you know, bu'ness.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	Nahaa - now that's what I like to hear. But it's like this: I save my best stuff for select clientele. Now that don't mean I don't appreciate your bu'ness, it's just, you know, bu'ness.	}{	Nahaa - now that's what I like to hear. But it's like this: I save my best stuff for select clientele. Now that don't mean I don't appreciate your bu'ness, it's just, you know, bu'ness.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	42	}{	Show me the merchandise.	}{	Show me the merchandise.	}{	0	}{	G.Patch_Plus == 0	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	}
 {	43	}{	Show me the merchandise.	}{	Show me the merchandise.	}{	0	}{	G.Patch_Plus == 1	}{	G.Larry_Buy = 1; npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	}
 {	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -218,10 +218,10 @@
 {	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	221	}{	Say, my girl down at Confession - name Venus Dare - she aksin' around for someone with skills to - well, I'll let her tell you. I'll give her a call, recommend you, if you're interested...?	}{	You're a little pale for me, anyway. Say, my girl down at Confession - name Venus Dare - she aksin' around for someone with skills to - well, I'll let her tell you. I'll give her a call, recommend you, if you're interested...?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Larry_Venus = 1; pc.SetQuest("Confession",1)	}{	}{	}{	}{	}{	}{	}{	}
-{	222	}{	Yeah, I'll check it out. But first I need to buy some merchandise.	}{	Yeah, I'll check it out. But first I need to buy some merchandise.	}{	241	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yes, but first I must fill my shopping cart.	}
-{	223	}{	Maybe I'll head down to Confession then. Goodbye.	}{	Maybe I'll head down to Confession then. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Ah, I will make a pilgrimage to the goddess' temple.	}
-{	224	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	221	}{	Say, my girl down at Confession - name Venus Dare - she aksin' around for someone with skills to - well, I'll let her tell you. I'll give her a call, recommend you, if you're interested...?	}{	You're a little pale for me, anyway. Say, my girl down at Confession - name Venus Dare - she aksin' around for someone with skills to - well, I'll let her tell you. I'll give her a call, recommend you, if you're interested...?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Larry_Venus = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	222	}{	Yeah, I'll check it out. But first I need to buy some merchandise.	}{	Yeah, I'll check it out. But first I need to buy some merchandise.	}{	241	}{	not IsDead("Venus")	}{	pc.SetQuest("Confession",1)	}{	}{	}{	}{	}{	}{	}{	Yes, but first I must fill my shopping cart.	}
+{	223	}{	Maybe I'll head down to Confession then. Goodbye.	}{	Maybe I'll head down to Confession then. Goodbye.	}{	0	}{	not IsDead("Venus")	}{	pc.SetQuest("Confession",1)	}{	}{	}{	}{	}{	}{	}{	Ah, I will make a pilgrimage to the goddess' temple.	}
+{	224	}{	Uh, no need to do that. I heard that she is dead.	}{	Uh, no need to do that. I heard that she is dead.	}{	0	}{	IsDead("Venus")	}{	}{	}{	}{	}{	}{	}{	}{	I won't be doing any work for people being really dead.	}
 {	225	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	226	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	227	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

@@ -985,9 +985,9 @@
 {	985	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	986	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	987	}{	Get out!	}{	Get out!	}{	#	}{	npc.SetDisposition("Anger", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	988	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	989	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	990	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	988	}{	I'll go.	}{	I'll go.	}{	0	}{	G.Misti_Dead == 0 or (G.Misti_Dead == 1 and G.Velvet_Quest == 0)	}{	}{	}{	}{	}{	}{	}{	}{	I'm gone already.	}
+{	989	}{	I'll go.	}{	I'll go.	}{	0	}{	G.Misti_Dead == 1 and G.Velvet_Quest > 0 and G.Velvet_Quest < 3	}{	pc.SetQuest("Strip",4)	}{	}{	}{	}{	}{	}{	}{	I'm gone already.	}
+{	990	}{	I'll go.	}{	I'll go.	}{	0	}{	G.Misti_Dead == 1 and G.Velvet_Quest >= 3	}{	pc.SetQuest("Writer",11)	}{	}{	}{	}{	}{	}{	}{	I'm gone already.	}
 {	991	}{	Thanks!	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	992	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	993	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -1002,7 +1002,7 @@
 {	1002	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1003	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1004	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	1005	}{	(Starting Condition)	}{	}{	987	}{	G.Velvet_Pissed == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1005	}{	(Starting Condition)	}{	}{	987	}{	G.Velvet_Pissed == 2 or G.Misti_Dead == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1006	}{	(Starting Condition)	}{	}{	471	}{	G.Velvet_Quest == 2 and G.Velvet_Hatter == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1007	}{	(Starting Condition)	}{	}{	401	}{	G.Velvet_Hunter > 1	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1008	}{	(Starting Condition)	}{	}{	961	}{	G.Velvet_Stairs == 2 and IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}

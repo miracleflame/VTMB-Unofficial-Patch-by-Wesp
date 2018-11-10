@@ -98,10 +98,10 @@
 {	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	101	}{	Oh? Then I'll see that he's suitably punished. Nonetheless, you've triumphed. My commendations.	}{	Oh? Then I'll see that he's suitably punished. Nonetheless, you've triumphed. My commendations.	}{	#	}{	}{	G.Prince_Mercurio = 1; G.Mercurio_Dead = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	102	}{	(Auto-Link)	}{	(Auto-Link)	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	103	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	Oh? Then I'll see that he's suitably punished. Nonetheless, you've triumphed. My commendations.	}{	Oh? Then I'll see that he's suitably punished. Nonetheless, you've triumphed. My commendations.	}{	#	}{	}{	G.Prince_Mercurio = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	102	}{	Thanks.	}{	Thanks.	}{	111	}{	G.Mercurio_Dead == 0	}{	G.Mercurio_Dead = 1	}{	}{	}{	}{	}{	}{	}{	I had some fun.	}
+{	103	}{	Thanks, and don't care about Mercurio. I killed him already.	}{	Thanks, and don't care about Mercurio. I killed him already.	}{	111	}{	G.Mercurio_Dead == 1 and (not pc.HasItem("item_g_mercurio_journal") or G.Patch_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	I had fun killing Mercury myself.	}
+{	104	}{	Thanks, and don't care about Mercurio. I killed him already, here is his journal.	}{	Thanks, and don't care about Mercurio. I killed him already, here is his journal.	}{	111	}{	G.Mercurio_Dead == 1 and pc.HasItem("item_g_mercurio_journal") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_g_mercurio_journal")	}{	}{	}{	}{	}{	}{	}{	I had fun killing Mercury myself. And I brought the stories he wrote.	}
 {	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -281,8 +281,8 @@
 {	281	}{	Give the Anarch community my regards.	}{	Give the Anarch community my regards.	}{	#	}{	npc.SetDisposition("PrinceSitting",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	282	}{	Okay.	}{	Okay.	}{	0	}{	G.Nines_Chat == 0	}{	pc.SetQuest("Dane",4)	}{	}{	}{	}{	}{	}{	}{	Done as good.	}
 {	283	}{	Whatever.	}{	Whatever.	}{	0	}{	G.Nines_Chat == 0	}{	pc.SetQuest("Dane",4)	}{	}{	}{	}{	}{	}{	}{	Hee hee.... Good one.	}
-{	284	}{	I did. Here's what Nines said...	}{	I did. Here's what Nines said...	}{	291	}{	G.Nines_Chat == 1	}{	}{	}{	}{	}{	}{	}{	}{	Done. I will read you back the minutes...	}
-{	285	}{	I did. Nines said some nonsense about the Anarchs. I didn't listen very carefully.	}{	I did. Nines said some nonsense about the Anarchs. I didn't listen very carefully.	}{	301	}{	G.Nines_Chat == 1	}{	G.Prince_Reaction = G.Prince_Reaction +1	}{	}{	}{	}{	}{	}{	}{	Done. Blah blah, woof woof...	}
+{	284	}{	I did. Here's what he said...	}{	I did. Here's what he said...	}{	291	}{	G.Nines_Chat == 1	}{	}{	}{	}{	}{	}{	}{	}{	Done. I will read you back the minutes...	}
+{	285	}{	I did. He said some nonsense about the Anarchs. I didn't listen very carefully.	}{	I did. He said some nonsense about the Anarchs. I didn't listen very carefully.	}{	301	}{	G.Nines_Chat == 1	}{	G.Prince_Reaction = G.Prince_Reaction +1	}{	}{	}{	}{	}{	}{	}{	Done. Blah blah, woof woof...	}
 {	286	}{	I did. They said nothing important.	}{	I did. They said nothing important.	}{	311	}{	G.Nines_Chat == 1	}{	}{	}{	}{	}{	}{	}{	}{	Done. Not a word.	}
 {	287	}{	I did. It put things in perspective.	}{	I did. It put things in perspective.	}{	321	}{	G.Nines_Chat == 1	}{	G.Prince_Reaction = G.Prince_Reaction -1	}{	}{	}{	}{	}{	}{	}{	Done. Words of gold, sage advice... it made sense even amongst the noise.	}
 {	288	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
