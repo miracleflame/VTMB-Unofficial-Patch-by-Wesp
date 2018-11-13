@@ -3,6 +3,9 @@ TerminalDefinition
 	"screen saver"		"Nocturne Theater"		// Bounces around on the screen when the terminal is not being used. 
 	"brackets"		""						// these surround the command prompt (2 characters), changed by wesp
 
+	"email_password"	"nose"		// the user must type this to access email from this terminal
+	"email_username"	"Cyrano"		// printed at the top of the email window, not used for log in. 
+	"difficulty"		"3"
 
 	LogonScreen	// displayed when the user first logs on
 	{
@@ -11,7 +14,16 @@ TerminalDefinition
 		"line1"		"We Want to Know Drama"
 
 	}
-	
+
+	Email		// added by wesp
+	{
+		"subject"	"Spotlight!"
+		"sender"	"sksp@company.vtm"
+		"body"		"Did you leave the broken spotlight up on the railing? Someone will trip over it and break their neck! Put in into the workshop as soon as possible, I will not stow that away for you.
+SkSp"
+		"dependency"	"G.Patch_Plus == 1"
+	}
+
 	SubDir
 	{
 		"name"			"Camera"	//(128 characters)
