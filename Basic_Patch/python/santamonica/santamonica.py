@@ -42,8 +42,12 @@ def finishElysiumTip():
         G.Elysium_Tip = 2
         G.Story_State = G.Story_State_Save
     if (G.Carson_Rescued == 1):
-        computer = Find("Carson_Computer2")
+        computer = Find("Carson_Computer")
         if computer: computer.Kill()
+        poster = Find("Carson_Poster")
+        if poster:poster.Kill()
+        tapeplayer = Find("tape_player")
+        if tapeplayer: tapeplayer.Kill()
     if(G.Story_State >= 15):
         if(G.Patch_Plus == 1 and G.Level_Swap == 0):
             bloodstains = FindList("merc_bloodstains")
