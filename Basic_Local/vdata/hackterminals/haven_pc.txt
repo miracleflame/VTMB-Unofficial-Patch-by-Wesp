@@ -258,8 +258,7 @@ Jeanette"
 	{
 		"subject"	"Library"
 		"sender"	"beckett@legend.vtm"
-		"body"	"Hello young one, a fellow Gangrel named Scott, who was doing some research for me in the LA public library on our infamous coffin, noticed a Lasombra there! As I'm preoccupied right now, please meet him in my stead at the Smoke Shop in Santa Monica to learn about the details. After all, Sabbat always means trouble and we wouldn't want anything bad happening to all the precious knowledge, now would we? 
-Beckett"
+		"body"	"Hello young one, LaCroix praised you as very capable, so maybe you can assist me with something. A fellow Gangrel named Scott, who was doing research for me in the LA public library, did notice a Lasombra there! As I'm preoccupied right now, please meet him in my stead at the Smoke Shop in Santa Monica to learn details. After all, Sabbat always means trouble and we wouldn't want anything bad happening to all the precious knowledge, would we? - Beckett"
 		"dependency"	"G.Library_Ready == 1 and G.Patch_Plus == 1"
 		"runscript"	"librarySetQuest()"
 	}
@@ -268,8 +267,7 @@ Beckett"
 	{
 		"subject"	"Excellent"
 		"sender"	"beckett@legend.vtm"
-		"body"	"Hello again... my friend told me that you interrupted the Sabbat test proceedings at the library which almost got him killed. He will remove the access to that ritual chamber so it won't happen again. Needless to stress that it might not be very astute to tell anyone about this short affair.
-Beckett"
+		"body"	"Hello again, Scott told me that you interrupted a Sabbat trial at the library which almost got him killed. We are both very grateful for this, and he will make sure the access to the ritual chamber will be cut off in time. Needless to say that it might not be very smart to tell anyone about this, not even your prince. - Beckett"
 		"dependency"	"G.Jumbles_Removed == 2 and G.Patch_Plus == 1"
 		"runscript"	"G.Library_Open = 2; librarySetQuest()"
 	}
