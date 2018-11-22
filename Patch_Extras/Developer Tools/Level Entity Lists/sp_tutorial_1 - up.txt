@@ -11785,7 +11785,6 @@
 "additionalequipment" "item_w_fists"
 "OnDialogEnd" ",,,1,-1,testGuard(),"
 "OnDamaged" "Tutorial_Security_Guard,SetRelationship,player D_HT 5,0,-1,,"
-"OnDeath" ",,,0,-1,civilianDeath(),"
 "origin" "-788 360 -200"
 }
 {
@@ -11918,13 +11917,12 @@
 "targetname" "sTalkguy_die"
 "m_iszPlay" "feeding_victim_shortattacker_front_attack_release"
 "spawnflags" "608"
-"OnBeginSequence" "sTalkguy_sound1,PlaySound,,0,-1,,"
-"OnBeginSequence" "sTalkguy_sound2,PlaySound,,0.2,-1,,"
+"OnEndSequence" ",,,0,-1,G.Sabbat_Kills = 1,"
 "OnBeginSequence" "Tutorial_Security_Guard,TakeDamage,100,0,-1,,"
-"OnEndSequence" ",,,0,-1,civilianDeath(),"
 "OnEndSequence" "controller,RemoveControllerNPC,,0,-1,,"
 "OnEndSequence" "feedcamera,EndShot,,0,-1,,"
-"OnEndSequence" ",,,0,-1,G.Sabbat_Kills = 1,"
+"OnBeginSequence" "sTalkguy_sound1,PlaySound,,0,-1,,"
+"OnBeginSequence" "sTalkguy_sound2,PlaySound,,0.2,-1,,"
 "origin" "-1140 400 -200"
 }
 {

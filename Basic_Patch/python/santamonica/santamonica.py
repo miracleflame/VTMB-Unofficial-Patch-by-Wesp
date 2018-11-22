@@ -1276,37 +1276,30 @@ def lockHaven():
         #mailbox.ScriptUnhide()
         relay = Find("haven_emptier")
         relay.Trigger()
-    if(G.Gary_Voerman):
-        poster = Find("poster_jeanette")
-        poster.ScriptUnhide()
-    if(G.Velvet_Poster):
-        poster = Find("poster_vv")
-        poster.ScriptUnhide()
-    if(G.Gary_Photochop):
-        poster = Find("poster_ming")
-        poster.ScriptUnhide()
-    if(G.Gary_Damsel):
-        poster = Find("poster_damsel")
-        poster.ScriptUnhide()
-    if(G.Gary_Imalia):
-        poster = Find("poster_imalia")
-        poster.ScriptUnhide()
-    if(G.Gary_Tawni):
-        poster = Find("poster_tawni")
-        poster.ScriptUnhide()
-    if(G.Gary_Cross):
-        poster = Find("poster_cross")
-        poster.ScriptUnhide()
-        if(G.Ball_Taken == 0):
-            __main__.FindPlayer().SetQuest("Gary", 9)
-            G.Ball_Taken = 2
-    if(G.Gary_Blind):
-        poster = Find("poster_blind")
-        poster.ScriptUnhide()
-        if(G.Ball_Taken == 1):
-            __main__.FindPlayer().SetQuest("Gary", 9)
-            G.Ball_Taken = 2
-
+        if(G.Gary_Voerman):
+            poster = Find("poster_jeanette")
+            poster.ScriptHide()
+        if(G.Velvet_Poster):
+            poster = Find("poster_vv")
+            poster.ScriptHide()
+        if(G.Gary_Photochop):
+            poster = Find("poster_ming")
+            poster.ScriptHide()
+        if(G.Gary_Damsel):
+            poster = Find("poster_damsel")
+            poster.ScriptHide()
+        if(G.Gary_Tawni):
+            poster = Find("poster_tawni")
+            poster.ScriptHide()
+        if(G.Gary_Imalia):
+            poster = Find("poster_imalia")
+            poster.ScriptHide()
+        if(G.Gary_Cross):
+            poster = Find("poster_cross")
+            poster.ScriptHide()
+        if(G.Gary_Blind):
+            poster = Find("poster_blind")
+            poster.ScriptHide()
 
 #HAVEN: Called the first time the player reads the paper in the Haven, changed by wesp
 def murderPaperRead():
@@ -1420,8 +1413,9 @@ def beachVisitors():
     state = __main__.FindPlayer().GetQuestState("Dane")
     if(state == 1 or state == 2):
         #Mercurio on beach
-        if(state == 1 and G.Prince_Mercurio == 0  and not IsDead("Mercurio") and mercurio):
+        if(state == 1 and G.Prince_Mercurio == 0 and not IsDead("Mercurio") and mercurio):
             mercurio.ScriptUnhide()
+            G.Beach_Dead = 1 
         #Mercurio gone
         elif(state == 2 and mercurio):
             mercurio.ScriptHide()

@@ -14,8 +14,7 @@
 "wetness_fadein" "5.0"
 "wetness_fadeout" "10.0"
 "levelscript" "giovanni"
-"comment" "Decompiled by BSPSource v1.2.1 from sp_giovanni_1.bsp"
-"safearea" "1"
+"safearea" "0"
 "copwaitarea" "1"
 }
 {
@@ -4920,7 +4919,6 @@
 "follower_type" "Default"
 "base_gender" "1"
 "OnFoundEnemy" "Relay_Boched_Level,Trigger,,0,-1,,"
-"OnDeath" ",,,0,-1,civilianDeath(),"
 "origin" "-877 1002 -399"
 }
 {
@@ -6304,14 +6302,6 @@
 "OnTrigger" "maker_guard_north,Enable,,0,-1,,"
 "OnTrigger" "maker_guard_west,Enable,,0,-1,,"
 "origin" "-743.833 1749 -159.915"
-}
-{
-"classname" "logic_auto"
-"targetname" "ligic_auto"
-"spawnflags" "1"
-"OnMapLoad" "Relay_Start_Patrols,Trigger,,0,-1,,"
-"OnMapLoad" ",,,0,-1,onGio1Load(),"
-"origin" "-804.632 1749 -144.733"
 }
 {
 "classname" "logic_relay"
@@ -8835,6 +8825,8 @@
 "classname" "logic_auto"
 "spawnflags" "0"
 "OnMapLoad" ",,,0,-1,unhidePlus(),"
+"OnMapLoad" "Relay_Start_Patrols,Trigger,,0,-1,,"
+"OnMapLoad" ",,,0,-1,onGio1Load(),"
 "origin" "0 0 0"
 }
 {

@@ -167,7 +167,8 @@ def checkEnding():
 
 #VENTRUETOWER: Called after talking to Chunk, opening the elevator to the Prince, changed by wesp
 def chunkResults():
-    chunk = Find("Chunk2")
+    chunk2 = Find("Chunk2")
+    chunk3 = Find("Chunk3")
     if(G.Chunk_Skip == 2):
         trigger = Find("chamber_transition")
         trigger.Enable()
@@ -175,18 +176,23 @@ def chunkResults():
     if(G.Chunk_Run == 1):
         cower = Find("chunk_cowers_run_1")
         cower.BeginSequence()
-        chunk.WillTalk(0)
-        chunk.SetRelationship("player D_FR 5")
+        chunk2.WillTalk(0)
+        chunk2.SetRelationship("player D_FR 5")
+        chunk3.WillTalk(0)
+        chunk3.SetRelationship("player D_FR 5")
         Find("base_elev_down_a").Unlock()
 #        killSafeArea.Trigger()
     elif(G.Chunk_Attack == 1):
         attack = Find("chunk_attacks_run_1")
         attack.BeginSequence()
-        chunk.SetRelationship("player D_HT 5")
+        chunk2.WillTalk(0)
+        chunk2.SetRelationship("player D_HT 5")
+        chunk3.WillTalk(0)
+        chunk3.SetRelationship("player D_HT 5")
         Find("base_elev_down_a").Unlock()
 #        killSafeArea.Trigger()
     elif(G.Chunk_Open > 0 and G.Story_State != 65):
-        chunkRelay   = Find("chunkRelay")
+        chunkRelay = Find("chunkRelay")
         chunkRelay.Trigger()
 
 #VENTRUETOWER: Called when the player leaves the level
