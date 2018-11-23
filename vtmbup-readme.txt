@@ -85,8 +85,8 @@ Level Entity Lists: Original and UP levels, by Wesp5 and Offkorn.
 Model Tools: Blender, others and tutorial, by DDLullu and Icicle.
 Original Python Files: scripts of the original release, by Wesp5.
 
-Trailers E3 2003 and 2004: Showing lost content, by Troika Games.
 Loader-Linux.sh: Wine script for Linux, thanks SCO and Wrzlprmft.
+Trailers E3 2003 and 2004: Showing lost content, by Troika Games.
 ModDev Guide: Bloodlines Mod Development Guide, compiled by Dheu.
 Restoration Doc: Used concept art and beta screenshots, by Wesp5.
 Soundtrack Info: For music soundtrack, by Rik Schaffer and Wesp5.
@@ -110,7 +110,27 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.1                                                   31.10.2018
+v10.2                                                  22.11.2018
+-----
++Placed a dead dog into Fu Syndicate and filled Kamikaze Zen shelf.
++Made Sheriff laugh when conjuring bats and made them attack less.
++Added console key and all hotkeys to the controls options submenu.
++Fixed details in library level and text and dialogue details too.
++Corrected maximal ammo of flamethrower and made Carson pack stuff.
+Made NPCs recognize the death of Misti, Venus, Mercurio and Knox.
+Fixed female Tremere hair and sheet warform model, thanks DLLullu.
+Restored Gangrels to Masquerade cutscene and added theatre email.
+Made male Gangrel not crouch to fit transformation to warform fix.
+Fixed Giovanni crypt line artifacts and armored a Venture bridge.
+Removed basic discipline changes and restored bump mapping option.
+Added a few weapon drop sounds and fidget and upset sound groups.
+Removed weird tongue of Sheriff warform model, thanks to Barabbah.
+Removed corpses of blood dolls and other NPCs on revisiting maps.
+Improved python and loader file compatibility, thanks to Psycho-A.
+Made video victim's model unique and corrected ghoul sound group.
+Corrected mirrors and details on several maps, thanks to Psycho-A.
+
+v10.1                                                   23.10.2018
 -----
 +Fixed Gary giving packs if you already have some and made it plus.
 +Shortened Bat's Communion to work with Beastmistress history too.
@@ -139,10 +159,6 @@ v10.1                                                   31.10.2018
 +Made Hengeyokai not freeze on Blood Theft and fixed Ji quest loop.
 +Improved library and made Red Spot gum ball machine destructable.
 +Finally fixed the dead-dog-still-hurting and Milligan freeze bugs.
-+Added console key and all hotkeys into the controls options menu.
-+Placed a dead dog into Fu Syndicate and filled Kamikaze Zen shelf.
-Fixed Giovanni crypt line artifacts and armored a Venture bridge.
-Removed basic discipline changes and restored bump mapping option.
 Made sure beachhouse thugs are dead if Mercurio appears at beach.
 Prevented player from using idle animation during a few cutscenes.
 Added info to hacking popup and fixed minor map and text details.
@@ -162,9 +178,6 @@ Moved breakroom at the SM clinic so the geometry fits the outside.
 Made blood dolls reappear after killing to avoid staying corpses.
 Moved sarcophagus loading scene to Giovanni mansion back entrance.
 Disabled bad icons and buttons for inactive Ocean House elevator.
-Improved python and loader file compatibility, thanks to Psycho-A.
-Added a few weapon drop sounds and fidget and upset sound groups.
-Corrected mirrors and textures on some levels, thanks to Psycho-A.
 
 v10.0                                                   15.06.2018
 -----
@@ -2351,11 +2364,13 @@ Closed holes at observatory, Society, Hallowbrook Hotel and LA hub.
 Fixed Jack not replying in tutorial and added a few toilett doors.
 Stopped several dialogue NPCs staying tranced after being fed upon.
 Used autoexec.cfg to fix dsp sound talk and frame rate door issues.
+Made game and NPCs recognize death of Knox, Mercurio and Heather.
 Moved linux loader into main folder and added warning popup to it.
 Closed big map hole in Venture Tower and some more in observatory.
 Made the patch copy all bin files into main folder to fix crashes.
 Prevented player from using idle animation during a few cutscenes.
-Made blood dolls reappear after killing to avoid staying corpses.
+Made NPCs recognize the death of Misti, Venus, Mercurio and Knox.
+Removed corpses of blood dolls and other NPCs on revisiting maps.
 
 Interface:
 +Made pause, camera-moves, auto-move and walk/run toggles definable.
@@ -2367,7 +2382,7 @@ Interface:
 +Added seven missing infobar sounds and created seven infobar icons.
 +Mentioned Clan Lasombra and the Nagaraja in the world loading tips.
 +Improved title menu and character sheet clan symbols and fixed lag.
-+Added console key and all hotkeys into the controls options menu.
++Added console key and all hotkeys to the controls options submenu.
 Adjusted fonts issues regarding Dementation and Tremere Domination.
 Added missing newspaper icons and increased the Obfuscate frame rate.
 Corrected the corrupted Intimidation font "W" at higher resolutions.
@@ -2384,7 +2399,7 @@ Graphics:
 +Improved rain and inspection effects and restored many particles.
 +Added missing steam to clinic, Ocean House, Vesuvius and Hollywood.
 +Included desectable eye replacer mod and added blood to beheading.
-+Made female character sheet model crouch and fixed hunter models.
+Fixed frozen hunter and Gangrel warform models on character sheet.
 Corrected and added landmark names and icons of bus and sewer maps.
 Swapped location labels of the missing sewer map with worldmap ones.
 Added missing fangs to some vampires and fixed beast form model bug.
@@ -2402,6 +2417,8 @@ Added native widescreen support and centered tutorial popups for it.
 Corrected some areaportals in Leopold Society and Giovanni Mansion.
 Disabled low poly model LOD and fixed pause messages in engine.dll.
 Corrected mirrored crate textures and reset clothing using console.
+Fixed hair of female Tremere and removed tongue of Sheriff warform.
+Made male Gangrel not crouch to fit transformation to warform fix.
 
 Sounds:
 +Added subtitles for Malkavian whispers and Deb of Night radio show.
@@ -2722,6 +2739,7 @@ Restored plaguebearer quest log, Regent line and cool Nines gesture.
 Fixed suitcase exchange at the parking garage and added one poster.
 Made abandoned warehouse bum and crackhouse girl leave after a time.
 Fixed two theatre door signs and discipline removal in crackhouse.
+Restored Gangrels to Masquerade cutscene and added theatre email.
 
 Confession:
 +Restored Venus' laptop, turnstile, gestures and three cage dancers.
@@ -2860,6 +2878,7 @@ Reconstructed lip-sync for Dan's restored line and fixed another one.
 Isaac-Tzimisce dialogue line will disappear after quest is complete.
 Used money as alternative for Isaac's gift issue in the basic patch.
 Added Gargoyle quest states and fixed connected quest start issue.
+Made video victim's model unique and corrected ghoul sound group.
 
 Luckee Star:
 +Fixed Hatter being unapproachable when you threatened him too early.
@@ -2924,6 +2943,7 @@ Fixed schrecknet commands being available after hubs were activated.
 Chinatown:
 +Made killing Lu lower Humanity and added Intimidation to Ji and Lu.
 +Added XP and humanity for keeping Zhao alive and added Tong mugger.
++Placed a dead dog into Fu Syndicate and filled Kamikaze Zen shelf.
 Made Tseng talk only of known people and restored Ming/Fu connection.
 Corrected Hitman quest rewards and added peace-talk lines for both.
 Fixed Hitman quest bug that showed failure when making them friends.
