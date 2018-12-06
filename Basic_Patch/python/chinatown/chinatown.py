@@ -115,6 +115,9 @@ def SetWhiteCloud():
 #    if __main__.FindPlayer().GetQuestState("Kiki") == 3:
     door = Find("whiteclouddr")
     door.Unlock()
+    if(G.Ji_Killed == 1):
+        ji = Find("Ji")
+        if ji: ji.Kill()
 
 #CHINATOWN HUB: UnsetCabbie
 def UnsetCabbie():

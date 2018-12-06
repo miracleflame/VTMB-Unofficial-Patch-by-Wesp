@@ -212,12 +212,6 @@ def chunkDancing():
         chunk.ScriptUnhide()
     else:
         chunk.ScriptHide()
-    if G.Danielle_Dead == 1:
-        danielle = Find("Danielle")
-        if danielle: danielle.Kill()
-    if G.Doll1_Dead == 1:
-        doll1 = Find("Doll1")
-        if doll1: doll1.Kill()
 
 #ASYLUM: Called after talking to Danielle, changed by wesp
 def danielleDialog():
@@ -225,6 +219,12 @@ def danielleDialog():
         danielle = Find("Danielle")
         danielle.UseInteresting(1)
         danielle.WillTalk(0)
+    if G.Danielle_Dead == 1:
+        danielle = Find("Danielle")
+        if danielle: danielle.Kill()
+    if G.Doll1_Dead == 1:
+        doll1 = Find("Doll1")
+        if doll1: doll1.Kill()
 
 #ASYLUM: Plays the conversation between the Voermans the first time the PC uses the elevator, changed by vladdmaster
 def elevatorConversation():
@@ -2016,6 +2016,9 @@ def taxi():
         else:
             blueblood.WillTalk(1)
             blueblood.UseInteresting(0)
+    if(G.Prophet_Dead == 1):
+        prophet = Find("Prophet")
+        if prophet: prophet.Kill()
 
 #SANTAMONICA: Sends the player to the warehouse if Bertram is ready to take them
 def toWarehouse():
