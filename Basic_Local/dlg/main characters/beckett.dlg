@@ -918,7 +918,7 @@
 {	918	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	919	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	920	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	921	}{	Well, perhaps, for this pack, it's for the best.	}{	Well, perhaps, for this pack, it's for the best.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	921	}{	Well, perhaps, for this pack, it's for the best.	}{	Well, perhaps, for this pack, it's for the best.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Sabbat_Attack = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	922	}{	I met with Dr. Johansen.	}{	I met with Dr. Johansen.	}{	941	}{	G.Beckett_Johansen == 0	}{	}{	}{	}{	}{	}{	}{	}{	I digested Johansen's brain.	}
 {	923	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	924	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -930,7 +930,7 @@
 {	930	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	931	}{	It's simple. Someone's misled them into believing there's an Antediluvian in this very room. They, and I suspect most Kindred in this city, would love to sink their stakes or teeth into its imagined occupant, if indeed rocketing it to the moon was out of the question.	}{	It's simple. Someone's misled them into believing there's an Antediluvian in this very room. They, and I suspect most Kindred in this city, would love to sink their stakes or teeth into its imagined occupant, if indeed rocketing it to the moon was out of the question.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Beckett_Attack = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	932	}{	The professor didn't say anything about that.	}{	The professor didn't say anything about that.	}{	941	}{	G.Beckett_Johansen == 0	}{	}{	}{	}{	}{	}{	}{	}{	???	}
-{	933	}{	I'm supposed to wipe them out because of the attack.	}{	I'm supposed to wipe them out because of the attack.	}{	921	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hmm.... I will ponder this as I devastate my enemies' ranks.	}
+{	933	}{	I'm supposed to wipe them out because of the attack.	}{	I'm supposed to wipe them out because of the attack.	}{	921	}{	G.Sabbat_Attack == 0	}{	}{	}{	}{	}{	}{	}{	}{	Hmm.... I will ponder this as I devastate my enemies' ranks.	}
 {	934	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	935	}{	I better prepare for my assault on the Sabbat. Goodbye, Beckett.	}{	I better prepare for my assault on the Sabbat. Goodbye, Beckett.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Now I purge the Sabbat's blood from the gore of this city.	}
 {	936	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
