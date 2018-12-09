@@ -156,13 +156,13 @@
 {	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	157	}{	Do you know where he is?	}{	Do you know where he is?	}{	161	}{	G.Knox_Outbound == 0	}{	}{	}{	}{	}{	}{	}{	}{	Do you know where the Nasty Dude is?	}
 {	158	}{	What's he like?	}{	What's he like?	}{	171	}{	G.Knox_Outbound == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the Nasty Dude.	}
-{	159	}{	So what's going on with your mission?	}{	So what's going on with your mission?	}{	211	}{	G.Knox_Mission == 2	}{	}{	}{	}{	}{	}{	}{	}{	But what of the secret hunt?	}
+{	159	}{	So what's going on with your mission?	}{	So what's going on with your mission?	}{	211	}{	G.Knox_Mission == 2 and G.Knox_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	But what of the secret hunt?	}
 {	160	}{	I've got to get out of here, Knox. See ya.	}{	I've got to get out of here, Knox. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
 {	161	}{	Aw man, I wish I knew where he was. I'm getting antsy waitin' around for him. I need to tell him some stuff, ya know. I dunno where he is or stays or anything. Aw man I- Whenever he needs me he just... ya know... appears.	}{	Aw man, I wish I knew where he was. I'm getting antsy waitin' around for him. I need to tell him some stuff, ya know. I dunno where he is or stays or anything. Aw man I- Whenever he needs me he just... ya know... appears.	}{	#	}{	}{	G.Knox_Bertram = 2	}{	}{	}{	}{	}{	}{	}{	}
 {	162	}{	Hold on... you're his "ghoul"? What does that mean?	}{	Hold on... you're his "ghoul"? What does that mean?	}{	131	}{	G.Knox_Ghoul == 1 and G.Knox_Outbound == 1 and G.Knox_Questions == 0	}{	G.Knox_Outbound = 0	}{	}{	}{	}{	}{	}{	}{	Tell me about this ghoulishness.	}
 {	163	}{	What do you know about your condition?	}{	What do you know about your condition?	}{	131	}{	G.Knox_Ghoul == 1 and G.Knox_Outbound == 1 and G.Knox_Questions == 0	}{	G.Knox_Outbound = 0	}{	}{	}{	}{	}{	}{	}{	What do you know of ghouldom?	}
 {	164	}{	Do you like being a ghoul?	}{	Do you like being a ghoul?	}{	141	}{	G.Knox_Outbound == 3 and G.Knox_Questions == 0	}{	G.Knox_Outbound = 0	}{	}{	}{	}{	}{	}{	}{	Are you a happy little golden ghoul?	}
-{	165	}{	So what's going on with your mission?	}{	So what's going on with your mission?	}{	211	}{	G.Knox_Mission == 2	}{	}{	}{	}{	}{	}{	}{	}{	But what of the secret hunt?	}
+{	165	}{	So what's going on with your mission?	}{	So what's going on with your mission?	}{	211	}{	G.Knox_Mission == 2 and G.Knox_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	But what of the secret hunt?	}
 {	166	}{	What is Bertram like?	}{	What is Bertram like?	}{	171	}{	G.Knox_Outbound == 0 and G.Knox_Questions == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the Nasty Dude.	}
 {	167	}{	What do you mean "just appears"?	}{	What do you mean "just appears"?	}{	181	}{	G.Knox_Outbound == 0	}{	}{	}{	}{	}{	}{	}{	}{	The Nasty Dude "just appears"?	}
 {	168	}{	What did you need to tell him?	}{	What did you need to tell him?	}{	211	}{	G.Knox_Outbound == 0 and G.Knox_Quest == 0 and G.Knox_Questions == 0	}{	}{	}{	}{	}{	}{	}{	}{	What words do you need to tell the Nasty Dude?	}
