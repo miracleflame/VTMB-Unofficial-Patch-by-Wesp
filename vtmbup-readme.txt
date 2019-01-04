@@ -110,13 +110,21 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.2                                                  22.11.2018
+v10.2                                                  04.01.2019
 -----
 +Placed a dead dog into Fu Syndicate and filled Kamikaze Zen shelf.
 +Made Sheriff laugh when conjuring bats and made them attack less.
 +Added console key and all hotkeys to the controls options submenu.
 +Fixed details in library level and text and dialogue details too.
 +Corrected maximal ammo of flamethrower and made Carson pack stuff.
+
++Prevented exploit of selling books and removed Trip button sound.
++Unlocked Red Spot storage door and repaired beachhouse NPC update.
+
+Removed copying bin files into main folder and SDK virus triggers.
+Modified barber chair with Lily to animate bonds, thanks DLLullu.
+Removed basic last Jack lines and made tutorial door react easier.
+
 Made NPCs recognize the death of Misti, Venus, Mercurio and Knox.
 Fixed female Tremere hair and sheet warform model, thanks DLLullu.
 Restored Gangrels to Masquerade cutscene and added theatre email.
@@ -129,6 +137,7 @@ Removed corpses of blood dolls and other NPCs on revisiting maps.
 Improved python and loader file compatibility, thanks to Psycho-A.
 Made video victim's model unique and corrected ghoul sound group.
 Corrected mirrors and details on several maps, thanks to Psycho-A.
+Fixed Milligan's business card and Dane screenshots, thanks IanW.
 
 v10.1                                                   23.10.2018
 -----
@@ -2497,7 +2506,7 @@ Items:
 +Modified Ocean House diary and Lily's photo textures to fit text.
 Modified placeholder names of four upgrade books and lowered a value.
 Removed some keys after use and fixed some item drop and sell flags.
-Fixed graphics of baton, VV photo, Megahurtz card and Gary's tapes.
+Fixed graphics of baton, VV photo, business cards and Gary's tapes.
 Made sarcophagus key and clothes not stashable and fixed drop sounds.
 Fixed the same-objects-in-inventory-and-containers-not-visible bug.
 
@@ -2538,6 +2547,7 @@ Vendors:
 +Made vendors sell SWAT rifle bullets and lowered price of fire axe.
 +Tseng will offer Shin Guntos and the SPAS directly but no powerups.
 +Made Tseng not offer blood and hide his special inventory better.
++Prevented exploit of selling books and removed Trip button sound.
 
 Tutorial:
 +Added unused quest logs, Sabbat goon muzzle flashes and a fade out.
@@ -2637,14 +2647,14 @@ Fixed morgue computer mentioning Crumb and locked morgue freezers.
 Made Vandal acknowledge quest payment and corrected two wrong auras.
 Swapped Lily cutscene Phil with scrubs model Bill if Phil is dead.
 Prevented asking Malcolm about Heather when you already saved her.
-Added option to pay Vandal and fixed bad lighting and other details.
+Modified barber chair with Lily to animate bonds and fixed lighting.
 Made Phil only refer to clinic computer if you already accessed it.
 Fixed clinic guard not dropping key if killed by seductive feeding.
 Made it possible to continue E's quest after visiting Vandal often.
 Moved breakroom at the SM clinic so the geometry fits the outside.
 
 Elizabeth Dane:
-+Added boat model and many props and fixed some missing door sounds.
++Added boat model, props, missing door sounds and fixed screenshots.
 Lowered difficulty of Dane computer and made cop acknowledge quest.
 Restored several rookie cops and repaired Dane crane switch icons.
 Stopped Dane cop from looping and fixed illogical camera detection.
@@ -2823,9 +2833,9 @@ Corrected doors, handles, cameras, walk-through columns and an icon.
 Hollywood:
 +Added male seduce feed for Tommy and fixed re-persuading or killing.
 +Fixed quest log updates on Ash and Romero dying during their quest.
-+Restored girl into VV's pool and actors being killed at Ground Zero.
-+Put cat model outside King's Way and locked the Red Spot back door.
-+Added Masquerade violation on public sweeper kill and Humanity loss.
++Restored VV's pool girl, actors to Ground Zero and cat to Kings Way.
++Unlocked Red Spot's storage door and locked it's back door instead.
++Added Masquerade violation and Humanity loss on public sweeper kill.
 +Restored private dance of Misti and fixed special Vesuvius sequence.
 +Added Malkavian whisper to Ash sewers and restored Gargoyle gesture.
 Fixed food critic quest reward and forced player into DMP dialogue. 
@@ -3978,16 +3988,19 @@ Leonard Boyarsky in an interview by Sebastian Thor from Eurogamer
 
 Wesp5 Projects:
 ---------------
-Vampire: The Masquerade - Bloodlines Unofficial Patch
-Babylon 5 - Star Fury Pilot Unofficial Patch
-White Gold: War in Paradise Unofficial Patch
-The Precursors Unofficial Patch
-The Dark Mod Unofficial Patch
-Half-Life: Xen-Warrior
-Half-Life: Uplink Addon
-Opposing Force: Aliens Addon
-Counter-Strike: Training Addon
-Gunman Chronicles: Demo Addon
-Gunman Chronicles: Pistol Addon
-Theme Doom Patch
-Midimaze Plus
+Mods:
+* Vampire: The Masquerade - Bloodlines Unofficial Patch
+* White Gold: War in Paradise Unofficial Patch
+* The Precursors Unofficial Patch
+* Half-Life: Xen-Warrior
+* Theme Doom Patch
+Addons:
+* The Dark Mod Unofficial Patch
+* The Babylon Project Unofficial Patch
+* Half-Life: Counter-Strike Training Addon
+* Half-Life: Opposing Force Aliens Addon
+* Half-Life: Uplink Addon
+* Gunman Chronicles: Pistol Addon
+* Gunman Chronicles: Demo Addon
+* Quake 2 Plus Compilation
+* Quake Plus Compilation

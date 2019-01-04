@@ -185,6 +185,12 @@ def setPlus():
         vendor = Find("Smoke_Vendor")
         if vendor and G.Vendor_Dead == 1:
             vendor.Kill()
+        spotdoor = Find("redspotstorage")
+        if spotdoor and G.Spot_Door == 0:
+            knobs = __main__.FindEntitiesByName("dancer_door-doorknob")
+            for knob in knobs:
+                knob.Unlock()
+            G.Spot_Door = 1
         locke = Find("Jezebel_Locke")
         if locke and G.Locke_Swap == 0:
             locke.ScriptHide()

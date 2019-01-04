@@ -473,7 +473,7 @@ def beachhouseStatus():
     if (__main__.IsDead("Rosa") or G.Story_State >= 35):
         thinblood.Kill()
     thinblood = Find("Copper")
-    if (__main__.IsDead("Copper") or G.Copper_Slayer):
+    if (__main__.IsDead("Copper") or G.Story_State >= 35 or G.Copper_Slayer):
         thinblood.Kill()
     thinblood = Find("Julius")
     if __main__.IsDead("Julius"):
