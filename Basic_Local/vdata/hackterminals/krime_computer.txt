@@ -74,7 +74,7 @@ Notes: Local. VOID: Subject's corpse identified. Being held at Medical Clinic Mo
 			"runtext"	"Michael \"Muddy\" Durbin
 Bond written 03/05/04 -- Assault. Prior Conviction for Grand Theft Auto. Prior Conviction for Robbery. Case #777121. Bond Amount: $10,000. Type of Bond: Collateral - 01 Corvega, color: Gray.
 Notes: Threepeat Offender, really wouldn't be surprised if this guy tries to run."	// changed by wesp
-		"dependency"		"G.Muddy_Dead == 0"	// added by wesp
+		"dependency"		"G.Muddy_Dead == 0 or G.PP == 0"	// added by wesp
 		}
 
 		Function
@@ -85,7 +85,7 @@ Notes: Threepeat Offender, really wouldn't be surprised if this guy tries to run
 Bond written 03/05/04 -- Assault. Prior Conviction for Grand Theft Auto. Prior Conviction for Robbery. Case #777121. Bond Amount: $10,000. Type of Bond: Collateral - 01 Corvega, color: Gray.
 Notes: Threepeat Offender, really wouldn't be surprised if this guy tries to run.
 Update 10/25/04 -- Deceased. Murdered by the serial killer."	// changed by wesp
-		"dependency"		"G.Muddy_Dead == 1"	// added by wesp
+		"dependency"		"G.Muddy_Dead == 1 and G.PP == 1"	// added by wesp
 		}
 	}
 
@@ -155,6 +155,18 @@ Notes: Brought him in for excessive talking smack at the local arcade."	// chang
 			"runtext"	"Brian Nilson
 Bond written 12/01/01 -- Battery. Case #245990. Bond Amount: $10,000. Type of Bond: Cash.
 Notes: Local thug threw some guy who was allegedly trying to buy drugs from him down the beach access stairs."	// changed by wesp
+		"dependency"		"not IsDead(\"Brian\") or G.PP == 0"	// added by wesp
+		}
+
+		Function
+		{
+			"name"		"Nilson, B"
+			"description"	"Brian Nilson"
+			"runtext"	"Brian Nilson
+Bond written 12/01/01 -- Battery. Case #245990. Bond Amount: $10,000. Type of Bond: Cash.
+Notes: Local thug threw some guy who was allegedly trying to buy drugs from him down the beach access stairs.
+Update 10/24/04 -- Deceased.      Killed in a local fight."	// changed by wesp
+		"dependency"		"IsDead(\"Brian\") and G.PP == 1"	// added by wesp
 		}
 
 		Function
