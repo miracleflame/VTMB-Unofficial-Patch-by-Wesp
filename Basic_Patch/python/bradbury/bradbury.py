@@ -76,6 +76,7 @@ def heatherCheck():
             if G.Patch_Plus == 1:  
                 heather_dead = Find("heather_dead")
                 heather_dead.ScriptUnhide()
+                heather_dead.WillTalk(1)
             if(G.Heather_Outfit == 1):
                 heather.SetModel("models/character/npc/unique/Santa_Monica/Heather/Heather_goth.mdl")
             elif(G.Heather_Outfit == 2):

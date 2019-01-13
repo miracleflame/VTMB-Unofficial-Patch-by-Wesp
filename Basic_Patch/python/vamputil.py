@@ -38,6 +38,10 @@ def setBasic():
         pc.GiveItem("item_a_lt_cloth")
     if G.Patch_Plus == 0:
         Find("idle_timer").Disable()
+        stumpy = Find("stumpy")
+        if stumpy:
+            door = Find("phonographdoor")
+            door.Lock()
         axe = __main__.Find("wesp_axe")
         if axe: axe.ScriptUnhide()
         if axe: axe.Kill()
@@ -156,6 +160,9 @@ def setPlus():
         box = Find("plus_cigarbox")
         money = Find("basic_money")
         if box: box.AddEntityToContainer("basic_money")
+        stumpy = Find("stumpy")
+        if (stumpy and G.Gimble_Dead == 1):
+            stumpy.ScriptHide()
         tub = Find("plus_tub")
         if (tub and (G.Killer_Hostile > 0 or G.Killer_Freed > 0)):
             junkteleport = Find("JunkyardTeleport2")
