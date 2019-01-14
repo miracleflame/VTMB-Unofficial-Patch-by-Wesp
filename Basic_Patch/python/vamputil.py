@@ -42,6 +42,11 @@ def setBasic():
         if stumpy:
             door = Find("phonographdoor")
             door.Lock()
+        door2knob1 = Find("nextdoor2knob1")
+        if door2knob1:
+            door2knob1.Unlock()
+            door2knob2 = Find("nextdoor2knob2")
+            door2knob2.Unlock()
         axe = __main__.Find("wesp_axe")
         if axe: axe.ScriptUnhide()
         if axe: axe.Kill()
