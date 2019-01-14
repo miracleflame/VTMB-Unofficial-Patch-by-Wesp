@@ -189,16 +189,16 @@
 {	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	191	}{	Good, great - hope it was painful. Didja get my money back?	}{	Good, great - hope it was painful. Didja get my money back?	}{	#	}{	npc.SetDisposition("lay", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	192	}{	I did. Here it is.	}{	I did. Here it is.	}{	201	}{	G.Patch_Plus == 0 and G.Mercurio_Loot == 1 and pc.CurrentMoney() >= 250	}{	pc.MoneyRemove(250)	}{	}{	}{	}{	}{	}{	}{	Here is your gold, Mercury.	}
+{	192	}{	I did. Here it is.	}{	I did. Here it is.	}{	201	}{	G.Patch_Plus == 0 and G.Mercurio_Loot == 1 and pc.CurrentMoney() >= 250	}{	pc.MoneyRemove(250); pc.AwardExperience("Astro04")	}{	}{	}{	}{	}{	}{	}{	Here is your gold, Mercury.	}
 {	193	}{	Your money? Yes! Yes, I did. Here it is.	}{	Your money? Yes! Yes, I did. Here it is.	}{	201	}{	G.Patch_Plus == 0 and G.Mercurio_Loot == 0 and pc.CurrentMoney() >= 250	}{	pc.MoneyRemove(250)	}{	}{	}{	}{	}{	}{	}{	Your gold? YES! Here is your gold, Mercury.	}
 {	194	}{	No, sorry, I didn't find it.	}{	No, sorry, I didn't find it.	}{	821	}{	}{	}{	}{	}{	}{	}{	}{	}{	My hands are as empty as my head.	}
-{	195	}{	I did. Here it is.	}{	I did. Here it is.	}{	201	}{	G.Patch_Plus == 1 and G.Mercurio_Loot == 1 and pc.CurrentMoney() >= 250	}{	pc.MoneyRemove(250)	}{	}{	}{	}{	}{	}{	}{	Here is your gold, Mercury.	}
+{	195	}{	I did. Here it is.	}{	I did. Here it is.	}{	201	}{	G.Patch_Plus == 1 and G.Mercurio_Loot == 1 and pc.CurrentMoney() >= 250	}{	pc.MoneyRemove(250); pc.AwardExperience("Astro04")	}{	}{	}{	}{	}{	}{	}{	Here is your gold, Mercury.	}
 {	196	}{	Your money? Yes! Yes, I did. Here it is.	}{	Your money? Yes! Yes, I did. Here it is.	}{	201	}{	G.Patch_Plus == 1 and G.Mercurio_Loot == 0 and pc.CurrentMoney() >= 250	}{	pc.MoneyRemove(250); FindPlayer().HumanityAdd( 1 )	}{	}{	}{	}{	}{	}{	}{	Your gold? YES! Here is your gold, Mercury.	}
 {	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	200	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	201	}{	Oh, you're a lifesaver. I might have to buy some new kidneys with this.	}{	Oh, you're a lifesaver. I might have to buy some new kidneys with this.	}{	#	}{	npc.SetDisposition("lay", 3)	}{	pc.AwardExperience("Astro04")	}{	}{	}{	}{	}{	}{	}{	}
+{	201	}{	Oh, you're a lifesaver. I might have to buy some new kidneys with this.	}{	Oh, you're a lifesaver. I might have to buy some new kidneys with this.	}{	#	}{	npc.SetDisposition("lay", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	202	}{	What am I supposed to do now?	}{	What am I supposed to do now?	}{	971	}{	}{	}{	}{	}{	}{	}{	}{	}{	Where do my feet lead me next?	}
 {	203	}{	What's the story with this Astrolite?	}{	What's the story with this Astrolite?	}{	211	}{	}{	}{	}{	}{	}{	}{	}{	}{	Astrolite is fun, no?	}
 {	204	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
