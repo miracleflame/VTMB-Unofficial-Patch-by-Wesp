@@ -468,6 +468,8 @@ def beachhouseStatus():
         dudes = __main__.FindEntitiesByClass("npc_VHumanCombatant")
         for dude in dudes:
             dude.Kill()
+        convo = Find("kitchen_convo")
+        if convo: convo.Kill()
     if(G.Story_State >= 10 and not G.Pier_Beach_Gone):
         G.Pier_Beach_Gone = 1
         blood = __main__.FindEntitiesByName("victimblooda")

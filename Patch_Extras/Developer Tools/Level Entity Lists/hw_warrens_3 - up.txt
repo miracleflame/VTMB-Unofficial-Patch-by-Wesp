@@ -7528,6 +7528,8 @@
 "StartDisabled" "0"
 "targetname" "Shot1_Start"
 "OnTrigger" "plus_check2,Test,,0,-1,,"
+"OnTrigger" "plus_check2,Kill,,0.1,-1,,"
+"OnTrigger" "Shot1_Start,Kill,,0.5,-1,,"
 "OnTrigger" "Events_Player,CreateControllerNPC,,0,-1,,"
 "OnTrigger" "Shot1_player_sequence,BeginSequence,,0.5,-1,,"
 "OnTrigger" "door_block,ScriptUnhide,,0.6,-1,,"
@@ -9644,6 +9646,7 @@
 "OnMapLoad" "Events_Player,CreateControllerNPC,,0,1,,"
 "OnMapLoad" ",,,0,-1,FindPlayer().ClearActiveDisciplines(),"
 "OnMapLoad" "blackbox,Kill,,3,1,,"
+"OnMapLoad" "door_block,ScriptHide,,0.6,-1,,"
 "origin" "22.89 -418 -476"
 }
 {
