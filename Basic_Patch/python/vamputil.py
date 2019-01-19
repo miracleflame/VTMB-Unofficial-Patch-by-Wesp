@@ -2727,7 +2727,7 @@ def mailboxExitCheck():
             G.Werewolf_Quest = 4
             pc.SetQuest("Werewolf Blood", 3)
             pc.ChangeMasqueradeLevel(-1)
-        if(container.HasItem("item_g_garys_film") and G.CD == 1 and G.Gary_Voerman == 0):
+        if(container.HasItem("item_g_garys_film") and G.CD > 0 and G.Gary_Voerman == 0):
             container.RemoveItem("item_g_garys_film")
             G.Gary_Voerman = 1
         if(container.HasItem("item_g_garys_photo") and G.Gary_Voerman == 1 and G.Velvet_Poster == 0):
