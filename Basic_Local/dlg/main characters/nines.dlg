@@ -701,8 +701,8 @@
 {	701	}{	Rumor is, you killed me. Sorry I couldn't clear your name yet, but I knew you'd make it in here in one piece. Hell, you got out of the park alive. Quite a feat, kid.	}{	Rumor is, you killed me. Sorry I couldn't clear your name yet, but I knew you'd make it in here in one piece. Hell, you got out of the park alive. Quite a feat, kid.	}{	#	}{	npc.SetDisposition("PrinceSitting", 1)	}{	G.Nines_Ending = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	702	}{	I thought you were dead! That werewolf had you!	}{	I thought you were dead! That werewolf had you!	}{	711	}{	}{	werewolfHeadCamera()	}{	}{	}{	}{	}{	}{	}{	Imposter! The real Nines is in the belly of a wolf!	}
 {	703	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	704	}{	There was another wolf, but I killed it. What about you?	}{	There was another wolf, but I killed it. What about you?	}{	711	}{	Humanity 5 & IsDead("Werewolf")	}{	werewolfHeadCamera()	}{	}{	}{	}{	}{	}{	}{	I beat the wolf at the clock. So... who won, you or the wolf?	}
-{	705	}{	I killed the shit out of that werewolf. How about you?	}{	I killed the shit out of that werewolf. How about you?	}{	711	}{	Humanity -5 & IsDead("Werewolf")	}{	werewolfHeadCamera()	}{	}{	}{	}{	}{	}{	}{	The werewolf that attacked me, all his pieces regret it... and yours?	}
+{	704	}{	There was another wolf, but I killed it. What about you?	}{	There was another wolf, but I killed it. What about you?	}{	711	}{	Humanity 5 & (IsDead("Werewolf") or G.Werewolf_Dead == 1)	}{	werewolfHeadCamera()	}{	}{	}{	}{	}{	}{	}{	I beat the wolf at the clock. So... who won, you or the wolf?	}
+{	705	}{	I killed the shit out of that werewolf. How about you?	}{	I killed the shit out of that werewolf. How about you?	}{	711	}{	Humanity -5 & (IsDead("Werewolf") or G.Werewolf_Dead == 1)	}{	werewolfHeadCamera()	}{	}{	}{	}{	}{	}{	}{	The werewolf that attacked me, all his pieces regret it... and yours?	}
 {	706	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	707	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	708	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -882,7 +882,7 @@
 {	882	}{	Xiao's dead.	}{	Xiao's dead.	}{	891	}{	IsDead("MingXiao")	}{	}{	}{	}{	}{	}{	}{	}{	Xiao is finding it hard to exist now.	}
 {	883	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	884	}{	Rest up, Nines. Goodbye.	}{	Rest up, Nines. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	If the Anarchs give you a get well card, tell them to sign it for me.	}
-{	885	}{	Yeah, those werewolves can be a bitch for most Kindred. Bye.	}{	Yeah, those werewolves can be a bitch for most Kindred. Bye.	}{	0	}{	IsDead("Werewolf")	}{	}{	}{	}{	}{	}{	}{	}{	You got something right here... I think it's a wolf tooth. I didn't get one.	}
+{	885	}{	Yeah, those werewolves can be a bitch for most Kindred. Bye.	}{	Yeah, those werewolves can be a bitch for most Kindred. Bye.	}{	0	}{	IsDead("Werewolf") or G.Werewolf_Dead == 1	}{	}{	}{	}{	}{	}{	}{	}{	You got something right here... I think it's a wolf tooth. I didn't get one.	}
 {	886	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	887	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	888	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
