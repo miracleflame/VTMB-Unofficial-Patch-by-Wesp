@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7999"
-	"mapversion" "17"
+	"mapversion" "24"
 	"prefab" "0"
 }
 viewsettings
@@ -15,7 +15,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "17"
+	"mapversion" "24"
 	"classname" "worldspawn"
 	"skyname" "santamonica"
 	"sounds" "1"
@@ -36451,80 +36451,6 @@ world
 	}
 	solid
 	{
-		"id" "494"
-		side
-		{
-			"id" "2974"
-			"plane" "(-260 -424 -104) (-260 -424 -352) (-260 -422 -352)"
-			"material" "OBJECTS/SEWERLADDERA"
-			"uaxis" "[0 1 0 32] 0.25"
-			"vaxis" "[0 0 1 232] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "2975"
-			"plane" "(-236 -422 -104) (-236 -422 -352) (-236 -424 -352)"
-			"material" "OBJECTS/SEWERLADDERA"
-			"uaxis" "[0 1 0 32] 0.25"
-			"vaxis" "[0 0 1 232] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "2976"
-			"plane" "(-236 -424 -104) (-236 -424 -352) (-260 -424 -352)"
-			"material" "OBJECTS/SEWERLADDERA"
-			"uaxis" "[-1 0 0 -88.8103] 0.19"
-			"vaxis" "[0 0 1 488] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "2977"
-			"plane" "(-260 -422 -104) (-260 -422 -352) (-236 -422 -352)"
-			"material" "OBJECTS/SEWERLADDERA"
-			"uaxis" "[-1 0 0 -89.2844] 0.19"
-			"vaxis" "[0 0 1 488] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "2978"
-			"plane" "(-260 -422 -352) (-260 -424 -352) (-236 -424 -352)"
-			"material" "OBJECTS/SEWERLADDERA"
-			"uaxis" "[0 1 0 32] 0.25"
-			"vaxis" "[-1 0 0 -188.016] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "2979"
-			"plane" "(-260 -424 -104) (-260 -422 -104) (-236 -422 -104)"
-			"material" "OBJECTS/SEWERLADDERA"
-			"uaxis" "[0 1 0 32] 0.25"
-			"vaxis" "[-1 0 0 -188.016] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		editor
-		{
-			"color" "0 247 188"
-		}
-	}
-	solid
-	{
 		"id" "495"
 		side
 		{
@@ -55724,8 +55650,8 @@ entity
 	"UpperRandomBound" "3"
 	connections
 	{
-		"OnTimerHigh" "shutterimpact,Impact,,0,-1,,"
 		"OnTimerLow" "shutterimpact,Impact,,0,-1,,"
+		"OnTimerHigh" "shutterimpact,Impact,,0,-1,,"
 	}
 	"origin" "289.861 -798 65.2674"
 	editor
@@ -55745,8 +55671,8 @@ entity
 	"UpperRandomBound" "2"
 	connections
 	{
-		"OnTimerHigh" "shutterimpactb,Impact,,0,-1,,"
 		"OnTimerLow" "shutterimpactb,Impact,,0,-1,,"
+		"OnTimerHigh" "shutterimpactb,Impact,,0,-1,,"
 	}
 	"origin" "305.861 -798 65.2674"
 	editor
@@ -65503,8 +65429,8 @@ entity
 	"no_alert_state" "0"
 	connections
 	{
-		"OnFoundEnemy" "ip_blind_monk_cower,Enable,,0,-1,,"
 		"OnFoundEnemy" "guards_message_sound,Kill,,0,-1,,"
+		"OnFoundEnemy" "ip_blind_monk_cower,Enable,,0,-1,,"
 	}
 	"origin" "125 -519 9"
 	editor
@@ -65572,8 +65498,8 @@ entity
 	"alternateequipment" "item_w_knife"
 	connections
 	{
-		"OnFoundEnemy" "ip_blind_monk_cower,Enable,,0,-1,,"
 		"OnFoundEnemy" "guards_message_sound,Kill,,0,-1,,"
+		"OnFoundEnemy" "ip_blind_monk_cower,Enable,,0,-1,,"
 	}
 	"origin" "107 -701 9"
 	editor
@@ -65676,8 +65602,8 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnMapLoad" "sentry1,FollowPatrolPath,sentry1_1 sentry1_2 sentry1_3,1.1,-1,,"
 		"OnMapLoad" "sentry1,SetupPatrolType,999 2 FOLLOW_PATROL_PATH_WALK,1,-1,,"
+		"OnMapLoad" "sentry1,FollowPatrolPath,sentry1_1 sentry1_2 sentry1_3,1.1,-1,,"
 	}
 	"origin" "65 128 9"
 	editor
@@ -65780,8 +65706,8 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnMapLoad" "sentry2,FollowPatrolPath,sentry2_1 sentry2_2 sentry2_3,2.1,-1,,"
 		"OnMapLoad" "sentry2,SetupPatrolType,999 2 FOLLOW_PATROL_PATH_WALK,2,-1,,"
+		"OnMapLoad" "sentry2,FollowPatrolPath,sentry2_1 sentry2_2 sentry2_3,2.1,-1,,"
 	}
 	"origin" "-105 -701 13"
 	editor
@@ -65848,14 +65774,14 @@ entity
 	"follower_type" "Default"
 	connections
 	{
-		"OnHearPlayer" "sound_monk_prayer,Kill,,0,-1,,"
-		"OnDeath" "sound_monk_prayer,Kill,,0,-1,,"
-		"OnDamaged" "sound_monk_prayer,Kill,,0,-1,,"
-		"OnFedUponBegin" "sound_monk_prayer,Kill,,0,-1,,"
-		"OnHearCombat" "sound_monk_prayer,Kill,,0,-1,,"
-		"OnFoundEnemy" "sound_monk_prayer,Kill,,0,-1,,"
-		"OnFoundEnemy" "guards_message_sound,Kill,,0,-1,,"
 		"OnFoundEnemy" "ip_blind_monk_cower,Enable,,0,-1,,"
+		"OnFoundEnemy" "guards_message_sound,Kill,,0,-1,,"
+		"OnFoundEnemy" "sound_monk_prayer,Kill,,0,-1,,"
+		"OnHearCombat" "sound_monk_prayer,Kill,,0,-1,,"
+		"OnFedUponBegin" "sound_monk_prayer,Kill,,0,-1,,"
+		"OnDamaged" "sound_monk_prayer,Kill,,0,-1,,"
+		"OnDeath" "sound_monk_prayer,Kill,,0,-1,,"
+		"OnHearPlayer" "sound_monk_prayer,Kill,,0,-1,,"
 	}
 	"origin" "-55 346 18"
 	editor
@@ -65917,8 +65843,8 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnMapLoad" "monk_praying,FollowPatrolPath,monk1_1 monk1_2 monk1_3 monk1_2,0.1,-1,,"
 		"OnMapLoad" "monk_praying,SetupPatrolType,999 1 FOLLOW_PATROL_PATH_WALK,0,-1,,"
+		"OnMapLoad" "monk_praying,FollowPatrolPath,monk1_1 monk1_2 monk1_3 monk1_2,0.1,-1,,"
 	}
 	"origin" "-48 356 9"
 	editor
@@ -66055,10 +65981,10 @@ entity
 	"alternateequipment" "item_w_knife"
 	connections
 	{
-		"OnFoundEnemy" "ip_blind_monk_cower,Enable,,0,-1,,"
-		"OnFoundEnemy" "guards_message_sound,Kill,,0,-1,,"
-		"OnDamaged" "guards_message_sound,Kill,,0,-1,,"
 		"OnDeath" "guards_message_sound,Kill,,0,-1,,"
+		"OnDamaged" "guards_message_sound,Kill,,0,-1,,"
+		"OnFoundEnemy" "guards_message_sound,Kill,,0,-1,,"
+		"OnFoundEnemy" "ip_blind_monk_cower,Enable,,0,-1,,"
 	}
 	"origin" "-100 -690.438 1"
 	editor
@@ -66127,8 +66053,8 @@ entity
 	"alternateequipment" "item_w_knife"
 	connections
 	{
-		"OnFoundEnemy" "ip_blind_monk_cower,Enable,,0,-1,,"
 		"OnFoundEnemy" "guards_message_sound,Kill,,0,-1,,"
+		"OnFoundEnemy" "ip_blind_monk_cower,Enable,,0,-1,,"
 	}
 	"origin" "248 -653 194"
 	editor
@@ -66197,8 +66123,8 @@ entity
 	"alternateequipment" "item_w_knife"
 	connections
 	{
-		"OnDamaged" "monk_upstairs,TweakParam,vision 540,0,-1,,"
 		"OnFoundEnemy" "cafeteria_message_sound,Kill,,0,-1,,"
+		"OnDamaged" "monk_upstairs,TweakParam,vision 540,0,-1,,"
 	}
 	"origin" "-108.237 -404.693 201"
 	editor
@@ -66342,10 +66268,10 @@ entity
 	"no_alert_state" "0"
 	connections
 	{
-		"OnDamaged" "monk_upstairs_conversation,TweakParam,vision 540,0,-1,,"
-		"OnFoundEnemy" "cafeteria_message_sound,Kill,,0,-1,,"
-		"OnDamaged" "cafeteria_message_sound,Kill,,0,-1,,"
 		"OnDeath" "cafeteria_message_sound,Kill,,0,-1,,"
+		"OnDamaged" "cafeteria_message_sound,Kill,,0,-1,,"
+		"OnFoundEnemy" "cafeteria_message_sound,Kill,,0,-1,,"
+		"OnDamaged" "monk_upstairs_conversation,TweakParam,vision 540,0,-1,,"
 	}
 	"origin" "31 -95 198"
 	editor
@@ -66414,8 +66340,8 @@ entity
 	"alternateequipment" "item_w_knife"
 	connections
 	{
-		"OnDamaged" "monk_upstairs,TweakParam,vision 540,0,-1,,"
 		"OnFoundEnemy" "cafeteria_message_sound,Kill,,0,-1,,"
+		"OnDamaged" "monk_upstairs,TweakParam,vision 540,0,-1,,"
 	}
 	"origin" "194.022 -175.336 201"
 	editor
@@ -66518,8 +66444,8 @@ entity
 	"targetname" "trigger_1_conversation_1"
 	connections
 	{
-		"OnTrigger" "trigger_2_conversation_1,Disable,,0,-1,,"
 		"OnTrigger" "monk_conversation_ip_control,PlayOneOffSound,,0,-1,,"
+		"OnTrigger" "trigger_2_conversation_1,Disable,,0,-1,,"
 	}
 	solid
 	{
@@ -66617,8 +66543,8 @@ entity
 	"targetname" "trigger_2_conversation_1"
 	connections
 	{
-		"OnTrigger" "trigger_1_conversation_1,Disable,,0,-1,,"
 		"OnTrigger" "monk_conversation_ip_control,PlayOneOffSound,,0,-1,,"
+		"OnTrigger" "trigger_1_conversation_1,Disable,,0,-1,,"
 	}
 	solid
 	{
@@ -66780,8 +66706,8 @@ entity
 	"origin" "-230 -535 245.5"
 	connections
 	{
-		"OnTrigger" "monk_upstairs,ScriptUnhide,,0,1,,"
 		"OnTrigger" "upstairs_conversation_control,PlayOneOffSound,,0,-1,,"
+		"OnTrigger" "monk_upstairs,ScriptUnhide,,0,1,,"
 	}
 	solid
 	{
@@ -67326,10 +67252,10 @@ entity
 	"alternateequipment" "item_w_knife"
 	connections
 	{
-		"OnFoundEnemy" "ip_blind_monk_cower,Enable,,0,-1,,"
-		"OnFoundEnemy" "guards_message_sound,Kill,,0,-1,,"
-		"OnDamaged" "guards_message_sound,Kill,,0,-1,,"
 		"OnDeath" "guards_message_sound,Kill,,0,-1,,"
+		"OnDamaged" "guards_message_sound,Kill,,0,-1,,"
+		"OnFoundEnemy" "guards_message_sound,Kill,,0,-1,,"
+		"OnFoundEnemy" "ip_blind_monk_cower,Enable,,0,-1,,"
 	}
 	"origin" "-153.376 -697.781 2"
 	editor
@@ -67355,21 +67281,21 @@ entity
 	"angles" "0 0 0"
 	connections
 	{
-		"OnOneOffSoundComplete" "guards_message_sound,PlaySound,,0,-1,,"
-		"OnOneOffSoundComplete" "monk_conversation_ip_after_2,ScriptUnhide,,45,-1,,"
-		"OnOneOffSoundComplete" "monk_conversation_ip_after_2,Enable,,45,-1,,"
-		"OnPlayerTooClose" "monk_conversation_ip_after_2,Enable,,0,-1,,"
-		"OnPlayerTooClose" "monk_conversation_ip_after_2,ScriptUnhide,,0,-1,,"
-		"OnPlayerTooClose" "monk_conversation_ip_after,ScriptUnhide,,0,-1,,"
-		"OnPlayerTooClose" "monk_conversation_ip_after,Enable,,0,-1,,"
-		"OnOneOffSoundComplete" "monk_conversation_ip_after,Enable,,45,-1,,"
-		"OnOneOffSoundComplete" "monk_conversation_ip_after,ScriptUnhide,,45,-1,,"
-		"OnOneOffSoundComplete" "monk_conversation_ip,ScriptHide,,45,-1,,"
-		"OnOneOffSoundComplete" "monk_conversation_ip,Disable,,45,-1,,"
-		"OnConversationEnd" "monk_conversation_ip,Disable,,45,-1,,"
-		"OnConversationEnd" "monk_conversation_ip,ScriptHide,,45,-1,,"
-		"OnConversationEnd" "monk_conversation_ip_after,ScriptUnhide,,45,-1,,"
 		"OnConversationEnd" "monk_conversation_ip_after,Enable,,45,-1,,"
+		"OnConversationEnd" "monk_conversation_ip_after,ScriptUnhide,,45,-1,,"
+		"OnConversationEnd" "monk_conversation_ip,ScriptHide,,45,-1,,"
+		"OnConversationEnd" "monk_conversation_ip,Disable,,45,-1,,"
+		"OnOneOffSoundComplete" "monk_conversation_ip,Disable,,45,-1,,"
+		"OnOneOffSoundComplete" "monk_conversation_ip,ScriptHide,,45,-1,,"
+		"OnOneOffSoundComplete" "monk_conversation_ip_after,ScriptUnhide,,45,-1,,"
+		"OnOneOffSoundComplete" "monk_conversation_ip_after,Enable,,45,-1,,"
+		"OnPlayerTooClose" "monk_conversation_ip_after,Enable,,0,-1,,"
+		"OnPlayerTooClose" "monk_conversation_ip_after,ScriptUnhide,,0,-1,,"
+		"OnPlayerTooClose" "monk_conversation_ip_after_2,ScriptUnhide,,0,-1,,"
+		"OnPlayerTooClose" "monk_conversation_ip_after_2,Enable,,0,-1,,"
+		"OnOneOffSoundComplete" "monk_conversation_ip_after_2,Enable,,45,-1,,"
+		"OnOneOffSoundComplete" "monk_conversation_ip_after_2,ScriptUnhide,,45,-1,,"
+		"OnOneOffSoundComplete" "guards_message_sound,PlaySound,,0,-1,,"
 	}
 	"origin" "-126 -700 12"
 	editor
@@ -67478,10 +67404,10 @@ entity
 	"alternateequipment" "item_w_knife"
 	connections
 	{
-		"OnDamaged" ",TweakParam,vision 540,0,-1,,"
-		"OnFoundEnemy" "cafeteria_message_sound,Kill,,0,-1,,"
-		"OnDamaged" "cafeteria_message_sound,Kill,,0,-1,,"
 		"OnDeath" "cafeteria_message_sound,Kill,,0,-1,,"
+		"OnDamaged" "cafeteria_message_sound,Kill,,0,-1,,"
+		"OnFoundEnemy" "cafeteria_message_sound,Kill,,0,-1,,"
+		"OnDamaged" ",TweakParam,vision 540,0,-1,,"
 	}
 	"origin" "57 -143 198"
 	editor
@@ -67555,9 +67481,9 @@ entity
 	"angles" "0 0 0"
 	connections
 	{
-		"OnOneOffSoundComplete" "cafeteria_message_sound,PlaySound,,0,-1,,"
-		"OnOneOffSoundComplete" "upstairs_conversation,ScriptHide,,35,-1,,"
 		"OnOneOffSoundComplete" "upstairs_conversation,Disable,,35,-1,,"
+		"OnOneOffSoundComplete" "upstairs_conversation,ScriptHide,,35,-1,,"
+		"OnOneOffSoundComplete" "cafeteria_message_sound,PlaySound,,0,-1,,"
 	}
 	"origin" "12 -132 201"
 	editor
@@ -67736,8 +67662,8 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnMapLoad" "monk_upstairs_podium,FollowPatrolPath,pod_1 pod_2 pod_3 pod_4 pod_5,0.1,-1,,"
 		"OnMapLoad" "monk_upstairs_podium,SetupPatrolType,999 1 FOLLOW_PATROL_PATH_WALK,0,-1,,"
+		"OnMapLoad" "monk_upstairs_podium,FollowPatrolPath,pod_1 pod_2 pod_3 pod_4 pod_5,0.1,-1,,"
 	}
 	"origin" "-146.665 -40.0487 201"
 	editor
@@ -68455,8 +68381,8 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnMapLoad" "cellar_guard_patrol,FollowPatrolPath,d_1 d_2 d_3 d_4 d_5,0.1,-1,,"
 		"OnMapLoad" "cellar_guard_patrol,SetupPatrolType,999 2 FOLLOW_PATROL_PATH_WALK,0,-1,,"
+		"OnMapLoad" "cellar_guard_patrol,FollowPatrolPath,d_1 d_2 d_3 d_4 d_5,0.1,-1,,"
 	}
 	"origin" "-91.4595 -363.243 -135"
 	editor
@@ -74209,9 +74135,9 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnMapLoad" "soc_int_pycheck,ScriptUnhide,,0,-1,,"
-		"OnMapLoad" "backdoor_1_lock,Unlock,,0,-1,,"
 		"OnMapLoad" "backdoor_2_lock,Unlock,,0,-1,,"
+		"OnMapLoad" "backdoor_1_lock,Unlock,,0,-1,,"
+		"OnMapLoad" "soc_int_pycheck,ScriptUnhide,,0,-1,,"
 	}
 	"origin" "21.2528 -658.081 9"
 	editor
@@ -74452,8 +74378,8 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnMapLoad" "sentry3_arms_crossed,FollowPatrolPath,sentry3_1 sentry3_2,2.1,-1,,"
 		"OnMapLoad" "sentry3_arms_crossed,SetupPatrolType,999 2 FOLLOW_PATROL_PATH_WALK,2,-1,,"
+		"OnMapLoad" "sentry3_arms_crossed,FollowPatrolPath,sentry3_1 sentry3_2,2.1,-1,,"
 	}
 	"origin" "75 -529 13"
 	editor
@@ -74493,8 +74419,8 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnMapLoad" "monk_upstairs_room,SetupPatrolType,999 2 FOLLOW_PATROL_PATH_WALK,0,-1,,"
 		"OnMapLoad" "monk_upstairs_room,FollowPatrolPath,room1 room2 room3 room2,0.1,-1,,"
+		"OnMapLoad" "monk_upstairs_room,SetupPatrolType,999 2 FOLLOW_PATROL_PATH_WALK,0,-1,,"
 	}
 	"origin" "282.75 -653.95 201"
 	editor
@@ -75392,20 +75318,20 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnTrigger0" "beam_1_sound_poweron,PlaySound,,0,-1,,"
-		"OnTrigger3" "beam_1,Color,230 15 15,0,-1,,"
-		"OnTrigger2" "beam_1,Color,63 23 237,0,-1,,"
-		"OnTrigger2" "beam_1_trigger,EnableFlagNPC,,0,-1,,"
-		"OnTrigger2" "beam_1_trigger,DisableFlagClient,,0,-1,,"
-		"OnTrigger1" "beam_1,TurnOff,,0,-1,,"
-		"OnTrigger0" "beam_1,TurnOn,,0,-1,,"
-		"OnTrigger3" "beam_1_trigger,DisableFlagNPC,,0,-1,,"
-		"OnTrigger3" "beam_1_trigger,EnableFlagClient,,0,-1,,"
-		"OnTrigger1" "beam_1_trigger,Disable,,0,-1,,"
-		"OnTrigger0" "beam_1_trigger,Enable,,0,-1,,"
-		"OnTrigger1" "beam_1_sound_poweroff,PlaySound,,0,-1,,"
-		"OnTrigger2" "beam_1_sound_switch,PlaySound,,0,-1,,"
 		"OnTrigger3" "beam_1_sound_switch,PlaySound,,0,-1,,"
+		"OnTrigger2" "beam_1_sound_switch,PlaySound,,0,-1,,"
+		"OnTrigger1" "beam_1_sound_poweroff,PlaySound,,0,-1,,"
+		"OnTrigger0" "beam_1_trigger,Enable,,0,-1,,"
+		"OnTrigger1" "beam_1_trigger,Disable,,0,-1,,"
+		"OnTrigger3" "beam_1_trigger,EnableFlagClient,,0,-1,,"
+		"OnTrigger3" "beam_1_trigger,DisableFlagNPC,,0,-1,,"
+		"OnTrigger0" "beam_1,TurnOn,,0,-1,,"
+		"OnTrigger1" "beam_1,TurnOff,,0,-1,,"
+		"OnTrigger2" "beam_1_trigger,DisableFlagClient,,0,-1,,"
+		"OnTrigger2" "beam_1_trigger,EnableFlagNPC,,0,-1,,"
+		"OnTrigger2" "beam_1,Color,63 23 237,0,-1,,"
+		"OnTrigger3" "beam_1,Color,230 15 15,0,-1,,"
+		"OnTrigger0" "beam_1_sound_poweron,PlaySound,,0,-1,,"
 	}
 	"origin" "-197.841 67.0358 20.207"
 	editor
@@ -75510,10 +75436,10 @@ entity
 	"origin" "-167.5 212.5 39.5"
 	connections
 	{
-		"OnTrigger" "pt_1a,Break,,0,-1,,"
-		"OnTrigger" "pt_1,Break,,0,-1,,"
-		"OnTrigger" "beam_1_terminal,ScriptHide,,0,-1,,"
 		"OnTrigger" "beam_1_hack,Break,,0,-1,,"
+		"OnTrigger" "beam_1_terminal,ScriptHide,,0,-1,,"
+		"OnTrigger" "pt_1,Break,,0,-1,,"
+		"OnTrigger" "pt_1a,Break,,0,-1,,"
 	}
 	solid
 	{
@@ -75674,10 +75600,10 @@ entity
 	"origin" "143.5 207 39.5"
 	connections
 	{
-		"OnTrigger" "pt_2a,Break,,0,-1,,"
-		"OnTrigger" "pt_2,Break,,0,-1,,"
-		"OnTrigger" "beam_2_terminal,ScriptHide,,0,-1,,"
 		"OnTrigger" "beam_2_hack,Break,,0,-1,,"
+		"OnTrigger" "beam_2_terminal,ScriptHide,,0,-1,,"
+		"OnTrigger" "pt_2,Break,,0,-1,,"
+		"OnTrigger" "pt_2a,Break,,0,-1,,"
 	}
 	solid
 	{
@@ -75863,12 +75789,12 @@ entity
 	"origin" "-68.51 -86.94 37.51"
 	connections
 	{
-		"OnTrigger" "pt_3a,Break,,0,-1,,"
-		"OnTrigger" "pt_3,Break,,0,-1,,"
-		"OnTrigger" "beam_3_terminal,ScriptHide,,0,-1,,"
-		"OnTrigger" "pt_3-2,Break,,0,-1,,"
-		"OnTrigger" "pt_3a-2,Break,,0,-1,,"
 		"OnTrigger" "beam_3_hack,Break,,0,-1,,"
+		"OnTrigger" "pt_3a-2,Break,,0,-1,,"
+		"OnTrigger" "pt_3-2,Break,,0,-1,,"
+		"OnTrigger" "beam_3_terminal,ScriptHide,,0,-1,,"
+		"OnTrigger" "pt_3,Break,,0,-1,,"
+		"OnTrigger" "pt_3a,Break,,0,-1,,"
 	}
 	solid
 	{
@@ -76025,10 +75951,10 @@ entity
 	"origin" "78.37 -602.48 33.5"
 	connections
 	{
-		"OnTrigger" "pt_4a,Break,,0,-1,,"
-		"OnTrigger" "pt_4,Break,,0,-1,,"
-		"OnTrigger" "beam_4_terminal,ScriptHide,,0,-1,,"
 		"OnTrigger" "beam_4_hack,Break,,0,-1,,"
+		"OnTrigger" "beam_4_terminal,ScriptHide,,0,-1,,"
+		"OnTrigger" "pt_4,Break,,0,-1,,"
+		"OnTrigger" "pt_4a,Break,,0,-1,,"
 	}
 	solid
 	{
@@ -76226,20 +76152,20 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnTrigger3" "beam_2_sound_switch,PlaySound,,0,-1,,"
-		"OnTrigger2" "beam_2_sound_switch,PlaySound,,0,-1,,"
-		"OnTrigger1" "beam_2_sound_poweroff,PlaySound,,0,-1,,"
-		"OnTrigger0" "beam_2_sound_poweron,PlaySound,,0,-1,,"
-		"OnTrigger3" "beam_2,Color,230 15 15,0,-1,,"
-		"OnTrigger2" "beam_2,Color,63 23 237,0,-1,,"
-		"OnTrigger2" "beam_2_trigger,EnableFlagNPC,,0,-1,,"
-		"OnTrigger2" "beam_2_trigger,DisableFlagClient,,0,-1,,"
-		"OnTrigger1" "beam_2,TurnOff,,0,-1,,"
-		"OnTrigger0" "beam_2,TurnOn,,0,-1,,"
-		"OnTrigger3" "beam_2_trigger,DisableFlagNPC,,0,-1,,"
-		"OnTrigger3" "beam_2_trigger,EnableFlagClient,,0,-1,,"
-		"OnTrigger1" "beam_2_trigger,Disable,,0,-1,,"
 		"OnTrigger0" "beam_2_trigger,Enable,,0,-1,,"
+		"OnTrigger1" "beam_2_trigger,Disable,,0,-1,,"
+		"OnTrigger3" "beam_2_trigger,EnableFlagClient,,0,-1,,"
+		"OnTrigger3" "beam_2_trigger,DisableFlagNPC,,0,-1,,"
+		"OnTrigger0" "beam_2,TurnOn,,0,-1,,"
+		"OnTrigger1" "beam_2,TurnOff,,0,-1,,"
+		"OnTrigger2" "beam_2_trigger,DisableFlagClient,,0,-1,,"
+		"OnTrigger2" "beam_2_trigger,EnableFlagNPC,,0,-1,,"
+		"OnTrigger2" "beam_2,Color,63 23 237,0,-1,,"
+		"OnTrigger3" "beam_2,Color,230 15 15,0,-1,,"
+		"OnTrigger0" "beam_2_sound_poweron,PlaySound,,0,-1,,"
+		"OnTrigger1" "beam_2_sound_poweroff,PlaySound,,0,-1,,"
+		"OnTrigger2" "beam_2_sound_switch,PlaySound,,0,-1,,"
+		"OnTrigger3" "beam_2_sound_switch,PlaySound,,0,-1,,"
 	}
 	"origin" "167.301 71.9333 20.6843"
 	editor
@@ -76272,10 +76198,10 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnBreak" "pt_2,Break,,0,-1,,"
-		"OnBreak" "pt_2a,Break,,0,-1,,"
-		"OnBreak" "beam_2_terminal,ScriptHide,,0,-1,,"
 		"OnBreak" "beam_2,ScriptHide,,0,-1,,"
+		"OnBreak" "beam_2_terminal,ScriptHide,,0,-1,,"
+		"OnBreak" "pt_2a,Break,,0,-1,,"
+		"OnBreak" "pt_2,Break,,0,-1,,"
 	}
 	"origin" "167.301 73.028 20"
 	editor
@@ -76308,13 +76234,13 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnBreak" "pt_3,Break,,0,-1,,"
-		"OnBreak" "pt_3a,Break,,0,-1,,"
-		"OnBreak" "beam_3_terminal,ScriptHide,,0,-1,,"
-		"OnBreak" "pt_3a-2,Break,,0,-1,,"
-		"OnBreak" "pt_3-2,Break,,0,-1,,"
-		"OnBreak" "beam_3-2,ScriptHide,,0,-1,,"
 		"OnBreak" "beam_3,ScriptHide,,0,-1,,"
+		"OnBreak" "beam_3-2,ScriptHide,,0,-1,,"
+		"OnBreak" "pt_3-2,Break,,0,-1,,"
+		"OnBreak" "pt_3a-2,Break,,0,-1,,"
+		"OnBreak" "beam_3_terminal,ScriptHide,,0,-1,,"
+		"OnBreak" "pt_3a,Break,,0,-1,,"
+		"OnBreak" "pt_3,Break,,0,-1,,"
 	}
 	"origin" "-50.3197 -31.9642 20"
 	editor
@@ -76344,30 +76270,30 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnTrigger3" "beam_3-2,Color,230 15 15,0,-1,,"
-		"OnTrigger2" "beam_3-2,Color,63 23 237,0,-1,,"
-		"OnTrigger2" "beam_3_trigger-2,EnableFlagNPC,,0,-1,,"
-		"OnTrigger2" "beam_3_trigger-2,DisableFlagClient,,0,-1,,"
-		"OnTrigger1" "beam_3-2,TurnOff,,0,-1,,"
-		"OnTrigger0" "beam_3-2,TurnOn,,0,-1,,"
-		"OnTrigger3" "beam_3_trigger-2,DisableFlagNPC,,0,-1,,"
-		"OnTrigger3" "beam_3_trigger-2,EnableFlagClient,,0,-1,,"
-		"OnTrigger1" "beam_3_trigger-2,Disable,,0,-1,,"
-		"OnTrigger0" "beam_3_trigger-2,Enable,,0,-1,,"
-		"OnTrigger3" "beam_3_sound_switch,PlaySound,,0,-1,,"
-		"OnTrigger2" "beam_3_sound_switch,PlaySound,,0,-1,,"
-		"OnTrigger1" "beam_3_sound_poweroff,PlaySound,,0,-1,,"
-		"OnTrigger0" "beam_3_sound_poweron,PlaySound,,0,-1,,"
-		"OnTrigger3" "beam_3,Color,230 15 15,0,-1,,"
-		"OnTrigger2" "beam_3,Color,63 23 237,0,-1,,"
-		"OnTrigger2" "beam_3_trigger,EnableFlagNPC,,0,-1,,"
-		"OnTrigger2" "beam_3_trigger,DisableFlagClient,,0,-1,,"
-		"OnTrigger1" "beam_3,TurnOff,,0,-1,,"
-		"OnTrigger0" "beam_3,TurnOn,,0,-1,,"
-		"OnTrigger3" "beam_3_trigger,DisableFlagNPC,,0,-1,,"
-		"OnTrigger3" "beam_3_trigger,EnableFlagClient,,0,-1,,"
-		"OnTrigger1" "beam_3_trigger,Disable,,0,-1,,"
 		"OnTrigger0" "beam_3_trigger,Enable,,0,-1,,"
+		"OnTrigger1" "beam_3_trigger,Disable,,0,-1,,"
+		"OnTrigger3" "beam_3_trigger,EnableFlagClient,,0,-1,,"
+		"OnTrigger3" "beam_3_trigger,DisableFlagNPC,,0,-1,,"
+		"OnTrigger0" "beam_3,TurnOn,,0,-1,,"
+		"OnTrigger1" "beam_3,TurnOff,,0,-1,,"
+		"OnTrigger2" "beam_3_trigger,DisableFlagClient,,0,-1,,"
+		"OnTrigger2" "beam_3_trigger,EnableFlagNPC,,0,-1,,"
+		"OnTrigger2" "beam_3,Color,63 23 237,0,-1,,"
+		"OnTrigger3" "beam_3,Color,230 15 15,0,-1,,"
+		"OnTrigger0" "beam_3_sound_poweron,PlaySound,,0,-1,,"
+		"OnTrigger1" "beam_3_sound_poweroff,PlaySound,,0,-1,,"
+		"OnTrigger2" "beam_3_sound_switch,PlaySound,,0,-1,,"
+		"OnTrigger3" "beam_3_sound_switch,PlaySound,,0,-1,,"
+		"OnTrigger0" "beam_3_trigger-2,Enable,,0,-1,,"
+		"OnTrigger1" "beam_3_trigger-2,Disable,,0,-1,,"
+		"OnTrigger3" "beam_3_trigger-2,EnableFlagClient,,0,-1,,"
+		"OnTrigger3" "beam_3_trigger-2,DisableFlagNPC,,0,-1,,"
+		"OnTrigger0" "beam_3-2,TurnOn,,0,-1,,"
+		"OnTrigger1" "beam_3-2,TurnOff,,0,-1,,"
+		"OnTrigger2" "beam_3_trigger-2,DisableFlagClient,,0,-1,,"
+		"OnTrigger2" "beam_3_trigger-2,EnableFlagNPC,,0,-1,,"
+		"OnTrigger2" "beam_3-2,Color,63 23 237,0,-1,,"
+		"OnTrigger3" "beam_3-2,Color,230 15 15,0,-1,,"
 	}
 	"origin" "-50.9015 -32.9643 19.6759"
 	editor
@@ -76400,10 +76326,10 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnBreak" "pt_4,Break,,0,-1,,"
-		"OnBreak" "pt_4a,Break,,0,-1,,"
-		"OnBreak" "beam_4_terminal,ScriptHide,,0,-1,,"
 		"OnBreak" "beam_4,ScriptHide,,0,-1,,"
+		"OnBreak" "beam_4_terminal,ScriptHide,,0,-1,,"
+		"OnBreak" "pt_4a,Break,,0,-1,,"
+		"OnBreak" "pt_4,Break,,0,-1,,"
 	}
 	"origin" "67.5196 -697.181 20"
 	editor
@@ -76433,20 +76359,20 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnTrigger3" "beam_4_sound_switch,PlaySound,,0,-1,,"
-		"OnTrigger2" "beam_4_sound_switch,PlaySound,,0,-1,,"
-		"OnTrigger1" "beam_4_sound_poweroff,PlaySound,,0,-1,,"
-		"OnTrigger0" "beam_4_sound_poweron,PlaySound,,0,-1,,"
-		"OnTrigger3" "beam_4,Color,230 15 15,0,-1,,"
-		"OnTrigger2" "beam_4,Color,63 23 237,0,-1,,"
-		"OnTrigger2" "beam_4_trigger,EnableFlagNPC,,0,-1,,"
-		"OnTrigger2" "beam_4_trigger,DisableFlagClient,,0,-1,,"
-		"OnTrigger1" "beam_4,TurnOff,,0,-1,,"
-		"OnTrigger0" "beam_4,TurnOn,,0,-1,,"
-		"OnTrigger3" "beam_4_trigger,DisableFlagNPC,,0,-1,,"
-		"OnTrigger3" "beam_4_trigger,EnableFlagClient,,0,-1,,"
-		"OnTrigger1" "beam_4_trigger,Disable,,0,-1,,"
 		"OnTrigger0" "beam_4_trigger,Enable,,0,-1,,"
+		"OnTrigger1" "beam_4_trigger,Disable,,0,-1,,"
+		"OnTrigger3" "beam_4_trigger,EnableFlagClient,,0,-1,,"
+		"OnTrigger3" "beam_4_trigger,DisableFlagNPC,,0,-1,,"
+		"OnTrigger0" "beam_4,TurnOn,,0,-1,,"
+		"OnTrigger1" "beam_4,TurnOff,,0,-1,,"
+		"OnTrigger2" "beam_4_trigger,DisableFlagClient,,0,-1,,"
+		"OnTrigger2" "beam_4_trigger,EnableFlagNPC,,0,-1,,"
+		"OnTrigger2" "beam_4,Color,63 23 237,0,-1,,"
+		"OnTrigger3" "beam_4,Color,230 15 15,0,-1,,"
+		"OnTrigger0" "beam_4_sound_poweron,PlaySound,,0,-1,,"
+		"OnTrigger1" "beam_4_sound_poweroff,PlaySound,,0,-1,,"
+		"OnTrigger2" "beam_4_sound_switch,PlaySound,,0,-1,,"
+		"OnTrigger3" "beam_4_sound_switch,PlaySound,,0,-1,,"
 	}
 	"origin" "68.0121 -698.07 20.8208"
 	editor
@@ -77349,11 +77275,11 @@ entity
 	"origin" "-69.51 -86.94 77.51"
 	connections
 	{
-		"OnTrigger" "pt_3-2,Break,,0,-1,,"
-		"OnTrigger" "beam_3_terminal,ScriptHide,,0,-1,,"
-		"OnTrigger" "pt_3a-2,Break,,0,-1,,"
-		"OnTrigger" "pt_3a,Break,,0,-1,,"
 		"OnTrigger" "pt_3,Break,,0,-1,,"
+		"OnTrigger" "pt_3a,Break,,0,-1,,"
+		"OnTrigger" "pt_3a-2,Break,,0,-1,,"
+		"OnTrigger" "beam_3_terminal,ScriptHide,,0,-1,,"
+		"OnTrigger" "pt_3-2,Break,,0,-1,,"
 	}
 	solid
 	{
@@ -77561,8 +77487,8 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnBreak" "shellbox_cover3,Break,,0,-1,,"
 		"OnBreak" "shellboxes,Kill,,0.5,1,,"
+		"OnBreak" "shellbox_cover3,Break,,0,-1,,"
 	}
 	"origin" "-147.248 -187 57"
 	editor
@@ -77594,8 +77520,8 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnBreak" "shellbox_cover3,Break,,0,-1,,"
 		"OnBreak" "shellboxes,Kill,,0.5,1,,"
+		"OnBreak" "shellbox_cover3,Break,,0,-1,,"
 	}
 	"origin" "-234 -94 47"
 	editor
@@ -77966,8 +77892,8 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnMapLoad" "cellar_guardzz,FollowPatrolPath,zz1 zz2 zz3 zz4,0.1,-1,,"
 		"OnMapLoad" "cellar_guardzz,SetupPatrolType,999 2 FOLLOW_PATROL_PATH_WALK,0,-1,,"
+		"OnMapLoad" "cellar_guardzz,FollowPatrolPath,zz1 zz2 zz3 zz4,0.1,-1,,"
 	}
 	"origin" "131 -520 -135"
 	editor
@@ -78000,10 +77926,10 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnBreak" "pt_1,Break,,0,-1,,"
-		"OnBreak" "pt_1a,Break,,0,-1,,"
-		"OnBreak" "beam_1_terminal,ScriptHide,,0,-1,,"
 		"OnBreak" "beam_1,ScriptHide,,0,-1,,"
+		"OnBreak" "beam_1_terminal,ScriptHide,,0,-1,,"
+		"OnBreak" "pt_1a,Break,,0,-1,,"
+		"OnBreak" "pt_1,Break,,0,-1,,"
 	}
 	"origin" "-196.755 70.7037 19.7505"
 	editor
@@ -79913,27 +79839,27 @@ entity
 	"enabled" "0"
 	connections
 	{
-		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
-		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
-		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
-		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
-		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
-		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
-		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
-		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
-		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
-		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
-		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
-		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
-		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
-		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
-		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
-		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
-		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
-		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
-		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
-		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
 		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
+		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
+		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
+		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
+		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
+		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
+		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
+		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
+		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
+		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
+		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
+		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
+		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
+		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
+		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
+		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
+		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
+		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
+		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
+		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
+		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -79949,29 +79875,29 @@ entity
 	"StartHidden" "0"
 	connections
 	{
-		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
-		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
-		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
-		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
-		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
-		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
-		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
-		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
-		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
-		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
-		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
-		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
-		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
-		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
-		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
-		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
-		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
-		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
-		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
-		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
-		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
-		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
 		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
+		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
+		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
+		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
+		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
+		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
+		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
+		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
+		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
+		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
+		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
+		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
+		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
+		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
+		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
+		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
+		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
+		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
+		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
+		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
+		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
+		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
+		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -119436,13 +119362,96 @@ entity
 		"color" "220 30 220"
 	}
 }
+entity
+{
+	"id" "7410"
+	"classname" "func_ladder"
+	solid
+	{
+		"id" "494"
+		side
+		{
+			"id" "2974"
+			"plane" "(-260 -424 -184) (-260 -424 -352) (-260 -422 -352)"
+			"material" "OBJECTS/SEWERLADDERA"
+			"uaxis" "[0 1 0 32] 0.25"
+			"vaxis" "[0 0 1 232] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "2975"
+			"plane" "(-236 -422 -184) (-236 -422 -352) (-236 -424 -352)"
+			"material" "OBJECTS/SEWERLADDERA"
+			"uaxis" "[0 1 0 32] 0.25"
+			"vaxis" "[0 0 1 232] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "2976"
+			"plane" "(-236 -424 -184) (-236 -424 -352) (-260 -424 -352)"
+			"material" "OBJECTS/SEWERLADDERA"
+			"uaxis" "[-1 0 0 -88.8103] 0.19"
+			"vaxis" "[0 0 1 488] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "2977"
+			"plane" "(-260 -422 -184) (-260 -422 -352) (-236 -422 -352)"
+			"material" "OBJECTS/SEWERLADDERA"
+			"uaxis" "[-1 0 0 -89.2844] 0.19"
+			"vaxis" "[0 0 1 488] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "2978"
+			"plane" "(-260 -422 -352) (-260 -424 -352) (-236 -424 -352)"
+			"material" "OBJECTS/SEWERLADDERA"
+			"uaxis" "[0 1 0 32] 0.25"
+			"vaxis" "[-1 0 0 -188.016] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "2979"
+			"plane" "(-260 -424 -184) (-260 -422 -184) (-236 -422 -184)"
+			"material" "OBJECTS/SEWERLADDERA"
+			"uaxis" "[0 1 0 32] 0.25"
+			"vaxis" "[-1 0 0 -188.016] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "180 180 0"
+		}
+	}
+	editor
+	{
+		"color" "180 180 0"
+	}
+}
 cameras
 {
 	"activecamera" "0"
 	camera
 	{
-		"position" "[74.1928 -620.662 137.749]"
-		"look" "[113.069 -890.629 118.784]"
+		"position" "[-243.642 -393.25 -167.044]"
+		"look" "[-235.101 -665.861 -186.117]"
 	}
 }
 cordon
