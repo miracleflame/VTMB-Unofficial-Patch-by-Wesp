@@ -1596,6 +1596,8 @@ def AThingOfSomeKind():
             clan=8
         #elif pc.model==Beast:
         i = randint(1, 7)
+        gender = pc.IsMale()                                                             
+        clan = pc.clan
         if(gender == 1):
             #Human
             if(clan == 1 and i == 1): c.ArmsCrossed=""
