@@ -110,22 +110,26 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.2                                                  04.01.2019
+v10.2                                                  25.01.2019
 -----
 +Placed a dead dog into Fu Syndicate and filled Kamikaze Zen shelf.
 +Made Sheriff laugh when conjuring bats and made them attack less.
 +Added console key and all hotkeys to the controls options submenu.
 +Fixed details in library level and text and dialogue details too.
-+Corrected maximal ammo of flamethrower and made Carson pack stuff.
-
++Corrected maximum ammo of flamethrower and made Carson pack stuff.
 +Prevented exploit of selling books and removed Trip button sound.
 +Unlocked Red Spot storage door and repaired beachhouse NPC update.
-
-Removed copying bin files into main folder and SDK virus triggers.
++Updated the Krimeputer log entries on Brian's and Muddy's deaths.
++Made Carson remove McGee's corpse and raised MAC-10 magazine cost.
++Fixed silent Heather dialogue and made warrens ladder accessible.
++Locked a haven door and moved Malcolm's bribe to Mercurio's house.
++Repaired problems when revisiting the beachhouse and the warrens.
+Removed quest update for Copper and locked Gimble's door in basic.
+Fixed some more wrong Humanity losses and cut off Heather sounds.
+Corrected Tommy Dominate reaction and possible poster quest issue.
 Modified barber chair with Lily to animate bonds, thanks DLLullu.
-Removed basic last Jack lines and made tutorial door react easier.
-
-Made NPCs recognize the death of Misti, Venus, Mercurio and Knox.
+Removed copying bin files into main folder and SDK virus triggers.
+Made tutorial door open better and removed basic last Jack lines.
 Fixed female Tremere hair and sheet warform model, thanks DLLullu.
 Restored Gangrels to Masquerade cutscene and added theatre email.
 Made male Gangrel not crouch to fit transformation to warform fix.
@@ -138,6 +142,9 @@ Improved python and loader file compatibility, thanks to Psycho-A.
 Made video victim's model unique and corrected ghoul sound group.
 Corrected mirrors and details on several maps, thanks to Psycho-A.
 Fixed Milligan's business card and Dane screenshots, thanks IanW.
+Made NPCs recognize the deaths of Misti, Venus, Mercurio and Knox.
+Fixed Leopold Society cellar ladder and floating towels in basic.
+Added way to use all animations for all models, thanks to DDLullu.
 
 v10.1                                                   23.10.2018
 -----
@@ -2428,6 +2435,7 @@ Disabled low poly model LOD and fixed pause messages in engine.dll.
 Corrected mirrored crate textures and reset clothing using console.
 Fixed hair of female Tremere and removed tongue of Sheriff warform.
 Made male Gangrel not crouch to fit transformation to warform fix.
+Added way to use all animations for all models, even NPCs to PCs.
 
 Sounds:
 +Added subtitles for Malkavian whispers and Deb of Night radio show.
@@ -2593,8 +2601,10 @@ Santa Monica:
 +Restored Trip's drug quest and added Humanity loss to SM blueblood.
 +Made player sending Gimble to Vandal loose humanity then regain it.
 +Cleaned Mercurio's apartment and fixed some wrong bum animations.
-+Made Carson quest more logical by having the player phone Gimble.
-+Restored Arthur's computer and starting monologue on the phone.
++Made player phone Gimble in Carson quest and Carson remove McGee.
++Restored Arthur's computer and his starting monologue on the phone.
++Updated the Krimeputer log entries on Brian's and Muddy's deaths.
++Locked a haven door and moved Malcolm's bribe to Mercurio's house.
 Made morphine quest acknowledge and removed some first quest info.
 Fixed morphine quest updates after angering Mercurio and warehouse.
 Made you remember former knowledge of Rolf Toten and Virgil Crumb.
@@ -2922,7 +2932,7 @@ Warrens:
 +Restored three female body parts and two blockades and fixed stairs.
 +Placed GLOCK near killed sewerworker and extended spiderchick scene.
 +Restored two unseen newspaper cuts and made web cameras stackable.
-+Improved corpse variety in warrens lair and the first start location.
++Improved corpse variety in warrens lair and made ladder accessible.
 +Added possibility to keep the Nosferatu alive for a humanity gain.
 Repaired warrens electrical terminal computer and pump 118a display.
 Made sure the quick Nosferatu dies and adjusted some warrens dates.
@@ -3045,7 +3055,7 @@ Society of Leopold:
 After giving Ash the bloodpack it will be gone from your inventory.
 Restored missing sounds to Bach cutscene and missing XP on escaping.
 Replaced some male hunters with females and swapped several weapons.
-Fixed exit crash with style and grace and lowered barrel inspection.
+Fixed exit crash with style and grace and cellar ladder top issue.
 Prevented Humanity from reaching zero in the dialogue with Johansen.
 
 Hallowbrook Hotel:
