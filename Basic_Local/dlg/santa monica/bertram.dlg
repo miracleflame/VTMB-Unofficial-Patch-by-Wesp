@@ -1,6 +1,6 @@
 {	1	}{	Look who finally made it. Thought you'd never find me, huh?	}{	Look who finally made it. Thought you'd never find me, did ya sweetheart?	}{	#	}{	npc.SetDisposition("joy",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	2	}{	You knew I was looking for you?	}{	You knew I was looking for you?	}{	21	}{	G.Patch_Plus == 0	}{	G.Bertram_Check = 1; pc.SetQuest("Warehouse",1)	}{	}{	}{	}{	}{	}{	}{	It festered in your brain that I looked for you?	}
-{	3	}{	You knew I was looking for you?	}{	You knew I was looking for you?	}{	21	}{	G.Patch_Plus == 1	}{	G.Bertram_Check = 1; pc.SetQuest("Warehouse",8)	}{	}{	}{	}{	}{	}{	}{	It festered in your brain that I looked for you?	}
+{	2	}{	You knew I was looking for you?	}{	You knew I was looking for you?	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	It festered in your brain that I looked for you?	}
+{	3	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	4	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	5	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -9,8 +9,8 @@
 {	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	11	}{	The one and only. Don't bother with the introductions, fledgling; I know who you are.	}{	The one and only. Don't bother with the introductions, fledgling; I know who you are.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	12	}{	You do?	}{	You do?	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	Then you know more than I do.	}
-{	13	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	You do?	}{	You do?	}{	31	}{	G.Patch_Plus == 0	}{	G.Bertram_Check = 1; pc.SetQuest("Warehouse",1)	}{	}{	}{	}{	}{	}{	}{	Then you know more than I do.	}
+{	13	}{	You do?	}{	You do?	}{	31	}{	G.Patch_Plus == 1	}{	G.Bertram_Check = 1; pc.SetQuest("Warehouse",8)	}{	}{	}{	}{	}{	}{	}{	Then you know more than I do.	}
 {	14	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -79,7 +79,7 @@
 {	79	}{	I'm outta here.	}{	I'm outta here.	}{	511	}{	G.Bertram_Ready > 0 and G.Bertram_Map == 0 and IsClan(pc,"Nosferatu")	}{	G.Bertram_Feud = 2	}{	}{	}{	}{	}{	}{	}{	}
 {	80	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	G.Bertram_Ready > 0 and G.Bertram_Map == 1	}{	G.Bertram_Feud = 2	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
 {	81	}{	Oh you did, did you? [laugh]Well, I wasn't worried. So why'd you need to find me? What did you need?	}{	Oh you did, did you? [laugh]Well, I wasn't worried. So why'd you need to find me? What did you need?	}{	#	}{	npc.SetDisposition("joy",3)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	82	}{	I need to get to that warehouse for Mercurio.	}{	I need to get to that warehouse for Mercurio.	}{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	I seek a strange house of wares, oh Nasty Dude!	}
+{	82	}{	I need to get to that warehouse for Mercurio. You know Mercurio?	}{	I need to get to that warehouse for Mercurio. You know Mercurio?		}{	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	I seek a strange house of wares, oh Nasty Dude! For the winged one, you know?	}
 {	83	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -996,3 +996,5 @@
 {	996	}{	(Starting Condition)	}{	}{	631	}{	(G.Story_State >= 5 and G.Story_State < 25) and G.Bertram_Goodjob == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	997	}{	(Starting Condition)	}{	}{	461	}{	G.Bertram_Go == 1 and G.Bertram_Ready < 2	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	998	}{	(Starting Condition)	}{	}{	101	}{	npc.times_talked > 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	999	}{	(Starting Condition)	}{	}{	11	}{	npc.times_talked == 1	 and G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1000	}{	(Starting Condition)	}{	}{	1	}{	npc.times_talked == 1	 and G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	}

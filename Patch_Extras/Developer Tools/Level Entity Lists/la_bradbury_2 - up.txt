@@ -15058,6 +15058,8 @@
 "OnStartTouch" "f4_impact_1,Impact,,0.1,-1,,"
 "OnStartTouch" "f4_r_presence_1,ScriptUnhide,,0,-1,,"
 "OnStartTouch" "f4_r_ghoul_1,ScriptUnhide,,0,-1,,"
+"OnStartTouch" "f4_r_ghoul_2,ScriptUnhide,,0,-1,,"
+"OnStartTouch" "f4_r_ghoul_3,ScriptUnhide,,0,-1,,"
 "OnStartTouch" "f4_r_presence_1,SetScriptedDiscipline,presence 3,0.1,-1,,"
 "OnStartTouch" "DoorBreak11,PlaySound,,0,-1,,"
 }
@@ -17600,15 +17602,16 @@
 "origin" "524 -792 -4"
 }
 {
-"classname" "item_w_occultblade"
+"classname" "item_w_flamethrower"
 "origin" "129.873 -532.966 9.00"
-"targetname" "basic_blade"
+"angles" "90 90 0"
+"targetname" "basic_thrower"
 "StartHidden" "0"
 }
 {
 "classname" "inspection_node"
-"parentname" "basic_blade"
-"targetname" "basic_bladenode"
+"parentname" "basic_thrower"
+"targetname" "basic_throwernode"
 "start_enabled" "1"
 "StartHidden" "0"
 "inspection" "3"
@@ -17667,16 +17670,16 @@
 "origin" "-52 -588 9"
 }
 {
-"classname" "item_w_flamethrower"
-"targetname" "basic_thrower"
+"classname" "item_w_occultblade"
+"targetname" "basic_blade"
 "StartHidden" "0"
 "angles" "90 90 0"
 "origin" "-100 -580 28"
 }
 {
 "classname" "inspection_node"
-"parentname" "basic_thrower"
-"targetname" "basic_throwernode"
+"parentname" "basic_blade"
+"targetname" "basic_bladenode"
 "start_enabled" "1"
 "StartHidden" "0"
 "inspection" "3"

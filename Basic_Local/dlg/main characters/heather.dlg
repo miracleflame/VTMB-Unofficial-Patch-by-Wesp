@@ -29,10 +29,10 @@
 {	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	31	}{	[unconscious, pained, open-mouthed groaning]Ngh...	}{	[unconscious, pained, open-mouthed groaning]Ngh...	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	32	}{	Maybe my blood can save you...	}{	Maybe my blood can save you...	}{	0	}{	pc.bloodpool > 1	}{	G.Heather_Steve = 1	}{	}{	}{	}{	}{	}{	}{	Taste my blood and be mine!	}
-{	33	}{	Sorry, I can't help you.	}{	Sorry, I can't help you.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	This one can do nothing for you.	}
-{	34	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	32	}{	Maybe my blood can save you...	}{	Maybe my blood can save you...	}{	0	}{	G.Patch_Plus == 1 and pc.bloodpool > 1	}{	G.Heather_Steve = 1	}{	}{	}{	}{	}{	}{	}{	Taste my blood and be mine!	}
+{	33	}{	Sorry, I can't help you.	}{	Sorry, I can't help you.	}{	0	}{	G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	This one can do nothing for you.	}
+{	34	}{	(feed her your blood)	}{	(feed her your blood)	}{	0	}{	G.Patch_Plus == 0 and pc.bloodpool > 1	}{	G.Heather_Steve = 1	}{	}{	}{	}{	}{	}{	}{	(feed her your blood)	}
+{	35	}{	(do nothing)	}{	(do nothing)	}{	0	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	(do nothing)	}
 {	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -1018,4 +1018,5 @@
 {	1018	}{	(Starting Condition)	}{	}{	17	}{	G.Heather_Groan == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1019	}{	(Starting Condition)	}{	}{	19	}{	G.Heather_Grandma == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1020	}{	(Starting Condition)	}{	}{	15	}{	G.Heather_Know == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	1021	}{	(Starting Condition)	}{	}{	11	}{	npc.times_talked == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1021	}{	(Starting Condition)	}{	}{	11	}{	npc.times_talked == 1 and G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1022	}{	(Starting Condition)	}{	}{	17	}{	npc.times_talked == 1 and G.Patch_Plus 0	}{	}{	}{	}{	}{	}{	}{	}{	}

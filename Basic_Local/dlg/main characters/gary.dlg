@@ -664,23 +664,23 @@
 {	664	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	491	}{	not IsClan(pc,"Nosferatu") and not IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	665	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	501	}{	IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	666	}{	Alright. I'll go. But you better keep your end of the deal.	}{	Alright. I'll go. But you better keep your end of the deal.	}{	671	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hmm... I will go to China... but do not cross me, voice.	}
-{	667	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	667	}{	The Kuei-jin are going to be sorry I ever came to town.	}{	The Kuei-jin are going to be sorry I ever came to town.	}{	721	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	Voice, you send chaos itself to those lands.	}^
 {	668	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	669	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	670	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	671	}{	Of course. What kind of a monster do you take me for?[Laughs] There is a method to my madness, boss. There's a payphone in Chinatown. I'll call you with the info once Barabus is safe... until then, you'll never know where I am.	}{	Of course. What kind of a monster do you take me for?[Laughs] There is a method to my madness, boss. There's a payphone in Chinatown. I'll call you with the info once Barabus is safe... until then, you'll never know where I am.	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	672	}{	It's as good as done. Bye.	}{	It's as good as done. Bye.	}{	0	}{	}{	G.Gary_Disappear = 1; garyDisappear(); garyInteractionEnd()	}{	}{	}{	}{	}{	}{	}{	I am done before it began.	}
-{	673	}{	Yeah, get back in the shadows. That's where you belong. Bye.	}{	Yeah, get back in the shadows. That's where you belong. Bye.	}{	0	}{	not IsClan(pc,"Nosferatu")	}{	G.Gary_Disappear = 1; garyDisappear(); garyInteractionEnd()	}{	}{	}{	}{	}{	}{	}{	Become one with the dark again, voice.	}
-{	674	}{	Cross me and it'll be the last thing you do. Goodbye.	}{	Cross me and it'll be the last thing you do. Goodbye.	}{	0	}{	Humanity -7	}{	G.Gary_Disappear = 1; garyDisappear(); garyInteractionEnd()	}{	}{	}{	}{	}{	}{	}{	If I do what the voice commands, the voice WILL do what it promises.	}
-{	675	}{	The Kuei-jin are going to be sorry I ever came to town.	}{	The Kuei-jin are going to be sorry I ever came to town.	}{	721	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	Voice, you send chaos itself to those lands.	}
+{	671	}{	Of course. What kind of a monster do you take me for?[Laughs] There is a method to my madness, boss. There's a payphone in Chinatown. I'll call you with the info once Barabus is safe... until then, you'll never know where I am.	}{	Of course. What kind of a monster do you take me for?[Laughs] There is a method to my madness, boss. There's a payphone in Chinatown. I'll call you with the info once Barabus is safe... until then, you'll never know where I am.	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	G.Gary_Disappear = 1; garyDisappear(); garyInteractionEnd()	}{	}{	}{	}{	}{	}{	}{	}
+{	672	}{	It's as good as done. Bye.	}{	It's as good as done. Bye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am done before it began.	}
+{	673	}{	Yeah, get back in the shadows. That's where you belong. Bye.	}{	Yeah, get back in the shadows. That's where you belong. Bye.	}{	0	}{	not IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	Become one with the dark again, voice.	}
+{	674	}{	Cross me and it'll be the last thing you do. Goodbye.	}{	Cross me and it'll be the last thing you do. Goodbye.	}{	0	}{	Humanity -7	}{	}{	}{	}{	}{	}{	}{	}{	If I do what the voice commands, the voice WILL do what it promises.	}
+{	675	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	676	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	677	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	678	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	679	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	680	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	681	}{	Remember, boss... that's their kingdom. Start testing them, you won't like the results. Just get our boy back.	}{	Remember, boss... that's their kingdom. Start testing them, you won't like the results. Just get our boy back.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	682	}{	I'll remember that. Goodbye.	}{	I'll remember that. Goodbye.	}{	0	}{	}{	G.Gary_Disappear = 1; garyDisappear(); garyInteractionEnd()	}{	}{	}{	}{	}{	}{	}{	I am done before it began.	}
-{	683	}{	We'll see. Goodbye.	}{	We'll see. Goodbye.	}{	0	}{	}{	G.Gary_Disappear = 1; garyDisappear(); garyInteractionEnd()	}{	}{	}{	}{	}{	}{	}{	Heh heh....	}
+{	681	}{	Remember, boss... that's their kingdom. Start testing them, you won't like the results. Just get our boy back.	}{	Remember, boss... that's their kingdom. Start testing them, you won't like the results. Just get our boy back.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Gary_Disappear = 1; garyDisappear(); garyInteractionEnd()	}{	}{	}{	}{	}{	}{	}{	}
+{	682	}{	I'll remember that. Goodbye.	}{	I'll remember that. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am done before it began.	}
+{	683	}{	We'll see. Goodbye.	}{	We'll see. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Heh heh....	}
 {	684	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	685	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	686	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

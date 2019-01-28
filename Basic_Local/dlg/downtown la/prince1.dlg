@@ -961,9 +961,9 @@
 {	961	}{	Oh, and to show my appreciation for your dedicated service to me, I have secured you a haven nearby - in the Skyeline apartment building. I hope it's to your liking.	}{	Oh, and to show my appreciation for your dedicated service to me, I have secured you a haven nearby - in the Skyeline apartment building. I hope it's to your liking.	}{	#	}{	}{	G.Prince_Skyline = 1; G.Heather_Clothes = 1; pc.GiveItem("item_k_skyline_haven_key")	}{	}{	}{	}{	}{	}{	}{	}
 {	962	}{	(Auto-Link)	}{	(Auto-Link)	}{	1011	}{	G.Prince_Hardwarn == 0 and pc.masquerade == 4	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	963	}{	(Auto-Link)	}{	(Auto-Link)	}{	991	}{	G.Prince_Lightwarn == 0 and pc.masquerade > 0	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	964	}{	Thanks!	}{	Thanks!	}{	0	}{	G.Heather_Drank == 0 or IsDead("Heather")	}{	}{	}{	}{	}{	}{	}{	}{	Yes!	}
-{	965	}{	Thanks! Tell my ghoul to move there too.	}{	Thanks! Tell my ghoul to move there too.	}{	0	}{	G.Heather_Drank == 1 and not IsDead("Heather") and G.Heather_Haven == 1	}{	}{	}{	}{	}{	}{	}{	}{	Yes! And get my pet to be there too.	}
-{	966	}{	Thanks! But better not tell the girl I've met below.	}{	Thanks! But better not tell the girl I've met below.	}{	0	}{	G.Heather_Drank == 1 and not IsDead("Heather") and G.Heather_Haven == 0	}{	}{	}{	}{	}{	}{	}{	}{	Yes! But don't let the pet below follow me there.	}
+{	964	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	G.Patch_Plus == 0 or G.Heather_Drank == 0 or IsDead("Heather")	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	965	}{	Thanks! Tell my ghoul to move there too.	}{	Thanks! Tell my ghoul to move there too.	}{	0	}{	G.Patch_Plus == 1 and G.Heather_Drank == 1 and not IsDead("Heather") and G.Heather_Haven == 1	}{	}{	}{	}{	}{	}{	}{	}{	Yes! And get my pet to be there too.	}
+{	966	}{	Thanks! But better not tell the girl I've met below.	}{	Thanks! But better not tell the girl I've met below.	}{	0	}{	G.Patch_Plus == 1 and G.Heather_Drank == 1 and not IsDead("Heather") and G.Heather_Haven == 0	}{	}{	}{	}{	}{	}{	}{	}{	Yes! But don't let the pet below follow me there.	}
 {	967	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	968	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	969	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
