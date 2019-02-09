@@ -2,58 +2,16 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7999"
-	"mapversion" "343"
+	"mapversion" "344"
 	"prefab" "0"
 }
 visgroups
 {
 	visgroup
 	{
-		"name" "Diner light helpers"
-		"visgroupid" "14"
-		"color" "135 228 181"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Areaportals"
-		"visgroupid" "2"
-		"color" "179 176 145"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "New bar sprites"
-		"visgroupid" "6"
-		"color" "255 128 64"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "DJ pulpit collision"
-		"visgroupid" "3"
-		"color" "174 215 132"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Cubemaps"
-		"visgroupid" "9"
-		"color" "130 107 104"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "New bar lights"
-		"visgroupid" "4"
-		"color" "255 255 128"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Patty face light"
-		"visgroupid" "7"
-		"color" "116 213 106"
+		"name" "New diner stuff"
+		"visgroupid" "11"
+		"color" "81 134 159"
 		"visible" "1"
 	}
 	visgroup
@@ -65,9 +23,51 @@ visgroups
 	}
 	visgroup
 	{
-		"name" "New diner stuff"
-		"visgroupid" "11"
-		"color" "81 134 159"
+		"name" "Patty face light"
+		"visgroupid" "7"
+		"color" "116 213 106"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "New bar lights"
+		"visgroupid" "4"
+		"color" "255 255 128"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Cubemaps"
+		"visgroupid" "9"
+		"color" "130 107 104"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "DJ pulpit collision"
+		"visgroupid" "3"
+		"color" "174 215 132"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "New bar sprites"
+		"visgroupid" "6"
+		"color" "255 128 64"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Areaportals"
+		"visgroupid" "2"
+		"color" "179 176 145"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Diner light helpers"
+		"visgroupid" "14"
+		"color" "135 228 181"
 		"visible" "1"
 	}
 }
@@ -81,7 +81,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "343"
+	"mapversion" "344"
 	"classname" "worldspawn"
 	"skyname" "warehouse"
 	"sounds" "1"
@@ -28940,9 +28940,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "cops_arrive,PlaySound,,0,-1,,"
-		"OnTrigger" "cops_outside,FadeIn,1,9,-1,,"
 		"OnTrigger" "cops_yell,PlaySound,1,9,-1,,"
+		"OnTrigger" "cops_outside,FadeIn,1,9,-1,,"
+		"OnTrigger" "cops_arrive,PlaySound,,0,-1,,"
 	}
 	"origin" "602.089 -5.40002 56"
 	editor
@@ -37161,8 +37161,8 @@ entity
 	"floatfreq" "2"
 	connections
 	{
-		"OnDialogEnd" ",,,0,-1,venusDialog(),"
 		"OnDeath" ",,,0,-1,venusDeath(),"
+		"OnDialogEnd" ",,,0,-1,venusDialog(),"
 	}
 	"origin" "406.949 831.981 0.355953"
 	editor
@@ -37226,8 +37226,8 @@ entity
 	"floatfreq" "2"
 	connections
 	{
-		"OnDialogEnd" ",,,0,-1,pattyDialog(),"
 		"OnDeath" ",,,0,-1,pattyDeath(),"
+		"OnDialogEnd" ",,,0,-1,pattyDialog(),"
 	}
 	"origin" "694.87 458.787 9"
 	editor
@@ -37429,9 +37429,9 @@ entity
 	"radius" "10"
 	connections
 	{
-		"OnEndSequence" "player_follow_venus,BeginSequence,,2,-1,,"
-		"OnEndSequence" "venus_controller,CreateControllerNPC,,0,-1,,"
 		"OnEndSequence" "box_office_door,Unlock,,0,-1,,"
+		"OnEndSequence" "venus_controller,CreateControllerNPC,,0,-1,,"
+		"OnEndSequence" "player_follow_venus,BeginSequence,,2,-1,,"
 	}
 	"origin" "383.202 838.997 9"
 	editor
@@ -37698,10 +37698,10 @@ entity
 	"origin" "382 768 55"
 	connections
 	{
-		"OnStartTouch" "teleport_player_to_office,Enable,,3,-1,,"
-		"OnStartTouch" "teleport_player_to_office,Disable,,4,-1,,"
-		"OnStartTouch" "venus_fader,Fade,,0,-1,,"
 		"OnStartTouch" "venus_controller,RemoveControllerNPC,,2.5,-1,,"
+		"OnStartTouch" "venus_fader,Fade,,0,-1,,"
+		"OnStartTouch" "teleport_player_to_office,Disable,,4,-1,,"
+		"OnStartTouch" "teleport_player_to_office,Enable,,3,-1,,"
 	}
 	solid
 	{
@@ -37926,13 +37926,13 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnMapLoad" ",,,0,-1,pattyGone(),"
-		"OnMapLoad" ",,,0,-1,venusToBar(),"
-		"OnMapLoad" "DJ-playing,BeginSequence,,0.1,-1,,"
-		"OnMapLoad" "poledancer1,BeginSequence,,0.1,-1,,"
-		"OnMapLoad" "poledancer2,BeginSequence,,0.1,-1,,"
-		"OnMapLoad" "poledancer3,BeginSequence,,0.1,-1,,"
 		"OnMapLoad" "plus_turntable,SetAnimation,spin,0.1,-1,,"
+		"OnMapLoad" "poledancer3,BeginSequence,,0.1,-1,,"
+		"OnMapLoad" "poledancer2,BeginSequence,,0.1,-1,,"
+		"OnMapLoad" "poledancer1,BeginSequence,,0.1,-1,,"
+		"OnMapLoad" "DJ-playing,BeginSequence,,0.1,-1,,"
+		"OnMapLoad" ",,,0,-1,venusToBar(),"
+		"OnMapLoad" ",,,0,-1,pattyGone(),"
 	}
 	"origin" "615.793 135 147.09"
 	editor
@@ -39877,8 +39877,8 @@ entity
 	"origin" "502 154 55"
 	connections
 	{
-		"OnStartTouch" "wallet_sparklies,ScriptUnhide,,0,-1,,"
 		"OnEndTouch" "wallet_sparklies,ScriptHide,,0,-1,,"
+		"OnStartTouch" "wallet_sparklies,ScriptUnhide,,0,-1,,"
 	}
 	solid
 	{
@@ -40007,7 +40007,7 @@ entity
 	"targetname" "dance_spot_player"
 	"rating" "5"
 	"holster_weapon" "1"
-	"origin" "548 1156 -5"
+	"origin" "548 1156 9"
 	editor
 	{
 		"color" "224 224 0"
@@ -40031,7 +40031,7 @@ entity
 	"targetname" "dance_spot_player"
 	"rating" "5"
 	"holster_weapon" "1"
-	"origin" "524 1104 -5"
+	"origin" "524 1104 9"
 	editor
 	{
 		"color" "224 224 0"
@@ -40055,7 +40055,7 @@ entity
 	"targetname" "dance_spot_player"
 	"rating" "5"
 	"holster_weapon" "1"
-	"origin" "524 1056 -5"
+	"origin" "524 1056 9"
 	editor
 	{
 		"color" "224 224 0"
@@ -40079,7 +40079,7 @@ entity
 	"targetname" "dance_spot_player"
 	"rating" "5"
 	"holster_weapon" "1"
-	"origin" "568 1020 -5"
+	"origin" "568 1020 9"
 	editor
 	{
 		"color" "224 224 0"
@@ -40103,7 +40103,7 @@ entity
 	"targetname" "dance_spot_player"
 	"rating" "5"
 	"holster_weapon" "1"
-	"origin" "620 1016 -5"
+	"origin" "620 1016 9"
 	editor
 	{
 		"color" "224 224 0"
@@ -40127,7 +40127,7 @@ entity
 	"targetname" "dance_spot_player"
 	"rating" "5"
 	"holster_weapon" "1"
-	"origin" "660 1064 -5"
+	"origin" "660 1064 9"
 	editor
 	{
 		"color" "224 224 0"
@@ -40151,7 +40151,7 @@ entity
 	"targetname" "dance_spot_player"
 	"rating" "5"
 	"holster_weapon" "1"
-	"origin" "660 1112 -5"
+	"origin" "660 1112 9"
 	editor
 	{
 		"color" "224 224 0"
@@ -40175,7 +40175,7 @@ entity
 	"targetname" "dance_spot_player"
 	"rating" "5"
 	"holster_weapon" "1"
-	"origin" "648 1152 -5"
+	"origin" "648 1152 9"
 	editor
 	{
 		"color" "224 224 0"
@@ -40199,7 +40199,7 @@ entity
 	"targetname" "dance_spot_player"
 	"rating" "5"
 	"holster_weapon" "1"
-	"origin" "600 1152 -5"
+	"origin" "600 1152 9"
 	editor
 	{
 		"color" "224 224 0"
@@ -40214,12 +40214,12 @@ entity
 	"targetname" "player_dance_trigger"
 	connections
 	{
-		"OnUseEnd" "dance_spot,Enable,,0,-1,,"
-		"OnUseEnd" "dance_spot_player,Disable,,0,-1,,"
-		"OnUseBegin" "dance_spot_player,Enable,,0,-1,,"
-		"OnUseBegin" "dance_spot,Disable,,0,-1,,"
-		"OnUseBegin" ",,,0,-1,G.No_Idle = 1,"
 		"OnUseEnd" ",,,0,-1,G.No_Idle = 0,"
+		"OnUseBegin" ",,,0,-1,G.No_Idle = 1,"
+		"OnUseBegin" "dance_spot,Disable,,0,-1,,"
+		"OnUseBegin" "dance_spot_player,Enable,,0,-1,,"
+		"OnUseEnd" "dance_spot_player,Disable,,0,-1,,"
+		"OnUseEnd" "dance_spot,Enable,,0,-1,,"
 	}
 	solid
 	{
@@ -40650,8 +40650,8 @@ entity
 	"ignore_detected_attack" "1"
 	connections
 	{
-		"OnDeath" "DJ-playing,Kill,,0,-1,,"
 		"OnDamaged" "DJ-playing,Kill,,0,-1,,"
+		"OnDeath" "DJ-playing,Kill,,0,-1,,"
 	}
 	"origin" "575 1720 154"
 	editor
@@ -40941,27 +40941,27 @@ entity
 	"enabled" "0"
 	connections
 	{
-		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
-		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
-		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
-		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
-		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
-		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
-		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
-		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
-		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
-		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
-		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
-		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
-		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
-		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
-		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
-		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
-		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
-		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
-		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
-		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
 		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
+		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
+		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
+		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
+		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
+		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
+		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
+		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
+		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
+		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
+		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
+		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
+		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
+		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
+		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
+		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
+		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
+		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
+		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
+		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
+		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -40977,29 +40977,29 @@ entity
 	"StartHidden" "0"
 	connections
 	{
-		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
-		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
-		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
-		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
-		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
-		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
-		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
-		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
-		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
-		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
-		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
-		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
-		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
-		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
-		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
-		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
-		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
-		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
-		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
-		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
-		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
-		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
 		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
+		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
+		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
+		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
+		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
+		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
+		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
+		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
+		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
+		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
+		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
+		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
+		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
+		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
+		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
+		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
+		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
+		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
+		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
+		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
+		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
+		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
+		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -64627,8 +64627,8 @@ entity
 	"origin" "632 230 61"
 	connections
 	{
-		"OnEndTouch" "plus_turnstile_collision,ScriptUnhide,,0,-1,,"
 		"OnStartTouch" "plus_turnstile_collision,ScriptHide,,0,-1,,"
+		"OnEndTouch" "plus_turnstile_collision,ScriptUnhide,,0,-1,,"
 	}
 	solid
 	{
@@ -66609,9 +66609,9 @@ entity
 	"radius" "10"
 	connections
 	{
-		"OnEndSequence" "venus_teleporter,Disable,,1,-1,,"
-		"OnEndSequence" "venus_teleporter,Enable,,0,-1,,"
 		"OnBeginSequence" "venus_camera,EndShot,,0,-1,,"
+		"OnEndSequence" "venus_teleporter,Enable,,0,-1,,"
+		"OnEndSequence" "venus_teleporter,Disable,,1,-1,,"
 	}
 	"origin" "396 660 9"
 	editor
@@ -70197,8 +70197,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[602.484 59.02 106.576]"
-		"look" "[608.817 590.727 -6.44936]"
+		"position" "[650.315 1010.83 181.076]"
+		"look" "[433.596 1101.41 -309.185]"
 	}
 }
 cordon
