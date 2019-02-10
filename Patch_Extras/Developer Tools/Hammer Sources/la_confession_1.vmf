@@ -2,58 +2,16 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7999"
-	"mapversion" "344"
+	"mapversion" "345"
 	"prefab" "0"
 }
 visgroups
 {
 	visgroup
 	{
-		"name" "New diner stuff"
-		"visgroupid" "11"
-		"color" "81 134 159"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Imprvd shadows"
-		"visgroupid" "8"
-		"color" "92 189 130"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Patty face light"
-		"visgroupid" "7"
-		"color" "116 213 106"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "New bar lights"
-		"visgroupid" "4"
-		"color" "255 255 128"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Cubemaps"
-		"visgroupid" "9"
-		"color" "130 107 104"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "DJ pulpit collision"
-		"visgroupid" "3"
-		"color" "174 215 132"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "New bar sprites"
-		"visgroupid" "6"
-		"color" "255 128 64"
+		"name" "Diner light helpers"
+		"visgroupid" "14"
+		"color" "135 228 181"
 		"visible" "1"
 	}
 	visgroup
@@ -65,9 +23,51 @@ visgroups
 	}
 	visgroup
 	{
-		"name" "Diner light helpers"
-		"visgroupid" "14"
-		"color" "135 228 181"
+		"name" "New bar sprites"
+		"visgroupid" "6"
+		"color" "255 128 64"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "DJ pulpit collision"
+		"visgroupid" "3"
+		"color" "174 215 132"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Cubemaps"
+		"visgroupid" "9"
+		"color" "130 107 104"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "New bar lights"
+		"visgroupid" "4"
+		"color" "255 255 128"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Patty face light"
+		"visgroupid" "7"
+		"color" "116 213 106"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Imprvd shadows"
+		"visgroupid" "8"
+		"color" "92 189 130"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "New diner stuff"
+		"visgroupid" "11"
+		"color" "81 134 159"
 		"visible" "1"
 	}
 }
@@ -81,7 +81,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "344"
+	"mapversion" "345"
 	"classname" "worldspawn"
 	"skyname" "warehouse"
 	"sounds" "1"
@@ -3876,7 +3876,7 @@ world
 			"id" "306"
 			"plane" "(660 -48 256) (660 -48 0) (660 144 0)"
 			"material" "STONE/CONFWLLF"
-			"uaxis" "[0 1 0 -256] 0.25"
+			"uaxis" "[0 1 0 -326] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -3961,7 +3961,7 @@ world
 			"id" "313"
 			"plane" "(492 144 256) (492 144 0) (492 -48 0)"
 			"material" "STONE/CONFWLLF"
-			"uaxis" "[0 1 0 -287] 0.25"
+			"uaxis" "[0 1 0 -302] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -8993,7 +8993,7 @@ world
 			"id" "739"
 			"plane" "(480 -48 96) (480 -48 0) (534 -48 0)"
 			"material" "STONE/CONFWLLF"
-			"uaxis" "[1 0 0 -256] 0.25"
+			"uaxis" "[1 0 0 -258] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -19520,7 +19520,7 @@ world
 			"id" "1791"
 			"plane" "(492 152 128) (492 152 0) (492 144 0)"
 			"material" "STONE/CONFWLLF"
-			"uaxis" "[0 1 0 -287] 0.25"
+			"uaxis" "[0 1 0 -300] 0.25"
 			"vaxis" "[0 0 -1 0] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -23064,9 +23064,9 @@ world
 		side
 		{
 			"id" "4579"
-			"plane" "(664 83 112) (656 83 -1) (656 83 112)"
+			"plane" "(666 83 112) (658 83 -1) (658 83 112)"
 			"material" "WOOD/GALPLY"
-			"uaxis" "[-1 0 0 418] 1"
+			"uaxis" "[-1 0 0 420] 1"
 			"vaxis" "[0 0 -1 -273] 1"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -23075,9 +23075,9 @@ world
 		side
 		{
 			"id" "4580"
-			"plane" "(656 86 109) (664 86 -1) (664 86 109)"
+			"plane" "(658 86 109) (666 86 -1) (666 86 109)"
 			"material" "WOOD/WOODC"
-			"uaxis" "[-1 0 0 104] 0.25"
+			"uaxis" "[-1 0 0 112] 0.25"
 			"vaxis" "[0 0 -1 -76] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -23086,7 +23086,7 @@ world
 		side
 		{
 			"id" "4581"
-			"plane" "(664 86 109) (664 83 -1) (664 83 112)"
+			"plane" "(666 86 109) (666 83 -1) (666 83 112)"
 			"material" "PLASTER/DOORA"
 			"uaxis" "[0 1 0 -188] 0.25"
 			"vaxis" "[0 0 -1 -4] 0.25"
@@ -23097,7 +23097,7 @@ world
 		side
 		{
 			"id" "4582"
-			"plane" "(656 83 112) (656 83 -1) (656 86 -1)"
+			"plane" "(658 83 112) (658 83 -1) (658 86 -1)"
 			"material" "PLASTER/DOORA"
 			"uaxis" "[0 1 0 -188] 0.25"
 			"vaxis" "[0 0 -1 -4] 0.25"
@@ -23108,9 +23108,9 @@ world
 		side
 		{
 			"id" "4583"
-			"plane" "(656 83 -1) (664 83 -1) (664 86 -1)"
+			"plane" "(658 83 -1) (666 83 -1) (666 86 -1)"
 			"material" "CONCRETE/CONCRETE2DARK"
-			"uaxis" "[-1 0 0 441] 1"
+			"uaxis" "[-1 0 0 443] 1"
 			"vaxis" "[0 1 0 -78] 1"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -23119,9 +23119,9 @@ world
 		side
 		{
 			"id" "4584"
-			"plane" "(656 86 109) (664 86 109) (664 83 112)"
+			"plane" "(658 86 109) (666 86 109) (666 83 112)"
 			"material" "CONCRETE/CONCRETE2DARK"
-			"uaxis" "[-1 0 0 418] 1"
+			"uaxis" "[-1 0 0 420] 1"
 			"vaxis" "[0 1 0 -23] 1"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -23138,7 +23138,7 @@ world
 		side
 		{
 			"id" "4585"
-			"plane" "(664 140.004 109) (664 83.004 112) (664 143.996 112)"
+			"plane" "(666 140.004 109) (666 83.004 112) (666 143.996 112)"
 			"material" "PLASTER/DOORA"
 			"uaxis" "[0 1 0 -188] 0.25"
 			"vaxis" "[0 0 -1 -4] 0.25"
@@ -23149,7 +23149,7 @@ world
 		side
 		{
 			"id" "4586"
-			"plane" "(656 86 109) (656 143.996 112) (656 83 112)"
+			"plane" "(658 86 109) (658 143.996 112) (658 83 112)"
 			"material" "PLASTER/DOORA"
 			"uaxis" "[0 1 0 -188] 0.25"
 			"vaxis" "[0 0 -1 -4] 0.25"
@@ -23160,10 +23160,10 @@ world
 		side
 		{
 			"id" "4587"
-			"plane" "(656 140.004 109) (656 86 109) (664 86 109)"
+			"plane" "(658 140.004 109) (658 86 109) (666 86 109)"
 			"material" "WOOD/WOODC"
 			"uaxis" "[0 -1 0 456] 0.25"
-			"vaxis" "[-1 0 0 104] 0.25"
+			"vaxis" "[-1 0 0 112] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -23171,9 +23171,9 @@ world
 		side
 		{
 			"id" "4588"
-			"plane" "(664 143.996 112) (664 83 112) (656 83.004 112)"
+			"plane" "(666 143.996 112) (666 83 112) (658 83.004 112)"
 			"material" "WOOD/GALPLY"
-			"uaxis" "[-1 0 0 418] 1"
+			"uaxis" "[-1 0 0 420] 1"
 			"vaxis" "[0 1 0 122] 1"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -23182,9 +23182,9 @@ world
 		side
 		{
 			"id" "4589"
-			"plane" "(656 144 112) (656 140 109) (664 140 109)"
+			"plane" "(658 144 112) (658 140 109) (666 140 109)"
 			"material" "CONCRETE/CONCRETE2DARK"
-			"uaxis" "[-1 0 0 418] 1"
+			"uaxis" "[-1 0 0 420] 1"
 			"vaxis" "[0 0 -1 -273] 1"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -23193,9 +23193,9 @@ world
 		side
 		{
 			"id" "4590"
-			"plane" "(664 83 112) (664 86 109) (656 86 109)"
+			"plane" "(666 83 112) (666 86 109) (658 86 109)"
 			"material" "CONCRETE/CONCRETE2DARK"
-			"uaxis" "[-1 0 0 418] 1"
+			"uaxis" "[-1 0 0 420] 1"
 			"vaxis" "[0 0 -1 -273] 1"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -23212,9 +23212,9 @@ world
 		side
 		{
 			"id" "4591"
-			"plane" "(664 140 109) (664 140 -1) (656 140 -1)"
+			"plane" "(666 140 109) (666 140 -1) (658 140 -1)"
 			"material" "WOOD/WOODC"
-			"uaxis" "[-1 0 0 56] 0.25"
+			"uaxis" "[-1 0 0 64] 0.25"
 			"vaxis" "[0 0 -1 -76] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -23223,9 +23223,9 @@ world
 		side
 		{
 			"id" "4592"
-			"plane" "(656 144 112) (656 144 -1) (664 144 -1)"
+			"plane" "(658 144 112) (658 144 -1) (666 144 -1)"
 			"material" "WOOD/GALPLY"
-			"uaxis" "[-1 0 0 418] 1"
+			"uaxis" "[-1 0 0 420] 1"
 			"vaxis" "[0 0 -1 -273] 1"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -23234,7 +23234,7 @@ world
 		side
 		{
 			"id" "4593"
-			"plane" "(664 144 112) (664 144 -1) (664 140 -1)"
+			"plane" "(666 144 112) (666 144 -1) (666 140 -1)"
 			"material" "PLASTER/DOORA"
 			"uaxis" "[0 1 0 -188] 0.25"
 			"vaxis" "[0 0 -1 -4] 0.25"
@@ -23245,7 +23245,7 @@ world
 		side
 		{
 			"id" "4594"
-			"plane" "(656 140 109) (656 144 -1) (656 144 112)"
+			"plane" "(658 140 109) (658 144 -1) (658 144 112)"
 			"material" "PLASTER/DOORA"
 			"uaxis" "[0 1 0 -188] 0.25"
 			"vaxis" "[0 0 -1 -4] 0.25"
@@ -23256,9 +23256,9 @@ world
 		side
 		{
 			"id" "4595"
-			"plane" "(656 140 -1) (664 140 -1) (664 144 -1)"
+			"plane" "(658 140 -1) (666 140 -1) (666 144 -1)"
 			"material" "CONCRETE/CONCRETE2DARK"
-			"uaxis" "[-1 0 0 441] 1"
+			"uaxis" "[-1 0 0 443] 1"
 			"vaxis" "[0 1 0 -78] 1"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -23267,9 +23267,9 @@ world
 		side
 		{
 			"id" "4596"
-			"plane" "(664 140 109) (656 140 109) (656 144 112)"
+			"plane" "(666 140 109) (658 140 109) (658 144 112)"
 			"material" "CONCRETE/CONCRETE2DARK"
-			"uaxis" "[-1 0 0 418] 1"
+			"uaxis" "[-1 0 0 420] 1"
 			"vaxis" "[0 1 0 -23] 1"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -28940,9 +28940,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "cops_yell,PlaySound,1,9,-1,,"
-		"OnTrigger" "cops_outside,FadeIn,1,9,-1,,"
 		"OnTrigger" "cops_arrive,PlaySound,,0,-1,,"
+		"OnTrigger" "cops_outside,FadeIn,1,9,-1,,"
+		"OnTrigger" "cops_yell,PlaySound,1,9,-1,,"
 	}
 	"origin" "602.089 -5.40002 56"
 	editor
@@ -37161,8 +37161,8 @@ entity
 	"floatfreq" "2"
 	connections
 	{
-		"OnDeath" ",,,0,-1,venusDeath(),"
 		"OnDialogEnd" ",,,0,-1,venusDialog(),"
+		"OnDeath" ",,,0,-1,venusDeath(),"
 	}
 	"origin" "406.949 831.981 0.355953"
 	editor
@@ -37226,8 +37226,8 @@ entity
 	"floatfreq" "2"
 	connections
 	{
-		"OnDeath" ",,,0,-1,pattyDeath(),"
 		"OnDialogEnd" ",,,0,-1,pattyDialog(),"
+		"OnDeath" ",,,0,-1,pattyDeath(),"
 	}
 	"origin" "694.87 458.787 9"
 	editor
@@ -37429,9 +37429,9 @@ entity
 	"radius" "10"
 	connections
 	{
-		"OnEndSequence" "box_office_door,Unlock,,0,-1,,"
-		"OnEndSequence" "venus_controller,CreateControllerNPC,,0,-1,,"
 		"OnEndSequence" "player_follow_venus,BeginSequence,,2,-1,,"
+		"OnEndSequence" "venus_controller,CreateControllerNPC,,0,-1,,"
+		"OnEndSequence" "box_office_door,Unlock,,0,-1,,"
 	}
 	"origin" "383.202 838.997 9"
 	editor
@@ -37698,10 +37698,10 @@ entity
 	"origin" "382 768 55"
 	connections
 	{
-		"OnStartTouch" "venus_controller,RemoveControllerNPC,,2.5,-1,,"
-		"OnStartTouch" "venus_fader,Fade,,0,-1,,"
-		"OnStartTouch" "teleport_player_to_office,Disable,,4,-1,,"
 		"OnStartTouch" "teleport_player_to_office,Enable,,3,-1,,"
+		"OnStartTouch" "teleport_player_to_office,Disable,,4,-1,,"
+		"OnStartTouch" "venus_fader,Fade,,0,-1,,"
+		"OnStartTouch" "venus_controller,RemoveControllerNPC,,2.5,-1,,"
 	}
 	solid
 	{
@@ -37926,13 +37926,13 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnMapLoad" "plus_turntable,SetAnimation,spin,0.1,-1,,"
-		"OnMapLoad" "poledancer3,BeginSequence,,0.1,-1,,"
-		"OnMapLoad" "poledancer2,BeginSequence,,0.1,-1,,"
-		"OnMapLoad" "poledancer1,BeginSequence,,0.1,-1,,"
-		"OnMapLoad" "DJ-playing,BeginSequence,,0.1,-1,,"
-		"OnMapLoad" ",,,0,-1,venusToBar(),"
 		"OnMapLoad" ",,,0,-1,pattyGone(),"
+		"OnMapLoad" ",,,0,-1,venusToBar(),"
+		"OnMapLoad" "DJ-playing,BeginSequence,,0.1,-1,,"
+		"OnMapLoad" "poledancer1,BeginSequence,,0.1,-1,,"
+		"OnMapLoad" "poledancer2,BeginSequence,,0.1,-1,,"
+		"OnMapLoad" "poledancer3,BeginSequence,,0.1,-1,,"
+		"OnMapLoad" "plus_turntable,SetAnimation,spin,0.1,-1,,"
 	}
 	"origin" "615.793 135 147.09"
 	editor
@@ -39171,7 +39171,7 @@ entity
 	"allow_kick_hint_use" "1"
 	"crossfade_skin_time" "2"
 	"combat_start_activity" "-1"
-	"teleport_move_timer" "10"
+	"teleport_move_timer" "0"
 	"follower_type" "Default"
 	"floatfreq" "2"
 	"soundgroup" "patron_club/male_dancer_2"
@@ -39231,7 +39231,7 @@ entity
 	"allow_kick_hint_use" "1"
 	"crossfade_skin_time" "2.0"
 	"combat_start_activity" "-1"
-	"teleport_move_timer" "10"
+	"teleport_move_timer" "0"
 	"follower_type" "Default"
 	"base_gender" "1"
 	"allow_alert_lookaround" "1"
@@ -39287,7 +39287,7 @@ entity
 	"allow_kick_hint_use" "1"
 	"crossfade_skin_time" "2"
 	"combat_start_activity" "-1"
-	"teleport_move_timer" "10"
+	"teleport_move_timer" "0"
 	"follower_type" "Default"
 	"floatfreq" "2"
 	"soundgroup" "patron_club/male_dancer_1"
@@ -39347,7 +39347,7 @@ entity
 	"allow_kick_hint_use" "1"
 	"crossfade_skin_time" "2"
 	"combat_start_activity" "-1"
-	"teleport_move_timer" "10"
+	"teleport_move_timer" "0"
 	"follower_type" "Default"
 	"base_gender" "1"
 	"allow_alert_lookaround" "1"
@@ -39403,7 +39403,7 @@ entity
 	"allow_kick_hint_use" "1"
 	"crossfade_skin_time" "2.0"
 	"combat_start_activity" "-1"
-	"teleport_move_timer" "10"
+	"teleport_move_timer" "0"
 	"follower_type" "Default"
 	"floatfreq" "2"
 	"soundgroup" "citizen_goth"
@@ -39463,7 +39463,7 @@ entity
 	"allow_kick_hint_use" "1"
 	"crossfade_skin_time" "2.0"
 	"combat_start_activity" "-1"
-	"teleport_move_timer" "10"
+	"teleport_move_timer" "0"
 	"follower_type" "Default"
 	"base_gender" "1"
 	"allow_alert_lookaround" "1"
@@ -39521,7 +39521,7 @@ entity
 	"allow_kick_hint_use" "1"
 	"crossfade_skin_time" "2.0"
 	"combat_start_activity" "-1"
-	"teleport_move_timer" "10"
+	"teleport_move_timer" "0"
 	"follower_type" "Default"
 	"base_gender" "1"
 	"allow_alert_lookaround" "1"
@@ -39577,7 +39577,7 @@ entity
 	"allow_kick_hint_use" "1"
 	"crossfade_skin_time" "2.0"
 	"combat_start_activity" "-1"
-	"teleport_move_timer" "10"
+	"teleport_move_timer" "0"
 	"follower_type" "Default"
 	"floatfreq" "2"
 	"soundgroup" "patron_club/male_dancer_1"
@@ -39635,7 +39635,7 @@ entity
 	"allow_kick_hint_use" "1"
 	"crossfade_skin_time" "2.0"
 	"combat_start_activity" "-1"
-	"teleport_move_timer" "10"
+	"teleport_move_timer" "0"
 	"follower_type" "Default"
 	"floatfreq" "2"
 	"soundgroup" "patron_club/male_dancer_2"
@@ -39877,8 +39877,8 @@ entity
 	"origin" "502 154 55"
 	connections
 	{
-		"OnEndTouch" "wallet_sparklies,ScriptHide,,0,-1,,"
 		"OnStartTouch" "wallet_sparklies,ScriptUnhide,,0,-1,,"
+		"OnEndTouch" "wallet_sparklies,ScriptHide,,0,-1,,"
 	}
 	solid
 	{
@@ -40214,12 +40214,12 @@ entity
 	"targetname" "player_dance_trigger"
 	connections
 	{
-		"OnUseEnd" ",,,0,-1,G.No_Idle = 0,"
-		"OnUseBegin" ",,,0,-1,G.No_Idle = 1,"
-		"OnUseBegin" "dance_spot,Disable,,0,-1,,"
-		"OnUseBegin" "dance_spot_player,Enable,,0,-1,,"
-		"OnUseEnd" "dance_spot_player,Disable,,0,-1,,"
 		"OnUseEnd" "dance_spot,Enable,,0,-1,,"
+		"OnUseEnd" "dance_spot_player,Disable,,0,-1,,"
+		"OnUseBegin" "dance_spot_player,Enable,,0,-1,,"
+		"OnUseBegin" "dance_spot,Disable,,0,-1,,"
+		"OnUseBegin" ",,,0,-1,G.No_Idle = 1,"
+		"OnUseEnd" ",,,0,-1,G.No_Idle = 0,"
 	}
 	solid
 	{
@@ -40650,8 +40650,8 @@ entity
 	"ignore_detected_attack" "1"
 	connections
 	{
-		"OnDamaged" "DJ-playing,Kill,,0,-1,,"
 		"OnDeath" "DJ-playing,Kill,,0,-1,,"
+		"OnDamaged" "DJ-playing,Kill,,0,-1,,"
 	}
 	"origin" "575 1720 154"
 	editor
@@ -40941,27 +40941,27 @@ entity
 	"enabled" "0"
 	connections
 	{
-		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
-		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
-		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
-		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
-		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
-		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
-		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
-		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
-		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
-		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
-		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
-		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
-		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
-		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
-		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
-		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
-		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
-		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
-		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
-		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
 		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
+		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
+		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
+		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
+		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
+		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
+		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
+		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
+		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
+		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
+		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
+		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
+		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
+		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
+		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
+		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
+		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
+		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
+		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
+		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
+		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -40977,29 +40977,29 @@ entity
 	"StartHidden" "0"
 	connections
 	{
-		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
-		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
-		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
-		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
-		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
-		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
-		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
-		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
-		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
-		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
-		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
-		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
-		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
-		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
-		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
-		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
-		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
-		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
-		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
-		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
-		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
-		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
 		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
+		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
+		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
+		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
+		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
+		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
+		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
+		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
+		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
+		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
+		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
+		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
+		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
+		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
+		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
+		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
+		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
+		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
+		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
+		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
+		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
+		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
+		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -64627,8 +64627,8 @@ entity
 	"origin" "632 230 61"
 	connections
 	{
-		"OnStartTouch" "plus_turnstile_collision,ScriptHide,,0,-1,,"
 		"OnEndTouch" "plus_turnstile_collision,ScriptUnhide,,0,-1,,"
+		"OnStartTouch" "plus_turnstile_collision,ScriptHide,,0,-1,,"
 	}
 	solid
 	{
@@ -66609,9 +66609,9 @@ entity
 	"radius" "10"
 	connections
 	{
-		"OnBeginSequence" "venus_camera,EndShot,,0,-1,,"
-		"OnEndSequence" "venus_teleporter,Enable,,0,-1,,"
 		"OnEndSequence" "venus_teleporter,Disable,,1,-1,,"
+		"OnEndSequence" "venus_teleporter,Enable,,0,-1,,"
+		"OnBeginSequence" "venus_camera,EndShot,,0,-1,,"
 	}
 	"origin" "396 660 9"
 	editor
@@ -70093,7 +70093,7 @@ entity
 	"distance" "90"
 	"spawnflags" "0"
 	"targetname" "toilett_door"
-	"origin" "660 140 54"
+	"origin" "661 140 54"
 	"disableshadows" "1"
 	"soundgroup" "standard_door"
 	"use_icon" "10"
@@ -70104,9 +70104,9 @@ entity
 		side
 		{
 			"id" "4573"
-			"plane" "(662 86 109) (662 86 -1) (658 86 -1)"
+			"plane" "(663 86 109) (663 86 -1) (659 86 -1)"
 			"material" "PLASTER/DOORA"
-			"uaxis" "[1 0 0 18.8571] 0.35"
+			"uaxis" "[1 0 0 16] 0.35"
 			"vaxis" "[0 0 -1 -4] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -70115,9 +70115,9 @@ entity
 		side
 		{
 			"id" "4574"
-			"plane" "(658 140 109) (658 140 -1) (662 140 -1)"
+			"plane" "(659 140 109) (659 140 -1) (663 140 -1)"
 			"material" "PLASTER/DOORA"
-			"uaxis" "[1 0 0 18.8571] 0.35"
+			"uaxis" "[1 0 0 16] 0.35"
 			"vaxis" "[0 0 -1 -4] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -70126,7 +70126,7 @@ entity
 		side
 		{
 			"id" "4575"
-			"plane" "(662 140 109) (662 140 -1) (662 86 -1)"
+			"plane" "(663 140 109) (663 140 -1) (663 86 -1)"
 			"material" "PLASTER/DOORA"
 			"uaxis" "[0 1 0 -188] 0.25"
 			"vaxis" "[0 0 -1 -4] 0.25"
@@ -70137,7 +70137,7 @@ entity
 		side
 		{
 			"id" "4576"
-			"plane" "(658 86 109) (658 86 -1) (658 140 -1)"
+			"plane" "(659 86 109) (659 86 -1) (659 140 -1)"
 			"material" "PLASTER/DOORA"
 			"uaxis" "[0 1 0 -188] 0.25"
 			"vaxis" "[0 0 -1 -4] 0.25"
@@ -70148,9 +70148,9 @@ entity
 		side
 		{
 			"id" "4577"
-			"plane" "(658 86 -1) (662 86 -1) (662 140 -1)"
+			"plane" "(659 86 -1) (663 86 -1) (663 140 -1)"
 			"material" "PLASTER/DOORA"
-			"uaxis" "[1 0 0 18.8571] 0.35"
+			"uaxis" "[1 0 0 16] 0.35"
 			"vaxis" "[0 1 0 -60] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -70159,9 +70159,9 @@ entity
 		side
 		{
 			"id" "4578"
-			"plane" "(662 86 109) (658 86 109) (658 140 109)"
+			"plane" "(663 86 109) (659 86 109) (659 140 109)"
 			"material" "PLASTER/DOORA"
-			"uaxis" "[1 0 0 18.8571] 0.35"
+			"uaxis" "[1 0 0 16] 0.35"
 			"vaxis" "[0 1 0 -60] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -70186,7 +70186,7 @@ entity
 	"id" "104515"
 	"classname" "infodecal"
 	"texture" "decals/signs/restrooms2"
-	"origin" "658 113 80"
+	"origin" "659 113 80"
 	editor
 	{
 		"color" "220 30 220"
@@ -70197,8 +70197,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[650.315 1010.83 181.076]"
-		"look" "[433.596 1101.41 -309.185]"
+		"position" "[607.948 98.0202 59.9501]"
+		"look" "[1149 140.754 90.9389]"
 	}
 }
 cordon
