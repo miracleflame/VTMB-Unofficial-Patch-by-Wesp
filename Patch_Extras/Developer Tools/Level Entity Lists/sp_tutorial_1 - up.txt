@@ -8458,11 +8458,19 @@
 "targetname" "logic_elev_up_with_jack"
 "StartDisabled" "0"
 "spawnflags" "0"
+"OnTrigger" "dialogue_check,Test,,0,-1,,"
 "OnTrigger" "logic_2,Enable,,0.1,-1,,"
 "OnTrigger" "logic_jack_from_elevator,Trigger,,2,-1,,"
 "OnTrigger" "elev_up,Trigger,,0,-1,,"
 "OnTrigger" "logic_kill_elev_doors,Enable,,0,-1,,"
 "origin" "-1141.34 185 57.4291"
+}
+{
+"classname" "logic_pythoncheck"
+"targetname" "dialogue_check"
+"python_script" "G.Patch_Plus == 0"
+"OnTrue" "popup_59,OpenWindow,,2,-1,,"
+"origin" "113 -10 56"
 }
 {
 "classname" "scripted_sequence"
