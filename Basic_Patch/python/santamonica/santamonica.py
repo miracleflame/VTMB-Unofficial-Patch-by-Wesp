@@ -1664,18 +1664,20 @@ def bertramOutOfHiding():
         yugo = Find("yugo")
         yugosteam1 = Find("yugo_steam_1")
         yugosteam2 = Find("yugo_steam_2")
-        obfuscator = Find("obfuscator")
-        obfuscator_trigger = Find("obfuscator_trigger")
         if G.Story_State < 5:
             if yugo: yugo.ScriptUnhide()
             if yugosteam1: yugosteam1.ScriptUnhide()
             if yugosteam2: yugosteam2.ScriptUnhide()
-            if obfuscator: obfuscator.ScriptUnhide()
-            if obfuscator_trigger: obfuscator_trigger.ScriptUnhide()
         else:
             if yugo: yugo.Kill()
             if yugosteam1: yugosteam1.Kill()
             if yugosteam2: yugosteam2.Kill()
+        obfuscator = Find("obfuscator")
+        obfuscator_trigger = Find("obfuscator_trigger")
+        if G.Story_State == 5:
+            if obfuscator: obfuscator.ScriptUnhide()
+            if obfuscator_trigger: obfuscator_trigger.ScriptUnhide()
+        else:
             if obfuscator: obfuscator.Kill()
             if obfuscator_trigger: obfuscator_trigger.Kill()
     if (G.Muddy_Message == 1 and __main__.FindPlayer().HasItem("item_k_murietta_key")):
