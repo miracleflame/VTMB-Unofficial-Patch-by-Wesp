@@ -1,5 +1,5 @@
 --------------------
-Bloodlines SDK v1.72
+Bloodlines SDK v1.72+
 --------------------
 
 This is an unofficial software developer's kit (SDK) for Vampire - The Masquerade: 
@@ -157,6 +157,7 @@ Usage notes:
 * Func_detail entities may add junk planes, in that case turn them back to world brushes.
 * For a valid map transition, landmark names on both maps must be the same.
 * For a valid map transition, landmark angles only matter if flag "1" is set.
+* Message "VPhysics Penetration Error" means that prop_physics mustn't intersect other one.
 * Since version 1.15 you may able to set various map compiling settings for each individually.
   We used "worldspawn" entity class to write certain params which're readable by compilers.
   For managing them, goto "Map -> Map Properties" in the Hammer menu and look bottom several 
@@ -371,11 +372,18 @@ Global changes:
 
 --------------------
 
-1.72 (13.10.2018):
+1.72+ (1.02.2019):
 - StudioMDL: Added important usage-limitations notes before launching Model Compiler and compiling process.
 - Studio Compiler: Optimized default settings for quick compiling from SMD files and fixed some messages.
-- Hammer/FGD: Fixed bad name of the parameter in ambient_generic.
+- Hammer/FGD: Fixed bad name in ambient_generic parameter and default area Safety type (from Madquerade to Combat).
+- Hammer/FGD: Fixed default sound groups for npc_VVampire and npc_VHuman* and added missing monster/ soundgroups.
 - Hammer [cr]: Improved "Justify" controls view in Face Edit Sheet tool, disabled Smoothing Groups as not supported.
+- Create Mod Wizard: Updated some default mod assets and added templates for each vdata/ script type.
+- Create Mod Wizard: Added auto-inserting mod's name into game Settings menu (gameui_english.txt file).
+- Improved BSP patcher scripts and added its item to the SDK main menu (run .bats and readmes to learn how to use).
+- Added auto-removing kHED editor settings on reset SDK to fix calling the user manual issues.
+- Turned off developer mode for launching game or loading maps due to latest compatibility issues [Temporary!].
+- Fixed false anti-virus software detections on two tools' InfoBox files.
 - Updated Source Code repository (for contributors).
 
 1.71 (18.09.2018):
@@ -896,7 +904,7 @@ Global changes:
 - [cr] Added program to view prop models.
 
 0.5:
-- First public release, inroduced Map Editor and Model Viewer.
+- First public release, introduced Map Editor and Model Viewer.
 
 < 0.5:
 - VampBSP tools alphas (VBsp/VVis/VRad compilers only).
