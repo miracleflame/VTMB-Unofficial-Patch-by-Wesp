@@ -450,10 +450,10 @@ def beachhouseStatus():
     if (__main__.IsDead("Rosa") or G.Story_State >= 35):
         thinblood.Kill()
     thinblood = Find("Copper")
-    if (__main__.IsDead("Copper") or G.Copper_Slayer):
+    if (__main__.IsDead("Copper") or G.Copper_Slayer or G.Story_State >= 35):
         thinblood.Kill()
     thinblood = Find("Julius")
-    if __main__.IsDead("Julius"):
+    if (__main__.IsDead("Julius") or G.Julius_Release == 1):
         thinblood.Kill()
     thinblood = Find("Lily")
     if(G.E_Quest > 2 and not __main__.IsDead("E") and not G.Thin_Bloods_Hidden):
@@ -1534,9 +1534,9 @@ def juliusDialog():
         julius = Find("Julius")
         julius.SetRelationship("player D_FR 5")
 
-#PIER: Puts Lilly on the beach if she's been rescued
+#PIER: Puts Lilly on the beach if she's been rescued, changed by wesp
 def lillyBack():
-    if(G.E_Quest > 2 and not __main__.IsDead("E") and not G.Thin_Bloods_Hidden):
+    if(G.E_Quest > 2 and not __main__.IsDead("E") and not G.Thin_Bloods_Hidden and G.Story_State < 35):
         lily = Find("Lily")
         if(lily):
             lily.ScriptUnhide()
