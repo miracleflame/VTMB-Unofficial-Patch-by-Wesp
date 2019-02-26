@@ -121,7 +121,7 @@
 {	121	}{	I knew you would. [blows smoke]What other reason to waste words on the ill-fated?	}{	I knew you would. [blows smoke]What other reason to waste words on the ill-fated?	}{	#	}{	}{	G.Ox_Gouge = 1; pc.SetQuest("Eyes",1)	}{	}{	}{	}{	}{	}{	}{	}
 {	122	}{	What's your story?	}{	What's your story?	}{	171	}{	G.Ox_Story == 0	}{	}{	}{	}{	}{	}{	}{	}{	Peel off that façade.	}
 {	123	}{	You sell weapons?	}{	You sell weapons?	}{	141	}{	G.Ox_Weapon == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need nukes! Got any?	}
-{	124	}{	Does the word "hengeyôkai" mean anything to you?	}{	Does the word "hengeyôkai" mean anything to you?	}{	151	}{	G.Yukie_Quest == 1 and G.Ox_Heng == 0	}{	}{	}{	}{	}{	}{	}{	}{	Hengeyôkai... do anything for you?	}
+{	124	}{	Does the word "hengeyokai" mean anything to you?	}{	Does the word "hengeyokai" mean anything to you?	}{	151	}{	G.Yukie_Quest == 1 and G.Ox_Heng == 0	}{	}{	}{	}{	}{	}{	}{	}{	Hengeyokai... do anything for you?	}
 {	125	}{	I'm looking for someone... real ugly, snooping type. Seen anyone like that?	}{	I'm looking for someone... real ugly, snooping type. Seen anyone like that?	}{	161	}{	G.Ox_Barabus == 0 and not IsClan(pc,"Nosferatu") and G.Story_State < 55	}{	}{	}{	}{	}{	}{	}{	}{	Have you seen any sewer rats?	}
 {	126	}{	I'm looking for someone... kind of looks like me. Seen anyone like that?	}{	I'm looking for someone... kind of looks like me. Seen anyone like that?	}{	161	}{	G.Ox_Barabus == 0 and IsClan(pc,"Nosferatu") and G.Story_State < 55	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	127	}{	Here are the eyes.	}{	Here are the eyes.	}{	191	}{	pc.HasItem("item_g_Eyes")	}{	pc.RemoveItem("item_g_Eyes")	}{	}{	}{	}{	}{	}{	}{	These eyes turned out not to be mine. You want them?	}
@@ -140,7 +140,7 @@
 {	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	141	}{	I sell things many would find cruel, but weapons... nooo.	}{	I sell things many would find cruel, but weapons... nooo.	}{	#	}{	}{	G.Ox_Weapon = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	142	}{	What's your story?	}{	What's your story?	}{	171	}{	G.Ox_Bio == 0	}{	}{	}{	}{	}{	}{	}{	}{	Peel off that façade.	}
-{	143	}{	Does the word "hengeyôkai" mean anything to you?	}{	Does the word "hengeyôkai" mean anything to you?	}{	151	}{	G.Yukie_Quest == 1 and G.Ox_Heng == 0	}{	}{	}{	}{	}{	}{	}{	}{	Hengeyôkai... do anything for you?	}
+{	143	}{	Does the word "hengeyokai" mean anything to you?	}{	Does the word "hengeyokai" mean anything to you?	}{	151	}{	G.Yukie_Quest == 1 and G.Ox_Heng == 0	}{	}{	}{	}{	}{	}{	}{	}{	Hengeyokai... do anything for you?	}
 {	144	}{	I'm looking for someone... real ugly, snooping type. Seen anyone like that?	}{	I'm looking for someone... real ugly, snooping type. Seen anyone like that?	}{	161	}{	G.Ox_Barabus == 0 and not IsClan(pc,"Nosferatu") and G.Story_State < 55	}{	}{	}{	}{	}{	}{	}{	}{	Have you seen any sewer rats?	}
 {	145	}{	I'm looking for someone... kind of looks like me. Seen anyone like that?	}{	I'm looking for someone... kind of looks like me. Seen anyone like that?	}{	161	}{	G.Ox_Barabus == 0 and IsClan(pc,"Nosferatu") and G.Story_State < 55	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	146	}{	Then I'm out of here.	}{	Then I'm out of here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I continue my search elsewhere.	}
@@ -161,7 +161,7 @@
 {	161	}{	[Blows smoke]No....	}{	[Blows smoke]No....	}{	#	}{	}{	G.Ox_Barabus = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	162	}{	What's your story?	}{	What's your story?	}{	171	}{	G.Ox_Bio == 0	}{	}{	}{	}{	}{	}{	}{	}{	Peel off that façade.	}
 {	163	}{	You sell weapons?	}{	You sell weapons?	}{	141	}{	G.Ox_Weapon == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need nukes! Got any?	}
-{	164	}{	Does the word "hengeyôkai" mean anything to you?	}{	Does the word "hengeyôkai" mean anything to you?	}{	151	}{	G.Yukie_Quest == 1 and G.Ox_Heng == 0	}{	}{	}{	}{	}{	}{	}{	}{	Hengeyôkai... do anything for you?	}
+{	164	}{	Does the word "hengeyokai" mean anything to you?	}{	Does the word "hengeyokai" mean anything to you?	}{	151	}{	G.Yukie_Quest == 1 and G.Ox_Heng == 0	}{	}{	}{	}{	}{	}{	}{	}{	Hengeyokai... do anything for you?	}
 {	165	}{	Damn! Alright, I'm out of here.	}{	Damn! Alright, I'm out of here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Not here. Maybe elsewhere.	}
 {	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	167	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -170,7 +170,7 @@
 {	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	171	}{	How rude of me not to introduce myself. You may call me... Mr. Ox. This is my shop. Do you find it interesting? There are no two like it on the road to Hell.	}{	How rude of me not to introduce myself. You may call me... Mr. Ox. This is my shop. Do you find it interesting? There are no two like it on the road to Hell.	}{	#	}{	}{	G.Ox_Bio = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	172	}{	You sell weapons?	}{	You sell weapons?	}{	141	}{	G.Ox_Weapon == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need nukes! Got any?	}
-{	173	}{	Does the word "hengeyôkai" mean anything to you?	}{	Does the word "hengeyôkai" mean anything to you?	}{	151	}{	G.Yukie_Quest == 1 and G.Ox_Heng == 0	}{	}{	}{	}{	}{	}{	}{	}{	Hengeyôkai... do anything for you?	}
+{	173	}{	Does the word "hengeyokai" mean anything to you?	}{	Does the word "hengeyokai" mean anything to you?	}{	151	}{	G.Yukie_Quest == 1 and G.Ox_Heng == 0	}{	}{	}{	}{	}{	}{	}{	}{	Hengeyokai... do anything for you?	}
 {	174	}{	I'm looking for someone... real ugly, snooping type. Seen anyone like that?	}{	I'm looking for someone... real ugly, snooping type. Seen anyone like that?	}{	161	}{	G.Ox_Barabus == 0 and not IsClan(pc,"Nosferatu") and G.Story_State < 55	}{	}{	}{	}{	}{	}{	}{	}{	Have you seen any sewer rats?	}
 {	175	}{	I'm looking for someone... kind of looks like me. Seen anyone like that?	}{	I'm looking for someone... kind of looks like me. Seen anyone like that?	}{	161	}{	G.Ox_Barabus == 0 and IsClan(pc,"Nosferatu") and G.Story_State < 55	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	176	}{	You should probably fire your advertising guy. Excuse me.	}{	You should probably fire your advertising guy. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hell.... Is that what I smell? I can stand it no more.	}
@@ -291,7 +291,7 @@
 {	291	}{	Yes?	}{	Yes?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	292	}{	What's your story?	}{	What's your story?	}{	171	}{	G.Ox_Bio == 0	}{	}{	}{	}{	}{	}{	}{	}{	Peel off that façade.	}
 {	293	}{	You sell weapons?	}{	You sell weapons?	}{	141	}{	G.Ox_Weapon == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need nukes! Got any?	}
-{	294	}{	Does the word "hengeyôkai" mean anything to you?	}{	Does the word "hengeyôkai" mean anything to you?	}{	151	}{	G.Yukie_Quest == 1 and G.Ox_Heng == 0	}{	}{	}{	}{	}{	}{	}{	}{	Hengeyôkai... do anything for you?	}
+{	294	}{	Does the word "hengeyokai" mean anything to you?	}{	Does the word "hengeyokai" mean anything to you?	}{	151	}{	G.Yukie_Quest == 1 and G.Ox_Heng == 0	}{	}{	}{	}{	}{	}{	}{	}{	Hengeyokai... do anything for you?	}
 {	295	}{	I'm looking for someone... real ugly, snooping type. Seen anyone like that?	}{	I'm looking for someone... real ugly, snooping type. Seen anyone like that?	}{	161	}{	G.Ox_Barabus == 0 and not IsClan(pc,"Nosferatu") and G.Story_State < 55	}{	}{	}{	}{	}{	}{	}{	}{	Have you seen any sewer rats?	}
 {	296	}{	I'm looking for someone... kind of looks like me. Seen anyone like that?	}{	I'm looking for someone... kind of looks like me. Seen anyone like that?	}{	161	}{	G.Ox_Barabus == 0 and IsClan(pc,"Nosferatu") and G.Story_State < 55	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	297	}{	I can't think of anything else. Goodbye.	}{	I can't think of anything else. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Alright, I'm leaving already.	}

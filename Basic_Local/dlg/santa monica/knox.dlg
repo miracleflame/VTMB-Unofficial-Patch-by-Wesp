@@ -139,7 +139,7 @@
 {	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	140	}{	This scene is dead. I'm outta here.	}{	This scene is dead. I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I have left the building.	}
 {	141	}{	It's awesome! Man after that first taste of vampire blood... it's like the best drug. Aw man, I'm tellin' ya, it's like... well it didn't mess me up, just made me feel like I was better at everything. I felt like a god, just suckin' on that nasty dude's wrist.	}{	It's awesome! Man after that first taste of vampire blood... it's like the best drug. Aw man, I'm tellin' ya, it's like... well it didn't mess me up, just made me feel like I was better at everything. I felt like a god, just suckin' on that nasty dude's wrist.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Knox_Likes = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	142	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	Can I ask you some questions?	}{	Can I ask you some questions?	}{	931	}{	G.Mercurio_Quest != 2	}{	}{	}{	}{	}{	}{	}{	}{	I have some questions worming out of my skull.	}
 {	143	}{	Who was this "nasty dude"?	}{	Who was this "nasty dude"?	}{	621	}{	G.Mercurio_Quest != 2 and G.Knox_Master == 0	}{	G.Knox_Master = 1	}{	}{	}{	}{	}{	}{	}{	Who is the Nasty Dude?	}
 {	144	}{	Who was this "nasty dude"?	}{	Who was this "nasty dude"?	}{	151	}{	G.Knox_Bertram == 0 and G.Mercurio_Quest == 2	}{	G.Knox_Master = 1	}{	}{	}{	}{	}{	}{	}{	Who is the Nasty Dude?	}
 {	145	}{	Do you know where Bertram is?	}{	Do you know where Bertram is?	}{	161	}{	G.Knox_Bertram == 1 and G.Bertram_Check == 0	}{	}{	}{	}{	}{	}{	}{	}{	Do you know where the Nasty Dude is?	}
@@ -153,7 +153,7 @@
 {	153	}{	What do you do for him?	}{	What do you do for him?	}{	211	}{	G.Knox_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	What do you do for the Nasty Dude?	}
 {	154	}{	So you are Bertram's "ghoul"? What does that mean?	}{	So you are Bertram's "ghoul"? What does that mean?	}{	131	}{	G.Knox_Ghoul == 1 and G.Knox_Outbound == 1	}{	G.Knox_Outbound = 0	}{	}{	}{	}{	}{	}{	}{	What do you know of ghouldom?	}
 {	155	}{	Do you like being a ghoul?	}{	Do you like being a ghoul?	}{	141	}{	G.Knox_Outbound == 3	}{	G.Knox_Outbound = 0	}{	}{	}{	}{	}{	}{	}{	Are you a happy little golden ghoul?	}
-{	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	156	}{	Can I ask you some questions?	}{	Can I ask you some questions?	}{	931	}{	G.Mercurio_Quest != 2	}{	}{	}{	}{	}{	}{	}{	}{	I have some questions worming out of my skull.	}
 {	157	}{	Do you know where he is?	}{	Do you know where he is?	}{	161	}{	G.Knox_Outbound == 0	}{	}{	}{	}{	}{	}{	}{	}{	Do you know where the Nasty Dude is?	}
 {	158	}{	What's he like?	}{	What's he like?	}{	171	}{	G.Knox_Outbound == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the Nasty Dude.	}
 {	159	}{	So what's going on with your mission?	}{	So what's going on with your mission?	}{	211	}{	G.Knox_Mission == 2 and G.Knox_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	But what of the secret hunt?	}
@@ -166,7 +166,7 @@
 {	166	}{	What is Bertram like?	}{	What is Bertram like?	}{	171	}{	G.Knox_Outbound == 0 and G.Knox_Questions == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the Nasty Dude.	}
 {	167	}{	What do you mean "just appears"?	}{	What do you mean "just appears"?	}{	181	}{	G.Knox_Outbound == 0	}{	}{	}{	}{	}{	}{	}{	}{	The Nasty Dude "just appears"?	}
 {	168	}{	What did you need to tell him?	}{	What did you need to tell him?	}{	211	}{	G.Knox_Outbound == 0 and G.Knox_Quest == 0 and G.Knox_Questions == 0	}{	}{	}{	}{	}{	}{	}{	}{	What words do you need to tell the Nasty Dude?	}
-{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	Can I ask you some questions?	}{	Can I ask you some questions?	}{	931	}{	G.Mercurio_Quest != 2	}{	}{	}{	}{	}{	}{	}{	}{	I have some questions worming out of my skull.	}
 {	170	}{	Thanks for the info. I'm getting out of here.	}{	Thanks for the info. I'm getting out of here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'd say goodbye, but I'm already somewhere else.	}
 {	171	}{	Oh man! Well he's, like, the only vampire I know but, well, he seems pretty damn powerful. Aw man, w-when he's lookin' at you it's like he's really scanning your brain, you know, it's like trippy, it's crazy. Ho man! But I guess that's the Nosferatu's thing, ya know. They like, know everything I-I guess.	}{	Oh man! Well he's, like, the only vampire I know but, well, he seems pretty damn powerful. Aw man, w-when he's lookin' at you it's like he's really scanning your brain, you know, it's like trippy, it's crazy. Ho man! But I guess that's the Nosferatu's thing, ya know. They like, know everything I-I guess.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Knox_Powerful = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	172	}{	How does he get in touch with you?	}{	How does he get in touch with you?	}{	181	}{	G.Knox_Questions == 0	}{	}{	}{	}{	}{	}{	}{	}{	How does the Nasty Dude contact you?	}

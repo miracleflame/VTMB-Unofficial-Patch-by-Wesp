@@ -11,16 +11,16 @@
 {	11	}{	[Dying and genuinely afraid for her life. Desperately doesn't want to die]Uh. Please - get a doctor.	}{	[Dying and genuinely afraid for her life. Desperately doesn't want to die]Uh. Please - get a doctor.	}{	#	}{	}{	G.Heather_Know = 1; heatherQuest1()	}{	}{	}{	}{	}{	}{	}{	}
 {	12	}{	I'll see what I can do.	}{	I'll see what I can do.	}{	13	}{	}{	}{	}{	}{	}{	}{	}{	}{	The broken will be mended.	}
 {	13	}{	[shocked, in pain, frightened]Uhh. My insides.... It hurts so bad.	}{	[shocked, in pain, frightened]Uhh. My insides.... It hurts so bad.	}{	#	}{	}{	G.Heather_Insides = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	14	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	14	}{	Hold on.	}{	Hold on.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Keep them inside.	}
 {	15	}{	[in pain, starting to cry]Heh huh. Can someone call my grandma... please?!?	}{	[in pain, starting to cry]Heh huh. Can someone call my grandma... please?!?	}{	#	}{	}{	G.Heather_Grandma = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	16	}{	Stay with me, I can save you!	}{	Stay with me, I can save you!	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	Don't go before I rescue you, little morsel!	}
 {	17	}{	[In pain, fighting it]Ah! Nnnnghhhh -	}{	[In pain, fighting it]Ah! Nnnnghhhh -	}{	#	}{	}{	G.Heather_Groan = 0	}{	}{	}{	}{	}{	}{	}{	}
-{	18	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	18	}{	Fight it.	}{	Fight it.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Fight the good fight.	}
 {	19	}{	[unconscious, pained groaning]Nngh ah... heh ah.	}{	[unconscious, pained groaning]Nngh ah... heh ah.	}{	#	}{	}{	G.Heather_Groan = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	20	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	20	}{	I'll be back.	}{	I'll be back.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll be back.	}
 {	21	}{	[unconscious, pained groaning]Ahh... heh... ahhhh!	}{	[unconscious, pained groaning]Ahh... heh... ahhhh!	}{	#	}{	}{	G.Heather_Grandma = 2	}{	}{	}{	}{	}{	}{	}{	}
 {	22	}{	(Auto-Link)	}{	(Auto-Link)	}{	31	}{	G.Knox_Ghoul == 2 or G.Mercurio_Ghoul == 1 }{	}{	}{	}{	}{	}{	}{	}{	(Auto-Link)	}
-{	23	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	23	}{	I'll be back.	}{	I'll be back.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll be back.	}
 {	24	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -99,9 +99,9 @@
 {	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	101	}{	What? Doctor! Security!!!	}{	What? Doctor! Security!!!	}{	#	}{	npc.SetDisposition("lay", 2)	}{	G.Nurse_Warn = 3	}{	}{	}{	}{	}{	}{	}{	}
-{	102	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	102	}{	I'm gone.	}{	I'm gone.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I already left.	}
 {	103	}{	I just need... some rest... now[falls asleep].	}{	I just need... some rest... now[falls asleep].	}{	#	}{	npc.SetDisposition("Dead",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	104	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	104	}{	Dream of me.	}{	Dream of me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Sleep, my slave.	}
 {	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -109,7 +109,7 @@
 {	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	111	}{	[seeing Nos player]Get away from me! NOOOooo![Screams]	}{	[seeing Nos player]Get away from me! NOOOooo![Screams]	}{	#	}{	npc.SetDisposition("lay", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	112	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Sorry.	}{	Sorry.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	113	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

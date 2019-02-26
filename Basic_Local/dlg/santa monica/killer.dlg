@@ -130,12 +130,12 @@
 {	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	131	}{	I won't answer to anyone and you'll never take me alive, vampire. No one will take from me again. No one! Either we go our separate ways here or one of us dies.	}{	I won't answer to anyone and you'll never take me alive, vampire. No one will take from me again. No one! Either we go our separate ways here or one of us dies.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	132	}{	Do you think your family would be proud of how you're acting?	}{	Do you think your family would be proud of how you're acting?	}{	151	}{	Persuasion 7	}{	}{	}{	}{	}{	}{	}{	}{	Would your dead loved ones sing your praises now?	}
-{	133	}{	Just remember, you made me do this.	}{	Just remember, you made me do this.	}{	0	}{	Humanity 5	}{	G.Killer_Hostile = 1	}{	}{	}{	}{	}{	}{	}{	Justice calls for your death, and I am her hand.	}
-{	134	}{	Shut up and die.	}{	Shut up and die.	}{	0	}{	Humanity -5	}{	G.Killer_Hostile = 1	}{	}{	}{	}{	}{	}{	}{	Your words are wasted, murderer! Die!	}
-{	135	}{	I'll waste no more time on you. Don't be surprised when you wake up staked.	}{	I'll waste no more time on you. Don't be surprised when you wake up staked.	}{	0	}{	Humanity 5	}{	G.Killer_Freed = 1; pc.SetQuest("Serial",10)	}{	}{	}{	}{	}{	}{	}{	I leave you to your Beastly ways.	}
-{	136	}{	Just get out of my sight.	}{	Just get out of my sight.	}{	0	}{	Humanity -5	}{	G.Killer_Freed = 1; pc.SetQuest("Serial",10)	}{	}{	}{	}{	}{	}{	}{	Leave now and cast no more shadows on my path.	}
-{	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	133	}{	Just remember, you made me do this.	}{	Just remember, you made me do this.	}{	0	}{	Humanity 5 & G.Patch_Plus == 0	}{	G.Killer_Hostile = 1	}{	}{	}{	}{	}{	}{	}{	Justice calls for your death, and I am her hand.	}
+{	134	}{	Shut up and die.	}{	Shut up and die.	}{	0	}{	Humanity -5 & G.Patch_Plus == 1	}{	G.Killer_Hostile = 1	}{	}{	}{	}{	}{	}{	}{	Your words are wasted, murderer! Die!	}
+{	135	}{	Just remember, you made me do this.	}{	Just remember, you made me do this.	}{	0	}{	Humanity 5 & G.Patch_Plus == 1	}{	G.Killer_Hostile = 1; FindPlayer().HumanityAdd( -1 )	}{	}{	}{	}{	}{	}{	}{	Justice calls for your death, and I am her hand.	}
+{	136	}{	Shut up and die.	}{	Shut up and die.	}{	0	}{	Humanity -5 & G.Patch_Plus == 1	}{	G.Killer_Hostile = 1; FindPlayer().HumanityAdd( -1 )	}{	}{	}{	}{	}{	}{	}{	Your words are wasted, murderer! Die!	}
+{	137	}{	I'll waste no more time on you. Don't be surprised when you wake up staked.	}{	I'll waste no more time on you. Don't be surprised when you wake up staked.	}{	0	}{	Humanity 5	}{	G.Killer_Freed = 1; pc.SetQuest("Serial",10)	}{	}{	}{	}{	}{	}{	}{	I leave you to your Beastly ways.	}
+{	138	}{	Just get out of my sight.	}{	Just get out of my sight.	}{	0	}{	Humanity -5	}{	G.Killer_Freed = 1; pc.SetQuest("Serial",10)	}{	}{	}{	}{	}{	}{	}{	Leave now and cast no more shadows on my path.	}
 {	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	141	}{	I'm supposed to owe allegiance to some vampire clan I know nothing about just because I was attacked? I was left for dead! Providence made me what I am. I'm doing what I was meant to do.	}{	I'm supposed to owe allegiance to some vampire clan I know nothing about just because I was attacked? I was left for dead! Providence made me what I am. I'm doing what I was meant to do.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

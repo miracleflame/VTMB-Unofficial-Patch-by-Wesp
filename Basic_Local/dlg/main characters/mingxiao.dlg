@@ -281,8 +281,8 @@
 {	281	}{	What can I help you with?	}{	What can I help you with?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	282	}{	Tell me about your people.	}{	Tell me about your people.	}{	251	}{	G.Ming_Kjname == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me more of your people, mirror mistress.	}
 {	283	}{	I had some questions about the Kuei-jin.	}{	I had some questions about the Kuei-jin.	}{	291	}{	G.Ming_Kjname > 0	}{	}{	}{	}{	}{	}{	}{	}{	Uncover this conundrum of the Kuei-jin!	}
-{	284	}{	Do you know of a hengeyôkai in Chinatown?	}{	Do you know of a hengeyôkai in Chinatown?	}{	461	}{	G.Yukie_Quest == 1 and G.Ming_Ziggy == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek a horrendous hengeyôkai.	}
-{	285	}{	Tell me about the hengeyôkai again.	}{	Tell me about the hengeyôkai again.	}{	481	}{	G.Ming_Ziggy == 1 and G.Zyg_Meet == 0 and G.Yukie_Market == 0 and not IsDead("Zygaena")	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the horrendous hengeyôkai.	}
+{	284	}{	Do you know of a hengeyokai in Chinatown?	}{	Do you know of a hengeyokai in Chinatown?	}{	461	}{	G.Yukie_Quest == 1 and G.Ming_Ziggy == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek a horrendous hengeyokai.	}
+{	285	}{	Tell me about the hengeyokai again.	}{	Tell me about the hengeyokai again.	}{	481	}{	G.Ming_Ziggy == 1 and G.Zyg_Meet == 0 and G.Yukie_Market == 0 and not IsDead("Zygaena")	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the horrendous hengeyokai.	}
 {	286	}{	I'm looking for a missing Nosferatu.	}{	I'm looking for a missing Nosferatu.	}{	421	}{	G.Ming_Barrabus == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek a Nosferatu night-child.	}
 {	287	}{	I'm still looking for the Nosferatu. What do I need to do again?	}{	I'm still looking for the Nosferatu. What do I need to do again?	}{	441	}{	G.Ming_Barrabus > 0 and pc.GetQuestState("Barabus") > 3	}{	}{	}{	}{	}{	}{	}{	}{	Where might I find the Nosferatu night-child?	}
 {	288	}{	Where can I find the Tong?	}{	Where can I find the Tong?	}{	581	}{	G.WongHo_Kiki == 1 and G.Kiki_Rescued == 0	}{	}{	}{	}{	}{	}{	}{	}{	Where could the Tong be found?	}
@@ -458,7 +458,7 @@
 {	458	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	459	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	460	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	461	}{	Ah yes, the hengeyôkai[hen-gee-YO-kai] - Zygaena[zi-GAY-nuh], I believe his name was. I had nearly forgotten him.	}{	Ah yes, the hengeyôkai[hen-gee-YO-kai] - Zygaena[zi-GAY-nuh], I believe his name was. I had nearly forgotten him.	}{	#	}{	}{	G.Ming_Ziggy = 1; G.Ming_Zygaena = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	461	}{	Ah yes, the hengeyokai[hen-gee-YO-kai] - Zygaena[zi-GAY-nuh], I believe his name was. I had nearly forgotten him.	}{	Ah yes, the hengeyokai[hen-gee-YO-kai] - Zygaena[zi-GAY-nuh], I believe his name was. I had nearly forgotten him.	}{	#	}{	}{	G.Ming_Ziggy = 1; G.Ming_Zygaena = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	462	}{	Then you know him?	}{	Then you know him?	}{	471	}{	}{	}{	}{	}{	}{	}{	}{	}{	Zygaena? Zany!	}
 {	463	}{	Does he work for you?	}{	Does he work for you?	}{	471	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	464	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -699,7 +699,7 @@
 {	699	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	700	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	701	}{	I have nothing left to say to you. Leave now.	}{	I have nothing left to say to you. Leave now.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	702	}{	I'll make this quick. Do you know of a hengeyôkai in Chinatown?	}{	I'll make this quick. Do you know of a hengeyôkai in Chinatown?	}{	706	}{	G.Yukie_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	What know you of a horrendous hengeyôkai?	}
+{	702	}{	I'll make this quick. Do you know of a hengeyokai in Chinatown?	}{	I'll make this quick. Do you know of a hengeyokai in Chinatown?	}{	706	}{	G.Yukie_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	What know you of a horrendous hengeyokai?	}
 {	703	}{	Later.	}{	Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My shadow darkens other domains.	}
 {	704	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	705	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -819,7 +819,7 @@
 {	819	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	820	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	821	}{	Indeed it does, Kindred. But let us speak of other things. How might I assist you?	}{	Indeed it does, Kindred. But let us speak of other things. How might I assist you?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	822	}{	Earl Grey is no saucy sustenance.	}{	Earl Grey is no saucy sustenance.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	822	}{	Earl Grey is no saucy sustenance so I decline.	}{	Earl Grey is no saucy sustenance so I decline.	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	823	}{	Tell me more of your people, mirror mistress.	}{	Tell me more of your people, mirror mistress.	}{	251	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	824	}{	I destroyed a life-eater in Santa Monica, Lady by the Sea.	}{	I destroyed a life-eater in Santa Monica, Lady by the Sea.	}{	741	}{	G.Kjspy_Dead == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	825	}{	Time is precious and you are not. I seek a Nosferatu night-child.	}{	Time is precious and you are not. I seek a Nosferatu night-child.	}{	21	}{	}{	G.Ming_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	}
