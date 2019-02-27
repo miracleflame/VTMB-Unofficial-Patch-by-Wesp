@@ -629,8 +629,8 @@
 {	629	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	630	}{	It's been fun, Knox, but I need to leave.	}{	It's been fun, Knox, but I need to leave.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My mind has left. My body follows.	}
 {	631	}{	What's up, man?	}{	What's up, girl?	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	632	}{	Nothing. Goodbye.	}{	Nothing. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My mind has left. My body follows.	}
-{	633	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	632	}{	Can I ask you some questions?	}{	Can I ask you some questions?	}{	931	}{	}{	}{	}{	}{	}{	}{	}{	}{	I have some questions worming out of my skull.	}
+{	633	}{	Nothing. Goodbye.	}{	Nothing. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My mind has left. My body follows.	}
 {	634	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	635	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	636	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -931,7 +931,7 @@
 {	931	}{	Aw man, yeah, sure! What do you want to know?	}{	Aw man, yeah, sure! What do you want to know?	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	932	}{	How do I get to the beach from here?	}{	How do I get to the beach from here?	}{	941	}{	}{	}{	}{	}{	}{	}{	}{	}{	Where does the water meet the sand?	}
 {	933	}{	Is there anything I should know about in Santa Monica?	}{	Is there anything I should know about in Santa Monica?	}{	951	}{	}{	}{	}{	}{	}{	}{	}{	}{	What of the Saint Monica?	}
-{	934	}{	Who was the vampire that made you a ghoul?	}{	Who was the vampire that made you a ghoul?	}{	621	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	934	}{	Who was the vampire that made you a ghoul?	}{	Who was the vampire that made you a ghoul?	}{	621	}{	G.Knox_Master == 0	}{	G.Knox_Master = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	935	}{	Didn't you work as a bounty hunter for Arthur Kilpatrick?	}{	Didn't you work as a bounty hunter for Arthur Kilpatrick?	}{	311	}{	G.Arthur_Knoxold == 1 and G.Arthur_Knoxout == 0	}{	}{	}{	}{	}{	}{	}{	}{	Were you not hunting people for fat Arthur?	}
 {	936	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	937	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
