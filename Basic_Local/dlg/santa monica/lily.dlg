@@ -128,8 +128,8 @@
 {	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	131	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	132	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	Don't let me stop you from going in.	}{	Don't let me stop you from going in.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	132	}{	Maybe another time. Goodbye.	}{	Maybe another time. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	When we meet again. Goodbye.	}
 {	133	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -138,8 +138,8 @@
 {	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	141	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	142	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	141	}{	Don't even think about it.	}{	Don't even think about it.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	142	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
 {	143	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	144	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	145	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -252,7 +252,7 @@
 {	252	}{	How did it go with E?	}{	How did it go with E?	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	How was your thin-blooded reunion?	}
 {	253	}{	Remember what you did? Give me some money and I won't tell E.	}{	Remember what you did? Give me some money and I won't tell E.	}{	271	}{	G.Lily_Extort == 1	}{	}{	}{	}{	}{	}{	}{	}{	I need some green or E knows what I've seen.	}
 {	254	}{	Good to see you're okay. Goodbye, Lily.	}{	Good to see you're okay. Goodbye, Lily.	}{	0	}{	Humanity 6	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
-{	255	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	255	}{	You wanna go for a swim?	}{	You wanna go for a swim?	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	Want to taste the water with me?	}
 {	256	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -263,7 +263,7 @@
 {	263	}{	Remember what you did? Give me some money and I won't tell E.	}{	Remember what you did? Give me some money and I won't tell E.	}{	271	}{	G.Lily_Extort == 1	}{	}{	}{	}{	}{	}{	}{	}{	I need some green or E knows what I've seen.	}
 {	264	}{	You probably want your stuff back then. Here, take it...	}{	You probably want your stuff back then. Here, take it...	}{	281	}{	G.Patch_Plus == 1 and pc.HasItem("item_g_lilly_purse") and pc.HasItem("item_g_lilly_photo") and pc.HasItem("item_g_lilly_diary") and pc.HasItem("item_g_bailbond_receipt")	}{	pc.RemoveItem("item_g_lilly_purse"); pc.RemoveItem("item_g_lilly_photo"); pc.RemoveItem("item_g_lilly_diary"); pc.RemoveItem("item_g_bailbond_receipt")	}{	}{	}{	}{	}{	}{	}{	Take what is yours from me, please.	}
 {	265	}{	You kids stay out of trouble. Bye.	}{	You kids stay out of trouble. Bye.	}{	0	}{	Humanity 6	}{	}{	}{	}{	}{	}{	}{	}{	May the sun never shine on you, little flower. Farewell.	}
-{	266	}{	Vampires in love... you guys make a great airport paperback.	}{	Vampires in love... you guys make a great airport paperback.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Vampires in love... you guys make a great airport paperback.	}
+{	266	}{	Vampires in love... you guys make a great airport paperback.	}{	Vampires in love... you guys make a great airport paperback.	}{	141	}{	}{	}{	}{	}{	}{	}{	}{	}{	Vampires in love... you guys make a great airport paperback.	}
 {	267	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	268	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -271,7 +271,7 @@
 {	271	}{	But... I told you, I don't have any money - I don't have anything to give you. Why are you doing this to me?	}{	But... I told you, I don't have any money - I don't have anything to give you. Why are you doing this to me?	}{	#	}{	npc.SetDisposition("Sad", 2)	}{	G.Lily_Extort = 2	}{	}{	}{	}{	}{	}{	}{	}
 {	272	}{	No money? That's a shame. Oh, well.	}{	No money? That's a shame. Oh, well.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	E will know your dark little secret, flower. Farewell.	}
 {	273	}{	Hey, bitch, I saved your life! Now I gotta tell your man.	}{	Hey, bitch, I saved your life! Now I gotta tell your man.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Pray fate does not frown on your deceitful dowry. Farewell.	}
-{	274	}{	Because money rules the world. Here, better cash your junk in then...	}{	Because money rules the world. Here, better cash your junk in then...	}{	0	}{	G.Patch_Plus == 1 and pc.HasItem("item_g_lilly_purse") and pc.HasItem("item_g_lilly_photo") and pc.HasItem("item_g_lilly_diary") and pc.HasItem("item_g_bailbond_receipt")	}{	pc.RemoveItem("item_g_lilly_purse"); pc.RemoveItem("item_g_lilly_photo"); pc.RemoveItem("item_g_lilly_diary"); pc.RemoveItem("item_g_bailbond_receipt")	}{	}{	}{	}{	}{	}{	}{	Because dead presidents rules everything. Sell your trinkets to get some...	}
+{	274	}{	Because money rules the world. Here, better cash in your junk then...	}{	Because money rules the world. Here, better cash in your junk then...	}{	0	}{	G.Patch_Plus == 1 and pc.HasItem("item_g_lilly_purse") and pc.HasItem("item_g_lilly_photo") and pc.HasItem("item_g_lilly_diary") and pc.HasItem("item_g_bailbond_receipt")	}{	pc.RemoveItem("item_g_lilly_purse"); pc.RemoveItem("item_g_lilly_photo"); pc.RemoveItem("item_g_lilly_diary"); pc.RemoveItem("item_g_bailbond_receipt")	}{	}{	}{	}{	}{	}{	}{	Because dead presidents rules everything. Sell your trinkets to get some...	}
 {	275	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	276	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	277	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
