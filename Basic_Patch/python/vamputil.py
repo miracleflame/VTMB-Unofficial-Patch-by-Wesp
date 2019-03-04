@@ -855,9 +855,9 @@ def nosAlive():
     gender = pc.IsMale()
     if __main__.G.Nossie_Dead == 0:
         if (gender == 1):
-            nos.PlayDialogFile("\Character\dlg\warrens\imalia\line407_col_e.mp3")
+            nos.PlayDialogFile("\Character\dlg\warrens\imalia\line385_col_e.mp3")
         else:
-            nos.PlayDialogFile("\Character\dlg\warrens\mitnick\line277_col_e.mp3")
+            nos.PlayDialogFile("\Character\dlg\warrens\mitnick\line286_col_e.mp3")
         __main__.FindPlayer().HumanityAdd( 1 )
 
 #SKYLINE: Called to add glow to elevator pointing arrows and mark floors, button G, added by vladdmaster
