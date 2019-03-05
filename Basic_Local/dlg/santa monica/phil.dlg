@@ -9,8 +9,8 @@
 {	9	}{	Are you saying you want me to leave?	}{	Are you saying you want me to leave?	}{	51	}{	Seduction 6 & (G.Phil_Seduce < 2 and G.Patch_Plus == 1)	}{	}{	}{	}{	}{	}{	}{	}{	I came back here to play doctor.	}
 {	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	11	}{	I f-f- ... I feel [mutters as falls asleep]asleep.	}{	I f-f- ... I feel [mutters as falls asleep]asleep.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	G.Phil_Asleep = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	12	}{	Good night.	}{	Good night.	}{	0	}{	G.Phil_Drop == 0	}{	philDropNote()	}{	}{	}{	}{	}{	}{	}{	}
-{	13	}{	Good night.	}{	Good night.	}{	0	}{	G.Phil_Drop == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	G.Phil_Drop == 0	}{	philDropNote()	}{	}{	}{	}{	}{	}{	}{	}
+{	13	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	G.Phil_Drop == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	14	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -79,8 +79,8 @@
 {	79	}{	Are you saying you want me to leave?	}{	Are you saying you want me to leave?	}{	51	}{	Seduction 6 & (G.Phil_Seduce < 2 and G.Patch_Plus == 1)	}{	}{	}{	}{	}{	}{	}{	}{	I came back here to play doctor.	}
 {	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	81	}{	Take it, take it! O-oh... boy, Phil, you did it now - I dropped it! I - uh... sorry![flees]	}{	Take it, take it! O-oh... boy, Phil, you did it now - I dropped it! I - uh... sorry![flees]	}{	#	}{	npc.SetDisposition("Fear", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	82	}{	That's better.	}{	That's better.	}{	0	}{	G.Phil_Drop == 0	}{	philDropNote(); npc.SetRelationship("player D_FR 5")	}{	}{	}{	}{	}{	}{	}{	Fear us.	}
-{	83	}{	That's better.	}{	That's better.	}{	0	}{	G.Phil_Drop == 1	}{	npc.SetRelationship("player D_FR 5")	}{	}{	}{	}{	}{	}{	}{	Fear us.	}
+{	82	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	G.Phil_Drop == 0	}{	philDropNote(); npc.SetRelationship("player D_FR 5")	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	83	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	G.Phil_Drop == 1	}{	npc.SetRelationship("player D_FR 5")	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
 {	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -89,7 +89,7 @@
 {	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	90	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	91	}{	It's 1969... that's all I know.	}{	It's 1969... that's all I know.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	92	}{	Okay.	}{	Okay.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I know too.	}
+{	92	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
 {	93	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
