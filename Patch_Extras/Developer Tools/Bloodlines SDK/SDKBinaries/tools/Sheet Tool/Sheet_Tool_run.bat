@@ -8,7 +8,7 @@ pushd "%~dp0"
 :set_vars
 set "AppFile=Sheet_Tool.exe"
 set "Program=%cd%\%AppFile%"
-set "Readme=%cd%\ShowReadme.exe"
+set "Readme=%cd%\Show_readme.exe"
 set "Delete="
 set "RunKey="
 
@@ -20,7 +20,7 @@ if not exist "%Program%" (
 if exist "..\..\service\sfk.exe" (
 	set sfk="..\..\service\sfk.exe") else (
 	echo>>"..\..\..\sdk_errors.log" [%date% %time%] %AppFile:.exe=% error: Missing "%cd%\..\..\service\sfk.exe" file.
-	goto run_program
+	goto show_readme
 )
 
 :fix_issue
@@ -32,7 +32,7 @@ for /f %%a in ('call %sfk% strlen "%Program%"') do if %%~a GTR 126 (
 )
 
 :show_readme
-start /b "" "%Readme%" "This is a tool to set a model animation as the character sheet animation.\n\nHow to use: \n------------- \nDrag the mdl from which to use the animation to the first slot or browse for \nit. Select PC models only! Try using Brujah or Malkavian female or Tremere \nmale, most other PCs won't transfer nicely (bones and weights problems).\n\nDrag the target mdl to receive the animation to the second slot or browse \nfor it. It can be a PC or NPC model (for PCs other animations may deform \nthe result so best use NPC). Then click \"Do it\" or check options first. \n\nDon't check anything for male to male or female to female models. If you see \nsome deformation you could try using the <bip0 and pelvis only> setting. \nOr do so for special transfers like e. g. male gangrel to female gangrel mdl. \n\nFor most of the NPC models it is the ACT_RAGDOLL dying animation that is \nchanged. I dont see any problem with that as vampires get a burning death. \n\nAnd I know one model that will need a hexedit for the animation to work. \nMaybe they are more, but most models should work fine using this tool." "Character Sheet Animation Injector  (c) DDLullu" OK
+start /b "" "%Readme%" "This is a tool to set a model animation as the character sheet animation.\n\nHow to use: \n------------- \nDrag the mdl from which to use the animation to the first slot or browse for it. Select PC models only! Try using Brujah or Malkavian female or Tremere male, most other PCs won't transfer nicely (bones and weights problems).\n\nDrag the target mdl to receive the animation to the second slot or browse for it. It can be a PC or NPC model (for PCs other animations may deform the result so best use NPC). Then click \"Do it\" or check options first. \n\nDon't check anything for male to male or female to female models. If you see some deformation you could try using the <bip0 and pelvis only> setting. Or do so for special transfers like e. g. male gangrel to female gangrel mdl. \n\nFor most of the NPC models it is the ACT_RAGDOLL dying animation that is changed. I dont see any problem with that as vampires get a burning death. \n\nAnd I know one model that will need a hexedit for the animation to work. Maybe they are more, but most models should work fine using this tool." "Character Sheet Animation Injector  (c) DDLullu" OK
 
 :run_program
 start %RunKey% "" "%Program%"

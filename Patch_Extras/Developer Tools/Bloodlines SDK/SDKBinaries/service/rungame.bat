@@ -7,7 +7,8 @@ title Run Game Script
 if "%~1"=="" exit
 
 :: Command line for launch
-set CMDLine=-dev
+rem Cut "+developer 0" string when DDLullu's mod will be fixed...
+set CMDLine=-dev +developer 0
 
 :: Check required files
 if not exist "GameCfg.ini" (

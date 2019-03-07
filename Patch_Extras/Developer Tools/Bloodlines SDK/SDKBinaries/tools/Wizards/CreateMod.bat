@@ -12,6 +12,7 @@ set MsgBox=service\msgbox.exe
 set Sfk=service\sfk.exe
 set InputBox=service\inputbox.exe
 set UnZip=service\7za.exe
+set UtfConv="%~dp0service\ansi2utf.exe"
 set EchoX=%Sfk% echo
 
 :: Check Assets
@@ -61,7 +62,7 @@ if not defined NewModName exit
 
 :: Set Directory
 for /f "delims=" %%a in (
-'%InputBox% "Enter mod directory (will be created near vampire/):" "%Title%" "MyFirstMod" /W:300'
+'%InputBox% "Enter mod directory (will be created near vampire/):" "%Title%" "%NewModName: =%" /W:300'
 ) do set "NewModDir=%%~a"
 if not defined NewModDir exit
 if defined NewModDir set "NewModDir=%NewModDir: =%"
@@ -106,7 +107,7 @@ if exist "%GameExeDir%\%NewModDir%\" (
 if not exist "%GameExeDir%\%NewModDir%\" md "%GameExeDir%\%NewModDir%\"> nul
 %UnZip% x -o"%GameExeDir%\%NewModDir%\" -y -aoa "%~dp0\service\modbase.zip"> nul
 
-:: Import assets from Unoff.Patch
+:: Import assets from Unofficial patch
 if exist "%GameExeDir%\Unofficial_Patch\materials\" (
 	%MsgBox% Found Wesp5's Unofficial Patch inside your game directory. Are you wish to copy its assets into your new mod to use them as the content base? It's very recommended action because this will make all fixed or improved stuff from the patch to be available in your mod as well. /c:Create a New Mod /t:MB_SYSTEMMODAL,MB_ICONQUESTION,MB_YESNO
 )
@@ -138,6 +139,14 @@ if "%ErrorLevel%"=="6" (
 :: Parse liblist.gam file
 %Sfk% filter "%GameExeDir%\%NewModDir%\scripts\liblist.gam" -lswhere "game " -srep "|game *|game \q%NewModName%\q|" -write -yes> nul
 %Sfk% filter "%GameExeDir%\%NewModDir%\scripts\liblist.gam" -lswhere "gamedll " -srep "|gamedll *|gamedll \q..\vampire\dlls\vampire.dll\q|" -write -yes> nul
+
+:: Parse gameui_english.txt file
+%Sfk% filter "%GameExeDir%\%NewModDir%\resource\gameui_english.txt" -srep "|\qGameUI_Patch\q*|\qGameUI_Patch\q\t\t\t\q%NewModName%\q|" -write -yes -utf> nul
+pushd "%GameExeDir%\%NewModDir%\resource\"
+%UtfConv% -i gameui_english.txt -o gameui_english.utf
+move /y gameui_english.utf gameui_english.txt > nul
+popd
+%Sfk% replace "%GameExeDir%\%NewModDir%\resource\gameui_english.txt" -bin "|0000||" -quiet -yes> nul
 
 :: Create .bat launcher
 set "NewBatName=%NewModName::=%"

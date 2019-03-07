@@ -1,7 +1,7 @@
 //====== Copyright © 2003-2018, Troika Games, Inc. All rights reserved. =======
 //
 // Purpose: Vampire Bloodlines game definition file (.fgd) 
-// Version: 1.70 beta
+// Version: 1.72 beta
 // Edition: Original VtMB
 // Written: Psycho-A
 //
@@ -6274,11 +6274,6 @@ studioprop()
 	pl_investigate(choices) : "Player Investigate" : "6" : "[VTMB] Unknown yet..." =	[]
 	pl_supernatural_attack(choices) : "Player Supernatural Attack" : "2" : "A supernatural level is set to the player for certain actions or by script. When the level is equal or greater thean the threshold, the apropriate action is triggered for the npc." =	[]
 	pl_supernatural_flee(choices) : "Player Supernatural Flee" : "3" : "A supernatural level is set to the player for certain actions or by script. When the level is equal or greater thean the threshold, the apropriate action is triggered for the npc. \nFlee overrides attack and a value of 6 means no action because the max value is 5." =	[]
-
-	sep_npcrel(string) readonly: "------------------------------------"
-	
-	// human-related
-	soundgroup(choices) : "Sound Group" : "Unique/Cal" : "The group of sounds relative to 'sound/character/*' that specifies base NPC action sounds. See 'vdata/system/sndscheme_char.txt' for more details." = []
 ]
 
 
@@ -6320,7 +6315,6 @@ studioprop()
 	sep_npcrel(string) readonly: "------------------------------------"
 	
 	// npc-related
-	soundgroup(choices) : "Sound Group" :  : "The group of sounds relative to 'sound/character/*' that specifies base NPC action sounds. See 'vdata/system/sndscheme_char.txt' for more details." = []
 	radius(integer) : "Radius [-?]" : : "[VTMB] Unknown yet..."
 ]
 
@@ -6944,7 +6938,6 @@ studioprop()
 	stattemplate(choices) : "NPC Stat Template" : "VampireGeneric" : "Goes to data in 'vdata/system/npctemplate***.txt'. NPCs in Hammer are assigned one of these which determines their statistics." = []
 
 	// vampire-specific
-	soundgroup(choices) : "Sound Group" : "Unique/E" : "The group of sounds relative to 'sound/character/*' that specifies base NPC action sounds. See 'vdata/system/sndscheme_char.txt' for more details." = []
 	follower_boss(choices) : "Follower Boss [-?]" : "" : "[VTMB] Unknown yet..." =
 	[
 		"" : "None"

@@ -1,7 +1,7 @@
-//====== Copyright © 2003-2017, Troika Games, Inc. All rights reserved. =======
+//====== Copyright © 2003-2018, Troika Games, Inc. All rights reserved. =======
 //
 // Purpose: Vampire Bloodlines game definition file (.fgd) 
-// Version: 1.63 beta
+// Version: 1.65 beta
 // Edition: Original VtMB [Base]
 // Written: Psycho-A
 //
@@ -97,7 +97,7 @@
 
 	sep_wsarea(string) readonly: "------------------------------------"
 
-	safearea(choices) : "Area: Safety Type" : 1 : "[VTMB] Selects safety type for map area." = 
+	safearea(choices) : "Area: Safety Type" : 0 : "[VTMB] Selects safety type for map area." = 
 	[
 		0 : "Combat"
 		1 : "Masquerade"
@@ -6952,17 +6952,18 @@ studioprop()
 	]
 	soundgroup(choices) : "Sound Group" : : "NPC Sound group. \n\nThe group of sounds relative to 'sound/character/*' that specifies base NPC action sounds. See 'vdata/system/sndscheme_char.txt' for more details." = 
 	[
-		"-" : "- Both -"
+		"*" : "- All -"
 		"" : "Default"
 		"Asian" : "Asian"
 		"Blue_Blood" : "Blue_Blood"
 		"Bum" : "Bum"
 		"Bum/Sick_Bum" : "Bum/Sick_Bum"
 		"Citizen" : "Citizen"
+		"Hunter" : "Hunter"
 		"Patron_Club" : "Patron_Club"
 		"Unique" : "Unique"
-		"-" : ""
-		"-" : "- Male -"
+		"/" : "        "
+		"*" : "- Male -"
 		"Al" : "Al"
 		"Bum/Old_Bum_Overpass" : "Bum/Old_Bum_Overpass"
 		"Citizen/Office Person 2" : "Citizen/Office Person 2"
@@ -6972,6 +6973,7 @@ studioprop()
 		"Giovanni_Guest_2" : "Giovanni_Guest_2"
 		"Guard" : "Guard"
 		"Italian_Accent" : "Italian_Accent"
+		"Mafia" : "Mafia"
 		"Museum_Guard" : "Museum_Guard"
 		"Officer" : "Officer"
 		"Officer/Dane_officer" : "Officer/Dane_officer"
@@ -6980,13 +6982,11 @@ studioprop()
 		"Patron_Club/Male_Dancer_1" : "Patron_Club/Male_Dancer_1"
 		"Patron_Club/Male_Dancer_2" : "Patron_Club/Male_Dancer_2"
 		"Sabbat_Thug" : "Sabbat_Thug"
-		"Sheriff_Manbat" : "Sheriff_Manbat"
 		"Stalker" : "Stalker"
 		"Young_Thug" : "Young_Thug"
 		"Unique/Ash_Lookalike" : "Unique/Ash_Lookalike"
 		"Unique/Brian" : "Unique/Brian"
 		"Unique/Bum" : "Unique/Bum"
-		"Unique/Bum_Disease_female" : "Unique/Bum_Disease_female"
 		"Unique/Bum_Disease_male" : "Unique/Bum_Disease_male"
 		"Unique/Cal" : "Unique/Cal"
 		"Unique/CDC floats" : "Unique/CDC floats"
@@ -7019,8 +7019,8 @@ studioprop()
 		"Unique/Tseng" : "Unique/Tseng"
 		"Unique/Vandal" : "Unique/Vandal"
 		"Unique/Victor" : "Unique/Victor"
-		"-" : ""
-		"-" : "- Female -"
+		"/" : "          "
+		"*" : "- Female -"
 		"Blue_Blood/Giovanni Guest" : "Blue_Blood/Giovanni Guest"
 		"Blue_Blood/Giovanni Guest 2" : "Blue_Blood/Giovanni Guest 2"
 		"Citizen/Citizen_Hollywood" : "Citizen/Citizen_Hollywood"
@@ -7036,6 +7036,7 @@ studioprop()
 		"Patron_Club/Female_Dancer_2" : "Patron_Club/Female_Dancer_2"
 		"Patron_Club/Female_Dancer_3" : "Patron_Club/Female_Dancer_3"
 		"Patron_Diner" : "Patron_Diner"
+		"Unique/Bum_Disease_female" : "Unique/Bum_Disease_female"
 		"Unique/Damsel" : "Unique/Damsel"
 		"Unique/Danielle" : "Unique/Danielle"
 		"Unique/Doris" : "Unique/Doris"
@@ -7052,6 +7053,22 @@ studioprop()
 		"Unique/Therese" : "Unique/Therese"
 		"Unique/Venus" : "Unique/Venus"
 		"Unique/Yukie" : "Unique/Yukie"
+		"/" : "        "
+		"*" : "- Monster -"
+		"Andrei_Transformed" : "Andrei_Transformed"
+		"Gargoyle" : "Gargoyle"
+		"Hengeyokai" : "Hengeyokai"
+		"Ming Xiao" : "Ming Xiao"
+		"Ming Xiao Proxy" : "Ming Xiao Proxy"
+		"SabbatLeader" : "SabbatLeader"
+		"Sheriff_Manbat" : "Sheriff_Manbat"
+		"Shovel_Head" : "Shovel_Head"
+		"Spiderchick" : "Spiderchick"
+		"TC_FatGuy" : "TC_FatGuy"
+		"TC_Runner" : "TC_Runner"
+		"Werewolf" : "Werewolf"
+		"Zombie_Male" : "Zombie_Male"
+		"Zombie_Female" : "Zombie_Female"
 	]
 	team_name(string) : "Team Name" : : "[VTMB] Unknown yet..."
 	ignore_detected_attack(choices) : "Ignore Detected Attack" : 0 : "Ignores when detects attack from other side." =

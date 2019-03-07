@@ -582,7 +582,8 @@ if /i not "%GExeExtn%"==".exe" (
 call :killproc "%GExeFile%"
 pushd "%GExePath%"
 set "PATH=%~dp0;%PATH%"
-start %RunKey% "game" "%GExeFile%" -game %ModName% +map "%MapName%" +%AddlCmds% %GameCmds%
+rem Cut "+developer 0" string when DDLullu's mod will be fixed...
+start %RunKey% "game" "%GExeFile%" -game %ModName% +map "%MapName%" +%AddlCmds% %GameCmds% +developer 0
 popd
 
 :rungame_err

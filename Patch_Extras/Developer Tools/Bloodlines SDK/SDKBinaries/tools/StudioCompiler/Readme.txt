@@ -17,10 +17,4 @@ Features
 
 This version can run anywhere and is updated for the latest orangebox models (Version 49 models cause it to crash).
 
-// Modified by Psycho-A for Bloodlines SDK 05.09.2018 and limitations added by wesp:
-
-The modeling features are in Alpha state, so keep in mind these limitations:
-1. The model should not contain more than 10000 polys and 25000 vertexes
-2. Only static props (scenery models) are supported - no characters or weapons
-3. The model should be single-boned and have only single frame on sequence
-4. Collision models may crash game, use model as prop_static or turn them off!
+// Modified by Psycho-A for Bloodlines SDK 05.09.2018.

@@ -614,8 +614,8 @@ exit /b
 	set "TgtPath=%~dp1"
 	if exist "%TgtPath:~0,-1%\" set "TgtPath=%TgtPath:~0,-1%"
 	if /i "%~x1"==".vtf" if /i "%ConvertMode%"=="ToImg" (call :VTT2IMG "%~1") else (call :VTF2TTZ "%~1")
-	if /i "%~x1"==".tth" if /i "%ConvertMode%"=="ToImg" (call :VTT2IMG "%~1") else (call :TTZ2VTF "%~1")
-	if /i "%~x1"==".ttz" if /i "%ConvertMode%"=="ToImg" (call :VTT2IMG "%~1") else (call :TTZ2VTF "%~1")
+	if /i "%~x1"==".tth" if /i "%ConvertMode%"=="ToVtf" (call :TTZ2VTF "%~1") else (call :VTT2IMG "%~1")
+	if /i "%~x1"==".ttz" if /i "%ConvertMode%"=="ToVtf" (call :TTZ2VTF "%~1") else (call :VTT2IMG "%~1")
 	if /i "%~x1"==".tga" if /i "%ConvertMode%"=="ToVtf" (call :IMG2VTF "%~1") else (call :IMG2TTZ "%~1")
 	if /i "%~x1"==".dds" if /i "%ConvertMode%"=="ToVtf" (call :IMG2VTF "%~1") else (call :IMG2TTZ "%~1")
 	if /i "%~x1"==".bmp" if /i "%ConvertMode%"=="ToVtf" (call :IMG2VTF "%~1") else (call :IMG2TTZ "%~1")

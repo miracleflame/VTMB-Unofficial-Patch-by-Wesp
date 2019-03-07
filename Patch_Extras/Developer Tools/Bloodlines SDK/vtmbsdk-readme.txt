@@ -1,5 +1,5 @@
 --------------------
-Bloodlines SDK v1.72+
+Bloodlines SDK v1.73
 --------------------
 
 This is an unofficial software developer's kit (SDK) for Vampire - The Masquerade: 
@@ -369,10 +369,18 @@ Global changes:
 * Improved and updated SDK interface, instructions, file system, some tools and other aspects.
 * Added modified StudioCompiler, user-friendly tool for compiling any model from .SMD or .QC formats.
 * Added SMD models import+export plugins for Autodesk 3ds Max 9-2019 and Google SketchUp tool.
+* Added new context menu option for MDL files to see which materials model use and which ones are missing in mod.
 
 --------------------
 
-1.72+ (1.02.2019):
+1.73 (26.02.2019):
+- Added new context menu option for MDL files to see which materials model use and which ones are missing in mod.
+- Turned off developer mode for launch game or load maps due to latest UP compatibility issues [Temporary!].
+- Fixed false anti-virus software detections on two tools' InfoBox files.
+- Texture Converter: Changed conversion format from VTF to TGA if TTH/TTZ files are selected in GUI mode.
+- Model Viewer: Default cubemap texture replaced with more reflective one for closer-to-game gloss appearance.
+
+1.72+ (30.10.2018):
 - StudioMDL: Added important usage-limitations notes before launching Model Compiler and compiling process.
 - Studio Compiler: Optimized default settings for quick compiling from SMD files and fixed some messages.
 - Hammer/FGD: Fixed bad name in ambient_generic parameter and default area Safety type (from Madquerade to Combat).
@@ -382,8 +390,6 @@ Global changes:
 - Create Mod Wizard: Added auto-inserting mod's name into game Settings menu (gameui_english.txt file).
 - Improved BSP patcher scripts and added its item to the SDK main menu (run .bats and readmes to learn how to use).
 - Added auto-removing kHED editor settings on reset SDK to fix calling the user manual issues.
-- Turned off developer mode for launching game or loading maps due to latest compatibility issues [Temporary!].
-- Fixed false anti-virus software detections on two tools' InfoBox files.
 - Updated Source Code repository (for contributors).
 
 1.71 (18.09.2018):

@@ -38,7 +38,10 @@ REG ADD "HKCU\Software\Classes\VPKFile\DefaultIcon" /f /ve /d "%FIPath%\pak.ico,
 REG ADD "HKCU\Software\Classes\.mdl" /f /ve /d "MDLFile"
 REG ADD "HKCU\Software\Classes\MDLFile" /f /ve /d "3D Model file"
 REG ADD "HKCU\Software\Classes\MDLFile\shell" /f /ve /d "View"
+REG ADD "HKCU\Software\Classes\MDLFile\shell\View" /f /ve /d "View Model"
 REG ADD "HKCU\Software\Classes\MDLFile\shell\View\command" /f /ve /d "%CD%\service\hlmv_shell.exe \"%%1\""
+REG ADD "HKCU\Software\Classes\MDLFile\shell\TexInfo" /f /ve /d "Texture Information"
+REG ADD "HKCU\Software\Classes\MDLFile\shell\TexInfo\command" /f /ve /d "%CD%\tools\MDLTextureInfo\MDLTextureInfo.cmd \"%%1\""
 REG ADD "HKCU\Software\Classes\MDLFile\DefaultIcon" /f /ve /d "%CD%\service\hlmv_shell.exe,0"
 
 :======== CFG Files =========

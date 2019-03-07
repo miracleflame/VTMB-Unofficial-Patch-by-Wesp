@@ -32,6 +32,11 @@ if not exist "SDKBinaries\%%~nxm" (
 	copy /y "%%~m" "SDKBinaries\%%~nxm"> nul
 ))
 
+:show_warning
+if not exist "%SMCHome%\ShowWarning.ini" goto run_program
+call "%SMCHome%\ShowWarning.exe" "The modeling features of the SDK are in Alpha state.\nKeep in mind these usage limitations:\n\n1. The model should contain max 10000 polys and 25000 vertexes;\n2. Only static prop models are supported - no characters or weapons;\n3. Models must be single-boned and have only 1 frame per sequence;\n4. Collision physics models may crash the game - compile model as \"prop_static\" or turn collisions off when pasting model on the map!" "Important Info - Please read!" OK Warning
+del /f /q "%SMCHome%\ShowWarning.ini"> nul
+
 :run_program
 start "smc" "%SMCHome%\StudioCompiler.exe"
 exit

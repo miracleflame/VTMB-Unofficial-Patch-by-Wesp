@@ -143,6 +143,10 @@ if exist "GameCfg.ini" (
  reg add "HKCU\Software\CFApps\StudioCompiler\MDLDecompiler"  /v "OutputDirectory" /t REG_SZ /d "%GameRoot%\SdkContent\ModelSrc" /f
 )> nul
 
+:khedmanualfix
+(reg delete "HKCU\Software\kHED" /f
+)> nul
+
 :installplugins
  start plugins\fileassocs.exe -internal
  start plugins\texplugins.exe -internal
@@ -166,7 +170,7 @@ if exist "GameCfg.ini" (
 :fisrstrun
  echo # This file needed to detect SDK first launch and run Wizard.> "FirstRun.ini"
  echo # This file needed to detect StudioMdl first launch and show Alpha-state Warning.> "service\mdlwarn.ini"
- echo # This file needed to detect StudioCompiler first launch and show usage Warning.> "tools\StudioCompiler\Warning.ini"
+ echo # This file needed to detect StudioCompiler first launch and show usage Warning.> "tools\StudioCompiler\ShowWarning.ini"
  taskkill /f /im "msgbox.exe"> nul
 
 :setmoddir
