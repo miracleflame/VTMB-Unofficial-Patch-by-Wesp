@@ -513,6 +513,8 @@ def zombieKillCounter():
     if(G.ZombieKills >= 7):
         openroom = Find("Relay_UnLock_ZombRoom")
         openroom.Trigger()
+        closeroom = Find("Relay_LockDown_ZombRoom")
+        closeroom.Kill()
 
 #GIOVANNI MANSION 5: Happens after chang brothers are killed, changed by wesp
 def gio5_changDefeated():
