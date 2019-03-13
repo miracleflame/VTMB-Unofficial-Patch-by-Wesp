@@ -1,46 +1,30 @@
-// Choreo version 1
 actor "AndreiSabbat"
 {
   channel "Speech"
   {
     event speak "NPC Line"
     {
-      time 0.000000 1.803492
-      param "character/dlg/hollywood/andrei/line207_col_e.wav"
-      param2 "70dB"
+      time 0.000000 33.3884807256
+      param "character/dlg/hollywood/Andrei/line207_col_e.wav"
+      param2 "480dB"
       fixedlength
     }
   }
-  channel "Gestures"
-  {
-  }
-  channel "Expressions"
-  {
-  }
-  channel "Speech Triggers"
-  {
-    event loud "Loud"
+  
+channel "expression 3"
+{
+    event expression "Express1"
     {
-      time 0.080000 0.190000
-      param "0.110"
+        time 7.9 10.4
+        param "lacroix"
+        param2 "Raised Both"
+        event_ramp
+        {
+            0.2538 1.5861
+        }
     }
-    event loud "Loud"
-    {
-      time 0.310000 0.420000
-      param "0.110"
-    }
-    event loud "Loud"
-    {
-      time 0.690000 0.800000
-      param "0.110"
-    }
-    event loud "Loud"
-    {
-      time 1.040000 1.150000
-      param "0.110"
-    }
-  }
-  bonerename "Bip01" "Bip01"
+}
+
 }
 
 fps 60

@@ -1,0 +1,31 @@
+actor "Andrei"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 22.819138322
+      param "character/dlg/hollywood/Andrei/line277_col_e.wav"
+      param2 "120dB"
+      fixedlength
+    }
+  }
+  
+channel "expression 3"
+{
+    event expression "Express1"
+    {
+        time 8.1 12.5
+        param "lacroix"
+        param2 "Disgust"
+        event_ramp
+        {
+            0.2538 4.2861
+        }
+    }
+}
+
+}
+
+fps 60
+snap off
