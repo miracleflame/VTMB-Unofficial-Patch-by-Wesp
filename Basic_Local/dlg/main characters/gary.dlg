@@ -479,8 +479,8 @@
 {	479	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	480	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	481	}{	Let's see what I got.... For a fellow Sewer Rat, I'm willing to let it go cheap.	}{	Let's see what I got.... For a fellow Sewer Rat, I'm willing to let it go cheap.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	482	}{	(Auto-Link)	}{	(Auto-Link)	}{	641	}{	G.Patch_Plus == 1 and not pc.HasItem("item_g_eldervitaepack")	}{	pc.GiveItem("item_g_eldervitaepack")	}{	}{	}{	}{	}{	}{	}{	}
-{	483	}{	(Auto-Link)	}{	(Auto-Link)	}{	641	}{	G.Patch_Plus == 1 and pc.HasItem("item_g_eldervitaepack")	}{	pc.GiveAmmo("item_g_eldervitaepack")	}{	}{	}{	}{	}{	}{	}{	}
+{	482	}{	Thanks. Any tips?	}{	Thanks. Any tips?	}{	641	}{	G.Patch_Plus == 1 and not pc.HasItem("item_g_eldervitaepack")	}{	pc.GiveItem("item_g_eldervitaepack"); G.Pack_Given = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	483	}{	Thanks. Any tips?	}{	Thanks. Any tips?	}{	641	}{	G.Patch_Plus == 1 and pc.HasItem("item_g_eldervitaepack")	}{	pc.GiveAmmo("item_g_eldervitaepack", 1); G.Pack_Given = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	484	}{	(Auto-Link)	}{	(Auto-Link)	}{	641	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	485	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	486	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -489,8 +489,8 @@
 {	489	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	490	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	491	}{	Let's see what I got....	}{	Let's see what I got....	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	492	}{	(Auto-Link)	}{	(Auto-Link)	}{	641	}{	G.Patch_Plus == 1 and not pc.HasItem("item_g_bluebloodpack")	}{	pc.GiveItem("item_g_bluebloodpack")	}{	}{	}{	}{	}{	}{	}{	}
-{	493	}{	(Auto-Link)	}{	(Auto-Link)	}{	641	}{	G.Patch_Plus == 1 and pc.HasItem("item_g_bluebloodpack")	}{	pc.GiveAmmo("item_g_bluebloodpack")	}{	}{	}{	}{	}{	}{	}{	}
+{	492	}{	Thanks. Any tips?	}{	Thanks. Any tips?	}{	641	}{	G.Patch_Plus == 1 and not pc.HasItem("item_g_bluebloodpack")	}{	pc.GiveItem("item_g_bluebloodpack"); G.Pack_Given = 1		}{	}{	}{	}{	}{	}{	}{	}
+{	493	}{	Thanks. Any tips?	}{	Thanks. Any tips?	}{	641	}{	G.Patch_Plus == 1 and pc.HasItem("item_g_bluebloodpack")	}{	pc.GiveAmmo("item_g_bluebloodpack", 1); G.Pack_Given = 1		}{	}{	}{	}{	}{	}{	}{	}
 {	494	}{	(Auto-Link)	}{	(Auto-Link)	}{	641	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	495	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	496	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -499,8 +499,8 @@
 {	499	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	500	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	501	}{	Let's see what I got.... For one of your kind, it ain't gonna be cheap.	}{	Let's see what I got.... For one of your kind, it ain't gonna be cheap.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	502	}{	(Auto-Link)	}{	(Auto-Link)	}{	651	}{	G.Patch_Plus == 1 and not pc.HasItem("item_g_bloodpack")	}{	pc.GiveItem("item_g_bloodpack")	}{	}{	}{	}{	}{	}{	}{	}
-{	503	}{	(Auto-Link)	}{	(Auto-Link)	}{	651	}{	G.Patch_Plus == 1 and pc.HasItem("item_g_bloodpack")	}{	pc.GiveAmmo("item_g_bloodpack")	}{	}{	}{	}{	}{	}{	}{	}
+{	502	}{	Thanks. Any tips?	}{	Thanks. Any tips?	}{	651	}{	G.Patch_Plus == 1 and not pc.HasItem("item_g_bloodpack")	}{	pc.GiveItem("item_g_bloodpack"); G.Pack_Given = 1		}{	}{	}{	}{	}{	}{	}{	}
+{	503	}{	Thanks. Any tips?	}{	Thanks. Any tips?	}{	651	}{	G.Patch_Plus == 1 and pc.HasItem("item_g_bloodpack")	}{	pc.GiveAmmo("item_g_bloodpack", 1); G.Pack_Given = 1		}{	}{	}{	}{	}{	}{	}{	}
 {	504	}{	(Auto-Link)	}{	(Auto-Link)	}{	651	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	505	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	506	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -620,18 +620,18 @@
 {	620	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	621	}{	Sounds dangerous? No, this ain't a suicide mission, boss. You'll be more of a curiosity than a threat. Talk to Xiao, ask her where my boy is, and get him back. Once he's safe, I'll tell you everything you need to know about the sarcophagus.	}{	Sounds dangerous? No, this ain't a suicide mission, boss. You'll be more of a curiosity than a threat. Talk to Xiao, ask her where my boy is, and get him back. Once he's safe, I'll tell you everything you need to know about the sarcophagus.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Chinatown_Open = 1; G.Gary_Quest = 1; pc.SetQuest("Barabus",1)	}{	}{	}{	}{	}{	}{	}{	}
 {	622	}{	Aren't the Kindred at war with the Kuei-jin?	}{	Aren't the Kindred at war with the Kuei-jin?	}{	631	}{	}{	}{	}{	}{	}{	}{	}{	}{	Is our blood not feuding?	}
-{	623	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	481	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	How do I enter the minefield without getting blown up?	}
-{	624	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	491	}{	not IsClan(pc,"Nosferatu") and not IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	How do I enter the minefield without getting blown up?	}
-{	625	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	501	}{	IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	623	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	481	}{	IsClan(pc,"Nosferatu") and G.Pack_Given == 0	}{	}{	}{	}{	}{	}{	}{	}{	How do I enter the minefield without getting blown up?	}
+{	624	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	491	}{	not IsClan(pc,"Nosferatu") and not IsClan(pc,"Toreador") and G.Pack_Given == 0	}{	}{	}{	}{	}{	}{	}{	}{	How do I enter the minefield without getting blown up?	}
+{	625	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	501	}{	IsClan(pc,"Toreador") and G.Pack_Given == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	626	}{	Why don't you go yourself?	}{	Why don't you go yourself?	}{	661	}{	}{	}{	}{	}{	}{	}{	}{	}{	Why doesn't your voice sound there?	}
 {	627	}{	Alright. I'll go. But you better keep your end of the deal.	}{	Alright. I'll go. But you better keep your end of the deal.	}{	671	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hmm... I will go to China... but do not cross me, voice.	}
 {	628	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	629	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	630	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	631	}{	Not that I know of. It's like the eye of the hurricane right now. Don't make those winds blow, boss.	}{	Not that I know of. It's like the eye of the hurricane right now. Don't make those winds blow, boss.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	632	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	481	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	How do I enter the minefield without getting blown up?	}
-{	633	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	491	}{	not IsClan(pc,"Nosferatu") and not IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	How do I enter the minefield without getting blown up?	}
-{	634	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	501	}{	IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	632	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	481	}{	IsClan(pc,"Nosferatu") and G.Pack_Given == 0	}{	}{	}{	}{	}{	}{	}{	}{	How do I enter the minefield without getting blown up?	}
+{	633	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	491	}{	not IsClan(pc,"Nosferatu") and not IsClan(pc,"Toreador") and G.Pack_Given == 0	}{	}{	}{	}{	}{	}{	}{	}{	How do I enter the minefield without getting blown up?	}
+{	634	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	501	}{	IsClan(pc,"Toreador") and G.Pack_Given == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	635	}{	Why don't you go yourself?	}{	Why don't you go yourself?	}{	661	}{	G.Gary_Homage == 0	}{	}{	}{	}{	}{	}{	}{	}{	Why doesn't your voice sound there?	}
 {	636	}{	Alright. I'll go. But you better keep your end of the deal.	}{	Alright. I'll go. But you better keep your end of the deal.	}{	671	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hmm... I will go to China... but do not cross me, voice.	}
 {	637	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -660,9 +660,9 @@
 {	660	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	661	}{	Forget it, boss... it's Chinatown.	}{	Forget it, boss... it's Chinatown.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Gary_Homage = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	662	}{	Aren't the Kindred at war with the Kuei-jin?	}{	Aren't the Kindred at war with the Kuei-jin?	}{	631	}{	}{	}{	}{	}{	}{	}{	}{	}{	Is our blood not feuding?	}
-{	663	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	481	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	How do I enter the minefield without getting blown up?	}
-{	664	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	491	}{	not IsClan(pc,"Nosferatu") and not IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	665	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	501	}{	IsClan(pc,"Toreador")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	663	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	481	}{	IsClan(pc,"Nosferatu") and G.Pack_Given == 0	}{	}{	}{	}{	}{	}{	}{	}{	How do I enter the minefield without getting blown up?	}
+{	664	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	491	}{	not IsClan(pc,"Nosferatu") and not IsClan(pc,"Toreador") and G.Pack_Given == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	665	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	Sounds dangerous. Got anything I can use to protect myself?	}{	501	}{	IsClan(pc,"Toreador") and G.Pack_Given == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	666	}{	Alright. I'll go. But you better keep your end of the deal.	}{	Alright. I'll go. But you better keep your end of the deal.	}{	671	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hmm... I will go to China... but do not cross me, voice.	}
 {	667	}{	The Kuei-jin are going to be sorry I ever came to town.	}{	The Kuei-jin are going to be sorry I ever came to town.	}{	721	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	Voice, you send chaos itself to those lands.	}^
 {	668	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
