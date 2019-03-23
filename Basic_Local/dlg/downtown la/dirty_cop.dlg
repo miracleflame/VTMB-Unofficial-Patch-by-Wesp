@@ -68,13 +68,13 @@
 {	68	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	69	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	70	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	71	}{	Alright, look, I got you a copy of the initial report, and I can get you in to the cabin, but you gotta make yourself real scarce after that. Anybody catches you, I don't know you. And no goddamn flash photography, brainchild.	}{	Alright, look, I got you a copy of the initial report, and I can get you in to the cabin, but you gotta make yourself real scarce after that. Anybody catches you, I don't know you. And no goddamn flash photography, brainchild.	}{	#	}{	}{	pc.GiveItem("item_g_edane_report"); G.Dane_Report = 1; daneQuest()	}{	}{	}{	}{	}{	}{	}{	}
+{	71	}{	Alright, look, I got you a copy of the initial report, and I can get you in to the cabin, but you gotta make yourself real scarce after that. Anybody catches you, I don't know you. And no goddamn flash photography, brainchild.	}{	Alright, look, I got you a copy of the initial report, and I can get you in to the cabin, but you gotta make yourself real scarce after that. Anybody catches you, I don't know you. And no goddamn flash photography, brainchild.	}{	#	}{	}{	pc.GiveItem("item_g_edane_report"); G.Dane_Report = 1; daneQuest(); SetCellUnhide()	}{	}{	}{	}{	}{	}{	}{	}
 {	72	}{	Where do I go?	}{	Where do I go?	}{	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	Where does my path lead?	}
 {	73	}{	Okay.	}{	Okay.	}{	76	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	76	}{	Hold up a sec. [aside, into radio]Heinz to Marsh, Heinz to Marsh....[pause] Marsh they need you up in the bridge, over. [to the player]There, the security room'll be clear.	}{	Hold up a sec. [aside, into radio]Heinz to Marsh, Heinz to Marsh....[pause] Marsh they need you up in the bridge, over. [to the player]There, the security room'll be clear.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	77	}{	Got it.	}{	Got it.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	Clarity is not my goblet of Earl Grey.	}
+{	77	}{	Got it.	}{	Got it.	}{	81	}{	}{	SetCellHide()	}{	}{	}{	}{	}{	}{	}{	Clarity is not my goblet of Earl Grey.	}
 {	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
