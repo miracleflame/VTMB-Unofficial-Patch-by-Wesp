@@ -444,21 +444,21 @@ def astrolitePickup():
 #BEACHHOUSE: Called to check if the beachhouse should be hostile, changed by wesp
 def beachhouseStatus():
     thinblood = Find("E")
-    if (__main__.IsDead("E") or G.Story_State >= 35):
+    if (thinblood and __main__.IsDead("E") or G.Story_State >= 35):
         thinblood.Kill()
     thinblood = Find("Rosa")
-    if (__main__.IsDead("Rosa") or G.Story_State >= 35):
+    if (thinblood and __main__.IsDead("Rosa") or G.Story_State >= 35):
         thinblood.Kill()
     thinblood = Find("Copper")
-    if (__main__.IsDead("Copper") or G.Copper_Slayer or G.Story_State >= 35):
+    if (thinblood and __main__.IsDead("Copper") or G.Copper_Slayer or G.Story_State >= 35):
         thinblood.Kill()
     thinblood = Find("Julius")
-    if (__main__.IsDead("Julius") or G.Julius_Release == 1):
+    if (thinblood and __main__.IsDead("Julius") or G.Julius_Release == 1):
         thinblood.Kill()
     thinblood = Find("Lily")
-    if(G.E_Quest > 2 and not __main__.IsDead("E") and not G.Thin_Bloods_Hidden):
+    if(thinblood and G.E_Quest > 2 and not __main__.IsDead("E") and not G.Thin_Bloods_Hidden):
         thinblood.ScriptUnhide()
-    if (__main__.IsDead("Lily") or G.Story_State >= 35):
+    if (thinblood and __main__.IsDead("Lily") or G.Story_State >= 35):
         thinblood.Kill()
     if(G.Beachhouse_Hostile == 1):
         dudes = __main__.FindEntitiesByClass("npc_VHumanCombatant")

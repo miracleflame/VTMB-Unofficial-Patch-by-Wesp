@@ -23,7 +23,7 @@
 {	23	}{	I don't drink... alcohol.	}{	I don't drink... alcohol.	}{	31	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	24	}{	I seek the daughters of Janus.	}{	I seek the daughters of Janus.	}{	250	}{	IsClan(pc,"Malkavian") and G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	25	}{	I'm looking for Therese. Where can I find her?	}{	I'm looking for Therese. Where can I find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	26	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Knox_TT == 0	}{	}{	}{	}{	}{	}{	}{	}{	May I find Knox at your doors?	}
+{	26	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Mercurio_Quest >= 2	}{	}{	}{	}{	}{	}{	}{	}{	May I find Knox at your doors?	}
 {	27	}{	I don't drink your flavor of libation. Farewell.	}{	I don't drink your flavor of libation. Farewell.	}{	0	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -130,7 +130,7 @@
 {	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	131	}{	[Shock]Oh! What the... what's wrong with yer face? They shootin' a movie near by or somethin'? Damn, you should really go take off that mask... you're, uh, scarin' the clientele.	}{	[Shock]Oh! What the... what's wrong with yer face? They shootin' a movie near by or somethin'? Damn, you should really go take off that mask... you're, uh, scarin' the clientele.	}{	#	}{	npc.SetDisposition("Disgust", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	132	}{	Sorry... I can't take it off right now. Can you tell me where Therese is?	}{	Sorry... I can't take it off right now. Can you tell me where Therese is?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	133	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Knox_TT == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	133	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Mercurio_Quest >= 2	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	134	}{	I'll go disappear for a while then. Bye.	}{	I'll go disappear for a while then. Bye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -163,7 +163,7 @@
 {	163	}{	I'm looking for Therese. Know where can I find her?	}{	I'm looking for Therese. Where can I find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek the dark daughter.	}
 {	164	}{	What do you know of the daughters of the two-headed god?	}{	What do you know of the daughters of the two-headed god?	}{	291	}{	G.Cal_Permission == 1 and IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	165	}{	What do you know about Therese and Jeanette?	}{	What do you know about Therese and Jeanette?	}{	181	}{	G.Cal_Permission == 1 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	166	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Knox_TT == 0	}{	}{	}{	}{	}{	}{	}{	}{	May I find Knox at your doors?	}
+{	166	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Mercurio_Quest >= 2	}{	}{	}{	}{	}{	}{	}{	}{	May I find Knox at your doors?	}
 {	167	}{	I just need someone to tell my troubles to.	}{	I just need someone to tell my troubles to.	}{	191	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	168	}{	No. Goodbye.	}{	No. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	To be somewhere else.	}
 {	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -173,14 +173,14 @@
 {	173	}{	I'm looking for Therese. Know where can I find her?	}{	I'm looking for Therese. Where can I find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	174	}{	What do you know about Therese and Jeanette?	}{	What do you know about Therese and Jeanette?	}{	181	}{	G.Cal_Permission == 1 and G.Jeanette_Refuse == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	175	}{	I just need someone to listen to my troubles.	}{	I just need someone to listen to my troubles.	}{	191	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	176	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Knox_TT == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	176	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Mercurio_Quest >= 2	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	177	}{	I think I'll take my business elsewhere. Goodbye.	}{	I think I'll take my business elsewhere. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	178	}{	You'd know better than anybody, fatass. Goodbye.	}{	You'd know better than anybody, fatass. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	181	}{	They cut me a check every two weeks. End of discussion.	}{	They cut me a check every two weeks. End of discussion.	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	182	}{	I need someone to tell my troubles to.	}{	I need someone to tell my troubles to.	}{	191	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	183	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Knox_TT == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	183	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Mercurio_Quest >= 2	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	184	}{	Got it. Goodbye.	}{	Got it. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	185	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -289,7 +289,7 @@
 {	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	291	}{	Ah, you talkin' about Therese and Jeanette? They cut me a check every two weeks. End of discussion.	}{	Ah, you talkin' about Therese and Jeanette? They cut me a check every two weeks. End of discussion.	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	292	}{	May I find Knox at your doors?	}{	May I find Knox at your doors?	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Knox_TT == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	May I find Knox at your doors?	}{	May I find Knox at your doors?	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Mercurio_Quest >= 2	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	293	}{	I am no longer here.	}{	I am no longer here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	294	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	295	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
