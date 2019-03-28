@@ -12172,7 +12172,6 @@
 "python_script" "G.Patch_Plus == 1"
 "OnTrue" "trig_forky_fire,Enable,,0,1,,"
 "OnTrue" "thug_interior_2,ScriptUnhide,,0,1,,"
-"OnTrue" "intro_music,PlaySound,,0,-1,,"
 "OnTrue" "forky_script_thug_first,BeginSequence,,0.5,-1,,"
 "OnTrue" "trigger_forky_thug_explode_perceps,Enable,,0,1,,"
 "origin" "126.812 244.227 31"
@@ -17382,7 +17381,7 @@
 "lfomodvol" "0"
 "cspinup" "0"
 "radius" "1250"
-"message" "Character/Male/Young_Thug/Disorientated_6.wav"
+"message" "Character/Male/Young_Thug/Disorientated_3.wav"
 "spawnflags" "48"
 "sound_event_level" "2"
 "origin" "-118 594 1"
@@ -26045,6 +26044,7 @@
 "classname" "logic_auto"
 "spawnflags" "0"
 "OnMapLoad" ",,,0,-1,unhidePlus(),"
+"OnMapLoad" "intro_music,PlaySound,,1,-1,,"
 "origin" "0 0 0"
 }
 {

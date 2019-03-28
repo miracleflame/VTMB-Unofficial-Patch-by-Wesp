@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7999"
-	"mapversion" "25"
+	"mapversion" "26"
 	"prefab" "0"
 }
 viewsettings
@@ -15,7 +15,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "25"
+	"mapversion" "26"
 	"classname" "worldspawn"
 	"skyname" "holly"
 	"sounds" "1"
@@ -29135,7 +29135,7 @@ entity
 	"vision" "-1"
 	"hearing" "-1.00"
 	"default_disposition" "Neutral"
-	"default_camera" "Zhao"
+	"default_camera" "ZhaoFarHigh"
 	"model" "models/character/npc/unique/Chinatown/Zhao/zhao.mdl"
 	"skin" "0"
 	"skincolor" "0 0 0 0"
@@ -29176,19 +29176,19 @@ entity
 	"alternateequipment" "item_w_knife"
 	connections
 	{
-		"OnDialogEnd" "slide_door_3,Close,,0.01,1,,"
-		"OnDialogEnd" "slide_door_2,Close,,0.01,1,,"
-		"OnDialogEnd" "slide_door_1,Close,,0.01,1,,"
-		"OnDialogBegin" "truck_sound_1,PlaySound,,0.1,1,,"
-		"OnDialogEnd" "zhao_combat_start,BeginSequence,,0.25,1,G.Zhao_Escape = 1,"
-		"OnDeath" "piss_place,ScriptUnhide,,0,-1,,"
-		"OnDeath" "reload_place,ScriptUnhide,,0,-1,,"
-		"OnDeath" "smoke_place,ScriptUnhide,,0,-1,,"
-		"OnDeath" "stage_2,ScriptUnhide,,0,-1,,"
-		"OnDeath" ",,,0,-1,G.Zhao_Dead = 1,"
-		"OnDialogEnd" "truck_sound_1,Kill,,0,-1,,"
-		"OnDialogEnd" "truck_sound_3,Kill,,0,-1,,"
 		"OnDialogBegin" "world,SetSafeArea,0,0,-1,,"
+		"OnDialogEnd" "truck_sound_3,Kill,,0,-1,,"
+		"OnDialogEnd" "truck_sound_1,Kill,,0,-1,,"
+		"OnDeath" ",,,0,-1,G.Zhao_Dead = 1,"
+		"OnDeath" "stage_2,ScriptUnhide,,0,-1,,"
+		"OnDeath" "smoke_place,ScriptUnhide,,0,-1,,"
+		"OnDeath" "reload_place,ScriptUnhide,,0,-1,,"
+		"OnDeath" "piss_place,ScriptUnhide,,0,-1,,"
+		"OnDialogEnd" "zhao_combat_start,BeginSequence,,0.25,1,G.Zhao_Escape = 1,"
+		"OnDialogBegin" "truck_sound_1,PlaySound,,0.1,1,,"
+		"OnDialogEnd" "slide_door_1,Close,,0.01,1,,"
+		"OnDialogEnd" "slide_door_2,Close,,0.01,1,,"
+		"OnDialogEnd" "slide_door_3,Close,,0.01,1,,"
 	}
 	"origin" "-899 838 242.4"
 	editor
@@ -30640,8 +30640,8 @@ entity
 	"spawnflags" "256"
 	connections
 	{
-		"OnBreak" "sound_window,PlaySound,,0,-1,,"
 		"OnBreak" "shoot_at_me,DisableHint,,0,-1,,"
+		"OnBreak" "sound_window,PlaySound,,0,-1,,"
 	}
 	solid
 	{
@@ -30771,8 +30771,8 @@ entity
 	"spawnflags" "256"
 	connections
 	{
-		"OnBreak" "sound_window,PlaySound,,0,-1,,"
 		"OnBreak" "shoot_at_me,DisableHint,,0,-1,,"
+		"OnBreak" "sound_window,PlaySound,,0,-1,,"
 	}
 	solid
 	{
@@ -31312,19 +31312,19 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "tong_callout2,PlaySound,,8,1,,"
-		"OnTrigger" "tong_callout1,PlaySound,,3,1,,"
-		"OnTrigger" "slide_door_1,Open,,0,-1,,"
-		"OnTrigger" "Tong_1,ScriptUnhide,,0,-1,,"
-		"OnTrigger" "Tong_5,ScriptUnhide,,0,-1,,"
-		"OnTrigger" "slide_door_3,Open,,0,-1,,"
-		"OnTrigger" "slide_door_2,Open,,0,-1,,"
-		"OnTrigger" "Tong_2,ScriptUnhide,,0.1,-1,,"
-		"OnTrigger" "Tong_3,ScriptUnhide,,0.1,-1,,"
-		"OnTrigger" "Tong_4,ScriptUnhide,,0.1,-1,,"
-		"OnTrigger" "Tong_6,ScriptUnhide,,0.1,-1,,"
-		"OnTrigger" "Tong_7,ScriptUnhide,,0.1,-1,,"
 		"OnTrigger" "tong_callout,PlaySound,,0.1,1,,"
+		"OnTrigger" "Tong_7,ScriptUnhide,,0.1,-1,,"
+		"OnTrigger" "Tong_6,ScriptUnhide,,0.1,-1,,"
+		"OnTrigger" "Tong_4,ScriptUnhide,,0.1,-1,,"
+		"OnTrigger" "Tong_3,ScriptUnhide,,0.1,-1,,"
+		"OnTrigger" "Tong_2,ScriptUnhide,,0.1,-1,,"
+		"OnTrigger" "slide_door_2,Open,,0,-1,,"
+		"OnTrigger" "slide_door_3,Open,,0,-1,,"
+		"OnTrigger" "Tong_5,ScriptUnhide,,0,-1,,"
+		"OnTrigger" "Tong_1,ScriptUnhide,,0,-1,,"
+		"OnTrigger" "slide_door_1,Open,,0,-1,,"
+		"OnTrigger" "tong_callout1,PlaySound,,3,1,,"
+		"OnTrigger" "tong_callout2,PlaySound,,8,1,,"
 	}
 	"origin" "-796 242 4"
 	editor
@@ -31893,12 +31893,12 @@ entity
 	"targetname" "logic_disable_entrenched"
 	connections
 	{
-		"OnTrigger" "Tong_7,StayEntrenched,0,0,-1,,"
-		"OnTrigger" "Tong_6,StayEntrenched,0,0,-1,,"
-		"OnTrigger" "Tong_4,StayEntrenched,0,0,-1,,"
-		"OnTrigger" "Tong_3,StayEntrenched,0,0,-1,,"
-		"OnTrigger" "Tong_2,StayEntrenched,0,0,-1,,"
 		"OnTrigger" "Tong_1,StayEntrenched,0,0,-1,,"
+		"OnTrigger" "Tong_2,StayEntrenched,0,0,-1,,"
+		"OnTrigger" "Tong_3,StayEntrenched,0,0,-1,,"
+		"OnTrigger" "Tong_4,StayEntrenched,0,0,-1,,"
+		"OnTrigger" "Tong_6,StayEntrenched,0,0,-1,,"
+		"OnTrigger" "Tong_7,StayEntrenched,0,0,-1,,"
 	}
 	"origin" "-1044.41 364.358 203"
 	editor
@@ -31913,12 +31913,12 @@ entity
 	"targetname" "logic_enable_entrenched"
 	connections
 	{
-		"OnTrigger" "Tong_7,StayEntrenched,1,0,-1,,"
-		"OnTrigger" "Tong_6,StayEntrenched,1,0,-1,,"
-		"OnTrigger" "Tong_4,StayEntrenched,1,0,-1,,"
-		"OnTrigger" "Tong_3,StayEntrenched,1,0,-1,,"
-		"OnTrigger" "Tong_2,StayEntrenched,1,0,-1,,"
 		"OnTrigger" "Tong_1,StayEntrenched,1,0,-1,,"
+		"OnTrigger" "Tong_2,StayEntrenched,1,0,-1,,"
+		"OnTrigger" "Tong_3,StayEntrenched,1,0,-1,,"
+		"OnTrigger" "Tong_4,StayEntrenched,1,0,-1,,"
+		"OnTrigger" "Tong_6,StayEntrenched,1,0,-1,,"
+		"OnTrigger" "Tong_7,StayEntrenched,1,0,-1,,"
 	}
 	"origin" "-1024 662 327"
 	editor
@@ -32140,10 +32140,10 @@ entity
 	"radius" "6"
 	connections
 	{
-		"OnEndSequence" "zhao_lean,Disable,,0.01,-1,,"
-		"OnEndSequence" "zhao_combat_start,ScriptHide,,0.03,-1,,"
-		"OnEndSequence" ",,,0.01,-1,npcTongHateZhao(),"
 		"OnEndSequence" ",,,0,1,npcZhaoHateTong(),"
+		"OnEndSequence" ",,,0.01,-1,npcTongHateZhao(),"
+		"OnEndSequence" "zhao_combat_start,ScriptHide,,0.03,-1,,"
+		"OnEndSequence" "zhao_lean,Disable,,0.01,-1,,"
 	}
 	"origin" "-879 728 241"
 	editor
@@ -33073,12 +33073,12 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnBreakLastLevel" "med_02,ScriptHide,,0,-1,,"
-		"OnBreakLastLevel" "med_03,ScriptHide,,0,-1,,"
-		"OnBreakLastLevel" "med_01,ScriptHide,,0,-1,,"
-		"OnBreakLastLevel" "low_01,ScriptUnhide,,0.01,-1,,"
-		"OnBreakLastLevel" "low_03,ScriptUnhide,,0.01,-1,,"
 		"OnBreakLastLevel" "low_02,ScriptUnhide,,0.01,-1,,"
+		"OnBreakLastLevel" "low_03,ScriptUnhide,,0.01,-1,,"
+		"OnBreakLastLevel" "low_01,ScriptUnhide,,0.01,-1,,"
+		"OnBreakLastLevel" "med_01,ScriptHide,,0,-1,,"
+		"OnBreakLastLevel" "med_03,ScriptHide,,0,-1,,"
+		"OnBreakLastLevel" "med_02,ScriptHide,,0,-1,,"
 	}
 	"origin" "-946 307.133 27.6924"
 	editor
@@ -33109,14 +33109,14 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnBreakLastLevel" "med_04,ScriptHide,,0,-1,,"
-		"OnBreakLastLevel" "med_05,ScriptHide,,0,-1,,"
-		"OnBreakLastLevel" "med_06,ScriptHide,,0,-1,,"
-		"OnBreakLastLevel" "low_05,ScriptUnhide,,0.01,-1,,"
-		"OnBreakLastLevel" "low_06,ScriptUnhide,,0.01,-1,,"
-		"OnBreakLastLevel" "low_07,ScriptUnhide,,0.01,-1,,"
-		"OnBreakLastLevel" "low_04,ScriptUnhide,,0.01,-1,,"
 		"OnBreakLastLevel" "med_07,ScriptHide,,0,-1,,"
+		"OnBreakLastLevel" "low_04,ScriptUnhide,,0.01,-1,,"
+		"OnBreakLastLevel" "low_07,ScriptUnhide,,0.01,-1,,"
+		"OnBreakLastLevel" "low_06,ScriptUnhide,,0.01,-1,,"
+		"OnBreakLastLevel" "low_05,ScriptUnhide,,0.01,-1,,"
+		"OnBreakLastLevel" "med_06,ScriptHide,,0,-1,,"
+		"OnBreakLastLevel" "med_05,ScriptHide,,0,-1,,"
+		"OnBreakLastLevel" "med_04,ScriptHide,,0,-1,,"
 	}
 	"origin" "-631 258 27.6924"
 	editor
@@ -33235,12 +33235,12 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnBreakLastLevel" "med_12,ScriptHide,,0,-1,,"
-		"OnBreakLastLevel" "med_09,ScriptHide,,0,-1,,"
-		"OnBreakLastLevel" "med_08,ScriptHide,,0,-1,,"
-		"OnBreakLastLevel" "low_12,ScriptUnhide,,0.01,-1,,"
-		"OnBreakLastLevel" "low_09,ScriptUnhide,,0.01,-1,,"
 		"OnBreakLastLevel" "low_08,ScriptUnhide,,0.01,-1,,"
+		"OnBreakLastLevel" "low_09,ScriptUnhide,,0.01,-1,,"
+		"OnBreakLastLevel" "low_12,ScriptUnhide,,0.01,-1,,"
+		"OnBreakLastLevel" "med_08,ScriptHide,,0,-1,,"
+		"OnBreakLastLevel" "med_09,ScriptHide,,0,-1,,"
+		"OnBreakLastLevel" "med_12,ScriptHide,,0,-1,,"
 	}
 	"origin" "-404 290 28.1948"
 	editor
@@ -33293,10 +33293,10 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnBreakLastLevel" "med_11,ScriptHide,,0,-1,,"
-		"OnBreakLastLevel" "med_10,ScriptHide,,0,-1,,"
-		"OnBreakLastLevel" "low_11,ScriptUnhide,,0.01,-1,,"
 		"OnBreakLastLevel" "low_10,ScriptUnhide,,0.01,-1,,"
+		"OnBreakLastLevel" "low_11,ScriptUnhide,,0.01,-1,,"
+		"OnBreakLastLevel" "med_10,ScriptHide,,0,-1,,"
+		"OnBreakLastLevel" "med_11,ScriptHide,,0,-1,,"
 	}
 	"origin" "-333 255 28"
 	editor
@@ -33415,12 +33415,12 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnBreakLastLevel" "med_15,ScriptHide,,0,-1,,"
-		"OnBreakLastLevel" "med_14,ScriptHide,,0,-1,,"
-		"OnBreakLastLevel" "low_15,ScriptUnhide,,0.01,-1,,"
-		"OnBreakLastLevel" "low_14,ScriptUnhide,,0.01,-1,,"
-		"OnBreakLastLevel" "low_13,ScriptUnhide,,0.01,-1,,"
 		"OnBreakLastLevel" "med_13,ScriptHide,,0,-1,,"
+		"OnBreakLastLevel" "low_13,ScriptUnhide,,0.01,-1,,"
+		"OnBreakLastLevel" "low_14,ScriptUnhide,,0.01,-1,,"
+		"OnBreakLastLevel" "low_15,ScriptUnhide,,0.01,-1,,"
+		"OnBreakLastLevel" "med_14,ScriptHide,,0,-1,,"
+		"OnBreakLastLevel" "med_15,ScriptHide,,0,-1,,"
 	}
 	"origin" "-198 425 28"
 	editor
@@ -33828,8 +33828,8 @@ entity
 	"origin" "-940.5 729.5 276"
 	connections
 	{
-		"OnStartTouch" "Zhao,StartPlayerDialog,,0.09,1,,"
 		"OnStartTouch" ",,,0.12,-1,zhaoDramaShot(),"
+		"OnStartTouch" "Zhao,StartPlayerDialog,,0.09,1,,"
 	}
 	solid
 	{
@@ -33950,8 +33950,8 @@ entity
 	"targetname" "temp_holder"
 	connections
 	{
-		"OnDialogEnd" "pc_move_controller,CreateControllerNPC,,0,-1,,"
 		"OnDialogEnd" "move_player,BeginSequence,,0.01,1,,"
+		"OnDialogEnd" "pc_move_controller,CreateControllerNPC,,0,-1,,"
 	}
 	"origin" "-985.746 717.707 379"
 	editor
@@ -34141,10 +34141,10 @@ entity
 	"targetname" "tong_counter"
 	connections
 	{
-		"OnHitMin" "slide_door_1,Open,,2,-1,,"
-		"OnHitMin" "slide_door_2,Open,,1,-1,,"
-		"OnHitMin" "slide_door_3,Open,,3,-1,,"
 		"OnHitMin" "Tong_Wave2_*,ScriptUnhide,,1,-1,npcTongWave2HateZhao(),"
+		"OnHitMin" "slide_door_3,Open,,3,-1,,"
+		"OnHitMin" "slide_door_2,Open,,1,-1,,"
+		"OnHitMin" "slide_door_1,Open,,2,-1,,"
 	}
 	"origin" "-928.825 838.767 249"
 	editor
@@ -34399,8 +34399,8 @@ entity
 	"targetname" "tong_counter2"
 	connections
 	{
-		"OnHitMin" "zhao_lean,Enable,,0,-1,,"
 		"OnHitMin" ",,,0,-1,G.Tong_Dead = 1,"
+		"OnHitMin" "zhao_lean,Enable,,0,-1,,"
 	}
 	"origin" "-956.973 844.37 249"
 	editor
@@ -34967,27 +34967,27 @@ entity
 	"enabled" "0"
 	connections
 	{
-		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
-		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
-		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
-		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
-		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
-		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
-		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
-		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
-		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
-		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
-		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
-		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
-		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
-		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
-		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
-		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
-		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
-		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
-		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
-		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
 		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
+		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
+		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
+		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
+		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
+		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
+		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
+		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
+		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
+		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
+		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
+		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
+		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
+		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
+		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
+		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
+		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
+		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
+		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
+		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
+		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -35003,29 +35003,29 @@ entity
 	"StartHidden" "0"
 	connections
 	{
-		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
-		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
-		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
-		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
-		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
-		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
-		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
-		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
-		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
-		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
-		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
-		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
-		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
-		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
-		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
-		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
-		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
-		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
-		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
-		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
-		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
-		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
 		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
+		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
+		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
+		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
+		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
+		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
+		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
+		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
+		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
+		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
+		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
+		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
+		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
+		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
+		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
+		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
+		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
+		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
+		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
+		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
+		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
+		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
+		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -44684,8 +44684,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[-601.394 396.015 43.2774]"
-		"look" "[-847.917 503.716 -5.52634]"
+		"position" "[-923.273 767.927 302.562]"
+		"look" "[-834.064 1024.11 268.402]"
 	}
 }
 cordon

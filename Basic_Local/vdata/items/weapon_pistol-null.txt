@@ -1,0 +1,155 @@
+// Pistol
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"viewmodel"		"models/weapons/pistol/view/v_pistol.mdl"
+	"playermodel"	"models/weapons/pistol/world/w_pistol.mdl"
+	"wieldmodel_f"	"models/error.mdl"
+	"wieldmodel_m"	"models/error.mdl"
+	"anim_prefix"	"revolver"
+
+	"impact_snd_group"	""
+
+	// This should match the viewmodel QC file offset:
+	"origin_x"		"6"
+	"origin_y"		"6"
+	"origin_z"		"68"
+
+	"bucket"		"1"
+	"bucket_position"	"0"
+
+	"weight"		"3"
+	"item_flags"	"0"
+	"item_type"		"weapon_firearm"
+	"item_worth"	"50"
+	"sound_group"	"Anaconda"
+
+	Magazine
+	{
+		"Size"		"6"
+		"Default_Size"	"18"
+		"Type"		"MediumRound"
+		"ReloadTime"	"3.5"
+		SoundData
+		{
+			"reload"
+			{
+				"sound1"	"weapons/reload.wav"
+			}
+
+			"reload_npc"
+			{		
+				"sound1"	"weapons/reload.wav"
+			}
+		}
+	}
+
+	Activation
+	{
+		"Tag"			"Primary"
+
+		"Type"		"Attack"
+		"Ammo_Type"		"MediumRound"
+		"Ammo_Cost"		"1"
+		"Dmg"			"4 Lethal Ranged_Combat"
+		"Botch_Table"	"Revolvers"
+		"Attack_Rate"	"1.0"
+		"Range"		"12"
+
+		DestFX { "Sprite"	"sprites/Bullet-Hit.spr" }
+		DestFX { "Entity"	"env_phosphoroushit" }
+
+		// Sounds...
+		// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+		SoundData
+		{
+			"empty"
+			{
+				"sound1"	"weapons/pinpull.wav"
+			}
+
+			"single_shot"
+			{
+				//"sound1"	"weapons/deagle-1.wav"
+				"sound1"		
+				{
+					"file"		"weapons/deagle-1.wav"
+					"pitch_range_min"		"95"
+					"pitch_range_max"		"105"
+				}
+			}
+
+			"single_shot_npc"
+			{
+				//"sound1"	"weapons/deagle-1.wav"
+				"sound1"		
+				{
+					"file"		"weapons/deagle-1.wav"
+					"pitch_range_min"		"90"
+					"pitch_range_max"		"150"
+				}
+			}
+		}
+	}
+
+	// Weapon Sprite data is loaded by the Client DLL.
+	SpriteData
+	{
+		"weapon"
+		{
+			"640"
+			{
+				"file"		"w_icons1"
+				"x"		"128"
+				"y"		"0"
+				"width"		"100"
+				"height"	"64"
+			}
+		}
+		"weapon_s"
+		{
+			"640"
+			{
+				"file"		"w_icons1b"
+				"x"		"128"
+				"y"		"0"
+				"width"		"100"
+				"height"	"64"
+			}
+		}
+		"ammo"
+		{
+			"640"
+			{
+				"file"		"a_icons1"
+				"x"			"55"
+				"y"			"60"
+				"width"		"73"
+				"height"	"15"
+			}
+		}
+		"crosshair"
+		{
+			"640"
+			{
+				"file"		"crosshairs"
+				"x"			"0"
+				"y"			"48"
+				"width"		"24"
+				"height"	"24"
+			}
+		}
+		"autoaim"
+		{
+			"640"
+			{
+				"file"		"crosshairs"
+				"x"			"0"
+				"y"			"48"
+				"width"		"24"
+				"height"	"24"
+			}
+		}
+	}
+}
