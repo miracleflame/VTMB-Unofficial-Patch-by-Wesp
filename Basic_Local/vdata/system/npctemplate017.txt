@@ -1,0 +1,121 @@
+//////////////////////////////////////////////////
+//                                              //
+//        *** ELIZABETH DANE NPCs ***           //
+//                                              //
+//////////////////////////////////////////////////
+
+ClanDataTables
+{
+
+// GENERAL COP
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"				"DaneGenCop"
+			"ParentTemplateName"			""	// changed by wesp
+			"Name"					"Police Officer"
+			"Description"				"Born to Protect and Serve."
+		}
+
+		General
+		{
+			"Clan"					"Human"
+			"M_Body"				"models/character/npc/common/Cop_Variant/regular_cop/Regular_Cop.mdl"
+			"Gender"				"Male"
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"SoundGroup"				"Officer/Dane_Officer"	// changed by wesp
+			"NormalFootfallDist"			"300"
+			"HeavyFootfallDist"			"600"
+			"NormalFootfallVol"			"0.45"
+			"HeavyFootfallVol"			"0.85"
+			"NpcFakeReloadCountMin"		"6.0" // thirtyeight
+
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"				"Physical_Mental_Social"
+			"Strength"				"3"
+			"Dexterity"				"1"
+			"Perception"				"5"
+			"Wits"					"5"
+			"Stamina"				"2"
+			"Armor_Rating"				"1"
+
+			"Max_Health"				"76"
+			"BloodPool"				"6"
+			"Starting_Equipment"			"NPCGeneric"
+			"Excluded_Equipment"			"Default"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"				"Skills_Knowledges_Talents"
+			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"1"
+			"Firearms"				"3"
+			"Melee"					"3"
+			"Computer"				"3"
+		}
+
+	}
+
+
+// DIRTY COP
+	ClanData
+	{
+		Text
+		{
+			"TemplateName"				"DaneLessCop"
+			"ParentTemplateName"			"DaneGenCop"
+			"Name"					"Dirty Cop"
+			"Description"				"Crooked cop who would look the other way for just a few bills."
+		}
+
+		General
+		{
+			"Clan"					"Human"
+			"M_Body"				"models/character/npc/common/Cop_Variant/Crooked_Cop/Crooked_Cop.mdl"
+			"Gender"				"Male"
+			"Kindred"				"0"
+			"Supernatural"			"0"
+			"Boss"				"0"
+			"SoundGroup"				"Dane_Officer"
+			"NormalFootfallDist"			"300"
+			"HeavyFootfallDist"			"600"
+			"NormalFootfallVol"			"0.45"
+			"HeavyFootfallVol"			"0.85"
+		}
+
+		Attributes
+		{
+//			"Attrib_Order"				"Physical_Mental_Social"
+			"Strength"				"2"
+			"Dexterity"				"1"
+			"Stamina"				"1"
+			"Perception"				"3"
+			"Wits"					"3"
+
+			"Max_Health"				"60"
+			"BloodPool"				"6"
+			"Starting_Equipment"			"NPCGeneric"
+			"Excluded_Equipment"			"Default"
+		}
+
+		Abilities
+		{
+//			"Ability_Order"				"Skills_Knowledges_Talents"
+			"Athletics"				"0"
+			"Brawl"					"0"
+			"Dodge"					"1"
+			"Firearms"				"4"
+			"Melee"					"0"
+			"Computer"				"1"
+		}
+	}
+
+}
