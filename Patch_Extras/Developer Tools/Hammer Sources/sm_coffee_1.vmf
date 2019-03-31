@@ -2,51 +2,16 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7999"
-	"mapversion" "336"
+	"mapversion" "337"
 	"prefab" "0"
 }
 visgroups
 {
 	visgroup
 	{
-		"name" "Geom Floor"
-		"visgroupid" "9"
-		"color" "99 240 129"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Geom Wall 01"
-		"visgroupid" "1"
-		"color" "176 241 198"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Geom Wall 02"
-		"visgroupid" "2"
-		"color" "247 84 229"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Geom Wall 03"
-		"visgroupid" "3"
-		"color" "186 163 208"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Geom Wall 04"
-		"visgroupid" "5"
-		"color" "128 113 86"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Geom Upper 01"
-		"visgroupid" "6"
-		"color" "163 192 225"
+		"name" "Geom Detailing"
+		"visgroupid" "8"
+		"color" "129 166 223"
 		"visible" "1"
 	}
 	visgroup
@@ -58,9 +23,44 @@ visgroups
 	}
 	visgroup
 	{
-		"name" "Geom Detailing"
-		"visgroupid" "8"
-		"color" "129 166 223"
+		"name" "Geom Upper 01"
+		"visgroupid" "6"
+		"color" "163 192 225"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Geom Wall 04"
+		"visgroupid" "5"
+		"color" "128 113 86"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Geom Wall 03"
+		"visgroupid" "3"
+		"color" "186 163 208"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Geom Wall 02"
+		"visgroupid" "2"
+		"color" "247 84 229"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Geom Wall 01"
+		"visgroupid" "1"
+		"color" "176 241 198"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Geom Floor"
+		"visgroupid" "9"
+		"color" "99 240 129"
 		"visible" "1"
 	}
 }
@@ -74,7 +74,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "336"
+	"mapversion" "337"
 	"classname" "worldspawn"
 	"skyname" "hav"
 	"sounds" "0"
@@ -15307,7 +15307,7 @@ entity
 		side
 		{
 			"id" "1445"
-			"plane" "(208 95.7598 32.0039) (208 95.7598 2) (208 130.76 2)"
+			"plane" "(208 95.7598 36.8432) (208 95.7598 2) (208 130.76 2)"
 			"material" "METAL/BRUSHED"
 			"uaxis" "[0 1 0 89.201] 0.2"
 			"vaxis" "[0 0 -1 249] 0.2"
@@ -15318,7 +15318,7 @@ entity
 		side
 		{
 			"id" "1446"
-			"plane" "(209 130.76 33) (209 95.7598 2) (209 95.7598 33)"
+			"plane" "(209 130.76 38) (209 95.7598 2) (209 95.7598 38)"
 			"material" "METAL/BRUSHED"
 			"uaxis" "[0 1 0 89.201] 0.2"
 			"vaxis" "[0 0 -1 249] 0.2"
@@ -15329,7 +15329,7 @@ entity
 		side
 		{
 			"id" "1447"
-			"plane" "(209 95.7598 33) (209 95.7598 2) (208 95.7598 2)"
+			"plane" "(209 95.7598 38) (209 95.7598 2) (208 95.7598 2)"
 			"material" "METAL/BRUSHED"
 			"uaxis" "[1 0 0 159] 0.2"
 			"vaxis" "[0 0 -1 249] 0.2"
@@ -15340,7 +15340,7 @@ entity
 		side
 		{
 			"id" "1448"
-			"plane" "(208 130.76 32.0039) (209 130.76 2) (209 130.76 33)"
+			"plane" "(208 130.76 36.8432) (209 130.76 2) (209 130.76 38)"
 			"material" "METAL/BRUSHED"
 			"uaxis" "[1 0 0 159] 0.2"
 			"vaxis" "[0 0 -1 249] 0.2"
@@ -15362,7 +15362,7 @@ entity
 		side
 		{
 			"id" "1450"
-			"plane" "(208 95.7598 32) (208 130.76 32) (209 130.76 33)"
+			"plane" "(208 95.7598 36.8387) (208 130.76 36.8387) (209 130.76 38)"
 			"material" "METAL/BRUSHED"
 			"uaxis" "[1 0 0 159] 0.2"
 			"vaxis" "[0 -1 0 -19.201] 0.2"
@@ -16875,27 +16875,27 @@ entity
 	"enabled" "0"
 	connections
 	{
-		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
-		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
-		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
-		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
-		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
-		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
-		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
-		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
-		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
-		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
-		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
-		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
-		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
-		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
-		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
-		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
-		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
-		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
-		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
-		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
 		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
+		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
+		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
+		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
+		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
+		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
+		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
+		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
+		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
+		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
+		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
+		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
+		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
+		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
+		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
+		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
+		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
+		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
+		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
+		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
+		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
 	}
 	"origin" "702.739 -291.605 0"
 	editor
@@ -16911,29 +16911,29 @@ entity
 	"StartHidden" "0"
 	connections
 	{
-		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
-		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
-		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
-		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
-		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
-		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
-		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
-		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
-		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
-		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
-		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
-		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
-		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
-		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
-		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
-		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
-		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
-		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
-		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
-		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
-		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
-		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
 		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
+		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
+		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
+		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
+		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
+		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
+		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
+		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
+		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
+		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
+		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
+		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
+		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
+		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
+		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
+		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
+		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
+		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
+		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
+		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
+		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
+		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
+		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
 	}
 	"origin" "702.739 -291.605 0"
 	editor
@@ -17383,8 +17383,8 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnUseEnd" "doorsound,PlaySound,,1,1,,"
 		"OnUseEnd" "SabbatGoon,ScriptUnhide,,1,1,,"
+		"OnUseEnd" "doorsound,PlaySound,,1,1,,"
 	}
 	"origin" "457.161 101.714 36.0059"
 	editor
@@ -35677,8 +35677,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[391.284 64.1955 52.2056]"
-		"look" "[408.705 333.208 6.61063]"
+		"position" "[290.77 -199.818 80.6253]"
+		"look" "[296.983 72.9704 63.3645]"
 	}
 }
 cordon
