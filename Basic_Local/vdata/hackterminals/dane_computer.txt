@@ -219,18 +219,18 @@ One of the men had a short wave radio, but all calls for help have gone unanswer
 
 		Function
 		{
-			"name"		"Unlock Doors"
+			"name"		"Unlock Records"	// changed by wesp
 			"description"	"Bulkhead Locks"
-			"runtext"	"All bulkheads open."
+			"runtext"	"Records Room unlocked."	// changed by wesp
 			"dependency"	"G.Dane_Locks == 0"
 			"runscript"	"daneSetLocks()"
 		}
 
 		Function
 		{
-			"name"		"Lock Doors"
+			"name"		"Lock Records"	// changed by wesp
 			"description"	"Bulkhead Locks"
-			"runtext"	"All bulkheads locked."
+			"runtext"	"Records Room locked."	// changed by wesp
 			"dependency"	"G.Dane_Locks == 1"
 			"runscript"	"daneSetLocks()"
 		}
