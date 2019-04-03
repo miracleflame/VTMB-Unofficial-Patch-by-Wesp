@@ -444,21 +444,21 @@ def astrolitePickup():
 #BEACHHOUSE: Called to check if the beachhouse should be hostile, changed by wesp
 def beachhouseStatus():
     thinblood = Find("E")
-    if (thinblood and __main__.IsDead("E") or G.Story_State >= 35):
+    if (thinblood and (__main__.IsDead("E") or G.Story_State >= 35)):
         thinblood.Kill()
     thinblood = Find("Rosa")
-    if (thinblood and __main__.IsDead("Rosa") or G.Story_State >= 35):
+    if (thinblood and (__main__.IsDead("Rosa") or G.Story_State >= 35)):
         thinblood.Kill()
     thinblood = Find("Copper")
-    if (thinblood and __main__.IsDead("Copper") or G.Copper_Slayer or G.Story_State >= 35):
+    if (thinblood and (__main__.IsDead("Copper") or G.Copper_Slayer or G.Story_State >= 35)):
         thinblood.Kill()
     thinblood = Find("Julius")
-    if (thinblood and __main__.IsDead("Julius") or G.Julius_Release == 1):
+    if (thinblood and (__main__.IsDead("Julius") or G.Julius_Release == 1)):
         thinblood.Kill()
     thinblood = Find("Lily")
     if(thinblood and G.E_Quest > 2 and not __main__.IsDead("E") and not G.Thin_Bloods_Hidden):
         thinblood.ScriptUnhide()
-    if (thinblood and __main__.IsDead("Lily") or G.Story_State >= 35):
+    if (thinblood and (__main__.IsDead("Lily") or G.Story_State >= 35)):
         thinblood.Kill()
     if(G.Beachhouse_Hostile == 1):
         dudes = __main__.FindEntitiesByClass("npc_VHumanCombatant")
@@ -1576,9 +1576,6 @@ def murderCleanedUp():
         victim = Find("victim")
         if(victim):
             victim.Kill()
-        trigger = Find("murder_scene_trigger")
-        if(trigger):
-            trigger.Kill()
         if G.Patch_Plus == 1:
             trasha = Find("pier_trasha")
             if(trasha): trasha.Kill()
@@ -1594,11 +1591,14 @@ def murderCleanedUp():
             piergate.Unlock()
             piergate.Open()
 
-#PIER: Called when the murder scene. Get it?
+#PIER: Called when the murder scene. Get it? changey by wesp
 def murderSeen():
-    if(G.Know_Murder == 0):
+    state = __main__.FindPlayer().GetQuestState("Serial")
+    if(state == 1 and G.Know_Murder == 0 and G.Story_State < 10):
         G.Know_Murder = 1
         __main__.FindPlayer().SetQuest("Serial", 2)
+    if(state == 1 and G.Story_State >= 10):
+        __main__.FindPlayer().SetQuest("Serial", 11)
 
 #PIER: Decides if rosa should direct the PC or not, changed by wesp
 def rosaDirections():

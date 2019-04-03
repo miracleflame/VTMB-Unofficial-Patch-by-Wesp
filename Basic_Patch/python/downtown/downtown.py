@@ -32,11 +32,11 @@ def abandonedBuildingMurder():
         bum = Find("bum")
         if bum: bum.Kill()
 
-#ABANDONED BUILDING: Called when the player spots the corpse
+#ABANDONED BUILDING: Called when the player spots the corpse, changed by wesp
 def headlessCorpseSpotted():
     pc = __main__.FindPlayer()
     state = pc.GetQuestState("Serial")
-    if(state == 0):
+    if(state == 0 or state == 11):
         pc.SetQuest("Serial", 4)
     elif(state == 1 or state == 2):
         pc.SetQuest("Serial", 5)
