@@ -532,9 +532,9 @@
 {	532	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	533	}{	I got something that might help you heal up a few of those wounds.	}{	I got something that might help you heal up a few of those wounds.	}{	541	}{	G.Ash_Heal == 0 and pc.HasItem("item_g_bloodpack")	}{	}{	}{	}{	}{	}{	}{	}{	Drink this and mend your broken body, phoenix.	}
 {	534	}{	Don't go anywhere. I'll be back.	}{	Don't go anywhere. I'll be back.	}{	0	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	You will not be caged much longer.	}
-{	535	}{	Don't go anywhere. I'll be back.	}{	Don't go anywhere. I'll be back.	}{	0	}{	G.Patch_Plus == 1	}{	pc.SetQuest("Ash",1)	}{	}{	}{	}{	}{	}{	}{	You will not be caged much longer.	}
-{	536	}{	You got careless. You deserve to be in there.	}{	You got careless. You deserve to be in there.	}{	551	}{	}{	}{	}{	}{	}{	}{	}{	}{	Stars that burn too bright are bound to be seen.	}
-{	537	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	535	}{	Don't go anywhere. I'll be back.	}{	Don't go anywhere. I'll be back.	}{	0	}{	G.Patch_Plus == 1 and pc.GetQuestState("Hunter") > 2	}{	pc.SetQuest("Ash",1)	}{	}{	}{	}{	}{	}{	}{	You will not be caged much longer.	}
+{	536	}{	Don't go anywhere. I'll be back.	}{	Don't go anywhere. I'll be back.	}{	0	}{	G.Patch_Plus == 1 and pc.GetQuestState("Hunter") < 3	}{	pc.SetQuest("Hunters",5); pc.SetQuest("Ash",4)	}{	}{	}{	}{	}{	}{	}{	You will not be caged much longer.	}
+{	537	}{	You got careless. You deserve to be in there.	}{	You got careless. You deserve to be in there.	}{	551	}{	}{	}{	}{	}{	}{	}{	}{	}{	Stars that burn too bright are bound to be seen.	}
 {	538	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	539	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	540	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

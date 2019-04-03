@@ -465,6 +465,14 @@ def oxReward2():
     else:
         pc.MoneyAdd(250)
 
+#DANA and DRAGON: cellphone and walkie_talkie, added by DDLullu
+def SetCellUnhide():
+    phone = __main__.Find("cell_hand")
+    if phone: phone.ScriptUnhide()
+def SetCellHide():
+    phone = __main__.Find("cell_hand")
+    if phone: phone.ScriptHide()
+
 #DINER: talking to the thugs, added by wesp
 def thugState():
     if (__main__.G.Thugs_Attack == 1):
@@ -767,6 +775,13 @@ def dodgeState():
     else:
         trunk = Find("Occult_Container")
         trunk.SpawnItemInContainer("item_p_occult_dodge")
+
+#PIER: Killed Copper when quest is active, added by wep
+def copperDeath():
+    if (__main__.G.Patch_Plus == 1):
+        copstatus = __main__.FindPlayer().GetQuestState("Copper")
+        if(copstatus == 1):
+            __main__.FindPlayer().SetQuest("Copper", 3)
 
 #RAMEN SHOP: If threatening yukie, added by wesp
 def onYukieThreat():
