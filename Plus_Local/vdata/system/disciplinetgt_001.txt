@@ -8,11 +8,11 @@ DisciplineTgtList
 
 
 
-// Dementation: Level 1, changed by EntenSchreck
+// Dementation: Level 1
 DisciplineTgt
 {
-	"Name"		"Veil of Madness"
-	"InternalName"	"Dementation_Veil_of_Madness"
+	"Name"		"Veil of Madness"	// changed by wesp
+	"InternalName"	"Dementation_Hysteria"
 
 	"Discipline"	"Dementation"
 	"Level"		"1"
@@ -147,6 +147,7 @@ DisciplineTgt
 			Default_Mapping
 			{
 				"HitTable"	"Hit_Supernatural_NoEffect"
+
 			}
 		}
 
@@ -196,15 +197,8 @@ DisciplineTgt
 				"DisciplineStrata"	"0"
 			}
 
-			Mapping
-			{
-				"Chance"	"50%"
-				"HitTable"	"Hit_Human_Haunting"
-			}
-
 			Default_Mapping
 			{
-				"Chance"	"50%"
 				"HitTable"	"Hit_Human"
 			}
 		}
@@ -214,12 +208,6 @@ DisciplineTgt
 			Affects_Filters
 			{
 				"DisciplineStrata"	"1"
-			}
-
-			Mapping
-			{
-				"Chance"	"50%"
-				"HitTable"	"Hit_Strata_1_Haunting"
 			}
 
 			Default_Mapping
@@ -233,12 +221,6 @@ DisciplineTgt
 			Affects_Filters
 			{
 				"DisciplineStrata"	"2"
-			}
-
-			Mapping
-			{
-				"Chance"	"50%"
-				"HitTable"	"Hit_Strata_2_Haunting"
 			}
 
 			Default_Mapping
@@ -280,12 +262,6 @@ DisciplineTgt
 				"DisciplineStrata"	"5"
 			}
 
-			Mapping
-			{
-				"Chance"	"50%"
-				"HitTable"	"Hit_Strata_5_Haunting"
-			}
-
 			Default_Mapping
 			{
 				"HitTable"	"Hit_Strata_5"
@@ -297,12 +273,6 @@ DisciplineTgt
 			Affects_Filters
 			{
 				"DisciplineStrata"	"6"
-			}
-
-			Mapping
-			{
-				"Chance"	"50%"
-				"HitTable"	"Hit_Strata_6_Haunting"
 			}
 
 			Default_Mapping
@@ -335,15 +305,8 @@ DisciplineTgt
 				"Human"	"1"
 			}
 
-			Mapping
-			{
-				"Chance"	"50%"
-				"HitTable"	"Hit_Human_Haunting"
-			}
-
 			Default_Mapping
 			{
-				"Chance"	"50%"
 				"HitTable"	"Hit_Human"
 			}
 		}
@@ -358,12 +321,7 @@ DisciplineTgt
 
 			Mapping
 			{
-				"Chance"	"20%"
-				"HitTable"	"Hit_Supernatural_Haunting"
-			}
-			Mapping
-			{
-				"Chance"	"20%"
+				"Chance"	"40%"
 				"HitTable"	"Hit_Supernatural"
 			}
 
@@ -442,85 +400,9 @@ DisciplineTgt
 	Hit_Human
 	{
 		"AI_Schedule"		"SCHED_TROIKA_D_HYSTERIA"
-		"Duration"		"15"	// changed by wesp
+		"Duration"		"9-12"
 		"Expression"		"Smile"
 		"AddToComfort"		"1"	// added by wesp
-		TraitEffect
-		{
-			"Effect"	"Discipline (Dementation-Hysteria)"
-		}
-
-		Trigger_Casting
-		{
-			"DisciplineFX"	"Use_Spell"
-			"Source"		"Target"
-			"Affects"		"Self"
-		}
-
-		Effect_Tgt_Hit
-		{
-			Particle_ThirdPerson
-			{
-				"Entity"		"disc_particle"
-				"RateMin"		"1.0"
-				"OpacityMin"	"1.0"
-				"SizeMin"		"1.0"
-				"ParticleName"	"D_Dementation_Hysteria_Emitter"
-				"AttachType"	"BoneSinglePoint"
-				"AttachName"	"Bip01 Head"
-			}
-		}
-
-		OnEnd	// added by wesp
-		{
-				Particle_ThirdPerson
-			{
-				"Entity"		"disc_particle"
-				"RateMin"		"1.0"
-				"OpacityMin"	"1.0"
-				"SizeMin"		"1.0"
-				"ParticleName"	"D_Full_Resist_Generic_Emitter"
-				"AttachType"	"BoneTree"
-				"AttachName"	""
-			}
-		}
-		OnInterrupt
-		{
-//			"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"
-
-			Effect_Tgt_Hit
-			{
-				Particle_ThirdPerson
-				{
-					"Entity"		"env_particle"
-					"RateMin"		"1.0"
-					"OpacityMin"	"1.0"
-					"SizeMin"		"1.0"
-					"ParticleName"	"D_Dementation_Hysteria_Broke_Emitter"
-					"AttachType"	"BoneSinglePoint"
-					"AttachName"	"Bip01 Head"
-
-					"Detach"		"1"
-				}
-
-				SoundFX
-				{
-//					"Sound"		"Disciplines/Dementation/Hysteria_Broke.wav"
-				}
-			}
-
-			FREEME_SoundFX
-			{
-//				"Sound"		"Disciplines/Dominate/Dementation_Ramp.wav"
-			}
-		}
-	}
-
-	Hit_Human_Haunting
-	{
-		"AI_Schedule"		"SCHED_TROIKA_DO_HAUNTING_ACTIVITY"
-		"Duration"		"15"	// changed by wesp
-		"AddToComfort"		"1"
 		TraitEffect
 		{
 			"Effect"	"Discipline (Dementation-Hysteria)"
@@ -600,12 +482,6 @@ DisciplineTgt
 		"AddToComfort"		"0"	// added by wesp
 	}
 
-	Hit_Supernatural_Haunting
-	{
-		"InheritFrom"		"Hit_Human_Haunting"
-		"AddToComfort"		"0"
-	}
-
 //	Hit_Supernatural_NoEffect
 //	{
 //		Effect_Tgt_Hit
@@ -648,14 +524,6 @@ DisciplineTgt
 	Hit_Supernatural_NoEffect
 	{
 		"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"	// added by Populism
-		"Duration"			"3"	// added by wesp
-
-		Trigger_Casting
-		{
-			"DisciplineFX"	"Use_Spell"
-			"Source"		"Target"
-			"Affects"		"Self"
-		}
 
 		Effect_Tgt_Hit
 		{
@@ -686,28 +554,14 @@ DisciplineTgt
 	Hit_Strata_1
 	{
 		"InheritFrom"		"Hit_Human"
-		"Duration"		"15"	// changed by wesp
+		"Duration"		"7-10"
 	}
-
-	Hit_Strata_1_Haunting
-	{
-		"InheritFrom"		"Hit_Human_Haunting"
-		"Duration"		"15"	// changed by wesp
-	}
-
 
 	Hit_Strata_2
 	{
 		"InheritFrom"		"Hit_Human"
 		"Duration"		"4"
 	}
-
-	Hit_Strata_2_Haunting
-	{
-		"InheritFrom"		"Hit_Human_Haunting"
-		"Duration"		"4"
-	}
-
 
 	Hit_Strata_3
 	{
@@ -721,26 +575,12 @@ DisciplineTgt
 
 	Hit_Strata_5
 	{
-		"InheritFrom"		"Hit_Human"	// changed by Populism
-		"Duration"		"3"	// changed by wesp
-	}
-
-	Hit_Strata_5_Haunting
-	{
-		"InheritFrom"		"Hit_Human_Haunting"
-		"Duration"		"3"
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
 	}
 
 	Hit_Strata_6
 	{
-		"InheritFrom"		"Hit_Human"	// changed by Populism
-		"Duration"		"2"	// changed by wesp
-	}
-
-	Hit_Strata_6_Haunting
-	{
-		"InheritFrom"		"Hit_Human_Haunting"	
-		"Duration"		"2"
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
 	}
 
 	Hit_Strata_7
@@ -781,7 +621,7 @@ DisciplineTgt
 		"Range"	"0"
 		"Source"	"Self"		// Self/Target
 		"Affects"	"Radius"		// Target/Radius:#/Cone:#
-		"MaxRadius"	"320"		// changed by wesp, 220
+		"MaxRadius"	"220"
 		Affects_Filters
 		{
 			"Critter"		"1"
@@ -1097,7 +937,7 @@ DisciplineTgt
 			"RateMin"		"1.0"
 			"OpacityMin"	"1.0"
 			"SizeMin"		"1.0"
-			"ParticleName"	"D_Dementation_Cast_Emitter2"	// restored by wesp
+//			"ParticleName"	"D_Dementation_Cast_Emitter2"
 			"AttachType"	"BoneSinglePoint"
 			"AttachName"	"Bip01 Head"
 		}
@@ -1158,16 +998,16 @@ DisciplineTgt
 		"AI_Schedule"		"SCHED_TROIKA_D_MASS_HALLUCINATION"
 		"Duration"			"20"
 
+		TraitEffect
+		{
+			"Effect"	"Discipline (Dementation-Mass_Hallucination)"
+		}
+
 		Trigger_Casting
 		{
 			"DisciplineFX"	"Use_Spell"
 			"Source"		"Target"
 			"Affects"		"Self"
-		}
-
-		TraitEffect
-		{
-			"Effect"	"Discipline (Dementation-Mass_Hallucination)"
 		}
 
 		Effect_Tgt_Hit
@@ -1192,15 +1032,7 @@ DisciplineTgt
 
 	Hit_Supernatural_NoEffect
 	{
-		"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"	// added by Populism
-		"Duration"			"3"	// added by wesp
-
-		Trigger_Casting
-		{
-			"DisciplineFX"	"Use_Spell"
-			"Source"		"Target"
-			"Affects"		"Self"
-		}	
+		"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"	// added by Populism	
 
 		Effect_Tgt_Hit
 		{
@@ -1314,836 +1146,21 @@ DisciplineTgt
 
 
 
-// Dementation: Level 3, changed by EntenSchreck
+// Dementation: Level 3
 DisciplineTgt
 {
-	"Name"		"Voice of Bedlam"	// changed by wesp
-	"InternalName"	"Dementation_Voice_of_Madness"
+	"Name"		"Vision of Death"
+	"InternalName"	"Dementation_Vision_of_Death"
 
 	"Discipline"	"Dementation"
 	"Level"		"3"
 
 	"TgtHightlightParticle"	"D_Target_Aura_Emitter"
 
-	"BloodCost"		"2"	// changed by wesp
-	"Overt"		"0"
-	"SupernaturalLvl"	"0"	// changed by wesp
-	"RecoveryTime"	"4.5"		// changed by wesp
-
-	AoE
-	{
-		"Range"	"600"		// changed by wesp
-		"Source"	"Self"	// Self/Target
-		"Affects"	"Target"	// Target/Radius:#/Cone:#, changed by wesp
-		Affects_Filters
-		{
-			"Critter"		"1"
-			"No_Self"		"1"
-			"No_Friends"	"1"
-		}
-
-
-		// Tables:
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"Invulnerable"	"1"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Invulnerable"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"Human"			"1"
-				"Player"		"1"
-				"Primary_Target"	"1"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Player_Human_Primary"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"Human"	"1"
-				"Player"	"1"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Player_Human"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"Supernatural"	"1"
-				"Player"		"1"
-				"Primary_Target"	"1"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Player_Supernatural_Primary"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"Supernatural"	"1"
-				"Player"	"1"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Player_Supernatural"
-			}
-		}
-
-//
-// BLAHBEDEE BLAHBEDEE BLAHBEDEE
-//
-
-		Affects_Table	// added by wesp
-		{
-			Affects_Filters
-			{
-				"CharTemplate"		"Doggie"
-			}
-
-			Mapping
-			{
-				"HitTable"	"Hit_Invulnerable"
-			}
-		}
-
-            Affects_Table	// added by Populism
-		{
-		
-                  Affects_Filters
-	            {
-				"CharTemplate"	"TzimisceCreation1"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
-			}
-		}
-
-            Affects_Table	// added by Populism
-		{
-		
-                  Affects_Filters
-	            {
-				"CharTemplate"	"TzimisceCreation2"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
-			}
-		}
-
-            Affects_Table	// added by Populism
-		{
-		
-                  Affects_Filters
-	            {
-				"CharTemplate"	"TzimisceCreation3"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"DisciplineStrata"	"1"
-				"Primary_Target"	"1"
-			}
-
-			Mapping
-			{
-				"Chance"	"60%"
-				"HitTable"	"Hit_Supernatural_Primary"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Strata_1_Partial_Resist"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"DisciplineStrata"	"1"
-			}
-
-			Mapping
-			{
-				"Chance"	"30%"
-				"HitTable"	"Hit_Supernatural_Madness_full"
-			}
-
-			Mapping
-			{
-				"Chance"	"40%"
-				"HitTable"	"Hit_Supernatural_Madness_partial"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Strata_1_Partial_Resist"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"DisciplineStrata"	"2"
-				"Primary_Target"	"1"
-			}
-
-			Mapping
-			{
-				"Chance"	"40%"
-				"HitTable"	"Hit_Supernatural_Primary"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Strata_2_Partial_Resist"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"DisciplineStrata"	"2"
-			}
-
-			Mapping
-			{
-				"Chance"	"20%"
-				"HitTable"	"Hit_Supernatural_Madness_full"
-			}
-
-			Mapping
-			{
-				"Chance"	"30%"
-				"HitTable"	"Hit_Supernatural_Madness_partial"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Strata_2_Partial_Resist"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"DisciplineStrata"	"3"
-				"Primary_Target"	"1"
-			}
-
-			Mapping
-			{
-				"Chance"	"60%"
-				"HitTable"	"Hit_Supernatural_Primary"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Strata_3_Partial_Resist"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"DisciplineStrata"	"3"
-			}
-
-			Mapping
-			{
-				"Chance"	"30%"
-				"HitTable"	"Hit_Supernatural_Madness_full"
-			}
-
-			Mapping
-			{
-				"Chance"	"40%"
-				"HitTable"	"Hit_Supernatural_Madness_partial"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Strata_3_Partial_Resist"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"DisciplineStrata"	"4"
-				"Primary_Target"	"1"
-			}
-
-			Mapping
-			{
-				"Chance"	"40%"
-				"HitTable"	"Hit_Supernatural_Primary"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Strata_4_Partial_Resist"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"DisciplineStrata"	"4"
-			}
-
-			Mapping
-			{
-				"Chance"	"20%"
-				"HitTable"	"Hit_Supernatural_Madness_full"
-			}
-
-			Mapping
-			{
-				"Chance"	"30%"
-				"HitTable"	"Hit_Supernatural_Madness_partial"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Strata_4_Partial_Resist"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"DisciplineStrata"	"5"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Strata_5"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"DisciplineStrata"	"6"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Strata_6"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"DisciplineStrata"	"7"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Strata_7"
-			}
-		}	
-//
-// BLAHBEDEE BLAHBEDEE BLAHBEDEE
-//
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"Human"		"1"
-				"Primary_Target"	"1"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Human_Primary"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"Human"		"1"
-			}
-			Mapping
-			{
-				"Chance"	"50%"
-				"HitTable"	"Hit_Human_Madness_full"
-			}
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Human_Madness_partial"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"Supernatural"	"1"
-				"No_Boss"		"1"
-				"Primary_Target"	"1"
-			}
-
-			Mapping
-			{
-				"Chance"	"50%"
-				"HitTable"	"Hit_Supernatural_Primary"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Supernatural_NoEffect_Primary"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"Supernatural"	"1"
-				"No_Boss"		"1"
-			}
-
-			Mapping
-			{
-				"Chance"	"25%"
-				"HitTable"	"Hit_Supernatural_Madness_full"
-			}
-
-			Mapping
-			{
-				"Chance"	"25%"
-				"HitTable"	"Hit_Supernatural_Madness_partial"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Supernatural_NoEffect"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"Boss"		"1"
-				"Primary_Target"	"1"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Boss_NoEffect_Primary"
-			}
-		}
-
-		Affects_Table
-		{
-			Affects_Filters
-			{
-				"Boss"	"1"
-			}
-
-			Default_Mapping
-			{
-				"HitTable"	"Hit_Boss_NoEffect"
-			}
-		}
-	}
-
-	Effect_Src_Instant
-	{
-		Particle_ThirdPerson
-		{
-			"Entity"		"disc_particle"
-			"RateMin"		"1.0"
-			"OpacityMin"	"1.0"
-			"SizeMin"		"1.0"
-			"ParticleName"	"D_Dementation_Cast_Emitter3"
-			"AttachType"	"BoneSinglePoint"
-			"AttachName"	"Bip01 Head"
-		}
-
-		Particle_FirstPerson
-		{
-			"Entity"		"disc_particle"
-			"RateMin"		"1.0"
-			"OpacityMin"	"1.0"
-			"SizeMin"		"1.0"
-			"ParticleName"	"D_Dementation_Hud_Cast_Emitter3"
-			"AttachType"	"ScreenCenter"
-			"AttachName"	""
-		}
-
-		SoundFX
-		{
-//			"Sound"		""
-		}
-	}
-
-	Effect_Src_Hit
-	{
-		SoundFX
-		{
-			"Sound"		"Disciplines/Dementation/haunting_hit.wav"	//"Disciplines/Dementation/bedlam_hit.wav"
-		}
-	}
-
-
-	// Effects:
-	Hit_Invulnerable
-	{
-	}
-
-	Hit_Player_Human_Primary
-	{
-	}
-
-	Hit_Player_Human
-	{
-	}
-
-	Hit_Player_Supernatural
-	{
-	}
-
-	Hit_Player_Supernatural_Primary
-	{
-	}
-
-	Hit_Human_Primary
-	{
-		"AI_Schedule"		"SCHED_TROIKA_DO_MADNESS_ACTIVITY"
-		"Duration"			"20"	// changed by wesp
-
-		TraitEffect
-		{
-			"Effect"	"Discipline (Dementation-Mass_Hallucination)"
-		}
-
-		Trigger_Casting
-		{
-			"DisciplineFX"	"Use_Spell"
-			"Source"		"Target"
-			"Affects"		"Self"
-		}
-
-		Effect_Tgt_Hit
-		{
-			DISABLED_Particle_ThirdPerson
-			{
-				"Entity"		"disc_particle"
-				"RateMin"		"1.0"
-				"OpacityMin"	"1.0"
-				"SizeMin"		"1.0"
-				"ParticleName"	"d_dementation_bedlam_emitter"
-				"AttachType"	"BoneSinglePoint"
-				"AttachName"	"Bip01 Head"
-			}
-			DISABLED_Particle_ThirdPerson
-			{
-				"Entity"		"disc_particle"
-				"RateMin"		"1.0"
-				"OpacityMin"	"1.0"
-				"SizeMin"		"1.0"
-				"ParticleName"	"D_Dementation_Mass_Hallucination_Tgt_Emitter"
-				"AttachType"	"BoneSinglePoint"
-				"AttachName"	"Bip01 Head"
-			}
-
-			Particle_ThirdPerson
-			{
-				"Entity"		"disc_particle"
-				"RateMin"		"1.0"
-				"OpacityMin"	"1.0"
-				"SizeMin"		"1.0"
-				"ParticleName"	"D_Dementation_Mass_Hallucination_Tgt_Emitter"
-				"AttachType"	"BoneSinglePoint"
-				"AttachName"	"Bip01 Head"
-			}
-		}
-	}
-
-	Hit_Human_Madness_full
-	{
-		"AI_Schedule"		"SCHED_TROIKA_DO_MADNESS_ACTIVITY"
-		"Duration"			"20"	// changed by wesp
-
-		TraitEffect
-		{
-			"Effect"	"Discipline (Dementation-Mass_Hallucination)"
-		}
-
-		Trigger_Casting
-		{
-			"DisciplineFX"	"Use_Spell"
-			"Source"		"Target"
-			"Affects"		"Self"
-		}
-
-		Effect_Tgt_Hit
-		{
-			Particle_ThirdPerson
-			{
-				"Entity"		"disc_particle"
-				"RateMin"		"1.0"
-				"OpacityMin"	"1.0"
-				"SizeMin"		"1.0"
-				"ParticleName"	"D_Dementation_Mass_Hallucination_Tgt_Emitter"
-				"AttachType"	"BoneSinglePoint"
-				"AttachName"	"Bip01 Head"
-			}
-		}
-	}
-
-	Hit_Human_Madness_partial
-	{
-
-		// Mass Halucination
-
-		"AI_Schedule"		"SCHED_TROIKA_D_MASS_HALLUCINATION"
-		"Duration"			"20"
-
-		TraitEffect
-		{
-			"Effect"	"Discipline (Dementation-Mass_Hallucination)"
-		}
-
-		Trigger_Casting
-		{
-			"DisciplineFX"	"Use_Spell"
-			"Source"		"Target"
-			"Affects"		"Self"
-		}
-
-		Effect_Tgt_Hit
-		{
-			Particle_ThirdPerson
-			{
-				"Entity"		"disc_particle"
-				"RateMin"		"1.0"
-				"OpacityMin"	"1.0"
-				"SizeMin"		"1.0"
-				"ParticleName"	"D_Dementation_Mass_Hallucination_Tgt_Emitter"
-				"AttachType"	"BoneSinglePoint"
-				"AttachName"	"Bip01 Head"
-			}
-		}
-	}
-
-
-	Hit_Supernatural_Primary
-	{
-		"InheritFrom"		"Hit_Human_Primary"
-	}
-
-	Hit_Supernatural_Madness_full
-	{
-		"InheritFrom"		"Hit_Human_Madness_full"
-	}
-
-	Hit_Supernatural_Madness_partial
-	{
-		"InheritFrom"		"Hit_Human_Madness_partial"
-	}
-
-	Hit_Supernatural_NoEffect_Primary
-	{
-		"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"	// added by Populism
-		"Duration"			"3"	// In order to play particles/etc.
-
-		Trigger_Casting
-		{
-			"DisciplineFX"	"Use_Spell"
-			"Source"		"Target"
-			"Affects"		"Self"
-		}
-
-		Effect_Tgt_Hit
-		{
-			Particle_ThirdPerson
-			{
-				"Entity"		"disc_particle"
-				"RateMin"		"1.0"
-				"OpacityMin"	"1.0"
-				"SizeMin"		"1.0"
-				"ParticleName"	"d_dementation_bedlam_emitter"
-				"AttachType"	"BoneSinglePoint"
-				"AttachName"	"Bip01 Head"
-			}
-
-			Particle_ThirdPerson
-			{
-				"Entity"		"disc_particle"
-				"RateMin"		"1.0"
-				"OpacityMin"	"1.0"
-				"SizeMin"		"1.0"
-				"ParticleName"	"D_Partial_Resist_Dem_Emitter"
-				"AttachType"	"BoneTreeWithColors"
-				"AttachName"	""
-			}
-		}
-	}
-
-      Hit_Supernatural_NoEffect
-	{
-	       "AI_Schedule"		"SCHED_TROIKA_DISORIENTED"	// added by Populism
-               "Duration"		"3"	// In order to play particles/etc.
-
-		Trigger_Casting
-		{
-			"DisciplineFX"	"Use_Spell"
-			"Source"		"Target"
-			"Affects"		"Self"
-		}
-
-		Effect_Tgt_Hit
-		{
-			Particle_ThirdPerson
-			{
-				"Entity"		"disc_particle"
-				"RateMin"		"1.0"
-				"OpacityMin"	"1.0"
-				"SizeMin"		"1.0"
-				"ParticleName"	"D_Full_Resist_Thaum_Emitter"
-				"AttachType"	"BoneTreeWithColors"
-				"AttachName"	""
-			}
-
-			Particle_ThirdPerson
-			{
-				"Entity"		"disc_particle"
-				"RateMin"		"1.0"
-				"OpacityMin"	"1.0"
-				"SizeMin"		"1.0"
-				"ParticleName"	"D_Full_Resist_Generic_Emitter"
-				"AttachType"	"BoneTree"
-				"AttachName"	""
-			}
-		}
-	}
-
-	Hit_Strata_1_Partial_Resist
-	{
-		"InheritFrom"		"Hit_Supernatural_NoEffect"
-		"Dmg_Health"		"0%"	// changed by Populism
-	}
-
-	Hit_Strata_2_Partial_Resist
-	{
-		"InheritFrom"		"Hit_Supernatural_NoEffect"
-		"Dmg_Health"		"0%"	// changed by Populism
-	}
-
-	Hit_Strata_3_Partial_Resist
-	{
-		"InheritFrom"		"Hit_Supernatural_NoEffect"
-		"Dmg_Health"		"0%"	// changed by Populism
-	}
-
-	Hit_Strata_4_Partial_Resist
-	{
-		"InheritFrom"		"Hit_Supernatural_NoEffect"
-		"Dmg_Health"		"0%"	// changed by Populism
-	}
-
-	Hit_Strata_5
-	{
-		"InheritFrom"		"Hit_Supernatural_NoEffect"
-		"Dmg_Health"		"0%"	// changed by Populism
-	}
-	
-	Hit_Strata_6
-	{
-		"InheritFrom"		"Hit_Supernatural_NoEffect"
-		"Dmg_Health"		"0%"	// changed by Populism
-	}
-
-	Hit_Strata_7
-	{
-		"InheritFrom"		"Hit_Supernatural_NoEffect"
-	}
-
-	Hit_Boss_NoEffect_Primary
-	{
-		"InheritFrom"		"Hit_Supernatural_NoEffect_Primary"
-	}
-
-	Hit_Boss_NoEffect
-	{
-		"InheritFrom"		"Hit_Supernatural_NoEffect"
-	}
-}
-
-
-// ---------------------
-
-// Dementation: Level 4, changed by EntenSchreck
-DisciplineTgt
-{
-	"Name"		"Vision of Death"
-	"InternalName"	"Dementation_Waking Nightmare"
-
-	"Discipline"	"Dementation"
-	"Level"		"4"
-
-	"TgtHightlightParticle"	"D_Target_Aura_Emitter"
-
-	"BloodCost"		"3"
+	"BloodCost"		"2"
 	"Overt"		"0"
 	"SupernaturalLvl"	"0"
-	"RecoveryTime"	"4.5"	// changed by wesp
+	"RecoveryTime"	"4.5"
 
 	AoE
 	{
@@ -2456,7 +1473,7 @@ DisciplineTgt
 			"RateMin"		"1.0"
 			"OpacityMin"	"1.0"
 			"SizeMin"		"1.0"
-			"ParticleName"	"D_Dementation_Cast_Emitter4"
+			"ParticleName"	"D_Dementation_Cast_Emitter3"
 			"AttachType"	"BoneSinglePoint"
 			"AttachName"	"Bip01 Head"
 		}
@@ -2467,7 +1484,7 @@ DisciplineTgt
 			"RateMin"		"1.0"
 			"OpacityMin"	"1.0"
 			"SizeMin"		"1.0"
-			"ParticleName"	"D_Dementation_Hud_Cast_Emitter4"
+			"ParticleName"	"D_Dementation_Hud_Cast_Emitter3"
 			"AttachType"	"ScreenCenter"
 			"AttachName"	""
 		}
@@ -2516,8 +1533,8 @@ DisciplineTgt
 
 		Effect_Tgt_Hit
 		{
-				Particle_ThirdPerson
-				{
+			Particle_ThirdPerson
+			{
 				"Entity"		"disc_particle"
 				"RateMin"		"1.0"
 				"OpacityMin"	"1.0"
@@ -2525,7 +1542,7 @@ DisciplineTgt
 				"ParticleName"	"D_Dementation_Vision_of_Death_Tgt_Emitter"
 				"AttachType"	"BoneSinglePoint"
 				"AttachName"	"Bip01 Head"
-				}
+			}
 		}
 	}
 
@@ -2536,9 +1553,9 @@ DisciplineTgt
 
 	Hit_Supernatural_PartialEffect
 	{
-		"AI_Schedule"		"SCHED_TROIKA_DO_MADNESS_ACTIVITY"	//"SCHED_TROIKA_DISORIENTED"
+		"AI_Schedule"		"SCHED_TROIKA_DO_MADNESS_ACTIVITY"	//"SCHED_TROIKA_DISORIENTED"	// added by Populism, changed by Entenschreck
 		"Dmg_Health"		"5-10%"
-		"Duration"			"5"
+		"Duration"		"5"	//changed by wesp
 
 		Trigger_Casting
 		{
@@ -2680,22 +1697,24 @@ DisciplineTgt
 	}
 }
 
+
+
 // ---------------------
 
 
 
-// Dementation: Level 5, changed by EntenSchreck
+// Dementation: Level 4
 DisciplineTgt
 {
 	"Name"		"Berserk Insanity"	// changed by wesp
-	"InternalName"	"Dementation_Total_Insanity"
+	"InternalName"	"Dementation_Berserk"
 
 	"Discipline"	"Dementation"
-	"Level"		"5"
+	"Level"		"4"
 
 	"TgtHightlightParticle"	"D_Target_Aura_Emitter"
 
-	"BloodCost"		"4"
+	"BloodCost"		"3"
 	"Overt"			"0"
 	"SupernaturalLvl"	"0"
 	"RecoveryTime"		"10.0"
@@ -3086,7 +2105,7 @@ DisciplineTgt
 			"RateMin"		"1.0"
 			"OpacityMin"	"1.0"
 			"SizeMin"		"1.0"
-			"ParticleName"	"D_Dementation_Cast_Emitter5"
+			"ParticleName"	"D_Dementation_Cast_Emitter4"
 			"AttachType"	"BoneSinglePoint"
 			"AttachName"	"Bip01 Head"
 		}
@@ -3097,7 +2116,7 @@ DisciplineTgt
 			"RateMin"		"1.0"
 			"OpacityMin"	"1.0"
 			"SizeMin"		"1.0"
-			"ParticleName"	"D_Dementation_Hud_Cast_Emitter5"
+			"ParticleName"	"D_Dementation_Hud_Cast_Emitter4"
 			"AttachType"	"ScreenCenter"
 			"AttachName"	""
 		}
@@ -3112,7 +2131,7 @@ DisciplineTgt
 	{
 		SoundFX
 		{
-			"Sound"		"Disciplines/Dementation/bedlam_hit.wav"	// changed by EntenSchreck
+			"Sound"		"Disciplines/Dementation/haunting_hit.wav"
 		}
 	}
 
@@ -3135,7 +2154,7 @@ DisciplineTgt
 		"AI_Schedule"		"SCHED_TROIKA_D_BERSERK"
 		"DoFrenzy"		"1"
 		"AddToComfort"		"1"
-		"Duration"		"30"	// "-1", Infinite, changed by wesp
+		"Duration"		"20-35"	// "-1"	// Infinite
 
 		TraitEffect
 		{
@@ -3190,6 +2209,7 @@ DisciplineTgt
 	Hit_Supernatural_NoEffect
 	{
 		"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"	// added by Populism	
+
 		"Duration"			"3"	// In order to play particles/etc.
 
 		Trigger_Casting
@@ -3225,7 +2245,7 @@ DisciplineTgt
 		}
 	}
 
-	Hit_Supernatural_ChangBrosClaw // 9-23-04 TJP we tried, but it's going to be too much programmer work to make this function properly so... he's now resistant.
+	Hit_Supernatural_ChangBrosClaw //9-23-04 TJP we tried, but it's going to be too much programmer work to make this function properly so... he's now resistant.
 	{
 
 		"InheritFrom"		"Hit_Supernatural_NoEffect"
@@ -3298,6 +2318,1528 @@ DisciplineTgt
 
 
 // ---------------------
+
+
+
+// Dementation: Level 5
+DisciplineTgt
+{
+	"Name"		"Voice of Bedlam"	// changed by wesp
+	"InternalName"	"Dementation_Bedlam"
+
+	"Discipline"	"Dementation"
+	"Level"		"5"
+
+	"TgtHightlightParticle"	"D_Target_Aura_Emitter"
+
+	"BloodCost"		"4"
+	"Overt"		"0"
+	"SupernaturalLvl"	"0"
+	"RecoveryTime"	"12.0"
+
+	AoE
+	{
+		"Range"	"900"
+		"Source"	"Target"		// Self/Target
+		"Affects"	"Radius"		// Target/Radius:#/Cone:#
+		"MaxRadius"	"450"
+		Affects_Filters
+		{
+			"Critter"		"1"
+			"No_Self"		"1"
+			"No_Friends"	"1"
+		}
+
+
+		// Tables:
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Invulnerable"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"		"1"
+				"Player"		"1"
+				"Primary_Target"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Human_Primary"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"	"1"
+				"Player"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Human"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"Player"		"1"
+				"Primary_Target"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Supernatural_Primary"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"Player"		"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Player_Supernatural"
+			}
+		}
+
+//
+// BLAHBEDEE BLAHBEDEE BLAHBEDEE
+//
+
+		Affects_Table	// added by wesp
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"Doggie"
+				"Primary_Target"	"1"
+			}
+
+			Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table	// added by wesp
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"Doggie"
+			}
+
+			Mapping
+			{
+				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+
+		Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"CharTemplate"	"TzimisceCreation1"
+				"Primary_Target"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"0%"
+				"HitTable"	"Hit_Supernatural_Mass_Hallucination_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"0%"
+				"HitTable"	"Hit_Supernatural_Vision_of_Death_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"70%"
+				"HitTable"	"Hit_Strata_2_Berserk_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"10%"
+				"HitTable"	"Hit_Strata_2_Hysteria_Primary" 
+			}
+
+			Mapping 
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_2_Partial_Resist_Primary" 
+			}
+
+		}
+
+		Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"CharTemplate"	"TzimisceCreation1"
+			}
+
+			Mapping
+			{
+				"Chance"	"0%"
+				"HitTable"	"Hit_Supernatural_Mass_Hallucination"
+			}
+
+			Mapping
+			{
+				"Chance"	"0%"
+				"HitTable"	"Hit_Supernatural_Vision_of_Death"
+			}
+
+			Mapping
+			{
+				"Chance"	"50%"
+				"HitTable"	"Hit_Strata_2_Berserk"
+			}
+
+			Mapping 
+			{
+				"Chance"	"50%"
+				"HitTable"	"Hit_Strata_2_Partial_Resist" 
+			}
+		}
+
+		Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"CharTemplate"	"TzimisceCreation2"
+				"Primary_Target"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Supernatural_Mass_Hallucination_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"0%"
+				"HitTable"	"Hit_Supernatural_Vision_of_Death_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"40%"
+				"HitTable"	"Hit_Strata_2_Berserk_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_2_Hysteria_Primary" 
+			}
+
+			Mapping 
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_2_Partial_Resist_Primary" 
+			}
+
+		}
+
+		Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"CharTemplate"	"TzimisceCreation2"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Supernatural_Mass_Hallucination"
+			}
+
+			Mapping
+			{
+				"Chance"	"0%"
+				"HitTable"	"Hit_Supernatural_Vision_of_Death"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Strata_2_Berserk"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_2_Hysteria"
+			}
+
+			Mapping 
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_2_Partial_Resist" 
+			}
+		}
+
+		Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"CharTemplate"	"TzimisceCreation3"
+				"Primary_Target"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Supernatural_Mass_Hallucination_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"0%"
+				"HitTable"	"Hit_Supernatural_Vision_of_Death_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"70%"
+				"HitTable"	"Hit_Supernatural_Berserk_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"0%"
+				"HitTable"	"Hit_Strata_1_Hysteria_Primary"
+			}
+		}
+
+		Affects_Table	// added by Populism
+		{
+			Affects_Filters
+			{
+				"CharTemplate"	"TzimisceCreation3"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Supernatural_Mass_Hallucination"
+			}
+
+			Mapping
+			{
+				"Chance"	"0%"
+				"HitTable"	"Hit_Supernatural_Vision_of_Death"
+			}
+
+			Mapping
+			{
+				"Chance"	"50%"
+				"HitTable"	"Hit_Supernatural_Berserk"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_1_Hysteria"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"1"
+				"Primary_Target"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Supernatural_Mass_Hallucination_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Supernatural_Vision_of_Death_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Supernatural_Berserk_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_1_Hysteria_Primary"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Supernatural_Mass_Hallucination"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Supernatural_Vision_of_Death"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Supernatural_Berserk"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_1_Hysteria"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"2"
+				"Primary_Target"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"10%"
+				"HitTable"	"Hit_Supernatural_Mass_Hallucination_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"40%"
+				"HitTable"	"Hit_Supernatural_Vision_of_Death_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_2_Berserk_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"10%"
+				"HitTable"	"Hit_Strata_2_Hysteria_Primary" 
+			}
+
+			Mapping 
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_2_Partial_Resist_Primary" 
+			}
+
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"2"
+			}
+
+			Mapping
+			{
+				"Chance"	"10%"
+				"HitTable"	"Hit_Supernatural_Mass_Hallucination"
+			}
+
+			Mapping
+			{
+				"Chance"	"40%"
+				"HitTable"	"Hit_Supernatural_Vision_of_Death"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_2_Berserk"
+			}
+
+			Mapping
+			{
+				"Chance"	"10%"
+				"HitTable"	"Hit_Strata_2_Hysteria"
+			}
+
+			Mapping 
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_2_Partial_Resist" 
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"3"
+				"Primary_Target"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Supernatural_Mass_Hallucination_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Supernatural_Vision_of_Death_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Supernatural_Berserk_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_3_Partial_Resist_Primary"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"3"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Supernatural_Mass_Hallucination"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Supernatural_Vision_of_Death"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Supernatural_Berserk"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_3_Partial_Resist"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"4"
+				"Primary_Target"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"10%"
+				"HitTable"	"Hit_Supernatural_Mass_Hallucination_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"40%"
+				"HitTable"	"Hit_Supernatural_Vision_of_Death_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_2_Berserk_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"10%"
+				"HitTable"	"Hit_Strata_2_Hysteria_Primary" 
+			}
+
+			Mapping 
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_2_Partial_Resist_Primary" 
+			}
+
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"4"
+			}
+
+			Mapping
+			{
+				"Chance"	"10%"
+				"HitTable"	"Hit_Supernatural_Mass_Hallucination"
+			}
+
+			Mapping
+			{
+				"Chance"	"40%"
+				"HitTable"	"Hit_Supernatural_Vision_of_Death"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Strata_2_Berserk"
+			}
+
+			Mapping 
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Strata_2_Partial_Resist" 
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"5"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_5"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"6"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_6"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"DisciplineStrata"	"7"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Strata_7"
+			}
+		}	
+//
+// BLAHBEDEE BLAHBEDEE BLAHBEDEE
+//
+
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"		"1"
+				"Primary_Target"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"10%"
+				"HitTable"	"Hit_Human_Mass_Hallucination_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Human_Vision_of_Death_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Human_Berserk_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Human_Hysteria_Primary"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Human"		"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"10%"
+				"HitTable"	"Hit_Human_Mass_Hallucination"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Human_Vision_of_Death"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Human_Berserk"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Human_Hysteria"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"		"1"
+				"No_Boss"		"1"
+				"Primary_Target"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Supernatural_Mass_Hallucination_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Supernatural_Vision_of_Death_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Supernatural_Berserk_Primary"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Supernatural_Hysteria_Primary"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Supernatural"	"1"
+				"No_Boss"	"1"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Supernatural_Mass_Hallucination"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Supernatural_Vision_of_Death"
+			}
+
+			Mapping
+			{
+				"Chance"	"20%"
+				"HitTable"	"Hit_Supernatural_Berserk"
+			}
+
+			Mapping
+			{
+				"Chance"	"30%"
+				"HitTable"	"Hit_Supernatural_Hysteria"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Boss"			"1"
+				"Primary_Target"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Boss_NoEffect_Primary"
+			}
+		}
+
+		Affects_Table
+		{
+			Affects_Filters
+			{
+				"Boss"	"1"
+			}
+
+			Default_Mapping
+			{
+				"HitTable"	"Hit_Boss_NoEffect"
+			}
+		}
+	}
+
+	Effect_Src_Instant
+	{
+		Particle_ThirdPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Dementation_Cast_Emitter5"
+			"AttachType"	"BoneSinglePoint"
+			"AttachName"	"Bip01 Head"
+		}
+
+		Particle_FirstPerson
+		{
+			"Entity"		"disc_particle"
+			"RateMin"		"1.0"
+			"OpacityMin"	"1.0"
+			"SizeMin"		"1.0"
+			"ParticleName"	"D_Dementation_Hud_Cast_Emitter5"
+			"AttachType"	"ScreenCenter"
+			"AttachName"	""
+		}
+
+		SoundFX
+		{
+//			"Sound"		"Disciplines/Dementation/Nightmare_Ramp.wav"
+		}
+	}
+
+	Effect_Src_Hit
+	{
+		SoundFX
+		{
+			"Sound"		"Disciplines/Dementation/Bedlam_hit.wav"
+		}
+	}
+
+
+	Effect_Tgt_Location_Hit	// ???
+	{
+// FX
+	}
+
+
+	// Effects:
+	Hit_Invulnerable
+	{
+	}
+
+	Hit_Player_Human_Primary
+	{
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Bedlam_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Player_Human
+	{
+	}
+
+	Hit_Player_Supernatural_Primary
+	{
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Bedlam_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Player_Supernatural
+	{
+	}
+
+	// Human
+	Hit_Human_Mass_Hallucination_Primary
+	{
+		//added by Entenschreck
+		"AI_Schedule"		"SCHED_TROIKA_DO_HAUNTING_ACTIVITY"
+		"AddToComfort"		"1"
+
+		//changed_by Entenschreck
+		"Duration"			"8-12"	//"20"
+
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Dementation-Mass_Hallucination)"
+		}
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Bedlam_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Mass_Hallucination_Tgt_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Human_Mass_Hallucination
+	{
+		//added by Entenschreck
+		"AI_Schedule"		"SCHED_TROIKA_DO_HAUNTING_ACTIVITY"
+		"AddToComfort"		"1"
+
+		//changed_by Entenschreck
+		"Duration"			"8-12"	//"20"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Dementation-Mass_Hallucination)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Mass_Hallucination_Tgt_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Human_Vision_of_Death_Primary
+	{
+		"AI_Schedule"		"SCHED_TROIKA_D_VISION_OF_DEATH"
+		"Duration"			"-1"	// Infinite
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Bedlam_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Vision_of_Death_Tgt_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+//				"ParticleName"	"D_Dementation_Vision_of_Death_Tgt_Emitter2"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Spine"
+			}
+		}
+	}
+
+	Hit_Human_Vision_of_Death
+	{
+		"AI_Schedule"		"SCHED_TROIKA_D_VISION_OF_DEATH"
+		"Duration"			"-1"	// Infinite
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Vision_of_Death_Tgt_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+//				"ParticleName"	"D_Dementation_Vision_of_Death_Tgt_Emitter2"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Spine"
+			}
+		}
+	}
+
+	Hit_Human_Berserk_Primary
+	{
+		"AI_Schedule"		"SCHED_TROIKA_D_BERSERK"
+		"DoFrenzy"		"1"
+		"AddToComfort"		"0"
+		"Duration"		"20-35"	// "-1"	// Infinite
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+//		TraitEffect // found this in the base Hit_Human for Berserk. It wasn't here. Is it needed?
+//		{
+//			"Effect"		"Discipline (Dementation-Berserk)"
+//		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Bedlam_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Berserk_Tgt_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Berserk_Tgt_Emitter2"
+				"AttachType"	"BoneTree"
+				"AttachName"	""
+			}
+		}
+
+		OnEnd
+		{
+//			"Force_Death"	"1"
+			"AI_Schedule"	"SCHED_TROIKA_D_SUICIDE"	// This schedule picks appropriate animation/etc.
+		}
+
+	}
+
+	Hit_Strata_2_Berserk_Primary
+	{
+		"InheritFrom"		"Hit_Human_Berserk_Primary"
+		"Duration"		"10-25"
+	}
+
+
+	Hit_Human_Berserk
+	{
+		"AI_Schedule"		"SCHED_TROIKA_D_BERSERK"
+		"DoFrenzy"		"1"
+		"AddToComfort"		"0"
+		"Duration"		"20-35"	// "-1"	// Infinite
+
+//		TraitEffect // found this in the base Hit_Human for Berserk. It wasn't here. Is it needed?
+//		{
+//			"Effect"		"Discipline (Dementation-Berserk)"
+//		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Berserk_Tgt_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Berserk_Tgt_Emitter2"
+				"AttachType"	"BoneTree"
+				"AttachName"	""
+			}
+		}
+
+		OnEnd
+		{
+//			"Force_Death"	"1"
+			"AI_Schedule"		"SCHED_TROIKA_D_SUICIDE"	// This schedule picks appropriate animation/etc.
+		}
+
+	}
+
+	Hit_Strata_2_Berserk
+	{
+		"InheritFrom"		"Hit_Human_Berserk"
+		"Duration"		"10-25"
+	}
+
+	Hit_Human_Hysteria_Primary
+	{
+		"AI_Schedule"		"SCHED_TROIKA_D_HYSTERIA"
+		"Duration"			"10-15"
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Bedlam_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Hysteria_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Strata_1_Hysteria_Primary
+	{
+		"InheritFrom"		"Hit_Human_Hysteria_Primary"
+		"Duration"			"7-10"
+	}
+
+	Hit_Strata_2_Hysteria_Primary
+	{
+		"InheritFrom"		"Hit_Human_Hysteria_Primary"
+		"Duration"			"4-6"
+	}
+
+	Hit_Human_Hysteria
+	{
+		"AI_Schedule"		"SCHED_TROIKA_D_HYSTERIA"
+		"Duration"			"10-15"
+
+		TraitEffect
+		{
+			"Effect"	"Discipline (Dementation-Hysteria)"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Hysteria_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Strata_1_Hysteria
+	{
+		"InheritFrom"		"Hit_Human_Hysteria"
+		"Duration"			"7-10"
+	}
+
+	Hit_Strata_2_Hysteria
+	{
+		"InheritFrom"		"Hit_Human_Hysteria"
+		"Duration"			"4-6"
+	}
+
+		// Supernatural
+	Hit_Supernatural_Mass_Hallucination_Primary
+	{
+		"InheritFrom"		"Hit_Human_Mass_Hallucination_Primary"
+	}
+
+	Hit_Supernatural_Mass_Hallucination
+	{
+		"InheritFrom"		"Hit_Human_Mass_Hallucination"
+	}
+
+	Hit_Supernatural_Vision_of_Death_Primary
+	{
+		"InheritFrom"		"Hit_Human_Vision_of_Death_Primary"
+	}
+
+	Hit_Supernatural_Vision_of_Death
+	{
+		"InheritFrom"		"Hit_Human_Vision_of_Death"
+	}
+
+	Hit_Supernatural_Berserk_Primary
+	{
+		"InheritFrom"		"Hit_Human_Berserk_Primary"
+	}
+
+	Hit_Supernatural_Berserk
+	{
+		"InheritFrom"		"Hit_Human_Berserk"
+	}
+
+	Hit_Supernatural_Hysteria_Primary
+	{
+		"InheritFrom"		"Hit_Human_Hysteria_Primary"
+	}
+
+	Hit_Supernatural_Hysteria
+	{
+		"InheritFrom"		"Hit_Human_Hysteria"
+	}
+
+		// Boss
+	Hit_Boss_NoEffect_Primary
+	{
+		"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"	// added by Populism
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Bedlam_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Partial_Resist_Dom_Emitter"
+				"AttachType"	"BoneTreeWithColors"
+				"AttachName"	""
+			}
+		}
+	}
+
+	Hit_Supernatural_NoEffect
+	{
+		"AI_Schedule"		"SCHED_TROIKA_DISORIENTED"	// added by Populism
+		"Duration"			"3"	// In order to play particles/etc.
+
+		Trigger_Casting
+		{
+			"DisciplineFX"	"Use_Spell"
+			"Source"		"Target"
+			"Affects"		"Self"
+		}
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dominate_Suicide_Pact_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+//				"ParticleName"	"D_Dominate_Suicide_Pact_Emitter2"
+				"AttachType"	"BoneTree"
+				"AttachName"	""
+			}
+
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Partial_Resist_Dom_Emitter"
+				"AttachType"	"BoneTreeWithColors"
+				"AttachName"	""
+			}
+		}
+	}
+
+	Hit_Boss_NoEffect
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+	}
+
+	Hit_Strata_1
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"18-20%"
+	}
+
+	Hit_Strata_2_Partial_Resist_Primary
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"18-20%"
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Bedlam_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Strata_2_Partial_Resist
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"18-20%"
+	}
+
+	Hit_Strata_3_Partial_Resist_Primary
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		//added by Entenschreck
+		"AI_Schedule"		"SCHED_TROIKA_DO_MADNESS_ACTIVITY"
+		"AddToComfort"		"1"
+
+		//changed_by Entenschreck
+		"Duration"			"6-10"
+
+		//disabled by Entenschreck
+		//"Dmg_Health"		"30-45%"
+
+		Effect_Tgt_Hit
+		{
+			Particle_ThirdPerson
+			{
+				"Entity"		"disc_particle"
+				"RateMin"		"1.0"
+				"OpacityMin"	"1.0"
+				"SizeMin"		"1.0"
+				"ParticleName"	"D_Dementation_Bedlam_Emitter"
+				"AttachType"	"BoneSinglePoint"
+				"AttachName"	"Bip01 Head"
+			}
+		}
+	}
+
+	Hit_Strata_3_Partial_Resist
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		//added by Entenschreck
+		"AI_Schedule"		"SCHED_TROIKA_DO_MADNESS_ACTIVITY"
+		"AddToComfort"		"1"
+
+		//changed_by Entenschreck
+		"Duration"			"6-10"
+
+		//disabled by Entenschreck
+		//"Dmg_Health"		"30-45%"
+	}
+
+	Hit_Strata_3
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"18-20%"
+	}
+
+	Hit_Strata_4_Partial_Resist
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"18-20%"
+	}
+
+	Hit_Strata_5
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"8-12%"
+	}
+	
+	Hit_Strata_6
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect"
+		"Dmg_Health"		"6-8%"
+	}
+
+	Hit_Strata_7
+	{
+		"InheritFrom"		"Hit_Supernatural_NoEffect" //if this doesn't work, use the Thaum:purge one
+	}
+}
 
 
 

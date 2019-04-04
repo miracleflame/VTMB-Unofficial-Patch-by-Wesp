@@ -1443,33 +1443,74 @@ def checkDiscipline():
     else:
         if (pc.active_blood_healing > 0): c.vm_bloodheal=""
         c.vdiscipline_last=""
-        VM()
-def VM():
-    c  = __main__.ccmd
-    G  = __main__.G
-    pc = __main__.FindPlayer()
-    c.vm_clearlist=""
-    if pc.HasItem("item_i_written"):
-        c.vm_charge="" #first one is always skipped
+        VThaumaturgy(1)
+
+def VThaumaturgy(x):
+    G    = __main__.G
+    pc   = __main__.FindPlayer()
+    c    = __main__.ccmd
+    cvar = __main__.cvar
+    ST   = __main__.ScheduleTask
+    VIEWMODEL  = FindClass("viewmodel")[2]
+    HANDSMODEL = FindClass("viewmodel")[3]
+
+    #called when activating a discipline EVERY TIME
+    if x == 1:
+        c.vm_clearlist=""
+        c.vm_lower=""    #first animation in the list is always skipped!
         c.vm_charge=""
-    else:
-        c.vm_draw="" #first one is always skipped
-        c.vm_draw=""
-    #Need a delay here!
-    __main__.ScheduleTask(0.05,"VMHelper()")
-def VMHelper():
-    c  = __main__.ccmd
-    G  = __main__.G
-    pc = __main__.FindPlayer()
-    if pc.HasItem("item_i_written"):
-        c.vm_continue=""
-        c.vm_hold=""
-        c.vm_reset=""
-    else:
-        c.vm_idle=""
-    c.vm_lower=""
-    #View list
-    #c.vdebug_wpn_anims_cycle_list=""
+
+        #Need a delay here!
+        ST(0.05,"VThaumaturgy(2)")
+
+
+    elif x == 2:
+
+        #c.disallowAttacking=""
+
+        #G.viewmodel = VIEWMODEL.model
+        G.handsmodel = HANDSMODEL.model
+
+        #vdebug_wpn_anims_cycle is set to 1 via DisciplineFX by default.
+        #If the target resists the discipline it will be set to 2.
+
+        if cvar.vdebug_wpn_anims_cycle == 1:
+            c.vm_continue=""
+            c.vm_hold=""
+            c.vm_reset=""
+            c.vm_lower=""
+
+            HANDSMODEL.SetModel("models/null.mdl")
+
+            if pc.IsMale() == 0 and not pc.clan == 5:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_female/v_thaumaturgy.mdl")
+
+            elif pc.clan == 5:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_nosferatu/v_thaumaturgy.mdl")
+
+
+        elif cvar.vdebug_wpn_anims_cycle == 2:
+            c.vm_chargehold=""
+            c.vm_chargehold=""
+            c.vm_chargehold=""
+            c.vm_lower=""
+
+            HANDSMODEL.SetModel("models/null.mdl")
+
+            if pc.IsMale() == 0 and not pc.clan == 5:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_female/v_thaumaturgy.mdl")
+
+            elif pc.clan == 5:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_nosferatu/v_thaumaturgy.mdl")
+
+        c.vdebug_wpn_anims_cycle_list=""
+
+        ST(2.2,"VThaumaturgy(3)")
+
+    elif x == 3:
+
+        #VIEWMODEL.SetModel(G.viewmodel)
+        HANDSMODEL.SetModel(G.handsmodel)
 
 #Clan specific idle animations, added by EntenSchreck, improved by malkav and wesp
 def IsIdling():
