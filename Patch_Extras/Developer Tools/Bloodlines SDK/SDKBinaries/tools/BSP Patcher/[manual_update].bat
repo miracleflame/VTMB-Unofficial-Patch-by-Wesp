@@ -8,7 +8,7 @@ if "%~1"=="" (
 	echo   Usage: 
 	echo 様様様様
 	echo.
-	echo   [1] Move both .bat files into the game's "maps\" dir.
+	echo   [1] Move all batch files into the game's "maps\" dir.
 	echo.
 	echo   [2] Create dir named "%%mapname%%_patch" with assets to be included.
 	echo       If you used "map_extract" script before, it will auto-generated.

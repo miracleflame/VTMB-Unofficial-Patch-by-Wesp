@@ -8,7 +8,7 @@ if "%~1"=="" (
 	echo   Usage: 
 	echo 様様様様
 	echo.
-	echo   [1] Move both .bat files into the game's "maps\" dir.
+	echo   [1] Move all batch files into the game's "maps\" dir.
 	echo.
 	echo   [2] Drag and drop your map .bsp file to this batch.
 	echo       This will create dir "%%mapname%%_patch" near .bsp.

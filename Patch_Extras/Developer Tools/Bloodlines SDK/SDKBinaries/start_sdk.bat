@@ -152,11 +152,12 @@ if exist "GameCfg.ini" (
  start plugins\texplugins.exe -internal
 
 :setconsolefont
-(reg add "HKCU\Console"  /v "FaceName"   /t REG_SZ    /d "Lucida Console" /f
- reg add "HKCU\Console"  /v "FontFamily" /t REG_DWORD /d "54"     /f
- reg add "HKCU\Console"  /v "FontSize"   /t REG_DWORD /d "851968" /f
- reg add "HKCU\Console"  /v "FontWeight" /t REG_DWORD /d "400"    /f
- reg add "HKCU\Console"  /v "QuickEdit"  /t REG_DWORD /d "1"      /f
+(reg add "HKCU\Console" /v "FaceName" /t REG_SZ /d "Lucida Console" /f
+ reg add "HKCU\Console" /v "FontFamily" /t REG_DWORD /d "54" /f
+ reg add "HKCU\Console" /v "FontSize" /t REG_DWORD /d "851968" /f
+ reg add "HKCU\Console" /v "FontWeight" /t REG_DWORD /d "400" /f
+ reg add "HKCU\Console" /v "QuickEdit" /t REG_DWORD /d "1" /f
+ reg add "HKCU\Console" /v "ScreenBufferSize" /t REG_DWORD /d "52428880" /f
 )> nul
 
 :extractassets
@@ -198,7 +199,7 @@ if exist "GameCfg.ini" (
  if "%ErrorLevel%"=="2" (del /a /q "FirstRun.ini"> nul) else ("setmoddir.exe")
 
 :startsdk
- taskkill /f /im SDKLauncher.exe> nul
+ taskkill /f /im SDKLauncher.exe> nul 2>&1
  start SDKLauncher.exe
 
 :wizard

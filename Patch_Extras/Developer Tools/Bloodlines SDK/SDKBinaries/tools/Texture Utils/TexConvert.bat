@@ -119,7 +119,7 @@ set "ErrorsFound=No"
 set "SomeSuccess=No"
 
 for /f "delims=" %%f in (
-'%OpenFile% "/e=*.vtf *.tth *.ttz *.tga *.dds *.bmp *.png *.jpg *.gif"'
+'%OpenFile% "/e=*.vtf *.tth *.tga *.dds *.bmp *.png *.jpg *.gif"'
 ) do (call :ConvertAll "%%~f")
 if /i "%ConvProcRan%"=="No" (goto Exit)
 

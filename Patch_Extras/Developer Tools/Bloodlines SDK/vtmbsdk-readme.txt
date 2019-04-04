@@ -1,5 +1,5 @@
 --------------------
-Bloodlines SDK v1.73
+Bloodlines SDK v1.74
 --------------------
 
 This is an unofficial software developer's kit (SDK) for Vampire - The Masquerade: 
@@ -373,14 +373,24 @@ Global changes:
 
 --------------------
 
+1.74 (04.04.2019):
+- Model Viewer [cr]: Disabled registry settings to fix roation bug on MDL re-opening and give small speedup.
+- MDL Texture Info: Added GUI opening model mode from the SDK main menu.
+- MDL Texture Info: Fixed errors, improved wrong formats' reaction and moved into "Texture Utils/" directory.
+- Model Viewer: Default cubemap texture replaced with more reflective one for better texture glossing assessment.
+- Added SDK menu link and infos to Photoshop/Paint.NET plugins to help if they weren't auto-installed correctly.
+- A minor file structure reogranisations and sdk launcher fix.
+- Updated Source Code repository (for contributors).
+
 1.73 (26.02.2019):
-- Added new context menu option for MDL files to see which materials model use and which ones are missing in mod.
+- Added new context menu item for MDL files to see which materials model use and which ones are missing in mod.
 - Turned off developer mode for launch game or load maps due to latest UP compatibility issues [Temporary!].
 - Fixed false anti-virus software detections on two tools' InfoBox files.
 - Texture Converter: Changed conversion format from VTF to TGA if TTH/TTZ files are selected in GUI mode.
-- Model Viewer: Default cubemap texture replaced with more reflective one for closer-to-game gloss appearance.
+- A minor reorganisation of MODELING section's order (by the priority of users' needs).
+- A minor SDK tools fixes and the SFK.exe helper update.
 
-1.72+ (30.10.2018):
+1.72 (30.10.2018):
 - StudioMDL: Added important usage-limitations notes before launching Model Compiler and compiling process.
 - Studio Compiler: Optimized default settings for quick compiling from SMD files and fixed some messages.
 - Hammer/FGD: Fixed bad name in ambient_generic parameter and default area Safety type (from Madquerade to Combat).

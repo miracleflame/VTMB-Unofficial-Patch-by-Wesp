@@ -41,7 +41,7 @@ REG ADD "HKCU\Software\Classes\MDLFile\shell" /f /ve /d "View"
 REG ADD "HKCU\Software\Classes\MDLFile\shell\View" /f /ve /d "View Model"
 REG ADD "HKCU\Software\Classes\MDLFile\shell\View\command" /f /ve /d "%CD%\service\hlmv_shell.exe \"%%1\""
 REG ADD "HKCU\Software\Classes\MDLFile\shell\TexInfo" /f /ve /d "Texture Information"
-REG ADD "HKCU\Software\Classes\MDLFile\shell\TexInfo\command" /f /ve /d "%CD%\tools\MDLTextureInfo\MDLTextureInfo.cmd \"%%1\""
+REG ADD "HKCU\Software\Classes\MDLFile\shell\TexInfo\command" /f /ve /d "%CD%\tools\Texture Utils\MDLTextureInfo.bat \"%%1\""
 REG ADD "HKCU\Software\Classes\MDLFile\DefaultIcon" /f /ve /d "%CD%\service\hlmv_shell.exe,0"
 
 :======== CFG Files =========

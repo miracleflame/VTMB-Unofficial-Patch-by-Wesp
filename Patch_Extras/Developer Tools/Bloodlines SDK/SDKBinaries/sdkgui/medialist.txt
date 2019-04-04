@@ -121,17 +121,17 @@ Media
 				Program			"hlmv.exe"
 				Image			6
 			}
-			studiocompiler
-			{
-				Title			"Model Compiler"
-				Program			"tools/StudioCompiler/Launcher.exe"
-				Image			9
-			}
 			mdldecompiler
 			{
 				Title			"Model Decompiler"
 				Program			"tools/Java-Based/Java_run.exe -jar \"mdl2smd.jar\""
 				Image			11
+			}
+			studiocompiler
+			{
+				Title			"Model Compiler"
+				Program			"tools/StudioCompiler/Launcher.exe"
+				Image			9
 			}
 			khed
 			{
@@ -139,17 +139,23 @@ Media
 				Program			"tools/kHED Editor/kHED_start.exe"
 				Image			23
 			}
-			qccompiler
+			mdltextureinfo
 			{
-				Title			"QC Files Compiler"
-				Program			"mdlcompiler.exe"
-				Image			9
+				Title			"MDL Texture Info"
+				Program			"tools\\Texture Utils\\MDLTextureInfo.bat"
+				Image			24
 			}
 			sheettool
 			{
 				Title			"CharSheet Injector"
 				Program			"tools/Sheet Tool/Sheet_Tool_run.exe"
 				Image			27
+			}
+			qccompiler
+			{
+				Title			"QC Files Compiler"
+				Program			"mdlcompiler.exe"
+				Image			9
 			}
 			3dsplugins
 			{
@@ -187,6 +193,12 @@ Media
 				Title			"TTh/TTz Viewer"
 				Program			"tools\\Texture Utils\\TTZView.bat"
 				Image			24
+			}
+			texplugins
+			{
+				Title			"Texture Plugins"
+				ShellExecute	"plugins\\texturing\\"
+				Image			13
 			}
 		}
 

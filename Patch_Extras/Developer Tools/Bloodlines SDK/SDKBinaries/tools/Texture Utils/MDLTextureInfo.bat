@@ -1,35 +1,38 @@
 :: written by: psycho-a
-:: program version: 1.0
-:: build date: 19.02.19
+:: program version: 1.3
+:: build date: 04.04.2019
 
 @echo off
 setlocal ENABLEEXTENSIONS
 set "PATH=%SystemRoot%\System32;%SystemRoot%;%SystemRoot%\System32\Wbem"
 set "PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"
-set "ProgVersion=1.0"
+set "ProgVersion=1.3"
 title MDL Texture Info v%ProgVersion%  (c) Psycho-A
 color 06
 pushd "%~dp0"
+pushd "..\.."
 
 
 :========================================================================================================
 :: PREPARE
 :========================================================================================================
 
-set Sfk="%cd%\sfk193.exe"
-set "ModDir=%~2"
-set "InputMDL=%~1"
+set "Sfk=service\sfk.exe"
+set "OpenDlg=service\opendlg.exe"
+set "OpenFile=%OpenDlg% /f"
 
-if not exist %Sfk% (
-	color 0c
-	cls
-	echo.
-	echo     ERROR: %Sfk% not found.
-	echo.
-	echo     Cannot proceed.
-	echo.
-	pause>nul
-	exit
+for %%m in ("%Sfk%" "%OpenDlg%") do (
+	if not exist %%m (
+		color 0c
+		cls
+		echo.
+		echo     ERROR: %%m not found.
+		echo.
+		echo     Cannot proceed.
+		echo.
+		pause>nul
+		exit
+	)
 )
 
 
@@ -39,18 +42,30 @@ if not exist %Sfk% (
 :========================================================================================================
 
 if "%~1"=="" (
-	rem Add context menu to registry...
+	rem Show usage notes...
 	echo. 
-	%Sfk% echo "  [green]Usage: [yellow]%~nx0 [cyan]\"path\file.mdl\""
-	%Sfk% echo "  Or Drag and Drop MDL file to this batch..."
+	%Sfk% echo "  Select .MDL to see which textures and paths it uses..."
+	echo. 
+	%Sfk% echo "  [green]Additional usage modes:"
+	echo. 
+	%Sfk% echo "  [cyan]1)[def] [white]Right-click[def] to your [cyan]MDL file[def] in Windows Explorer;
+	%Sfk% echo "  [cyan]2)[def] Run [white]CMD.exe[def] > [yellow]%~nx0 [cyan]\"path\file.mdl\"[def];"
+	%Sfk% echo "  [cyan]3)[def] [white]Drag and Drop [cyan].MDL[def] to [yellow]%~nx0[def] batch..."
 	echo.
-	(REG ADD "HKCU\Software\Classes\.mdl" /f /ve /d "MDLFile"
-	 REG ADD "HKCU\Software\Classes\MDLFile" /f /ve /d "3D Model file"
-	 REG ADD "HKCU\Software\Classes\MDLFile\shell\TexInfo" /f /ve /d "Texture Information"
-	 REG ADD "HKCU\Software\Classes\MDLFile\shell\TexInfo\command" /f /ve /d "%~0 \"%%1\""
+	%Sfk% echo "  [Bloodlines SDK must be installed to use this tool!]"
+	echo. 
+	rem Add context menu to registry...
+	(reg add "HKCU\Software\Classes\.mdl" /f /ve /d "MDLFile"
+	 reg add "HKCU\Software\Classes\MDLFile" /f /ve /d "3D Model file"
+	 reg add "HKCU\Software\Classes\MDLFile\shell\TexInfo" /f /ve /d "Texture Information"
+	 reg add "HKCU\Software\Classes\MDLFile\shell\TexInfo\command" /f /ve /d "%~dpnx0 \"%%1\""
 	)> nul
-	pause> nul
-	exit
+	rem Show OpenFile dialog...
+	for /f "delims=" %%f in ('%OpenFile% "/e=*.mdl"') do set "InputMDL=%%~f"
+	set "ModDir=%ModDir%"
+) else (
+	set "ModDir=%~2"
+	set "InputMDL=%~1"
 )
 
 if not exist "%InputMDL%" exit /b
@@ -59,6 +74,8 @@ for /f "delims=" %%a in ('call %Sfk% echo "%~dp1|" +filt -rep "|\models\*||" -le
 	set "ModDir=%%~a"
 ))
 if not exist "%ModDir%\materials\" set ModDir=
+if not exist "%GameDir%\" set "GameDir={null}"
+cls
 
 
 
@@ -67,6 +84,7 @@ if not exist "%ModDir%\materials\" set ModDir=
 :========================================================================================================
 
 %Sfk% echo [yellow]Reading MDL texture data...
+set ErrorsFound=
 
 rem read numtextures offset
 for /f %%a in ('call %Sfk% hexdump -pure -offlen 292 2 -nofile "%InputMDL%"') do (
@@ -84,6 +102,13 @@ rem read textpaths bank offset
 for /f %%a in ('call %Sfk% hexdump -pure -offlen 304 4 -nofile "%InputMDL%"') do (
 for /f %%b in ('call %Sfk% num "0x%%~a" -show decle') do set "TexPathsOffset=%%~b" )
 
+rem check possible errors
+for %%v in (NumTextures TexNamesOffset NumPaths TexPathsOffset) do (
+	set ErrorParamInfo=%%~v
+	if not defined %%~v call :WrongMdlError
+)
+if defined ErrorsFound goto finish
+
 %Sfk% echo "[cyan]> Textures paths: %NumPaths%"
 %Sfk% echo "[cyan]> Textures count: %NumTextures%"
 rem   echo "[blue]> Texpath offset: %TexPathsOffset%"
@@ -98,6 +123,8 @@ rem read texname positions
 set "CurrStep=1"
 set "CurrOffset=%TexNamesOffset%"
 call :ReadTexNameOffset "%InputMDL%"
+
+if defined ErrorsFound goto finish
 
 
 
@@ -123,8 +150,15 @@ if not defined MissingTextures (
 ))))
 
 
+
+:========================================================================================================
 :: FINISH
+:========================================================================================================
+:finish
 echo.
+if defined ErrorsFound (
+	%Sfk% echo [red]Probably wrong/bad MDL file.
+)
 if /i not "%~3"=="-nopause" (
 	pause
 )
@@ -136,6 +170,9 @@ exit
 :ReadTexPathOffset
 	for /f %%a in ('call %Sfk% hexdump -pure -offlen %CurrOffset% 4 -nofile "%~1"') do (
 	for /f %%b in ('call %Sfk% num "0x%%~a" -show decle') do set /a "TexPathPosition=%%~b")
+	set ErrorParamInfo=TexPathPosition
+	if not defined TexPathPosition  (goto WrongMdlError) else (
+	if not 0%TexPathPosition% GTR 0 (goto WrongMdlError))
 	rem Texture path position: %TexPathPosition%
 
 	rem Show texture name at position...
@@ -155,6 +192,9 @@ exit /b
 :ReadTexNameOffset
 	for /f %%a in ('call %Sfk% hexdump -pure -offlen %CurrOffset% 2 -nofile "%~1"') do (
 	for /f %%b in ('call %Sfk% num "0x%%~a" -small -show decle') do set /a "TexNamePosition=%CurrOffset%+%%~b")
+	set ErrorParamInfo=TexNamePosition
+	if not defined TexNamePosition  (goto WrongMdlError) else (
+	if not 0%TexNamePosition% GTR 0 (goto WrongMdlError))
 	rem Texture name position: %TexNamePosition%
 
 	rem Show texture name at position...
@@ -188,6 +228,9 @@ exit /b
 		if exist "%ModDir%\materials\%%~p\%~1.vmt" (
 			set TexIsExist=1
 			call :ReadVmtInsides "%ModDir%\materials\%%~p\%~1.vmt"
+		) else if exist "%GameDir%\materials\%%~p\%~1.vmt" (
+			set TexIsExist=1
+			call :ReadVmtInsides "%GameDir%\materials\%%~p\%~1.vmt"
 		)
 	)
 	if not defined TexIsExist (
@@ -197,14 +240,21 @@ exit /b
 exit /b
 
 :ReadVmtInsides
+	attrib -H "%~1"> nul 2>&1
 	copy /y "%~1" "%~dpn0.tmp"> nul
 	%Sfk% filter "%~dpn0.tmp" -+/ -+\ -srep =\q*//*=\q= -rep =//*== -rep =/=\= -write -quiet=2 -yes
-	for /f "useback tokens=1,2" %%a in ("%~dpn0.tmp") do (
+	for /f "usebackq tokens=1,2" %%a in ("%~dpn0.tmp") do (
 		if not "%%~b"=="" (
 		if not exist "%ModDir%\materials\%%~b.tth" (
+		if not exist "%GameDir%\materials\%%~b.tth" (
 			%Sfk% echo [red]- Missing: \"%%~b.tth\"
 			set MissingTextures=True
-		))
+		)))
 	)
 	del /f /q "%~dpn0.tmp"
+exit /b
+
+:WrongMdlError
+	set ErrorsFound=1
+	%Sfk% echo [red]- Failed to get %ErrorParamInfo%.
 exit /b
