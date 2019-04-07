@@ -2,93 +2,16 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7999"
-	"mapversion" "402"
+	"mapversion" "408"
 	"prefab" "0"
 }
 visgroups
 {
 	visgroup
 	{
-		"name" "++MissRoomStuff"
-		"visgroupid" "9"
-		"color" "220 93 130"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Cubemaps"
-		"visgroupid" "13"
-		"color" "189 114 155"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Lights"
-		"visgroupid" "1"
-		"color" "176 81 230"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "NPCs"
-		"visgroupid" "8"
-		"color" "167 148 149"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Nodes"
-		"visgroupid" "7"
-		"color" "250 227 80"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Dynamic Models"
-		"visgroupid" "6"
-		"color" "241 86 159"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Static Models"
-		"visgroupid" "5"
-		"color" "92 93 162"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Decals"
-		"visgroupid" "4"
-		"color" "202 99 176"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "3D-Sky parts"
-		"visgroupid" "14"
-		"color" "88 137 126"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "World Geom"
-		"visgroupid" "12"
-		"color" "105 206 103"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Particles"
-		"visgroupid" "11"
-		"color" "103 228 229"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Triggers"
-		"visgroupid" "10"
-		"color" "106 147 224"
+		"name" "++TrigHurts"
+		"visgroupid" "2"
+		"color" "183 180 245"
 		"visible" "1"
 	}
 	visgroup
@@ -100,9 +23,86 @@ visgroups
 	}
 	visgroup
 	{
-		"name" "++TrigHurts"
-		"visgroupid" "2"
-		"color" "183 180 245"
+		"name" "Triggers"
+		"visgroupid" "10"
+		"color" "106 147 224"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Particles"
+		"visgroupid" "11"
+		"color" "103 228 229"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "World Geom"
+		"visgroupid" "12"
+		"color" "105 206 103"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "3D-Sky parts"
+		"visgroupid" "14"
+		"color" "88 137 126"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Decals"
+		"visgroupid" "4"
+		"color" "202 99 176"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Static Models"
+		"visgroupid" "5"
+		"color" "92 93 162"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Dynamic Models"
+		"visgroupid" "6"
+		"color" "241 86 159"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Nodes"
+		"visgroupid" "7"
+		"color" "250 227 80"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "NPCs"
+		"visgroupid" "8"
+		"color" "167 148 149"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Lights"
+		"visgroupid" "1"
+		"color" "176 81 230"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Cubemaps"
+		"visgroupid" "13"
+		"color" "189 114 155"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "++MissRoomStuff"
+		"visgroupid" "9"
+		"color" "220 93 130"
 		"visible" "1"
 	}
 }
@@ -116,7 +116,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "402"
+	"mapversion" "408"
 	"classname" "worldspawn"
 	"skyname" "holly"
 	"sounds" "1"
@@ -54737,21 +54737,21 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" "FireEarly,PlaySound,,0,-1,,"
-		"OnTrigger" "SchemePostFire,FadeIn,,0,-1,,"
-		"OnTrigger" "SchemePreFire,FadeOut,,0,-1,,"
-		"OnTrigger" "bedroom2,Lock,,0,-1,,"
-		"OnTrigger" "bedroom1,Lock,,0,-1,,"
-		"OnTrigger" "bedroom4,Unlock,,0,-1,,"
-		"OnTrigger" "bedroom3,Unlock,,0,-1,,"
-		"OnTrigger" "room_flames_particle,TurnOn,,0,-1,,"
-		"OnTrigger" "bach_event_explosion_shake,Kill,,14,-1,,"
-		"OnTrigger" "bach_event_explosion_sound,Kill,,14,-1,,"
-		"OnTrigger" "bach_event_explosion_sound,PlaySound,,0,-1,,"
-		"OnTrigger" "bach_event_explosion_shake,StartShake,,0,-1,,"
-		"OnTrigger" "room_flames_hurt,Enable,,0.1,-1,,"
-		"OnTrigger" "Bach,ScriptUnhide,,0,-1,,"
 		"OnTrigger" ",,,0,-1,malk4_JournalSeeGrout(),"
+		"OnTrigger" "Bach,ScriptUnhide,,0,-1,,"
+		"OnTrigger" "room_flames_hurt,Enable,,0.1,-1,,"
+		"OnTrigger" "bach_event_explosion_shake,StartShake,,0,-1,,"
+		"OnTrigger" "bach_event_explosion_sound,PlaySound,,0,-1,,"
+		"OnTrigger" "bach_event_explosion_sound,Kill,,14,-1,,"
+		"OnTrigger" "bach_event_explosion_shake,Kill,,14,-1,,"
+		"OnTrigger" "room_flames_particle,TurnOn,,0,-1,,"
+		"OnTrigger" "bedroom3,Unlock,,0,-1,,"
+		"OnTrigger" "bedroom4,Unlock,,0,-1,,"
+		"OnTrigger" "bedroom1,Lock,,0,-1,,"
+		"OnTrigger" "bedroom2,Lock,,0,-1,,"
+		"OnTrigger" "SchemePreFire,FadeOut,,0,-1,,"
+		"OnTrigger" "SchemePostFire,FadeIn,,0,-1,,"
+		"OnTrigger" "FireEarly,PlaySound,,0,-1,,"
 	}
 	"origin" "-1504 272 -2632"
 	editor
@@ -56890,9 +56890,9 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" "grout_cam_player_teleport,Teleport,,0,-1,,"
-		"OnTrigger" "grout_cam_target_0,PlayAsCameraTarget,,0.1,-1,,"
 		"OnTrigger" "grout_cam_track0,PlayAsCameraPosition,,0.1,-1,,"
+		"OnTrigger" "grout_cam_target_0,PlayAsCameraTarget,,0.1,-1,,"
+		"OnTrigger" "grout_cam_player_teleport,Teleport,,0,-1,,"
 	}
 	"origin" "-1740 95 -2593"
 	editor
@@ -56909,12 +56909,12 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" ",,,0,-1,FindPlayer().ClearActiveDisciplines(),"
-		"OnTrigger" "bedroom1,Lock,,0,-1,,"
-		"OnTrigger" "Bach,StartPlayerDialogRemote,,0.5,-1,,"
-		"OnTrigger" "bach_dialog_teleport,Teleport,,1,-1,,"
-		"OnTrigger" "bach_dialog_teleport,Kill,,2,-1,,"
 		"OnTrigger" "bedroom2,Lock,,0,-1,,"
+		"OnTrigger" "bach_dialog_teleport,Kill,,2,-1,,"
+		"OnTrigger" "bach_dialog_teleport,Teleport,,1,-1,,"
+		"OnTrigger" "Bach,StartPlayerDialogRemote,,0.5,-1,,"
+		"OnTrigger" "bedroom1,Lock,,0,-1,,"
+		"OnTrigger" ",,,0,-1,FindPlayer().ClearActiveDisciplines(),"
 	}
 	"origin" "-1376 96 -2594"
 	editor
@@ -57270,10 +57270,10 @@ entity
 	"origin" "718.5 -488 -2656"
 	connections
 	{
-		"OnStartTouch" "teleport_explosion_trigger,Trigger,,0.1,-1,,"
-		"OnStartTouch" "killtowerabase,Kill,,0,-1,,"
-		"OnStartTouch" "towerkill1,Kill,,0,-1,,"
 		"OnStartTouch" "towerkill2,Kill,,0,-1,,"
+		"OnStartTouch" "towerkill1,Kill,,0,-1,,"
+		"OnStartTouch" "killtowerabase,Kill,,0,-1,,"
+		"OnStartTouch" "teleport_explosion_trigger,Trigger,,0.1,-1,,"
 	}
 	solid
 	{
@@ -60596,9 +60596,9 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnFullyOpen" "escape_relay_2,Trigger,,0,-1,,"
-		"OnOpen" "ghoul_fire_escape_4,ScriptUnhide,,0,-1,,"
 		"OnOpen" "escape_sequence_4,BeginSequence,,0.5,-1,,"
+		"OnOpen" "ghoul_fire_escape_4,ScriptUnhide,,0,-1,,"
+		"OnFullyOpen" "escape_relay_2,Trigger,,0,-1,,"
 	}
 	solid
 	{
@@ -60708,8 +60708,8 @@ entity
 	"targetname" "dining2"
 	connections
 	{
-		"OnFullyOpen" "escape_relay_2,Trigger,,0,-1,,"
 		"OnOpen" "escape_sequence_4,BeginSequence,,0.5,-1,,"
+		"OnFullyOpen" "escape_relay_2,Trigger,,0,-1,,"
 	}
 	solid
 	{
@@ -60936,10 +60936,10 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnMapLoad" ",,,0,1,FindPlayer().ClearActiveDisciplines(),"
-		"OnMapLoad" "door_bar,SetAnimation,activate,0,-1,,"
-		"OnMapLoad" "bedroom4,Lock,,0,-1,,"
 		"OnMapLoad" "bedroom3,Lock,,0,-1,,"
+		"OnMapLoad" "bedroom4,Lock,,0,-1,,"
+		"OnMapLoad" "door_bar,SetAnimation,activate,0,-1,,"
+		"OnMapLoad" ",,,0,1,FindPlayer().ClearActiveDisciplines(),"
 	}
 	"origin" "-1390 137 -2836"
 	editor
@@ -64794,12 +64794,12 @@ entity
 	"origin" "-1411 1016 -2979.83"
 	connections
 	{
-		"OnTrigger" "escape_hurt_1,Enable,,0,-1,,"
-		"OnTrigger" "escape_particle_1,TurnOn,,0,-1,,"
-		"OnTrigger" "escape_light_1,FadeToPattern,nmonqnmomnmomomno,1,-1,,"
-		"OnTrigger" "escape_sound_1,PlaySound,,0,-1,,"
-		"OnTrigger" "escape_sequence_1,BeginSequence,,0.1,-1,,"
 		"OnTrigger" "ghoul_fire_escape_1,ScriptUnhide,,0,-1,,"
+		"OnTrigger" "escape_sequence_1,BeginSequence,,0.1,-1,,"
+		"OnTrigger" "escape_sound_1,PlaySound,,0,-1,,"
+		"OnTrigger" "escape_light_1,FadeToPattern,nmonqnmomnmomomno,1,-1,,"
+		"OnTrigger" "escape_particle_1,TurnOn,,0,-1,,"
+		"OnTrigger" "escape_hurt_1,Enable,,0,-1,,"
 	}
 	solid
 	{
@@ -65816,9 +65816,9 @@ entity
 	"origin" "-742 1678 -2906.78"
 	connections
 	{
-		"OnStartTouch" ",,,0,-1,,"
-		"OnTrigger" "escape_hurt_3,Enable,,0,-1,,"
 		"OnTrigger" "escape_particle_3,TurnOn,,0,-1,,"
+		"OnTrigger" "escape_hurt_3,Enable,,0,-1,,"
+		"OnStartTouch" ",,,0,-1,,"
 	}
 	solid
 	{
@@ -66020,12 +66020,12 @@ entity
 	"origin" "-1431 96 -2909"
 	connections
 	{
-		"OnTrigger" "escape_sequence_5,BeginSequence,,0,-1,,"
-		"OnTrigger" "ghoul_fire_escape_5,ScriptUnhide,,0,-1,,"
-		"OnTrigger" "escape_hurt_4,Enable,,0,-1,,"
-		"OnTrigger" "escape_particle_4,TurnOn,,0,-1,,"
-		"OnTrigger" "escape_light_4,FadeToPattern,mmnmmommommnonmmonqnmmo,0,-1,,"
 		"OnTrigger" "escape_sound_4,PlaySound,,0,-1,,"
+		"OnTrigger" "escape_light_4,FadeToPattern,mmnmmommommnonmmonqnmmo,0,-1,,"
+		"OnTrigger" "escape_particle_4,TurnOn,,0,-1,,"
+		"OnTrigger" "escape_hurt_4,Enable,,0,-1,,"
+		"OnTrigger" "ghoul_fire_escape_5,ScriptUnhide,,0,-1,,"
+		"OnTrigger" "escape_sequence_5,BeginSequence,,0,-1,,"
 	}
 	solid
 	{
@@ -66390,9 +66390,9 @@ entity
 	"origin" "-762 688 -2624"
 	connections
 	{
-		"OnTrigger" "ghoul_fire_escape_2,ScriptUnhide,,0,-1,,"
-		"OnTrigger" "escape_hurt_5,Enable,,0,-1,,"
 		"OnTrigger" "escape_particle_5,TurnOn,,0,-1,,"
+		"OnTrigger" "escape_hurt_5,Enable,,0,-1,,"
+		"OnTrigger" "ghoul_fire_escape_2,ScriptUnhide,,0,-1,,"
 	}
 	solid
 	{
@@ -66887,8 +66887,8 @@ entity
 	"origin" "-267 83 -2622.5"
 	connections
 	{
-		"OnTrigger" "escape_hurt_6,Enable,,0,-1,,"
 		"OnTrigger" "escape_particle_6,TurnOn,,0,-1,,"
+		"OnTrigger" "escape_hurt_6,Enable,,0,-1,,"
 	}
 	solid
 	{
@@ -66988,9 +66988,9 @@ entity
 	"origin" "-51 -411 -2616.87"
 	connections
 	{
-		"OnTrigger" "escape_particle_7,TurnOn,,0,-1,,"
-		"OnTrigger" "escape_hurt_7,Enable,,0,-1,,"
 		"OnTrigger" "ghoul_fire_escape_3,ScriptUnhide,,0,-1,,"
+		"OnTrigger" "escape_hurt_7,Enable,,0,-1,,"
+		"OnTrigger" "escape_particle_7,TurnOn,,0,-1,,"
 	}
 	solid
 	{
@@ -67543,10 +67543,10 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" "escape_light_2,FadeToPattern,mmnmmommommnonmmonqnmmo,1,-1,,"
-		"OnTrigger" "escape_sound_2,PlaySound,,0,-1,,"
-		"OnTrigger" "escape_hurt_2,Enable,,2,-1,,"
 		"OnTrigger" "escape_particle_2,TurnOn,,0,-1,,"
+		"OnTrigger" "escape_hurt_2,Enable,,2,-1,,"
+		"OnTrigger" "escape_sound_2,PlaySound,,0,-1,,"
+		"OnTrigger" "escape_light_2,FadeToPattern,mmnmmommommnonmmonqnmmo,1,-1,,"
 	}
 	"origin" "-382 826 -2876"
 	editor
@@ -68009,8 +68009,8 @@ entity
 	"base_gender" "1"
 	connections
 	{
-		"OnFoundEnemy" "escape_sequence_1,CancelSequence,,0,-1,,"
 		"OnFoundEnemy" "escape_sequence_1,Kill,,1,-1,,"
+		"OnFoundEnemy" "escape_sequence_1,CancelSequence,,0,-1,,"
 	}
 	"origin" "-1600 1216 -2752"
 	editor
@@ -68846,13 +68846,13 @@ entity
 	"origin" "-1225.5 93 -2732"
 	connections
 	{
-		"OnTrigger" "ghoul_fire_escape_1,ScriptHide,,0,-1,,"
-		"OnTrigger" "ghoul_fire_escape_2,ScriptHide,,0,-1,,"
-		"OnTrigger" "ghoul_fire_escape_3,ScriptHide,,0,-1,,"
-		"OnTrigger" "ghoul_fire_escape_5,ScriptHide,,0,-1,,"
-		"OnTrigger" "bedroom3,Close,,0,-1,,"
-		"OnTrigger" "bedroom4,Close,,0,-1,,"
 		"OnTrigger" "ghoul_fire_escape_4,ScriptHide,,0,-1,,"
+		"OnTrigger" "bedroom4,Close,,0,-1,,"
+		"OnTrigger" "bedroom3,Close,,0,-1,,"
+		"OnTrigger" "ghoul_fire_escape_5,ScriptHide,,0,-1,,"
+		"OnTrigger" "ghoul_fire_escape_3,ScriptHide,,0,-1,,"
+		"OnTrigger" "ghoul_fire_escape_2,ScriptHide,,0,-1,,"
+		"OnTrigger" "ghoul_fire_escape_1,ScriptHide,,0,-1,,"
 	}
 	solid
 	{
@@ -68953,8 +68953,8 @@ entity
 	"origin" "-1440 936 -2985.5"
 	connections
 	{
-		"OnTrigger" "escape_sequence_1,CancelSequence,,0,-1,,"
 		"OnTrigger" "escape_sequence_1,Kill,,0,-1,,"
+		"OnTrigger" "escape_sequence_1,CancelSequence,,0,-1,,"
 	}
 	solid
 	{
@@ -69204,8 +69204,8 @@ entity
 	"base_gender" "1"
 	connections
 	{
-		"OnFoundEnemy" "escape_sequence_1,CancelSequence,,2,-1,,"
 		"OnFoundEnemy" "escape_sequence_1,Kill,,2,-1,,"
+		"OnFoundEnemy" "escape_sequence_1,CancelSequence,,2,-1,,"
 	}
 	"origin" "-128 960 -3024"
 	editor
@@ -69287,8 +69287,8 @@ entity
 	"origin" "-440 828 -2989.84"
 	connections
 	{
-		"OnTrigger" "escape_sequence_4,CancelSequence,,0,-1,,"
 		"OnTrigger" "escape_sequence_4,Kill,,0,-1,,"
+		"OnTrigger" "escape_sequence_4,CancelSequence,,0,-1,,"
 	}
 	solid
 	{
@@ -69489,8 +69489,8 @@ entity
 	"origin" "-1320 108 -2929.84"
 	connections
 	{
-		"OnTrigger" "escape_sequence_5,CancelSequence,,0,-1,,"
 		"OnTrigger" "escape_sequence_5,Kill,,0,-1,,"
+		"OnTrigger" "escape_sequence_5,CancelSequence,,0,-1,,"
 	}
 	solid
 	{
@@ -69660,8 +69660,8 @@ entity
 	"base_gender" "1"
 	connections
 	{
-		"OnFoundEnemy" "escape_sequence_5,CancelSequence,,1,-1,,"
 		"OnFoundEnemy" "escape_sequence_5,Kill,,1,-1,,"
+		"OnFoundEnemy" "escape_sequence_5,CancelSequence,,1,-1,,"
 	}
 	"origin" "-1832 -48 -3160"
 	editor
@@ -70275,7 +70275,7 @@ entity
 	"crossfade_skin_time" "2.0"
 	"renderamt" "255"
 	"rendercolor" "255 255 255"
-	"origin" "-1560 -150 -2689"
+	"origin" "-1558 -158 -2689"
 	editor
 	{
 		"color" "241 86 159"
@@ -70622,56 +70622,6 @@ entity
 }
 entity
 {
-	"id" "1985"
-	"classname" "item_container_animated"
-	"angles" "0 80 0"
-	"skin" "0"
-	"disableshadows" "1"
-	"model" "models/scenery/furniture/hollowbook/hollowbook.mdl"
-	"StartHidden" "1"
-	"demo_sequence" "None"
-	"npc_transparent" "1"
-	"targetname" "wesp_book"
-	"crossfade_skin_time" "2.0"
-	"use_icon" "46"
-	"lootable_type" "3"
-	"soundgroup" "push_arm_door"
-	"move_speed" "45"
-	"rot_dist" "90"
-	"rot_speed" "45"
-	"rot_axis" "1"
-	"solid" "6"
-	"renderamt" "255"
-	"rendercolor" "255 255 255"
-	"move_dest" "-1616 -175 -2688"
-	connections
-	{
-		"OnItemRemove" "wesp_booknode,Kill,,0,-1,,"
-	}
-	"origin" "-1616 -175 -2688"
-	editor
-	{
-		"color" "220 30 220"
-	}
-}
-entity
-{
-	"id" "1986"
-	"classname" "inspection_node"
-	"start_enabled" "1"
-	"inspection" "5"
-	"StartHidden" "1"
-	"parentname" "wesp_book"
-	"targetname" "wesp_booknode"
-	"origin" "-1616 -175 -2688"
-	editor
-	{
-		"color" "250 227 80"
-		"visgroupid" "7"
-	}
-}
-entity
-{
 	"id" "1987"
 	"classname" "prop_dynamic"
 	"angles" "0 265 0"
@@ -70723,8 +70673,8 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnUse" "bach_event,Trigger,,1.11,-1,,"
 		"OnUse" "plus_skel_switch,Lock,,1,-1,,"
+		"OnUse" "bach_event,Trigger,,1.11,-1,,"
 	}
 	"origin" "-1586 327 -2686"
 	editor
@@ -70740,9 +70690,9 @@ entity
 	"python_script" "G.Patch_Plus == 1"
 	connections
 	{
-		"OnTrue" "grout_cam_track0,RestoreCameraToPlayerControl,,0,-1,,"
-		"OnFalse" "grout_cam_track0,RestoreCameraToPlayerControl,,0,-1,,"
 		"OnFalse" "bach_event,Trigger,,1.11,-1,,"
+		"OnFalse" "grout_cam_track0,RestoreCameraToPlayerControl,,0,-1,,"
+		"OnTrue" "grout_cam_track0,RestoreCameraToPlayerControl,,0,-1,,"
 	}
 	"origin" "-1586 327 -2686"
 	editor
@@ -70821,27 +70771,27 @@ entity
 	"enabled" "0"
 	connections
 	{
-		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
-		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
-		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
-		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
-		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
-		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
-		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
-		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
-		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
-		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
-		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
-		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
-		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
-		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
-		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
-		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
-		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
-		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
-		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
-		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
 		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
+		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
+		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
+		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
+		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
+		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
+		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
+		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
+		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
+		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
+		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
+		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
+		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
+		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
+		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
+		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
+		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
+		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
+		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
+		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
+		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -70858,29 +70808,29 @@ entity
 	"StartHidden" "0"
 	connections
 	{
-		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
-		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
-		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
-		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
-		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
-		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
-		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
-		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
-		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
-		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
-		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
-		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
-		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
-		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
-		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
-		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
-		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
-		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
-		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
-		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
-		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
-		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
 		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
+		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
+		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
+		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
+		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
+		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
+		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
+		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
+		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
+		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
+		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
+		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
+		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
+		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
+		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
+		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
+		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
+		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
+		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
+		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
+		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
+		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
+		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -99392,13 +99342,13 @@ entity
 	"targetname" "teleport_explosion_trigger"
 	connections
 	{
-		"OnTrigger" "teleport_explosion_impact,Impact,500,0.1,-1,,"
-		"OnTrigger" "teleport_explosion_hurt,Enable,,0,-1,,"
-		"OnTrigger" "teleport_explosion_sound,PlaySound,,0,-1,,"
-		"OnTrigger" "teleport_explosion_shake,StartShake,,0,-1,,"
-		"OnTrigger" "teleport_explosion_particle,TurnOn,,0,-1,,"
-		"OnTrigger" "teleport_explosion_light,SetPattern,mmnmmommommnonmmonqnmmo,0,-1,,"
 		"OnTrigger" "burningroomteleportb,ScriptHide,,0.1,-1,,"
+		"OnTrigger" "teleport_explosion_light,SetPattern,mmnmmommommnonmmonqnmmo,0,-1,,"
+		"OnTrigger" "teleport_explosion_particle,TurnOn,,0,-1,,"
+		"OnTrigger" "teleport_explosion_shake,StartShake,,0,-1,,"
+		"OnTrigger" "teleport_explosion_sound,PlaySound,,0,-1,,"
+		"OnTrigger" "teleport_explosion_hurt,Enable,,0,-1,,"
+		"OnTrigger" "teleport_explosion_impact,Impact,500,0.1,-1,,"
 	}
 	"origin" "648 -396 -2572"
 	editor
@@ -110097,12 +110047,12 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnOpen" "FireRoaring2,PlaySound,,0,-1,,"
-		"OnOpen" "FireRoaring,PlaySound,,0,-1,,"
-		"OnOpen" "FirePops,PlaySound,,0,-1,,"
-		"OnOpen" "FireEarly,PlaySound,,0,-1,,"
-		"OnOpen" "FireCrackling,PlaySound,,0,-1,,"
 		"OnOpen" "bach_start_dialog_relay,Trigger,,0,1,,"
+		"OnOpen" "FireCrackling,PlaySound,,0,-1,,"
+		"OnOpen" "FireEarly,PlaySound,,0,-1,,"
+		"OnOpen" "FirePops,PlaySound,,0,-1,,"
+		"OnOpen" "FireRoaring,PlaySound,,0,-1,,"
+		"OnOpen" "FireRoaring2,PlaySound,,0,-1,,"
 	}
 	solid
 	{
@@ -121552,13 +121502,63 @@ entity
 		"color" "0 180 0"
 	}
 }
+entity
+{
+	"id" "356804"
+	"classname" "prop_dynamic"
+	"angles" "0 225 0"
+	"model" "models/weapons/stake/info/i_stake.mdl"
+	"targetname" "plus_reels"
+	"StartHidden" "1"
+	"health" "0"
+	"skin" "0"
+	"disableshadows" "1"
+	"solid" "6"
+	"MinAnimTime" "5"
+	"MaxAnimTime" "10"
+	"demo_sequence" "None"
+	"npc_transparent" "1"
+	"crossfade_skin_time" "2.0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"origin" "-1556 -157 -2679"
+	editor
+	{
+		"color" "127 127 255"
+	}
+}
+entity
+{
+	"id" "356836"
+	"classname" "prop_dynamic"
+	"angles" "40 60 90"
+	"model" "models/weapons/stake/world/g_stake.mdl"
+	"targetname" "plus_stake"
+	"StartHidden" "1"
+	"health" "0"
+	"skin" "0"
+	"disableshadows" "1"
+	"solid" "6"
+	"MinAnimTime" "5"
+	"MaxAnimTime" "10"
+	"demo_sequence" "None"
+	"npc_transparent" "1"
+	"crossfade_skin_time" "2.0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"origin" "-1621 -183 -2688"
+	editor
+	{
+		"color" "127 127 255"
+	}
+}
 cameras
 {
 	"activecamera" "0"
 	camera
 	{
-		"position" "[680.98 -489.929 -2649.16]"
-		"look" "[-1608.7 -2763.69 -2675.76]"
+		"position" "[-1558.64 -148.612 -2657.67]"
+		"look" "[-1043.22 -1134.57 -5686.8]"
 	}
 }
 cordon
