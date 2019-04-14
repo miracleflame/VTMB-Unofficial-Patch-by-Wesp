@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7999"
-	"mapversion" "35"
+	"mapversion" "43"
 	"prefab" "0"
 }
 viewsettings
@@ -15,7 +15,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "35"
+	"mapversion" "43"
 	"classname" "worldspawn"
 	"skyname" "holly"
 	"sounds" "1"
@@ -71562,7 +71562,7 @@ entity
 	"crossfade_skin_time" "2.0"
 	"renderamt" "255"
 	"rendercolor" "255 255 255"
-	"origin" "-492.283 427.54 -149.608"
+	"origin" "-492.283 427 -149"
 	editor
 	{
 		"color" "127 127 255"
@@ -71839,7 +71839,7 @@ entity
 	"id" "1247"
 	"classname" "prop_dynamic"
 	"angles" "0 90 0"
-	"model" "models/character/npc/common/freshcorpses/tortured_W_Eyes.mdl"
+	"model" "models/character/npc/common/freshcorpses/tortured_ver3.mdl"
 	"skin" "0"
 	"disableshadows" "1"
 	"solid" "3"
@@ -71854,7 +71854,7 @@ entity
 	"crossfade_skin_time" "2.0"
 	"renderamt" "255"
 	"rendercolor" "255 255 255"
-	"origin" "34.4745 -411.542 -149.639"
+	"origin" "34.4745 -412 -164"
 	editor
 	{
 		"color" "127 127 255"
@@ -76924,8 +76924,8 @@ entity
 			"id" "5340"
 			"plane" "(-532 -322 269) (-532 -43 269) (-330 -43 269)"
 			"material" "TOOLS/TRIGGER_SMALL_HULL"
-			"uaxis" "[1 0 0 0] 0.25"
-			"vaxis" "[0 -1 0 0] 0.25"
+			"uaxis" "[1 0 0 -42] 0.25"
+			"vaxis" "[0 -1 0 22] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -98415,8 +98415,8 @@ entity
 			"id" "6699"
 			"plane" "(-453 -192 251) (-453 -151 251) (-398 -151 251)"
 			"material" "TILE/MUSFLOORC_BLOODY"
-			"uaxis" "[1 0 0 -135] 0.15"
-			"vaxis" "[0 -1 0 7] 0.15"
+			"uaxis" "[1 0 0 22] 0.15"
+			"vaxis" "[0 -1 0 140] 0.15"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -104840,8 +104840,8 @@ entity
 			"id" "7161"
 			"plane" "(-538 -4 251) (-536 10 251) (-254 -4 251)"
 			"material" "TILE/MUSFLOORC_BLOODY"
-			"uaxis" "[1 0 0 -135] 0.15"
-			"vaxis" "[0 -1 0 7] 0.15"
+			"uaxis" "[1 0 0 -170] 0.15"
+			"vaxis" "[0 -1 0 22] 0.15"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -104945,8 +104945,8 @@ entity
 			"id" "7169"
 			"plane" "(-538 -42 251) (-538 -16 251) (-254 -16 251)"
 			"material" "TILE/MUSFLOORC_BLOODY"
-			"uaxis" "[1 0 0 -135] 0.15"
-			"vaxis" "[0 -1 0 7] 0.15"
+			"uaxis" "[1 0 0 -170] 0.15"
+			"vaxis" "[0 -1 0 22] 0.15"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -105028,8 +105028,8 @@ entity
 			"id" "7175"
 			"plane" "(-564 -86 251) (-564 -16 251) (-538 -16 251)"
 			"material" "TILE/MUSFLOORC_BLOODY"
-			"uaxis" "[1 0 0 -135] 0.15"
-			"vaxis" "[0 -1 0 7] 0.15"
+			"uaxis" "[1 0 0 -170] 0.15"
+			"vaxis" "[0 -1 0 22] 0.15"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -105054,7 +105054,7 @@ entity
 		side
 		{
 			"id" "7176"
-			"plane" "(-564 -326.624 251) (-564 -326.624 249) (-564 -142 249)"
+			"plane" "(-564 -323.999 251) (-564 -323.999 249) (-564 -142 249)"
 			"material" "METAL/MUSCOUNTERA"
 			"uaxis" "[0 1 0 264] 0.25"
 			"vaxis" "[0 0 -1 -116] 0.25"
@@ -105065,7 +105065,7 @@ entity
 		side
 		{
 			"id" "7177"
-			"plane" "(-538 -142 251) (-538 -142 249) (-538 -326.624 249)"
+			"plane" "(-538 -142 251) (-538 -142 249) (-538 -323.999 249)"
 			"material" "PLASTER/DRAGCEILINGTRIMA"
 			"uaxis" "[0 1 0 97] 0.22"
 			"vaxis" "[0 0 -1 11] 0.13"
@@ -105076,7 +105076,7 @@ entity
 		side
 		{
 			"id" "7178"
-			"plane" "(-538 -326.624 251) (-538 -326.624 249) (-564 -326.624 249)"
+			"plane" "(-538 -323.999 251) (-538 -323.999 249) (-564 -323.999 249)"
 			"material" "PLASTER/DRAGCEILINGTRIMA"
 			"uaxis" "[-1 0 0 -269.333] 0.15"
 			"vaxis" "[0 0 -1 9] 0.15"
@@ -105098,7 +105098,7 @@ entity
 		side
 		{
 			"id" "7180"
-			"plane" "(-564 -142 249) (-564 -326.624 249) (-538 -326.624 249)"
+			"plane" "(-564 -142 249) (-564 -323.999 249) (-538 -323.999 249)"
 			"material" "TILE/MUSFLOORC"
 			"uaxis" "[-1 0 0 -269.333] 0.15"
 			"vaxis" "[0 1 0 220] 0.15"
@@ -105109,10 +105109,10 @@ entity
 		side
 		{
 			"id" "7181"
-			"plane" "(-564 -326.624 251) (-564 -142 251) (-538 -142 251)"
+			"plane" "(-564 -323.999 251) (-564 -142 251) (-538 -142 251)"
 			"material" "TILE/MUSFLOORC_BLOODY"
-			"uaxis" "[1 0 0 -135] 0.15"
-			"vaxis" "[0 -1 0 7] 0.15"
+			"uaxis" "[1 0 0 -170] 0.15"
+			"vaxis" "[0 -1 0 22] 0.15"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -105148,7 +105148,7 @@ entity
 		side
 		{
 			"id" "7183"
-			"plane" "(-514 -324 251) (-514 -324 249) (-514 -364 249)"
+			"plane" "(-513 -324 251) (-513 -324 249) (-513 -364 249)"
 			"material" "PLASTER/DRAGCEILINGTRIMA"
 			"uaxis" "[0 -1 0 97] 0.22"
 			"vaxis" "[0 0 -1 11] 0.13"
@@ -105159,7 +105159,7 @@ entity
 		side
 		{
 			"id" "7184"
-			"plane" "(-514 -364 251) (-514 -364 249) (-564 -364 249)"
+			"plane" "(-513 -364 251) (-513 -364 249) (-564 -364 249)"
 			"material" "METAL/MUSCOUNTERA"
 			"uaxis" "[-1 0 0 -200] 0.25"
 			"vaxis" "[0 0 -1 -116] 0.25"
@@ -105170,7 +105170,7 @@ entity
 		side
 		{
 			"id" "7185"
-			"plane" "(-564 -324 251) (-564 -324 249) (-514 -324 249)"
+			"plane" "(-564 -324 251) (-564 -324 249) (-513 -324 249)"
 			"material" "PLASTER/DRAGCEILINGTRIMA"
 			"uaxis" "[-1 0 0 97] 0.22"
 			"vaxis" "[0 0 -1 11] 0.13"
@@ -105181,7 +105181,7 @@ entity
 		side
 		{
 			"id" "7186"
-			"plane" "(-564 -324 249) (-564 -364 249) (-514 -364 249)"
+			"plane" "(-564 -324 249) (-564 -364 249) (-513 -364 249)"
 			"material" "TILE/MUSFLOORC"
 			"uaxis" "[0 -1 0 -472] 0.15"
 			"vaxis" "[-1 0 0 -212] 0.15"
@@ -105192,10 +105192,10 @@ entity
 		side
 		{
 			"id" "7187"
-			"plane" "(-564 -364 251) (-564 -324 251) (-514 -324 251)"
+			"plane" "(-564 -364 251) (-564 -324 251) (-513 -324 251)"
 			"material" "TILE/MUSFLOORC_BLOODY"
-			"uaxis" "[1 0 0 -135] 0.15"
-			"vaxis" "[0 -1 0 7] 0.15"
+			"uaxis" "[1 0 0 -170] 0.15"
+			"vaxis" "[0 -1 0 22] 0.15"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -105941,8 +105941,8 @@ entity
 			"id" "7241"
 			"plane" "(-418 -364 251) (-418 -250 251) (-413 -250 251)"
 			"material" "TILE/MUSFLOORC_BLOODY"
-			"uaxis" "[1 0 0 -135] 0.15"
-			"vaxis" "[0 -1 0 7] 0.15"
+			"uaxis" "[1 0 0 -170] 0.15"
+			"vaxis" "[0 -1 0 22] 0.15"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -106024,8 +106024,8 @@ entity
 			"id" "7247"
 			"plane" "(-397 -364 251) (-397 -250 251) (-392 -250 251)"
 			"material" "TILE/MUSFLOORC_BLOODY"
-			"uaxis" "[1 0 0 -135] 0.15"
-			"vaxis" "[0 -1 0 7] 0.15"
+			"uaxis" "[1 0 0 -170] 0.15"
+			"vaxis" "[0 -1 0 22] 0.15"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -106190,8 +106190,8 @@ entity
 			"id" "7259"
 			"plane" "(-413 -364 251) (-413 -310 251) (-397 -310 251)"
 			"material" "TILE/MUSFLOORC_BLOODY"
-			"uaxis" "[1 0 0 -135] 0.15"
-			"vaxis" "[0 -1 0 7] 0.15"
+			"uaxis" "[1 0 0 -170] 0.15"
+			"vaxis" "[0 -1 0 22] 0.15"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -106240,8 +106240,8 @@ entity
 			"id" "7262"
 			"plane" "(-392 -364 251) (-392 -250 251) (-381 -307 251)"
 			"material" "TILE/MUSFLOORC_BLOODY"
-			"uaxis" "[1 0 0 -135] 0.15"
-			"vaxis" "[0 -1 0 7] 0.15"
+			"uaxis" "[1 0 0 -170] 0.15"
+			"vaxis" "[0 -1 0 22] 0.15"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -106516,8 +106516,8 @@ entity
 			"id" "7284"
 			"plane" "(-471 -364 251) (-471 -324 251) (-418 -324 251)"
 			"material" "TILE/MUSFLOORC_BLOODY"
-			"uaxis" "[1 0 0 -135] 0.15"
-			"vaxis" "[0 -1 0 7] 0.15"
+			"uaxis" "[1 0 0 -170] 0.15"
+			"vaxis" "[0 -1 0 22] 0.15"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -111164,8 +111164,8 @@ entity
 			"id" "7620"
 			"plane" "(-500 -16 251) (-500 -4 251) (-288 -4 251)"
 			"material" "TILE/MUSFLOORC_BLOODY"
-			"uaxis" "[1 0 0 -135] 0.15"
-			"vaxis" "[0 -1 0 7] 0.15"
+			"uaxis" "[1 0 0 -170] 0.15"
+			"vaxis" "[0 -1 0 22] 0.15"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -147144,7 +147144,7 @@ entity
 	"id" "3622"
 	"classname" "env_cubemap"
 	"cubemapsize" "0"
-	"sides" "7191 6745 6746 6747 7195 6748 7276"
+	"sides" "5107 6745 6746 6747 5014 6748 5071 5095 7189 7273 5007 5112 5088 5100"
 	"origin" "-490 -230 232"
 	editor
 	{
@@ -147156,7 +147156,7 @@ entity
 	"id" "3623"
 	"classname" "env_cubemap"
 	"cubemapsize" "0"
-	"sides" "6688 6689 6690 6691 7286 7287 7176 7288"
+	"sides" "7286 7287 7288"
 	"origin" "-471 -208 277"
 	editor
 	{
@@ -147234,17 +147234,6 @@ entity
 }
 entity
 {
-	"id" "3630"
-	"classname" "env_cubemap"
-	"cubemapsize" "0"
-	"origin" "-392 -128 277"
-	editor
-	{
-		"color" "0 0 255"
-	}
-}
-entity
-{
 	"id" "3631"
 	"classname" "env_cubemap"
 	"cubemapsize" "0"
@@ -147267,44 +147256,11 @@ entity
 }
 entity
 {
-	"id" "3633"
-	"classname" "env_cubemap"
-	"cubemapsize" "0"
-	"origin" "-485 -147 277"
-	editor
-	{
-		"color" "0 0 255"
-	}
-}
-entity
-{
-	"id" "3634"
-	"classname" "env_cubemap"
-	"cubemapsize" "0"
-	"origin" "-435 -170 277"
-	editor
-	{
-		"color" "0 0 255"
-	}
-}
-entity
-{
 	"id" "3635"
 	"classname" "env_cubemap"
 	"cubemapsize" "0"
 	"sides" "5187 5181"
 	"origin" "124 216 184"
-	editor
-	{
-		"color" "0 0 255"
-	}
-}
-entity
-{
-	"id" "3636"
-	"classname" "env_cubemap"
-	"cubemapsize" "0"
-	"origin" "-490 -230 273"
 	editor
 	{
 		"color" "0 0 255"
@@ -148205,8 +148161,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[-184.155 1132.1 -342.538]"
-		"look" "[-169.94 1402.36 -381.384]"
+		"position" "[-484.058 -218.227 249.342]"
+		"look" "[-479.425 -487.442 201.866]"
 	}
 	camera
 	{

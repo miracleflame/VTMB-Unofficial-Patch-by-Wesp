@@ -8015,6 +8015,7 @@
 "OnFinishCrushAnimation" "rotdoor2,Kill,,0,-1,,"
 "OnFinishCrushAnimation" "rotdoor1,Kill,,0,-1,,"
 "OnFinishCrushAnimation" "telescope_doors_switch,Unlock,,0,-1,,"
+"OnFinishCrushAnimation" "door_block,ScriptUnhide,,0,-1,,"
 "OnBeginCrushAnimation" "telescope_doors_switch,Lock,,0,-1,,"
 "OnBeginCrushAnimation" "rotdoor2,SetSpeed,5,0.5,-1,,"
 "OnBeginCrushAnimation" "rotdoor1,SetSpeed,5,0.5,-1,,"
@@ -10108,6 +10109,28 @@
 }
 {
 "classname" "prop_largehull_ignore"
+"angles" "38 265 0"
+"model" "models/scenery/structural/sewer/sew_stair02.mdl"
+"skin" "0"
+"solid" "0"
+"disableshadows" "1"
+"StartHidden" "1"
+"targetname" "breakable_stairs_pieces_1"
+"origin" "-415 700 149"
+}
+{
+"classname" "prop_largehull_ignore"
+"angles" "47 290 -22"
+"model" "models/scenery/structural/sewer/sew_stair03.mdl"
+"skin" "0"
+"solid" "0"
+"disableshadows" "1"
+"StartHidden" "1"
+"targetname" "breakable_stairs_pieces_1"
+"origin" "-372 691 150"
+}
+{
+"classname" "prop_largehull_ignore"
 "angles" "0 270 0"
 "model" "models/scenery/structural/sewer/sew_stair04.mdl"
 "skin" "0"
@@ -10162,6 +10185,28 @@
 }
 {
 "classname" "prop_largehull_ignore"
+"angles" "22 190 -5"
+"model" "models/scenery/structural/sewer/sew_stair03.mdl"
+"skin" "0"
+"solid" "0"
+"disableshadows" "1"
+"StartHidden" "1"
+"targetname" "breakable_stairs_pieces_2"
+"origin" "140 140 170"
+}
+{
+"classname" "prop_largehull_ignore"
+"angles" "20 170 30"
+"model" "models/scenery/structural/sewer/sew_stair02.mdl"
+"skin" "0"
+"solid" "0"
+"disableshadows" "1"
+"StartHidden" "1"
+"targetname" "breakable_stairs_pieces_2"
+"origin" "158 175 147"
+}
+{
+"classname" "prop_largehull_ignore"
 "angles" "0 180 0"
 "model" "models/scenery/structural/sewer/sew_stair01.mdl"
 "skin" "0"
@@ -10184,6 +10229,28 @@
 }
 {
 "classname" "prop_largehull_ignore"
+"model" "models/scenery/structural/observatory/obsstairs_b.mdl"
+"angles" "0 270 -50"
+"skin" "0"
+"disableshadows" "1"
+"solid" "0"
+"StartHidden" "1"
+"targetname" "breakable_stairs_pieces_3"
+"origin" "-297 220 100"
+}
+{
+"classname" "prop_largehull_ignore"
+"model" "models/scenery/structural/observatory/obsstairs_c.mdl"
+"angles" "0 270 0"
+"skin" "0"
+"disableshadows" "1"
+"solid" "6"
+"StartHidden" "1"
+"targetname" "breakable_stairs_pieces_3"
+"origin" "-296 236 205"
+}
+{
+"classname" "prop_largehull_ignore"
 "model" "models/scenery/structural/observatory/obsstairs_d.mdl"
 "angles" "0 270 0"
 "skin" "0"
@@ -10193,6 +10260,7 @@
 "targetname" "breakable_stairs_pieces_3"
 "origin" "-297 236 205"
 }
+
 {
 "model" "*119"
 "classname" "func_breakable"
@@ -15566,6 +15634,27 @@
 "renderamt" "255"
 "rendercolor" "255 255 255"
 "origin" "-1309.95 497.176 130.419"
+}
+{
+"classname" "prop_dynamic"
+"angles" "0 218 0"
+"targetname" "door_block"
+"StartHidden" "1"
+"model" "models/scenery/misc/BoxesBreakable/BoxesBreakable_D0.mdl"      
+"health" "0"
+"skin" "0"
+"disableshadows" "1"
+"solid" "2"
+"MinAnimTime" "5"
+"MaxAnimTime" "10"
+"demo_sequence" "None"
+"npc_transparent" "1"
+"crossfade_skin_time" "2.0"
+"renderfx" "6"
+"rendermode" "10"
+"renderamt" "255"
+"rendercolor" "255 255 255"
+"origin" "-200 316 310"
 }
 {
 "classname" "logic_auto"
