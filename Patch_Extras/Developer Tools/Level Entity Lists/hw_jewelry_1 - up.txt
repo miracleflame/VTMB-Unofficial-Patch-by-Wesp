@@ -4555,7 +4555,8 @@
 }
 {
 "classname" "ambient_soundscheme"
-"start_enabled" "1"
+"targetname" "Scheme609"
+"start_enabled" "0"
 "scheme_file" "sound/Schemes/609.txt"
 "origin" "-325.566 -19.7996 260"
 }
@@ -6457,6 +6458,8 @@
 "classname" "logic_relay"
 "StartDisabled" "0"
 "targetname" "start_snuff"
+"OnTrigger" "SchemeJewelry,FadeOut,,0,-1,,"
+"OnTrigger" "Scheme609,FadeIn,,0,-1,,"
 "OnTrigger" "snuff_doors,SetAnimation,Snuff_Film,9.75,-1,,"
 "OnTrigger" "snuff_target,PlayAsCameraTarget,,9.75,-1,,"
 "OnTrigger" "snuff_camera,PlayAsCameraPosition,,9.75,-1,,"
@@ -6792,6 +6795,8 @@
 "classname" "logic_relay"
 "StartDisabled" "0"
 "targetname" "start_half_snuff"
+"OnTrigger" "SchemeJewelry,FadeOut,,0,-1,,"
+"OnTrigger" "Scheme609,FadeIn,,0,-1,,"
 "OnTrigger" "teleport_close,Teleport,,0,-1,,"
 "OnTrigger" "playercontroller,ImmobilizePlayer,,0,-1,,"
 "OnTrigger" "TV_Camera,PlayAsCameraPosition,,0,-1,,"
@@ -6966,6 +6971,8 @@
 "spawnflags" "1"
 "origin" "-3489.74 -3132.5 -67.43"
 "StartHidden" "1"
+"OnTrigger" "SchemeJewelry,FadeIn,,0,-1,,"
+"OnTrigger" "Scheme609,FadeOut,,0,-1,,"
 "OnTrigger" "force_dialog,ScriptHide,,1,-1,,"
 "OnTrigger" "Isaac,StartPlayerDialogRemote,,0,-1,,"
 }
