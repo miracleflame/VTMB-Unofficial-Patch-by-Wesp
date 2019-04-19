@@ -1,6 +1,6 @@
 {	1	}{	Might as well be a costume party... everyone smiling, pretending this isn't a pageant put on by the patriarch of this family. Fine. But this is a contest, and I came to win.	}{	Might as well be a costume party... everyone smiling, pretending this isn't a pageant put on by the patriarch of this family. Fine. But this is a contest, and I came to win.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	2	}{	What are you talking about?	}{	What are you talking about?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	I can't catch up to your train of thought.	}
-{	3	}{	Tell me what you know about the sarcophagus.	}{	Tell me what you know about the sarcophagus.	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	I don't want your story, I want the sarcophagus.	}
+{	3	}{	Tell me what you know about the sarcophagus.	}{	Tell me what you know about the sarcophagus.	}{	161	}{	G.Story_State > 55	}{	}{	}{	}{	}{	}{	}{	}{	I don't want your story, I want the sarcophagus.	}
 {	4	}{	I'm Victor. Pleasure to make your acquaintance.	}{	I'm Maria. Pleasure to make your acquaintance.	}{	11	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	I'm also a family member. I'm... mmm-mmm ahem.... And you are?	}
 {	5	}{	May the best one win.	}{	May the best one win.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	That trophy is mine!	}
 {	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -169,7 +169,7 @@
 {	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	171	}{	If you don't even know about the contest, then you really don't have to worry about winning it.	}{	If you don't even know about the contest, then you really don't have to worry about winning it.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	172	}{	Tell me what you know about the sarcophagus.	}{	Tell me what you know about the sarcophagus.	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	I don't want your story, I want the sarcophagus.	}
+{	172	}{	Tell me what you know about the sarcophagus.	}{	Tell me what you know about the sarcophagus.	}{	161	}{	G.Story_State > 55	}{	}{	}{	}{	}{	}{	}{	}{	I don't want your story, I want the sarcophagus.	}
 {	173	}{	I'm Victor. Pleasure to make your acquaintance.	}{	I'm Maria. Pleasure to make your acquaintance.	}{	11	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	I'm also a family member. I'm... mmm-mmm ahem.... And you are?	}
 {	174	}{	That's what you think. I have a contest to win, excuse me.	}{	That's what you think. I have a contest to win, excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	That trophy is mine!	}
 {	175	}{	Right. Enjoy the party.	}{	Right. Enjoy the party.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Fruitless. I'll pick from another tree.	}
@@ -251,7 +251,7 @@
 {	251	}{	Oh... hello again.	}{	Oh... hello again.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	252	}{	I forgot to introduce myself. I'm Victor.	}{	I forgot to introduce myself. I'm Maria.	}{	11	}{	G.Mira_Introduce == 0	}{	}{	}{	}{	}{	}{	}{	}{	I'm also a family member. I'm... mmm-mmm ahem.... And you are?	}
 {	253	}{	I might have heard something about your family you might like to know.	}{	I might have heard something about your family you might like to know.	}{	271	}{	G.Mira_Gossip == 1	}{	}{	}{	}{	}{	}{	}{	}{	I may have closet bones to sell.	}
-{	254	}{	Tell me what you know about the sarcophagus.	}{	Tell me what you know about the sarcophagus.	}{	161	}{	}{	}{	}{	}{	}{	}{	}{	}{	I don't want your story, I want the sarcophagus.	}
+{	254	}{	Tell me what you know about the sarcophagus.	}{	Tell me what you know about the sarcophagus.	}{	161	}{	G.Story_State > 55	}{	}{	}{	}{	}{	}{	}{	}{	I don't want your story, I want the sarcophagus.	}
 {	255	}{	Excuse me. Thought you were someone else.	}{	Excuse me. Thought you were someone else.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	That it is. So long.	}
 {	256	}{	Hello. Goodbye.	}{	Hello. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Hello. Goodbye.	}
 {	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
