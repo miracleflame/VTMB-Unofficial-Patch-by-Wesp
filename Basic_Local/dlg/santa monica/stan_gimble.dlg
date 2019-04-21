@@ -254,7 +254,7 @@
 {	254	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	255	}{	Oh, that's wonderful.	}{	Oh, that's wonderful.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	256	}{	Indeed, just check in with a guy called Vandal. It will be perfect for a specialist like yourself.	}{	Indeed, just check in with a guy called Vandal. It will be perfect for a specialist like yourself.	}{	201	}{	pc.humanity >= 4	}{	G.Vandal_Quest = 3; G.Gimble_Vandal = 1; pc.SetQuest("Danielle",7); FindPlayer().HumanityAdd( -1 ); G.Gimble_Humanity = 1	}{	}{	}{	}{	}{	}{	}{	A Vandal will receive you with pleasure for your are special.	}
-{	257	}{	Indeed, just check in with a guy called Vandal. It will be perfect for a specialist like yourself.	}{	Indeed, just check in with a guy called Vandal. It will be perfect for a specialist like yourself.	}{	201	}{	pc.humanity < 4	}{	G.Vandal_Quest = 3; G.Gimble_Vandal = 1; pc.SetQuest("Danielle",7)	}{	}{	}{	}{	}{	}{	}{	A Vandal will receive you with pleasure for your are special.	}
+{	257	}{	Indeed, just check in with a guy called Vandal. It will be perfect for a specialist like yourself.	}{	Indeed, just check in with a guy called Vandal. It will be perfect for a specialist like yourself.	}{	201	}{	pc.humanity < 4	}{	G.Vandal_Quest = 3; G.Gimble_Vandal = 1; pc.SetQuest("Danielle",7)	}{	}{	}{	}{	}{	}{	}{	A Vandal will receive you with pleasure for you are special.	}
 {	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
