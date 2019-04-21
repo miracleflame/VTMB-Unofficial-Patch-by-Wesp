@@ -628,7 +628,9 @@ def checkMafiaState():
             boris_plus.ScriptUnhide()
             boris_plus.SetName("Boris")
             G.Boris_Swap = 1
-    if(G.Boris_Hostile or G.Dema_Hostile or G.Dema_Go == 2):
+    if(G.Boris_Hostile > 0 or G.Dema_Hostile > 0 or G.Dema_Go == 2):
+        trigger = Find("dema_hide_trigger")
+        trigger.Disable()
         dema = Find("Dema")
         dema.SetRelationship("player D_HT 5")
         dude = Find("patrol_guy")
