@@ -146,8 +146,8 @@
 {	146	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	147	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	148	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	150	}{	You're a disgrace. Die, Caitiff!	}{	You're a disgrace. Die, Caitiff!	}{	0	}{	}{	G.Killer_Hostile = 1	}{	}{	}{	}{	}{	}{	}{	Die, clanless one!	}
+{	149	}{	You're dangerous. Die now!	}{	You're dangerous. Die now!	}{	0	}{	G.Bertram_Caitiff == 0	}{	G.Killer_Hostile = 1	}{	}{	}{	}{	}{	}{	}{	Die, dangerous one!	}
+{	150	}{	You're a disgrace. Die, Caitiff!	}{	You're a disgrace. Die, Caitiff!	}{	0	}{	G.Bertram_Caitiff == 1	}{	G.Killer_Hostile = 1	}{	}{	}{	}{	}{	}{	}{	Die, clanless one!	}
 {	151	}{	[anguished, breaking down]No - God no! No! It's got to stop. I can't live like this. You're right. Oh God, you're right! I'll never do it again, I swear. Forgive me.	}{	[anguished, breaking down]No - God no! No! It's got to stop. I can't live like this. You're right. Oh God, you're right! I'll never do it again, I swear. Forgive me.	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	152	}{	Alright. Go. Get on with your unlife.	}{	Alright. Go. Get on with your unlife.	}{	0	}{	Humanity 5	}{	G.Killer_Freed = 1; pc.SetQuest("Serial",9)	}{	}{	}{	}{	}{	}{	}{	Cast no more dark shadows.	}
 {	153	}{	Get lost then. Consider yourself lucky.	}{	Get lost then. Consider yourself lucky.	}{	0	}{	Humanity -5	}{	G.Killer_Freed = 1; pc.SetQuest("Serial",9)	}{	}{	}{	}{	}{	}{	}{	Luck has smiled on your murderous carcass. I leave you.	}
