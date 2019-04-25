@@ -1,0 +1,1906 @@
+//====== Copyright © 2003-2017, Troika Games, Inc. All rights reserved. =======
+//
+// Purpose: Vampire Bloodlines game definition file (.fgd) 
+// Version: 1.42 beta
+// Edition: Original VtMB [Additional Base]
+// Written: Psycho-A
+//
+//=============================================================================
+
+
+//-------------------------------------------------------------------------------------------------------------------
+// NOTE1: These entities found in game code but not included for its potetial useless and inoperability.
+//-------------------------------------------------------------------------------------------------------------------
+
+	// activity_copy_prop
+	// ai_hint
+	// ai_network
+	// aitesthull
+	// auspex_aura
+	// beam
+	// bodyque
+	// camera_animated
+	// camera_track
+	// debug_entity
+	// dynamic_prop
+	// entityflame
+	// disc_particle
+	// env_glow
+	// env_steamjet
+	// env_swarm_bats
+	// filter_base
+	// flame_cluster
+	// func_plat
+	// func_wall
+	// funCBaseFlex
+	// gib
+	// gravity_pellet
+	// grenade
+	// info_constraint_anchor
+	// info_intermission
+	// info_player_deathmatch
+	// instanced_scripted_scene
+	// light_glspot
+	// logic_proximity
+	// momentary_door
+	// multisource
+	// npc_crow
+	// npc_generic_bathack
+	// npc_TestBaseHumanoid
+	// npc_VTest
+	// npc_VPlaceholder
+	// npc_VChangBros
+	// npc_VCombatman
+	// npc_VMercurio
+	// npc_VMoleman
+	// npc_sabbat
+	// physics_prop
+	// physics_prop_ragdoll
+	// player
+	// player_manager
+	// player_pickup
+	// playerevents
+	// prop_base
+	// prop_model_state
+	// prop_ragdoll_special
+	// raggib
+	// scripted_scene
+	// sheriff_teleport_bats
+	// simple_physics_brush
+	// simple_physics_prop
+	// soundent
+	// speaker
+	// tectonic
+	// te_tester
+	// test_traceline
+	// trigger
+	// trigger_brush
+	// vampire_skill
+	// vampireprojectile
+	// vampireprojectile_mingxiaospit
+	// vdisciplineprojectile
+	// viewmodel
+	// weapon_physcannon
+	// window_pane
+	// worldevents
+
+
+
+//-------------------------------------------------------------------------------------------------------------------
+// NOTE2: All of entities below are workable and compatible with Source Engine but not used in game.
+//-------------------------------------------------------------------------------------------------------------------
+
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+//
+// AI Entities
+//
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+
+
+//====================================================================================================================
+// ai_changehintgroup [common, HL2-based]
+//====================================================================================================================
+
+@PointClass base(Targetname) sphere(Radius)  size(-8 -8 -8, 8 8 8) = ai_changehintgroup : "Change Hint Group"
+[
+	SearchType(choices) : "Search Type" : 0 : "How to search for the entities to change." = 
+	[
+		0 : "Entity Name"
+		1 : "Classname"
+		2 : "Old Hint Group"
+	] 
+	SearchName(string) : "Name to search for"
+	NewHintGroup(string) : "New Hint Group"
+	Radius(string) : "Search Radius" : "0.0" : "Radius to search (0 for all of map)"
+	hintlimiting(choices) : "Hint Limit Nav" : 0 : "Limits NPC to using specified hint group for navigation requests, does not limit local navigation." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+
+	input Kill( void ) : "Removes this entity from the world"
+	input Activate( void ) : "Change the Hint Group"
+]
+
+
+
+
+//====================================================================================================================
+// ai_changetarget [common, HL2-based]
+//====================================================================================================================
+
+@PointClass base(Targetname) size(-8 -8 -8, 8 8 8) = ai_changetarget : "Change Target"
+[
+	target(target_destination) : "Target entity" : : "Name of entity whose target will be changed."
+	m_iszNewTarget(string) : "New Target"
+
+	// Inputs
+	input Kill( void ) : "Removes this entity from the world"
+	input Activate( void ) : "Changes the entities target"
+]
+
+
+
+
+//====================================================================================================================
+// ai_goal_standoff [common, HL2-based]
+//====================================================================================================================
+
+@PointClass base(Targetname) iconsprite("editor/ai_goal_standoff.vmt") = ai_goal_standoff : "AI Goal Standoff"
+[
+	actor(target_destination) : "Actor(s) to affect"
+//	goal(string) : "Target Entity (self by default) [NOT IMPLEMENTED]"
+
+	StartActive(choices) : "Start Active" : 0 =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+
+	HintGroupChangeReaction(Choices) : "Reaction to tactical change" : 1 : "What to do if leader moves, threat is neutralized, hint group changes, etc" =
+	[
+		0 : "Move when ready (default AI)"
+		1 : "Move when seek cover"
+		2 : "Move immediately"
+	]
+
+	Aggressiveness(Choices) : "Aggressiveness" : 2 =
+	[
+		0 : "Very low"
+		1 : "Low"
+		2 : "Medium"
+		3 : "High"
+		4 : "Very High"
+		// Custom agression disabled
+		// 		100 : "Custom"
+	]
+
+	PlayerBattleline(choices) : "Player battleline" : 1 : "Player defines a battle line, applies to allies only" =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+
+	StayAtCover(choices) : "Stay at cover location" : 0 : "When have suitable cover, don't change it (disables advancing to battle line)" =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+
+	// Inputs
+	input Activate( void ) : "Begin contesting position"
+	input Deactivate( void ) : "Cease contesting position"
+	input SetAggressiveness(integer) : "Set aggressiveness"
+]
+
+
+
+//====================================================================================================================
+// ai_sound [common, HL2-based]
+//====================================================================================================================
+
+@PointClass base(Targetname,Parentname)
+line (
+	255 255 255,
+	targetname,
+	parentname
+)
+sphere(volume) iconsprite("editor/ai_sound.vmt") = ai_sound :
+	"This entity makes sounds or smells that can be sensed by NPCs, but not by the player. This can be used " +
+	"to cause reactions in nearby NPCs.\n\n" +
+	"Sound Types\n" +
+	"  Combat: Will cause most NPCs to become alert\n" +
+	"  World: Will cause most NPCs to become alert\n" +
+	"  Danger: Will cause most NPCs to move away from the position of the sound\n" +
+	"  Bullet Impact: \n" +
+	"  Carcass: \n" +
+	"  Meat: \n" +
+	"  Garbage: \n" +
+	"  Thumper: causes antlions to run away briefly\n" +
+	"  Readiness: (Low, Medium, High) Causes player companions that can hear this sound to change readiness\n"
+[																									  
+	input InsertSound(Integer) : "Insert a sound in the AI sound list"
+
+	soundtype(choices) : "Sound Type" : 0 : "The type of sound or smell will determine the reaction of NPCs that sense it." =
+	[
+		1: "Combat"
+		2: "World"
+		//4: "Player (Don't use)"
+		8: "Danger"
+		16: "Bullet Impact"
+		32: "Carcass"
+		64: "Meat"
+		128: "Garbage"
+		256: "Thumper"
+	]
+]
+
+
+
+
+
+
+
+
+
+
+
+
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+//
+// Environmental Effects
+//
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+
+
+//====================================================================================================================
+// env_firesensor [common]
+//====================================================================================================================
+
+@PointClass base(Targetname,Parentname)
+line (
+	255 255 255,
+	targetname,
+	parentname
+)
+size(-4 -4 -4, 4 4 4) color(255 255 0) sphere(fireradius) = env_firesensor : 
+	"An entity that detects changes in heat nearby."
+[
+	spawnflags(flags) =
+	[
+		1:	"Start On" : 1
+	]
+
+	fireradius(float) : "Radius" : 128
+	heatlevel(float) : "Heat level" : 32
+	heattime(float) : "Time at level" : 0
+
+	// Inputs
+	input Enable(void)				: "Enable fire source"
+	input Disable(void)				: "Disable fire source"
+	output OnHeatLevelStart(void)	: "Fires when the heat level has been detected for the given length of time"
+	output OnHeatLevelEnd(void)		: "Fires when the heat level is no longer detected."
+]
+
+
+
+
+//====================================================================================================================
+// env_microphone [common]
+//====================================================================================================================
+
+@PointClass base(Targetname,Parentname,EnableDisable)
+line (
+	255 255 255,
+	targetname,
+	parentname
+)
+iconsprite("editor/env_microphone.vmt") sphere(MaxRange) color(0 0 255) = env_microphone :
+	"An entity that acts as a microphone. It works in one of two modes. If it has a 'Speaker' set, it picks up all sounds within the specified sound range, " +
+	"and rebroadcasts them through the Speaker entity. In this Speaker mode, it ignores the Hears X spawnflags and does not fire the SoundLevel output. " +
+	"If it has no Speaker set, it measures the sound level at a point, and outputs the sound level as a value between 0 and 1. In Measuring mode, it only hears sounds that match the Hear X spawnflags."
+[
+	target(target_destination) : "Measure target" : : "The name of an entity where the sound level will be measured."
+	SpeakerName(target_destination) : "Speaker" : "" : "The name of a speaker entity through which to play any sounds heard by this microphone."
+
+	spawnflags(flags) =
+	[
+		1 : "Hears combat sounds" : 1
+		2 : "Hears world sounds" : 1
+		4 : "Hears player sounds" : 1
+		8 : "Hears bullet impacts" : 1
+		16: "Swallows sounds routed through speakers" : 0
+	]
+
+	Sensitivity(float) : "Sensitivity (0 - 10)" : 1 : "Microphone sensitivity, 0=deaf, 1=default, 10=extremely sensitive)"
+	SmoothFactor(float) : "Smoothing (0 - 1)" : 0 : "Smoothing factor, 0=no smoothing, 1=maximum smoothing)"
+	MaxRange(float) : "Maximum hearing range (0=infinite)" : 240 : "Sounds beyond this range won't be heard, irrelevant of attenuation. "+
+		"WARNING: setting this to zero (or a value > 1024) when the microphone is connected to a speaker entity can be very bad for performance!!"
+
+	// Outputs
+	output SoundLevel(float) : "Fires when the sound level at the point changes."
+	output OnRoutedSound(void) : "Fires whenever a heard sound is routed out through the specified speaker (if any)."
+]
+
+
+
+//====================================================================================================================
+// env_player_surface_trigger [common]
+//====================================================================================================================
+
+@PointClass base(Targetname) = env_player_surface_trigger : 
+	"An entity that monitors the material of the surface the player is standing on, and fires outputs whenever it changes to/from a specific material."
+[
+	gamematerial(choices) : "Game Material to Watch" : "0" : "The material to watch. When the player stands on/off this material, this entity's outputs will be fired." =
+	[
+		0 : "None (player's in the air)"
+		67 : "Concrete"
+		77 : "Metal"
+		68 : "Dirt"
+		86 : "Vent"
+		71 : "Grate"
+		84 : "Tile"
+		83 : "Slosh"
+		87 : "Wood"
+		80 : "Computer"
+		89 : "Glass"
+		70 : "Flesh"
+		73 : "Clip"
+		79 : "Foliage"
+		78 : "Sand"
+	]
+	
+	// Inputs
+	input Enable(void) : "Start watching the player's surface."
+	input Disable(void) : "Stop watching the player's surface."
+
+	// Outputs
+	output OnSurfaceChangedToTarget(void) : "Fired when the player moves onto the specified game material."
+	output OnSurfaceChangedFromTarget(void) : "Fired when the player moves off the specified game material."
+]
+
+
+
+//====================================================================================================================
+// env_soundscape [common]
+//====================================================================================================================
+
+@PointClass base(Targetname,Parentname,EnableDisable)
+line (
+	255 255 255,
+	targetname,
+	parentname
+)
+sphere() iconsprite("editor/env_soundscape.vmt") line(255 255 255, targetname, position0) line(255 255 255, targetname, position1) line(255 255 255, targetname, position2) line(255 255 255, targetname, position3) line(255 255 255, targetname, position4) line(255 255 255, targetname, position5) line(255 255 255, targetname, position6) line(255 255 255, targetname, position7) = env_soundscape : 
+	"An entity to control sound in an area. The active soundscape at any time is the last one that had line-of-sight to the player, and was within the radius."
+[
+	radius(integer) : "Radius" : 128
+	soundscape(choices) : "Soundscape" : "Nothing" =
+	[
+		"Nothing"				: "Nothing"
+		"Automatic"				: "Automatic"
+		"GenericIndoor"			: "Indoor"
+		"GenericOutdoor"		: "Outdoor"
+	]
+	position0(target_destination) : "Sound Position 0" : "" : "A sound position that will be referenced inside the soundscape text file. Usually used to position a set of sounds within the world."
+	position1(target_destination) : "Sound Position 1" : "" : "A sound position that will be referenced inside the soundscape text file. Usually used to position a set of sounds within the world."
+	position2(target_destination) : "Sound Position 2" : "" : "A sound position that will be referenced inside the soundscape text file. Usually used to position a set of sounds within the world."
+	position3(target_destination) : "Sound Position 3" : "" : "A sound position that will be referenced inside the soundscape text file. Usually used to position a set of sounds within the world."
+]
+
+
+
+//====================================================================================================================
+// env_terrainmorph [common, HL2-based]
+//====================================================================================================================
+
+@PointClass base(Targetname,Parentname)
+line (
+	255 255 255,
+	targetname,
+	parentname
+)
+size(-4 -4 -4, 4 4 4) color(0 180 0) = env_terrainmorph : 
+	"Morphs terrain by pulling vertices along a normal.\n\n" +
+	"Place this entity the desired distance from a terrain surface and set ANGLES " +
+	"to the normal along which you want to pull the surface's vertices. If you set the INSTANT spawnflag, " +
+	"the morph will take place instantly instead of over time.\n"
+[
+	startradius( integer ) : "Start Radius" : 500 : "Radius of the effect when morphing begins. Only this value is used" +
+													"if the effect is flagged to occur instantly."
+	goalradius( integer ) : "Goal Radius" : 100 : "Radius of the effect at the end of morphing. The radius of this effect will change from "+
+												  "Start Radius to Goal Radius over the duration of this effect. This value is ignored if the effect is flagged to occur instantly."
+
+	duration( integer ) : "Duration" : 3 : "The morph will take place over this period of time (seconds). Ignored if flagged to occur instantly"
+
+	fraction( integer ) : "Displacement Fraction" : 1 : "If set to 1, the terrain surface will be pulled exactly to this entity's position." +
+														" If set to 0.5, the surface will be pulled exactly half way to this entity's position. " +
+														"If set to 2, the surface will be pulled to an imaginary point twice as far away as this entity. " +
+														"(Any Displacement Fraction greater than 1.0 will result in clipping. The surface cannot be pulled beyond " +
+														"This entity's position and any vertices attemping will clip to this entity's position. You may use this feature to create mesas.)"
+
+	// Inputs
+	input BeginMorph(void) : "Begin Morph"
+
+	spawnflags(flags) =
+	[
+		1: "Instant" : 0 
+	]
+]
+
+
+
+
+
+
+
+
+
+
+
+
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+//
+// Function Brushes
+//
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+
+
+//====================================================================================================================
+// func_platrot [common]
+//====================================================================================================================
+// VTMB-adaptation:
+//  removed: Shadow,minlight
+
+@BaseClass = BasePlat
+[
+ 	input Toggle(void) : "Toggles the platform's state."
+	input GoUp(void) : "Tells the platform to go up."
+	input GoDown(void) : "Tells the platform to go down."
+]
+
+@SolidClass base(TargetnameRot,Parentname,p_Origin,RenderFields,BasePlat)
+line (
+	255 255 255,
+	targetname,
+	parentname
+)
+= func_platrot : 
+	"A brush entity that moves vertically, and can rotate while doing so." 
+[
+	spawnflags(Flags) =
+	[
+		1: "Toggle" : 1
+		64: "X Axis" : 0
+		128: "Y Axis" : 0
+	]
+	noise1(sound) : "Movement Sound" : : "The sound to play when the brush moves."
+	noise2(sound) : "Stop Sound" : : "The sound to play when the brush stops moving."
+	speed(integer) : "Speed of Rotation" : 50 : "Speed at which the brush rotates, in degrees per second."
+	height(integer) : "Travel Altitude" : 0 : "The vertical distance from the starting position that this platform moves. If negative, the platform will lower."
+	rotation(integer) : "Spin amount" : 0 : "The amount this platform should rotate as it moves, in degrees."
+]
+
+
+
+//====================================================================================================================
+// func_rot_button [common]
+//====================================================================================================================
+
+@SolidClass
+base (
+	TargetnameRot,
+	Parentname,
+	p_Origin,
+	EnableDisable,
+	e_func_button,
+	RenderFields,
+	o_VUsableExt
+)
+line (
+	255 255 255,
+	targetname,
+	parentname
+)
+= func_rot_button : 
+	"A brush entity that's designed to be used for a rotating player-useable button. When used by the player, it rotates to a pressed position."
+[
+	sep_rotbut1(string) readonly: "------------------------------------"
+
+	master(string) : "Master (Obsolete)" : : "Legacy support: The name of a master entity. If the master hasn't been activated, this button cannot be used."
+	health(integer) : "Health (Obsolete)" : 0 : "Legacy method of specifying whether or not the button can be shot to activate it. Use the 'Damage Activates' spawnflag instead."
+	sounds(choices) : "Sounds" : 21 = 
+	[
+		0: "None (Silent)"
+		21: "Squeaky"
+		22: "Squeaky Pneumatic"
+		23: "Ratchet Groan"
+		24: "Clean Ratchet"
+		25: "Gas Clunk"
+	]
+	distance(integer) : "Distance (deg)" : 90 : "The amount, in degrees, that the button should rotate when it's pressed."
+	// TODO: move spawnflags into Button base class?
+	spawnflags(flags) =
+	[
+		1 : "Not solid" : 0
+		2 : "Reverse Dir" : 0
+		32: "Toggle" : 0
+		64: "X Axis" : 0
+		128: "Y Axis" : 0
+		256: "Touch Activates": 0
+		512: "Damage Activates": 0
+		1024: "Use Activates": 0
+		2048: "Starts locked" : 0
+	]
+]
+
+
+
+//====================================================================================================================
+// momentary_rot_button [common]
+//====================================================================================================================
+
+@SolidClass
+base (
+	TargetnameRot,
+	Parentname,
+	p_Origin,
+	RenderFields,
+	o_VUsableExt
+)
+line (
+	255 255 255,
+	targetname,
+	parentname
+)
+= momentary_rot_button : 
+	"A brush entity that's designed to be used for rotating wheels, where the player can rotate them to arbitrary positions before stopping."
+[
+	sep_mombut1(string) readonly: "------------------------------------"
+
+	speed(integer) : "Speed (deg/sec)" : 50 : "The amount, in degrees, that the wheel turns per second."
+	sounds(choices) : "Sounds" : 0 = 
+	[
+		0: "None"
+		1: "Big zap & Warmup"
+		2: "Access Denied"
+		3: "Access Granted"
+		4: "Quick Combolock"
+		5: "Power Deadbolt 1"
+		6: "Power Deadbolt 2"
+		7: "Plunger"
+		8: "Small zap"
+		9: "Keycard Sound"
+		21: "Squeaky"
+		22: "Squeaky Pneumatic"
+		23: "Ratchet Groan"
+		24: "Clean Ratchet"
+		25: "Gas Clunk"
+	]
+	distance(integer) : "Distance" : 90 : "The maximum amount, in degrees, that the wheel is allowed to rotate."
+	returnspeed(integer) : "Auto-return speed" : 0 : "If the 'Toggle' spawnflag is not set, the speed at which the wheel auto-returns when left alone, in degrees per second."
+
+	sep_mombut2(string) readonly: "------------------------------------"
+
+	startposition(float) : "Start Position" : 0 : "Postion when spawned. The value is a range between 0.0 and 1.0, where 0 is the unrotated position and 1 is the rotated position + 'Distance'."
+	startdirection(choices) : "Start Direction" : "Forward" =
+	[
+		-1 : "Forward"		 // Reverses upon USE, so are
+		1 : "Backward"	 // reversed here.
+	]
+	master(string) : "Master (Obsolete)" : : "Legacy support: The name of a master entity. If the master hasn't been activated, this button cannot be used."
+
+	spawnflags(flags) =
+	[
+		1: "Not Solid" : 1
+		32: "Toggle (Disable Auto Return)" : 1
+		64: "X Axis" : 0
+		128: "Y Axis" : 0
+		1024: "Use Activates" : 1
+		2048: "Starts locked" : 0
+		8192: "Jiggle when used while locked" : 0
+	]
+
+	// Inputs
+	input Lock(void) : "Lock the button, preventing it from functioning."
+	input Unlock(void) : "Unlock the button, allowing it to function."
+	input SetPosition(string) : "Move to a position. The parameter must be a value between 0 and 1, where 0 is the unrotated position and 1 is the rotated position + 'Distance'."
+
+	// Outputs
+	output Position(integer)   : "Fired whenever the button moves. The output is the position of button from 0 to 1, where 0 is the unrotated position and 1 is the rotated position + 'Distance'."
+	output OnPressed(integer)  : "Fired when the button is first pressed."
+	output OnUnpressed(integer): "Fired when the button is first released from being pressed."
+	output OnFullyClosed(void) : "Fired when the button has reached position 1, the rotated position + 'Distance'."
+	output OnFullyOpen(void)   : "Fired when the button has reached position 0, the unrotated starting position."
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+//
+// Nodes
+//
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+
+
+//====================================================================================================================
+// info_node_air [common]
+//====================================================================================================================
+
+@PointClass base(Node) studio("models/editor/air_node.mdl") color(232 171 8)  = info_node_air :
+	"A navigation node for flying NPCs. Air navigation nodes are baked into the nodegraph so that NPCs can move " +
+	"to them. Air nodes do not fall to the ground when they spawn."
+[
+	nodeheight(integer) : "NodeHeight"  : 0
+]
+
+
+//====================================================================================================================
+// info_node_air_hint [common]
+//====================================================================================================================
+// VTMB-adaptation:
+//  removed: base(Targetname,Angles) (already included)
+
+@PointClass base(HintNode) studio("models/editor/air_node_hint.mdl") color(232 171 8) line(255 255 255, nodeid, TargetNode) = info_node_air_hint :
+	"A navigation node for flying NPCs that includes some context information for NPCs that are interested in it. The hint might " +
+	"indicate a window that could be looked into, or an item of interest that could be commented on. Many hint nodes are NPC-specific, " +
+	"so it's helpful to use naming conventions like 'Crow: Fly to point' in the hint choices list. The angles of a hint node indicate what direction " +
+	"the NPC should face to perform the hint behavior."
+[
+	nodeheight(integer) : "NodeHeight"  : 0
+]
+
+
+//====================================================================================================================
+// info_node_hint [common]
+//====================================================================================================================
+// VTMB-adaptation:
+//   removed: outputs (unsup)
+
+@PointClass base(HintNode) studio("models/editor/ground_node_hint.mdl") color(232 219 8) = info_node_hint :
+	"A navigation node for ground moving NPCs that includes some context information for NPCs that are interested in it. The hint might " +
+	"indicate a window that could be looked out of, or an item of interest that could be commented on. Many hint nodes are NPC-specific, " +
+	"so it's helpful to use naming conventions like 'Crow: Fly to point' in the hint choices list. The angles of a hint node indicate what direction " +
+	"the NPC should face to perform the hint behavior.\n\n" +
+	"It's important to understand the distinction between scripts, such as scripted_sequence and scripted_schedule, and info_hint entities. Scripts summon " +
+	"NPCs to specific cue points to play their parts, while hints provide context information to the AI that they use to perform their " +
+	"behaviors. Hints require code support in the NPC, while scripts are generic and may require only animations to play. Use a hint if the behavior is driven " +
+	"by the AI, use a script if the behavior is driven by the map."
+[
+]
+
+
+
+
+
+
+
+
+
+
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+//
+// Logic Entities
+//
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+
+
+//====================================================================================================================
+// logic_branch [common]
+//====================================================================================================================
+
+@PointClass base(Targetname) iconsprite("editor/logic_branch.vmt") = logic_branch :
+	"Tests a boolean value and fires an output based on whether the value is true or false. " +
+	"Use this entity to branch between two potential sets of events."
+[
+	// Keys
+	InitialValue(integer) : "Initial value" : : "Initial value for the boolean value (0 or 1)."
+	
+	// Inputs
+	input SetValue(bool) : "Sets the boolean value without performing the comparison. Use this to hold a value for a future test."
+	input SetValueTest(bool) : "Sets the boolean value and tests it, firing OnTrue or OnFalse based on the value."
+	input Test(void) : "Tests the input value and fires OnTrue or OnFalse based on the value."
+	
+	// Outputs
+	output OnTrue(bool) : "Fires when the input value is true (nonzero)." 
+	output OnFalse(bool) : "Fires when the input value is false (zero)." 
+]
+
+
+//====================================================================================================================
+// logic_compare [common]
+//====================================================================================================================
+
+@PointClass base(Targetname) iconsprite("editor/logic_compare.vmt") = logic_compare :
+	"Compares an input value to another value. " +
+	"If the input value is less than the compare value, the OnLessThan output is fired with the input value. " +
+	"If the input value is equal to the compare value, the OnEqualTo output is fired with the input value. " +	
+	"If the input value is greater than the compare value, the OnGreaterThan output is fired with the input value."
+[
+	// Keys
+	InitialValue(integer) : "Initial value" : : "Initial value for the input value."
+	CompareValue(integer) : "Compare value" : : "The value to compare against."
+	
+	// Inputs
+	input SetValue(float) : "Sets the value that will be compared against the compare value."
+	input SetValueCompare(float) : "Sets the value that will be compared against the compare value and performs the comparison."
+	input SetCompareValue(float) : "Sets the compare value."
+	input Compare(void) : "Forces a compare of the input value with the compare value."
+	
+	// Outputs
+	output OnLessThan(float) : "Fires when the input value is less than the compare value. Sends the input value as data." 
+	output OnEqualTo(float) : "Fires when the input value is equal to the compare value. Sends the input value as data." 
+	output OnNotEqualTo(float) : "Fires when the input value is different from the compare value. Sends the input value as data." 
+	output OnGreaterThan(float) : "Fires when the input value is greater than the compare value. Sends the input value as data."
+]
+
+
+//====================================================================================================================
+// logic_lineto [common]
+//====================================================================================================================
+
+@PointClass base(Targetname) size(-8 -8 -8, 8 8 8) = logic_lineto : 
+	"An entity that calculates and outputs a vector from one entity to another." 
+[
+	source(target_destination) : "Start entity" : : "Name of the entity the line should start from."
+	target(target_destination) : "End entity" : : "Name of the entity that line should end at."
+	
+	// Outputs
+	output Line(vector) : "Fired when the vector, from the start entity to the end entity, changes. Passes along the vector as a parameter."
+]
+
+
+//====================================================================================================================
+// logic_multicompare [common]
+//====================================================================================================================
+
+@PointClass base(Targetname) iconsprite("editor/logic_multicompare.vmt") = logic_multicompare :
+	"Compares a set of inputs to each other. If they are all the same, fires an OnEqual output. " +
+	"If any are different, fires the OnNotEqual output."
+[
+	// keys
+	IntegerValue(integer) : "Integer Value (optional)"
+	ShouldComparetoValue(choices) : "Should use Integer Value" : 0 =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+
+	// Inputs
+	input InputValue(integer) : "Input value"
+	input CompareValues(void) : "Compares the values and fires appropriate outputs"
+
+	// Outputs
+	output OnEqual(void) : "Fires if the values are equal"
+	output OnNotEqual(void) : "Fires if the values are not equal"
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+//
+// NPCs
+//
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+
+
+//===================================================================================================================
+// CLASS: BaseNPC [common]
+//===================================================================================================================
+// VTMB-adaptation:
+//  removed: Angles,Shadow (included)
+
+@BaseClass base(Targetname,RenderFields,DamageFilter) color(0 200 200) = BaseNPC
+[
+	target(target_destination) : "Target path corner" : : "If set, the name of a path corner entity that this NPC will walk to after spawning."
+	squadname(String) : "Squad Name"
+	hintgroup(String) : "Hint Group"
+	hintlimiting(choices) : "Hint Limit Nav" : 0 : "Limits NPC to using specified hint group for navigation requests, does not limit local navigation." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+
+	spawnflags(Flags) = 
+	[
+		1 : "Wait Till Seen" : 0
+		2 : "Gag" : 0
+		4 : "Fall to ground" : 1
+		8 : "Drop Healthkit" : 0
+		16 : "Efficient" : 0
+		128: "Wait For Script" : 0
+		256: "Long Visibility/Shoot" : 0
+		512: "Fade Corpse" : 0
+		1024: "Think outside PVS" : 0
+		2048: "Template NPC (used by npc_maker, will not spawn)" : 0
+	]
+
+	physdamagescale(float) : "Physics Impact Damage Scale" : "1.0" : "Scales damage energy when this character is hit by a physics object. NOTE: 0 means this feature is disabled for backwards compatibility."
+	output OnDamaged(void) : "This NPC takes damage"
+	output OnDeath(void) : "This NPC is killed" 
+	output OnHalfHealth(void) : "This NPC reaches half of its maximum health"
+	output OnHearWorld(void) : "This NPC hears a sound (other than combat or the player)"
+	output OnHearPlayer(void) : "This NPC hears the player"
+	output OnHearCombat(void) : "This NPC hears combat sounds"
+
+	output OnFoundEnemy(string) : "Fired when establish line of sight to enemy (output's entity)"
+	output OnLostEnemyLOS(void) : "Fired when lost line of sight to enemy"
+	output OnLostEnemy(void) : "Fired when lost enemy"
+
+	output OnFoundPlayer(string) : "Fired when establish line of sight to player (output's player entity)"
+	output OnLostPlayerLOS(void) : "Fired when lost line of sight to player"
+	output OnLostPlayer(void) : "Fired when lost player"
+
+	// Inputs
+	input SetRelationship(string) : "Changes this entity's relationship with another entity or class"
+	input SetHealth(integer) : "Set this entity's health"
+	input SetBodyGroup(integer) : "Hack: Sets this NPC's body group, by index (from 0 - n). You'd better know what you are doing!"
+	input physdamagescale(float) : "Sets the value that scales damage energy when this character is hit by a physics object. NOTE: 0 means this feature is disabled for backwards compatibility."
+	input Ignite(void) : "Ignite, burst into flames"
+]
+
+
+
+//===================================================================================================================
+// monster_generic [common, HL2-based]
+//===================================================================================================================
+
+@PointClass base(BaseNPC,RenderFields) studio() = monster_generic : "Generic Script NPC"
+[
+	spawnflags(Flags) = 
+	[
+		4 : "Not solid"	: 0
+	]
+	model(studio) : "Model"
+	body(Integer) : "Body" : 0
+]
+	
+	
+
+//===================================================================================================================
+// npc_bullseye [common]
+//===================================================================================================================
+
+@NPCClass base(Parentname, BaseNPC) iconsprite("editor/bullseye.vmt") color(255 0 0) = npc_bullseye : "Bullseye"
+[
+	// Unlike other NPCs level designers are allowed to set the health on bullseyes
+	health(Integer) : "Health" : 35
+
+	spawnflags(Flags) = 
+	[
+		65536   : "Not Solid" : 0
+		131072  : "Take No Damage" : 0
+		262144  : "Enemy Damage Only" : 0
+		524288  : "Bleed" : 0
+		1048576 : "Perfect Accuracy" : 0
+	]
+	output OnTargeted(void) : "Fires when targeted"
+	output OnReleased(void) : "Fires when no longer targeted"
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+//
+// Physics Entities
+//
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+
+
+//===================================================================================================================
+// phys_constraintsystem [common]
+//===================================================================================================================
+// VTMB-adaptation:
+//  removed: additionaliterations (new)
+
+@PointClass base(Targetname) = phys_constraintsystem : 
+	"An entity used to manage a group of interacting constraints and keep them stable. " +
+	"All constraints on a set of entities should be placed in the same system, or they will fight each other during simulation."
+[
+]
+
+
+
+//===================================================================================================================
+// phys_keepupright [common]
+//===================================================================================================================
+
+@PointClass base(TargetnameRot) = phys_keepupright : "A controller that tries to keep an entity facing a particular direction."
+[
+	spawnflags(flags) =
+	[
+		1: "Start inactive" : 0
+	]
+
+	attach1(target_destination) : "Target Entity" : "" : "The entity to align to the desired angles."
+	angularlimit(float) : "Angular Limit" : "15" : "The maximum angular velocity that this controller can compensate for, in degrees per second."
+
+	// Inputs
+	input TurnOn(void) : "Enable the controller."
+	input TurnOff(void) : "Disable the controller." 
+]
+
+
+
+//===================================================================================================================
+// phys_motor [common]
+//===================================================================================================================
+
+@PointClass base(Targetname) halfgridsnap size(-8 -8 -8, 8 8 8) = phys_motor : 
+	"An entity that tries to spin a target entity at a particular speed."
+[
+	speed(string) : "Rotation Speed" : "0" : "Angular speed (units are degress/second)"
+	spinup(string) : "Spin up time" : "1" : "spin up time in seconds (also affects the rate at which speed changes happen)"
+	inertiafactor(float) : "System Interia Scale" : "1.0" : "Make this larger if the object being driven is constrained to a set of heavier objects."
+	axis(vecline) : "Rotation Axis" : ""
+
+	spawnflags(flags) =
+	[
+		// starts on by default
+		1: "Start On" : 1
+		// Disable world collisions on hinges
+		2: "No world collision" : 0
+		// motor also acts as a hinge constraining the object to this axis
+		4: "Hinge Object" : 1
+		// Maintain local relationship with the attached object (NOT WORKING YET)
+//		8: "Orient Locally" : 1
+	]
+	attach1(target_destination) : "Attached Object" : "" : "Object to apply the force to"
+
+	input SetSpeed(float) : "Sets target speed"
+	input TurnOn(void) : "Turns motor on"
+	input TurnOff(void) : "Turns motor off"
+]
+	
+	
+	
+//===================================================================================================================
+// phys_pulleyconstraint [common]
+//===================================================================================================================
+
+@PointClass base(TwoObjectPhysics) halfgridsnap studio("models/editor/axis_helper.mdl") = phys_pulleyconstraint : 
+	"A constraint that is essentially two length constraints and two points. Imagine it as a virtual rope connected to two objects, each suspended from a pulley above them."+
+	"The constraint keeps the sum of the distances between the pulley points and their suspended objects constant."
+[
+	addlength(float) : "Additional Length" : "0" : "Add (or subtract) this amount to the rest length of the pulley rope."
+	gearratio(float) : "Pulley Gear Ratio" : "1" : "Add (or subtract) this amount to the rest length of the pulley rope."
+	position2(vecline) : "Pulley Position 2" : : "The position of the pulley for Entity 2. The pulley for Entity 1 is the origin of this constraint entity. Entity 1 is always suspended from pulley point 1, and Entity 2 is always suspended from pulley point 2."
+	spawnflags(flags) =
+	[
+		1: "No Collision until break" : 1
+		2: "Keep Rigid" : 0
+	]
+]	
+	
+		
+	
+//===================================================================================================================
+// phys_slideconstraint [common]
+//===================================================================================================================
+
+@PointClass base(TwoObjectPhysics) halfgridsnap studio("models/editor/axis_helper.mdl") = phys_slideconstraint : 
+	"A constraint that constrains an entity along a line segment."
+[
+	spawnflags(flags) =
+	[
+		1: "No Collision until break" : 1
+		2: "Limit Endpoints" : 0
+	]
+	slideaxis(vecline) : "Sliding Axis"
+	slidefriction(float) : "Friction" : "0" : "Resistance/friction in the constraint"
+]
+	
+	
+	
+//===================================================================================================================
+// phys_spring [common]
+//===================================================================================================================
+
+@PointClass base(Targetname) halfgridsnap = phys_spring : 
+	"A physically simulated spring. "+
+	"'Length' is what's known as the 'natural spring length'. This is how long the spring would "+
+	"be if it was at rest (nothing hanging on it or attached). When you attach something to the "+
+	"spring, it will stretch longer than its 'natural length'. The amount of stretch is "+
+	"determined by the 'Sprint Constant'. The larger the spring constant the less stretch the spring."
+[
+	spawnflags(flags) =
+	[
+		1 : "Force only on stretch" : 0
+	]
+
+	attach1(target_destination) : "Entity 1" : ""
+	attach2(target_destination) : "Entity 2" : ""
+
+	springaxis(vecline) : "Spring Axis" : "" : "Use the helper. Drag it out to match the virtual spring."
+	length(string) : "Spring Length" : "0" : "How long the spring would be if it was at rest (nothing hanging on it or attached). 0 means the length of the brush."
+	constant(string) : "Spring Constant" : "50" : "Stiffness of the spring.  The larger the number the less the spring will stretch."
+	damping(string) : "Damping Constant" : "2.0" : "How much energy the spring loses.  The larger the number, the less bouncy the spring."
+	relativedamping(string) : "Relative Damping Constant" : "0.1" : "The amount of energy the spring loses proportional to the relative velocity of the two objects the spring is attached to."
+	// UNDONE: add max tension and what event to fire when it breaks
+	breaklength(string) : "Break on Length" : "0" : "If the spring's length ever exceeds this length, the spring breaks."
+
+	// Inputs
+	input SetSpringConstant(float) : "Set the Spring Constant."
+	input SetSpringLength(float) : "Set the Spring Length."
+	input SetSpringDamping(float) : "Set the Spring Damping."
+]
+	
+	
+	
+//===================================================================================================================
+// phys_torque [common]
+//===================================================================================================================
+	
+@PointClass base(ForceController) halfgridsnap = phys_torque : 
+	"An angular thruster. Use it to apply angular force to an entity."
+[
+	// Angular acceleration (units are degress/s^2)
+	force(string) : "Angular Acceleration" : "0"
+	axis(vecline) : "Rotation Axis" : ""
+]
+
+	
+	
+//===================================================================================================================
+// physics_cannister [common]
+//===================================================================================================================
+
+@PointClass base(TargetnameRot) sphere(expradius) studioprop() = physics_cannister : 
+	"A physically simulated gas cannister that can have its cap shot off, at which point gas will start escaping and cause the cannister to fly around. If it takes enough damage, it will explode."
+[
+	model(studio) : "World model" : "models/fire_equipment/w_weldtank.mdl" : "Model to use for render/physics"
+	spawnflags(flags) = 
+	[
+		1 : "Start Asleep" : 0
+		2 : "Explodes" : 1
+	]
+
+	expdamage(string) : "Explosion Damage" : "200.0" : "Magnitude of radius damage to do upon explosion"
+	expradius(string) : "Explosion Radius" : "250.0" : "Radius of the explosion damage"
+	health(integer) : "Health" : 25 : "How much damage the cannister takes before exploding."
+
+	thrust(string) : "Thrust" : "3000.0" : "Amount of thrust"
+	fuel(string) : "Fuel Seconds" : "12.0" : "Time that thrust lasts"
+	rendercolor(color255) : "Smoke Color (R G B)" : "255 255 255"
+	renderamt(integer) : "Smoke Alpha (0 - 255)" : 128
+	gassound(sound) : "Thruster Sound" : "ambient/objects/cannister_loop.wav"
+
+	// input
+	input Activate(void) : "Starts the thruster."
+	input Deactivate(void) : "Stops the thruster."
+	input Explode(void) : "Triggers the explosion."
+	input Wake(void) : "Wakes up the cannister if it is sleeping."
+
+	// outputs
+	output OnActivate(void) : "Fired when the cannister is activated."
+]
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+//
+// Point Entities
+//
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+
+
+//===================================================================================================================
+// player_loadsaved [common, HL2-based]
+//===================================================================================================================
+
+@PointClass base(Targetname) size(-16 -16 -16, 16 16 16) = player_loadsaved : "Load Auto-Saved game" 
+[
+	duration(string) : "Fade Duration (seconds)" : "2"
+	holdtime(string) : "Hold Fade (seconds)" : "0"
+	renderamt(integer) : "Fade Alpha" : 255
+	rendercolor(color255) : "Fade Color (R G B)" : "0 0 0"
+	loadtime(string) : "Reload delay" : "0"
+
+	input Reload(void) : "Ends this game and reloads"
+]
+
+	
+	
+	
+//===================================================================================================================
+// player_weaponstrip [common]
+//===================================================================================================================
+
+@PointClass base(Targetname) size(-16 -16 -16, 16 16 16) = player_weaponstrip : "Strips player's weapons"
+[
+	input Strip(void) : "Strip player's weapons"
+]
+
+	
+	
+	
+//===================================================================================================================
+// point_anglesensor [common]
+//===================================================================================================================
+
+@PointClass base(Targetname,Parentname,EnableDisable)
+line (
+	255 255 255,
+	targetname,
+	parentname
+)
+= point_anglesensor :
+	"An entity that detects if another entity points in a given direction for a period of time."
+[
+	target(target_destination) : "Target entity name" : : "Name of the entity whose angles will be sensed."
+	lookatname(target_destination) : "Look at entity"
+	duration(float) : "Duration in seconds"
+	tolerance(integer) : "Tolerance in degrees"
+
+	// Inputs
+	input Toggle(void) : "Toggles the sensor between enabled and disabled."
+	input Test(void) : "Checks to see if the target entity is facing the lookat entity within the specified tolerance, " +
+		"firing either the OnFacingLookat or OnNotFacingLookat output based on the result."
+	
+	// Outputs
+	output TargetDir(vector) : "Fired when the forward direction of the target entity changes. Passes the new forward direction as a parameter."
+	output OnFacingLookat(void) : "Fired when the target entity points at the lookat entity for more than the " +
+		"specified duration."
+	output OnNotFacingLookat(void) : "Fires in response to a CheckFacing input when the target entity is not " +
+		"pointing at the lookat entity."
+]
+	
+	
+	
+//===================================================================================================================
+// point_hurt [common]
+//===================================================================================================================
+
+@PointClass base(Targetname) sphere(DamageRadius) = point_hurt :
+	"An entity that does damage to all entities in a radius around itself, with a specified delay." +
+	"If 'Target Entity' is specified, the damage is only done to that entity."
+[
+	DamageTarget(string) : "Target Entity" : "" : "If specified, only this entity will take damage. Otherwise, all entities within the Radius will take damage."
+	
+	DamageRadius(float) : "Radius" : 256 : "All entities within this radius of this entity will take damage. If a 'Target Entity' is specified, only that entity will take damage."
+	Damage(integer) : "Damage" : 5 : "Damage done to all affected entities each time this entity fires."
+	DamageDelay(float) : "Delay" : 1 : "Delay between refires, in seconds."
+	
+	DamageType(choices) : "Damage Type" : 0 : "Type of damage to inflict on entities damaged." =
+	[
+		0 : "GENERIC"
+		1 : "CRUSH"
+		2 : "BULLET"
+		4 : "SLASH"
+		8 : "BURN"
+		16 : "FREEZE"
+		32 : "FALL"
+		64 : "BLAST"
+		128 : "CLUB"
+		256 : "SHOCK"
+		512 : "SONIC"
+		1024 : "ENERGYBEAM"
+		16384: "DROWN"
+		32768 : "PARALYSE"
+		65536 : "NERVEGAS"
+		131072 : "POISON"
+		262144 : "RADIATION"
+		524288 : "DROWNRECOVER"
+		1048576 : "CHEMICAL"
+		2097152 : "SLOWBURN"
+		4194304 : "SLOWFREEZE"
+	]
+
+	// Inputs
+	input Hurt(void) : "Force a single fire, damaging either the Target Entity or all entities within the radius."
+	input TurnOn(void) : "Enable this entity. It will start damaging entities everytime it fires, and refire based upon the specified Delay."
+	input TurnOff(void) : "Disable this entity. It will stop damaging entities."
+	input Toggle(void) : "Toggle this entity between On/Off state."
+]
+	
+
+
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+//
+// Triggers
+//
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+
+
+//===================================================================================================================
+// trigger_transition [common]
+//===================================================================================================================
+
+@SolidClass base(Targetname) = trigger_transition : 
+	"A volume that's used to control which entities go through the level transition. Create one or more trigger_transitions and "+
+	"give them the same name as the changelevel landmark. Any entities within the trigger_transition(s) will go to the next map."+
+	"See trigger_changelevel for more info."
+[
+]
+
+
+
+//===================================================================================================================
+// trigger_proximity [common]
+//===================================================================================================================
+
+@SolidClass base(ExtTrigger) = trigger_proximity :
+	"Measures the distance of the player within the trigger volume from a given point (and within " +
+	"a given radius). The NearestPlayerDistance output will be 0 when the player is at the center point, " +
+	"and 1 when the player is at the radius."
+[
+	measuretarget(target_destination) : "Point to Measure From" : : "The name of a target entity who's origin is the point to measure the player's distance from."
+	radius(string) : "Radius to measure within" : 256 : "The radius to which the distance should be mapped. If the player is outside the radius he will be ignored."
+	
+	// Outputs
+	output NearestEntityDistance(integer) : "Fired continuously when entities are touching the trigger volume. The output parameter is the distance from the "+
+						"Point to Measure From to the nearest entity that passed the trigger filters. The distance is mapped to the radius distance, "+
+						"so it will be 0 when the entity is on the point, and 1 when the entity is at the edge of the radius."
+]
+
+
+
+
+
+
+
+
+
+
+
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+//
+// Misc Point Entities
+//
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+
+
+//====================================================================================================================
+// keyframe_track [common]
+//====================================================================================================================
+
+@KeyFrameClass base(TargetnameRot,Parentname,KeyFrame) size(-6 -6 -6, 6 6 6) color(255 200 0) keyframe() = keyframe_track : 
+	"Animation KeyFrame"
+[
+]
+
+
+//====================================================================================================================
+// move_keyframed [common]
+//====================================================================================================================
+
+@MoveClass base(Targetname,Parentname,KeyFrame,Mover) size(-8 -8 -8, 8 8 8) color(255 170 0) animator() = move_keyframed : 
+	"Keyframed Move Behavior"
+[
+]
+
+
+//====================================================================================================================
+// math_colorblend [common]
+//====================================================================================================================
+
+@PointClass base(Targetname) = math_colorblend :
+	"Used to create a blend between two colors for controlling the color of another entity."
+[
+	spawnflags(flags) = 
+	[
+		1 : "Ignore out of range input values" : 1
+	]
+
+	inmin(integer) : "Minimum Valid Input Value" : 0 : "Input values below this value will be ignored."
+	inmax(integer) : "Maximum Valid Input Value" : 1 : "Input values above this value will be ignored."
+	colormin(color255) : "Output RGB color when input is min." : "0 0 0" : "When the input value is equal to 'Minimum Valid Input Value', this is the output RGB color."
+	colormax(color255) : "Output RGB color when input is max." : "255 255 255" : "When the input value is equal to 'Maximum Valid Input Value', this is the output RGB color."
+
+	// Inputs
+	input InValue(float) : "Input value and fire the output with the remapped value."
+	
+	// Outputs
+	output OutColor(color255) : "Fired when the InValue input is received, with the remapped RGB color as the parameter."
+]
+
+
+//====================================================================================================================
+// math_remap [common]
+//====================================================================================================================
+
+@PointClass base(Targetname,EnableDisable) = math_remap :
+	"An entity that remaps a range of input values to a given range of output values."
+[
+	spawnflags(flags) = 
+	[
+		1 : "Ignore out of range input values" : 1
+		2 : "Clamp output to output range" : 2
+	]
+
+	in1(integer) : "Minimum Valid Input Value" : 0 : "Input values below this value will be ignored."
+	in2(integer) : "Maximum Valid Input Value" : 1 : "Input values above this value will be ignored."
+	out1(integer) : "Output Value When Input Is Min." : : "When the input value is equal to 'Minimum Valid Input Value', this is the output value."
+	out2(integer) : "Output Value When Input Is Max." : : "When the input value is equal to 'Maximum Valid Input Value', this is the output value."
+
+	// Inputs
+	input InValue(float) : "Input value and fire the output with the remapped value."
+	
+	// Outputs
+	output OutValue(float) : "Fired when the InValue input is received, with the remapped input value as the parameter."
+]
+
+
+//===================================================================================================================
+// path_corner [common, HL2-based]
+//===================================================================================================================
+// VTMB-adaptation:
+//  removed: Angles (included)
+
+@PointClass base(TargetnameRot) size(16 16 16) line(255 255 255, targetname, target) color(247 181 82) = path_corner : "Generic path point"
+[
+	spawnflags(Flags) =
+	[
+		1: "Wait for retrigger" : 0
+		2: "Teleport to THIS path_corner" : 0
+	]
+	target(target_destination) : "Next stop target"
+	wait(integer) : "Wait here (secs)" : 0
+	speed(integer) : "New Train Speed" : 0
+	yaw_speed(integer) : "New Train rot. Speed" : 0
+
+	// Inputs 
+	input SetNextPathCorner(string) : "Sets next pathcorner"
+
+	// Outputs
+	output OnPass(void) : "Fires when a path follower passes this point"
+]
+
+
+//===================================================================================================================
+// path_corner_crash [common, HL2-based]
+//===================================================================================================================
+
+@PointClass base(Targetname) size(16 16 16) color(255 0 0) = path_corner_crash : "Flying Object Crash Path"
+[
+	target(target_destination) : "Next stop target"
+]
+
+	
+//===================================================================================================================
+// scripted_target [common, HL2-based]
+//===================================================================================================================
+
+@PointClass base(Targetname,Parentname)
+line (
+	255 255 255,
+	targetname,
+	parentname
+)
+iconsprite("editor/info_target.vmt")  = scripted_target : "Scripted Target"
+[
+	StartDisabled(choices) : "Start Disabled" : 1 =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+
+	m_iszEntity(npcclass) : "Target NPC"
+	m_flRadius(integer) : "Search Radius (0=everywhere)" : 0 : "Radius to search within for an NPC to use. 0 searches everywhere."
+
+	MoveSpeed(integer) : "Move Speed" : 5			// How quickly should target move between scripted targets
+	PauseDuration(integer) : "Pause Duration" : 0		// How long should target pause at scripted target
+	EffectDuration(integer) : "Effect Duration" : 2		// How long should any associated effect last
+
+	target(target_destination) : "Next Target"		// Next scripted target
+
+	// Inputs
+	input Enable(void) : "Enable this entity"
+	input Disable(void) : "Disable this entity"
+
+	// Outputs
+	output AtTarget(void) : "Fires when NPC reaches this target"
+	output LeaveTarget(void) : "Fires when NPC leaves this target"
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//-------------------------------------------------------------------------------------------------------------------
+// NOTE3: Entities below are VtMB-specific. Some of it may not work properly...
+//-------------------------------------------------------------------------------------------------------------------
+
+
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+//
+// NPCs
+//
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+
+
+//===================================================================================================================
+// npc_generic [VTMB-specific]
+//===================================================================================================================
+
+@NPCClass base(VBaseNPC,VAddNPCFeats) studio() = npc_generic : 
+	"[VTMB] Generic scripted NPC. Not used on original maps."
+[
+	model(studio) : "Model" : "models/character/npc/common/citizen/male2/male_citizen_2.mdl"
+]
+
+
+//===================================================================================================================
+// Clan-specific NPCs [VTMB-specific]
+//===================================================================================================================
+
+@NPCClass base(VBaseNPC,VAddNPCFeats) studio() = npc_VGangrel : "[VTMB] Generic Gangrel-clan NPC. Not used on original maps."		[ model(studio) : "Model" : "models/character/pc/male/gangrel/armor_0/gangrel_male_armor_0.mdl" ]
+@NPCClass base(VBaseNPC,VAddNPCFeats) studio() = npc_VMalkavian : "[VTMB] Generic Malkavian-clan NPC. Not used on original maps."	[ model(studio) : "Model" : "models/character/pc/male/malkavian/armor_0/malkavian_male_armor_0.mdl" ]
+@NPCClass base(VBaseNPC,VAddNPCFeats) studio() = npc_VNosferatu : "[VTMB] Generic Nosferatu-clan NPC. Not used on original maps."	[ model(studio) : "Model" : "models/character/pc/male/nosferatu/armor_0/nosferatu.mdl" ]
+@NPCClass base(VBaseNPC,VAddNPCFeats) studio() = npc_VToreador : "[VTMB] Generic Toreador-clan NPC. Not used on original maps."		[ model(studio) : "Model" : "models/character/pc/male/toreador/armor_0/toreador_male_armor_0.mdl" ]
+@NPCClass base(VBaseNPC,VAddNPCFeats) studio() = npc_VTremere : "[VTMB] Generic Tremere-clan NPC. Not used on original maps."		[ model(studio) : "Model" : "models/character/pc/male/tremere/armor_0/tremere_male_armor_0.mdl" ]
+@NPCClass base(VBaseNPC,VAddNPCFeats) studio() = npc_VVentrue : "[VTMB] Generic Ventrue-clan NPC. Not used on original maps."		[ model(studio) : "Model" : "models/character/pc/male/ventrue/armor_0/ventrue_male_armor_0.mdl" ]
+@NPCClass base(VBaseNPC,VAddNPCFeats) studio() = npc_VHunter : "[VTMB] Generic Hunter-clan NPC. Not used on original maps."			[ model(studio) : "Model" : "models/character/pc/male/average_vampire_hunter/average_vampire_hunter_pc.mdl" ]
+
+
+
+
+
+
+
+
+
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+//
+// Animal NPCs
+//
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+
+
+//===================================================================================================================
+// npc_VAnimal [VTMB-specific]
+//===================================================================================================================
+
+@NPCClass base(VBaseNPC,VAddNPCFeats) studio() = npc_VAnimal : 
+	"[VTMB] Animal NPC. Not used on original maps."
+[
+	model(studio) : "Model" : "models/character/monster/cat/cat.mdl"
+	stattemplate(choices) : "NPC Stat Template" : "Rat" : "Goes to data in 'vdata/system/npctemplate***.txt'. NPCs in Hammer are assigned one of these which determines their statistics." = []
+
+	// npc-specific
+	detection_distance(integer) : "Detection Distance" : 256 : "Defines distance rat can wind the player."
+	friendship_level(integer) : "Friendship Level" : 1 : "The level of rat's friendliness in relation to player."
+	must_detect(choices) : "Must Detect [-?]" : "1" : "[VTMB] Unknown yet..." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	fright_distance(integer) : "Fright Distance" : 128 : "Distance that rat will frights the player."
+	fright_duration(float) : "Fright Duration" : "5.0" : "Duration of rat's fright when it nearby the player."
+	conflict_range(integer) : "Conflict Range" : 100 : "[VTMB] Unknown yet..."
+	warn_range(integer) : "Warn Range" : 200 : "[VTMB] Unknown yet..."
+]
+
+
+//===================================================================================================================
+// npc_VDog [VTMB-specific]
+//===================================================================================================================
+
+@NPCClass base(VBaseNPC,VAddNPCFeats) studio() = npc_VDog : 
+	"[VTMB] Dog NPC. Not used on original maps."
+[
+	model(studio) : "Model" : "models/character/monster/dog/feral/dog_feral.mdl"
+	stattemplate(choices) : "NPC Stat Template" : "Rat" : "Goes to data in 'vdata/system/npctemplate***.txt'. NPCs in Hammer are assigned one of these which determines their statistics." = []
+
+	// npc-specific
+	detection_distance(integer) : "Detection Distance" : 256 : "Defines distance rat can wind the player."
+	friendship_level(integer) : "Friendship Level" : 1 : "The level of rat's friendliness in relation to player."
+	must_detect(choices) : "Must Detect [-?]" : "1" : "[VTMB] Unknown yet..." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	fright_distance(integer) : "Fright Distance" : 128 : "Distance that rat will frights the player."
+	fright_duration(float) : "Fright Duration" : "5.0" : "Duration of rat's fright when it nearby the player."
+	conflict_range(integer) : "Conflict Range" : 100 : "[VTMB] Unknown yet..."
+	warn_range(integer) : "Warn Range" : 200 : "[VTMB] Unknown yet..."
+]
+	
+
+//===================================================================================================================
+// npc_VBatSwarm [VTMB-specific]
+//===================================================================================================================
+
+@NPCClass base(VBaseNPC,VAddNPCFeats) studio() = npc_VBatSwarm : 
+	"[VTMB] Bat swarm. Not used on original maps."
+[
+	model(studio) : "Model" : "models/character/monster/animalism_bat/animalism_bat.mdl"
+
+	// npc-specific
+	detection_distance(integer) : "Detection Distance" : 256 : "Defines distance rat can wind the player."
+	friendship_level(integer) : "Friendship Level" : 1 : "The level of rat's friendliness in relation to player."
+	must_detect(choices) : "Must Detect [-?]" : "1" : "[VTMB] Unknown yet..." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	fright_distance(integer) : "Fright Distance" : 128 : "Distance that rat will frights the player."
+	fright_duration(float) : "Fright Duration" : "5.0" : "Duration of rat's fright when it nearby the player."
+	conflict_range(integer) : "Conflict Range" : 100 : "[VTMB] Unknown yet..."
+	warn_range(integer) : "Warn Range" : 200 : "[VTMB] Unknown yet..."
+]
+
+
+
+
+
+
+
+
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+//
+// Monster NPCs
+//
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+
+
+//===================================================================================================================
+// npc_VStalker [VTMB-specific]
+//===================================================================================================================
+
+@NPCClass base(VBaseNPC,VAddNPCFeats) studio() = npc_VStalker : 
+	"[VTMB] Stalker NPC. Not used on original maps."
+[
+	model(studio) : "Model" : "models/character/npc/unique/Malkavian_Mansion/Stalker/Stalker.mdl"
+	additionalequipment(choices) : "Base Equipment" : "item_w_knife" : "This is the weapon that NPC will basically use." =
+	[
+		"0" : "Nothing"
+		"item_w_bush_hook" : "item_w_bush_hook"
+		"item_w_crossbow_flaming" : "item_w_crossbow_flaming"
+		"item_w_deserteagle" : "item_w_deserteagle"
+		"item_w_fireaxe" : "item_w_fireaxe"
+		"item_w_fists" : "item_w_fists"
+		"item_w_flamethrower" : "item_w_flamethrower"
+		"item_w_katana" : "item_w_katana"
+		"item_w_knife" : "item_w_knife"
+		"item_w_occultblade" : "item_w_occultblade"
+	]
+	stattemplate(choices) : "NPC Stat Template" : "MalkMansionCroucher" : "Goes to data in 'vdata/system/npctemplate***.txt'. NPCs in Hammer are assigned one of these which determines their statistics." = []
+	player_reaction(choices) : "Reaction to Player" : "D_HT 5" : "Type of NPC's relationship with player. Use <str_type> <int_degree> format,\n\n"+
+		"  where <type> is:\n"+
+		"\tD_LI [0-10] --> Likes Player (Will Defend)\n"+
+		"\tD_NU [0-10] --> Neutral (Default)\n"+
+		"\tD_HT [0-10] --> Hates Player (Will Attack)" =
+	[
+		"D_LI 0" : "D_LI 0"
+		"D_NU 0" : "D_NU 0"
+		"D_HT 0" : "D_HT 0"
+		"D_HT 5" : "D_HT 5"
+	]
+
+	// npc-specific
+	disturbed(choices) : "Disturbed" : 0 : "Set this NPC disturbing state." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	on_fire(choices) : "On Fire [-?]" : 0 : "Set this NPC burning state." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+]
+
+
+//===================================================================================================================
+// npc_VMingXiaoTentacle [VTMB-specific]
+//===================================================================================================================
+
+@NPCClass base(VBaseNPC,VAddNPCFeats) studio() = npc_VMingXiaoTentacle : 
+	"[VTMB] Ming Xiao's tentacles. Not used on original maps."
+[
+	model(studio) : "Model" : "models/character/monster/mingxiao/mingxiao_tenticle/mingxiao_tenticle.mdl"
+	stattemplate(choices) : "NPC Stat Template" : "MingXiao" : "Goes to data in 'vdata/system/npctemplate***.txt'. NPCs in Hammer are assigned one of these which determines their statistics." = []
+]
+
+
+//===================================================================================================================
+// npc_VSheriffSwarm [VTMB-specific]
+//===================================================================================================================
+
+@NPCClass base(VBaseNPC,VAddNPCFeats) studio() = npc_VSheriffSwarm : 
+	"[VTMB] Sheriff's bat swarm. Not used on original maps."
+[
+	model(studio) : "Model" : "models/character/npc/unique/downtown/Sheriff/batswarm.mdl"
+	stattemplate(choices) : "NPC Stat Template" : "SheriffMan" : "Goes to data in 'vdata/system/npctemplate***.txt'. NPCs in Hammer are assigned one of these which determines their statistics." = []
+]
+
+
+//===================================================================================================================
+// npc_VFrenzyShadow [VTMB-specific]
+//===================================================================================================================
+
+@NPCClass base(VBaseNPC,VAddNPCFeats) studio() = npc_VFrenzyShadow : 
+	"[VTMB] Frenzy shadow (unknown). Not used on original maps."
+[
+]
+
+
+
+
+
+
+
+
+
+
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+// 
+// Misc
+// 
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+
+
+//===================================================================================================================
+// trigger_fog [VTMB-specific]
+//===================================================================================================================
+
+@SolidClass base(VBaseTrigger,Parentname)
+= trigger_fog : 
+	"[VTMB] A trigger that controls fog on map. Not used on original maps."
+[
+]
+
+
+
+
+//===================================================================================================================
+// game_ui [common]
+//===================================================================================================================
+// VTMB-adaptation:
+//  added: description note
+//  removed: Unpressed* outputs (new)
+
+@PointClass
+base (
+	Targetname
+) size(-8 -8 -8, 8 8 8)
+= game_ui :
+	"An entity used to override player input when the player is looking at it. \n\n"+
+	"[VTMB] Note: Does not appear to work."
+[
+	FieldOfView(float) : "FieldOfView" : "-1.0" : "The amount of tolerance in the view checking when determining whether the player's input is still under control. 1.0 = straight ahead, 0.0 = +/- 90 degrees, -1.0 = all directions. If the player isn't within the tolerance, the player regains control."
+
+	spawnflags(flags) =
+	[
+		32 : "Freeze Player" : 1
+		64 : "Hide Weapon" : 1
+		128 : "+Use Deactivates" : 0
+		256 : "Jump Deactivates" : 0
+	]
+	
+	// Inputs
+	input Deactivate(void) : "Return Player Control."
+	input Activate(void) : "Take Player Control."
+
+	// Outputs
+	output PlayerOn(void) : "Fired whenever this entity starts controlling the player's input."
+	output PlayerOff(void) : "Fired whenever this entity stops controlling the player's input."
+	output PressedMoveLeft(void) : "Fired whenever the player presses the moveleft key."
+	output PressedMoveRight(void) : "Fired whenever the player presses the moveright key."
+	output PressedForward(void) : "Fired whenever the player presses the forward key."
+	output PressedBack(void) : "Fired whenever the player presses the backward key."
+	output PressedAttack(void) : "Fired whenever the player presses the attack key."
+	output PressedAttack2(void) : "Fired whenever the player presses the secondary attack key."
+
+	output XAxis(string) : "An output that fires whenever the X axis of the player's input changes. i.e. -1 when the player has moveleft key down, 1 when the player has moveright key down, and 0 if neither."
+	output YAxis(string) : "An output that fires whenever the Y axis of the player's input changes. i.e. -1 when the player has backward key down, 1 when the player has forward key down, and 0 if neither."
+	output AttackAxis(string) : "An output that fires whenever the state of the player's attack key changes. i.e. 1 when the player has the attack key down, 0 otherwise."
+	output Attack2Axis(string) : "An output that fires whenever the state of the player's secondary attack key changes. i.e. 1 when the player has the secondary attack key down, 0 otherwise."
+]
+
+
+
+
+//===================================================================================================================
+// hud_counter [VTMB-specific]
+//===================================================================================================================
+
+@PointClass base(Targetname) iconsprite("editor/logic_timer.vmt") = hud_counter : 
+	"[VTMB] Show numerical value on screen.\nNOTE: Never have gotten it to work."
+[
+	setvalue(integer) : "Count Time" : 240 : "Set time value."
+	setxpos(float) : "X Position" : -1 : "Set X position on screen."
+	setypos(float) : "Y Position" : -1 : "Set Y position on screen."
+
+	// inputs
+	input setvalue(integer) : "Set time value."
+	input setxpos(void) : "Set X position on screen."
+	input setypos(void) : "Set Y position on screen."
+	input TurnOn(void) : "Turn on the countdown."
+	input TurnOff(void) : "Turn off the countdown."
+]
+
+
+//===================================================================================================================
+// hud_image [VTMB-specific]
+//===================================================================================================================
+
+@PointClass base(Targetname) = hud_image :
+	"[VTMB] Image that draws on player HUD. Not used on original maps."
+[
+	definition_file(choices) : "Definition Script" : "data/signs/start_game_popup.txt" : "Image definition script related to '<moddir>/VData/Signs/*.txt' file. \n\nPlease, add full moddir-related path and file extension (vdata/signs/mysign.txt) if you're using a custom (not included in this list) script file." =
+	[
+		"vdata/signs/start_game_popup.txt" : "start_game_popup"
+		"vdata/signs/temp_intro.txt" : "temp_intro"
+		"vdata/signs/tutorial_popup.txt" : "tutorial_popup"
+	]
+	fade_in(float) : "Fade-In (secs)" : "0.5" : "Fade-in effect when sign opens."
+	fade_out(float) : "Fade-Out (secs)" : "0.5" : "Fade-out effect when sign closes."
+	pause(choices) : "Pause When Reading" : 1 : "Pauses game process when sign shows on-screen." =
+	[
+		0 : "No"
+		1 : "Yes"
+	]
+	spawnflags(flags) =
+	[
+		1: "Flag 1 (unknown yet)" : 1
+		4: "Flag 4 (unknown yet)" : 1
+	]
+	input ChangeFile(string) : "Changes image definition file."
+]
+
+
+//===================================================================================================================
+// prop_ragdoll_attached [VTMB-specific]
+//===================================================================================================================
+
+@PointClass base(Studiomodel,EnableDisable) studioprop() = prop_ragdoll_attached :
+	"A ragdoll prop that can be attached using it's bones (not tested). Not uses on original maps."
+[
+	attach_type(integer) : "Attach Type" : 0 : "[VTMB] Unknown yet..."
+	bone(choices) : "Attaching Bone" : "<none>" : "Model's bone, which is attached [not tested]." =
+	[
+		"" : "<none>"
+		"Bip01 Head" : "Bip01 Head"
+		"Bip01 L Hand" : "Bip01 L Hand"
+		"Bip01 R Hand" : "Bip01 R Hand"
+		"Bip01 Neck" : "Bip01 Neck"
+		"Bip01 Pelvis" : "Bip01 Pelvis"
+		"Bip01 Spine" : "Bip01 Spine"
+		"Bip01 Spine01" : "Bip01 Spine01"
+		"Bip01 Spine02" : "Bip01 Spine02"
+		"Bip01 Spine03" : "Bip01 Spine03"
+	]
+ 	physdamagescale(float) : "Physics Impact Damage Scale" : "0.1" : "Scales damage energy when this object is hit by a physics object. NOTE: 0 means this feature is disabled for backwards compatibility. \nSet to 1.0 for materials as strong as flesh, smaller numbers indicate stronger materials."
+	spawnflags(flags) = 
+	[
+		4 : "Debris (don't collide with anything)" : 1
+	]
+	input physdamagescale(float) : "Set the Physics Impact Damage Scale for this character. NOTE: 0 means this feature is disabled for backwards compatibility."
+]
+
+
+
+
+
+
+
+
+
+//*******************************************************************************************************************
+//*******************************************************************************************************************
+// 
+// End of FGD
+// 
+//*******************************************************************************************************************
+//*******************************************************************************************************************

@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ###  PackFile Explorer Copyright 2005 - 2008 Dave Gaunt  ### -->
+<PackFileExplorer definition="3.09">
+  <!-- ###  Register Packfile Types  ### -->
+  <Register extension=".bsa">
+    <Driver name="DirBSA" icon="0" description="TES4 Oblivion">
+      <Validation offset="0" hex="42,53,41,00" />
+    </Driver>
+  </Register>
+  <Register extension=".bsp">
+    <Driver name="DirBSP" icon="1" description="Source Engine Map">
+      <Validation offset="0" hex="56,42,53,50" />
+    </Driver>
+  </Register>
+  <Register extension=".dat">
+    <Driver name="DirLHOG" icon="13" description="Legend Hand Of God">
+      <Validation pathcontains="legend" />
+      <Validation pathcontains=".pak" />
+    </Driver>
+  </Register>
+  <Register extension=".gcf">
+    <Driver name="DirGCF" icon="1" description="Source Engine Archive">
+      <Validation offset="8" hex="06,00,00,00" />
+    </Driver>
+  </Register>
+  <Register extension=".key">
+    <Driver name="DirBIF" icon="2" description="The Witcher">
+      <Validation offset="0" hex="4B,45,59,20,56,31,2E,31" />
+    </Driver>
+  </Register>
+  <Register extension=".nob">
+    <Driver name="DirZIP" icon="3" description="Vampire Redemption">
+      <Validation offset="0" hex="50,4B,03,04" />
+    </Driver>
+  </Register>
+  <Register extension=".pod">
+    <Driver name="DirPOD" icon="14" description="BloodRayne">
+      <Validation offset="0" hex="50,4F,44,33" />
+    </Driver>
+  </Register>
+  <Register extension=".p0?">
+    <Driver name="DirG3" icon="5" description="Gothic 3">
+      <Validation offset="4" hex="47,33,56,30" />
+    </Driver>
+  </Register>
+  <Register extension=".pak">
+    <Driver name="DirG3" icon="5" description="Gothic 3">
+      <Validation offset="4" hex="47,33,56,30" />
+    </Driver>
+  </Register>
+  <Register extension=".pk3">
+    <Driver name="DirZIP" icon="5" description="Id Tech 3">
+      <Validation offset="0" hex="50,4B,03,04" />
+    </Driver>
+  </Register>
+  <Register extension=".pk4">
+    <Driver name="DirZIP" icon="6" description="Id Tech 4">
+      <Validation offset="0" hex="50,4B,03,04" />
+    </Driver>
+  </Register>
+  <Register extension=".upk">
+    <Driver name="DirUPK" icon="9" description="Fury">
+      <Validation offset="0" hex="C1,83,2A,9E,97,01" />
+    </Driver>
+    <Driver name="DirUPK" icon="10" description="Gears Of War">
+      <Validation offset="0" hex="C1,83,2A,9E,EA,01" />
+    </Driver>
+    <Driver name="DirUPK" icon="11" description="Mass Effect">
+      <Validation offset="0" hex="C1,83,2A,9E,EB,01" />
+    </Driver>
+    <Driver name="DirUPK" icon="8" description="Unreal Tournament 3">
+      <Validation offset="0" hex="C1,83,2A,9E,FF,01" />
+    </Driver>
+  </Register>
+  <Register extension=".vpk">
+    <Driver name="DirVPK" icon="4" description="Vampire Bloodlines" />
+  </Register>
+  <!-- Check This... Appears To Break When Not Using The .upk Extension !!!
+  <Register extension=".xxx">
+    <Driver name="DirUPK" icon="12" description="Medal Of Honour Airborne">
+      <Validation offset="0" hex="C1,83,2A,9E,A5,01" />
+    </Driver>
+  </Register>
+  -->
+  <Register extension=".zip">
+    <Driver name="DirZIP" icon="7" description="Generic Archive">
+      <Validation offset="0" hex="50,4B,03,04" />
+    </Driver>
+  </Register>
+  <!-- ###  Register File Types  ### -->
+  <Register extension=".af">
+    <Driver name="FileASCII" icon="1" description="Articulated Figure" />
+  </Register>
+  <Register extension=".ain">
+    <Driver name="FileASCII" icon="1" description="AI Navigation" />
+  </Register>
+  <Register extension=".bin">
+    <Driver name="FileBinary" icon="0" description="Binary Data" />
+  </Register>
+  <Register extension=".bbx">
+    <Driver name="FileXML" icon="1" description="NWN2" />
+  </Register>
+  <Register extension=".bfx">
+    <Driver name="FileXML" icon="1" description="NWN2" />
+  </Register>
+  <Register extension=".bmp">
+    <Driver name="FileImage" icon="2" description="Bitmap Image" />
+  </Register>
+  <Register extension=".cfg">
+    <Driver name="FileASCII" icon="1" description="Configuration" />
+  </Register>
+  <Register extension=".cm">
+    <Driver name="FileASCII" icon="1" description="Collision Model" />
+  </Register>
+  <Register extension=".conf">
+    <Driver name="FileASCII" icon="1" description="Configuration" />
+  </Register>
+  <Register extension=".dds">
+    <Driver name="FileImage" icon="2" description="DirectX Texture" />
+  </Register>
+  <Register extension=".def">
+    <Driver name="FileASCII" icon="1" description="Definition" />
+  </Register>
+  <Register extension=".dlg">
+    <Driver name="FileASCII" icon="1" description="Dialog" />
+  </Register>
+  <Register extension=".fx">
+    <Driver name="FileASCII" icon="1" description="Effects" />
+  </Register>
+  <Register extension=".gui">
+    <Driver name="FileASCII" icon="1" description="User Interface" />
+  </Register>
+  <Register extension=".ini">
+    <Driver name="FileASCII" icon="1" description="Configuration" />
+  </Register>
+  <Register extension=".jpg">
+    <Driver name="FileImage" icon="2" description="Image" />
+  </Register>
+  <Register extension=".lip">
+    <Driver name="FileASCII" icon="1" description="Lip Sync" />
+  </Register>
+  <Register extension=".lua">
+    <Driver name="FileASCII" icon="1" description="Script" />
+  </Register>
+  <Register extension=".lwo">
+    <Driver name="FileMesh" icon="4" description="Lightwave Model" />
+  </Register>
+  <Register extension=".md5mesh">
+    <Driver name="FileMesh" icon="4" description="Doom3 Model" />
+  </Register>
+  <Register extension=".mdb">
+    <Driver name="FileMesh" icon="4" description="NWN2 Model" />
+  </Register>
+  <Register extension=".mdl">
+    <Driver name="FileMesh" icon="4" description="Bloodlines Model" />
+    <Exclude extension=".phy" /><!-- Hide x.phy if x.mdl exists -->
+    <Exclude extension=".dx80.vtx" />
+    <Exclude extension=".dx7_2Bone.vtx" />
+  </Register>
+  <Register extension=".mtr">
+    <Driver name="FileASCII" icon="1" description="Material" />
+  </Register>
+  <Register extension=".nag">
+    <Driver name="FileASCII" icon="1" description="Audio Group" />
+  </Register>
+  <Register extension=".nai">
+    <Driver name="FileASCII" icon="1" description="AI" />
+  </Register>
+  <Register extension=".nam">
+    <Driver name="FileASCII" icon="1" description="Material" />
+  </Register>
+  <Register extension=".ncd">
+    <Driver name="FileASCII" icon="1" description="Clan Definition" />
+  </Register>
+  <Register extension=".nco">
+    <Driver name="FileASCII" icon="1" description="Conversation" />
+  </Register>
+  <Register extension=".ndd">
+    <Driver name="FileASCII" icon="1" description="Discipline Definition" />
+  </Register>
+  <Register extension=".ndg">
+    <Driver name="FileASCII" icon="1" description="Discipline Group" />
+  </Register>
+  <Register extension=".nex">
+    <Driver name="FileASCII" icon="1" description="Particle Explosion" />
+  </Register>
+  <Register extension=".nls">
+    <Driver name="FileASCII" icon="1" description="Localised Strings" />
+  </Register>
+  <Register extension=".nmf">
+    <Driver name="FileASCII" icon="1" description="Meta File" />
+  </Register>
+  <Register extension=".nms">
+    <Driver name="FileASCII" icon="1" description="Motion Set" />
+  </Register>
+  <Register extension=".nod">
+    <Driver name="FileMesh" icon="4" description="Redemption Model" />
+  </Register>
+  <Register extension=".not">
+    <Driver name="FileBinary" icon="0" description="Binary Template" />
+  </Register>
+  <Register extension=".npc">
+    <Driver name="FileASCII" icon="1" description="Player Character" />
+  </Register>
+  <Register extension=".npd">
+    <Driver name="FileASCII" icon="1" description="Particle Definition" />
+  </Register>
+  <Register extension=".nqd">
+    <Driver name="FileASCII" icon="1" description="Quest Definition" />
+  </Register>
+  <Register extension=".nsc">
+    <Driver name="FileASCII" icon="1" description="Chronicle" />
+  </Register>
+  <Register extension=".nss">
+    <Driver name="FileASCII" icon="1" description="Scene Script" />
+  </Register>
+  <Register extension=".nst">
+    <Driver name="FileASCII" icon="1" description="Story Teller" />
+  </Register>
+  <Register extension=".ntt">
+    <Driver name="FileASCII" icon="1" description="Treasure Types" />
+  </Register>
+  <Register extension=".nvo">
+    <Driver name="FileASCII" icon="1" description="Voice Over Text" />
+  </Register>
+  <Register extension=".pda">
+    <Driver name="FileASCII" icon="1" description="Doom3 PDA" />
+  </Register>
+  <Register extension=".pfx">
+    <Driver name="FileXML" icon="1" description="NWN2" />
+  </Register>
+  <Register extension=".png">
+    <Driver name="FileImage" icon="2" description="Image" />
+  </Register>
+  <Register extension=".prt">
+    <Driver name="FileASCII" icon="1" description="Particle" />
+  </Register>
+  <Register extension=".py">
+    <Driver name="FileASCII" icon="1" description="Python Script" />
+  </Register>
+  <Register extension=".res">
+    <Driver name="FileASCII" icon="1" description="Resource" />
+  </Register>
+  <Register extension=".script">
+    <Driver name="FileASCII" icon="1" description="Script" />
+  </Register>
+  <Register extension=".sef">
+    <Driver name="FileXML" icon="1" description="NWN2" />
+  </Register>
+  <Register extension=".skin">
+    <Driver name="FileASCII" icon="1" description="Skin" />
+  </Register>
+  <Register extension=".tex">
+    <Driver name="FileImage" icon="2" description="BloodRayne Texture" />
+  </Register>
+  <Register extension=".tga">
+    <Driver name="FileImage" icon="2" description="Targa Image" />
+    <Exclude extension=".nam" /><!-- Hide x.nam if x.tga exists -->
+  </Register>
+  <Register extension=".tth">
+    <Driver name="FileImage" icon="2" description="Bloodlines Texture" />
+    <Exclude extension=".ttz" /><!-- Hide x.ttz if x.tth exists -->
+    <Exclude extension=".vmt" /><!-- Hide x.vmt if x.tth exists -->
+  </Register>
+  <Register extension=".txt">
+    <Driver name="FileASCII" icon="1" description="ASCII Text" />
+  </Register>
+  <Register extension=".vcd">
+    <Driver name="FileASCII" icon="1" description="Choreography" />
+  </Register>
+  <Register extension=".vfp">
+    <Driver name="FileASCII" icon="1" description="Pixel Shader" />
+  </Register>
+  <Register extension=".vmt">
+    <Driver name="FileASCII" icon="1" description="Valve Material" />
+  </Register>
+  <Register extension=".vp">
+    <Driver name="FileASCII" icon="1" description="Pixel Shader" />
+  </Register>
+  <Register extension=".vsm">
+    <Driver name="FileBSP" icon="4" description="Source Engine Map" />
+  </Register>
+  <Register extension=".vtf">
+    <Driver name="FileImage" icon="2" description="Valve Texture" />
+    <Exclude extension=".vmt" /><!-- Hide x.vmt if x.vtf exists -->
+  </Register>
+  <Register extension=".wav">
+    <Driver name="FileAudio" icon="3" description="Resource Interchange File Format Audio" />
+  </Register>
+  <Register extension=".x">
+    <Driver name="FileMesh" icon="4" description="DirectX Model" />
+  </Register>
+  <Register extension=".ximg">
+    <Driver name="FileImage" icon="2" description="Gothic3 Texture" />
+  </Register>
+  <Register extension=".xml">
+    <Driver name="FileASCII" icon="1" description="Extensible Markup Language" />
+  </Register>
+</PackFileExplorer>

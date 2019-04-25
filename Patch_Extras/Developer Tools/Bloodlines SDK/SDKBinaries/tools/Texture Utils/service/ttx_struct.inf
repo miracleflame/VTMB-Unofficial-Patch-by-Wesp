@@ -1,0 +1,28 @@
+-----------
+Annotation:
+-----------
+The .TTx file format is used by Vampire Bloodlines. 
+It contains Valve's VTF texture compressed by Zlib (.ttz) and custom header (.tth).
+See also 'vtf\vtf.cpp' and 'public\vtf\vtf.h'...
+
+----------
+Structure:
+----------
+[TTH]
+Signature					char[4] {h:0x545448000100} ("TTH")	// Troika texture header
+Version  					unsigned char[2] {h:0x0100} (1;0)	// 1.0
+VtfMipsNumber				unsigned char {h:0x01-0D} (1-13)	// byte #56 of Vtf header
+UnRecARFlag					unsigned char {h:0x03/04} (3)	// unused but related to img aspect (3 for "1", 4 for "2"..)
+VtfChunkSize				int {h:0x00-ffffffff} ( 0-256 m)
+MipsFlagsData				double[*VtfMipsNumber] {h:?/0x00} (?, Size:8-104)	// may be empty
+VtfFileSize					int {h:0x40-ffffffff} (64-256 m)
+TtzFileSize					int {h:0x00-ffffffff} ( 0-256 m)
+VtfChunk					raw[*VtfChunkSize] (Header+Thumbnail, Size:0-256 m)
+
+[TTZ]
+RawDataGZipped				raw[*TtzFileSize] (ImageData, Size:0-256 m)
+
+[Notes]
+MipsFlagsData is still unknown, but making it null is worked normal.
+VtfChunk may contain as header data only (64 bytes for VTF v7.1) as also thumbnail or even whole file (up to 256 mb).
+In the last case, .ttz data will be null or not attached at all, and VtfMipsNumber must be set to 1 (important!).

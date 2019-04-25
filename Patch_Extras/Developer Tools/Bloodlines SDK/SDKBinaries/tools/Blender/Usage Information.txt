@@ -1,0 +1,44 @@
+Blender MDL Import-Export how-to:
+---------------------------------
+
+This toolkit for Blender editor will allow you to edit the existing 
+game's MDLs by modifying their vertices and UVs (texture mapping).
+It doesn't require installing or configuring, just learn about using!
+
+1) Open the desired .MDL in the PackFile Explorer or VampED and then
+extract it as "d3d.x" into the directory you wish. Remember to extract
+the .MDL file from VPK archive into the same folder as the d3d.x and 
+TGAs obtained as well if you want to export changes back to the model.
+Any version from VampED v0.92 to PackFile Explorer v3.09 can do it.
+
+2) Then you simply have to go to the "File" menu of the main Blender 
+window, choose "Import" and then "Bloodlines_X (.X)". Select *.x model
+you have extracted before with VampED, and load it.
+
+3) Move the vertices as desired. DON'T create or destroy verts: the 
+strips must match the original model! For PackFile Explorer's .X export,
+don't move the vertices at "0,0,0", as they are the LODs vertices. 
+Move the UV as desired too. Try to move separate chunks, you could use 
+the Scale function on those selected chunks.
+
+4) To export your changes, choose "Bloodlines (x.mdl)" in "Export" menu,
+and then select the right output folder and the .MDL you've extracted.
+You'll get the new .MDL with the same name as orignal one but with "_x"
+at the end of it. You must put it into the right game's models/ subdir
+(must match the one inside of source .vpk's path, create it if missing),
+and remove "_x". The new .MDL will override the one inside of .VPK file.
+
+I also have written another script for Blender. It saves the UV as well
+as the vertices. All you have to do is choose in the Export script menu
+the "Bloodlines_UV (x.mdl)", then choose the right out folder and the 
+right MDL. The script will then try to find the number of vertices and 
+compare that to the number of verts in Blender. If it fails, an error 
+popup will show and the script will end. If it succeeds, another popup 
+will tell you that the file was created successfully. You should have 
+new UV in addition of the new coordinates and vertices, and that's it.
+
+
+Have fun!
+Dan (alias DDLullu)
+
+// Improved and adapted for Bloodlines SDK by Psycho-A at 25.04.2019
