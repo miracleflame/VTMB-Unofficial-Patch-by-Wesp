@@ -1,0 +1,203 @@
+SoundScheme
+{
+	Music
+	{
+		"Filename"	"music/Dangerous_Places.mp3"  //placeholder until compressed sound files are available
+		"Volume"	"35"
+		"NoPause" "0"	// added by wesp
+	}
+
+	Combat
+	{
+		"Filename"	"music/Dangerous_Places_Combat.mp3"  //placeholder until compressed sound files are available
+		"Volume"	"25"
+		"NoPause" "0"	// added by wesp
+	}
+
+	Ambient
+	{
+		"Filename"	"Environmental\Interior\Room_Small.wav"  //placeholder until compressed sound files are available
+		"Volume"	"35"
+	}
+
+	RandomSound	// added by wesp
+	{
+		"Filename"	"area\special\warehouse\industrial_light.wav"
+		"PitchMin"	"95"	
+		"PitchMax"	"105"
+		"Volume"	"25"
+		"Frequency"	"20"	
+		
+		"AudibleRadius"		"4500"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"1500"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"2500"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"400"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"800"		// the sound will be played no higher than these many units above the sound scheme entity
+		"AngleMin"		"45"
+		"AngleMax"		"135"
+	}
+
+	RandomSound
+	{
+		"Filename"	"\Environmental\Machines\Steamburst3.wav"
+		"PitchMin"	"95"	
+		"PitchMax"	"105"
+		"Volume"	"25"
+		"Frequency"	"20"	
+		
+		"AudibleRadius"		"4500"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"1500"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"2500"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"400"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"800"		// the sound will be played no higher than these many units above the sound scheme entity
+		"AngleMin"		"45"
+		"AngleMax"		"135"
+	}
+
+	RandomSound
+	{
+		"Filename"	"\Area\Santa_Monica\Warehouse\train_horn1.wav"
+		"PitchMin"	"95"	
+		"PitchMax"	"105"
+		"Volume"	"30"
+		"Frequency"	"10"	// out of 1000. Checks top to bottom 10 times every second
+		
+		"AudibleRadius"		"5000"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"800"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"1000"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"400"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"800"		// the sound will be played no higher than these many units above the sound scheme entity
+		"AngleMin"		"45"
+		"AngleMax"		"135"
+	}
+
+	RandomSound
+	
+	{
+		"Filename"	"\Environmental\Machines\Steam4.wav"	// changed by wesp
+		"PitchMin"	"95"	
+		"PitchMax"	"105"
+		"Volume"	"20"
+		"Frequency"	"30"	// out of 1000. Checks top to bottom 10 times every second
+		
+		"AudibleRadius"		"4500"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"400"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"750"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"0"		// the sound will be played no higher than these many units above the sound scheme entity
+		"AngleMin"		"45"
+		"AngleMax"		"135"
+	}
+
+	RandomSound
+	{
+		"Filename"	"\Area\Santa_Monica\Warehouse\train_horn2.wav"
+		"PitchMin"	"95"	
+		"PitchMax"	"105"
+		"Volume"	"25"
+		"Frequency"	"30"	// out of 1000. Checks top to bottom 10 times every second
+		
+		"AudibleRadius"		"4500"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"800"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"1000"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"0"		// the sound will be played no higher than these many units above the sound scheme entity
+		"AngleMin"		"45"
+		"AngleMax"		"135"
+	}
+
+	RandomSound
+	{
+		"Filename"	"\Area\Santa_Monica\Warehouse\train_bell.wav"
+		"PitchMin"	"100"	
+		"PitchMax"	"100"
+		"Volume"	"25"
+		"Frequency"	"20"	// out of 1000. Checks top to bottom 10 times every second
+		
+		"AudibleRadius"		"4500"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"800"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"1000"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"0"		// the sound will be played no higher than these many units above the sound scheme entity
+		"AngleMin"		"45"
+		"AngleMax"		"135"
+	}
+	
+	RandomSound
+	{
+		"Filename"	"\Area\Santa_Monica\Warehouse\train_passing.wav"
+		"PitchMin"	"95"	
+		"PitchMax"	"105"
+		"Volume"	"25"
+		"Frequency"	"20"	// out of 1000. Checks top to bottom 10 times every second
+		
+		"AudibleRadius"		"4500"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"800"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"1000"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"0"		// the sound will be played no higher than these many units above the sound scheme entity
+		"AngleMin"		"45"
+		"AngleMax"		"135"
+	}
+
+	RandomSound
+	{
+		"Filename"	"\Environmental\Vehicles\train_diesel_horn.wav"
+		"PitchMin"	"95"	
+		"PitchMax"	"110"
+		"Volume"	"30"
+		"Frequency"	"4"
+		
+		"AudibleRadius"		"2000"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"1200"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"2000"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"0"		// the sound will be played no higher than these many units above the sound scheme entity
+	}
+
+	RandomSound
+	{
+		"Filename"	"\Environmental\Vehicles\train_passing_2.wav"
+		"PitchMin"	"95"	
+		"PitchMax"	"110"
+		"Volume"	"25"
+		"Frequency"	"4"
+		
+		"AudibleRadius"		"2000"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"1200"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"2000"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"0"		// the sound will be played no higher than these many units above the sound scheme entity
+	}
+
+	RandomSound
+	{
+		"Filename"	"\Environmental\City\industry_train_wheels2.wav"
+		"PitchMin"	"95"	
+		"PitchMax"	"110"
+		"Volume"	"30"
+		"Frequency"	"20"
+		
+		"AudibleRadius"		"2000"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"1200"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"2000"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"0"		// the sound will be played no higher than these many units above the sound scheme entity
+	}
+
+	RandomSound
+	{
+		"Filename"	"\Environmental\City\industry_train_wheels1.wav"
+		"PitchMin"	"95"	
+		"PitchMax"	"110"
+		"Volume"	"25"
+		"Frequency"	"20"
+		
+		"AudibleRadius"		"2000"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"1200"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"2000"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"0"		// the sound will be played no higher than these many units above the sound scheme entity
+	}
+
+}

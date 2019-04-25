@@ -17,8 +17,8 @@ SoundScheme	// added by wesp
 
 	Ambient
 	{
-		"Filename"	"environmental/Sewers/sewer ambinc no drips.wav"
-		"Volume"	"40"
+		"Filename"	"area/downtown/bradbury/thick_rain.wav"
+		"Volume"	"10"
 	}
 
 	RandomSound
@@ -50,4 +50,35 @@ SoundScheme	// added by wesp
 		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
 		"HeightMax"		"0"		// the sound will be played no higher than these many units above the sound scheme entity
 	}
+
+	RandomSound
+	{
+		"Filename"	"area\downtown\bradbury\digging_out.wav"
+		"PitchMin"	"90"	
+		"PitchMax"	"110"
+		"Volume"	"50"
+		"Frequency"	"5"
+		
+		"AudibleRadius"		"1000"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"100"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"500"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"0"		// the sound will be played no higher than these many units above the sound scheme entity
+	}
+
+	RandomSound
+	{
+		"Filename"	"area\downtown\bradbury\shovel_hit.wav"
+		"PitchMin"	"90"	
+		"PitchMax"	"110"
+		"Volume"	"50"
+		"Frequency"	"5"
+		
+		"AudibleRadius"		"1000"		// when played, the sound will be attenuated so that it can be heard from this far away
+		"DistMin"		"100"		// the sound will be played at a point no less than this distance from the player
+		"DistMax"		"500"		// the sound will be played at a point no farther than this distance from the player
+		"HeightMin"		"0"		// the sound will played no lower than these many units below the sound scheme entity
+		"HeightMax"		"0"		// the sound will be played no higher than these many units above the sound scheme entity
+	}
+
 }

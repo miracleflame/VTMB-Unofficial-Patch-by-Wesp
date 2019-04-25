@@ -8814,9 +8814,22 @@
 "dialogname" "dlg/Warrens/Mitnick.dlg"
 "follower_type" "Default"
 "OnDialogBegin" "mitnick_dialog,Teleport,,0,-1,,"
+"OnDialogBegin" "mitnick_typing,Kill,,0,-1,,"
 "OnDialogEnd" "mitnick_dialog,Kill,,0,-1,,"
 "OnDialogEnd" "Mitnick,SetDontFacePlayerInDialog,0,0,-1,,"
 "origin" "-2183.54 357.815 240.114"
+}
+{
+"classname" "ambient_generic"
+"health" "10"
+"pitch" "100"
+"pitchstart" "100"
+"radius" "850"
+"sound_event_level" "2"
+"flag_force_looping" "1"
+"targetname" "mitnick_typing"
+"message" "area/hollywood/warrens/computer keyboard.wav"
+"origin" "-2148.22 274.709 268"
 }
 {
 "classname" "logic_auto"

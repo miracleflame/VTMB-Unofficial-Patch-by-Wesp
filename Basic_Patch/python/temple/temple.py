@@ -337,11 +337,14 @@ def tpl3_hub_check_alarm():
             if guard:
                 guard.ScriptUnhide()
 
-#TEMPLE 3: Check if all 4 pedestals are set
+#TEMPLE 3: Check if all 4 pedestals are set, changed by wesp
 def tpl3_check_pedestals():
     print "temple3: checking pedestal states..."
     if (G.tpl3_elephant_final == 1 and G.tpl3_dragon_final == 1 and G.tpl3_cat_final == 1 and G.tpl3_crane_final == 1):
         print "temple3: pedestals all set!"
+        if G.Patch_Plus == 1:
+            gong = Find("gong_wesp")
+            gong.PlaySound()
         tele_emitter = Find( "teleport_emitter" )
         tele_emitter.TurnOn()
         tele_trigger = Find( "teleport_trigger" )
