@@ -398,9 +398,10 @@ Global changes:
 
 --------------------
 
-1.80 (25.04.2019):
+1.80 (26.04.2019):
 - Added full Blender 2.42 and MDL/.X Import/Export scripts for editing existing game models' vertices and UV:
   -- It's fully ready for use (installing and configuring aren't needed) - just learn how-to in the usage doc!
+- Texture Converter: Fixed critical typo not allowing to normally convert images to TTZs.
 - Texture Converter: Removed "Convert" context items from TTZ extension to avoid twice converting (use TTHs!).
 - Rewritten some SDK control scripts and added workarounds for better Linux/Wine environment compatibility.
 - A minor file structure reorganization (remove whole old SDKBinaries/ folder before updating!).

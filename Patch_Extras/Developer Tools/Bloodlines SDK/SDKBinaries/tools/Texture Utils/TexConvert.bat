@@ -496,7 +496,7 @@ for %%m in ("%VtfFile%") do (
 	%Validate% "%%~dpnm.ttz"
 	if exist "error.init" goto QuitFunc
 	rem Get obtained TTZ size...
-	for %%x in ("%%~dpnm.ttz") do (
+	for %%s in ("%%~dpnm.ttz") do (
 	  set "TtzNumSize=%%~zs"
 	  echo   Obtained TTZ size:	%%~zs bytes.
 	)

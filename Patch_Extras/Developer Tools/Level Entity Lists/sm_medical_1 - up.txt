@@ -3873,6 +3873,8 @@
 "soundgroup" "Unique/Nurse"
 "base_gender" "1"
 "allow_alert_lookaround" "1"
+"OnDamaged" "plus_clinic1,Kill,,0,-1,,"
+"OnDeath" "plus_clinic1,Kill,,0,-1,,"
 "OnIncapacitatedStart" "nurse_talk_trigger,Disable,,0,-1,,"
 "OnIncapacitatedEnd" "nurse_talk_trigger,Enable,,0,-1,,"
 "OnDialogBegin" "nurse_to_cabinets,Disable,,0,-1,,"
@@ -11320,7 +11322,7 @@
 "use_icon" "40"
 "renderamt" "255"
 "rendercolor" "255 255 255"
-"origin" "1230.23 379.852 43"
+"origin" "1230.23 380 43"
 }
 {
 "classname" "prop_dynamic"
@@ -12171,6 +12173,33 @@
 "classname" "infodecal"
 "texture" "decals/structural/medicalhalllight"
 "origin" "980 151 215.345"
+}
+{
+"classname" "ambient_generic"
+"health" "10"
+"pitch" "100"
+"pitchstart" "100"
+"radius" "100"
+"StartHidden" "1"
+"sound_event_level" "2"
+"targetname" "plus_clinic1"
+"message" "area/santa_monica/clinic/nurse_conversation_med loop.wav"
+"flag_force_looping" "1"
+"origin" "1229 152 57"
+}
+{
+"classname" "ambient_generic"
+"health" "10"
+"pitch" "100"
+"pitchstart" "100"
+"radius" "50"
+"StartHidden" "1"
+"sound_event_level" "2"
+"targetname" "plus_clinic2"
+"message" "area/santa_monica/clinic/clinic breathing machine.wav"
+"flag_force_looping" "1"
+"spawnflags" "0"
+"origin" "1134 376 56"
 }
 {
 "classname" "logic_auto"
