@@ -2,93 +2,16 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7999"
-	"mapversion" "978"
+	"mapversion" "975"
 	"prefab" "0"
 }
 visgroups
 {
 	visgroup
 	{
-		"name" "NewLighting"
-		"visgroupid" "7"
-		"color" "85 202 195"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "NPCs"
-		"visgroupid" "15"
-		"color" "118 159 188"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "FunctionBrushes"
-		"visgroupid" "14"
-		"color" "173 162 107"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Cubemaps"
-		"visgroupid" "13"
-		"color" "218 99 224"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Globals"
-		"visgroupid" "5"
-		"color" "113 182 95"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "PointEntities"
-		"visgroupid" "3"
-		"color" "188 125 210"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "ClipBrushes"
-		"visgroupid" "2"
-		"color" "237 146 139"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Triggers"
-		"visgroupid" "12"
-		"color" "255 128 0"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Lighting"
-		"visgroupid" "10"
-		"color" "255 255 128"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "FuncDetails"
-		"visgroupid" "9"
-		"color" "255 128 64"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Effects"
-		"visgroupid" "8"
-		"color" "233 94 87"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "XtraShadows"
-		"visgroupid" "6"
-		"color" "0 168 249"
+		"name" "Water"
+		"visgroupid" "1"
+		"color" "102 160 213"
 		"visible" "1"
 	}
 	visgroup
@@ -100,16 +23,93 @@ visgroups
 	}
 	visgroup
 	{
-		"name" "Water"
-		"visgroupid" "1"
-		"color" "102 160 213"
+		"name" "XtraShadows"
+		"visgroupid" "6"
+		"color" "0 168 249"
 		"visible" "1"
 	}
 	visgroup
 	{
-		"name" "StaticProps"
-		"visgroupid" "18"
-		"color" "105 110 231"
+		"name" "Effects"
+		"visgroupid" "8"
+		"color" "233 94 87"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "FuncDetails"
+		"visgroupid" "9"
+		"color" "255 128 64"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Lighting"
+		"visgroupid" "10"
+		"color" "255 255 128"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Triggers"
+		"visgroupid" "12"
+		"color" "255 128 0"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "ClipBrushes"
+		"visgroupid" "2"
+		"color" "237 146 139"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "PointEntities"
+		"visgroupid" "3"
+		"color" "188 125 210"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Globals"
+		"visgroupid" "5"
+		"color" "113 182 95"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Cubemaps"
+		"visgroupid" "13"
+		"color" "218 99 224"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "FunctionBrushes"
+		"visgroupid" "14"
+		"color" "173 162 107"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "NPCs"
+		"visgroupid" "15"
+		"color" "118 159 188"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "NewLighting"
+		"visgroupid" "7"
+		"color" "85 202 195"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "FunctionProps"
+		"visgroupid" "16"
+		"color" "179 208 81"
 		"visible" "1"
 	}
 	visgroup
@@ -121,9 +121,9 @@ visgroups
 	}
 	visgroup
 	{
-		"name" "FunctionProps"
-		"visgroupid" "16"
-		"color" "179 208 81"
+		"name" "StaticProps"
+		"visgroupid" "18"
+		"color" "105 110 231"
 		"visible" "1"
 	}
 }
@@ -132,12 +132,12 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"nGridSpacing" "1"
-	"bShow3DGrid" "1"
+	"bShow3DGrid" "0"
 }
 world
 {
 	"id" "0"
-	"mapversion" "978"
+	"mapversion" "975"
 	"classname" "worldspawn"
 	"angles" "0 0 0"
 	"comment" "Draft by EntenSchreck, finished by Wesp5 and improved by Psycho-A and duchU"
@@ -36906,80 +36906,6 @@ world
 	}
 	solid
 	{
-		"id" "302461"
-		side
-		{
-			"id" "8998"
-			"plane" "(648 -2453 -620) (648 -2453 -674) (588 -2453 -674)"
-			"material" "TOOLS/TOOLSCLIP"
-			"uaxis" "[1 0 0 -48] 0.25"
-			"vaxis" "[0 0 -1 48] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "8999"
-			"plane" "(588 -2436 -620) (588 -2436 -674) (648 -2436 -674)"
-			"material" "TOOLS/TOOLSCLIP"
-			"uaxis" "[1 0 0 -48] 0.25"
-			"vaxis" "[0 0 -1 48] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "9000"
-			"plane" "(588 -2436 -674) (588 -2453 -674) (648 -2453 -674)"
-			"material" "TOOLS/TOOLSCLIP"
-			"uaxis" "[1 0 0 -48] 0.25"
-			"vaxis" "[0 -1 0 -60] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "9001"
-			"plane" "(588 -2453 -620) (588 -2436 -620) (648 -2436 -620)"
-			"material" "TOOLS/TOOLSCLIP"
-			"uaxis" "[1 0 0 -48] 0.25"
-			"vaxis" "[0 -1 0 -60] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "9002"
-			"plane" "(588 -2453 -620) (588 -2453 -674) (588 -2436 -674)"
-			"material" "TOOLS/TOOLSCLIP"
-			"uaxis" "[0 1 0 60] 0.25"
-			"vaxis" "[0 0 -1 48] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "9003"
-			"plane" "(648 -2436 -620) (648 -2436 -674) (648 -2453 -674)"
-			"material" "TOOLS/TOOLSCLIP"
-			"uaxis" "[0 1 0 60] 0.25"
-			"vaxis" "[0 0 -1 48] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		editor
-		{
-			"color" "0 151 208"
-		}
-	}
-	solid
-	{
 		"id" "1015"
 		side
 		{
@@ -47874,26 +47800,26 @@ entity
 {
 	"id" "4770"
 	"classname" "prop_switch"
-	"actsnd" "environmental/electronic/button_click_1.wav"
 	"angles" "0 0 0"
 	"crossfade_skin_time" "2.0"
-	"deactsnd" "environmental/electronic/button_click_1.wav"
 	"disableshadows" "0"
 	"locked_icon" "3"
-	"locksnd" "environmental/electronic/deny_beep.wav"
 	"model" "models/scenery/misc/lever/lever.mdl"
 	"npc_transparent" "1"
 	"solid" "6"
-	"soundgroup" "small_metal_switch"
+	"soundgroup" "medium_metal_switch"
 	"targetname" "doorlever"
 	"use_icon" "12"
 	"renderamt" "255"
 	"rendercolor" "255 255 255"
 	"spawnflags" "0"
+	"actsnd" "environmental/electronic/button_click_1.wav"
+	"deactsnd" "environmental/electronic/button_click_1.wav"
+	"locksnd" "environmental/electronic/deny_beep.wav"
 	connections
 	{
-		"OnUse" "sew_door_2,Unlock,,0,1,,"
 		"OnUse" "leverinspection,Kill,,0,1,,"
+		"OnUse" "sew_door_2,Unlock,,0,1,,"
 	}
 	"origin" "622 -2113 -678"
 	editor
@@ -49667,27 +49593,27 @@ entity
 	"targetname" "events_player_plus"
 	connections
 	{
-		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
-		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
-		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
-		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
-		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
-		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
-		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
-		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
-		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
-		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
-		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
-		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
-		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
-		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
-		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
-		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
-		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
-		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
-		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
-		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
 		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
+		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
+		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
+		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
+		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
+		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
+		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
+		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
+		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
+		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
+		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
+		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
+		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
+		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
+		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
+		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
+		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
+		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
+		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
+		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
+		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -49704,29 +49630,29 @@ entity
 	"targetname" "world"
 	connections
 	{
-		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
-		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
-		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
-		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
-		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
-		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
-		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
-		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
-		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
-		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
-		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
-		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
-		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
-		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
-		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
-		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
-		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
-		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
-		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
-		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
-		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
-		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
 		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
+		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
+		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
+		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
+		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
+		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
+		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
+		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
+		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
+		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
+		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
+		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
+		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
+		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
+		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
+		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
+		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
+		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
+		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
+		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
+		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
+		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
+		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -53820,7 +53746,7 @@ entity
 	"cspinup" "0"
 	"sound_event_level" "2"
 	"targetname" "Fan Noir Huge Upstairs"
-	"origin" "1568 -558 -98"
+	"origin" "1568 -560 -88"
 	editor
 	{
 		"color" "188 125 210"
@@ -80735,11 +80661,11 @@ entity
 	"lfomodvol" "0"
 	"lforate" "0"
 	"lfotype" "0"
-	"message" "usable/switches/wall_light_switch/on.wav"
+	"message" "area/santa_monica/clinic/click3.wav"
 	"pitch" "100"
 	"pitchstart" "100"
 	"preset" "0"
-	"radius" "300"
+	"radius" "3000"
 	"sound_event" "0"
 	"sound_event_level" "2"
 	"spawnflags" "48"
@@ -81781,7 +81707,7 @@ entity
 	"model" "models/scenery/misc/lever/lever.mdl"
 	"npc_transparent" "1"
 	"solid" "6"
-	"soundgroup" "small_metal_switch"
+	"soundgroup" "medium_metal_switch"
 	"targetname" "doorlever"
 	"use_icon" "12"
 	"renderamt" "255"
@@ -81806,11 +81732,11 @@ entity
 	"origin" "823 -533 -532.5"
 	connections
 	{
-		"OnStartTouch" "doortrap_sound,PlaySound,,0.3,-1,,"
-		"OnStartTouch" "doortrap_trigger,PlaySound,,0,-1,,"
-		"OnStartTouch" "doortrap_hurt,Disable,,1,1,,"
-		"OnStartTouch" "doortrap_hurt,Enable,,0.5,1,,"
 		"OnStartTouch" "doortrap,RotateToDest,,0.3,1,,"
+		"OnStartTouch" "doortrap_hurt,Enable,,0.5,1,,"
+		"OnStartTouch" "doortrap_hurt,Disable,,1,1,,"
+		"OnStartTouch" "doortrap_trigger,PlaySound,,0,-1,,"
+		"OnStartTouch" "doortrap_sound,PlaySound,,0.3,-1,,"
 	}
 	solid
 	{
@@ -82315,7 +82241,7 @@ entity
 	"skin" "0"
 	"fademindist" "1800"
 	"fademaxdist" "2500"
-	"solid" "0"
+	"solid" "6"
 	"model" "models/scenery/structural/stake/gas_pipes4.mdl"
 	"disableshadows" "1"
 	"origin" "596 -2369 -564"
@@ -82573,66 +82499,31 @@ entity
 }
 entity
 {
-	"id" "302425"
-	"classname" "prop_dynamic"
-	"angles" "-37 30 -170"
-	"crossfade_skin_time" "2.0"
-	"disableshadows" "1"
-	"model" "models/character/monster/tzimisce/creation1/creation1_lower.mdl"
-	"physdamagescale" "1.0"
-	"renderamt" "255"
-	"rendercolor" "255 255 255"
-	"renderfx" "0"
-	"rendermode" "0"
-	"skin" "0"
-	"spawnflags" "4"
-	"npc_transparent" "1"
-	"demo_sequence" "None"
-	"collideable_gibs" "0"
-	"health" "0"
-	"ExplodeDamage" "0"
-	"ExplodeRadius" "0"
-	"solid" "6"
-	"RandomAnimation" "0"
-	"MinAnimTime" "5"
-	"MaxAnimTime" "10"
-	"blocks_traces" "0"
-	"origin" "542 139 -547"
+	"id" "302428"
+	"classname" "ambient_generic"
+	"radius" "700"
+	"spawnflags" "0"
+	"message" "epic/wind.wav"
+	"health" "10"
+	"preset" "0"
+	"volstart" "0"
+	"fadein" "0"
+	"fadeout" "0"
+	"pitch" "80"
+	"pitchstart" "100"
+	"spinup" "0"
+	"spindown" "0"
+	"lfotype" "0"
+	"lforate" "0"
+	"lfomodpitch" "0"
+	"lfomodvol" "0"
+	"cspinup" "0"
+	"sound_event_level" "2"
+	"targetname" "Fan Noir Huge Upstairs"
+	"origin" "1566 -560 -64"
 	editor
 	{
-		"color" "127 127 255"
-	}
-}
-entity
-{
-	"id" "304306"
-	"classname" "prop_dynamic"
-	"angles" "0 120 0"
-	"crossfade_skin_time" "2.0"
-	"disableshadows" "1"
-	"model" "models/character/monster/tzimisce/creation1/creation1_torso.mdl"
-	"physdamagescale" "1.0"
-	"renderamt" "255"
-	"rendercolor" "255 255 255"
-	"renderfx" "0"
-	"rendermode" "0"
-	"skin" "0"
-	"spawnflags" "4"
-	"npc_transparent" "1"
-	"demo_sequence" "None"
-	"collideable_gibs" "0"
-	"health" "0"
-	"ExplodeDamage" "0"
-	"ExplodeRadius" "0"
-	"solid" "6"
-	"RandomAnimation" "0"
-	"MinAnimTime" "5"
-	"MaxAnimTime" "10"
-	"blocks_traces" "0"
-	"origin" "580 200 -580"
-	editor
-	{
-		"color" "127 127 255"
+		"color" "192 192 192"
 	}
 }
 cameras
@@ -82640,8 +82531,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[559.851 25.1946 -518.274]"
-		"look" "[547.404 281.881 -588.449]"
+		"position" "[593.403 -2124.6 -624.329]"
+		"look" "[691.448 -2082.63 -868.448]"
 	}
 }
 cordon
