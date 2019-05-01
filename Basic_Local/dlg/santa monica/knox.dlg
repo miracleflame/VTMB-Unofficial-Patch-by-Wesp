@@ -139,13 +139,13 @@
 {	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	140	}{	This scene is dead. I'm outta here.	}{	This scene is dead. I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I have left the building.	}
 {	141	}{	It's awesome! Man after that first taste of vampire blood... it's like the best drug. Aw man, I'm tellin' ya, it's like... well it didn't mess me up, just made me feel like I was better at everything. I felt like a god, just suckin' on that nasty dude's wrist.	}{	It's awesome! Man after that first taste of vampire blood... it's like the best drug. Aw man, I'm tellin' ya, it's like... well it didn't mess me up, just made me feel like I was better at everything. I felt like a god, just suckin' on that nasty dude's wrist.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Knox_Likes = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	142	}{	Can I ask you some questions?	}{	Can I ask you some questions?	}{	931	}{	G.Mercurio_Quest != 2	}{	}{	}{	}{	}{	}{	}{	}{	I have some questions worming out of my skull.	}
-{	143	}{	Who was this "nasty dude"?	}{	Who was this "nasty dude"?	}{	621	}{	G.Mercurio_Quest != 2 and G.Knox_Master == 0	}{	G.Knox_Master = 1	}{	}{	}{	}{	}{	}{	}{	Who is the Nasty Dude?	}
-{	144	}{	Who was this "nasty dude"?	}{	Who was this "nasty dude"?	}{	151	}{	G.Knox_Bertram == 0 and G.Mercurio_Quest == 2	}{	G.Knox_Master = 1	}{	}{	}{	}{	}{	}{	}{	Who is the Nasty Dude?	}
-{	145	}{	Do you know where Bertram is?	}{	Do you know where Bertram is?	}{	161	}{	G.Knox_Bertram == 1 and G.Bertram_Check == 0	}{	}{	}{	}{	}{	}{	}{	}{	Do you know where the Nasty Dude is?	}
-{	146	}{	So what's Bertram like?	}{	So what's Bertram like?	}{	171	}{	G.Knox_Bertram > 0 and G.Knox_Powerful == 0 and G.Knox_Quest == 0 and G.Bertram_Check == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the Nasty Dude.	}
-{	147	}{	How does Bertram get in touch with you?	}{	How does Bertram get in touch with you?	}{	181	}{	G.Knox_Bertram > 0 and G.Knox_Appear == 0 and G.Knox_Quest == 0 and G.Bertram_Check == 0	}{	}{	}{	}{	}{	}{	}{	}{	How does the Nasty Dude contact you?	}
-{	148	}{	So what are you doing around here?	}{	So what are you doing around here?	}{	651	}{	G.Mercurio_Quest != 2	}{	}{	}{	}{	}{	}{	}{	}{	What makes your life move today?	}
+{	142	}{	Who was this "nasty dude"?	}{	Who was this "nasty dude"?	}{	621	}{	G.Mercurio_Quest != 2 and G.Knox_Master == 0	}{	G.Knox_Master = 1	}{	}{	}{	}{	}{	}{	}{	Who is the Nasty Dude?	}
+{	143	}{	Who was this "nasty dude"?	}{	Who was this "nasty dude"?	}{	151	}{	G.Knox_Bertram == 0 and G.Mercurio_Quest == 2	}{	G.Knox_Master = 1	}{	}{	}{	}{	}{	}{	}{	Who is the Nasty Dude?	}
+{	144	}{	Do you know where Bertram is?	}{	Do you know where Bertram is?	}{	161	}{	G.Knox_Bertram == 1 and G.Bertram_Check == 0	}{	}{	}{	}{	}{	}{	}{	}{	Do you know where the Nasty Dude is?	}
+{	145	}{	So what's Bertram like?	}{	So what's Bertram like?	}{	171	}{	G.Knox_Bertram > 0 and G.Knox_Powerful == 0 and G.Knox_Quest == 0 and G.Bertram_Check == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the Nasty Dude.	}
+{	146	}{	How does Bertram get in touch with you?	}{	How does Bertram get in touch with you?	}{	181	}{	G.Knox_Bertram > 0 and G.Knox_Appear == 0 and G.Knox_Quest == 0 and G.Bertram_Check == 0	}{	}{	}{	}{	}{	}{	}{	}{	How does the Nasty Dude contact you?	}
+{	147	}{	So what are you doing around here?	}{	So what are you doing around here?	}{	651	}{	G.Mercurio_Quest != 2	}{	}{	}{	}{	}{	}{	}{	}{	What makes your life move today?	}
+{	148	}{	Can I ask you some questions?	}{	Can I ask you some questions?	}{	931	}{	G.Mercurio_Quest != 2	}{	}{	}{	}{	}{	}{	}{	}{	I have some questions worming out of my skull.	}
 {	149	}{	Can I bounce few more questions off you?	}{	Can I bounce few more questions off you?	}{	541	}{	G.Knox_Quest > 0 and G.Knox_Knowledge < 5	}{	}{	}{	}{	}{	}{	}{	}{	I have more questions worming out of my skull.	}
 {	150	}{	I'm outta here. Later.	}{	I'm outta here. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am somewhere else.	}
 {	151	}{	Oh man! His name's Bertram Tung. He's a Nosferatu[noss-fuh-RAH-too].	}{	Oh man! His name's Bertram Tung. He's a Nosferatu[noss-fuh-RAH-too].	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Knox_Bertram = 1	}{	}{	}{	}{	}{	}{	}{	}
@@ -153,10 +153,10 @@
 {	153	}{	What do you do for him?	}{	What do you do for him?	}{	211	}{	G.Knox_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	What do you do for the Nasty Dude?	}
 {	154	}{	So you are Bertram's "ghoul"? What does that mean?	}{	So you are Bertram's "ghoul"? What does that mean?	}{	131	}{	G.Knox_Ghoul == 1 and G.Knox_Outbound == 1	}{	G.Knox_Outbound = 0	}{	}{	}{	}{	}{	}{	}{	What do you know of ghouldom?	}
 {	155	}{	Do you like being a ghoul?	}{	Do you like being a ghoul?	}{	141	}{	G.Knox_Outbound == 3	}{	G.Knox_Outbound = 0	}{	}{	}{	}{	}{	}{	}{	Are you a happy little golden ghoul?	}
-{	156	}{	Can I ask you some questions?	}{	Can I ask you some questions?	}{	931	}{	G.Mercurio_Quest != 2	}{	}{	}{	}{	}{	}{	}{	}{	I have some questions worming out of my skull.	}
-{	157	}{	Do you know where he is?	}{	Do you know where he is?	}{	161	}{	G.Knox_Outbound == 0	}{	}{	}{	}{	}{	}{	}{	}{	Do you know where the Nasty Dude is?	}
-{	158	}{	What's he like?	}{	What's he like?	}{	171	}{	G.Knox_Outbound == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the Nasty Dude.	}
-{	159	}{	So what's going on with your mission?	}{	So what's going on with your mission?	}{	211	}{	G.Knox_Mission == 2 and G.Knox_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	But what of the secret hunt?	}
+{	156	}{	Do you know where he is?	}{	Do you know where he is?	}{	161	}{	G.Knox_Outbound == 0	}{	}{	}{	}{	}{	}{	}{	}{	Do you know where the Nasty Dude is?	}
+{	157	}{	What's he like?	}{	What's he like?	}{	171	}{	G.Knox_Outbound == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the Nasty Dude.	}
+{	158	}{	So what's going on with your mission?	}{	So what's going on with your mission?	}{	211	}{	G.Knox_Mission == 2 and G.Knox_Quest == 0	}{	}{	}{	}{	}{	}{	}{	}{	But what of the secret hunt?	}
+{	159	}{	Can I ask you some questions?	}{	Can I ask you some questions?	}{	931	}{	G.Mercurio_Quest != 2	}{	}{	}{	}{	}{	}{	}{	}{	I have some questions worming out of my skull.	}
 {	160	}{	I've got to get out of here, Knox. See ya.	}{	I've got to get out of here, Knox. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
 {	161	}{	Aw man, I wish I knew where he was. I'm getting antsy waitin' around for him. I need to tell him some stuff, ya know. I dunno where he is or stays or anything. Aw man I- Whenever he needs me he just... ya know... appears.	}{	Aw man, I wish I knew where he was. I'm getting antsy waitin' around for him. I need to tell him some stuff, ya know. I dunno where he is or stays or anything. Aw man I- Whenever he needs me he just... ya know... appears.	}{	#	}{	}{	G.Knox_Bertram = 2	}{	}{	}{	}{	}{	}{	}{	}
 {	162	}{	Hold on... you're his "ghoul"? What does that mean?	}{	Hold on... you're his "ghoul"? What does that mean?	}{	131	}{	G.Knox_Ghoul == 1 and G.Knox_Outbound == 1 and G.Knox_Questions == 0	}{	G.Knox_Outbound = 0	}{	}{	}{	}{	}{	}{	}{	Tell me about this ghoulishness.	}
