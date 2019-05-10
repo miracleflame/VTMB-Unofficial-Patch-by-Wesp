@@ -959,7 +959,7 @@
 {
 "classname" "infodecal"
 "texture" "decals/structural/lightswitchb"
-"origin" "-727.217 -1088 123.407"
+"origin" "-737.217 -1088 123.407"
 }
 {
 "classname" "infodecal"
@@ -2262,7 +2262,7 @@
 "follower_type" "Default"
 "should_ragdoll" "1"
 "Flag_ViewCone" "1"
-"OnDeath" ",,,1,-1,gio3_checkAllZombieDead(),"
+"OnDeath" ",,,0,-1,gio3_checkAllZombieDead(),"
 "OnDamaged" "Relay_Nadia_Flees,Trigger,,0,-1,,"
 "OnDamaged" "Relay_Kill_Nadia,Trigger,,0,-1,,"
 "origin" "-809 -246.602 -309.892"
@@ -3413,7 +3413,7 @@
 "combat_start_activity" "-1"
 "spawnflags" "4"
 "model" "models/character/monster/undead/male/undead_Male.mdl"
-"StartHidden" "1"
+"StartHidden" "0"
 "friendship_level" "1"
 "warn_range" "200.0"
 "conflict_range" "100.0"
@@ -3449,7 +3449,7 @@
 "OnTrigger" "seq_nadia2,CancelSequence,,0,-1,,"
 "OnTrigger" "Choreo_InFear,Cancel,,0,-1,,"
 "OnTrigger" "choreo_thisway,Start,,1,-1,,"
-"OnTrigger" "seq_nadia2b_x,BeginSequence,,0,-1,,"
+"OnTrigger" "seq_nadia2b_x,BeginSequence,,1,-1,,"
 "OnTrigger" "Trig_Stop_Nadia_Motion1,ScriptUnhide,,0,-1,,"
 }
 {
@@ -4001,6 +4001,7 @@
 "OnTrigger" "door_block,Kill,,0,-1,,"
 "OnTrigger" "Zombie_Makers2,Enable,,0,-1,,"
 "OnTrigger" "door_break_shake,StartShake,,0,-1,,"
+"OnTrigger" "door_break_shake,StopShake,,0.1,-1,,"
 "OnTrigger" "sound_floor3_doorcrash,PlaySound,,0,-1,,"
 "OnTrigger" "impact_explodio,Explode,,0.1,-1,,"
 "OnTrigger" "door_floor3_explodio,ScriptUnhide,,0,-1,,"

@@ -350,7 +350,7 @@ def gio3_checkAllZombieDeadAndZone():
             if Nadia:
                 Nadia.Kill()
 
-#GIOVANNI MANSION 3: Check if all zombies dead, set nadia
+#GIOVANNI MANSION 3: Check if all zombies dead, set nadia, changed by wesp
 def gio3_checkAllZombieDead():
     G.ZombiesDead = ( G.ZombiesDead + 1 )
     counter = 0
@@ -359,7 +359,7 @@ def gio3_checkAllZombieDead():
         if ( zombie.IsAlive() ):
             counter = counter + 1
             G.Zombies = ( counter )
-    if counter == 0:
+    if (counter == 0 or G.ZombiesDead >= 24):
         relay = Find( "Relay_Zombies_Dead" )
         relay.Trigger()
     else:
