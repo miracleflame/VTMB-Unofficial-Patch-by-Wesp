@@ -6,7 +6,7 @@ TerminalDefinition	// added by wesp
 	LogonScreen	// displayed when the user first logs on
 	{
 		// Any number of lines are acceptable
-		"line0"		"LA public library secrets"
+		"line0"		"LA public library"
 	}
 
 	// you can have up to 5 subdirs per terminal
@@ -18,41 +18,41 @@ TerminalDefinition	// added by wesp
 	{
 		"name"			"Journal"				// This is what is displayed as the name of this menu, and what the player must type to enter the menu (128 characters)
 		"password"		"gangrel"				// password required to run commands in this menu (16 characters)
-		"description"		"Lasombra activities" 	// This is printed each time the user enters this menu (128 characters)
+		"description"		"Library activities" 	// This is printed each time the user enters this menu (128 characters)
 
 		Function
 		{
 			"name"		"First"			// this is what the player must type in to trigger this function. (16 characters)
 			"description"	"First entry"		// this is a description of this function  (128 characters)
-			"runtext"	"Beckett asked me to do research about an ancient sarcophagus in the public library. Rather boring stuff but then I noticed another Kindred sneaking around who melted right into the shadows. I fear it was a Lasombra, but what is he doing here in LA? Is it about the sarcophagus? I'll better follow him around the next few nights."
+			"runtext"	"Beckett asked me to do research about an ancient sarcophagus for him in the public library. Rather boring stuff, but then I noticed another Kindred sneaking around who seemed to step from shadow to shadow like through a door. Is it a Lasombra? But what is he doing here in LA? Is it about Beckett's sarcophagus? I'll better follow him around these next few nights, just to be on the safe side..."
 		}
 		
 		Function
 		{
 			"name"		"Second"			// this is what the player must type in to trigger this function. (16 characters)
 			"description"	"Second entry"		// this is a description of this function  (128 characters)
-			"runtext"	"Tonight the Lasombra went into the old house downtown with that red symbol. I followed him, but was stopped by a black guy who asked if I'd been enlightened. I wasn't, so I left and some time later the new agent of the prince entered the building. Soon after the black guy ran out in panic and climbed into the sewers where I lost him."
+			"runtext"	"The Kindred from the library went into that abandoned house downtown tonight, the one with the sprayed red symbol nearby. I followed him and was met by a bouncer who asked if I'd been enlightened. I wasn't, so he didn't let me in and I left. A short time latter the new agent of the prince entered, soon the bouncer ran out in panic and into the sewers! I followed him all the way to Santa Monica where he then visited the Smoke Shop to relax."
 		}
 
 		Function
 		{
 			"name"		"Third"			// this is what the player must type in to trigger this function. (16 characters)
 			"description"	"Third entry"		// this is a description of this function  (128 characters)
-			"runtext"	"In Santa Monica I watched how the Lasombra entered the old junkyard, probably to talk with the Caitiff living there. Before I could do something about it, the new agent of the prince arrived and suddenly the Lasombra teleported behind me! I hope I wasn't spotted. Then he took a cab back to the LA library."
+			"runtext"	"Tonight, I followed the Kindred himself to Santa Monica where he entered the junkyard, probably to meet with that weird guy working there. I was still watching the place when again the agent of the prince arrived, and suddenly the Kindred stepped out of a shadow nearby! I hope I wasn't spotted. He took a cab back to the library."
 		}
 
 		Function
 		{
 			"name"		"Fourth"			// this is what the player must type in to trigger this function. (16 characters)
 			"description"	"Fourth entry"		// this is a description of this function  (128 characters)
-			"runtext"	"I suspect that the Lasombra tries to recruit Caitiff and ghouls to compliment the Sabbat shovelheads. I'm pretty sure he failed turning the junkyard guy, but I don't know about the other one. This doesn't affect the sarcophagus thing, but I still got a bad feeling with him always returning to the library. As I'm not a fighter myself I will contact and ask Beckett about it."
+			"runtext"	"I do not know what this Lasombra is up to. Possibly recruiting for the Sabbat? I'm pretty sure that he failed with the junkyard guy, but I really don't know about the bouncer. This doesn't affect the sarcophagus thing, but I still got a very bad feeling with him always returning to the library. I will contact Beckett and ask for help!"
 		}
 
 		Function
 		{
 			"name"		"Fifth"			// this is what the player must type in to trigger this function. (16 characters)
 			"description"	"Fifth entry"		// this is a description of this function  (128 characters)
-			"runtext"	"I fixed a meeting with Beckett in the Santa Monica smoke shop as I followed the black guy there and he seems to be a regular customer. In case this doesn't work out, I'll go back to the library using the old sewer emergency hatch and search it for a possible lair!"
+			"runtext"	"I arranged a meeting with Beckett in the Santa Monica smoke shop as the bouncer is a regular there. We should find out what he knows as Beckett can be very convincing. Afterwards, I'll show Beckett the old emergency hatch in the sewers that I use to enter the library unseen and we will look for the Lasombra's lair there ourselves!"
 			"runscript"	"G.Library_Coffee = 2; librarySetQuest()"
 		}
 	}
