@@ -100,9 +100,8 @@ def SetZhaos():
     if (state == 1):
         knob.Unlock()
     elif (state == 2):
-        if (G.Zhao_Dead == 1 or G.Tong_Dead == 0):
+        if (G.Zhao_Dead == 1):
             pc.SetQuest("Gangster", 3)
-            pc.AwardExperience("Gangster02")
         else:
             pc.SetQuest("Gangster", 4)
             if G.Patch_Plus == 1:
