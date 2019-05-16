@@ -21,7 +21,7 @@
 {	21	}{	Yup. Sure do. I'm a third-generation bondsman. Got a few employees, but I handle most every aspect of the business.	}{	Yup. Sure do. I'm a third-generation bondsman. Got a few employees, but I handle most every aspect of the business.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Arthur_Run = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	22	}{	I don't see any employees, Arthur.	}{	I don't see any employees, Arthur.	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	You seem alone here, oh large-waisted warrior.	}
 {	23	}{	How is business these days?	}{	How is business these days?	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	How goes the hunting of bounties?	}
-{	24	}{	You looking for any help?	}{	You looking for any help?	}{	741	}{	}{	}{	}{	}{	}{	}{	}{	}{	May I help bail your bonds?	}
+{	24	}{	You looking for any help?	}{	You looking for any help?	}{	741	}{	G.Arthur_Knox < 2	}{	}{	}{	}{	}{	}{	}{	}{	May I help bail your bonds?	}
 {	25	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -490,7 +490,7 @@
 {	490	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	491	}{	Ah, I reckon not. Thanks for not taking offense about it. I'm Arthur Kilpatrick. Welcome to Kilpatrick Bail Bonds. How can I help you?	}{	Ah, I reckon not. Thanks for not taking offense about it. I'm Arthur Kilpatrick. Welcome to Kilpatrick Bail Bonds. How can I help you?	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	492	}{	Do you run this place?	}{	Do you run this place?	}{	21	}{	G.Arthur_Run == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	493	}{	Do you need any help around here?	}{	Do you need any help around here?	}{	741	}{	}{	G.Player_Asked = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	493	}{	Do you need any help around here?	}{	Do you need any help around here?	}{	741	}{	G.Arthur_Knox < 2	}{	G.Player_Asked = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	494	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	495	}{	Actually, I'm extremely offended, you fat fuck.	}{	Actually, I'm extremely offended, you fat fuck.	}{	711	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	496	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -729,7 +729,7 @@
 {	729	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	730	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	731	}{	Hey there, hold on a minute. You're pushin' a bit too far now.	}{	Hey there, hold on a minute. You're pushin' a bit too far now.	}{	#	}{	npc.SetDisposition("Anger",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	732	}{	You're right, I'm sorry. You need any help?	}{	You're right, I'm sorry. You need any help?	}{	741	}{	}{	G.Player_Asked = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	732	}{	You're right, I'm sorry. You need any help?	}{	You're right, I'm sorry. You need any help?	}{	741	}{	G.Arthur_Knox < 2	}{	G.Player_Asked = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	733	}{	Oh, did I hurt your feelings, tubby?	}{	Oh, did I hurt your feelings, tubby?	}{	751	}{	}{	G.Arthur_Pissed = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	734	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	735	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -769,7 +769,7 @@
 {	769	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	770	}{	I suppose you did.	}{	I suppose you did.	}{	881	}{	}{	}{	}{	}{	}{	}{	}{	}{	I used to occupy this space.	}
 {	771	}{	Huh? Umm, oh, of course not. What can I help you with?	}{	Huh? Umm, oh, of course not. What can I help you with?	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Arthur_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	}
-{	772	}{	You need any help around here?	}{	You need any help around here?	}{	741	}{	}{	G.Player_Asked = 1	}{	}{	}{	}{	}{	}{	}{	I'm here to help bail your bonds!	}
+{	772	}{	You need any help around here?	}{	You need any help around here?	}{	741	}{	G.Arthur_Knox < 2	}{	G.Player_Asked = 1	}{	}{	}{	}{	}{	}{	}{	I'm here to help bail your bonds!	}
 {	773	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	774	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	775	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -789,7 +789,7 @@
 {	789	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	790	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	791	}{	Bail my bonds? [Shakes his head]Huh. That was weird. [As if noticing you for the first time]Hey there. Can I help you with anything?	}{	Bail my bonds? [Shakes his head]Huh. That was weird. [As if noticing you for the first time]Hey there. Can I help you with anything?	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Arthur_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	}
-{	792	}{	Speak to me of the hunter.	}{	Speak to me of the hunter.	}{	741	}{	}{	G.Player_Asked = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	792	}{	Speak to me of the hunter.	}{	Speak to me of the hunter.	}{	741	}{	G.Arthur_Knox < 2	}{	G.Player_Asked = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	793	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	794	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	795	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -799,7 +799,7 @@
 {	799	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	800	}{	My body has departed. My mind will follow.	}{	My body has departed. My mind will follow.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	801	}{	[Almost snapping to attention]Of course, sir. Anything you say. What can I help you with this fine evening?	}{	[Almost snapping to attention]Of course, ma'am. Anything you say. What can I help you with this fine evening?	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Arthur_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	}
-{	802	}{	Are you in any need of help around here?	}{	Are you in any need of help around here?	}{	741	}{	}{	G.Player_Asked = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	802	}{	Are you in any need of help around here?	}{	Are you in any need of help around here?	}{	741	}{	G.Arthur_Knox < 2	}{	G.Player_Asked = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	803	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	804	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	805	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -809,7 +809,7 @@
 {	809	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	810	}{	Nothing right now. Goodbye.	}{	Nothing right now. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You're speaking to the place I used to be.	}
 {	811	}{	[Terrified]Please, please, don-don't hurt me... I'm sorry if I offended you in any way.	}{	[Terrified]Please, please, don-don't hurt me... I'm sorry if I offended you in any way.	}{	#	}{	npc.SetDisposition("Fear",2)	}{	G.Arthur_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	}
-{	812	}{	Don't worry about it. You need any help around here?	}{	Don't worry about it. You need any help around here?	}{	741	}{	}{	G.Player_Asked = 1	}{	}{	}{	}{	}{	}{	}{	I'm here to help bail your bonds!	}
+{	812	}{	Don't worry about it. You need any help around here?	}{	Don't worry about it. You need any help around here?	}{	741	}{	G.Arthur_Knox < 2	}{	G.Player_Asked = 1	}{	}{	}{	}{	}{	}{	}{	I'm here to help bail your bonds!	}
 {	813	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	814	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	815	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -819,7 +819,7 @@
 {	819	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	820	}{	Don't let it happen again. Goodbye.	}{	Don't let it happen again. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You're speaking to the place I used to be.	}
 {	821	}{	[blushing]Well, uh, y'know I, uh... I get told that a lot, heh, heh.	}{	[blushing]Well, uh, y'know I, uh... I get told that a lot, heh, heh.	}{	#	}{	npc.SetDisposition("Flirt",1)	}{	G.Arthur_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	}
-{	822	}{	I'm sure. Do you need any help around here?	}{	I'm sure. Do you need any help around here?	}{	741	}{	}{	G.Player_Asked = 1	}{	}{	}{	}{	}{	}{	}{	I'm here to help bail your bonds!	}
+{	822	}{	I'm sure. Do you need any help around here?	}{	I'm sure. Do you need any help around here?	}{	741	}{	G.Arthur_Knox < 2	}{	G.Player_Asked = 1	}{	}{	}{	}{	}{	}{	}{	I'm here to help bail your bonds!	}
 {	823	}{	Come here, I want to show you something.	}{	Come here, I want to show you something.	}{	0	}{	}{	G.Seductive_Feed = 1; pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	}
 {	824	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	825	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -829,7 +829,7 @@
 {	829	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	830	}{	Goodbye, Arthur.	}{	Goodbye, Arthur.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You're speaking to the place I used to be.	}
 {	831	}{	Hey, well, he-yeah, d- uh... I don't want you to think I'm not flattered or nothin', but, uh, I-I-I don't swing that way.	}{	Hey, well, he-yeah, d- uh... I don't want you to think I'm not flattered or nothin', but, uh, I-I-I don't swing that way.	}{	#	}{	npc.SetDisposition("Joy",1)	}{	G.Arthur_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	}
-{	832	}{	No problem. Do you need any help around here?	}{	No problem. Do you need any help around here?	}{	741	}{	}{	G.Player_Asked = 1	}{	}{	}{	}{	}{	}{	}{	I'm here to help bail your bonds!	}
+{	832	}{	No problem. Do you need any help around here?	}{	No problem. Do you need any help around here?	}{	741	}{	G.Arthur_Knox < 2	}{	G.Player_Asked = 1	}{	}{	}{	}{	}{	}{	}{	I'm here to help bail your bonds!	}
 {	833	}{	Come here, I want to show you something.	}{	Come here, I want to show you something.	}{	0	}{	}{	G.Seductive_Feed = 1; pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	}
 {	834	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	835	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
