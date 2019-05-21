@@ -289,13 +289,13 @@
 {	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	290	}{	Alright. See ya.	}{	Alright. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Farewell, golden ghoul.	}
 {	291	}{	Yo, dude, you do that thing yet?	}{	Yo, girl, you do that thing yet?	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	292	}{	I did. You don't have to worry about it any more.	}{	I did. You don't have to worry about it any more.	}{	521	}{	(G.Knox_Quest == 6 and G.Knox_Bertfound == 1) or (IsDead("AsianVamp") and G.Knox_Bertfound == 1)	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
-{	293	}{	I did. You don't have to worry about it any more.	}{	I did. You don't have to worry about it any more.	}{	381	}{	(G.Knox_Quest == 6 and G.Knox_Fess == 0 and G.Knox_Bertfound == 0) or (IsDead("AsianVamp") and G.Knox_Fess == 0 and G.Knox_Bertfound == 0)	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
-{	294	}{	I did. You don't have to worry about it any more.	}{	I did. You don't have to worry about it any more.	}{	471	}{	(G.Knox_Quest == 6 and G.Knox_Fess == 1 and G.Knox_Bertfound == 0) or (IsDead("AsianVamp") and G.Knox_Fess == 1 and G.Knox_Bertfound == 0)	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
-{	295	}{	No, not yet.	}{	No, not yet.	}{	301	}{	}{	}{	}{	}{	}{	}{	}{	}{	I still seek the eater of lives.	}
-{	296	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	297	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	298	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	292	}{	I did. You don't have to worry about it any more.	}{	I did. You don't have to worry about it any more.	}{	521	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and G.Knox_Bertfound == 1 and (not pc.HasItem("item_g_driver_license_gimble") or G.Patch_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
+{	293	}{	I did. You don't have to worry about it any more.	}{	I did. You don't have to worry about it any more.	}{	381	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and G.Knox_Fess == 0 and G.Knox_Bertfound == 0 and (not pc.HasItem("item_g_driver_license_gimble") or G.Patch_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
+{	294	}{	I did. You don't have to worry about it any more.	}{	I did. You don't have to worry about it any more.	}{	471	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and G.Knox_Fess == 1 and G.Knox_Bertfound == 0 and (not pc.HasItem("item_g_driver_license_gimble") or G.Patch_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
+{	295	}{	I did. You don't have to worry about it any more. And you should get rid of this.	}{	I did. You don't have to worry about it any more. And you should get rid of this.	}{	521	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and G.Knox_Bertfound == 1 and pc.HasItem("item_g_driver_license_gimble") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_g_driver_license_gimble")	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal. And you should make this disappear now.	}
+{	296	}{	I did. You don't have to worry about it any more. And you should get rid of this.	}{	I did. You don't have to worry about it any more. And you should get rid of this.	}{	381	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and G.Knox_Fess == 0 and G.Knox_Bertfound == 0 and pc.HasItem("item_g_driver_license_gimble") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_g_driver_license_gimble")	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal. And you should make this disappear now.	}
+{	297	}{	I did. You don't have to worry about it any more. And you should get rid of this.	}{	I did. You don't have to worry about it any more. And you should get rid of this.	}{	471	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and G.Knox_Fess == 1 and G.Knox_Bertfound == 0 and pc.HasItem("item_g_driver_license_gimble") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_g_driver_license_gimble")	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal. And you should make this disappear now.	}
+{	298	}{	No, not yet.	}{	No, not yet.	}{	301	}{	}{	}{	}{	}{	}{	}{	}{	}{	I still seek the eater of lives.	}
 {	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	300	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	301	}{	Damn, dude, damn! Aw damn! I was really hopin' you had. Let me know when you do.	}{	Damn, dude, damn! Aw damn! I was really hopin' you had. Let me know when you do.	}{	#	}{	npc.SetDisposition("Sad",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -480,39 +480,39 @@
 {	480	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	481	}{	Hey! So, like, how you doin' on that thing we talked about?	}{	Hey! So, like, how you doin' on that thing we talked about?	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Knox_Ghoul = 2; G.Knox_Bertram = 2; G.Knox_Powerful = 1; G.Knox_Appear = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	482	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	483	}{	I did it. You don't have to worry about it any more.	}{	I did it. You don't have to worry about it any more.	}{	381	}{	(G.Knox_Quest == 6 and G.Knox_Fess == 0) or (IsDead("AsianVamp") and G.Knox_Fess == 0)	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
-{	484	}{	I did it. You don't have to worry about it any more.	}{	I did it. You don't have to worry about it any more.	}{	471	}{	(G.Knox_Quest == 6 and G.Knox_Fess == 1) or (IsDead("AsianVamp") and G.Knox_Fess == 1)	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
-{	485	}{	I spoke with Bertram.	}{	I spoke with Bertram.	}{	491	}{	}{	G.Knox_Bertfound = 1	}{	}{	}{	}{	}{	}{	}{	I spoke with the Nasty One!	}
-{	486	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	487	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	483	}{	I did it. You don't have to worry about it any more.	}{	I did it. You don't have to worry about it any more.	}{	381	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and G.Knox_Fess == 0 and (not pc.HasItem("item_g_driver_license_gimble") or G.Patch_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
+{	484	}{	I did it. You don't have to worry about it any more.	}{	I did it. You don't have to worry about it any more.	}{	471	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and G.Knox_Fess == 1 and (not pc.HasItem("item_g_driver_license_gimble") or G.Patch_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
+{	485	}{	I did it. You don't have to worry about it any more. And you should get rid of this.	}{	I did it. You don't have to worry about it any more. And you should get rid of this.	}{	381	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and G.Knox_Fess == 0 and pc.HasItem("item_g_driver_license_gimble") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_g_driver_license_gimble")	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal. And you should make this disappear now.	}
+{	486	}{	I did it. You don't have to worry about it any more. And you should get rid of this.	}{	I did it. You don't have to worry about it any more. And you should get rid of this.	}{	471	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and G.Knox_Fess == 1 and pc.HasItem("item_g_driver_license_gimble") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_g_driver_license_gimble")	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal. And you should make this disappear now.	}
+{	487	}{	I spoke with Bertram.	}{	I spoke with Bertram.	}{	491	}{	}{	G.Knox_Bertfound = 1	}{	}{	}{	}{	}{	}{	}{	I spoke with the Nasty One!	}
 {	488	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	489	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	490	}{	Sorry. I'm still looking into it. Later.	}{	Sorry. I'm still looking into it. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	No deeds have yet been done. Farewell.	}
 {	491	}{	Oh cool. He'll be glad once we get this problem taken care of.	}{	Oh cool. He'll be glad once we get this problem taken care of.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	492	}{	I already did it. You don't have to worry about it any more.	}{	I already did it. You don't have to worry about it any more.	}{	381	}{	(G.Knox_Quest == 6 and G.Knox_Fess == 0) or (IsDead("AsianVamp") and G.Knox_Fess == 0)	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
-{	493	}{	I already did it. You don't have to worry about it any more.	}{	I already did it. You don't have to worry about it any more.	}{	521	}{	(G.Knox_Quest == 6 and G.Knox_Fess == 1) or (IsDead("AsianVamp") and G.Knox_Fess == 1)	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
-{	494	}{	I told him you broke down and told me everything. He wasn't too happy.	}{	I told him you broke down and told me everything. He wasn't too happy.	}{	501	}{	G.Bertram_Pissed == 1	}{	}{	}{	}{	}{	}{	}{	}{	I told the Nasty Dude that you spilled your golden guts.	}
-{	495	}{	He said you guys had plans for me all along.	}{	He said you guys had plans for me all along.	}{	511	}{	G.Bertram_Plant == 1 and G.Knox_Fess == 0	}{	}{	}{	}{	}{	}{	}{	}{	He told me of your secret little plans for me.	}
-{	496	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	497	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	492	}{	I already did it. You don't have to worry about it any more.	}{	I already did it. You don't have to worry about it any more.	}{	381	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and G.Knox_Fess == 0 and (not pc.HasItem("item_g_driver_license_gimble") or G.Patch_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
+{	493	}{	I already did it. You don't have to worry about it any more.	}{	I already did it. You don't have to worry about it any more.	}{	521	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and G.Knox_Fess == 1 and (not pc.HasItem("item_g_driver_license_gimble") or G.Patch_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
+{	494	}{	I already did it. You don't have to worry about it any more. And you should get rid of this.	}{	I already did it. You don't have to worry about it any more. And you should get rid of this.	}{	381	}{	(G.Knox_Quest == 6 and or IsDead("AsianVamp")) and G.Knox_Fess == 0 and pc.HasItem("item_g_driver_license_gimble") and G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal. And you should make this disappear now.	}
+{	495	}{	I already did it. You don't have to worry about it any more. And you should get rid of this.	}{	I already did it. You don't have to worry about it any more. And you should get rid of this.	}{	521	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and G.Knox_Fess == 1 and pc.HasItem("item_g_driver_license_gimble") and G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal. And you should make this disappear now.	}
+{	496	}{	I told him you broke down and told me everything. He wasn't too happy.	}{	I told him you broke down and told me everything. He wasn't too happy.	}{	501	}{	G.Bertram_Pissed == 1	}{	}{	}{	}{	}{	}{	}{	}{	I told the Nasty Dude that you spilled your golden guts.	}
+{	497	}{	He said you guys had plans for me all along.	}{	He said you guys had plans for me all along.	}{	511	}{	G.Bertram_Plant == 1 and G.Knox_Fess == 0	}{	}{	}{	}{	}{	}{	}{	}{	He told me of your secret little plans for me.	}
 {	498	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	499	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	500	}{	I'm still looking into that. Later.	}{	I'm still looking into that. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	No deeds have yet been done. Farewell.	}
 {	501	}{	Damn man, that's cold. That's ice cold! Damn! Why'd you have to do that, huh? I thought we were cool!	}{	Damn man, that's cold. That's ice cold! Damn! Why'd you have to do that, huh? I thought we were cool!	}{	#	}{	npc.SetDisposition("Sad",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	502	}{	Don't worry. I got the job done.	}{	Don't worry. I got the job done.	}{	521	}{	G.Knox_Quest == 6 or IsDead("AsianVamp")	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
-{	503	}{	Those are the breaks. No one said being a ghoul would be easy.	}{	Those are the breaks. No one said being a ghoul would be easy.	}{	531	}{	}{	}{	}{	}{	}{	}{	}{	}{	Bear your burden, little golden ghoul.	}
-{	504	}{	What goes around comes around.	}{	What goes around comes around.	}{	531	}{	}{	}{	}{	}{	}{	}{	}{	}{	What goes around comes around... like my mind!	}
-{	505	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	502	}{	Don't worry. I got the job done.	}{	Don't worry. I got the job done.	}{	521	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and (not pc.HasItem("item_g_driver_license_gimble") or G.Patch_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
+{	503	}{	Don't worry. I got the job done. Now you should get rid of this.	}{	Don't worry. I got the job done. Now you should get rid of this.	}{	521	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and pc.HasItem("item_g_driver_license_gimble") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_g_driver_license_gimble")	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal. And you should make this disappear now.	}
+{	504	}{	Those are the breaks. No one said being a ghoul would be easy.	}{	Those are the breaks. No one said being a ghoul would be easy.	}{	531	}{	}{	}{	}{	}{	}{	}{	}{	}{	Bear your burden, little golden ghoul.	}
+{	505	}{	What goes around comes around.	}{	What goes around comes around.	}{	531	}{	}{	}{	}{	}{	}{	}{	}{	}{	What goes around comes around... like my mind!	}
 {	506	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	507	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	508	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	509	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	510	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	511	}{	[grinning, embarrassed and proud]Well, uh, yeah. Bertram's teaching me the ropes and this was a little test, dealin' with you. But it's still serious vampire business; this Asian thing needs to be taken out. How ya doin' on that, huh?	}{	[grinning, embarrassed and proud]Well, uh, yeah. Bertram's teaching me the ropes and this was a little test, dealin' with you. But it's still serious vampire business; this Asian thing needs to be taken out. How ya doin' on that, huh?	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	512	}{	It's done.	}{	It's done.	}{	521	}{	G.Knox_Quest == 6 or IsDead("AsianVamp")	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
-{	513	}{	Unlike you, I was able to get the job done.	}{	Unlike you, I was able to get the job done.	}{	521	}{	G.Knox_Quest == 6 or IsDead("AsianVamp")	}{	}{	}{	}{	}{	}{	}{	}{	I did what you could not, little ghoul.	}
-{	514	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	515	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	512	}{	It's done.	}{	It's done.	}{	521	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and (not pc.HasItem("item_g_driver_license_gimble") or G.Patch_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal.	}
+{	513	}{	Unlike you, I was able to get the job done.	}{	Unlike you, I was able to get the job done.	}{	521	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and (not pc.HasItem("item_g_driver_license_gimble") or G.Patch_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	I did what you could not, little ghoul.	}
+{	514	}{	It's done. Now you should get rid of this.	}{	It's done. Now you should get rid of this.	}{	521	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and pc.HasItem("item_g_driver_license_gimble") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_g_driver_license_gimble")	}{	}{	}{	}{	}{	}{	}{	The life-eater has enjoyed his last meal. And you should make this disappear now.	}
+{	515	}{	Unlike you, I was able to get the job done. Now you should get rid of this.	}{	Unlike you, I was able to get the job done. Now you should get rid of this.	}{	521	}{	(G.Knox_Quest == 6 or IsDead("AsianVamp")) and pc.HasItem("item_g_driver_license_gimble") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_g_driver_license_gimble")	}{	}{	}{	}{	}{	}{	}{	I did what you could not, little ghoul. And you should make this disappear now.	}
 {	516	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	517	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	518	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -839,7 +839,7 @@
 {	839	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	840	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	841	}{	Thanks!	}{	Thanks!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	842	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	842	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	843	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	844	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	845	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
