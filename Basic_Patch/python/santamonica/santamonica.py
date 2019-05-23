@@ -472,8 +472,6 @@ def beachhouseStatus():
         if convo: convo.Kill()
         call = Find("mike_call_dennis")
         if call: call.Kill()
-        butch = Find("plus_butch")
-        if butch: butch.Kill()
     if(G.Story_State >= 10 and not G.Pier_Beach_Gone):
         G.Pier_Beach_Gone = 1
         blood = __main__.FindEntitiesByName("victimblooda")
@@ -485,9 +483,6 @@ def beachhouseStatus():
         cops = __main__.FindEntitiesByName("cop")
         for cop in cops:
             cop.Kill()
-        copcars = __main__.FindEntitiesByName("copcar")
-        for copcar in copcars:
-            copcar.Kill()
         cop_patrol_pier = Find("cop_patrol_pier")
         if(cop_patrol_pier):
             cop_patrol_pier.Kill()
@@ -1350,6 +1345,8 @@ def killerDeath():
     if(state != 9):
         pc.ChangeMasqueradeLevel(-1)
         pc.SetQuest("Serial", 8)
+    if (pc.HasItem("item_g_junkyard_businesscard")):
+        __main__.ScheduleTask(1.00, "__main__.FindPlayer().RemoveItem(\"item_g_junkyard_businesscard\")")
     relay = Find("player_leave_relay")
     relay.Trigger()
 
@@ -1364,6 +1361,8 @@ def killerHostileCheck():
         G.Killer_Attacks = 1
         script.BeginSequence()
     else:
+        if (pc.HasItem("item_g_junkyard_businesscard")):
+            __main__.ScheduleTask(1.00, "__main__.FindPlayer().RemoveItem(\"item_g_junkyard_businesscard\")")
         relay = Find("player_leave_relay")
         relay.Trigger()
 
