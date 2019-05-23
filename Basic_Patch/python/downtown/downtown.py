@@ -628,9 +628,7 @@ def checkMafiaState():
             boris_plus.ScriptUnhide()
             boris_plus.SetName("Boris")
             G.Boris_Swap = 1
-    if(G.Boris_Hostile > 0 or G.Dema_Hostile > 0 or G.Dema_Go == 2):
-        trigger = Find("dema_hide_trigger")
-        trigger.Disable()
+    if(G.Boris_Hostile or G.Dema_Hostile or G.Dema_Go == 2):
         dema = Find("Dema")
         dema.SetRelationship("player D_HT 5")
         dude = Find("patrol_guy")
@@ -924,12 +922,16 @@ def milliganDeath():
     if(state == 1 or state == 2):
         pc.SetQuest("Necromantic", 3)
         pc.ChangeMasqueradeLevel(-1)
+        if (pc.HasItem("item_g_milligans_businesscard")):
+            __main__.ScheduleTask(1.00, "__main__.FindPlayer().RemoveItem(\"item_g_milligans_businesscard\")")
 
 #SKYLINE: Called after talking to milligan at the skyline, changed by wesp
 def milliganSkylineDialog():
     if(G.Mill_Dementated or G.Mill_Loose or G.Mill_Persuaded or G.Mill_Dominated or G.Mill_Intimidate):
         scared = Find("milligan_scared")
         scared.Kill()
+        if (pc.HasItem("item_g_milligans_businesscard")):
+            __main__.ScheduleTask(1.00, "__main__.FindPlayer().RemoveItem(\"item_g_milligans_businesscard\")")
         relay = Find("Milligan_leaves_relay")
         relay.Trigger()
 

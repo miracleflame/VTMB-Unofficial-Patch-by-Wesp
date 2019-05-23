@@ -536,7 +536,7 @@ def cutscene():
         if (state == 1):
             pc.SetQuest("Dirt", 3)
         if (pc.HasItem("item_g_giovanni_invitation_victor")):
-		    __main__.ScheduleTask(1.00, "__main__.FindPlayer().RemoveItem(\"item_g_giovanni_invitation_victor\")")
+            __main__.ScheduleTask(1.00, "__main__.FindPlayer().RemoveItem(\"item_g_giovanni_invitation_victor\")")
         if (pc.HasItem("item_g_giovanni_invitation_maria")):
             __main__.ScheduleTask(1.00, "__main__.FindPlayer().RemoveItem(\"item_g_giovanni_invitation_maria\")")
 #      logic = Find("logic_scene")
