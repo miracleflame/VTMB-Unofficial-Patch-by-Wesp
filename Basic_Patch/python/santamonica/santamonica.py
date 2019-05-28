@@ -1361,7 +1361,7 @@ def killerHostileCheck():
         G.Killer_Attacks = 1
         script.BeginSequence()
     else:
-        if (pc.HasItem("item_g_junkyard_businesscard")):
+        if (__main__.FindPlayer().HasItem("item_g_junkyard_businesscard")):
             __main__.ScheduleTask(1.00, "__main__.FindPlayer().RemoveItem(\"item_g_junkyard_businesscard\")")
         relay = Find("player_leave_relay")
         relay.Trigger()
