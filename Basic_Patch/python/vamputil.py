@@ -615,15 +615,16 @@ def librarySetQuest():
         __main__.G.Library_Smoke = 1
     if (__main__.G.Library_Smoke == 2):
         pc.SetQuest("Library", 2)
-        __main__.G.Library_Coffee = 1
-        __main__.G.Library_Smoke = 3
-    if (__main__.G.Library_Coffee == 2):
-        pc.SetQuest("Library", 3)
         __main__.G.Library_Note = 1
-        __main__.G.Library_Coffee = 3
-    if (__main__.G.Library_Note == 2 and __main__.G.Library_Open == 0):
+        __main__.G.Library_Smoke = 3
+    if (__main__.G.Library_Note == 2):
+        pc.SetQuest("Library", 3)
+        __main__.G.Library_Coffee = 1
+        __main__.G.Library_Note = 3
+    if (__main__.G.Library_Coffee == 2 and __main__.G.Library_Open == 0):
         pc.SetQuest("Library", 4)
         __main__.G.Library_Open = 1
+        __main__.G.Library_Coffee = 3
     if (__main__.G.Library_Open == 2):
         if (__main__.G.Guard1_Killed == 0 and __main__.G.Guard2_Killed == 0):
             __main__.FindPlayer().AwardExperience("Library02")
