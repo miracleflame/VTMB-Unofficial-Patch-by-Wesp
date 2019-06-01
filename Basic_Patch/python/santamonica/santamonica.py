@@ -1092,6 +1092,10 @@ def killerInDiner():
     if(npc):
         if(G.Therese_Quest < 3 and G.Story_State < 4):
             npc.ScriptUnhide()
+            if G.Patch_Plus == 1 and G.Killer_Phoned == 0:
+                script = Find("killer_phones")
+                script.BeginSequence()
+                G.Killer_Phoned = 1
         else:
             npc.Kill()
     doris = Find("Doris")

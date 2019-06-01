@@ -1,0 +1,152 @@
+// Choreo version 1
+actor "Killer"
+{
+  channel "Speech"
+  {
+    event speak "NPC Line"
+    {
+      time 0.000000 19.833832
+      param "character/dlg/santa monica/killer/line1_col_e.wav"
+      param2 "70dB"
+      fixedlength
+    }
+  }
+  channel "Gestures"
+  {
+    event gesture "cellphone_idle"
+    {
+      time 0.000000 5.000000
+      param "cellphone_idle"
+    }
+    event gesture "cellphone_idle"
+    {
+      time 2.500000 7.500000
+      param "cellphone_idle"
+    }
+    event gesture "cellphone_idle"
+    {
+      time 5.000000 10.000000
+      param "cellphone_idle"
+    }
+    event gesture "cellphone_idle"
+    {
+      time 7.500000 12.500000
+      param "cellphone_idle"
+    }
+    event gesture "cellphone_idle"
+    {
+      time 10.000000 15.000000
+      param "cellphone_idle"
+    }
+    event gesture "cellphone_idle"
+    {
+      time 12.500000 17.500000
+      param "cellphone_idle"
+    }
+    event gesture "cellphone_idle"
+    {
+      time 15.000000 20.000000
+      param "cellphone_idle"
+    }
+    event gesture "cellphone_idle"
+    {
+      time 17.500000 22.500000
+      param "cellphone_idle"
+    }
+    event gesture "cellphone_outof"
+    {
+      time 20.000000 21.500000
+      param "cellphone_idle"
+    }
+  }
+  channel "Expressions"
+  {
+  }
+  channel "Speech Triggers"
+  {
+    event silence "Silence"
+    {
+      time 1.100000 1.400000
+      param "0.300"
+    }
+    event silence "Silence"
+    {
+      time 5.290000 5.920000
+      param "0.630"
+    }
+    event silence "Silence"
+    {
+      time 10.110000 10.679999
+      param "0.570"
+    }
+    event silence "Silence"
+    {
+      time 14.839999 15.389999
+      param "0.550"
+    }
+    event silence "Silence"
+    {
+      time 15.889999 16.000000
+      param "0.110"
+    }
+    event silence "Silence"
+    {
+      time 18.750000 19.289999
+      param "0.540"
+    }
+    event silence "Silence"
+    {
+      time 19.770000 19.879999
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 0.630000 0.740000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 3.470000 3.580000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 6.060000 6.190000
+      param "0.130"
+    }
+    event loud "Loud"
+    {
+      time 6.350000 6.460000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 10.719999 10.849999
+      param "0.130"
+    }
+    event loud "Loud"
+    {
+      time 10.920000 11.040000
+      param "0.120"
+    }
+    event loud "Loud"
+    {
+      time 11.300000 11.410000
+      param "0.110"
+    }
+    event loud "Loud"
+    {
+      time 12.259999 12.389999
+      param "0.130"
+    }
+    event loud "Loud"
+    {
+      time 13.230000 13.340000
+      param "0.110"
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+fps 60
+snap off
