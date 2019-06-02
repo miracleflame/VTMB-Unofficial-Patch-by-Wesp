@@ -12,12 +12,13 @@ Find = __main__.FindEntityByName
 if __main__.IsClan or FindPlayer.IsClan or IsClan or __main__.IsIdling or FindPlayer.IsIdling or IsIdling is null:
     from vamputil import *
 
-#SEWERS: unlocks drain controls if key present
+#SEWERS: unlocks drain controls if key present, changed by wesp
 def checkForPasskey():
     pc = __main__.FindPlayer()
     control = Find("control")
     if ( pc.HasItem("item_g_warrens4_passkey") ):
         control.Unlock()
+        pc.RemoveItem("item_g_warrens4_passkey")
     #changed by dan_upright 04/12/04 and by wesp
     elif ( pc.CalcFeat("inspection") < 5 ):
         sparklies = __main__.CreateEntityNoSpawn("inspection_node", 0, (0, 0, 0))

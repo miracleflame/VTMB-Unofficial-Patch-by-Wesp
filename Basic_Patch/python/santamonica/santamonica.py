@@ -472,6 +472,7 @@ def beachhouseStatus():
         if convo: convo.Kill()
         call = Find("mike_call_dennis")
         if call: call.Kill()
+        __main__.ScheduleTask(1.0, "__main__.FindEntityByName(\"plus_butch\").Kill()")
     if(G.Story_State >= 10 and not G.Pier_Beach_Gone):
         G.Pier_Beach_Gone = 1
         blood = __main__.FindEntitiesByName("victimblooda")
