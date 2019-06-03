@@ -484,6 +484,9 @@ def beachhouseStatus():
         cops = __main__.FindEntitiesByName("cop")
         for cop in cops:
             cop.Kill()
+        copcars = __main__.FindEntitiesByName("copcar")
+        for copcar in copcars:
+            copcar.Kill()
         cop_patrol_pier = Find("cop_patrol_pier")
         if(cop_patrol_pier):
             cop_patrol_pier.Kill()
