@@ -594,6 +594,8 @@ def cardPrinterEnable():
         printer = Find("card_printer")
         printer.ScriptUnhide()
     if(G.Patch_Plus == 1):
+        stagedoor = Find("biltdrk")
+        stagedoor.Unlock()
         if __main__.IsClan(__main__.FindPlayer(), "Nosferatu"):
             if guard: guard.SetRelationship("player D_HT 5")
 
