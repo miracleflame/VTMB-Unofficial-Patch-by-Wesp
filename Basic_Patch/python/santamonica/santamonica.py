@@ -1603,10 +1603,10 @@ def murderCleanedUp():
             piergate.Unlock()
             piergate.Open()
 
-#PIER: Called when the murder scene. Get it? changey by wesp
+#PIER: Called when the murder scene. Get it? changed by wesp
 def murderSeen():
     state = __main__.FindPlayer().GetQuestState("Serial")
-    if(state == 1 and G.Know_Murder == 0 and G.Story_State < 10):
+    if(G.Know_Murder == 0 and G.Story_State < 10):
         G.Know_Murder = 1
         __main__.FindPlayer().SetQuest("Serial", 2)
     if(state == 1 and G.Story_State >= 10):
