@@ -1822,6 +1822,8 @@
 "targetname" "hunter_4"
 "team_name-wesp" "hunters"
 "follower_type" "Default"
+"OnDeath" "logic_end_a,Test,,0.1,-1,,"
+"OnDeath" ",,,0,-1,G.Hunter_Dead = G.Hunter_Dead + 1,"
 "origin" "1841 1150 -465"
 }
 {
@@ -1881,6 +1883,8 @@
 "targetname" "hunter_4"
 "team_name-wesp" "hunters"
 "follower_type" "Default"
+"OnDeath" "logic_end_a,Test,,0.1,-1,,"
+"OnDeath" ",,,0,-1,G.Hunter_Dead = G.Hunter_Dead + 1,"
 "origin" "1664 1216 -465"
 }
 {
@@ -3471,6 +3475,8 @@
 "targetname" "hunter_4_vision"
 "team_name-wesp" "hunters"
 "follower_type" "Default"
+"OnDeath" "logic_end_a,Test,,0.1,-1,,"
+"OnDeath" ",,,0,-1,G.Hunter_Dead = G.Hunter_Dead + 1,"
 "origin" "2708.05 959.308 -465"
 }
 {
@@ -5332,6 +5338,8 @@
 "targetname" "hunter_4"
 "team_name-wesp" "hunters"
 "follower_type" "Default"
+"OnDeath" "logic_end_a,Test,,0.1,-1,,"
+"OnDeath" ",,,0,-1,G.Hunter_Dead = G.Hunter_Dead + 1,"
 "origin" "2693 1145 -465"
 }
 {
@@ -5391,6 +5399,8 @@
 "team_name-wesp" "hunters"
 "cantdropweapons" "0"
 "follower_type" "Default"
+"OnDeath" "logic_end_a,Test,,0.1,-1,,"
+"OnDeath" ",,,0,-1,G.Hunter_Dead = G.Hunter_Dead + 1,"
 "origin" "2871 1146 -465"
 }
 {
@@ -5484,7 +5494,7 @@
 }
 {
 "classname" "logic_pythoncheck"
-"python_script" "G.Hunter_Dead >= 2"
+"python_script" "G.Hunter_Dead >= 7"
 "targetname" "logic_end_a"
 "OnTrue" "trig_end,Enable,,2,-1,,"
 "OnTrue" "Ash,SetFollowerType,Default,0,-1,,"
