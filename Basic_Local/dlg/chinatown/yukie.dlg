@@ -240,7 +240,7 @@
 {	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	241	}{	Nani (What)?	}{	Nani (What)?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	242	}{	What do you know about the Kuei-jin?	}{	What do you know about the Kuei-jin?	}{	251	}{	G.Yukie_Kuei == 0	}{	}{	}{	}{	}{	}{	}{	}{	The things in the temple... tell me of them.	}
-{	243	}{	Any other info you can tell me about this hengeyokai?	}{	Any other info you can tell me about this hengeyokai?	}{	261	}{	G.Yukie_Fish == 0	}{	}{	}{	}{	}{	}{	}{	}{	Its scent is strong. Why?	}
+{	243	}{	Any other info you can tell me about this hengeyokai?	}{	Any other info you can tell me about this hengeyokai?	}{	261	}{	G.Yukie_Fish == 0 and G.Yukie_Quest < 2	}{	}{	}{	}{	}{	}{	}{	}{	Its scent is strong. Why?	}
 {	244	}{	That's a really nice sword... I'll buy it off you.	}{	That's a really nice sword... I'll buy it off you.	}{	271	}{	G.Yukie_Sword == 0	}{	}{	}{	}{	}{	}{	}{	}{	I'll trade you these little green men for your sword.	}
 {	245	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	246	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -301,7 +301,7 @@
 {	301	}{	Doko desu ka (Where is it)? Where...?	}{	Doko desu ka (Where is it)? Where...?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	302	}{	He's at the fish market. He doesn't know you're after him.	}{	He's at the fish market. He doesn't know you're after him.	}{	311	}{	G.Zyg_Yukie == 1 and G.Zyg_Human == 0	}{	}{	}{	}{	}{	}{	}{	}{	Fish Market. It knows not that it is hunted.	}
 {	303	}{	I told him to meet me at the fish market. We can ambush him there.	}{	I told him to meet me at the fish market. We can ambush him there.	}{	321	}{	G.Zyg_Meet == 1 and G.Zyg_Human == 0	}{	}{	}{	}{	}{	}{	}{	}{	It hides its scent in the fish market. Let us be like ninjas and surprise it.	}
-{	304	}{	Sorry, but I killed him at the Red Dragon.	}{	Sorry, but I killed him at the Red Dragon.	}{	391	}{	G.Zyg_Human == 1	}{	pc.SetQuest("Yukie",7)	}{	}{	}{	}{	}{	}{	}{	It looked like a man and then I killed it.	}
+{	304	}{	Sorry, but I killed him at the Red Dragon.	}{	Sorry, but I killed him at the Red Dragon.	}{	391	}{	G.Zyg_Human == 1	}{	G.Yukie_Quest = 2; pc.SetQuest("Yukie",7)	}{	}{	}{	}{	}{	}{	}{	It looked like a man and then I killed it.	}
 {	305	}{	I'm still looking. Sorry.	}{	I'm still looking. Sorry.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Somewhere unknown to me. I am gone.	}
 {	306	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	307	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -410,7 +410,7 @@
 {	410	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	411	}{	Dozo (Please).	}{	Dozo (Please).	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	412	}{	Yeah, I'll go first.	}{	Yeah, I'll go first.	}{	0	}{	G.Zyg_Human == 0	}{	}{	}{	}{	}{	}{	}{	}{	Let's go fishing!	}
-{	413	}{	Sorry, but I already killed the Hengeyokai at the Red Dragon.	}{	Sorry, but I already killed the Hengeyokai at the Red Dragon.	}{	391	}{	G.Zyg_Human == 1	}{	pc.SetQuest("Yukie",7)	}{	}{	}{	}{	}{	}{	}{	It looked like a man and then I killed it.	}
+{	413	}{	Sorry, but I already killed the Hengeyokai at the Red Dragon.	}{	Sorry, but I already killed the Hengeyokai at the Red Dragon.	}{	391	}{	G.Zyg_Human == 1	}{	G.Yukie_Quest = 2; pc.SetQuest("Yukie",7)	}{	}{	}{	}{	}{	}{	}{	It looked like a man and then I killed it.	}
 {	414	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	415	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	416	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

@@ -677,6 +677,7 @@ def OnShuDialogEnd():
 def setHunterFive():
     if (G.Zyg_Fish == 1):
         __main__.FindPlayer().SetQuest("Yukie", 5)
+        G.Yukie_Quest = 2
     else:
         G.Zyg_Human = 1
         __main__.FindPlayer().SetQuest("Yukie", 8)
