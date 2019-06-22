@@ -459,7 +459,7 @@
 {	459	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	460	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	461	}{	Here's what I got.	}{	Here's what I got.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	462	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	462	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
 {	463	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	464	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	465	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -949,7 +949,7 @@
 {	949	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	950	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	951	}{	Oh, uh, by the way... I paid a visit to our friends on the cliff up there early this morning. OD-ing's a painful way to go. Especially when your kneecaps are on the floor next to you. What can I say, payback can be a bitch like that.	}{	Oh, uh, by the way... I paid a visit to our friends on the cliff up there early this morning. OD-ing's a painful way to go. Especially when your kneecaps are on the floor next to you. What can I say, payback can be a bitch like that.	}{	#	}{	npc.SetDisposition("joy", 1)	}{	G.Beach_Dead = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	952	}{	Definitely. What do you got that might help me out?	}{	Definitely. What do you got that might help me out?	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	I need some nasty little toys.	}
+{	952	}{	Definitely. What do you got that might help me out?	}{	Definitely. What do you got that might help me out?	}{	461	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need some nasty little toys.	}
 {	953	}{	Uh-huh. I need some info.	}{	Uh-huh. I need some info.	}{	491	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need to find some answers in the wrinkles of your brain.	}
 {	954	}{	I didn't think it was necessary, but that's your choice. Goodbye, Mercurio.	}{	I didn't think it was necessary, but that's your choice. Goodbye, Mercurio.	}{	0	}{	Humanity 6	}{	}{	}{	}{	}{	}{	}{	}{	Run, run, little Mercury. Farewell.	}
 {	955	}{	They deserved it. Goodbye, Mercurio.	}{	They deserved it. Goodbye, Mercurio.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Mercury can also be the god of war, hmm? I am gone.	}
@@ -961,7 +961,7 @@
 {	961	}{	[Ecstatically]Hey! You, hey, what can I say? You preserved my ass. I truly appreciate you not sayin' anything, and I want you to know, I take care of those who do me favors. So for now on, you need equipment, info, you come see me at my apartment. Don't hesitate.	}{	[Ecstatically]Hey! You, hey, what can I say? You preserved my ass. I truly appreciate you not sayin' anything, and I want you to know, I take care of those who do me favors. So for now on, you need equipment, info, you come see me at my apartment. Don't hesitate.	}{	#	}{	npc.SetDisposition("joy", 1)	}{	G.Mercurio_Deal = 1; G.Mercurio_Combat = 0	}{	}{	}{	}{	}{	}{	}{	}
 {	962	}{	You look like you're feeling better.	}{	You look like you're feeling better.	}{	391	}{	G.Mercurio_Health == 0	}{	}{	}{	}{	}{	}{	}{	}{	How fleet your feet, Mercury?	}
 {	963	}{	What are you doing out here, Mercurio?	}{	What are you doing out here, Mercurio?	}{	941	}{	}{	}{	}{	}{	}{	}{	}{	}{	What has set great Mercury by the waters?	}
-{	964	}{	I might need some equipment for this little trip.	}{	I might need some equipment for this little trip.	}{	0	}{	IsDead("Dennis")	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	I need some nasty little toys.	}
+{	964	}{	I might need some equipment for this little trip.	}{	I might need some equipment for this little trip.	}{	461	}{	IsDead("Dennis")	}{	}{	}{	}{	}{	}{	}{	}{	I need some nasty little toys.	}
 {	965	}{	I might need some equipment for this little trip.	}{	I might need some equipment for this little trip.	}{	951	}{	not IsDead("Dennis")	}{	}{	}{	}{	}{	}{	}{	}{	I need some nasty little toys.	}
 {	966	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	967	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
