@@ -333,36 +333,6 @@ def setPlus():
             __main__.ccmd.ropestop=""
         events = __main__.FindEntityByName("events_player_plus")
         if events: events.EnableOutputs()
-        #Changes v_thaumaturgy.mdl to match clan and gender, added by Entenschreck, changed by wesp
-        pc = __main__.FindPlayer()
-        gender = pc.IsMale()
-        #copies male version
-        if gender and G.File_Copied_Male == 0:
-            print "Changing v_thaumaturgy.mdl to male one"
-            src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\models\\weapons\\thaumaturgy\\view_male\\v_thaumaturgy.mdl"
-            dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\models\\weapons\\thaumaturgy\\view\\v_thaumaturgy.mdl"
-            fileutil.copyfile(src, dst)
-            G.File_Copied_Nos = 0
-            G.File_Copied_Male = 1
-            G.File_Copied_Female = 0
-        #copies female version
-        if not gender and G.File_Copied_Female == 0:
-            print "Changing v_thaumaturgy.mdl to female one"
-            src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\models\\weapons\\thaumaturgy\\view_female\\v_thaumaturgy.mdl"
-            dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\models\\weapons\\thaumaturgy\\view\\v_thaumaturgy.mdl"
-            fileutil.copyfile(src, dst)
-            G.File_Copied_Nos = 0
-            G.File_Copied_Male = 0
-            G.File_Copied_Female = 1
-        #copies Nosferatu version
-        if IsClan(pc, "Nosferatu") and G.File_Copied_Nos == 0:
-            print "Changing v_thaumaturgy.mdl to Nosferatu one"
-            src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\models\\weapons\\thaumaturgy\\view_nosferatu\\v_thaumaturgy.mdl"
-            dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\models\\weapons\\thaumaturgy\\view\\v_thaumaturgy.mdl"
-            fileutil.copyfile(src, dst)
-            G.File_Copied_Nos = 1
-            G.File_Copied_Male = 0
-            G.File_Copied_Female = 0
 
 def unhidePlus():
     c  = __main__.ccmd
@@ -1445,33 +1415,116 @@ def checkDiscipline():
     else:
         if (pc.active_blood_healing > 0): c.vm_bloodheal=""
         c.vdiscipline_last=""
-        VM()
-def VM():
-    c  = __main__.ccmd
-    G  = __main__.G
-    pc = __main__.FindPlayer()
-    c.vm_clearlist=""
-    if pc.HasItem("item_i_written"):
-        c.vm_charge="" #first one is always skipped
+        VThaumaturgy(1)
+
+def VThaumaturgy(x):
+    G    = __main__.G
+    pc   = __main__.FindPlayer()
+    c    = __main__.ccmd
+    cvar = __main__.cvar
+    ST   = __main__.ScheduleTask
+
+    #called when activating a discipline EVERY TIME
+    if x == 1:
+        c.vm_clearlist=""
+        c.vm_lower=""    #first animation in the list is always skipped!
         c.vm_charge=""
-    else:
-        c.vm_draw="" #first one is always skipped
-        c.vm_draw=""
-    #Need a delay here!
-    __main__.ScheduleTask(0.05,"VMHelper()")
-def VMHelper():
-    c  = __main__.ccmd
-    G  = __main__.G
-    pc = __main__.FindPlayer()
-    if pc.HasItem("item_i_written"):
-        c.vm_continue=""
-        c.vm_hold=""
-        c.vm_reset=""
-    else:
-        c.vm_idle=""
-    c.vm_lower=""
-    #View list
-    #c.vdebug_wpn_anims_cycle_list=""
+
+        #Need a delay here!
+        ST(0.05,"VThaumaturgy(2)")
+
+    elif x == 2:
+
+        #c.disallowAttacking=""
+
+        VIEWMODEL  = FindClass("viewmodel")[2]
+        HANDSMODEL = FindClass("viewmodel")[3]
+
+        #vdebug_wpn_anims_cycle is set to 1 via DisciplineFX by default.
+        #If the target resists the discipline it will be set to 2.
+
+        if cvar.vdebug_wpn_anims_cycle == 1:
+            c.vm_continue=""
+            c.vm_hold=""
+            c.vm_reset=""
+            c.vm_lower=""
+
+            HANDSMODEL.SetModel("models/null.mdl")
+
+            if pc.IsMale() == 0 and not pc.clan == 5:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_female/v_thaumaturgy.mdl")
+
+            elif pc.clan == 5:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_nosferatu/v_thaumaturgy.mdl")
+
+
+        elif cvar.vdebug_wpn_anims_cycle == 2:
+            c.vm_chargehold=""
+            c.vm_chargehold=""
+            c.vm_chargehold=""
+            c.vm_lower=""
+
+            HANDSMODEL.SetModel("models/null.mdl")
+
+            if pc.IsMale() == 0 and not pc.clan == 5:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_female/v_thaumaturgy.mdl")
+
+            elif pc.clan == 5:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_nosferatu/v_thaumaturgy.mdl")
+
+        c.vdebug_wpn_anims_cycle_list=""
+
+        ST(2.2,"VThaumaturgy(3)")
+
+    elif x == 3:
+#For some reason the game crashes for some players if the model's name is stored in a G variable...
+#Using this method now instead.
+
+        VIEWMODEL  = FindClass("viewmodel")[2]
+        HANDSMODEL = FindClass("viewmodel")[3]
+
+        #Brujah
+        if pc.IsMale() == 0 and pc.clan == 2:
+            HANDSMODEL.SetModel("models/hands/female/shared/v_shared_female_hands.mdl")
+        elif pc.IsMale() == 1 and pc.clan == 2:
+            HANDSMODEL.SetModel("models/hands/male/brujah/v_brujah_male_hands.mdl")
+
+        #Gangrel
+        elif pc.IsMale() == 0 and pc.clan == 3:
+            HANDSMODEL.SetModel("models/hands/female/gangrel/v_gangrel_female_hands.mdl")
+        elif pc.IsMale() == 1 and pc.clan == 3:
+            HANDSMODEL.SetModel("models/hands/male/gangrel/v_gangrel_male_hands.mdl")
+
+        #Nosferatu
+        elif pc.IsMale() == 0 and pc.clan == 5:
+            HANDSMODEL.SetModel("models/hands/female/nosferatu/v_nosferatu_fem_hands.mdl")
+        elif pc.IsMale() == 1 and pc.clan == 5:
+            HANDSMODEL.SetModel("models/hands/male/nosferatu/v_nosferatu_male_hands.mdl")
+
+        #Toreador
+        elif pc.IsMale() == 0 and pc.clan == 6:
+            HANDSMODEL.SetModel("models/hands/female/toreador/v_toreador_fem_hands.mdl")
+        elif pc.IsMale() == 1 and pc.clan == 6:
+            HANDSMODEL.SetModel("models/hands/male/shared/v_shared_male_hands.mdl")
+
+        #Tremere
+        elif pc.IsMale() == 0 and pc.clan == 7:
+            HANDSMODEL.SetModel("models/hands/female/tremere/v_tremere_fem_hands.mdl")
+        elif pc.IsMale() == 1 and pc.clan == 7:
+            HANDSMODEL.SetModel("models/hands/male/shared/v_shared_male_hands.mdl")
+
+        #Ventrue
+        elif pc.IsMale() == 0 and pc.clan == 8:
+            HANDSMODEL.SetModel("models/hands/female/ventrue/v_ventrue_fem_hands.mdl")
+        elif pc.IsMale() == 1 and pc.clan == 8:
+            HANDSMODEL.SetModel("models/hands/male/shared/v_shared_male_hands.mdl")
+
+        else:
+            if pc.IsMale() == 0:
+                HANDSMODEL.SetModel("models/hands/female/shared/v_shared_female_hands.mdl")
+            elif pc.IsMale() == 1:
+                HANDSMODEL.SetModel("models/hands/male/shared/v_shared_male_hands.mdl")
+
 
 #Clan specific idle animations, added by EntenSchreck, improved by malkav and wesp
 def IsIdling():
