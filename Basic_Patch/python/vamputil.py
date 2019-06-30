@@ -1451,12 +1451,20 @@ def VThaumaturgy(x):
 
             HANDSMODEL.SetModel("models/null.mdl")
 
-            if pc.IsMale() == 0 and not pc.clan == 5:
-                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_female/v_thaumaturgy.mdl")
+            if pc.clan == 3:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_gangrel/v_thaumaturgy.mdl")
 
             elif pc.clan == 5:
                 VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_nosferatu/v_thaumaturgy.mdl")
 
+            elif pc.IsMale() == 0 and pc.clan == 6:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_female_toreador/v_thaumaturgy.mdl")
+
+            elif pc.IsMale() == 0 and pc.clan == 7:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_female_tremere/v_thaumaturgy.mdl")
+
+            elif pc.IsMale() == 0 and pc.clan == 8:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_female_ventrue/v_thaumaturgy.mdl")
 
         elif cvar.vdebug_wpn_anims_cycle == 2:
             c.vm_chargehold=""
@@ -1466,11 +1474,20 @@ def VThaumaturgy(x):
 
             HANDSMODEL.SetModel("models/null.mdl")
 
-            if pc.IsMale() == 0 and not pc.clan == 5:
-                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_female/v_thaumaturgy.mdl")
+            if pc.clan == 3:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_gangrel/v_thaumaturgy.mdl")
 
             elif pc.clan == 5:
                 VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_nosferatu/v_thaumaturgy.mdl")
+
+            elif pc.IsMale() == 0 and pc.clan == 6:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_female_toreador/v_thaumaturgy.mdl")
+
+            elif pc.IsMale() == 0 and pc.clan == 7:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_female_tremere/v_thaumaturgy.mdl")
+
+            elif pc.IsMale() == 0 and pc.clan == 8:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_female_ventrue/v_thaumaturgy.mdl")
 
         c.vdebug_wpn_anims_cycle_list=""
 
