@@ -1451,11 +1451,11 @@ def VThaumaturgy(x):
 
             HANDSMODEL.SetModel("models/null.mdl")
 
-            if pc.clan == 3:
-                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_gangrel/v_thaumaturgy.mdl")
-
-            elif pc.clan == 5:
+            if pc.clan == 5:
                 VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_nosferatu/v_thaumaturgy.mdl")
+
+            elif pc.IsMale() == 1 and pc.clan == 2:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_male_brujah/v_thaumaturgy.mdl")
 
             elif pc.IsMale() == 0 and pc.clan == 6:
                 VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_female_toreador/v_thaumaturgy.mdl")
@@ -1474,11 +1474,11 @@ def VThaumaturgy(x):
 
             HANDSMODEL.SetModel("models/null.mdl")
 
-            if pc.clan == 3:
-                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_gangrel/v_thaumaturgy.mdl")
-
-            elif pc.clan == 5:
+            if pc.clan == 5:
                 VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_nosferatu/v_thaumaturgy.mdl")
+
+            elif pc.IsMale() == 1 and pc.clan == 2:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_male_brujah/v_thaumaturgy.mdl")
 
             elif pc.IsMale() == 0 and pc.clan == 6:
                 VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_female_toreador/v_thaumaturgy.mdl")
