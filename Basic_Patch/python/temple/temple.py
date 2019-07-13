@@ -349,7 +349,7 @@ def tpl3_check_pedestals():
         tele_emitter.TurnOn()
         tele_trigger = Find( "teleport_trigger" )
         tele_trigger.ScriptUnhide()
-        __main__.FindPlayer().SetQuest("Ming", 4)
+# wesp        __main__.FindPlayer().SetQuest("Ming", 4)
         torches = Finds( "torch*" )
         for torch in torches:
             if torch:
