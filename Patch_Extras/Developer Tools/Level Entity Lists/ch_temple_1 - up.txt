@@ -11057,6 +11057,7 @@
 {
 "classname" "prop_dynamic"
 "angles" "0 70 95"
+"targetname" "tree_fix"
 "model" "models/scenery/trash/blocks/blockwall2.mdl"
 "health" "0"
 "skin" "0"
@@ -11072,6 +11073,7 @@
 {
 "classname" "prop_dynamic"
 "angles" "0 0 0"
+"targetname" "entrance_fix"
 "model" "models/scenery/street/fencepost/fencepost.mdl"
 "health" "0"
 "skin" "0"
@@ -11087,6 +11089,7 @@
 {
 "classname" "prop_dynamic"
 "angles" "0 0 0"
+"targetname" "entrance_fix"
 "model" "models/scenery/street/fencepost/fencepost.mdl"
 "health" "0"
 "skin" "0"
@@ -11102,6 +11105,7 @@
 {
 "classname" "prop_dynamic"
 "angles" "0 0 0"
+"targetname" "entrance_fix"
 "model" "models/scenery/street/fencepost/fencepost.mdl"
 "health" "0"
 "skin" "0"
@@ -11117,6 +11121,7 @@
 {
 "classname" "prop_dynamic"
 "angles" "0 0 0"
+"targetname" "entrance_fix"
 "model" "models/scenery/street/fencepost/fencepost.mdl"
 "health" "0"
 "skin" "0"
@@ -11132,6 +11137,7 @@
 {
 "classname" "prop_dynamic"
 "angles" "0 0 8"
+"targetname" "entrance_fix"
 "model" "models/scenery/street/fencepost/fencepost.mdl"
 "health" "0"
 "skin" "0"
@@ -11147,6 +11153,7 @@
 {
 "classname" "prop_dynamic"
 "angles" "0 0 8"
+"targetname" "entrance_fix"
 "model" "models/scenery/street/fencepost/fencepost.mdl"
 "health" "0"
 "skin" "0"
@@ -11162,6 +11169,7 @@
 {
 "classname" "prop_dynamic"
 "angles" "0 0 0"
+"targetname" "entrance_fix"
 "model" "models/scenery/street/fencepost/fencepost.mdl"
 "health" "0"
 "skin" "0"
@@ -11177,6 +11185,7 @@
 {
 "classname" "prop_dynamic"
 "angles" "0 0 0"
+"targetname" "entrance_fix"
 "model" "models/scenery/street/fencepost/fencepost.mdl"
 "health" "0"
 "skin" "0"
@@ -11192,6 +11201,7 @@
 {
 "classname" "prop_dynamic"
 "angles" "0 0 8"
+"targetname" "entrance_fix"
 "model" "models/scenery/street/fencepost/fencepost.mdl"
 "health" "0"
 "skin" "0"
@@ -11207,6 +11217,7 @@
 {
 "classname" "prop_dynamic"
 "angles" "0 0 8"
+"targetname" "entrance_fix"
 "model" "models/scenery/street/fencepost/fencepost.mdl"
 "health" "0"
 "skin" "0"
@@ -11218,6 +11229,38 @@
 "npc_transparent" "1"
 "crossfade_skin_time" "2.0"
 "origin" "-62 2735 -165"
+}
+{
+"classname" "prop_dynamic"
+"angles" "0 0 90"
+"targetname" "floor_fix"
+"model" "models/scenery/street/fencepost/fencepost.mdl"
+"health" "0"
+"skin" "0"
+"disableshadows" "0"
+"solid" "6"
+"MinAnimTime" "5"
+"MaxAnimTime" "10"
+"demo_sequence" "None"
+"npc_transparent" "1"
+"crossfade_skin_time" "2.0"
+"origin" "1057 4415 -258"
+}
+{
+"classname" "prop_dynamic"
+"angles" "0 0 90"
+"targetname" "floor_fix"
+"model" "models/scenery/street/fencepost/fencepost.mdl"
+"health" "0"
+"skin" "0"
+"disableshadows" "0"
+"solid" "6"
+"MinAnimTime" "5"
+"MaxAnimTime" "10"
+"demo_sequence" "None"
+"npc_transparent" "1"
+"crossfade_skin_time" "2.0"
+"origin" "1057 4563 -258"
 }
 {
 "classname" "npc_VHumanCombatant"
@@ -11309,7 +11352,7 @@
 "OnTrue" "Yukie_particles,TurnOff,,1,1,,"
 "OnTrue" "Yukie_gong,PlaySound,,0,-1,,"
 "OnTrue" "teleport_shortcut,TurnOn,,2,-1,,"
-"OnTrue" "temple_shortcut_transition,Enable,,3,-1,,"
+"OnTrue" "temple_shortcut_transition,Enable,,12,-1,,"
 "origin" "-20 2700 -255"
 }
 {

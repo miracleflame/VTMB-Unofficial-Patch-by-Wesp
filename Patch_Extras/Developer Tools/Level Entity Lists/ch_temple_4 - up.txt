@@ -590,7 +590,7 @@
 "spawnflags" "4"
 "physdamagescale" "1.0"
 "npc_perception" "9"
-"vision" "-1"
+"vision" "6000"
 "hearing" "-1.00"
 "default_disposition" "Neutral"
 "default_camera" "vdata/CameraShots/DialogDefaultWoman.txt"
@@ -2189,6 +2189,22 @@
 "angles" "0 0 0"
 "spawnflags" "1"
 "origin" "91 -192 -503"
+}
+{
+"classname" "info_landmark"
+"angles" "0 270 0"
+"spawnflags" "1"
+"targetname" "temple_shortcut"
+"origin" "66 501 -439"
+}
+{
+"model" "*3"
+"classname" "trigger_changelevel"
+"targetname" "temple_shortcut_transition"
+"map" "ch_temple_1"
+"landmark" "temple_shortcut"
+"spawnflags" "2"
+"origin" "64 500 -384"
 }
 {
 "classname" "logic_auto"
