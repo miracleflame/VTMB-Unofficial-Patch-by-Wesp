@@ -1506,12 +1506,6 @@ def VThaumaturgy(x):
         elif pc.IsMale() == 1 and pc.clan == 2:
             HANDSMODEL.SetModel("models/hands/male/brujah/v_brujah_male_hands.mdl")
 
-        #Gangrel
-        elif pc.IsMale() == 0 and pc.clan == 3:
-            HANDSMODEL.SetModel("models/hands/female/gangrel/v_gangrel_female_hands.mdl")
-        elif pc.IsMale() == 1 and pc.clan == 3:
-            HANDSMODEL.SetModel("models/hands/male/gangrel/v_gangrel_male_hands.mdl")
-
         #Nosferatu
         elif pc.IsMale() == 0 and pc.clan == 5:
             HANDSMODEL.SetModel("models/hands/female/nosferatu/v_nosferatu_fem_hands.mdl")
