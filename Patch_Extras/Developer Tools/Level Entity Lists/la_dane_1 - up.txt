@@ -1424,7 +1424,7 @@
 "RandomAnimation" "0"
 "MinAnimTime" "5"
 "MaxAnimTime" "10"
-"targetname" "modeldoor_7"
+"targetname" "modeldoor_8"
 "parentname" "invdoor_8"
 "crossfade_skin_time" "2.0"
 "origin" "-324.246 -464 -75.9626"
@@ -3940,9 +3940,17 @@
 "spawnflags" "4"
 "m_iszIdle" "idle_1"
 "m_iszPostIdle" "idle_1"
-"OnBeginSequence" "ChoreoScene_Hey_You,Start,,0.01,-1,,"
+"OnBeginSequence" "cop_male_or_female,Test,,0.01,1,,"
 "OnBeginSequence" "Relay_Case_Fire,Enable,,0,-1,,"
 "origin" "25 831.808 0"
+}
+{
+"classname" "logic_pythoncheck"
+"targetname" "cop_male_or_female"
+"python_script" "FindPlayer().IsMale()"
+"OnTrue" "ChoreoScene_Hey_You_Male,Start,,0.01,-1,,"
+"OnFalse" "ChoreoScene_Hey_You_Female,Start,,0.01,-1,,"
+"origin" "65.2651 329.935 -55"
 }
 {
 "classname" "intersting_place"
@@ -8616,7 +8624,7 @@
 "classname" "logic_choreographed_scene"
 "SceneFile" "sound/Character/dlg/Downtown LA/dirty_cop/line1_col_e.vcd"
 "target1" "Cop_Dirty"
-"targetname" "ChoreoScene_Hey_You"
+"targetname" "ChoreoScene_Hey_You_Male"
 "angles" "0 0 0"
 "hide_ents" "0"
 "OnCompletion" "Relay_Case_Fire,Trigger,,0.3,-1,,"
@@ -8624,7 +8632,17 @@
 }
 {
 "classname" "logic_choreographed_scene"
-"SceneFile" "sound/Character/dlg/Downtown LA/dirty_cop/line4_col_e.vcd"
+"SceneFile" "sound/Character/dlg/Downtown LA/dirty_cop/line1_col_f.vcd"
+"target1" "Cop_Dirty"
+"targetname" "ChoreoScene_Hey_You_Female"
+"angles" "0 0 0"
+"hide_ents" "0"
+"OnCompletion" "Relay_Case_Fire,Trigger,,0.3,-1,,"
+"origin" "25.1565 830.112 121"
+}
+{
+"classname" "logic_choreographed_scene"
+"SceneFile" "sound/Character/dlg/Downtown LA/dirty_cop/line4_col_f.vcd"
 "target1" "Cop_Dirty"
 "targetname" "ChoreoScene_Not_Who"
 "angles" "0 0 0"
@@ -9186,7 +9204,7 @@
 }
 {
 "classname" "logic_choreographed_scene"
-"SceneFile" "sound/Character/dlg/Downtown LA/dirty_cop/line2_col_f.vcd"
+"SceneFile" "sound/Character/dlg/Downtown LA/dirty_cop/line2_col_e.vcd"
 "target1" "Cop_Dirty"
 "targetname" "ChoreoScene_Hey_You2"
 "angles" "0 0 0"
@@ -9205,11 +9223,22 @@
 "origin" "62 830 121"
 }
 {
+"classname" "logic_choreographed_scene"
+"SceneFile" "sound/Character/dlg/Downtown LA/dirty_cop/line3_col_f.vcd"
+"target1" "Cop_Dirty"
+"targetname" "ChoreoScene_Hey_You4"
+"angles" "0 0 0"
+"hide_ents" "0"
+"OnCompletion" "Relay_Case_Fire,Trigger,,0.3,-1,,"
+"origin" "62 830 121"
+}
+{
 "classname" "logic_case"
 "targetname" "CaseLogic_Hey_You"
-"OnCase02" "ChoreoScene_Hey_You2,Start,,0,-1,,"
 "OnCase01" "ChoreoScene_Hey_You,Start,,0,-1,,"
+"OnCase02" "ChoreoScene_Hey_You2,Start,,0,-1,,"
 "OnCase03" "ChoreoScene_Hey_You3,Start,,0,-1,,"
+"OnCase04" "ChoreoScene_Hey_You4,Start,,0,-1,,"
 "origin" "54 808 121"
 }
 {
@@ -9336,7 +9365,7 @@
 "RandomAnimation" "0"
 "MinAnimTime" "5"
 "MaxAnimTime" "10"
-"targetname" "modeldoor_3"
+"targetname" "modeldoor_4"
 "parentname" "invdoor_4"
 "crossfade_skin_time" "2.0"
 "origin" "-143.996 -1027.98 -75.9626"
@@ -9871,7 +9900,7 @@
 "RandomAnimation" "0"
 "MinAnimTime" "5"
 "MaxAnimTime" "10"
-"targetname" "modeldoor_6"
+"targetname" "modeldoor_7"
 "parentname" "invdoor_7"
 "crossfade_skin_time" "2.0"
 "origin" "-340.246 -192 -11.9626"
@@ -10048,6 +10077,7 @@
 "OnTrigger" "CaseLogic_Hey_You,Kill,,0,-1,,"
 "OnTrigger" "ChoreoScene_Whale_Watch,Kill,,0,-1,,"
 "OnTrigger" "ChoreoScene_Not_Who,Kill,,0,-1,,"
+"OnTrigger" "ChoreoScene_Hey_You4,Kill,,0,-1,,"
 "OnTrigger" "ChoreoScene_Hey_You3,Kill,,0,-1,,"
 "OnTrigger" "ChoreoScene_Hey_You2,Kill,,0,-1,,"
 "OnTrigger" "ChoreoScene_Hey_You,Kill,,0,-1,,"
