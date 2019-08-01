@@ -1,0 +1,32 @@
+Particle
+{
+	loop	"0"
+	frames	"30"	
+
+	spawn
+	{
+		particle "ImpactFX_BloodSpatter_Out"
+		burst "30"
+		phi "-40~40"
+		theta "0~360"
+		x	"2"
+	}
+
+	spawn
+	{
+		particle "ImpactFX_BloodSpatter_Out2"	// added by wesp  
+		burst "30"
+		phi "0~360"
+		theta "0~360"
+		x	"2"
+	}
+
+	spawn
+	{
+		particle "ImpactFX_Mc_GenericHit1"
+		burst "1"
+	}
+
+}
+
+	
