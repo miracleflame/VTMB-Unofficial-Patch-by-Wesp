@@ -4,14 +4,14 @@
 {	4	}{	Would you still be interested in some family gossip?	}{	Would you still be interested in some family gossip?	}{	161	}{	G.Chris_Gossip == 1	}{	}{	}{	}{	}{	}{	}{	}{	I thought I had issues, then I talked to your family.	}
 {	5	}{	Hello there. And what's your name?	}{	Hello there. And what's your name?	}{	51	}{	Seduction 7 & (G.Chris_Seduce == 0 and not IsMale(pc))	}{	}{	}{	}{	}{	}{	}{	}{	Hi! I need a name, and yours is the one I want more than any.	}
 {	6	}{	Something the matter?	}{	Something the matter?	}{	11	}{	Humanity 5 & G.Chris_Outdo == 0	}{	}{	}{	}{	}{	}{	}{	}{	Storm clouds overhead. Why?	}
-{	7	}{	So, know where the sarcophagus is?	}{	So, know where the sarcophagus is?	}{	91	}{	G.Story_State > 55	}{	}{	}{	}{	}{	}{	}{	}{	I don't want to interrupt your sulk, I just want the sarcophagus.	}
+{	7	}{	So, know where the sarcophagus is?	}{	So, know where the sarcophagus is?	}{	91	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	I don't want to interrupt your sulk, I just want the sarcophagus.	}
 {	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	11	}{	Family events, heh. How many more of these do we have to attend before we're taken seriously? I mean, honestly.	}{	Family events, heh. How many more of these do we have to attend before we're taken seriously? I mean, honestly.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	12	}{	What are you talking about?	}{	What are you talking about?	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yes, honestly. Sure. No question. What's this all about?	}
 {	13	}{	Yeah, really!	}{	Yeah, really!	}{	141	}{	Persuasion 6	}{	}{	}{	}{	}{	}{	}{	}{	It burns me like a thousand suns.	}
-{	14	}{	So, know where the sarcophagus is?	}{	So, know where the sarcophagus is?	}{	91	}{	G.Story_State > 55	}{	}{	}{	}{	}{	}{	}{	}{	I don't want to interrupt your sulk, I just want the sarcophagus.	}
+{	14	}{	So, know where the sarcophagus is?	}{	So, know where the sarcophagus is?	}{	91	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	I don't want to interrupt your sulk, I just want the sarcophagus.	}
 {	15	}{	Fantastic party, huh?	}{	Fantastic party, huh?	}{	21	}{	}{	}{	}{	}{	}{	}{	}{	}{	This sure is a party.	}
 {	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -20,7 +20,7 @@
 {	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	21	}{	What? Oh, uh - sure.	}{	What? Oh, uh - sure.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	22	}{	What's your problem?	}{	What's your problem?	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	What's stirring?	}
-{	23	}{	So, know where the sarcophagus is?	}{	So, know where the sarcophagus is?	}{	91	}{	G.Story_State > 55	}{	}{	}{	}{	}{	}{	}{	}{	I don't want to interrupt your sulk, I just want the sarcophagus.	}
+{	23	}{	So, know where the sarcophagus is?	}{	So, know where the sarcophagus is?	}{	91	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	I don't want to interrupt your sulk, I just want the sarcophagus.	}
 {	24	}{	Nice place they have here.	}{	Nice place they have here.	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	I never knew the word "opulent" until this house taught it to me.	}
 {	25	}{	Something the matter?	}{	Something the matter?	}{	11	}{	Humanity 5 & G.Chris_Outdo == 0	}{	}{	}{	}{	}{	}{	}{	}{	Storm clouds overhead. Why?	}
 {	26	}{	Enjoy.	}{	Enjoy.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Bye.	}
@@ -29,7 +29,7 @@
 {	29	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	30	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	31	}{	You know Uncle Bruno....	}{	You know Uncle Bruno....	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	32	}{	So, know where the sarcophagus is?	}{	So, know where the sarcophagus is?	}{	91	}{	G.Story_State > 55	}{	}{	}{	}{	}{	}{	}{	}{	I don't want to interrupt your sulk, I just want the sarcophagus.	}
+{	32	}{	So, know where the sarcophagus is?	}{	So, know where the sarcophagus is?	}{	91	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	I don't want to interrupt your sulk, I just want the sarcophagus.	}
 {	33	}{	What's your problem?	}{	What's your problem?	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	What's stirring?	}
 {	34	}{	See any good movies lately?	}{	See any good movies lately?	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	Oh, yeah, him. Helluva guy. Is he the guy on the pizza box?	}
 {	35	}{	Something the matter?	}{	Something the matter?	}{	11	}{	Humanity 5 & G.Chris_Outdo == 0	}{	}{	}{	}{	}{	}{	}{	}{	Storm clouds overhead. Why?	}

@@ -22,7 +22,7 @@
 {	22	}{	Tell me more.	}{	Tell me more.	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	Feed me more.	}
 {	23	}{	Then why don't you invest in it?	}{	Then why don't you invest in it?	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	Place your bet already.	}
 {	24	}{	Not interested.	}{	Not interested.	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	The more pieces I have, the clearer the picture becomes. And it's horrifying.	}
-{	25	}{	Forget about that. Just tell me where the sarcophagus is.	}{	Forget about that. Just tell me where the sarcophagus is.	}{	61	}{	G.Story_State > 55	}{	}{	}{	}{	}{	}{	}{	}{	Speak of the sarcophagus or say nothing at all.	}
+{	25	}{	Forget about that. Just tell me where the sarcophagus is.	}{	Forget about that. Just tell me where the sarcophagus is.	}{	61	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	Speak of the sarcophagus or say nothing at all.	}
 {	26	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	27	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	28	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -41,7 +41,7 @@
 {	41	}{	Well, I know somebody at the company, and that's what they call "insider trading". I could lose my job for that.	}{	Well, I know somebody at the company, and that's what they call "insider trading". I could lose my job for that.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	42	}{	Alright, tell me more.	}{	Alright, tell me more.	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	I didn't say stop!	}
 {	43	}{	Not interested.	}{	Not interested.	}{	51	}{	}{	}{	}{	}{	}{	}{	}{	}{	The more pieces I have, the clearer the picture becomes. And it's horrifying.	}
-{	44	}{	Forget about that. Just tell me what you know about the sarcophagus.	}{	Forget about that. Just tell me what you know about the sarcophagus.	}{	61	}{	G.Story_State > 55	}{	}{	}{	}{	}{	}{	}{	}{	Speak of the sarcophagus or say nothing at all.	}
+{	44	}{	Forget about that. Just tell me what you know about the sarcophagus.	}{	Forget about that. Just tell me what you know about the sarcophagus.	}{	61	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	Speak of the sarcophagus or say nothing at all.	}
 {	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -100,7 +100,7 @@
 {	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	101	}{	Okay, alright. You change your mind, you let me know.	}{	Okay, alright. You change your mind, you let me know.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	102	}{	Fine. Excuse me.	}{	Fine. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Where's the punch bowl? I want to throw a few.	}
-{	103	}{	Before I go, tell me what you know about the sarcophagus.	}{	Before I go, tell me what you know about the sarcophagus.	}{	61	}{	G.Story_State > 55	}{	}{	}{	}{	}{	}{	}{	}{	Speak of the sarcophagus or say nothing at all.	}
+{	103	}{	Before I go, tell me what you know about the sarcophagus.	}{	Before I go, tell me what you know about the sarcophagus.	}{	61	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	Speak of the sarcophagus or say nothing at all.	}
 {	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -201,7 +201,7 @@
 {	201	}{	Given that opportunity some thought?	}{	Given that opportunity some thought?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	202	}{	What was it again?	}{	What was it again?	}{	31	}{	}{	}{	}{	}{	}{	}{	}{	}{	The opportunity?	}
 {	203	}{	Talked to some of your family.	}{	Talked to some of your family.	}{	211	}{	G.Adam_Gossip == 1	}{	}{	}{	}{	}{	}{	}{	}{	I have your family's dirt all over me.	}
-{	204	}{	Tell me what you know about the sarcophagus.	}{	Tell me what you know about the sarcophagus.	}{	61	}{	G.Story_State > 55	}{	}{	}{	}{	}{	}{	}{	}{	Speak of the sarcophagus or say nothing at all.	}
+{	204	}{	Tell me what you know about the sarcophagus.	}{	Tell me what you know about the sarcophagus.	}{	61	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	Speak of the sarcophagus or say nothing at all.	}
 {	205	}{	Still not interested. Excuse me.	}{	Still not interested. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I would rather my thoughts were elsewhere. They are going.	}
 {	206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

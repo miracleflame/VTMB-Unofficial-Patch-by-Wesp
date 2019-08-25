@@ -40,7 +40,7 @@
 {	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	41	}{	Oh, I'm from back east myself. I'm working on my Master's out here though. The Giovannis have been nice enough to let me stay here while I finish up my studies. I've learned a great deal from them - like you wouldn't believe.	}{	Oh, I'm from back east myself. I'm working on my Master's out here though. The Giovannis have been nice enough to let me stay here while I finish up my studies. I've learned a great deal from them - like you wouldn't believe.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	42	}{	For example?	}{	For example?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	What sights have your young eyes witnessed?	}
-{	43	}{	Say, Nadia, you know anything about a sarcophagus?	}{	Say, Nadia, you know anything about a sarcophagus?	}{	211	}{	G.Story_State > 55	}{	}{	}{	}{	}{	}{	}{	}{	Do you believe in the sarcophagus?	}
+{	43	}{	Say, Nadia, you know anything about a sarcophagus?	}{	Say, Nadia, you know anything about a sarcophagus?	}{	211	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	Do you believe in the sarcophagus?	}
 {	44	}{	Enjoy the party, Nadia. Excuse me.	}{	Enjoy the party, Nadia. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I fade back into the party.	}
 {	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -50,7 +50,7 @@
 {	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	51	}{	I'm working on my Master's out here - I'm from back east. The Giovannis have been nice enough to let me stay here while I finish up my studies. I've learned a great deal from them - like you wouldn't believe.	}{	I'm working on my Master's out here - I'm from back east. The Giovannis have been nice enough to let me stay here while I finish up my studies. I've learned a great deal from them - like you wouldn't believe.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	52	}{	For example?	}{	For example?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	What sights have your young eyes witnessed?	}
-{	53	}{	Say, Nadia, you know anything about a sarcophagus?	}{	Say, Nadia, you know anything about a sarcophagus?	}{	211	}{	G.Story_State > 55	}{	}{	}{	}{	}{	}{	}{	}{	Do you believe in the sarcophagus?	}
+{	53	}{	Say, Nadia, you know anything about a sarcophagus?	}{	Say, Nadia, you know anything about a sarcophagus?	}{	211	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	Do you believe in the sarcophagus?	}
 {	54	}{	Enjoy the party, Nadia. Excuse me.	}{	Enjoy the party, Nadia. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I fade back into the party.	}
 {	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -120,7 +120,7 @@
 {	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	121	}{	Uh, yeah, cousin Victor. I'm Nadia, I don't know if you remember, I've been staying with the Giovannis while I work on my Master's degree out here. They've provided such a rich supplement to my education.	}{	Uh, yeah, cousin Maria. I'm Nadia. I don't know if you remember, I've been staying with the Giovannis while I work on my Master's degree out here. They've provided such a rich supplement to my education.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	122	}{	For example?	}{	For example?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	123	}{	Say, Nadia, you know anything about a sarcophagus?	}{	Say, Nadia, you know anything about a sarcophagus?	}{	211	}{	G.Story_State > 55	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	123	}{	Say, Nadia, you know anything about a sarcophagus?	}{	Say, Nadia, you know anything about a sarcophagus?	}{	211	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	124	}{	Enjoy the party, Nadia. Excuse me.	}{	Enjoy the party, Nadia. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -173,7 +173,7 @@
 {	173	}{	I know a little about our family's secrets... the dead tell you tales too?	}{	I know a little about our family's secrets... the dead tell you tales too?	}{	191	}{	Persuasion 8	}{	}{	}{	}{	}{	}{	}{	}{	Things do not die here, they become servile.	}
 {	174	}{	Just tell me for chrissakes.	}{	Just tell me for chrissakes.	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	I can see your tongue from here.	}
 {	175	}{	Why don't we go talk privately about it somewhere.	}{	Why don't we go talk privately about it somewhere.	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	Then take me to somewhere more suited to loose lips.	}
-{	176	}{	Have they told you anything about a sarcophagus?	}{	Have they told you anything about a sarcophagus?	}{	211	}{	G.Story_State > 55	}{	}{	}{	}{	}{	}{	}{	}{	Then tell me where a sarcophagus may hide in this house.	}
+{	176	}{	Have they told you anything about a sarcophagus?	}{	Have they told you anything about a sarcophagus?	}{	211	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	Then tell me where a sarcophagus may hide in this house.	}
 {	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -500,7 +500,7 @@
 {	500	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	501	}{	Hi.	}{	Hi.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	502	}{	So... learned anything interesting about the Giovanni while you've been here?	}{	So... learned anything interesting about the Giovanni while you've been here?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	What sights have your young eyes witnessed in this house?	}
-{	503	}{	Say, you know anything about a sarcophagus?	}{	Say, you know anything about a sarcophagus?	}{	211	}{	G.Story_State > 55	}{	}{	}{	}{	}{	}{	}{	}{	Do you believe in the sarcophagus?	}
+{	503	}{	Say, you know anything about a sarcophagus?	}{	Say, you know anything about a sarcophagus?	}{	211	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	Do you believe in the sarcophagus?	}
 {	504	}{	Enjoy the party. Excuse me.	}{	Enjoy the party. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I fade back into the party.	}
 {	505	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	506	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
