@@ -1,8 +1,8 @@
 @echo off
+title Launcher for apps with long path trouble  (c) Psycho-A
 setlocal ENABLEEXTENSIONS
 set "PATH=%SystemRoot%\System32;%SystemRoot%;%SystemRoot%\System32\Wbem"
 set "PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"
-title Launcher for apps with long path trouble  (c) Psycho-A
 pushd "%~dp0"
 
 :set_vars
@@ -16,17 +16,18 @@ if not exist "%Program%" (
 	echo>>"..\..\..\sdk_errors.log" [%date% %time%] Program error: App file "%Program%" not found!
 	exit
 )
-if exist "..\..\service\sfk.exe" (
-	set sfk="..\..\service\sfk.exe") else (
-	echo>>"..\..\..\sdk_errors.log" [%date% %time%] %AppFile:.exe=% error: Missing "%cd%\..\..\service\sfk.exe" file.
+if exist "..\..\helpers\sfk.exe" (
+	set Sfk="..\..\helpers\sfk.exe") else (
+	echo>>"..\..\..\sdk_errors.log" [%date% %time%] %AppFile:.exe=% error: Missing "%cd%\..\..\helpers\sfk.exe" file.
 	goto run_program
 )
 
 :fix_issue
-for /f %%a in ('call %sfk% strlen "%Program%"') do (
+for /f %%a in ('call %Sfk% strlen "%Program%"') do (
 if %%~a GTR 126 (
-	copy /y "%Program%" "%~d0\"> nul
-	set "Program=%~d0\%AppFile%"
+	if not exist "%Temp%\" md "%Temp%"
+	copy /y "%AppFile%" "%Temp%\"> nul
+	set "Program=%Temp%\%AppFile%"
 	set "Delete=1"
 	set "RunKey=/w"
 ))

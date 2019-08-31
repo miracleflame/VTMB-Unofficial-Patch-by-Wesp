@@ -1,4 +1,4 @@
-# $Id: meshtools.py,v 1.5 2006/06/29 07:06:54 campbellbarton Exp $
+# $Id: meshtools.py,v 1.6 2006/12/12 10:38:43 campbellbarton Exp $
 #
 # +---------------------------------------------------------+
 # | Copyright (c) 2001 Anthony D'Agostino                   |
@@ -119,8 +119,7 @@ def versioned_name(objname):
 	existing_names = []
 	for object in Blender.Object.Get():
 		existing_names.append(object.name)
-		data = object.data
-		if data: existing_names.append(data.name)
+		existing_names.append(object.getData(name_only=1))
 	if objname in existing_names: # don't over-write other names
 		try:
 			name, ext = objname.split('.')

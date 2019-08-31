@@ -1,7 +1,7 @@
 #!BPY
 """
 Name: 'Bone Weight Copy'
-Blender: 241
+Blender: 243
 Group: 'Object'
 Tooltip: 'Copy Bone Weights from 1 mesh, to all other selected meshes.'
 """
@@ -64,7 +64,7 @@ def copy_bone_influences(_from, _to, PREF_SEL_ONLY, PREF_NO_XCROSS):
 		'''
 		
 		# First seek the closest Z axis vert idx/v
-		seek_vec_x,seek_vec_y,seek_vec_z= tuple(seek_vec)
+		seek_vec_x,seek_vec_y,seek_vec_z= seek_vec
 		
 		from_vec_idx= 0
 		
@@ -143,7 +143,6 @@ def copy_bone_influences(_from, _to, PREF_SEL_ONLY, PREF_NO_XCROSS):
 	else: # Add all groups.
 		for group in from_groups:
 			me_to.addVertGroup(group)
-		
 	
 	add_ = Mesh.AssignModes.ADD
 	
@@ -169,28 +168,18 @@ def copy_bone_influences(_from, _to, PREF_SEL_ONLY, PREF_NO_XCROSS):
 # ZSORT return (i/co) tuples, used for fast seeking of the snapvert.
 def worldspace_verts_idx(me, ob):
 	mat= ob.matrixWorld
-	def worldvert(v):
-		vec= Vector(v)
-		vec.resize4D()
-		vec= vec*mat
-		vec.resize3D()
-		return vec
-	verts_zsort= [ (i, worldvert(v.co)) for i, v in enumerate(me.verts) ]
+	verts_zsort= [ (i, v.co*mat) for i, v in enumerate(me.verts) ]
 	
 	# Sorts along the Z Axis so we can optimize the getsnap.
-	verts_zsort.sort(lambda a,b: cmp(a[1].z, b[1].z,))
+	try:	verts_zsort.sort(key = lambda a: a[1].z)
+	except:	verts_zsort.sort(lambda a,b: cmp(a[1].z, b[1].z,))
+	
 	return verts_zsort
 
 
 def worldspace_verts(me, ob):
 	mat= ob.matrixWorld
-	def worldvert(v):
-		vec= Vector(v)
-		vec.resize4D()
-		vec= vec*mat
-		vec.resize3D()
-		return vec
-	return [ worldvert(v.co) for v in me.verts ]
+	return [ v.co*mat for v in me.verts ]
 	
 def subdivMesh(me, subdivs):
 	oldmode = Mesh.Mode()
@@ -209,14 +198,19 @@ def main():
 		Blender.Draw.PupMenu('Error%t|2 or more mesh objects need to be selected.|aborting.')
 		return
 	
-	PREF_QUALITY= Blender.Draw.Create(3)
+	PREF_QUALITY= Blender.Draw.Create(0)
 	PREF_NO_XCROSS= Blender.Draw.Create(0)
 	PREF_SEL_ONLY= Blender.Draw.Create(0)
 	
 	pup_block = [\
 	('Quality:', PREF_QUALITY, 0, 4, 'Generate interpolated verts for a higher quality result.'),\
 	('No X Crossing', PREF_NO_XCROSS, 'Do not snap across the zero X axis'),\
-	('Copy to Selected', PREF_SEL_ONLY, 'Only copy new weights to selected verts on the target mesh. (use active object as source)'),\
+	'',\
+	'"Update Selected" copies',\
+	'active object weights to',\
+	'selected verts on the other',\
+	'selected mesh objects.',\
+	('Update Selected', PREF_SEL_ONLY, 'Only copy new weights to selected verts on the target mesh. (use active object as source)'),\
 	]
 	
 	
@@ -227,17 +221,16 @@ def main():
 	PREF_NO_XCROSS= PREF_NO_XCROSS.val
 	quality=  PREF_QUALITY.val
 	
-	act_ob= scn.getActiveObject()
+	act_ob= scn.objects.active
 	if PREF_SEL_ONLY and act_ob==None:
 		Blender.Draw.PupMenu('Error%t|When dealing with 2 or more meshes with vgroups|There must be an active object|to be used as a source|aborting.')
 		return
 
 	sel=[]
 	from_data= None
-	act_ob= scn.getActiveObject()
+	
 	for ob in contextSel:
-		
-		if ob.getType()=='Mesh':
+		if ob.type=='Mesh':
 			me= ob.getData(mesh=1)
 			groups= me.getVertGroupNames()
 			
@@ -253,7 +246,7 @@ def main():
 							_ob.sel=0
 						ob.sel=1
 						Object.Duplicate(mesh=1)
-						ob= scn.getActiveObject()
+						ob= scn.objects.active
 						me= ob.getData(mesh=1)
 						# groups will be the same
 						print '\tGenerating higher %ix quality weights.' % quality
@@ -264,15 +257,18 @@ def main():
 			else:
 				data= (ob, me, worldspace_verts(me, ob), groups)
 				sel.append(data)
-		
-	if not sel or from_data==None:
-		Blender.Draw.PupMenu('Select 2 or more mesh objects, aborting.')
-		if not sel and quality:
-			from_data[1].verts= None
+	
+	if not from_data:
+		Blender.Draw.PupMenu('Error%t|No mesh with vertex groups found.')
 		return
+	
+	if not sel:
+		Blender.Draw.PupMenu('Error%t|Select 2 or more mesh objects, aborting.')
+		if quality:	from_data[1].verts= None
+		return
+	
 	t= Blender.sys.time()
 	Window.WaitCursor(1)
-	
 	
 	# Now do the copy.
 	print '\tCopying from "%s" to %i other mesh(es).' % (from_data[0].name, len(sel))

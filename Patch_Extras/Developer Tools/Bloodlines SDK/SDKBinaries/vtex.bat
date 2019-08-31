@@ -47,7 +47,7 @@ if /i "%~1"=="-shader" set CmdLine=%~1 "%~2"
 
 :StripMatsDir
 for /f "delims=" %%a in (
-'service\sfk.exe echo "%TgaPath%/" +filt -rep "|*materials*\||" -lerep "|/||" -lerep "|\||"'
+'helpers\sfk.exe echo "%TgaPath%/" +filt -rep "|*materials*\||" -lerep "|/||" -lerep "|\||"'
 ) do (
 	set "TtzPath=%ModDir%\materials\%%~a"
 	set "TtzFile=materials\%%~a\%TexName%.tth"
@@ -90,17 +90,18 @@ if /i "%~4"=="-vmtparam" set "VmtParam4=^%~5^ ^%~6^"
 if /i "%~5"=="-vmtparam" set "VmtParam5=^%~6^ ^%~7^"
 if /i "%~6"=="-vmtparam" set "VmtParam6=^%~7^ ^%~8^"
 if /i "%~7"=="-vmtparam" set "VmtParam7=^%~8^ ^%~9^"
-if defined TexNames for %%m in (%TexNames%) do (
+if defined TexNames (
+for %%m in (%TexNames%) do (
 if exist "%TtzPath%\%%~m.vmt" (
-	if defined VmtParam1 call service\sfk.exe replace "%TtzPath%\%%~m.vmt" -spat "|}|\t%VmtParam1:\=/%\r\n}|" -yes
-	if defined VmtParam2 call service\sfk.exe replace "%TtzPath%\%%~m.vmt" -spat "|}|\t%VmtParam2:\=/%\r\n}|" -yes
-	if defined VmtParam3 call service\sfk.exe replace "%TtzPath%\%%~m.vmt" -spat "|}|\t%VmtParam3:\=/%\r\n}|" -yes
-	if defined VmtParam4 call service\sfk.exe replace "%TtzPath%\%%~m.vmt" -spat "|}|\t%VmtParam4:\=/%\r\n}|" -yes
-	if defined VmtParam5 call service\sfk.exe replace "%TtzPath%\%%~m.vmt" -spat "|}|\t%VmtParam5:\=/%\r\n}|" -yes
-	if defined VmtParam6 call service\sfk.exe replace "%TtzPath%\%%~m.vmt" -spat "|}|\t%VmtParam6:\=/%\r\n}|" -yes
-	if defined VmtParam7 call service\sfk.exe replace "%TtzPath%\%%~m.vmt" -spat "|}|\t%VmtParam7:\=/%\r\n}|" -yes
-	call service\sfk.exe replace "%TtzPath%\%%~m.vmt" -spat "|^|\q|" -quiet -yes
-))> nul
+	if defined VmtParam1 (helpers\sfk.exe replace "%TtzPath%\%%~m.vmt" -spat "|}|\t%VmtParam1:\=/%\r\n}|" -yes)
+	if defined VmtParam2 (helpers\sfk.exe replace "%TtzPath%\%%~m.vmt" -spat "|}|\t%VmtParam2:\=/%\r\n}|" -yes)
+	if defined VmtParam3 (helpers\sfk.exe replace "%TtzPath%\%%~m.vmt" -spat "|}|\t%VmtParam3:\=/%\r\n}|" -yes)
+	if defined VmtParam4 (helpers\sfk.exe replace "%TtzPath%\%%~m.vmt" -spat "|}|\t%VmtParam4:\=/%\r\n}|" -yes)
+	if defined VmtParam5 (helpers\sfk.exe replace "%TtzPath%\%%~m.vmt" -spat "|}|\t%VmtParam5:\=/%\r\n}|" -yes)
+	if defined VmtParam6 (helpers\sfk.exe replace "%TtzPath%\%%~m.vmt" -spat "|}|\t%VmtParam6:\=/%\r\n}|" -yes)
+	if defined VmtParam7 (helpers\sfk.exe replace "%TtzPath%\%%~m.vmt" -spat "|}|\t%VmtParam7:\=/%\r\n}|" -yes)
+	helpers\sfk.exe replace "%TtzPath%\%%~m.vmt" -spat "|^|\q|" -quiet -yes
+)))> nul
 
 :ClearChildVmts
 if defined TexNames (

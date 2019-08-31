@@ -77,6 +77,24 @@ class xExport:
 
 		print " "
 		print "modifying MDL..."
+		EXPORT_VERT = Draw.Create(1)
+		EXPORT_UV = Draw.Create(1)
+		EXPORT_NORMAL = Draw.Create(0)
+		pup_block = [\
+		('Export Options'),\
+		('Vertices' ,EXPORT_VERT , 'Export the Vertice?'),\
+		('UV' ,EXPORT_UV , 'Export the UV?'),\
+		('Normals' ,EXPORT_NORMAL , 'Export the Normal?')
+		]
+		if not Draw.PupBlock('Darken = check option...', pup_block):
+			self.file.close()
+			self.file1.close()
+			return
+		export_vert = EXPORT_VERT.val
+		export_uv = EXPORT_UV.val
+		export_normal = EXPORT_NORMAL.val
+		Window.WaitCursor(1)
+
 		object = Blender.Object.GetSelected()[0]
 		mesh = object.getData()
 
@@ -149,19 +167,27 @@ class xExport:
 
 				if texcoord[ii][0] != 0.0:
 					if not ((vert.co.x == 0.0) and (vert.co.y == 0.0) and (vert.co.z == 0.0)):
-						#temp_data = struct.pack('<3f3f2f12s',vert.co.x,vert.co.y,vert.co.z,data[3],data[4],data[5],texcoord[ii][0],texcoord[ii][1],data[8])
-						temp_data = struct.pack('<3BB4h3f3f2f',data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],vert.co.x,vert.co.y,vert.co.z,vert.no.x,vert.no.y,vert.no.z,texcoord[ii][0],texcoord[ii][1]) # x y z and uv
+						temp_data = struct.pack('<3BB4h3f',data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8],data[9],data[10]) #no vertices
+						if export_vert: temp_data = struct.pack('<3BB4h3f',data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],vert.co.x,vert.co.y,vert.co.z) #with vertices
+						temp_data1 = struct.pack('<3f',data[11],data[12],data[13]) #no normals
+						if export_normal: temp_data1 = struct.pack('<3f',vert.no.x,vert.no.y,vert.no.z) # with normals
+						temp_data2 = struct.pack('<2f',data[14],data[15]) #no UV
+						if export_uv: temp_data2 = struct.pack('<2f',texcoord[ii][0],texcoord[ii][1]) #with uv
 						#temp_data = struct.pack('<3BB4h3f3f2f',data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8],data[9],data[10],data[11],data[12],data[13],texcoord[ii][0],texcoord[ii][1]) #only uv
 						#                                        w1      w2      w3      n+?     b1     b2      b3        0       x      y        z       nx       ny       nz             u            v           #
 				else:
 					if not ((vert.co.x == 0.0) and (vert.co.y == 0.0) and (vert.co.z == 0.0)):
-						#temp_data = struct.pack('<3f3f2f12s',vert.co.x,vert.co.y,vert.co.z,data[3],data[4],data[5],data[6],data[7],data[8])
-						temp_data = struct.pack('<3BB4h3f3f2f',data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],vert.co.x,vert.co.y,vert.co.z,vert.no.x,vert.no.y,vert.no.z,data[14],data[15]) #only x y z
-				#temp_data = struct.pack('<3BB4h3f3f2f',data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],vert.co.x,vert.co.y,vert.co.z,vert.no.x,vert.no.y,vert.no.z,texcoord[ii][0],texcoord[ii][1])
-				self.file1.write(temp_data)	#overwite verts and UV with blender value
+						temp_data = struct.pack('<3BB4h3f',data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8],data[9],data[10]) #no vertices
+						if export_vert: temp_data = struct.pack('<3BB4h3f',data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],vert.co.x,vert.co.y,vert.co.z) #with vertices
+						temp_data1 = struct.pack('<3f',data[11],data[12],data[13]) #no normals
+						if export_normal: temp_data1 = struct.pack('<3f',vert.no.x,vert.no.y,vert.no.z) # with normals
+						temp_data2 = struct.pack('<2f',data[14],data[15]) #no UV
+				self.file1.write(temp_data) #overwite verts with blender value
+				self.file1.write(temp_data1) #overwite normals with blender value
+				self.file1.write(temp_data2) #overwite UV with blender value
 				ii += 1
 
-			self.file1.write(self.file.read())	 #finishing writing the mdl
+			self.file1.write(self.file.read()) #finishing writing the mdl
 			result=Blender.Draw.PupMenu("The ..._x.MDL was created successfully %t|OK")
 
 

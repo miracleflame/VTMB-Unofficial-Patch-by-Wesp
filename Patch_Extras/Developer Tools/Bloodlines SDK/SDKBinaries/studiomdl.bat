@@ -60,9 +60,9 @@ echo Warning: Collision data is currently not supported!
 echo Warning: Animations are currently not supported!
 echo Warning: Only less than ~10000 polys models allowed!
 echo.
-if not exist "service\mdlwarn.ini" goto RunCompiler
-service\msgbox.exe Please note: The model compiler currently has no normal processing physics data (collision meshes), and they may cause game to crash! To avoid this, please paste *any* compiled model into your maps only as "prop_dynamic" and collision turned Off ("Collisions: Not Solid" in the Hammer Editor, or "solid" "0" flag when pasting to an existing level using VPKTool), or simply as "prop_static" if you're using the Hammer Editor. To make such a model solid with characters and world, surround it with "func_detail" or "func_brush" brush volumes with "toolsinvisible" texture covered on. For prop_dynamic models you can also parent them to "func_physbox" brushes to give them fake physics (take and move). /c:Custom Models Warning! /t:MB_OK,MB_ICONWARNING
-del /f /q "service\mdlwarn.ini"> nul
+if not exist "helpers\mdlwarn.ini" goto RunCompiler
+helpers\msgbox.exe Please note: The model compiler currently has no normal processing physics data (collision meshes), and they may cause game to crash! To avoid this, please paste *any* compiled model into your maps only as "prop_dynamic" and collision turned Off ("Collisions: Not Solid" in the Hammer Editor, or "solid" "0" flag when pasting to an existing level using VPKTool), or simply as "prop_static" if you're using the Hammer Editor. To make such a model solid with characters and world, surround it with "func_detail" or "func_brush" brush volumes with "toolsinvisible" texture covered on. For prop_dynamic models you can also parent them to "func_physbox" brushes to give them fake physics (take and move). /c:Custom Models Warning! /t:MB_OK,MB_ICONWARNING
+del /f /q "helpers\mdlwarn.ini"> nul
 
 :RunCompiler
 call studiomdl.exe -game "%ModDir%" %CmdLine%

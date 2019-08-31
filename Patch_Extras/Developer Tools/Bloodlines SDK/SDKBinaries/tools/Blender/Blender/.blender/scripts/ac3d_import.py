@@ -2,7 +2,7 @@
 
 """ Registration info for Blender menus:
 Name: 'AC3D (.ac)...'
-Blender: 236
+Blender: 242
 Group: 'Import'
 Tip: 'Import an AC3D (.ac) file.'
 """
@@ -10,7 +10,7 @@ Tip: 'Import an AC3D (.ac) file.'
 __author__ = "Willian P. Germano"
 __url__ = ("blender", "elysiun", "AC3D's homepage, http://www.ac3d.org",
 	"PLib 3d gaming lib, http://plib.sf.net")
-__version__ = "2.36a 2005-12-04"
+__version__ = "2.43 2007-02-12"
 
 __bpydoc__ = """\
 This script imports AC3D models into Blender.
@@ -26,30 +26,32 @@ Missing:<br>
     The url tag is irrelevant for Blender.
 
 Known issues:<br>
-    None.
-
+    - Some objects may be imported with wrong normals due to wrong information in the model itself. This can be noticed by strange shading, like darker than expected parts in the model. To fix this, select the mesh with wrong normals, enter edit mode and tell Blender to recalculate the normals, either to make them point outside (the usual case) or inside.<br>
+ 
 Config Options:<br>
-    - group (toggle): if "on", grouped objects in the .ac file are parented to
-Empties.
     - textures dir (string): if non blank, when imported texture paths are
 wrong in the .ac file, Blender will also look for them at this dir.
 
 Notes:<br>
-    - when looking for assigned textures, Blender tries in order: the actual
+   - When looking for assigned textures, Blender tries in order: the actual
 paths from the .ac file, the .ac file's dir and the default textures dir path
 users can configure (see config options above).
 """
 
-# $Id: ac3d_import.py,v 1.11 2006/01/29 19:17:52 ianwill Exp $
+# $Id: ac3d_import.py,v 1.20 2007/02/13 17:37:32 ianwill Exp $
 #
 # --------------------------------------------------------------------------
-# AC3DImport version 2.36a Dec 04, 2005
-# Program versions: Blender 2.36+ and AC3Db files (means version 0xb)
-# changed: fixed a bug: error on 1 vertex "closed" polylines
+# AC3DImport version 2.43 Feb 12, 2007
+# Program versions: Blender 2.43 and AC3Db files (means version 0xb)
+# changed: updated for new Blender version, Mesh module
+# --------------------------------------------------------------------------
+# Thanks: Melchior Franz for extensive bug testing and reporting, making this
+# version cope much better with old or bad .ac files, among other improvements;
+# Stewart Andreason for reporting a serious crash.
 # --------------------------------------------------------------------------
 # ***** BEGIN GPL LICENSE BLOCK *****
 #
-# Copyright (C) 2005: Willian P. Germano, wgermano _at_ ig.com.br
+# Copyright (C) 2004-2007: Willian P. Germano, wgermano _at_ ig.com.br
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -74,33 +76,32 @@ users can configure (see config options above).
 #  fixing. Avoiding or triangulating concave n-gons in AC3D is a simple way to
 #  avoid problems.
 
+from math import radians
+
 import Blender
-from Blender import Registry
+from Blender import Scene, Object, Mesh, Lamp, Registry, sys as bsys, Window, Image, Material
 from Blender.sys import dirsep
+from Blender.Mathutils import Vector, Matrix, Euler
 
 # Default folder for AC3D textures, to override wrong paths, change to your
 # liking or leave as "":
 TEXTURES_DIR = ""
 
-# Set 'GROUP' to True to make Blender group imported objects using Empties,
-# to reproduce the object hierarchy in the .ac file
-GROUP = False
-
 tooltips = {
-	'TEXTURES_DIR': 'additional dir to look for missing textures',
-	'GROUP': 'mimick grouping information by parenting grouped meshes to empties'
+	'TEXTURES_DIR': 'additional dir to look for missing textures'
 }
 
 def update_registry():
-	global GROUP, TEXTURES_DIR
-	rd = dict([('GROUP', GROUP), ('TEXTURES_DIR', TEXTURES_DIR)])
+	global TEXTURES_DIR
+	rd = dict([('TEXTURES_DIR', TEXTURES_DIR)])
 	Registry.SetKey('ac3d_import', rd, True)
 
 rd = Registry.GetKey('ac3d_import', True)
 
 if rd:
+	if 'GROUP' in rd:
+		update_registry()
 	TEXTURES_DIR = rd['TEXTURES_DIR']
-	GROUP = rd['GROUP']
 else: update_registry()
 
 if TEXTURES_DIR:
@@ -119,11 +120,31 @@ if rd:
 	
 errmsg = ""
 
+# Matrix to align ac3d's coordinate system with Blender's one,
+# it's a -90 degrees rotation around the x axis:
+AC_TO_BLEND_MATRIX = Matrix([1, 0, 0], [0, 0, 1], [0, -1, 0])
+
+AC_WORLD = 0
+AC_GROUP = 1
+AC_POLY = 2
+AC_LIGHT = 3
+AC_OB_TYPES = {
+	'world': AC_WORLD,
+	'group': AC_GROUP,
+	'poly':  AC_POLY,
+	'light':  AC_LIGHT
+	}
 
 def inform(msg):
 	global VERBOSE
 	if VERBOSE: print msg
 
+def euler_in_radians(eul):
+	"Used while there's a bug in the BPY API"
+	eul.x = radians(eul.x)
+	eul.y = radians(eul.y)
+	eul.z = radians(eul.z)
+	return eul
 
 class Obj:
 	
@@ -135,13 +156,19 @@ class Obj:
 		self.tex = ''
 		self.texrep = [1,1]
 		self.texoff = None
-		self.loc = [0, 0, 0]
+		self.loc = []
 		self.rot = []
+		self.size = []
 		self.crease = 30
 		self.vlist = []
-		self.flist = []
+		self.flist_cfg = []
+		self.flist_v = []
+		self.flist_uv = []
+		self.elist = []
 		self.matlist = []
 		self.kids = 0
+
+		self.bl_obj = None # the actual Blender object created from this data
 
 class AC3DImport:
 
@@ -149,9 +176,11 @@ class AC3DImport:
 
 		global errmsg
 
+		self.scene = Scene.GetCurrent()
+
 		self.i = 0
 		errmsg = ''
-		self.importdir = Blender.sys.dirname(filename)
+		self.importdir = bsys.dirname(filename)
 		try:
 			file = open(filename, 'r')
 		except IOError, (errno, strerror):
@@ -187,8 +216,7 @@ class AC3DImport:
 
 		self.objlist = []
 		self.mlist = []
-		self.dads = []
-		self.kids = []
+		self.kidsnumlist = []
 		self.dad = None
 
 		self.lines = file.readlines()
@@ -199,12 +227,17 @@ class AC3DImport:
 		self.testAC3DImport()
 				
 	def parse_obj(self, value):
-		if self.kids:
-			while not self.kids[-1]:
-				self.kids.pop()
-				self.dad = self.dad.dad
-			self.kids[-1] -= 1
-		new = Obj(value)
+		kidsnumlist = self.kidsnumlist
+		if kidsnumlist:
+			while not kidsnumlist[-1]:
+				kidsnumlist.pop()
+				if kidsnumlist:
+					self.dad = self.dad.dad
+				else:
+					inform('Ignoring unexpected data at end of file.')
+					return -1 # bad file with more objects than reported
+			kidsnumlist[-1] -= 1
+		new = Obj(AC_OB_TYPES[value])
 		new.dad = self.dad
 		new.name = value
 		self.objlist.append(new)
@@ -212,7 +245,7 @@ class AC3DImport:
 	def parse_kids(self, value):
 		kids = int(value)
 		if kids:
-			self.kids.append(kids)
+			self.kidsnumlist.append(kids)
 			self.dad = self.objlist[-1]
 		self.objlist[-1].kids = kids
 
@@ -225,7 +258,8 @@ class AC3DImport:
 		self.objlist[-1].data = data
 
 	def parse_tex(self, value):
-		texture = value.split('"')[1]
+		line = self.lines[self.i - 1] # parse again to properly get paths with spaces
+		texture = line.split('"')[1]
 		self.objlist[-1].tex = texture
 
 	def parse_texrep(self, trash):
@@ -269,23 +303,24 @@ class AC3DImport:
 
 	def parse_rot(self, trash):
 		i = self.i - 1
+		ob = self.objlist[-1]
 		rot = self.lines[i].split(' ', 1)[1]
 		rot = map(float, rot.split())
-		self.objlist[-1].rot = rot
+		matrix = Matrix(rot[:3], rot[3:6], rot[6:])
+		ob.rot = matrix
+		size = matrix.scalePart() # vector
+		ob.size = size
 
 	def parse_loc(self, trash):
 		i = self.i - 1
 		loc = self.lines[i].split(' ', 1)[1]
 		loc = map(float, loc.split())
-		self.objlist[-1].loc = loc
+		self.objlist[-1].loc = Vector(loc)
 
 	def parse_crease(self, value):
 		# AC3D: range is [0.0, 180.0]; Blender: [1, 80]
-		try:
-			value = int(value)
-		except ValueError:
-			value = int(float(value)) # duh
-		self.objlist[-1].crease = value
+		value = float(value)
+		self.objlist[-1].crease = int(value)
 
 	def parse_vert(self, value):
 		i = self.i
@@ -301,29 +336,10 @@ class AC3DImport:
 			n -= 1
 			i += 1
 
+		if vlist: # prepend a vertex at 1st position to deal with vindex 0 issues
+			vlist.insert(0, line)
+
 		self.i = i
-
-		rot = obj.rot
-		if rot:
-			nv = len(vlist)
-			for j in range(nv):
-				v = vlist[j]
-				t = [0,0,0]
-				t[0] = rot[0]*v[0] + rot[3]*v[1] + rot[6]*v[2]
-				t[1] = rot[1]*v[0] + rot[4]*v[1] + rot[7]*v[2]
-				t[2] = rot[2]*v[0] + rot[5]*v[1] + rot[8]*v[2]
-				vlist[j] = t
-
-		loc = obj.loc
-		dad = obj.dad
-		while dad:
-			for j in [0, 1, 2]:
-				loc[j] += dad.loc[j]
-			dad = dad.dad
-
-		for v in vlist:
-			for j in [0, 1, 2]:
-				v[j] += loc[j]
 
 	def parse_surf(self, value):
 		i = self.i
@@ -333,12 +349,19 @@ class AC3DImport:
 		obj = self.objlist[-1]
 		matlist = obj.matlist
 		numsurf = int(value)
+		NUMSURF = numsurf
+
+		badface_notpoly = badface_multirefs = 0
 
 		while numsurf:
-			flags = lines[i].split()
-			flaglow = 0
-			if len(flags[1]) > 3: flaglow = int(flags[1][3])
-			flaghigh = int(flags[1][2])
+			flags = lines[i].split()[1][2:]
+			if len(flags) > 1:
+				flaghigh = int(flags[0])
+				flaglow = int(flags[1])
+			else:
+				flaghigh = 0
+				flaglow = int(flags[0])
+
 			is_smooth = flaghigh & 1
 			twoside = flaghigh & 2
 			mat = lines[i+1].split()
@@ -349,45 +372,68 @@ class AC3DImport:
 			i += 3
 			face = []
 			faces = []
+			edges = []
 			fuv = []
+			fuvs = []
 			rfs = refs
 
 			while rfs:
 				line = lines[i].split()
-				v = int(line[0])
+				v = int(line[0]) + 1 # + 1 to avoid vindex == 0
 				uv = [float(line[1]), float(line[2])]
-				face.append([v, uv])
+				face.append(v)
+				fuv.append(Vector(uv))
 				rfs -= 1
 				i += 1
-				
-			if flaglow:
+
+			if flaglow: # it's a line or closed line, not a polygon
 				while len(face) >= 2:
 					cut = face[:2]
-					faces.append(cut)
+					edges.append(cut)
 					face = face[1:]
 
-				if flaglow == 1 and faces:
-					face = [faces[-1][-1], faces[0][0]]
+				if flaglow == 1 and edges: # closed line
+					face = [edges[-1][-1], edges[0][0]]
+					edges.append(face)
+
+			else: # polygon
+
+				# check for bad face, that references same vertex more than once
+				lenface = len(face)
+				if lenface < 3:
+					# less than 3 vertices, not a face
+					badface_notpoly += 1
+				elif sum(map(face.count, face)) != lenface:
+					# multiple references to the same vertex
+					badface_multirefs += 1
+				else: # ok, seems fine
+					while len(face) > 4:
+						cut = face[:4]
+						cutuv = fuv[:4]
+						face = face[3:]
+						fuv = fuv[3:]
+						face.insert(0, cut[0])
+						fuv.insert(0, cutuv[0])
+						faces.append(cut)
+						fuvs.append(cutuv)
+
 					faces.append(face)
+					fuvs.append(fuv)
 
-			else:
-				while len(face) > 4:
-					cut = face[:4]
-					face = face[3:]
-					face.insert(0, cut[0])
-					faces.append(cut)	 
-
-				faces.append(face)
-
-			for f in faces:
-				f.append(mat)
-				f.append(is_smooth)
-				f.append(twoside)
-				self.objlist[-1].flist.append(f)
+			obj.flist_cfg.extend([[mat, is_smooth, twoside]] * len(faces))
+			obj.flist_v.extend(faces)
+			obj.flist_uv.extend(fuvs)
+			obj.elist.extend(edges) # loose edges
 
 			numsurf -= 1	  
 
-							
+		if badface_notpoly or badface_multirefs:
+			inform('Object "%s" - ignoring bad faces:' % obj.name)
+			if badface_notpoly:
+				inform('\t%d face(s) with less than 3 vertices.' % badface_notpoly)
+			if badface_multirefs:
+				inform('\t%d face(s) with multiple references to a same vertex.' % badface_multirefs)
+
 		self.i = i
 
 	def parse_file(self):
@@ -404,122 +450,278 @@ class AC3DImport:
 			i += 1
 			if kw:
 				self.i = i
-				self.token[kw](line[1])
+				result = self.token[kw](line[1])
+				if result:
+					break # bad .ac file, stop parsing
 				i = self.i
 			line = lines[i].split()
 
+	# for each group of meshes we try to find one that can be used as
+	# parent of the group in Blender.
+	# If not found, we can use an Empty as parent.
+	def found_parent(self, groupname, olist):
+		l = [o for o in olist if o.type == AC_POLY \
+				and not o.kids and not o.rot and not o.loc]
+		if l:
+			for o in l:
+				if o.name == groupname:
+					return o
+				#return l[0]
+		return None
+
+	def build_hierarchy(self):
+		blmatrix = AC_TO_BLEND_MATRIX
+
+		olist = self.objlist[1:]
+		olist.reverse()
+
+		scene = self.scene
+
+		newlist = []
+
+		for o in olist:
+			kids = o.kids
+			if kids:
+				children = newlist[-kids:]
+				newlist = newlist[:-kids]
+				if o.type == AC_GROUP:
+					parent = self.found_parent(o.name, children)
+					if parent:
+						children.remove(parent)
+						o.bl_obj = parent.bl_obj
+					else: # not found, use an empty
+						empty = scene.objects.new('Empty', o.name)
+						o.bl_obj = empty
+
+				bl_children = [c.bl_obj for c in children if c.bl_obj != None]
+				
+				o.bl_obj.makeParent(bl_children, 0, 1)
+				for child in children:
+					blob = child.bl_obj
+					if not blob: continue
+					if child.rot:
+						eul = euler_in_radians(child.rot.toEuler())
+						blob.setEuler(eul)
+					if child.size:
+						blob.size = child.size
+					if not child.loc:
+						child.loc = Vector(0.0, 0.0, 0.0)
+					blob.setLocation(child.loc)
+
+			newlist.append(o)
+
+		for o in newlist: # newlist now only has objs w/o parents
+			blob = o.bl_obj
+			if not blob:
+				continue
+			if o.size:
+				o.bl_obj.size = o.size
+			if not o.rot:
+				blob.setEuler([1.5707963267948966, 0, 0])
+			else:
+				matrix = o.rot * blmatrix
+				eul = euler_in_radians(matrix.toEuler())
+				blob.setEuler(eul)
+			if o.loc:
+				o.loc *= blmatrix
+			else:
+				o.loc = Vector(0.0, 0.0, 0.0)
+			blob.setLocation(o.loc) # forces DAG update, so we do it even for 0, 0, 0
+
+		# XXX important: until we fix the BPy API so it doesn't increase user count
+		# when wrapping a Blender object, this piece of code is needed for proper
+		# object (+ obdata) deletion in Blender:
+		for o in self.objlist:
+			if o.bl_obj:
+				o.bl_obj = None
+
 	def testAC3DImport(self):
-		global GROUP
-		scene = Blender.Scene.GetCurrent()
+
+		FACE_TWOSIDE = Mesh.FaceModes['TWOSIDE']
+		FACE_TEX = Mesh.FaceModes['TEX']
+		MESH_AUTOSMOOTH = Mesh.Modes['AUTOSMOOTH']
+
+		MAT_MODE_ZTRANSP = Material.Modes['ZTRANSP']
+		MAT_MODE_TRANSPSHADOW = Material.Modes['TRANSPSHADOW']
+
+		scene = self.scene
+
+		bl_images = {} # loaded texture images
+		missing_textures = [] # textures we couldn't find
+
+		objlist = self.objlist[1:] # skip 'world'
 
 		bmat = []
+		has_transp_mats = False
 		for mat in self.mlist:
 			name = mat[0]
-			m = Blender.Material.New(name)
+			m = Material.New(name)
 			m.rgbCol = (mat[1][0], mat[1][1], mat[1][2])
 			m.amb = mat[2]
 			m.emit = mat[3]
 			m.specCol = (mat[4][0], mat[4][1], mat[4][2])
 			m.spec = mat[5]
 			m.alpha = mat[6]
+			if m.alpha < 1.0:
+				m.mode |= MAT_MODE_ZTRANSP
+				has_transp_mats = True
 			bmat.append(m)
 
-		for obj in self.objlist:
-			if obj.type == 'world':
+		if has_transp_mats:
+			for mat in bmat:
+				mat.mode |= MAT_MODE_TRANSPSHADOW
+
+		obj_idx = 0 # index of current obj in loop
+		for obj in objlist:
+			if obj.type == AC_GROUP:
 				continue
-			elif obj.type == 'group':
-				if not GROUP: continue
-				empty = Blender.Object.New('Empty')
-				empty.name = obj.name
-				scene.link(empty)
-				if self.dads:
-					dadobj = Blender.Object.get(self.dads.pop())
-					dadobj.makeParent([empty])
-				while obj.kids:
-					self.dads.append(empty.name)
-					obj.kids -= 1
+			elif obj.type == AC_LIGHT:
+				light = Lamp.New('Lamp')
+				object = scene.objects.new(light, obj.name)
+				#object.select(True)
+				obj.bl_obj = object
+				if obj.data:
+					light.name = obj.data
 				continue
-			mesh = Blender.NMesh.New()
+
+			# type AC_POLY:
+
+			# old .ac files used empty meshes as groups, convert to a real ac group
+			if not obj.vlist and obj.kids:
+				obj.type = AC_GROUP
+				continue
+
+			mesh = Mesh.New()
+			object = scene.objects.new(mesh, obj.name)
+			#object.select(True)
+			obj.bl_obj = object
 			if obj.data: mesh.name = obj.data
-			mesh.setMaxSmoothAngle(obj.crease) # will clamp to [1, 80]
-			mesh.hasFaceUV(1)
+			mesh.degr = obj.crease # will auto clamp to [1, 80]
 
-			tex = None
-			if obj.tex != '':
-				try:
-					tex = Blender.Image.Load(obj.tex)
-					# Commented because it's unnecessary:
-					#tex.xrep = int(obj.texrep[0])
-					#tex.yrep = int(obj.texrep[1])
-				except:
-					basetexname = Blender.sys.basename(obj.tex)
-					try:
-						obj.tex = self.importdir + '/' + basetexname
-						tex = Blender.Image.Load(obj.tex)
-					except:
-						try:
-							obj.tex = TEXTURES_DIR + basetexname
-							tex = Blender.Image.Load(obj.tex)
-						except:
-							inform("Couldn't load texture: %s" % basetexname)
+			if not obj.vlist: # no vertices? nothing more to do
+				continue
 
-			for v in obj.vlist:
-				bvert = Blender.NMesh.Vert(v[0],v[1],v[2])
-				mesh.verts.append(bvert)
+			mesh.verts.extend(obj.vlist)
 
 			objmat_indices = []
 			for mat in bmat:
 				if bmat.index(mat) in obj.matlist:
 					objmat_indices.append(bmat.index(mat))
-					mesh.materials.append(mat)
-			for f in obj.flist:
-				twoside = f[-1]
-				is_smooth = f[-2]
-				fmat = f[-3]
-				f=f[:-3]
-				bface = Blender.NMesh.Face()
-				bface.smooth = is_smooth
-				if twoside: bface.mode |= Blender.NMesh.FaceModes['TWOSIDE']
-				if tex:
-					bface.mode |= Blender.NMesh.FaceModes['TEX']
-					bface.image = tex
-				bface.materialIndex = objmat_indices.index(fmat)
-				if obj.texoff:
-					uoff = obj.texoff[0]
-					voff = obj.texoff[1]
-					urep = obj.texrep[0]
-					vrep = obj.texrep[1]
-					for vi in range(len(f)):
-						f[vi][1][0] *= urep
-						f[vi][1][1] *= vrep
-						f[vi][1][0] += uoff
-						f[vi][1][1] += voff
+					mesh.materials += [mat]
 
-				for vi in range(len(f)):
-					bface.v.append(mesh.verts[f[vi][0]])
-					bface.uv.append((f[vi][1][0], f[vi][1][1]))
-				#mesh.faces.append(bface)
-				# quick hack, will switch from NMesh to Mesh later:
-				if len(bface.v) > 1: mesh.addFace(bface)
+			for e in obj.elist:
+				mesh.edges.extend(e)
 
-			mesh.mode = 0
-			object = Blender.NMesh.PutRaw(mesh)
-			object.setName(obj.name)
-			object.setEuler([1.5707963,0,0]) # align ac3d w/ Blender
-			if self.dads:
-				dadobj = Blender.Object.get(self.dads.pop())
-				dadobj.makeParent([object])
+			if obj.flist_v:
+				mesh.faces.extend(obj.flist_v)
+
+				facesnum = len(mesh.faces)
+
+				if facesnum == 0: # shouldn't happen, of course
+					continue
+
+				mesh.faceUV = True
+
+				# checking if the .ac file had duplicate faces (Blender ignores them)
+				if facesnum != len(obj.flist_v):
+					# it has, ugh. Let's clean the uv list:
+					lenfl = len(obj.flist_v)
+					flist = obj.flist_v
+					uvlist = obj.flist_uv
+					cfglist = obj.flist_cfg
+					for f in flist:
+						f.sort()
+					fi = lenfl
+					while fi > 0: # remove data related to duplicates
+						fi -= 1
+						if flist[fi] in flist[:fi]:
+							uvlist.pop(fi)
+							cfglist.pop(fi)
+
+				img = None
+				if obj.tex != '':
+					if obj.tex in bl_images.keys():
+						img = bl_images[obj.tex]
+					elif obj.tex not in missing_textures:
+						texfname = None
+						objtex = obj.tex
+						baseimgname = bsys.basename(objtex)
+						if bsys.exists(objtex) == 1:
+							texfname = objtex
+						else:
+							if baseimgname.find('\\') > 0:
+								baseimgname = bsys.basename(objtex.replace('\\','/'))
+							objtex = bsys.join(self.importdir, baseimgname)
+							if bsys.exists(objtex) == 1:
+								texfname = objtex
+							else:
+								objtex = bsys.join(TEXTURES_DIR, baseimgname)
+								if bsys.exists(objtex):
+									texfname = objtex
+						if texfname:
+							try:
+								img = Image.Load(texfname)
+								# Commented because it's unnecessary:
+								#img.xrep = int(obj.texrep[0])
+								#img.yrep = int(obj.texrep[1])
+								if img:
+									bl_images[obj.tex] = img
+							except:
+								inform("Couldn't load texture: %s" % baseimgname)
+						else:
+							missing_textures.append(obj.tex)
+							inform("Couldn't find texture: %s" % baseimgname)
+
+				for i in range(facesnum):
+					f = obj.flist_cfg[i]
+					fmat = f[0]
+					is_smooth = f[1]
+					twoside = f[2]
+					bface = mesh.faces[i]
+					bface.smooth = is_smooth
+					if twoside: bface.mode |= FACE_TWOSIDE
+					if img:
+						bface.mode |= FACE_TEX
+						bface.image = img
+					bface.mat = objmat_indices.index(fmat)
+					fuv = obj.flist_uv[i]
+					if obj.texoff:
+						uoff = obj.texoff[0]
+						voff = obj.texoff[1]
+						urep = obj.texrep[0]
+						vrep = obj.texrep[1]
+						for uv in fuv:
+							uv[0] *= urep
+							uv[1] *= vrep
+							uv[0] += uoff
+							uv[1] += voff
+
+					mesh.faces[i].uv = fuv
+
+				# finally, delete the 1st vertex we added to prevent vindices == 0
+				mesh.verts.delete(0)
+
+				mesh.calcNormals()
+
+				mesh.mode = MESH_AUTOSMOOTH
+
+			obj_idx += 1
+
+		self.build_hierarchy()
+		scene.update()
 
 # End of class AC3DImport
 
 def filesel_callback(filename):
 
-	inform("Trying to import AC3D model(s) from %s ..." % filename)
-	Blender.Window.WaitCursor(1)
-	starttime = Blender.sys.time()
+	inform("\nTrying to import AC3D model(s) from:\n%s ..." % filename)
+	Window.WaitCursor(1)
+	starttime = bsys.time()
 	test = AC3DImport(filename)
-	Blender.Window.WaitCursor(0)
-	endtime = Blender.sys.time() - starttime
-	inform('... done!  Data imported in %.3f seconds.\n' % endtime)
+	Window.WaitCursor(0)
+	endtime = bsys.time() - starttime
+	inform('Done! Data imported in %.3f seconds.\n' % endtime)
 
-Blender.Window.FileSelector(filesel_callback, "Import AC3D", "*.ac")
+Window.EditMode(0)
+
+Window.FileSelector(filesel_callback, "Import AC3D", "*.ac")

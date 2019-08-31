@@ -47,7 +47,7 @@ class xImport:
 			words = line_uv.split()																																																	
 			if l and words[0] == "MeshTextureCoords" :
 				nr_uv_ind = lines.index(line_uv)	
-		 
+		
 		
 				
 		#Get Materials		
@@ -300,10 +300,12 @@ class xImport:
 #  MAIN
 #------------------------------------------------------------------
 def my_callback(filename):
-	if not filename.find('.x', -2): print "Not an .x file" 
+	if not filename.lower().endswith('.x'): print "Not an .x file" 
 	ximport = xImport(filename)
 	ximport.Import()
 
 arg = __script__['arg']
-Blender.Window.FileSelector(my_callback, "Import DirectX")	
+
+if __name__ == '__main__':
+	Blender.Window.FileSelector(my_callback, "Import DirectX", "*.x")
 	

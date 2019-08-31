@@ -50,7 +50,11 @@ def warn(message, category=None, stacklevel=1):
             filename = filename[:-1]
     else:
         if module == "__main__":
-            filename = sys.argv[0]
+            try:
+                filename = sys.argv[0]
+            except AttributeError:
+                # embedded interpreters don't have sys.argv, see bug #839151
+                filename = '__main__'
         if not filename:
             filename = module
     registry = globals.setdefault("__warningregistry__", {})
@@ -59,7 +63,7 @@ def warn(message, category=None, stacklevel=1):
 def warn_explicit(message, category, filename, lineno,
                   module=None, registry=None):
     if module is None:
-        module = filename
+        module = filename or "<unknown>"
         if module[-3:].lower() == ".py":
             module = module[:-3] # XXX What about leading pathname?
     if registry is None:

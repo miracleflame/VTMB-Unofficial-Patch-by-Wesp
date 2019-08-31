@@ -96,7 +96,7 @@ set Priority=/normal
 	echo [Window]
 	echo PauseWin	=	True)>>"%RMCfg%"
  rem Close previously open windows
-	service\nircmd.exe win close ititle "%WinTitle%"
+	helpers\nircmd.exe win close ititle "%WinTitle%"
 
 exit
 
@@ -115,8 +115,8 @@ for %%f in (
 	"%~n0.bat"
 	"%~n0.exe"
 	"cmdseq.wc"
-	"service\sfk.exe"
-	"service\nircmd.exe"
+	"helpers\sfk.exe"
+	"helpers\nircmd.exe"
 ) do (
 	if not exist "%%~f" (
 		color 0c
@@ -129,7 +129,7 @@ for %%f in (
 )
 
 set "MapFile="
-set "textcolor=service\sfk.exe color"
+set "textcolor=helpers\sfk.exe color"
 for /f "usebackq eol=# tokens=1,* delims=	=" %%a in ("%RMCfg%") do (set "%%~a=%%~b")
 del /f /q "%RMCfg%"> nul
 
@@ -178,7 +178,7 @@ for %%m in ("%ModDir%") do (
 )
 
 :hide_editor_window
-service\nircmd.exe win min stitle "Bloodlines Map Editor"
+helpers\nircmd.exe win min stitle "Bloodlines Map Editor"
 
 
 call :get_starttime

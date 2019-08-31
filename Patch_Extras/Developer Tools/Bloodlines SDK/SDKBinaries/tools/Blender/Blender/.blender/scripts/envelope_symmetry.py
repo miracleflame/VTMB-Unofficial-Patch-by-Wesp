@@ -42,7 +42,7 @@ For this version users need to edit the script code to change default options.
 # Find the latest version at: http://www.mindfloaters.de/blender/
 #
 # --------------------------------------------------------------------------
-# $Id: envelope_symmetry.py,v 1.2 2006/07/03 05:05:28 campbellbarton Exp $
+# $Id: envelope_symmetry.py,v 1.4 2006/12/25 09:17:22 campbellbarton Exp $
 # --------------------------------------------------------------------------
 # ***** BEGIN GPL LICENSE BLOCK *****
 #
@@ -103,9 +103,8 @@ def flipFace(v):
 
 # return object with given object name (with variable parts) and mesh name
 def getObjectByName(obj_name, mesh_name):
-	objs = Blender.Scene.GetCurrent().getChildren() #Blender.Object.Get()
-	for obj in objs:
-		if obj.getType() == "Mesh":
+	for obj in Blender.Scene.GetCurrent().objects:
+		if obj.type == "Mesh":
 #			if obj.getName()[0:len(obj_name)] == obj_name and obj.getData().name == mesh_name:
 			# use only mesh_name so bone name and weight (in the envelope name)
 			# can be changed by the user and mirrored by the script.
@@ -118,13 +117,12 @@ SUFFIX_LEN = len(REF_SUFFIX);
 Blender.Window.EditMode(0)
 
 count = 0
-objs = Blender.Scene.GetCurrent().getChildren() #objs = Blender.Object.Get()
-for obj in objs:
-	if obj.getType() != 'Mesh':
+for obj in Blender.Scene.GetCurrent().objects:
+	if obj.type != 'Mesh':
 		continue
 
 	count += 1
-	name = obj.getName()
+	name = obj.name
 	pos = name.find(SEPARATOR)
 	if (pos > -1):
 		ApplySizeAndRotation(obj)
@@ -145,7 +143,7 @@ for obj in objs:
 				# update vertices
 
 				mirror_mesh = mirror_obj.getData()
-				for i in range(len(mesh.verts)):
+				for i in xrange(len(mesh.verts)):
 					org = mesh.verts[i]
 					mir = mirror_mesh.verts[i]
 					mir.co[0], mir.co[1], mir.co[2] = org.co[0], org.co[1], org.co[2]
@@ -156,7 +154,7 @@ for obj in objs:
 
 				# create mirror object
 
-				mirror_mesh = Blender.NMesh.GetRaw(obj.getData().name)
+				mirror_mesh = obj.data
 				for face in mirror_mesh.faces:
 					flipFace(face.v)
 				for vert in mirror_mesh.verts:

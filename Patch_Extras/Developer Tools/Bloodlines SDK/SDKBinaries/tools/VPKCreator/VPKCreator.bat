@@ -37,9 +37,9 @@ pause > nul
 
 :Vars
 set "VCHome=%CD%"
-set "VCConfig=%VCHome%\Config.ini"
-set "SfkTool=%VCHome%\..\..\service\sfk.exe"
-set "VBuilder=%VCHome%\service\vpkbuilder.exe"
+set VCConfig="%VCHome%\Config.ini"
+set VBuilder="%VCHome%\service\vpkbuilder.exe"
+set Sfk="%VCHome%\..\..\helpers\sfk.exe"
 set "PackDirsList=%VCHome%\pack_dirs.txt"
 
 set Wait=call :WaitFunc
@@ -68,13 +68,11 @@ for /f "usebackq delims== tokens=1,*" %%a in ("GameCfg.ini") do (
 :CheckFiles
 
 for %%M in (
-	"%VCConfig%"
-	"%SfkTool%"
-	"%VBuilder%"
-	"%ModDirFull%"
+	%Sfk% %VCConfig% %VBuilder%
 	"%VCHome%\Readme.txt"
 	"%VCHome%\service\KillApps.exe"
 	"%VCHome%\service\Empty.vpk"
+	"%ModDirFull%"
 ) do (
 	if not exist "%%~M" (
 		color 0c
@@ -223,7 +221,7 @@ goto PackSingleSetMode
 		exit /b
 	)
 	set DirIsValid=0
-	for /f "usebackq eol=# delims=	= tokens=1,2" %%a in ("%VCConfig%") do (
+	for /f "usebackq eol=# delims=	= tokens=1,2" %%a in (%VCConfig%) do (
 		if /i "%%~a"=="Dir" (if /i "%%~b"=="%~1" (set "DirIsValid=1") )
 	)
 	if "%DirIsValid%"=="0" (
@@ -328,7 +326,7 @@ goto PackAll
 color 03
 call :BuildVpkIndex
 type nul>"%PackDirsList%"
-for /f "usebackq eol=# delims=	= tokens=1,2" %%a in ("%VCConfig%") do (
+for /f "usebackq eol=# delims=	= tokens=1,2" %%a in (%VCConfig%) do (
 if /i "%%~a"=="Dir" (if exist "%CD%\%%~b\*" (echo %%~b>> "%PackDirsList%")) )
 
 call :StartBuilder +proclocales
@@ -405,15 +403,16 @@ echo.
 echo     Running building programs...
 echo     Please wait until the process ends.
 echo.
-for /f "usebackq eol=# delims=	= tokens=1,2,3,4" %%l in ("%VCConfig%") do (
-	if /i "%%~l"=="Loc" if exist "%CD%\%%~m\*" (
+for /f "usebackq eol=# delims=	= tokens=1,2,3,4" %%l in (%VCConfig%) do (
+	if /i "%%~l"=="Loc" (
+	if exist "%CD%\%%~m\*" (
 		echo     Preparing "%%~m" content...
 		call :ProcLocalized "%%~m" "" -nodelete
-	)
+	))
 )
 if exist "%CD%\_pack_loc\*" (
 	echo     Packing localized resources...
-	"%VBuilder%" "zzz_localized.vpk" "_pack_loc"> nul
+	%VBuilder% "zzz_localized.vpk" "_pack_loc"> nul
 	rd /s /q "_pack_loc"> nul
 )
 
@@ -525,37 +524,37 @@ goto StartMenu
 	echo     Please wait until the process ends.
 	echo.
 	for /f "usebackq delims=|" %%f in ("%PackDirsList%") do (
-		for /f "usebackq eol=# delims=	= tokens=1,2,3,4" %%w in ("%VCConfig%") do (
-			if /i "%%~w"=="Dir" if /i "%%~x"=="%%~f" (
-				echo     Preparing "%%~f" files...
-				if not "%%~z"=="" (
-					if /i "%%~y"=="Sep" (
-					if "%MergingMode%"=="1" (
-						"%SfkTool%" copy "%%~f" "_pack_sep\%%~f" -file %%~z -yes> nul
-						if /i "%~1"=="+proclocales" (call :ProcLocalized "%%~f" "_pack_sep\")
-						echo     Packing "%%~f" content...
-						"%VBuilder%" "zzz_pak-%%~f.vpk" "_pack_sep"> nul
-						rd /s /q "_pack_sep"> nul
-					) else (
-						"%SfkTool%" copy "%%~f" "_pack_com\%%~f" -file %%~z -yes> nul
-					))
-					if /i "%%~y"=="Com" (
-						"%SfkTool%" copy "%%~f" "_pack_com\%%~f" -file %%~z -yes> nul
-						if /i "%~1"=="+proclocales" (call :ProcLocalized "%%~f" "_pack_com\")
-					)
+	for /f "usebackq eol=# delims=	= tokens=1,2,3,4" %%w in (%VCConfig%) do (
+		if /i "%%~w"=="Dir" (
+		if /i "%%~x"=="%%~f" (
+			echo     Preparing "%%~f" files...
+			if not "%%~z"=="" (
+				if /i "%%~y"=="Sep" (
+				if "%MergingMode%"=="1" (
+					%Sfk% copy "%%~f" "_pack_sep\%%~f" -file %%~z -yes> nul
+					if /i "%~1"=="+proclocales" (call :ProcLocalized "%%~f" "_pack_sep\")
+					echo     Packing "%%~f" content...
+					%VBuilder% "zzz_pak-%%~f.vpk" "_pack_sep"> nul
+					rd /s /q "_pack_sep"> nul
+				) else (
+					%Sfk% copy "%%~f" "_pack_com\%%~f" -file %%~z -yes> nul
+				))
+				if /i "%%~y"=="Com" (
+					%Sfk% copy "%%~f" "_pack_com\%%~f" -file %%~z -yes> nul
+					if /i "%~1"=="+proclocales" (call :ProcLocalized "%%~f" "_pack_com\")
 				)
 			)
-		)
-	)
+		))
+	))
 	if exist "%CD%\_pack_com\*" (
 		echo     Packing other/merged content...
-		"%VBuilder%" "zzz_pak-vbmergeds.vpk" "_pack_com"> nul
+		%VBuilder% "zzz_pak-vbmergeds.vpk" "_pack_com"> nul
 		rd /s /q "_pack_com"> nul
 	)
 	if /i "%~1"=="+proclocales" (
 	if exist "%CD%\_pack_loc\*" (
 		echo     Packing localized resources...
-		"%VBuilder%" "zzz_localized.vpk" "_pack_loc"> nul
+		%VBuilder% "zzz_localized.vpk" "_pack_loc"> nul
 		rd /s /q "_pack_loc"> nul
 	))
 
@@ -563,11 +562,11 @@ exit /b
 
 :=======================================
 :ProcLocalized
-for /f "usebackq eol=# delims=	= tokens=1,2,3,4" %%l in ("%VCConfig%") do (
+for /f "usebackq eol=# delims=	= tokens=1,2,3,4" %%l in (%VCConfig%) do (
 	if /i "%%~l"=="Loc" if /i "%%~m"=="%~1" if exist "%~2%%~m\%%~n\" (
-		"%SfkTool%" copy "%~2%%~m\%%~n" "_pack_loc\%%~m\%%~n" -file %%~o -yes> nul
+		%Sfk% copy "%~2%%~m\%%~n" "_pack_loc\%%~m\%%~n" -file %%~o -yes> nul
 		if /i not "%~3"=="-nodelete" (
-		"%SfkTool%" del -withdirs "%~2%%~m\%%~n" %%~o -yes> nul)
+		%Sfk% del -withdirs "%~2%%~m\%%~n" %%~o -yes> nul)
 	)
 )
 exit /b
@@ -581,8 +580,8 @@ exit /b
 	pushd "%VCHome%"
 
 	dir /b /s /a:d "%ModDirFull%\"> "dirlst.lst"
-	"%SfkTool%" replace "dirlst.lst" "|%ModDirFull%\||" -quiet -yes> nul
-	"%SfkTool%" replace "dirlst.lst" "|\|/|" -quiet -yes> nul
+	%Sfk% replace "dirlst.lst" "|%ModDirFull%\||" -quiet -yes> nul
+	%Sfk% replace "dirlst.lst" "|\|/|" -quiet -yes> nul
 
 	set DirNum=0
 	copy /y "service\Empty.vpk" "%ModDirFull%\zzz_vpk-index.vpk"> nul
@@ -591,8 +590,8 @@ exit /b
 		echo.
 		echo     Building VPK index, please wait...
 		echo     Processing: "%%~m"
-		"%SfkTool%" linelen "%%~m" +hex -digits=2 +filter -form "$col1+000000" +hextobin "cchunk.bin" -quiet
-		"%SfkTool%" replace "cchunk.bin" -spat "|\x00\x00\x00|\x00\x00\x00%%~m\x00\x00\x00\x00\x00\x00\x00\x00|" -quiet -yes> nul
+		%Sfk% linelen "%%~m" +hex -digits=2 +filter -form "$col1+000000" +hextobin "cchunk.bin" -quiet
+		%Sfk% replace "cchunk.bin" -spat "|\x00\x00\x00|\x00\x00\x00%%~m\x00\x00\x00\x00\x00\x00\x00\x00|" -quiet -yes> nul
 		copy /b "%ModDirFull%\zzz_vpk-index.vpk" + "cchunk.bin" "%ModDirFull%\zzz_vpk-index.vpk"> nul
 		call :CountDirs
 	)
@@ -600,9 +599,9 @@ exit /b
 	cls
 	echo.
 	echo     Finalizing...
-	"%SfkTool%" echo %DirNum% +hex -digits=4 +filter -lsrep "|??||" +hextobin "sbyte1.bin" -quiet> nul
-	"%SfkTool%" echo %DirNum% +hex -digits=4 +filter -lerep "|??||" +hextobin "sbyte2.bin" -quiet> nul
-	"%SfkTool%" echo 00000000000001 +hextobin "cchunk.bin" -quiet> nul
+	%Sfk% echo %DirNum% +hex -digits=4 +filter -lsrep "|??||" +hextobin "sbyte1.bin" -quiet> nul
+	%Sfk% echo %DirNum% +hex -digits=4 +filter -lerep "|??||" +hextobin "sbyte2.bin" -quiet> nul
+	%Sfk% echo 00000000000001 +hextobin "cchunk.bin" -quiet> nul
 	copy /b "%ModDirFull%\zzz_vpk-index.vpk" + "sbyte1.bin" + "sbyte2.bin" + "cchunk.bin" "%ModDirFull%\zzz_vpk-index.vpk"> nul
 
 	del /f /q sbyte?.bin cchunk.bin dirlst.lst> nul
@@ -676,22 +675,22 @@ exit /b
 	echo.
 	if /i not "%~1"=="-locals" (
 		for /f "usebackq delims=|" %%f in ("%PackDirsList%") do (
-		for /f "usebackq eol=# delims=	= tokens=1,2,3,4" %%w in ("%VCConfig%") do (
+		for /f "usebackq eol=# delims=	= tokens=1,2,3,4" %%w in (%VCConfig%) do (
 			if /i "%%~w"=="Dir" if /i "%%~x"=="%%~f" (
 				echo     Deleting "%%~f"...
-				"%SfkTool%" del -withdirs "%%~f" %%~z -yes> nul
+				%Sfk% del -withdirs "%%~f" %%~z -yes> nul
 			)
 		))
 	) else (
-		for /f "usebackq eol=# delims=	= tokens=1,2,3,4" %%l in ("%VCConfig%") do (
+		for /f "usebackq eol=# delims=	= tokens=1,2,3,4" %%l in (%VCConfig%) do (
 			if /i "%%~l"=="Loc" if exist "%CD%\%%~m\%%~n\*" (
 				if not "%%~n"=="." (echo     Deleting "%%~m\%%~n"...) else (echo     Deleting "%%~m"...)
-				"%SfkTool%" del -withdirs "%%~m\%%~n" %%~o -yes> nul
+				%Sfk% del -withdirs "%%~m\%%~n" %%~o -yes> nul
 			)
 		)
 	)
 	echo     Deleting unused trash...
-	"%SfkTool%" del! -withdirs "%CD%" .tmp .bak .old .gam~ .dsp> nul
+	%Sfk% del! -withdirs "%CD%" .tmp .bak .old .gam~ .dsp> nul
 	call :RemEmptyDirs "%CD%"
 exit /b
 

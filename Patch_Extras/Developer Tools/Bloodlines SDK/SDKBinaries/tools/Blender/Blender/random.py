@@ -29,13 +29,12 @@
 General notes on the underlying Mersenne Twister core generator:
 
 * The period is 2**19937-1.
-* It is one of the most extensively tested generators in existence
-* Without a direct way to compute N steps forward, the
-  semantics of jumpahead(n) are weakened to simply jump
-  to another distant state and rely on the large period
-  to avoid overlapping sequences.
-* The random() method is implemented in C, executes in
-  a single Python step, and is, therefore, threadsafe.
+* It is one of the most extensively tested generators in existence.
+* Without a direct way to compute N steps forward, the semantics of
+  jumpahead(n) are weakened to simply jump to another distant state and rely
+  on the large period to avoid overlapping sequences.
+* The random() method is implemented in C, executes in a single Python step,
+  and is, therefore, threadsafe.
 
 """
 
@@ -43,7 +42,6 @@ from warnings import warn as _warn
 from types import MethodType as _MethodType, BuiltinMethodType as _BuiltinMethodType
 from math import log as _log, exp as _exp, pi as _pi, e as _e
 from math import sqrt as _sqrt, acos as _acos, cos as _cos, sin as _sin
-from math import floor as _floor
 from os import urandom as _urandom
 from binascii import hexlify as _hexlify
 
@@ -254,11 +252,6 @@ class Random(_random.Random):
 
         Optional arg random is a 0-argument function returning a random
         float in [0.0, 1.0); by default, the standard random.random.
-
-        Note that for even rather small len(x), the total number of
-        permutations of x is larger than the period of most random number
-        generators; this implies that "most" permutations of a long
-        sequence can never be generated.
         """
 
         if random is None:
@@ -286,6 +279,15 @@ class Random(_random.Random):
         large population:   sample(xrange(10000000), 60)
         """
 
+        # XXX Although the documentation says `population` is "a sequence",
+        # XXX attempts are made to cater to any iterable with a __len__
+        # XXX method.  This has had mixed success.  Examples from both
+        # XXX sides:  sets work fine, and should become officially supported;
+        # XXX dicts are much harder, and have failed in various subtle
+        # XXX ways across attempts.  Support for mapping types should probably
+        # XXX be dropped (and users should pass mapping.keys() or .values()
+        # XXX explicitly).
+
         # Sampling without replacement entails tracking either potential
         # selections (the pool) in a list or previous selections in a
         # dictionary.
@@ -303,7 +305,9 @@ class Random(_random.Random):
         random = self.random
         _int = int
         result = [None] * k
-        if n < 6 * k:     # if n len list takes less space than a k len dict
+        if n < 6 * k or hasattr(population, "keys"):
+            # An n-length list is smaller than a k-length set, or this is a
+            # mapping type so the other algorithm wouldn't work.
             pool = list(population)
             for i in xrange(k):         # invariant:  non-selected at [0,n-i)
                 j = _int(random() * (n-i))
@@ -311,15 +315,16 @@ class Random(_random.Random):
                 pool[j] = pool[n-i-1]   # move non-selected item into vacancy
         else:
             try:
-                n > 0 and (population[0], population[n//2], population[n-1])
-            except (TypeError, KeyError):   # handle sets and dictionaries
-                population = tuple(population)
-            selected = {}
-            for i in xrange(k):
-                j = _int(random() * n)
-                while j in selected:
+                selected = {}
+                for i in xrange(k):
                     j = _int(random() * n)
-                result[i] = selected[j] = population[j]
+                    while j in selected:
+                        j = _int(random() * n)
+                    result[i] = selected[j] = population[j]
+            except (TypeError, KeyError):   # handle (at least) sets
+                if isinstance(population, list):
+                    raise
+                return self.sample(tuple(population), k)
         return result
 
 ## -------------------- real-valued distributions  -------------------
@@ -346,7 +351,7 @@ class Random(_random.Random):
         # Math Software, 3, (1977), pp257-260.
 
         random = self.random
-        while True:
+        while 1:
             u1 = random()
             u2 = 1.0 - random()
             z = NV_MAGICCONST*(u1-0.5)/u2
@@ -416,7 +421,7 @@ class Random(_random.Random):
         b = (a - _sqrt(2.0 * a))/(2.0 * kappa)
         r = (1.0 + b * b)/(2.0 * b)
 
-        while True:
+        while 1:
             u1 = random()
 
             z = _cos(_pi * u1)
@@ -425,7 +430,7 @@ class Random(_random.Random):
 
             u2 = random()
 
-            if not (u2 >= c * (2.0 - c) and u2 > c * _exp(1.0 - c)):
+            if u2 < c * (2.0 - c) or u2 <= c * _exp(1.0 - c):
                 break
 
         u3 = random()
@@ -463,7 +468,7 @@ class Random(_random.Random):
             bbb = alpha - LOG4
             ccc = alpha + ainv
 
-            while True:
+            while 1:
                 u1 = random()
                 if not 1e-7 < u1 < .9999999:
                     continue
@@ -486,18 +491,19 @@ class Random(_random.Random):
 
             # Uses ALGORITHM GS of Statistical Computing - Kennedy & Gentle
 
-            while True:
+            while 1:
                 u = random()
                 b = (_e + alpha)/_e
                 p = b*u
                 if p <= 1.0:
-                    x = pow(p, 1.0/alpha)
+                    x = p ** (1.0/alpha)
                 else:
-                    # p > 1
                     x = -_log((b-p)/alpha)
                 u1 = random()
-                if not (((p <= 1.0) and (u1 > _exp(-x))) or
-                          ((p > 1)  and  (u1 > pow(x, alpha - 1.0)))):
+                if p > 1.0:
+                    if u1 <= x ** (alpha - 1.0):
+                        break
+                elif u1 <= _exp(-x):
                     break
             return x * beta
 

@@ -25,7 +25,7 @@ want to export only selected or all relevant objects.
 """
 
 
-# $Id: vrml97_export.py,v 1.18 2006/05/19 17:28:17 hos Exp $
+# $Id: vrml97_export.py,v 1.23 2006/12/25 09:17:23 campbellbarton Exp $
 #
 #------------------------------------------------------------------------
 # VRML97 exporter for blender 2.36 or above
@@ -134,13 +134,11 @@ class VRML2Export:
 			self.verbose = 0
 			
 		# decimals for material color values     0.000 - 1.000
-		self.cp=3
+		self.cp=7
 		# decimals for vertex coordinate values  0.000 - n.000
-		self.vp=3
+		self.vp=7
 		# decimals for texture coordinate values 0.000 - 1.000
-		self.tp=3
-		
-		self.it=3
+		self.tp=7
 		
 		#--- class private don't touch ---
 		self.texNames={}   # dictionary of textureNames
@@ -286,11 +284,11 @@ class VRML2Export:
 
 	def writeNavigationInfo(self, scene):
 		allObj = []
-		allObj = scene.getChildren()
+		allObj = list(scene.objects)
 		headlight = "TRUE"
 		vislimit = 0.0
 		for thisObj in allObj:
-			objType=thisObj.getType()
+			objType=thisObj.type
 			if objType == "Camera":
 				vislimit = thisObj.data.getClipEnd()
 			elif objType == "Lamp":
@@ -455,8 +453,9 @@ class VRML2Export:
 		if (me.vertexColors):
 			if len(me.materials) > 0:
 				mat = me.materials[0]
-				if (mat.mode & Blender.Material.Modes['VCOL_PAINT']):
-					self.vcolors = 1
+				if mat:
+					if (mat.mode & Blender.Material.Modes['VCOL_PAINT']):
+						self.vcolors = 1
 			
 		# check if object is wireframe only
 		if ob.drawType == Blender.Object.DrawTypes.WIRE:
@@ -476,6 +475,10 @@ class VRML2Export:
 		if (len(ob.modifiers) > 0):
 			me = Mesh.New()
 			me.getFromObject(ob.name)
+			# Careful with the name, the temporary mesh may
+			# reuse the default name for other meshes. So we
+			# pick our own name.
+			me.name = "MOD_%s" % (ob.name)
 		else:
 			me = ob.getData(mesh = 1)
 
@@ -535,8 +538,16 @@ class VRML2Export:
 		if self.meshNames.has_key(meshName):
 			self.writeIndented("USE ME_%s\n" % meshName, 0)
 			self.meshNames[meshName]+=1
+			if (self.verbose == 1):
+				print "  Using Mesh %s (Blender mesh: %s)\n" % \
+					  (meshName, me.name)
 			return
 		self.meshNames[meshName]=1
+
+		if (self.verbose == 1):
+			print "  Writing Mesh %s (Blender mesh: %s)\n" % \
+				  (meshName, me.name)
+			return
 
 		self.writeIndented("DEF ME_%s Group {\n" % meshName,1)
 		self.writeIndented("children [\n", 1)
@@ -545,26 +556,31 @@ class VRML2Export:
 		issmooth = 0
 
 		maters = me.materials
+		nummats = self.getNumMaterials(me)
 
 		# Vertex and Face colors trump materials and image textures
 		if (self.facecolors or self.vcolors):
-			if len(maters) > 0:
-				self.writeShape(ob, me, 0, None)
+			if nummats > 0:
+				if maters[0]:
+					self.writeShape(ob, me, 0, None)
+				else:
+					self.writeShape(ob, me, -1, None)
 			else:
 				self.writeShape(ob, me, -1, None)
 		# Do meshes with materials, possible with image textures
-		elif len(maters) > 0:
+		elif nummats > 0:
 			for matnum in range(len(maters)):
-				images = []
-				if me.faceUV:
-					images = self.getImages(me, matnum)
-					if len(images) > 0:
-						for image in images:
-							self.writeShape(ob, me, matnum, image)
+				if maters[matnum]:
+					images = []
+					if me.faceUV:
+						images = self.getImages(me, matnum)
+						if len(images) > 0:
+							for image in images:
+								self.writeShape(ob, me, matnum, image)
+						else:
+							self.writeShape(ob, me, matnum, None)
 					else:
 						self.writeShape(ob, me, matnum, None)
-				else:
-					self.writeShape(ob, me, matnum, None)
 		else:
 			if me.faceUV:
 				images = self.getImages(me, -1)
@@ -591,6 +607,15 @@ class VRML2Export:
 						images.append(face.image)
 						imageNames[imName]=1
 		return images
+
+	def getNumMaterials(self, me):
+		# Oh silly Blender, why do you sometimes have 'None' as
+		# a member of the me.materials array?
+		num = 0
+		for mat in me.materials:
+			if mat:
+				num = num + 1
+		return num
 
 	def writeCoordinates(self, me, meshName):
 		coordName = "coord_%s" % (meshName)
@@ -619,14 +644,22 @@ class VRML2Export:
 		self.writeIndented("\n")
 
 	def writeShape(self, ob, me, matnum, image):
+		# Note: at this point it is assumed for matnum!=-1 that the 
+		# material in me.materials[matnum] is not equal to 'None'.
+		# Such validation should be performed by the function that
+		# calls this one.
 		self.writeIndented("Shape {\n",1)
 
 		self.writeIndented("appearance Appearance {\n", 1)
 		if (matnum != -1):
 			mater = me.materials[matnum]
 			self.writeMaterial(mater, self.cleanStr(mater.name,''))
-		if image != None:
-			self.writeImageTexture(image.name)
+			if (mater.mode & Blender.Material.Modes['TEXFACE']):
+				if image != None:
+					self.writeImageTexture(image.name)
+		else:
+			if image != None:
+				self.writeImageTexture(image.name)
 
 		self.writeIndented("}\n", -1)
 
@@ -925,7 +958,7 @@ class VRML2Export:
 								round(sky1,self.cp), \
 								round(sky2,self.cp)))
 		alltexture = len(worldmat)
-		for i in range(alltexture):
+		for i in xrange(alltexture):
 			namemat = worldmat[i].getName()
 			pic = worldmat[i].getImage()
 			if pic:
@@ -947,7 +980,7 @@ class VRML2Export:
 		self.writeIndented("\n\n")
 
 	def writeLamp(self, ob):
-		la = Lamp.Get(ob.data.getName())
+		la = ob.data
 		laType = la.getType()
 
 		if laType == Lamp.Types.Lamp:
@@ -1013,21 +1046,14 @@ class VRML2Export:
 				   axis[0], axis[1], axis[2], angle)
 
 		self.writeIndented("DEF OB_%s Transform {\n" % (obname), 1)
-		self.writeIndented("translation %s %s %s\n" % \
-						   (round(v.x,3), \
-							round(v.y,3), \
-							round(v.z,3)))
+		self.writeIndented("translation %f %f %f\n" % \
+						   (v.x, v.y, v.z) )
 
-		self.writeIndented("rotation %s %s %s %s\n" % \
-						   (round(axis[0],3), \
-							round(axis[1],3), \
-							round(axis[2],3), \
-							round(angle,3)))
+		self.writeIndented("rotation %f %f %f %f\n" % \
+						   (axis[0],axis[1],axis[2],angle) )
 		
-		self.writeIndented("scale %s %s %s\n" % \
-						   (round(sizeX,3), \
-							round(sizeY,3), \
-							round(sizeZ,3)))
+		self.writeIndented("scale %f %f %f\n" % \
+						   (sizeX, sizeY, sizeZ) )
 
 		self.writeIndented("children [\n", 1)
 
@@ -1064,9 +1090,9 @@ class VRML2Export:
 		self.proto = 0
 		allObj = []
 		if ARG == 'selected':
-			allObj = Blender.Object.GetSelected()
+			allObj = list(scene.objects.context)
 		else:
-			allObj = scene.getChildren()
+			allObj = list(scene.objects)
 			self.writeInline()
 
 		for thisObj in allObj:

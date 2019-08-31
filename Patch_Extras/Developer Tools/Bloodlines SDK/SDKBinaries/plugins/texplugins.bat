@@ -35,12 +35,12 @@ exit /b
 
 :InstallPNPlugs
 	if exist "plugins\texturing\paintdotnet.7z" if exist "%~1\Paint*Net?*" (
-	service\7za.exe x "plugins\texturing\paintdotnet.7z" -o"%~1\" -y -aoa> nul
+	helpers\7za.exe x "plugins\texturing\paintdotnet.7z" -o"%~1\" -y -aoa> nul
 	if exist "%~1\FileTypes\VtfFileType.dll" set PlgInstSuccess=1)
 exit /b
 
 :InstallPSPlugs
 	if exist "plugins\texturing\photoshop.7z" if exist "%~1\Photoshop.exe" (
-	service\7za.exe x "plugins\texturing\photoshop.7z" -o"%~1\" -y -aoa> nul
+	helpers\7za.exe x "plugins\texturing\photoshop.7z" -o"%~1\" -y -aoa> nul
 	if exist "%~1\Plug-Ins\File Formats\VTF.8bi" set PlgInstSuccess=1)
 exit /b

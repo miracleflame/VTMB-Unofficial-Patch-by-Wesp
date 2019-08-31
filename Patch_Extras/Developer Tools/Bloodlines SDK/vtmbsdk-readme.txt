@@ -1,5 +1,5 @@
 --------------------
-Bloodlines SDK v1.80
+Bloodlines SDK v1.80+
 --------------------
 
 This is an unofficial software developer's kit (SDK) for Vampire - The Masquerade: 
@@ -398,13 +398,17 @@ Global changes:
 
 --------------------
 
-1.80 (26.04.2019):
-- Added full Blender 2.42 and MDL/.X Import/Export scripts for editing existing game models' vertices and UV:
+1.80 (23.08.2019):
+- Added full Blender 2.43 and MDL/.X Import/Export scripts for editing existing game models' vertices and UV:
   -- It's fully ready for use (installing and configuring aren't needed) - just learn how-to in the usage doc!
 - Texture Converter: Fixed critical typo not allowing to normally convert images to TTZs.
 - Texture Converter: Removed "Convert" context items from TTZ extension to avoid twice converting (use TTHs!).
+- Texture Converter: Fixed generating twin CR carret on Windows 7+ if VMT Templates are defined.
+- Model Compiler: Unlocked "Materials Directory" line to directly set material path (not using Materials tab).
 - Rewritten some SDK control scripts and added workarounds for better Linux/Wine environment compatibility.
-- A minor file structure reorganization (remove whole old SDKBinaries/ folder before updating!).
+- A major file structure reorganization - remove your whole old SDKBinaries/ folder before updating SDK!
+- Added extracting .dx7_2bone.vtx model chunks from VPKs too, so people could directly use it for their models.
+- Speeded up launching all Texturing-related tools from the SDK menu by separating some initializing threads.
 - Changed "Check for Updates" web link due to project's site (Planet-Vampire) reorganization.
 - Photoshop, Paint.NET, 3ds Max and Sketchup plugins had separated into new PLUGINS category on SDK menu.
 - Updated SDK readme: actualized tools info, work on Wine, model editing and map compiling improvements.

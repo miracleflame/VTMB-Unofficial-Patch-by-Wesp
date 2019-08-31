@@ -1,15 +1,15 @@
 @echo off
 title WL Dumper for Dupe Finder ^& Deleter  (c) Psycho-A
 
-:SetBaseDirs
-pushd "%~dp0..\..\.."
+:SetBaseDir
+pushd "%~dp0..\..\..\.."
 set "SourceDir=%CD%\Vampire"
-set "WhiteList=%CD%\WhiteList-Vampire.lst"
 
 :SetPrograms
 pushd "%~dp0"
-set Sfk="..\..\service\sfk.exe"
-set Sha="sha1.exe"
+set "Sfk=..\..\..\helpers\sfk.exe"
+set "Sha=sha1.exe"
+set "WhiteList=%cd%\WhiteList-Vampire.lst"
 
 :CheckDirs
 if not exist "%SourceDir%" (
@@ -26,7 +26,7 @@ echo.
 :DumpFileTOC
 call :DelTemps
 for /f "delims=" %%a in ('dir /b /s /a-d "%SourceDir%\"') do (call :WriteLine "%%~a")
-%Sfk% replace "%WhiteList%" "|%SourceDir%\||" -quiet -yes> nul
+%Sfk% replace "%WhiteList%" "|%SourceDir%\||" -yes -quiet=2
 echo Written to:
 echo "%WhiteList%".
 
@@ -50,5 +50,5 @@ exit /b
 
 :DelTemps
 for %%m in ("%WhiteList%*") do (
-del /f /q /a "%WhiteList%"> nul)
+	del /f /q /a "%%~m"> nul )
 exit /b

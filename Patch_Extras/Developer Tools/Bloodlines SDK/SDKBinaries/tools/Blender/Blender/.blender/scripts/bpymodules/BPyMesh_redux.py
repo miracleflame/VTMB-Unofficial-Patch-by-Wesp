@@ -24,8 +24,8 @@
 import Blender
 Vector= Blender.Mathutils.Vector
 Ang= Blender.Mathutils.AngleBetweenVecs
-LineIntersect= Blender.Mathutils.LineIntersect
 CrossVecs= Blender.Mathutils.CrossVecs
+MidpointVecs= Blender.Mathutils.MidpointVecs
 import BPyMesh
 
 # If python version is less than 2.4, try to get set stuff from module
@@ -52,11 +52,6 @@ def col_key_mix(col1, col2,  w1, w2):
 	# Weighted mix. w1+w2==1.0
 	return int(w1*col1[0] + w2*col2[0]), int(w1*col1[1] + w2*col2[1]), int(w1*col1[2]+col2[2]*w2)
 
-def ed_key(ed):
-	i1= ed.v1.index
-	i2= ed.v2.index
-	if i1<i2: return i1,i2
-	return i2,i1
 
 def redux(ob, REDUX=0.5, BOUNDRY_WEIGHT=2.0, REMOVE_DOUBLES=False, FACE_AREA_WEIGHT=1.0, FACE_TRIANGULATE=True, DO_UV=True, DO_VCOL=True, DO_WEIGHTS=True, VGROUP_INF_REDUX= None, VGROUP_INF_WEIGHT=0.5):
 	"""
@@ -116,9 +111,12 @@ def redux(ob, REDUX=0.5, BOUNDRY_WEIGHT=2.0, REMOVE_DOUBLES=False, FACE_AREA_WEI
 	OLD_MESH_MODE= Blender.Mesh.Mode()
 	Blender.Mesh.Mode(Blender.Mesh.SelectModes.VERTEX)
 	
-	if (DO_UV or DO_VCOL) and not me.faceUV:
-		DO_VCOL= DO_UV= False
-		
+	if DO_UV and not me.faceUV:
+		DO_UV= False
+	
+	if DO_VCOL and not me.vertexColors:
+		DO_VCOL = False
+	
 	current_face_count= len(me.faces)
 	target_face_count= int(current_face_count * REDUX)
 	# % of the collapseable faces to collapse per pass.
@@ -150,7 +148,7 @@ def redux(ob, REDUX=0.5, BOUNDRY_WEIGHT=2.0, REMOVE_DOUBLES=False, FACE_AREA_WEI
 			self.init_from_edge(ed) # So we can re-use the classes without using more memory.
 		
 		def init_from_edge(self, ed):
-			self.key= ed_key(ed)
+			self.key= ed.key
 			self.length= ed.length
 			self.faces= []
 			self.v1= ed.v1
@@ -165,6 +163,68 @@ def redux(ob, REDUX=0.5, BOUNDRY_WEIGHT=2.0, REMOVE_DOUBLES=False, FACE_AREA_WEI
 			# Basic weighting.
 			#self.collapse_weight= self.length *  (1+ ((ed.v1.no-ed.v2.no).length**2))
 			self.collapse_weight= 1.0
+		
+		def collapse_locations(self, w1, w2):
+			'''
+			Generate a smart location for this edge to collapse to
+			w1 and w2 are vertex location bias
+			'''
+			
+			v1co= self.v1.co
+			v2co= self.v2.co
+			v1no= self.v1.no
+			v2no= self.v2.no
+			
+			# Basic operation, works fine but not as good as predicting the best place.
+			#between= ((v1co*w1) + (v2co*w2))
+			#self.collapse_loc= between
+			
+			# normalize the weights of each vert - se we can use them as scalers.
+			wscale= w1+w2
+			if not wscale: # no scale?
+				w1=w2= 0.5
+			else:
+				w1/=wscale
+				w2/=wscale
+			
+			length= self.length
+			between= MidpointVecs(v1co, v2co)
+			
+			# Collapse
+			# new_location = between # Replace tricky code below. this code predicts the best collapse location.
+			
+			# Make lines at right angles to the normals- these 2 lines will intersect and be
+			# the point of collapsing.
+			
+			# Enlarge so we know they intersect:  self.length*2
+			cv1= CrossVecs(v1no, CrossVecs(v1no, v1co-v2co))
+			cv2= CrossVecs(v2no, CrossVecs(v2no, v2co-v1co))
+			
+			# Scale to be less then the edge lengths.
+			cv2.length = cv1.length = 1
+			
+			cv1 = cv1 * (length* 0.4)
+			cv2 = cv2 * (length* 0.4)
+			
+			smart_offset_loc= between + (cv1 + cv2)
+			
+			# Now we need to blend between smart_offset_loc and w1/w2
+			# you see were blending between a vert and the edges midpoint, so we cant use a normal weighted blend.
+			if w1 > 0.5: # between v1 and smart_offset_loc
+				#self.collapse_loc= v1co*(w2+0.5) + smart_offset_loc*(w1-0.5)
+				w2*=2
+				w1= 1-w2
+				new_loc_smart= v1co*w1 + smart_offset_loc*w2
+			else: # w between v2 and smart_offset_loc
+				w1*=2
+				w2= 1-w1
+				new_loc_smart= v2co*w2 + smart_offset_loc*w1
+				
+			if new_loc_smart.x != new_loc_smart.x: # NAN LOCATION, revert to between
+				new_loc_smart= None
+			
+			return new_loc_smart, between, v1co*0.99999 + v2co*0.00001, v1co*0.00001 + v2co*0.99999
+		
 
 	class collapseFace(object):
 		__slots__ = 'verts', 'normal', 'area', 'index', 'orig_uv', 'orig_col', 'uv', 'col' # , 'collapse_edge_count'
@@ -176,9 +236,10 @@ def redux(ob, REDUX=0.5, BOUNDRY_WEIGHT=2.0, REMOVE_DOUBLES=False, FACE_AREA_WEI
 			self.normal= f.no
 			self.area= f.area
 			self.index= f.index
-			if DO_UV or DO_VCOL:
+			if DO_UV:
 				self.orig_uv= [uv_key(uv) for uv in f.uv]
 				self.uv= f.uv
+			if DO_VCOL:
 				self.orig_col= [col_key(col) for col in f.col]
 				self.col= f.col
 	
@@ -329,148 +390,112 @@ def redux(ob, REDUX=0.5, BOUNDRY_WEIGHT=2.0, REMOVE_DOUBLES=False, FACE_AREA_WEI
 			vert_collapsed= [1] * len(verts)
 		
 		
-		def ed_set_collapse_loc(ced):
-			v1co= ced.v1.co
-			v2co= ced.v2.co
-			v1no= ced.v1.no
-			v2no= ced.v2.no
-			
-			# Basic operation, works fine but not as good as predicting the best place.
-			#between= ((v1co*w1) + (v2co*w2))
-			#ced.collapse_loc= between
-			
-			# Use the vertex weights to bias the new location.
-			w1= vert_weights[ced.key[0]]
-			w2= vert_weights[ced.key[1]]
-			
-			# normalize the weights of each vert - se we can use them as scalers.
-			wscale= w1+w2
-			if not wscale: # no scale?
-				w1=w2= 0.5
-			else:
-				w1/=wscale
-				w2/=wscale
-			
-			length= ced.length
-			between= (v1co+v2co) * 0.5
-			
-			# Collapse
-			# new_location = between # Replace tricky code below. this code predicts the best collapse location.
-			
-			# Make lines at right angles to the normals- these 2 lines will intersect and be
-			# the point of collapsing.
-			
-			# Enlarge so we know they intersect:  ced.length*2
-			cv1= CrossVecs(v1no, CrossVecs(v1no, v1co-v2co))
-			cv2= CrossVecs(v2no, CrossVecs(v2no, v2co-v1co))
-			
-			# Scale to be less then the edge lengths.
-			cv1.normalize()
-			cv2.normalize()
-			cv1 = cv1 * (length* 0.4)
-			cv2 = cv2 * (length* 0.4)
-			
-			smart_offset_loc= between + (cv1 + cv2)
-			
-			
-			if (smart_offset_loc-between).length > length/2:
-				# New collapse loc is way out, just use midpoint.
-				ced.collapse_loc= between
-			else:
-				# Now we need to blend between smart_offset_loc and w1/w2
-				# you see were blending between a vert and the edges midpoint, so we cant use a normal weighted blend.
-				if w1 > 0.5: # between v1 and smart_offset_loc
-					#ced.collapse_loc= v1co*(w2+0.5) + smart_offset_loc*(w1-0.5)
-					w2*=2
-					w1= 1-w2
-					
-					
-					ced.collapse_loc= v1co*w1 + smart_offset_loc*w2
-				else: # w between v2 and smart_offset_loc
-					w1*=2
-					w2= 1-w1
-					ced.collapse_loc= v2co*w2 + smart_offset_loc*w1
-					
-				if ced.collapse_loc.x != ced.collapse_loc.x: # NAN LOCATION, revert to between
-					ced.collapse_loc= between
 				
 		
 		# Best method, no quick hacks here, Correction. Should be the best but needs tweaks.
 		def ed_set_collapse_error(ced):
-			i1, i2= ced.key
+			# Use the vertex weights to bias the new location.
+			new_locs= ced.collapse_locations(vert_weights[ced.key[0]], vert_weights[ced.key[1]])
 			
+			
+			# Find the connecting faces of the 2 verts.
+			i1, i2= ced.key
 			test_faces= set()
 			for i in (i1,i2): # faster then LC's
 				for f in vert_face_users[i]:
 					test_faces.add(f[1].index)
-			
 			for f in ced.faces:
 				test_faces.remove(f.index)
 			
-			# test_faces= tuple(test_faces) # keep order
 			
 			v1_orig= Vector(ced.v1.co)
 			v2_orig= Vector(ced.v2.co)
 			
-			ced.v1.co= ced.v2.co= ced.collapse_loc
-			
-			new_nos= [faces[i].no for i in test_faces]
-			
-			ced.v1.co= v1_orig
-			ced.v2.co= v2_orig
-			
-			# now see how bad the normals are effected
-			angle_diff= 1.0
-			
-			for ii, i in enumerate(test_faces): # local face index, global face index
-				cfa= collapse_faces[i] # this collapse face
-				try:
-					# can use perim, but area looks better.
-					if FACE_AREA_WEIGHT:
-						# Psudo code for wrighting
-						# angle_diff= The before and after angle difference between the collapsed and un-collapsed face.
-						# ... devide by 180 so the value will be between 0 and 1.0
-						# ... add 1 so we can use it as a multiplyer and not make the area have no eefect (below)
-						# area_weight= The faces original area * the area weight
-						# ... add 1.0 so a small area face dosent make the angle_diff have no effect.
-						#
-						# Now multiply - (angle_diff * area_weight)
-						# ... The weight will be a minimum of 1.0 - we need to subtract this so more faces done give the collapse an uneven weighting.
-						
-						angle_diff+= ((1+(Ang(cfa.normal, new_nos[ii])/180)) * (1+(cfa.area * FACE_AREA_WEIGHT))) -1 # 4 is how much to influence area
-					else:
-						angle_diff+= (Ang(cfa.normal), new_nos[ii])/180
-						
-				except:
-					pass
-			
-			# This is very arbirary, feel free to modify
-			try:		no_ang= (Ang(ced.v1.no, ced.v2.no)/180) + 1
-			except:		no_ang= 2.0
+			def test_loc(new_loc):
+				'''
+				Takes a location and tests the error without changing anything
+				'''
+				new_weight= ced.collapse_weight
+				ced.v1.co= ced.v2.co= new_loc
 				
-			# do *= because we face the boundry weight to initialize the weight. 1.0 default.
-			ced.collapse_weight*=  ((no_ang * ced.length) * (1-(1/angle_diff)))# / max(len(test_faces), 1)
+				new_nos= [faces[i].no for i in test_faces]
+				
+				# So we can compare the befire and after normals
+				ced.v1.co= v1_orig
+				ced.v2.co= v2_orig
+				
+				# now see how bad the normals are effected
+				angle_diff= 1.0
+				
+				for ii, i in enumerate(test_faces): # local face index, global face index
+					cfa= collapse_faces[i] # this collapse face
+					try:
+						# can use perim, but area looks better.
+						if FACE_AREA_WEIGHT:
+							# Psudo code for wrighting
+							# angle_diff= The before and after angle difference between the collapsed and un-collapsed face.
+							# ... devide by 180 so the value will be between 0 and 1.0
+							# ... add 1 so we can use it as a multiplyer and not make the area have no eefect (below)
+							# area_weight= The faces original area * the area weight
+							# ... add 1.0 so a small area face dosent make the angle_diff have no effect.
+							#
+							# Now multiply - (angle_diff * area_weight)
+							# ... The weight will be a minimum of 1.0 - we need to subtract this so more faces done give the collapse an uneven weighting.
+							
+							angle_diff+= ((1+(Ang(cfa.normal, new_nos[ii])/180)) * (1+(cfa.area * FACE_AREA_WEIGHT))) -1 # 4 is how much to influence area
+						else:
+							angle_diff+= (Ang(cfa.normal), new_nos[ii])/180
+							
+					except:
+						pass
+								
+				
+				# This is very arbirary, feel free to modify
+				try:		no_ang= (Ang(ced.v1.no, ced.v2.no)/180) + 1
+				except:		no_ang= 2.0
+				
+				# do *= because we face the boundry weight to initialize the weight. 1.0 default.
+				new_weight *=  ((no_ang * ced.length) * (1-(1/angle_diff)))# / max(len(test_faces), 1)
+				return new_weight
+			# End testloc
+			
+			
+			# Test the collapse locatons
+			collapse_loc_best= None
+			collapse_weight_best= 1000000000
+			ii= 0
+			for collapse_loc in new_locs:
+				if collapse_loc: # will only ever fail if smart loc is NAN
+					test_weight= test_loc(collapse_loc)
+					if test_weight < collapse_weight_best:
+						iii= ii
+						collapse_weight_best = test_weight
+						collapse_loc_best= collapse_loc
+					ii+=1
+			
+			ced.collapse_loc= collapse_loc_best
+			ced.collapse_weight= collapse_weight_best
 			
 			
 			# are we using a weight map
 			if VGROUP_INF_REDUX:
 				v= vert_weights_map[i1]+vert_weights_map[i2]
 				ced.collapse_weight*= v
-				
+		# End collapse Error
 		
 		# We can calculate the weights on __init__ but this is higher qualuity.
 		for ced in collapse_edges:
 			if ced.faces: # dont collapse faceless edges.
-				ed_set_collapse_loc(ced)
 				ed_set_collapse_error(ced)
 		
 		# Wont use the function again.
 		del ed_set_collapse_error
-		del ed_set_collapse_loc
 		# END BOUNDRY. Can remove
 		
 		# sort by collapse weight
-		collapse_edges.sort(lambda ced1, ced2: cmp(ced1.collapse_weight, ced2.collapse_weight)) # edges will be used for sorting
+		try:	collapse_edges.sort(key = lambda ced: ced.collapse_weight) # edges will be used for sorting
+		except:	collapse_edges.sort(lambda ced1, ced2: cmp(ced1.collapse_weight, ced2.collapse_weight)) # edges will be used for sorting
+		
 		
 		vert_collapsed= [0]*len(verts)
 		
@@ -519,11 +544,16 @@ def redux(ob, REDUX=0.5, BOUNDRY_WEIGHT=2.0, REMOVE_DOUBLES=False, FACE_AREA_WEI
 			
 			current_face_count -= len(ced.faces)
 			
-			# Interpolate the bone weights.
-			if DO_WEIGHTS:
+			# Find and assign the real weights based on collapse loc.
+			
+			# Find the weights from the collapse error
+			if DO_WEIGHTS or DO_UV or DO_VCOL:
 				i1, i2= ced.key
-				w1= vert_weights[i1]
-				w2= vert_weights[i2]
+				# Dont use these weights since they may not have been used to make the collapse loc.
+				#w1= vert_weights[i1]
+				#w2= vert_weights[i2]
+				w1= (ced.v2.co-ced.collapse_loc).length
+				w2= (ced.v1.co-ced.collapse_loc).length
 				
 				# Normalize weights
 				wscale= w1+w2
@@ -534,77 +564,58 @@ def redux(ob, REDUX=0.5, BOUNDRY_WEIGHT=2.0, REMOVE_DOUBLES=False, FACE_AREA_WEI
 					w2/= wscale
 				
 				
-				# add verts vgroups to eachother
-				'''
-				wd1= vWeightDict[i1] # v1 weight dict
-				wd2= vWeightDict[i2] # v2 weight dict
-				
-				# Make sure vert groups on both verts exist.
-				for wd_from, wd_to in ((wd1, wd2), (wd2, wd1)):
-					for group_key, weight_value in wd_from.iteritems():
-						try: wd_to[group_key] # We have this weight?
-						except: wd_to[group_key]= 0.0 # Adding a zero weight.
-				
-				# Mix the weights for vert groups
-				for group_key in wd_from.iterkeys():
-					wd1[group_key]= wd2[group_key]= (wd1[group_key]*w1) + (wd2[group_key]*w2)
-				'''
-				
-				wl1= vWeightList[i1] # v1 weight dict
-				wl2= vWeightList[i2] # v2 weight dict
-				for group_index in xrange(len_vgroups):
-					wl1[group_index]= wl2[group_index]= (wl1[group_index]*w1) + (wl2[group_index]*w2)
-				
-			
-			if DO_UV or DO_VCOL:
-				# Handel UV's and vert Colors!
-				for v, my_weight, other_weight, edge_my_uvs, edge_other_uvs, edge_my_cols, edge_other_cols in (\
-				( ced.v1, vert_weights[ced.key[0]], vert_weights[ced.key[1]], ced.uv1, ced.uv2, ced.col1, ced.col2),\
-				( ced.v2, vert_weights[ced.key[1]], vert_weights[ced.key[0]], ced.uv2, ced.uv1, ced.col2, ced.col1)\
-				):
+				# Interpolate the bone weights.
+				if DO_WEIGHTS:
 					
-					# Normalize weights
-					wscale= my_weight+other_weight
-					if not wscale: # no scale?
-						my_weight=other_weight= 0.5
-					else:
-						my_weight/= wscale
-						other_weight/= wscale
-					
-					uvs_mixed=   [ uv_key_mix(edge_my_uvs[iii],   edge_other_uvs[iii],  my_weight, other_weight)  for iii in xrange(len(edge_my_uvs))  ]
-					cols_mixed=  [ col_key_mix(edge_my_cols[iii], edge_other_cols[iii], my_weight, other_weight) for iii in xrange(len(edge_my_cols)) ]
-					
-					for face_vert_index, cfa in vert_face_users[v.index]:
-						if len(cfa.verts)==3 and cfa not in ced.faces: # if the face is apart of this edge then dont bother finding the uvs since the face will be removed anyway.
+					# add verts vgroups to eachother
+					wl1= vWeightList[i1] # v1 weight dict
+					wl2= vWeightList[i2] # v2 weight dict
+					for group_index in xrange(len_vgroups):
+						wl1[group_index]= wl2[group_index]= (wl1[group_index]*w1) + (wl2[group_index]*w2)
+				# Done finding weights.
+				
+				
+				
+				if DO_UV or DO_VCOL:
+					# Handel UV's and vert Colors!
+					for v, my_weight, other_weight, edge_my_uvs, edge_other_uvs, edge_my_cols, edge_other_cols in (\
+					(ced.v1, w1, w2, ced.uv1, ced.uv2, ced.col1, ced.col2),\
+					(ced.v2, w2, w1, ced.uv2, ced.uv1, ced.col2, ced.col1)\
+					):
+						uvs_mixed=   [ uv_key_mix(edge_my_uvs[iii],   edge_other_uvs[iii],  my_weight, other_weight)  for iii in xrange(len(edge_my_uvs))  ]
+						cols_mixed=  [ col_key_mix(edge_my_cols[iii], edge_other_cols[iii], my_weight, other_weight) for iii in xrange(len(edge_my_cols)) ]
 						
-							if DO_UV:
-								# UV COORDS
-								uvk=  cfa.orig_uv[face_vert_index] 
-								try:
-									tex_index= edge_my_uvs.index(uvk)
-								except:
-									tex_index= None
-									""" # DEBUG!
-									if DEBUG:
-										print 'not found', uvk, 'in', edge_my_uvs, 'ed index', ii, '\nwhat about', edge_other_uvs
-									"""
-								if tex_index != None: # This face uses a uv in the collapsing face. - do a merge
-									other_uv= edge_other_uvs[tex_index]
-									uv_vec= cfa.uv[face_vert_index]
-									uv_vec.x, uv_vec.y= uvs_mixed[tex_index]
+						for face_vert_index, cfa in vert_face_users[v.index]:
+							if len(cfa.verts)==3 and cfa not in ced.faces: # if the face is apart of this edge then dont bother finding the uvs since the face will be removed anyway.
 							
-							# TEXFACE COLORS
-							if DO_VCOL:
-								colk= cfa.orig_col[face_vert_index] 
-								try:    tex_index= edge_my_cols.index(colk)
-								except: pass
-								if tex_index != None:
-									other_col= edge_other_cols[tex_index]
-									col_ob= cfa.col[face_vert_index]
-									col_ob.r, col_ob.g, col_ob.b= cols_mixed[tex_index]
-							
-							# DEBUG! if DEBUG: rd()
-				
+								if DO_UV:
+									# UV COORDS
+									uvk=  cfa.orig_uv[face_vert_index] 
+									try:
+										tex_index= edge_my_uvs.index(uvk)
+									except:
+										tex_index= None
+										""" # DEBUG!
+										if DEBUG:
+											print 'not found', uvk, 'in', edge_my_uvs, 'ed index', ii, '\nwhat about', edge_other_uvs
+										"""
+									if tex_index != None: # This face uses a uv in the collapsing face. - do a merge
+										other_uv= edge_other_uvs[tex_index]
+										uv_vec= cfa.uv[face_vert_index]
+										uv_vec.x, uv_vec.y= uvs_mixed[tex_index]
+								
+								# TEXFACE COLORS
+								if DO_VCOL:
+									colk= cfa.orig_col[face_vert_index] 
+									try:    tex_index= edge_my_cols.index(colk)
+									except: pass
+									if tex_index != None:
+										other_col= edge_other_cols[tex_index]
+										col_ob= cfa.col[face_vert_index]
+										col_ob.r, col_ob.g, col_ob.b= cols_mixed[tex_index]
+								
+								# DEBUG! if DEBUG: rd()
+			
 			# Execute the collapse
 			ced.v1.sel= ced.v2.sel= True # Select so remove doubles removed the edges and faces that use it
 			ced.v1.co= ced.v2.co=  ced.collapse_loc

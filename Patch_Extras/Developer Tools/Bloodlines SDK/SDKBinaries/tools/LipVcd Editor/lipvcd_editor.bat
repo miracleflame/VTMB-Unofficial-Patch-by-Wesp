@@ -13,11 +13,11 @@ pushd "%~dp0"
 
 :: Set required environment
 set TargetPath=projectbase\sound
-set NirCmd=..\..\service\nircmd.exe
-set MsgBox=..\..\service\msgbox.exe
-set InputBox=..\..\service\inputbox.exe
-set OpenDlg=..\..\service\opendlg.exe
-set Sfk=..\..\service\sfk.exe
+set NirCmd=..\..\helpers\nircmd.exe
+set MsgBox=..\..\helpers\msgbox.exe
+set InputBox=..\..\helpers\inputbox.exe
+set OpenDlg=..\..\helpers\opendlg.exe
+set Sfk=..\..\helpers\sfk.exe
 set FPApp=hlfaceposer.exe
 set FPConfigGen=hlfaceposer_cfg.reg
 set FPConfigVCD=hlfaceposer_vcd.reg
@@ -47,7 +47,7 @@ for %%m in (
 		exit
 	)
 )
-taskkill /f /t /im hlfaceposer.exe> nul 2>&1
+taskkill /f /im hlfaceposer.exe> nul 2>&1
 if exist "%TargetPath%\" rd /s /q "%TargetPath%"> nul
 if not exist "%TargetPath%\" md "%TargetPath%\"
 

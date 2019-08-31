@@ -8,14 +8,17 @@ set "PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"
 color 81
 mode con cols=34 lines=12
 echo Initializing...
-if not "%~1"=="" if /i not "%~x1"==".lip" exit
+if not "%~1"=="" (
+if /i not "%~x1"==".lip" (
+	exit
+))
 chcp 1251> nul
 pushd "%~dp0"
 
 :: Required assets
-set InputBox=..\..\service\inputbox.exe
-set Sfk=..\..\service\sfk.exe
-set OpenFile=..\..\service\opendlg.exe /f "/e=*.lip *.txt"
+set InputBox=..\..\helpers\inputbox.exe
+set Sfk=..\..\helpers\sfk.exe
+set OpenFile=..\..\helpers\opendlg.exe /f "/e=*.lip *.txt"
 
 :: Read LIP file
 echo Reading input...

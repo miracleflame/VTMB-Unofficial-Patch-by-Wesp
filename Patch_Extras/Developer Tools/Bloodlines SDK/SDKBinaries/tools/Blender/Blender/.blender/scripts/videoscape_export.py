@@ -43,7 +43,7 @@ specular highlights to the vertex colors.
 5. The Videoscape format also allows vertex colors to be specified.
 """
 
-# $Id: videoscape_export.py,v 1.10 2006/01/29 19:17:53 ianwill Exp $
+# $Id: videoscape_export.py,v 1.11 2006/12/12 10:38:42 campbellbarton Exp $
 #
 # +---------------------------------------------------------+
 # | Copyright (c) 2001 Anthony D'Agostino                   |
@@ -83,9 +83,9 @@ def write(filename):
 
 	objects = Blender.Object.GetSelected()
 	objname = objects[0].name
-	meshname = objects[0].data.name
+	meshname = objects[0].getData(name_only=1)
 	mesh = Blender.NMesh.GetRaw(meshname)
-	obj = Blender.Object.Get(objname)
+	obj = objects[0]
 
 	if not meshtools.has_vertex_colors(mesh):
 		message = "Please assign vertex colors before exporting.\n"

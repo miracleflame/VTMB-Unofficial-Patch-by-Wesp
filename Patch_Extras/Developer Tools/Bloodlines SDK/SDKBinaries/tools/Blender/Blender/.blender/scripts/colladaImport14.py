@@ -9,17 +9,19 @@ Tooltip: 'Import scene from COLLADA 1.4 format (.dae)'
 
 __author__ = "Illusoft - Pieter Visser"
 __url__ = ("Project homepage, http://colladablender.illusoft.com")
-__version__ = "0.2.65"
+__version__ = "0.3.146"
 __email__ = "colladablender@illusoft.com"
 __bpydoc__ = """\
 
 Description: Imports a COLLADA 1.4 file into a Blender scene.
 
+Bugs and Features: check the project website: http://colladablender.illusoft.com
+
 Usage: Run the script from the menu or inside Blender. 
 """
 
 # --------------------------------------------------------------------------
-# Illusoft Collada 1.4 plugin for Blender version 0.2.65
+# Illusoft Collada 1.4 plugin for Blender version 0.3.146
 # --------------------------------------------------------------------------
 # ***** BEGIN GPL LICENSE BLOCK *****
 #

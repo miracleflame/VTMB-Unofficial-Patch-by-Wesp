@@ -17,15 +17,15 @@ echo.
 
 pushd "%~dp0"
 set "DFHome=%cd%"
-set "WhiteListPack=%DFHome%\service\WhiteList-packs.7z"
+set "WhiteListPack=%cd%\service\WhiteList-packs.7z"
 set "WhiteListDirs=WhiteList-v1.0-Dirs.lst"
 set "WhiteListVpks=WhiteList-v1.0-Vpks.lst"
 
 :SetPrograms
 pushd ..\..
-set Sfk="%cd%\service\sfk.exe"
-set Arc="%cd%\service\7za.exe"
-set Msg="%cd%\service\msgbox.exe"
+set Sfk="%cd%\helpers\sfk.exe"
+set Arc="%cd%\helpers\7za.exe"
+set Msg="%cd%\helpers\msgbox.exe"
 set Sha="%~dp0service\sha1.exe"
 
 set "SourceDir=Vampire"

@@ -6,6 +6,7 @@ set "PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"
 
 set "SMCHome=%~dp0"
 set "SMCRegPath=HKCU\Software\CFApps\StudioCompiler"
+set "ShowWarning=%~dp0\ShowWarning.exe"
 
 pushd "%~dp0\..\..\.."
 if not exist "SDKContent\ModelSrc\" md "SDKContent\ModelSrc"
@@ -21,21 +22,22 @@ for /f "usebackq delims== tokens=1,*" %%a in ("SDKBinaries\GameCfg.ini") do (
 set "VProject=%GameDir%"
 
 :fix_regpaths
-reg add "%SMCRegPath%\StudioCompiler" /v "TabSelect"       /t REG_DWORD /d "0" /f
-reg add "%SMCRegPath%\StudioCompiler" /v "SDKDirectory"    /t REG_SZ /d "%CD%\SdkBinaries" /f
-reg add "%SMCRegPath%\StudioCompiler" /v "GameDirectory"   /t REG_SZ /d "%ModDir%" /f
-reg add "%SMCRegPath%\StudioCompiler" /v "Shader"          /t REG_SZ /d "VertexLitGeneric" /f
+reg>nul add "%SMCRegPath%\StudioCompiler" /v "TabSelect"     /t REG_DWORD /d "0" /f
+reg>nul add "%SMCRegPath%\StudioCompiler" /v "SDKDirectory"  /t REG_SZ /d "%CD%\SdkBinaries" /f
+reg>nul add "%SMCRegPath%\StudioCompiler" /v "GameDirectory" /t REG_SZ /d "%ModDir%" /f
+reg>nul add "%SMCRegPath%\StudioCompiler" /v "Shader"        /t REG_SZ /d "VertexLitGeneric" /f
 
 :copy_reqfiles
-for %%m in ("%SMCHome%\CopyFiles\*") do (
-if not exist "SDKBinaries\%%~nxm" (
-	copy /y "%%~m" "SDKBinaries\%%~nxm"> nul
+for %%f in ("%SMCHome%\CopyFiles\*") do (
+if not exist "SDKBinaries\%%~nxf" (
+	copy /y "%%~f" "SDKBinaries\%%~nxf"> nul
 ))
 
 :show_warning
-if not exist "%SMCHome%\ShowWarning.ini" goto run_program
-call "%SMCHome%\ShowWarning.exe" "The modeling features of the SDK are in Alpha state.\nKeep in mind these usage limitations:\n\n1. The model should contain max 10000 polys and 25000 vertexes;\n2. Only static prop models are supported - no characters or weapons;\n3. Models must be single-boned and have only 1 frame per sequence;\n4. Collision physics models may crash the game - compile model as \"prop_static\" or turn collisions off when pasting model on the map!" "Important Info - Please read!" OK Warning
-del /f /q "%SMCHome%\ShowWarning.ini"> nul
+if exist "%SMCHome%\ShowWarning.ini" (
+	call "%ShowWarning%" "The modeling features of the SDK are in Alpha state.\r\nKeep in mind these usage limitations:\r\n\r\n1. The model should contain max 10000 polys and 25000 vertexes;\r\n2. Only static prop models are supported - no characters or weapons;\r\n3. Models must be single-boned and have only 1 frame per sequence;\r\n4. Collision physics models may crash the game - compile model as\r\n\042prop_static\042 or turn collisions off when pasting model on the map!" "Important Info - Please read!" OK Warning
+	del /f /q "%SMCHome%\ShowWarning.ini"> nul
+)
 
 :run_program
 start "smc" "%SMCHome%\StudioCompiler.exe"

@@ -109,7 +109,7 @@ FD  = []                # file handle
 NORMALS = []			# normal list
 mats = []
 EXPORT_DIR = ''
-WORLD = Blender.World.Get() 
+WORLD = Blender.World.GetCurrent() 
 
 # ---------------------------------------------------------------------------
 # get_path returns the path portion o/wf the supplied filename.
@@ -162,31 +162,16 @@ def get_materials(obj):
   # any materials attached to the object itself
   mats = obj.getMaterials(0)
 
-  if 'Mesh' != obj.getType():
+  if 'Mesh' != obj.type:
     return mats
 
   # now drop down to the mesh level
   #mesh = Blender.NMesh.GetRaw(obj.data.name)
-  mesh = obj.data
 
-  if mesh.materials:
-    for mat in mesh.materials:
-      mats.append(mat)
+  mats.extend(obj.getData(mesh=1).materials)
 
   # return the materials list
   return mats
-
-
-
-# ---------------------------------------------------------------------------
-# apply_transform converts a vertex to co-ords
-# ---------------------------------------------------------------------------
-def apply_transform(vert, matrix):
-  vc = Mathutils.CopyVec(vert)
-  vc.resize4D()
-  return Mathutils.VecMultMat(vc, matrix)
-
-
 
 # ---------------------------------------------------------------------------
 # do_header writes out the header data
@@ -230,7 +215,8 @@ def do_header():
   FD.write("}\n\n")
 
   # static ambience block 
-  ambient = WORLD[0].getAmb()
+  if WORLD:	ambient = WORLD.getAmb()
+  else:		ambient = 0,0,0
 
   FD.write("SI_Ambience  {\n")
   FD.write("	%f,\n" % ambient[0])
@@ -252,14 +238,14 @@ def do_materiallibrary():
 
   # run through every material, how many used?
   for mat in MAT:
-    nmat = mat.getName()
+    nmat = mat.name
 
     # first, is this material on any of the objects.
     f = 0
     for obj in OBJ:
       ml = get_materials(obj)
       for mli in ml:
-        nmli = mli.getName()
+        nmli = mli.name
         if nmli == nmat:
           f = 1
           mnum += 1
@@ -279,14 +265,14 @@ def do_materiallibrary():
 
   # run through every material, write the used ones
   for mat in MAT:
-    nmat = mat.getName()
+    nmat = mat.name
 
     # find out if on any object, if so we write.
     f = 0
     for obj in OBJ:
       ml = get_materials(obj)
       for mli in ml:
-        nmli = mli.getName()
+        nmli = mli.name
         if nmli == nmat:
           do_material(mat)
           f = 1
@@ -330,7 +316,7 @@ def do_material(mat):
 		
 
     # get the name first
-    name = mat.getName()
+    name = mat.name
 
    # face colour		r, g, b, a
   # power (spec decay)  fl
@@ -395,7 +381,7 @@ def do_texture(mtex):
 
   # get our texture
   tex = mtex.tex
-  tn = tex.getName()
+  tn = tex.name
 
 
   # what type of texture, we are limitd
@@ -413,11 +399,11 @@ def do_texture(mtex):
   # mapping type  ? uv  map wrapped is 4, how to detect?
   # start with a simple xy mapping ie 0
   FD.write("			4,\n")
-
-  print img.getSize ()
+  
+  if img.has_data:	ix, iy = img.getSize()
+  else: 			ix, iy = 512,512
 
   # image width, and height
-  ix, iy = img.getSize()
   FD.write("			%d,\n" % ix)
   FD.write("			%d,\n" % iy)
   # u crop min/max, v crop min/max
@@ -432,9 +418,12 @@ def do_texture(mtex):
     uvs = 1
   FD.write("			%d,\n" % uvs )
   # u/v repeat
-  iru = img.getXRep()
+  if img.has_data:	iru = img.getXRep()
+  else:			iru = 1
   FD.write("			%d,\n" % iru )
-  irv = img.getYRep()
+  if img.has_data:	irv = img.getYRep()
+  else:			irv = 1
+
   FD.write("			%d,\n" % irv )
   # u/v alt - 0, 0
   FD.write("			0,\n" ) 
@@ -496,7 +485,7 @@ def do_model_transform(obj):
   global FD
 
   # now output
-  FD.write("		SI_Transform SRT-" + removeSpacesFromName( obj.getName() ) + " {\n" )
+  FD.write("		SI_Transform SRT-" + removeSpacesFromName( obj.name ) + " {\n" )
 
   
 
@@ -559,19 +548,10 @@ def do_model_material(obj):
 
   for mat in ml:
     FD.write("		SI_GlobalMaterial  {\n" )
-    FD.write("			\"" + removeSpacesFromName(mat.getName()) + "\",\n" )
+    FD.write("			\"" + removeSpacesFromName(mat.name) + "\",\n" )
     FD.write("			\"NODE\",\n" )
     FD.write("		}\n\n" )
 
-
-
-def meshHasUV ( mesh ):
-  if mesh.hasFaceUV():
-    return TRUE
-#  materials = mesh.materials
-#    if len(materials) > 0:
-	  
-  return FALSE
 
 # ---------------------------------------------------------------------------
 # do_collect_uv, makes an easy to use list out of the uv data
@@ -598,9 +578,9 @@ def do_collect_uv(mesh):
   # run through all the faces
   j = 0
   for f in mesh.faces:
-    for i in range(len(f)):
+    for uv in f.uv:
       UVI.append(j)
-      UVC.append(f.uv[i])
+      UVC.append(uv)
       j+=1
     UVI.append(-1)
 
@@ -625,9 +605,9 @@ def do_collect_colour(mesh):
   # run through all the faces
   j = 0
   for f in mesh.faces:
-    for i in range(len(f)):
+    for c in f.col:
       VCI.append(j)
-      VCC.append(f.col[i])
+      VCC.append(c)
       j+=1
     VCI.append(-1)
 
@@ -641,7 +621,7 @@ def do_mesh_shape(obj):
   global UVC, UVI, VCC, VCI, FD, NORMALS
 
   # Grab the mesh itself
-  mesh = Blender.NMesh.GetRaw(obj.data.name)
+  mesh = obj.data
 
   # get the world matrix
   matrix = obj.getMatrix('worldspace')
@@ -656,7 +636,7 @@ def do_mesh_shape(obj):
     elements+=1
   if len(VCC):
     elements+=1
-  FD.write("			SI_Shape SHP-" + removeSpacesFromName ( obj.getName() ) + "-ORG {\n" )
+  FD.write("			SI_Shape SHP-" + removeSpacesFromName ( obj.name ) + "-ORG {\n" )
   FD.write("				%d,\n" % elements )
   FD.write("				\"ORDERED\",\n\n" )
 
@@ -751,7 +731,7 @@ def do_mesh_faces(obj):
   triangles = len(tris)
 
   if n == 0:
-    FD.write("			SI_TriangleList " + removeSpacesFromName(obj.getName()) + " {\n")
+    FD.write("			SI_TriangleList " + removeSpacesFromName(obj.name) + " {\n")
     FD.write("				%d,\n" % triangles)
 
     ostring="				\"NORMAL"
@@ -793,7 +773,7 @@ def do_mesh_faces(obj):
 
   #
   # output the shell
-    FD.write("			SI_TriangleList " + removeSpacesFromName(obj.getName()) + " {\n")
+    FD.write("			SI_TriangleList " + removeSpacesFromName(obj.name) + " {\n")
   #  FD.write("				%d,\n" % triangles)
     FD.write("				%d,\n" % aTriCount)
 
@@ -806,7 +786,7 @@ def do_mesh_faces(obj):
     FD.write(ostring)
 
 
-    FD.write("				\"" + removeSpacesFromName ( mat.getName() ) + "\",\n\n")
+    FD.write("				\"" + removeSpacesFromName ( mat.name ) + "\",\n\n")
 
 #    FD.write("				\"\",\n\n")
 
@@ -950,7 +930,7 @@ def do_model_mesh(obj):
   global FD
 
   # output the shell
-  FD.write("		SI_Mesh MSH-" + removeSpacesFromName(obj.getName()) + " {\n")
+  FD.write("		SI_Mesh MSH-" + removeSpacesFromName(obj.name) + " {\n")
 
   # todo, add calc normals and calc uv here
   # these can be used in both the following sections.
@@ -974,19 +954,19 @@ def do_model(obj):
   global FD
 
   # we only want meshes for now.
-  if 'Mesh' != obj.getType():
+  if 'Mesh' != obj.type:
     return
 
   # check if the mesh is valid
   if validMesh(obj) <> 0:
-	  print "INVALID MESH " + obj.getName ()
+	  print "INVALID MESH " + obj.name
 	  return
 
 
-  print "Exporting model " + obj.getName ()
+  print "Exporting model " + obj.name
 
   # start model
-  FD.write("	SI_Model MDL-" + removeSpacesFromName(obj.getName()) + " {\n")
+  FD.write("	SI_Model MDL-" + removeSpacesFromName(obj.name) + " {\n")
 
   # do transform
   do_model_transform(obj)
@@ -1008,7 +988,7 @@ def do_model(obj):
 #
 
 def validMesh (obj):
-  mesh = Blender.NMesh.GetRaw(obj.data.name)
+  mesh = obj.data
   for f in mesh.faces:
     if len(f.v) < 3:
       print "MESH HAS FACES WITH < 3 VERTICES"
@@ -1064,14 +1044,14 @@ def do_light(obj):
   global FD
 
   # we only want lights for now.
-  if 'Lamp' != obj.getType():
+  if 'Lamp' != obj.type:
     return
 
-  print "Exporting light " + obj.getName ()
+  print "Exporting light " + obj.name
 
   aLampType = 1
 
-  lmpName=Lamp.Get(obj.data.getName())
+  lmpName=Lamp.Get(obj.getData(name_only=1))
   lmpType=lmpName.getType()
 
   if lmpType == Lamp.Types.Lamp:
@@ -1084,12 +1064,12 @@ def do_light(obj):
     aLampType = 0
 
   # start model
-  FD.write("	SI_Light " + removeSpacesFromName(obj.getName()) + " {\n")
+  FD.write("	SI_Light " + removeSpacesFromName(obj.name) + " {\n")
 
   # do type
   FD.write("		%d,\n" % aLampType)
 
-  lampName=Lamp.Get(obj.data.getName())
+  lampName= obj.data
   colour = lampName.col
 
   # do color
@@ -1116,18 +1096,18 @@ def do_camera(obj):
   global FD
 
   # we only want cameras for now.
-  if 'Camera' != obj.getType():
+  if 'Camera' != obj.type:
     return
 
-  print "Exporting camera " + obj.getName ()
+  print "Exporting camera " + obj.name
 
 
 
   # start model
-  FD.write("	SI_Camera " + removeSpacesFromName(obj.getName()) + " {\n")
+  FD.write("	SI_Camera " + removeSpacesFromName(obj.name) + " {\n")
 
 
-  cameraName=Camera.Get(obj.data.getName())
+  cameraName=obj.data
   
   # colour = cameraName.col
 
@@ -1168,9 +1148,8 @@ def do_camera(obj):
 # ---------------------------------------------------------------------------
 
 def do_light_ambient():
-  ambient = WORLD[0].getAmb()
-  if ambient == [0.0,0.0,0.0]:
-    ambient = [0.5,0.5,0.5]
+  if WORLD:	ambient = WORLD.getAmb()
+  else:		ambient = 0,0,0
 
   FD.write("	SI_Light ambient_sw3d {\n")
 
@@ -1210,7 +1189,7 @@ def export_xsi(filename):
   #OBJ = Blender.Object.GetSelected()
   #if not OBJ:
   
-  OBJ = Blender.Scene.GetCurrent().getChildren() #Blender.Object.Get()
+  OBJ = list(Blender.Scene.GetCurrent().objects) #Blender.Object.Get()
 
   # we need some objects, if none specified stop
   if not OBJ:

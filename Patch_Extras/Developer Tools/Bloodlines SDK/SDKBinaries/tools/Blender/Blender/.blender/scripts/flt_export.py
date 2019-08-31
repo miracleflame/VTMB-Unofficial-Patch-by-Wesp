@@ -1,22 +1,4 @@
 #!BPY
-
-# flt_export.py is an OpenFlight exporter for blender.
-# Copyright (C) 2005 Greg MacDonald
-#
-# This program is free software; you can redistribute it and/or
-# modify it under the terms of the GNU General Public License
-# as published by the Free Software Foundation; either version 2
-# of the License, or (at your option) any later version.
-# 
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-
 """ Registration info for Blender menus:
 Name: 'OpenFlight (.flt)...'
 Blender: 237
@@ -55,6 +37,23 @@ What's Not Handled:<br>
 * Animations.<br>
 * Vetex colors.<br>
 """
+
+# flt_export.py is an OpenFlight exporter for blender.
+# Copyright (C) 2005 Greg MacDonald
+#
+# This program is free software; you can redistribute it and/or
+# modify it under the terms of the GNU General Public License
+# as published by the Free Software Foundation; either version 2
+# of the License, or (at your option) any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software
+# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 
 import Blender
 from flt_filewalker import FltOut
@@ -253,7 +252,7 @@ class Node:
 	def blender_export(self, level=[0]):
 		if self.object:
 			if options.verbose >= 2:
-				print '\t' * level[0], self.name, self.object.getType()
+				print '\t' * level[0], self.name, self.object.type
 
 		level[0] += 1
 		
@@ -294,7 +293,7 @@ class Node:
 		self.header = header
 		self.object = object
 		if object:
-			self.name = self.object.getName()
+			self.name = self.object.name
 			self.matrix = self.object.getMatrix('localspace')
 		else:
 			self.name = 'no name'
@@ -320,7 +319,7 @@ class Node:
 		# Spawn children.
 		self.has_object_child = False # For Database class.
 		for child in self.child_objects:			
-			if child.getType() == 'Mesh':
+			if child.type == 'Mesh':
 				BlenderMesh(self, header, child, left_over)
 				self.has_object_child = True
 			else: # Treat all non meshes as emptys
@@ -371,7 +370,7 @@ class BlenderMesh(Node):
 
 			# Gather Material
 			mat_desc = MaterialDesc()
-			mat_desc.name = mat.getName()
+			mat_desc.name = mat.name
 			mat_desc.alpha = mat.getAlpha()
 			mat_desc.shininess = mat.getSpec() * 64.0   # 2.0 => 128.0
 			if options.use_mat_color:
@@ -675,7 +674,7 @@ class Database(Node):
 	def __init__(self, scene, fw):
 		self.fw = fw
 		self.scene = scene
-		self.all_objects = scene.getChildren()
+		self.all_objects = list(scene.objects)
 		self.GRR = GlobalResourceRepository()
 
 		Node.__init__(self, None, self, None, self.all_objects)

@@ -2,7 +2,7 @@
 
 """ Registration info for Blender menus
 Name: 'Bevel Center'
-Blender: 240
+Blender: 243
 Group: 'Mesh'
 Tip: 'Bevel selected faces, edges, and vertices'
 """
@@ -50,7 +50,7 @@ from Blender import NMesh, Window, Scene
 from Blender.Draw import *
 from Blender.Mathutils import *
 from Blender.BGL import *
-
+import BPyMessages
 #PY23 NO SETS#
 '''
 try:
@@ -65,6 +65,21 @@ except:
 
 global E_selected
 E_selected = NMesh.EdgeFlags['SELECT']
+
+old_dist = None
+
+def act_mesh_ob():
+	scn = Scene.GetCurrent()
+	ob = scn.objects.active
+	if ob == None or ob.type != 'Mesh': 
+		BPyMessages.Error_NoMeshActive()
+		return
+	
+	if ob.getData(mesh=1).multires:
+		BPyMessages.Error_NoMeshMultiresEdit()
+		return
+	
+	return ob
 
 def make_sel_vert(*co):
 	v= NMesh.Vert(*co)
@@ -187,7 +202,7 @@ def make_faces():
 						NF.append(NMesh.Face([newV[ind2-2][0],newV[ind2-2][1],newV[ind2-1][0],newV[ind2-1][1]]))
 					
 					else:
-						ind2 = min( [((newV[i][1].co-newV[i-1][0].co).length, i) for i in enumV] )
+						ind2 = min( [((newV[i][1].co-newV[i-1][0].co).length, i) for i in enumV] )[1]
 						NF.append(NMesh.Face([newV[ind2-1][1],newV[ind2][0],newV[ind2][1],newV[ind2-2][0]]))
 						NF.append(NMesh.Face([newV[ind2-2][0],newV[ind2-2][1],newV[ind2-1][0],newV[ind2-1][1]]))
 				
@@ -278,7 +293,7 @@ def make_corners():
 				
 				b = [x0]						# b will contain the sorted list of vertices
 				
-				for i in range(len(hc)-1):
+				for i in xrange(len(hc)-1):
 					for x in hc[x0] :
 						if x not in b :		 break
 					b.append(x)
@@ -298,12 +313,12 @@ def make_corners():
 						for i in xrange(3):	 New_d[i] += dir[i]
 
 					New_V *= 1./len(hc)
-					for i in range(3) :		 New_d[i] /= nV
+					for i in xrange(3) :		 New_d[i] /= nV
 					
 					center = make_sel_vert(New_V.x,New_V.y,New_V.z)
 					add_to_NV(v,tuple(New_d),center)
 
-					for k in range(len(b)-1):   make_sel_face([center, b[k], b[k+1]])
+					for k in xrange(len(b)-1):   make_sel_face([center, b[k], b[k+1]])
 				
 		if  2 < nV and v in NC :
 			for edge in NC[v] :				 me.findEdge(*edge).flag   |= E_selected
@@ -341,19 +356,27 @@ EVENT_RECURS = 4
 EVENT_EXIT = 5
 
 def draw():
-	global dist, left, right, num
+	global dist, left, right, num, old_dist
 	global EVENT_NOEVENT, EVENT_BEVEL, EVENT_UPDATE, EVENT_RECURS, EVENT_EXIT
 
 	glClear(GL_COLOR_BUFFER_BIT)
 	Button("Bevel",EVENT_BEVEL,10,100,280,25)
+	
+	BeginAlign()
 	left=Number('',  EVENT_NOEVENT,10,70,45, 20,left.val,0,right.val,'Set the minimum of the slider')
-	right = Number("",EVENT_NOEVENT,245,70,45,20,right.val,left.val,200,"Set the maximum of the slider")
 	dist=Slider("Thickness  ",EVENT_UPDATE,60,70,180,20,dist.val,left.val,right.val,0, \
 			"Thickness of the bevel, can be changed even after bevelling")
+	right = Number("",EVENT_NOEVENT,245,70,45,20,right.val,left.val,200,"Set the maximum of the slider")
+
+	EndAlign()
 	glRasterPos2d(8,40)
 	Text('To finish, you can use recursive bevel to smooth it')
-	num=Number('',  EVENT_NOEVENT,10,10,40, 16,num.val,1,100,'Recursion level')
-	Button("Recursive",EVENT_RECURS,55,10,100,16)
+	
+	
+	if old_dist != None:
+		num=Number('',  EVENT_NOEVENT,10,10,40, 16,num.val,1,100,'Recursion level')
+		Button("Recursive",EVENT_RECURS,55,10,100,16)
+	
 	Button("Exit",EVENT_EXIT,210,10,80,20)
 
 def event(evt, val):
@@ -373,19 +396,16 @@ Register(draw, event, bevent)
 def bevel():
 	""" The main function, which creates the bevel """
 	global me,NV,NV_ext,NE,NC, old_faces,old_dist
-	t= Blender.sys.time()
-	scn = Scene.GetCurrent()
-	ob = scn.getActiveObject() 
-	if ob == None or ob.getType() != 'Mesh': 
-		Draw.PupMenu('ERROR%t|Select a mesh object.')
-		return
+	
+	ob = act_mesh_ob()
+	if not ob: return
 	
 	Window.WaitCursor(1) # Change the Cursor
-	
+	t= Blender.sys.time()
 	is_editmode = Window.EditMode() 
 	if is_editmode: Window.EditMode(0)
 	
-	me = ob.getData()
+	me = ob.data
 
 	NV = {}
 	#PY23 NO SETS# NV_ext = set()
@@ -409,14 +429,20 @@ def bevel():
 def bevel_update():
 	""" Use NV to update the bevel """
 	global dist, old_dist
+	
+	if old_dist == None:
+		# PupMenu('Error%t|Must bevel first.')
+		return
+	
 	is_editmode = Window.EditMode()
 	if is_editmode: Window.EditMode(0)
+	
 	fac = dist.val - old_dist
 	old_dist = dist.val
 
 	for old_v in NV.iterkeys():
 		for dir in NV[old_v].iterkeys():
-			for i in range(3):
+			for i in xrange(3):
 				NV[old_v][dir].co[i] += fac*dir[i]
 
 	me.update(1)
@@ -427,11 +453,11 @@ def recursive():
 	""" Make a recursive bevel... still experimental """
 	global dist
 	from math import pi, sin
-
+	
 	if num.val > 1:
 		a = pi/4
 		ang = []
-		for k in range(num.val):
+		for k in xrange(num.val):
 			ang.append(a)
 			a = (pi+2*a)/4
 

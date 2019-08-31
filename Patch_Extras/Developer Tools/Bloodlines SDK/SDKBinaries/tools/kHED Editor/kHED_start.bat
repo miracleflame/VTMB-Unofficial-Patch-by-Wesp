@@ -1,14 +1,15 @@
 @echo off
+title kHED launcher
 setlocal ENABLEEXTENSIONS
 
-:: get the manual work
-rem reg delete "TODO!"
-
-:: change root directory
+:: change working dir
 pushd "%~dp0"
+
+:: get the manual work
+reg add "HKCU\Software\kHED\kHED\Settings" /v "DirOpenSave" /d "%CD%" /f> nul
 
 :: launch program
 start kHED.exe
 
-:: quit script
+:: quit launch script
 exit

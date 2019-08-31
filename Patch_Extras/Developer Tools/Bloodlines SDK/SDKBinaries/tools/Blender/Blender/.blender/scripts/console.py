@@ -140,26 +140,6 @@ def PupMenuLess(menu, groupSize=35):
 				
 
 
-def unzip(list):
-
-	"""
-		unzip: inverse of zip - converts a list of tuples into a tuple of lists
-		
-		e.g.
-		 a,b = unzip(zip(a,b))
-	
-		* note: all tuples in list have to have the same length, if not,
-				this function will fail
-	"""
-	
-	if not list: return ()
-	l = []
-	for t in range(len(list[0])):
-		l.append(map( lambda x,t=t: x[t], list ))
-	return tuple(l)
-
-
-
 # Use newstyle classes, Im not bothering with inheretence
 # but slots are faster.
 class cmdLine(object):
@@ -363,14 +343,14 @@ def handle_event(evt, val):
 			# Ignore the last char since its padding.
 			whiteSpace = ''
 			#for i in range(len(cmdBuffer[-1].cmd)):
-			for i in range(len(string)-1):
+			for i in xrange(len(string)-1):
 				if cmdBuffer[-1].cmd[i] == ' ' or cmdBuffer[-1].cmd[i] == '\t':
 					whiteSpace += string[i]
 				else:
 					break
 			return whiteSpace
 		
-		# Are we in the moddle of a multiline part or not?
+		# Are we in the middle of a multiline part or not?
 		# try be smart about it
 		if cmdBuffer[-1].cmd.split('#')[0].rstrip().endswith(':'):
 			# : indicates an indent is needed
@@ -782,17 +762,18 @@ histIndex = cursor = -1 # How far back from the first letter are we? - in curren
 
 # Autoexec, startup code.
 scriptDir = Get('scriptsdir')
-if not scriptDir.endswith(Blender.sys.sep):
-	scriptDir += Blender.sys.sep
+if scriptDir:
+	if scriptDir.endswith(Blender.sys.sep):
+		scriptDir += Blender.sys.sep
+	
+	console_autoexec  = '%s%s' % (scriptDir, 'console_autoexec.py')
 
-console_autoexec  = '%s%s' % (scriptDir, 'console_autoexec.py')
-
-if not sys.exists(console_autoexec):
-	# touch the file
-	cmdBuffer.append(cmdLine('...console_autoexec.py not found, making new in scripts dir', 1, None))
-	open(console_autoexec, 'w').close()
-else:
-	cmdBuffer.append(cmdLine('...Using existing console_autoexec.py in scripts dir', 1, None))
+	if not sys.exists(console_autoexec):
+		# touch the file
+		cmdBuffer.append(cmdLine('...console_autoexec.py not found, making new in scripts dir', 1, None))
+		open(console_autoexec, 'w').close()
+	else:
+		cmdBuffer.append(cmdLine('...Using existing console_autoexec.py in scripts dir', 1, None))
 
 
 
@@ -810,7 +791,9 @@ def include_console(includeFile):
 		# Execute the local > global coversion.
 		exec('%s%s' % ('__CONSOLE_VAR_DICT__[__TMP_VAR_NAME__]=', __TMP_VAR_NAME__))
 		
-include_console(console_autoexec) # pass the blender module
+if scriptDir:
+	include_console(console_autoexec) # pass the blender module
+
 #-end autoexec-----------------------------------------------------------------#
 
 

@@ -5,28 +5,30 @@ set "PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"
 set version=0.8 beta
 set Title=Create a New Mod
 title %Title%
-pushd "%~dp0"
-pushd "..\.."
+pushd "%~dp0\..\.."
 
-set MsgBox=service\msgbox.exe
-set Sfk=service\sfk.exe
-set InputBox=service\inputbox.exe
-set UnZip=service\7za.exe
+set MsgBox=helpers\msgbox.exe
+set Sfk=helpers\sfk.exe
+set InputBox=helpers\inputbox.exe
+set UnZip=helpers\7za.exe
 set UtfConv="%~dp0service\ansi2utf.exe"
+set ModBase="%~dp0service\modbase.zip"
 set EchoX=%Sfk% echo
 
 :: Check Assets
-for %%m in (msgbox sfk inputbox 7za) do (
-if not exist "service\%%~m.exe" (
-	echo ERROR!
-	echo>>"..\sdk_errors.log" [%date% %time%] Internal error: Missing "%cd%\service\%%~m.exe" file.
+for %%f in (
+	%MsgBox% %Sfk% %InputBox% %UnZip%
+	%UtfConv% %ModBase%
+) do (if not exist "%%~f" (
+	echo ERROR! Missing "%%~nxf" file.
+	echo>>"..\sdk_errors.log" [%date% %time%] CreateMod error: Missing "%%~f" file.
 	exit
 ))
 
 :: Check Config
 if not exist "GameCfg.ini" (
-	%EchoX% [Red]ERROR!
-	echo>>"..\sdk_errors.log" [%date% %time%] SDK Error: Missing "%cd%\GameCfg.ini" file. Full reset needed.
+	%EchoX% [Red]ERROR! Missing "GameCfg.ini" file.
+	echo>>"..\sdk_errors.log" [%date% %time%] SDK error: Missing "%cd%\GameCfg.ini" file. Full reset needed.
 	%MsgBox% Can't find "GameCfg.ini" at SDK binaries. Please, re-launch the SDK now to perform full reset procedure which will generate default game config. /c:Bloodlines SDK :: Error /t:MB_SYSTEMMODAL,MB_ICONERROR
 	exit
 )
@@ -105,7 +107,7 @@ if exist "%GameExeDir%\%NewModDir%\" (
 
 :: Create folder and extract stuff
 if not exist "%GameExeDir%\%NewModDir%\" md "%GameExeDir%\%NewModDir%\"> nul
-%UnZip% x -o"%GameExeDir%\%NewModDir%\" -y -aoa "%~dp0\service\modbase.zip"> nul
+%UnZip% x -o"%GameExeDir%\%NewModDir%\" -y -aoa "%ModBase%"> nul
 
 :: Import assets from Unofficial patch
 if exist "%GameExeDir%\Unofficial_Patch\materials\" (
@@ -136,7 +138,7 @@ if "%ErrorLevel%"=="6" (
 	if /i not "%%~nxm"=="dlg" (
 		xcopy /s /c /i /r /q /y "%%~m" "%GameExeDir%\%NewModDir%\sound\character\%%~nxm\"> nul
 	))
-	call taskkill /f /im "MsgBox.exe"> nul
+	taskkill /f /im "MsgBox.exe"> nul
 ))
 
 :: Parse liblist.gam file

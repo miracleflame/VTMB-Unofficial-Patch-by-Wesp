@@ -2743,8 +2743,8 @@ def writeAnimation( libraryElement, ipo, ipoOwner ):
             
             # Gather data
             for curve in transformCurves:
-                curveName = curve.getName( )
-                value = curve.evaluate( time )
+                curveName = curve.name
+                value = curve[time]
                 # print '%s: Time: %i Value: %f' % ( curveName, time, value )
                 if ( curveName == 'LocX' ): translateXYZ.x = value
                 elif ( curveName == 'LocY' ): translateXYZ.y = value

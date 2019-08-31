@@ -30,7 +30,7 @@ if "%~1"=="" (
 pushd "%~dp0"
 pushd "..\..\SDKBinaries\"
 set "BSPZip=%CD%\bspzip.exe"
-set "Sfk=%CD%\service\sfk.exe"
+set "Sfk=%CD%\helpers\sfk.exe"
 popd
 
 :SetMapFile

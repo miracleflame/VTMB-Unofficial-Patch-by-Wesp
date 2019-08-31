@@ -1,7 +1,7 @@
 #!BPY
 """
 Name: 'Poly Reducer'
-Blender: 241
+Blender: 243
 Group: 'Mesh'
 Tooltip: 'Removed polygons from a mesh while maintaining the shape, textures and weights.'
 """
@@ -16,6 +16,8 @@ This script simplifies the mesh by removing faces, keeping the overall shape of 
 
 from Blender import Draw, Window, Scene, Mesh, Mathutils, sys, Object
 import BPyMesh
+# reload(BPyMesh)
+import BPyMessages
 
 # ***** BEGIN GPL LICENSE BLOCK *****
 #
@@ -41,13 +43,17 @@ import BPyMesh
 
 def main():
 	scn = Scene.GetCurrent()
-	act_ob= scn.getActiveObject()
-	if not act_ob or act_ob.getType()!='Mesh':
-		Draw.PupMenu('Error, select a mesh as your active object')
+	act_ob= scn.objects.active
+	if not act_ob or act_ob.type != 'Mesh':
+		BPyMessages.Error_NoMeshActive()
 		return
 	
-	
 	act_me= act_ob.getData(mesh=1)
+	
+	if act_me.multires:
+		BPyMessages.Error_NoMeshMultiresEdit()
+		return
+	
 	act_group= act_me.activeGroup
 	if not act_group: act_group= ''
 	
@@ -66,10 +72,10 @@ def main():
 	PREF_DO_UV= Draw.Create(1)
 	PREF_DO_VCOL= Draw.Create(1)
 	PREF_DO_WEIGHTS= Draw.Create(1)
+	PREF_OTHER_SEL_OBS= Draw.Create(0)
 	
 	pup_block = [\
 	('Poly Reduce:', PREF_REDUX, 0.05, 0.95, 'Scale the meshes poly count by this value.'),\
-	'',\
 	('Boundry Weight:', PREF_BOUNDRY_WEIGHT, 0.0, 20.0, 'Weight boundry verts by this scale, 0.0 for no boundry weighting.'),\
 	('Area Weight:', PREF_FACE_AREA_WEIGHT, 0.0, 20.0, 'Collapse edges effecting lower area faces first.'),\
 	('Triangulate', PREF_FACE_TRIANGULATE, 'Convert quads to tris before reduction, for more choices of edges to collapse.'),\
@@ -77,6 +83,9 @@ def main():
 	('VGroup Weighting', VGROUP_INF_ENABLE, 'Use a vertex group to influence the reduction, higher weights for higher quality '),\
 	('vgroup name: ', VGROUP_INF_REDUX, 0, 32, 'The name of the vertex group to use for the weight map'),\
 	('vgroup mult: ', VGROUP_INF_WEIGHT, 0.0, 100.0, 'How much to make the weight effect the reduction'),\
+	('Other Selected Obs', PREF_OTHER_SEL_OBS, 'reduce other selected objects.'),\
+	'',\
+	'',\
 	'',\
 	('UV Coords', PREF_DO_UV, 'Interpolate UV Coords.'),\
 	('Vert Colors', PREF_DO_VCOL, 'Interpolate Vertex Colors'),\
@@ -84,7 +93,7 @@ def main():
 	('Remove Doubles', PREF_REM_DOUBLES, 'Remove doubles before reducing to avoid boundry tearing.'),\
 	]
 	
-	if not Draw.PupBlock("X Mirror mesh tool", pup_block):
+	if not Draw.PupBlock("Poly Reducer", pup_block):
 		return
 	
 	PREF_REDUX= PREF_REDUX.val
@@ -106,7 +115,7 @@ def main():
 	PREF_DO_UV= PREF_DO_UV.val
 	PREF_DO_VCOL= PREF_DO_VCOL.val
 	PREF_DO_WEIGHTS= PREF_DO_WEIGHTS.val
-	
+	PREF_OTHER_SEL_OBS= PREF_OTHER_SEL_OBS.val
 	
 	
 	t= sys.time()
@@ -114,8 +123,15 @@ def main():
 	is_editmode = Window.EditMode() # Exit Editmode.
 	if is_editmode: Window.EditMode(0)
 	Window.WaitCursor(1)	
-	
+	print 'reducing:', act_ob.name, act_ob.getData(1)
 	BPyMesh.redux(act_ob, PREF_REDUX, PREF_BOUNDRY_WEIGHT, PREF_REM_DOUBLES, PREF_FACE_AREA_WEIGHT, PREF_FACE_TRIANGULATE, PREF_DO_UV, PREF_DO_VCOL, PREF_DO_WEIGHTS, VGROUP_INF_REDUX, VGROUP_INF_WEIGHT)
+	
+	if PREF_OTHER_SEL_OBS:
+		for ob in scn.objects.context:
+			if ob.type == 'Mesh' and ob != act_ob:
+				print 'reducing:', ob.name, ob.getData(1)
+				BPyMesh.redux(ob, PREF_REDUX, PREF_BOUNDRY_WEIGHT, PREF_REM_DOUBLES, PREF_FACE_AREA_WEIGHT, PREF_FACE_TRIANGULATE, PREF_DO_UV, PREF_DO_VCOL, PREF_DO_WEIGHTS, VGROUP_INF_REDUX, VGROUP_INF_WEIGHT)
+				Window.RedrawAll()
 	
 	if is_editmode: Window.EditMode(1)
 	Window.WaitCursor(0)

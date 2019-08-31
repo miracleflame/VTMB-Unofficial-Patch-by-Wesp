@@ -1,19 +1,17 @@
 # Blender: registered menu entries for bpython scripts
 
 Animation {
-'Armature Symmetry' 234 armature_symetry.py 0 'Make an armature symetrical'
+'Armature Symmetry' 242 armature_symmetry.py 0 'Make an Armature symetrical'
 'BlenderLipSynchro' 242 blenderLipSynchro.py 0 'Import phonemes from Papagayo or JLipSync for lip synchronization'
 'Camera Changer' 234 camera_changer.py 0 'Create script link to change cameras (based on their names) during an animation'
-'Empties to Armature' 241 bvh2arm.py 0 'Create Armature from a parented-empties chain'
-'Envelope Assignment' 234 envelope_assignment.py 0 'Assigns weights to vertices via envelopes'
 'Envelope Symmetry' 234 envelope_symmetry.py 0 'Make envelope symetrical'
 'Shape Widget Wizard' 238 widgetwizard.py 0 'Adds Widgets for Driven Shapes'
-'Trajectory' 242 animation_trajectory.py 0 'See Trajectory of selected object'
+'Trajectory' 243 animation_trajectory.py 0 'See Trajectory of selected object'
 }
 
 Export {
-'3D Studio (.3ds)...' 241 3ds_export.py 0 'Export to 3DS file format (.3ds).'
-'AC3D (.ac)...' 236 ac3d_export.py 0 'Export selected meshes to AC3D (.ac) format'
+'3D Studio (.3ds)...' 243 3ds_export.py 0 'Export to 3DS file format (.3ds).'
+'AC3D (.ac)...' 242 ac3d_export.py 0 'Export selected meshes to AC3D (.ac) format'
 'Bloodlines_ALL (x.mdl)' 240 VampEd_mdl.py 0 'Modifies the Bloodlines model .MDL directly'
 'Bloodlines_UVs (x.mdl)' 240 VampEd_mdl_UV.py 0 'Modifies the Bloodlines model .MDL directly'
 'Bloodlines_VERTs (x.mdl)' 240 VampEd_mdl_vert.py 0 'Modifies the Bloodlines model .MDL directly'
@@ -21,15 +19,15 @@ Export {
 'COLLADA 1.4(.dae) ...' 241 colladaExport14.py 0 'Export scene from Blender to COLLADA 1.4 format (.dae)'
 'DEC Object File Format (.off)...' 232 off_export.py 0 'Export selected mesh to DEC Object File Format (*.off)'
 'DirectX(.x)...' 242 DirectX8Exporter.py 0 'Export to DirectX text file format format.'
-'LightWave (.lwo)...' 232 lightwave_export.py 0 'Export selected meshes to LightWave File Format (.lwo)'
+'LightWave (.lwo)...' 243 lightwave_export.py 0 'Export selected meshes to LightWave File Format (.lwo)'
 'Lightwave Motion (.mot)...' 241 export_lightwave_motion.py 0 'Export Loc Rot Size chanels to a Lightwave .mot file'
-'MD2 (.md2)' 241 md2_export.py 0 'Export to Quake file format (.md2).'
-'Nendo (.ndo)...' 232 nendo_export.py 0 'Export selected mesh to Nendo File Format (*.ndo)'
+'MD2 (.md2)' 243 md2_export.py 0 'Export to Quake file format (.md2).'
 'OpenFlight (.flt)...' 237 flt_export.py 0 'Export to OpenFlight v16.0 (.flt)'
-'OpenInventor (.iv)' 236 export-iv-0.1.py 0 'Export to OpenInventor file format. (.iv)'
+'OpenInventor (.iv)...' 236 export-iv-0.1.py 0 'Export to OpenInventor file format. (.iv)'
 'Radiosity (.radio)...' 232 radiosity_export.py 0 'Export selected mesh (with vertex colors) to Radiosity File Format (.radio)'
 'Raw Faces (.raw)...' 242 raw_export.py 0 'Export selected mesh to Raw Triangle Format (.raw)'
-'Save Current Theme...' 240 save_theme.py 0 'Save current theme as a BPython script'
+'Save Current Theme...' 242 save_theme.py 0 'Save current theme as a BPython script'
+'Save Mesh as MDD' 242 export_mdd.py 0 'Animated mesh to MDD vertex keyframe file.'
 'SoftImage XSI (.xsi)...' 236 xsi_export.py 0 'Export to a SoftImage XSI file'
 'Stanford PLY (*.ply)...' 241 ply_export.py 0 'Export active object to Stanford PLY format'
 'TrueSpace (.cob)...' 232 truespace_export.py 0 'Export selected meshes to TrueSpace File Format (.cob)'
@@ -38,7 +36,7 @@ Export {
 |_All Objects compressed...: comp
 |_Selected Objects...: selected
 'VideoScape with Vertex Colors (.obj)...' 232 videoscape_export.py 0 'Export selected mesh to VideoScape File Format (.obj)'
-'Wavefront (.obj)...' 232 obj_export.py 0 'Save a Wavefront OBJ File'
+'Wavefront (.obj)...' 243 export_obj.py 0 'Save a Wavefront OBJ File'
 'X3D Extensible 3D (.x3d)...' 235 x3d_export.py 0 'Export to Extensible 3D file (.x3d)'
 |_All Objects...: all
 |_All Objects compressed...: comp
@@ -48,16 +46,17 @@ Export {
 
 Import {
 '3D Studio (.3ds)...' 241 3ds_import.py 0 'Import from 3DS file format (.3ds)'
-'AC3D (.ac)...' 236 ac3d_import.py 0 'Import an AC3D (.ac) file.'
+'AC3D (.ac)...' 242 ac3d_import.py 0 'Import an AC3D (.ac) file.'
 'Bloodlines_X (.x)...' 240 Full_VampEd_import.py 0 'Imports model from Bloodlines .X file format'
 'COLLADA 1.3.1 (.dae) ...' 237 collada_import.py 0 'Import scene from COLLADA format (.dae)'
 'COLLADA 1.4(.dae) ...' 241 colladaImport14.py 0 'Import scene from COLLADA 1.4 format (.dae)'
-'DEC Object File Format (.off)...' 232 off_import.py 0 'Import DEC Object File Format (*.off)'
+'DEC Object File Format (.off)...' 242 off_import.py 0 'Import DEC Object File Format (*.off)'
 'DirectX(.x)...' 240 DirectX8Importer.py 0
-'Google Earth (.kml / .kmz)...' 241 kmz_ImportWithMesh.py 0 'Import geometry of .kml or .kmz 3D models'
+'Drawing eXchange Format (.dxf)' 243 import_dxf.py 0 'Import DXF file.'
 'LightWave (.lwo)...' 239 lightwave_import.py 0 'Import LightWave Object File Format'
+'Load MDD to Mesh RVKs' 242 import_mdd.py 0 'baked vertex animation to active mesh object.'
 'MD2 (.md2)' 239 md2_import.py 0 'Import from Quake file format (.md2).'
-'Nendo (.ndo)...' 232 nendo_import.py 0 'Import Nendo Object File Format (.ndo)'
+'Motion Capture (.bvh)...' 242 bvh_import.py 0 'Import a (.bvh) motion capture file'
 'OpenFlight (.flt)...' 238 flt_import.py 0 'Import OpenFlight (.flt)'
 'Paths (.svg, .ps, .eps, .ai, Gimp)' 233 paths_import.py 0 'Import a path from any of a set of formats (still experimental)'
 |_Gimp 1.0 - 1.2.5: Gimp_1_0
@@ -70,36 +69,32 @@ Import {
 'Raw Faces (.raw)...' 242 raw_import.py 0 'Import Raw Triangle File Format (.raw)'
 'Stanford PLY (*.ply)...' 241 ply_import.py 0 'Import a Stanford PLY file'
 'TrueSpace (.cob)...' 232 truespace_import.py 0 'Import TrueSpace Object File Format (.cob)'
-'Wavefront (.obj)...' 237 obj_import.py 0 'Load a Wavefront OBJ File, Shift: batch import all dir.'
+'Wavefront (.obj)...' 242 import_obj.py 0 'Load a Wavefront OBJ File, Shift: batch import all dir.'
 }
 
 Mesh {
-'B-Brush Sculpter' 240 mesh_bbrush_menu.py 0 'Sculpt the active mesh (adds a scriptlink)'
-'Bevel Center' 240 bevel_center.py 0 'Bevel selected faces, edges, and vertices'
-'Bridge Faces/Edge-Loops' 237 mesh_skin.py 0 'Select 2 vert loops, then run this script.'
+'Bevel Center' 243 bevel_center.py 0 'Bevel selected faces, edges, and vertices'
+'Bridge Faces/Edge-Loops' 243 mesh_skin.py 0 'Select 2 vert loops, then run this script.'
 'Clean Meshes' 242 mesh_cleanup.py 0 'Clean unused data from all selected mesh objects.'
 'Discombobulator' 237 discombobulator.py 0 'Adds random geometry to a mesh'
-'Dispaint' 237 disp_paint.py 0 'use vertex paint color value to modify shape displacing vertices along normal'
 'Edges to Curve' 241 mesh_edges2curves.py 0 'Edges not used by a face are converted into polyline(s)'
-'Mirror Bone Weights' 239 mirror_bone_weights.py 0 'Mirror vertex group influences of a model'
-|_-x to +x: nxtopx
-|_+x to -x: pxtonx
 'Mirror Vertex Locations & Weight' 241 mesh_mirror_tool.py 0 'Snap Verticies to X mirrord locations and weights.'
-'Poly Reducer' 241 mesh_poly_reduce.py 0 'Removed polygons from a mesh while maintaining the shape, textures and weights.'
+'Poly Reducer' 243 mesh_poly_reduce.py 0 'Removed polygons from a mesh while maintaining the shape, textures and weights.'
 'Rvk1 to Rvk2' 234 rvk1_torvk2.py 0 'Copy deform data (not surf. subdiv) of active obj to rvk of the 2nd selected obj'
-'Triangles to Quads' 240 mesh_tri2quad.py 0 'Triangles to Quads for all selected mesh objects.'
-'Unweld' 234 unweld.py 0 'Unweld all faces from a (or several) selected and common vertex. Made vertex bevelling'
+'Solidify Selection' 243 mesh_solidify.py 0 'Makes the mesh solid by creating a second skin.'
+'Unweld vertex/ices' 243 unweld.py 0 'Unweld all faces from a (or several) selected and common vertex. Made vertex bevelling'
 }
 
 Object {
 'Apply Deformation' 242 object_apply_def.py 0
-'Axis Orientation Copy' 239 Axiscopy.py 0 'Copy local axis orientation of active object to all selected meshes (changes mesh data)'
+'Axis Orientation Copy' 242 Axiscopy.py 0 'Copy local axis orientation of active object to all selected meshes (changes mesh data)'
 'Batch Object Name Edit' 240 object_batch_name_edit.py 0 'Apply the chosen rule to rename all selected objects at once.'
-'Bone Weight Copy' 241 mesh_boneweight_copy.py 0 'Copy Bone Weights from 1 mesh, to all other selected meshes.'
+'Bone Weight Copy' 243 mesh_boneweight_copy.py 0 'Copy Bone Weights from 1 mesh, to all other selected meshes.'
+'Cookie Cut from View' 234 object_cookie_cutter.py 0
 'Data Copier' 232 obdatacopier.py 0 'Copy data from active object to other selected ones.'
-'Knife Tool' 232 knife.py 0 'Cut selected mesh(es) along an active plane w/o creating doubles'
 'Object Name Editor' 232 renameobjectbyblock.py 0 'GUI to select and rename objects.'
-'UVcopy' 242 uvcopy.py 0 'Copy UV coords from a mesh to another that has same vertex indices'
+'Randomize Loc Size Rot' 241 object_random_loc_sz_rot.py 0 'Randomize the selected objects Loc Size Rot'
+'UV Copy from Active' 242 uvcopy.py 0 'Copy UV coords from a mesh to another that has same vertex indices'
 }
 
 System {
@@ -109,36 +104,45 @@ System {
 }
 
 UV {
-'ArchiMap UV Projection Unwrapper' 240 uv_archimap.py 0 'ArchiMap UV Unwrap mesh faces for all select mesh objects'
-'Auto Image Layout' 241 uv_auto_layout_tex.py 0 'Pack all texture images into 1 image and remap faces.'
-'Find Image Target Paths' 241 image_find_paths.py 0 'Finds all image paths from this blend and references the new paths'
-'Image Edit (External App)' 241 image_edit.py 0 'Edits the image in another application. The Gimp for eg.'
-'Relax selected UVs.' 237 uv_relax.py 0 'Relaxes selected UVs '
-'Save UV Face Layout...' 232 uv_export.py 0 'Export the UV face layout of the selected object to a .TGA file'
-'Texture Baker' 239 tex2uvbaker.py 0 'Procedural to uvmapped texture baker'
-'UVpainter' 232 uvpaint.py 0 'Use vertex paint color value to fill uvmapping'
-'UVs from adjacent' 241 uv_from_adjacent.py 0 'Assign UVs to selected faces from surrounding unselected faces.'
+'Save UV Face Layout...' 242 uv_export.py 0 'Export the UV face layout of the selected object to a .TGA or .SVG file'
 }
 
-Wizards {
-'Kloputils 3' 234 kloputils.py 0 'Set of object aligning, modifying tools'
+Image {
+'Billboard Render on Active' 242 image_billboard.py 0 'Selected objects and lamps to rendered faces on the act mesh'
+'Consolidate into one image' 243 image_auto_layout.py 0 'Pack all texture images into 1 image and remap faces.'
+'Edit Externaly' 242 image_edit.py 0 'Open in an application for editing. (hold Shift to configure)'
+'Fix Broken Paths' 242 image_find_paths.py 0 'Search for new image paths to make relative links to'
+}
+
+FaceSelect {
+'Same Weights...' 241 faceselect_same_weights.py 0 'Select same faces with teh same weight for the active group.'
 }
 
 WeightPaint {
 'Clean Weight...' 241 weightpaint_clean.py 0 'Removed verts from groups below a weight limit.'
-'Grow/Shrink Weight...' 241 weightpaint_grow_shrink.py 0 'Removed verts from groups below a weight limit.'
+'Envelope via Group Objects' 242 weightpaint_envelope_assign.py 0 'Assigns weights to vertices via object envelopes'
+'Grow/Shrink Weight...' 241 weightpaint_grow_shrink.py 0 'Grow/Shrink active vertex group.'
 'Normalize/Scale Weight...' 241 weightpaint_normalize.py 0 'Normalize the weight of the active weightgroup.'
 'Weight Gradient...' 241 weightpaint_gradient.py 0 'Click on the start and end grad points for the mesh for selected faces.'
 }
 
 VertexPaint {
+'Copy from Material...' 242 vertexpaint_from_material.py 0 'Writes material diffuse color as vertex colors.'
 'Self Shadow VCols (AO)...' 241 vertexpaint_selfshadow_ao.py 0 'Generate Fake Ambient Occlusion with vertex colors.'
 'VCol Gradient...' 241 vertexpaint_gradient.py 0 'Click on the start and end grad points for the mesh for selected faces.'
 }
 
+UVCalculation {
+'Click project from face' 242 uvcalc_quad_clickproj.py 0 '3 Clicks to project uvs onto selected faces.'
+'Follow Active (quads)' 242 uvcalc_follow_active_coords.py 0 'Follow from active quads.'
+'UVs from unselected adjacent' 242 uvcalc_from_adjacent.py 0 'Assign UVs to selected faces from surrounding unselected faces.'
+'Unwrap (smart projections)' 240 uvcalc_smart_project.py 0 'UV Unwrap mesh faces for all select mesh objects'
+}
+
 Help {
 'Getting Started' 234 help_getting_started.py 0 'Help for new users'
-'HotKey and MouseAction Reference' 241 hotkeys.py 0 'All the hotkeys/short keys'
+'HotKey and MouseAction Reference' 242 hotkeys.py 0 'All the hotkeys/short keys'
+'ID Property Browser' 242 IDPropBrowser.py 0 'Browse ID properties'
 'Manual' 234 help_manual.py 0 'The Blender reference manual'
 'Python Scripting Reference' 234 help_py_reference.py 0 'Documentation for using the Blender Python API'
 'Release Notes' 234 help_release_notes.py 0 'Information about the changes in this version of Blender'

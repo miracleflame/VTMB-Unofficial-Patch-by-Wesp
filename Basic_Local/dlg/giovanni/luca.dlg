@@ -49,7 +49,7 @@
 {	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	50	}{	I understand. Goodbye.	}{	I understand. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	But I want to explore the fun house.... I need a ticket.	}
 {	51	}{	Family reunion tonight. [Struggles with word]In- invitation only.	}{	Family reunion tonight. [Struggles with word]In- invitation only.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	52	}{	Here you go.	}{	Here you go.	}{	11	}{	IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_victor")	}{	G.Victor_Know = 1; pc.RemoveItem("item_g_giovanni_invitation_victor")	; Relay_Open_Front_Door()	}{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}
+{	52	}{	Here you go.	}{	Here you go.	}{	11	}{	IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_victor")	}{	G.Victor_Know = 1; pc.RemoveItem("item_g_giovanni_invitation_victor"); Relay_Open_Front_Door()	}{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}
 {	53	}{	Here you go.	}{	Here you go.	}{	21	}{	not IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_victor") and not pc.HasItem("item_g_giovanni_invitation_maria")	}{	G.Victor_Know = 1 }{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}
 {	54	}{	Here you go.	}{	Here you go.	}{	11	}{	not IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_maria")	}{	G.Maria_Know = 1; pc.RemoveItem("item_g_giovanni_invitation_maria"); Relay_Open_Front_Door()	}{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}
 {	55	}{	Here you go.	}{	Here you go.	}{	21	}{	IsMale(pc) and pc.HasItem("item_g_giovanni_invitation_maria") and not pc.HasItem("item_g_giovanni_invitation_victor")	}{	G.Maria_Know = 1 }{	}{	}{	}{	}{	}{	}{	I have my ticket, let me in the fun house.	}

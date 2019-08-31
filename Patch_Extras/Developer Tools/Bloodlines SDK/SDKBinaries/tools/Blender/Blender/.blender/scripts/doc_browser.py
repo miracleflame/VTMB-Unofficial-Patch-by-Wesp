@@ -28,7 +28,7 @@ entry in Blender's Help menu).
 """
 
 
-# $Id: doc_browser.py,v 1.4 2006/06/11 21:35:14 ianwill Exp $
+# $Id: doc_browser.py,v 1.5 2006/12/12 05:29:42 campbellbarton Exp $
 #
 # --------------------------------------------------------------------------
 # ***** BEGIN GPL LICENSE BLOCK *****
@@ -141,6 +141,10 @@ browse_scrollstart= 0
 def browse_module(num):
 	global browsing, selected, browse_scrollstart
 	
+	# cant go back from Blender
+	if browsing.val == 'Blender' and num == -1:
+		return
+	
 	if (num>=0): newstr= browsing.val + "." + browselist[num][0]
 	else:
 		modules= split(browsing.val, ".")
@@ -160,10 +164,17 @@ def browse_module(num):
 
 def make_browselist():
 	global browselist
-
+	
+	try:
+		module= eval(browsing.val)
+	except:
+		Blender.Draw.PupMenu('Error%t|Module is invalid')
+		browsing.val = 'Blender'
+		return
+	
 	browselist= []
-
-	module= eval(browsing.val)
+	
+	
 	items= dir(module)
 
 	for item_name in items:

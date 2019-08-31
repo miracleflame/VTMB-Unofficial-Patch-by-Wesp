@@ -21,7 +21,7 @@ if not exist "service\VExtract?.exe" (
 :=======================================================================
 :prepare
 echo Preparing...
-start "" "%MsgBox%" Content will be extracted into directory "%TargetDir%". First, the basic content (textures, models and sounds) will be extracted. See console window for current progress. Don't close it! /c:Note /t:MB_ICONASTERISK
+start "" %MsgBox% Content will be extracted into directory "%TargetDir%". First, the basic content (textures, models and sounds) will be extracted. See console window for current progress. Don't close it! /c:Note /t:MB_ICONASTERISK
 if exist "%AppData%\vpkindex.ls?" (del /a /q "%AppData%\vpkindex.ls?"> nul)
 
 :setsrcdirs
@@ -36,14 +36,14 @@ if /i not "%ModDir%"=="%VampireDir%" (
 :excontent
 echo Extracting basic content:
 call :Extract "Textures" "0 1" "materials" "vmt tth ttz"
-call :Extract "Models"   "0"   "models"    "mdl dx80.vtx phy"
+call :Extract "Models"   "0"   "models"    "mdl vtx phy"
 call :Extract "Sounds"   "0 1" "sound"     "wav mp3"
 
 echo Basic content extracted.
 echo.
 
-call :CheckMsgBox
-"%MsgBox%" Basic resources extracted. Do you also want to extract the script assets?  Note they are not needed for level design, just may be useful for learning if you wish to add or customize quests, game mechanics or interfaces.  Since Python scripts and MP3 audio are already extracted, they will be left in the original directory. You can always access it. /c:Information /t:MB_SYSTEMMODAL,MB_ICONQUESTION,MB_YESNO
+taskkill /f /im "msgbox.exe"> nul 2>&1
+%MsgBox% Basic resources extracted. Do you also want to extract the script assets?  Note they are not needed for level design, just may be useful for learning if you wish to add or customize quests, game mechanics or interfaces.  Since Python scripts and MP3 audio are already extracted, they will be left in the original directory. You can always access it. /c:Information /t:MB_SYSTEMMODAL,MB_ICONQUESTION,MB_YESNO
 if not "%ErrorLevel%"=="6" goto finalize
 
 
@@ -73,11 +73,6 @@ exit /b
 :=======================================================================
 :Functions
 
-:CheckMsgBox
-	for /f "tokens=1" %%m in ('tasklist /NH') do (
-	if /i "%%~m"=="msgbox.exe" (taskkill /f /im "msgbox.exe"> nul) )
-exit /b
-
 :Extract
 	if not "%~1"=="-" (
 	echo - Extracting %~1...)
@@ -95,7 +90,7 @@ exit /b
 :CopyLoose
 	echo - Copying %~1...
 	if exist "%ModDir%\%~2\*" (
-		"%SfkTool%" copy "%ModDir%\%~2" "%TargetDir%\%~2" -mirror -file %~3 -yes> nul
+		%Sfk% copy "%ModDir%\%~2" "%TargetDir%\%~2" -mirror -file %~3 -yes> nul
 	) else (
 		echo   No "%~2" dir presented in your game version.
 	)

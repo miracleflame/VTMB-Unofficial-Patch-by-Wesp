@@ -1,12 +1,13 @@
 @echo off
+@color 47
 set ProgVersion=1.9-beta
+set WinTitle=Texture Converter v%ProgVersion%  (c) Psycho-A
 
+title %WinTitle%
 setlocal ENABLEEXTENSIONS
 set "PATH=%SystemRoot%\System32;%SystemRoot%;%SystemRoot%\System32\Wbem"
 set "PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"
-title Texture Converter v%ProgVersion%  (c) Psycho-A
 pushd "%~dp0"
-color 47
 
 :UserDefs
 ::: For VTF to TTh mode:
@@ -28,9 +29,9 @@ set AutoCreateVmts=1
 
 
 :Vars
-set Sfk="..\..\service\sfk.exe"
-set MsgBox="..\..\service\msgbox.exe"
-set OpenDlg="..\..\service\OpenDlg.exe"
+set Sfk="..\..\helpers\sfk.exe"
+set MsgBox="..\..\helpers\msgbox.exe"
+set OpenDlg="..\..\helpers\OpenDlg.exe"
 set FileTypes="service\filetypes.bat"
 set ZLib="service\zlib1.exe"
 set TtzDec="service\Ttz2Vtf.exe"
@@ -43,7 +44,8 @@ set OpenFile=call %OpenDlg% /f /m
 
 :CheckFiles
 for %%m in (
-%Sfk% %MsgBox% %ZLib% %OpenDlg% %TtzDec% %VtfCmd% %FileTypes% service\zlib1.dll
+%Sfk% %MsgBox% %ZLib% %OpenDlg% %Templates%
+%TtzDec% %VtfCmd% %FileTypes% service\zlib1.dll
 ) do (
 	if not exist "%%~m" (
 		color 4e
@@ -55,7 +57,9 @@ for %%m in (
 )
 
 :AssignFiles
-if "%~1%~2"=="" call "%FileTypes%" -int
+if "%~1%~2"=="" (
+	start /b "" %FileTypes% -ext
+)
 
 
 
@@ -575,7 +579,7 @@ echo   VMt material path:   "%BaseTex%".
  echo {
  echo 	"$baseTexture" "%BaseTex%"
  if defined VmtParams (
- call %Sfk% echo -lit "%VmtParams%" +filter -srep "|'$|\t'$|" -srep "|'|\q|" -srep "|; |\r\n|" -srep "|;|\r\n|")
+ call %Sfk% echo -lit "%VmtParams%" +filter -srep "|'$|\t'$|" -srep "|'|\q|" -srep "|; |\n|" -srep "|;|\n|")
  echo }
 )> "%TgtPath%\%~n1.vmt"
 
@@ -647,7 +651,6 @@ exit /b
 
 	rem Read template manifest..
 	if "%UseTemplates%"=="1" (
-	if exist %Templates% (
 		echo   Reading templates...
 		set TmpKey=
 		set TmpName=
@@ -655,26 +658,25 @@ exit /b
 			set "TmpKey=%%~a"
 			call :ProcTemplates %%b
 		)
-	))
+	)
 	if "%UseTemplates%"=="1" (
-	if exist %Templates% (
 		echo   Format template: %TmpSuccess%
-	))
+	)
 exit /b
 
 :ProcTemplates
 	set TmpVal=%*
-	if "%TmpKey:~0,1% %TmpKey:~-1,1%"=="[ ]" set TmpName=%TmpKey:~1,-1%
+	if "%TmpKey:~0,1% %TmpKey:~-1,1%"=="[ ]" set "TmpName=%TmpKey:~1,-1%"
 	if /i "%TmpKey%"=="Dirs" (
 	for %%m in (%TmpVal%) do (
 		if defined VmtPath (
 			for /f "delims=" %%p in (
 			'call %Sfk% echo -lit "%VmtPath%" +filter -lsrep "|%%~m|\|"'
-			) do (if /i not "%%~p"=="%VmtPath%" (set TmpSuccess=%TmpName%) )
+			) do (if /i not "%%~p"=="%VmtPath%" (set "TmpSuccess=%TmpName%") )
 		) else (
 			for /f "delims=" %%p in (
 			'call %Sfk% echo -lit "%TgtPath%" +filter -rep "|\%%~m\|\|"'
-			) do (if /i not "%%~p"=="%TgtPath%" (set TmpSuccess=%TmpName%) )
+			) do (if /i not "%%~p"=="%TgtPath%" (set "TmpSuccess=%TmpName%") )
 		)
 	))
 	if /i "%TmpName%"=="%TmpSuccess%" (

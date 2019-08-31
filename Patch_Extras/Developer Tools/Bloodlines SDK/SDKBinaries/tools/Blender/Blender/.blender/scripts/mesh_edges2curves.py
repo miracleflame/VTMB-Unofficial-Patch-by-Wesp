@@ -42,8 +42,13 @@ Supported:<br>
 
 from Blender import *
 
-def sortPair(a,b):
-	return min(a,b), max(a,b)
+def edkey(ed):
+	i1 = ed.v1.index
+	i2 = ed.v2.index
+	if i1>i2:
+		return (i2,i1), ed
+	else:
+		return (i1,i2), ed
 
 def polysFromMesh(me):
 	# a polyline is 2 
@@ -51,31 +56,16 @@ def polysFromMesh(me):
 	polyLines = []
 	
 	# Get edges not used by a face
-	edgeDict= dict([ (sortPair(ed.v1.index, ed.v2.index), ed) for ed in me.edges ])
+	edgeDict= dict([ (ed.key, ed) for ed in me.edges ])
 	for f in me.faces:
-		for i in xrange(len(f.v)):
-			key= sortPair(f.v[i].index, f.v[i-1].index)
+		for key in f.edge_keys:
 			try:
 				del edgeDict[key]
 			except:
 				pass
+	
 	edges= edgeDict.values()
 	
-	
-	'''
-	# build vert connectivite
-	vertConnex= [list() for i in xrange(len(me.verts))]
-	for ed in edges:
-		i1= ed.v1.index
-		i2= ed.v2.index
-		vertConnex[i1].append(i2)
-		vertConnex[i2].append(i1)
-		
-		
-	# verts without 2 users are none.
-	vertConnex=[ [None,vc][len(vc)==2] for vc in vertConnex
-	'''
-
 	
 	while edges:
 		currentEdge= edges.pop()
@@ -94,37 +84,37 @@ def polysFromMesh(me):
 					polyLine.append(ed.v2)
 					endVert= polyLine[-1]
 					ok=1
-					edges.pop(i)
+					del edges[i]
 					#break
 				elif ed.v2 == endVert:
 					polyLine.append(ed.v1)
 					endVert= polyLine[-1]
 					ok=1
-					edges.pop(i)
+					del edges[i]
 					#break
 				elif ed.v1 == startVert:
 					polyLine.insert(0, ed.v2)
 					startVert= polyLine[0]
 					ok=1
-					edges.pop(i)
+					del edges[i]
 					#break	
 				elif ed.v2 == startVert:
 					polyLine.insert(0, ed.v1)
 					startVert= polyLine[0]
 					ok=1
-					edges.pop(i)
+					del edges[i]
 					#break
 		polyLines.append((polyLine, polyLine[0]==polyLine[-1]))
-		print len(edges), len(polyLines)
+		# print len(edges), len(polyLines)
 	return polyLines
 
 
 def mesh2polys():
 	scn= Scene.GetCurrent()
-	for ob in scn.getChildren():
-		ob.sel= 0
-	meshOb= scn.getActiveObject()
-	if meshOb==None or meshOb.getType() != 'Mesh':
+	scn.objects.selected = []
+	
+	meshOb= scn.objects.active
+	if meshOb==None or meshOb.type != 'Mesh':
 		Draw.PupMenu( 'ERROR: No Active Mesh Selected, Aborting' )
 		return
 	Window.WaitCursor(1)
@@ -133,13 +123,12 @@ def mesh2polys():
 	polygons= polysFromMesh(me)
 	w=t=1
 	cu= Curve.New()
+	cu.name = me.name
 	cu.setFlag(1)
-	ob= Object.New('Curve', me.name)
-	ob.link(cu)
-	scn.link(ob)
-	ob.Layers= meshOb.Layers
+	
+	ob = scn.objects.active = scn.objects.new(cu)
 	ob.setMatrix(meshOb.matrixWorld)
-	ob.sel= 1
+	
 	i=0
 	for poly, closed in polygons:
 		if closed:

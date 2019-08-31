@@ -95,7 +95,7 @@ drawtype = 0
 
 #get rid of an ipo curve by deleting all its points
 def delCurve(ipo):
-	while len(ipo.getPoints()) > 0:
+	while len(ipo.bezierPoints) > 0:
 		ipo.delBezier(0)
 		ipo.recalc()
 	
@@ -106,18 +106,26 @@ def verifyIpocurve(ky,index):
 		nip = Ipo.New("Key","keyipo")
 		ky.ipo = nip
 	ipo = ky.ipo
-	idx = "Key " + str(index)
-	crv = ipo.getCurve(index)
+	if index == 0:
+		idx = "Basis"
+	else:
+		idx = "Key " + str(index)
+	crv = ipo[idx]
 	if crv == None:
-	   crv = ipo.addCurve(idx)
-	crv.setInterpolation("Linear")
+		# print idx
+		crv = ipo.addCurve(idx)
+	crv.interpolation = IpoCurve.InterpTypes.LINEAR
 	return crv
 
 # Add the Drivers and Curves	
 def setupDrivers(ob,ctrl,type):    
 	global shapes
-	me = ob.getData()	
-	ky = me.getKey()
+	me = ob.getData(mesh=1)	
+	ky = me.key
+	
+	# Should we add an error here??
+	if not ky:
+		return
 	
 	if type in [SHAPE1_ONE_MONE,SHAPE1_ONE_ZERO,SHAPE1_ZERO_MONE]:
 		ctrl.protectFlags = int("111111011",2)
@@ -129,15 +137,15 @@ def setupDrivers(ob,ctrl,type):
 
 		delCurve(ipo)		
 		if type == 1:
-			ipo.addBezier((-1,-1))
-			ipo.addBezier((0,0))
-			ipo.addBezier((1,1))
+			ipo.append((-1,-1))
+			ipo.append((0,0))
+			ipo.append((1,1))
 		if type == 2:
-			ipo.addBezier((0,0))
-			ipo.addBezier((1,1))
+			ipo.append((0,0))
+			ipo.append((1,1))
 		if type == 3:
-			ipo.addBezier((-1,-1))
-			ipo.addBezier((0,0))
+			ipo.append((-1,-1))
+			ipo.append((0,0))
 		ipo.recalc()	
 
 	if type == SHAPE1_TOGGLE:
@@ -148,10 +156,10 @@ def setupDrivers(ob,ctrl,type):
 		ipo.driverChannel = IpoCurve.LOC_Z
 		ipo.recalc()
 		delCurve(ipo)
-		ipo.addBezier((0,0))
-		ipo.addBezier((0.5,0))
-		ipo.addBezier((0.500001,1))		
-		ipo.addBezier((1,1))
+		ipo.append((0,0))
+		ipo.append((0.5,0))
+		ipo.append((0.500001,1))		
+		ipo.append((1,1))
 		ipo.recalc()
 			
 	if type == SHAPE2_EXCLUSIVE:
@@ -162,8 +170,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo.driverChannel = IpoCurve.LOC_Z
 		ipo.recalc()
 		delCurve(ipo)
-		ipo.addBezier((0,0))
-		ipo.addBezier((1,1))
+		ipo.append((0,0))
+		ipo.append((1,1))
 		ipo.recalc()
 
 		ipo2 = verifyIpocurve(ky,shapes[1].val)
@@ -172,8 +180,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo2.driverChannel = IpoCurve.LOC_Z
 		ipo2.recalc()
 		delCurve(ipo2)
-		ipo2.addBezier((-1,1))
-		ipo2.addBezier((0,0))
+		ipo2.append((-1,1))
+		ipo2.append((0,0))
 		ipo2.recalc()
 
 	if type == SHAPE2_T:
@@ -184,8 +192,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo.driverChannel = IpoCurve.LOC_Z
 		ipo.recalc()
 		delCurve(ipo)
-		ipo.addBezier((-1,-1))
-		ipo.addBezier((0,0))
+		ipo.append((-1,-1))
+		ipo.append((0,0))
 		ipo.recalc()
 
 		ipo2 = verifyIpocurve(ky,shapes[1].val)
@@ -194,8 +202,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo2.driverChannel = IpoCurve.LOC_X
 		ipo2.recalc()
 		delCurve(ipo2)
-		ipo2.addBezier((-1,-1))
-		ipo2.addBezier((1,1))
+		ipo2.append((-1,-1))
+		ipo2.append((1,1))
 		ipo2.recalc()
 
 	if type == SHAPE2_INVT:
@@ -206,8 +214,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo.driverChannel = IpoCurve.LOC_Z
 		ipo.recalc()
 		delCurve(ipo)
-		ipo.addBezier((0,0))
-		ipo.addBezier((1,1))
+		ipo.append((0,0))
+		ipo.append((1,1))
 		ipo.recalc()
 
 		ipo2 = verifyIpocurve(ky,shapes[1].val)
@@ -216,8 +224,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo2.driverChannel = IpoCurve.LOC_X
 		ipo2.recalc()
 		delCurve(ipo2)
-		ipo2.addBezier((-1,-1))
-		ipo2.addBezier((1,1))
+		ipo2.append((-1,-1))
+		ipo2.append((1,1))
 		ipo2.recalc()
 
 	if type == SHAPE2_PLUS:
@@ -228,8 +236,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo.driverChannel = IpoCurve.LOC_Z
 		ipo.recalc()
 		delCurve(ipo)
-		ipo.addBezier((-1,-1))
-		ipo.addBezier((1,1))
+		ipo.append((-1,-1))
+		ipo.append((1,1))
 		ipo.recalc()
 
 		ipo2 = verifyIpocurve(ky,shapes[1].val)
@@ -238,8 +246,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo2.driverChannel = IpoCurve.LOC_X
 		ipo2.recalc()
 		delCurve(ipo2)
-		ipo2.addBezier((-1,-1))
-		ipo2.addBezier((1,1))
+		ipo2.append((-1,-1))
+		ipo2.append((1,1))
 		ipo2.recalc()
 				
 	if type == SHAPE2_V: # 2 Shape Mix
@@ -249,8 +257,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo.driverObject = ctrl
 		ipo.driverChannel = IpoCurve.LOC_Z
 		delCurve(ipo)
-		ipo.addBezier((0,0))
-		ipo.addBezier((1,1))
+		ipo.append((0,0))
+		ipo.append((1,1))
 		ipo.recalc()		
 		
 		ipo2 = verifyIpocurve(ky,shapes[1].val)
@@ -258,8 +266,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo2.driverObject = ctrl
 		ipo2.driverChannel = IpoCurve.LOC_X
 		delCurve(ipo2)
-		ipo2.addBezier((0,0))
-		ipo2.addBezier((1,1))
+		ipo2.append((0,0))
+		ipo2.append((1,1))
 		ipo2.recalc()
 
 
@@ -271,8 +279,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo.driverChannel = IpoCurve.LOC_Z
 		ipo.recalc()
 		delCurve(ipo)
-		ipo.addBezier((0,0))
-		ipo.addBezier((1,1))
+		ipo.append((0,0))
+		ipo.append((1,1))
 		ipo.recalc()
 
 		ipo2 = verifyIpocurve(ky,shapes[1].val)
@@ -281,8 +289,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo2.driverChannel = IpoCurve.LOC_X
 		ipo2.recalc()
 		delCurve(ipo2)
-		ipo2.addBezier((-1,1))
-		ipo2.addBezier((0,0))
+		ipo2.append((-1,1))
+		ipo2.append((0,0))
 		ipo2.recalc()
 
 		ipo2 = verifyIpocurve(ky,shapes[2].val)
@@ -291,8 +299,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo2.driverChannel = IpoCurve.LOC_X
 		ipo2.recalc()
 		delCurve(ipo2)
-		ipo2.addBezier((0,0))
-		ipo2.addBezier((1,1))
+		ipo2.append((0,0))
+		ipo2.append((1,1))
 		ipo2.recalc()
 
 	if type == SHAPE3_T:
@@ -303,8 +311,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo.driverChannel = IpoCurve.LOC_Z
 		ipo.recalc()
 		delCurve(ipo)
-		ipo.addBezier((-1,-1))
-		ipo.addBezier((0,0))
+		ipo.append((-1,-1))
+		ipo.append((0,0))
 		ipo.recalc()
 
 		ipo2 = verifyIpocurve(ky,shapes[1].val)
@@ -313,8 +321,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo2.driverChannel = IpoCurve.LOC_X
 		ipo2.recalc()
 		delCurve(ipo2)
-		ipo2.addBezier((-1,1))
-		ipo2.addBezier((0,0))
+		ipo2.append((-1,1))
+		ipo2.append((0,0))
 		ipo2.recalc()
 
 		ipo2 = verifyIpocurve(ky,shapes[2].val)
@@ -323,8 +331,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo2.driverChannel = IpoCurve.LOC_X
 		ipo2.recalc()
 		delCurve(ipo2)
-		ipo2.addBezier((0,0))
-		ipo2.addBezier((1,1))
+		ipo2.append((0,0))
+		ipo2.append((1,1))
 		ipo2.recalc()
 		
 	if type == SHAPE4_X:
@@ -334,8 +342,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo.driverObject = ctrl
 		ipo.driverChannel = IpoCurve.LOC_Z
 		delCurve(ipo)
-		ipo.addBezier((0,0))
-		ipo.addBezier((1,1))	
+		ipo.v((0,0))
+		ipo.v((1,1))	
 		ipo.recalc()
 			
 		ipo2 = verifyIpocurve(ky,shapes[1].val)
@@ -343,8 +351,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo2.driverObject = ctrl
 		ipo2.driverChannel = IpoCurve.LOC_X
 		delCurve(ipo2)
-		ipo2.addBezier((0,0))
-		ipo2.addBezier((1,1))
+		ipo2.v((0,0))
+		ipo2.v((1,1))
 		ipo2.recalc()
 		
 		ipo3 = verifyIpocurve(ky,shapes[2].val)
@@ -352,8 +360,8 @@ def setupDrivers(ob,ctrl,type):
 		ipo3.driverObject = ctrl
 		ipo3.driverChannel = IpoCurve.LOC_X
 		delCurve(ipo3)
-		ipo3.addBezier((-1,1))
-		ipo3.addBezier((0,0))
+		ipo3.v((-1,1))
+		ipo3.append((0,0))
 		ipo3.recalc()
 			
 		ipo4 = verifyIpocurve(ky,shapes[3].val)
@@ -361,23 +369,36 @@ def setupDrivers(ob,ctrl,type):
 		ipo4.driverObject = ctrl
 		ipo4.driverChannel = IpoCurve.LOC_Z
 		delCurve(ipo4)
-		ipo4.addBezier((-1,1))
-		ipo4.addBezier((0,0))
+		ipo4.append((-1,1))
+		ipo4.append((0,0))
 		ipo4.recalc()
 
 #The Main Call to Build the Widget
 		
 def build(type):
 	global shapes,widmenu,rangename
-	sce = Blender.Scene.getCurrent()
+	sce = Blender.Scene.GetCurrent()
+	
+	ob = sce.objects.active
+	
+	try:
+		ob.getData(mesh=1).key
+	except:
+		Blender.Draw.PupMenu('Aborting%t|Object has no keys')
+		return
+	
 	loc = Window.GetCursorPos() 
 	range	   = makeRange(type,rangename.val)
- 	controller = makeController(rangename.val)
+	controller = makeController(rangename.val)
 	text       = makeText(rangename.val)
 
 	sce.link(range)
 	sce.link(controller)
 	sce.link(text)
+	
+	range.restrictRender = True
+	controller.restrictRender = True
+	text.restrictRender = True
 	
 	range.setLocation(loc)
 	controller.setLocation(loc)
@@ -387,8 +408,7 @@ def build(type):
 	range.makeParent([text],0)
 
 	sce.update()
-
-	ob = Object.GetSelected()[0]
+	
 	setupDrivers(ob,controller,widmenu.val)
 	
 #Create the text
@@ -399,8 +419,8 @@ def makeText(name):
 	txt.setDrawMode(Text3d.DRAW3D)
 	txt.setAlignment(Text3d.MIDDLE)
 	txt.setText(name)
-  	ob.link(txt)
-  	ob.setEuler(3.14159/2,0,0)
+	ob.link(txt)
+	ob.setEuler(3.14159/2,0,0)
 	return ob
 	
 
@@ -586,18 +606,22 @@ EVENT_BACK 			= 103
 #get the list of shapes from the selected object
 
 def shapeMenuText():
-	if len(Object.GetSelected()) == 0:
+	ob = Blender.Scene.GetCurrent().objects.active
+	if not ob:
 		return ""
-	ob = Object.GetSelected()[0]
-	me = ob.getData()
-	key= me.getKey()
+	
+	me = ob.getData(mesh=1)
+	try:	key= me.key
+	except:	key = None
+	
 	if key == None:
-		return ""	
-	blocks = key.getBlocks()
+		return ""
+	
+	blocks = key.blocks
 	menu = "Choose Shape %t|"
-	for n in range(len(blocks)):
-		menu = menu + blocks[n].name + " %x" + str(n) + "|"
-	return menu 		
+	for i, block in enumerate(blocks):
+		menu = menu + block.name + " %x" + str(n) + "|"
+	return menu
 
 
 #draw the widget for the gui
@@ -873,15 +897,17 @@ def draw():
 3 Shape - T %x"      +str(SHAPE3_T)        +"|\
 3 Shape - Inv T%x"   +str(SHAPE3_INVT)     +"|\
 4 Shape - Mix %x"    +str(SHAPE4_X)
- 		widmenu = Menu(name, EVENT_NONE, 5, 120, 200, 40, widmenu.val, "Choose Widget Type.")
+		widmenu = Menu(name, EVENT_NONE, 5, 120, 200, 40, widmenu.val, "Choose Widget Type.")
 		PushButton("Next", EVENT_NEXT, 5, 25, 50, 18) 
 
 	elif stage == 2:
 		glRasterPos2d(60,140) 
 		rangename = String("Name: ", EVENT_NONE, 5, 170, 200, 18, rangename.val, 50, "Name for Range Object") 
 		drawWidget(widmenu.val)	
-		PushButton("Back",   EVENT_BACK, 5, 25, 50, 18)
-		PushButton("Finish", EVENT_NEXT, 55, 25, 50, 18)
+		BeginAlign()
+		PushButton("Back",   EVENT_BACK, 5, 25, 50, 18, "Choose another shape type")
+		PushButton("Finish", EVENT_NEXT, 55, 25, 50, 18, "Add Objects at the cursor location")
+		EndAlign()
 	return	 
 
 

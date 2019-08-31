@@ -1,9 +1,9 @@
 #!BPY
 """
-Name: 'Image Edit (External App)'
-Blender: 241
-Group: 'UV'
-Tooltip: 'Edits the image in another application. The Gimp for eg.'
+Name: 'Edit Externaly'
+Blender: 242a
+Group: 'Image'
+Tooltip: 'Open in an application for editing. (hold Shift to configure)'
 """
 
 __author__ = "Campbell Barton"
@@ -15,15 +15,21 @@ This script opens the current image in an external application for editing.
 
 Useage:
 Choose an image for editing in the UV/Image view.
-Select UVs, Image Edit (External App)
-For first time users try running the default application *
-If the application does not open you can type in the full path.
-The last entered application will be saved as a default.
 
-* Note, Start for win32 and open for macos will use system default assosiated application.
+To configure the application to open the image with, hold Shift as you click on
+this menu item.
+
+For first time users try running the default application for your operating system.
+If the application does not open you can type in the full path.
+You can choose that the last entered application will be saved as a default.
+
+* Note, default commants for opening an image are "start" for win32 and "open" for macos.
+This will use the system default assosiated application.
 """
 
 # ***** BEGIN GPL LICENSE BLOCK *****
+#
+# Script copyright (C) Campbell J Barton 2006
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -54,8 +60,11 @@ except:
 import Blender
 from Blender import Image, sys, Draw, Registry
 
-def main():
-	image = Image.GetCurrent()
+def edit_extern(image=None):
+	
+	if not image:
+		image = Image.GetCurrent()
+	
 	if not image: # Image is None
 		Draw.PupMenu('ERROR: You must select an active Image.')
 		return
@@ -97,8 +106,10 @@ def main():
 	pupblock.append(('editor: ', appstring_but, 0, 48, 'Path to application, %f will be replaced with the image path.'))
 	pupblock.append(('Set Default', save_default_but, 'Store this path in the blender registry.'))
 	
-	if not Draw.PupBlock('External Image Editor...', pupblock):
-		return
+	# Only configure if Shift is held,
+	if Blender.Window.GetKeyQualifiers() & Blender.Window.Qual.SHIFT:
+		if not Draw.PupBlock('External Image Editor...', pupblock):
+			return
 	
 	appstring = appstring_but.val
 	save_default= save_default_but.val
@@ -113,7 +124,13 @@ def main():
 	# -------------------------------
 	
 	appstring = appstring.replace('%f', imageFileName)
+	print '\tediting image with command "%s"' % appstring
 	os.system(appstring)
+
+
+def main():
+	edit_extern()
+	
 
 if __name__ == '__main__' and os != None:
 	main()

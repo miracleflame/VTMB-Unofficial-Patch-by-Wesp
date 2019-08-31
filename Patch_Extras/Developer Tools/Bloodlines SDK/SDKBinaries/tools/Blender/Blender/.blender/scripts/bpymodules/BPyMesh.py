@@ -19,7 +19,9 @@
 
 
 import Blender
-from BPyMesh_redux import redux # seperated because of its size.
+import BPyMesh_redux # seperated because of its size.
+# reload(BPyMesh_redux)
+redux= BPyMesh_redux.redux
 
 # python 2.3 has no reversed() iterator. this will only work on lists and tuples
 try:
@@ -76,6 +78,8 @@ def list2MeshWeight(me, groupNames, vWeightList):
 	if len(vWeightList) != len(me.verts):
 		raise 'Error, Lists Differ in size, do not modify your mesh.verts before updating the weights'
 	
+	act_group = me.activeGroup
+	
 	# Clear the vert group.
 	currentGroupNames= me.getVertGroupNames()
 	for group in currentGroupNames:
@@ -97,6 +101,9 @@ def list2MeshWeight(me, groupNames, vWeightList):
 					me.assignVertsToGroup(groupNames[group_index], vertList, min(1, max(0, weight)), add_)
 				except:
 					pass # vert group is not used anymore.
+	
+	try:	me.activeGroup = act_group
+	except:	pass
 	
 	me.update()
 
@@ -132,6 +139,8 @@ def dict2MeshWeight(me, groupNames, vWeightDict):
 	if len(vWeightDict) != len(me.verts):
 		raise 'Error, Lists Differ in size, do not modify your mesh.verts before updating the weights'
 	
+	act_group = me.activeGroup
+	
 	# Clear the vert group.
 	currentGroupNames= me.getVertGroupNames()
 	for group in currentGroupNames:
@@ -156,6 +165,9 @@ def dict2MeshWeight(me, groupNames, vWeightDict):
 				me.assignVertsToGroup(group, vertList, min(1, max(0, weight)), add_)
 			except:
 				pass # vert group is not used anymore.
+	
+	try:	me.activeGroup = act_group
+	except:	pass
 	
 	me.update()
 
@@ -234,7 +246,131 @@ def dictWeightFlipGroups(dict_weight, groupNames, createNewGroups):
 		new_wdict[flipname]= weight
 	
 	return new_wdict, groupNames
+
+
+def mesh2linkedFaces(me):
+	'''
+	Splits the mesh into connected parts,
+	these parts are returned as lists of faces.
+	used for seperating cubes from other mesh elements in the 1 mesh
+	'''
 	
+	# Build vert face connectivity
+	vert_faces= [[] for i in xrange(len(me.verts))]
+	for f in me.faces:
+		for v in f:
+			vert_faces[v.index].append(f)
+	
+	# sort faces into connectivity groups
+	face_groups= [[f] for f in me.faces]
+	face_mapping = range(len(me.faces)) # map old, new face location
+	
+	# Now clump faces iterativly
+	ok= True
+	while ok:
+		ok= False
+		
+		for i, f in enumerate(me.faces):
+			mapped_index= face_mapping[f.index]
+			mapped_group= face_groups[mapped_index]
+			
+			for v in f:
+				for nxt_f in vert_faces[v.index]:
+					if nxt_f != f:
+						nxt_mapped_index= face_mapping[nxt_f.index]
+						
+						# We are not a part of the same group
+						if mapped_index != nxt_mapped_index:
+							
+							ok= True
+							
+							# Assign mapping to this group so they all map to this group
+							for grp_f in face_groups[nxt_mapped_index]:
+								face_mapping[grp_f.index] = mapped_index
+							
+							# Move faces into this group
+							mapped_group.extend(face_groups[nxt_mapped_index])
+							
+							# remove reference to the list
+							face_groups[nxt_mapped_index]= None 
+						
+						
+	# return all face groups that are not null
+	# this is all the faces that are connected in their own lists.
+	return [fg for fg in face_groups if fg]
+
+
+def getFaceLoopEdges(faces, seams=[]):
+	'''
+	Takes me.faces or a list of faces and returns the edge loops
+	These edge loops are the edges that sit between quads, so they dont touch
+	1 quad, not not connected will make 2 edge loops, both only containing 2 edges.
+	
+	return a list of edge key lists
+	[ [(0,1), (4, 8), (3,8)], ...]
+	
+	optionaly, seams are edge keys that will be removed
+	'''
+	
+	OTHER_INDEX = 2,3,0,1 # opposite face index
+	
+	edges = {}
+	
+	for f in faces:
+		if len(f) == 4:
+			edge_keys = f.edge_keys
+			for i, edkey in enumerate(f.edge_keys):
+				edges.setdefault(edkey, []).append(edge_keys[OTHER_INDEX[i]])
+	
+	for edkey in seams:
+		edges[edkey] = []
+	
+	# Collect edge loops here
+	edge_loops = []	
+	
+	for edkey, ed_adj in edges.iteritems():
+		if 0 <len(ed_adj) < 3: # 1 or 2
+			# Seek the first edge
+			context_loop = [edkey, ed_adj[0]]
+			edge_loops.append(context_loop)
+			if len(ed_adj) == 2:
+				other_dir = ed_adj[1]
+			else:
+				other_dir = None
+			
+			ed_adj[:] = []
+			
+			flipped = False
+			
+			while 1:
+				# from knowing the last 2, look for th next.
+				ed_adj = edges[context_loop[-1]]
+				if len(ed_adj) != 2:
+					
+					if other_dir and flipped==False: # the original edge had 2 other edges
+						flipped = True # only flip the list once
+						context_loop.reverse()
+						ed_adj[:] = []
+						context_loop.append(other_dir) # save 1 lookiup
+						
+						ed_adj = edges[context_loop[-1]]
+						if len(ed_adj) != 2:
+							ed_adj[:] = []
+							break
+					else:
+						ed_adj[:] = []
+						break
+				
+				i = ed_adj.index(context_loop[-2])
+				context_loop.append( ed_adj[ not  i] )
+				
+				# Dont look at this again
+				ed_adj[:] = []
+
+	
+	return edge_loops
+	
+
 
 def getMeshFromObject(ob, container_mesh=None, apply_modifiers=True, vgroups=True, scn=None):
 	'''
@@ -256,12 +392,12 @@ def getMeshFromObject(ob, container_mesh=None, apply_modifiers=True, vgroups=Tru
 		mesh.verts= None
 	
 	
-	type = ob.getType()
+	ob_type = ob.type
 	dataname = ob.getData(1)
 	tempob= None
-	if apply_modifiers or type != 'Mesh':
+	if apply_modifiers or ob_type != 'Mesh':
 		try:
-			mesh.getFromObject(ob.name)
+			mesh.getFromObject(ob)
 		except:
 			return None
 	
@@ -270,16 +406,15 @@ def getMeshFromObject(ob, container_mesh=None, apply_modifiers=True, vgroups=Tru
 		Dont apply modifiers, copy the mesh. 
 		So we can transform the data. its easiest just to get a copy of the mesh. 
 		'''
-		tempob= Blender.Object.New('Mesh')
-		tempob.shareFrom(ob)
-		scn.link(tempob)
-		mesh.getFromObject(tempob.name)
-		scn.unlink(tempob)
+		tempob= scn.objects.new(ob.getData(mesh=1))
+		mesh.getFromObject(tempob)
+		scn.objects.unlink(tempob)
 	
-	if type == 'Mesh':
+	if ob_type == 'Mesh':
 		if vgroups:
 			if tempob==None:
 				tempob= Blender.Object.New('Mesh')
+			
 			tempob.link(mesh)
 			try:
 				# Copy the influences if possible.
@@ -324,14 +459,17 @@ def pickMeshRayFace(me, orig, dir):
 				best_face= f
 				best_side= side
 				best_isect= isect
-	f= best_face
-	isect= best_isect
-	side= best_side
+	
+	return best_face, best_isect, best_side
+
+
+def pickMeshRayFaceWeight(me, orig, dir):
+	f, isect, side = pickMeshRayFace(me, orig, dir)
 	
 	if f==None:
 		return None, None, None, None, None
 	
-	f_v= [v.co for v in f.v]
+	f_v= [v.co for v in f]
 	if side==1: # we can leave side 0 without changes.
 		f_v = f_v[0], f_v[2], f_v[3]
 	
@@ -353,7 +491,7 @@ def pickMeshRayFace(me, orig, dir):
 
 
 def pickMeshGroupWeight(me, act_group, orig, dir):
-	f, side, w0, w1, w2= pickMeshRayFace(me, orig, dir)
+	f, side, w0, w1, w2= pickMeshRayFaceWeight(me, orig, dir)
 	
 	if f==None:
 		return None
@@ -373,7 +511,7 @@ def pickMeshGroupWeight(me, act_group, orig, dir):
 
 def pickMeshGroupVCol(me, orig, dir):
 	Vector= Blender.Mathutils.Vector
-	f, side, w0, w1, w2= pickMeshRayFace(me, orig, dir)
+	f, side, w0, w1, w2= pickMeshRayFaceWeight(me, orig, dir)
 	
 	if f==None:
 		return None
@@ -389,14 +527,6 @@ def pickMeshGroupVCol(me, orig, dir):
 	f_colvecs= [col2vec(f_c[i]) for i in idxs]
 	return f_colvecs[0]*w0 +  f_colvecs[1]*w1 + f_colvecs[2]*w2
 
-# reuse me more.
-def sorted_edge_indicies(ed):
-	i1= ed.v1.index
-	i2= ed.v2.index
-	if i1>i2:
-		i1,i2= i2,i1
-	return i1, i2
-
 def edge_face_users(me):
 	''' 
 	Takes a mesh and returns a list aligned with the meshes edges.
@@ -404,17 +534,11 @@ def edge_face_users(me):
 	would be the equiv for having ed.face_users as a property
 	'''
 	
-	face_edges_dict= dict([(sorted_edge_indicies(ed), (ed.index, [])) for ed in me.edges])
+	face_edges_dict= dict([(ed.key, (ed.index, [])) for ed in me.edges])
 	for f in me.faces:
-		fvi= [v.index for v in f.v]# face vert idx's
-		for i in xrange(len(f)):
-			i1= fvi[i]
-			i2= fvi[i-1]
-			
-			if i1>i2:
-				i1,i2= i2,i1
-			
-			face_edges_dict[i1,i2][1].append(f)
+		fvi= [v.index for v in f]# face vert idx's
+		for edkey in f.edge_keys:
+			face_edges_dict[edkey][1].append(f)
 	
 	face_edges= [None] * len(me.edges)
 	for ed_index, ed_faces in face_edges_dict.itervalues():
@@ -432,21 +556,13 @@ def face_edges(me):
 	face_edges[i][j] -> list of faces that this edge uses.
 	crap this is tricky to explain :/
 	'''
-	face_edges= [ [None] * len(f) for f in me.faces ]
+	face_edges= [ [-1] * len(f) for f in me.faces ]
 	
-	face_edges_dict= dict([(sorted_edge_indicies(ed), []) for ed in me.edges])
+	face_edges_dict= dict([(ed.key, []) for ed in me.edges])
 	for fidx, f in enumerate(me.faces):
-		fvi= [v.index for v in f.v]# face vert idx's
-		for i in xrange(len(f)):
-			i1= fvi[i]
-			i2= fvi[i-1]
-			
-			if i1>i2:
-				i1,i2= i2,i1
-			
-			edge_face_users= face_edges_dict[i1,i2]
+		for i, edkey in enumerate(f.edge_keys):
+			edge_face_users= face_edges_dict[edkey]
 			edge_face_users.append(f)
-			
 			face_edges[fidx][i]= edge_face_users
 			
 	return face_edges
@@ -614,19 +730,12 @@ def edgeFaceUserCount(me, faces= None):
 	
 	edge_users= [0] * len(me.edges)
 	
-	edges_idx_dict= dict([(sorted_edge_indicies(ed), ed.index) for ed in me.edges])
+	edges_idx_dict= dict([(ed.key, ed.index) for ed in me.edges])
 
 	for f in faces:
-		fvi= [v.index for v in f.v]# face vert idx's
-		for i in xrange(len(f)):
-			i1= fvi[i]
-			i2= fvi[i-1]
-			
-			if i1>i2:
-				i1,i2= i2,i1
-			
-			edge_users[edges_idx_dict[i1,i2]] += 1 
-			
+		for edkey in f.edge_keys:
+			edge_users[edges_idx_dict[edkey]] += 1 
+	
 	return edge_users
 
 
@@ -674,10 +783,6 @@ def getUvPixelLoc(face, pxLoc, img_size = None, uvArea = None):
 				)
 				
 	return None
-
-
-type_tuple= type( (0,) )
-type_list= type( [] )
 
 
 # Used for debugging ngon
@@ -759,7 +864,7 @@ def ngon(from_data, indices, PREF_FIX_LOOPS= True):
 		'''
 		Normal single concave loop filling
 		'''
-		if type(from_data) in (type_tuple, type_list):
+		if type(from_data) in (tuple, list):
 			verts= [Vector(from_data[i]) for ii, i in enumerate(indices)]
 		else:
 			verts= [from_data.verts[i].co for ii, i in enumerate(indices)]
@@ -776,7 +881,7 @@ def ngon(from_data, indices, PREF_FIX_LOOPS= True):
 		This is used by lightwave LWO files a lot
 		'''
 		
-		if type(from_data) in (type_tuple, type_list):
+		if type(from_data) in (tuple, list):
 			verts= [vert_treplet(Vector(from_data[i]), ii) for ii, i in enumerate(indices)]
 		else:
 			verts= [vert_treplet(from_data.verts[i].co, ii) for ii, i in enumerate(indices)]
@@ -946,16 +1051,10 @@ def meshCalcNormals(me, vertNormals=None):
 		
 	edges={}
 	for f in me.faces:
-		for i in xrange(len(f)):
-			i1, i2= f.v[i].index, f.v[i-1].index
-			if i1<i2:
-				i1,i2= i2,i1
-				
-			try:
-				edges[i1, i2].append(f.no)
-			except:
-				edges[i1, i2]= [f.no]
-				
+		f_v = f.v
+		for edkey in f.edge_keys:
+			edges.setdefault(edkey, []).append(f.no)
+	
 	# Weight the edge normals by total angle difference
 	for fnos in edges.itervalues():
 		
@@ -998,25 +1097,25 @@ def pointInsideMesh(ob, pt):
 	Vector = Blender.Mathutils.Vector
 	
 	def ptInFaceXYBounds(f, pt):
-			
-		co= f.v[0].co
+		f_v = f.v
+		co= f_v[0].co
 		xmax= xmin= co.x
 		ymax= ymin= co.y
 		
-		co= f.v[1].co
+		co= f_v[1].co
 		xmax= max(xmax, co.x)
 		xmin= min(xmin, co.x)
 		ymax= max(ymax, co.y)
 		ymin= min(ymin, co.y)
 		
-		co= f.v[2].co
+		co= f_v[2].co
 		xmax= max(xmax, co.x)
 		xmin= min(xmin, co.x)
 		ymax= max(ymax, co.y)
 		ymin= min(ymin, co.y)
 		
-		if len(f)==4: 
-			co= f.v[3].co
+		if len(f_v)==4: 
+			co= f_v[3].co
 			xmax= max(xmax, co.x)
 			xmin= min(xmin, co.x)
 			ymax= max(ymax, co.y)
@@ -1034,22 +1133,17 @@ def pointInsideMesh(ob, pt):
 		#return xmax, ymax, xmin, ymin
 	
 	def faceIntersect(f):
-		isect = Intersect(f.v[0].co, f.v[1].co, f.v[2].co, ray, obSpacePt, 1) # Clipped.
+		f_v = f.v
+		isect = Intersect(f_v[0].co, f_v[1].co, f_v[2].co, ray, obSpacePt, 1) # Clipped.
 		if not isect and len(f) == 4:
-			isect = Intersect(f.v[0].co, f.v[2].co, f.v[3].co, ray, obSpacePt, 1) # Clipped.
+			isect = Intersect(f_v[0].co, f_v[2].co, f_v[3].co, ray, obSpacePt, 1) # Clipped.
 				
 		if isect and isect.z > obSpacePt.z: # This is so the ray only counts if its above the point. 
 			return True
 		else:
 			return False
 	
-	
-	obImvMat = Blender.Mathutils.Matrix(ob.matrixWorld)
-	obImvMat.invert()
-	pt.resize4D()
-	obSpacePt = pt* obImvMat
-	pt.resize3D()
-	obSpacePt.resize3D()
+	obSpacePt = pt*ob.matrixWorld.copy().invert()
 	ray = Vector(0,0,-1)
 	me= ob.getData(mesh=1)
 	

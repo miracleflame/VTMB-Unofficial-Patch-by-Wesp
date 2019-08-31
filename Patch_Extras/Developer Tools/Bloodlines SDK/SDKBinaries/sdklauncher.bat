@@ -1,21 +1,21 @@
 @echo off
+title Bloodlines SDK Launcher
 setlocal ENABLEEXTENSIONS
 set "PATH=%SystemRoot%\System32;%SystemRoot%;%SystemRoot%\System32\Wbem"
 set "PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"
-title Bloodlines SDK launcher
 pushd "%~dp0"
 
 :: Main
 for %%m in (
-	service\sfk.exe
-	service\msgbox.exe
-	service\7za.exe
-	service\nircmd.exe
-	service\ed_assets.7z
-	service\cmdseq.init
-	setmoddir.exe
-	resetconfig.exe
 	sdklauncher.exe
+	helpers\sfk.exe
+	helpers\msgbox.exe
+	helpers\7za.exe
+	helpers\nircmd.exe
+	helpers\ed_assets.7z
+	helpers\cmdseq.init
+	helpers\setmoddir.exe
+	helpers\resetconfig.exe
 	tools\wizards\prepwizard.bat
 	tools\wizards\createmod.bat
 ) do (
@@ -27,19 +27,19 @@ for %%m in (
 
 :: Variables
 set "SDKRoot=%CD%"
-set "Sfk=service\sfk.exe"
-set "EchoSp=service\sfk.exe echo"
-set "MsgBox=service\msgbox.exe"
-set "UnZip=service\7za.exe"
-set "NirCmd=service\nircmd.exe"
+set "Sfk=helpers\sfk.exe"
+set "EchoSp=helpers\sfk.exe echo"
+set "MsgBox=helpers\msgbox.exe"
+set "UnZip=helpers\7za.exe"
+set "NirCmd=helpers\nircmd.exe"
 
 :: WineTricks
 if not exist "%SystemRoot%\System32\chcp.???" (
 	echo Fixing Wine compatibility...
 	set "WINEARCH=win32"
 	set "WINEPREFIX=~/.wine"
-	%UnZip% x "service\winelibs.7z" -o"%SystemRoot%\System32\" -y -aoa> nul
-	regedit /s "service\winefix.reg"
+	%UnZip% x "helpers\winelibs.7z" -o"%SystemRoot%\System32\" -y -aoa> nul
+	regedit /s "helpers\winefix.reg"
 	echo Restarting SDK launcher...
 	for %%s in ("Bloodline*SDK.exe") do (
 		start "SDK: Wine Mode" "%%~s"
@@ -176,26 +176,26 @@ if exist "GameCfg.ini" (
 )> nul
 
 :extractassets
- %UnZip% x "service\ed_assets.7z" -o"%GameDir%\" -y -aoa> nul
+ %UnZip% x "helpers\ed_assets.7z" -o"%GameDir%\" -y -aoa> nul
 
 :cleartemps
  if exist "*.rf"  del /a /q *.rf> nul
- copy /y "service\cmdseq.init" ".\cmdseq.wc"> nul
+ copy /y "helpers\cmdseq.init" ".\cmdseq.wc"> nul
  reg delete "HKCU\Software\Troika\hlmv" /f> nul
 
 :fisrstrun
  echo # This file needed to detect SDK first launch and run Wizard.> "FirstRun.ini"
- echo # This file needed to detect StudioMdl first launch and show Alpha-state Warning.> "service\mdlwarn.ini"
+ echo # This file needed to detect StudioMdl first launch and show Alpha-state Warning.> "helpers\mdlwarn.ini"
  echo # This file needed to detect StudioCompiler first launch and show usage Warning.> "tools\StudioCompiler\ShowWarning.ini"
  taskkill /f /im "msgbox.exe"> nul
 
 :setmoddir
  %MsgBox% This is the first launch of the Bloodlines SDK. Choose the mod directory you're using for your project (usually it's folder near "vampire.exe" in the game root directory). If you plan to work with the original game (which is in "Vampire" folder), just click "Cancel" to keep default config. /t:MB_SYSTEMMODAL,MB_ICONINFORMATION,MB_OKCANCEL /c:Note
- if not "%ErrorLevel%"=="2" "setmoddir.exe" -first
+ if not "%ErrorLevel%"=="2" "helpers\setmoddir.exe" -first
 
 :checkmoddir
  if "%FixBrokenConfig%"=="1" (
-	%Sfk% replace "GameCfg.ini" "|NumConfigs*|NumConfigs=1|" -yes -quiet=2
+	%Sfk% replace "GameCfg.ini" "|NumConfigs=0|NumConfigs=1|" -yes -quiet=2
 	call :hammerfix -single
  )
  for /f "usebackq delims== tokens=1,*" %%a in ("GameCfg.ini") do (
@@ -215,7 +215,7 @@ if exist "GameCfg.ini" (
 
 :badmoddir
  %MsgBox% The currently specified game directory is invalid. Please, choose the correct game content location (this usually is game's "Vampire" or "Unofficial_Patch" subdirectory). If you don't, not all tools will work! /c:Bloodlines SDK :: Error /t:MB_SYSTEMMODAL,MB_ICONWARNING,MB_OKCANCEL
- if "%ErrorLevel%"=="2" (del /a /q "FirstRun.ini"> nul) else ("setmoddir.exe")
+ if "%ErrorLevel%"=="2" (del /a /q "FirstRun.ini"> nul) else ("helpers\setmoddir.exe")
 
 :startsdk
  taskkill /f /im SDKLauncher.exe> nul 2>&1

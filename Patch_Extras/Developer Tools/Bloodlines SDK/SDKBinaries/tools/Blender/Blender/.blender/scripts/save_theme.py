@@ -2,14 +2,14 @@
 
 """
 Name: 'Save Current Theme...'
-Blender: 240
+Blender: 242
 Group: 'Export'
 Tooltip: 'Save current theme as a BPython script'
 """
 
 __author__ = "Willian P. Germano"
 __url__ = ("blender", "elysiun")
-__version__ = "2.41 2006/01/16"
+__version__ = "2.43 2006/12/30"
 
 __bpydoc__ = """\
 This script saves the current Theme in Blender as a Blender Python script.
@@ -36,7 +36,7 @@ Remember to edit your exported theme's source file to put your name and
 some information on it before sharing it with others.
 """
 
-# $Id: save_theme.py,v 1.10 2006/01/29 19:17:53 ianwill Exp $
+# $Id: save_theme.py,v 1.13 2007/01/13 03:07:04 campbellbarton Exp $
 #
 # --------------------------------------------------------------------------
 # Copyright (C) 2004: Willian P. Germano, wgermano _at_ ig com br
@@ -87,13 +87,13 @@ def write_theme(filename):
 
 # \"\"\"
 # Name: '%s'
-# Blender: 241
+# Blender: 242
 # Group: 'Themes'
 # Tooltip: 'Change current theme'
 # \"\"\"
 
 __%s__ = "????"
-__%s__ = "2.41"
+__%s__ = "2.43"
 __%s__ = ["blender"]
 __%s__ = \"\"\"\\
 You can edit this section to write something about your script that can
@@ -124,7 +124,10 @@ theme = Theme.New('%s')
 		for var in vars:
 			v = "%s.%s" % (tsp, var)
 			exec("value = %s" % v)
-			fout.write("%s = %s\n" % (v, value))
+			if type(value) == str:
+				fout.write("%s = '%s'\n" % (v, value))
+			else:
+				fout.write("%s = %s\n" % (v, value))
 
 	fout.write('\nBlender.Redraw(-1)')
 	fout.close()

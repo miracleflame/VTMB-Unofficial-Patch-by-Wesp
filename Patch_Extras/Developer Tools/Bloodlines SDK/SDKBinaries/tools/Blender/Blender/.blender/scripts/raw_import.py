@@ -31,7 +31,7 @@ verts. Only *exact* duplicates are removed, there is no way to specify a
 tolerance.
 """
 
-# $Id: raw_import.py,v 1.11 2006/07/06 19:02:22 campbellbarton Exp $
+# $Id: raw_import.py,v 1.12 2006/12/25 09:17:23 campbellbarton Exp $
 #
 # +---------------------------------------------------------+
 # | Copyright (c) 2002 Anthony D'Agostino                   |
@@ -102,17 +102,12 @@ def read(filename):
 	me.faces.extend(faces)
 	
 	
-	objname = Blender.sys.splitext(Blender.sys.basename(filename))[0]
 	scn= Blender.Scene.GetCurrent()
-	for obj in scn.getChildren():
+	for obj in scn.objects:
 		obj.sel= 0
 	
-	me.name= objname
-	ob= Blender.Object.New('Mesh', objname)
-	ob.link(me)
-	scn.link(ob)
-	ob.sel= 1
-	ob.Layers= scn.Layers
+	me.name= Blender.sys.splitext(Blender.sys.basename(filename))[0]
+	ob = scn.objects.new(me)
 	Blender.Redraw()
 	
 	print 'Successfully imported "%s" in %.4f seconds' % (Blender.sys.basename(filename), Blender.sys.time()-t)

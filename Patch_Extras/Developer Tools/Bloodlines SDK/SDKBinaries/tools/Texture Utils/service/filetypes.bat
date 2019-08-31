@@ -1,8 +1,8 @@
 @echo off
-:if "%~1"=="" exit
-if not defined ExportFormat set ExportFormat=tga
+if not defined ExportFormat (
+set "ExportFormat=tga")
+if defined WinTitle title %WinTitle%
 pushd "%~dp0.."
-echo Registering image formats...
 
 :======== TTH Files =========
 REG>nul ADD "HKCU\Software\Classes\.tth" /f /ve                           /d "TTHFile"
@@ -44,4 +44,5 @@ REG>nul ADD "HKCU\Software\Classes\SystemFileAssociations\.%%~m\shell\Conv2Vtf" 
 REG>nul ADD "HKCU\Software\Classes\SystemFileAssociations\.%%~m\shell\Conv2Vtf\command" /f /ve /d "%CD%\TexConvert.exe \"%%1\" -tovtf")
 
 popd
-exit /b
+if /i "%~1"=="-ext" (
+exit ) else (exit /b)
