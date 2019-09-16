@@ -12209,7 +12209,7 @@
 "spawnflags" "1"
 "StartHidden" "1"
 "targetname" "can"
-"origin" "2838 103 -7387"
+"origin" "2838 103 -7422"
 }
 {
 "model" "*37"
@@ -12504,7 +12504,7 @@
 "trimcolor" "0 0 0 0"
 "stattemplate" "Larry"
 "player_reaction" "D_NU 0"
-"invincible" "0"
+"invincible" "1"
 "interesting_place_groups" "26"
 "use_interesting" "1"
 "hint_groups" "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32"
@@ -12535,6 +12535,7 @@
 "soundgroup" "Larry"
 "OnDialogEnd" ",,,0,-1,SetParkingGarage(),"
 "OnSellWeapon" "logic_larry_buy_1,Trigger,,0,-1,,"
+"OnDamaged" "Larry,MakeInvincible,0,0,-1,,"
 "OnDeath" ",,,0,-1,larryDeath(),"
 "origin" "2888 382 -7424"
 }
@@ -13034,14 +13035,13 @@
 "sound_event_level" "2"
 "spawnflags" "16"
 "targetname" "sound_rat"
-"message" "Environmental/Animals/rat_Single2.wav"
-"SourceEntityName" "rat"
+"message" "Environmental/Animals/rat squeak Single.wav"
 "origin" "2845.08 136.84 -7415"
 }
 {
 "classname" "ambient_generic"
 "targetname" "sound_rat_2"
-"message" "Environmental/Animals/rat_Single2.wav"
+"message" "Environmental/Animals/rat squeak Single.wav"
 "health" "10"
 "preset" "0"
 "volstart" "0"
