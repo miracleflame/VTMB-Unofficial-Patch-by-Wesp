@@ -2,93 +2,16 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7999"
-	"mapversion" "975"
+	"mapversion" "978"
 	"prefab" "0"
 }
 visgroups
 {
 	visgroup
 	{
-		"name" "Water"
-		"visgroupid" "1"
-		"color" "102 160 213"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Imprvd Shadows"
-		"visgroupid" "4"
-		"color" "100 85 170"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "XtraShadows"
-		"visgroupid" "6"
-		"color" "0 168 249"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Effects"
-		"visgroupid" "8"
-		"color" "233 94 87"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "FuncDetails"
-		"visgroupid" "9"
-		"color" "255 128 64"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Lighting"
-		"visgroupid" "10"
-		"color" "255 255 128"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Triggers"
-		"visgroupid" "12"
-		"color" "255 128 0"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "ClipBrushes"
-		"visgroupid" "2"
-		"color" "237 146 139"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "PointEntities"
-		"visgroupid" "3"
-		"color" "188 125 210"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Globals"
-		"visgroupid" "5"
-		"color" "113 182 95"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Cubemaps"
-		"visgroupid" "13"
-		"color" "218 99 224"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "FunctionBrushes"
-		"visgroupid" "14"
-		"color" "173 162 107"
+		"name" "NewLighting"
+		"visgroupid" "7"
+		"color" "85 202 195"
 		"visible" "1"
 	}
 	visgroup
@@ -100,16 +23,93 @@ visgroups
 	}
 	visgroup
 	{
-		"name" "NewLighting"
-		"visgroupid" "7"
-		"color" "85 202 195"
+		"name" "FunctionBrushes"
+		"visgroupid" "14"
+		"color" "173 162 107"
 		"visible" "1"
 	}
 	visgroup
 	{
-		"name" "FunctionProps"
-		"visgroupid" "16"
-		"color" "179 208 81"
+		"name" "Cubemaps"
+		"visgroupid" "13"
+		"color" "218 99 224"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Globals"
+		"visgroupid" "5"
+		"color" "113 182 95"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "PointEntities"
+		"visgroupid" "3"
+		"color" "188 125 210"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "ClipBrushes"
+		"visgroupid" "2"
+		"color" "237 146 139"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Triggers"
+		"visgroupid" "12"
+		"color" "255 128 0"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Lighting"
+		"visgroupid" "10"
+		"color" "255 255 128"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "FuncDetails"
+		"visgroupid" "9"
+		"color" "255 128 64"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Effects"
+		"visgroupid" "8"
+		"color" "233 94 87"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "XtraShadows"
+		"visgroupid" "6"
+		"color" "0 168 249"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Imprvd Shadows"
+		"visgroupid" "4"
+		"color" "100 85 170"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Water"
+		"visgroupid" "1"
+		"color" "102 160 213"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "StaticProps"
+		"visgroupid" "18"
+		"color" "105 110 231"
 		"visible" "1"
 	}
 	visgroup
@@ -121,9 +121,9 @@ visgroups
 	}
 	visgroup
 	{
-		"name" "StaticProps"
-		"visgroupid" "18"
-		"color" "105 110 231"
+		"name" "FunctionProps"
+		"visgroupid" "16"
+		"color" "179 208 81"
 		"visible" "1"
 	}
 }
@@ -137,7 +137,7 @@ viewsettings
 world
 {
 	"id" "0"
-	"mapversion" "975"
+	"mapversion" "978"
 	"classname" "worldspawn"
 	"angles" "0 0 0"
 	"comment" "Draft by EntenSchreck, finished by Wesp5 and improved by Psycho-A and duchU"
@@ -43516,6 +43516,228 @@ world
 			"visgroupid" "9"
 		}
 	}
+	solid
+	{
+		"id" "304286"
+		side
+		{
+			"id" "8998"
+			"plane" "(644 -2453 -560) (644 -2453 -674) (588 -2453 -674)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[1 0 0 24] 0.25"
+			"vaxis" "[0 0 -1 -16] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "8999"
+			"plane" "(588 -2436 -560) (588 -2436 -674) (644 -2436 -674)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[1 0 0 24] 0.25"
+			"vaxis" "[0 0 -1 -16] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9000"
+			"plane" "(588 -2436 -674) (588 -2453 -674) (644 -2453 -674)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[1 0 0 24] 0.25"
+			"vaxis" "[0 -1 0 -56] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9001"
+			"plane" "(588 -2453 -560) (588 -2436 -560) (644 -2436 -560)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[1 0 0 24] 0.25"
+			"vaxis" "[0 -1 0 -56] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9002"
+			"plane" "(588 -2453 -560) (588 -2453 -674) (588 -2436 -674)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[0 1 0 56] 0.25"
+			"vaxis" "[0 0 -1 -16] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9003"
+			"plane" "(644 -2436 -560) (644 -2436 -674) (644 -2453 -674)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[0 1 0 56] 0.25"
+			"vaxis" "[0 0 -1 -16] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 211 220"
+		}
+	}
+	solid
+	{
+		"id" "304338"
+		side
+		{
+			"id" "9004"
+			"plane" "(630 -2120 -628) (630 -2120 -674) (607 -2120 -674)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[1 0 0 16] 0.25"
+			"vaxis" "[0 0 -1 48] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9005"
+			"plane" "(607 -2102 -628) (607 -2102 -674) (630 -2102 -674)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[1 0 0 16] 0.25"
+			"vaxis" "[0 0 -1 48] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9006"
+			"plane" "(607 -2102 -674) (607 -2120 -674) (630 -2120 -674)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[1 0 0 16] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9007"
+			"plane" "(607 -2120 -628) (607 -2102 -628) (630 -2102 -628)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[1 0 0 16] 0.25"
+			"vaxis" "[0 -1 0 0] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9008"
+			"plane" "(607 -2120 -628) (607 -2120 -674) (607 -2102 -674)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 48] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9009"
+			"plane" "(630 -2102 -628) (630 -2102 -674) (630 -2120 -674)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[0 1 0 0] 0.25"
+			"vaxis" "[0 0 -1 48] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 105 106"
+		}
+	}
+	solid
+	{
+		"id" "304353"
+		side
+		{
+			"id" "9010"
+			"plane" "(-58 -877 -491) (-58 -877 -537) (-81 -877 -537)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[1 0 0 16] 0.25"
+			"vaxis" "[0 0 -1 20] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9011"
+			"plane" "(-81 -859 -491) (-81 -859 -537) (-58 -859 -537)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[1 0 0 16] 0.25"
+			"vaxis" "[0 0 -1 20] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9012"
+			"plane" "(-81 -859 -537) (-81 -877 -537) (-58 -877 -537)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[1 0 0 16] 0.25"
+			"vaxis" "[0 -1 0 44] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9013"
+			"plane" "(-81 -877 -491) (-81 -859 -491) (-58 -859 -491)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[1 0 0 16] 0.25"
+			"vaxis" "[0 -1 0 44] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9014"
+			"plane" "(-81 -877 -491) (-81 -877 -537) (-81 -859 -537)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[0 1 0 -44] 0.25"
+			"vaxis" "[0 0 -1 20] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9015"
+			"plane" "(-58 -859 -491) (-58 -859 -537) (-58 -877 -537)"
+			"material" "TOOLS/TOOLSCLIP"
+			"uaxis" "[0 1 0 -44] 0.25"
+			"vaxis" "[0 0 -1 20] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 129 230"
+		}
+	}
 	group
 	{
 		"id" "115336"
@@ -47806,7 +48028,7 @@ entity
 	"locked_icon" "3"
 	"model" "models/scenery/misc/lever/lever.mdl"
 	"npc_transparent" "1"
-	"solid" "6"
+	"solid" "2"
 	"soundgroup" "medium_metal_switch"
 	"targetname" "doorlever"
 	"use_icon" "12"
@@ -47818,8 +48040,8 @@ entity
 	"locksnd" "environmental/electronic/deny_beep.wav"
 	connections
 	{
-		"OnUse" "leverinspection,Kill,,0,1,,"
 		"OnUse" "sew_door_2,Unlock,,0,1,,"
+		"OnUse" "leverinspection,Kill,,0,1,,"
 	}
 	"origin" "622 -2113 -678"
 	editor
@@ -49593,27 +49815,27 @@ entity
 	"targetname" "events_player_plus"
 	connections
 	{
-		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
-		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
-		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
-		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
-		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
-		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
-		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
-		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
-		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
-		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
-		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
-		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
-		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
-		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
-		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
-		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
-		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
-		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
-		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
-		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
 		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
+		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
+		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
+		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
+		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
+		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
+		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
+		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
+		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
+		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
+		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
+		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
+		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
+		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
+		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
+		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
+		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
+		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
+		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
+		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
+		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -49630,29 +49852,29 @@ entity
 	"targetname" "world"
 	connections
 	{
-		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
-		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
-		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
-		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
-		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
-		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
-		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
-		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
-		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
-		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
-		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
-		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
-		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
-		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
-		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
-		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
-		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
-		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
-		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
-		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
-		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
-		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
 		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
+		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
+		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
+		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
+		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
+		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
+		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
+		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
+		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
+		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
+		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
+		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
+		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
+		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
+		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
+		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
+		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
+		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
+		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
+		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
+		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
+		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
+		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -49908,7 +50130,7 @@ entity
 	"fademindist" "-1.0"
 	"model" "models/scenery/pipes/VALVE_WHEEL/valve_wheel.mdl"
 	"skin" "0"
-	"solid" "0"
+	"solid" "6"
 	"origin" "-530 -2044 -616"
 	editor
 	{
@@ -49998,7 +50220,7 @@ entity
 	"fademindist" "-1.0"
 	"model" "models/scenery/pipes/VALVE_WHEEL/valve_wheel.mdl"
 	"skin" "0"
-	"solid" "0"
+	"solid" "6"
 	"origin" "679 -2358 -609.799"
 	editor
 	{
@@ -51575,7 +51797,7 @@ entity
 	"fademindist" "-1.0"
 	"model" "models/scenery/pipes/VALVE_WHEEL/valve_wheel.mdl"
 	"skin" "0"
-	"solid" "0"
+	"solid" "6"
 	"origin" "668 -269 -474"
 	editor
 	{
@@ -51843,7 +52065,7 @@ entity
 	"fademindist" "-1.0"
 	"model" "models/scenery/pipes/VALVE_WHEEL/valve_wheel.mdl"
 	"skin" "0"
-	"solid" "0"
+	"solid" "6"
 	"origin" "542.468 255.921 -472"
 	editor
 	{
@@ -80855,7 +81077,7 @@ entity
 	"id" "257644"
 	"classname" "infodecal"
 	"texture" "dev/dev_signflammable01a"
-	"origin" "-1016 -174 -432"
+	"origin" "-1016 -174 -447"
 	editor
 	{
 		"color" "233 94 87"
@@ -81706,7 +81928,7 @@ entity
 	"locksnd" "environmental/electronic/deny_beep.wav"
 	"model" "models/scenery/misc/lever/lever.mdl"
 	"npc_transparent" "1"
-	"solid" "6"
+	"solid" "2"
 	"soundgroup" "medium_metal_switch"
 	"targetname" "doorlever"
 	"use_icon" "12"
@@ -81732,11 +81954,11 @@ entity
 	"origin" "823 -533 -532.5"
 	connections
 	{
-		"OnStartTouch" "doortrap,RotateToDest,,0.3,1,,"
-		"OnStartTouch" "doortrap_hurt,Enable,,0.5,1,,"
-		"OnStartTouch" "doortrap_hurt,Disable,,1,1,,"
-		"OnStartTouch" "doortrap_trigger,PlaySound,,0,-1,,"
 		"OnStartTouch" "doortrap_sound,PlaySound,,0.3,-1,,"
+		"OnStartTouch" "doortrap_trigger,PlaySound,,0,-1,,"
+		"OnStartTouch" "doortrap_hurt,Disable,,1,1,,"
+		"OnStartTouch" "doortrap_hurt,Enable,,0.5,1,,"
+		"OnStartTouch" "doortrap,RotateToDest,,0.3,1,,"
 	}
 	solid
 	{
@@ -82241,7 +82463,7 @@ entity
 	"skin" "0"
 	"fademindist" "1800"
 	"fademaxdist" "2500"
-	"solid" "6"
+	"solid" "0"
 	"model" "models/scenery/structural/stake/gas_pipes4.mdl"
 	"disableshadows" "1"
 	"origin" "596 -2369 -564"
@@ -82531,8 +82753,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[593.403 -2124.6 -624.329]"
-		"look" "[691.448 -2082.63 -868.448]"
+		"position" "[-75.0541 -789.275 -504.424]"
+		"look" "[-14.5757 -1047.66 -527.85]"
 	}
 }
 cordon
