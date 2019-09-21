@@ -2683,7 +2683,7 @@ def heatherHavenS():
 #HAVEN: Used to place heather in the various player havens, changed by wesp and vladdmaster
 def heatherHavenC():
     G = __main__.G
-    if(G.Story_State >= 100):
+    if(G.Story_State >= 100 and G.Regent_Ending == 0):
         doorl = Find("chantry_door_left")
         doorl.Lock()
         doorr = Find("chantry_door_right")
