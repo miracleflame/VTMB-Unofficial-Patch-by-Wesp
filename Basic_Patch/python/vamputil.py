@@ -1690,7 +1690,7 @@ def AThingOfSomeKind():
         elif pc.model==VenF1 or pc.model==VenF2 or pc.model==VenF3 or pc.model==VenF4:
             clan=8
         #elif pc.model==Beast:
-        i = randint(1, 7)
+        i = randint(1, 5)
         gender = pc.IsMale()                                                             
         clan = pc.clan
         if(gender == 1):
@@ -1698,84 +1698,84 @@ def AThingOfSomeKind():
             if(clan == 1 and i == 1): c.ArmsCrossed=""
             elif(clan == 1 and i == 2): c.Pissed=""
             elif(clan == 1 and i == 3): c.Pray=""
-            elif(clan == 1 and i == 4): c.Lost=""
+            elif(clan == 1 and i > 3): c.Lost=""
             #Brujah
             if(clan == 2 and i == 1): c.BruAnim2=""
             elif(clan == 2 and i == 2): c.BruAnim3=""
             elif(clan == 2 and i == 3): c.Lost=""
-            elif(clan == 2 and i >= 3): c.BruAnim1=""
+            elif(clan == 2 and i > 3): c.BruAnim1=""
             #Gangrel
-            if(clan == 3 and i == 1): c.GanAnim2=""
-            elif(clan == 3 and i == 2): c.GanAnim3=""
-            elif(clan == 3 and i == 3): c.Lost=""
-            elif(clan == 3 and i >= 3): c.GanAnim1=""
+            if(clan == 3 and i == 1): c.GanAnim3=""
+            elif(clan == 3 and i == 2): c.GanAnim2=""
+            if(clan == 3 and i == 3): c.Lost=""
+            elif(clan == 3 and i > 2): c.GanAnim1=""
             #Malkavian
             if(clan == 4 and i == 1): c.MalAnim2=""
             elif(clan == 4 and i == 2): c.Lost=""
             elif(clan == 4 and i == 3): c.Jittery=""
-            elif(clan == 4 and i >= 3): c.MalAnim1=""
+            elif(clan == 4 and i > 3): c.MalAnim1=""
             #Nosferatu
             if(clan == 5 and i == 1): c.NosAnim2=""
             elif(clan == 5 and i == 2): c.NosAnim3=""
             elif(clan == 5 and i == 3): c.Lost=""
-            elif(clan == 5 and i >= 3): c.NosAnim1=""
+            elif(clan == 5 and i > 3): c.NosAnim1=""
             #Toreador
             if(clan == 6 and i == 1): c.TorAnim2=""
             elif(clan == 6 and i == 2): c.TorAnim3=""
             elif(clan == 6 and i == 3): c.TorAnim4=""
             elif(clan == 6 and i == 4): c.Lost=""
-            elif(clan == 6 and i >= 4): c.TorAnim1=""
+            elif(clan == 6 and i > 4): c.TorAnim1=""
             #Tremere
             if(clan == 7 and i == 1): c.TreAnim2=""
             elif(clan == 7 and i == 2): c.TreAnim3=""
             elif(clan == 7 and i == 3): c.Lost=""
-            elif(clan == 7 and i >= 3): c.TreAnim1=""
+            elif(clan == 7 and i > 3): c.TreAnim1=""
             #Ventrue
             if(clan == 8 and i == 1): c.VenAnim2=""
             elif(clan == 8 and i == 2): c.VenAnim3=""
             elif(clan == 8 and i == 3): c.Lost=""
-            elif(clan == 8 and i >= 3): c.VenAnim1=""
+            elif(clan == 8 and i > 3): c.VenAnim1=""
         elif(gender == 0):
             #Human
             if(clan == 1 and i == 1): c.ArmsCrossed=""
             elif(clan == 1 and i == 2): c.Pissed=""
             elif(clan == 1 and i == 3): c.Pray=""
-            elif(clan == 1 and i == 4): c.Lost=""
+            elif(clan == 1 and i > 3): c.Lost=""
             #Brujah
             if(clan == 2 and i == 1): c.BrufemAnim2=""
             elif(clan == 2 and i == 2): c.BrufemAnim2=""
             elif(clan == 2 and i == 3): c.Lost=""
-            elif(clan == 2 and i >= 3): c.BrufemAnim1=""
+            elif(clan == 2 and i > 3): c.BrufemAnim1=""
             #Gangrel
             if(clan == 3 and i == 1): c.GanfemAnim1=""
-            elif(clan == 3 and i >= 2): c.Lost=""
-# disabled by wesp  elif(clan == 3 and i >= 2): c.GanfemAnim2=""
+            elif(clan == 3 and i == 2): c.Lost=""
+# disabled by wesp            elif(clan == 3 and i > 2): c.GanfemAnim2=""
             #Malkavian
             if(clan == 4 and i == 1): c.MalfemAnim2=""
             elif(clan == 4 and i == 2): c.MalfemAnim3=""
             elif(clan == 4 and i == 3): c.MalfemAnim4=""
             elif(clan == 4 and i == 4): c.Lost=""
-            elif(clan == 4 and i >= 4): c.MalfemAnim1=""
+            elif(clan == 4 and i > 4): c.MalfemAnim1=""
             #Nosferatu
             if(clan == 5 and i == 1): c.NosfemAnim2=""
             elif(clan == 5 and i == 2): c.NosfemAnim3=""
             elif(clan == 5 and i == 3): c.Lost=""
-            elif(clan == 5 and i >= 3): c.NosfemAnim1=""
+            elif(clan == 5 and i > 3): c.NosfemAnim1=""
             #Toreador
             if(clan == 6 and i == 1): c.TorfemAnim2=""
             elif(clan == 6 and i == 2): c.TorfemAnim3=""
             elif(clan == 6 and i == 3): c.Lost=""
-            elif(clan == 6 and i >= 3): c.TorfemAnim1=""
+            elif(clan == 6 and i > 3): c.TorfemAnim1=""
             #Tremere
             if(clan == 7 and i == 1): c.TrefemAnim2=""
             elif(clan == 7 and i == 2): c.TrefemAnim3=""
             elif(clan == 7 and i == 3): c.Lost=""
-            elif(clan == 7 and i >= 3): c.TrefemAnim1=""
+            elif(clan == 7 and i > 3): c.TrefemAnim1=""
             #Ventrue
             if(clan == 8 and i == 1): c.VenfemAnim2=""
             elif(clan == 8 and i == 2): c.VenfemAnim3=""
             elif(clan == 8 and i == 3): c.Lost=""
-            elif(clan == 8 and i >= 3): c.VenfemAnim1=""
+            elif(clan == 8 and i > 3): c.VenfemAnim1=""
 #Durations - unused, but kept them if needed in future
 #Brujah_HitHands2		1.30
 #Brujah_Female_ArmOut2		4.00
