@@ -844,7 +844,7 @@ DisciplineTgt
 	{
 		"Speed"		"500"
 		"Model"		"models\character\monster\animalism_beetle\animalism_beetle.mdl"
-		"Particle"	"d_animalism_beetle_emitter"
+		"Particle"		"d_animalism_beetle_emitter"
 		"Particle_Hit"	"D_Animalism_beetle_tgt_emitter"
 	}
 
@@ -3883,39 +3883,6 @@ DisciplineTgt
 		TraitEffect
 		{
 			"Effect"	"Discipline (Cast_Alt)"
-		}
-		Effect_Tgt_Hit
-		{
-			Particle_ThirdPerson
-			{
-				"Entity"		"disc_particle"
-				"RateMin"		"1.0"
-				"OpacityMin"	"1.0"
-				"SizeMin"		"1.0"
-				"ParticleName"	"D_Thaumaturgy_Cast_Emitter"
-				"AttachType"	"BoneSinglePoint"
-				"AttachName"	"Bip01 Head"
-			}
-			Particle_ThirdPerson
-			{
-				"Entity"		"disc_particle"
-				"RateMin"		"1.0"
-				"OpacityMin"	"1.0"
-				"SizeMin"		"1.0"
-				"ParticleName"	"D_ThaumaturgyCast_emitter"
-				"AttachType"	"BoneSinglePoint"
-				"AttachName"	"Bip01 R Hand"
-			}
-			Particle_FirstPerson
-			{
-				"Entity"		"disc_particle"
-				"RateMin"		"1.0"
-				"OpacityMin"	"1.0"
-				"SizeMin"		"1.0"
-				"ParticleName"	"D_Thaumaturgy_BloodShot_Hud_Emitter"
-				"AttachType"	"ScreenCenter"
-				"AttachName"	""
-			}
 		}
 	}
 	Ventrue
