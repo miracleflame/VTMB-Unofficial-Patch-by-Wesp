@@ -2425,6 +2425,18 @@ StatData
 					"Function"	"BloodHealFunc"
 				}
 
+				Action	// added by wesp
+				{
+					"Value"	">0"
+					Particle
+					{
+						Definition 	"d_bloodhealing_view_emitter"
+						Bone		""
+						AttachType	"ScreenCenter"
+						Viewmodel	"1"
+					}
+				}
+
 				Action
 				{
 					"Triggers"	"Inc"
@@ -2982,6 +2994,18 @@ StatData
 						Definition 	"D_BloodBuff_Generic"
 						Bone		"Bip01 Spine2"
 						AttachType	"bone"
+					}
+				}
+
+				Action	// added by wesp
+				{
+					"Value"	">0"
+					Particle
+					{
+						Definition 	"d_bloodbuff_view_emitter"
+						Bone		""
+						AttachType	"ScreenCenter"
+						Viewmodel	"1"
 					}
 				}
 			}
