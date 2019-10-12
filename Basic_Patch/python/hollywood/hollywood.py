@@ -555,6 +555,155 @@ def randomClubevents():
         misti = Find("Misti")
         if misti: misti.Kill()
 
+#VESUVIUS: VV's lapdance from CQM, created by burgermeister, modified by wesp
+#This does most of the work to starting up the cut scene
+def setupLapDance():
+
+    pc = __main__.FindPlayer()
+
+    #First make an NPC clone. This is a secondary NPC that looks just like the player.
+    if not __main__.FindEntityByName("pcClone"):
+        pcClone = __main__.CreateEntityNoSpawn("npc_VHuman",pc.GetOrigin(),pc.GetAngles())
+        pcClone.SetName("pcClone")
+        pcClone.SetModel("models/null.mdl")
+        __main__.CallEntitySpawn(pcClone)
+        pcClone = __main__.FindEntityByName("pcClone")
+       
+        #Set the clone down on the couch
+        if pcClone:
+            pcClone.SetOrigin((3138.285888671875, 613.3624267578125, -5.6500399112701416))
+            pcClone.SetAngles((0.0, 0.3515625, 0.0))
+            pcClone.SetModel(pc.model)
+            #__main__.FindEntityByName('pcClone').ChangeSchedule('SCHED_TROIKA_IDLE')
+
+            sitdown = __main__.Find("player_sitdown")
+            if(sitdown): 
+                sitdown.BeginSequence()
+               
+        #Make a second clone of the pc. This is necessary because once you set a sequence
+        #on these dynamic NPCs, they can't be stopped. In this case, that's the sitting
+        #animation. This second clone is used for the final sitting animation
+       
+        pcClone2 = __main__.CreateEntityNoSpawn("npc_VHuman",pc.GetOrigin(),pc.GetAngles())
+        pcClone2.SetName("pcClone2")
+        pcClone2.SetModel("models/null.mdl")
+        __main__.CallEntitySpawn(pcClone2)
+        pcClone2 = __main__.FindEntityByName("pcClone2")
+
+        #Female models are slightly distorted so to get the camera to line up consently,
+        #the z coords for females has to change just slightly
+        if pcClone2:
+            if(pc.IsMale()):
+                z = -5.65
+            else:
+                z = 0.65
+            pcClone2.SetOrigin((3138.285888671875, 613.3624267578125, z))
+            pcClone2.SetAngles((0.0, 0.3515625, 0.0))
+
+            sitdown = __main__.Find("player_sitdown2")
+            if(sitdown): 
+                sitdown.BeginSequence()
+
+#Make a clone for VV, that is actually a prop dynamic. This is the only way to get her
+#to do the pole dance. Setup and execute the pole dance.
+    if not __main__.FindEntityByName("vvClone"):
+        vvClone=__main__.CreateEntityNoSpawn("prop_dynamic",pc.GetOrigin(),pc.GetAngles())
+        vvClone.SetName("vvClone")
+        vvClone.SetModel("models/character/npc/unique/hollywood/vvstrip/vv.mdl")
+        __main__.CallEntitySpawn(vvClone)
+        vvClone = __main__.FindEntityByName("vvClone")
+        vvClone.SetAngles((0.0, 80.2744140625, -1.1234249797098528e-007))
+        vvClone.SetOrigin((3172.63037109375, 726.16925048828125, 5.1447391510009766))
+        vvClone.SetAnimation("pole_stroke_01")
+
+    #Since, we can't break animations, we have to make a second VV. One that dances,
+    #and the regular one the player talks to.
+    realVV = __main__.Find("VV")
+    danceVV = __main__.Find("VV_lapdance")
+
+    #Hide the real VV
+    if(realVV):
+        realVV.ScriptHide()
+   
+    #Make dancing VV show up.
+    if(danceVV):
+        danceVV.SetDisposition("Flirtatious",1)
+   
+    #Hide the player.
+    __main__.FindPlayer().SetOrigin((3140, 650, -50))
+
+#This handles the first transition, i.e. camera between VV's legs.
+def lapDanceTransition1():
+
+    vvClone = __main__.Find("vvClone")
+    
+    if(vvClone):
+    
+        vvClone.SetOrigin((3164.621337890625, 661.06866455078125, 0.03125))
+        vvClone.SetAngles((0.0, -88.5772705078125, 0.0))
+        vvClone.SetAnimation("idle")
+
+#This handles the second transition, i.e. vag in your face.
+def lapDanceTransition2():
+
+    #We have to get rid of the vv clone because she is stuck
+    #pole dancing forever.
+    #Killing the entity causes the animation to continue until the map exits,
+    #but since parent entity is then dead, it fills the console with errors.
+    #Moving her outside the map then, is a little better.
+    vvClone = __main__.Find("vvClone")
+    if(vvClone):
+        vvClone.SetOrigin((5000,5000,5000))
+    dance = __main__.Find("vv_dance_4")
+    
+    #Start legs dance.
+    if(dance):
+        dance.Start()
+
+#This handles the third transition, i.e. boobs in your face.
+def lapDanceTransition3():
+    dance = __main__.Find("vv_dance_6")
+    
+    if(dance):
+        dance.Start()
+
+#This handles the fourth transition, i.e. dry humping
+def lapDanceTransition4():
+    dance = __main__.Find("vv_dance_3")
+    pcClone = __main__.Find("pcClone")
+    
+    if(dance):
+        dance.Start()
+        
+    #Hide the pc clone, because it gets in the way of the 1st person
+    #camera shot
+    if(pcClone):
+        pcClone.SetModel("models/null.mdl")
+        
+
+#This cleans things up
+def lapDanceTransition5():
+
+    #Put the player back in the private room
+    __main__.FindPlayer().SetOrigin((3140, 650, 0))
+        
+    vvDance = __main__.Find("VV_lapdance")
+    if(vvDance):
+        vvDance.Kill()
+
+    vv = __main__.Find("VV")
+    if(vv):
+        vv.ScriptUnhide()
+        vv.WillTalk(1)
+    
+    pcClone2 = __main__.Find("pcClone2")
+    if(pcClone2):
+        pcClone2.Kill()
+    
+    pcClone = __main__.Find("pcClone")
+    if(pcClone):
+        pcClone.Kill()
+
 #HOLLYWOOD: Determines if the sweeper is on the streets and going to talk to the player, changed by wesp
 def sweeperPlacement():
     if G.Isaac_Know:

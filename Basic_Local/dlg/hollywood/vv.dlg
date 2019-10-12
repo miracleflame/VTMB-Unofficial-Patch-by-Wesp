@@ -218,7 +218,7 @@
 {	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	221	}{	[Quickly, Slyly]Flatterer. No, I'm just a dancer. Keep it up and maybe I'll give you your own very private show. [seductively]I can make your heart beat again.	}{	[Quickly, Slyly]Flatterer. No, I'm just a dancer. Keep it up and maybe I'll give you your own very private show. [seductively]I can make your heart beat again.	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	221	}{	[Quickly, Slyly]Flatterer. No, I'm just a dancer. Keep it up and maybe I'll give you your own very private show. [seductively]I can make your heart beat again.	}{	[Quickly, Slyly]Flatterer. No, I'm just a dancer. Keep it up and maybe I'll give you your own very private show. [seductively]I can make your heart beat again.	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	G.Velvet_Dance = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	222	}{	Tell me something else about yourself.	}{	Tell me something else about yourself.	}{	241	}{	}{	}{	}{	}{	}{	}{	}{	}{	Rant on, dolly.	}
 {	223	}{	I bet you could. I'd like to know more.	}{	I bet you could. I'd like to know more.	}{	241	}{	}{	G.Velvet_Like = G.Velvet_Like +1	}{	}{	}{	}{	}{	}{	}{	I like being dead, but I'll risk life if you'll tell me more about you.	}
 {	224	}{	I doubt it. I know I'm a dead thing, you've obviously forgotten.	}{	I doubt it. I know I'm a dead thing, you've obviously forgotten.	}{	231	}{	}{	G.Velvet_Like = G.Velvet_Like -2	}{	}{	}{	}{	}{	}{	}{	I'm dead, you're dead, we're all dead. DEAD DEAD DEAD. Just a reminder.	}
@@ -751,9 +751,9 @@
 {	751	}{	Can't you tell? I simply adore you - you're so sweet to me, the way you protect me. What would I have done had you never come in here? Oh, why can't they all be like you? The world could be so... so, beautiful. Here, take this, a reminder of the beautiful girl whose heart you stole.	}{	Can't you tell? I simply adore you - you're so sweet to me, the way you protect me. What would I have done had you never come in here? Oh, why can't they all be like you? The world could be so... so, beautiful. Here, take this, a reminder of the beautiful girl whose heart you stole.	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	pc.GiveItem("item_g_vv_photo"); G.Velvet_Email = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	752	}{	And here's the screenplay.	}{	And here's the screenplay.	}{	661	}{	pc.HasItem("item_g_Hatters_Screenplay")	}{	}{	}{	}{	}{	}{	}{	}{	The Hatter's words, for you too.	}
 {	753	}{	By the way, I had to kill Hatter.	}{	By the way, I had to kill Hatter.	}{	701	}{	IsDead("DHatter")	}{	}{	}{	}{	}{	}{	}{	}{	Oh, and the Hatter's head came off.	}
-{	754	}{	My pleasure, thanks.	}{	My pleasure, thanks.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll keep you in my heart and the picture in my pocket.	}
-{	755	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	756	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	754	}{	Thanks, but didn't you say something about giving me a private show?	}{	Thanks, but didn't you say something about giving me a private show?	}{	911	}{	G.Velvet_Dance == 1 and G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	Beautiful, but didn't you want to make my heart beat again too?	}
+{	755	}{	My pleasure, thanks.	}{	My pleasure, thanks.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll keep you in my heart and the picture in my pocket.	}
+	756	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	757	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	758	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	759	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -909,8 +909,8 @@
 {	909	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	910	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	911	}{	Mmm, this is going to be interesting.	}{	Mmm, this is going to be interesting.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	912	}{	(Auto-Link)	}{	(Auto-Link)	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	913	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	912	}{	(Auto-Link)	}{	(Auto-Link)	}{	171	}{	G.Velvet_Dance == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	913	}{	I really hope so.	}{	I really hope so.	}{	0	}{	G.Velvet_Dance == 1	}{	G.Velvet_Dance = 0; Find("vv_lapdance_cut").Trigger()	}{	}{	}{	}{	}{	}{	}{	I love it already.	}
 {	914	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	915	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	916	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
