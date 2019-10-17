@@ -510,6 +510,7 @@ def igorDeath():
     state = pc.GetQuestState("Confession")
     if state > 0 and state < 4 and state != 3:
         pc.SetQuest("Confession", 4)
+        G.Igor_Talk = 1
 
 #DOWNTOWN: Set state on Nines cutscene
 def OnNinesCutscene():
