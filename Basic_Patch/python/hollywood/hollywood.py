@@ -568,22 +568,21 @@ def setupLapDance():
         pcClone.SetModel("models/null.mdl")
         __main__.CallEntitySpawn(pcClone)
         pcClone = __main__.FindEntityByName("pcClone")
-       
+
         #Set the clone down on the couch
         if pcClone:
             pcClone.SetOrigin((3138.285888671875, 613.3624267578125, -5.6500399112701416))
             pcClone.SetAngles((0.0, 0.3515625, 0.0))
             pcClone.SetModel(pc.model)
             #__main__.FindEntityByName('pcClone').ChangeSchedule('SCHED_TROIKA_IDLE')
-
             sitdown = __main__.Find("player_sitdown")
             if(sitdown): 
                 sitdown.BeginSequence()
-               
+    
         #Make a second clone of the pc. This is necessary because once you set a sequence
         #on these dynamic NPCs, they can't be stopped. In this case, that's the sitting
         #animation. This second clone is used for the final sitting animation
-       
+
         pcClone2 = __main__.CreateEntityNoSpawn("npc_VHuman",pc.GetOrigin(),pc.GetAngles())
         pcClone2.SetName("pcClone2")
         pcClone2.SetModel("models/null.mdl")
@@ -599,7 +598,6 @@ def setupLapDance():
                 z = 0.65
             pcClone2.SetOrigin((3138.285888671875, 613.3624267578125, z))
             pcClone2.SetAngles((0.0, 0.3515625, 0.0))
-
             sitdown = __main__.Find("player_sitdown2")
             if(sitdown): 
                 sitdown.BeginSequence()
@@ -624,21 +622,19 @@ def setupLapDance():
     #Hide the real VV
     if(realVV):
         realVV.ScriptHide()
-   
+
     #Make dancing VV show up.
     if(danceVV):
         danceVV.SetDisposition("Flirtatious",1)
-   
+
     #Hide the player.
-    __main__.FindPlayer().SetOrigin((3140, 650, -50))
+    __main__.FindPlayer().SetOrigin((2900, 470, -130))
 
 #This handles the first transition, i.e. camera between VV's legs.
 def lapDanceTransition1():
 
     vvClone = __main__.Find("vvClone")
-    
     if(vvClone):
-    
         vvClone.SetOrigin((3164.621337890625, 661.06866455078125, 0.03125))
         vvClone.SetAngles((0.0, -88.5772705078125, 0.0))
         vvClone.SetAnimation("idle")
@@ -655,7 +651,6 @@ def lapDanceTransition2():
     if(vvClone):
         vvClone.SetOrigin((5000,5000,5000))
     dance = __main__.Find("vv_dance_4")
-    
     #Start legs dance.
     if(dance):
         dance.Start()
@@ -663,7 +658,6 @@ def lapDanceTransition2():
 #This handles the third transition, i.e. boobs in your face.
 def lapDanceTransition3():
     dance = __main__.Find("vv_dance_6")
-    
     if(dance):
         dance.Start()
 
@@ -671,38 +665,22 @@ def lapDanceTransition3():
 def lapDanceTransition4():
     dance = __main__.Find("vv_dance_3")
     pcClone = __main__.Find("pcClone")
-    
     if(dance):
         dance.Start()
-        
+
     #Hide the pc clone, because it gets in the way of the 1st person
     #camera shot
     if(pcClone):
         pcClone.SetModel("models/null.mdl")
-        
 
 #This cleans things up
 def lapDanceTransition5():
 
-    #Put the player back in the private room
-    __main__.FindPlayer().SetOrigin((3140, 650, 0))
-        
-    vvDance = __main__.Find("VV_lapdance")
-    if(vvDance):
-        vvDance.Kill()
-
+    #Put VV back in the private room
     vv = __main__.Find("VV")
     if(vv):
         vv.ScriptUnhide()
         vv.WillTalk(1)
-    
-    pcClone2 = __main__.Find("pcClone2")
-    if(pcClone2):
-        pcClone2.Kill()
-    
-    pcClone = __main__.Find("pcClone")
-    if(pcClone):
-        pcClone.Kill()
 
 #HOLLYWOOD: Determines if the sweeper is on the streets and going to talk to the player, changed by wesp
 def sweeperPlacement():

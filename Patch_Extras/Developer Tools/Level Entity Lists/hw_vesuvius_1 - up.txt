@@ -6196,7 +6196,7 @@
 "spawnflags" "3"
 "targetname" "VV_cam_2"
 "shotname" "vdata/CameraShots/NPCFollow.txt"
-"target1" "vv"
+"target1" "lap"
 "startent" "VV_cam_2"
 "endent" "VV_cam_2"
 "origin" "3352 456 87.2986"
@@ -7779,6 +7779,9 @@
 "OnTrigger" ",,,30,1,lapDanceTransition3(),"
 "OnTrigger" ",,,40,1,lapDanceTransition4(),"
 "OnTrigger" ",,,50,1,lapDanceTransition5(),"
+"OnTrigger" "pc_clone,Kill,,50,-1,,"
+"OnTrigger" "pc_clone2,Kill,,50,-1,,"
+"OnTrigger" "VV_lapdance,Kill,,50,-1,,"
 "OnTrigger" "pc,RemoveControllerNPC,,50,1,,"
 }
 {
