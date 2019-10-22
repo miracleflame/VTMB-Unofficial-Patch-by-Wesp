@@ -29,6 +29,13 @@ def malkNosCatchAll():
 def andreiDead():
     __main__.FindPlayer().SetQuest("Kings Way", 2)
 
+#ASPHOLE: Sets body of Ash lookalike, added by wesp
+def ashFakeBody():
+    dead_ashlook = __main__.CreateEntityNoSpawn("prop_ragdoll", (-210,650,0), (0,90,0) )
+    dead_ashlook.SetModel("models/character/npc/unique/Hollywood/Ash_Lookalike/ash_Lookalike.mdl")
+    dead_ashlook.SetName("dead_ashlook")
+    __main__.CallEntitySpawn(dead_ashlook)
+
 #ASPHOLE: Called to swap ash and lookalike clothes
 def ashClothingSwap():
     ash = Find("Ash")
@@ -72,6 +79,7 @@ def ashSituation():
     ash = Find("Ash")
     lookalike = Find("Ash_lookalike")
     hunter = Find("Hunter")
+    ashlook = Find("dead_ashlook")
     if(G.Ash_Know != 1):
         if(lookalike):
             lookalike.WillTalk(0)
@@ -87,6 +95,8 @@ def ashSituation():
             lookalike.Kill()
         if(hunter):
             hunter.Kill()
+        if(ashlook):
+            ashlook.Kill()
     if G.Doll3_Dead == 1:
         doll3 = Find("Doll3")
         if doll3: doll3.Kill()
@@ -156,6 +166,10 @@ def killerEscape():
     __main__.FindPlayer().SetQuest("Serial", 6)
     __main__.FindPlayer().SetQuest("Muddy", 4)
     G.Muddy_Dead = 1
+    dead_muddy = __main__.CreateEntityNoSpawn("prop_ragdoll", (-70,-2440,20), (0,222,0) )
+    dead_muddy.SetModel("models/character/npc/common/citizen/male/male_citizen_1.mdl")
+    dead_muddy.SetName("dead_muddy")
+    __main__.CallEntitySpawn(dead_muddy)
 
 # TJP - 01/28/04
 #LUCKYSTAR: Determines what state the luckystar hotel is in, changed by wesp
@@ -168,6 +182,9 @@ def luckyState():
         skelter = Find("Skelter")
         if (G.Patch_Plus == 1):
             skelter.ScriptUnhide()
+    deadmuddy = Find("dead_muddy")
+    if (G.Muddy_Dead == 1):
+        deadmuddy.Kill()
     if(G.Killer_Key == 1):
     #A different flag, tied to the material clue from the downtown murder scene, would be better for the first argument
         print ("Killer present")
