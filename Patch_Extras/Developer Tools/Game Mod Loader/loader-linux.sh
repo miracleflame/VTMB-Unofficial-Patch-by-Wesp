@@ -1,11 +1,11 @@
-#!/bin/bash
+#!/bin/bash, Wine Linux loading script by SCO and Wrzlprmft
 
 PREFIXES="$HOME/.local/share/wineprefixes"
 mkdir -p "$PREFIXES"
 export WINEARCH=win32
 export WINEPREFIX="$PREFIXES/Vampire the Masquerade - Bloodlines"
 
-# cd to the script’s directory
+# cd to the script's directory
 GAME_PATH=$(dirname "$(readlink -f "$0")")
 cd "$GAME_PATH"
 
@@ -16,7 +16,7 @@ do
 		if [ -t 1 ]; then
 			echo "This already is the root directory; giving up to find Vampire.exe. This script must be placed in the Bloodlines directory or one of its subdirectories to work." 1>&2
 		else
-			zenity --error --text "The script’s directory and none of its parent directories contains Vampire.exe. This script must be placed in the Bloodlines directory or one of its subdirectories to work."
+			zenity --error --text "The script's directory and none of its parent directories contains Vampire.exe. This script must be placed in the Bloodlines directory or one of its subdirectories to work."
 		fi
 		exit 1
 	fi
