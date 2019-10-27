@@ -6,7 +6,7 @@ SignData
 
 	Sign
 	{
-		"dependency"	"G.Story_State >= 0 and G.Story_State < 5"	
+		"dependency"	"G.Story_State < 5"	// changed by wesp
 		"filename"		"vdata/signs/Newspaper_Serial_Killer.txt"
 	}
 
@@ -120,8 +120,8 @@ SignData
 
 	Sign
 	{
-		// make sure that something is always displayed, or it will freak out...
-		"dependency"		"G.Story_State >= 0"	
+		// make sure that something is always displayed, or it will freak out..., changed by wesp
+		"dependency"		"G.Story_State < 5"	
 		"filename"		"vdata/signs/Newspaper_Serial_Killer.txt"
 	}
 
