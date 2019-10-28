@@ -240,7 +240,7 @@ def setPlus():
             sarc.ScriptHide()
             sarcbasic = Find("sarc_basic")
             sarcbasic.ScriptHide()
-        museummanhole = Find("Manhole_Museum")
+        museummanhole = Find("museum_taxi")
         if museummanhole:
             museumcabbie = Find("cabbie")
             museumcabbie.WillTalk(0)
