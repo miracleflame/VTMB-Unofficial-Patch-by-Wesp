@@ -1590,11 +1590,10 @@ def AThingOfSomeKind():
         for npc in npcs:
             p2 = npc.GetOrigin()
             dist = distanceSquared(postwo, p2)
-            if(dist < 3200):	#distance: 80 - npcs can't be closer than 41.0044. Player is most likely feeding if any npc is closer. Changed to 80 because of forced dialogues.
+            if(dist < 20000):	#distance: npcs can't be closer than 40. Player is most likely feeding if any npc is closer. Changed because of dialogues.
                 notIdle = 1
                 G.Delay = 1 #how many times animations are skipped after feeding
                 print "no anims, pc near npc"
-                break
     if(notIdle == 0 and pc.active_protean < 2 and pc.HasWeaponEquipped("item_w_unarmed")):
         #This version supports custom models
         BruM1="models/character/pc/male/brujah/armor0/brujah_male_armor_0.mdl"
