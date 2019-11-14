@@ -185,6 +185,7 @@ def luckyState():
     deadmuddy = Find("dead_muddy")
     if (G.Muddy_Dead == 1):
         deadmuddy.Kill()
+        G.Muddy_Dead = 2
     if(G.Killer_Key == 1):
     #A different flag, tied to the material clue from the downtown murder scene, would be better for the first argument
         print ("Killer present")
