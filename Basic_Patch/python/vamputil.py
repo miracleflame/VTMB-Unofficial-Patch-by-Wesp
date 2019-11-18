@@ -301,6 +301,8 @@ def setPlus():
             if libraryclosed: libraryclosed.ScriptUnhide()
         andrei = Find("Andrei")
         if andrei: andrei.ScriptHide()
+        andreiplus = Find("plus_Andrei")
+        if (andreiplus and G.Andrei_Talked == 1): andreiplus.ScriptHide()
         andreisabbat = Find("AndreiSabbat")
         if (andreisabbat and G.Player_Sabbat == 1):
             world = Find("world")
@@ -2796,13 +2798,10 @@ def posterCheck():
     if(G.Gary_Cross):
         poster = Find("poster_cross")
         poster.ScriptUnhide()
-        if(G.Ball_Taken == 0):
-            __main__.FindPlayer().SetQuest("Gary", 9)
-            G.Ball_Taken = 2
     if(G.Gary_Blind):
         poster = Find("poster_blind")
         poster.ScriptUnhide()
-        if(G.Ball_Taken == 1):
+        if(G.Ball_Taken < 2):
             __main__.FindPlayer().SetQuest("Gary", 9)
             G.Ball_Taken = 2
 
