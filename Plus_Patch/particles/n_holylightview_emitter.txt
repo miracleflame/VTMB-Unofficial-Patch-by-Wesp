@@ -1,0 +1,28 @@
+//Attach Type: Bone Tree
+
+
+Particle
+{
+	loop "0"		// changed by wesp
+	fps "30"		// added by wesp
+
+	spawn
+	{
+		particle	"D_FortitudeView_InFrontHands"
+		rate		"30"
+		phi		"-180~180"
+		theta		"0~360"
+		radius		".5"
+	}
+
+	spawn
+	{
+		particle "D_FortitudeView_BehindHands"
+		rate "100"
+		phi "-180~180"
+		theta "0~360"
+		z	"0"
+		radius "0 "
+	}
+
+}

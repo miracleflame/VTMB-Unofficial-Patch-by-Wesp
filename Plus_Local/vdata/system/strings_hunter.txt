@@ -1,0 +1,746 @@
+// Strings
+
+StringData
+{
+	// For this file, Localize only the "Name*" fields (NOT the "InternalName" field or any others!)
+	// In other words, Localize "Name", "Name0", "Name1", etc.
+
+	Strings
+	{
+		// Note: These string lists are automatically loaded, you can add your own in here if you need to
+		// They are referenced by the "NameMapping" fields in stats
+
+	 	Gender
+		{
+	 		"Name0"	"Female"
+		 	"Name1"	"Male"
+	 	}
+
+		Level
+		{
+			"Name0"	"Below Low"
+			"Name1"	"Low"
+		 	"Name2"	"Medium"
+		 	"Name3"	"High"
+		}
+
+		HealthLevel
+		{
+			"Name0"	"Uninjured"
+			"Name1"	"Bruised"
+			"Name2"	"Hurt"
+			"Name3"	"Injured"
+			"Name4"	"Wounded"
+			"Name5"	"Mauled"
+			"Name6"	"Crippled"
+			"Name7"	"Incapacitated"
+		}
+
+		HumanityLevel
+		{
+			"Name0"	"Horrific"
+			"Name1"	"Bestial"
+			"Name2"	"Cold"
+			"Name3"	"Unfeeling"
+			"Name4"	"Distant"
+			"Name5"	"Removed"
+			"Name6"	"Normal"
+			"Name7"	"Caring"
+			"Name8"	"Compassionate"
+			"Name9"	"Saintly"
+		}
+
+		AttributeLevel
+		{
+			"Name0"	"Unnaturally Poor"
+			"Name1"	"Poor"
+			"Name2"	"Average"
+			"Name3"	"Good"
+			"Name4"	"Exceptional"
+			"Name5"	"Outstanding"
+		}
+
+		AbilityLevel
+		{
+			"Name0"	"Unknown"
+			"Name1"	"Novice"
+			"Name2"	"Practiced"
+			"Name3"	"Competent"
+			"Name4"	"Expert"
+			"Name5"	"Master"
+		}
+
+		DisciplineLevel
+		{
+			"Name0"	"Hint of Awakening"
+			"Name1"	"Barely Awakened"
+			"Name2"	"Awakened"
+			"Name3"	"Level 3"
+			"Name4"	"Level 4"
+			"Name5"	"Mastery"
+		}
+
+		WillpowerLevel
+		{
+			"Name0"	"Spineless"
+			"Name1"	"Weak"
+			"Name2"	"Unassertive"
+			"Name3"	"Diffident"
+			"Name4"	"Certain"
+			"Name5"	"Confident"
+			"Name6"	"Determined"
+			"Name7"	"Controlled"
+			"Name8"	"Iron-Willed"
+			"Name9"	"Unshakable"
+		}
+
+		KineKindred
+		{
+			"Name0"	"Kine"
+			"Name1"	"Kindred"
+		}
+
+		KineKindredDescriptions
+		{
+			"Name0"	"A normal human being."
+			"Name1"	"One of the vampiric undead."
+		}
+
+		CostStrings
+		{
+			"Name0"	"Cost"
+			"Name1"	"New"
+			"Name2"	"Raise"
+			"Name3"	"Current_Rating"
+			"Name4"	"Initial Cost"
+			"Name5" "Remaining Points"
+			"Name6" "Value"
+		}
+
+		ClanStrs
+		{
+			"Name0"	"None"
+			"Name1"	"Brujah"
+			"Name2"	"Gangrel"
+			"Name3"	"Malkavian"
+			"Name4"	"Nosferatu"
+			"Name5"	"Toreador"
+			"Name6"	"Tremere"
+			"Name7"	"Ventrue"
+		}
+
+		AttributeGroup
+		{
+			"Name0"		"Physical"
+			"Name1"		"Social"
+			"Name2"		"Mental"
+		}
+
+		AbilityGroup
+		{
+			"Name0"		"Talents"
+			"Name1"		"Skills"
+			"Name2"		"Knowledges"
+		}
+
+		FeatGroup
+		{
+// Old Headings:
+//				"Name0"		"Combat"
+//				"Name1"		"Physical"
+//				"Name2"		"Mental"
+//				"Name3"		"Social"
+
+// New Headings: (6/15/04)
+			"Name0"		"Combat"
+			"Name1"		"Covert"
+			"Name2"		"Public"	// changed by wesp
+			"Name3"		"Soak"
+		}
+
+		NuminaGroup
+		{
+			"Name0"		"Numina"
+		}
+
+		MiscStrs
+		{
+			"Name0"		"None"
+			"Name1"		"Melee Weapons"
+			"Name2"		"Ranged Weapons"
+			"Name3"		"Bloodpack"
+			"Name4"		"Blue Bloodpack"
+			"Name5"		"Elder Bloodpack"
+			"Name6"		"Hotkeys"
+		}
+
+		UIAppearanceStrs
+		{
+			"Name0"		"Head"
+			"Name1"		"Hair"
+			"Name2"		"Accessories"
+			"Name3"		"Color"
+		}
+
+		UIMiscStrs	// Note: Some of these are buttons on the character editor
+		{
+			"Name0"		"Armor"
+			"Name1"		"Info"
+			"Name2"		"Appearance"
+			"Name3"		"Affiliation"
+			"Name4"		"Archetype"
+			"Name5"		"Cancel"
+			"Name6"		"Accept"
+			"Name7"		"Play"
+			"Name8"		"  You have %d Total XP to spend."
+			"Name9"		"  Kills = %d XP"
+			"Name10"		"  Dmg Inflicted = %3.2f XP"
+			"Name11"		"  TeamWin = %d XP"
+			"Name12"		"  TeamLoss = %d XP"
+			"Name13"		"  RoundGoals %d X %1.2f = %2.2f XP"
+			"Name14"		"  SubGoals %d X %1.2f = %2.2f XP"
+			"Name15"		"Next"
+			"Name16"		"Reset Stats"
+			"Name17"		"Points Remaining"
+			"Name18"		"You must spend all points to continue."
+			"Name19"		"UP/DN Arrow Keys Scroll"
+			"Name20"		"Auto-Level is Off"	// Turn on 'Auto-Levelling', changed by wesp
+			"Name21"		"Auto-Level is On"	// Turn off 'Auto-Levelling', changed by wesp
+			"Name22"		"Auto-Spend Points"	// Auto Spend Points
+			"Name23"		"Turns Off automatic spending of experience points."	// Auto-Level Points
+			"Name24"		"Turns On automatic spending of experience points."	// Auto-Level Points
+			"Name25"		"Automatically spends your starting character points."	// Auto Spend Points
+			"Name26"		"Undoes all of your current changes."	// Reset Stats
+			"Name27"		"Exits without keeping your current changes."	// Cancel
+			"Name28"		"Exits without keeping your changes, returns to the Main Menu."	// Cancel
+			"Name29"		"Exits with your changes."	// Accept
+			"Name30"		"Cancelling will lose all character info changes you have made and return you to the Main Menu."	// ConfirmCancel
+			"Name31"		"Skip Intro"
+			"Name32"		"This controls skipping the intro scenes."
+		}
+
+		UIOccultStrs
+		{
+			"Name0"		"Number of blood points stored:"
+		}
+
+		UIHudFeedbackOverrideStrs
+		{
+			"Name0"		"Overwhelming Strength"
+		}
+
+		UIMapList
+		{
+			"Name0"		"santamonica"
+		}
+
+		UITabStrs
+		{
+			"Name0"		"Base"
+			"Name1"		"Sheet"
+			"Name2"		"Info"
+			"Name3"		"Quest Log"
+			"Name4"		"Equipment"
+		}
+		
+		UIQuestStrs
+		{
+			"Name0"		"Active Quests"
+			"Name1"		"Completed"
+			"Name2"		"Failed"
+			"Name3"		"Santa Monica"
+			"Name4"		"Downtown"
+			"Name5"		"Hollywood"
+			"Name6"		"Chinatown"
+			"Name7"		"Main"
+		}
+
+		UIInfoStrs
+		{
+			"Name0"		"Damage"
+			"Name1"		"Fire Rate"
+			"Name2"		"Range"
+			"Name3"		"Reload Speed"
+			"Name4"		"$"
+			"Name5"		"Your key ring contains these keys:"
+			"Name6"		"No keys"
+			"Name7"		"Ranged Combat Requirement"
+			"Name8"		"Melee Combat Requirement"
+			"Name9"		"Damage Potential"
+			"Name10"	"Lethality"
+			"Name11"	"Feat Adjustment"
+			"Name12"	"Base Damage"
+			"Name13"	"Contains:"		// used by money clip and other cash holding items to say "Contains: $150"
+			"Name14"	"Brawl Combat Requirement"
+		}
+
+		UIBarterActionStrs
+		{
+			"Name0"		"None"
+			"Name1"		"Take"
+			"Name2"		"Give"
+			"Name3"		"Buy"
+			"Name4"		"Sell"
+			"Name5"		"Can't Afford"
+			"Name6"		"Can't Sell"
+			"Name7"		"Use"		// changed by wesp
+			"Name8"		"Can't Use"		// changed by wesp
+			"Name9"		"Read"
+			"Name10"		"Can't Read"
+			"Name11"	"Use"
+			"Name12"	"Can't Use"
+		}
+
+		UIBarterStrs
+		{
+			"Name0"	"No Item"
+			"Name1"	"No Item"
+			"Name2"	"Drop"
+			"Name3"	"Can't Drop"
+			"Name4"	"Ammo Full!"
+			"Name5"	"Inventory Full!"
+			"Name6"	"Exit"
+			"Name7"	"MAX"
+			"Name8"	"CURR"
+//			"Name8"	"CURRENT"  // Changed to fix clipping issue
+		}
+
+		UIKnowledgeStrs	// changed by wesp
+		{
+			"Name0"		"You squint at the wiggly markings on the page, but can't quite make out what they say. Despite this, something in the back of your mind is thinking they say \"illiterate dumbass\"."
+			"Name1"		"In the World of Darkness, there isn't enough illumination to read this book... at least for you, duncemeister!"
+			"Name2"		"As you are a product of the American public education system, this tome is beyond your comprehension."
+			"Name3"		"It seems to be saying something about \"Don't Copy That Floppy!\", but you can't possibly be reading it right."
+			"Name4"		"Wow, you really wish you knew what \"antidisestablishmentarianism\" meant."
+			"Name5"		"In the game of life, your reading skills are ET for the 2600."
+			"Name6"		"Vampires might not need glasses, but they DO need \"Hooked on Phonics\"."
+			"Name7"		"You've been feeding on too many teenagers, go suck on a librarian and maybe you'll be able to figure this out."	//"You are unsure what benefits can be gained from this tome."
+		}
+
+		UIOccultStrs
+		{
+			"Name0"		"You have no clue what this thing is, but it looks eeeeeevil."
+			"Name1"		"Maybe if you were a bit more goth you would have a clue what this thingie is."
+			"Name2"		"If Ozzy were here, I'm sure he could tell you what this is."
+			"Name3"		"It isn't a WWJD bracelet, so you have no idea what it could be."
+			"Name4"		"You cannot identify this item, perhaps you should finish eating the soul doughnut?"
+			"Name5"		"You haven't seen one of these before, but Bun Bun left it here, so it can't be good news."
+			"Name6"		"Hmm, when you gaze upon this object, the skies darken and lightning flashes. Those aren't good clues to what this is though."
+			"Name7"		"You can't identify this item, but it has a \"Made in Hell\" label on the bottom."
+		}
+
+		UIManualStrs
+		{
+			"Name0"		"Your knowledge of"
+			"Name1"		"is greater than anything covered in this text. You can gain no benefit from this tome."
+		}
+
+		UIRequirementStrs
+		{
+			"Name0"		"You need a Research skill of at least"
+			"Name1"		"You need a"
+			"Name2"		"ability of at least"
+			"Name3"		"to use this item."
+			"Name4"		"You need an Occult skill of at least"
+			"Name5"		"Unknown"
+			"Name6"		"Level"
+			"Name7"		"This item is beneath your abilities, you would gain nothing from it."
+		}
+
+		ItemReloadStrs
+		{
+			"Name0"		"Slow"	//"Short"
+			"Name1"		"Medium"
+			"Name2"		"Fast"
+		}
+
+		ItemRangeStrs
+		{
+			"Name0"		"Short"
+			"Name1"		"Medium"
+			"Name2"		"Long"
+		}
+
+		ItemFireRateStrs
+		{
+			"Name0"		"Very High"
+			"Name1"		"High"
+			"Name2"		"Medium"
+			"Name3"		"Low"
+		}
+
+		StatCategoryTitles
+		{
+			"Name0"		"Physical Attributes"
+			"Name1"		"Social Attributes"
+			"Name2"		"Mental Attributes"
+			"Name3"		"Talents"
+			"Name4"		"Skills"
+			"Name5"		"Knowledges"
+			"Name6"		"Disciplines"
+		}
+
+		StatCategoryLine1
+		{
+			"Name0"		"Physical Attributes measure your character's ability to hit harder, act more agile, and soak damage."	// changed by wesp
+			"Name1"		"Social Attributes determine the amount of charm and influence you have over others."
+			"Name2"		"Mental Attributes are important for spotting secrets, applying knowledges, and aiming."
+			"Name3"		"Talents are inherent abilities that one improves on through life experience."
+			"Name4"		"Skills are abilities that can be taught or learned from books."
+			"Name5"		"Knowledges are applications of the mind and often depend on mental attributes."
+			"Name6"		"Powerful supernatural abilities. Each clan specializes in its own unique set of these."	// changed by wesp
+		}
+
+		StatCategoryLine2
+		{
+			"Name0"		"!"
+			"Name1"		"!"
+			"Name2"		"BrujahStatCategoryLine2"
+			"Name3"		"GangrelStatCategoryLine2"
+			"Name4"		"MalkavianStatCategoryLine2"
+			"Name5"		"NosferatuStatCategoryLine2"
+			"Name6"		"ToreadorStatCategoryLine2"
+			"Name7"		"TremereStatCategoryLine2"
+			"Name8"		"VentrueStatCategoryLine2"
+		}
+
+		BrujahStatCategoryLine2
+		{
+			"Name0"		"The Brujah bloodline is renown for its sheer physical prowess."
+			"Name1"		"Charm has its merits, but it's useless when swords get drawn."
+			"Name2"		"The fierce passion of the Brujah clan is rooted in a history of academic idealism."
+			"Name3"		"Brujah vampires act on an instinctive level, relying on their talents to survive."
+			"Name4"		"Brujah join talent with skill to devastating effect."
+			"Name5"		"No one expects a Brujah to know much. Wise Brujah use this stereotype to their advantage."
+		}
+
+		GangrelStatCategoryLine2
+		{
+			"Name0"		"The Gangrel's kinship with the Beast gives them tremendous strength and grace of movement."
+			"Name1"		"The elite of vampire society have little regard for Gangrel. The feeling is mutual."
+			"Name2"		"The Gangrel's predatory nature lends to heightened perception and quick wits."
+			"Name3"		"The animalistic Gangrel draw from strong instincts."
+			"Name4"		"Vampires of the Gangrel clan are capable of amazing feats of skill."
+			"Name5"		"Few Gangrel have the patience or discipline to excel in organized studies."
+		}
+
+		MalkavianStatCategoryLine2
+		{
+			"Name0"		"Malkavians demonstrate less concern for their physical well-being than other vampires."
+			"Name1"		"Regardless of their dementia, or perhaps because of it, Malkavians are fascinating conversationalists."
+			"Name2"		"Malkavians are bastions of mental fortitude. Perhaps simply because no one else wants in their head."
+			"Name3"		"The natural talents of the Malkavian are inhibited only by the many voices in their heads."
+			"Name4"		"With a wide-open mind and a lack of inhibitions, Malkavians are constantly learning."
+			"Name5"		"The twisted mind of the Malkavian grants great insight. If only others could communicate with them."
+		}
+
+		NosferatuStatCategoryLine2
+		{
+			"Name0"		"The Nosferatu body is twisted, but far from broken."
+			"Name1"		"Social graces. Who needs 'em?"
+			"Name2"		"Nosferatu demonstrate a fierce mental prowess that always keeps other vampires guessing."
+			"Name3"		"Why rely on gut reaction when a Nosferatu can orchestrate events as he pleases?"
+			"Name4"		"Skill and stealth combine in a Nosferatu to remarkable and often deadly effect."
+			"Name5"		"The Nosferatu lurk in shadows, collecting knowledge like unseen savants."
+		}
+
+		ToreadorStatCategoryLine2
+		{
+			"Name0"		"The Toreador's body is a thing of beauty, not a machine of industry."
+			"Name1"		"Enchanting or beguiling, the Toreador can play the social webs like a divine harpist."
+			"Name2"		"Eternal life is best savored by a cultured palette. The senses are nothing without a mind to interpret."
+			"Name3"		"To turn the many undercurrents of a social situation requires talent and subtlety."
+			"Name4"		"The Toreador are not so much the artiste, as the muse."
+			"Name5"		"An interesting conversationalist such as the Toreador will undoubtedly have a broad range of knowledges to speak of."
+		}
+
+		TremereStatCategoryLine2
+		{
+			"Name0"		"Tremere eschew physical prowess in favor of mental power, but are predators still."
+			"Name1"		"A closed cloister of secretive sorcerers, the Tremere are mistrusted and generally disliked."
+			"Name2"		"Blood magic is not something any vampire may dabble in. Only the strongest minds survive to practice the art."
+			"Name3"		"To control sanguineous magic requires great innate talent."
+			"Name4"		"Many Tremere practice their dark arts to the exclusion of other, lesser pursuits."
+			"Name5"		"The supernaturally sharpened mind of a Tremere can dissect any field of study."
+		}
+
+		VentrueStatCategoryLine2
+		{
+			"Name0"		"Physical prowess is required for the front lines. Your place is the war room."
+			"Name1"		"Great social prudence is required to marshall a society of immortals. Only the most deft negotiators prevail."
+			"Name2"		"Clan Ventrue emphasizes mental mettle. Only the tough can command the respect needed to lead."
+			"Name3"		"The talent needed to lead is borne in the Ventrue blood. It's something others cannot learn."
+			"Name4"		"Skill is what you want... in your servants."
+			"Name5"		"To be well-rounded in applied knowledges is imperative. Others look to the Ventrue for guidance, after all."
+		}
+
+		UI_Discipline_Gen_Targeting
+		{
+			"Name0"	"No Target"		//
+		}
+
+
+// Note: These may all be moving into their separate DisciplineTgt*.txt files...
+		UI_Animalism_Targeting
+		{
+			"Name0"	"Nightwisp Ravens"		// 0x00
+			"Name1"	"Burrowing Beetle"		// 0x01
+			"Name2"	"Serpens Succumbere"		// 0x02
+			"Name3"	"Bloodsucker's Communion"	// 0x04
+			"Name4"	"Pestilence"			// 0x08
+ 		}
+
+		UI_Dem_Targeting
+		{
+			"Name0"	"Madcap Laugh"		// 0x00
+			"Name1"	"Mass Hallucination"	// 0x01
+			"Name2"	"Vision of Death"		// 0x02
+			"Name3"	"Berserk"			// 0x04
+			"Name4"	"Sanitarium Sampler"	// 0x08
+
+// OLD, Removed ones
+//				"Name0"	"Veil of Madness"		// 0x00
+//				"Name1"	"The Haunting"		// 0x01
+//				"Name2"	"Voice of Madness"	// 0x02
+//				"Name3"	"Waking Nightmare"	// 0x04
+//				"Name4"	"Total Insanity"		// 0x08
+ 		}
+
+		UI_Dom_Targeting
+		{
+			"Name0"	"Trance"			// 1
+			"Name1"	"Brainwipe"			// 2
+			"Name2"	"Suicide"			// 3
+			"Name3"	"Possession"		// 4
+			"Name4"	"Suicide Pact"		// 5
+
+// OLD, Removed ones
+//				"Name0"	"Calm"	// Command the Wearied Mind 1a
+//				"Name1"	"Dance"	// Command the Wearied Mind 1b
+//				"Name2"	"Follow"	// Command the Wearied Mind 1c
+//				"Name3"	"Hide"	// Command the Wearied Mind 1d
+//				"Name4"	"Jump"	// Command the Wearied Mind 1e
+//				"Name5"	"Leave"	// Command the Wearied Mind 1f
+//				"Name6"	"Mesmerize"				// 2
+//				"Name7"	"Sleep"				// 3
+//				"Name8"	"Impose Will"			// 4
+//				"Name9"	"Possession"			// 5
+ 		}
+
+		UI_Thaum_Targeting
+		{
+			"Name0"	"Blood Strike"		// 0x00, changed by wesp	
+			"Name1"	"Blood Purge"		// 0x01, changed by wesp
+			"Name2"	"Blood Shield"	// 0x02, changed by wesp
+			"Name3"	"Blood Salvo"	// 0x04
+			"Name4"	"Blood Boil"	// 0x08
+
+
+// OLD, Removed ones
+//				"Name0"	"Blood Malady"	// 0x00
+//				"Name1"	"Bloody Eye"	// 0x01
+//				"Name2"	"Theft of Vitae"	// 0x02
+//				"Name3"	"Purge Blood"	// 0x04
+//				"Name4"	"Blood Boil"	// 0x08
+ 		}
+ 		
+ 		UI_Wallet_Strings
+ 		{
+
+			"Name0" "Current Money:"	// this entry is shown at the top of the barter window
+			"Name1" "Your Cash:"	// the rest are when you examine your wallet, changed by wesp. 
+ 			"Name2"	"Your wallet is empty, baby. You're so broke, you can't even afford to pay attention."
+ 			"Name3"	"The thin, faded cash in your wallet won't get you far."
+ 			"Name4" "Looks like you've got a wallet set for a night on the town."
+ 			"Name5" "Your bulging wallet makes you the undead Rockefeller."
+ 		}
+
+		UI_Progress_Bar
+		{
+			"Name0"	"Attempt:"
+			"Name1"	"Difficulty:"
+			"Name2" "Success"
+			"Name3" "Failed"
+			"Name4" "Not Attempted"
+			"Name5" "Arming Explosive"
+			"Name6" "Explosive Armed"
+			"Name7"	"BRAINS!!!"
+			"Name8" "Escaped!"
+			"Name9" "Lockpicking"
+		}
+
+		Hacking_Strings
+		{
+			"Name0" "Press CTRL-C to use the Hacking feat"
+			"Name1" "Changed to menu"
+			"Name2" "Available menus"
+			"Name3" "Available commands"
+			"Name4" "No commands"
+			"Name5" "Invalid command"
+			"Name6" "Type \"list\" to get the available commands."
+			"Name7" "Type \"help\" for assistance."
+			"Name8" "Type \"list\" to get the available menus and commands."
+			"Name9" "Menu names are listed in brackets. Type the name of a menu to switch to that menu."
+			"Name10" "Command names are listed after menu names. Type the name of a command to run that command."
+			"Name11" "Different menus have different available commands."
+			"Name12" "Password: "		// changed by wesp
+			"Name13" "A password is required to enter this subdirectory."	// changed by wesp
+			"Name14" "Password required"
+			"Name15" "PASSWORD FAILED"
+			"Name16" "Password succeeded"
+			"Name17" "home"
+			"Name18" "[Press \"ENTER\" to continue]"
+			"Name19" "Password accepted: <%s>            Entering menu."	// changed by wesp
+			"Name20" "Help information"
+			"Name21" "[Press \"ENTER\" to go back]"	// changed by wesp
+			"Name22" "From"
+			"Name23" "Subject"
+			"Name24" "[n]ext"
+			"Name25" "[p]rev"
+			"Name26" "[d]elete"
+			"Name27" "[m]enu"
+			"Name28" "[q]uit"
+			"Name29" "Email for"
+			"Name30" "email"
+			"Name31" "You have %d emails, %d are unread."	// changed by wesp
+			"Name32" "Type \"quit\" to exit"
+			"Name33" "quit"
+			"Name34" "help"
+			"Name35" "list"
+			"Name36" "email"
+			"Name37" "Difficulty: "
+			"Name38" "Skill too low to make hack attempt at difficulty: "	// changed by wesp
+			"Name39" "Password accepted: <%s>            Entering email."	// changed by wesp
+			"Name40" "Making hack attempt at skill: "	// changed by wesp
+			"Name41" "Current menu"
+			"Name42" "Type menu or command: "	// changed by wesp
+			"Name43" "Home menu" 
+			"Name44" "Menu" 
+			"Name45" "%d total emails, choose %d...%d"
+			"Name46" "%s or %s for more emails"
+			"Name47" "%s to exit: "
+		}
+
+		// Some are Used in Hud Feedback Window Messages
+ 		Infobar_Strings
+ 		{
+			"Name0" "Frenzy"
+ 			"Name1"	"Need Faith"	// changed by wesp
+ 			"Name2"	"Botch"
+ 			"Name3" "Masquerade Violation"
+			"Name4" "Masquerade Redemption"
+			"Name5" "Criminal Violation"
+ 			"Name6" "Inventory Full"
+			"Name7" "Quest Complete"
+			"Name8" "Quest Log Updated"
+			"Name9" "Experience Rewarded: "
+			"Name10" "Money Gained: "
+			"Name11" "Money Lost: "
+			"Name12" "Humanity Lost"
+			"Name13" "Humanity Gained"
+			"Name14" "New Discipline Gained"
+			"Name15" "Need Lockpick"	// changed by wesp
+			"Name16" "Not a Blueblood"
+			"Name17" "Diseased Blood"
+			"Name18" "Already Sated"
+			"Name19" "Used Key: "
+			"Name20" "Lost Key: "
+			"Name21" "Holster Melee Weapon"
+			"Name22" "Inadequate Skill"
+			"Name23" "Experience Awarded"
+			"Name24" "Lockpicking skill below lock difficulty of "	// changed by wesp
+			"Name25" "Stats Increased"
+			"Name26" "Mode Selected: "		// Weapon_Mode_Selected
+			"Name27" "Effect Gained: "		// Effect Gained
+			"Name28" "Effect Lost: "		// Effect Lost
+			"Name29" "Item Gained: "		// Item Gained
+			// Obfuscate:
+			"Name30"	"Crouching"
+			"Name31"	"Moved"
+			"Name32"	"Standing"
+			"Name33"	"Walking"
+			"Name34"	"Running"
+			"Name35"	"Jumping"
+			"Name36"	"Using"
+			"Name37"	"Attacking"
+			"Name38"	"Attacking"	// Not a stealth attack
+			"Name39"	"Someone can see you"
+			"Name40"	"Feeding"
+			"Name41"	"Bumped Object"
+			// Misc
+			"Name42"	"Damage inflicted: "	// How much damage the player inflicted on a target
+			"Name43"	"Damage soaked: "		// How much damage the player soaked from a hit
+			"Name44"	"No valid Target found"			// For Targeted Disciplines
+			"Name45"	"No valid Target found in Radius"	// For Targeted Disciplines
+			"Name46"	"No valid Target found in Cone"	// For Targeted Disciplines
+			// Physics Hand Messages			/
+			"Name47"	"You are not strong enough to move this"	// changed by wesp
+			"Name48"	"You cannot pick up what you are standing on"
+			// Area type messages
+			"Name49"	"The cops are still looking for you"
+			"Name50"	"You have entered a combat area"
+			"Name51"	"You have entered a safe area"
+			"Name52"	"You have entered Elysium"
+
+			"Name53"	"You gain no nourishment from rat blood"
+			"Name54"	"Game Saved"
+			"Name55"	"Cannot save at this time"	// changed by wesp
+			"Name56"	"Need More Faith"	// changed by wesp
+			"Name57"	"123"		// Discipline Activated -- String is unused, but placeholder is needed
+			"Name58"	"123"		// Discipline Deactivated -- String is unused, but placeholder is needed
+
+			"Name59"	"Police Hunting"
+			"Name60"	"Police Giving Up"
+			"Name61"	"Weapons Not Allowed"
+			"Name62"	"Numina Not Allowed"	// changed by wesp
+			"Name63"	"Lurking: Obfuscate Timer Paused"
+			"Name64"	"Obfuscate Timer Running"
+
+			"Name65"	"Cannot talk during combat"
+			"Name66"	"Cannot save during dialog"	// changed by wesp
+			"Name67"	"Cannot save at this time"	// changed by wesp
+			"Name68"	"Cannot save while using"
+			"Name69"	"Cannot save while dead (only undead)"
+			"Name70"	"Cannot save while in cutscene"	// changed by wesp
+			"Name71"	"Cannot save while grappling"	// changed by wesp
+			"Name72"	"Must wait to use that Discipline again"
+			"Name73"	"Feed Attempt Failed"
+			"Name74"	"Your body rejects the blood of this lowborn human"
+			"Name75"	"Lockpicking succeeded at lock difficulty of "	// changed by wesp
+			"Name76"	"You cannot fight while climbing a ladder"
+			"Name77"	"Doors unusable while cops are in pursuit"
+
+			"Name78"	"You already have this weapon"
+			"Name79"	"Game Saving..."
+			"Name80"	"Target out of Range"			// For Targeted Disciplines
+			"Name81"	"Target Obstructed"			// For Targeted Disciplines
+
+			"Name82"	"Inventory Full - Item Dropped!"
+		}
+
+		// Used in Hud Feedback Window Messages
+		UIHudObfFeedbackStrs
+		{
+			"Name0"	"Level 1 Obfuscate Failed: "
+			"Name1"	"Level 2 Obfuscate Failed: "
+			"Name2"	"Level 3 Obfuscate Failed: "
+			"Name3"	"Level 4 Obfuscate Failed: "
+			"Name4"	"Level 5 Obfuscate Failed: "
+		}
+
+		UIHudFeedbackStrs
+		{
+			// These are Used in Hud Feedback Window Messages!!!
+			"Name0"	"Mode Selected: "	// As in, 'single-shot mode selected', etc.  -- NOT USED ANYMORE
+			"Name1"	"Effect Gained: %s"	// Trait effects that have been gained ( +1 Strength, etc. )
+			"Name2"	"Effect Lost: %s"		// Trait effects that have been lost ( +1 Strength, etc. )
+			"Name3"	"Item Gained: %s"		// Item that was picked up
+		}
+
+		// Used in Hud Feedback Window Messages
+		UI_Discipline_Feedback
+		{
+			"Name0"	"-%s ( %d )"	// Displayed when a discipline raises/lowers value
+ 		}
+	}
+}

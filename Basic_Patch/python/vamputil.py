@@ -100,6 +100,89 @@ def setPlus():
         pc.GiveItem("item_g_wallet")
         pc.GiveItem("item_g_keyring")
         pc.GiveItem("item_a_lt_cloth")
+    if (G.Vampire_Hunter == 0 and (pc.clan == 9 or pc.clan == 10 or pc.clan == 11)):
+        print "Vampire Hunter"
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\vdata\\system\\stats_hunter.txt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\vdata\\system\\stats.txt"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\vdata\\system\\strings_hunter.txt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\vdata\\system\\strings.txt"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\vdata\\system\\traiteffects000_hunter.txt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\vdata\\system\\traiteffects000.txt"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\disciplines\\faith_heal.tth"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\disciplines\\bloodheal.tth"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\disciplines\\faith_heal.ttz"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\disciplines\\bloodheal.ttz"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\disciplines\\faith_heal_base.tth"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\disciplines\\bloodheal_base.tth"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\disciplines\\faith_heal_base.ttz"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\disciplines\\bloodheal_base.ttz"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\faith_bar.vmt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\bloodbar.vmt"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\faith_barbottom.vmt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\bloodbarbottom.vmt"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\faith_barfill.vmt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\bloodbarfill.vmt"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\faith_useglow.vmt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\blooduseglow.vmt"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\faith_useiconglow.vmt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\blooduseiconglow.vmt"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\bloodbar\\faith_bar.vmt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\bloodbar\\bloodbar.vmt"
+        fileutil.copyfile(src, dst)
+        G.Vampire_Hunter = 1
+    elif G.Vampire_Hunter == 0:
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\vdata\\system\\stats_vampire.txt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\vdata\\system\\stats.txt"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\vdata\\system\\strings_vampire.txt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\vdata\\system\\strings.txt"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\vdata\\system\\traiteffects000_vampire.txt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\vdata\\system\\traiteffects000.txt"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\disciplines\\blood_heal.tth"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\disciplines\\bloodheal.tth"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\disciplines\\blood_heal.ttz"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\disciplines\\bloodheal.ttz"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\disciplines\\blood_heal_base.tth"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\disciplines\\bloodheal_base.tth"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\disciplines\\blood_heal_base.ttz"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\disciplines\\bloodheal_base.ttz"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\blood_bar.vmt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\bloodbar.vmt"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\blood_barbottom.vmt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\bloodbarbottom.vmt"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\blood_barfill.vmt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\bloodbarfill.vmt"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\blood_useglow.vmt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\blooduseglow.vmt"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\blood_useiconglow.vmt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\blooduseiconglow.vmt"
+        fileutil.copyfile(src, dst)
+        src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\bloodbar\\blood_bar.vmt"
+        dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\bloodbar\\bloodbar.vmt"
+        fileutil.copyfile(src, dst)
+        G.Vampire_Hunter = 1
     if G.Patch_Plus == 1:
         plus = __main__.FindEntitiesByName("plus_*")
         for p in plus:
@@ -1415,9 +1498,17 @@ def checkDiscipline():
     if (pc.HasItem("item_w_tzimisce2_head")):
         print "YOU SHALL NOT CAST!"
     else:
-        if (pc.active_blood_healing > 0): c.vm_bloodheal=""
         c.vdiscipline_last=""
+        __main__.ScheduleTask(1.0,"BloodHealTest()")
         VThaumaturgy(1)
+
+def BloodHealTest():		# added by wesp
+    c  = __main__.ccmd
+    pc = __main__.FindPlayer()
+    if (pc.active_blood_healing > 0 and (pc.clan == 9 or pc.clan == 10 or pc.clan == 11)):
+        c.faithheal=""
+    elif (pc.active_blood_healing > 0):
+        c.vm_bloodheal=""
 
 def VThaumaturgy(x):
     G    = __main__.G
