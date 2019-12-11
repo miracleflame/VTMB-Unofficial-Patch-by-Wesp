@@ -668,20 +668,29 @@ def lapDanceTransition2():
     vvClone = __main__.Find("vvClone")
     if(vvClone):
         vvClone.SetOrigin((5000,5000,5000))
-    dance = __main__.Find("vv_dance_4")
+    if(__main__.FindPlayer().IsMale()):
+        dance = __main__.Find("vv_dance_4")
+    else:
+        dance = __main__.Find("vv_dance_4_female")
     #Start legs dance.
     if(dance):
         dance.Start()
 
 #This handles the third transition, i.e. boobs in your face.
 def lapDanceTransition3():
-    dance = __main__.Find("vv_dance_6")
+    if(__main__.FindPlayer().IsMale()):
+        dance = __main__.Find("vv_dance_6")
+    else:
+        dance = __main__.Find("vv_dance_6_female")
     if(dance):
         dance.Start()
 
 #This handles the fourth transition, i.e. dry humping
 def lapDanceTransition4():
-    dance = __main__.Find("vv_dance_3")
+    if(__main__.FindPlayer().IsMale()):
+        dance = __main__.Find("vv_dance_3")
+    else:
+        dance = __main__.Find("vv_dance_3_female")
     pcClone = __main__.Find("pcClone")
     if(dance):
         dance.Start()
