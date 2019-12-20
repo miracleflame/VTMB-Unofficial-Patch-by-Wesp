@@ -122,6 +122,8 @@ def setCemQuest():
         eventStart.Trigger()
         control = Find ("Player_control")
         control.CreateControllerNPC()
+        romeroseq = Find("romero_seq_stand")
+        romeroseq.CancelSequence()
         playerseq = Find("player_control_seq")
         playerseq.BeginSequence()
     elif (state == 0):
