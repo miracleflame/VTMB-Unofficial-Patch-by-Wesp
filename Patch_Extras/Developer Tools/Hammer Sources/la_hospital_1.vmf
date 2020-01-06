@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7999"
-	"mapversion" "86"
+	"mapversion" "90"
 	"prefab" "0"
 }
 viewsettings
@@ -15,7 +15,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "86"
+	"mapversion" "90"
 	"classname" "worldspawn"
 	"skyname" "santamonica"
 	"sounds" "1"
@@ -45883,9 +45883,9 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnOpen" "monitor_1_dead,ScriptUnhide,,0,-1,,"
-		"OnOpen" "monitor_1_alt,Kill,,0,-1,,"
 		"OnOpen" "monitor_2,ScriptUnhide,,0.1,-1,,"
+		"OnOpen" "monitor_1_alt,Kill,,0,-1,,"
+		"OnOpen" "monitor_1_dead,ScriptUnhide,,0,-1,,"
 	}
 	solid
 	{
@@ -50186,8 +50186,8 @@ entity
 	"targetname" "poor_sap_1_trigger"
 	connections
 	{
-		"OnStartTouch" "poor_sap_1_monitor_camera,StartShot,,0,-1,,"
 		"OnStartTouch" "poor_sap_1_relay,Trigger,,0,1,,"
+		"OnStartTouch" "poor_sap_1_monitor_camera,StartShot,,0,-1,,"
 	}
 	solid
 	{
@@ -50808,9 +50808,9 @@ entity
 	"radius" "10"
 	connections
 	{
-		"OnBeginSequence" "poor_sap_2_monitor_camera,EndShot,,4,-1,,"
-		"OnBeginSequence" "poor_sap_2,Kill,100,4,-1,,"
 		"OnBeginSequence" "poor_sap_2_scream_2,PlaySound,,1.7,-1,,"
+		"OnBeginSequence" "poor_sap_2,Kill,100,4,-1,,"
+		"OnBeginSequence" "poor_sap_2_monitor_camera,EndShot,,4,-1,,"
 	}
 	"origin" "341 -1432.26 9"
 	editor
@@ -50945,9 +50945,9 @@ entity
 	"origin" "152.5 -1169 43"
 	connections
 	{
-		"OnStartTouch" "poor_sap_2_monitor_camera,StartShot,,0,-1,,"
-		"OnStartTouch" "poor_sap_2_dies,BeginSequence,,0.7,-1,,"
 		"OnStartTouch" "poor_sap_2_scream,PlaySound,,0.7,-1,,"
+		"OnStartTouch" "poor_sap_2_dies,BeginSequence,,0.7,-1,,"
+		"OnStartTouch" "poor_sap_2_monitor_camera,StartShot,,0,-1,,"
 	}
 	solid
 	{
@@ -51283,10 +51283,10 @@ entity
 	"soundgroup" "Unique/E"
 	connections
 	{
-		"OnDialogBegin" "Corpse,Kill,,0,-1,,"
-		"OnDialogEnd" "debris_hider,Trigger,,0,-1,pishaDialog(),"
-		"OnDeath" "pisha_dead_relay,Trigger,,0,-1,,"
 		"OnDamaged" "pisha_fight_relay,Trigger,,0,1,pishaDeath(),"
+		"OnDeath" "pisha_dead_relay,Trigger,,0,-1,,"
+		"OnDialogEnd" "debris_hider,Trigger,,0,-1,pishaDialog(),"
+		"OnDialogBegin" "Corpse,Kill,,0,-1,,"
 	}
 	"origin" "358 -234.314 -285"
 	editor
@@ -51352,17 +51352,17 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "poor_sap_1_trigger,Kill,,0,-1,,"
-		"OnTrigger" "cam_move,Kill,,3,1,,"
-		"OnTrigger" "camera_1,Kill,,3,1,,"
-		"OnTrigger" "monitor_1_alt,ScriptUnhide,,3,-1,,"
-		"OnTrigger" "monitor_1_dead,ScriptHide,,3,-1,,"
-		"OnTrigger" "monitor_1_dead,ScriptUnhide,,2,1,,"
-		"OnTrigger" "monitor_1,Kill,,3,1,,"
-		"OnTrigger" "poor_sap_1_scream,PlaySound,,0,1,,"
-		"OnTrigger" "poor_sap_1_sequence,BeginSequence,,0.5,1,,"
-		"OnTrigger" "poor_sap_1,ScriptUnhide,,0,1,,"
 		"OnTrigger" "camcorder_broken,ScriptUnhide,,3,-1,,"
+		"OnTrigger" "poor_sap_1,ScriptUnhide,,0,1,,"
+		"OnTrigger" "poor_sap_1_sequence,BeginSequence,,0.5,1,,"
+		"OnTrigger" "poor_sap_1_scream,PlaySound,,0,1,,"
+		"OnTrigger" "monitor_1,Kill,,3,1,,"
+		"OnTrigger" "monitor_1_dead,ScriptUnhide,,2,1,,"
+		"OnTrigger" "monitor_1_dead,ScriptHide,,3,-1,,"
+		"OnTrigger" "monitor_1_alt,ScriptUnhide,,3,-1,,"
+		"OnTrigger" "camera_1,Kill,,3,1,,"
+		"OnTrigger" "cam_move,Kill,,3,1,,"
+		"OnTrigger" "poor_sap_1_trigger,Kill,,0,-1,,"
 	}
 	"origin" "455 -857.505 117.241"
 	editor
@@ -51582,8 +51582,8 @@ entity
 	"origin" "716.5 -311.5 -229.5"
 	connections
 	{
-		"OnStartTouch" "pisha_door,Unlock,,0,-1,,"
 		"OnStartTouch" "pisha_eat_guy_scene,Start,,0,-1,,"
+		"OnStartTouch" "pisha_door,Unlock,,0,-1,,"
 	}
 	solid
 	{
@@ -51687,8 +51687,8 @@ entity
 	"radius" "10"
 	connections
 	{
-		"OnEndSequence" "poor_sap_1_monitor_camera,EndShot,,0,-1,,"
 		"OnEndSequence" "poor_sap_1,Kill,,0,-1,,"
+		"OnEndSequence" "poor_sap_1_monitor_camera,EndShot,,0,-1,,"
 	}
 	"origin" "405.316 -1164 0.180831"
 	editor
@@ -52293,12 +52293,12 @@ entity
 	"origin" "585.5 -583.5 -250.5"
 	connections
 	{
-		"OnStartTouch" "milligan_leaves_relay,Trigger,,0,-1,,"
-		"OnStartTouch" "final_sap_scream,Kill,,10,-1,,"
-		"OnStartTouch" "Snd_Locked_In,Kill,,10,-1,,"
-		"OnStartTouch" "Snd_Locked_In,PlaySound,,0,-1,,"
-		"OnStartTouch" "guy_hit_door_scene,Start,,0,-1,,"
 		"OnStartTouch" "final_sap_blood,ScriptUnhide,,3.8,-1,,"
+		"OnStartTouch" "guy_hit_door_scene,Start,,0,-1,,"
+		"OnStartTouch" "Snd_Locked_In,PlaySound,,0,-1,,"
+		"OnStartTouch" "Snd_Locked_In,Kill,,10,-1,,"
+		"OnStartTouch" "final_sap_scream,Kill,,10,-1,,"
+		"OnStartTouch" "milligan_leaves_relay,Trigger,,0,-1,,"
 	}
 	solid
 	{
@@ -53096,12 +53096,12 @@ entity
 	"Case06" "6"
 	connections
 	{
-		"OnCase01" "arm,FlingNow,,0,-1,,"
-		"OnCase02" "arm_2,FlingNow,,0,-1,,"
-		"OnCase03" "skull,FlingNow,,0,-1,,"
-		"OnCase04" "torso,FlingNow,,0,-1,,"
-		"OnCase05" "leg,FlingNow,,0,-1,,"
 		"OnCase06" "leg_2,FlingNow,,0,-1,,"
+		"OnCase05" "leg,FlingNow,,0,-1,,"
+		"OnCase04" "torso,FlingNow,,0,-1,,"
+		"OnCase03" "skull,FlingNow,,0,-1,,"
+		"OnCase02" "arm_2,FlingNow,,0,-1,,"
+		"OnCase01" "arm,FlingNow,,0,-1,,"
 	}
 	"origin" "529 -206.375 -211.22"
 	editor
@@ -53117,13 +53117,13 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "fire_crackle,PlaySound,,0,-1,,"
-		"OnTrigger" "spell_timer,Enable,,0,-1,,"
-		"OnTrigger" "flame_wall_hurt,Enable,,0,1,,"
-		"OnTrigger" "flame_wall,TurnOn,,0,1,,"
-		"OnTrigger" "zombie_spawner,Enable,,0,1,,"
-		"OnTrigger" "pisha_fight,BeginSequence,,0,-1,,"
 		"OnTrigger" "Pisha,SetRelationship,player D_HT 5,0,-1,,"
+		"OnTrigger" "pisha_fight,BeginSequence,,0,-1,,"
+		"OnTrigger" "zombie_spawner,Enable,,0,1,,"
+		"OnTrigger" "flame_wall,TurnOn,,0,1,,"
+		"OnTrigger" "flame_wall_hurt,Enable,,0,1,,"
+		"OnTrigger" "spell_timer,Enable,,0,-1,,"
+		"OnTrigger" "fire_crackle,PlaySound,,0,-1,,"
 	}
 	"origin" "267 -244.997 -201.976"
 	editor
@@ -53140,12 +53140,12 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "fire_crackle,StopSound,,0,-1,,"
-		"OnTrigger" "zombie_spawner,Kill,,0,1,,"
-		"OnTrigger" "spell_timer,Disable,,0,1,,"
-		"OnTrigger" "flame_wall_hurt,Disable,,0,1,,"
-		"OnTrigger" "flame_wall,TurnOff,,0,1,,"
 		"OnTrigger" "zombie_killer,Trigger,,0,-1,,"
+		"OnTrigger" "flame_wall,TurnOff,,0,1,,"
+		"OnTrigger" "flame_wall_hurt,Disable,,0,1,,"
+		"OnTrigger" "spell_timer,Disable,,0,1,,"
+		"OnTrigger" "zombie_spawner,Kill,,0,1,,"
+		"OnTrigger" "fire_crackle,StopSound,,0,-1,,"
 	}
 	"origin" "288 -244 -201.976"
 	editor
@@ -53682,10 +53682,10 @@ entity
 	"Case04" "4"
 	connections
 	{
-		"OnCase01" "spell_1,BeginSequence,,0,-1,,"
-		"OnCase04" "spell_4,BeginSequence,,0,-1,,"
-		"OnCase03" "spell_3,BeginSequence,,0,-1,,"
 		"OnCase02" "spell_2,BeginSequence,,0,-1,,"
+		"OnCase03" "spell_3,BeginSequence,,0,-1,,"
+		"OnCase04" "spell_4,BeginSequence,,0,-1,,"
+		"OnCase01" "spell_1,BeginSequence,,0,-1,,"
 	}
 	"origin" "267 -206.427 -193.625"
 	editor
@@ -53709,10 +53709,10 @@ entity
 	"radius" "10"
 	connections
 	{
-		"OnBeginSequence" "spell_sound,PlaySound,,0,-1,,"
-		"OnBeginSequence" "body_part_chooser,PickRandom,,0,-1,,"
-		"OnBeginSequence" "spell_particles,TurnOn,,0,-1,,"
 		"OnEndSequence" "spell_particles,TurnOff,,0,-1,,"
+		"OnBeginSequence" "spell_particles,TurnOn,,0,-1,,"
+		"OnBeginSequence" "body_part_chooser,PickRandom,,0,-1,,"
+		"OnBeginSequence" "spell_sound,PlaySound,,0,-1,,"
 	}
 	"origin" "292 -156 -279"
 	editor
@@ -53736,10 +53736,10 @@ entity
 	"radius" "10"
 	connections
 	{
-		"OnBeginSequence" "spell_sound,PlaySound,,0,-1,,"
-		"OnBeginSequence" "body_part_chooser,PickRandom,,0,-1,,"
-		"OnBeginSequence" "spell_particles,TurnOn,,0,-1,,"
 		"OnEndSequence" "spell_particles,TurnOff,,0,-1,,"
+		"OnBeginSequence" "spell_particles,TurnOn,,0,-1,,"
+		"OnBeginSequence" "body_part_chooser,PickRandom,,0,-1,,"
+		"OnBeginSequence" "spell_sound,PlaySound,,0,-1,,"
 	}
 	"origin" "516 -144 -279"
 	editor
@@ -53763,10 +53763,10 @@ entity
 	"radius" "10"
 	connections
 	{
-		"OnBeginSequence" "spell_sound,PlaySound,,0,-1,,"
-		"OnBeginSequence" "body_part_chooser,PickRandom,,0,-1,,"
-		"OnBeginSequence" "spell_particles,TurnOn,,0,-1,,"
 		"OnEndSequence" "spell_particles,TurnOff,,0,-1,,"
+		"OnBeginSequence" "spell_particles,TurnOn,,0,-1,,"
+		"OnBeginSequence" "body_part_chooser,PickRandom,,0,-1,,"
+		"OnBeginSequence" "spell_sound,PlaySound,,0,-1,,"
 	}
 	"origin" "472 -432 -279"
 	editor
@@ -53790,10 +53790,10 @@ entity
 	"radius" "10"
 	connections
 	{
-		"OnBeginSequence" "spell_sound,PlaySound,,0,-1,,"
-		"OnBeginSequence" "body_part_chooser,PickRandom,,0,-1,,"
-		"OnBeginSequence" "spell_particles,TurnOn,,0,-1,,"
 		"OnEndSequence" "spell_particles,TurnOff,,0,-1,,"
+		"OnBeginSequence" "spell_particles,TurnOn,,0,-1,,"
+		"OnBeginSequence" "body_part_chooser,PickRandom,,0,-1,,"
+		"OnBeginSequence" "spell_sound,PlaySound,,0,-1,,"
 	}
 	"origin" "280 -352 -279"
 	editor
@@ -53864,9 +53864,9 @@ entity
 	"radius" "10"
 	connections
 	{
-		"OnBeginSequence" "spell_sound,PlaySound,,0,-1,,"
-		"OnEndSequence" "spell_particles,TurnOff,,0,-1,,"
 		"OnBeginSequence" "spell_particles,TurnOn,,0,-1,,"
+		"OnEndSequence" "spell_particles,TurnOff,,0,-1,,"
+		"OnBeginSequence" "spell_sound,PlaySound,,0,-1,,"
 	}
 	"origin" "356 -243.443 -287"
 	editor
@@ -54296,8 +54296,8 @@ entity
 	"origin" "545.5 -312.5 -229.5"
 	connections
 	{
-		"OnStartTouch" "controller,CreateControllerNPC,,0,-1,,"
 		"OnStartTouch" "player_to_pisha,BeginSequence,,0.1,-1,,"
+		"OnStartTouch" "controller,CreateControllerNPC,,0,-1,,"
 	}
 	solid
 	{
@@ -54411,11 +54411,11 @@ entity
 	"radius" "10"
 	connections
 	{
-		"OnBeginSequence" "pisha_eat_fade,Fade,,0,-1,,"
-		"OnBeginSequence" "Corpse,ScriptUnhide,,0.5,-1,,"
-		"OnBeginSequence" "Corpse1,ScriptHide,,0.5,-1,,"
-		"OnBeginSequence" "pisha_eat_guy_scene,Cancel,,0.5,-1,,"
 		"OnBeginSequence" "pisha_eat_guy_done,Start,,0.6,-1,,"
+		"OnBeginSequence" "pisha_eat_guy_scene,Cancel,,0.5,-1,,"
+		"OnBeginSequence" "Corpse1,ScriptHide,,0.5,-1,,"
+		"OnBeginSequence" "Corpse,ScriptUnhide,,0.5,-1,,"
+		"OnBeginSequence" "pisha_eat_fade,Fade,,0,-1,,"
 	}
 	"origin" "447.979 -252 -288"
 	editor
@@ -54438,9 +54438,10 @@ entity
 	"full_sound" "1"
 	connections
 	{
-		"OnCompletion" "Pisha,StartPlayerDialog,,1,-1,,"
-		"OnCompletion" "controller,RemoveControllerNPC,,0,-1,,"
 		"OnCompletion" "pisha_eat_guy_corpse_loop,Start,,0,-1,,"
+		"OnCompletion" "controller,RemoveControllerNPC,,0,-1,,"
+		"OnCompletion" "Pisha,StartPlayerDialog,,1,-1,,"
+		"OnCompletion" "Corpse1,ScriptUnhide,,0,-1,,"
 	}
 	"origin" "361.157 -235.273 -285.527"
 	editor
@@ -54922,8 +54923,8 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" ",,,0,-1,milliganCard(),"
 		"OnTrigger" "Milligan,Kill,,0,-1,G.Milligan_Skyline = 1,"
+		"OnTrigger" ",,,0,-1,milliganCard(),"
 	}
 	"origin" "325.59 -449 101.879"
 	editor
@@ -55257,8 +55258,8 @@ entity
 	"unlocked_sound" "environmental/electronic/button_beep.wav"
 	connections
 	{
-		"OnPressed" "boards,Break,,0,-1,,"
 		"OnPressed" "board_break_button,Kill,,0.2,-1,,"
+		"OnPressed" "boards,Break,,0,-1,,"
 	}
 	solid
 	{
@@ -55484,8 +55485,8 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnMapLoad" ",,,0,-1,unhidePlus(),"
 		"OnMapLoad" ",,,0,-1,G.Stop_Shake = 1,"
+		"OnMapLoad" ",,,0,-1,unhidePlus(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -55545,27 +55546,27 @@ entity
 	"enabled" "0"
 	connections
 	{
-		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
-		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
-		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
-		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
-		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
-		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
-		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
-		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
-		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
-		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
-		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
-		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
-		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
-		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
-		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
-		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
-		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
-		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
-		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
-		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
 		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
+		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
+		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
+		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
+		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
+		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
+		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
+		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
+		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
+		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
+		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
+		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
+		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
+		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
+		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
+		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
+		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
+		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
+		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
+		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
+		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -55581,29 +55582,29 @@ entity
 	"StartHidden" "0"
 	connections
 	{
-		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
-		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
-		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
-		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
-		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
-		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
-		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
-		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
-		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
-		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
-		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
-		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
-		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
-		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
-		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
-		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
-		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
-		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
-		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
-		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
-		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
-		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
 		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
+		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
+		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
+		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
+		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
+		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
+		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
+		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
+		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
+		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
+		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
+		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
+		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
+		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
+		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
+		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
+		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
+		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
+		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
+		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
+		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
+		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
+		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -146975,13 +146976,57 @@ entity
 		"color" "144 160 112"
 	}
 }
+entity
+{
+	"id" "16450"
+	"classname" "infodecal"
+	"texture" "decals/stains/blooda"
+	"origin" "586 -371 -288"
+	editor
+	{
+		"color" "220 30 220"
+	}
+}
+entity
+{
+	"id" "16462"
+	"classname" "infodecal"
+	"texture" "decals/stains/bloodb"
+	"origin" "542 -343 -288"
+	editor
+	{
+		"color" "220 30 220"
+	}
+}
+entity
+{
+	"id" "16465"
+	"classname" "infodecal"
+	"texture" "decals/stains/bloodc"
+	"origin" "495 -326 -288"
+	editor
+	{
+		"color" "220 30 220"
+	}
+}
+entity
+{
+	"id" "16501"
+	"classname" "infodecal"
+	"texture" "decals/stains/bloodd"
+	"origin" "440 -299 -288"
+	editor
+	{
+		"color" "220 30 220"
+	}
+}
 cameras
 {
 	"activecamera" "0"
 	camera
 	{
-		"position" "[698.568 -308.681 -202.681]"
-		"look" "[432.93 -338.474 -260.179]"
+		"position" "[443.404 -227.42 -177.672]"
+		"look" "[266.973 -303.033 -372.382]"
 	}
 }
 cordon

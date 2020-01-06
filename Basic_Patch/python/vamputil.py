@@ -323,8 +323,8 @@ def setPlus():
             sarc.ScriptHide()
             sarcbasic = Find("sarc_basic")
             sarcbasic.ScriptHide()
-        museummanhole = Find("museum_taxi")
-        if museummanhole:
+        museumteleport = Find("museum_teleport")
+        if museumteleport:
             museumcabbie = Find("cabbie")
             museumcabbie.WillTalk(0)
             doorfire = Find("door_fire")
@@ -608,15 +608,15 @@ def spawnGold():
 def changeLevelCheck():
     map2a = Find("giovanni_2a")
     map2b = Find("giovanni_2b")
-    if (__main__.G.GioBotchedOutside == 1 ):
-        map2a.Disable()
-        map2b.Enable()
-        print "2a disabled"
-    else:
+    if (__main__.G.BeenToGioParty == 1):
         map2b.Disable()
         map2a.Enable()
         print "2b disabled"
-    if (__main__.G.Nadia_Fright == 1 ):
+    else:
+        map2a.Disable()
+        map2b.Enable()
+        print "2a disabled"
+    if (__main__.G.Nadia_Fright == 1):
         print ( "********* cleaning up *************" )
         door = Find("door_fake")
         door.ScriptHide()

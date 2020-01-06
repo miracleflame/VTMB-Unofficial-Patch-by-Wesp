@@ -129,8 +129,8 @@
 {	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	131	}{	You can let yourself out.	}{	You can let yourself out.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	132	}{	I need access to your controlled substances room.	}{	I need access to your controlled substances room.	}{	161	}{	Persuasion 3 & G.Guard_Dominated < 1 and OneOfSet(1,2) and G.Guard_CS == 0	}{	}{	}{	}{	}{	}{	}{	}{	I must enter Controlled Substances or the computers will remain incommunicado.	}
-{	133	}{	I need access to your controlled substances room.	}{	I need access to your controlled substances room.	}{	171	}{	Persuasion 3 & G.Guard_Dominated < 1 and OneOfSet(2,2) and G.Guard_CS == 0	}{	}{	}{	}{	}{	}{	}{	}{	I must enter Controlled Substances or the computers will remain incommunicado.	}
+{	132	}{	I need access to your controlled substances room.	}{	I need access to your controlled substances room.	}{	161	}{	Persuasion 3 & (G.Guard_Dominated < 1 and OneOfSet(1,2) and G.Guard_CS == 0 and G.CS_Key == 0)	}{	}{	}{	}{	}{	}{	}{	}{	I must enter Controlled Substances or the computers will remain incommunicado.	}
+{	133	}{	I need access to your controlled substances room.	}{	I need access to your controlled substances room.	}{	171	}{	Persuasion 3 & (G.Guard_Dominated < 1 and OneOfSet(2,2) and G.Guard_CS == 0 and G.CS_Key == 0)	}{	}{	}{	}{	}{	}{	}{	}{	I must enter Controlled Substances or the computers will remain incommunicado.	}
 {	134	}{	Thanks again.	}{	Thanks again.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Much thanks.	}
 {	135	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	136	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

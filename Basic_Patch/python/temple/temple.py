@@ -347,8 +347,7 @@ def tpl3_check_pedestals():
             gong.PlaySound()
         tele_emitter = Find( "teleport_emitter" )
         tele_emitter.TurnOn()
-        tele_trigger = Find( "teleport_trigger" )
-        tele_trigger.ScriptUnhide()
+        __main__.ScheduleTask(10.0, "__main__.FindEntityByName(\"teleport_trigger\").ScriptUnhide()")
 # wesp        __main__.FindPlayer().SetQuest("Ming", 4)
         torches = Finds( "torch*" )
         for torch in torches:

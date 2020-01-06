@@ -287,13 +287,14 @@ def onGio1Load():
     print ( "***************** Running Gio1 Loading Script *****************" )
     G.GioGuard = 0
     print ( "***************** Reset Guard DLGs *****************" )
-    if ( G.Story_State == 60 ):
+    if ( G.Story_State == 60 and G.Gio_Cutscene == 0):
         gio1_KillAllOutside()
+        G.Gio_Cutscene = 1
         cutscene()
         print ( "***************** Playing Loading Movie *****************" )
         return
     checkNosferatu()
-    if ( G.Story_State >= 65 ):
+    if ( G.Gio_Cutscene == 1 ):
         truck = Find("truck1")
         truck.ScriptHide()
         transition = Find("trig_to_chambers")
@@ -315,9 +316,9 @@ def onGio2aLoad():
         print ( "************* Infiltrated the Giovanni Mansion ****************" )
     if (G.Nadia_G3 == 1):
         Nadia = Find("Nadia")
-        if Nadia: Nadia.ScriptHide()
+        if Nadia: Nadia.Kill()
         float = Find("Choreo_FollowMe")
-        if float: float.ScriptHide()
+        if float: float.Kill()
 
 #GIOVANNI MANSION 2: Fires on Giovanni2b Load
 def onGio2bLoad():
@@ -520,6 +521,8 @@ def zombieKillCounter():
 def gio5_changDefeated():
     G.Story_State = 60
     G.Chunk_Open = 4
+    G.gio_2_nadia_pt = 0
+    G.GioBotchedInside = 1
     trigger = Find("trig_from_4")
     trigger.ScriptUnhide()
     __main__.ChangeMap(3, "truckmark", "trig_shortcut")

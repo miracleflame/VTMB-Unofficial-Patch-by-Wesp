@@ -48,19 +48,10 @@ def finishElysiumTip():
         if poster:poster.Kill()
         tapeplayer = Find("tape_player")
         if tapeplayer: tapeplayer.Kill()
-    if(not __main__.IsDead("Malcolm") and G.Patch_Plus == 1):
-        if(G.Malcolm_Affair == 4):
-            cash1 = Find("cash1")
-            if cash1: cash1.ScriptUnhide()
-            cash1node = Find("cash1node")
-            if cash1node: cash1node.ScriptUnhide()
-        elif(G.Malcolm_Affair == 5):
-            cash2 = Find("cash2")
-            if cash2: cash2.ScriptUnhide()
-            cash2node = Find("cash2node")
-            if cash2node: cash2node.ScriptUnhide()
+        taperecorder = Find("tape_recorder")
+        if taperecorder: taperecorder.Kill()
     if(G.Story_State >= 15):
-        if(G.Patch_Plus == 1 and G.Level_Clean == 0):
+        if(G.Patch_Plus == 1 and G.Level_Swap == 0):
             bloodstains = FindList("merc_bloodstains")
             for stain in bloodstains:
                 stain.Kill()
@@ -72,7 +63,41 @@ def finishElysiumTip():
             table_fallen.Kill()
             table = Find("merc_table")
             table.ScriptUnhide()
-            G.Level_Clean = 1
+            G.Level_Swap = 1
+    if (G.Door_Opened == 1):
+        door1 = Find("emptyroomdoor1_lock")
+        if door1: door1.Unlock()
+        door2 = Find("emptyroomdoor2_lock")
+        if door2: door2.Unlock()
+    if (G.Trunk_Opened == 1):
+        trunklock = Find("trunk2_lock")
+        if trunklock: trunklock.Unlock()
+    if (G.Tape_Taken == 1):
+        trunk = Find("trunk2")
+        if trunk: trunk.DeleteItems()
+    if (G.Ring_Taken == 1):
+        ring = Find("ring2")
+        if ring: ring.Kill()
+        ring_sp = Find("ring2_inspect")
+        if ring_sp: ring_sp.Kill()
+    if (G.Book_Taken == 1):
+        book = Find("plus_moolah2")
+        if book: book.Kill()
+        book_sp = Find("plus_moolah2_sparklies")
+        if book_sp: book_sp.Kill()
+    if (G.Key_Taken == 1):
+        key = Find("key2")
+        if key: key.Kill()
+        key_sp = Find("key2_sparklies")
+        if key_sp: key_sp.Kill()
+    if (G.Journal_Taken == 1):
+        journal = Find("mercurio_journal2")
+        if journal: journal.Kill()
+        journal_sp = Find("journal2_sparklies")
+        if journal_sp: journal_sp.Kill()
+    if (G.Tape_Played == 1):
+        tape_sp = Find("tape_sparklies")
+        if tape_sp: tape_sp.Kill()
 
 #APARTMENT: Called when the player picks up the journal in Mercurio's
 def journalPickup():
@@ -444,21 +469,21 @@ def astrolitePickup():
 #BEACHHOUSE: Called to check if the beachhouse should be hostile, changed by wesp
 def beachhouseStatus():
     thinblood = Find("E")
-    if (thinblood and (__main__.IsDead("E") or G.Story_State >= 35)):
+    if (__main__.IsDead("E") or G.Story_State >= 35):
         thinblood.Kill()
     thinblood = Find("Rosa")
-    if (thinblood and (__main__.IsDead("Rosa") or G.Story_State >= 35)):
+    if (__main__.IsDead("Rosa") or G.Story_State >= 35):
         thinblood.Kill()
     thinblood = Find("Copper")
-    if (thinblood and (__main__.IsDead("Copper") or G.Copper_Slayer or G.Story_State >= 35)):
+    if (__main__.IsDead("Copper") or G.Copper_Slayer):
         thinblood.Kill()
     thinblood = Find("Julius")
-    if (thinblood and (__main__.IsDead("Julius") or G.Julius_Release == 1)):
+    if __main__.IsDead("Julius"):
         thinblood.Kill()
     thinblood = Find("Lily")
-    if(thinblood and G.E_Quest > 2 and not __main__.IsDead("E") and not G.Thin_Bloods_Hidden):
+    if(G.E_Quest > 2 and not __main__.IsDead("E") and not G.Thin_Bloods_Hidden):
         thinblood.ScriptUnhide()
-    if (thinblood and (__main__.IsDead("Lily") or G.Story_State >= 35)):
+    if (__main__.IsDead("Lily") or G.Story_State >= 35):
         thinblood.Kill()
     if(G.Beachhouse_Hostile == 1):
         dudes = __main__.FindEntitiesByClass("npc_VHumanCombatant")
@@ -468,11 +493,6 @@ def beachhouseStatus():
         dudes = __main__.FindEntitiesByClass("npc_VHumanCombatant")
         for dude in dudes:
             dude.Kill()
-        convo = Find("kitchen_convo")
-        if convo: convo.Kill()
-        call = Find("mike_call_dennis")
-        if call: call.Kill()
-        __main__.ScheduleTask(1.0, "__main__.FindEntityByName(\"plus_butch\").Kill()")
     if(G.Story_State >= 10 and not G.Pier_Beach_Gone):
         G.Pier_Beach_Gone = 1
         blood = __main__.FindEntitiesByName("victimblooda")
@@ -484,9 +504,6 @@ def beachhouseStatus():
         cops = __main__.FindEntitiesByName("cop")
         for cop in cops:
             cop.Kill()
-        copcars = __main__.FindEntitiesByName("copcar")
-        for copcar in copcars:
-            copcar.Kill()
         cop_patrol_pier = Find("cop_patrol_pier")
         if(cop_patrol_pier):
             cop_patrol_pier.Kill()
@@ -841,8 +858,6 @@ def heatherCheck():
     if npc:
         if(G.Heather_Drank == 1 or G.Story_State >= 10):
             npc.Kill()
-            if(G.Patch_Plus == 1 and G.Heather_Drank == 0):
-                heatherQuest3()
         else:
             npc.ScriptUnhide()
     if __main__.IsDead("Malcolm"):
@@ -1096,10 +1111,6 @@ def killerInDiner():
     if(npc):
         if(G.Therese_Quest < 3 and G.Story_State < 4):
             npc.ScriptUnhide()
-            if G.Patch_Plus == 1 and G.Killer_Phoned == 0:
-                script = Find("killer_phones")
-                script.BeginSequence()
-                G.Killer_Phoned = 1
         else:
             npc.Kill()
     doris = Find("Doris")
@@ -1256,7 +1267,7 @@ def jackVisit():
 #HAVEN: Places the bribe from Malcolm in the player's haven, changed by wesp
 def malcolmBribed():
     player_mail = Find("Mailbox_haven")
-    if(player_mail and not __main__.IsDead("Malcolm") and G.Patch_Plus == 0):
+    if(player_mail and not __main__.IsDead("Malcolm")):
         if(G.Malcolm_Affair == 4):
             player_mail.AddEntityToContainer("small_bribe")
             G.Malcolm_Affair = 6
@@ -1353,8 +1364,6 @@ def killerDeath():
     if(state != 9):
         pc.ChangeMasqueradeLevel(-1)
         pc.SetQuest("Serial", 8)
-    if (pc.HasItem("item_g_junkyard_businesscard")):
-        __main__.ScheduleTask(1.00, "__main__.FindPlayer().RemoveItem(\"item_g_junkyard_businesscard\")")
     relay = Find("player_leave_relay")
     relay.Trigger()
 
@@ -1369,8 +1378,6 @@ def killerHostileCheck():
         G.Killer_Attacks = 1
         script.BeginSequence()
     else:
-        if (__main__.FindPlayer().HasItem("item_g_junkyard_businesscard")):
-            __main__.ScheduleTask(1.00, "__main__.FindPlayer().RemoveItem(\"item_g_junkyard_businesscard\")")
         relay = Find("player_leave_relay")
         relay.Trigger()
 
@@ -1548,9 +1555,9 @@ def juliusDialog():
         julius = Find("Julius")
         julius.SetRelationship("player D_FR 5")
 
-#PIER: Puts Lilly on the beach if she's been rescued, changed by wesp
+#PIER: Puts Lilly on the beach if she's been rescued
 def lillyBack():
-    if(G.E_Quest > 2 and not __main__.IsDead("E") and not G.Thin_Bloods_Hidden and G.Story_State < 35):
+    if(G.E_Quest > 2 and not __main__.IsDead("E") and not G.Thin_Bloods_Hidden):
         lily = Find("Lily")
         if(lily):
             lily.ScriptUnhide()
@@ -1588,6 +1595,9 @@ def murderCleanedUp():
         victim = Find("victim")
         if(victim):
             victim.Kill()
+        trigger = Find("murder_scene_trigger")
+        if(trigger):
+            trigger.Kill()
         if G.Patch_Plus == 1:
             trasha = Find("pier_trasha")
             if(trasha): trasha.Kill()
@@ -1603,14 +1613,11 @@ def murderCleanedUp():
             piergate.Unlock()
             piergate.Open()
 
-#PIER: Called when the murder scene. Get it? changed by wesp
+#PIER: Called when the murder scene. Get it?
 def murderSeen():
-    state = __main__.FindPlayer().GetQuestState("Serial")
-    if(G.Know_Murder == 0 and G.Story_State < 10):
+    if(G.Know_Murder == 0):
         G.Know_Murder = 1
         __main__.FindPlayer().SetQuest("Serial", 2)
-    if(state == 1 and G.Story_State >= 10):
-        __main__.FindPlayer().SetQuest("Serial", 11)
 
 #PIER: Decides if rosa should direct the PC or not, changed by wesp
 def rosaDirections():
@@ -1678,20 +1685,18 @@ def bertramOutOfHiding():
         yugo = Find("yugo")
         yugosteam1 = Find("yugo_steam_1")
         yugosteam2 = Find("yugo_steam_2")
+        obfuscator = Find("obfuscator")
+        obfuscator_trigger = Find("obfuscator_trigger")
         if G.Story_State < 5:
             if yugo: yugo.ScriptUnhide()
             if yugosteam1: yugosteam1.ScriptUnhide()
             if yugosteam2: yugosteam2.ScriptUnhide()
+            if obfuscator: obfuscator.ScriptUnhide()
+            if obfuscator_trigger: obfuscator_trigger.ScriptUnhide()
         else:
             if yugo: yugo.Kill()
             if yugosteam1: yugosteam1.Kill()
             if yugosteam2: yugosteam2.Kill()
-        obfuscator = Find("obfuscator")
-        obfuscator_trigger = Find("obfuscator_trigger")
-        if G.Story_State == 5:
-            if obfuscator: obfuscator.ScriptUnhide()
-            if obfuscator_trigger: obfuscator_trigger.ScriptUnhide()
-        else:
             if obfuscator: obfuscator.Kill()
             if obfuscator_trigger: obfuscator_trigger.Kill()
     if (G.Muddy_Message == 1 and __main__.FindPlayer().HasItem("item_k_murietta_key")):

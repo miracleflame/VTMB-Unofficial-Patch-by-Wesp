@@ -1,0 +1,128 @@
+SignData
+{
+	// Signs will check scripts from top to bottom.
+	// The first depenency to return true will 
+	// 
+
+	Sign
+	{
+		"dependency"	"G.Story_State < 5"	// changed by wesp
+		"filename"		"vdata/signs/Newspaper_Serial_Killer.txt"
+	}
+
+	Sign
+	{
+		"dependency"	"G.Story_State == 5"	
+		"filename"		"vdata/signs/Newspaper_Elizabeth_Dane.txt"
+	}
+
+	Sign
+	{
+		"dependency"	"G.Story_State == 10"	
+		"filename"		"vdata/signs/Newspaper_Warehouse.txt"
+	}
+
+	Sign
+	{
+		"dependency"	"G.Story_State == 15"	
+		"filename"		"vdata/signs/Newspaper_Epidemic.txt"
+	}
+
+	Sign
+	{
+		"dependency"	"G.Story_State == 20 and G.Dane_Kills >= 3"	// changed by wesp
+		"filename"		"vdata/signs/Newspaper_Dane_Slaughter.txt"
+	}
+
+	Sign
+	{
+		"dependency"	"G.Story_State == 20 and G.Dane_Kills < 3"		// changed by wesp
+		"filename"		"vdata/signs/Newspaper_Dane_Facts.txt"
+	}
+
+	Sign
+	{
+		"dependency"	"G.Story_State == 25"	
+		"filename"		"vdata/signs/Newspaper_Malk_Mansion.txt"
+	}
+
+	Sign
+	{
+		"dependency"	"G.Story_State == 30"	
+		"filename"		"vdata/signs/Newspaper_Johansen.txt"
+	}
+	
+	Sign
+	{
+		"dependency"	"G.Story_State == 35"	
+		"filename"		"vdata/signs/Newspaper_Museum.txt"
+	}
+
+	Sign
+	{
+		"dependency"	"G.Story_State >= 40 and G.Story_State < 55"	
+		"filename"		"vdata/signs/Newspaper_Ash_Rivers.txt"
+	}
+
+	Sign
+	{
+		"dependency"	"G.Story_State == 55 and G.Glaze_Kill > 0"		// changed by wesp	
+		"filename"		"vdata/signs/Newspaper_Glaze.txt"
+	}
+
+	Sign
+	{
+		"dependency"	"G.Story_State == 55 and G.Glaze_Kill == 0"	// added by wesp
+		"filename"		"vdata/signs/Newspaper_Glaze_Stealth.txt"
+	}
+
+	Sign
+	{
+		"dependency"	"G.Story_State == 65 and G.WongHo_Dead == 1"	
+		"filename"		"vdata/signs/Newspaper_Wong_Ho_Dead.txt"
+	}
+
+	Sign
+	{
+		"dependency"	"G.Story_State >= 60 and G.Story_State < 70"	// changed by wesp
+		"filename"		"vdata/signs/Newspaper_FU.txt"
+	}
+
+	Sign
+	{
+		"dependency"	"G.Story_State >= 70 and G.Story_State < 80"	
+		"filename"		"vdata/signs/Newspaper_Johansen2.txt"	// changed by wesp
+	}
+
+	Sign
+	{
+		"dependency"	"G.Story_State == 80"	
+		"filename"		"vdata/signs/Newspaper_Society.txt"	// changed by wesp
+	}
+
+	Sign
+	{
+		"dependency"	"G.Story_State >= 85 and G.Story_State < 90"	
+		"filename"		"vdata/signs/Newspaper_Sabbat_Attack.txt"
+	}
+
+	Sign
+	{
+		"dependency"	"G.Story_State >= 90 and G.Story_State < 100"	
+		"filename"		"vdata/signs/Newspaper_Griffith.txt"
+	}
+
+	Sign
+	{
+		"dependency"		"G.Story_State >= 100"	
+		"filename"		"vdata/signs/Newspaper_Halloween.txt"
+	}
+
+	Sign
+	{
+		// make sure that something is always displayed, or it will freak out...
+		"dependency"		"G.Story_State >= 0"	
+		"filename"		"vdata/signs/Newspaper_Serial_Killer.txt"
+	}
+
+}

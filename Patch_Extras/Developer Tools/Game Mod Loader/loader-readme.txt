@@ -100,3 +100,7 @@ export WINEARCH=win32
 export WINEPREFIX="$PREFIX"
 
 wine Steam.exe -no-dwrite
+
+willbane wrote that adding resolution helps with the main menu:
+---------------------------------------------------------------
+wine vampire.exe -full -width 1920 -height 1080 -game "$opt" &

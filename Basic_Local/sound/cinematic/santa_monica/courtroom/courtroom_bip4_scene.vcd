@@ -1,0 +1,197 @@
+// Choreo version 1
+actor "Nines"
+{
+  channel "Anim"
+  {
+    event sequence "courtroom"
+    {
+      time 0.000000 149.966995
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  channel "VO"
+  {
+    event speak "nines_line909"
+    {
+      time 116.906670 118.370590
+      param "Character\dlg\MAIN CHARACTERS\nines\line909_col_e.mp3"
+      fixedlength
+    }
+  }
+  channel "expressions"
+  {
+    event expression "Enraged_No Deform 01"
+    {
+      time 116.680008 119.113335
+      param "nines_expressions"
+      param2 "Enraged_NoDeform"
+      event_ramp
+      {
+        0.0880 0.9765
+        2.3513 0.9671
+      }
+    }
+    event expression "Mad 01"
+    {
+      time 94.880005 115.980003
+      param "nines_expressions"
+      param2 "Mad"
+    }
+    event expression "Enraged 01"
+    {
+      time 124.180008 127.160011
+      param "nines_expressions"
+      param2 "Enraged"
+    }
+    event expression "Anger 02"
+    {
+      time 141.200012 145.340027
+      param "nines_expressions"
+      param2 "Anger"
+      event_ramp
+      {
+        0.2364 0.9061
+        0.3182 0.9061
+        0.9250 0.9061
+        0.9886 0.9061
+        1.3583 0.4835
+        1.4166 0.4812
+        3.9084 0.4577
+        3.9584 0.4554
+      }
+    }
+  }
+  channel "Expressions2"
+  {
+    event expression "Squint 01"
+    {
+      time 142.226669 145.373352
+      param "nines_expressions"
+      param2 "Squint"
+      event_ramp
+      {
+        0.3867 0.8333
+        0.5000 0.8333
+        2.8067 0.8333
+        2.9467 0.8333
+      }
+    }
+  }
+  bonerename "Bip01" "Bip01"
+}
+
+actor "Damsel"
+{
+  channel "Anim"
+  {
+    event sequence "courtroom"
+    {
+      time 0.000000 149.966995
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  channel "expressions2"
+  {
+  }
+  bonerename "Bip02" "Bip01"
+}
+
+actor "Skelter"
+{
+  channel "Anim"
+  {
+    event sequence "courtroom"
+    {
+      time 0.000000 149.966995
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  channel "VO"
+  {
+    event speak "whisper"
+    {
+      time 17.973333 21.135216
+      param "Character\dlg\Downtown LA\skelter\whisper.mp3"
+      fixedlength
+    }
+  }
+  channel "expression"
+  {
+    event expression "Anger 01"
+    {
+      time 16.786669 23.706669
+      param "skelter_expressions"
+      param2 "Anger"
+      event_ramp
+      {
+        0.0820 0.9789
+        4.0394 1.0000
+        4.3030 0.7629
+        4.4121 0.7629
+        6.5667 0.7629
+        6.6667 0.7629
+      }
+    }
+    event expression "Irritated 01"
+    {
+      time 93.946671 99.186676
+      param "skelter_expressions"
+      param2 "Irritated"
+    }
+    event expression "Fear 01"
+    {
+      time 115.413338 120.166672
+      param "skelter_expressions"
+      param2 "Fear"
+    }
+    event expression "Disgust_NoDeform 01"
+    {
+      time 123.933342 127.173347
+      param "skelter_expressions"
+      param2 "Disgust_NoDeform"
+    }
+    event expression "Anger 03"
+    {
+      time 140.973343 145.160019
+      param "skelter_expressions"
+      param2 "Anger"
+    }
+  }
+  channel "expression2"
+  {
+    event expression "Anger 02"
+    {
+      time 117.913330 120.180000
+      param "skelter_expressions"
+      param2 "Anger"
+      event_ramp
+      {
+        0.1120 0.4812
+        0.1340 0.4812
+        2.1486 0.4812
+        2.1714 0.4812
+      }
+    }
+  }
+  bonerename "Bip03" "Bip01"
+}
+
+actor "Vampire10"
+{
+  channel "Anim"
+  {
+    event sequence "courtroom"
+    {
+      time 0.000000 149.966995
+      param "entire_scene"
+      fixedlength
+    }
+  }
+  bonerename "Bip04" "Bip01"
+}
+
+fps 60
+snap off

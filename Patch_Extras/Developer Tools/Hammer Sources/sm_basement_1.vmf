@@ -2,100 +2,16 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7999"
-	"mapversion" "270"
+	"mapversion" "272"
 	"prefab" "0"
 }
 visgroups
 {
 	visgroup
 	{
-		"name" "Gimble face light"
-		"visgroupid" "1"
-		"color" "130 91 184"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Sound"
-		"visgroupid" "2"
-		"color" "105 174 199"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Cubemaps"
-		"visgroupid" "3"
-		"color" "114 251 152"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Point Entities"
-		"visgroupid" "4"
-		"color" "159 108 205"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Globals"
-		"visgroupid" "5"
-		"color" "128 129 198"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Areaportals"
-		"visgroupid" "6"
-		"color" "133 154 83"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Function Brushes"
-		"visgroupid" "7"
-		"color" "130 139 248"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Func Details"
-		"visgroupid" "8"
-		"color" "255 128 128"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Lighting"
-		"visgroupid" "9"
-		"color" "98 139 184"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Decals"
-		"visgroupid" "10"
-		"color" "223 140 253"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Function Props"
-		"visgroupid" "11"
-		"color" "128 225 198"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "NPC Models"
-		"visgroupid" "12"
-		"color" "149 170 99"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Dynamic Props"
-		"visgroupid" "13"
-		"color" "174 183 84"
+		"name" "Triggers"
+		"visgroupid" "15"
+		"color" "208 241 230"
 		"visible" "1"
 	}
 	visgroup
@@ -107,16 +23,93 @@ visgroups
 	}
 	visgroup
 	{
-		"name" "Triggers"
-		"visgroupid" "15"
-		"color" "208 241 230"
+		"name" "Dynamic Props"
+		"visgroupid" "13"
+		"color" "174 183 84"
 		"visible" "1"
 	}
 	visgroup
 	{
-		"name" "Shadow Masks"
-		"visgroupid" "17"
-		"color" "64 128 128"
+		"name" "NPC Models"
+		"visgroupid" "12"
+		"color" "149 170 99"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Function Props"
+		"visgroupid" "11"
+		"color" "128 225 198"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Decals"
+		"visgroupid" "10"
+		"color" "223 140 253"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Lighting"
+		"visgroupid" "9"
+		"color" "98 139 184"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Func Details"
+		"visgroupid" "8"
+		"color" "255 128 128"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Function Brushes"
+		"visgroupid" "7"
+		"color" "130 139 248"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Areaportals"
+		"visgroupid" "6"
+		"color" "133 154 83"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Globals"
+		"visgroupid" "5"
+		"color" "128 129 198"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Point Entities"
+		"visgroupid" "4"
+		"color" "159 108 205"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Cubemaps"
+		"visgroupid" "3"
+		"color" "114 251 152"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Sound"
+		"visgroupid" "2"
+		"color" "105 174 199"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Gimble face light"
+		"visgroupid" "1"
+		"color" "130 91 184"
 		"visible" "1"
 	}
 	visgroup
@@ -124,6 +117,13 @@ visgroups
 		"name" "Clip Brushes"
 		"visgroupid" "16"
 		"color" "255 128 64"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Shadow Masks"
+		"visgroupid" "17"
+		"color" "64 128 128"
 		"visible" "1"
 	}
 }
@@ -137,7 +137,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "270"
+	"mapversion" "272"
 	"classname" "worldspawn"
 	"skyname" "santamonica"
 	"sounds" "1"
@@ -15574,8 +15574,8 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnFullyOpen" "BasementTeleport1,ChangeNow,,0,-1,,"
 		"OnFullyClosed" "controller,RemoveControllerNPC,,0,-1,,"
+		"OnFullyOpen" "BasementTeleport1,ChangeNow,,0,-1,,"
 	}
 	solid
 	{
@@ -16811,10 +16811,10 @@ entity
 	"soundgroup" "Unique/Gimble"
 	connections
 	{
-		"OnDialogEnd" "controller,CreateControllerNPC,,0,-1,,"
-		"OnDialogEnd" "gimble_leave_check,test,,0,-1,,"
-		"OnDeath" "gimble_dead_relay,Trigger,,0,-1,,"
 		"OnDeath" ",,,0,-1,gimbleDeath(),"
+		"OnDeath" "gimble_dead_relay,Trigger,,0,-1,,"
+		"OnDialogEnd" "gimble_leave_check,test,,0,-1,,"
+		"OnDialogEnd" "controller,CreateControllerNPC,,0,-1,,"
 	}
 	"origin" "-448 -104 -80"
 	editor
@@ -17936,11 +17936,11 @@ entity
 	"base_gender" "1"
 	connections
 	{
-		"OnDialogEnd" "Carson_free_relay,Trigger,,0,-1,,"
-		"OnDeath" ",,,0,-1,carsonDeath(),"
-		"OnDeath" "gimble_dead_relay,Kill,,0,-1,,"
-		"OnDialogEnd" "gimble_attack_check,test,,0,-1,,"
 		"OnDialogBegin" "Carson_camera,StartShot,,0,1,,"
+		"OnDialogEnd" "gimble_attack_check,test,,0,-1,,"
+		"OnDeath" "gimble_dead_relay,Kill,,0,-1,,"
+		"OnDeath" ",,,0,-1,carsonDeath(),"
+		"OnDialogEnd" "Carson_free_relay,Trigger,,0,-1,,"
 	}
 	"origin" "-532 -368 -388"
 	editor
@@ -17958,12 +17958,12 @@ entity
 	"origin" "-762 -386 -344"
 	connections
 	{
-		"OnStartTouch" "gimbledoor2,Close,,0.2,-1,,"
-		"OnStartTouch" "gimbledoor1,Close,,0.2,-1,,"
-		"OnStartTouch" "gimbledoor1,Lock,,0.2,-1,,"
-		"OnStartTouch" "gimbledoor2,Lock,,0.2,-1,,"
-		"OnStartTouch" "Carson,StartPlayerDialog,,0.2,-1,,"
 		"OnStartTouch" "controller,RemoveDisciplinesNow,,0,-1,,"
+		"OnStartTouch" "Carson,StartPlayerDialog,,0.2,-1,,"
+		"OnStartTouch" "gimbledoor2,Lock,,0.2,-1,,"
+		"OnStartTouch" "gimbledoor1,Lock,,0.2,-1,,"
+		"OnStartTouch" "gimbledoor1,Close,,0.2,-1,,"
+		"OnStartTouch" "gimbledoor2,Close,,0.2,-1,,"
 	}
 	solid
 	{
@@ -18076,10 +18076,10 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "Stan_Gimble,WillTalk,0,0,-1,,"
-		"OnTrigger" "gimbledoor3,Unlock,,0,-1,,"
-		"OnTrigger" "gimble_attack,BeginSequence,,0,-1,,"
 		"OnTrigger" "Stan_Gimble,SetRelationship,player D_HT 5,0,-1,,"
+		"OnTrigger" "gimble_attack,BeginSequence,,0,-1,,"
+		"OnTrigger" "gimbledoor3,Unlock,,0,-1,,"
+		"OnTrigger" "Stan_Gimble,WillTalk,0,0,-1,,"
 	}
 	"origin" "-1159 -395.932 -287.507"
 	editor
@@ -23058,8 +23058,8 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnMapLoad" "controller,RemoveDisciplinesNow,,0,-1,,"
 		"OnMapLoad" "Stan_Gimble,StartPlayerDialog,,2,1,,"
+		"OnMapLoad" "controller,RemoveDisciplinesNow,,0,-1,,"
 	}
 	"origin" "-443 -197.437 -23.0368"
 	editor
@@ -23142,8 +23142,8 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnDeactivate" "celldoor4,Unlock,,0,-1,,"
 		"OnDeactivate" "celldoor4,Open,,0.1,-1,,"
+		"OnDeactivate" "celldoor4,Unlock,,0,-1,,"
 	}
 	"origin" "-656 -425 -333"
 	editor
@@ -23161,15 +23161,15 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "gimbledoor2,Unlock,,0,-1,,"
-		"OnTrigger" "gimbledoor1,Unlock,,0,-1,,"
-		"OnTrigger" "Carson_free_relay,Enable,,0,-1,,"
-		"OnTrigger" "controller,RemoveDisciplinesNow,,0,-1,,"
-		"OnTrigger" "gimble_dead_fade,Fade,,0,-1,,"
-		"OnTrigger" "player_teleport,Teleport,,0.2,-1,,"
-		"OnTrigger" "controller,CreateControllerNPC,,0.3,-1,,"
-		"OnTrigger" "player_release_carson,BeginSequence,,1,-1,,"
 		"OnTrigger" "Carson_camera,StartShot,,1,-1,,"
+		"OnTrigger" "player_release_carson,BeginSequence,,1,-1,,"
+		"OnTrigger" "controller,CreateControllerNPC,,0.3,-1,,"
+		"OnTrigger" "player_teleport,Teleport,,0.2,-1,,"
+		"OnTrigger" "gimble_dead_fade,Fade,,0,-1,,"
+		"OnTrigger" "controller,RemoveDisciplinesNow,,0,-1,,"
+		"OnTrigger" "Carson_free_relay,Enable,,0,-1,,"
+		"OnTrigger" "gimbledoor1,Unlock,,0,-1,,"
+		"OnTrigger" "gimbledoor2,Unlock,,0,-1,,"
 	}
 	"origin" "-955.613 -408.02 -270"
 	editor
@@ -23249,8 +23249,8 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnEndSequence" "Carson,StartPlayerDialog,,0,-1,,"
 		"OnEndSequence" "controller,RemoveControllerNPC,,0,-1,,"
+		"OnEndSequence" "Carson,StartPlayerDialog,,0,-1,,"
 	}
 	"origin" "-752 -376 -380"
 	editor
@@ -23268,11 +23268,11 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "Carson prot brush,Disable,,0,-1,,"
-		"OnTrigger" "controller,CreateControllerNPC,,0,-1,,"
-		"OnTrigger" "Carson_camera,StartShot,,0,-1,,"
-		"OnTrigger" "carson_free_sequence,BeginSequence,,0.2,-1,,"
 		"OnTrigger" "player_release_carson_3,BeginSequence,,0.2,-1,,"
+		"OnTrigger" "carson_free_sequence,BeginSequence,,0.2,-1,,"
+		"OnTrigger" "Carson_camera,StartShot,,0,-1,,"
+		"OnTrigger" "controller,CreateControllerNPC,,0,-1,,"
+		"OnTrigger" "Carson prot brush,Disable,,0,-1,,"
 	}
 	"origin" "-665 -306.858 -295.659"
 	editor
@@ -23314,9 +23314,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnEndSequence" "controller,RemoveControllerNPC,,0,-1,,"
-		"OnEndSequence" "Carson_camera,EndShot,,0,-1,,"
 		"OnEndSequence" "Carson,Kill,,0,-1,,"
+		"OnEndSequence" "Carson_camera,EndShot,,0,-1,,"
+		"OnEndSequence" "controller,RemoveControllerNPC,,0,-1,,"
 	}
 	"origin" "-532 -612 -388"
 	editor
@@ -23723,9 +23723,9 @@ entity
 	"python_script" "G.Gimble_Vandal == 0"
 	connections
 	{
-		"OnTrue" "gimble_attack_relay,trigger,,0,-1,,"
-		"OnFalse" "Stan_Gimble,Kill,,0,-1,,"
 		"OnFalse" "gimble_dead_relay,trigger,,0,-1,,"
+		"OnFalse" "Stan_Gimble,Kill,,0,-1,,"
+		"OnTrue" "gimble_attack_relay,trigger,,0,-1,,"
 	}
 	"origin" "-404 91 92"
 	editor
@@ -23742,10 +23742,10 @@ entity
 	"python_script" "G.Gimble_Vandal == 0"
 	connections
 	{
-		"OnFalse" "gimbledoor3,Unlock,,4,1,,"
-		"OnTrue" "gimble_leave,BeginSequence,,0,1,,"
-		"OnFalse" "gimble_leave2,BeginSequence,,0,1,,"
 		"OnFalse" "Stan_Gimble,Kill,,4,1,,"
+		"OnFalse" "gimble_leave2,BeginSequence,,0,1,,"
+		"OnTrue" "gimble_leave,BeginSequence,,0,1,,"
+		"OnFalse" "gimbledoor3,Unlock,,4,1,,"
 	}
 	"origin" "-404 91 92"
 	editor
@@ -23848,27 +23848,27 @@ entity
 	"enabled" "0"
 	connections
 	{
-		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
-		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
-		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
-		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
-		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
-		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
-		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
-		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
-		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
-		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
-		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
-		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
-		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
-		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
-		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
-		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
-		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
-		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
-		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
-		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
 		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
+		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
+		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
+		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
+		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
+		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
+		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
+		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
+		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
+		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
+		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
+		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
+		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
+		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
+		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
+		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
+		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
+		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
+		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
+		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
+		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -23885,30 +23885,30 @@ entity
 	"StartHidden" "0"
 	connections
 	{
-		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
-		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
-		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
-		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
-		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
-		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
-		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
-		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
-		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
-		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
-		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
-		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
-		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
-		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
-		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
-		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
-		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
-		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
-		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
-		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
-		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
-		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
-		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
 		"OnCopsOutside" "cops_relay,Trigger,,0,-1,,"
+		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
+		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
+		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
+		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
+		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
+		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
+		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
+		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
+		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
+		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
+		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
+		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
+		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
+		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
+		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
+		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
+		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
+		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
+		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
+		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
+		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
+		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
+		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -28529,7 +28529,7 @@ entity
 			"id" "6240"
 			"plane" "(258.309 -303.393 -45) (242.328 -304.091 -29) (258.31 -303.393 -29)"
 			"material" "OBJECTS/CARDBOARD_SIDE1"
-			"uaxis" "[1 0.043577 0 52.603] 0.249763"
+			"uaxis" "[1 0.043577 0 43] 0.25"
 			"vaxis" "[0 0 -1 12] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -28540,7 +28540,7 @@ entity
 			"id" "6241"
 			"plane" "(241.629 -288.106 -45) (257.621 -287.409 -29) (241.629 -288.106 -29)"
 			"material" "OBJECTS/CARDBOARD_SIDE1"
-			"uaxis" "[1 0.043577 0 52.603] 0.249763"
+			"uaxis" "[1 0.043577 0 43] 0.25"
 			"vaxis" "[0 0 -1 12] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -28613,7 +28613,7 @@ entity
 			"id" "6246"
 			"plane" "(283.379 -304.301 -45) (267.391 -304.999 -29) (283.38 -304.301 -29)"
 			"material" "OBJECTS/CARDBOARD_SIDE1"
-			"uaxis" "[1 0.043577 0 16.603] 0.249763"
+			"uaxis" "[1 0.043577 0 7] 0.25"
 			"vaxis" "[0 0 -1 12] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -28624,7 +28624,7 @@ entity
 			"id" "6247"
 			"plane" "(266.691 -289.014 -45) (282.68 -288.316 -45) (282.68 -288.316 -29)"
 			"material" "OBJECTS/CARDBOARD_SIDE1"
-			"uaxis" "[1 0.043577 0 16.603] 0.249763"
+			"uaxis" "[1 0.043577 0 7] 0.25"
 			"vaxis" "[0 0 -1 12] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -28697,7 +28697,7 @@ entity
 			"id" "6252"
 			"plane" "(315.219 -299.908 -69) (299.234 -300.606 -53) (315.22 -299.908 -53)"
 			"material" "OBJECTS/CARDBOARD_SIDE1"
-			"uaxis" "[1 0.043577 0 16.603] 0.249763"
+			"uaxis" "[1 0.043577 0 7] 0.25"
 			"vaxis" "[0 0 -1 44] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -28708,7 +28708,7 @@ entity
 			"id" "6253"
 			"plane" "(298.535 -284.621 -69) (314.52 -283.923 -69) (314.52 -283.923 -53)"
 			"material" "OBJECTS/CARDBOARD_SIDE1"
-			"uaxis" "[1 0.043577 0 16.603] 0.249763"
+			"uaxis" "[1 0.043577 0 7] 0.25"
 			"vaxis" "[0 0 -1 44] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -28781,7 +28781,7 @@ entity
 			"id" "6258"
 			"plane" "(336.332 -301.99 -69) (320.34 -302.688 -69) (320.344 -302.688 -53)"
 			"material" "OBJECTS/CARDBOARD_SIDE1"
-			"uaxis" "[1 0.043577 0 60.603] 0.249763"
+			"uaxis" "[1 0.043577 0 51] 0.25"
 			"vaxis" "[0 0 -1 44] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -28792,7 +28792,7 @@ entity
 			"id" "6259"
 			"plane" "(319.645 -286.702 -69) (335.629 -286.004 -53) (319.637 -286.703 -53)"
 			"material" "OBJECTS/CARDBOARD_SIDE1"
-			"uaxis" "[1 0.043577 0 60.603] 0.249763"
+			"uaxis" "[1 0.043577 0 51] 0.25"
 			"vaxis" "[0 0 -1 44] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -28865,7 +28865,7 @@ entity
 			"id" "6276"
 			"plane" "(345.328 -302.033 -17) (329.336 -302.731 -17) (329.34 -302.731 -1)"
 			"material" "OBJECTS/CARDBOARD_SIDE1"
-			"uaxis" "[1 0.043577 0 24.603] 0.249763"
+			"uaxis" "[1 0.043577 0 15] 0.25"
 			"vaxis" "[0 0 -1 60] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -28876,7 +28876,7 @@ entity
 			"id" "6277"
 			"plane" "(328.648 -286.746 -17) (344.63 -286.048 -17) (344.629 -286.048 -1)"
 			"material" "OBJECTS/CARDBOARD_SIDE1"
-			"uaxis" "[1 0.043577 0 24.603] 0.249763"
+			"uaxis" "[1 0.043577 0 15] 0.25"
 			"vaxis" "[0 0 -1 60] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -28949,7 +28949,7 @@ entity
 			"id" "6282"
 			"plane" "(384.371 -301.893 -45) (368.379 -302.591 -45) (368.379 -302.591 -29)"
 			"material" "OBJECTS/CARDBOARD_SIDE1"
-			"uaxis" "[1 0.043577 0 60.603] 0.249763"
+			"uaxis" "[1 0.043577 0 51] 0.25"
 			"vaxis" "[0 0 -1 12] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -28960,7 +28960,7 @@ entity
 			"id" "6283"
 			"plane" "(367.691 -286.607 -45) (383.668 -285.909 -29) (367.688 -286.607 -29)"
 			"material" "OBJECTS/CARDBOARD_SIDE1"
-			"uaxis" "[1 0.043577 0 60.603] 0.249763"
+			"uaxis" "[1 0.043577 0 51] 0.25"
 			"vaxis" "[0 0 -1 12] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -29033,7 +29033,7 @@ entity
 			"id" "6288"
 			"plane" "(356.48 -305.113 -69) (340.5 -305.811 -69) (340.5 -305.811 -53)"
 			"material" "OBJECTS/CARDBOARD_SIDE1"
-			"uaxis" "[1 0.043577 0 44.603] 0.249763"
+			"uaxis" "[1 0.043577 0 35] 0.25"
 			"vaxis" "[0 0 -1 44] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -29044,7 +29044,7 @@ entity
 			"id" "6289"
 			"plane" "(339.801 -289.826 -69) (355.781 -289.128 -53) (339.801 -289.826 -53)"
 			"material" "OBJECTS/CARDBOARD_SIDE1"
-			"uaxis" "[1 0.043577 0 44.603] 0.249763"
+			"uaxis" "[1 0.043577 0 35] 0.25"
 			"vaxis" "[0 0 -1 44] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
@@ -100334,7 +100334,7 @@ entity
 	}
 	editor
 	{
-		"color" "220 0 180"
+		"color" "0 255 0"
 	}
 }
 entity
@@ -100565,7 +100565,7 @@ entity
 	}
 	editor
 	{
-		"color" "220 0 180"
+		"color" "0 180 0"
 	}
 }
 cameras
@@ -100573,8 +100573,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[-1055.57 -513.733 -300.181]"
-		"look" "[-1326.42 -489.076 -328.112]"
+		"position" "[177.931 -214.576 -64.0358]"
+		"look" "[276.593 39.7702 -81.9766]"
 	}
 }
 cordon

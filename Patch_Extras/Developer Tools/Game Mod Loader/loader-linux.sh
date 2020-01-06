@@ -1,4 +1,5 @@
-#!/bin/bash, Wine Linux loading script by SCO and Wrzlprmft
+#!/bin/bash
+# Wine Linux loading script by SCO and Wrzlprmft
 
 PREFIXES="$HOME/.local/share/wineprefixes"
 mkdir -p "$PREFIXES"
@@ -85,7 +86,7 @@ else #from file manager
 		wine vampire.exe -game "${PMODS[0]}" &
 	else
 		#ask the user which one
-		SEL=$(zenity --list --column "mod" --title "Select mod" --text="More than one possible mod, select Vampire or ok for the original game:" "${PMODS[@]}")
+		SEL=$(zenity --list --column "Available mods" --title "Select mod" --text="More than one possible mod, select Vampire or OK for the original game:" "${PMODS[@]}")
 		#user didn't cancel
 		if [ $? -eq 0 ]; then
 			#user pressed ok with nothing selected
