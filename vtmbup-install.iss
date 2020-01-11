@@ -1,16 +1,16 @@
 ; -- vtmbup-installer.iss --
 
 [Setup]
-AppName=Vampire: The Masquerade - Bloodlines Unofficial Patch 10.2
-AppVerName=Vampire: The Masquerade - Bloodlines Unofficial Patch 10.2
+AppName=Vampire: The Masquerade - Bloodlines Unofficial Patch 10.5
+AppVerName=Vampire: The Masquerade - Bloodlines Unofficial Patch 10.5
 VersionInfoDescription=Vampire: The Masquerade - Bloodlines Unofficial Patch
-VersionInfoVersion=10.2
+VersionInfoVersion=10.5
 AppPublisher=Werner Spahl
 DefaultDirName={reg:HKLM\Software\Activision\Vampire - Bloodlines,InstallPath|{pf}\Steam\steamapps\common\vampire the masquerade - bloodlines}
 AppendDefaultDirName=no
 DirExistsWarning=no
-EnableDirDoesntExistWarning=yes
-OutputBaseFilename=VTMBup102
+EnableDirDoesntExistWarning=no
+OutputBaseFilename=VTMBup105
 Uninstallable=no
 InfoBeforeFile=vtmbup-readme.txt
 InfoAfterFile=vtmbup-after.txt
@@ -42,25 +42,31 @@ begin
   if RegQueryStringValue(HKLM, 'SOFTWARE\Activision\Vampire - Bloodlines','Version',string) then 
   result := True;
 end;
+function NextButtonClick(PageId: Integer): Boolean;
+begin
+    Result := True;
+    if (PageId = wpSelectDir) and not FileExists(ExpandConstant('{app}\vampire.exe')) then begin
+        MsgBox('Vampire.exe can not be found in that folder. Please select the correct folder.', mbError, MB_OK);
+        Result := False;
+        exit;
+    end;
+end;
 
 [Files]
+Source: "{app}\Vampire\cfg\*"; DestDir: "{app}\Vampire\cfg\old"; Components: basic; Flags: external skipifsourcedoesntexist
 Source: "{app}\Unofficial_Patch\save\*"; DestDir: "{app}\Unofficial_Patch\save\old"; Components: basic; Flags: external skipifsourcedoesntexist
-Source: "{app}\Unofficial_Patch\save\auto*"; DestDir: "{app}\Unofficial_Patch\save"; Components: basic; Flags: external deleteafterinstall skipifsourcedoesntexist
-Source: "{app}\Unofficial_Patch\save\quick*"; DestDir: "{app}\Unofficial_Patch\save"; Components: basic; Flags: external deleteafterinstall skipifsourcedoesntexist
-Source: "{app}\Unofficial_Patch\save\Vampire-0*"; DestDir: "{app}\Unofficial_Patch\save"; Components: basic; Flags: external deleteafterinstall skipifsourcedoesntexist
 Source: "vtmbup-readme.txt"; DestDir: "{app}"; Components: readme; Flags: isreadme overwritereadonly
 Source: "Official_Patch\*"; DestDir: "{app}"; Components: basic; Flags: recursesubdirs ignoreversion overwritereadonly
 Source: "Basic_Patch\dlls\*"; DestDir: "{app}\vampire\dlls"; Components: basic; Flags: recursesubdirs ignoreversion overwritereadonly
 Source: "Basic_Patch\cl_dlls\*"; DestDir: "{app}\vampire\cl_dlls"; Components: basic; Flags: recursesubdirs ignoreversion overwritereadonly
-Source: "Patch_Extras\Developer Tools\Game Mod Loader\*"; DestDir: "{app}"; Components: basic; Flags: recursesubdirs ignoreversion
 Source: "Basic_Patch\*"; DestDir: "{app}\Unofficial_Patch"; Components: basic; Flags: recursesubdirs ignoreversion overwritereadonly
 Source: "Basic_Local\*"; DestDir: "{app}\Unofficial_Patch"; Components: basic; Flags: recursesubdirs ignoreversion overwritereadonly
 Source: "Plus_Patch\*"; DestDir: "{app}\Unofficial_Patch"; Components: plus; Flags: recursesubdirs ignoreversion overwritereadonly
 Source: "Plus_Local\*"; DestDir: "{app}\Unofficial_Patch"; Components: plus; Flags: recursesubdirs ignoreversion overwritereadonly
-Source: "Patch_Extras\*"; DestDir: "{app}\Patch_Extras"; Components: extras; Flags: ignoreversion overwritereadonly
-Source: "Patch_Extras\Developer Tools\*"; DestDir: "{app}\Patch_Extras\Developer Tools"; Components: extras; Flags: recursesubdirs ignoreversion overwritereadonly
-Source: "Patch_Extras\Player Mods\*"; DestDir: "{app}\Patch_Extras\Player Mods"; Components: extras; Flags: recursesubdirs ignoreversion overwritereadonly
+Source: "Patch_Extras\*"; DestDir: "{app}\Patch_Extras"; Components: extras; Flags: recursesubdirs ignoreversion overwritereadonly
+Source: "Patch_Extras\Developer Tools\Game Mod Loader\*"; DestDir: "{app}"; Components: basic; Flags: recursesubdirs ignoreversion; Excludes: "Vampire_4GB_fixed.exe"
 Source: "Patch_Extras\Developer Tools\Game Mod Loader\Vampire_4GB_fixed.exe"; DestDir: "{app}"; DestName: "Vampire.exe"; Flags: ignoreversion overwritereadonly; Check: IsWin64
+Source: "{app}\Bin\*"; DestDir: "{app}"; Components: basic; Flags: external skipifsourcedoesntexist overwritereadonly
 Source: "{app}\*.exe";                          Flags: external dontcopy skipifsourcedoesntexist; Attribs: readonly
 Source: "{app}\*.dll";                          Flags: external dontcopy skipifsourcedoesntexist; Attribs: readonly
 Source: "{app}\Bin\*.dll";                      Flags: external dontcopy skipifsourcedoesntexist; Attribs: readonly
@@ -68,7 +74,6 @@ Source: "{app}\Unofficial_Patch\cl_dlls\*.dll"; Flags: external dontcopy skipifs
 Source: "{app}\Unofficial_Patch\dlls\*.dll";    Flags: external dontcopy skipifsourcedoesntexist; Attribs: readonly
 Source: "{app}\Vampire\cl_dlls\*.dll";          Flags: external dontcopy skipifsourcedoesntexist; Attribs: readonly
 Source: "{app}\Vampire\dlls\*.dll";             Flags: external dontcopy skipifsourcedoesntexist; Attribs: readonly
-; disabled Source: "{app}\Bin\*"; DestDir: "{app}"; Components: basic; Flags: external skipifsourcedoesntexist overwritereadonly
 
 [InstallDelete]
 Type: filesandordirs; Name: "{app}\vampire.dat"
