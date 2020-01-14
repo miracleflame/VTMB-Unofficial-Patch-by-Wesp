@@ -598,12 +598,12 @@
 {	598	}{	I'm ready to head to Chinatown.	}{	I'm ready to head to Chinatown.	}{	0	}{	G.Story_State == 105 and G.Sabbat_Ending == 1 and not G.Ming_Dead == 1	}{	G.Caine_Business = 1	}{	}{	}{	}{	}{	}{	}{	The end is near....	}
 {	599	}{	It's time to finish this.	}{	It's time to finish this.	}{	291	}{	G.Story_State == 125 and G.Ming_Dead == 1	}{	G.Caine_Business = 1	}{	}{	}{	}{	}{	}{	}{	The end is near.	}
 {	600	}{	It's time to finish this.	}{	It's time to finish this.	}{	291	}{	G.Story_State == 120 and G.Ming_Dead == 1	}{	G.Caine_Business = 1	}{	}{	}{	}{	}{	}{	}{	The end is near.	}
-{	601	}{	It's time to finish this.	}{	It's time to finish this.	}{	291	}{	G.Story_State == 115 and G.Ming_Dead == 1	}{	G.Caine_Business = 1	}{	}{	}{	}{	}{	}{	}{	The end is near.	}
+{	601	}{	It's time to finish this.	}{	It's time to finish this.	}{	291	}{	G.Story_State == 115 and G.Ming_Dead == 1 and G.Nines_Ending == 1	}{	G.Caine_Business = 1	}{	}{	}{	}{	}{	}{	}{	The end is near.	}
 {	602	}{	It's time to finish this.	}{	It's time to finish this.	}{	291	}{	G.Story_State == 110 and G.Prince_Ending == 1	}{	G.Caine_Business = 1	}{	}{	}{	}{	}{	}{	}{	The end is near.	}
 {	603	}{	It's time to finish this.	}{	It's time to finish this.	}{	291	}{	G.Story_State == 105 and G.Ming_Dead == 1	}{	G.Caine_Business = 1	}{	}{	}{	}{	}{	}{	}{	The end is near.	}
 {	604	}{	It's time to finish this.	}{	It's time to finish this.	}{	291	}{	G.Story_State == 100 and G.Ming_Ending == 1	}{	G.Caine_Business = 1	}{	}{	}{	}{	}{	}{	}{	The end is near.	}
-{	605	}{	Honestly, I don't know where to go.	}{	Honestly, I don't know where to go.	}{	441	}{	G.Nines_Ending == 0 and G.Ming_Ending == 0 and G.Sabbat_Ending == 0 and G.Regent_Ending == 0 and G.Prince_Ending == 0 and G.Caine_Solo == 0	}{	}{	}{	}{	}{	}{	}{	}{	I... don't... KNOW!	}
-{	606	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	605	}{	Let me check with Nines one more time.	}{	Let me check with Nines one more time.	}{	0	}{	G.Story_State == 115 and G.Ming_Dead == 1 and G.Nines_Second == 0 	}{	G.Caine_Business = 1; G.Nines_Ending = 0 	}{	}{	}{	}{	}{	}{	}{	I want to meet the number nine again.	}
+{	606	}{	Honestly, I don't know where to go.	}{	Honestly, I don't know where to go.	}{	441	}{	G.Nines_Ending == 0 and G.Ming_Ending == 0 and G.Sabbat_Ending == 0 and G.Regent_Ending == 0 and G.Prince_Ending == 0 and G.Caine_Solo == 0	}{	}{	}{	}{	}{	}{	}{	}{	I... don't... KNOW!	}
 {	607	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	608	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	609	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

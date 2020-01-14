@@ -89,8 +89,8 @@
 {	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	90	}{	Actually, I'm going to get out of here. See ya.	}{	Actually, I'm going to get out of here. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
 {	91	}{	What place you wanna know about?	}{	What place you wanna know about?	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	92	}{	What know you of the club of the insane?	}{	What know you of the club of the insane?	}{	701	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	93	}{	What do you know about The Asylum?	}{	What do you know about The Asylum?	}{	661	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	What know you of the club of the insane?	}{	What know you of the club of the insane?	}{	601	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	93	}{	What do you know about The Asylum?	}{	What do you know about The Asylum?	}{	121	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	94	}{	Tell me about the mansion of the dead.	}{	Tell me about the mansion of the dead.	}{	611	}{	G.Therese_Quest > 1 and IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	95	}{	What can you tell me about the Ocean House Hotel?	}{	What can you tell me about the Ocean House Hotel?	}{	131	}{	G.Therese_Quest > 1 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	96	}{	Do you know about the gallery of night?	}{	Do you know about the gallery of night?	}{	621	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -120,10 +120,11 @@
 {	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	121	}{	Oh you mean that club? Knox, the bounty hunter, he goes there sometimes - I ain't never been. We get drunk and disorderlies and drug busts outta there sometimes. Some fights. The owners run it pretty tight though.	}{	Oh you mean that club? Knox, the bounty hunter, he goes there sometimes - I ain't never been. We get drunk and disorderlies and drug busts outta there sometimes. Some fights. The owners run it pretty tight though.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	122	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	123	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	126	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	3	}{	I'm curious about your business.	}{	I'm curious about your business.	}{	551	}{	G.Arthur_BH == 0 and G.Arthur_BJ == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	124	}{	Who are the owners?	}{	Who are the owners?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	125	}{	I see. I wanted to ask you about another place.	}{	I see. I wanted to ask you about another place.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	126	}{	I have a question about something else.	}{	I have a question about something else.	}{	81	}{	G.Arthur_SM == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	127	}{	Thanks Arthur. Catch you later.	}{	Thanks Arthur. Catch you later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	127	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -600,10 +601,10 @@
 {	600	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	601	}{	Oh you mean that club, The Asylum? Knox, the bounty hunter, he goes there sometimes, I ain't never been. We get drunk and disorderlies and drug busts outta there sometimes. Some fights. The owners run it pretty tight though.	}{	Oh you mean that club, The Asylum? Knox, the bounty hunter, he goes there sometimes, I ain't never been. We get drunk and disorderlies and drug busts outta there sometimes. Some fights. The owners run it pretty tight though.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	602	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	603	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	604	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	605	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	606	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	603	}{	Who owns this house of cracked mirrors?	}{	Who owns this house of cracked mirrors?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	604	}{	I have more places I need your words to show me.	}{	I have more places I need your words to show me.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	605	}{	I have more questions bursting my brain.	}{	I have more questions bursting my brain.	}{	81	}{	G.Arthur_SM == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	606	}{	You make me feel like a yeti at yuletide. Farewell.	}{	You make me feel like a yeti at yuletide. Farewell.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	607	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	608	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	609	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

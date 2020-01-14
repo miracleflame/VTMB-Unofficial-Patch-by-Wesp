@@ -879,7 +879,7 @@
 {	879	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	880	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	881	}{	I'm all torn up - no use to you, kid.	}{	I'm all torn up - no use to you, kid.	}{	#	}{	npc.SetDisposition("PrinceSitting", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	882	}{	Xiao's dead.	}{	Xiao's dead.	}{	891	}{	IsDead("MingXiao")	}{	}{	}{	}{	}{	}{	}{	}{	Xiao is finding it hard to exist now.	}
+{	882	}{	Xiao's dead.	}{	Xiao's dead.	}{	891	}{	G.Ming_Dead == 1 and G.Nines_Second == 0	}{	}{	}{	}{	}{	}{	}{	}{	Xiao is finding it hard to exist now.	}
 {	883	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	884	}{	Rest up, Nines. Goodbye.	}{	Rest up, Nines. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	If the Anarchs give you a get well card, tell them to sign it for me.	}
 {	885	}{	Yeah, those werewolves can be a bitch for most Kindred. Bye.	}{	Yeah, those werewolves can be a bitch for most Kindred. Bye.	}{	0	}{	IsDead("Werewolf") or G.Werewolf_Dead == 1	}{	}{	}{	}{	}{	}{	}{	}{	You got something right here... I think it's a wolf tooth. I didn't get one.	}
@@ -888,12 +888,12 @@
 {	888	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	889	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	890	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	891	}{	I had full confidence you'd smoke that bitch. We got "Le Prince" pinned in his tower. Time to go on out there and give LaCroix what he deserves.	}{	I had full confidence you'd smoke that bitch. We got "Le Prince" pinned in his tower. Time to go on out there and give LaCroix what he deserves.	}{	#	}{	npc.SetDisposition("PrinceSitting", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	891	}{	I had full confidence you'd smoke that bitch. We got "Le Prince" pinned in his tower. Time to go on out there and give LaCroix what he deserves.	}{	I had full confidence you'd smoke that bitch. We got "Le Prince" pinned in his tower. Time to go on out there and give LaCroix what he deserves.	}{	#	}{	npc.SetDisposition("PrinceSitting", 1)	}{	G.Nines_Second = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	892	}{	Want to come along?	}{	Want to come along?	}{	895	}{	}{	}{	}{	}{	}{	}{	}{	}{	Will Nines and me make ten?	}
 {	893	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	894	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	895	}{	Can't do nothing for you, kid.	}{	}{	#	}{	npc.SetDisposition("PrinceSitting", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	896	}{	Okay.	}{	Okay.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Then I am one.	}
+{	896	}{	Okay.	}{	Okay.	}{	0	}{	}{	G.Nines_Ending = 1 }{	}{	}{	}{	}{	}{	}{	Then I am one.	}
 {	897	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	898	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	899	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
