@@ -85,7 +85,7 @@ Level Entity Lists: Original and UP levels, by Wesp5 and Offkorn.
 
 Trailers E3 2003 and 2004: Showing lost content, by Troika Games.
 ModDev Guide: Bloodlines Mod Development Guide, compiled by Dheu.
-No-more-LOD: Tool removing character sheet model LOD, by DDlullu.
+No-more-LOD and Make-Model-Solid: Two modeling tools, by DDlullu.
 Restoration Doc: Used concept art and beta screenshots, by Wesp5.
 Soundtrack Info: For music soundtrack, by Rik Schaffer and Wesp5.
 ZVTool Readme: For dynamic console editing scripts, by ZylonBane.
@@ -108,7 +108,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.5                                                  11.01.2019
+v10.5                                                  22.01.2019
 -----
 +Renamed Holy Sight to Vision and fixed Divine Light cross texture.
 +Added Society icon to title and heat haze effect to fire barrels.
@@ -121,11 +121,13 @@ v10.5                                                  11.01.2019
 +Corrected female player models for Velvet's dance, thanks DDLullu.
 +Fixed Hallowbrook Atrium walls and Giovanni Mansion backtracking.
 +Restored two missing XPs to Ocean House quest and two Nines lines.
++Added option to come back to Nines in endgame for two more lines.
++Restored film projector into Malkavian Maze, thanks to endthewars.
 Fixed Bertram's CD label and added Kamikaze Zen missing passwords.
 Made Serial quest independent from Muddy and forced patch folder.
 Fixed possible problem if people kill Igor without talking to him.
 Restored no Humanity loss for civilians in combat areas to basic.
-Added no-more-LOD tool and used it for hunters, thanks to DDLullu.
+Added No-more-LOD and Make-Model-Solid tools, many thanks DDLullu.
 Fixed Ming's sanctum view, teleport timing and a temple map hole.
 Corrected female Tremere lenses and hair problems, thanks DDLullu.
 Fixed female Malkavian hair hole, Dane door and cemetery fadings.
@@ -3397,7 +3399,7 @@ Scenery:
 + Twenty-three props at warehouse and three in Asylum.
 + Sixteen props in Lotus Blossom and two in fishmarket.
 + Twenty-two props in Ocean House and eight in SM clinic.
-+ Twenty-four props at Grout's and nineteen at Giovanni's.
++ Twenty-five props at Grout's and nineteen at Giovanni's.
 + Thirteen props in Empire hotel and four in Venture Tower.
 + Twenty-four props in tattoo shop and seven props in Tsengs.
 + Two props at junkyard and three in Foxy Boxes and Chinatown.
@@ -3547,7 +3549,7 @@ Models:
 * More pipes, pillows, barbells and billiard balls (models found).
 
 Textures:
-* Cinema movie projector (textures found).
+* Old style blood drop GUI (textures found).
 * Sewer travelmap interface (textures found).
 * Alternate Yukie and raver clothes (textures found).
 * Alternate SWAT rifle and Lily purse (textures found).
@@ -3914,6 +3916,7 @@ was also used to restore some of the Chateau Marmont Hotel, which
 Brian Mitsoda wrote could've been "Probably Malkavian Mansion?"
 
 Restored Models:
+models/objects/projector.mdl
 models/scenery/structural/chateau/deco1.mdl 
 models/scenery/structural/chateau/balltop.mdl
 models/scenery/structural/chateau/winframe.mdl
