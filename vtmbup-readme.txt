@@ -108,7 +108,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.5                                                  22.01.2019
+v10.5                                                  24.01.2019
 -----
 +Renamed Holy Sight to Vision and fixed Divine Light cross texture.
 +Added Society icon to title and heat haze effect to fire barrels.
