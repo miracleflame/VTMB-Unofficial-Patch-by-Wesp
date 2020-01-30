@@ -99,7 +99,7 @@
 {	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	101	}{	You have any of those items you mentioned?	}{	You have any of those items you mentioned?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	102	}{	I have the special chewing gum for your teeth for $100.	}{	I have the special chewing gum for your teeth for $100.	}{	111	}{	G.Copper_Gum == 0 and pc.HasItem("item_w_mingxiao_melee") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_w_mingxiao_melee"); G.Copper_Gum = 1; pc.MoneyAdd(100)	}{	}{	}{	}{	}{	}{	}{	I have the special rubber for your fangs for $100.	}
+{	102	}{	I have the special chewing gum for your teeth for $100.	}{	I have the special chewing gum for your teeth for $100.	}{	111	}{	G.Copper_Gum == 0 and pc.HasItem("item_w_mingxiao_tentacle") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_w_mingxiao_tentacle"); G.Copper_Gum = 1; pc.MoneyAdd(100)	}{	}{	}{	}{	}{	}{	}{	I have the special rubber for your fangs for $100.	}
 {	103	}{	Need any more unicorn blood?	}{	Need any more unicorn blood?	}{	161	}{	G.Copper_Blood >=3 and G.Copper_Uni == 1 and pc.HasItem("item_g_bloodpack")	}{	}{	}{	}{	}{	}{	}{	}{	I have more one-horned horse blood.	}
 {	104	}{	Sure. How much unicorn blood do you need?	}{	Sure. How much unicorn blood do you need?	}{	141	}{	G.Copper_Blood < 3 and G.Copper_Uni == 1 and pc.HasItem("item_g_bloodpack")	}{	}{	}{	}{	}{	}{	}{	}{	I have the blood of the magical stallion. How much do you desire?	}
 {	105	}{	Here's the stake. You have $100?	}{	Here's the stake. You have $100?	}{	121	}{	G.Copper_Stake == 1 and pc.HasItem("item_g_stake")	}{	}{	}{	}{	}{	}{	}{	}{	I have the Holy Stake if you've got the blessed $100.	}
@@ -160,7 +160,7 @@
 {	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	161	}{	I think I have enough for the procedure now. Thanks for the blood.	}{	I think I have enough for the procedure now. Thanks for the blood.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Copper_Uni = 2	}{	}{	}{	}{	}{	}{	}{	}
 {	162	}{	Just to be sure, you may want to kill the head vampire with this holy stake - $100.	}{	Just to be sure, you may want to kill the head vampire with this holy stake - $100.	}{	121	}{	G.Copper_Stake == 1 and pc.HasItem("item_g_stake")	}{	}{	}{	}{	}{	}{	}{	}{	A start, but the heart of the Dark Father will free us all. A hundred smackers for freedom.	}
-{	163	}{	I also have the special chewing gum for your teeth for $100.	}{	I also have the special chewing gum for your teeth for $100.	}{	111	}{	G.Copper_Gum == 0 and pc.HasItem("item_w_mingxiao_melee") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_w_mingxiao_melee"); G.Copper_Gum = 1; pc.MoneyAdd(100)	}{	}{	}{	}{	}{	}{	}{	I also have the special rubber for your fangs for $100.	}
+{	163	}{	I also have the special chewing gum for your teeth for $100.	}{	I also have the special chewing gum for your teeth for $100.	}{	111	}{	G.Copper_Gum == 0 and pc.HasItem("item_w_mingxiao_tentacle") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_w_mingxiao_tentacle"); G.Copper_Gum = 1; pc.MoneyAdd(100)	}{	}{	}{	}{	}{	}{	}{	I also have the special rubber for your fangs for $100.	}
 {	164	}{	Enjoy. Goodbye.	}{	Enjoy. Goodbye.	}{	0	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	You sure do. I am gone.	}
 {	165	}{	Enjoy. Goodbye.	}{	Enjoy. Goodbye.	}{	0	}{	G.Patch_Plus == 1	}{	pc.SetQuest("Copper", 4)	}{	}{	}{	}{	}{	}{	}{	You sure do. I am gone.	}
 {	166	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
