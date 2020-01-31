@@ -1390,6 +1390,8 @@ def checkCD():
 
 #WARRENS: Made Gary give Bloodpacks, added by wesp
 def spawnPack():
+    if __main__.G.Patch_Plus == 0:
+        return
     pc = __main__.FindPlayer()
     if (IsClan(pc,"Toreador")):
         if (pc.AmmoCount("item_g_bloodpack") == 0):
