@@ -1388,6 +1388,31 @@ def checkCD():
         pc = __main__.FindPlayer()
         pc.SetQuest("BertramCD", 2)
 
+#WARRENS: Made Gary give Bloodpacks, added by wesp
+def spawnPack():
+    pc = __main__.FindPlayer()
+    if (IsClan(pc,"Toreador")):
+        if (pc.AmmoCount("item_g_bloodpack") == 0):
+            pc.GiveItem("item_g_bloodpack")
+        else:
+            pc.GiveAmmo("item_g_bloodpack",1)
+            c  = __main__.ccmd
+            c.showSpawn=""
+    elif (IsClan(pc,"Nosferatu")):
+        if (pc.AmmoCount("item_g_eldervitaepack") == 0):
+            pc.GiveItem("item_g_eldervitaepack")
+        else:
+            pc.GiveAmmo("item_g_eldervitaepack",1)
+            c  = __main__.ccmd
+            c.showSpawn=""
+    else:
+        if (pc.AmmoCount("item_g_bluebloodpack") == 0):
+            pc.GiveItem("item_g_bluebloodpack")
+        else:
+            pc.GiveAmmo("item_g_bluebloodpack",1)
+            c  = __main__.ccmd
+            c.showSpawn=""
+
 #Toggle walking/running, added by wesp
 def toggleSpeed():
     G = __main__.G
