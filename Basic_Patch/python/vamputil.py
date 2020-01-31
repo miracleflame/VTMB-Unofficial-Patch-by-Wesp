@@ -505,6 +505,9 @@ def spawnVandalBlood():
         __main__.CallEntitySpawn(sparklies)
     else:
         pc.GiveAmmo("item_g_bluebloodpack",1)
+        if __main__.G.Patch_Plus == 1:
+            c  = __main__.ccmd
+            c.showSpawn=""
 
 #CLOUD: Chooses reward from Mr. Ox, added by wesp
 def oxReward1():
@@ -595,6 +598,9 @@ def spawnWatch():
         pc.GiveItem("item_g_watch_fancy")
     else:
         pc.GiveAmmo("item_g_watch_fancy",1)
+        if __main__.G.Patch_Plus == 1:
+            c  = __main__.ccmd
+            c.showSpawn=""
 
 #GIOVANNI MANSION 2: Spawns ring, added by Wesp5
 def spawnGold():
@@ -603,6 +609,9 @@ def spawnGold():
         pc.GiveItem("item_g_ring_gold")
     else:
         pc.GiveAmmo("item_g_ring_gold",1)
+        if __main__.G.Patch_Plus == 1:
+            c  = __main__.ccmd
+            c.showSpawn=""
 
 #GIOVANNI MANSION 3: Keep door open, added by wesp
 def changeLevelCheck():
@@ -691,6 +700,9 @@ def spawnRing():
         pc.GiveItem("item_g_ring_silver")
     else:
         pc.GiveAmmo("item_g_ring_silver",1)
+        if __main__.G.Patch_Plus == 1:
+            c  = __main__.ccmd
+            c.showSpawn=""
 
 #HOSPITAL: Called to unhide the business card, added by wesp
 def milliganCard():
@@ -890,6 +902,9 @@ def spawnWatch():
         pc.GiveItem("item_g_watch_fancy")
     else:
         pc.GiveAmmo("item_g_watch_fancy",1)
+        if __main__.G.Patch_Plus == 1:
+            c  = __main__.ccmd
+            c.showSpawn=""
 
 #SEWERS: Shortcut door, added by wesp
 def unhideShortcut():
