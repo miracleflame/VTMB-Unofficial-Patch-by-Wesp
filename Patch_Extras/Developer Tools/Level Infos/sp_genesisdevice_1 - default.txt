@@ -1,0 +1,73 @@
+{
+"world_maxs" "339 272 394"
+"world_mins" "-209 -304 -74"
+"classname" "worldspawn"
+"skyname" "hav"
+"sounds" "1"
+"MaxRange" "4096"
+"fogcolor" "41 41 56"
+"fogcolor2" "255 255 255"
+"fogdir" "1 0 0"
+"fogstart" "500.0"
+"fogend" "3000"
+"levelscript" "demo"
+"fogenable" "1"
+"wetness_fadetarget" "0.0"
+"wetness_fadein" "5.0"
+"wetness_fadeout" "10.0"
+}
+{
+"classname" "info_player_start"
+"angles" "0 180 0"
+"origin" "235 0 145"
+}
+{
+"classname" "light"
+"_light" "1 1 1 1"
+"style" "0"
+"_constant_attn" "0"
+"_linear_attn" "0"
+"_quadratic_attn" "1"
+"_distance" "0"
+"fade_time" "0.05"
+"origin" "-128 192 384"
+}
+{
+"model" "*1"
+"classname" "trigger_once"
+"targetname" "newplayer"
+"StartHidden" "0"
+"StartDisabled" "0"
+"spawnflags" "1"
+"origin" "96 -32 248.7"
+"OnTrigger" ",,,0,-1,G.Story_State = -5,"
+"OnTrigger" "newplayer,Toggle,,0,1,ccmd.createplayer,"
+}
+{
+"classname" "info_landmark"
+"targetname" "newgame"
+"angles" "0 0 0"
+"spawnflags" "1"
+"origin" "168 0 -64"
+}
+{
+"model" "*2"
+"classname" "trigger_changelevel"
+"targetname" "boogieout"
+"map" "sp_theatre"
+"landmark" "newgame"
+"origin" "87.5 -24.5 -4.5"
+"spawnflags" "0"
+"" ",,,0,-1,,"
+}
+{
+"model" "*3"
+"classname" "trigger_multiple"
+"targetname" "firetrans"
+"StartHidden" "0"
+"StartDisabled" "0"
+"spawnflags" "1"
+"origin" "166 -24.5 -4.5"
+"wait" "1"
+"OnStartTouch" "boogieout,ChangeNow,,0,-1,,"
+}
