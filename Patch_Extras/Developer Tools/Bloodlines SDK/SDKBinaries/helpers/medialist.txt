@@ -32,6 +32,7 @@ Media
 		"26" { index 26; image icon_grepwin }
 		"27" { index 27; image icon_sheettool }
 		"28" { index 28; image icon_blender }
+		"29" { index 29; image icon_crowbar }
 	}
 
 	Sections
@@ -122,22 +123,28 @@ Media
 				Program			"hlmv.exe"
 				Image			6
 			}
-			mdldecompiler
-			{
-				Title			"Model Decompiler"
-				Program			"tools/Java-Based/Java_run.exe -jar \"mdl2smd.jar\""
-				Image			11
-			}
+		//	mdldecompiler
+		//	{
+		//		Title			"Model Decompiler"
+		//		Program			"tools/Java-Based/Java_run.exe -jar \"mdl2smd.jar\""
+		//		Image			11
+		//	}
 			studiocompiler
 			{
 				Title			"Model Compiler"
-				Program			"tools/StudioCompiler/Launcher.exe"
+				Program			"tools/StudioCompiler/Launcher.exe"	// auto-assign project
 				Image			9
+			}
+			crowbar
+			{
+				Title			"Crowbar Tool"
+				Program			"tools/Crowbar/Launcher.exe"
+				Image			29
 			}
 			khed
 			{
 				Title			"kHED Model Editor"
-				Program			"tools/kHED Editor/kHED_start.exe"
+				Program			"tools/kHED Editor/kHED_start.exe"	// fix for user manual
 				Image			23
 			}
 			mdltextureinfo
@@ -152,10 +159,16 @@ Media
 				ShellExecute	"tools\\Blender\\"
 				Image			28
 			}
+			nomorelod
+			{
+				Title			"No-more-LOD Tool"
+				Program			"tools/No More LOD/No_more_LOD_run.exe"	// custom gui
+				Image			11
+			}
 			sheettool
 			{
 				Title			"CharSheet Injector"
-				Program			"tools/Sheet Tool/Sheet_Tool_run.exe"
+				Program			"tools/Sheet Tool/Sheet_Tool_run.exe"	// fix for >127s paths
 				Image			27
 			}
 			qccompiler
@@ -186,7 +199,7 @@ Media
 			ttzview
 			{
 				Title			"TTh/TTz Viewer"
-				Program			"tools\\Texture Utils\\TTZView.bat"
+				Program			"tools\\Texture Utils\\TTZView.bat"	// wrapper for vtfedit
 				Image			24
 			}
 		}

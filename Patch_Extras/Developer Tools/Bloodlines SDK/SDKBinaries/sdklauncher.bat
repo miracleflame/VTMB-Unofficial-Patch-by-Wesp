@@ -185,9 +185,10 @@ if exist "GameCfg.ini" (
 
 :fisrstrun
  echo # This file needed to detect SDK first launch and run Wizard.> "FirstRun.ini"
- echo # This file needed to detect StudioMdl first launch and show Alpha-state Warning.> "helpers\mdlwarn.ini"
- echo # This file needed to detect StudioCompiler first launch and show usage Warning.> "tools\StudioCompiler\ShowWarning.ini"
- taskkill /f /im "msgbox.exe"> nul
+ echo # This file needed to detect StudioCompiler first launch and show usage Warning.> "tools\StudioCompiler\Warning.ini"
+ echo "NULL"> "tools\Crowbar\ProjectDir.ini"
+ for /d %%p in ("%AppData%\ZeqMacaw\CroVtmb*") do rd /s /q "%%~p"
+ taskkill /f /im "msgbox.exe"> nul 2>&1
 
 :setmoddir
  %MsgBox% This is the first launch of the Bloodlines SDK. Choose the mod directory you're using for your project (usually it's folder near "vampire.exe" in the game root directory). If you plan to work with the original game (which is in "Vampire" folder), just click "Cancel" to keep default config. /t:MB_SYSTEMMODAL,MB_ICONINFORMATION,MB_OKCANCEL /c:Note

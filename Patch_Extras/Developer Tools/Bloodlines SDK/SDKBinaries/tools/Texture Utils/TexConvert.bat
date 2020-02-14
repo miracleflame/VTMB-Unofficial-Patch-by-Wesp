@@ -1,6 +1,6 @@
 @echo off
 @color 47
-set ProgVersion=1.9-beta
+set ProgVersion=2.0-beta
 set WinTitle=Texture Converter v%ProgVersion%  (c) Psycho-A
 
 title %WinTitle%
@@ -25,7 +25,7 @@ set OutputFormat=Auto
 set UseTemplates=1
 : use Templates.ini to detect format and vmt layout
 set AutoCreateVmts=1
-: creates .vmt file if source is in materials/ dir
+: create Vmt file if source's in materials[rc]/ dir
 
 
 :Vars
@@ -37,7 +37,7 @@ set ZLib="service\zlib1.exe"
 set TtzDec="service\Ttz2Vtf.exe"
 set VtfCmd="VtfCmd.exe"
 set Templates="Templates.ini"
-set "TempDir=%cd%\temp"
+set "TempDir=%WinDir%\Temp\texutils"
 
 set Validate=call :Validate
 set OpenFile=call %OpenDlg% /f /m
@@ -108,7 +108,9 @@ for %%f in (%*) do (call :ConvertAll "%%~f")
 echo.
 echo Finished.
 if not "%ShellMode%"=="1" (
-ping>nul -n 4 "127.0.0.1" )
+if /i not "%~2"=="-silent" (
+if /i not "%~3"=="-silent" (
+ping>nul -n 4 "127.0.0.1" )))
 goto Exit
 
 
@@ -319,7 +321,8 @@ set "VtfMipsCnt=04"
 set "PreCacheCn=00"
 set "VtfDfVrStr=56544600070000000100000040000000"
 set "VtfDfHdrSz=64"
-set "VtfMipsStr=1000000000000000"
+set "VtfMipsStr=0000000000000000"
+rem "VtfMipsStr=1000000000000000"
 set "VHdrSz=40"
 set "VTmbSx=10"
 set "VTmbSy=10"
@@ -377,7 +380,7 @@ if "%AutoFixVtfVersion%"=="1" (
 				%Validate% "%TempDir%\%%~nm.new.p3"
 				if exist "error.init" goto QuitFunc
 				copy /y /b "%TempDir%\%%~nm.new.p1" + "%TempDir%\%%~nm.new.p2" + "%TempDir%\%%~nm.new.p3" "%%~m"> nul
-				del  /f /q "%TempDir%\%%~nm.new.p?"> nul
+				del /f /q /a "%TempDir%\%%~nm.new.p?"> nul
 				goto fixvtfverfinish
 			)
 		))
@@ -406,6 +409,7 @@ for %%m in ("%VtfFile%") do (
 
 rem Process compress condition..
 if "%CompressImageData%"=="0" (
+	rem Fixed values:
 	set "VtfMipsCnt=01"
 	set "VtfMipsDat=0000000000000000"
 	set "TtzNumSize=0"
@@ -496,7 +500,7 @@ for %%m in ("%VtfFile%") do (
 	if exist "error.init" goto QuitFunc
 	rem Compress VTF tail...
 	%ZLib% -c "%TempDir%\%%~nxm.tail" "%%~dpnm.ttz" "8"> nul
-	del /f /q "%TempDir%\%%~nxm.tail"> nul
+	del /f /q /a "%TempDir%\%%~nxm.tail"> nul
 	%Validate% "%%~dpnm.ttz"
 	if exist "error.init" goto QuitFunc
 	rem Get obtained TTZ size...
@@ -545,7 +549,7 @@ for %%m in ("%VtfFile%") do (
 		copy /b "%%~dpnm.tth" + "%%~m" "%%~dpnm.tth"> nul
 	) else (
 		copy /b "%%~dpnm.tth" + "%TempDir%\%%~nxm.head" "%%~dpnm.tth"> nul
-		del /f /q "%TempDir%\%%~nxm.head"> nul
+		del /f /q /a "%TempDir%\%%~nxm.head"> nul
 	)
 	%Validate% "%%~dpnm.tth"
 	if exist "error.init" goto QuitFunc
@@ -553,40 +557,46 @@ for %%m in ("%VtfFile%") do (
 
 
 rem GENERATE .VMT if needed...
-if not "%AutoCreateVmts%"=="1" goto genvmtfinish
-if exist "%TgtPath%\%~n1.vmt" goto genvmtfinish
+if not "%AutoCreateVmts%"=="1" goto skip_genvmt
+if exist "%TgtPath%\%~n1.vmt" goto skip_genvmt
 
 rem Get path for vmt...
 :: moved to :ReadTemplates function
-if not defined VmtPath goto genvmtfinish
+if not defined VmtPath goto skip_genvmt
 set "BaseTex=%VmtPath:\=/%/%~n1"
 
 rem Check texname postfix...
 set TextureIsMask=
 for /f "delims=" %%p in (
-'call %Sfk% echo -lit "%~n1" +filter -lerep "|_ref||" -lerep "|_normal||" -lerep "|_bump||" -lerep "|_spec||"' 
+'call %Sfk% echo -lit "%~n1" +filter -lerep "|_ref||" -lerep "|_normal||" -lerep "|_bump||" -lerep "|_spec||"'
 ) do (if /i not "%%~p"=="%~n1" (set "TextureIsMask=True") )
-if defined TextureIsMask (goto genvmtfinish)
+if defined TextureIsMask goto skip_genvmt
 
 rem Set defaults if template not detected...
-if not defined VmtShader set VmtShader=LightmappedGeneric
-if not defined VmtParams set VmtParams='$surfaceprop' 'default'
+if not defined VmtShader (
+	set VmtShader=LightmappedGeneric
+)
+if not defined VmtParams (
+	set VmtParams='$surfaceProp' 'default'
+	for %%d in (
+		asphalt brick concrete dirt tile
+		carpet glass grass metal plaster
+		plastic rock stone water wood
+	) do (for %%p in ("%TgtPath%") do (
+		if /i "%%~nxp"=="%%~d" (
+		set VmtParams='$surfaceProp' '%%~d')
+	))
+)
 
 rem Generate Vmt file...
 echo   VMt material path:   "%BaseTex%".
-(echo // created in bloodlines sdk
- echo "%VmtShader%"
- echo {
- echo 	"$baseTexture" "%BaseTex%"
- if defined VmtParams (
- call %Sfk% echo -lit "%VmtParams%" +filter -srep "|'$|\t'$|" -srep "|'|\q|" -srep "|; |\n|" -srep "|;|\n|")
- echo }
-)> "%TgtPath%\%~n1.vmt"
+call :GenerateVmt "%~1"> "%TgtPath%\%~n1.vmt"
+%Sfk% addcr "%TgtPath%\%~n1.vmt"
 
 rem Check if .vmt exist...
 %Validate% "%TgtPath%\%~n1.vmt"
 if exist "error.init" goto QuitFunc
-:genvmtfinish
+:skip_genvmt
 
 
 rem Final actions
@@ -685,6 +695,29 @@ exit /b
 	))
 exit /b
 
+:GenerateVmt
+	set SpecularFound=
+	echo // created in bloodlines sdk
+	echo "%VmtShader%"
+	echo {
+	echo 	"$baseTexture" "%BaseTex%"
+	for %%s in (ref spec s mask) do (
+	if exist "%TgtPath%\%~n1_%%~s.tth" (
+	echo 	"$envMapMask" "%BaseTex%_%%~s"
+	echo 	"$envMap" "env_cubemap"
+	echo 	"$envMapTint" "[1.0 1.0 1.0]"
+	set SpecularFound=True
+	))
+	if not defined SpecularFound (
+	for %%s in (normal norm n bump) do (
+	if exist "%TgtPath%\%~n1_%%~s.tth" (
+	echo 	"$bumpMap" "%BaseTex%_%%~s"
+	)))
+	if defined VmtParams (
+	call %Sfk% echo -lit "%VmtParams%" +filter -srep "|'$|\t'$|" -srep "|'|\q|" -srep "|; |\n|" -srep "|;|\n|")
+	echo }
+exit /b
+
 :ConvertSz
 	for /f %%s in ('call %Sfk% hex "%~1" -digits=8 +filter -lsrep "/????//" -lsrep "/??//"') do (set "%~2B1=%%~s")
 	for /f %%m in ('call %Sfk% hex "%~1" -digits=8 +filter -lsrep "/????//" -lerep "/??//"') do (set "%~2B2=%%~m")
@@ -728,6 +761,4 @@ if /i not "%~2"=="-noinfo" echo.
 exit /b
 
 :Exit
-if exist "%TempDir%\" (
-rd /s /q "%TempDir%\" )
-exit
+exit /b

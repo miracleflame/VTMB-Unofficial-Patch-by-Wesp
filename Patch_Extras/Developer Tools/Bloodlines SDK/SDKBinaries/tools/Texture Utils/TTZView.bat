@@ -1,6 +1,6 @@
 @echo off
 @color 61
-set ProgVersion=1.5-beta
+set ProgVersion=1.6-beta
 set WinTitle=TTZ Viewer v%ProgVersion%  (c) Psycho-A
 
 title %WinTitle%
@@ -15,7 +15,7 @@ set OpenDlg=..\..\helpers\OpenDlg.exe
 set TtzDecomp="service\TtzDecomp.exe"
 set FileTypes="service\filetypes.bat"
 set OpenFile=call "%OpenDlg%" /f
-set "TempDir=%cd%\temp"
+set "TempDir=%WinDir%\Temp\texutils"
 
 :CheckFiles
 for %%m in (%MsgBox% %OpenDlg% %TtzDecomp% %FileTypes%) do (
@@ -91,5 +91,5 @@ if exist "%~dpn1.vtt" (
 
 :view
 	VTFEdit.exe "%TempDir%\%~n1.vtf"
-	rd /s /q "%TempDir%"> nul
+	del /f /q "%TempDir%\%~n1.vtf"> nul
 exit /b

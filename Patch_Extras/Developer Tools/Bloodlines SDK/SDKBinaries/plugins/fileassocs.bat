@@ -30,8 +30,9 @@ REG>nul ADD "HKCU\Software\Classes\VMFFile\DefaultIcon" /f /ve /d "%FIPath%\vmf.
 :======== VPK Files =========
 REG>nul ADD "HKCU\Software\Classes\.vpk" /f /ve /d "VPKFile"
 REG>nul ADD "HKCU\Software\Classes\VPKFile" /f /ve /d "Vampire Pack file"
-REG>nul ADD "HKCU\Software\Classes\VPKFile\shell" /f /ve /d "VPKTool"
+REG>nul ADD "HKCU\Software\Classes\VPKFile\shell" /f /ve /d "Open"
 REG>nul ADD "HKCU\Software\Classes\VPKFile\shell\VPKTool\command" /f /ve /d "%CD%\tools\VPKTool\VPKTool.exe V \"%%1\""
+REG>nul ADD "HKCU\Software\Classes\VPKFile\shell\Open\command" /f /ve /d "%CD%\tools\Crowbar\Launcher.exe \"%%1\""
 REG>nul ADD "HKCU\Software\Classes\VPKFile\DefaultIcon" /f /ve /d "%FIPath%\pak.ico,0"
 
 :======== MDL Files =========
@@ -91,6 +92,8 @@ REG>nul ADD "HKCU\Software\Classes\QCFile" /f /ve /d "Model Compile parameters"
 REG>nul ADD "HKCU\Software\Classes\QCFile\shell" /f /ve /d "Notepad"
 REG>nul ADD "HKCU\Software\Classes\QCFile\shell\Notepad" /f /ve /d "Edit with NotePad"
 REG>nul ADD "HKCU\Software\Classes\QCFile\shell\Notepad\command" /f /ve /d "notepad.exe \"%%1\""
+REG>nul ADD "HKCU\Software\Classes\QCFile\shell\Compile" /f /ve /d "Compile to MDL..."
+REG>nul ADD "HKCU\Software\Classes\QCFile\shell\Compile\command" /f /ve /d "%CD%\studiomdl.bat \"%%1\""
 REG>nul ADD "HKCU\Software\Classes\QCFile\DefaultIcon" /f /ve /d "shell32.dll,69"
 
 :======== SMD Files =========

@@ -716,8 +716,7 @@ exit /b
 exit /b
 
 :killproc
-	for /f "tokens=1" %%m in ('tasklist /NH') do (
-	if /i "%%~m"=="%~1" (taskkill /f /im "%~1"> nul))
+	taskkill /f /im "%~1"> nul 2>&1
 exit /b
 
 :rem_empties

@@ -1,5 +1,5 @@
 --------------------
-Bloodlines SDK v1.80+
+Bloodlines SDK v1.92
 --------------------
 
 This is an unofficial software developer's kit (SDK) for Vampire - The Masquerade: 
@@ -47,7 +47,7 @@ This SDK includes various third-party tools, in particular:
 
 * Source SDK GUI (developed by Valve, customized by Psycho-A)
 * PackFile Explorer v3.9 (developed by Dave Gaunt)
-* MDL 2 SMD Beta (developed by Daedalus, http://forum.bloodlinesresurgence.com)
+* Crowbar tool v0.65 (developed by ZeqMacaw, https://github.com/ZeqMacaw/Crowbar)
 * BSPSource v1.2.1 (VMEx modification, developed by Barracuda, https://github.com/ata4/bspsrc)
 * VPKTool v3.9a (Quick and dirty Bloodlines Tools, developed by Turvy)
 * VTMBedit Tool (developed by David Arneson [xatmos])
@@ -56,7 +56,7 @@ This SDK includes various third-party tools, in particular:
 * BSPEdit v1.09 (developed by Robert Morley, http://www.rob.patcroteau.com)
 * BSPDetail v1.0 (by DDLullu, http://forums.planetvampire.com/index.php?action=profile;u=3672)
 * kHED v1.1.5, low-poly model editor (developed by JDPhU, http://khed.glsl.ru)
-* Blender v2.42, model editor (developed by Blender Foundation, http://www.blender.org)
+* Blender v2.43, model editor (developed by Blender Foundation, http://www.blender.org)
 * Blender import/export scripts and MDL decompressor (written by DDLullu, adapted by Psycho-A)
 * VExtract (developed by Daedalus for Bloodlines Revival project [dropped now])
 * VPK Creator (developed by Psycho-A and Theo de Moree, http://www.gameapps.com)
@@ -71,6 +71,8 @@ This SDK includes various third-party tools, in particular:
 * Create a New Mod Wizard (custom script, written by Psycho-A)
 * MDL Texture Info (script and Windows shell extension, written by Psycho-A)
 * 4GB Exe Patcher (patch for 64-bit OS, developed by NTCore)
+* Make-Model-Solid (fixing tool for MDL's collision, developed by DDLullu)
+* No-More-LOD (character LODs disabler tool, developed by DDLullu)
 
 --------------------
 
@@ -86,9 +88,9 @@ Additional tools (for advanced users):
 The following tools required Java Runtime Environment (http://java.com/download) 
 to be installed on your system:
 
-* Model Decompiler
 * BSPSource Decompiler
 * EntSpy BSP Tool
+* MDL 2 SMD [disabled for now]
 * BSPInfo Tool [disabled for now]
 * PakRat Tool [disabled for now]
 
@@ -184,8 +186,11 @@ Usage notes:
   may compile from ready QC scripts, as well as "QC Files Compiler" utility in the SDK.
 * To learn more about QC, follow this link: https://developer.valvesoftware.com/wiki/QC
   To learn about SMD, visit this: https://developer.valvesoftware.com/wiki/Studiomdl_Data
-* Many old Source Engine game's staticprop models can be decompiled using Studio Compiler's
-  "Model Decompiler" and then imported into Bloodlines using Model Compiler without editing.
+* Since version 1.9 there's no more limits to use custom models with collision data in game,
+  so all compiled models will have solidity and their native physic properties! You may 
+  freely use prop_static, dynamic or physics entities with "Collision" enabled as well...
+* Many old Source Engine game's staticprop models can be decompiled using "Crowbar" tool
+  and then imported into Bloodlines using Model Compiler with nothing or minor editing.
 * Since version 1.7 the SDK includes SMD import/export plugins for 3ds Max v5 - 2019 and 
   Google's Sketchup. This mean you may use this software for your modeling purposes.
 * Since version 1.8 the SDK includes full Blender editor with scripts for the D3D.x -> MDL
@@ -202,13 +207,10 @@ Usage notes:
 * Sometimes compiled model becomes half-sized in game. In this case, set $scale 2.0 param 
   in "Model Options" of the Studio Compiler, or inside model's QC script before you compile.
 * If the model becomes rotated 90/180/270 degrees in game comparing the original, use the
-  $origin 0 0 0 # param inside of its QC script where # is the rotation degree number.
+  $origin 0 0 0 -90 param inside of its QC script where -90 is the rotation degree number.
 * If compiled model has no bounding Hitbox (check this in the Model Viewer), define Hitbox 
   manually inside of QC script before compiling, using this command (without brackets):
   $hbox [group number] "bone name" [min x] [min y] [min z] [max x] [max y] [max z]
-* If compiled model becomes transparent (doesn't collide with player and NPCs), although the
-  physics model was defined, surround that model with bounding primitives using "toolsclip" 
-  or "toolsinvisible" textures in the Hammer Editor (this makes extranal collition).
 
 [Scoring/Authoring]
 * Since version 1.6 you can edit or create the closecaption and lip-syncing files (.lip) and
@@ -254,6 +256,11 @@ Project Developers:
 * Psycho-A (Programming and all subsequent works).
 * Behar (Rare, but very useful help).
 * Fire64 (Programming, project CEO) [no support anymore].
+
+Special Thanks to:
+
+* DDLullu (huge help in fixing modelling bugs).
+* ZeqMacaw (for his wonderful decompiler).
 
 --------------------
 
@@ -314,8 +321,8 @@ There are some issues in the project, which we're still not able to solve fully,
 03) No VPK archives support for filesystem_stdio-related apps (Hammer, HLMV, all map compilers), so we are forced to extract game resources manually. The format structure description (for those who may interest this) can be found in "vpk_notes.txt" file of source code assets.
     Solution [Temp]: All content unpacks into SdkContent\Vampire\ dir via external batch tool.
 
-04) BSP compilers can't compile the water brushes (water is not drawing in game).
-    Solution [Temp]: Not found for now, possibly shader-level problem. Use placeholder textures...
+04) BSP compilers can't compile the water brush volumes (water is not drawing in game).
+    Solution [Temp]: Not found for now, possibly shader-level problem. Use envmap-reflective and animated textures...
 
 05) Something in BSP structures interrupts to use precipitation particles (like rain) - they just stucks like on collisions.
     Solution [Temp]: Scale env_particle density to >10 or use func_particle volumes, but it's more resource-cost.
@@ -395,15 +402,55 @@ Global changes:
 * Added new context menu option for MDL files to see which materials model use and which ones are missing in mod.
 * Added options to control bounced lighting and lightmap scale directly for map through its properties.
 * Added full Blender and MDL/.X Import/Export scripts for existing game models' vertices/UV editing.
+* Integrated DDLullu's tool into Model Compiler, so no more any physics/collision model usage limitations.
+* Texture Converter now able to detect material types, properties and auto-append texture masks in vmt.
+* Added workarounds to automatically fix -90 degree rotation and animation bugs on compiling custom models.
+
 
 --------------------
 
+1.92 (08.02.2020):
+- Model Compiler: Added workaround to automatically fix -90-degree-rotation-issue on Vtmb-decompiled models.
+- Model Compiler: Added workaround to fix game crashes and rendering issues on compiling all dynamic models.
+* These fixies applies during model compiling and when issued model found, user will asked to apply it or leave.
+- Model Compiler: Fixed darkening models on shooting them by updating Studiomdl-fix tool, thanks to DDLullu!
+- Model Compiler: Better QC files parsing, fixing compiling materials and improved log messages.
+- Crowbar tool: Fixed incorrect "phy" material string dumping on decompiling Vtmb's physics meshes.
+- Crowbar tool: Isolated Vtmb-adapted tool version settings from regular Source Engine Crowbar releases.
+- Model Viewer: Fixed opening MDL files from non-SDK mod directories.
+- Various minor technical fixes in SDK internal scripts and updated Readme info.
+
+1.91 (28.01.2020):
+- Old MDL2SMD model decompiler replaced with more painless and functional "Crowbar" tool by ZeqMacaw.
+* The program is fully customized for Bloodlines & SDK: you only need to manage input and output model paths!
+- Added "No-More-LOD" tool by DDLullu to disable LODs on character sheets, and added simple GUI to it.
+- Reassigned double-clicking VPK archives to Crowbar tool as it's more user-friendly to view and unpack them.
+- Model Compiler/StudioMDL: More robust adaptation for three types of current SDK compiling tools.
+- Some unused Java-based libraries have been cleared.
+
+1.90 (27.01.2020):
+- Added "Make-Model-Solid" tool and integrated it with Model Compiler, thanks to DDLullu!
+* Now there's no manual fixing MDLs, no PHY models usage limitations, and all prop entity types are supported!
+- Model Compiler: Added drag-n-drop to StudioMDL.bat and Windows Context menu item to quick compile QC to MDL.
+- Model Compiler: Added auto-compiling all model's source textures (TGAs etc.) right after compiling MDL file.
+* Textures must be placed near .QC, in Mod's materials/<qcpath>/ or SDKContent/MaterialSrc/<qcpath>/ to do it!
+- Texture Converter: Added auto-appending Bump and Specular masks to .VMT if present near base texture.
+- Texture Converter: Added auto-appending Surface properties to .VMT if directory name matches type.
+- QC Files Compiler: Restored tool broken functionality by fixing file system issue.
+- Other minor fixes and file system reogranisation, plase don't install new version over older ones!
+
+1.81 (25.09.2019):
+- Updated Blender to version 2.43 and improved MDL export script.
+- Texture Converter: Prevented corrupting TTZ files on right-click batch converting from the Explorer.
+- Texture Converter: Added "-silent" key to launch from external batch scripts (convert.exe "file" -silent).
+- Texture Converter: Fixed generating twin CR carret on Windows 7+ if VMT Templates are defined.
+- Various minor internal fixes and optimizations.
+
 1.80 (23.08.2019):
-- Added full Blender 2.43 and MDL/.X Import/Export scripts for editing existing game models' vertices and UV:
+- Added full Blender 2.40 and MDL/.X Import/Export scripts for editing existing game models' vertices and UV:
   -- It's fully ready for use (installing and configuring aren't needed) - just learn how-to in the usage doc!
 - Texture Converter: Fixed critical typo not allowing to normally convert images to TTZs.
 - Texture Converter: Removed "Convert" context items from TTZ extension to avoid twice converting (use TTHs!).
-- Texture Converter: Fixed generating twin CR carret on Windows 7+ if VMT Templates are defined.
 - Model Compiler: Unlocked "Materials Directory" line to directly set material path (not using Materials tab).
 - Rewritten some SDK control scripts and added workarounds for better Linux/Wine environment compatibility.
 - A major file structure reorganization - remove your whole old SDKBinaries/ folder before updating SDK!
@@ -822,7 +869,7 @@ Global changes:
 
 0.9 (26.03.2015):
 - SDK is fully unbinded from needing to place itself into the game root dir.
-- Hammer: Changed default settings to more comfortable (adatped texture viewer, enabled nudging objects and auto-selection in 2D..);
+- Hammer: Changed default settings to more comfortable (adapted texture viewer, enabled nudging objects and auto-selection in 2D..);
 - Hammer: Fixed Entity creation in 2D views by right-click context menu (previuosly didn't work).
 - Hammer: Added new experimental ability to build correct cubemaps after map compiling. 
   >> Don't forget to attach "Brush Faces" of surfaces in entity's properties, or cubemaps won't be visible (engine limitation)!

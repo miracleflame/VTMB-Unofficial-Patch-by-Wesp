@@ -2,12 +2,13 @@
 setlocal ENABLEEXTENSIONS
 set "PATH=%SystemRoot%\System32;%SystemRoot%;%SystemRoot%\System32\Wbem"
 set "PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"
-title VTex compiler :: SDK mode
+title VTex compiler: SDK mode
 if "%~1"=="" (
 	vtex.exe
 	pause> nul
 	exit
 )
+pushd "%~dp0"
 
 :DefVars
 pushd "%~dp0.."
@@ -15,7 +16,7 @@ if not defined ModDir (
 set "VProject=%cd%\vampire"
 set "ModDir=%cd%\vampire"
 set "GameDir=%cd%\vampire")
-pushd "%~dp0"
+popd
 
 if exist "GameCfg.ini" (
 for /f "usebackq delims== tokens=1,*" %%a in ("GameCfg.ini") do (
@@ -38,7 +39,7 @@ if not defined TgaFound (
 	echo ERROR! No input TGA images specified.
 	echo -------------------------------------
 	if "%~1"=="" pause> nul
-	exit
+	goto :Quit
 )
 
 :ParseCmdline
@@ -120,6 +121,7 @@ if defined BadVmts for %%m in (%BadVmts%) do (
 )> nul
 
 :Quit
+popd
 exit
 
 
