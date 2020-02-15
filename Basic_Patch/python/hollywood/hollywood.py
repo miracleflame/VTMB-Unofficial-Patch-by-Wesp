@@ -183,7 +183,7 @@ def luckyState():
         if (G.Patch_Plus == 1):
             skelter.ScriptUnhide()
     deadmuddy = Find("dead_muddy")
-    if (G.Muddy_Dead == 1):
+    if (G.Muddy_Dead == 1 and deadmuddy is not None):
         deadmuddy.Kill()
         G.Muddy_Dead = 2
     if(G.Killer_Key == 1):
