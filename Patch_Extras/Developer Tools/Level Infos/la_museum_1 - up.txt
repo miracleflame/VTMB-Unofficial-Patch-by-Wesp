@@ -10810,6 +10810,8 @@
 "soundgroup" "Museum_Guard"
 "OnDeath" "inc_kill_count,Trigger,,0,-1,,"
 "OnDeath" ",,,0,-1,OnKeyGuardDeath(),"
+"OnDamaged" ",,,0,-1,OnKeyGuardDeath(),"
+"OnFedUponBegin" ",,,0,-1,OnKeyGuardDeath(),"
 "OnIncapacitatedStart" ",,,0,-1,OnKeyGuardDeath(),"
 "origin" "99 843 -284"
 }
