@@ -2055,6 +2055,16 @@ def OnFrenzyBegin():
         pc.RemoveItem("item_w_tzimisce2_head")
     if pc.HasItem("item_i_written"):
         pc.RemoveItem("item_i_written")
+    f=FindClass("Npc_VFrenzyShadow")[0]    #This is the frenzying clone
+    if f:
+        f.SetName("FrenzyShadow")
+        f.BumpStat("Strength", 5)
+        f.BumpStat("Stamina", 5)
+        f.BumpStat("Wits", 5)
+        if IsClan(pc, "Gangrel"):    #5 additional dots
+            f.BumpStat("Strength", 5)
+            f.BumpStat("Stamina", 5)
+            f.BumpStat("Wits", 5)
 def OnFrenzyEnd():
     print "Frenzy End"
 def OnPlayerKilled():
