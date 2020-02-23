@@ -2935,27 +2935,55 @@ StatData
 				Action
 				{
 					"Triggers"	"Inc"
-					"Value"	">0"
+					"Value"	"1"
 					"Stat"	"BloodPool -3"
 				}
 
 				Action
 				{
 					"Triggers"	"Inc"
-					"Value"	">0"
+					"Value"	"1"
 					"Effect"	"Discipline (Corpus_Vampirus)"
 				}
 
 				Action
 				{
-					"Value"	">0"
+					"Triggers"	"Inc"
+					"Value"	"2"
+					"Effect"	"Frenzy (Kindred)"
+				}
+
+				Action
+				{
+					"Triggers"	"Inc"
+					"Value"	"3"
+					"Effect"	"Frenzy (Gangrel)"
+				}
+
+				Action
+				{
+					"Value"	"1"
 					Particle
 					{
 						Definition 	"D_BloodBuff_Generic"
 						Bone		"Bip01 Spine2"
 						AttachType	"bone"
 					}
-				}		
+				}
+
+				Action	// added by wesp
+				{
+					"Value"	"1"
+					Particle
+					{
+						Definition 	"d_bloodbuff_view_emitter"
+						Bone		""
+						AttachType	"ScreenCenter"
+						Viewmodel	"1"
+					}
+				}
+
+		
 				Action
 				{
 					"Value"	">1"
@@ -2994,18 +3022,6 @@ StatData
 						Definition 	"D_BloodBuff_Generic"
 						Bone		"Bip01 Spine2"
 						AttachType	"bone"
-					}
-				}
-
-				Action	// added by wesp
-				{
-					"Value"	">0"
-					Particle
-					{
-						Definition 	"d_bloodbuff_view_emitter"
-						Bone		""
-						AttachType	"ScreenCenter"
-						Viewmodel	"1"
 					}
 				}
 			}

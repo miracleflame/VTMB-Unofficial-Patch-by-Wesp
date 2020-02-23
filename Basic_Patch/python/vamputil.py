@@ -2055,16 +2055,14 @@ def OnFrenzyBegin():
         pc.RemoveItem("item_w_tzimisce2_head")
     if pc.HasItem("item_i_written"):
         pc.RemoveItem("item_i_written")
-    f=FindClass("Npc_VFrenzyShadow")[0]    #This is the frenzying clone
-    if f:
-        f.SetName("FrenzyShadow")
-        f.BumpStat("Strength", 5)
-        f.BumpStat("Stamina", 5)
-        f.BumpStat("Wits", 5)
-        if IsClan(pc, "Gangrel"):    #5 additional dots
-            f.BumpStat("Strength", 5)
-            f.BumpStat("Stamina", 5)
-            f.BumpStat("Wits", 5)
+# added by EntenSchreck to correct Frenzy stats
+    if __main__.G.Patch_Plus == 1:
+        f=FindClass("Npc_VFrenzyShadow")[0]    #This is the frenzying clone
+        if f:
+            f.SetName("FrenzyShadow")
+            f.SetScriptedDiscipline("Corpus_Vampirus 2")
+            if IsClan(pc, "Gangrel"):
+                f.SetScriptedDiscipline("Corpus_Vampirus 3")
 def OnFrenzyEnd():
     print "Frenzy End"
 def OnPlayerKilled():
