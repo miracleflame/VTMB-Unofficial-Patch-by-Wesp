@@ -6,7 +6,7 @@
 {	6	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	7	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	8	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	9	}{	No. Sorry to trouble you.	}{	No. Sorry to trouble you.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	9	}{	No. Sorry to trouble you.	}{	No. Sorry to trouble you.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	11	}{	Ugh! Ahem. [Clears throat, looks at watch]Hmmm... mmm, what time is it?	}{	Ugh! Ahem. [Clears throat, looks at watch]Hmmm... mmm, what time is it?	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	12	}{	What are you doing?	}{	What are you doing?	}{	31	}{	G.Smblue_Plans == 0	}{	}{	}{	}{	}{	}{	}{	}{	What strings pull you, stranger?	}
@@ -16,7 +16,7 @@
 {	16	}{	Looking for a little company?	}{	Looking for a little company?	}{	61	}{	Seduction 4 & G.Smblue_Plans == 1	}{	G.Smblue_Seduced = 1	}{	}{	}{	}{	}{	}{	}{	Perhaps we might make a sweet, streetside rendezvous.	}
 {	17	}{	Looking for a little company?	}{	Looking for a little company?	}{	131	}{	Seduction -4 & G.Smblue_Plans == 1	}{	}{	}{	}{	}{	}{	}{	}{	Perhaps we might make a sweet, streetside rendezvous.	}
 {	18	}{	You just want to admire me in private.	}{	You just want to admire me in private.	}{	61	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Smblue_Dominated = 1; G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
-{	19	}{	Later.	}{	Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	19	}{	Later.	}{	Later.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
 {	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	21	}{	Waiting for that blasted tow truck I called an hour ago. I'd rather not wait another second in this part of town, this time of night. It's a rather dreadful place, don't you think? I should've listened to my mechanic - "buy German", he said.	}{	Waiting for that blasted tow truck I called an hour ago. I'd rather not wait another second in this part of town, this time of night. It's a rather dreadful place, don't you think? I should've listened to my mechanic - "buy German", he said.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	G.Smblue_Plans = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	22	}{	Terribly sorry to trouble you, my wallet's been stolen and I need to take a cab.	}{	Terribly sorry to trouble you, my wallet's been stolen and I need to take a cab.	}{	51	}{	Persuasion 4 & G.Smblue_Persuade == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seem to have lost the gold in my pot. Can you help me refill it?	}
@@ -27,7 +27,7 @@
 {	27	}{	Meet me in the alley.	}{	Meet me in the alley.	}{	61	}{	Dominate 1	}{	G.Smblue_Dominated = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	28	}{	Meet me in the alley.	}{	Meet me in the alley.	}{	61	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	G.Smblue_Dominated = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
 {	29	}{	You just want to admire me in private.	}{	You just want to admire me in private.	}{	61	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Smblue_Dominated = 1; G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
-{	30	}{	I'm outta here.	}{	I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	30	}{	I'm outta here.	}{	I'm outta here.	}{	191	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
 {	31	}{	Nothing... n-nothing. Just, uh, waiting for a friend to, uh... get off work. He's, umm... a police officer - old army buddy. Uh, he should be bringing his dog as well... it's, uh, a Rottweiler. Wonderful attack dogs, they are.	}{	Nothing... n-nothing. Just, uh, waiting for a friend to, uh... get off work. He's, umm... a police officer - old army buddy. Uh, he should be bringing his dog as well... it's, uh, a Rottweiler. Wonderful attack dogs, they are.	}{	#	}{	Whisper("Lying"); npc.SetDisposition("Fear", 1)	}{	G.Smblue_Plans = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	32	}{	Terribly sorry to trouble you, my wallet's been stolen and I need to take a cab.	}{	Terribly sorry to trouble you, my wallet's been stolen and I need to take a cab.	}{	51	}{	Persuasion 4 & G.Smblue_Persuade == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seem to have lost the gold in my pot. Can you help me refill it?	}
 {	33	}{	Could I persuade you to help me out? My wallet's been stolen.	}{	Could I persuade you to help me out? My wallet's been stolen.	}{	41	}{	Persuasion -4	}{	}{	}{	}{	}{	}{	}{	}{	Could I persuade you to provide me with funds recently pilfered from me?	}
@@ -37,7 +37,7 @@
 {	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	40	}{	I'll be on my way then.	}{	I'll be on my way then.	}{	0	}{	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	We all wear the night like a serrated shawl. Farewell.	}
+{	40	}{	I'll be on my way then.	}{	I'll be on my way then.	}{	191	}{	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	We all wear the night like a serrated shawl. Farewell.	}
 {	41	}{	'Fraid I'm a little short on cash right now, so sorry.	}{	'Fraid I'm a little short on cash right now, so sorry.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	42	}{	Just a few bucks? I'm a little down on my luck right now. Help me out.	}{	Just a few bucks? I'm a little down on my luck right now. Help me out.	}{	71	}{	Intimidate 3	}{	}{	}{	}{	}{	}{	}{	}{	Fortune smiles on you. You will share your rewards. NOW.	}
 {	43	}{	Oh. Well, maybe you're looking for a little company?	}{	Oh. Well, maybe you're looking for a little company?	}{	61	}{	Seduction 4	}{	G.Smblue_Seduced = 1	}{	}{	}{	}{	}{	}{	}{	Perhaps we might make a sweet, streetside rendezvous.	}
@@ -47,7 +47,7 @@
 {	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	50	}{	I'll be on my way then.	}{	I'll be on my way then.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Luck is a limpid leper. Farewell.	}
+{	50	}{	I'll be on my way then.	}{	I'll be on my way then.	}{	191	}{	}{	}{	}{	}{	}{	}{	}{	}{	Luck is a limpid leper. Farewell.	}
 {	51	}{	Oh, I completely understand, here, uh... uh, take a few bucks. Think nothing of it. I wouldn't be surprised if in this neighborhood you were pickpocketed. Anyhow, good evening... and, uh, do be careful.	}{	Oh, I completely understand, here, uh... uh, take a few bucks. Think nothing of it. I wouldn't be surprised if in this neighborhood you were pickpocketed. Anyhow, good evening... and, uh, do be careful.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Smblue_Persuade = 1; pc.MoneyAdd(20)	}{	}{	}{	}{	}{	}{	}{	}
 {	52	}{	Thank you!	}{	Thank you!	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Thanks!	}
 {	53	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -117,7 +117,7 @@
 {	117	}{	Looking for a little company?	}{	Looking for a little company?	}{	121	}{	Seduction -4	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	118	}{	Meet me in the alley.	}{	Meet me in the alley.	}{	61	}{	Dominate 1	}{	G.Smblue_Dominated = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	119	}{	Meet me in the alley.	}{	Meet me in the alley.	}{	61	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	G.Smblue_Dominated = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
-{	120	}{	See ya.	}{	See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	120	}{	See ya.	}{	See ya.	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	121	}{	I'm happily married... to my work. And I have a wife, too.	}{	I'm happily married... to my work. And I have a wife, too.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	122	}{	What are you doing?	}{	What are you doing?	}{	21	}{	G.Smblue_Plans == 0	}{	}{	}{	}{	}{	}{	}{	}{	What strings pull you, stranger?	}
 {	123	}{	Terribly sorry to trouble you, my wallet's been stolen and I need to take a cab.	}{	Terribly sorry to trouble you, my wallet's been stolen and I need to take a cab.	}{	51	}{	Persuasion 4 & G.Smblue_Persuade == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seem to have lost the gold in my pot. Can you help me refill it?	}
@@ -127,13 +127,13 @@
 {	127	}{	Meet me in the alley.	}{	Meet me in the alley.	}{	61	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	G.Smblue_Dominated = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
 {	128	}{	You just want to admire me in private.	}{	You just want to admire me in private.	}{	61	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Smblue_Dominated = 1; G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
 {	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	130	}{	Whatever. I'm outta here.	}{	Whatever. I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	130	}{	Whatever. I'm outta here.	}{	Whatever. I'm outta here.	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
 {	131	}{	I'm happily married... to my work. And I have a wife, too.	}{	I'm happily married... to my work. And I have a wife, too.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	132	}{	What are you doing?	}{	What are you doing?	}{	31	}{	G.Smblue_Plans == 0	}{	}{	}{	}{	}{	}{	}{	}{	What strings pull you, stranger?	}
 {	133	}{	Terribly sorry to trouble you, my wallet's been stolen and I need to take a cab.	}{	Terribly sorry to trouble you, my wallet's been stolen and I need to take a cab.	}{	41	}{	Persuasion 4	}{	}{	}{	}{	}{	}{	}{	}{	I seem to have lost the gold in my pot. Can you help me refill it?	}
 {	134	}{	Could I persuade you to help me out? My wallet's been stolen.	}{	Could I persuade you to help me out? My wallet's been stolen.	}{	41	}{	Persuasion -4	}{	}{	}{	}{	}{	}{	}{	}{	Could I persuade you to provide me with funds recently pilfered from me?	}
 {	135	}{	Think you could spare a few bucks? I'm a little down on my luck right now.	}{	Think you could spare a few bucks? I'm a little down on my luck right now.	}{	71	}{	Intimidate 3	}{	}{	}{	}{	}{	}{	}{	}{	Fortune smiles on you. You will share your rewards. NOW.	}
-{	136	}{	Sorry to bother you. Goodnight.	}{	Sorry to bother you. Goodnight.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	136	}{	Sorry to bother you. Goodnight.	}{	Sorry to bother you. Goodnight.	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
 {	137	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -169,7 +169,7 @@
 {	169	}{	Be that way. Asshole.	}{	Be that way. Asshole.	}{	0	}{	G.Smblueblood_Fear < 3	}{	G.Smblue_Shock = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	171	}{	What I wouldn't do for a glass of '79 Chateau Montebleau right now.	}{	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	172	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
 {	173	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	174	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -179,7 +179,7 @@
 {	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	181	}{	I can't believe people live in a place like this.	}{	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	182	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
 {	183	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	184	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	185	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -189,7 +189,7 @@
 {	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	191	}{	Of all the places to have car problems.	}{	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	192	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	192	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
 {	193	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	194	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	195	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

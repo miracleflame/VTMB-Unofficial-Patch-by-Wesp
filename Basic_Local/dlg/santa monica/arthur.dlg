@@ -89,8 +89,8 @@
 {	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	90	}{	Actually, I'm going to get out of here. See ya.	}{	Actually, I'm going to get out of here. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
 {	91	}{	What place you wanna know about?	}{	What place you wanna know about?	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	92	}{	What know you of the club of the insane?	}{	What know you of the club of the insane?	}{	601	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	93	}{	What do you know about The Asylum?	}{	What do you know about The Asylum?	}{	121	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	What know you of the club of the insane?	}{	What know you of the club of the insane?	}{	661	}{	IsClan(pc,"Malkavian") and G.Arthur_Knoxold == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	93	}{	What do you know about The Asylum?	}{	What do you know about The Asylum?	}{	701	}{	not IsClan(pc,"Malkavian") and G.Arthur_Knoxold == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	94	}{	Tell me about the mansion of the dead.	}{	Tell me about the mansion of the dead.	}{	611	}{	G.Therese_Quest > 1 and IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	95	}{	What can you tell me about the Ocean House Hotel?	}{	What can you tell me about the Ocean House Hotel?	}{	131	}{	G.Therese_Quest > 1 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	96	}{	Do you know about the gallery of night?	}{	Do you know about the gallery of night?	}{	621	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -103,8 +103,8 @@
 {	103	}{	What do you know about the diner?	}{	What do you know about the diner?	}{	151	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	104	}{	A calliope, a wheel in the sky, the ocean like a grave beneath....	}{	A calliope, a wheel in the sky, the ocean like a grave beneath....	}{	641	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	105	}{	What can you tell me about the pier?	}{	What can you tell me about the pier?	}{	161	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	106	}{	What know you of the club of the insane?	}{	What know you of the club of the insane?	}{	601	}{	IsClan(pc,"Malkavian") and G.Arthur_Knoxold == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	107	}{	What do you know about The Asylum?	}{	What do you know about The Asylum?	}{	121	}{	not IsClan(pc,"Malkavian") and G.Arthur_Knoxold == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	108	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
