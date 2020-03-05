@@ -101,7 +101,7 @@ def setPlus():
         pc.GiveItem("item_g_keyring")
         pc.GiveItem("item_a_lt_cloth")
     if (G.Vampire_Hunter == 0 and (pc.clan == 9 or pc.clan == 10 or pc.clan == 11)):
-        print "Vampire Hunter"
+        print "Vampire to Hunter"
         src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\vdata\\system\\stats_hunter.txt"
         dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\vdata\\system\\stats.txt"
         fileutil.copyfile(src, dst)
@@ -142,7 +142,8 @@ def setPlus():
         dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\bloodbar\\bloodbar.vmt"
         fileutil.copyfile(src, dst)
         G.Vampire_Hunter = 1
-    elif G.Vampire_Hunter == 0:
+    elif G.Vampire_Hunter == 1 and not (pc.clan == 9 or pc.clan == 10 or pc.clan == 11):
+        print "Hunter to Vampire"
         src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\vdata\\system\\stats_vampire.txt"
         dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\vdata\\system\\stats.txt"
         fileutil.copyfile(src, dst)
@@ -182,7 +183,7 @@ def setPlus():
         src = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\bloodbar\\blood_bar.vmt"
         dst = fileutil.getcwd() + "\\" + fileutil.moddir + "\\materials\\hud\\new_ui\\bloodbar\\bloodbar.vmt"
         fileutil.copyfile(src, dst)
-        G.Vampire_Hunter = 1
+        G.Vampire_Hunter = 0
     if G.Patch_Plus == 1:
         plus = __main__.FindEntitiesByName("plus_*")
         for p in plus:
