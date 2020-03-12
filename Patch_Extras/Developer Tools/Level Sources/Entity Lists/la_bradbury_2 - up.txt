@@ -17492,7 +17492,6 @@
 {
 "classname" "logic_auto"
 "OnMapLoad" ",,,0,-1,initVars(),"
-"OnMapLoad" "heather_dead,WillTalk,0,0,-1,,"
 "origin" "385.361 -481 -372.11"
 }
 {
@@ -18681,10 +18680,11 @@
 "spawnflags" "8196"
 "model" "models/character/npc/unique/Santa_Monica/Heather/Heather.mdl"
 "targetname" "heather_dead"
+"StartHidden" "1"
 "dialogname" "dlg/main characters/heather_dead.dlg"
 "follower_type" "Default"
 "OnDialogBegin" "heather_camera,StartShot,,0,-1,,"
-"OnDialogEnd" "heather_dead,WillTalk,0,0,-1,,"
+"OnDialogEnd" "heather_dead,Kill,,0,-1,,"
 "origin" "280 680 -829"
 }
 {
@@ -18708,7 +18708,8 @@
 "FieldOfView" "0.9"
 "spawnflags" "129"
 "origin" "280 680 -750"
-"OnTrigger" "heather_dead,StartPlayerDialogRemote,,0,-1,,"
+"OnTrigger" "heather_dead,ScriptUnhide,,0,-1,,"
+"OnTrigger" "heather_dead,StartPlayerDialogRemote,,0.1,-1,,"
 }
 {
 "classname" "prop_dynamic"

@@ -4307,12 +4307,13 @@
 "model" "*18"
 "classname" "trigger_look"
 "targetname" "trig_heather"
-"target" "heather_dead"
+"target" "Heather"
 "LookTime" "0.1"
 "FieldOfView" "0.9"
 "spawnflags" "129"
 "origin" "500 420 -180"
-"OnTrigger" "heather_dead,StartPlayerDialogRemote,,0,-1,,"
+"OnTrigger" "heather_dead,ScriptUnhide,,0,-1,,"
+"OnTrigger" "heather_dead,StartPlayerDialogRemote,,0.1,-1,,"
 }
 {
 "classname" "camera_cinematic"
@@ -4328,7 +4329,7 @@
 }
 {
 "classname" "npc_VPedestrian"
-"angles" "0 270.5 0"
+"angles" "0 0 0"
 "renderfx" "0"
 "rendermode" "0"
 "renderamt" "0"
@@ -4379,11 +4380,11 @@
 "spawnflags" "8196"
 "model" "models/character/npc/unique/Santa_Monica/Heather/Heather.mdl"
 "targetname" "heather_dead"
+"StartHidden" "1"
 "dialogname" "dlg/main characters/heather_dead.dlg"
 "follower_type" "Default"
-"base_gender" "1"
-"OnDialogEnd" "heather_dead,WillTalk,0,0,-1,,"
 "OnDialogBegin" "heather_camera,StartShot,,0,-1,,"
+"OnDialogEnd" "heather_dead,Kill,,0,-1,,"
 "origin" "460 407 -280"
 }
 {
