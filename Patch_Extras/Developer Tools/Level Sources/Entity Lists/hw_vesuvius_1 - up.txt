@@ -6227,6 +6227,30 @@
 }
 {
 "classname" "ambient_generic"
+"targetname" "banging-sound-pants"
+"message" "Environmental/People/Getting_It_On_Pants.wav"
+"health" "10"
+"preset" "0"
+"volstart" "10"
+"fadein" "0"
+"fadeout" "0"
+"pitch" "100"
+"pitchstart" "100"
+"spinup" "0"
+"spindown" "0"
+"lfotype" "0"
+"lforate" "0"
+"lfomodpitch" "0"
+"lfomodvol" "0"
+"cspinup" "0"
+"radius" "2200"
+"sound_event" "0"
+"sound_event_level" "2"
+"spawnflags" "16"
+"origin" "3036 312 -127"
+}
+{
+"classname" "ambient_generic"
 "targetname" "dressing_room-sound_music"
 "health" "6"
 "preset" "0"
@@ -6434,12 +6458,14 @@
 "classname" "trigger_multiple"
 "targetname" "bang-trigger_bang"
 "StartHidden" "0"
-"StartDisabled" "1"
+"StartDisabled" "0"
 "wait" "1"
 "spawnflags" "1"
 "origin" "3104 432 -94"
 "OnStartTouch" "banging-sound,PlaySound,,0,-1,,"
-"OnStartTouch" "bang-trigger_bang,Kill,,0.5,-1,,"
+"OnStartTouch" "banging-sound-pants,PlaySound,,15,-1,,"
+"OnStartTouch" "bang-trigger_bang,Disable,,0.5,-1,,"
+"OnStartTouch" "bang-trigger_1,Enable,,0.5,-1,,"
 }
 {
 "model" "*34"
@@ -6450,7 +6476,7 @@
 "wait" "1"
 "spawnflags" "1"
 "origin" "3152 586 48"
-"OnStartTouch" "bang-trigger_1,Kill,,0.5,-1,,"
+"OnStartTouch" "bang-trigger_1,Disable,,0.5,-1,,"
 "OnStartTouch" "bang-trigger_2,Enable,,0.5,-1,,"
 }
 {
@@ -6463,7 +6489,7 @@
 "spawnflags" "1"
 "origin" "2328 1024 -100"
 "OnStartTouch" "bang-trigger_3,Enable,,0.5,-1,,"
-"OnStartTouch" "bang-trigger_2,Kill,,0.5,-1,,"
+"OnStartTouch" "bang-trigger_2,Disable,,0.5,-1,,"
 }
 {
 "model" "*36"
@@ -6475,7 +6501,7 @@
 "spawnflags" "1"
 "origin" "2136 748 -100"
 "OnStartTouch" "bang-trigger_bang,Enable,,0.5,-1,,"
-"OnStartTouch" "bang-trigger_3,Kill,,0.5,-1,,"
+"OnStartTouch" "bang-trigger_3,Disable,,0.5,-1,,"
 }
 {
 "classname" "ambient_soundscheme"
