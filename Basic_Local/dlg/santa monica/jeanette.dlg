@@ -389,8 +389,8 @@
 {	389	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	390	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	391	}{	[Rapidly, frightened]Oh, I'm so relieved you're safe! I wanted to warn you when I heard it was a setup, but Therese pulled a gun on me and I locked myself in the bathroom and she's threatening to kill me an-and you have to help me!	}{	[Rapidly, frightened]Oh, I'm so relieved you're safe! I wanted to warn you when I heard it was a setup, but Therese pulled a gun on me and I locked myself in the bathroom and she's threatening to kill me an-and you have to help me!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	392	}{	Slow down. Tell me what happened.	}{	Slow down. Tell me what happened.	}{	411	}{	}{	}{	}{	}{	}{	}{	}{	}{	Patience, white mistress. Tell me what troubles you.	}
-{	393	}{	Of course I'll save you. But first, tell me what happened.	}{	Of course I'll save you. But first, tell me what happened.	}{	411	}{	Seduction 2	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	I shall be your white knight, ivory goddess. First tell me your tale.	}
+{	392	}{	Slow down. Tell me what happened.	}{	Slow down. Tell me what happened.	}{	411	}{	G.Jeanette_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	Patience, white mistress. Tell me what troubles you.	}
+{	393	}{	Of course I'll save you. But first, tell me what happened.	}{	Of course I'll save you. But first, tell me what happened.	}{	411	}{	Seduction 2 & G.Jeanette_Quest == 1	}{	G.Jeanette_Seduce = G.Jeanette_Seduce + 1	}{	}{	}{	}{	}{	}{	}{	I shall be your white knight, ivory goddess. First tell me your tale.	}
 {	394	}{	Why should I help you?	}{	Why should I help you?	}{	421	}{	}{	G.Jeanette_Seduce = G.Jeanette_Seduce - 1	}{	}{	}{	}{	}{	}{	}{	You are biblically known to many. Call another.	}
 {	395	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	396	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -399,7 +399,7 @@
 {	399	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	400	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	401	}{	[Rapidly, frightened]It was a setup! Listen, I know we've had our differences, but you have to trust me! Therese tried to have you killed! I had to lock myself in the bathroom because now she's got a gun and - please, you have to help me!	}{	[Rapidly, frightened]It was a setup! Listen, I know we've had our differences, but you have to trust me! Therese tried to have you killed! I had to lock myself in the bathroom because now she's got a gun and - please, you have to help me!	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	402	}{	Slow down. Tell me what happened.	}{	Slow down. Tell me what happened.	}{	411	}{	}{	}{	}{	}{	}{	}{	}{	}{	Patience, white mistress. Tell me what troubles you.	}
+{	402	}{	Slow down. Tell me what happened.	}{	Slow down. Tell me what happened.	}{	411	}{	G.Jeanette_Quest == 1	}{	}{	}{	}{	}{	}{	}{	}{	Patience, white mistress. Tell me what troubles you.	}
 {	403	}{	Why should I help you?	}{	Why should I help you?	}{	421	}{	}{	}{	}{	}{	}{	}{	}{	}{	What need have I of a used saddle?	}
 {	404	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	405	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
