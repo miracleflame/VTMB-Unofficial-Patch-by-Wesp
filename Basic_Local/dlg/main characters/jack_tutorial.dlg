@@ -19,7 +19,7 @@
 {	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	20	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	21	}{	I'm Jack. What's important is, I'm offering help. You make it back from Santa Monica with your hide and we'll trade life stories, m'kay? Till then, I got about... this much time. You in or out?	}{	I'm Jack. What's important is, I'm offering help. You make it back from Santa Monica with your hide and we'll trade life stories, m'kay? Till then, I got about... this much time. You in or out?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	22	}{	Okay. I could use the help.	}{	Okay. I could use the help.	}{	87	}{	G.Patch_Plus == 0	}{	G.Jack_Faction = G.Jack_Faction + 1	}{	}{	}{	}{	}{	}{	}{	I shall undertake your dark tutelage.	}
+{	22	}{	Okay. I could use the help.	}{	Okay. I could use the help.	}{	81	}{	G.Patch_Plus == 0	}{	G.Jack_Faction = G.Jack_Faction + 1	}{	}{	}{	}{	}{	}{	}{	I shall undertake your dark tutelage.	}
 {	23	}{	Okay. I could use the help.	}{	Okay. I could use the help.	}{	81	}{	G.Patch_Plus == 1	}{	G.Jack_Faction = G.Jack_Faction + 1	}{	}{	}{	}{	}{	}{	}{	I shall undertake your dark tutelage.	}
 {	24	}{	I don't have much time... just give me the basics.	}{	I don't have much time... just give me the basics.	}{	891	}{	}{	G.Jack_Faction = G.Jack_Faction + 1	}{	}{	}{	}{	}{	}{	}{	Break down for me the bare-boned basics.	}
 {	25	}{	What happened in there?	}{	What happened in there?	}{	1015	}{	}{	}{	}{	}{	}{	}{	}{	}{	I didn't understand the play they gave.	}
@@ -81,9 +81,9 @@
 {	81	}{	[like the Fonz]Alright.	}{	[like the Fonz]Alright.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	82	}{	(Auto-Link)	}{	(Auto-Link)	}{	83	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-Link)	}
 {	83	}{	[looking around at the other vampires in the room]Uhh... why don't we, uh, step out back here.	}{	[looking around at the other vampires in the room]Uhh... why don't we, uh, step out back here.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	84	}{	No need. Only the prince escorted me and by his looks he would never use a back entrance to leave the theater.	}{	No need. Only the prince escorted me and by his looks he would never use a back entrance to leave the theater.	}{	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	Only the jester-prince was with me and he would never exit the back of the theater of death.	}
+{	84	}{	Yeah, let's get away from that horrible place.	}{	Yeah, let's get away from that horrible place.	}{	0	}{	}{	G.Tut_Jack = 1	}{	}{	}{	}{	}{	}{	}{	Let's leave the theatre of horrors behind.	}
 {	85	}{	Christ, it's stuffy in there, huh? This is much better.	}{	Christ, it's stuffy in there, huh? This is much better.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	86	}{	Yeah, it's good.	}{	Yeah, it's good.	}{	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	Fresh air for a fresh corpse.	}
+{	86	}{	(Auto-Link)	}{	(Auto-Link)	}{	87	}{	}{	G.Tut_Patch = 2	}{	}{	}{	}{	}{	}{	}{	(Auto-Link)	}
 {	87	}{	Now, we ain't got much time, but I figure somebody should fill you in on the bare bones stuff at least, ya know. Could save your hide.	}{	Now, we ain't got much time, but I figure somebody should fill you in on the bare bones stuff at least, ya know. Could save your hide.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	88	}{	(Auto-Link)	}{	(Auto-Link)	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-Link)	}
 {	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -128,7 +128,7 @@
 {	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	131	}{	Now go for it. Be sure though - and this is important so listen up - be sure not to drain 'em dry, okay? It might be hard to resist, but don't kill 'em.	}{	Now go for it. Be sure though - and this is important so listen up - be sure not to drain 'em dry, okay? It might be hard to resist, but don't kill 'em.	}{	#	}{	}{	G.Tut_Jack = 1; pc.SetQuest("Tutorial",3)	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	Now go for it. Be sure though - and this is important so listen up - be sure not to drain 'em dry, okay? It might be hard to resist, but don't kill 'em.	}{	Now go for it. Be sure though - and this is important so listen up - be sure not to drain 'em dry, okay? It might be hard to resist, but don't kill 'em.	}{	#	}{	}{	pc.SetQuest("Tutorial",3)	}{	}{	}{	}{	}{	}{	}{	}
 {	132	}{	Alright.	}{	Alright.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I go to drain the luscious liquid.	}
 {	133	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -1075,12 +1075,12 @@
 {	1075	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1076	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1077	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	1078	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	1079	}{	(Starting Condition)	}{	(Starting Condition)	}{	1001	}{	G.Tut_Jack == 0 and (pc.strength + pc.dexterity + pc.stamina + pc.charisma + pc.manipulation + pc.appearance + pc.perception + pc.intelligence + pc.wits) > 15	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	1080	}{	(Starting Condition)	}{	(Starting Condition)	}{	1001	}{	G.Tut_Jack == 0 and (pc.brawl + pc.dodge + pc.intimidate + pc.subterfuge + pc.firearms + pc.melee + pc.security + pc.stealth + pc.computers + pc.finance + pc.investigation + pc.academics) > 10	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	1081	}{	(Starting Condition)	}{	(Starting Condition)	}{	1001	}{	G.Tut_Jack == 0 and (pc.animalism + pc.auspex + pc.celerity + pc.dementation + pc.dominate + pc.fortitude + pc.obfuscate + pc.potence + pc.presence + pc.protean + pc.thaumaturgy) > 0	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	1082	}{	(Starting Condition)	}{	(Starting Condition)	}{	1001	}{	G.Tut_Jack == 0 and (pc.base_animalism + pc.base_auspex + pc.base_celerity + pc.base_dementation + pc.base_dominate + pc.base_fortitude + pc.base_obfuscate + pc.base_potence + pc.base_presence + pc.base_protean + pc.base_thaumaturgy) > -4	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	1083	}{	(Starting Condition)	}{	(Starting Condition)	}{	11	}{	G.Tut_Jack == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1078	}{	(Starting Condition)	}{	(Starting Condition)	}{	1001	}{	G.Tut_Jack == 0 and (pc.strength + pc.dexterity + pc.stamina + pc.charisma + pc.manipulation + pc.appearance + pc.perception + pc.intelligence + pc.wits) > 15	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1079	}{	(Starting Condition)	}{	(Starting Condition)	}{	1001	}{	G.Tut_Jack == 0 and (pc.brawl + pc.dodge + pc.intimidate + pc.subterfuge + pc.firearms + pc.melee + pc.security + pc.stealth + pc.computers + pc.finance + pc.investigation + pc.academics) > 10	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1080	}{	(Starting Condition)	}{	(Starting Condition)	}{	1001	}{	G.Tut_Jack == 0 and (pc.animalism + pc.auspex + pc.celerity + pc.dementation + pc.dominate + pc.fortitude + pc.obfuscate + pc.potence + pc.presence + pc.protean + pc.thaumaturgy) > 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1081	}{	(Starting Condition)	}{	(Starting Condition)	}{	1001	}{	G.Tut_Jack == 0 and (pc.base_animalism + pc.base_auspex + pc.base_celerity + pc.base_dementation + pc.base_dominate + pc.base_fortitude + pc.base_obfuscate + pc.base_potence + pc.base_presence + pc.base_protean + pc.base_thaumaturgy) > -4	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1082	}{	(Starting Condition)	}{	(Starting Condition)	}{	11	}{	G.Tut_Jack == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1083	}{	(Starting Condition)	}{	(Starting Condition)	}{	85	}{	G.Tut_Jack == 1 and G.Tut_Patch == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1084	}{	(Starting Condition)	}{	(Starting Condition)	}{	136	}{	G.Tut_Jack == 1 and G.Tutorial_Blueblood == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1085	}{	(Starting Condition)	}{	(Starting Condition)	}{	141	}{	G.Tut_Jack == 1 and G.Tutorial_Blueblood == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1086	}{	(Starting Condition)	}{	(Starting Condition)	}{	246	}{	G.Tut_Jack == 2 and G.Tut_Chopshop == 0	}{	}{	}{	}{	}{	}{	}{	}{	}

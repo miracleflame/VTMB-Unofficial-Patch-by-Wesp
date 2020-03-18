@@ -85,6 +85,12 @@ def DialogPostProcess():
         __main__.ChangeMap(2.5, "newgame", "trig_leave_tutorial")
         #changes end
 
+    # tutorial/downtown location fix, added by wesp
+    elif (G.Tut_Jack == 1 and G.Tut_Patch == 0):
+        G.Tut_Patch = 1
+        teleport_fade = Find("teleport_fade")
+        teleport_fade.Fade()
+
     # the first time
     elif (G.Tut_Jack == 1 and G.Tutorial_Blueblood == 0 and G.Tutorial_Feeding == 0):
 #        popup.SetValue(2)
