@@ -717,7 +717,7 @@ def milliganCard():
 
 #HOSPITAL: Called when Pisha leaves, added by wesp
 def pishaGone():
-    if (__main__.G.Story_State >= 85 and __main__.G.Pisha_Know == 1):
+    if (__main__.G.Story_State >= 85 and __main__.G.Pisha_Know == 1 and not __main__.IsDead("Pisha")):
         pisha = Find("Pisha")
         if pisha: pisha.Kill()
         book = Find("book")

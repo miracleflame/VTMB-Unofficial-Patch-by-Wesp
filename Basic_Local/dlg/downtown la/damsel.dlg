@@ -252,9 +252,9 @@
 {	252	}{	The plaguebearer's dead.	}{	The plaguebearer's dead.	}{	261	}{	(G.Kanker_Dead == 1 and G.Jezebel_Dead == 0 and G.Vick_Dead == 0 and G.Damsel_Quest < 2) or (G.Kanker_Dead == 0 and G.Jezebel_Dead == 1 and G.Vick_Dead == 0 and G.Damsel_Quest < 2)	}{	}{	}{	}{	}{	}{	}{	}{	The carrier pigeon is extinct.	}
 {	253	}{	Do you know what the symbol on this flyer is?	}{	Do you know what the symbol on this flyer is?	}{	271	}{	pc.HasItem("item_g_brotherhood_flyer")	}{	}{	}{	}{	}{	}{	}{	}{	Does this paper symbol speak to your mind?	}
 {	254	}{	All the plaguebearers are dead.	}{	All the plaguebearers are dead.	}{	281	}{	G.Kanker_Dead == 1 and G.Jezebel_Dead == 1 and IsDead("Bishop Vick") and G.Damsel_Quest < 3	}{	}{	}{	}{	}{	}{	}{	}{	The king of the carrier pigeons and all his filthy chicks are finally extinct.	}
-{	255	}{	I'll keep looking.	}{	I'll keep looking.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will flush out the pigeon, wait and see.	}
-{	256	}{	Before I go, I had a question.	}{	Before I go, I had a question.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind first.	}
-{	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	255	}{	Yeah, but love killed Paul, look here.	}{	Yeah, but love killed Paul, look here.	}{	701	}{	G.Patch_Plus == 1 and pc.HasItem("item_g_hannahs_appt_book")	}{	pc.RemoveItem("item_g_hannahs_appt_book")	}{	}{	}{	}{	}{	}{	}{	Love killed your pet, see?	}
+{	256	}{	I'll keep looking.	}{	I'll keep looking.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will flush out the pigeon, wait and see.	}
+{	257	}{	Before I go, I had a question.	}{	Before I go, I had a question.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	I wonder something from your mind first.	}
 {	258	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	259	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -780,7 +780,7 @@
 {	780	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	781	}{	Yeah, yeah, yeah, just don't get him started on that damn werewolf again. Ugh, you'd think he'd stop at telling me the story twice.	}{	Yeah, yeah, yeah, just don't get him started on that damn werewolf again. Ugh, you'd think he'd stop at telling me the story twice.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	782	}{	I'll try not to mention it.	}{	I'll try not to mention it.	}{	801	}{	}{	}{	}{	}{	}{	}{	}{	}{	I hate reruns too.	}
-{	783	}{	Yeah? You know I killed one too.	}{	Yeah? You know I killed one too.	}{	811	}{	IsDead("Werewolf")	}{	}{	}{	}{	}{	}{	}{	}{	Let me tell you a story. Once upon a time, I killed the shit out of a werewolf.	}
+{	783	}{	Yeah? You know I killed one too.	}{	Yeah? You know I killed one too.	}{	811	}{	IsDead("Werewolf") or G.Werewolf_Dead == 1	}{	}{	}{	}{	}{	}{	}{	}{	Let me tell you a story. Once upon a time, I killed the shit out of a werewolf.	}
 {	784	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	785	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	786	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -799,7 +799,7 @@
 {	799	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	800	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	801	}{	Alright, go on in. I'll make sure no one interrupts. But man, I HOPE somebody tries!	}{	Alright, go on in. I'll make sure no one interrupts. But man, I HOPE somebody tries!	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Damsel_Watchdog = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	802	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	802	}{	I bet.	}{	I bet.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	We hope it too!	}
 {	803	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	804	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	805	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
