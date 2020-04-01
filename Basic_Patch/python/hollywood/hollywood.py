@@ -711,13 +711,13 @@ def lapDanceTransition5():
 
 #HOLLYWOOD: Determines if the sweeper is on the streets and going to talk to the player, changed by wesp
 def sweeperPlacement():
+    sweeper = Find("Sweeper")
     if G.Isaac_Know:
-        sweeper = Find("Sweeper")
         if sweeper:
             sweeper.Kill()
             trig = Find("trig_kill_sweeper")
             trig.Kill()
-    else:
+    elif sweeper and not IsDead("Sweeper"):
         __main__.ScheduleTask(3.0, "__main__.FindEntityByName(\"Sweeper\").StartPlayerDialog(256)")
 
 #HOLLYWOOD: Hides/unhides Samantha
