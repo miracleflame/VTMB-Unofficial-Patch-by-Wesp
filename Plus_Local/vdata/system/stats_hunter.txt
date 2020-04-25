@@ -1367,7 +1367,7 @@ StatData
 			{
 				"Name"		"Spirit Heal"	// changed by wesp
 				"InternalName"	"Blood_Healing"
-				"HelpText"	"Calling to his faith a hunter can heal wounds and fix his broken body to some extent."	// wesp
+				"HelpText"	"Calling to his faith a hunter can heal wounds and fix his broken body to some extent."	// added by wesp
 				"HelpTextH1"	"Level 1:"
 				"HelpTextH2"	"Level 2:"
 				"HelpTextH3"	"Level 3:"
@@ -3992,64 +3992,64 @@ StatData
 				"IncPredependency"	"FaithPoints > 0"
 				"IncPredependency"	"Health < Max_Health"
 
-				Action	// changed by EntenSchreck
+				Action	// changed by wesp
 				{
 					"Value"	"1"
 					Particle
 					{
-						Definition 	"n_shieldoffaith_emitter"	// wesp
+						Definition 	"n_shieldoffaith_emitter"
 						Bone		""
 						AttachType	"Tree"
 					}
 				}
-				Action	// added by EntenSchreck
+				Action	// added by wesp
 				{
 					"Value"	"2"
 					Particle
 					{
-						Definition 	"n_shieldoffaith_emitter"	// wesp
+						Definition 	"n_shieldoffaith_emitter"
 						Bone		""
 						AttachType	"Tree"
 					}
 				}
-				Action	// added by EntenSchreck
+				Action	// added by wesp
 				{
 					"Value"	"3"
 					Particle
 					{
-						Definition 	"n_shieldoffaith_emitter"	// wesp
+						Definition 	"n_shieldoffaith_emitter"
 						Bone		""
 						AttachType	"Tree"
 					}
 				}
-				Action	// added by EntenSchreck
+				Action	// added by wesp
 				{
 					"Value"	"4"
 					Particle
 					{
-						Definition 	"n_shieldoffaith_emitter"	// wesp
+						Definition 	"n_shieldoffaith_emitter"
 						Bone		""
 						AttachType	"Tree"
 					}
 				}
 
-				Action	// added by EntenSchreck
+				Action	// added by wesp
 				{
 					"Value"	"5"
 					Particle
 					{
-						Definition 	"n_shieldoffaith_emitter"	// wesp
+						Definition 	"n_shieldoffaith_emitter"
 						Bone		""
 						AttachType	"Tree"
 					}
 				}
 
-				Action
+				Action	// added by wesp
 				{
 					"Value"	">0"
 					Particle
 					{
-						Definition 	"n_shieldoffaith_view_emitter"	// wesp
+						Definition 	"n_shieldoffaith_view_emitter"
 						Bone		""
 						AttachType	"ScreenCenter"
 						Viewmodel	"1"
