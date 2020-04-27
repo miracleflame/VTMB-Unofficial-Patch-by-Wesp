@@ -1,0 +1,30 @@
+//Attach Type: Bone Single Point
+//Bone: Bip01 L Hand, Bip01 R Hand
+//added by wesp
+
+Particle
+{
+	loop "1"	//"0"
+	fps "30"
+
+	spawn
+	{
+		particle "d_potence_5bp_bodyglow3"
+		loop "1"
+		rate "30"
+		radius "30~60"
+		theta "0~360"
+		phi	"202~202"
+	}
+	spawn		
+	{
+		particle "d_potence_1bp_flash2"
+		loop "1"
+		rate "10"
+		radius "100~120"
+		theta "0~360"
+		phi	"202~202"
+	}
+}
+
+
