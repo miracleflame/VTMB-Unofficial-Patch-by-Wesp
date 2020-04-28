@@ -71,7 +71,7 @@
 {	71	}{	Hmm... this is a family reunion - don't you think it's a little inappropriate? I mean, we could be first cousins... not that that's gotten in the way of some of our relatives' romances but...	}{	Hmm... this is a family reunion - don't you think it's a little inappropriate? I mean, we could be first cousins... not that that's gotten in the way of some of our relatives' romances but...	}{	#	}{	npc.SetDisposition("Disgust", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	72	}{	My last name's Rossellini. I'm Maria.	}{	My last name's Rossellini. I'm Maria.	}{	61	}{	G.Maria_Know == 1	}{	}{	}{	}{	}{	}{	}{	}{	Our last names are not like the other. Mine is Rossellini, comes after Maria.	}
 {	73	}{	You sure you don't want to go off somewhere and "talk" for a bit?	}{	You sure you don't want to go off somewhere and "talk" for a bit?	}{	41	}{	}{	}{	}{	}{	}{	}{	}{	}{	Want to take this somewhere dark and hopefully wet?	}
-{	74	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	So what is the problem?	}{	So what is the problem?	}{	181	}{	Persuasion 9	}{	}{	}{	}{	}{	}{	}{	}{	So what?	}
 {	75	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	76	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -171,8 +171,8 @@
 {	171	}{	I don't even know who you are. I'm Chris Giovanni, by the way.	}{	I don't even know who you are. I'm Chris Giovanni, by the way.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	172	}{	Victor. Victor Rossellini.	}{	Maria. Maria Rossellini.	}{	181	}{	not IsClan(pc,"Malkavian") and (G.Victor_Know == 1 or G.Maria_Know == 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	173	}{	My invitation says "Victor Rossellini".	}{	My invitation says "Maria Rossellini".	}{	181	}{	IsClan(pc,"Malkavian") and (G.Victor_Know == 1 or G.Maria_Know == 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	174	}{	Nice meeting you, Christopher. Enjoy the party.	}{	Nice meeting you, Christopher. Enjoy the party.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Forget it I will.	}
-{	175	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	174	}{	My name doesn't matter, I'm no Giovanni.	}{	My name doesn't matter, I'm no Giovanni.	}{	181	}{	}{	}{	}{	}{	}{	}{	}{	}{	My name is nobody, no Giovanni.	}
+{	175	}{	Nice meeting you, Christopher. Enjoy the party.	}{	Nice meeting you, Christopher. Enjoy the party.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Forget it I will.	}
 {	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	178	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
