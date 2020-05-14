@@ -239,12 +239,14 @@ def knoxPresence():
     if (G.Mercurio_Quest >= 2 and not IsDead("Knox")):
         if G.Patch_Plus == 1:
             knox = Find("Knox_plus")
-            knox.ScriptUnhide()
-            knox.SetName("Knox")
+            if knox:
+                knox.ScriptUnhide()
+                knox.SetName("Knox")
         else:
             knox = Find("Knox_basic")
-            knox.ScriptUnhide()
-            knox.SetName("Knox")
+            if knox:
+                knox.ScriptUnhide()
+                knox.SetName("Knox")
 
 #ASYLUM: Called upon finishing dialogue with jeanette, changed by wesp
 def jeanetteDialog():
@@ -263,9 +265,9 @@ def jeanetteDownstairs():
         npc.SetDisposition("Flirtatious", 1)
         trigger.Teleport()
         trigger = Find("Jeanette_dialog")
-        trigger.Enable()
+        if trigger: trigger.Enable()
         trigger = Find("wait_for_elevator_relay")
-        trigger.Enable()
+        if trigger: trigger.Enable()
     else:
         guy = Find("jeanette_flirt_partner")
         guy.UseInteresting(1)
