@@ -1696,8 +1696,8 @@ def bertramOutOfHiding():
             if obfuscator: obfuscator.ScriptUnhide()
             if obfuscator_trigger: obfuscator_trigger.ScriptUnhide()
         else:
-            if obfuscator: obfuscator.Kill()
-            if obfuscator_trigger: obfuscator_trigger.Kill()
+            if obfuscator: obfuscator.ScriptHide()
+            if obfuscator_trigger: obfuscator_trigger.ScriptHide()
     if (G.Muddy_Message == 1 and __main__.FindPlayer().HasItem("item_k_murietta_key")):
         __main__.ScheduleTask(1.00, "__main__.FindPlayer().RemoveItem(\"item_k_murietta_key\")")
     if(G.Story_State >= 10 and not G.SM_Gone):
