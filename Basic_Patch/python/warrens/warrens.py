@@ -18,7 +18,6 @@ def checkForPasskey():
     control = Find("control")
     if ( pc.HasItem("item_g_warrens4_passkey") ):
         control.Unlock()
-        pc.RemoveItem("item_g_warrens4_passkey")
     #changed by dan_upright 04/12/04 and by wesp
     elif ( pc.CalcFeat("inspection") < 5 ):
         sparklies = __main__.CreateEntityNoSpawn("inspection_node", 0, (0, 0, 0))
