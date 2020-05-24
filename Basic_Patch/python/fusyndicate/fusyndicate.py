@@ -140,7 +140,7 @@ class LaserRoomBeams :
 
 mb = LaserRoomBeams()
 
-#F.U. SYNDICATE: Controls the moving blades
+#F.U. SYNDICATE: Controls the moving blades, changed by wesp
 class BladeMover:
     def bladeInit(self):
         self.track = []
@@ -176,10 +176,10 @@ class BladeMover:
         elif (self.bladeStates[i] == 0):
             return
         elif self.baseOn[i] == 1:
-            self.track[i].Close()
+            self.track[i].ToggleMovement()
             self.baseOn[i] = 0
         else:
-            self.track[i].Open()
+            self.track[i].ToggleMovement()
             self.baseOn[i] = 1
 
     # disable blades after power has been pulled
