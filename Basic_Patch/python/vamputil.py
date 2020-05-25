@@ -445,8 +445,10 @@ def HelloYoungCainite():
 
 #BAILBONDS: Starts Arthurs monologue on the phone, added by wesp
 def arthurPhones():
-    arthur = Find("plus_Arthur")
-    arthur.PlayDialogFile("character/dlg/santa monica/arthur/line1_col_e.mp3")
+    if __main__.G.Arthur_Phoned == 0:
+        arthur = Find("plus_Arthur")
+        arthur.PlayDialogFile("character/dlg/santa monica/arthur/line1_col_e.mp3")
+        __main__.G.Arthur_Phoned = 1
 
 #CLINIC: Sets Heather quest states, added by wesp
 def heatherQuest1():
@@ -3310,6 +3312,17 @@ def resetHos():
     G.Whore_Follower = 0
     if (G.Romero_Whore == 2):
         G.Romero_Whore = 1
+    prophet = Find("Prophet")
+    if (prophet and G.Prophet_Dead == 0):
+        print"Prophetfix"
+        lines = FindList("line*")
+        for line in lines:
+            line.Cancel()
+        rants = FindList("prophet_rant_sequence_*")
+        for rant in rants:
+            rant.CancelSequence()
+        prophettrigger = Find("prophet_trigger")
+        prophettrigger.Enable()
 
 #PROSTITUTES: Revert's hooker's name at end of dialogue, changed by wesp
 def revertHookerName():
