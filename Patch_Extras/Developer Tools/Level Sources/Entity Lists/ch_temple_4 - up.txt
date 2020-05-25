@@ -590,7 +590,7 @@
 "spawnflags" "4"
 "physdamagescale" "1.0"
 "npc_perception" "9"
-"vision" "-1"
+"vision" "6000"
 "hearing" "-1.00"
 "default_disposition" "Neutral"
 "default_camera" "vdata/CameraShots/DialogDefaultWoman.txt"
@@ -1762,6 +1762,7 @@
 "OnTrigger" "key_sparklies,ScriptUnhide,,0,-1,,"
 "OnTrigger" "key_twirl,ScriptUnhide,,0,-1,,"
 "OnTrigger" "key_twirl,Start,,0.2,-1,,"
+"OnTrigger" "key_display,ScriptUnhide,,0,-1,,"
 "origin" "119 489.782 -379.527"
 }
 {
@@ -2189,6 +2190,43 @@
 "angles" "0 0 0"
 "spawnflags" "1"
 "origin" "91 -192 -503"
+}
+{
+"classname" "info_landmark"
+"angles" "0 270 0"
+"spawnflags" "1"
+"targetname" "temple_shortcut"
+"origin" "66 501 -439"
+}
+{
+"model" "*3"
+"classname" "trigger_changelevel"
+"targetname" "temple_shortcut_transition"
+"map" "ch_temple_1"
+"landmark" "temple_shortcut"
+"spawnflags" "2"
+"origin" "64 500 -384"
+}
+{
+"classname" "prop_dynamic"
+"model" "models/scenery/furniture/displaytable/floating.mdl"
+"angles" "0 0 180"
+"skin" "0"
+"solid" "6"
+"disableshadows" "0"
+"health" "0"
+"ExplodeDamage" "0"
+"ExplodeRadius" "0"
+"demo_sequence" "None"
+"RandomAnimation" "0"
+"MinAnimTime" "5"
+"MaxAnimTime" "10"
+"npc_transparent" "1"
+"crossfade_skin_time" "2.0"
+"StartHidden" "1"
+"targetname" "key_display"
+"parentname" "key_twirl"
+"origin" "66 468 -408.5"
 }
 {
 "classname" "logic_auto"
