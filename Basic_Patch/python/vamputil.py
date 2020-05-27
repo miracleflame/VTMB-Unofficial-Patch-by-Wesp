@@ -594,7 +594,7 @@ def brunoD():
     if(status < 4):
         pc.SetQuest("Sarcophagus", 5)
 
-#GIOVANNI MANSION 2: Spawns watch, added by Wesp5
+#GIOVANNI MANSION 2: Spawns watch, added by wesp
 def spawnWatch():
     pc = __main__.FindPlayer()
     if (pc.AmmoCount("item_g_watch_fancy") == 0):
@@ -605,7 +605,7 @@ def spawnWatch():
             c  = __main__.ccmd
             c.showSpawn=""
 
-#GIOVANNI MANSION 2: Spawns ring, added by Wesp5
+#GIOVANNI MANSION 2: Spawns ring, added by wesp
 def spawnGold():
     pc = __main__.FindPlayer()
     if (pc.AmmoCount("item_g_ring_gold") == 0):
@@ -696,7 +696,7 @@ def librarySetQuest():
         if (__main__.G.Guard1_Killed == 0 and __main__.G.Guard2_Killed == 0):
             __main__.FindPlayer().AwardExperience("Library02")
 
-#HAVEN: Used to give silver ring, added by Wesp5
+#HAVEN: Used to give silver ring, added by wesp
 def spawnRing():
     pc = __main__.FindPlayer()
     if (pc.AmmoCount("item_g_ring_silver") == 0):
@@ -900,7 +900,7 @@ def slaterAlive():
     if (__main__.IsDead("Spicoli")):
         if(spicoli): spicoli.Kill()
 
-#SANTA MONICA: Spawns blueblood watch, added by Wesp5
+#SANTA MONICA: Spawns blueblood watch, added by wesp
 def spawnWatch():
     pc = __main__.FindPlayer()
     if (pc.AmmoCount("item_g_watch_fancy") == 0):
