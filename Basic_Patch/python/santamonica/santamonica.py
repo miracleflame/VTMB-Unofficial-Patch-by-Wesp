@@ -1276,11 +1276,6 @@ def lockHaven():
             laptop.ScriptHide()
             mailbox = Find("Mailbox_haven")
             if(mailbox): mailbox.SetName("Locked_mailbox_haven")
-        #mailbox.ScriptHide()
-        #mailbox = Find("locked_haven_box")
-        #mailbox.ScriptUnhide()
-        relay = Find("haven_emptier")
-        relay.Trigger()
         if(G.Gary_Voerman):
             poster = Find("poster_jeanette")
             poster.ScriptHide()
@@ -1305,6 +1300,13 @@ def lockHaven():
         if(G.Gary_Blind):
             poster = Find("poster_blind")
             poster.ScriptHide()
+        #mailbox.ScriptHide()
+        #mailbox = Find("locked_haven_box")
+        #mailbox.ScriptUnhide()
+        if G.Haven_Empty == 0:
+            relay = Find("haven_emptier")
+            relay.Trigger()
+            G.Haven_Empty = 1
 
 #HAVEN: Called the first time the player reads the paper in the Haven, changed by wesp
 def murderPaperRead():
