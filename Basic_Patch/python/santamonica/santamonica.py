@@ -1276,30 +1276,6 @@ def lockHaven():
             laptop.ScriptHide()
             mailbox = Find("Mailbox_haven")
             if(mailbox): mailbox.SetName("Locked_mailbox_haven")
-        if(G.Gary_Voerman):
-            poster = Find("poster_jeanette")
-            poster.ScriptHide()
-        if(G.Velvet_Poster):
-            poster = Find("poster_vv")
-            poster.ScriptHide()
-        if(G.Gary_Photochop):
-            poster = Find("poster_ming")
-            poster.ScriptHide()
-        if(G.Gary_Damsel):
-            poster = Find("poster_damsel")
-            poster.ScriptHide()
-        if(G.Gary_Tawni):
-            poster = Find("poster_tawni")
-            poster.ScriptHide()
-        if(G.Gary_Imalia):
-            poster = Find("poster_imalia")
-            poster.ScriptHide()
-        if(G.Gary_Cross):
-            poster = Find("poster_cross")
-            poster.ScriptHide()
-        if(G.Gary_Blind):
-            poster = Find("poster_blind")
-            poster.ScriptHide()
         #mailbox.ScriptHide()
         #mailbox = Find("locked_haven_box")
         #mailbox.ScriptUnhide()

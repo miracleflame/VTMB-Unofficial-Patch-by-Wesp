@@ -234,9 +234,9 @@ def setPlus():
         nines = Find("Nines")
         if (G.Story_State == 115 and nines): nines.SetModel("models/character/npc/unique/Downtown/Nines/Nines_damagedw.mdl")
         flunky3 = Find("flunky3")
-        if flunky3: flunky3.SetModel("models/character/npc/unique/Downtown/Skelter/Skelter.mdl")
+        if flunky3: flunky3.SetModel("models/character/npc/unique/Downtown/Damsel/Damsel.mdl")
         flunky4 = Find("flunky4")
-        if flunky4 and (IsClan(pc,"Brujah")): flunky4.SetModel("models/character/pc/male/toreador/armor0/Toreador_Male_Armor_0.mdl")
+        if flunky4: flunky4.SetModel("models/character/npc/unique/Downtown/Skelter/Skelter.mdl")
         flunky5 = Find("flunky5")
         if flunky5 and (IsDead("Sweeper")):
             if (IsClan(pc,"Toreador")): flunky5.SetModel("models/character/pc/male/gangrel/armor_1/Gangrel_Male_Armor_1.mdl")
@@ -2923,28 +2923,31 @@ def putStuffInMailBox():
 #HAVEN: Used to determine if the player has collected any posters, changed by wesp
 def posterCheck():
     G = __main__.G
-    if(G.Gary_Voerman):
+    newgame = Find("newgame")
+    if newgame and G.Haven_Empty == 1:
+        return
+    elif(G.Gary_Voerman):
         poster = Find("poster_jeanette")
         poster.ScriptUnhide()
-    if(G.Velvet_Poster):
+    elif(G.Velvet_Poster):
         poster = Find("poster_vv")
         poster.ScriptUnhide()
-    if(G.Gary_Photochop):
+    elif(G.Gary_Photochop):
         poster = Find("poster_ming")
         poster.ScriptUnhide()
-    if(G.Gary_Damsel):
+    elif(G.Gary_Damsel):
         poster = Find("poster_damsel")
         poster.ScriptUnhide()
-    if(G.Gary_Imalia):
+    elif(G.Gary_Imalia):
         poster = Find("poster_imalia")
         poster.ScriptUnhide()
-    if(G.Gary_Tawni):
+    elif(G.Gary_Tawni):
         poster = Find("poster_tawni")
         poster.ScriptUnhide()
-    if(G.Gary_Cross):
+    elif(G.Gary_Cross):
         poster = Find("poster_cross")
         poster.ScriptUnhide()
-    if(G.Gary_Blind):
+    elif(G.Gary_Blind):
         poster = Find("poster_blind")
         poster.ScriptUnhide()
         if(G.Ball_Taken < 2):
@@ -3321,8 +3324,9 @@ def resetHos():
         rants = FindList("prophet_rant_sequence_*")
         for rant in rants:
             rant.CancelSequence()
-        prophettrigger = Find("prophet_trigger")
-        prophettrigger.Enable()
+        prophettriggers = FindList("prophet_trigger")
+        for prophettrigger in prophettriggers:
+            prophettrigger.Enable()
 
 #PROSTITUTES: Revert's hooker's name at end of dialogue, changed by wesp
 def revertHookerName():
