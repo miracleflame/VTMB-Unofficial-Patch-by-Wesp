@@ -2925,7 +2925,31 @@ def posterCheck():
     G = __main__.G
     newgame = Find("newgame")
     if newgame and G.Haven_Empty == 1:
-        return
+        print "no posters"
+        if(G.Gary_Voerman):
+            poster = Find("poster_jeanette")
+            poster.ScriptHide()
+        if(G.Velvet_Poster):
+            poster = Find("poster_vv")
+            poster.ScriptHide()
+        if(G.Gary_Photochop):
+            poster = Find("poster_ming")
+            poster.ScriptHide()
+        if(G.Gary_Damsel):
+            poster = Find("poster_damsel")
+            poster.ScriptHide()
+        if(G.Gary_Tawni):
+            poster = Find("poster_tawni")
+            poster.ScriptHide()
+        if(G.Gary_Imalia):
+            poster = Find("poster_imalia")
+            poster.ScriptHide()
+        if(G.Gary_Cross):
+            poster = Find("poster_cross")
+            poster.ScriptHide()
+        if(G.Gary_Blind):
+            poster = Find("poster_blind")
+            poster.ScriptHide()
     elif(G.Gary_Voerman):
         poster = Find("poster_jeanette")
         poster.ScriptUnhide()
