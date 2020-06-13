@@ -3345,12 +3345,12 @@ def resetHos():
         lines = FindList("line*")
         for line in lines:
             line.Cancel()
-        rants = FindList("prophet_rant_sequence_*")
-        for rant in rants:
-            rant.CancelSequence()
-        prophettriggers = FindList("prophet_trigger")
-        for prophettrigger in prophettriggers:
-            prophettrigger.Enable()
+        rant1 = Find("prophet_rant_sequence_1")
+        rant1.CancelSequence()
+        rant2 = Find("prophet_rant_sequence_2")
+        rant2.CancelSequence()
+        rant3 = Find("prophet_rant_sequence_3")
+        rant3.CancelSequence()
 
 #PROSTITUTES: Revert's hooker's name at end of dialogue, changed by wesp
 def revertHookerName():

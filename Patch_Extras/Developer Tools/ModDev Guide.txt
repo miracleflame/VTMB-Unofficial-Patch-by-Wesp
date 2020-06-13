@@ -1715,7 +1715,7 @@ III.7  > > > >  Input\Output
           The original game included an entity called "game_ui" with events
           such as PressedAttack, PressedAttack2, PressedMoveLeft, 
           PressedMoveRight, PressedForward, PressedBack, PressedFeed, 
-          PressedAny, etc.. In theory you could have embedded one of these
+          PressedAny, etc... In theory you could have embedded one of these
           onto a map to receive a copy of the events. Used in conjuction with
           game_sign's, you could have created custom interactive gui components
           including your own game menus, maps and even dialog interaction. 
@@ -9036,16 +9036,12 @@ filter_multi
  
 FUNCTIONS)
  
-     Functions apply themselves to in game objects. Most functions
-identify the
+     Functions apply themselves to in game objects. Most functions identify the
      object they apply themselves to through an inline model reference. The
      model property might look like "*305". The * notation means it is a
-     reference to an inline object, already loaded by the map. If you
-activate
-     the picker and look at most entities, you will notice a number
-associated
-     with the entity. Furthermore, most entities have a modelindex
-property.
+     reference to an inline object, already loaded by the map. If you activate
+     the picker and look at most entities, you will notice a number associated
+     with the entity. Furthermore, most entities have a modelindex property.
      These are set by the engine as they are loaded from the map. For this
      reason, inserting objects into maps can cause havoc on the game. When
      editing map files, you must add all new elements to the END of the map
@@ -9490,9 +9486,8 @@ func_lod
  
   NOTES:
 
-    LOD = Level of Detail. You can set this globally for the entire game
-from the In Game Options
-    Menu. Or you can increase/decrease for specific objects
+    LOD = Level of Detail. You can set this globally for the entire game from
+    the In Game Options Menu. Or you can increase/decrease for specific objects
 
  
   EVENTS:
@@ -9839,10 +9834,8 @@ info_landmark : Named Location for teleporting
 info_node
 
  
-  NOTES: info_nodes are used by the games ai to help NPCs and monsters
-"see"
-         the map. Some nodes also identify what an npc can do like
-climbing a
+  NOTES: info_nodes are used by the games ai to help NPCs and monsters "see"
+         the map. Some nodes also identify what an npc can do like climbing a
          ladder. Without these, NPCs would appear to be blind and walk into
          buildings, etc...
 
@@ -9994,9 +9987,8 @@ info_player_start
 
  
   NOTES: This is a special node that the engine looks for. There SHOULD be
-         exactly 1 per map and it is where the engine will place the
-Player by
-         default. Since there should only be 1, you generally do not
+         exactly 1 per map and it is where the engine will place the Player 
+         by default. Since there should only be 1, you generally do not
          create it dynamically using script.
  
   PROPERTIES (ex):
@@ -10010,10 +10002,8 @@ info_teleport_destination
 
  
   NOTES: Despite its name, teleportation doesn't require a special node.
-Any
-         named Entity will do. This class is mostly used to clarify the
-nodes
-         purpose to an observant reader.
+         Any named Entity will do. This class is mostly used to clarify 
+         the nodes purpose to an observant reader.
  
   "targetname" "teleport_moe"
   "angles" "0 270 0"
@@ -10123,8 +10113,7 @@ intersting_place
 intersting_place_conversation
  
   NOTES: See Interesting Place. Conversation marks nodes that attract 2
-NPCS at
-         the same time.
+         NPCS at the same time.
  
 CONTAINERS)
  
@@ -10422,7 +10411,7 @@ logic_choreographed_scene
     Should it play, etc...). Note that this does NOT restrict the model.
     You can create the model at runtime to be any compatible model you
     wish ( VTMB does this in the intro ), so long as you name it
-accordingly. 
+    accordingly. 
 
     While the example below has target1/2 values, the scene files values
     override.
@@ -10589,10 +10578,7 @@ SetScriptedDiscipline(String "<str_type> <int_level>")
  
     Examples
       SetScriptedDiscipline("potence 3") <- Permanently activates
-Potence on
-                                            NPC (doesn't matter if they
-have it
-                                            or not)
+      Potence on NPC (doesn't matter if they have it or not)
 
       SetScriptedDiscipline("potence 0") <- Deactives Potence on NPC
 
@@ -10601,12 +10587,10 @@ have it
  
 SetFollowerBoss :
  
-  Generally strait forward. The input string is normally "!player" or
-"". Note
-  That npcs that are members of squads can not be told to follow the PC.
-You
-  can however use TweakParam("SQUAD ") to disable the npcs squad assignment
-  prior to calling.
+  Generally straight forward. The input string is normally "!player" or
+  "". Note that npcs that are members of squads can not be told to follow 
+  the PC. You can however use TweakParam("SQUAD ") to disable the npcs 
+  squad assignment prior to calling.
  
 SetFollowerType:
  
@@ -15223,8 +15207,7 @@ npc_VZombie
  
 npc_maker
  
-  NOTES: Many of the games entities are created dynamically. Most
-encounters
+  NOTES: Many of the games entities are created dynamically. Most encounters
         involving combat, the enemies are spawned on the fly based on a
         template. The pedetrians walking around in the city and the cops...
         all spawned on the fly.
@@ -15232,11 +15215,10 @@ encounters
         Dynamically spawned NPCs are created by npc_maker. Each maker is
         associated with an NPC template. Template definitions can be found
         under the vdata/system directory. You can also type "vclans" in the
-        console for a list of all templates. Note that most are named
-"None".
+        console for a list of all templates. Note that most are named "None".
 
         Templates have a templatename and then a normal name. templatename
-        is required and must be unique, but not a normalname.. vclans only
+        is required and must be unique, but not a normalname. vclans only
         displays normal names. 
 
         As you might have guessed from the console command, Template and
@@ -17350,7 +17332,6 @@ mover_keyframe
   "targetname" "t5"
   "NextKey" "t1"
   "origin" "6304 1136 -295"
-
  
 params_explosion : fishmarket
  
@@ -17385,41 +17366,30 @@ params_particle
 scripted_sequence
  
   NOTES: Scripted Sequences are used to execute animations and movements
-on map
-         characeters. By default, they execute once and then
-self-delete. You
-         can override this behavior by setting some of the spawn flags:
+         of map characters. By default, they execute once and then self-
+         delete. You can override this behavior by setting spawn flags:
  
-         bit  value   Meaning                bit  value    Meaning
-          1     1                              9    256     Enable
-looping Post Idle Animation
-          2     2                             10    512
-          3     4      Persistent             11   1024
-          4     8                             12   2048
-          5     16     Start Enabled          13   4096
-          6     32                            14   8192
-          7     64                            15  16384
-          8     128                           16  32768
+         bit  value   Meaning          bit  value    Meaning
+          1     1                       9    256     Post Idle Animation
+          2     2                      10    512
+          3     4      Persistent      11   1024
+          4     8                      12   2048
+          5     16     Start Enabled   13   4096
+          6     32                     14   8192
+          7     64                     15  16384
+          8     128                    16  32768
  
          Persistent + Idle Animation Enabled = 4 + 256 = 260
 
-
          "m_flRadius"- Search radius for entities. Depending on the
-spawn flag,
-                       it may or may not care if the Entity matches the
-name of
-                       the m_iszEntity property. 
-
+spawn flag, it may or may not care if the Entity matches the name of
+the m_iszEntity property. 
  
          "m_iszIdle" - If set, this is the animation that plays PRIOR to
-calling
-                       BeginSequence. Only has affect if StartEnabled is
-true.
+calling BeginSequence. Only has affect if StartEnabled is true.
  
          "m_iszPlay" - When you call BeginSequence, this is the
-animation that
-                       plays (One time shot)
-
+animation that plays (One time shot)
 
          "m_iszPostIdle" - Animation that plays after m_iszPlay.
         
@@ -17431,10 +17401,8 @@ then begin animations
                        3 : entities walk to scripted_sequence origin,
 then begin animations. Walk back when finished
                        4 : like 3, however entities teleport back to
-original location when animation
-                           is complete.
+original location when animation is complete.
  
-
   output: OnBeginSequence
   output: OnEndSequence
   output: OnScriptEvent01
@@ -17465,7 +17433,6 @@ original location when animation
   output: OnBarterClose
   output: OnLinearMoveDone
   output: OnAngularMoveDone
-
  
   input: MoveToPosition
   input: BeginSequence
@@ -17526,11 +17493,10 @@ original location when animation
  
 Unrecognized:
  
-npc_BaseVampAI   (JunkYard)npc_maker
-ent_angl ??
-worldspawn <- dont touch
-z ??
-point_stop_sign ???
+npc_BaseVampAI <- old vampire entity left over on the junkyard map
+ent_angl <- on King's Way map
+worldspawn <- don't touch, defines map parameters like area and skybox
+z <- on warehouse map
  
 ===================================
 How do I figure out what functions I can call on entities?
@@ -17541,6 +17507,7 @@ Examples :
 ent_info npc_VDialogPedestrian
 ent_info npc_VPedestrian
 ent_info npc_VVampire
+
 
 -------------------------------------------------------------------------------
 H. > > > >  Animations
@@ -23875,7 +23842,7 @@ WorldMap Clarification  ZylonBane
 Fact Checker:           Offkorn
 
 ===============================================================================
-                    < < < < < Final Words.... > > > > >
+                    < < < < < Final Words... > > > > >
 ===============================================================================
 
   The material presented in this Guide is the result of six months of 
@@ -23892,7 +23859,8 @@ Fact Checker:           Offkorn
 
   My ultimate hope is that this Guide will encourage other developers to create 
   new adventures or add new game enhancements.
- 
+
+
 ===============================================================================
                     < < < < < Model Guide > > > > >
 ===============================================================================
@@ -24765,7 +24733,7 @@ Second we create the specular map or "envmapmask"...
 Spec/env map through https://www.gimp.org/downloads/ GIMP 2.8 free image editor: (<< this creates the shininess on your model)
 15. Open the original .tga file of your texture again (not the normal map you just made).
 16. Choose menu Colors > Desaturate.
-17. Choose Lightness, Luminosity, or Average ... it previews it for you. Note, black is not shiny, white is totally shiny, and grey is in-between (depending on its brightness). So if your image isn't mostly black, pretty much everything is going to look shiny (usually this is bad).
+17. Choose Lightness, Luminosity, or Average... it previews it for you. Note, black is not shiny, white is totally shiny, and grey is in-between (depending on its brightness). So if your image isn't mostly black, pretty much everything is going to look shiny (usually this is bad).
 18. Choose the brush tool again, set your color to black (RGB 0 0 0, make sure). Now paint over anything you don't want to be shiny until all those areas are black. To quickly and easily change your brush size, use the [ and ] keys. If you're having trouble with the darkness causing lack of detail in the image, open the original .TGA file, Select All (CTRL-A), Copy (CTRL-C), switch back to your greyscale image and choose menu Edit > Paste As > New Layer. Now go over to the layers in list in the right, click on the new layer you just pasted in (it will have color in it), then move the opacity slider down (50% should be OK, but put it as you like). Now make sure you click back on the layer of your greyscale image so it is selected (that's the one it will draw into when you are using the brush tool). This way, you'll be able to see your original colored texture as a ghostly transparent image over top your grayscale, but you'll only be painting on the grayscale. Helps a ton...
 19. Optional but helpful: You can use Brightness/Contrast to make things shinier or duller, but if you already have black areas you probably don't want to change them.
 19a.  Choose menu Select > By Color (Shift-O). In the left side, make sure Threshhold is 0 (you can set it higher but you probably shouldn't). Now click on a black part (truly black, as in RGB 0 0 0). Now all the black parts should be selected.
@@ -24839,7 +24807,7 @@ Now we create the specular map or "envmapmask"...
 Spec/env map through https://www.gimp.org/downloads/ GIMP 2.8 free image editor: (<< this creates the shininess on your model)
 2. Open the original .tga file of your texture again (not the normal map you just made).
 3. Choose menu Colors > Desaturate.
-4. Choose Lightness, Luminosity, or Average ... it previews it for you. Note, black is not shiny, white is totally shiny, and grey is in-between (depending on its brightness). So if your image isn't mostly black, pretty much everything is going to look shiny (usually this is bad).
+4. Choose Lightness, Luminosity, or Average... it previews it for you. Note, black is not shiny, white is totally shiny, and grey is in-between (depending on its brightness). So if your image isn't mostly black, pretty much everything is going to look shiny (usually this is bad).
 5. Choose the brush tool (hotkey P), set your color to black (RGB 0 0 0, make sure). Now paint over anything you don't want to be shiny until all those areas are black. To quickly and easily change your brush size, use the [ and ] keys. If you're having trouble with the darkness causing lack of detail in the image, open the original .TGA file, Select All (CTRL-A), Copy (CTRL-C), switch back to your greyscale image and choose menu Edit > Paste As > New Layer. Now go over to the layers in list in the right, click on the new layer you just pasted in (it will have color in it), then move the opacity slider down (50% should be OK, but put it as you like). Now make sure you click back on the layer of your greyscale image so it is selected (that's the one it will draw into when you are using the brush tool). This way, you'll be able to see your original colored texture as a ghostly transparent image over top your grayscale, but you'll only be painting on the grayscale. Helps a ton...
 6. Optional but helpful: You can use Brightness/Contrast to make things shinier or duller, but if you already have black areas you probably don't want to change them.
 6a.  Choose menu Select > By Color (Shift-O). In the left side, make sure Threshhold is 0 (you can set it higher but you probably shouldn't). Now click on a black part (truly black, as in RGB 0 0 0). Now all the black parts should be selected.
