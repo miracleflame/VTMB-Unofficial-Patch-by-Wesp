@@ -1274,8 +1274,8 @@ def lockHaven():
         if(G.Patch_Plus == 0):
             laptop = Find("haven_pc")
             laptop.ScriptHide()
-            mailbox = Find("Mailbox_haven")
-            if(mailbox): mailbox.SetName("Locked_mailbox_haven")
+        mailbox = Find("Mailbox_haven")
+        if(mailbox): mailbox.SetName("Locked_mailbox_haven")
         #mailbox.ScriptHide()
         #mailbox = Find("locked_haven_box")
         #mailbox.ScriptUnhide()

@@ -2924,7 +2924,7 @@ def putStuffInMailBox():
 def posterCheck():
     G = __main__.G
     newgame = Find("newgame")
-    if newgame and G.Haven_Empty == 1:
+    if (newgame and G.Haven_Empty == 1):
         print "no posters"
         if(G.Gary_Voerman):
             poster = Find("poster_jeanette")
