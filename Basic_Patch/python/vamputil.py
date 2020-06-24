@@ -2950,33 +2950,34 @@ def posterCheck():
         if(G.Gary_Blind):
             poster = Find("poster_blind")
             poster.ScriptHide()
-    elif(G.Gary_Voerman):
-        poster = Find("poster_jeanette")
-        poster.ScriptUnhide()
-    elif(G.Velvet_Poster):
-        poster = Find("poster_vv")
-        poster.ScriptUnhide()
-    elif(G.Gary_Photochop):
-        poster = Find("poster_ming")
-        poster.ScriptUnhide()
-    elif(G.Gary_Damsel):
-        poster = Find("poster_damsel")
-        poster.ScriptUnhide()
-    elif(G.Gary_Imalia):
-        poster = Find("poster_imalia")
-        poster.ScriptUnhide()
-    elif(G.Gary_Tawni):
-        poster = Find("poster_tawni")
-        poster.ScriptUnhide()
-    elif(G.Gary_Cross):
-        poster = Find("poster_cross")
-        poster.ScriptUnhide()
-    elif(G.Gary_Blind):
-        poster = Find("poster_blind")
-        poster.ScriptUnhide()
-        if(G.Ball_Taken < 2):
-            __main__.FindPlayer().SetQuest("Gary", 9)
-            G.Ball_Taken = 2
+    else:
+        if(G.Gary_Voerman):
+            poster = Find("poster_jeanette")
+            poster.ScriptUnhide()
+        if(G.Velvet_Poster):
+            poster = Find("poster_vv")
+            poster.ScriptUnhide()
+        if(G.Gary_Photochop):
+            poster = Find("poster_ming")
+            poster.ScriptUnhide()
+        if(G.Gary_Damsel):
+            poster = Find("poster_damsel")
+            poster.ScriptUnhide()
+        if(G.Gary_Imalia):
+            poster = Find("poster_imalia")
+            poster.ScriptUnhide()
+        if(G.Gary_Tawni):
+            poster = Find("poster_tawni")
+            poster.ScriptUnhide()
+        if(G.Gary_Cross):
+            poster = Find("poster_cross")
+            poster.ScriptUnhide()
+        if(G.Gary_Blind):
+            poster = Find("poster_blind")
+            poster.ScriptUnhide()
+            if(G.Ball_Taken < 2):
+                __main__.FindPlayer().SetQuest("Gary", 9)
+                G.Ball_Taken = 2
 
 #HAVEN: Updates the player's mailbox and flags if he has sent the blood in the mail, changed by wesp
 def mailboxExitCheck():
@@ -3341,16 +3342,16 @@ def resetHos():
         G.Romero_Whore = 1
     prophet = Find("Prophet")
     if (prophet and G.Prophet_Dead == 0):
-        print"Prophetfix"
+        print "Prophetfix"
         lines = FindList("line*")
         for line in lines:
-            line.Cancel()
+            if line: line.Cancel()
         rant1 = Find("prophet_rant_sequence_1")
-        rant1.CancelSequence()
+        if rant1: rant1.CancelSequence()
         rant2 = Find("prophet_rant_sequence_2")
-        rant2.CancelSequence()
+        if rant2: rant2.CancelSequence()
         rant3 = Find("prophet_rant_sequence_3")
-        rant3.CancelSequence()
+        if rant3: rant3.CancelSequence()
 
 #PROSTITUTES: Revert's hooker's name at end of dialogue, changed by wesp
 def revertHookerName():

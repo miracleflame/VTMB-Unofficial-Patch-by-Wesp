@@ -209,7 +209,7 @@ def luckyState():
 #LUCKYSTAR: Useless, really, changed by wesp :)
 def lsww():
     print ("wait for it")
-    if (G.LSWW > 8):
+    if (G.LSWW > 16):
         print ("yup")
         ww = Find("werewolf")
         ww.ScriptUnhide()

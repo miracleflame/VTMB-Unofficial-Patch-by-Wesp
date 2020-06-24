@@ -239,14 +239,12 @@ def knoxPresence():
     if (G.Mercurio_Quest >= 2 and not IsDead("Knox")):
         if G.Patch_Plus == 1:
             knox = Find("Knox_plus")
-            if knox:
-                knox.ScriptUnhide()
-                knox.SetName("Knox")
+            knox.ScriptUnhide()
+            knox.SetName("Knox")
         else:
             knox = Find("Knox_basic")
-            if knox:
-                knox.ScriptUnhide()
-                knox.SetName("Knox")
+            knox.ScriptUnhide()
+            knox.SetName("Knox")
 
 #ASYLUM: Called upon finishing dialogue with jeanette, changed by wesp
 def jeanetteDialog():
@@ -265,9 +263,9 @@ def jeanetteDownstairs():
         npc.SetDisposition("Flirtatious", 1)
         trigger.Teleport()
         trigger = Find("Jeanette_dialog")
-        if trigger: trigger.Enable()
+        trigger.Enable()
         trigger = Find("wait_for_elevator_relay")
-        if trigger: trigger.Enable()
+        trigger.Enable()
     else:
         guy = Find("jeanette_flirt_partner")
         guy.UseInteresting(1)
@@ -1223,6 +1221,9 @@ def inviteGone():
     if(G.Mercurio_Know == 1):
         note = Find("mercurios_note")
         if note: note.Kill()
+    if(G.Heather_Haven == 1 and G.Patch_Plus == 1):
+        pizza = Find("pizza")
+        if pizza: pizza.Kill()
 
 #HAVEN: Jack visits the player after the observatory, changed by wesp
 def jackVisit():
@@ -1274,15 +1275,39 @@ def lockHaven():
         if(G.Patch_Plus == 0):
             laptop = Find("haven_pc")
             laptop.ScriptHide()
-        mailbox = Find("Mailbox_haven")
-        if(mailbox): mailbox.SetName("Locked_mailbox_haven")
+            mailbox = Find("Mailbox_haven")
+            if(mailbox): mailbox.SetName("Locked_mailbox_haven")
         #mailbox.ScriptHide()
         #mailbox = Find("locked_haven_box")
         #mailbox.ScriptUnhide()
-        if G.Haven_Empty == 0:
-            relay = Find("haven_emptier")
-            relay.Trigger()
-            G.Haven_Empty = 1
+        relay = Find("haven_emptier")
+        relay.Trigger()
+        print "no posters"
+        if(G.Gary_Voerman):
+            poster = Find("poster_jeanette")
+            poster.ScriptHide()
+        if(G.Velvet_Poster):
+            poster = Find("poster_vv")
+            poster.ScriptHide()
+        if(G.Gary_Photochop):
+            poster = Find("poster_ming")
+            poster.ScriptHide()
+        if(G.Gary_Damsel):
+            poster = Find("poster_damsel")
+            poster.ScriptHide()
+        if(G.Gary_Tawni):
+            poster = Find("poster_tawni")
+            poster.ScriptHide()
+        if(G.Gary_Imalia):
+            poster = Find("poster_imalia")
+            poster.ScriptHide()
+        if(G.Gary_Cross):
+            poster = Find("poster_cross")
+            poster.ScriptHide()
+        if(G.Gary_Blind):
+            poster = Find("poster_blind")
+            poster.ScriptHide()
+        G.Haven_Empty = 1 
 
 #HAVEN: Called the first time the player reads the paper in the Haven, changed by wesp
 def murderPaperRead():
@@ -1674,8 +1699,8 @@ def bertramOutOfHiding():
             if obfuscator: obfuscator.ScriptUnhide()
             if obfuscator_trigger: obfuscator_trigger.ScriptUnhide()
         else:
-            if obfuscator: obfuscator.ScriptHide()
-            if obfuscator_trigger: obfuscator_trigger.ScriptHide()
+            if obfuscator: obfuscator.Kill()
+            if obfuscator_trigger: obfuscator_trigger.Kill()
     if (G.Muddy_Message == 1 and __main__.FindPlayer().HasItem("item_k_murietta_key")):
         __main__.ScheduleTask(1.00, "__main__.FindPlayer().RemoveItem(\"item_k_murietta_key\")")
     if(G.Story_State >= 10 and not G.SM_Gone):
