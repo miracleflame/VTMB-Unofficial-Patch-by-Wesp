@@ -9,16 +9,16 @@ visgroups
 {
 	visgroup
 	{
-		"name" "5 objects"
-		"visgroupid" "1"
-		"color" "118 143 236"
+		"name" "1 object"
+		"visgroupid" "2"
+		"color" "147 160 129"
 		"visible" "1"
 	}
 	visgroup
 	{
-		"name" "1 object"
-		"visgroupid" "2"
-		"color" "147 160 129"
+		"name" "5 objects"
+		"visgroupid" "1"
+		"color" "118 143 236"
 		"visible" "1"
 	}
 }
@@ -76197,13 +76197,13 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnOpen" "script_3b,BeginSequence,,0.4,-1,,"
-		"OnOpen" "Jack,TeleportToEntity,teleport_2,0.2,-1,,"
-		"OnOpen" "sound_window_break,PlaySound,,0,-1,,"
-		"OnOpen" "Jack,UseInteresting,0,0,-1,,"
-		"OnOpen" ",,,0,-1,G.Tut_Officedoor = 1,"
-		"OnOpen" "chopwndwbroken,ScriptUnhide,,0,-1,,"
 		"OnOpen" "chopwndwsolid,ScriptHide,,0,-1,,"
+		"OnOpen" "chopwndwbroken,ScriptUnhide,,0,-1,,"
+		"OnOpen" ",,,0,-1,G.Tut_Officedoor = 1,"
+		"OnOpen" "Jack,UseInteresting,0,0,-1,,"
+		"OnOpen" "sound_window_break,PlaySound,,0,-1,,"
+		"OnOpen" "Jack,TeleportToEntity,teleport_2,0.2,-1,,"
+		"OnOpen" "script_3b,BeginSequence,,0.4,-1,,"
 	}
 	solid
 	{
@@ -77747,12 +77747,12 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnTrigger0" "tutsafelock,Unlock,,0,-1,,"
-		"OnTrigger1" "tutsafelock,Lock,,0.5,-1,,"
-		"OnTrigger0" "trig_popup_safe,Enable,,0,-1,,"
-		"OnTrigger0" "trig_popup_note,Disable,,0,-1,,"
-		"OnTrigger0" "tutsafelock,ScriptHide,,0.5,-1,,"
 		"OnTrigger1" "tutsafelock,ScriptUnhide,,0,-1,,"
+		"OnTrigger0" "tutsafelock,ScriptHide,,0.5,-1,,"
+		"OnTrigger0" "trig_popup_note,Disable,,0,-1,,"
+		"OnTrigger0" "trig_popup_safe,Enable,,0,-1,,"
+		"OnTrigger1" "tutsafelock,Lock,,0.5,-1,,"
+		"OnTrigger0" "tutsafelock,Unlock,,0,-1,,"
 	}
 	"origin" "263.089 127.534 148.015"
 	editor
@@ -79072,23 +79072,23 @@ entity
 	"floor1" "-135"
 	connections
 	{
-		"OnReachFloor1" "elev_button_1,Unlock,,0,-1,,"
-		"OnReachFloor2" "elev_button_1,Lock,,0.35,-1,,"
-		"OnReachFloorAny" "counter_elev,SetValue,0,0,-1,,"
-		"OnReachFloorAny" "elev_button_2,SetState,1,0.3,-1,,"
-		"OnReachFloorAny" "elev_button_1,SetState,1,0.3,-1,,"
-		"OnReachFloorAny" "elev_button_2,Unlock,,0.3,-1,,"
-		"OnReachFloorAny" "elev_button_1,Unlock,,0.3,-1,,"
-		"OnReachFloorAny" "tutwareelevdre,Open,,0.1,-1,,"
-		"OnReachFloorAny" "tutwareelevdrf,Open,,0.1,-1,,"
-		"OnReachFloorAny" "plus_elevarr,Skin,0,0.5,-1,,"
-		"OnReachFloor2" "tutwareelevdrc,Open,,0.1,-1,,"
-		"OnReachFloor2" "tutwareelevdrd,Open,,0.1,-1,,"
-		"OnReachFloor1" "tutwareelevdra,Open,,0.1,-1,,"
-		"OnReachFloor1" "tutwareelevdrb,Open,,0.1,-1,,"
-		"OnReachFloorAny" "elev_button_1_up,SetState,1,0,-1,,"
-		"OnReachFloorAny" "elev_button_1_up,Unlock,,0.2,-1,,"
 		"OnReachFloor2" ",,,0,-1,G.Tut_Elev = 1,"
+		"OnReachFloorAny" "elev_button_1_up,Unlock,,0.2,-1,,"
+		"OnReachFloorAny" "elev_button_1_up,SetState,1,0,-1,,"
+		"OnReachFloor1" "tutwareelevdrb,Open,,0.1,-1,,"
+		"OnReachFloor1" "tutwareelevdra,Open,,0.1,-1,,"
+		"OnReachFloor2" "tutwareelevdrd,Open,,0.1,-1,,"
+		"OnReachFloor2" "tutwareelevdrc,Open,,0.1,-1,,"
+		"OnReachFloorAny" "plus_elevarr,Skin,0,0.5,-1,,"
+		"OnReachFloorAny" "tutwareelevdrf,Open,,0.1,-1,,"
+		"OnReachFloorAny" "tutwareelevdre,Open,,0.1,-1,,"
+		"OnReachFloorAny" "elev_button_1,Unlock,,0.3,-1,,"
+		"OnReachFloorAny" "elev_button_2,Unlock,,0.3,-1,,"
+		"OnReachFloorAny" "elev_button_1,SetState,1,0.3,-1,,"
+		"OnReachFloorAny" "elev_button_2,SetState,1,0.3,-1,,"
+		"OnReachFloorAny" "counter_elev,SetValue,0,0,-1,,"
+		"OnReachFloor2" "elev_button_1,Lock,,0.35,-1,,"
+		"OnReachFloor1" "elev_button_1,Unlock,,0,-1,,"
 	}
 	solid
 	{
@@ -81765,9 +81765,9 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnOpen" "trig_in_stealth_room,Disable,,0,-1,,"
-		"OnFullyClosed" "logic_enable_in_stealth,Trigger,,0,-1,,"
 		"OnOpen" ",,,0,-1,G.Tutorial_Discflags = 0,"
+		"OnFullyClosed" "logic_enable_in_stealth,Trigger,,0,-1,,"
+		"OnOpen" "trig_in_stealth_room,Disable,,0,-1,,"
 	}
 	solid
 	{
@@ -81879,8 +81879,8 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnOpen" "plus_logic_talkguy,Trigger,,0,-1,,"
 		"OnOpen" "logic_set_clan_stuff,Trigger,,0,-1,,"
+		"OnOpen" "plus_logic_talkguy,Trigger,,0,-1,,"
 	}
 	solid
 	{
@@ -81992,9 +81992,9 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnOpen" "logic_enable_this_room,Trigger,,0,-1,,"
-		"OnOpen" "trig_in_this_room,Disable,,0,-1,,"
 		"OnOpen" "logic_spawn_disc2,Trigger,,0,-1,,"
+		"OnOpen" "trig_in_this_room,Disable,,0,-1,,"
+		"OnOpen" "logic_enable_this_room,Trigger,,0,-1,,"
 	}
 	solid
 	{
@@ -82282,11 +82282,11 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnFullyOpen" "elev_button_2,Unlock,,0,-1,,"
-		"OnOpen" "fire_behind_other_gate,TurnOff,,0,-1,,"
-		"OnOpen" "thug_2,ScriptUnhide,,0,-1,,"
-		"OnOpen" "thug_3,ScriptUnhide,,0,-1,,"
 		"OnFullyOpen" "logic_kill_elev_doors,Trigger,,0,-1,,"
+		"OnOpen" "thug_3,ScriptUnhide,,0,-1,,"
+		"OnOpen" "thug_2,ScriptUnhide,,0,-1,,"
+		"OnOpen" "fire_behind_other_gate,TurnOff,,0,-1,,"
+		"OnFullyOpen" "elev_button_2,Unlock,,0,-1,,"
 	}
 	solid
 	{
@@ -82397,15 +82397,15 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnClose" "logic_1,Disable,,0,-1,,"
-		"OnClose" "logic_2,Disable,,0,-1,,"
-		"OnFullyClosed" "logic_2,Enable,,0,-1,,"
-		"OnFullyClosed" "counter_elev,Add,0,0.2,-1,,"
-		"OnFullyClosed" "logic_1,Enable,,0,-1,,"
-		"OnBlockedClosing" "tutwareelevdrf,Open,,0,-1,,"
-		"OnBlockedClosing" "tutwareelevdre,Open,,0,-1,,"
-		"OnFullyOpen" "elev_button_2,Unlock,,0,-1,,"
 		"OnFullyOpen" "logic_kill_elev_doors,Trigger,,0,-1,,"
+		"OnFullyOpen" "elev_button_2,Unlock,,0,-1,,"
+		"OnBlockedClosing" "tutwareelevdre,Open,,0,-1,,"
+		"OnBlockedClosing" "tutwareelevdrf,Open,,0,-1,,"
+		"OnFullyClosed" "logic_1,Enable,,0,-1,,"
+		"OnFullyClosed" "counter_elev,Add,0,0.2,-1,,"
+		"OnFullyClosed" "logic_2,Enable,,0,-1,,"
+		"OnClose" "logic_2,Disable,,0,-1,,"
+		"OnClose" "logic_1,Disable,,0,-1,,"
 	}
 	solid
 	{
@@ -82517,15 +82517,15 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnFullyClosed" "logic_1,Enable,,0,-1,,"
-		"OnFullyClosed" "logic_2,Enable,,0,-1,,"
-		"OnFullyClosed" "counter_elev,Add,0,0.2,-1,,"
-		"OnBlockedClosing" "tutwareelevdrf,Open,,0,-1,,"
-		"OnBlockedClosing" "tutwareelevdre,Open,,0,-1,,"
-		"OnBlockedClosing" "tutwareelevdrb,Open,,0,-1,,"
-		"OnBlockedClosing" "tutwareelevdra,Open,,0,-1,,"
-		"OnFullyOpen" "elev_button_1,Unlock,,0,-1,,"
 		"OnFullyOpen" "elev_button_2,Unlock,,0,-1,,"
+		"OnFullyOpen" "elev_button_1,Unlock,,0,-1,,"
+		"OnBlockedClosing" "tutwareelevdra,Open,,0,-1,,"
+		"OnBlockedClosing" "tutwareelevdrb,Open,,0,-1,,"
+		"OnBlockedClosing" "tutwareelevdre,Open,,0,-1,,"
+		"OnBlockedClosing" "tutwareelevdrf,Open,,0,-1,,"
+		"OnFullyClosed" "counter_elev,Add,0,0.2,-1,,"
+		"OnFullyClosed" "logic_2,Enable,,0,-1,,"
+		"OnFullyClosed" "logic_1,Enable,,0,-1,,"
 	}
 	solid
 	{
@@ -82637,12 +82637,12 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnBlockedClosing" "tutwareelevdra,Open,,0,-1,,"
-		"OnBlockedClosing" "tutwareelevdrb,Open,,0,-1,,"
-		"OnBlockedClosing" "tutwareelevdre,Open,,0,-1,,"
-		"OnBlockedClosing" "tutwareelevdrf,Open,,0,-1,,"
-		"OnFullyOpen" "elev_button_1,Unlock,,0,-1,,"
 		"OnFullyOpen" "elev_button_2,Unlock,,0,-1,,"
+		"OnFullyOpen" "elev_button_1,Unlock,,0,-1,,"
+		"OnBlockedClosing" "tutwareelevdrf,Open,,0,-1,,"
+		"OnBlockedClosing" "tutwareelevdre,Open,,0,-1,,"
+		"OnBlockedClosing" "tutwareelevdrb,Open,,0,-1,,"
+		"OnBlockedClosing" "tutwareelevdra,Open,,0,-1,,"
 	}
 	solid
 	{
@@ -95874,10 +95874,10 @@ entity
 	"base_gender" "1"
 	connections
 	{
-		"OnFedUponEnd" ",,,0,-1,G.Tutorial_Blueblood = 1,"
-		"OnDeath" ",,,0,-1,G.Tutorial_Blueblood = 2,"
-		"OnFedUponEnd" "trig_dialog_outside_chopshop,Enable,,0,-1,,"
 		"OnDeath" "popup_5,OpenWindow,,1,-1,,"
+		"OnFedUponEnd" "trig_dialog_outside_chopshop,Enable,,0,-1,,"
+		"OnDeath" ",,,0,-1,G.Tutorial_Blueblood = 2,"
+		"OnFedUponEnd" ",,,0,-1,G.Tutorial_Blueblood = 1,"
 	}
 	"origin" "377.825 -684 -36"
 	editor
@@ -95932,11 +95932,11 @@ entity
 	"wait" "1"
 	connections
 	{
-		"OnStartTouch" "focusc1,PlayAsCameraTarget,,0,-1,,"
-		"OnStartTouch" "trackc1,PlayAsCameraPosition,,0,-1,,"
-		"OnStartTouch" "sound_fire,StopSound,,0,-1,,"
-		"OnTrigger" ",,,0,-1,G.Tut_Chopshop = 1,"
 		"OnStartTouch" "trigger_3,Disable,,0.2,-1,,"
+		"OnTrigger" ",,,0,-1,G.Tut_Chopshop = 1,"
+		"OnStartTouch" "sound_fire,StopSound,,0,-1,,"
+		"OnStartTouch" "trackc1,PlayAsCameraPosition,,0,-1,,"
+		"OnStartTouch" "focusc1,PlayAsCameraTarget,,0,-1,,"
 	}
 	solid
 	{
@@ -96084,9 +96084,9 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnUseBegin" "logic_noblood,Disable,,0,-1,,"
-		"OnUseEnd" "logic_noblood,Enable,,0,-1,,"
 		"OnUseEnd" "counter_noblood,Add,0,0.2,-1,,"
+		"OnUseEnd" "logic_noblood,Enable,,0,-1,,"
+		"OnUseBegin" "logic_noblood,Disable,,0,-1,,"
 	}
 	"origin" "388 459 148"
 	editor
@@ -96145,9 +96145,9 @@ entity
 	"targetname" "trig_dialog_feed_on_bum"
 	connections
 	{
-		"OnStartTouch" "pc_0,RemoveDisciplinesNow,,0,-1,,"
-		"OnStartTouch" "Jack,StartPlayerDialog,,0.05,-1,,"
 		"OnStartTouch" "bum_maker,Spawn,,0,-1,,"
+		"OnStartTouch" "Jack,StartPlayerDialog,,0.05,-1,,"
+		"OnStartTouch" "pc_0,RemoveDisciplinesNow,,0,-1,,"
 	}
 	solid
 	{
@@ -96247,10 +96247,10 @@ entity
 	"origin" "-384 820 35"
 	connections
 	{
-		"OnStartTouch" "thug_1,ScriptUnhide,,0,-1,,"
-		"OnStartTouch" "trig_popup_rats,Enable,,0,-1,,"
-		"OnStartTouch" "thug_maker,Spawn,,0,-1,,"
 		"OnStartTouch" "Jack,StartPlayerDialog,,0,-1,,"
+		"OnStartTouch" "thug_maker,Spawn,,0,-1,,"
+		"OnStartTouch" "trig_popup_rats,Enable,,0,-1,,"
+		"OnStartTouch" "thug_1,ScriptUnhide,,0,-1,,"
 	}
 	solid
 	{
@@ -96406,12 +96406,12 @@ entity
 	"base_gender" "1"
 	connections
 	{
-		"OnFedUponBegin" "script_4b,BeginSequence,,0,1,,"
-		"OnFedUponBegin" ",,,0,-1,G.Tutorial_Bum = 1,"
-		"OnDeath" "popup_32,OpenWindow,,1,-1,,"
-		"OnFedUponEnd" "ratmaker,Spawn,,0.2,-1,,"
-		"OnFedUponEnd" "trig_dialog_feed_on_rats,Enable,,0,-1,,"
 		"OnFedUponEnd" "rat,Kill,,0,-1,,"
+		"OnFedUponEnd" "trig_dialog_feed_on_rats,Enable,,0,-1,,"
+		"OnFedUponEnd" "ratmaker,Spawn,,0.2,-1,,"
+		"OnDeath" "popup_32,OpenWindow,,1,-1,,"
+		"OnFedUponBegin" ",,,0,-1,G.Tutorial_Bum = 1,"
+		"OnFedUponBegin" "script_4b,BeginSequence,,0,1,,"
 	}
 	"origin" "-420 1296 -248"
 	editor
@@ -96823,9 +96823,9 @@ entity
 	"StartHidden" "1"
 	connections
 	{
-		"OnStartTouch" "signcounter2,Add,0,0.2,-1,,"
-		"OnStartTouch" "trig_popup_obfuscate,Disable,,0.2,-1,,"
 		"OnStartTouch" ",,,0,-1,OnApproachThug1(),"
+		"OnStartTouch" "trig_popup_obfuscate,Disable,,0.2,-1,,"
+		"OnStartTouch" "signcounter2,Add,0,0.2,-1,,"
 	}
 	solid
 	{
@@ -96925,8 +96925,8 @@ entity
 	"targetname" "trig_popup_feed"
 	connections
 	{
-		"OnStartTouch" "popup_3,OpenWindow,,0,-1,,"
 		"OnStartTouch" "trig_popup_feed,Disable,,0.2,-1,,"
+		"OnStartTouch" "popup_3,OpenWindow,,0,-1,,"
 	}
 	solid
 	{
@@ -97095,11 +97095,11 @@ entity
 	"base_gender" "1"
 	connections
 	{
-		"OnFoundPlayer" "logic_on_stealth_dead,Disable,,0,-1,,"
-		"OnDamaged" "logic_on_stealth_dead,Disable,,0,-1,,"
-		"OnDamaged" "popup_50,OpenWindow,,0.5,-1,,"
-		"OnFoundPlayer" "popup_50,OpenWindow,,0.5,-1,,"
 		"OnDeath" "logic_on_stealth_dead,Trigger,,0.1,-1,,"
+		"OnFoundPlayer" "popup_50,OpenWindow,,0.5,-1,,"
+		"OnDamaged" "popup_50,OpenWindow,,0.5,-1,,"
+		"OnDamaged" "logic_on_stealth_dead,Disable,,0,-1,,"
+		"OnFoundPlayer" "logic_on_stealth_dead,Disable,,0,-1,,"
 	}
 	"origin" "-1210 479 -197"
 	editor
@@ -97175,10 +97175,10 @@ entity
 	"base_gender" "1"
 	connections
 	{
-		"OnDeath" "logic_enable_in_stealth,Disable,,0,-1,,"
-		"OnDeath" "thug_maker_4,Spawn,,0,-1,,"
-		"OnDeath" ",,,0,-1,G.Tut_Stealthkill = 1,"
 		"OnDeath" ",,,0,-1,OnKillDisc1(),"
+		"OnDeath" ",,,0,-1,G.Tut_Stealthkill = 1,"
+		"OnDeath" "thug_maker_4,Spawn,,0,-1,,"
+		"OnDeath" "logic_enable_in_stealth,Disable,,0,-1,,"
 	}
 	"origin" "-1704 468 -200"
 	editor
@@ -97644,10 +97644,10 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnClose" "logic_2,Disable,,0,-1,,"
-		"OnClose" "logic_1,Disable,,0,-1,,"
-		"OnClose" "logic_closealldoors,Trigger,,0,-1,,"
 		"OnFullyOpen" "elev_button_2,Unlock,,0,-1,,"
+		"OnClose" "logic_closealldoors,Trigger,,0,-1,,"
+		"OnClose" "logic_1,Disable,,0,-1,,"
+		"OnClose" "logic_2,Disable,,0,-1,,"
 	}
 	solid
 	{
@@ -97849,10 +97849,10 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "logic_closealldoors,Trigger,,0,-1,,"
-		"OnTrigger" "counter_elev,SetValue,2,0.2,-1,,"
-		"OnTrigger" "elev_button_2,Lock,,0,-1,,"
 		"OnTrigger" "elev_button_1,Lock,,0,-1,,"
+		"OnTrigger" "elev_button_2,Lock,,0,-1,,"
+		"OnTrigger" "counter_elev,SetValue,2,0.2,-1,,"
+		"OnTrigger" "logic_closealldoors,Trigger,,0,-1,,"
 	}
 	"origin" "-1041 157.382 -81.6839"
 	editor
@@ -97868,10 +97868,10 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "logic_closealldoors,Trigger,,0,-1,,"
-		"OnTrigger" "counter_elev,SetValue,1,0,-1,,"
-		"OnTrigger" "elev_button_2,Lock,,0,-1,,"
 		"OnTrigger" "elev_button_1,Lock,,0,-1,,"
+		"OnTrigger" "elev_button_2,Lock,,0,-1,,"
+		"OnTrigger" "counter_elev,SetValue,1,0,-1,,"
+		"OnTrigger" "logic_closealldoors,Trigger,,0,-1,,"
 	}
 	"origin" "-1041 158 -94"
 	editor
@@ -98028,8 +98028,8 @@ entity
 	"origin" "-921 9.5 49"
 	connections
 	{
-		"OnTrigger" "Jack,TeleportToEntity,teleport_7,0,-1,,"
 		"OnTrigger" ",,,0,-1,G.Tut_Dogdoor = 1,"
+		"OnTrigger" "Jack,TeleportToEntity,teleport_7,0,-1,,"
 	}
 	solid
 	{
@@ -98143,21 +98143,21 @@ entity
 	"targetname" "pc_0"
 	connections
 	{
-		"OnActivateCelerity" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cCelerity,"
-		"OnActivateThaumaturgyLvl2" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cThaumaturgy2,"
-		"OnActivateThaumaturgyLvl1" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cThaumaturgy1,"
-		"OnActivateDominateLvl2" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cDominate2,"
-		"OnActivateDominateLvl1" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cDominate1,"
-		"OnActivateDementationLvl2" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cDementation2,"
-		"OnActivateDementationLvl1" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cDementation1,"
-		"OnActivateAnimalismLvl2" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cAnimalism2,"
-		"OnActivateAnimalismLvl1" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cAnimalism1,"
-		"OnActivatePresense" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cPresence,"
-		"OnActivatePotence" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cPotence,"
-		"OnActivateObfuscate" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cObfuscate,"
-		"OnActivateFortitude" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cFortitude,"
-		"OnActivateAuspex" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cAuspex,"
 		"OnActivateProtean" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cProtean,"
+		"OnActivateAuspex" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cAuspex,"
+		"OnActivateFortitude" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cFortitude,"
+		"OnActivateObfuscate" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cObfuscate,"
+		"OnActivatePotence" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cPotence,"
+		"OnActivatePresense" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cPresence,"
+		"OnActivateAnimalismLvl1" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cAnimalism1,"
+		"OnActivateAnimalismLvl2" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cAnimalism2,"
+		"OnActivateDementationLvl1" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cDementation1,"
+		"OnActivateDementationLvl2" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cDementation2,"
+		"OnActivateDominateLvl1" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cDominate1,"
+		"OnActivateDominateLvl2" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cDominate2,"
+		"OnActivateThaumaturgyLvl1" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cThaumaturgy1,"
+		"OnActivateThaumaturgyLvl2" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cThaumaturgy2,"
+		"OnActivateCelerity" ",,,0,-1,G.Tutorial_Discflags = G.Tutorial_Discflags | cCelerity,"
 	}
 	"origin" "-114 -216 24"
 	editor
@@ -98191,8 +98191,8 @@ entity
 	"radius" "10"
 	connections
 	{
-		"" "logic_raid_start,Trigger,128.0,1.75,-1,,"
 		"OnEndSequence" "Jack,StartPlayerDialog,,2,-1,,"
+		"" "logic_raid_start,Trigger,128.0,1.75,-1,,"
 	}
 	"origin" "214 54 112"
 	editor
@@ -98304,9 +98304,9 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "knob_buff,Unlock,,0,-1,,"
-		"OnTrigger" "script_7b,BeginSequence,,0.15,-1,,"
 		"OnTrigger" "tutwareportal03,Open,,0.05,-1,,"
+		"OnTrigger" "script_7b,BeginSequence,,0.15,-1,,"
+		"OnTrigger" "knob_buff,Unlock,,0,-1,,"
 	}
 	"origin" "-1676.43 313 -129.976"
 	editor
@@ -98339,8 +98339,8 @@ entity
 	"radius" "10"
 	connections
 	{
-		"OnBeginSequence" "Jack,UseInteresting,0,0,-1,,"
 		"OnBeginSequence" "trig_port_chopshop_door,Enable,,0,-1,,"
+		"OnBeginSequence" "Jack,UseInteresting,0,0,-1,,"
 	}
 	"origin" "-260 -20 -40"
 	editor
@@ -99191,8 +99191,8 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnPressed" "elev_up,Trigger,,0,-1,,"
 		"OnPressed" "plus_elevarr,skin,1,0,-1,,"
+		"OnPressed" "elev_up,Trigger,,0,-1,,"
 	}
 	"origin" "-1044 160 -143.704"
 	editor
@@ -99209,14 +99209,14 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "SabbatRaidComp,PlaySound,,0,-1,,"
-		"OnTrigger" "Restaurant,StopSound,,0,-1,,"
-		"OnTrigger" "sound_1h,PlaySound,,0,1,,"
-		"OnTrigger" "City Soundscheme,FadeOut,,0,-1,,"
-		"OnTrigger" "SabbatNear,FadeIn,,0,-1,,"
-		"OnTrigger" "sound_fire,PlaySound,,4,-1,,"
-		"OnTrigger" "sound_1a,PlaySound,,0,-1,,"
 		"OnTrigger" "RestrauntScreams,PlaySound,,2,-1,,"
+		"OnTrigger" "sound_1a,PlaySound,,0,-1,,"
+		"OnTrigger" "sound_fire,PlaySound,,4,-1,,"
+		"OnTrigger" "SabbatNear,FadeIn,,0,-1,,"
+		"OnTrigger" "City Soundscheme,FadeOut,,0,-1,,"
+		"OnTrigger" "sound_1h,PlaySound,,0,1,,"
+		"OnTrigger" "Restaurant,StopSound,,0,-1,,"
+		"OnTrigger" "SabbatRaidComp,PlaySound,,0,-1,,"
 	}
 	"origin" "398.499 -834.528 -31"
 	editor
@@ -99271,9 +99271,9 @@ entity
 	"targetname" "logic_raid"
 	connections
 	{
-		"OnTrigger" "blueblood,Kill,,0,-1,,"
-		"OnTrigger" "blueblood_maker,Kill,,0,-1,,"
 		"OnTrigger" "logic_sabbat_outside,Trigger,,0,-1,,"
+		"OnTrigger" "blueblood_maker,Kill,,0,-1,,"
+		"OnTrigger" "blueblood,Kill,,0,-1,,"
 	}
 	"origin" "225.776 -9 175.146"
 	editor
@@ -99581,14 +99581,14 @@ entity
 	"NextKey" "trackb0"
 	connections
 	{
-		"OnReachedKeyframe" "logic_shot_0,Trigger,,0,-1,,"
-		"" "Jack,WillTalk,1,0.4,-1,,"
-		"" "Jack,StartPlayerDialog,,0.5,-1,,"
-		"" "cam_track4_1,PlayAsCameraPosition,,0,-1,,"
-		"" "cam_focus4_1,PlayAsCameraTarget,,0,-1,,"
-		"OnAnimationCompleted" "pc_0,RemoveControllerNPC,,1.5,-1,,"
-		"OnAnimationCompleted" "Jack,StartPlayerDialog,128,1,-1,,"
 		"OnAnimationCompleted" "logic_shot_end,Trigger,,0,-1,,"
+		"OnAnimationCompleted" "Jack,StartPlayerDialog,128,1,-1,,"
+		"OnAnimationCompleted" "pc_0,RemoveControllerNPC,,1.5,-1,,"
+		"" "cam_focus4_1,PlayAsCameraTarget,,0,-1,,"
+		"" "cam_track4_1,PlayAsCameraPosition,,0,-1,,"
+		"" "Jack,StartPlayerDialog,,0.5,-1,,"
+		"" "Jack,WillTalk,1,0.4,-1,,"
+		"OnReachedKeyframe" "logic_shot_0,Trigger,,0,-1,,"
 	}
 	"origin" "199 27 180.49"
 	editor
@@ -99639,14 +99639,14 @@ entity
 	"NextKey" "focusb0"
 	connections
 	{
-		"OnAnimationCompleted" "logic_shot_end,Trigger,,0,-1,,"
-		"OnAnimationCompleted" "Jack,StartPlayerDialog,128,1,-1,,"
-		"OnAnimationCompleted" "pc_0,RemoveControllerNPC,,1.5,-1,,"
-		"" "cam_focus4_1,PlayAsCameraTarget,,0,-1,,"
-		"" "cam_track4_1,PlayAsCameraPosition,,0,-1,,"
-		"" "Jack,StartPlayerDialog,,0.5,-1,,"
-		"" "Jack,WillTalk,1,0.4,-1,,"
 		"OnReachedKeyframe" "logic_shot_0,Trigger,,0,-1,,"
+		"" "Jack,WillTalk,1,0.4,-1,,"
+		"" "Jack,StartPlayerDialog,,0.5,-1,,"
+		"" "cam_track4_1,PlayAsCameraPosition,,0,-1,,"
+		"" "cam_focus4_1,PlayAsCameraTarget,,0,-1,,"
+		"OnAnimationCompleted" "pc_0,RemoveControllerNPC,,1.5,-1,,"
+		"OnAnimationCompleted" "Jack,StartPlayerDialog,128,1,-1,,"
+		"OnAnimationCompleted" "logic_shot_end,Trigger,,0,-1,,"
 	}
 	"origin" "180 -18 180.49"
 	editor
@@ -99684,12 +99684,12 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "logic_jack_teleport_3,Disable,,0.5,-1,,"
-		"OnTrigger" "Jack,TeleportToEntity,teleport_3,0,-1,,"
-		"" "jack_flash,TurnOn,,0,-1,,"
-		"" "sound_jackflash,PlaySound,,0.75,-1,,"
-		"" "sound_jackflash,StopSound,,3,-1,,"
 		"" "jack_flash,TurnOff,,3,-1,,"
+		"" "sound_jackflash,StopSound,,3,-1,,"
+		"" "sound_jackflash,PlaySound,,0.75,-1,,"
+		"" "jack_flash,TurnOn,,0,-1,,"
+		"OnTrigger" "Jack,TeleportToEntity,teleport_3,0,-1,,"
+		"OnTrigger" "logic_jack_teleport_3,Disable,,0.5,-1,,"
 	}
 	"origin" "261.597 121 186.787"
 	editor
@@ -99756,13 +99756,13 @@ entity
 	"wait" "1"
 	connections
 	{
-		"OnStartTouch" "Jack,TeleportToEntity,teleport_3,0,-1,,"
-		"OnStartTouch" "logic_lock_chopshop,Trigger,,0,-1,,"
-		"OnStartTouch" "trigger_6,Disable,,0.2,-1,,"
-		"OnStartTouch" ",,,0,-1,G.Tut_Ashot = 1,"
-		"OnStartTouch" "logic_reset_back_alley_2,Disable,,0,-1,,"
-		"OnStartTouch" "logic_reset_back_alley_3,Enable,,0,-1,,"
 		"OnStartTouch" "logic_alley_scene,Trigger,,0.05,-1,,"
+		"OnStartTouch" "logic_reset_back_alley_3,Enable,,0,-1,,"
+		"OnStartTouch" "logic_reset_back_alley_2,Disable,,0,-1,,"
+		"OnStartTouch" ",,,0,-1,G.Tut_Ashot = 1,"
+		"OnStartTouch" "trigger_6,Disable,,0.2,-1,,"
+		"OnStartTouch" "logic_lock_chopshop,Trigger,,0,-1,,"
+		"OnStartTouch" "Jack,TeleportToEntity,teleport_3,0,-1,,"
 	}
 	solid
 	{
@@ -99862,10 +99862,10 @@ entity
 	"wait" "1"
 	connections
 	{
-		"OnStartTouch" "distract_check,Test,,1,-1,,"
-		"OnStartTouch" "logic_gunfire,Trigger,,0,-1,,"
-		"OnStartTouch" "trig_diversion,Disable,,0.2,-1,,"
 		"OnStartTouch" "tutalleydoora,Lock,,0,-1,,"
+		"OnStartTouch" "trig_diversion,Disable,,0.2,-1,,"
+		"OnStartTouch" "logic_gunfire,Trigger,,0,-1,,"
+		"OnStartTouch" "distract_check,Test,,1,-1,,"
 	}
 	solid
 	{
@@ -99979,15 +99979,15 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "sound_combat_4,PlaySound,,3,-1,,"
-		"OnTrigger" "sound_combat_3,PlaySound,,5,-1,,"
-		"OnTrigger" "sound_combat_2,PlaySound,,4,-1,,"
-		"OnTrigger" "sound_combat_1,PlaySound,,0,-1,,"
-		"OnTrigger" "sound_combat_1,StopSound,,6,-1,,"
-		"OnTrigger" "sound_combat_2,StopSound,,10,-1,,"
-		"OnTrigger" "sound_combat_3,StopSound,,11,-1,,"
-		"OnTrigger" "sound_combat_4,StopSound,,9,-1,,"
 		"OnTrigger" "SabbatRaidSneak,PlaySound,,0,-1,,"
+		"OnTrigger" "sound_combat_4,StopSound,,9,-1,,"
+		"OnTrigger" "sound_combat_3,StopSound,,11,-1,,"
+		"OnTrigger" "sound_combat_2,StopSound,,10,-1,,"
+		"OnTrigger" "sound_combat_1,StopSound,,6,-1,,"
+		"OnTrigger" "sound_combat_1,PlaySound,,0,-1,,"
+		"OnTrigger" "sound_combat_2,PlaySound,,4,-1,,"
+		"OnTrigger" "sound_combat_3,PlaySound,,5,-1,,"
+		"OnTrigger" "sound_combat_4,PlaySound,,3,-1,,"
 	}
 	"origin" "-1008.73 -143.431 -31"
 	editor
@@ -100010,8 +100010,8 @@ entity
 	"radius" "10"
 	connections
 	{
-		"OnEndSequence" "fire_behind_other_gate,TurnOn,,0,-1,,"
 		"OnBeginSequence" "logic_explosion2,Trigger,,0,-1,,"
+		"OnEndSequence" "fire_behind_other_gate,TurnOn,,0,-1,,"
 	}
 	"origin" "-776 -112 -40"
 	editor
@@ -100028,11 +100028,11 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "sound_fire_2,PlaySound,,1,-1,,"
-		"OnTrigger" "explosion2,Explode,,0,-1,,"
-		"OnTrigger" "sound_explosion,StopSound,,3,-1,,"
-		"OnTrigger" "SabbatRaidSneak,Volume,2,0,-1,,"
 		"OnTrigger" "SabbatRaidSneak2,PlaySound,,0,-1,,"
+		"OnTrigger" "SabbatRaidSneak,Volume,2,0,-1,,"
+		"OnTrigger" "sound_explosion,StopSound,,3,-1,,"
+		"OnTrigger" "explosion2,Explode,,0,-1,,"
+		"OnTrigger" "sound_fire_2,PlaySound,,1,-1,,"
 	}
 	"origin" "-1009.32 -122.589 -31"
 	editor
@@ -100940,8 +100940,8 @@ entity
 	"origin" "-920 161.5 49"
 	connections
 	{
-		"OnStartTouch" "Jack,StartPlayerDialog,,0,-1,,"
 		"OnTrigger" "logic_failed_thug,Disable,,0,-1,,"
+		"OnStartTouch" "Jack,StartPlayerDialog,,0,-1,,"
 	}
 	solid
 	{
@@ -101041,8 +101041,8 @@ entity
 	"wait" "1"
 	connections
 	{
-		"OnStartTouch" "Jack,StartPlayerDialog,,0,-1,,"
 		"OnStartTouch" "trig_dialog_outside_bathroom,Disable,,0.2,-1,,"
+		"OnStartTouch" "Jack,StartPlayerDialog,,0,-1,,"
 	}
 	solid
 	{
@@ -101139,10 +101139,10 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "tutchopdoorb,Close,,0,-1,,"
-		"OnTrigger" "tutchopdoorb,Lock,,0.5,-1,,"
-		"OnTrigger" "fire_behind_gate,TurnOff,,0,-1,,"
 		"OnTrigger" "fire_explosion,TurnOff,,0,-1,,"
+		"OnTrigger" "fire_behind_gate,TurnOff,,0,-1,,"
+		"OnTrigger" "tutchopdoorb,Lock,,0.5,-1,,"
+		"OnTrigger" "tutchopdoorb,Close,,0,-1,,"
 	}
 	"origin" "225 665 82.5502"
 	editor
@@ -101379,9 +101379,9 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnOpen" "Jack,TeleportToEntity,teleport_jack_after_physics,0,-1,,"
-		"OnOpen" "tutwareportal06,Lock,,0,-1,,"
 		"OnOpen" ",,,0,-1,G.Tut_Throw = 1,"
+		"OnOpen" "tutwareportal06,Lock,,0,-1,,"
+		"OnOpen" "Jack,TeleportToEntity,teleport_jack_after_physics,0,-1,,"
 	}
 	solid
 	{
@@ -101833,8 +101833,8 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "sJack_from_elevator,BeginSequence,,0.25,-1,,"
 		"OnTrigger" "Jack,TeleportToEntity,teleport_6,0,-1,,"
+		"OnTrigger" "sJack_from_elevator,BeginSequence,,0.25,-1,,"
 	}
 	"origin" "-1140.15 185 72.5135"
 	editor
@@ -101851,11 +101851,11 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "dialogue_check,Test,,0,-1,,"
-		"OnTrigger" "logic_2,Enable,,0.1,-1,,"
-		"OnTrigger" "logic_jack_from_elevator,Trigger,,2,-1,,"
-		"OnTrigger" "elev_up,Trigger,,0,-1,,"
 		"OnTrigger" "logic_kill_elev_doors,Enable,,0,-1,,"
+		"OnTrigger" "elev_up,Trigger,,0,-1,,"
+		"OnTrigger" "logic_jack_from_elevator,Trigger,,2,-1,,"
+		"OnTrigger" "logic_2,Enable,,0.1,-1,,"
+		"OnTrigger" "dialogue_check,Test,,0,-1,,"
 	}
 	"origin" "-1141.34 185 57.4291"
 	editor
@@ -102024,14 +102024,14 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "trig_dialog_outside_chopshop,Disable,,0,-1,,"
-		"OnTrigger" ",,,0,-1,G.Tutorial_Blueblood = 0,"
-		"OnTrigger" "teleport_blueblood,Teleport,,1.1,-1,,"
-		"OnTrigger" "blueblood_maker,Spawn,,1.25,-1,,"
-		"OnTrigger" "fade_out,Fade,,0,-1,,"
-		"OnTrigger" ",,,0,-1,ResetBlood(),"
-		"OnTrigger" "blueblood,Kill,,1,-1,,"
 		"OnTrigger" "trig_popup_feed,Enable,,1.25,-1,,"
+		"OnTrigger" "blueblood,Kill,,1,-1,,"
+		"OnTrigger" ",,,0,-1,ResetBlood(),"
+		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "blueblood_maker,Spawn,,1.25,-1,,"
+		"OnTrigger" "teleport_blueblood,Teleport,,1.1,-1,,"
+		"OnTrigger" ",,,0,-1,G.Tutorial_Blueblood = 0,"
+		"OnTrigger" "trig_dialog_outside_chopshop,Disable,,0,-1,,"
 	}
 	"origin" "519 -267.841 67.6617"
 	editor
@@ -102077,16 +102077,16 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "trig_popup_feed_bum,Enable,,0,-1,,"
-		"OnTrigger" "teleport_bum,Teleport,,1.1,-1,,"
-		"OnTrigger" "fade_out,Fade,,0,-1,,"
-		"OnTrigger" ",,,0,-1,ResetBlood(),"
-		"OnTrigger" "bum_maker,Spawn,,1.2,-1,,"
-		"OnTrigger" ",,,0,-1,G.Tutorial_Bum = 0,"
-		"OnTrigger" "rat,ScriptHide,,0,-1,,"
-		"OnTrigger" "trig_dialog_feed_on_rats,Disable,,0,-1,,"
-		"OnTrigger" "bum_maker,Spawn,,2,-1,,"
 		"OnTrigger" "bum,Kill,,0,-1,,"
+		"OnTrigger" "bum_maker,Spawn,,2,-1,,"
+		"OnTrigger" "trig_dialog_feed_on_rats,Disable,,0,-1,,"
+		"OnTrigger" "rat,ScriptHide,,0,-1,,"
+		"OnTrigger" ",,,0,-1,G.Tutorial_Bum = 0,"
+		"OnTrigger" "bum_maker,Spawn,,1.2,-1,,"
+		"OnTrigger" ",,,0,-1,ResetBlood(),"
+		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "teleport_bum,Teleport,,1.1,-1,,"
+		"OnTrigger" "trig_popup_feed_bum,Enable,,0,-1,,"
 	}
 	"origin" "-366 786 -35.0665"
 	editor
@@ -102134,16 +102134,16 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "thug_maker,Spawn,,2.5,-1,,"
-		"OnTrigger" "SabbatRaidSneak2,StopSound,,0,-1,,"
-		"OnTrigger" "SabbatRaidSneak,StopSound,,0,-1,,"
-		"OnTrigger" "fire_behind_other_gate,TurnOff,,0,-1,,"
-		"OnTrigger" "thug_maker,Spawn,,1.2,-1,,"
-		"OnTrigger" "fade_out,Fade,,0,-1,,"
-		"OnTrigger" ",,,0,-1,G.Tut_Aggfeed = 0,"
-		"OnTrigger" "trig_diversion,Enable,,0,-1,,"
-		"OnTrigger" "teleport_thug,Teleport,,1,-1,,"
 		"OnTrigger" "sSabbat_distracted,CancelSequence,,0,-1,,"
+		"OnTrigger" "teleport_thug,Teleport,,1,-1,,"
+		"OnTrigger" "trig_diversion,Enable,,0,-1,,"
+		"OnTrigger" ",,,0,-1,G.Tut_Aggfeed = 0,"
+		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "thug_maker,Spawn,,1.2,-1,,"
+		"OnTrigger" "fire_behind_other_gate,TurnOff,,0,-1,,"
+		"OnTrigger" "SabbatRaidSneak,StopSound,,0,-1,,"
+		"OnTrigger" "SabbatRaidSneak2,StopSound,,0,-1,,"
+		"OnTrigger" "thug_maker,Spawn,,2.5,-1,,"
 	}
 	"origin" "-807 17 77"
 	editor
@@ -102278,9 +102278,9 @@ entity
 	"unlocked_sound" "environmental/electronic/button_beep.wav"
 	connections
 	{
-		"OnPressed" "pc_0,CreateControllerNPC,,0.5,-1,,"
-		"OnPressed" "teleport_temp,Teleport,,0,-1,,"
 		"OnPressed" "logic_scene_1,Trigger,,0,-1,,"
+		"OnPressed" "teleport_temp,Teleport,,0,-1,,"
+		"OnPressed" "pc_0,CreateControllerNPC,,0.5,-1,,"
 	}
 	solid
 	{
@@ -102580,10 +102580,10 @@ entity
 	"wait" "1"
 	connections
 	{
-		"OnStartTouch" "logic_jackflash_chopshop_door,Trigger,,0,-1,,"
-		"OnStartTouch" "popup_8,OpenWindow,,0,-1,,"
-		"OnStartTouch" "tutchopdoora,Lock,,0,-1,,"
 		"OnStartTouch" "trig_popup_jump,Disable,,0.2,-1,,"
+		"OnStartTouch" "tutchopdoora,Lock,,0,-1,,"
+		"OnStartTouch" "popup_8,OpenWindow,,0,-1,,"
+		"OnStartTouch" "logic_jackflash_chopshop_door,Trigger,,0,-1,,"
 	}
 	solid
 	{
@@ -102683,8 +102683,8 @@ entity
 	"wait" "1"
 	connections
 	{
-		"OnStartTouch" "popup_12,OpenWindow,,0,-1,,"
 		"OnStartTouch" "trig_popup_lockpick,Disable,,0.2,-1,,"
+		"OnStartTouch" "popup_12,OpenWindow,,0,-1,,"
 	}
 	solid
 	{
@@ -102784,8 +102784,8 @@ entity
 	"wait" "1"
 	connections
 	{
-		"OnStartTouch" "popup_23,OpenWindow,,0,-1,,"
 		"OnStartTouch" "trig_popup_feed_bum,Disable,,0.2,-1,,"
+		"OnStartTouch" "popup_23,OpenWindow,,0,-1,,"
 	}
 	solid
 	{
@@ -103203,8 +103203,8 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "teleport_very_beginning,Teleport,,1.1,-1,,"
 		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "teleport_very_beginning,Teleport,,1.1,-1,,"
 	}
 	"origin" "229 -269 266"
 	editor
@@ -103247,9 +103247,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "teleport_blueblood,Teleport,,1.1,-1,,"
-		"OnTrigger" "fade_out,Fade,,0,-1,,"
 		"OnTrigger" "logic_reset_blueblood_2,Trigger,,1.15,-1,,"
+		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "teleport_blueblood,Teleport,,1.1,-1,,"
 	}
 	"origin" "229 -269 255"
 	editor
@@ -103266,9 +103266,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "teleport_chopshop_door,Teleport,,1.1,-1,,"
-		"OnTrigger" "fade_out,Fade,,0,-1,,"
 		"OnTrigger" "logic_reset_chopshop_door_2,Trigger,,1.15,-1,,"
+		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "teleport_chopshop_door,Teleport,,1.1,-1,,"
 	}
 	"origin" "229 -269 244"
 	editor
@@ -103299,9 +103299,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "teleport_lockpick,Teleport,,1.1,-1,,"
-		"OnTrigger" "fade_out,Fade,,0,-1,,"
 		"OnTrigger" "logic_reset_lockpick_2,Trigger,,1.15,-1,,"
+		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "teleport_lockpick,Teleport,,1.1,-1,,"
 	}
 	"origin" "229 -269 233"
 	editor
@@ -103318,9 +103318,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "teleport_hack,Teleport,,1.1,-1,,"
-		"OnTrigger" "fade_out,Fade,,0,-1,,"
 		"OnTrigger" "logic_reset_hack_2,Trigger,,1.15,-1,,"
+		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "teleport_hack,Teleport,,1.1,-1,,"
 	}
 	"origin" "229 -269 222"
 	editor
@@ -103443,12 +103443,12 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "trig_dialog_outside_chopshop,Disable,,0,-1,,"
-		"OnTrigger" "blueblood,Kill,,0,-1,,"
-		"OnTrigger" "blueblood_maker,Spawn,,0.2,-1,,"
-		"OnTrigger" "fire_behind_gate,TurnOff,,0,-1,,"
-		"OnTrigger" "sound_fire,StopSound,,0,-1,,"
 		"OnTrigger" "trig_popup_feed,Enable,,0,-1,,"
+		"OnTrigger" "sound_fire,StopSound,,0,-1,,"
+		"OnTrigger" "fire_behind_gate,TurnOff,,0,-1,,"
+		"OnTrigger" "blueblood_maker,Spawn,,0.2,-1,,"
+		"OnTrigger" "blueblood,Kill,,0,-1,,"
+		"OnTrigger" "trig_dialog_outside_chopshop,Disable,,0,-1,,"
 	}
 	"origin" "212 -269 255"
 	editor
@@ -103465,10 +103465,10 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" ",,,0,-1,spawnLockpicks(),"
-		"OnTrigger" "tutchopdoora,Unlock,,0,-1,,"
-		"OnTrigger" "trig_popup_jump,Enable,,0,-1,,"
 		"OnTrigger" "trigger_3,Enable,,0,-1,,"
+		"OnTrigger" "trig_popup_jump,Enable,,0,-1,,"
+		"OnTrigger" "tutchopdoora,Unlock,,0,-1,,"
+		"OnTrigger" ",,,0,-1,spawnLockpicks(),"
 	}
 	"origin" "212 -269 244"
 	editor
@@ -103485,8 +103485,8 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "office_knob,Lock,,0,-1,,"
 		"OnTrigger" "trig_popup_lockpick,Enable,,0,-1,,"
+		"OnTrigger" "office_knob,Lock,,0,-1,,"
 	}
 	"origin" "212 -269 233"
 	editor
@@ -103503,11 +103503,11 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "tutsafelock,Lock,,0.5,-1,,"
-		"OnTrigger" ",,,0,-1,spawnKeycard(),"
-		"OnTrigger" "tutdoordknob,Lock,,0,-1,,"
-		"OnTrigger" "tutdoordknob_wesp,Lock,,0,-1,,"
 		"OnTrigger" "tutsafelock,ScriptUnhide,,0,-1,,"
+		"OnTrigger" "tutdoordknob_wesp,Lock,,0,-1,,"
+		"OnTrigger" "tutdoordknob,Lock,,0,-1,,"
+		"OnTrigger" ",,,0,-1,spawnKeycard(),"
+		"OnTrigger" "tutsafelock,Lock,,0.5,-1,,"
 	}
 	"origin" "212 -269 222"
 	editor
@@ -103524,9 +103524,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "teleport_bum,Teleport,,1.1,-1,,"
-		"OnTrigger" "fade_out,Fade,,0,-1,,"
 		"OnTrigger" "logic_reset_bum_2,Trigger,,1.15,-1,,"
+		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "teleport_bum,Teleport,,1.1,-1,,"
 	}
 	"origin" "229 -269 200"
 	editor
@@ -103543,9 +103543,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "bum_maker,Spawn,,0.2,-1,,"
-		"OnTrigger" "bum,Kill,,0,-1,,"
 		"OnTrigger" "trig_popup_feed_bum,Enable,,0,-1,,"
+		"OnTrigger" "bum,Kill,,0,-1,,"
+		"OnTrigger" "bum_maker,Spawn,,0.2,-1,,"
 	}
 	"origin" "212 -269 200"
 	editor
@@ -103562,9 +103562,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "teleport_thug,Teleport,,1.1,-1,,"
-		"OnTrigger" "fade_out,Fade,,0,-1,,"
 		"OnTrigger" "logic_reset_sneak_2,Trigger,,1.15,-1,,"
+		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "teleport_thug,Teleport,,1.1,-1,,"
 	}
 	"origin" "229 -269 178"
 	editor
@@ -103581,12 +103581,12 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "fire_behind_other_gate,TurnOff,,0,-1,,"
-		"OnTrigger" "sound_fire_2,StopSound,,0,-1,,"
-		"OnTrigger" "trig_diversion,Enable,,0,-1,,"
-		"OnTrigger" "trig_popup_obfuscate,Enable,,0,-1,,"
-		"OnTrigger" "thug_1,Kill,,0,-1,,"
 		"OnTrigger" "thug_maker,Spawn,,0.2,-1,,"
+		"OnTrigger" "thug_1,Kill,,0,-1,,"
+		"OnTrigger" "trig_popup_obfuscate,Enable,,0,-1,,"
+		"OnTrigger" "trig_diversion,Enable,,0,-1,,"
+		"OnTrigger" "sound_fire_2,StopSound,,0,-1,,"
+		"OnTrigger" "fire_behind_other_gate,TurnOff,,0,-1,,"
 	}
 	"origin" "212 -269 178"
 	editor
@@ -103603,9 +103603,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "teleport_kill_thug,Teleport,,1.1,-1,,"
-		"OnTrigger" "fade_out,Fade,,0,-1,,"
 		"OnTrigger" "logic_reset_unarmed_2,Trigger,,1.15,-1,,"
+		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "teleport_kill_thug,Teleport,,1.1,-1,,"
 	}
 	"origin" "229 -269 167"
 	editor
@@ -103637,9 +103637,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "fade_out,Fade,,0,-1,,"
-		"OnTrigger" "logic_reset_back_alley_2,Trigger,,1.1,-1,,"
 		"OnTrigger" "logic_reset_back_alley_3,Trigger,,1.1,-1,,"
+		"OnTrigger" "logic_reset_back_alley_2,Trigger,,1.1,-1,,"
+		"OnTrigger" "fade_out,Fade,,0,-1,,"
 	}
 	"origin" "229 -269 211"
 	editor
@@ -103656,8 +103656,8 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "trigger_6,Enable,,0.1,-1,,"
 		"OnTrigger" "teleport_back_alley,Teleport,,0,-1,,"
+		"OnTrigger" "trigger_6,Enable,,0.1,-1,,"
 	}
 	"origin" "212 -269 211"
 	editor
@@ -103674,11 +103674,11 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "trig_popup_unarmed,Enable,,0,-1,,"
-		"OnTrigger" "thug_1,Kill,,0,-1,,"
-		"OnTrigger" "thug_maker,Spawn,,0.2,-1,,"
-		"OnTrigger" ",,,0,-1,__main__.FindPlayer().RemoveItem('item_w_tire_iron'),"
 		"OnTrigger" "trig_dialog_outside_bathroom,Disable,,0,-1,,"
+		"OnTrigger" ",,,0,-1,__main__.FindPlayer().RemoveItem('item_w_tire_iron'),"
+		"OnTrigger" "thug_maker,Spawn,,0.2,-1,,"
+		"OnTrigger" "thug_1,Kill,,0,-1,,"
+		"OnTrigger" "trig_popup_unarmed,Enable,,0,-1,,"
 	}
 	"origin" "212 -269 167"
 	editor
@@ -103723,8 +103723,8 @@ entity
 	"origin" "-807.5 230.5 53.5"
 	connections
 	{
-		"OnStartTouch" "trig_popup_unarmed,Disable,,0.2,-1,,"
 		"OnStartTouch" "popup_38,OpenWindow,,0,-1,,"
+		"OnStartTouch" "trig_popup_unarmed,Disable,,0.2,-1,,"
 	}
 	solid
 	{
@@ -103824,8 +103824,8 @@ entity
 	"origin" "-920.5 -12.5 33.5"
 	connections
 	{
-		"OnStartTouch" "trig_popup_unarmed,Disable,,0.2,-1,,"
 		"OnStartTouch" "popup_38,OpenWindow,,0,-1,,"
+		"OnStartTouch" "trig_popup_unarmed,Disable,,0.2,-1,,"
 	}
 	solid
 	{
@@ -103925,11 +103925,11 @@ entity
 	"StartHidden" "1"
 	connections
 	{
-		"OnStartTouch" "signcounter4,Add,0,0.2,-1,,"
-		"OnStartTouch" "signcounter3,Add,0,0.2,-1,,"
-		"OnStartTouch" ",,,0,-1,OnPreMelee(),"
-		"OnStartTouch" "trig_popup_melee,Disable,,0.2,-1,,"
 		"OnStartTouch" "guard_maker,Spawn,,0,-1,,"
+		"OnStartTouch" "trig_popup_melee,Disable,,0.2,-1,,"
+		"OnStartTouch" ",,,0,-1,OnPreMelee(),"
+		"OnStartTouch" "signcounter3,Add,0,0.2,-1,,"
+		"OnStartTouch" "signcounter4,Add,0,0.2,-1,,"
 	}
 	solid
 	{
@@ -104027,9 +104027,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "teleport_melee,teleport,,1.1,-1,,"
-		"OnTrigger" "fade_out,Fade,,0,-1,,"
 		"OnTrigger" "logic_reset_melee_2,Trigger,,1.15,-1,,"
+		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "teleport_melee,teleport,,1.1,-1,,"
 	}
 	"origin" "229 -269 156"
 	editor
@@ -104046,12 +104046,12 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "trig_popup_melee,Enable,,0,-1,,"
-		"OnTrigger" "trig_melee_room,Enable,,0,-1,,"
-		"OnTrigger" "guard_1,Kill,,0,-1,,"
-		"OnTrigger" "guard_maker,Spawn,,0.2,-1,,"
-		"OnTrigger" "tutware sewer door,Unlock,,0,-1,,"
 		"OnTrigger" "activisionsucks,Unlock,,0,-1,,"
+		"OnTrigger" "tutware sewer door,Unlock,,0,-1,,"
+		"OnTrigger" "guard_maker,Spawn,,0.2,-1,,"
+		"OnTrigger" "guard_1,Kill,,0,-1,,"
+		"OnTrigger" "trig_melee_room,Enable,,0,-1,,"
+		"OnTrigger" "trig_popup_melee,Enable,,0,-1,,"
 	}
 	"origin" "212 -269 156"
 	editor
@@ -104080,9 +104080,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnMapLoad" "pc_0,MakePlayerUnkillable,,0,-1,,"
-		"OnMapLoad" "Jack,WillTalk,0,0,-1,,"
 		"OnMapLoad" "world,SetNoFrenzyArea,1,0,-1,,"
+		"OnMapLoad" "Jack,WillTalk,0,0,-1,,"
+		"OnMapLoad" "pc_0,MakePlayerUnkillable,,0,-1,,"
 	}
 	"origin" "4.89872 -287 114.521"
 	editor
@@ -104116,9 +104116,9 @@ entity
 	"StartHidden" "1"
 	connections
 	{
-		"OnStartTouch" "signcounter2,Add,0,0.2,-1,,"
-		"OnStartTouch" "trig_popup_rats,Disable,,0.2,-1,,"
 		"OnStartTouch" ",,,0,-1,OnPreRats(),"
+		"OnStartTouch" "trig_popup_rats,Disable,,0.2,-1,,"
+		"OnStartTouch" "signcounter2,Add,0,0.2,-1,,"
 	}
 	solid
 	{
@@ -104295,9 +104295,9 @@ entity
 	"targetname" "trig_physics_distract"
 	connections
 	{
-		"OnStartTouch" "sound_physics_guy,PlaySound,,0,-1,,"
-		"OnStartTouch" "trig_physics_distract,Disable,,0.2,-1,,"
 		"OnStartTouch" "sPhysthug,BeginSequence,,0.75,-1,,"
+		"OnStartTouch" "trig_physics_distract,Disable,,0.2,-1,,"
+		"OnStartTouch" "sound_physics_guy,PlaySound,,0,-1,,"
 	}
 	solid
 	{
@@ -104501,9 +104501,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "teleport_stealth_kill,Teleport,,1.1,-1,,"
-		"OnTrigger" "fade_out,Fade,,0,-1,,"
 		"OnTrigger" "logic_reset_stealth_2,Trigger,,1.15,-1,,"
+		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "teleport_stealth_kill,Teleport,,1.1,-1,,"
 	}
 	"origin" "229 -269 145"
 	editor
@@ -104520,10 +104520,10 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "stealth_victim_maker,Spawn,,0.2,-1,,"
-		"OnTrigger" "stealth_victim,Kill,,0,-1,,"
-		"OnTrigger" "knob_buff,Lock,,0,-1,,"
 		"OnTrigger" "trig_popup_stealth_kill,Enable,,0,-1,,"
+		"OnTrigger" "knob_buff,Lock,,0,-1,,"
+		"OnTrigger" "stealth_victim,Kill,,0,-1,,"
+		"OnTrigger" "stealth_victim_maker,Spawn,,0.2,-1,,"
 	}
 	"origin" "212 -269 145"
 	editor
@@ -104554,9 +104554,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "teleport_physics,Teleport,,1.1,-1,,"
-		"OnTrigger" "fade_out,Fade,,0,-1,,"
 		"OnTrigger" "logic_reset_physics_2,Trigger,,1.15,-1,,"
+		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "teleport_physics,Teleport,,1.1,-1,,"
 	}
 	"origin" "229 -269 134"
 	editor
@@ -104573,13 +104573,13 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "thug_4,Kill,,0,-1,,"
-		"OnTrigger" "thug_maker_4,Spawn,,0.2,-1,,"
-		"OnTrigger" "teleport_cans,Teleport,,0,-1,,"
-		"OnTrigger" "trig_popup_physicsdisc,Enable,,0,-1,,"
-		"OnTrigger" "trig_physics_distract,Enable,,0,-1,,"
-		"OnTrigger" "tutwareportal04,Lock,,0,-1,,"
 		"OnTrigger" "trig_popup_physics,Enable,,0.5,-1,,"
+		"OnTrigger" "tutwareportal04,Lock,,0,-1,,"
+		"OnTrigger" "trig_physics_distract,Enable,,0,-1,,"
+		"OnTrigger" "trig_popup_physicsdisc,Enable,,0,-1,,"
+		"OnTrigger" "teleport_cans,Teleport,,0,-1,,"
+		"OnTrigger" "thug_maker_4,Spawn,,0.2,-1,,"
+		"OnTrigger" "thug_4,Kill,,0,-1,,"
 	}
 	"origin" "212 -269 134"
 	editor
@@ -104610,9 +104610,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "teleport_firearms,Teleport,,1.1,-1,,"
-		"OnTrigger" "fade_out,Fade,,0,-1,,"
 		"OnTrigger" "logic_reset_firearms_2,Trigger,,1.15,-1,,"
+		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "teleport_firearms,Teleport,,1.1,-1,,"
 	}
 	"origin" "229 -269 123"
 	editor
@@ -104984,9 +104984,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "teleport_rat,Teleport,,1.1,-1,,"
-		"OnTrigger" "fade_out,Fade,,0,-1,,"
 		"OnTrigger" "logic_reset_rat_2,Trigger,,1.15,-1,,"
+		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "teleport_rat,Teleport,,1.1,-1,,"
 	}
 	"origin" "229 -269 189"
 	editor
@@ -105003,9 +105003,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "trig_popup_rats,Enable,,0,-1,,"
-		"OnTrigger" "rat,Kill,,0,-1,,"
 		"OnTrigger" "ratmaker,Spawn,,0.2,-1,,"
+		"OnTrigger" "rat,Kill,,0,-1,,"
+		"OnTrigger" "trig_popup_rats,Enable,,0,-1,,"
 	}
 	"origin" "212 -269 189"
 	editor
@@ -105097,12 +105097,12 @@ entity
 	"base_gender" "1"
 	connections
 	{
-		"OnFoundPlayer" "logic_failed_thug,Trigger,,0.5,-1,,"
-		"OnDeath" ",,,0,-1,G.Tut_Aggfeed = 1,"
-		"OnDeath" "kill_check,Test,,0,-1,,"
-		"OnDeath" "trig_popup_tireiron,Enable,,0,-1,,"
-		"OnIncapacitatedStart" ",,,0,-1,G.Sabbat_Incapacitated = 1,"
 		"OnIncapacitatedEnd" ",,,0,-1,G.Sabbat_Incapacitated = 0,"
+		"OnIncapacitatedStart" ",,,0,-1,G.Sabbat_Incapacitated = 1,"
+		"OnDeath" "trig_popup_tireiron,Enable,,0,-1,,"
+		"OnDeath" "kill_check,Test,,0,-1,,"
+		"OnDeath" ",,,0,-1,G.Tut_Aggfeed = 1,"
+		"OnFoundPlayer" "logic_failed_thug,Trigger,,0.5,-1,,"
 	}
 	"origin" "-507 -109 -38"
 	editor
@@ -105134,9 +105134,9 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "logic_raid,Trigger,,0,-1,,"
-		"OnTrigger" "cam_track_1,PlayAsCameraPosition,,1,-1,,"
 		"OnTrigger" "cam_focus_1,PlayAsCameraTarget,,1,-1,,"
+		"OnTrigger" "cam_track_1,PlayAsCameraPosition,,1,-1,,"
+		"OnTrigger" "logic_raid,Trigger,,0,-1,,"
 	}
 	"origin" "216.334 17 193.571"
 	editor
@@ -105168,11 +105168,11 @@ entity
 	"origin" "-1219.5 -152 -140"
 	connections
 	{
-		"OnStartTouch" "Jack,StartPlayerDialog,,0,-1,,"
-		"OnStartTouch" "trig_dialog_give_gun,Disable,,0.5,-1,,"
-		"OnStartTouch" "tutwareportal05,Lock,,0,-1,,"
-		"OnStartTouch" "thug_4,Kill,,0,-1,,"
 		"OnStartTouch" "tutwareportal05,Close,,0,-1,,"
+		"OnStartTouch" "thug_4,Kill,,0,-1,,"
+		"OnStartTouch" "tutwareportal05,Lock,,0,-1,,"
+		"OnStartTouch" "trig_dialog_give_gun,Disable,,0.5,-1,,"
+		"OnStartTouch" "Jack,StartPlayerDialog,,0,-1,,"
 	}
 	solid
 	{
@@ -105272,8 +105272,8 @@ entity
 	"origin" "316 736 -38"
 	connections
 	{
-		"OnTrigger" "popup_22,OpenWindow,,0,-1,,"
 		"OnTrigger" "trig_popup_healing,Disable,,0.5,-1,,"
+		"OnTrigger" "popup_22,OpenWindow,,0,-1,,"
 	}
 	solid
 	{
@@ -108302,8 +108302,8 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "trackd1,PlayAsCameraPosition,,0,-1,,"
 		"OnTrigger" "focusd1,PlayAsCameraTarget,,0,-1,,"
+		"OnTrigger" "trackd1,PlayAsCameraPosition,,0,-1,,"
 	}
 	"origin" "225 665 41"
 	editor
@@ -108324,8 +108324,8 @@ entity
 	"FieldOfView" "0.9"
 	connections
 	{
-		"OnTrigger" "popup_16,OpenWindow,,0,-1,,"
 		"OnTrigger" "trig_popup_hack,Disable,,0.2,-1,,"
+		"OnTrigger" "popup_16,OpenWindow,,0,-1,,"
 	}
 	solid
 	{
@@ -108434,8 +108434,8 @@ entity
 	"FieldOfView" "0.9"
 	connections
 	{
-		"OnTrigger" "popup_18,OpenWindow,,0,-1,,"
 		"OnTrigger" "trig_popup_safe,Disable,,0.2,-1,,"
+		"OnTrigger" "popup_18,OpenWindow,,0,-1,,"
 	}
 	solid
 	{
@@ -108567,9 +108567,9 @@ entity
 	"move_dest" "331 132 132.93"
 	connections
 	{
-		"OnUseEnd" ",,,0,-1,OnSafeEnd(),"
-		"OnItemRemove" ",,,0,-1,G.Tut_Key = 1,"
 		"OnItemRemove" "trig_jack_teleport_3,Enable,,0,-1,,"
+		"OnItemRemove" ",,,0,-1,G.Tut_Key = 1,"
+		"OnUseEnd" ",,,0,-1,OnSafeEnd(),"
 	}
 	"origin" "331 132 132.929"
 	editor
@@ -108585,11 +108585,11 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "stealth_victim_maker,Spawn,,0,-1,,"
-		"OnTrigger" "script_6b,BeginSequence,,0.5,-1,,"
-		"OnTrigger" "Jack,TeleportToEntity,teleport_5,0,-1,,"
-		"OnTrigger" "activisionsucks,Unlock,,0,-1,,"
 		"OnTrigger" "activisionsucks,Open,,0.1,-1,,"
+		"OnTrigger" "activisionsucks,Unlock,,0,-1,,"
+		"OnTrigger" "Jack,TeleportToEntity,teleport_5,0,-1,,"
+		"OnTrigger" "script_6b,BeginSequence,,0.5,-1,,"
+		"OnTrigger" "stealth_victim_maker,Spawn,,0,-1,,"
 	}
 	"origin" "-910.114 551 -96.1135"
 	editor
@@ -108609,12 +108609,12 @@ entity
 	"StartHidden" "0"
 	connections
 	{
-		"OnStartTouch" "logic_noblood,Disable,,0,-1,,"
-		"OnStartTouch" "CityAmbience,Volume,10,0,-1,,"
-		"OnTrigger" "TutorialUnderground,FadeOut,,0,-1,,"
-		"OnTrigger" "Sabbat Chopshop,FadeIn,,0,-1,,"
-		"OnStartTouch" "trig_popup_shootout,Disable,,0.2,-1,,"
 		"OnStartTouch" "world,SetNoFrenzyArea,0,0,-1,,"
+		"OnStartTouch" "trig_popup_shootout,Disable,,0.2,-1,,"
+		"OnTrigger" "Sabbat Chopshop,FadeIn,,0,-1,,"
+		"OnTrigger" "TutorialUnderground,FadeOut,,0,-1,,"
+		"OnStartTouch" "CityAmbience,Volume,10,0,-1,,"
+		"OnStartTouch" "logic_noblood,Disable,,0,-1,,"
 	}
 	solid
 	{
@@ -108750,9 +108750,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "logic_random_jack_float,PickRandom,,0,-1,,"
-		"OnTrigger" "logic_hit_jack,Disable,,0.2,-1,,"
 		"OnTrigger" "logic_hit_jack,Enable,,12,-1,,"
+		"OnTrigger" "logic_hit_jack,Disable,,0.2,-1,,"
+		"OnTrigger" "logic_random_jack_float,PickRandom,,0,-1,,"
 	}
 	"origin" "-292.313 -9 69.0082"
 	editor
@@ -108770,8 +108770,8 @@ entity
 	"InitialCase" "1"
 	connections
 	{
-		"OnCase02" "logic_jack_hit_1001,Start,,0,-1,,"
 		"OnCase01" "logic_jack_hit_1006,Start,,0,-1,,"
+		"OnCase02" "logic_jack_hit_1001,Start,,0,-1,,"
 	}
 	"origin" "-290.184 -9 53.8069"
 	editor
@@ -109069,9 +109069,9 @@ entity
 	"origin" "-1535.5 468.5 -112.5"
 	connections
 	{
-		"OnTrigger" "knob_buff,Lock,,0,-1,,"
-		"OnTrigger" "logic_jack_to_stealth_door,Trigger,,0.1,-1,,"
 		"OnTrigger" "trig_in_stealth_room,Disable,,0.2,-1,,"
+		"OnTrigger" "logic_jack_to_stealth_door,Trigger,,0.1,-1,,"
+		"OnTrigger" "knob_buff,Lock,,0,-1,,"
 	}
 	solid
 	{
@@ -109171,8 +109171,8 @@ entity
 	"origin" "-1064 420 -122"
 	connections
 	{
-		"OnTrigger" "trig_in_melee_room,Disable,,0.1,-1,,"
 		"OnTrigger" "activisionsucks,Lock,,0,-1,,"
+		"OnTrigger" "trig_in_melee_room,Disable,,0.1,-1,,"
 	}
 	solid
 	{
@@ -109269,8 +109269,8 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "logic_jack_to_stealth_door,Disable,,0.1,-1,,"
 		"OnTrigger" "script_6c,BeginSequence,,0,-1,,"
+		"OnTrigger" "logic_jack_to_stealth_door,Disable,,0.1,-1,,"
 	}
 	"origin" "-1297 407.985 -66.0578"
 	editor
@@ -109289,8 +109289,8 @@ entity
 	"origin" "-1523.5 -12 -112.5"
 	connections
 	{
-		"OnTrigger" "yetanotherfuckingdoor,Lock,,0,-1,,"
 		"OnTrigger" "trig_in_physics_room,Disable,,0.1,-1,,"
+		"OnTrigger" "yetanotherfuckingdoor,Lock,,0,-1,,"
 	}
 	solid
 	{
@@ -109439,9 +109439,9 @@ entity
 	"StartHidden" "1"
 	connections
 	{
-		"OnStartTouch" ",,,0,-1,OnPostPhysics(),"
-		"OnStartTouch" "signcounter4,Add,0,0.2,-1,,"
 		"OnStartTouch" "trig_popup_physicsdisc,Disable,,0.1,-1,,"
+		"OnStartTouch" "signcounter4,Add,0,0.2,-1,,"
+		"OnStartTouch" ",,,0,-1,OnPostPhysics(),"
 	}
 	solid
 	{
@@ -109899,8 +109899,8 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "logic_failed_physics_2,Trigger,,1.1,-1,,"
 		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "logic_failed_physics_2,Trigger,,1.1,-1,,"
 	}
 	"origin" "-1554.15 287 -108.177"
 	editor
@@ -109916,14 +109916,14 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "sound_physics_guy,StopSound,,0,-1,,"
-		"OnTrigger" "trig_physics_distract,Enable,,0.3,-1,,"
-		"OnTrigger" "trig_popup_physicsdisc,Enable,,0.3,-1,,"
-		"OnTrigger" "can,Kill,,0,-1,,"
-		"OnTrigger" "thug_maker_4,Spawn,,0.25,-1,,"
-		"OnTrigger" "thug_4,Kill,,0.1,-1,,"
-		"OnTrigger" "teleport_reset_physics,Teleport,,0.1,-1,,"
 		"OnTrigger" ",,,0.1,-1,spawnCans(),"
+		"OnTrigger" "teleport_reset_physics,Teleport,,0.1,-1,,"
+		"OnTrigger" "thug_4,Kill,,0.1,-1,,"
+		"OnTrigger" "thug_maker_4,Spawn,,0.25,-1,,"
+		"OnTrigger" "can,Kill,,0,-1,,"
+		"OnTrigger" "trig_popup_physicsdisc,Enable,,0.3,-1,,"
+		"OnTrigger" "trig_physics_distract,Enable,,0.3,-1,,"
+		"OnTrigger" "sound_physics_guy,StopSound,,0,-1,,"
 	}
 	"origin" "-1554.15 287 -121"
 	editor
@@ -109953,8 +109953,8 @@ entity
 	"targetname" "logic_reset_back_alley_3"
 	connections
 	{
-		"OnTrigger" "teleport_back_alley_2,Teleport,,0,-1,,"
 		"OnTrigger" ",,,0,-1,G.Tut_Ashot = 1,"
+		"OnTrigger" "teleport_back_alley_2,Teleport,,0,-1,,"
 	}
 	"origin" "197 -269 211"
 	editor
@@ -109973,10 +109973,10 @@ entity
 	"origin" "-1723.5 141 -159"
 	connections
 	{
-		"OnEndTouch" "trig_popup_physics,Disable,,0.1,-1,,"
-		"OnEndTouch" "popup_44,OpenWindow,,0,-1,,"
-		"OnEndTouch" "guy_disc3,Kill,,0,-1,,"
 		"OnEndTouch" "yetanotherfuckingdoor,Close,,0,-1,,"
+		"OnEndTouch" "guy_disc3,Kill,,0,-1,,"
+		"OnEndTouch" "popup_44,OpenWindow,,0,-1,,"
+		"OnEndTouch" "trig_popup_physics,Disable,,0.1,-1,,"
 	}
 	solid
 	{
@@ -110073,10 +110073,10 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "explosion,Explode,,0,-1,,"
-		"OnTrigger" "fire_explosion,TurnOn,,0,-1,,"
-		"OnTrigger" "shake_explosion,StartShake,,0,-1,,"
 		"OnTrigger" "logic_sheriff,Trigger,,0,-1,,"
+		"OnTrigger" "shake_explosion,StartShake,,0,-1,,"
+		"OnTrigger" "fire_explosion,TurnOn,,0,-1,,"
+		"OnTrigger" "explosion,Explode,,0,-1,,"
 	}
 	"origin" "242.372 -9 175"
 	editor
@@ -110092,9 +110092,9 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "logic_raid_2,Trigger,,0,-1,,"
-		"OnTrigger" "cam_track_1,PlayAsCameraPosition,,1,-1,,"
 		"OnTrigger" "cam_focus_3,PlayAsCameraTarget,,1,-1,,"
+		"OnTrigger" "cam_track_1,PlayAsCameraPosition,,1,-1,,"
+		"OnTrigger" "logic_raid_2,Trigger,,0,-1,,"
 	}
 	"origin" "204 17 193.571"
 	editor
@@ -111111,9 +111111,9 @@ entity
 	"origin" "-864.5 603.5 -27"
 	connections
 	{
-		"OnStartTouch" "CityAmbience,Volume,10,0,-1,,"
-		"OnStartTouch" "TutorialUnderground,FadeOut,,0,-1,,"
 		"OnStartTouch" "City Soundscheme,FadeIn,,0,-1,,"
+		"OnStartTouch" "TutorialUnderground,FadeOut,,0,-1,,"
+		"OnStartTouch" "CityAmbience,Volume,10,0,-1,,"
 	}
 	solid
 	{
@@ -111212,9 +111212,9 @@ entity
 	"origin" "-864.5 604.5 -176.5"
 	connections
 	{
-		"OnStartTouch" "CityAmbience,StopSound,,3,-1,,"
-		"OnStartTouch" "TutorialUnderground,FadeIn,,0,-1,,"
 		"OnStartTouch" "City Soundscheme,FadeOut,,3,-1,,"
+		"OnStartTouch" "TutorialUnderground,FadeIn,,0,-1,,"
+		"OnStartTouch" "CityAmbience,StopSound,,3,-1,,"
 	}
 	solid
 	{
@@ -111361,11 +111361,11 @@ entity
 	"origin" "-208 13.5 9"
 	connections
 	{
-		"OnStartTouch" "SabbatRaidComp,Volume,7,0,-1,,"
-		"OnStartTouch" "SabbatNear,FadeOut,,0,-1,,"
-		"OnStartTouch" "Sabbat Chopshop,FadeIn,,0,-1,,"
-		"OnStartTouch" "sound_1h,Volume,6,0,-1,,"
 		"OnStartTouch" "sound_1a,Volume,3,0,-1,,"
+		"OnStartTouch" "sound_1h,Volume,6,0,-1,,"
+		"OnStartTouch" "Sabbat Chopshop,FadeIn,,0,-1,,"
+		"OnStartTouch" "SabbatNear,FadeOut,,0,-1,,"
+		"OnStartTouch" "SabbatRaidComp,Volume,7,0,-1,,"
 	}
 	solid
 	{
@@ -111565,10 +111565,10 @@ entity
 	"targetname" "SabbatAlleyChain"
 	connections
 	{
-		"OnStartTouch" "SabbatAlleyBarrel,Kill,,10,-1,,"
-		"OnStartTouch" "SabbatAlleyChainClose,Kill,,10,-1,,"
-		"OnStartTouch" "SabbatAlleyChainClose,PlaySound,,4,-1,,"
 		"OnStartTouch" "SabbatAlleyBarrel,PlaySound,,6,-1,,"
+		"OnStartTouch" "SabbatAlleyChainClose,PlaySound,,4,-1,,"
+		"OnStartTouch" "SabbatAlleyChainClose,Kill,,10,-1,,"
+		"OnStartTouch" "SabbatAlleyBarrel,Kill,,10,-1,,"
 	}
 	solid
 	{
@@ -113145,11 +113145,11 @@ entity
 	"targetname" "trigger_4"
 	connections
 	{
-		"OnStartTouch" "pc_0,RemoveDisciplinesNow,,0,-1,,"
-		"OnStartTouch" ",,,0,-1,OnJackFloat(),"
-		"OnStartTouch" "sJack_waveover,BeginSequence,,0,-1,,"
-		"OnStartTouch" "pc_0,CreateControllerNPC,,0.05,-1,,"
 		"OnStartTouch" "script_2a,BeginSequence,,0.2,-1,,"
+		"OnStartTouch" "pc_0,CreateControllerNPC,,0.05,-1,,"
+		"OnStartTouch" "sJack_waveover,BeginSequence,,0,-1,,"
+		"OnStartTouch" ",,,0,-1,OnJackFloat(),"
+		"OnStartTouch" "pc_0,RemoveDisciplinesNow,,0,-1,,"
 	}
 	solid
 	{
@@ -113246,8 +113246,8 @@ entity
 	"targetname" "logic_noblood"
 	connections
 	{
-		"OnTrigger" "popup_7,OpenWindow,,0,-1,,"
 		"OnTrigger" "counter_noblood,SetValue,0,0,-1,,"
+		"OnTrigger" "popup_7,OpenWindow,,0,-1,,"
 	}
 	"origin" "-120.629 -287 244.071"
 	editor
@@ -113300,8 +113300,8 @@ entity
 	"Case02" "2"
 	connections
 	{
-		"OnCase02" "logic_2,Trigger,,0,-1,,"
 		"OnCase01" "logic_1,Trigger,,0,-1,,"
+		"OnCase02" "logic_2,Trigger,,0,-1,,"
 	}
 	"origin" "-1102 150 -80"
 	editor
@@ -113369,12 +113369,12 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "tutwareelevdre,Close,,0,-1,,"
-		"OnTrigger" "tutwareelevdrf,Close,,0,-1,,"
-		"OnTrigger" "tutwareelevdrc,Close,,0,-1,,"
-		"OnTrigger" "tutwareelevdrd,Close,,0,-1,,"
-		"OnTrigger" "tutwareelevdrb,Close,,0,-1,,"
 		"OnTrigger" "tutwareelevdra,Close,,0,-1,,"
+		"OnTrigger" "tutwareelevdrb,Close,,0,-1,,"
+		"OnTrigger" "tutwareelevdrd,Close,,0,-1,,"
+		"OnTrigger" "tutwareelevdrc,Close,,0,-1,,"
+		"OnTrigger" "tutwareelevdrf,Close,,0,-1,,"
+		"OnTrigger" "tutwareelevdre,Close,,0,-1,,"
 	}
 	"origin" "-1040.03 151 -119.593"
 	editor
@@ -113409,10 +113409,10 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnOpen" "tutware sewer door,Lock,,0,-1,,"
-		"OnOpen" "trig_in_melee_room,Disable,,0,-1,,"
-		"OnFullyClosed" "logic_enable_in_melee,Trigger,,0,-1,,"
 		"OnOpen" "logic_spawn_melee,Trigger,,0,-1,,"
+		"OnFullyClosed" "logic_enable_in_melee,Trigger,,0,-1,,"
+		"OnOpen" "trig_in_melee_room,Disable,,0,-1,,"
+		"OnOpen" "tutware sewer door,Lock,,0,-1,,"
 	}
 	solid
 	{
@@ -113690,8 +113690,8 @@ entity
 	"base_gender" "1"
 	connections
 	{
-		"OnDialogEnd" ",,,1,-1,testGuard(),"
 		"OnDamaged" "Tutorial_Security_Guard,SetRelationship,player D_HT 5,0,-1,,"
+		"OnDialogEnd" ",,,1,-1,testGuard(),"
 	}
 	"origin" "-788 360 -200"
 	editor
@@ -113720,9 +113720,9 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "talkguy_maker,Spawn,,0,-1,,"
-		"OnTrigger" "sTalkguy,BeginSequence,,0.1,-1,,"
 		"OnTrigger" "plus_logic_talkguy,Disable,,0.5,-1,,"
+		"OnTrigger" "sTalkguy,BeginSequence,,0.1,-1,,"
+		"OnTrigger" "talkguy_maker,Spawn,,0,-1,,"
 	}
 	"origin" "-777.841 631 -131.802"
 	editor
@@ -113742,10 +113742,10 @@ entity
 	"StartHidden" "0"
 	connections
 	{
-		"OnStartTouch" "trig_talkguy,Disable,,0.5,-1,,"
-		"OnStartTouch" "sTalkguy,CancelSequence,,0,-1,,"
-		"OnStartTouch" "sTalkguy_turn,BeginSequence,,0.2,-1,,"
 		"OnStartTouch" "Tutorial_Security_Guard,StartPlayerDialogRemote,,1,-1,,"
+		"OnStartTouch" "sTalkguy_turn,BeginSequence,,0.2,-1,,"
+		"OnStartTouch" "sTalkguy,CancelSequence,,0,-1,,"
+		"OnStartTouch" "trig_talkguy,Disable,,0.5,-1,,"
 	}
 	solid
 	{
@@ -113886,9 +113886,9 @@ entity
 	"radius" "10"
 	connections
 	{
-		"OnEndSequence" "sTalkguy_engage,BeginSequence,,2.6,-1,,"
-		"OnBeginSequence" "controller,CreateControllerNPC,,0,-1,,"
 		"OnBeginSequence" "feedcamera,StartShot,,0,-1,,"
+		"OnBeginSequence" "controller,CreateControllerNPC,,0,-1,,"
+		"OnEndSequence" "sTalkguy_engage,BeginSequence,,2.6,-1,,"
 	}
 	"origin" "-940 400 -200"
 	editor
@@ -113994,13 +113994,13 @@ entity
 	"radius" "10"
 	connections
 	{
-		"OnEndSequence" ",,,0,-1,G.Sabbat_Kills = 1,"
-		"OnEndSequence" ",,,0,-1,civilianDeath(),"
-		"OnBeginSequence" "Tutorial_Security_Guard,TakeDamage,100,0,-1,,"
-		"OnEndSequence" "controller,RemoveControllerNPC,,0,-1,,"
-		"OnEndSequence" "feedcamera,EndShot,,0,-1,,"
-		"OnBeginSequence" "sTalkguy_sound1,PlaySound,,0,-1,,"
 		"OnBeginSequence" "sTalkguy_sound2,PlaySound,,0.2,-1,,"
+		"OnBeginSequence" "sTalkguy_sound1,PlaySound,,0,-1,,"
+		"OnEndSequence" "feedcamera,EndShot,,0,-1,,"
+		"OnEndSequence" "controller,RemoveControllerNPC,,0,-1,,"
+		"OnBeginSequence" "Tutorial_Security_Guard,TakeDamage,100,0,-1,,"
+		"OnEndSequence" ",,,0,-1,civilianDeath(),"
+		"OnEndSequence" ",,,0,-1,G.Sabbat_Kills = 1,"
 	}
 	"origin" "-1140 400 -200"
 	editor
@@ -114246,9 +114246,9 @@ entity
 	"NextKey" "focusc2"
 	connections
 	{
-		"OnAnimationCompleted" "lockpicks_brush,ScriptHide,,0,-1,,"
-		"OnAnimationCompleted" "focusc1,RestoreCameraToPlayerControl,0.50,1,-1,,"
 		"OnAnimationCompleted" "popup_9,OpenWindow,9,0.5,-1,,"
+		"OnAnimationCompleted" "focusc1,RestoreCameraToPlayerControl,0.50,1,-1,,"
+		"OnAnimationCompleted" "lockpicks_brush,ScriptHide,,0,-1,,"
 	}
 	"origin" "55 443 154"
 	editor
@@ -114304,10 +114304,10 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnOpen" "logic_check_disc2,Trigger,,0,-1,,"
-		"OnFullyClosed" "logic_enable_that_room,Trigger,,0,-1,,"
-		"OnOpen" "trig_in_that_room,Disable,,0,-1,,"
 		"OnOpen" "logic_spawn_disc3,Trigger,,0,-1,,"
+		"OnOpen" "trig_in_that_room,Disable,,0,-1,,"
+		"OnFullyClosed" "logic_enable_that_room,Trigger,,0,-1,,"
+		"OnOpen" "logic_check_disc2,Trigger,,0,-1,,"
 	}
 	solid
 	{
@@ -114609,9 +114609,9 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnOpen" "logic_check_disc3,Trigger,,0,-1,,"
-		"OnFullyClosed" "logic_enable_in_physics,Trigger,,0,-1,,"
 		"OnOpen" "trig_in_physics_room,Disable,,0,-1,,"
+		"OnFullyClosed" "logic_enable_in_physics,Trigger,,0,-1,,"
+		"OnOpen" "logic_check_disc3,Trigger,,0,-1,,"
 	}
 	solid
 	{
@@ -115003,8 +115003,8 @@ entity
 	"origin" "-2008 615.5 -108"
 	connections
 	{
-		"OnTrigger" "trig_in_this_room,Disable,,0.2,-1,,"
 		"OnTrigger" "tutwareportal04,Lock,,0,-1,,"
+		"OnTrigger" "trig_in_this_room,Disable,,0.2,-1,,"
 	}
 	solid
 	{
@@ -115120,8 +115120,8 @@ entity
 	"targetname" "trig_in_that_room"
 	connections
 	{
-		"OnTrigger" "trig_in_that_room,Disable,,0.1,-1,,"
 		"OnTrigger" "anotherfuckingtutorialdoor,Lock,,0,-1,,"
+		"OnTrigger" "trig_in_that_room,Disable,,0.1,-1,,"
 	}
 	solid
 	{
@@ -115237,8 +115237,8 @@ entity
 	"targetname" "trig_popup_inspection"
 	connections
 	{
-		"OnTrigger" "trig_popup_inspection,Disable,,0.2,-1,,"
 		"OnTrigger" "signcounter,Add,0,0,-1,,"
+		"OnTrigger" "trig_popup_inspection,Disable,,0.2,-1,,"
 	}
 	solid
 	{
@@ -115340,8 +115340,8 @@ entity
 	"origin" "319 175 148"
 	connections
 	{
-		"OnTrigger" "popup_20,OpenWindow,,0,-1,,"
 		"OnTrigger" "trig_popup_note,Disable,,0.5,-1,,"
+		"OnTrigger" "popup_20,OpenWindow,,0,-1,,"
 	}
 	solid
 	{
@@ -115433,9 +115433,9 @@ entity
 	"wait" "1"
 	connections
 	{
-		"OnTrigger" "trig_popup_masquerade,Disable,,0.5,-1,,"
-		"OnTrigger" "signcounter,Add,0,0,-1,,"
 		"OnTrigger" "signcounter2,Add,0,0,-1,,"
+		"OnTrigger" "signcounter,Add,0,0,-1,,"
+		"OnTrigger" "trig_popup_masquerade,Disable,,0.5,-1,,"
 	}
 	solid
 	{
@@ -115532,9 +115532,9 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "sabbat_redshirt_5,ScriptUnhide,,0,-1,,"
-		"OnTrigger" "sabbat_redshirt_4,ScriptUnhide,,0,-1,,"
 		"OnTrigger" "logic_unhide_sabbat,Disable,,0.5,-1,,"
+		"OnTrigger" "sabbat_redshirt_4,ScriptUnhide,,0,-1,,"
+		"OnTrigger" "sabbat_redshirt_5,ScriptUnhide,,0,-1,,"
 	}
 	"origin" "176.557 567 198.059"
 	editor
@@ -115553,9 +115553,9 @@ entity
 	"targetname" "trig_popup_disc1"
 	connections
 	{
-		"OnEndTouch" "trig_popup_disc1,Disable,,0.5,-1,,"
-		"OnEndTouch" "popup_37,OpenWindow,,0,-1,,"
 		"OnEndTouch" "tutwareportal03,Close,,0,-1,,"
+		"OnEndTouch" "popup_37,OpenWindow,,0,-1,,"
+		"OnEndTouch" "trig_popup_disc1,Disable,,0.5,-1,,"
 	}
 	solid
 	{
@@ -115655,9 +115655,9 @@ entity
 	"targetname" "trig_popup_disc2"
 	connections
 	{
-		"OnTrigger" "trig_popup_disc2,Disable,,0.5,-1,,"
-		"OnTrigger" "popup_40,OpenWindow,,0,-1,,"
 		"OnTrigger" "tutwareportal04,Close,,0,-1,,"
+		"OnTrigger" "popup_40,OpenWindow,,0,-1,,"
+		"OnTrigger" "trig_popup_disc2,Disable,,0.5,-1,,"
 	}
 	solid
 	{
@@ -115757,10 +115757,10 @@ entity
 	"origin" "-2049.5 245.5 -148"
 	connections
 	{
-		"OnTrigger" "trig_popup_disc3,Disable,,0.5,-1,,"
-		"OnTrigger" "popup_42,OpenWindow,,0,-1,,"
-		"OnTrigger" "guy_disc2,Kill,,0,-1,,"
 		"OnTrigger" "anotherfuckingtutorialdoor,Close,,0,-1,,"
+		"OnTrigger" "guy_disc2,Kill,,0,-1,,"
+		"OnTrigger" "popup_42,OpenWindow,,0,-1,,"
+		"OnTrigger" "trig_popup_disc3,Disable,,0.5,-1,,"
 	}
 	solid
 	{
@@ -115857,9 +115857,9 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "sound_fire_2,StopSound,,0,-1,,"
-		"OnTrigger" "guard_maker,Spawn,,0,-1,,"
 		"OnTrigger" "logic_spawn_melee,Disable,,0.5,-1,,"
+		"OnTrigger" "guard_maker,Spawn,,0,-1,,"
+		"OnTrigger" "sound_fire_2,StopSound,,0,-1,,"
 	}
 	"origin" "-815 453.688 -114.281"
 	editor
@@ -115877,10 +115877,10 @@ entity
 	"origin" "-868.5 415.5 -148"
 	connections
 	{
-		"OnEndTouch" "popup_10,OpenWindow,,0,-1,,"
-		"OnEndTouch" "guard_1,TweakParam,vision 540,0,-1,,"
-		"OnEndTouch" "trig_popup_stealth,Disable,,0.5,-1,,"
 		"OnEndTouch" "activisionsucks,Close,,0,-1,,"
+		"OnEndTouch" "trig_popup_stealth,Disable,,0.5,-1,,"
+		"OnEndTouch" "guard_1,TweakParam,vision 540,0,-1,,"
+		"OnEndTouch" "popup_10,OpenWindow,,0,-1,,"
 	}
 	solid
 	{
@@ -116073,10 +116073,10 @@ entity
 	"base_gender" "1"
 	connections
 	{
-		"OnDeath" "disc2_count_1,Add,1,0,-1,,"
-		"OnDeath" "disc2_count_2,Add,1,0,-1,,"
-		"OnFoundPlayer" "logic_disc2_found,Trigger,,0,-1,,"
 		"OnDeath" "logic_enable_this_room,Disable,,0,-1,,"
+		"OnFoundPlayer" "logic_disc2_found,Trigger,,0,-1,,"
+		"OnDeath" "disc2_count_2,Add,1,0,-1,,"
+		"OnDeath" "disc2_count_1,Add,1,0,-1,,"
 	}
 	"origin" "-2105 765 -191"
 	editor
@@ -116092,14 +116092,14 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "disc2_maker,Spawn,,0,-1,,"
-		"OnTrigger" "logic_spawn_disc2,Disable,,0.5,-1,,"
-		"OnTrigger" "guy_disc2,SetupPatrolType,9999 0 FOLLOW_PATROL_PATH_WALK,0.15,-1,,"
-		"OnTrigger" "guy_disc2,FollowPatrolPath,B1 B2 B3 B4,0.25,-1,,"
-		"OnTrigger" "guy_disc2_2,FollowPatrolPath,B3 B4 B1 B2,0.25,-1,,"
-		"OnTrigger" "guy_disc2_2,SetupPatrolType,9999 0 FOLLOW_PATROL_PATH_WALK,0.15,-1,,"
-		"OnTrigger" "guy_disc2_2,ScriptUnhide,,0.1,-1,,"
 		"OnTrigger" "guy_disc2,ScriptUnhide,,0.1,-1,,"
+		"OnTrigger" "guy_disc2_2,ScriptUnhide,,0.1,-1,,"
+		"OnTrigger" "guy_disc2_2,SetupPatrolType,9999 0 FOLLOW_PATROL_PATH_WALK,0.15,-1,,"
+		"OnTrigger" "guy_disc2_2,FollowPatrolPath,B3 B4 B1 B2,0.25,-1,,"
+		"OnTrigger" "guy_disc2,FollowPatrolPath,B1 B2 B3 B4,0.25,-1,,"
+		"OnTrigger" "guy_disc2,SetupPatrolType,9999 0 FOLLOW_PATROL_PATH_WALK,0.15,-1,,"
+		"OnTrigger" "logic_spawn_disc2,Disable,,0.5,-1,,"
+		"OnTrigger" "disc2_maker,Spawn,,0,-1,,"
 	}
 	"origin" "-1777 582 -120.064"
 	editor
@@ -116115,8 +116115,8 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "logic_reset_disc2_2,Trigger,,1.1,-1,,"
 		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "logic_reset_disc2_2,Trigger,,1.1,-1,,"
 	}
 	"origin" "-1777 582 -88"
 	editor
@@ -116198,9 +116198,9 @@ entity
 	"base_gender" "1"
 	connections
 	{
-		"OnDeath" "disc3_count_2,Add,1,0,-1,,"
-		"OnFoundPlayer" "logic_disc3_found,Trigger,,0,-1,,"
 		"OnDeath" "disc3_count_1,Add,1,0,-1,,"
+		"OnFoundPlayer" "logic_disc3_found,Trigger,,0,-1,,"
+		"OnDeath" "disc3_count_2,Add,1,0,-1,,"
 	}
 	"origin" "-1992 -97 -191"
 	editor
@@ -116217,9 +116217,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "disc3_maker,Spawn,,0,-1,,"
-		"OnTrigger" "logic_spawn_disc3,Disable,,0.5,-1,,"
 		"OnTrigger" "guy_disc3,ScriptUnhide,,0.25,-1,,"
+		"OnTrigger" "logic_spawn_disc3,Disable,,0.5,-1,,"
+		"OnTrigger" "disc3_maker,Spawn,,0,-1,,"
 	}
 	"origin" "-2034 295 -105.754"
 	editor
@@ -116235,15 +116235,15 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" ",,,0,-1,ResetDiscBlood(),"
-		"OnTrigger" "pc_0,RemoveDisciplines,,0,-1,,"
-		"OnTrigger" "logic_spawn_disc3,Trigger,,0.2,-1,,"
-		"OnTrigger" "logic_spawn_disc3,Enable,,0,-1,,"
-		"OnTrigger" "teleport_disc3,Teleport,,0,-1,,"
-		"OnTrigger" "trig_popup_disc3,Enable,,0,-1,,"
-		"OnTrigger" ",,,0,-1,G.Tutorial_Discflags = 0,"
-		"OnTrigger" "disc3_count_1,SetValue,0,0,-1,,"
 		"OnTrigger" "disc3_count_2,SetValue,0,0,-1,,"
+		"OnTrigger" "disc3_count_1,SetValue,0,0,-1,,"
+		"OnTrigger" ",,,0,-1,G.Tutorial_Discflags = 0,"
+		"OnTrigger" "trig_popup_disc3,Enable,,0,-1,,"
+		"OnTrigger" "teleport_disc3,Teleport,,0,-1,,"
+		"OnTrigger" "logic_spawn_disc3,Enable,,0,-1,,"
+		"OnTrigger" "logic_spawn_disc3,Trigger,,0.2,-1,,"
+		"OnTrigger" "pc_0,RemoveDisciplines,,0,-1,,"
+		"OnTrigger" ",,,0,-1,ResetDiscBlood(),"
 	}
 	"origin" "-2034 295 -89"
 	editor
@@ -116262,8 +116262,8 @@ entity
 	"origin" "-1255.5 370 -148"
 	connections
 	{
-		"OnTrigger" "trig_popup_buff,Disable,,0.5,-1,,"
 		"OnTrigger" "popup_34,OpenWindow,,0,-1,,"
+		"OnTrigger" "trig_popup_buff,Disable,,0.5,-1,,"
 	}
 	solid
 	{
@@ -116424,8 +116424,8 @@ entity
 	"targetname" "trig_more_ammo"
 	connections
 	{
-		"OnStartTouch" "ammo_container,DeleteItems,,0,-1,,"
 		"OnStartTouch" "ammo_container,SpawnItemInContainer,item_w_thirtyeight,0.1,-1,,"
+		"OnStartTouch" "ammo_container,DeleteItems,,0,-1,,"
 	}
 	solid
 	{
@@ -116535,9 +116535,9 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnHealthChanged" "gun_clip,ScriptHide,,0,-1,,"
-		"OnHealthChanged" "trig_popup_shoot,ScriptHide,,0,-1,,"
 		"OnHealthChanged" "popup_45,Kill,,0,-1,,"
+		"OnHealthChanged" "trig_popup_shoot,ScriptHide,,0,-1,,"
+		"OnHealthChanged" "gun_clip,ScriptHide,,0,-1,,"
 	}
 	"origin" "-1223.4 280 -172"
 	editor
@@ -117259,10 +117259,10 @@ entity
 	"base_gender" "1"
 	connections
 	{
-		"OnDeath" "disc2_count_2,Add,1,0,-1,,"
-		"OnDeath" "disc2_count_1,Add,1,0,-1,,"
-		"OnFoundPlayer" "logic_disc2_found,Trigger,,0,-1,,"
 		"OnDeath" "logic_enable_this_room,Disable,,0,-1,,"
+		"OnFoundPlayer" "logic_disc2_found,Trigger,,0,-1,,"
+		"OnDeath" "disc2_count_1,Add,1,0,-1,,"
+		"OnDeath" "disc2_count_2,Add,1,0,-1,,"
 	}
 	"origin" "-1960 545 -191"
 	editor
@@ -117345,9 +117345,9 @@ entity
 	"base_gender" "1"
 	connections
 	{
-		"OnDeath" "disc3_count_2,Add,1,0,-1,,"
-		"OnFoundPlayer" "logic_disc3_found,Trigger,,0,-1,,"
 		"OnDeath" "disc3_count_1,Add,1,0,-1,,"
+		"OnFoundPlayer" "logic_disc3_found,Trigger,,0,-1,,"
+		"OnDeath" "disc3_count_2,Add,1,0,-1,,"
 	}
 	"origin" "-1914 -16 -191"
 	editor
@@ -117363,8 +117363,8 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" ",,,0,1,SetClanPopups(),"
 		"OnTrigger" ",,,0,-1,OnDiscGuys(),"
+		"OnTrigger" ",,,0,1,SetClanPopups(),"
 	}
 	"origin" "-815 454 -99.4156"
 	editor
@@ -117481,8 +117481,8 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "logic_failed_stealth_kill_2,Trigger,,1.1,-1,,"
 		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "logic_failed_stealth_kill_2,Trigger,,1.1,-1,,"
 	}
 	"origin" "-841 464.864 -113.808"
 	editor
@@ -117671,9 +117671,9 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnHealthChanged" "gun_clip,ScriptHide,,0,-1,,"
-		"OnHealthChanged" "trig_popup_shoot,ScriptHide,,0,-1,,"
 		"OnHealthChanged" "popup_45,Kill,,0,-1,,"
+		"OnHealthChanged" "trig_popup_shoot,ScriptHide,,0,-1,,"
+		"OnHealthChanged" "gun_clip,ScriptHide,,0,-1,,"
 	}
 	"origin" "-1227 280 -172"
 	editor
@@ -117702,9 +117702,9 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnHealthChanged" "gun_clip,ScriptHide,,0,-1,,"
-		"OnHealthChanged" "trig_popup_shoot,ScriptHide,,0,-1,,"
 		"OnHealthChanged" "popup_45,Kill,,0,-1,,"
+		"OnHealthChanged" "trig_popup_shoot,ScriptHide,,0,-1,,"
+		"OnHealthChanged" "gun_clip,ScriptHide,,0,-1,,"
 	}
 	"origin" "-1231 280 -172"
 	editor
@@ -117733,9 +117733,9 @@ entity
 	"rendercolor" "255 255 255"
 	connections
 	{
-		"OnHealthChanged" "gun_clip,ScriptHide,,0,-1,,"
-		"OnHealthChanged" "trig_popup_shoot,ScriptHide,,0,-1,,"
 		"OnHealthChanged" "popup_45,Kill,,0,-1,,"
+		"OnHealthChanged" "trig_popup_shoot,ScriptHide,,0,-1,,"
+		"OnHealthChanged" "gun_clip,ScriptHide,,0,-1,,"
 	}
 	"origin" "-1220 280 -172"
 	editor
@@ -117751,8 +117751,8 @@ entity
 	"targetname" "logic_reset_disc3"
 	connections
 	{
-		"OnTrigger" "logic_reset_disc3_2,Trigger,,1,-1,,"
 		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "logic_reset_disc3_2,Trigger,,1,-1,,"
 	}
 	"origin" "-2081 295 -75"
 	editor
@@ -117837,17 +117837,17 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" ",,,0,-1,ResetDiscBlood(),"
-		"OnTrigger" "pc_0,RemoveDisciplines,,0,-1,,"
-		"OnTrigger" "logic_check_disc2,Enable,,0,-1,,"
-		"OnTrigger" "teleport_disc2,Teleport,,0,-1,,"
-		"OnTrigger" "trig_popup_disc2,Enable,,0,-1,,"
-		"OnTrigger" "logic_spawn_disc2,Enable,,0,-1,,"
-		"OnTrigger" "logic_spawn_disc2,Trigger,,0.2,-1,,"
-		"OnTrigger" "disc2_count_1,SetValue,0,0,-1,,"
-		"OnTrigger" "disc2_count_2,SetValue,0,0,-1,,"
-		"OnTrigger" ",,,0,-1,G.Tutorial_Discflags = 0,"
 		"OnTrigger" "guy_disc2,Kill,,0,-1,,"
+		"OnTrigger" ",,,0,-1,G.Tutorial_Discflags = 0,"
+		"OnTrigger" "disc2_count_2,SetValue,0,0,-1,,"
+		"OnTrigger" "disc2_count_1,SetValue,0,0,-1,,"
+		"OnTrigger" "logic_spawn_disc2,Trigger,,0.2,-1,,"
+		"OnTrigger" "logic_spawn_disc2,Enable,,0,-1,,"
+		"OnTrigger" "trig_popup_disc2,Enable,,0,-1,,"
+		"OnTrigger" "teleport_disc2,Teleport,,0,-1,,"
+		"OnTrigger" "logic_check_disc2,Enable,,0,-1,,"
+		"OnTrigger" "pc_0,RemoveDisciplines,,0,-1,,"
+		"OnTrigger" ",,,0,-1,ResetDiscBlood(),"
 	}
 	"origin" "-1777 571 -88"
 	editor
@@ -117954,8 +117954,8 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "logic_reset_disc1_2,Trigger,,1.1,-1,,"
 		"OnTrigger" "fade_out,Fade,,0,-1,,"
+		"OnTrigger" "logic_reset_disc1_2,Trigger,,1.1,-1,,"
 	}
 	"origin" "-1297 414.3 -90.7899"
 	editor
@@ -117971,15 +117971,15 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" ",,,0,-1,ResetDiscBlood(),"
-		"OnTrigger" "pc_0,RemoveDisciplines,,0,-1,,"
-		"OnTrigger" "tutwareportal03,Lock,,0,-1,,"
-		"OnTrigger" "trig_popup_disc1,Enable,,0,-1,,"
-		"OnTrigger" "stealth_victim_maker,Spawn,,0.1,-1,,"
-		"OnTrigger" "teleport_stealth_kill,Teleport,,0,-1,,"
-		"OnTrigger" ",,,0,-1,G.Tutorial_Discflags = 0,"
-		"OnTrigger" "stealth_victim_maker,Spawn,,3,-1,,"
 		"OnTrigger" "stealth_victim,Kill,,0,-1,,"
+		"OnTrigger" "stealth_victim_maker,Spawn,,3,-1,,"
+		"OnTrigger" ",,,0,-1,G.Tutorial_Discflags = 0,"
+		"OnTrigger" "teleport_stealth_kill,Teleport,,0,-1,,"
+		"OnTrigger" "stealth_victim_maker,Spawn,,0.1,-1,,"
+		"OnTrigger" "trig_popup_disc1,Enable,,0,-1,,"
+		"OnTrigger" "tutwareportal03,Lock,,0,-1,,"
+		"OnTrigger" "pc_0,RemoveDisciplines,,0,-1,,"
+		"OnTrigger" ",,,0,-1,ResetDiscBlood(),"
 	}
 	"origin" "-1297 402 -90.7899"
 	editor
@@ -118030,9 +118030,9 @@ entity
 	"itemname" "item_w_tire_iron"
 	connections
 	{
-		"OnPlayerHasItem" "trig_popup_tireiron_check,Disable,,0,-1,,"
-		"OnPlayerHasItem" "trig_popup_tireiron,Disable,,0.5,-1,,"
 		"OnPlayerHasItem" "popup_35,OpenWindow,,0,-1,,"
+		"OnPlayerHasItem" "trig_popup_tireiron,Disable,,0.5,-1,,"
+		"OnPlayerHasItem" "trig_popup_tireiron_check,Disable,,0,-1,,"
 	}
 	solid
 	{
@@ -118132,8 +118132,8 @@ entity
 	"wait" "1"
 	connections
 	{
-		"OnTrigger" "trig_popup_tireiron_check,Disable,,0.25,-1,,"
 		"OnTrigger" "trig_popup_tireiron_check,Enable,,0,-1,,"
+		"OnTrigger" "trig_popup_tireiron_check,Disable,,0.25,-1,,"
 	}
 	solid
 	{
@@ -118349,15 +118349,15 @@ entity
 	"full_sound" "1"
 	connections
 	{
-		"OnCompletion" "logic_alley_cleanup,Trigger,,0,-1,,"
-		"OnCompletion" "Jack V Sabbat SFX,StopSound,,0,-1,,"
-		"OnTrigger1" "Jack,SetScriptedDiscipline,potence 5,0,-1,,"
-		"OnTrigger1" "timer_muzzle_flash_2,Enable,,0,-1,,"
-		"OnTrigger2" "timer_muzzle_flash_2,Disable,,0,-1,,"
-		"OnTrigger2" "potenced_emitter,TurnOn,,0,-1,,"
-		"" "Jack,SetScriptedDiscipline,celerity 1,0,-1,,"
-		"" "Jack,SetScriptedDiscipline,celerity 0,0,-1,,"
 		"OnTrigger2" "Jack,SetScriptedDiscipline,potence 0,0,-1,,"
+		"" "Jack,SetScriptedDiscipline,celerity 0,0,-1,,"
+		"" "Jack,SetScriptedDiscipline,celerity 1,0,-1,,"
+		"OnTrigger2" "potenced_emitter,TurnOn,,0,-1,,"
+		"OnTrigger2" "timer_muzzle_flash_2,Disable,,0,-1,,"
+		"OnTrigger1" "timer_muzzle_flash_2,Enable,,0,-1,,"
+		"OnTrigger1" "Jack,SetScriptedDiscipline,potence 5,0,-1,,"
+		"OnCompletion" "Jack V Sabbat SFX,StopSound,,0,-1,,"
+		"OnCompletion" "logic_alley_cleanup,Trigger,,0,-1,,"
 	}
 	"origin" "-394 747 -38"
 	editor
@@ -119884,17 +119884,17 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "Jack V Sabbat SFX,PlaySound,,0,-1,,"
-		"OnTrigger" "logic_alley_damage,Trigger,,0,-1,,"
-		"OnTrigger" "knife,ScriptUnhide,,0,-1,,"
-		"OnTrigger" "timer_muzzle_flash_3,Enable,,0,-1,,"
-		"OnTrigger" "timer_muzzle_flash_3,Disable,,2,-1,,"
-		"OnTrigger" "logic_jack_vs_sabbat,Start,,0,-1,,"
-		"OnTrigger" "logic_alley_cams,Trigger,,0,-1,,"
-		"OnTrigger" "trig_player_shot,Enable,,0.75,-1,,"
-		"OnTrigger" "trig_player_shot,Disable,,5.9,-1,,"
-		"OnTrigger" "logic_alley_sounds,Trigger,,0,-1,,"
 		"OnTrigger" "knife,Kill,,5.67,-1,,"
+		"OnTrigger" "logic_alley_sounds,Trigger,,0,-1,,"
+		"OnTrigger" "trig_player_shot,Disable,,5.9,-1,,"
+		"OnTrigger" "trig_player_shot,Enable,,0.75,-1,,"
+		"OnTrigger" "logic_alley_cams,Trigger,,0,-1,,"
+		"OnTrigger" "logic_jack_vs_sabbat,Start,,0,-1,,"
+		"OnTrigger" "timer_muzzle_flash_3,Disable,,2,-1,,"
+		"OnTrigger" "timer_muzzle_flash_3,Enable,,0,-1,,"
+		"OnTrigger" "knife,ScriptUnhide,,0,-1,,"
+		"OnTrigger" "logic_alley_damage,Trigger,,0,-1,,"
+		"OnTrigger" "Jack V Sabbat SFX,PlaySound,,0,-1,,"
 	}
 	"origin" "225 665 26"
 	editor
@@ -120118,12 +120118,12 @@ entity
 	"StartDisabled" "1"
 	connections
 	{
-		"OnTrigger" "tutwareelevdrc,Kill,,0,-1,,"
-		"OnTrigger" "elev_button_1,Kill,,0,-1,,"
-		"OnTrigger" "elev_button_2,Kill,,0,-1,,"
-		"OnTrigger" "tutwareelevdrd,Kill,,0,-1,,"
-		"OnTrigger" "tutwareelevdre,Kill,,0,-1,,"
 		"OnTrigger" "tutwareelevdrf,Kill,,0,-1,,"
+		"OnTrigger" "tutwareelevdre,Kill,,0,-1,,"
+		"OnTrigger" "tutwareelevdrd,Kill,,0,-1,,"
+		"OnTrigger" "elev_button_2,Kill,,0,-1,,"
+		"OnTrigger" "elev_button_1,Kill,,0,-1,,"
+		"OnTrigger" "tutwareelevdrc,Kill,,0,-1,,"
 	}
 	"origin" "-1136.18 185 45.4341"
 	editor
@@ -120191,17 +120191,17 @@ entity
 	"targetname" "logic_alley_sounds"
 	connections
 	{
-		"OnTrigger" "sound_thugs_w_guns,StopSound,,10,-1,,"
-		"OnTrigger" "SabbatAlleyFuck,StopSound,,10,-1,,"
-		"OnTrigger" "sound_mac10,PlaySound,,0,-1,,"
-		"OnTrigger" "SchemeSabbatAlley,FadeIn,,0,-1,,"
-		"OnTrigger" "Sabbat Chopshop,FadeOut,,0,-1,,"
-		"OnTrigger" "SabbatAlleyFuck,PlaySound,,1,-1,,"
-		"OnTrigger" "CityAmbience,Volume,6,0,-1,,"
-		"OnTrigger" "sound_thugs_w_guns,PlaySound,,0,-1,,"
-		"OnTrigger" "sound_mac10,StopSound,,7,-1,,"
-		"OnTrigger" "sound_mac10,PlaySound,,9.1,-1,,"
 		"OnTrigger" "sound_mac10,StopSound,,9.6,-1,,"
+		"OnTrigger" "sound_mac10,PlaySound,,9.1,-1,,"
+		"OnTrigger" "sound_mac10,StopSound,,7,-1,,"
+		"OnTrigger" "sound_thugs_w_guns,PlaySound,,0,-1,,"
+		"OnTrigger" "CityAmbience,Volume,6,0,-1,,"
+		"OnTrigger" "SabbatAlleyFuck,PlaySound,,1,-1,,"
+		"OnTrigger" "Sabbat Chopshop,FadeOut,,0,-1,,"
+		"OnTrigger" "SchemeSabbatAlley,FadeIn,,0,-1,,"
+		"OnTrigger" "sound_mac10,PlaySound,,0,-1,,"
+		"OnTrigger" "SabbatAlleyFuck,StopSound,,10,-1,,"
+		"OnTrigger" "sound_thugs_w_guns,StopSound,,10,-1,,"
 	}
 	"origin" "215 665 12"
 	editor
@@ -120234,8 +120234,8 @@ entity
 	"target" "point_door"
 	connections
 	{
-		"OnTrigger" "trig_popup_use,Disable,,0.2,-1,,"
 		"OnTrigger" "popup_6,OpenWindow,,0,-1,,"
+		"OnTrigger" "trig_popup_use,Disable,,0.2,-1,,"
 	}
 	solid
 	{
@@ -120564,8 +120564,8 @@ entity
 	"pause" "1"
 	connections
 	{
-		"OnUseEnd" "trig_popup_note,Enable,,0,-1,,"
 		"OnUseEnd" "trig_popup_hack,Enable,,0,-1,,"
+		"OnUseEnd" "trig_popup_note,Enable,,0,-1,,"
 	}
 	"origin" "0 0 0"
 	editor
@@ -120885,8 +120885,8 @@ entity
 	"pause" "1"
 	connections
 	{
-		"OnUseEnd" "logic_failed_thug_2,Trigger,,0,-1,,"
 		"OnUseBegin" "thug_1,Kill,,1,-1,,"
+		"OnUseEnd" "logic_failed_thug_2,Trigger,,0,-1,,"
 	}
 	"origin" "0 0 0"
 	editor
@@ -120974,8 +120974,8 @@ entity
 	"pause" "1"
 	connections
 	{
-		"OnUseEnd" "trig_popup_hack,Enable,,0,-1,,"
 		"OnUseEnd" "trig_popup_note,Enable,,0,-1,,"
+		"OnUseEnd" "trig_popup_hack,Enable,,0,-1,,"
 	}
 	"origin" "0 0 0"
 	editor
@@ -121091,8 +121091,8 @@ entity
 	"pause" "1"
 	connections
 	{
-		"OnUseEnd" "stealth_victim,SetRelationship,player D_HT 5,0,-1,,"
 		"OnUseEnd" ",,,0,-1,G.Tutorial_Discflags = 0,"
+		"OnUseEnd" "stealth_victim,SetRelationship,player D_HT 5,0,-1,,"
 	}
 	"origin" "0 0 0"
 	editor
@@ -121204,10 +121204,10 @@ entity
 	"pause" "1"
 	connections
 	{
-		"OnUseEnd" ",,,0,-1,G.Tut_Jack = 16,"
-		"OnUseEnd" "guy_disc3_2,SetRelationship,player D_HT 5,0,-1,,"
-		"OnUseEnd" "guy_disc3,SetRelationship,player D_HT 5,0,-1,,"
 		"OnUseEnd" ",,,0,-1,G.Tutorial_Discflags = 0,"
+		"OnUseEnd" "guy_disc3,SetRelationship,player D_HT 5,0,-1,,"
+		"OnUseEnd" "guy_disc3_2,SetRelationship,player D_HT 5,0,-1,,"
+		"OnUseEnd" ",,,0,-1,G.Tut_Jack = 16,"
 	}
 	"origin" "0 0 0"
 	editor
@@ -121247,8 +121247,8 @@ entity
 	"pause" "1"
 	connections
 	{
-		"OnUseEnd" ",,,0,-1,G.Tut_Jack = 15,"
 		"OnUseEnd" ",,,0,-1,G.Tutorial_Discflags = 0,"
+		"OnUseEnd" ",,,0,-1,G.Tut_Jack = 15,"
 	}
 	"origin" "0 0 0"
 	editor
@@ -121308,9 +121308,9 @@ entity
 	"pause" "1"
 	connections
 	{
-		"OnUseEnd" "guy_disc2_2,Kill,,0,-1,,"
-		"OnUseEnd" "guy_disc2,Kill,,0,-1,,"
 		"OnUseEnd" "logic_reset_disc2,Trigger,,0,-1,,"
+		"OnUseEnd" "guy_disc2,Kill,,0,-1,,"
+		"OnUseEnd" "guy_disc2_2,Kill,,0,-1,,"
 	}
 	"origin" "0 0 0"
 	editor
@@ -121330,8 +121330,8 @@ entity
 	"pause" "1"
 	connections
 	{
-		"OnUseBegin" "guard_1,Kill,,0,-1,,"
 		"OnUseEnd" "logic_failed_stealth_kill,Trigger,,0,-1,,"
+		"OnUseBegin" "guard_1,Kill,,0,-1,,"
 	}
 	"origin" "0 0 0"
 	editor
@@ -121351,8 +121351,8 @@ entity
 	"pause" "1"
 	connections
 	{
-		"OnUseEnd" "logic_reset_disc3,Trigger,,0,-1,,"
 		"OnUseBegin" "guy_disc3,Kill,,0,-1,,"
+		"OnUseEnd" "logic_reset_disc3,Trigger,,0,-1,,"
 	}
 	"origin" "0 0 0"
 	editor
@@ -121372,8 +121372,8 @@ entity
 	"pause" "1"
 	connections
 	{
-		"OnUseBegin" "thug_4,Kill,,0,-1,,"
 		"OnUseEnd" "logic_failed_physics,Trigger,,0,-1,,"
+		"OnUseBegin" "thug_4,Kill,,0,-1,,"
 	}
 	"origin" "0 0 0"
 	editor
@@ -121393,8 +121393,8 @@ entity
 	"pause" "1"
 	connections
 	{
-		"OnUseEnd" "logic_reset_disc2,Trigger,,0,-1,,"
 		"OnUseBegin" "guy_disc2,Kill,,0,-1,,"
+		"OnUseEnd" "logic_reset_disc2,Trigger,,0,-1,,"
 	}
 	"origin" "0 0 0"
 	editor
@@ -121414,8 +121414,8 @@ entity
 	"pause" "1"
 	connections
 	{
-		"OnUseEnd" "logic_reset_disc1,Trigger,,0,-1,,"
 		"OnUseBegin" "stealth_victim,Kill,,0,-1,,"
+		"OnUseEnd" "logic_reset_disc1,Trigger,,0,-1,,"
 	}
 	"origin" "0 0 0"
 	editor
@@ -121583,8 +121583,8 @@ entity
 	"pause" "1"
 	connections
 	{
-		"OnUseEnd" "logic_reset_disc3,Trigger,,0,-1,,"
 		"OnUseBegin" "guy_disc3,Kill,,0,-1,,"
+		"OnUseEnd" "logic_reset_disc3,Trigger,,0,-1,,"
 	}
 	"origin" "0 0 0"
 	editor
@@ -121636,12 +121636,12 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "logic_jackflash_chopshop_door,Disable,,0.5,-1,,"
-		"" "sound_jackflash,StopSound,,3,-1,,"
-		"" "jack_flash,TurnOff,,2,-1,,"
-		"" "jack_flash,TurnOn,,0,-1,,"
-		"OnTrigger" "Jack,TeleportToEntity,teleport_1,0,-1,,"
 		"" "sound_jackflash,PlaySound,,0.75,-1,,"
+		"OnTrigger" "Jack,TeleportToEntity,teleport_1,0,-1,,"
+		"" "jack_flash,TurnOn,,0,-1,,"
+		"" "jack_flash,TurnOff,,2,-1,,"
+		"" "sound_jackflash,StopSound,,3,-1,,"
+		"OnTrigger" "logic_jackflash_chopshop_door,Disable,,0.5,-1,,"
 	}
 	"origin" "-246.737 -9 77.6048"
 	editor
@@ -121716,9 +121716,9 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" "sSabbat1_0,BeginSequence,,0,-1,,"
-		"OnTrigger" "sSabbat2_0,BeginSequence,,0.5,-1,,"
 		"OnTrigger" "sSabbat3_0,BeginSequence,,1.5,-1,,"
+		"OnTrigger" "sSabbat2_0,BeginSequence,,0.5,-1,,"
+		"OnTrigger" "sSabbat1_0,BeginSequence,,0,-1,,"
 	}
 	"origin" "102 -10 65.8168"
 	editor
@@ -121811,14 +121811,14 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" "Sabbat Yell,PlaySound,,0,-1,,"
-		"OnTrigger" "Sabbat Laugh,PlaySound,,3,-1,,"
-		"OnTrigger" "sSabbat2_5_proxy,BeginSequence,,0,-1,,"
-		"OnTrigger" "timer_muzzle_flash,Enable,,0,-1,,"
-		"OnTrigger" "timer_muzzle_flash,Disable,,2.8,-1,,"
-		"OnTrigger" "sSabbat1_4,BeginSequence,,0,-1,,"
-		"OnTrigger" "sSabbat2_4,BeginSequence,,0,-1,,"
 		"OnTrigger" "sSabbat3_4,BeginSequence,,0,-1,,"
+		"OnTrigger" "sSabbat2_4,BeginSequence,,0,-1,,"
+		"OnTrigger" "sSabbat1_4,BeginSequence,,0,-1,,"
+		"OnTrigger" "timer_muzzle_flash,Disable,,2.8,-1,,"
+		"OnTrigger" "timer_muzzle_flash,Enable,,0,-1,,"
+		"OnTrigger" "sSabbat2_5_proxy,BeginSequence,,0,-1,,"
+		"OnTrigger" "Sabbat Laugh,PlaySound,,3,-1,,"
+		"OnTrigger" "Sabbat Yell,PlaySound,,0,-1,,"
 	}
 	"origin" "135 -10 65.8168"
 	editor
@@ -121911,10 +121911,10 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" "sSabbat1_5,BeginSequence,,0.05,-1,,"
-		"OnTrigger" "sSabbat2_5,BeginSequence,,0.05,-1,,"
-		"OnTrigger" "sSabbat2_4,CancelSequence,,0,-1,,"
 		"OnTrigger" "sSabbat1_4,CancelSequence,,0,-1,,"
+		"OnTrigger" "sSabbat2_4,CancelSequence,,0,-1,,"
+		"OnTrigger" "sSabbat2_5,BeginSequence,,0.05,-1,,"
+		"OnTrigger" "sSabbat1_5,BeginSequence,,0.05,-1,,"
 	}
 	"origin" "146 -10 65.8168"
 	editor
@@ -121951,8 +121951,8 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" "sheriff_hand,TurnOn,,0,-1,,"
 		"OnTrigger" "sSheriff_6,BeginSequence,,0,-1,,"
+		"OnTrigger" "sheriff_hand,TurnOn,,0,-1,,"
 	}
 	"origin" "102 -10 56"
 	editor
@@ -121997,14 +121997,14 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" "mac10_2,ScriptUnhide,,0.1,-1,,"
-		"OnTrigger" "blueblood,Kill,,0,-1,,"
-		"OnTrigger" "sabbat_redshirt_3,ScriptUnhide,,0,-1,,"
-		"OnTrigger" "sabbat_redshirt_2,ScriptUnhide,,0,-1,,"
-		"OnTrigger" "sabbat_redshirt_1,ScriptUnhide,,0,-1,,"
-		"OnTrigger" "sheriff,ScriptUnhide,,0,-1,,"
-		"OnTrigger" "sheriff_shield,ScriptUnhide,,0,-1,,"
 		"" "logic_particle_setup,Trigger,,0,-1,,"
+		"OnTrigger" "sheriff_shield,ScriptUnhide,,0,-1,,"
+		"OnTrigger" "sheriff,ScriptUnhide,,0,-1,,"
+		"OnTrigger" "sabbat_redshirt_1,ScriptUnhide,,0,-1,,"
+		"OnTrigger" "sabbat_redshirt_2,ScriptUnhide,,0,-1,,"
+		"OnTrigger" "sabbat_redshirt_3,ScriptUnhide,,0,-1,,"
+		"OnTrigger" "blueblood,Kill,,0,-1,,"
+		"OnTrigger" "mac10_2,ScriptUnhide,,0.1,-1,,"
 	}
 	"origin" "102 -10 75"
 	editor
@@ -122022,15 +122022,15 @@ entity
 	"OnTrigger" "sound_maul_wolves,PlaySound,3,-1,,"
 	connections
 	{
-		"OnTrigger" "sound_cast_wolves,PlaySound,,0,-1,,"
-		"OnTrigger" "sheriff_hand,TurnOff,,0,-1,,"
-		"OnTrigger" "plus_check,Test,,0,-1,,"
-		"OnTrigger" "wolf1,SetAnimation,animalism_spectralwolves_into,0.35,-1,,"
-		"OnTrigger" "wolf2,SetAnimation,animalism_spectralwolves_into,0.05,-1,,"
-		"OnTrigger" "wolf1,ScriptUnhide,,0.3,-1,,"
-		"OnTrigger" "wolf2,ScriptUnhide,,0,-1,,"
-		"OnTrigger" "wolf1,SetAnimation,animalism_spectralwolves_idle,3.57,-1,,"
 		"OnTrigger" "wolf2,SetAnimation,animalism_spectralwolves_idle,3.27,-1,,"
+		"OnTrigger" "wolf1,SetAnimation,animalism_spectralwolves_idle,3.57,-1,,"
+		"OnTrigger" "wolf2,ScriptUnhide,,0,-1,,"
+		"OnTrigger" "wolf1,ScriptUnhide,,0.3,-1,,"
+		"OnTrigger" "wolf2,SetAnimation,animalism_spectralwolves_into,0.05,-1,,"
+		"OnTrigger" "wolf1,SetAnimation,animalism_spectralwolves_into,0.35,-1,,"
+		"OnTrigger" "plus_check,Test,,0,-1,,"
+		"OnTrigger" "sheriff_hand,TurnOff,,0,-1,,"
+		"OnTrigger" "sound_cast_wolves,PlaySound,,0,-1,,"
 	}
 	"origin" "113 -10 56"
 	editor
@@ -122046,10 +122046,10 @@ entity
 	"python_script" "G.Patch_Plus == 1"
 	connections
 	{
-		"OnTrue" "wolf1_halo1,TurnOn,,0.3,-1,,"
-		"OnTrue" "wolf2_halo1,TurnOn,,0,-1,,"
-		"OnTrue" "wolf1_halo2,TurnOn,,0.3,-1,,"
 		"OnTrue" "wolf2_halo2,TurnOn,,0,-1,,"
+		"OnTrue" "wolf1_halo2,TurnOn,,0.3,-1,,"
+		"OnTrue" "wolf2_halo1,TurnOn,,0,-1,,"
+		"OnTrue" "wolf1_halo1,TurnOn,,0.3,-1,,"
 	}
 	"origin" "113 -10 56"
 	editor
@@ -122283,8 +122283,8 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" "Snd Vampire Death,PlaySound,,5.5,-1,,"
 		"OnTrigger" "sSabbat3_9,BeginSequence,,0,-1,,"
+		"OnTrigger" "Snd Vampire Death,PlaySound,,5.5,-1,,"
 	}
 	"origin" "135 -10 56"
 	editor
@@ -122301,11 +122301,11 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" "sound_cast_pests,PlaySound,,1,-1,,"
-		"OnTrigger" "sheriff_hand,TurnOn,,0,-1,,"
-		"OnTrigger" "sSheriff_10,BeginSequence,,0,-1,,"
-		"OnTrigger" "pestilence,TurnOn,,1,-1,,"
 		"OnTrigger" "Sheriff_Blow,PlaySound,,3,-1,,"
+		"OnTrigger" "pestilence,TurnOn,,1,-1,,"
+		"OnTrigger" "sSheriff_10,BeginSequence,,0,-1,,"
+		"OnTrigger" "sheriff_hand,TurnOn,,0,-1,,"
+		"OnTrigger" "sound_cast_pests,PlaySound,,1,-1,,"
 	}
 	"origin" "146 -10 56"
 	editor
@@ -122322,9 +122322,9 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" "sheriff_hand,TurnOff,,0,-1,,"
-		"OnTrigger" "sSabbat3_11,BeginSequence,,0,-1,,"
 		"OnTrigger" "sabbat_redshirt_3,TakeDamage,100,0.7,-1,,"
+		"OnTrigger" "sSabbat3_11,BeginSequence,,0,-1,,"
+		"OnTrigger" "sheriff_hand,TurnOff,,0,-1,,"
 	}
 	"origin" "102 -10 46"
 	editor
@@ -122395,9 +122395,9 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" "sPlayer_13,CancelSequence,,0.5,-1,,"
-		"OnTrigger" "sSheriff_14,BeginSequence,,0.05,-1,,"
 		"OnTrigger" "sSheriff_14,CancelSequence,,0,-1,,"
+		"OnTrigger" "sSheriff_14,BeginSequence,,0.05,-1,,"
+		"OnTrigger" "sPlayer_13,CancelSequence,,0.5,-1,,"
 	}
 	"origin" "135 -10 46"
 	editor
@@ -122481,10 +122481,10 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" "frontgate,Open,,0,-1,,"
-		"OnTrigger" "logic_sabbat_setup,Trigger,,0,-1,,"
-		"OnTrigger" "trackb00,PlayAsCameraPosition,,0.25,-1,,"
 		"OnTrigger" "focusb00,PlayAsCameraTarget,,0.25,-1,,"
+		"OnTrigger" "trackb00,PlayAsCameraPosition,,0.25,-1,,"
+		"OnTrigger" "logic_sabbat_setup,Trigger,,0,-1,,"
+		"OnTrigger" "frontgate,Open,,0,-1,,"
 	}
 	"origin" "102 -10 85"
 	editor
@@ -122510,8 +122510,8 @@ entity
 	"NextKey" "trackb4"
 	connections
 	{
-		"" "logic_shot_3,Trigger,,0,-1,,"
 		"OnReachedKeyframe" "logic_shot_4,Trigger,,3.7,-1,,"
+		"" "logic_shot_3,Trigger,,0,-1,,"
 	}
 	"origin" "-231 -132 43"
 	editor
@@ -122655,9 +122655,9 @@ entity
 	"NextKey" "trackb7"
 	connections
 	{
-		"OnLeavingKeyframe" "teleport_proxy_2,Teleport,,0,-1,,"
-		"OnReachedKeyframe" "teleport_proxy_1,Teleport,,0,-1,,"
 		"OnReachedKeyframe" "logic_shot_7,Trigger,,1.7,-1,,"
+		"OnReachedKeyframe" "teleport_proxy_1,Teleport,,0,-1,,"
+		"OnLeavingKeyframe" "teleport_proxy_2,Teleport,,0,-1,,"
 	}
 	"origin" "-214 -133 47"
 	editor
@@ -122705,8 +122705,8 @@ entity
 	"NextKey" "trackb8"
 	connections
 	{
-		"OnReachedKeyframe" "logic_shot_8,Trigger,,3.3,-1,,"
 		"OnReachedKeyframe" "logic_shot_7_2,Trigger,,1.9,-1,,"
+		"OnReachedKeyframe" "logic_shot_8,Trigger,,3.3,-1,,"
 	}
 	"origin" "120 -202 -25"
 	editor
@@ -123098,18 +123098,18 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" "sabbat_redshirt_2_proxy,Kill,,0,-1,,"
-		"OnTrigger" "sound_howl_2,Kill,,0,-1,,"
-		"OnTrigger" "frontgate,Close,,0,-1,,"
-		"OnTrigger" "wolf2,Kill,,0,-1,,"
-		"OnTrigger" "wolf1,Kill,,0,-1,,"
-		"OnTrigger" "sabbat_redshirt_2,Kill,,0,-1,,"
-		"OnTrigger" "sabbat_redshirt_1,Kill,,0,-1,,"
-		"OnTrigger" "sheriff,Kill,,0,-1,,"
-		"OnTrigger" "sheriff_shield,Kill,,0,-1,,"
-		"OnTrigger" "sound_cast_pests,Kill,,0,-1,,"
-		"OnTrigger" "sound_cast_wolves,Kill,,0,-1,,"
 		"OnTrigger" "sound_maul_wolves,Kill,,0,-1,,"
+		"OnTrigger" "sound_cast_wolves,Kill,,0,-1,,"
+		"OnTrigger" "sound_cast_pests,Kill,,0,-1,,"
+		"OnTrigger" "sheriff_shield,Kill,,0,-1,,"
+		"OnTrigger" "sheriff,Kill,,0,-1,,"
+		"OnTrigger" "sabbat_redshirt_1,Kill,,0,-1,,"
+		"OnTrigger" "sabbat_redshirt_2,Kill,,0,-1,,"
+		"OnTrigger" "wolf1,Kill,,0,-1,,"
+		"OnTrigger" "wolf2,Kill,,0,-1,,"
+		"OnTrigger" "frontgate,Close,,0,-1,,"
+		"OnTrigger" "sound_howl_2,Kill,,0,-1,,"
+		"OnTrigger" "sabbat_redshirt_2_proxy,Kill,,0,-1,,"
 	}
 	"origin" "102 -10 36"
 	editor
@@ -123146,10 +123146,10 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "sabbat_redshirt_5,TakeDamage,100,12,-1,,"
-		"OnTrigger" ",,,11,-1,RemoveMac10(),"
-		"OnTrigger" "mac10_1,Kill,,11,-1,,"
 		"OnTrigger" "sabbat_redshirt_4,TakeDamage,100,7.5,-1,,"
+		"OnTrigger" "mac10_1,Kill,,11,-1,,"
+		"OnTrigger" ",,,11,-1,RemoveMac10(),"
+		"OnTrigger" "sabbat_redshirt_5,TakeDamage,100,12,-1,,"
 	}
 	"origin" "-250.394 665 38.9335"
 	editor
@@ -123165,12 +123165,12 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "logic_on_stealth_dead,Enable,,0,-1,,"
-		"OnTrigger" "guard_maker,Spawn,,1,-1,,"
-		"OnTrigger" "teleport_stealth_kill_new,Teleport,,0,-1,,"
-		"OnTrigger" "activisionsucks,Lock,,0,-1,,"
-		"OnTrigger" "trig_popup_stealth,Enable,,0,-1,,"
 		"OnTrigger" "guard_maker,Spawn,,0,-1,,"
+		"OnTrigger" "trig_popup_stealth,Enable,,0,-1,,"
+		"OnTrigger" "activisionsucks,Lock,,0,-1,,"
+		"OnTrigger" "teleport_stealth_kill_new,Teleport,,0,-1,,"
+		"OnTrigger" "guard_maker,Spawn,,1,-1,,"
+		"OnTrigger" "logic_on_stealth_dead,Enable,,0,-1,,"
 	}
 	"origin" "-841 465 -124"
 	editor
@@ -123280,11 +123280,11 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" "sheriff_hand,SetParent,sheriff,0.5,-1,,"
-		"OnTrigger" "sheriff_hand,SetParent,!player,1,-1,,"
-		"OnTrigger" "sheriff_hand,SetParent,sheriff,1.5,-1,,"
-		"OnTrigger" "sheriff_hand,TurnOn,,1.25,-1,,"
 		"" "sheriff_hand,TurnOff,,1.75,-1,,"
+		"OnTrigger" "sheriff_hand,TurnOn,,1.25,-1,,"
+		"OnTrigger" "sheriff_hand,SetParent,sheriff,1.5,-1,,"
+		"OnTrigger" "sheriff_hand,SetParent,!player,1,-1,,"
+		"OnTrigger" "sheriff_hand,SetParent,sheriff,0.5,-1,,"
 	}
 	"origin" "113 -10 75"
 	editor
@@ -123301,13 +123301,13 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnTrigger" "sSabbat2_5_proxy,CancelSequence,,0,-1,,"
-		"OnTrigger" "timer_muzzle_flash,Disable,,0,-1,,"
-		"OnTrigger" "sSabbat1_5,CancelSequence,,0.3,-1,,"
-		"OnTrigger" "sSabbat2_5,CancelSequence,,0,-1,,"
-		"OnTrigger" "sSabbat1_7_2,BeginSequence,,0.35,-1,,"
-		"OnTrigger" "sSabbat2_7_2,BeginSequence,,0.05,-1,,"
 		"OnTrigger" "sSabbat3_4,CancelSequence,,0,-1,,"
+		"OnTrigger" "sSabbat2_7_2,BeginSequence,,0.05,-1,,"
+		"OnTrigger" "sSabbat1_7_2,BeginSequence,,0.35,-1,,"
+		"OnTrigger" "sSabbat2_5,CancelSequence,,0,-1,,"
+		"OnTrigger" "sSabbat1_5,CancelSequence,,0.3,-1,,"
+		"OnTrigger" "timer_muzzle_flash,Disable,,0,-1,,"
+		"OnTrigger" "sSabbat2_5_proxy,CancelSequence,,0,-1,,"
 	}
 	"origin" "113 -23 56"
 	editor
@@ -123884,14 +123884,14 @@ entity
 	"targetname" "logic_alley_cleanup"
 	connections
 	{
-		"OnTrigger" "logic_alley_cams,Kill,,0,-1,,"
-		"OnTrigger" "logic_alley_sounds,Kill,,0,-1,,"
-		"OnTrigger" "logic_alley_damage,Kill,,0,-1,,"
-		"OnTrigger" "potenced_emitter,Kill,,0,-1,,"
-		"OnTrigger" "Jack V Sabbat SFX,Kill,,0,-1,,"
-		"OnTrigger" "sound_thugs_w_guns,Kill,,0,-1,,"
-		"OnTrigger" "SabbatAlleyFuck,Kill,,0,-1,,"
 		"OnTrigger" "sound_mac10,Kill,,0,-1,,"
+		"OnTrigger" "SabbatAlleyFuck,Kill,,0,-1,,"
+		"OnTrigger" "sound_thugs_w_guns,Kill,,0,-1,,"
+		"OnTrigger" "Jack V Sabbat SFX,Kill,,0,-1,,"
+		"OnTrigger" "potenced_emitter,Kill,,0,-1,,"
+		"OnTrigger" "logic_alley_damage,Kill,,0,-1,,"
+		"OnTrigger" "logic_alley_sounds,Kill,,0,-1,,"
+		"OnTrigger" "logic_alley_cams,Kill,,0,-1,,"
 	}
 	"origin" "225 665 12"
 	editor
@@ -123909,12 +123909,12 @@ entity
 	"origin" "-1218.5 -193 -140"
 	connections
 	{
-		"OnEndTouch" "logic_failed_physics,Enable,,0,-1,,"
-		"OnStartTouch" "logic_failed_physics,Disable,,0,-1,,"
-		"OnEndTouch" "thug_4,TweakParam,vision -1,0,-1,,"
-		"OnEndTouch" "thug_4,TweakParam,hearing -1,0,-1,,"
-		"OnStartTouch" "thug_4,TweakParam,hearing 0,0,-1,,"
 		"OnStartTouch" "thug_4,TweakParam,vision 0,0,-1,,"
+		"OnStartTouch" "thug_4,TweakParam,hearing 0,0,-1,,"
+		"OnEndTouch" "thug_4,TweakParam,hearing -1,0,-1,,"
+		"OnEndTouch" "thug_4,TweakParam,vision -1,0,-1,,"
+		"OnStartTouch" "logic_failed_physics,Disable,,0,-1,,"
+		"OnEndTouch" "logic_failed_physics,Enable,,0,-1,,"
 	}
 	solid
 	{
@@ -124011,9 +124011,9 @@ entity
 	"StartDisabled" "0"
 	connections
 	{
-		"OnTrigger" "logic_jack_melee_room,Trigger,,0,-1,,"
-		"OnTrigger" ",,,0,-1,G.Tut_Melee = 1,"
 		"OnTrigger" "logic_enable_in_melee,Disable,,0,-1,,"
+		"OnTrigger" ",,,0,-1,G.Tut_Melee = 1,"
+		"OnTrigger" "logic_jack_melee_room,Trigger,,0,-1,,"
 	}
 	"origin" "-1271 446.27 -163.45"
 	editor
@@ -124306,8 +124306,8 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnMapLoad" ",,,0,-1,unhidePlus(),"
 		"OnMapLoad" "linux_check,Test,,0.1,-1,,"
+		"OnMapLoad" ",,,0,-1,unhidePlus(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -124369,27 +124369,27 @@ entity
 	"enabled" "0"
 	connections
 	{
-		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
-		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
-		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
-		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
-		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
-		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
-		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
-		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
-		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
-		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
-		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
-		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
-		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
-		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
-		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
-		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
-		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
-		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
-		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
-		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
 		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
+		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
+		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
+		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
+		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
+		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
+		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
+		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
+		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
+		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
+		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
+		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
+		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
+		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
+		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
+		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
+		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
+		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
+		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
+		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
+		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -124405,31 +124405,31 @@ entity
 	"StartHidden" "0"
 	connections
 	{
-		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
-		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
-		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
-		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
-		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
-		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
-		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
-		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
-		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
-		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
-		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
-		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
-		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
-		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
-		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
-		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
-		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
-		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
-		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
-		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
-		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
-		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
-		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
-		"OnPlayerHasNoBlood" "logic_noblood,Trigger,,0,-1,,"
 		"OnPlayerHasNoBlood" "counter_noblood,SetValue,1,0,-1,,"
+		"OnPlayerHasNoBlood" "logic_noblood,Trigger,,0,-1,,"
+		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
+		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
+		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
+		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
+		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
+		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
+		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
+		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
+		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
+		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
+		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
+		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
+		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
+		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
+		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
+		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
+		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
+		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
+		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
+		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
+		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
+		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
+		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -191687,11 +191687,11 @@ entity
 	"additionalequipment" "item_w_claws"
 	connections
 	{
-		"OnDialogBegin" "logic_jack_hit_1006,Cancel,,0,-1,,"
-		"OnDialogBegin" "logic_jack_hit_1001,Cancel,,0,-1,,"
-		"OnDamaged" "logic_hit_jack,Trigger,,0,-1,,"
-		"OnDialogEnd" ",,,0,-1,DialogPostProcess(),"
 		"OnDamaged" "pcevents,ClearDialogCombatTimers,,0.5,-1,,"
+		"OnDialogEnd" ",,,0,-1,DialogPostProcess(),"
+		"OnDamaged" "logic_hit_jack,Trigger,,0,-1,,"
+		"OnDialogBegin" "logic_jack_hit_1001,Cancel,,0,-1,,"
+		"OnDialogBegin" "logic_jack_hit_1006,Cancel,,0,-1,,"
 	}
 	"origin" "144 7352 -199"
 	editor
@@ -191747,12 +191747,12 @@ entity
 	"spawnflags" "8"
 	connections
 	{
-		"OnBeginFade" "Jack,WillTalk,0,0,1,,"
-		"OnBeginFade" "teleport_very_beginning,Teleport,,1,1,,"
-		"OnBeginFade" "Jack,WillTalk,1,3,1,,"
-		"OnBeginFade" "Jack,UseInteresting,1,4,1,,"
-		"OnBeginFade" "Jack,StartPlayerDialogRemote,,5,1,,"
 		"OnBeginFade" "teleport_jack,Teleport,,2,1,,"
+		"OnBeginFade" "Jack,StartPlayerDialogRemote,,5,1,,"
+		"OnBeginFade" "Jack,UseInteresting,1,4,1,,"
+		"OnBeginFade" "Jack,WillTalk,1,3,1,,"
+		"OnBeginFade" "teleport_very_beginning,Teleport,,1,1,,"
+		"OnBeginFade" "Jack,WillTalk,0,0,1,,"
 	}
 	"origin" "-25 7472 -76"
 	editor
@@ -191771,14 +191771,14 @@ entity
 	"wait" "1"
 	connections
 	{
-		"OnEndTouch" "Jack,UseInteresting,0,0,-1,,"
-		"OnEndTouch" "Jack,StartPlayerDialogRemote,256,0,-1,,"
-		"OnEndTouch" "trig_off_porch,Kill,,0.5,-1,,"
-		"OnEndTouch" "Jack,WillTalk,1,0,-1,,"
-		"OnEndTouch" "pc_0,CreateControllerNPC,,0,-1,,"
-		"OnEndTouch" "pc_0,RemoveControllerNPC,,5,-1,,"
-		"OnEndTouch" "blueblood_maker,Spawn,,0,-1,,"
 		"OnEndTouch" "pc_0,RemoveDisciplinesNow,,0,-1,,"
+		"OnEndTouch" "blueblood_maker,Spawn,,0,-1,,"
+		"OnEndTouch" "pc_0,RemoveControllerNPC,,5,-1,,"
+		"OnEndTouch" "pc_0,CreateControllerNPC,,0,-1,,"
+		"OnEndTouch" "Jack,WillTalk,1,0,-1,,"
+		"OnEndTouch" "trig_off_porch,Kill,,0.5,-1,,"
+		"OnEndTouch" "Jack,StartPlayerDialogRemote,256,0,-1,,"
+		"OnEndTouch" "Jack,UseInteresting,0,0,-1,,"
 	}
 	solid
 	{
@@ -192912,8 +192912,8 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnEnterMapHere" "Jack,StartPlayerDialogRemote,,1.2,-1,,"
 		"OnEnterMapHere" "fade_out,Fade,,0.1,-1,,"
+		"OnEnterMapHere" "Jack,StartPlayerDialogRemote,,1.2,-1,,"
 	}
 	"origin" "-256 -176 -33"
 	editor

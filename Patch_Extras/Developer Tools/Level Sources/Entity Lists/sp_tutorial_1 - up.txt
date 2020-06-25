@@ -18787,16 +18787,6 @@
 "spawnflags" "2"
 }
 {
-"classname" "point_teleport"
-"targetname" "teleport_very_beginning"
-"angles" "0 0 0"
-"target" "!player"
-"spawnflags" "1"
-"OnEnterMapHere" "fade_out,Fade,,0.1,-1,,"
-"OnEnterMapHere" "Jack,StartPlayerDialogRemote,,1.2,-1,,"
-"origin" "-14 7455 -164"
-}
-{
 "classname" "info_landmark"
 "targetname" "tutorial"
 "angles" "0 90 0"
@@ -18881,15 +18871,6 @@
 "angles" "0 90 0"
 "target" "Jack"
 "origin" "-230 -250 -32"
-}
-{
-"classname" "point_teleport"
-"targetname" "teleport_very_beginning"
-"angles" "0 300 0"
-"target" "!player"
-"spawnflags" "0"
-"StartHidden" "0"
-"origin" "-256 -176 -32"
 }
 {
 "classname" "npc_VVampire"
@@ -19011,6 +18992,16 @@
 "OnEndTouch" "trig_off_porch,Kill,,0.5,-1,,"
 "OnEndTouch" "Jack,StartPlayerDialogRemote,256,0,-1,,"
 "OnEndTouch" "Jack,UseInteresting,0,0,-1,,"
+}
+{
+"classname" "point_teleport"
+"targetname" "teleport_very_beginning"
+"angles" "0 300 0"
+"target" "!player"
+"spawnflags" "1"
+"OnEnterMapHere" "fade_out,Fade,,0.1,-1,,"
+"OnEnterMapHere" "Jack,StartPlayerDialogRemote,,1.2,-1,,"
+"origin" "-256 -176 -33"
 }
 {
 "classname" "logic_auto"
