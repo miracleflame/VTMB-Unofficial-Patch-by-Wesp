@@ -323,7 +323,7 @@ def LeaveTutorialShort():
     pc = Find("pc_0")
     if pc: pc.MakePlayerKillable()
 
-#TUTORIAL: After killing blueblood
+#TUTORIAL: After killing blueblood, changed by wesp
 def OnBluebloodDeath():
     if G.Tut_Jack == 1:
         logic = Find("logic_failed_blueblood")
@@ -545,13 +545,13 @@ def spawnCans():
         can.SetModel("models/scenery/PHYSICS/sardine/sardine.mdl")
         __main__.CallEntitySpawn(can)
 
-#TUTORIAL:  reset stuff
+#TUTORIAL: Reset stuff
 def saveState():
     ks = G.keys()
     for k in ks:
         G_tut[k] = G[k]
 
-def resetState():
+def state():
     teleport = Find(statemap[G.Tut_Jack])
     ks = G.keys()
     for k in ks:
