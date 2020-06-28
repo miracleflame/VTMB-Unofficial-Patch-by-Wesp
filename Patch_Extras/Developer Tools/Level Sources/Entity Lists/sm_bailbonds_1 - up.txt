@@ -402,7 +402,8 @@
 }
 {
 "classname" "intersting_place"
-"angles" "0 0 0"
+"targetname" "table"
+"angles" "0 90 0"
 "type" "Idle"
 "min_bounds" "-16 -16 0"
 "max_bounds" "16  16 72"
@@ -415,10 +416,13 @@
 "enabled" "1"
 "rating" "3"
 "OnNPCArrived" "plus_computer,Enable,,0,-1,,"
-"origin" "3250 1020 -311"
+"OnNPCArrived" "computer,Enable,,0,-1,,"
+"OnNPCArrived" "table,Disable,,0,-1,,"
+"origin" "3150 1060 -311"
 }
 {
 "classname" "intersting_place"
+"targetname" "computer"
 "angles" "0 90 0"
 "type" "Idle"
 "min_bounds" "-16 -16 0"
@@ -432,6 +436,8 @@
 "enabled" "1"
 "rating" "3"
 "OnNPCArrived" "plus_computer,Disable,,0,-1,,"
+"OnNPCArrived" "computer,Disable,,0,-1,,"
+"OnNPCArrived" "table,Enable,,0,-1,,"
 "origin" "3075 900 -311"
 }
 {
