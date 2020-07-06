@@ -1,3 +1,4 @@
+import nt
 import __main__
 import fileutil
 from random import Random
@@ -75,11 +76,11 @@ def setBasic():
         if bladebros and G.Chang_Swap == 0:
             bladebros.SetName("ChangBrosBlade")
             bladebrosplus = Find("ChangBrosBlade_plus")
-            bladebrosplus.Kill()
+            if bladebrosplus: bladebrosplus.Kill()
             clawbros = Find("Chang_basic")
             clawbros.SetName("Chang")
             clawbrosplus = Find("Chang_plus")
-            clawbrosplus.Kill()
+            if clawbrosplus: clawbrosplus.Kill()
             G.Chang_Swap = 1
 
 def setPlus():
@@ -191,9 +192,10 @@ def setPlus():
         basic = __main__.FindEntitiesByName("basic_*")
         for b in basic:
             b.ScriptHide()
-        cop = Find("Cop_Deck1_Guard2")
+        FixKeyBindings()
         IsIdling()
         G.No_Idle = 0
+        cop = Find("Cop_Deck1_Guard2")
         if cop: cop.SetModel("models/character/npc/common/Cop_Variant/rookied_cop/Rookied_Cop.mdl")
         cop = Find("Cop_Deck3_Guard2")
         if cop: cop.SetModel("models/character/npc/common/Cop_Variant/rookied_cop/Rookied_Cop.mdl")
@@ -286,9 +288,9 @@ def setPlus():
             copperremains.ScriptUnhide()
             copperstake.ScriptUnhide()
             G.Copper_Seen = 1
-        elif (copperremains and G.Copper_Seen == 1):
-            copperremains.Kill()
-            copperstake.Kill()
+        elif (G.Copper_Seen == 1):
+            if copperremains: copperremains.Kill()
+            if copperstake: copperstake.Kill()
         doll6 = Find("plus_Doll6")
         if doll6 and G.Doll6_Dead == 1:
             doll6.Kill()
@@ -313,11 +315,11 @@ def setPlus():
         if bladebros and G.Chang_Swap == 0:
             bladebros.SetName("ChangBrosBlade")
             bladebrosbasic = Find("ChangBrosBlade_basic")
-            bladebrosbasic.Kill()
+            if bladebrosbasic: bladebrosbasic.Kill()
             clawbros = Find("Chang_plus")
             clawbros.SetName("Chang")
             clawbrosbasic = Find("Chang_basic")
-            clawbrosbasic.Kill()
+            if clawbrosbasic: clawbrosbasic.Kill()
             G.Chang_Swap = 1
         sarc = Find("sarc_plus")
         if sarc and G.Story_State >= 65:
@@ -839,7 +841,7 @@ def killWerewolf():
     dead_werewolf.SetName("dead_werewolf")
     __main__.CallEntitySpawn(dead_werewolf)
     __main__.G.Werewolf_Dead = 1
-    werewolf.Kill()
+    if werewolf: werewolf.Kill()
 
 #OCEANHOUSE: Swaps Dodge powerup and book, added by wesp
 def dodgeState():
@@ -1538,6 +1540,30 @@ def newDiscipline(x):
         c.incThaumaturgy=""    #should actually never get this
     c.showDiscipline=""
 
+#Fix Discipline key, copied from Dheu's ModDev Guide, changed by Entenschreck
+def FixKeyBindings():
+    data = ''
+    fin = None
+    try:
+        config = nt.getcwd() + "\\Unofficial_Patch\\cfg\\config.cfg"
+        fin = open(config,"r")
+        line = fin.readline()
+        while line:
+            dsc = line.rfind('"vdiscipline_last"')
+            if -1 != dsc:
+                r = dsc
+                dsc = line.find(' ')
+                data='%sbind %s "vm_discipline"\n' % (data,line[dsc:r].strip())
+            line=fin.readline()
+    finally:
+        if fin: fin.close()
+    if 0 != len(data):
+        console = nt.getcwd() + "\\Unofficial_Patch\\cfg\\console.cfg"
+        cfg=open(console, 'w')
+        try: cfg.write(data)
+        finally: cfg.close()
+        __main__.ccmd.execonsole=""
+
 #Animations for firstperson Thaumaturgy hand, added by Entenschreck, improved by wesp
 def checkDiscipline():
     c  = __main__.ccmd
@@ -1605,6 +1631,12 @@ def VThaumaturgy(x):
 
             elif pc.IsMale() == 0 and pc.clan == 8:
                 VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_female_ventrue/v_thaumaturgy.mdl")
+
+            elif pc.IsMale() == 0:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_female/v_thaumaturgy.mdl")
+
+            elif pc.IsMale() == 1:
+                VIEWMODEL.SetModel("models/weapons/thaumaturgy/view_male/v_thaumaturgy.mdl")
 
         elif cvar.vdebug_wpn_anims_cycle == 2:
             c.vm_chargehold=""
@@ -3137,7 +3169,7 @@ def malkTalkToTV():
 def malkTvDone():
     newscaster = Find("newscaster_break")
     malkcaster = Find("newscaster")
-    malkcaster.Kill()
+    if malkcaster: malkcaster.Kill()
     newscaster.ScriptUnhide()
     newscaster.SetName("newscaster")
 
