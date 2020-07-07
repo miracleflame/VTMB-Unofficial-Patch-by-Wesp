@@ -89,8 +89,8 @@
 {	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	90	}{	Actually, I'm going to get out of here. See ya.	}{	Actually, I'm going to get out of here. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
 {	91	}{	What place you wanna know about?	}{	What place you wanna know about?	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	92	}{	What know you of the club of the insane?	}{	What know you of the club of the insane?	}{	661	}{	IsClan(pc,"Malkavian") and G.Arthur_Knoxold == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	93	}{	What do you know about The Asylum?	}{	What do you know about The Asylum?	}{	701	}{	not IsClan(pc,"Malkavian") and G.Arthur_Knoxold == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	92	}{	What know you of the club of the insane?	}{	What know you of the club of the insane?	}{	701	}{	IsClan(pc,"Malkavian") and G.Arthur_Knoxold == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	93	}{	What do you know about The Asylum?	}{	What do you know about The Asylum?	}{	661	}{	not IsClan(pc,"Malkavian") and G.Arthur_Knoxold == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	94	}{	Tell me about the mansion of the dead.	}{	Tell me about the mansion of the dead.	}{	611	}{	G.Therese_Quest > 1 and IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	95	}{	What can you tell me about the Ocean House Hotel?	}{	What can you tell me about the Ocean House Hotel?	}{	131	}{	G.Therese_Quest > 1 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	96	}{	Do you know about the gallery of night?	}{	Do you know about the gallery of night?	}{	621	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -1001,7 +1001,7 @@
 {	1001	}{	(Starting Condition)	}{	}{	511	}{	G.Arthur_Muddy == 5 and G.Arthur_Knoxout == 1 and G.Arthur_Foreign == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1002	}{	(Starting Condition)	}{	}{	521	}{	G.Arthur_Muddy == 5	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1003	}{	(Starting Condition)	}{	}{	481	}{	IsClan(pc,"Nosferatu") and G.Arthur_Talked == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	1004	}{	(Starting Condition)	}{	}{	531	}{	pc.GetQuestState("Serial") >= 6 and pc.GetQuestState("Bail Jumper") > 0 and G.Arthur_Muddy < 5	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	1004	}{	(Starting Condition)	}{	}{	531	}{	pc.GetQuestState("Serial") >= 6 and pc.GetQuestState("Serial") < 11 and pc.GetQuestState("Bail Jumper") > 0 and G.Arthur_Muddy < 5	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1005	}{	(Starting Condition)	}{	}{	851	}{	G.Arthur_Knox >= 4 and G.Arthur_Muddy >= 3	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1006	}{	(Starting Condition)	}{	}{	321	}{	G.Arthur_Muddy == 1 or G.Arthur_Muddy == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1007	}{	(Starting Condition)	}{	}{	871	}{	G.Arthur_Pissed == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
