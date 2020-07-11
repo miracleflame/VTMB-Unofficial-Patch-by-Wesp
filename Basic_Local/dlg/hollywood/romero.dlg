@@ -321,7 +321,7 @@
 {	321	}{	Moon comes up, dead come out, hammer comes down. TV gets, uh, lousy reception. All in all, life's hovering around... swell.	}{	Moon comes up, dead come out, hammer comes down. TV gets, uh, lousy reception. All in all, life's hovering around... swell.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	322	}{	Nice to hear it. Goodbye.	}{	Nice to hear it. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	It's a dream, isn't it. I will leave you in your nirvana.	}
 {	323	}{	Sounds boring. Anything else you may need?	}{	Sounds boring. Anything else you may need?	}{	671	}{	G.Patch_Plus == 1 and G.Romero_Whore != 3 and G.Romero_Boink == 0 and not IsClan(pc,"Nosferatu")	}{	G.Romero_Ally = 0	}{	}{	}{	}{	}{	}{	}{	The same and the same and the same. Need something new?	}
-{	324	}{	Any chance for me to do some zombie killing?	}{	Any chance for me to do some zombie killing?	}{	161	}{	G.Patch_Plus == 1 and G.Romero_Quest <= 1	}{	G.Romero_Hammer = 2	}{	}{	}{	}{	}{	}{	}{	Can I be the hammer?	}
+{	324	}{	Any chance for me to do some zombie killing?	}{	Any chance for me to do some zombie killing?	}{	161	}{	G.Patch_Plus == 1 and G.Romero_Hammer < 1	}{	G.Romero_Hammer = 2	}{	}{	}{	}{	}{	}{	}{	Can I be the hammer?	}
 {	325	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	326	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	327	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
