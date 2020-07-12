@@ -672,9 +672,9 @@
 {	672	}{	You did what?!? Where is he?	}{	You did what?!? Where is he?	}{	681	}{	}{	}{	}{	}{	}{	}{	}{	}{	No no no no no... fish travel in schools! Where is it?	}
 {	673	}{	Ah, I love coming home to find dinner waiting. Thank you, my pet.	}{	Ah, I love coming home to find dinner waiting. Thank you, my pet.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	674	}{	Just in time, I'm starved. You're finally making yourself useful.	}{	Just in time, I'm starved. You're finally making yourself useful.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	Good that it was here or perhaps I may have torn into you. Good girl.	}
-{	675	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	676	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	677	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	675	}{	I already did. Dump his body somewhere inconspicuous, would you?	}{	I already did. Dump his body somewhere inconspicuous, would you?	}{	711	}{	IsDead("McFly") and G.McFly_Dump == 0	}{	G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	Fish stink up the place. Clean up, would you.	}
+{	676	}{	I already noticed and let him go. Never, ever do that again, Heather.	}{	I already noticed and let him go. Never, ever do that again, Heather.	}{	721	}{	(G.Mcfly_Leave == 1 or G.Mcfly_Dominated == 1 or G.Mcfly_Dementated == 1) and G.Mcfly_Free == 0	}{	G.Mcfly_Free = 1; G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	I found the fish and put it back in the pond.	}
+{	677	}{	I already fed on him but let him live. Get him out as long as the trance is lasting.	}{	I already fed on him but let him live. Get him out as long as the trance is lasting.	}{	711	}{	not IsDead("McFly") and G.Mcfly_Dump == 0 and G.Mcfly_Feed == 1	}{	G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	I already took a sip, now throw the fish out.	}
 {	678	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	679	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	680	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -708,7 +708,7 @@
 {	708	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	709	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	710	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	711	}{	I promise, it'll be done by the time you get back.	}{	I promise, it'll be done by the time you get back.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.Mcfly_Dump = 1	}{	}{	}{	}{	}{	}{	}{	I'll clean up, you go outside and play.	}
+{	711	}{	I promise, it'll be done by the time you get back.	}{	I promise, it'll be done by the time you get back.	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	G.McFly_Dump = 1	}{	}{	}{	}{	}{	}{	}{	I'll clean up, you go outside and play.	}
 {	712	}{	Good. Goodbye, Heather.	}{	Good. Goodbye, Heather.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Yes... so many playmates waiting for me.	}
 {	713	}{	See that it is.	}{	See that it is.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	If this place stinks when I return, I'll rub your nose in it.	}
 {	714	}{	And after that's done, get lost. I don't want you here anymore.	}{	And after that's done, get lost. I don't want you here anymore.	}{	591	}{	}{	}{	}{	}{	}{	}{	}{	}{	Clean up, pack up, walk out.	}
