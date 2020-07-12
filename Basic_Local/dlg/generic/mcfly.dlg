@@ -38,7 +38,7 @@
 {	38	}{	Maybe I could use a drink.... Yeah, I could use a drink!	}{	Maybe I could use a drink.... Yeah, I could use a drink!	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	39	}{	Hah hah, dinner theater. You know I love it. And now, the main course.	}{	Hah hah, dinner theater. You know I love it. And now, the main course.	}{	131	}{	Humanity -6	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	41	}{	[In a daze]Ah man, I need to go.... I don't know how I got here, but I'm supposed to be somewhere else right now.... Sorry for the intrusion.	}{	[In a daze]Ah man, I need to go.... I don't know how I got here, but I'm supposed to be somewhere else right now.... Sorry for the intrusion.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	G.Mcfly_Dominated = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	41	}{	[In a daze]Ah man, I need to go.... I don't know how I got here, but I'm supposed to be somewhere else right now.... Sorry for the intrusion.	}{	[In a daze]Ah man, I need to go.... I don't know how I got here, but I'm supposed to be somewhere else right now.... Sorry for the intrusion.	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	G.McFly_Dominated = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	42	}{	No problem. See ya.	}{	No problem. See ya.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	43	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -48,7 +48,7 @@
 {	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	51	}{	Yeah, that's right, you better let me go! I'm going to the cops soon as I leave. You just wait till they hear what I've got to say!	}{	Yeah, that's right, you better let me go! I'm going to the cops soon as I leave. You just wait till they hear what I've got to say!	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	G.Mcfly_Dementated = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	51	}{	Yeah, that's right, you better let me go! I'm going to the cops soon as I leave. You just wait till they hear what I've got to say!	}{	Yeah, that's right, you better let me go! I'm going to the cops soon as I leave. You just wait till they hear what I've got to say!	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	G.McFly_Dementated = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	52	}{	Whatever you say. See ya.	}{	Whatever you say. See ya.	}{	0	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	53	}{	Whatever you say. See ya.	}{	Whatever you say. See ya.	}{	0	}{	Humanity -7 & G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	54	}{	Whatever you say. See ya.	}{	Whatever you say. See ya.	}{	0	}{	Humanity 7 & G.Patch_Plus == 1	}{	pc.HumanityAdd(-1)	}{	}{	}{	}{	}{	}{	}{	}
@@ -59,7 +59,7 @@
 {	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	61	}{	So she's going to play it like that? Alright, alright, just let me out. I want to get as far away from that crazy bitch as possible.	}{	So she's going to play it like that? Alright, alright, just let me out. I want to get as far away from that crazy bitch as possible.	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	62	}{	There. Once again, I'm very sorry.	}{	There. Once again, I'm very sorry.	}{	0	}{	}{	G.Mcfly_Leave = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	There. Once again, I'm very sorry.	}{	There. Once again, I'm very sorry.	}{	0	}{	}{	G.McFly_Leave = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	63	}{	Hmm.... There's still no guarantee you won't talk.... And I am a little dry.	}{	Hmm.... There's still no guarantee you won't talk.... And I am a little dry.	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	64	}{	Maybe I could use a drink.... Yeah, I could use a drink!	}{	Maybe I could use a drink.... Yeah, I could use a drink!	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -98,7 +98,7 @@
 {	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	101	}{	[Frightened]What the - what the hell's wrong with you?!?	}{	[Frightened]What the - what the hell's wrong with you?!?	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	G.Mcfly_Frenzy = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	101	}{	[Frightened]What the - what the hell's wrong with you?!?	}{	[Frightened]What the - what the hell's wrong with you?!?	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	G.McFly_Frenzy = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	102	}{	Arrgh.... ROAR!	}{	Arrgh.... ROAR!	}{	0	}{	}{	pc.FrenzyTrigger()	}{	}{	}{	}{	}{	}{	}{	}
 {	103	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	104	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -109,7 +109,7 @@
 {	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	111	}{	Aw, c'mon, now - I didn't mean it. I- I should have known there was something wrong with that broad. Look, I'll give you money, whatever you want, just... let me go, alright? Please don't kick my ass! Oh, man, I think I just shit myself.	}{	Aw, c'mon, now - I didn't mean it. I- I should have known there was something wrong with that broad. Look, I'll give you money, whatever you want, just... let me go, alright? Please don't kick my ass! Oh, man, I think I just shit myself.	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	112	}{	Get out of here. Say a word and I'll find you. And you'll regret it.	}{	Get out of here. Say a word and I'll find you. And you'll regret it.	}{	0	}{	}{	G.Mcfly_Leave = 1	}{	}{	}{	}{	}{	}{	}{	Leave and be silent, or I'll follow you around the world.	}
+{	112	}{	Get out of here. Say a word and I'll find you. And you'll regret it.	}{	Get out of here. Say a word and I'll find you. And you'll regret it.	}{	0	}{	}{	G.McFly_Leave = 1	}{	}{	}{	}{	}{	}{	}{	Leave and be silent, or I'll follow you around the world.	}
 {	113	}{	Give me everything you got and you walk out of here unscathed.	}{	Give me everything you got and you walk out of here unscathed.	}{	121	}{	G.McFly_Money == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	114	}{	Hmm.... There's still no guarantee you won't talk.... And I am a little dry.	}{	Hmm.... There's still no guarantee you won't talk.... And I am a little dry.	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	115	}{	Maybe I could use a drink.... Yeah, I could use a drink!	}{	Maybe I could use a drink.... Yeah, I could use a drink!	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -119,7 +119,7 @@
 {	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	121	}{	Yeah, yeah here. Take it - take it all! Just please don't hit me!	}{	Yeah, yeah here. Take it - take it all! Just please don't hit me!	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	pc.MoneyAdd( 50 ); G.McFly_Money = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	122	}{	Get out of here. Say a word and I'll find you. And you'll regret it.	}{	Get out of here. Say a word and I'll find you. And you'll regret it.	}{	0	}{	}{	G.Mcfly_Leave = 1	}{	}{	}{	}{	}{	}{	}{	Leave and be silent, or I'll follow you around the world.	}
+{	122	}{	Get out of here. Say a word and I'll find you. And you'll regret it.	}{	Get out of here. Say a word and I'll find you. And you'll regret it.	}{	0	}{	}{	G.McFly_Leave = 1	}{	}{	}{	}{	}{	}{	}{	Leave and be silent, or I'll follow you around the world.	}
 {	123	}{	Hmm.... There's still no guarantee you won't talk.... And I am a little dry.	}{	Hmm.... There's still no guarantee you won't talk.... And I am a little dry.	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	124	}{	Maybe I could use a drink.... Yeah, I could use a drink!	}{	Maybe I could use a drink.... Yeah, I could use a drink!	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -128,7 +128,7 @@
 {	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	131	}{	What the hell does that mean? Wait, why are you looking at me like that? Hey...![Nervous whimpering]	}{	What the hell does that mean? Wait, why are you looking at me like that? Hey...![Nervous whimpering]	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	G.Mcfly_Feed = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	131	}{	What the hell does that mean? Wait, why are you looking at me like that? Hey...![Nervous whimpering]	}{	What the hell does that mean? Wait, why are you looking at me like that? Hey...![Nervous whimpering]	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	G.McFly_Feed = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	132	}{	Come here. I've got a secret to tell you....	}{	Come here. I've got a secret to tell you....	}{	0	}{	}{	G.Seductive_Feed = 1; pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	}
 {	133	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	134	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

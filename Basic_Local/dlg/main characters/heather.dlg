@@ -668,13 +668,13 @@
 {	668	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	669	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	670	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	671	}{	[Excited]Oh, you're back! I, um... I went out this evening and I... well, I met someone and he wouldn't leave me alone so I - w- he came back here with me and... well, I thought you might want to... you know, want to... drink his blood.	}{	[Excited]Oh, you're back! I, um... I went out this evening and I... well, I met someone and he wouldn't leave me alone so I - w- he came back here with me and... well, I thought you might want to... you know, want to... drink his blood.	}{	#	}{	npc.SetDisposition("Joy",1)	}{	G.Heather_Lure = 1; G.Heather_Feed = 0; G.Mcfly_Present = 0	}{	}{	}{	}{	}{	}{	}{	I went fishing today... and I caught a big one. Can you hear him flopping around the bathroom? That's how you can tell he's fresh.	}
+{	671	}{	[Excited]Oh, you're back! I, um... I went out this evening and I... well, I met someone and he wouldn't leave me alone so I - w- he came back here with me and... well, I thought you might want to... you know, want to... drink his blood.	}{	[Excited]Oh, you're back! I, um... I went out this evening and I... well, I met someone and he wouldn't leave me alone so I - w- he came back here with me and... well, I thought you might want to... you know, want to... drink his blood.	}{	#	}{	npc.SetDisposition("Joy",1)	}{	G.Heather_Lure = 1; G.Heather_Feed = 0; G.McFly_Present = 0	}{	}{	}{	}{	}{	}{	}{	I went fishing today... and I caught a big one. Can you hear him flopping around the bathroom? That's how you can tell he's fresh.	}
 {	672	}{	You did what?!? Where is he?	}{	You did what?!? Where is he?	}{	681	}{	}{	}{	}{	}{	}{	}{	}{	}{	No no no no no... fish travel in schools! Where is it?	}
 {	673	}{	Ah, I love coming home to find dinner waiting. Thank you, my pet.	}{	Ah, I love coming home to find dinner waiting. Thank you, my pet.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	674	}{	Just in time, I'm starved. You're finally making yourself useful.	}{	Just in time, I'm starved. You're finally making yourself useful.	}{	691	}{	}{	}{	}{	}{	}{	}{	}{	}{	Good that it was here or perhaps I may have torn into you. Good girl.	}
 {	675	}{	I already did. Dump his body somewhere inconspicuous, would you?	}{	I already did. Dump his body somewhere inconspicuous, would you?	}{	711	}{	IsDead("McFly") and G.McFly_Dump == 0	}{	G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	Fish stink up the place. Clean up, would you.	}
-{	676	}{	I already noticed and let him go. Never, ever do that again, Heather.	}{	I already noticed and let him go. Never, ever do that again, Heather.	}{	721	}{	(G.Mcfly_Leave == 1 or G.Mcfly_Dominated == 1 or G.Mcfly_Dementated == 1) and G.Mcfly_Free == 0	}{	G.Mcfly_Free = 1; G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	I found the fish and put it back in the pond.	}
-{	677	}{	I already fed on him but let him live. Get him out as long as the trance is lasting.	}{	I already fed on him but let him live. Get him out as long as the trance is lasting.	}{	711	}{	not IsDead("McFly") and G.Mcfly_Dump == 0 and G.Mcfly_Feed == 1	}{	G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	I already took a sip, now throw the fish out.	}
+{	676	}{	I already noticed and let him go. Never, ever do that again, Heather.	}{	I already noticed and let him go. Never, ever do that again, Heather.	}{	721	}{	(G.McFly_Leave == 1 or G.McFly_Dominated == 1 or G.McFly_Dementated == 1) and G.McFly_Free == 0	}{	G.McFly_Free = 1; G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	I found the fish and put it back in the pond.	}
+{	677	}{	I already fed on him but let him live. Get him out as long as the trance is lasting.	}{	I already fed on him but let him live. Get him out as long as the trance is lasting.	}{	711	}{	not IsDead("McFly") and G.McFly_Dump == 0 and G.McFly_Feed == 1	}{	G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	I already took a sip, now throw the fish out.	}
 {	678	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	679	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	680	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -700,8 +700,8 @@
 {	700	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	701	}{	Master?	}{	Master?	}{	#	}{	npc.SetDisposition("Neutral",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	702	}{	Dump his body somewhere inconspicuous, would you?	}{	Dump his body somewhere inconspicuous, would you?	}{	711	}{	IsDead("McFly") and G.McFly_Dump == 0	}{	G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	Fish stink up the place. Clean up, would you.	}
-{	703	}{	I let him go. Never, ever do that again, Heather.	}{	I let him go. Never, ever do that again, Heather.	}{	721	}{	(G.Mcfly_Leave == 1 or G.Mcfly_Dominated == 1 or G.Mcfly_Dementated == 1) and G.Mcfly_Free == 0	}{	G.Mcfly_Free = 1; G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	I put the fish back in the pond.	}
-{	704	}{	I fed on him but let him live. Get him out as long as the trance is lasting.	}{	I fed on him but let him live. Get him out as long as the trance is lasting.	}{	711	}{	not IsDead("McFly") and G.Mcfly_Dump == 0 and G.Mcfly_Feed == 1	}{	G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	I took a sip, now throw the fish out.	}
+{	703	}{	I let him go. Never, ever do that again, Heather.	}{	I let him go. Never, ever do that again, Heather.	}{	721	}{	(G.McFly_Leave == 1 or G.McFly_Dominated == 1 or G.McFly_Dementated == 1) and G.McFly_Free == 0	}{	G.McFly_Free = 1; G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	I put the fish back in the pond.	}
+{	704	}{	I fed on him but let him live. Get him out as long as the trance is lasting.	}{	I fed on him but let him live. Get him out as long as the trance is lasting.	}{	711	}{	not IsDead("McFly") and G.McFly_Dump == 0 and G.McFly_Feed == 1	}{	G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	I took a sip, now throw the fish out.	}
 {	705	}{	About your appearance... change it.	}{	About your appearance... change it.	}{	985	}{	G.Heather_Clothes == 0	}{	}{	}{	}{	}{	}{	}{	}{	Your skin... change it.	}
 {	706	}{	It's nothing, my pet, excuse me.	}{	It's nothing, my pet, excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Excuse me, my pet.	}
 {	707	}{	Oh, are you still here? I'll be off now.	}{	Oh, are you still here? I'll be off now.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Don't you talk to me! I am gone.	}
@@ -770,8 +770,8 @@
 {	770	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	771	}{	Master?	}{	Master?	}{	#	}{	npc.SetDisposition("Flirt",1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	772	}{	Dump his body somewhere inconspicuous, would you?	}{	Dump his body somewhere inconspicuous, would you?	}{	711	}{	IsDead("McFly") and G.McFly_Dump == 0	}{	G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	Fish stink up the place. Clean up, would you.	}
-{	773	}{	I let him go. Never, ever do that again, Heather.	}{	I let him go. Never, ever do that again, Heather.	}{	721	}{	(G.Mcfly_Leave == 1 or G.Mcfly_Dominated == 1 or G.Mcfly_Dementated == 1) and G.Mcfly_Free == 0	}{	G.Mcfly_Free = 1; G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	I put the fish back in the pond.	}
-{	774	}{	I fed on him but let him live. Get him out as long as the trance is lasting.	}{	I fed on him but let him live. Get him out as long as the trance is lasting.	}{	711	}{	not IsDead("McFly") and G.Mcfly_Dump == 0 and G.Mcfly_Feed == 1	}{	G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	I took a sip, now throw the fish out.	}
+{	773	}{	I let him go. Never, ever do that again, Heather.	}{	I let him go. Never, ever do that again, Heather.	}{	721	}{	(G.McFly_Leave == 1 or G.McFly_Dominated == 1 or G.McFly_Dementated == 1) and G.McFly_Free == 0	}{	G.McFly_Free = 1; G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	I put the fish back in the pond.	}
+{	774	}{	I fed on him but let him live. Get him out as long as the trance is lasting.	}{	I fed on him but let him live. Get him out as long as the trance is lasting.	}{	711	}{	not IsDead("McFly") and G.McFly_Dump == 0 and G.McFly_Feed == 1	}{	G.Heather_Lure = 2	}{	}{	}{	}{	}{	}{	}{	I took a sip, now throw the fish out.	}
 {	775	}{	I need your blood.	}{	I need your blood.	}{	0	}{	G.Heather_Feed == 0	}{	G.Heather_Feed = 1; G.Seductive_Feed = 1; pc.SeductiveFeed(npc)	}{	}{	}{	}{	}{	}{	}{	Bleed for me.	}
 {	776	}{	About your appearance... change it.	}{	About your appearance... change it.	}{	985	}{	G.Heather_Clothes == 0	}{	}{	}{	}{	}{	}{	}{	}{	Your skin... change it.	}
 {	777	}{	I'll return later.	}{	I'll return later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Where? Not here.	}
@@ -996,7 +996,7 @@
 {	996	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	997	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	998	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	999	}{	(Starting Condition)	}{	}{	671	}{	G.Mcfly_Present == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	999	}{	(Starting Condition)	}{	}{	671	}{	G.McFly_Present == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1000	}{	(Starting Condition)	}{	}{	701	}{	G.Heather_Lure == 1 and G.Story_State < 45 	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1001	}{	(Starting Condition)	}{	}{	891	}{	G.Heather_Armor == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	1002	}{	(Starting Condition)	}{	}{	821	}{	G.Story_State >= 70 and G.Heather_Dream == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
