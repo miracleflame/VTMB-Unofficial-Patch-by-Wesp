@@ -2927,7 +2927,7 @@ def heatherLeaves():
         relay = Find("heather_leaves_relay")
         relay.Trigger()
 
-#HAVEN: Called to see if Mcfly leaves
+#HAVEN: Called to see if McFly leaves
 def mcflyDialog():
     G = __main__.G
     if(G.Mcfly_Leave or G.Mcfly_Dominated or G.Mcfly_Dementated):
@@ -3020,7 +3020,7 @@ def mailboxExitCheck():
         if(G.Heather_Lure and G.Mcfly_Present and not (G.Mcfly_Leave or G.Mcfly_Feed or G.Mcfly_Dominated or G.Mcfly_Dementated)):
             G.Mcfly_Leave = 1
             pc.ChangeMasqueradeLevel(1)
-            mcfly = Find("Mcfly")
+            mcfly = Find("McFly")
             if mcfly: mcfly.Kill()
         if (container.HasItem("item_g_werewolf_bloodpack")):
             container.AddEntityToContainer("werewolf_reward")
