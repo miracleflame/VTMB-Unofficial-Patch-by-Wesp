@@ -23,6 +23,8 @@ if __main__.IsClan or FindPlayer.IsClan or IsClan or __main__.IsIdling or FindPl
 
 #F.U. SYNDICATE: Check gamestate and open doors accordingly, changed by wesp
 def startTest():
+#    world = Find("world")
+#    world.SetSafeArea(0)
     if (G.Barrabus_Exit != 0):
         barabus = Find("barabus")
         if barabus: barabus.Kill()
@@ -31,8 +33,6 @@ def startTest():
         confDoor2 = Find("lobbydoor2")
         liftDoor1 = Find("liftdoor1")
         liftDoor2 = Find("liftdoor2")
-#        world = Find("world")
-#        world.SetSafeArea(0)
         confDoor1.Unlock()
         confDoor2.Unlock()
         confDoor1.Open()
@@ -211,10 +211,8 @@ def killedMandarin():
 def barabusQuestUpdate():
     __main__.FindPlayer().SetQuest("Barabus", 2)
 
-#F.U. SYNDICATE: Play correct float for Mandarin, changed by wesp
+#F.U. SYNDICATE: Play correct float for Mandarin
 def UVFloat():
-    world = Find("world")
-    world.SetSafeArea(0)
     Mandarin = Find("Mandarin")
     if(__main__.IsClan(__main__.FindPlayer(), "Nosferatu")):
         if(__main__.FindPlayer().IsMale()):
