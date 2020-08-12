@@ -725,7 +725,7 @@ def pishaGone():
         corpse = Find("corpse1")
         if corpse: corpse.Kill()
         __main__.G.Pisha_Corpse = 1 
-    if (__main__.G.Story_State >= 85 and __main__.G.Pisha_Know > 0 and not __main__.IsDead("Pisha")):
+    if (__main__.G.Story_State > 85 and __main__.G.Pisha_Know > 0 and not __main__.IsDead("Pisha")):
         pisha = Find("Pisha")
         if pisha: pisha.Kill()
         book = Find("book")
