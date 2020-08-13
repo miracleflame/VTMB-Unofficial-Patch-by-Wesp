@@ -45,33 +45,22 @@ def finishElysiumTip():
         computer = Find("Carson_Computer")
         if computer: computer.Kill()
         poster = Find("Carson_Poster")
-        if poster:poster.Kill()
+        if poster: poster.Kill()
         tapeplayer = Find("tape_player")
         if tapeplayer: tapeplayer.Kill()
         taperecorder = Find("tape_recorder")
         if taperecorder: taperecorder.Kill()
-    if(not __main__.IsDead("Malcolm") and G.Patch_Plus == 1):
-        if(G.Malcolm_Affair == 4):
-            cash1 = Find("cash1")
-            if cash1: cash1.ScriptUnhide()
-            cash1node = Find("cash1node")
-            if cash1node: cash1node.ScriptUnhide()
-        elif(G.Malcolm_Affair == 5):
-            cash2 = Find("cash2")
-            if cash2: cash2.ScriptUnhide()
-            cash2node = Find("cash2node")
-            if cash2node: cash2node.ScriptUnhide()
     if(G.Story_State >= 15):
         if(G.Patch_Plus == 1 and G.Level_Clean == 0):
             bloodstains = FindList("merc_bloodstains")
             for stain in bloodstains:
                 stain.Kill()
             couch_bloody = Find("merc_couch_bloody")
-            couch_bloody.Kill()
+            if couch_bloody: couch_bloody.Kill()
             couch = Find("merc_couch")
             couch.ScriptUnhide()
             table_fallen = Find("merc_table_fallen")
-            table_fallen.Kill()
+            if table_fallen: table_fallen.Kill()
             table = Find("merc_table")
             table.ScriptUnhide()
             G.Level_Clean = 1
@@ -147,7 +136,7 @@ def mercurioFight():
         sparklies = Find("journal_sparklies")
         sparklies.ScriptUnhide()
     if(__main__.IsDead("Mercurio")):
-        npc.Kill()
+        if npc: npc.Kill()
 
 #ASIAN VAMP ARENA: Called when vamp is killed, changed by wesp
 def asianVampDeath():
@@ -383,7 +372,7 @@ def touretteDialogueResults():
         print "post_switch"
     elif(G.Tourette_Wins == 1):
         tourette_gun = Find("Tourette_thirtyeight")
-        tourette_gun.Kill()
+        if tourette_gun: tourette_gun.Kill()
         __main__.ChangeMap(2.5, "asylum1", "AsylumTeleport1")
 
 #ASYLUM: Makes the muzzle flash
@@ -783,6 +772,17 @@ def gimbleDead():
         trunk.AddEntityToContainer("gimble_key")
         gimble = Find("gimble")
         gimble.ScriptUnhide()
+    if(not __main__.IsDead("Malcolm") and G.Patch_Plus == 1):
+        if(G.Malcolm_Affair == 4):
+            cash1 = Find("cash1")
+            if cash1: cash1.ScriptUnhide()
+            cash1node = Find("cash1node")
+            if cash1node: cash1node.ScriptUnhide()
+        elif(G.Malcolm_Affair == 5):
+            cash2 = Find("cash2")
+            if cash2: cash2.ScriptUnhide()
+            cash2node = Find("cash2node")
+            if cash2node: cash2node.ScriptUnhide()
 
 #CLINIC: Called when gimble's key is retrieved
 def gimbleItemPickup():
@@ -798,13 +798,13 @@ def guardDialog():
             for trigger in triggers:
                 trigger.Kill()
             trigger = Find("guard_warning")
-            trigger.Kill()
+            if trigger: trigger.Kill()
             script = Find("guard_to_cs")
-            script.Kill()
+            if script: script.Kill()
             script = Find("guard_to_prescriptions")
-            script.Kill()
+            if script: script.Kill()
             trigger = Find("player_on_floor_two")
-            trigger.Kill()
+            if trigger: trigger.Kill()
         if(G.Guard_Dominated == 1):
             G.Guard_Dominated = 2
             G.Guard_Open = 2
@@ -816,7 +816,7 @@ def guardDialog():
             teleport.Teleport()
             teleport = Find("player_teleport_cs")
             teleport.Enable()
-            teleport.Kill()
+            if teleport: teleport.Kill()
             camera = Find("guard_follow_camera")
             camera.StartShot()
             script = Find("guard_to_cs_door")
@@ -828,7 +828,7 @@ def guardDialog():
             teleport.Teleport()
             teleport = Find("player_teleport_cis")
             teleport.Enable()
-            teleport.Kill()
+            if teleport: teleport.Kill()
             camera = Find("guard_follow_camera")
             camera.StartShot()
             script = Find("guard_to_cis_door")
@@ -847,6 +847,17 @@ def heatherCheck():
                 heatherQuest3()
         else:
             npc.ScriptUnhide()
+    if(not __main__.IsDead("Malcolm") and G.Patch_Plus == 1):
+        if(G.Malcolm_Affair == 4):
+            cash1 = Find("cash1")
+            if cash1: cash1.ScriptUnhide()
+            cash1node = Find("cash1node")
+            if cash1node: cash1node.ScriptUnhide()
+        elif(G.Malcolm_Affair == 5):
+            cash2 = Find("cash2")
+            if cash2: cash2.ScriptUnhide()
+            cash2node = Find("cash2node")
+            if cash2node: cash2node.ScriptUnhide()
     if __main__.IsDead("Malcolm"):
         malcolm = Find("Malcolm")
         if malcolm: malcolm.Kill()

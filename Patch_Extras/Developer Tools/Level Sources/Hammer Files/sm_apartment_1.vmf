@@ -2,44 +2,16 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7999"
-	"mapversion" "407"
+	"mapversion" "408"
 	"prefab" "0"
 }
 visgroups
 {
 	visgroup
 	{
-		"name" "Wall Switches"
-		"visgroupid" "11"
-		"color" "134 95 108"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Window Lights"
-		"visgroupid" "8"
-		"color" "119 84 101"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "TV Light"
-		"visgroupid" "4"
-		"color" "0 128 255"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Old CeilingLights"
-		"visgroupid" "3"
-		"color" "92 157 194"
-		"visible" "1"
-	}
-	visgroup
-	{
-		"name" "Table Shadow"
-		"visgroupid" "2"
-		"color" "91 184 89"
+		"name" "Lamp Spots"
+		"visgroupid" "10"
+		"color" "98 219 216"
 		"visible" "1"
 	}
 	visgroup
@@ -51,9 +23,37 @@ visgroups
 	}
 	visgroup
 	{
-		"name" "Lamp Spots"
-		"visgroupid" "10"
-		"color" "98 219 216"
+		"name" "Table Shadow"
+		"visgroupid" "2"
+		"color" "91 184 89"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Old CeilingLights"
+		"visgroupid" "3"
+		"color" "92 157 194"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "TV Light"
+		"visgroupid" "4"
+		"color" "0 128 255"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Window Lights"
+		"visgroupid" "8"
+		"color" "119 84 101"
+		"visible" "1"
+	}
+	visgroup
+	{
+		"name" "Wall Switches"
+		"visgroupid" "11"
+		"color" "134 95 108"
 		"visible" "1"
 	}
 }
@@ -67,7 +67,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "407"
+	"mapversion" "408"
 	"classname" "worldspawn"
 	"skyname" "holly"
 	"sounds" "1"
@@ -28888,6 +28888,80 @@ world
 	}
 	solid
 	{
+		"id" "30927"
+		side
+		{
+			"id" "3167"
+			"plane" "(59 712 219) (59 712 36) (59 715 36)"
+			"material" "PLASTER/APADRC"
+			"uaxis" "[0 1 0 -312] 0.25"
+			"vaxis" "[0 0 -1 144] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "3168"
+			"plane" "(77 715 219) (77 715 36) (77 712 36)"
+			"material" "PLASTER/APADRC"
+			"uaxis" "[0 1 0 -240] 1"
+			"vaxis" "[0 0 -1 0] 1"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "3169"
+			"plane" "(77 712 219) (77 712 36) (59 712 36)"
+			"material" "PLASTER/APADRC"
+			"uaxis" "[-1 0 0 320] 0.25"
+			"vaxis" "[0 0 -1 144] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "3170"
+			"plane" "(59 715 219) (59 715 36) (77 715 36)"
+			"material" "PLASTER/APADRC"
+			"uaxis" "[-1 0 0 288] 0.25"
+			"vaxis" "[0 0 -1 144] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "3171"
+			"plane" "(59 715 36) (59 712 36) (77 712 36)"
+			"material" "PLASTER/APADRC"
+			"uaxis" "[0 1 0 -240] 1"
+			"vaxis" "[1 0 0 -147] 1"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "3172"
+			"plane" "(59 712 219) (59 715 219) (77 715 219)"
+			"material" "PLASTER/APADRC"
+			"uaxis" "[0 1 0 -240] 1"
+			"vaxis" "[1 0 0 -147] 1"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "0 178 251"
+		}
+	}
+	solid
+	{
 		"id" "3197"
 		side
 		{
@@ -29166,80 +29240,6 @@ world
 		{
 			"color" "91 184 89"
 			"groupid" "3828"
-		}
-	}
-	solid
-	{
-		"id" "30927"
-		side
-		{
-			"id" "3167"
-			"plane" "(59 712 219) (59 712 36) (59 715 36)"
-			"material" "PLASTER/APADRC"
-			"uaxis" "[0 1 0 -312] 0.25"
-			"vaxis" "[0 0 -1 144] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "3168"
-			"plane" "(77 715 219) (77 715 36) (77 712 36)"
-			"material" "PLASTER/APADRC"
-			"uaxis" "[0 1 0 -240] 1"
-			"vaxis" "[0 0 -1 0] 1"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "3169"
-			"plane" "(77 712 219) (77 712 36) (59 712 36)"
-			"material" "PLASTER/APADRC"
-			"uaxis" "[-1 0 0 320] 0.25"
-			"vaxis" "[0 0 -1 144] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "3170"
-			"plane" "(59 715 219) (59 715 36) (77 715 36)"
-			"material" "PLASTER/APADRC"
-			"uaxis" "[-1 0 0 288] 0.25"
-			"vaxis" "[0 0 -1 144] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "3171"
-			"plane" "(59 715 36) (59 712 36) (77 712 36)"
-			"material" "PLASTER/APADRC"
-			"uaxis" "[0 1 0 -240] 1"
-			"vaxis" "[1 0 0 -147] 1"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "3172"
-			"plane" "(59 712 219) (59 715 219) (77 715 219)"
-			"material" "PLASTER/APADRC"
-			"uaxis" "[0 1 0 -240] 1"
-			"vaxis" "[1 0 0 -147] 1"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		editor
-		{
-			"color" "0 178 251"
 		}
 	}
 	group
@@ -29656,8 +29656,8 @@ entity
 	"spawnflags" "1"
 	connections
 	{
-		"OnMapLoad" "newscaster,SetFakeSilence,1,0,-1,,"
 		"OnMapLoad" "newscaster,SetSoundOverrideEnt,tv_prop,0,-1,,"
+		"OnMapLoad" "newscaster,SetFakeSilence,1,0,-1,,"
 	}
 	"origin" "1348 124 139"
 	editor
@@ -29966,9 +29966,9 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnOpen" "door1_light,FadeToPattern,z,0,-1,,"
-		"OnFullyClosed" "door1_light,FadeToPattern,a,0.1,-1,,"
 		"OnFullyClosed" "door2_light,FadeToPattern,a,0.1,-1,,"
+		"OnFullyClosed" "door1_light,FadeToPattern,a,0.1,-1,,"
+		"OnOpen" "door1_light,FadeToPattern,z,0,-1,,"
 	}
 	solid
 	{
@@ -30078,9 +30078,9 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnOpen" "door2_light,FadeToPattern,z,0,-1,,"
-		"OnFullyClosed" "door1_light,FadeToPattern,a,0.1,-1,,"
 		"OnFullyClosed" "door2_light,FadeToPattern,a,0.1,-1,,"
+		"OnFullyClosed" "door1_light,FadeToPattern,a,0.1,-1,,"
+		"OnOpen" "door2_light,FadeToPattern,z,0,-1,,"
 	}
 	solid
 	{
@@ -31293,9 +31293,9 @@ entity
 	"soundgroup" "Unique/Mercurio"
 	connections
 	{
-		"OnDialogBegin" ",,,0,-1,mercurioCamera(),"
-		"OnDialogEnd" ",,,0,-1,mercurioDialog(),"
 		"OnDeath" ",,,0,-1,mercurioDeath(),"
+		"OnDialogEnd" ",,,0,-1,mercurioDialog(),"
+		"OnDialogBegin" ",,,0,-1,mercurioCamera(),"
 	}
 	"origin" "273 651.956 39"
 	editor
@@ -31310,8 +31310,8 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnMapLoad" ",,,0.1,-1,finishElysiumTip(),"
 		"OnMapLoad" ",,,0,-1,mercurioFight(),"
+		"OnMapLoad" ",,,0.1,-1,finishElysiumTip(),"
 	}
 	"origin" "23.7628 151.524 45"
 	editor
@@ -31718,9 +31718,9 @@ entity
 	"spawnflags" "0"
 	connections
 	{
-		"OnTrigger" "cops_yell,PlaySound,1,9,-1,,"
-		"OnTrigger" "cops_outside,FadeIn,1,9,-1,,"
 		"OnTrigger" "cops_arrive,PlaySound,,0,-1,,"
+		"OnTrigger" "cops_outside,FadeIn,1,9,-1,,"
+		"OnTrigger" "cops_yell,PlaySound,1,9,-1,,"
 	}
 	"origin" "19.88 105.933 65"
 	editor
@@ -31824,10 +31824,10 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnFullyClosed" "emptyroomdoor2_light,FadeToPattern,a,0.1,-1,,"
-		"OnFullyClosed" "emptyroomdoor1_light,FadeToPattern,a,0.1,-1,,"
-		"OnOpen" "emptyroomdoor1_light,FadeToPattern,z,0,-1,,"
 		"OnOpen" "emptyroomdoor2_light,FadeToPattern,z,0,-1,,"
+		"OnOpen" "emptyroomdoor1_light,FadeToPattern,z,0,-1,,"
+		"OnFullyClosed" "emptyroomdoor1_light,FadeToPattern,a,0.1,-1,,"
+		"OnFullyClosed" "emptyroomdoor2_light,FadeToPattern,a,0.1,-1,,"
 	}
 	solid
 	{
@@ -31937,9 +31937,9 @@ entity
 	"locked_icon" "3"
 	connections
 	{
-		"OnOpen" "emptyroomdoor2_light,FadeToPattern,z,0,-1,,"
-		"OnFullyClosed" "emptyroomdoor1_light,FadeToPattern,a,0.1,-1,,"
 		"OnFullyClosed" "emptyroomdoor2_light,FadeToPattern,a,0.1,-1,,"
+		"OnFullyClosed" "emptyroomdoor1_light,FadeToPattern,a,0.1,-1,,"
+		"OnOpen" "emptyroomdoor2_light,FadeToPattern,z,0,-1,,"
 	}
 	solid
 	{
@@ -33607,8 +33607,8 @@ entity
 	"angles" "0 0 0"
 	connections
 	{
-		"OnPlayerPickup" ",,,0,-1,journalPickup(),"
 		"OnPlayerPickup" ",,,0,-1,G.Journal_Taken = 1,"
+		"OnPlayerPickup" ",,,0,-1,journalPickup(),"
 	}
 	"origin" "260 560 72"
 	editor
@@ -34064,27 +34064,27 @@ entity
 	"enabled" "0"
 	connections
 	{
-		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
-		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
-		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
-		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
-		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
-		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
-		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
-		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
-		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
-		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
-		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
-		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
-		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
-		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
-		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
-		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
-		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
-		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
-		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
-		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
 		"OnActivateThaumaturgyLvl2" ",,,0,-1,OnActivateThaumLvl2(),"
+		"OnActivateThaumaturgyLvl1" ",,,0,-1,OnActivateThaumLvl1(),"
+		"OnActivateDominateLvl2" ",,,0,-1,OnActivateDominateLvl2(),"
+		"OnActivateDominateLvl1" ",,,0,-1,OnActivateDominateLvl1(),"
+		"OnActivateDementationLvl2" ",,,0,-1,OnActivateDementationLvl2(),"
+		"OnActivateDementationLvl1" ",,,0,-1,OnActivateDementationLvl1(),"
+		"OnActivateAnimalismLvl2" ",,,0,-1,OnActivateAnimalismLvl2(),"
+		"OnActivateAnimalismLvl1" ",,,0,-1,OnActivateAnimalismLvl1(),"
+		"OnActivatePresense" ",,,0,-1,OnActivatePresence(),"
+		"OnWolfMorphBegin" ",,,0,1,OnWolfMorphBegin(),"
+		"OnWolfMorphEnd" ",,,0,-1,OnWolfMorphEnd(),"
+		"OnActivateCelerity" ",,,0,-1,OnActivateCelerity(),"
+		"OnActivatePotence" ",,,0,-1,OnActivatePotence(),"
+		"OnActivateObfuscate" ",,,0,-1,OnActivateObfuscate(),"
+		"OnActivateFortitude" ",,,0,-1,OnActivateFortitude(),"
+		"OnActivateAuspex" ",,,0,-1,OnActivateAuspex(),"
+		"OnActivateProtean" ",,,0,-1,OnActivateProtean(),"
+		"OnFrenzyBegin" ",,,0,-1,OnFrenzyBegin(),"
+		"OnFrenzyEnd" ",,,0,-1,OnFrenzyEnd(),"
+		"OnPlayerKilled" ",,,0,-1,OnPlayerKilled(),"
+		"OnPlayerTookDamage" ",,,0,-1,OnPlayerTookDamage(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -34100,30 +34100,30 @@ entity
 	"StartHidden" "0"
 	connections
 	{
-		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
-		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
-		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
-		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
-		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
-		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
-		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
-		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
-		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
-		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
-		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
-		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
-		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
-		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
-		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
-		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
-		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
-		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
-		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
-		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
-		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
-		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
-		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
 		"OnCopsOutside" "cops_relay,Trigger,,0,-1,,"
+		"OnCopsOutside" ",,,0,-1,OnCopsOutside(),"
+		"OnCopsComing" ",,,0,-1,OnCopsComing(),"
+		"OnStartCopPursuitMode" ",,,0,-1,OnStartCopPursuitMode(),"
+		"OnEndCopPursuitMode" ",,,0,-1,OnEndCopPursuitMode(),"
+		"OnStartCopAlertMode" ",,,0,-1,OnStartCopAlertMode(),"
+		"OnEndCopAlertMode" ",,,0,-1,OnEndCopAlertMode(),"
+		"OnStartHunterPursuitMode" ",,,0,-1,OnStartHunterPursuitMode(),"
+		"OnEndHunterPursuitMode" ",,,0,-1,OnEndHunterPursuitMode(),"
+		"OnMasqueradeLevel1" ",,,0,-1,OnMasqueradeLevel1(),"
+		"OnMasqueradeLevel2" ",,,0,-1,OnMasqueradeLevel2(),"
+		"OnMasqueradeLevel3" ",,,0,-1,OnMasqueradeLevel3(),"
+		"OnMasqueradeLevel4" ",,,0,-1,OnMasqueradeLevel4(),"
+		"OnMasqueradeLevel5" ",,,0,-1,OnMasqueradeLevel5(),"
+		"OnMasqueradeLevelChanged" ",,,0,-1,OnMasqueradeLevelChanged(),"
+		"OnPlayerHasNoBlood" ",,,0,-1,OnPlayerHasNoBlood(),"
+		"OnCombatMusicStart" ",,,0,-1,OnCombatMusicStart(),"
+		"OnCombatMusicEnd" ",,,0,-1,OnCombatMusicEnd(),"
+		"OnAlertMusicStart" ",,,0,-1,OnAlertMusicStart(),"
+		"OnAlertMusicEnd" ",,,0,-1,OnAlertMusicEnd(),"
+		"OnNormalMusicStart" ",,,0,-1,OnNormalMusicStart(),"
+		"OnNormalMusicEnd" ",,,0,-1,OnNormalMusicEnd(),"
+		"OnUseBegin" ",,,0,-1,OnUseBegin(),"
+		"OnUseEnd" ",,,0,-1,OnUseEnd(),"
 	}
 	"origin" "0 0 0"
 	editor
@@ -36063,9 +36063,9 @@ entity
 	"origin" "-121 524 83.5"
 	connections
 	{
-		"OnEndTouch" "emptyroomdoor1_light,FadeToPattern,a,5,-1,,"
-		"OnEndTouch" "emptyroomdoor2_light,FadeToPattern,a,5,-1,,"
 		"OnEndTouch" "emptyroomdoor1,Close,,5,-1,,"
+		"OnEndTouch" "emptyroomdoor2_light,FadeToPattern,a,5,-1,,"
+		"OnEndTouch" "emptyroomdoor1_light,FadeToPattern,a,5,-1,,"
 	}
 	solid
 	{
@@ -36225,9 +36225,9 @@ entity
 	"origin" "121 651 83.5"
 	connections
 	{
-		"OnEndTouch" "door1_light,FadeToPattern,a,5,-1,,"
-		"OnEndTouch" "door2_light,FadeToPattern,a,5,-1,,"
 		"OnEndTouch" "door1,Close,,5,-1,,"
+		"OnEndTouch" "door2_light,FadeToPattern,a,5,-1,,"
+		"OnEndTouch" "door1_light,FadeToPattern,a,5,-1,,"
 	}
 	solid
 	{
@@ -39901,10 +39901,10 @@ entity
 	"unlocked_sound" "environmental/electronic/button_beep.wav"
 	connections
 	{
-		"OnOut" "tape_sound,Volume,0,0,-1,,"
-		"OnPressed" "tape_sparklies,Kill,,0,1,,"
-		"OnPressed" ",,,0,-1,G.Tape_Played = 1,"
 		"OnIn" "tape_sound,PlaySound,,0,-1,,"
+		"OnPressed" ",,,0,-1,G.Tape_Played = 1,"
+		"OnPressed" "tape_sparklies,Kill,,0,1,,"
+		"OnOut" "tape_sound,Volume,0,0,-1,,"
 	}
 	solid
 	{
@@ -40015,10 +40015,10 @@ entity
 	"targetname" "mcgee room switch"
 	connections
 	{
-		"OnIn" "emptyroomlamp,ScriptHide,,0,-1,,"
-		"OnIn" "mcgee room light,TurnOn,,0,-1,,"
-		"OnOut" "emptyroomlamp,ScriptUnhide,,0,-1,,"
 		"OnOut" "mcgee room light,TurnOff,,0,-1,,"
+		"OnOut" "emptyroomlamp,ScriptUnhide,,0,-1,,"
+		"OnIn" "mcgee room light,TurnOn,,0,-1,,"
+		"OnIn" "emptyroomlamp,ScriptHide,,0,-1,,"
 	}
 	solid
 	{
@@ -40128,13 +40128,13 @@ entity
 	"locked_icon" "12"
 	connections
 	{
-		"OnOut" "tv_screen,ScriptHide,,0,-1,,"
-		"OnIn" "tv_light,SetPattern,zxzzxzxxzzxzxzzzxz,0,-1,,"
-		"OnIn" "newscaster,SetSoundOverrideEnt,tv_prop,0,-1,,"
-		"OnOut" "newscaster,SetFakeSilence,1,0,-1,,"
-		"OnOut" "tv_light,TurnOff,,0,-1,,"
-		"OnIn" "tv_screen,ScriptUnhide,,0,-1,,"
 		"OnIn" "newscaster,SetFakeSilence,0,0,-1,,"
+		"OnIn" "tv_screen,ScriptUnhide,,0,-1,,"
+		"OnOut" "tv_light,TurnOff,,0,-1,,"
+		"OnOut" "newscaster,SetFakeSilence,1,0,-1,,"
+		"OnIn" "newscaster,SetSoundOverrideEnt,tv_prop,0,-1,,"
+		"OnIn" "tv_light,SetPattern,zxzzxzxxzzxzxzzzxz,0,-1,,"
+		"OnOut" "tv_screen,ScriptHide,,0,-1,,"
 	}
 	solid
 	{
@@ -40247,71 +40247,13 @@ entity
 		"color" "220 30 220"
 	}
 }
-entity
-{
-	"id" "30869"
-	"classname" "item_m_money_clip"
-	"targetname" "cash1"
-	"starting_money" "75"
-	"angles" "0 0 0"
-	"StartHidden" "1"
-	"origin" "-52 709 37.0483"
-	editor
-	{
-		"color" "0 0 200"
-	}
-}
-entity
-{
-	"id" "30871"
-	"classname" "inspection_node"
-	"parentname" "cash1"
-	"targetname" "cash1node"
-	"start_enabled" "1"
-	"inspection" "5"
-	"StartHidden" "1"
-	"origin" "-52 709 37.0483"
-	editor
-	{
-		"color" "220 30 220"
-	}
-}
-entity
-{
-	"id" "30904"
-	"classname" "item_m_money_clip"
-	"targetname" "cash2"
-	"starting_money" "150"
-	"angles" "0 0 0"
-	"StartHidden" "1"
-	"origin" "52 709 37"
-	editor
-	{
-		"color" "0 0 200"
-	}
-}
-entity
-{
-	"id" "30906"
-	"classname" "inspection_node"
-	"parentname" "cash2"
-	"targetname" "cash2node"
-	"start_enabled" "1"
-	"inspection" "5"
-	"StartHidden" "1"
-	"origin" "52 709 37"
-	editor
-	{
-		"color" "220 30 220"
-	}
-}
 cameras
 {
 	"activecamera" "0"
 	camera
 	{
-		"position" "[31.7017 706.903 44.0409]"
-		"look" "[280.489 732.341 -66.4587]"
+		"position" "[-10.693 673.809 91.1179]"
+		"look" "[196.64 665.982 -86.9395]"
 	}
 }
 cordon

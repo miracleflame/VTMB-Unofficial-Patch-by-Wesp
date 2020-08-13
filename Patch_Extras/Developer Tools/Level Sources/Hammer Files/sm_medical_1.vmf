@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7999"
-	"mapversion" "512"
+	"mapversion" "514"
 	"prefab" "0"
 }
 visgroups
@@ -186,7 +186,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "512"
+	"mapversion" "514"
 	"classname" "worldspawn"
 	"skyname" "holly"
 	"sounds" "1"
@@ -120613,13 +120613,71 @@ entity
 		"color" "180 180 0"
 	}
 }
+entity
+{
+	"id" "115685"
+	"classname" "item_m_money_clip"
+	"targetname" "cash2"
+	"starting_money" "150"
+	"angles" "0 0 0"
+	"StartHidden" "1"
+	"origin" "785 783 60.0483"
+	editor
+	{
+		"color" "0 0 200"
+	}
+}
+entity
+{
+	"id" "115687"
+	"classname" "inspection_node"
+	"parentname" "cash2"
+	"targetname" "cash2node"
+	"start_enabled" "1"
+	"inspection" "5"
+	"StartHidden" "1"
+	"origin" "785 781 60"
+	editor
+	{
+		"color" "220 30 220"
+	}
+}
+entity
+{
+	"id" "115690"
+	"classname" "inspection_node"
+	"parentname" "cash1"
+	"targetname" "cash1node"
+	"start_enabled" "1"
+	"inspection" "5"
+	"StartHidden" "1"
+	"origin" "785 791 60"
+	editor
+	{
+		"color" "220 30 220"
+	}
+}
+entity
+{
+	"id" "115693"
+	"classname" "item_m_money_clip"
+	"targetname" "cash1"
+	"starting_money" "75"
+	"angles" "0 0 0"
+	"StartHidden" "1"
+	"origin" "784 792 60.0483"
+	editor
+	{
+		"color" "0 0 200"
+	}
+}
 cameras
 {
 	"activecamera" "0"
 	camera
 	{
-		"position" "[1266.34 939.459 -237.29]"
-		"look" "[1232.88 674.556 -296.089]"
+		"position" "[809.115 807.525 118.98]"
+		"look" "[688.806 727.591 -113.156]"
 	}
 }
 cordon
