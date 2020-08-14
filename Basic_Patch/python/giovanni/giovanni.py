@@ -360,7 +360,7 @@ def gio3_checkAllZombieDead():
         if ( zombie.IsAlive() ):
             counter = counter + 1
             G.Zombies = ( counter )
-    if (counter == 0 or G.ZombiesDead >= 24):
+    if (counter == 0 or G.ZombiesDead >= 25):
         relay = Find( "Relay_Zombies_Dead" )
         relay.Trigger()
     else:
@@ -515,7 +515,7 @@ def zombieKillCounter():
         openroom = Find("Relay_UnLock_ZombRoom")
         openroom.Trigger()
         closeroom = Find("Relay_LockDown_ZombRoom")
-        closeroom.Kill()
+        if closeroom: closeroom.Kill()
 
 #GIOVANNI MANSION 5: Happens after chang brothers are killed, changed by wesp
 def gio5_changDefeated():
