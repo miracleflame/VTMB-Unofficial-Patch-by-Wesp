@@ -248,7 +248,6 @@ def gio1_panicVictorMaria():
 
 #GIOVANNI MANSION 2: Set all guests inside house to flee and die, changed by wesp
 def gio2_guestsFlee():
-    __main__.G.Inside_Empty = 1
     guest = Find( "Guest" )
     for guest in guests:
         if guest:
@@ -287,7 +286,7 @@ def nadiaLeave():
 def onGio1Load():
     print ( "***************** Running Gio1 Loading Script *****************" )
     G.GioGuard = 0
-    if (G.Inside_Empty == 1 or G.GioBotchedInside == 1 or G.GioBotchedOutside == 1):
+    if (G.GioBotchedInside == 1 or G.GioBotchedOutside == 1):
         ambient = Find ("Restaurant")
         if ambient: ambient.Kill()
     print ( "***************** Reset Guard DLGs *****************" )
