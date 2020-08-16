@@ -13,7 +13,7 @@ Finds = __main__.FindEntitiesByName
 if __main__.IsClan or FindPlayer.IsClan or IsClan or __main__.IsIdling or FindPlayer.IsIdling or IsIdling is null:
     from vamputil import *
 
-#GIOVANNI MANSION 1: Set all to gone outside the house
+#GIOVANNI MANSION 1: Set all to gone outside the house, changed by wesp
 def gio1_KillAllOutside():
     print ( "***************** Starting to Remove NPCs ******************" )
     spawner = Find( "maker_guard_north" )
@@ -98,8 +98,8 @@ def gio1_KillAllOutside():
 
     luca = Find( "Luca" )
     if (luca):
-        print ( "************* Killed Luca 4 ****************" )
-        luca.Kill()
+        print ( "************* Luca will stay ****************" )
+        luca.ScriptHide()
     else:
         print ( "************* Couldnt Find Luca****************" )
 
@@ -248,10 +248,17 @@ def gio1_panicVictorMaria():
 
 #GIOVANNI MANSION 2: Set all guests inside house to flee and die, changed by wesp
 def gio2_guestsFlee():
-    guest = Find( "Guest" )
+
+    sounds = Find("Sounds_Party")
+    if sounds: sounds.Kill()
+
+    speechs = Finds("Bruno_Speech")
+    for speech in speechs:
+        if speech: speech.Kill()
+
+    guests = Finds("PartyGuest" )
     for guest in guests:
-        if guest:
-            guest.FleeAndDie()
+        if guest: guest.FleeAndDie()
 
     adam = Find( "Adam" )
     if adam: adam.FleeAndDie()
@@ -289,6 +296,8 @@ def onGio1Load():
     if (G.GioBotchedInside == 1 or G.GioBotchedOutside == 1):
         ambient = Find ("Restaurant")
         if ambient: ambient.Kill()
+        luca = Find("Luca")
+        if (luca): luca.ScriptUnhide()
     print ( "***************** Reset Guard DLGs *****************" )
     if ( G.Story_State == 60 and G.Gio_Cutscene == 0):
         gio1_KillAllOutside()
@@ -312,6 +321,13 @@ def onGio1Load():
 #GIOVANNI MANSION 2: Fires on Giovanni2a Load, changed by wesp
 def onGio2aLoad():
     G.BeenToGioParty = 1
+    if G.Story_State >=60:
+        gio2_guestsFlee()
+        guests = Finds("PartyGuest" )
+        for guest in guests:
+            if guest: guest.Kill()
+        chris = Find( "Christopher" )
+        if chris: chris.Kill()
     pc = __main__.FindPlayer()
     state = pc.GetQuestState("Giovanni")
     if (state < 2):
@@ -425,7 +441,7 @@ def gio1_setAlarm():
         #turn on spawners
         gio1_activateSpawners()
 
-#GIOVANNI MANSION 1: Entrance Check for chooseing to go to 2a or 2b
+#GIOVANNI MANSION 1: Entrance Check for chooseing to go to 2a or 2b, changed by wesp
 def entranceFrontCheck():
     if ( G.BeenToGioParty == 1 ):
         __main__.ChangeMap(1, "frontload_landmark", "frontload_a")
