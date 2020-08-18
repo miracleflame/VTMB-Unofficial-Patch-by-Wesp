@@ -39,6 +39,8 @@ def setBasic():
         pc.GiveItem("item_a_lt_cloth")
     if G.Patch_Plus == 0:
         Find("idle_timer").Disable()
+        musicplus = Find("music_plus")
+        if musicplus: musicplus.StopSound()
         door = Find("phonographdoor")
         if door: door.Lock()
         backdoor = Find("reddrbckknob")
@@ -195,6 +197,8 @@ def setPlus():
         FixKeyBindings()
         IsIdling()
         G.No_Idle = 0
+        musicbasic = Find("music_basic")
+        if musicbasic:musicbasic.StopSound()
         cop = Find("Cop_Deck1_Guard2")
         if cop: cop.SetModel("models/character/npc/common/Cop_Variant/rookied_cop/Rookied_Cop.mdl")
         cop = Find("Cop_Deck3_Guard2")
@@ -589,7 +593,7 @@ def playerGotBox():
             pc.HumanityAdd(-1)
 
 #GIOVANNI MANSION 2: Feedback for killing Bruno, added by wesp
-def brunoD():
+def brunoDeath():
     __main__.G.Bruno_Killed = 1
     pc = __main__.FindPlayer()
     status = __main__.FindPlayer().GetQuestState("Sarcophagus")
@@ -622,7 +626,7 @@ def spawnGold():
 def changeLevelCheck():
     map2a = Find("giovanni_2a")
     map2b = Find("giovanni_2b")
-    if (__main__.G.BeenToGioParty == 1):
+    if (__main__.G.BeenToGioParty == 1 and not (G.GioBotchedOutside == 1 or G.GioBotchedInside == 1) ):
         map2b.Disable()
         map2a.Enable()
         print "2b disabled"
@@ -725,7 +729,7 @@ def pishaGone():
         corpse = Find("corpse1")
         if corpse: corpse.Kill()
         __main__.G.Pisha_Corpse = 1 
-    if (__main__.G.Story_State > 85 and __main__.G.Pisha_Know > 0 and not __main__.IsDead("Pisha")):
+    if (__main__.G.Story_State >= 85 and __main__.G.Pisha_Know > 0 and not __main__.IsDead("Pisha")):
         pisha = Find("Pisha")
         if pisha: pisha.Kill()
         book = Find("book")
