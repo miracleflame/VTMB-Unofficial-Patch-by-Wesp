@@ -221,7 +221,12 @@ def gio2_aggroInside():
     nadia = Find( "Nadia" )
     if (nadia):
         nadia.SetRelationship( "player D_HT 5" )
-        print "********** Set all Inside to Hate **********"
+    triggers = Finds("Trigger_Follow*")
+    for trigger in triggers:
+        if trigger: trigger.Kill()
+        print "come on killed"
+
+    print "********** Set all Inside to Hate **********"
 
     pc = __main__.FindPlayer()
     state = pc.GetQuestState("Dirt")
@@ -271,6 +276,10 @@ def gio2_guestsFlee():
 
     nadia = Find( "Nadia" )
     if nadia: nadia.FleeAndDie()
+    triggers = Finds("Trigger_Follow*")
+    for trigger in triggers:
+        if trigger: trigger.Kill()
+        print "come on killed"
 
     pc = __main__.FindPlayer()
     state = pc.GetQuestState("Dirt")
@@ -298,6 +307,16 @@ def onGio1Load():
         if ambient: ambient.Kill()
         luca = Find("Luca")
         if (luca): luca.ScriptUnhide()
+        victor = Find( "Victor" )
+        if (victor): victor.Kill()
+        maria = Find( "Maria" )
+        if (maria): maria.Kill()
+        partygoers = Finds( "partygoer" )
+        for partygoer in partygoers:
+            if partygoer: partygoer.Kill()
+        limos = Finds( "limo" )
+        for limo in limos:
+            if limo: limo.Kill()
     print ( "***************** Reset Guard DLGs *****************" )
     if ( G.Story_State == 60 and G.Gio_Cutscene == 0):
         gio1_KillAllOutside()
@@ -346,6 +365,17 @@ def onGio2bLoad():
     if (state < 2):
         pc.SetQuest("Giovanni", 2)
         print ( "************* Infiltrated the Giovanni Mansion ****************" )
+    if __main__.G.GioBotchedInside == 1:
+        if __main__.G.Dodge_Book == 1:
+            dodgebook2 = Find("dodge_book2")
+            if dodgebook2: dodgebook2.ScriptHide()
+        brunoeventsilent = Find("Bruno_Event_Silent")
+        brunoeventsilent.Trigger()
+        brunoevent = Find("Bruno_Event")
+        if brunoevent: brunoevent.Kill()
+    if __main__.G.Bruno_Killed == 1:
+        bruno = Find("Bruno")
+        if bruno: __main__.ScheduleTask(1.0, "__main__.FindEntityByName(\'Bruno\').Kill()")
 
 #GIOVANNI MANSION 3: Checks to see if zombies are hostile when Nadia takes damage
 def damCheck():
@@ -379,7 +409,7 @@ def gio3_checkAllZombieDead():
         if ( zombie.IsAlive() ):
             counter = counter + 1
             G.Zombies = ( counter )
-    if (counter == 0 or G.ZombiesDead >= 25):
+    if (counter == 0 or G.ZombiesDead >= 26):
         relay = Find( "Relay_Zombies_Dead" )
         relay.Trigger()
     else:
@@ -402,9 +432,9 @@ def nadiaTo2b():
     relayTo2b = Find( "Relay_Nadia_to_2b" )
     relayTo2b.Trigger()
 
-#GIOVANNI MANSION 3: Unhide begin nadia dialog, changed by wesp
+#GIOVANNI MANSION 3/4: Unhide begin nadia dialog, changed by wesp
 def gio3_checkNadiaUnhide():
-    if ( G.gio_2_nadia_pt == 1 ):
+    if ( G.gio_2_nadia_pt == 1 and G.GioBotchedInside == 0 ):
         Nadia = Find( "Nadia" )
         Nadia.ScriptUnhide()
         G.Nadia_G3 = 1
@@ -424,7 +454,9 @@ def gio3_checkNadiaUnhide():
         float = Find("choreo_PointRight1")
     if ( G.Story_State >= 60 ):
         Nadia = Find( "Nadia" )
-        Nadia.ScriptHide()
+        if Nadia: Nadia.ScriptHide()
+        choreo = Find("Relay_Cancel_Chereo")
+        if choreo: choreo.Trigger()
 
 #GIOVANNI MANSION 1: Set alarm state for g_1
 def gio1_setAlarm():
@@ -443,20 +475,14 @@ def gio1_setAlarm():
 
 #GIOVANNI MANSION 1: Entrance Check for chooseing to go to 2a or 2b, changed by wesp
 def entranceFrontCheck():
-    if ( G.BeenToGioParty == 1 ):
-        __main__.ChangeMap(1, "frontload_landmark", "frontload_a")
-        return
-    if ( G.GioBotchedOutside == 1 ):
+    if ( G.GioBotchedOutside == 1 or G.GioBotchedInside == 1 ):
         __main__.ChangeMap(1, "frontload_landmark", "frontload_b")
         return
     else:
         __main__.ChangeMap(1, "frontload_landmark", "frontload_a")
 
 def entranceBackCheck():
-    if ( G.BeenToGioParty == 1 ):
-        __main__.ChangeMap(1, "backload_landmark", "backload_a")
-        return
-    if ( G.GioBotchedOutside == 1 ):
+    if ( G.GioBotchedOutside == 1 or G.GioBotchedInside == 1 ):
         __main__.ChangeMap(1, "backload_landmark", "backload_b")
         return
     else:

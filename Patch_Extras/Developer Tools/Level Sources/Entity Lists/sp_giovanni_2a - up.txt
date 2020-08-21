@@ -7348,8 +7348,9 @@
 "follower_type" "Default"
 "is_bossmonster" "1"
 "cantdropweapons" "0"
+"OnHalfHealth" "spell_timer,Disable,,0,-1,,"
 "OnDeath" "Relay_Open_Doors,Trigger,,0,-1,,"
-"OnDeath" ",,,0,-1,brunoD(),"
+"OnDeath" ",,,0,-1,brunoDeath(),"
 "origin" "-387 513 1.00"
 }
 {
@@ -12311,6 +12312,7 @@
 "classname" "item_p_research_hg_dodge"
 "targetname" "dodge_book"
 "origin" "349.859 396.733 28"
+"OnPlayerPickup" ",,,0,-1,G.Dodge_Book = 1,"
 }
 {
 "classname" "inspection_node"

@@ -626,7 +626,7 @@ def spawnGold():
 def changeLevelCheck():
     map2a = Find("giovanni_2a")
     map2b = Find("giovanni_2b")
-    if (__main__.G.BeenToGioParty == 1 and not (G.GioBotchedOutside == 1 or G.GioBotchedInside == 1) ):
+    if (__main__.G.BeenToGioParty == 1 and not (__main__.G.GioBotchedOutside == 1 or __main__.G.GioBotchedInside == 1) ):
         map2b.Disable()
         map2a.Enable()
         print "2b disabled"

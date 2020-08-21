@@ -7299,8 +7299,9 @@
 "cantdropweapons" "0"
 "is_bossmonster" "1"
 "squadname" "meeting"
-"OnDeath" ",,,0,-1,brunoD(),"
+"OnHalfHealth" "spell_timer,Disable,,0,-1,,"
 "OnDeath" "Relay_Open_Doors,Trigger,,0,-1,,"
+"OnDeath" ",,,0,-1,brunoDeath(),"
 "origin" "-387 513 1"
 }
 {
@@ -7869,6 +7870,22 @@
 "m_iszEntity" "Bruno"
 "m_iszNextScript" "Sequence_Bruno_2"
 "OnEndSequence" "ExplodeDoor_1_Relay,Trigger,,0.5,-1,,"
+"OnBeginSequence" "Bruno_Door_Convert,ConvertTarget,,0,-1,,"
+"OnEndSequence" "Bruno_Door_Elplode,Explode,,0.5,-1,,"
+"OnBeginSequence" "spell_particles,TurnOn,,0,-1,,"
+"origin" "-378 409 5"
+}
+{
+"classname" "scripted_sequence"
+"m_flRadius" "3000"
+"m_flRepeat" "0"
+"m_fMoveTo" "0"
+"angles" "0 270 0"
+"spawnflags" "4704"
+"targetname" "Sequence_Bruno_1_Silent"
+"m_iszEntity" "Bruno"
+"m_iszNextScript" "Sequence_Bruno_2"
+"OnEndSequence" "ExplodeDoor_1_Relay_Silent,Trigger,,0.5,-1,,"
 "OnBeginSequence" "Bruno_Door_Convert,ConvertTarget,,0,-1,,"
 "OnEndSequence" "Bruno_Door_Elplode,Explode,,0.5,-1,,"
 "OnBeginSequence" "spell_particles,TurnOn,,0,-1,,"
@@ -10466,6 +10483,20 @@
 "origin" "-306.844 399 95.6142"
 }
 {
+"classname" "logic_relay"
+"StartDisabled" "0"
+"targetname" "Bruno_Event_Silent"
+"spawnflags" "0"
+"" ",,,0,-1,G.BochedGio = 1,"
+"OnTrigger" "Sequence_Bruno_1_Silent,BeginSequence,,0,-1,,"
+"OnTrigger" "Bruno_Speech,Kill,,0,-1,,"
+"OnTrigger" "Meeting_Guys,Kill,,0,-1,,"
+"OnTrigger" "Bruno,TweakParam,HEARING 2,0,-1,,"
+"OnTrigger" "Brunox,SetRelationship,player D_HT 5,0,-1,,"
+"OnTrigger" "Bruno,TweakParam,VISION 1200,0,-1,,"
+"origin" "-306.844 399 95.6142"
+}
+{
 "classname" "npc_maker_zombie"
 "angles" "0 135 0"
 "renderfx" "0"
@@ -11999,13 +12030,13 @@
 }
 {
 "classname" "item_p_research_hg_dodge"
-"targetname" "dodge_book"
+"targetname" "dodge_book2"
 "origin" "349.859 396.733 28"
 }
 {
 "classname" "inspection_node"
-"targetname" "dodge_book_sparklies"
-"parentname" "dodge_book"
+"targetname" "dodge_book2_sparklies"
+"parentname" "dodge_book2"
 "start_enabled" "1"
 "inspection" "6"
 "origin" "348 395.43 28"
@@ -13091,10 +13122,8 @@
 "classname" "logic_relay"
 "StartDisabled" "0"
 "spawnflags" "0"
-"targetname" "ExplodeDoor_1_Relay"
+"targetname" "ExplodeDoor_1_Relay_Silent"
 "OnTrigger" "ExplodeDoor_1_DoorBlock,Kill,,0,-1,,"
-"OnTrigger" "ExplodeDoor_1_Shake,StartShake,,0,-1,,"
-"OnTrigger" "ExplodeDoor_1_Sound,PlaySound,,0,-1,,"
 "OnTrigger" "ExplodeDoor_1_Explosion,Explode,,0.1,-1,,"
 "OnTrigger" "ExplodeDoor_1_Debries,ScriptUnhide,,0,-1,,"
 "OnTrigger" "ExplodeDoor_1_FakeBrush,Kill,,0,-1,,"
