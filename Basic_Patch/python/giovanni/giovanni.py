@@ -368,7 +368,9 @@ def onGio2bLoad():
     if __main__.G.GioBotchedInside == 1:
         if __main__.G.Dodge_Book == 1:
             dodgebook2 = Find("dodge_book2")
-            if dodgebook2: dodgebook2.ScriptHide()
+            if dodgebook2: dodgebook2.Kill()
+            dodgebook2sparklies = Find("dodge_book2_sparklies")
+            if dodgebook2sparklies: dodgebook2sparklies.Kill()
         brunoeventsilent = Find("Bruno_Event_Silent")
         brunoeventsilent.Trigger()
         brunoevent = Find("Bruno_Event")

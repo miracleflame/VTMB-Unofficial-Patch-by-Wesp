@@ -7887,7 +7887,6 @@
 "m_iszNextScript" "Sequence_Bruno_2"
 "OnEndSequence" "ExplodeDoor_1_Relay_Silent,Trigger,,0.5,-1,,"
 "OnBeginSequence" "Bruno_Door_Convert,ConvertTarget,,0,-1,,"
-"OnEndSequence" "Bruno_Door_Elplode,Explode,,0.5,-1,,"
 "OnBeginSequence" "spell_particles,TurnOn,,0,-1,,"
 "origin" "-378 409 5"
 }
@@ -13117,6 +13116,20 @@
 "frequency" "2.5"
 "targetname" "ExplodeDoor_1_Shake"
 "origin" "-380 374 62.128"
+}
+{
+"classname" "logic_relay"
+"StartDisabled" "0"
+"spawnflags" "0"
+"targetname" "ExplodeDoor_1_Relay"
+"OnTrigger" "ExplodeDoor_1_DoorBlock,Kill,,0,-1,,"
+"OnTrigger" "ExplodeDoor_1_Shake,StartShake,,0,-1,,"
+"OnTrigger" "ExplodeDoor_1_Sound,PlaySound,,0,-1,,"
+"OnTrigger" "ExplodeDoor_1_Explosion,Explode,,0.1,-1,,"
+"OnTrigger" "ExplodeDoor_1_Debries,ScriptUnhide,,0,-1,,"
+"OnTrigger" "ExplodeDoor_1_FakeBrush,Kill,,0,-1,,"
+"OnTrigger" "Bruno_area_portal,Open,,0,-1,,"
+"origin" "-380 374 46"
 }
 {
 "classname" "logic_relay"
