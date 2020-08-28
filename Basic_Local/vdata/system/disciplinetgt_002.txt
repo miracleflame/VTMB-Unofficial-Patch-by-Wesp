@@ -1114,7 +1114,7 @@ DisciplineTgt
 
 			Mapping
 			{
-				"HitTable"	"Hit_Invulnerable"
+				"HitTable"	"Hit_Supernatural_NoEffect"
 			}
 		}
 
@@ -2374,6 +2374,19 @@ DisciplineTgt
 			Mapping
 			{
 				"HitTable"	"Hit_Invulnerable"
+			}
+		}
+
+		Affects_Table	// added by wesp
+		{
+			Affects_Filters
+			{
+				"CharTemplate"		"Zombie"
+			}
+
+			Mapping
+			{
+				"HitTable"	"Hit_Supernatural_NoEffect"
 			}
 		}
 

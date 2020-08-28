@@ -39,7 +39,7 @@
 {	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	41	}{	Oh, I'm from back east myself. I'm working on my Master's out here though. The Giovannis have been nice enough to let me stay here while I finish up my studies. I've learned a great deal from them - like you wouldn't believe.	}{	Oh, I'm from back east myself. I'm working on my Master's out here though. The Giovannis have been nice enough to let me stay here while I finish up my studies. I've learned a great deal from them - like you wouldn't believe.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	42	}{	For example?	}{	For example?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	What sights have your young eyes witnessed?	}
+{	42	}{	For example?	}{	For example?	}{	171	}{	G.Nadia_Secret == 0 and G.ZombiesDead == 0	}{	}{	}{	}{	}{	}{	}{	}{	What sights have your young eyes witnessed?	}
 {	43	}{	Say, Nadia, you know anything about a sarcophagus?	}{	Say, Nadia, you know anything about a sarcophagus?	}{	211	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	Do you believe in the sarcophagus?	}
 {	44	}{	Enjoy the party, Nadia. Excuse me.	}{	Enjoy the party, Nadia. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I fade back into the party.	}
 {	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -49,7 +49,7 @@
 {	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	51	}{	I'm working on my Master's out here - I'm from back east. The Giovannis have been nice enough to let me stay here while I finish up my studies. I've learned a great deal from them - like you wouldn't believe.	}{	I'm working on my Master's out here - I'm from back east. The Giovannis have been nice enough to let me stay here while I finish up my studies. I've learned a great deal from them - like you wouldn't believe.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	52	}{	For example?	}{	For example?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	What sights have your young eyes witnessed?	}
+{	52	}{	For example?	}{	For example?	}{	171	}{	G.Nadia_Secret == 0 and G.ZombiesDead == 0	}{	}{	}{	}{	}{	}{	}{	}{	What sights have your young eyes witnessed?	}
 {	53	}{	Say, Nadia, you know anything about a sarcophagus?	}{	Say, Nadia, you know anything about a sarcophagus?	}{	211	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	Do you believe in the sarcophagus?	}
 {	54	}{	Enjoy the party, Nadia. Excuse me.	}{	Enjoy the party, Nadia. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I fade back into the party.	}
 {	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -119,7 +119,7 @@
 {	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	121	}{	Uh, yeah, cousin Victor. I'm Nadia, I don't know if you remember, I've been staying with the Giovannis while I work on my Master's degree out here. They've provided such a rich supplement to my education.	}{	Uh, yeah, cousin Maria. I'm Nadia. I don't know if you remember, I've been staying with the Giovannis while I work on my Master's degree out here. They've provided such a rich supplement to my education.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	122	}{	For example?	}{	For example?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	122	}{	For example?	}{	For example?	}{	171	}{	G.Nadia_Secret == 0 and G.ZombiesDead == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	123	}{	Say, Nadia, you know anything about a sarcophagus?	}{	Say, Nadia, you know anything about a sarcophagus?	}{	211	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	124	}{	Enjoy the party, Nadia. Excuse me.	}{	Enjoy the party, Nadia. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -212,7 +212,7 @@
 {	212	}{	Are you sure? Think hard. It's important!	}{	Are you sure? Think hard. It's important!	}{	111	}{	}{	}{	}{	}{	}{	}{	}{	}{	I want to believe you but... don't.	}
 {	213	}{	I bet a broken wrist would refresh your memory.	}{	I bet a broken wrist would refresh your memory.	}{	111	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	Why don't I tear off an ear and interrogate it?	}
 {	214	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	215	}{	You were saying you've learned some interesting things here. Care to share?	}{	You were saying you've learned some interesting things here. Care to share?	}{	171	}{	G.Nadia_Secret == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me more of your life in this mortuary.	}
+{	215	}{	You were saying you've learned some interesting things here. Care to share?	}{	You were saying you've learned some interesting things here. Care to share?	}{	171	}{	G.Nadia_Secret == 0 and G.ZombiesDead == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me more of your life in this mortuary.	}
 {	216	}{	Forget it then. Enjoy the party.	}{	Forget it then. Enjoy the party.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I fade back into the party.	}
 {	217	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	218	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -499,7 +499,7 @@
 {	499	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	500	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	501	}{	Hi.	}{	Hi.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	502	}{	So... learned anything interesting about the Giovanni while you've been here?	}{	So... learned anything interesting about the Giovanni while you've been here?	}{	171	}{	}{	}{	}{	}{	}{	}{	}{	}{	What sights have your young eyes witnessed in this house?	}
+{	502	}{	So... learned anything interesting about the Giovanni while you've been here?	}{	So... learned anything interesting about the Giovanni while you've been here?	}{	171	}{	G.Nadia_Secret == 0 and G.ZombiesDead == 0	}{	}{	}{	}{	}{	}{	}{	}{	What sights have your young eyes witnessed in this house?	}
 {	503	}{	Say, you know anything about a sarcophagus?	}{	Say, you know anything about a sarcophagus?	}{	211	}{	G.Story_State < 60	}{	}{	}{	}{	}{	}{	}{	}{	Do you believe in the sarcophagus?	}
 {	504	}{	Enjoy the party. Excuse me.	}{	Enjoy the party. Excuse me.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I fade back into the party.	}
 {	505	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

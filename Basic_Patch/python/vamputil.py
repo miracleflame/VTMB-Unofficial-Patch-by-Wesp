@@ -326,7 +326,7 @@ def setPlus():
             if clawbrosbasic: clawbrosbasic.Kill()
             G.Chang_Swap = 1
         sarc = Find("sarc_plus")
-        if sarc and G.Story_State >= 65:
+        if sarc and G.Story_State >= 60:
             sarc.ScriptHide()
             sarcbasic = Find("sarc_basic")
             sarcbasic.ScriptHide()
@@ -351,7 +351,7 @@ def setPlus():
         if giovannimanhole:
             giovannicabbie = Find("cabbie")
             giovannicabbie.WillTalk(0)
-            if G.Story_State >= 65:
+            if G.Story_State >= 60:
                 if IsClan(pc,"Nosferatu"):
                     manholefake = Find("Manhole_Giovanni_Fake")
                     manhole = Find("Manhole_Giovanni")

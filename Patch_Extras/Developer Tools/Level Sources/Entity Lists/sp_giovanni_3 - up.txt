@@ -3360,7 +3360,7 @@
 }
 {
 "classname" "npc_VZombie"
-"targetname" "Zombie_Spawned"
+"targetname" "Zombie_Entrance"
 "angles" "0 29 0"
 "renderfx" "0"
 "rendermode" "0"
@@ -3418,6 +3418,7 @@
 "warn_range" "200.0"
 "conflict_range" "100.0"
 "remove_distance" "1024.0"
+"should_ragdoll" "1"
 "follower_type" "Default"
 "OnDamaged" "Relay_Kill_Nadia,Trigger,,0,-1,,"
 "OnDeath" ",,,0,-1,gio3_checkAllZombieDead(),"
@@ -4019,7 +4020,7 @@
 }
 {
 "classname" "npc_VZombie"
-"targetname" "Zombie_Spawned"
+"targetname" "Zombie_Door"
 "angles" "0 271 0"
 "renderfx" "0"
 "rendermode" "0"
