@@ -50,7 +50,7 @@ def setupChamber():
     elif (G.Story_State == 60):
         actCoffin = Find("coffin_state")
         actCoffin.Trigger()
-
+        __main__.FindPlayer().SetQuest("Sarcophagus",4)
     # check to make sure the correct Prince is active
     if (G.Story_State < 30):
         princeStart.ScriptUnhide()
@@ -156,7 +156,8 @@ def chooseCamarilla():
         change = Find("Regent_Guard_3")
         change.SetModel("models/character/pc/male/nosferatu/armor0/Nosferatu.mdl")
     if(G.Patch_Plus == 0):
-        Find("Regent_Guard_Spare_Model").Kill()
+        spare = Find("Regent_Guard_Spare_Model")
+        if spare: spare.Kill()
 
 #PRINCE'S CHAMBERS: Selects the correct ending to transition to from Give Prince Key ending
 def checkEnding():
@@ -267,7 +268,7 @@ def despawnBomb():
     bomb = FindClass("item_g_astrolite")
     center = bomb[0].GetOrigin()
     angles = bomb[0].GetAngles()
-    bomb[0].Kill()
+    if bomb: bomb[0].Kill()
     bombProp = Find("bomb_prop")
     bombProp.SetOrigin(center)
     bombProp.SetAngles(angles)
