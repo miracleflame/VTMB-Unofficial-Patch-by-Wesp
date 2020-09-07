@@ -306,7 +306,12 @@ def onGio1Load():
         ambient = Find ("Restaurant")
         if ambient: ambient.Kill()
         luca = Find("Luca")
-        if (luca): luca.ScriptUnhide()
+        if (luca):
+            luca.ScriptUnhide()
+            luca.SetRelationship( "player D_HT 5" )
+        guard5 = Find( "guard_5" )
+        if (guard5):
+            guard5.SetRelationship( "player D_HT 5" )
         victor = Find( "Victor" )
         if (victor): victor.Kill()
         maria = Find( "Maria" )
@@ -441,6 +446,10 @@ def gio3_checkNadiaUnhide():
         Nadia.ScriptUnhide()
         G.Nadia_G3 = 1
     else:
+        Nadia = Find( "Nadia" )
+        if Nadia: Nadia.ScriptHide()
+        choreo = Find("Relay_Cancel_Chereo")
+        if choreo: choreo.Trigger()
         Relay = Find("Relay_Nadia_Flees")
         if Relay: Relay.Kill()
         Relay1 = Find("Relay_Nadia_Escapes")
@@ -454,11 +463,9 @@ def gio3_checkNadiaUnhide():
         float = Find("choreo_InHere")
         if float: float.ScriptHide()
         float = Find("choreo_PointRight1")
-    if ( G.Story_State >= 60 ):
-        Nadia = Find( "Nadia" )
-        if Nadia: Nadia.ScriptHide()
-        choreo = Find("Relay_Cancel_Chereo")
-        if choreo: choreo.Trigger()
+        if float: float.ScriptHide()
+        float = Find("Choreo_InFear")
+        if float: float.ScriptHide()
 
 #GIOVANNI MANSION 1: Set alarm state for g_1
 def gio1_setAlarm():
@@ -570,6 +577,7 @@ def gio5_changDefeated():
     G.Chunk_Open = 4
     G.gio_2_nadia_pt = 0
     G.GioBotchedInside = 1
+    G.GioBotchedOutside = 1 
     trigger = Find("trig_from_4")
     trigger.ScriptUnhide()
     __main__.ChangeMap(3, "truckmark", "trig_shortcut")
