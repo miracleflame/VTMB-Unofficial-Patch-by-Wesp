@@ -184,7 +184,7 @@ def luckyState():
             skelter.ScriptUnhide()
     deadmuddy = Find("dead_muddy")
     if (G.Muddy_Dead == 1):
-        deadmuddy.Kill()
+        if deadmuddy: deadmuddy.Kill()
         G.Muddy_Dead = 2
     if(G.Killer_Key == 1):
     #A different flag, tied to the material clue from the downtown murder scene, would be better for the first argument
@@ -559,16 +559,14 @@ def randomClubevents():
     if(Index < 3):
         eventtwo.Trigger()
         eventthree.Trigger()
-        offwork = Find("stripper_off_work")
-        if offwork: offwork.Kill()
+# wesp        offwork = Find("stripper_off_work")
+# wesp        if offwork: offwork.Kill()
     elif(Index < 6):
         eventone.Trigger()
         eventthree.Trigger()
     elif(Index < 10):
         eventone.Trigger()
         eventtwo.Trigger()
-        if G.Patch_Plus == 0:
-            eventthree.Trigger()
     if G.Misti_Dead == 1:
         misti = Find("Misti")
         if misti: misti.Kill()
