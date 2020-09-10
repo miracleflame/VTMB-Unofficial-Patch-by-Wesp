@@ -1,5 +1,5 @@
 --------------------
-Bloodlines SDK v1.92
+Bloodlines SDK v1.93
 --------------------
 
 This is an unofficial software developer's kit (SDK) for Vampire - The Masquerade: 
@@ -73,6 +73,7 @@ This SDK includes various third-party tools, in particular:
 * 4GB Exe Patcher (patch for 64-bit OS, developed by NTCore)
 * Make-Model-Solid (fixing tool for MDL's collision, developed by DDLullu)
 * No-More-LOD (character LODs disabler tool, developed by DDLullu)
+* Skin Editor - Bloodlines Edition (custom editor, developed by hlstriker)
 
 --------------------
 
