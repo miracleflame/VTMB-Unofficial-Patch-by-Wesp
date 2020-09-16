@@ -158,7 +158,7 @@
 {	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	160	}{	Try not to die. Goodbye.	}{	Try not to die. Goodbye.	}{	0	}{	}{	npc.SetDisposition("Dead",1)	}{	}{	}{	}{	}{	}{	}{	Keep your heart pumping. Farewell.	}
-{	161	}{	Ahh... ohh.... Oh, holy Christ I needed that.	}{	Ahh... ohh.... Oh, holy Christ I needed that.	}{	#	}{	npc.SetDisposition("lay", 3)	}{	FindPlayer().HumanityAdd(1); G.Mercurio_Aid = 1; pc.AwardExperience("Astro03")	}{	}{	}{	}{	}{	}{	}{	}
+{	161	}{	Ahh... ohh.... Oh, holy Christ I needed that.	}{	Ahh... ohh.... Oh, holy Christ I needed that.	}{	#	}{	npc.SetDisposition("lay", 3)	}{	FindPlayer().HumanityAdd( 1 ); G.Mercurio_Aid = 1; pc.AwardExperience("Astro03")	}{	}{	}{	}{	}{	}{	}{	}
 {	162	}{	You're welcome. I'll come back when I have the Astrolite. Goodbye.	}{	You're welcome. I'll come back when I have the Astrolite. Goodbye.	}{	141	}{	G.Mercurio_Astro == 0 and G.Mercurio_Get == 0	}{	}{	}{	}{	}{	}{	}{	}{	I will return with the boom-boom.	}
 {	163	}{	I got the Astrolite back.	}{	I got the Astrolite back.	}{	171	}{	G.Mercurio_Quest == 1 and pc.HasItem("item_g_astrolite")	}{	}{	}{	}{	}{	}{	}{	}{	I got the boom-boom.	}
 {	164	}{	I had some questions about Santa Monica.	}{	I had some questions about Santa Monica.	}{	321	}{	G.Mercurio_Quest == 2	}{	}{	}{	}{	}{	}{	}{	}{	Tell me of the lady by the sea.	}
@@ -180,20 +180,20 @@
 {	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	181	}{	Didja get my money back?	}{	Didja get my money back?	}{	#	}{	npc.SetDisposition("lay", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	182	}{	I did. Here it is.	}{	I did. Here it is.	}{	201	}{	G.Patch_Plus == 0 and G.Mercurio_Loot == 1 and pc.CurrentMoney() >= 250	}{	pc.MoneyRemove(250)	}{	}{	}{	}{	}{	}{	}{	Here is your gold, Mercury.	}
-{	183	}{	Your money? Yes! Yes, I did. Here it is.	}{	Your money? Yes! Yes, I did. Here it is.	}{	201	}{	G.Patch_Plus == 0 and G.Mercurio_Loot == 0 and pc.CurrentMoney() >= 250	}{	pc.MoneyRemove(250)	}{	}{	}{	}{	}{	}{	}{	Your gold? YES! Here is your gold, Mercury.	}
+{	183	}{	Your money? Yes! Yes, I did. Here it is.	}{	Your money? Yes! Yes, I did. Here it is.	}{	201	}{	G.Mercurio_Loot == 0 and pc.CurrentMoney() >= 250	}{	pc.MoneyRemove(250)	}{	}{	}{	}{	}{	}{	}{	Your gold? YES! Here is your gold, Mercury.	}
 {	184	}{	No, sorry, I didn't find it.	}{	No, sorry, I didn't find it.	}{	821	}{	}{	}{	}{	}{	}{	}{	}{	}{	My hands are as empty as my head.	}
 {	185	}{	I did. Here it is.	}{	I did. Here it is.	}{	201	}{	G.Patch_Plus == 1 and G.Mercurio_Loot == 1 and pc.CurrentMoney() >= 250	}{	pc.MoneyRemove(250); pc.AwardExperience("Astro04")	}{	}{	}{	}{	}{	}{	}{	Here is your gold, Mercury.	}
-{	186	}{	Your money? Yes! Yes, I did. Here it is.	}{	Your money? Yes! Yes, I did. Here it is.	}{	201	}{	G.Patch_Plus == 1 and G.Mercurio_Loot == 0 and pc.CurrentMoney() >= 250	}{	pc.MoneyRemove(250); FindPlayer().HumanityAdd( 1 )	}{	}{	}{	}{	}{	}{	}{	Your gold? YES! Here is your gold, Mercury.	}
+{	186	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	191	}{	Good, great - hope it was painful. Didja get my money back?	}{	Good, great - hope it was painful. Didja get my money back?	}{	#	}{	npc.SetDisposition("lay", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	192	}{	I did. Here it is.	}{	I did. Here it is.	}{	201	}{	G.Patch_Plus == 0 and G.Mercurio_Loot == 1 and pc.CurrentMoney() >= 250	}{	pc.MoneyRemove(250)	}{	}{	}{	}{	}{	}{	}{	Here is your gold, Mercury.	}
-{	193	}{	Your money? Yes! Yes, I did. Here it is.	}{	Your money? Yes! Yes, I did. Here it is.	}{	201	}{	G.Patch_Plus == 0 and G.Mercurio_Loot == 0 and pc.CurrentMoney() >= 250	}{	pc.MoneyRemove(250)	}{	}{	}{	}{	}{	}{	}{	Your gold? YES! Here is your gold, Mercury.	}
+{	193	}{	Your money? Yes! Yes, I did. Here it is.	}{	Your money? Yes! Yes, I did. Here it is.	}{	201	}{	G.Mercurio_Loot == 0 and pc.CurrentMoney() >= 250	}{	pc.MoneyRemove(250)	}{	}{	}{	}{	}{	}{	}{	Your gold? YES! Here is your gold, Mercury.	}
 {	194	}{	No, sorry, I didn't find it.	}{	No, sorry, I didn't find it.	}{	821	}{	}{	}{	}{	}{	}{	}{	}{	}{	My hands are as empty as my head.	}
 {	195	}{	I did. Here it is.	}{	I did. Here it is.	}{	201	}{	G.Patch_Plus == 1 and G.Mercurio_Loot == 1 and pc.CurrentMoney() >= 250	}{	pc.MoneyRemove(250); pc.AwardExperience("Astro04")	}{	}{	}{	}{	}{	}{	}{	Here is your gold, Mercury.	}
-{	196	}{	Your money? Yes! Yes, I did. Here it is.	}{	Your money? Yes! Yes, I did. Here it is.	}{	201	}{	G.Patch_Plus == 1 and G.Mercurio_Loot == 0 and pc.CurrentMoney() >= 250	}{	pc.MoneyRemove(250); FindPlayer().HumanityAdd( 1 )	}{	}{	}{	}{	}{	}{	}{	Your gold? YES! Here is your gold, Mercury.	}
+{	196	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	197	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	198	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	199	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

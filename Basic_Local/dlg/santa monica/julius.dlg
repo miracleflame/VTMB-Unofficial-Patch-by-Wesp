@@ -109,8 +109,8 @@
 {	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	111	}{	[Elated, sobbing]Thhh-thhh-thhank th-th- thanks- thank you! Thank you! Oh, thank you!	}{	[Elated, sobbing]Thhh-thhh-thhank th-th- thanks- thank you! Thank you! Oh, thank you!	}{	#	}{	npc.SetDisposition("Joy", 2)	}{	pc.SetQuest("Writer",9)	}{	}{	}{	}{	}{	}{	}{	}
-{	112	}{	Remember, Julius, never come back in this lifetime. Leave immediately.	}{	Remember, Julius, never come back in this lifetime. Leave immediately.	}{	0	}{	G.Patch_Plus == 0	}{	G.Julius_Cringe = 0; G.Julius_Release = 1; pc.HumanityAdd(1)	}{	}{	}{	}{	}{	}{	}{	Never again should my eyes behold your stuttering stupidity. Farewell.	}
-{	113	}{	Remember, Julius, never come back in this lifetime. Leave immediately.	}{	Remember, Julius, never come back in this lifetime. Leave immediately.	}{	0	}{	G.Patch_Plus == 1	}{	G.Julius_Cringe = 0; G.Julius_Release = 1; pc.HumanityAdd(1); pc.AwardExperience("Writer06")	}{	}{	}{	}{	}{	}{	}{	Never again should my eyes behold your stuttering stupidity. Farewell.	}
+{	112	}{	Remember, Julius, never come back in this lifetime. Leave immediately.	}{	Remember, Julius, never come back in this lifetime. Leave immediately.	}{	0	}{	G.Patch_Plus == 0	}{	G.Julius_Cringe = 0; G.Julius_Release = 1; pc.HumanityAdd( 1 )	}{	}{	}{	}{	}{	}{	}{	Never again should my eyes behold your stuttering stupidity. Farewell.	}
+{	113	}{	Remember, Julius, never come back in this lifetime. Leave immediately.	}{	Remember, Julius, never come back in this lifetime. Leave immediately.	}{	0	}{	G.Patch_Plus == 1	}{	G.Julius_Cringe = 0; G.Julius_Release = 1; pc.HumanityAdd( 1 ); pc.AwardExperience("Writer06")	}{	}{	}{	}{	}{	}{	}{	Never again should my eyes behold your stuttering stupidity. Farewell.	}
 {	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -120,11 +120,11 @@
 {	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	121	}{	Uhh... I-I-I-I-I don't h-have muh-muh-much. Ah, eh, juh-just s-s-s-som-some money. A h-h-h-hundred bucks or so.	}{	Uhh... I-I-I-I-I don't h-have muh-muh-much. Ah, eh, juh-just s-s-s-som-some money. A h-h-h-hundred bucks or so.	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	122	}{	Keep it. But you leave immediately. You come back to LA, I'll kill you.	}{	Keep it. But you leave immediately. You come back to LA, I'll kill you.	}{	111	}{	Humanity 5	}{	}{	}{	}{	}{	}{	}{	}{	Keep your pennies. I see you on a one-way dark train to somewhere else.	}
-{	123	}{	Alright, give me what you got and get out of town. I see you again, it's over.	}{	Alright, give me what you got and get out of town. I see you again, it's over.	}{	111	}{	Humanity 8 & G.Patch_Plus == 0	}{	pc.MoneyAdd(100); pc.HumanityAdd(-2)	}{	}{	}{	}{	}{	}{	}{	I accept your measly givings. Now leave before I take the rest from your hide.	}
+{	123	}{	Alright, give me what you got and get out of town. I see you again, it's over.	}{	Alright, give me what you got and get out of town. I see you again, it's over.	}{	111	}{	Humanity 8 & G.Patch_Plus == 0	}{	pc.MoneyAdd(100); pc.HumanityAdd( -2 )	}{	}{	}{	}{	}{	}{	}{	I accept your measly givings. Now leave before I take the rest from your hide.	}
 {	124	}{	Alright, give me what you got and get out of town. I see you again, it's over.	}{	Alright, give me what you got and get out of town. I see you again, it's over.	}{	111	}{	Humanity -8	}{	pc.MoneyAdd(100)	}{	}{	}{	}{	}{	}{	}{	Give it to me. If our shadows cross again, I take your unlife.	}
 {	125	}{	A hundred bucks?!? That's not enough! Sorry, Julius, I've got too much to lose.	}{	A hundred bucks?!? That's not enough! Sorry, Julius, I've got too much to lose.	}{	131	}{	}{	}{	}{	}{	}{	}{	}{	}{	More green is necessary, Caesar.	}
 {	126	}{	I'll remember to search your corpse for it.	}{	I'll remember to search your corpse for it.	}{	131	}{	Humanity -5	}{	}{	}{	}{	}{	}{	}{	}{	I'll sift through your ashes for my treasure.	}
-{	127	}{	Alright, give me what you got and get out of town. I see you again, it's over.	}{	Alright, give me what you got and get out of town. I see you again, it's over.	}{	111	}{	Humanity 8 & G.Patch_Plus == 1	}{	pc.MoneyAdd(100); pc.HumanityAdd(-1)	}{	}{	}{	}{	}{	}{	}{	I accept your measly givings. Now leave before I take the rest from your hide.	}
+{	127	}{	Alright, give me what you got and get out of town. I see you again, it's over.	}{	Alright, give me what you got and get out of town. I see you again, it's over.	}{	111	}{	Humanity 8 & G.Patch_Plus == 1	}{	pc.MoneyAdd(100)	}{	}{	}{	}{	}{	}{	}{	I accept your measly givings. Now leave before I take the rest from your hide.	}
 {	128	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	129	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	130	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

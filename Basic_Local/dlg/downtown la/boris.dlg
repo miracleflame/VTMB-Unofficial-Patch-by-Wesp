@@ -210,7 +210,7 @@
 {	210	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	211	}{	Maniac! Who let you in? Dima, put this mad dog down!	}{	Maniac! Who let you in? Dima, put this mad dog down!	}{	#	}{	npc.SetDisposition("Anger", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	212	}{	If it was not important, I would be somewhere else. You are not interested?	}{	If it was not important, I would be somewhere else. You are not interested?	}{	231	}{	Persuasion 4	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	213	}{	The goddess sends me. Your friends hate you. They plot your death. They will betray you!	}{	The goddess sends me. Your friends hate you. They plot your death. They will betray you!	}{	261	}{	Dementation 1 & (G.Boris_Dementated == 0 and not IsDead("Dema"))	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	213	}{	Your friends hate you. They plot your death. They will betray you!	}{	Your friends hate you. They plot your death. They will betray you!	}{	261	}{	Dementation 1 & (G.Boris_Dementated == 0 and not IsDead("Dema"))	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	214	}{	I would gladly add you to the coterie of slain men laid about your halls.	}{	I would gladly add you to the coterie of slain men laid about your halls.	}{	231	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	215	}{	The goddess no longer offers tribute nor lets you defile her temple.	}{	The goddess no longer offers tribute nor lets you defile her temple.	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	216	}{	I prefer the term lunatic.	}{	I prefer the term lunatic.	}{	221	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -248,7 +248,7 @@
 {	248	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	249	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	250	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	251	}{	Hehe. Spoiled American bitch! She pay you; you want to make money?	}{	Hehe. Spoiled American bitch! She pay you; you want to make money?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Boris_Dementated == 2	}{	}{	}{	}{	}{	}{	}{	}
+{	251	}{	Hehe. Spoiled American bitch! She pay you; you want to make money?	}{	Hehe. Spoiled American bitch! She pay you; you want to make money?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	252	}{	(Auto-Link)	}{	(Auto-Link)	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	253	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	254	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -279,7 +279,7 @@
 {	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	281	}{	}{	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	282	}{	(Starting Condition)	}{	}{	241	}{	G.Boris_Dementated == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	282	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	283	}{	(Starting Condition)	}{	}{	201	}{	G.Boris_Debt == 1 or G.Boris_Venus == 3	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	284	}{	(Starting Condition)	}{	}{	191	}{	G.Boris_Return == 4	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	285	}{	(Starting Condition)	}{	}{	171	}{	G.Boris_Venus > 0	}{	}{	}{	}{	}{	}{	}{	}{	}

@@ -411,10 +411,10 @@
 {	411	}{	Couldn't stay away, could you?	}{	Couldn't stay away, could you?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	412	}{	About that hunter...	}{	About that hunter...	}{	621	}{	G.Velvet_Hunter > 1 and G.Velvet_Quest < 2	}{	}{	}{	}{	}{	}{	}{	}{	About the hunting one...	}
 {	413	}{	About Hatter...	}{	About Hatter...	}{	881	}{	G.Velvet_Quest == 3	}{	}{	}{	}{	}{	}{	}{	}{	The Hatter...	}
-{	414	}{	Didn't you say something about giving me a private show?	}{	Didn't you say something about giving me a private show?	}{	911	}{	G.Velvet_Dance == 1 and G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	Didn't you want to make my heart beat again?	}
-{	415	}{	I had some questions.	}{	I had some questions.	}{	791	}{	G.Velvet_Dancer == 0 or G.Velvet_Real == 0 or G.Velvet_Origin == 0 or G.Velvet_Snuff == 0 or G.Velvet_Hollywood == 0 or G.Velvet_Ash == 0 or G.Velvet_Isaac == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me something.	}
-{	416	}{	Unfortunately, I have to... I'll be back.	}{	Unfortunately, I have to... I'll be back.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Oh, I'm supposed to be somewhere else. I am gone.	}
-{	417	}{	I can. Watch me walk out.	}{	I can. Watch me walk out.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I sooo can. And I am.	}
+{	414	}{	I had some questions.	}{	I had some questions.	}{	791	}{	G.Velvet_Dancer == 0 or G.Velvet_Real == 0 or G.Velvet_Origin == 0 or G.Velvet_Snuff == 0 or G.Velvet_Hollywood == 0 or G.Velvet_Ash == 0 or G.Velvet_Isaac == 0	}{	}{	}{	}{	}{	}{	}{	}{	Tell me something.	}
+{	415	}{	Unfortunately, I have to... I'll be back.	}{	Unfortunately, I have to... I'll be back.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Oh, I'm supposed to be somewhere else. I am gone.	}
+{	416	}{	I can. Watch me walk out.	}{	I can. Watch me walk out.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I sooo can. And I am.	}
+{	417	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	418	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	419	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	420	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -751,8 +751,8 @@
 {	751	}{	Can't you tell? I simply adore you - you're so sweet to me, the way you protect me. What would I have done had you never come in here? Oh, why can't they all be like you? The world could be so... so, beautiful. Here, take this, a reminder of the beautiful girl whose heart you stole.	}{	Can't you tell? I simply adore you - you're so sweet to me, the way you protect me. What would I have done had you never come in here? Oh, why can't they all be like you? The world could be so... so, beautiful. Here, take this, a reminder of the beautiful girl whose heart you stole.	}{	#	}{	npc.SetDisposition("Flirt", 1)	}{	pc.GiveItem("item_g_vv_photo"); G.Velvet_Email = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	752	}{	And here's the screenplay.	}{	And here's the screenplay.	}{	661	}{	pc.HasItem("item_g_Hatters_Screenplay")	}{	}{	}{	}{	}{	}{	}{	}{	The Hatter's words, for you too.	}
 {	753	}{	By the way, I had to kill Hatter.	}{	By the way, I had to kill Hatter.	}{	701	}{	IsDead("DHatter")	}{	}{	}{	}{	}{	}{	}{	}{	Oh, and the Hatter's head came off.	}
-{	754	}{	My pleasure, thanks.	}{	My pleasure, thanks.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll keep you in my heart and the picture in my pocket.	}
-{	755	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	754	}{	Thanks, but didn't you say something about giving me a private show?	}{	Thanks, but didn't you say something about giving me a private show?	}{	911	}{	G.Velvet_Dance == 1 and G.Patch_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	Beautiful, but didn't you want to make my heart beat again too?	}
+{	755	}{	My pleasure, thanks.	}{	My pleasure, thanks.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll keep you in my heart and the picture in my pocket.	}
 {	756	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	757	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	758	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

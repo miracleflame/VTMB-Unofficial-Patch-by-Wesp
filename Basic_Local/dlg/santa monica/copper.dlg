@@ -40,10 +40,10 @@
 {	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	41	}{	But how? I don't want this... I want to be human again.	}{	But how? I don't want this... I want to be human again.	}{	#	}{	npc.SetDisposition("Sad", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	42	}{	Guess what - it's not going to happen.	}{	Guess what - it's not going to happen.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	In dreams, you will be. And I will be a dinosaur. RAWRRRR!	}
-{	43	}{	The dead can never live again. But they can survive. Do you understand?	}{	The dead can never live again. But they can survive. Do you understand?	}{	181	}{	G.Patch_Plus == 1	}{	G.Copper_Humanity = 1; pc.HumanityAdd(1)	}{	}{	}{	}{	}{	}{	}{	The leopard cannot change its spots. But it can hunt. Understand?	}
-{	44	}{	The dead can never live again. But they can survive. Do you understand?	}{	The dead can never live again. But they can survive. Do you understand?	}{	181	}{	G.Patch_Plus == 0	}{	G.Copper_Humanity = 1	}{	}{	}{	}{	}{	}{	}{	The leopard cannot change its spots. But it can hunt. Understand?	}
-{	45	}{	Then you are doomed to die again.	}{	Then you are doomed to die again.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Death visits the weak twice.	}
-{	46	}{	You don't deserve to be one of us.	}{	You don't deserve to be one of us.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	More blood for the rest.	}
+{	43	}{	The dead can never live again. But they can survive. Do you understand?	}{	The dead can never live again. But they can survive. Do you understand?	}{	181	}{	}{	G.Copper_Humanity = 1	}{	}{	}{	}{	}{	}{	}{	The leopard cannot change its spots. But it can hunt. Understand?	}
+{	44	}{	Then you are doomed to die again.	}{	Then you are doomed to die again.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Death visits the weak twice.	}
+{	45	}{	You don't deserve to be one of us.	}{	You don't deserve to be one of us.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	More blood for the rest.	}
+{	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	47	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	48	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -119,9 +119,9 @@
 {	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	121	}{	Yeah, here you go. Uh, now where can I find the head vampire?	}{	Yeah, here you go. Uh, now where can I find the head vampire?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.RemoveItem("item_g_stake"); pc.MoneyAdd(100)	}{	}{	}{	}{	}{	}{	}{	}
-{	122	}{	He's in the tallest building downtown. His name's LaCroix.	}{	He's in the tallest building downtown. His name's LaCroix.	}{	131	}{	Humanity 3 & G.Patch_Plus == 1	}{	G.Copper_Prince = 1; pc.HumanityAdd(-1)	}{	}{	}{	}{	}{	}{	}{	LaCroix lives in a mansion in the sky.	}
+{	122	}{	He's in the tallest building downtown. His name's LaCroix.	}{	He's in the tallest building downtown. His name's LaCroix.	}{	131	}{	Humanity 3 & G.Patch_Plus == 1	}{	G.Copper_Prince = 1; pc.HumanityAdd( -1 )	}{	}{	}{	}{	}{	}{	}{	LaCroix lives in a mansion in the sky.	}
 {	123	}{	His name's Rodriguez. He's probably downtown.	}{	His name's Rodriguez. He's probably downtown.	}{	131	}{	Humanity 3 & G.Patch_Plus == 1	}{	G.Copper_Nines = 1	}{	}{	}{	}{	}{	}{	}{	They call him Rodriguez. He sits on his throne downtown.	}
-{	124	}{	Can't you figure it out? He's the President of the United States.	}{	Can't you figure it out? He's the President of the United States.	}{	131	}{	Humanity 3 & G.Patch_Plus == 1	}{	G.Copper_Prez = 1; pc.HumanityAdd(-1); G.Copper_Masquerade = 1	}{	}{	}{	}{	}{	}{	}{	Hail to the chief! The President is a bloodsucker.	}
+{	124	}{	Can't you figure it out? He's the President of the United States.	}{	Can't you figure it out? He's the President of the United States.	}{	131	}{	Humanity 3 & G.Patch_Plus == 1	}{	G.Copper_Prez = 1; pc.HumanityAdd( -1 ); G.Copper_Masquerade = 1	}{	}{	}{	}{	}{	}{	}{	Hail to the chief! The President is a bloodsucker.	}
 {	125	}{	He's in the tallest building downtown. His name's LaCroix.	}{	He's in the tallest building downtown. His name's LaCroix.	}{	131	}{	Humanity -3 & G.Patch_Plus == 1	}{	G.Copper_Prince = 1	}{	}{	}{	}{	}{	}{	}{	LaCroix lives in a mansion in the sky.	}
 {	126	}{	His name's Rodriguez. He's probably downtown.	}{	His name's Rodriguez. He's probably downtown.	}{	131	}{	Humanity -3 & G.Patch_Plus == 1	}{	G.Copper_Nines = 1	}{	}{	}{	}{	}{	}{	}{	They call him Rodriguez. He sits on his throne downtown.	}
 {	127	}{	Can't you figure it out? He's the President of the United States.	}{	Can't you figure it out? He's the President of the United States.	}{	131	}{	Humanity -3 & G.Patch_Plus == 1	}{	G.Copper_Prez = 1; G.Copper_Masquerade = 1	}{	}{	}{	}{	}{	}{	}{	Hail to the chief! The President is a bloodsucker.	}
