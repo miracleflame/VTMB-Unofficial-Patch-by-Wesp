@@ -410,6 +410,12 @@ Global changes:
 
 --------------------
 
+1.93 (20.09.2020):
+- Hammer/FGD: Re-added env_sun entity as fully workable in game.
+- Model Compiler: Added checking models for physbox and asking user to auto-generate it when compiling.
+- Model Viewer: Fixed opening MDL files if mod directory contain spaces in path.
+- Skin Editor: Bloodlines Edition (custom editor, developed by hlstriker)
+
 1.92 (08.02.2020):
 - Model Compiler: Added workaround to automatically fix -90-degree-rotation-issue on Vtmb-decompiled models.
 - Model Compiler: Added workaround to fix game crashes and rendering issues on compiling all dynamic models.
@@ -418,7 +424,6 @@ Global changes:
 - Model Compiler: Better QC files parsing, fixing compiling materials and improved log messages.
 - Crowbar tool: Fixed incorrect "phy" material string dumping on decompiling Vtmb's physics meshes.
 - Crowbar tool: Isolated Vtmb-adapted tool version settings from regular Source Engine Crowbar releases.
-- Model Viewer: Fixed opening MDL files from non-SDK mod directories.
 - Various minor technical fixes in SDK internal scripts and updated Readme info.
 
 1.91 (28.01.2020):

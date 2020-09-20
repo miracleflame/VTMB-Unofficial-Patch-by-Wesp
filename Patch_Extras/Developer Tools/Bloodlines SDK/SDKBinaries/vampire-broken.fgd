@@ -1,7 +1,7 @@
-//====== Copyright © 2003-2017, Troika Games, Inc. All rights reserved. =======
+//====== Copyright © 2003-2020, Troika Games, Inc. All rights reserved. =======
 //
 // Purpose: Vampire Bloodlines game definition file (.fgd) 
-// Version: 1.2 beta
+// Version: 1.3 beta
 // Edition: Original VtMB [Broken/NotWorking Entities]
 // Written: Psycho-A
 //
@@ -186,27 +186,6 @@ iconsprite("editor/env_firesource") color(255 255 0) sphere(fireradius) = env_fi
 	
 	// Outputs
 	output OnShowMessage(void) : "Fired when the message is activated."
-]
-
-
-
-//====================================================================================================================
-// env_sun [common]
-//====================================================================================================================
-// not changed.
-
-@PointClass base(TargetnameRot) color(255 0 0) = env_sun : 
-	"An entity to control & draw a sun effect in the sky. \nDoesn't seems to be working in VtMB."
-[
-	target(target_destination)	: "Viewer entity" : : "Name of an entity used to determine where the sun is in the skybox. The sun should be lined up on a line from this entity to the env_sun entity."
-	rendercolor(color255)		: "Sun Color (R G B)" : "100 80 80"
-	NumLayers(integer)			: "Number of layers" : 3
-	HorzSize(integer)			: "Horizontal size of sun"	: 120
-	VertSize(integer)			: "Vertical size of sun"	: 100
-
-	input TurnOn(void)			: "Enable sun rendering"
-	input TurnOff(void)			: "Disable sun rendering"
-	input SetColor(color255)	: "Change the sun's color"
 ]
 
 

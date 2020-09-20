@@ -1,7 +1,7 @@
-//====== Copyright © 2003-2019, Troika Games, Inc. All rights reserved. =======
+//====== Copyright © 2003-2020, Troika Games, Inc. All rights reserved. =======
 //
 // Purpose: Vampire Bloodlines game definition file (.fgd) 
-// Version: 1.72 beta
+// Version: 1.74 beta
 // Edition: Original VtMB [Base]
 // Written: Psycho-A
 //
@@ -2632,6 +2632,34 @@ studioprop("models/editor/spot_cone.mdl")
 	input Rate(integer) : "Sets the particle emission rate in particles per second."
 	input Speed(integer) : "Sets the default speed of the particles in units per second."
 	input SpreadSpeed(integer) : "Sets the spread speed in units per second."
+]
+
+
+
+
+
+//====================================================================================================================
+// env_sun [common]
+//====================================================================================================================
+// not changed.
+
+@PointClass
+base(
+	TargetnameRot
+)
+color(255 0 0)
+= env_sun :
+	"An entity to control & draw a sun effect in the sky."
+[
+	target(target_destination)	: "Viewer entity" : : "Name of an entity used to determine where the sun is in the skybox. The sun should be lined up on a line from this entity to the env_sun entity."
+	rendercolor(color255)		: "Sun Color (R G B)" : "100 80 80"
+	NumLayers(integer)			: "Number of layers" : 3
+	HorzSize(integer)			: "Horizontal size of sun"	: 120
+	VertSize(integer)			: "Vertical size of sun"	: 100
+
+	input TurnOn(void)			: "Enable sun rendering"
+	input TurnOff(void)			: "Disable sun rendering"
+	input SetColor(color255)	: "Change the sun's color"
 ]
 
 

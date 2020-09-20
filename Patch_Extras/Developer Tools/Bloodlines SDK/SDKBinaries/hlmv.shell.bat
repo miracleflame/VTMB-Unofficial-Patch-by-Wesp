@@ -6,7 +6,7 @@ set "PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC"
 pushd "%~dp0"
 
 :CheckBin
-set HLMV="%Cd%\hlmv.exe"
+set "HLMV=%Cd%\hlmv.exe"
 for %%m in (hlmv.exe helpers\sfk.exe) do (
 if not exist "%%~m" (
 	echo>>"..\sdk_errors.log" [%date% %time%] HlmvShell error: Missing "%cd%\%%~m" file.
@@ -41,8 +41,7 @@ if not exist "%VProject%\materials\" (call :SearchBaseDir)
 set "GameDir=%VProject%"
 
 :RunProgram
-pushd "%ModDir%"
-start "" %HLMV% "%FilePath%"
+start "View" "%HLMV%" \"%~1\"
 exit
 
 :SearchBaseDir

@@ -1,6 +1,6 @@
 @echo off
 rem StudioMDL rotation and animation issues fixer
-rem Written by Psycho-A at [14:26 02.02.2020]
+rem Written by Psycho-A at [23:40 15.02.2020]
 setlocal EnableExtensions
 if "%~1"=="" exit /b
 if not defined QCFile exit /b
@@ -13,6 +13,9 @@ set IsVtmbDecompiled=
 set ModelIsStaticProp=
 set StaticPropIsSet=
 set HasOriginOverride=
+set ModelBody=
+set BodyGroup=
+set StudioSmd=
 
 
 :ScanFiles
@@ -31,6 +34,11 @@ for /f "usebackq eol=/ tokens=1,*" %%a in ("%QCFile%") do (
 	for /f "tokens=1-4" %%i in ("%%~b") do (
 		if "%%~l"=="-90" (set HasOriginOverride=True)
 	)))
+	rem Find reference mesh by type:
+	if /i "%%~a"=="$model" (if not "%%~b"=="" (set ModelBody=True))
+	if /i "%%~a"=="$body" (if not "%%~b"=="" (set ModelBody=True))
+	if /i "%%~a"=="$bodygroup" (if not "%%~b"=="" (set BodyGroup=True))
+	if /i "%%~a"=="studio" (if not "%%~b"=="" (set StudioSmd=True))
 	rem Check if need to correct StaticProp definition:
 	if /i "%%~a"=="$staticprop" (set StaticPropIsSet=True)
 )
@@ -49,6 +57,7 @@ for /f "usebackq eol=/ tokens=1-4" %%a in ("%%~s") do (
 
 :CheckCriterias
 rem Skip missing criterias:
+if defined CollisionModel (
 if defined StaticPropIsSet (
 	rem For Static props...
 	if defined ModelIsStaticProp (
@@ -59,7 +68,7 @@ if defined StaticPropIsSet (
 		rem Non-Static props...
 		goto Quit_skip
 	)
-)
+))
 
 
 :Summary
@@ -68,9 +77,59 @@ if defined CollisionModel    (echo - Model contain physics SMD: Yes ) else (echo
 if defined ModelIsStaticProp (echo - Model used as static_prop: Yes ) else (echo - Model used as static_prop: No  )
 if defined StaticPropIsSet   (echo - Flag "StaticProp" defined: Yes ) else (echo - Flag "StaticProp" defined: No  )
 if defined HasOriginOverride (echo - Model has origin override: Yes ) else (echo - Model has origin override: No  )
+echo.
 
 
-:RequestUser
+:RequestUser1
+if defined CollisionModel (goto RequestUser2) else (
+	rem Physics model not found, request to add:
+	%MsgBox% The model you are trying to compile doesn't have the physics collision mesh specified in the .QC file. If you click "Yes", the program will auto- create a physics model based on the reference mesh or first found phy SMD file. If the model don't have a physics model by design, click "No". /c:StudioMDL warning /t:MB_ICONQUESTION,MB_YESNO,MB_SYSTEMMODAL
+)
+if "%ErrorLevel%"=="7" (goto RequestUser2)
+
+
+:AddCollisionModel
+set TargetPhyModel=
+echo Adding collision mesh to QC...
+rem Try to find collision by name:
+for %%f in ("%QCPath%\*_phy.smd" "%QCPath%\*_physics.smd") do (
+	set "TargetPhyModel=%%~nxf"
+)
+if not defined TargetPhyModel (
+	rem Try to get reference mesh as .phy from .QC:
+	if defined ModelBody (
+		rem Read simplified QC version...
+		for /f "usebackq eol=/ tokens=1,2,*" %%a in ("%QCFile%") do (
+			if /i "%%~a"=="$model" (if not "%%~c"=="" (
+			if exist "%QCPath%\%%~c" call :SetFixed TargetPhyModel "%%~c"
+			if exist "%QCPath%\%%~c.smd" call :SetFixed TargetPhyModel "%%~c.smd"))
+			if /i "%%~a"=="$body" (if not "%%~c"=="" (
+			if exist "%QCPath%\%%~c" call :SetFixed TargetPhyModel "%%~c"
+			if exist "%QCPath%\%%~c.smd" call :SetFixed TargetPhyModel "%%~c.smd"))
+		)
+	) else (
+		rem Read advanced QC version from Crowbar...
+		if defined BodyGroup (if defined StudioSmd (
+		for /f "usebackq eol=/ tokens=1,*" %%a in ("%QCFile%") do (
+			if /i "%%~a"=="studio" (if not "%%~b"=="" (
+			if exist "%QCPath%\%%~b" call :SetFixed TargetPhyModel "%%~b"
+			if exist "%QCPath%\%%~b.smd" call :SetFixed TargetPhyModel "%%~b.smd"))
+		)))
+	)
+)
+if defined TargetPhyModel (
+	echo>>"%QCFile%" $CollisionModel "%TargetPhyModel%"
+	echo>>"%QCFile%" {
+	echo>>"%QCFile%" 	$automass
+	echo>>"%QCFile%" 	$concave
+	echo>>"%QCFile%" }
+	echo - Added file "%TargetPhyModel%".
+) else (
+	echo - No physics SMD files found!
+)
+
+
+:RequestUser2
 if defined ModelIsStaticProp (
 	rem Fixes for static_props:
 	%MsgBox% It looks like the model is decompiled from Vampire: Bloodlines, so the resulting model in your project may have 90-degree rotation issue on Z-axis of the reference, physics or sequence meshes. The program may try to fix this issue if you click "Yes". The source QC and SMD files won't be modified, so you can always revert this fix just by recompiling. Do it? /c:StudioMDL warning /t:MB_ICONQUESTION,MB_YESNO,MB_SYSTEMMODAL
@@ -78,7 +137,7 @@ if defined ModelIsStaticProp (
 	rem Fixes for dynamic props:
 	%MsgBox% It looks like the model is designed as a dynamic object, which is not allowed for StudioMDL compiler at this moment, and it may cause the game to crash or render bugs. The program can fix it by compiling the model as a static prop if you click "Yes". The source QC file won't be modified, so you can always revert this fix just by recompiling. Do it? /c:StudioMDL warning /t:MB_ICONQUESTION,MB_YESNO,MB_SYSTEMMODAL
 )
-if "%ErrorLevel%"=="7" (goto Quit) else echo.
+if "%ErrorLevel%"=="7" (goto Quit)
 
 
 :RotatePhyMesh
