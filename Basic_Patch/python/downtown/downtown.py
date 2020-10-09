@@ -1011,14 +1011,10 @@ def stockTheFridge():
             fridge.SpawnItemInContainer("item_g_bloodpack")
         bloodpacks = bloodpacks - 1
 
-#SKYLINE: Called to send the player to the taxi if the story state is right, changed by wesp
+#SKYLINE: Called to send the player to the taxi if the story state is right
 def toTaxi():
     if(G.Story_State >= 100):
         __main__.ChangeMap(2.5, "caine_landmark", "caine_transition")
-        vent1 = Find("haven_vent_1")
-        vent1.Close()
-        vent2 = Find("haven_vent_2")
-        vent2.Close()
 
 #SKYLINE: Called to unlock the player's haven, changed by wesp
 def unlockHaven():
@@ -1034,6 +1030,11 @@ def unlockHaven():
         newbox = Find("mailbox_haven")
         if newbox: newbox.ScriptUnhide()
         trunk = Find("trunk")
+    if(G.Story_State >= 100):
+        vent1 = Find("haven_vent_1")
+        vent1.Close()
+        vent2 = Find("haven_vent_2")
+        vent2.Close()
 
 #TJP 4/20/04
 #DANE: Check to see if Dirty Cop goes hostile, and if trigger is enabled.
