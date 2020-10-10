@@ -1033,8 +1033,10 @@ def unlockHaven():
     if(G.Story_State >= 100):
         vent1 = Find("haven_vent_1")
         vent1.Close()
+        vent1.Lock()
         vent2 = Find("haven_vent_2")
         vent2.Close()
+        vent2.Lock()
 
 #TJP 4/20/04
 #DANE: Check to see if Dirty Cop goes hostile, and if trigger is enabled.
