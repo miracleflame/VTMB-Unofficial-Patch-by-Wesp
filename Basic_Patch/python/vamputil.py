@@ -66,6 +66,10 @@ def setBasic():
         if axenode: axenode.Kill()
         miau = Find("plus_miau")
         if miau: miau.Kill()
+        cammandarin = Find("cam_mandarin")
+        if cammandarin:
+            world = Find("world")
+            world.SetSafeArea(0)
         heli1 = Find("plus_helisound1")
         if heli1: heli1.Kill()
         heli2 = Find("plus_helisound2")

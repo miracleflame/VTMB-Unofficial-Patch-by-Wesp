@@ -118,7 +118,7 @@ def pattyDeath():
 def pattyDialog():
     patty = Find("Patty")
     if(G.Patty_Alley or G.Patty_SD or G.Patty_Pisha or G.Patty_SM):
-        if(G.Patch_Plus == 0):
+        if(G.Patch_Plus == 0 or G.Turnstile_Gone == 2):
             script = Find("patty_to_door")
         if(G.Patch_Plus == 1):
             script = Find("patty_to_door_plus")
@@ -178,8 +178,8 @@ def venusToBar():
     if G.Turnstile_Gone == 1:
         fan = Find("plus_turnstile")
         if fan: fan.Kill()
-        fanz = Find("plus_turnstilez")
-        if fanz: fanz.Kill()
+        fancollision = Find("plus_turnstile_collision")
+        if fancollision: fancollision.Kill()
         G.Turnstile_Gone = 2
 
 #DOWNTOWN: Called if the player feeds on a diseased bum
@@ -1011,10 +1011,14 @@ def stockTheFridge():
             fridge.SpawnItemInContainer("item_g_bloodpack")
         bloodpacks = bloodpacks - 1
 
-#SKYLINE: Called to send the player to the taxi if the story state is right
+#SKYLINE: Called to send the player to the taxi if the story state is right, changed by wesp
 def toTaxi():
     if(G.Story_State >= 100):
         __main__.ChangeMap(2.5, "caine_landmark", "caine_transition")
+        vent1 = Find("haven_vent_1")
+        vent1.Close()
+        vent2 = Find("haven_vent_2")
+        vent2.Close()
 
 #SKYLINE: Called to unlock the player's haven, changed by wesp
 def unlockHaven():
@@ -1030,13 +1034,6 @@ def unlockHaven():
         newbox = Find("mailbox_haven")
         if newbox: newbox.ScriptUnhide()
         trunk = Find("trunk")
-    if(G.Story_State >= 100):
-        vent1 = Find("haven_vent_1")
-        vent1.Close()
-        vent1.Lock()
-        vent2 = Find("haven_vent_2")
-        vent2.Close()
-        vent2.Lock()
 
 #TJP 4/20/04
 #DANE: Check to see if Dirty Cop goes hostile, and if trigger is enabled.
