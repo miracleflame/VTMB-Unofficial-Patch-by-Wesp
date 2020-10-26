@@ -4510,7 +4510,7 @@
 "OnTrigger" "killer_escapes,Start,,0,-1,,"
 "OnTrigger" ",,,0,-1,G.No_Idle = 1,"
 "OnTrigger" "Muddy,SetHeadAsCameraTarget,,0,-1,,"
-"OnTrigger" ",,,10,-1,killerEscape(),"
+"OnTrigger" ",,,5,-1,killerEscape(),"
 "origin" "-78.6408 -2522.63 96.6961"
 }
 {
@@ -5145,6 +5145,24 @@
 "texture" "decals/damage/pillarbaseb"
 "angles" "0 270 0"
 "origin" "-52 -2334 144"
+}
+{
+"classname" "prop_dynamic"
+"angles" "0 45 90"
+"model" "models/scenery/structural/warrens/floorblock.mdl"
+"demo_sequence" "None"
+"skin" "0"
+"disableshadows" "0"
+"solid" "6"
+"health" "0"
+"RandomAnimation" "0"
+"MinAnimTime" "5"
+"MaxAnimTime" "10"
+"crossfade_skin_time" "2.0"
+"npc_transparent" "1"
+"StartHidden" "0"
+"targetname" "floor_block"
+"origin" "-100 -2460 6"
 }
 {
 "classname" "npc_VVampire"

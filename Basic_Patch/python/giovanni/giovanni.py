@@ -416,7 +416,7 @@ def gio3_checkAllZombieDead():
         if ( zombie.IsAlive() ):
             counter = counter + 1
             G.Zombies = ( counter )
-    if counter == 0:
+    if counter == 0 and G.gio_2_nadia_pt == 1:
         relay = Find( "Relay_Zombies_Dead" )
         relay.Trigger()
     else:
