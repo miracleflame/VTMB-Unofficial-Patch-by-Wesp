@@ -845,10 +845,10 @@
 }
 {
 "classname" "prop_dynamic"
-"angles" "0 0 0"
+"angles" "0 -4.5 0"
 "model" "models/scenery/structural/bradbury/wall_blank.mdl"
 "skin" "0"
-"disableshadows" "1"
+"disableshadows" "0"
 "solid" "6"
 "StartHidden" "0"
 "collideable_gibs" "0"
@@ -861,7 +861,7 @@
 "targetname" "2charhole_unbroken_3"
 "spawnflags" "0"
 "crossfade_skin_time" "2.0"
-"origin" "83.9999 -664 -224.012"
+"origin" "79 -664 -224.012"
 }
 {
 "classname" "prop_dynamic"
@@ -998,7 +998,7 @@
 "MaxAnimTime" "10"
 "targetname" "lowhole_unbroken_2"
 "crossfade_skin_time" "2.0"
-"origin" "83.9999 -664 -223.91"
+"origin" "83.9999 -664 -224.012"
 }
 {
 "classname" "prop_dynamic"
@@ -8737,7 +8737,6 @@
 "OnTrigger" "midhole_broken_2,ScriptUnhide,,0,1,,"
 "OnTrigger" "midhole_unbroken_2,Kill,,0,1,,"
 "OnTrigger" "midhole_explosion_2,Explode,,0.01,1,,"
-"OnTrigger" "plus_sound_2,PlaySound,,0.1,1,,"
 "OnTrigger" "f2_door_relay_1,Trigger,,5,-1,,"
 "origin" "327 -888 -207.976"
 }
@@ -8746,7 +8745,7 @@
 "health" "10"
 "pitch" "100"
 "pitchstart" "100"
-"radius" "4000"
+"radius" "500"
 "sound_event_level" "2"
 "StartHidden" "1"
 "targetname" "plus_sound_2"
@@ -16647,6 +16646,7 @@
 "OnTrigger" "1charhole_broken_9,ScriptUnhide,,0,1,,"
 "OnTrigger" "1charhole_unbroken_9,Kill,,0,1,,"
 "OnTrigger" "1charhole_explosion_9,Explode,,0.01,1,,"
+"OnTrigger" "plus_sound_2,PlaySound,,0.1,1,,"
 "origin" "55 -844 -208.153"
 }
 {
