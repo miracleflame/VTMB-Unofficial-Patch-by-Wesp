@@ -873,7 +873,7 @@
 "angles" "0 0 0"
 "distance" "90"
 "climbable" "0"
-"spawnflags" "288"
+"spawnflags" "256"
 "origin" "-709.5 -1089.5 122.5"
 "targetname" "prep_door4"
 "soundgroup" "standard_door"
@@ -2877,6 +2877,7 @@
 "OnTrigger" "Relay_Set_Zombies_to_Hate,Trigger,,0,-1,,"
 "OnTrigger" "Relay_Kill_Nadia,Disable,,0,-1,,"
 "OnTrigger" "Nadia,StartPlayerDialogRemote,,0,1,,"
+"OnTrigger" "Nadia,WillTalk,0,2,-1,,"
 }
 {
 "classname" "scripted_sequence"
@@ -4175,6 +4176,7 @@
 "spawnflags" "1"
 "origin" "-522 -878 82"
 "targetname" "Trigger_Nadia_Start_Talk"
+"OnTrigger" "Nadia,WillTalk,1,0,-1,,"
 "OnTrigger" "Nadia,StartPlayerDialog,,0,-1,,"
 }
 {
