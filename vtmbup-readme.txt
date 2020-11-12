@@ -24,8 +24,8 @@ lights-through-walls, floats-for-females and more-than-2GB-RAM bugs.
 To install the patch choose the Bloodlines directory as destination,
 select wanted features, install and then start the game from the new
 desktop or start menu links. Thanks to Jordan Russel for Inno Setup!
-It is very important to start a new game after patching, saved games
-are moved to save/old! To uninstall, just remove the patch links and
+It's important to start a new game after patching, old saves will be
+moved to save/incompatible! To uninstall, remove the patch links and
 patch directory. Changelogs, known issues and more are listed below.
 
 On issues in Windows Vista/7/8/10 install the patch as administrator
@@ -33,7 +33,7 @@ into the game folder, then disable visual themes/desktop composition
 or run the game in XP compatibility mode. On problems with Steam run
 Steam and the game as administrator and copy steam.dll into the game
 folder if you get a "failed to find Steam" error. If you want to run
-it from the Steam list add -game Unofficial_Patch to launch options.
+from the Steam library add -game Unofficial_Patch to launch options.
 
 Special thanks to burgermeister for the Public Library, EntenSchreck
 for the Hallowbrook Atrium, the Chateau Hotel outside and drafts for
@@ -47,7 +47,7 @@ to Jor and Wabbite who fixed the 2 GB memory bug in shaderapidx9.dll
 and Frank7777 who added the refresh-rate fix to it. To in9 who fixed
 client.dll bad weapons stats, to SomeCommentDoe and Drog Black Tooth
 who repaired lights-through-wall and LOD in engine.dll and Behar and
-Psycho-A who merged in loader.dll, and added -game mod installation!
+Psycho-A who merged all in loader.dll, and added -game installation!
 
 The patch is provided "as is" and any warranties are disclaimed. The
 free redistribution of the unchanged patch is permitted but it's not
@@ -59,7 +59,8 @@ Many thanks also to the following people who contributed much to it!
 
 Acknowledgments: 
 ----------------
-Thanks to all helpers like Zenith, Malkav, IanW, duchU, -3xA'Lu©?y,
+Special thanks to: HungarianPatriot, Anderson, IanW, duchU, Zenith,
+GoodGamesPlayer, Wilhelm-Streicher, endthewars, Malkav, -3xA'Lu©?y,
 No_Mercy, Behar, atrblizzard, Zer0morph, Psycho-A, AJ, vladdmaster,
 burgermeister, Entenschreck, Stosh, gothemasticator, Darth Sithari,
 Dheu, Felix, Fabio, foestermalk, StockholmSyndrome, SomeCommentDoe,
@@ -73,21 +74,19 @@ Sgloomi, Paul Moloney, Alec Maassen van den Brink, and RobinHood70!
 
 Patch Extras:
 -------------
-VTMB Transcriptions: By ellipsis_jones, gothemasticator and Wesp5.
+VTMB Transcripts: Ellipsis_jones, gothemasticator, IanW and Wesp5.
 VTMB Walkthrough: Walkthrough & Guide by vampyri_lestat and Wesp5.
 
 Developer Tools:
 ----------------
 Bloodlines SDK: Full SDK with many tools, by Psycho-A and Fire64.
 Game Mod Loader: Combined .dll fixes and -game support, by Behar.
-Hammer Sources: VMF files used to compile all new maps, by Wesp5.
-Level Entity Lists: Original and UP levels, by Wesp5 and Offkorn.
+Level Sources: Entity lists and Hammer vmf, by Offkorn and Wesp5.
+Original Python Files: Scripts of the original release, by Wesp5.
 
-Trailers E3 2003 and 2004: Showing lost content, by Troika Games.
+Bloodlines Trailers E3 2003/2004: Beta contents, by Troika Games.
 ModDev Guide: Bloodlines Mod Development Guide, compiled by Dheu.
-No-more-LOD and Make-Model-Solid: Two modeling tools, by DDlullu.
-Restoration Doc: Used concept art and beta screenshots, by Wesp5.
-Soundtrack Info: For music soundtrack, by Rik Schaffer and Wesp5.
+Restoration Doc and Soundtrack Info: Restored contents, by Wesp5.
 ZVTool Readme: For dynamic console editing scripts, by ZylonBane.
 
 Player Mods:
@@ -97,8 +96,6 @@ ENBSeries: Shader suite, copy to game folder, by Boris Vorontsov.
 Free View Weapons: Copy to vampire/vdata/items, created by Wesp5.
 SweetFX: Different shader suite, use ReShade Setup, by CeeJay.dk.
 
-4GB Patch: Patches up the exe for 64 bit, thanks Daniel Pistelli.
-Dinput8.dll: Fixes Windows 10 mouse bug, thanks Dusk of Oolacile.
 Install64: Windows installer patch for 64 bit, by Iain Patterson.
 ResPatch: Widescreen resolution kit, by Wabbite (.NET 2+ needed).
 ScreenWindowedOn/Off.reg: To switch fullscreen mode, by Psycho-A.
@@ -108,7 +105,91 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.5                                                  24.01.2019
+v10.8                                                  12.11.2020
+-----
++Improved the turnstile at Club Confession, thanks to EntenSchreck.
++Corrected trigger, sound and badly lit wall at Hallowbrook Hotel.
++Updated tutorial security guard's voice-overs, thanks to Chalvrek.
+Removed an icon in Venture Tower and made broken roof accessable.
+Corrected Blade Brother name in basic and Luckee Star body issues.
+Reset Gangrel sheet stances and combat area Glaze in basic patch.
+Locked endgame Skyeline vents and fixed floating or clipping junk.
+Fixed sticky floor, bad camera angles and other minor map issues.
+Disabled Arthur's privat computer and movement in the basic patch.
+Added sign to Hollywood cemetery gate and fixed name in computer.
+Fixed a temple trap trigger and covered bad Society rock textures.
+Made Tawni's boyfriend holster gun when using interesting points.
+Removed redundant or duplicate tools in the Player Mods directory.
+Restored missing line of Mandarin and issues with Nadia in crypt.
+
+v10.7                                                  20.09.2020
+-----
++Fixed Nines Chateau trigger and sweeper greeting Nosferatu player.
++Restored Potence and Celerity view particles and improved others.
++Corrected getting secret from Christopher and flirting with Nadja.
++Fixed second museum visit of Nosferatu and VV's lapdance slowing.
++Restored Obfuscator not appearing and repaired minor model issues.
++Fixed Arthur repeating his phone call and feed stuck in tutorial.
++Restored "TrueSight" for Bishop Vick, Blood Guardian and Cathayan.
++Improved Mercurio and Jenny sounds and made them plus patch only.
++Swapped Brujah clone with Damsel at the ending, thanks to DDLullu.
++Decreased chances of werewolf easter egg and prophet not ranting.
++Added safety measures to casting hand models, thanks EntenSchreck.
++Removed heat effect from fire and delayed Pisha leaving the city.
++Fixed being able to take Romero's zombie quest after pimpin quest.
++Moved Malcolm's black mail money from apartments into his office.
++Improved Giovanni trap section and circumvented Bruno not burning.
++Removed unfitting Humanity changes and added some missing sounds.
+Added script and Skin Editor to SDK, thanks DDLullu and hlstriker.
+Restored original music to the radio on the pier for basic patch.
+Fixed reentering issues and door breaking at the Giovanni Mansion.
+Added missing XP if you found Ginger Swan before meeting courier.
+Corrected ground stutter and sarcophagus key drop, thanks Norrwin.
+Fixed possible ways to get stuck in tutorial and big warrens map.
+Added missing solidity of sewer and temple models, thanks Norrwin.
+Corrected tutorial MAC-10 loudness and minor map and text issues.
+Repaired an auto-locking door and stuck fanblades at Fu Syndicate.
+Fixed blocking Confession barkeeper and sewers Ash talking early.
+Corrected posters staying in SM haven and improved Empire dancing.
+Added and changed dropping sounds of some items, thanks Psycho-A.
+Fixed several maps so that new dropping sounds don't mess them up.
+Corrected Boris dialogue problem after he survived fighting Dema.
+Stated Auspex and Divine Vision amplification and fixed Ming aura.
+Added story pitch in page_text.ttz to transcripts, thank to IanW.
+Fixed talking with Heather after you dealt with McFly in two ways.
+Made Glaze Masquerade area and Fu Syndicate start as combat area.
+Fixed teleporting SWAT and crossguy Humanity loss at Fu Syndicate.
+Restored black monitors and case for Milligan, thanks endthewars.
+Disabled Mass Suicide for zombies and fixed a Giovanni ragdolling.
+Fixed stripper and girl off work leaving Vesuvius' dressing room.
+
+v10.6                                                  14.04.2020
+-----
++Repaired broken melee of Ming and created new item gained message.
++Improved all cars and tutorial guard audio, thanks to endthewars.
++Fixed Frenzy to really use the boosted stats, thanks EntenSchreck.
++Adjusted firearms ammo cost and restored one for the basic patch.
++Restored Jeanette and Therese dialogue and many more unused lines.
++Made Heather throw away old pizza and not being visible as ghost.
++Fixed normal SWAT being biteable and Hallowbrook Atrium confusion.
++Made killing junkyard dog cost Humanity and Pisha meal disappear.
+Corrected alternative way of hitmen's peace and minor file issues.
+Removed two plus emails from basic and fixed other minor details.
+Fixed Nines' camera view at observatory and Romero's combat stats.
+Specific Crowbar tool created for Bloodlines, thanks to ZeqMacaw.
+ZeqMacaw's and DDLullu's tools integrated in SDK, thanks Psycho-A.
+Fixed bombguy's explosion radius and two shopping carts' physics.
+Restored dispatching Dima for Malkavians and raised tutorial ammo.
+Removed shortcut at museum and fixed guard dropping workroom key.
+Fixed name of museum in computers and basic max flamethrower ammo.
+Repaired "Bloodsucker Communion" name and Numina names and icons.
+Fixed tutorial location continuity in downtown, thanks endthewars.
+Restored sound to Vesuvius easter egg and made it easier to find.
+Fixed exploit to get the werewolf blood and some dialogue details.
+Corrected loader-linux script to work for bash, thanks to GaGGaG.
+Fixed possible courier and warrens computer problems in Hollywood.
+
+v10.5                                                  24.01.2020
 -----
 +Renamed Holy Sight to Vision and fixed Divine Light cross texture.
 +Added Society icon to title and heat haze effect to fire barrels.
@@ -164,7 +245,7 @@ v10.4                                                  18.07.2019
 Prevented Dima from vanishing and Hollywood prostitute talk-loop.
 Fixed Bach encounter exploit and moved Ming sanctum XP to sanctum.
 Added missing Tawni's TV sound and removed some lens reflections.
-Restored Courier and Mercurio lines and removed more auto-endings.
+Restored courier and Mercurio lines and removed more auto-endings.
 Corrected wrong zombie sounds and fixed walkthrough inaccuracies.
 Improved Tseng shelf weapons and SDK, thanks DDLullu and Psycho-A.
 Fixed crouching Blood Hunt enemies and early sewer Ash exit talk.
@@ -227,7 +308,7 @@ Swapped pictures of restored Ocean House and Halloween newspaper.
 Removed plus Hallowbrook sound and warehouse intro music in basic.
 Fixed combat music on blood hunt map and duplicated Therese line.
 Removed plus inspection in the Tattoo Shop and sound for clothing.
-Corrected reel to reel at Grout's mansion and stuck museum guard.
+Corrected reel to reel at Grout's Mansion and stuck museum guard.
 Fixed distraction of Giovanni backdoor guard and minor map issues.
 Restored three Heather lines, two Lily lines, and subtitle names.
 Fixed hit blood spatters and thin bloods leaving beachhouse beach.
@@ -309,7 +390,7 @@ Changed criminal level of several weapons to get police to react.
 Fixed talking to Zhao from the shelves and sneaky Glaze newspaper.
 Corrected warrens, hospital, society and 609 maps by recompiling.
 Unified formatting of newspaper articles and improved GUI details.
-Made CDC guy at Fu Syndicate unbiteable like the others downtown.
+Disabled bad icons and buttons for inactive Ocean House elevator.
 Fixed Presence hair and cleared Disciplines before more cutscenes.
 Covered level holes in observatory, Red Dragon and Venture Tower.
 Fixed vanishing details downtown, at Ocean House, and in cemetery.
@@ -318,12 +399,11 @@ Made the patch copy all bin files into main folder to fix crashes.
 Added toilet doors to a few maps and fixed minor dialogue issues.
 Moved breakroom at the SM clinic so the geometry fits the outside.
 Made blood dolls reappear after killing to avoid staying corpses.
-Moved sarcophagus loading scene to Giovanni mansion back entrance.
-Disabled bad icons and buttons for inactive Ocean House elevator.
+Moved sarcophagus loading scene to Giovanni Mansion back entrance.
 
 v10.0                                                   15.06.2018
 -----
-+Swapped Nines line at Malkavian mansion and added new music there.
++Swapped Nines line at Malkavian Mansion and added new music there.
 +Improved Chateau details and added persuaded Gargoyle and killer.
 +Fixed Giovanni Mansion random whispers and added Copper's remains.
 +Corrected noclipping taxi at the museum and TV in Skyeline haven.
@@ -460,7 +540,7 @@ v9.6                                                     02.10.2016
 +Added dialogue lines to give some surplus items to Gary and Damsel.
 +Raised conditions to persuade Gimble and unlocked door afterwards.
 +Sold crossbow ammo later and changed two tutorial elevator buttons.
-+Added taxi to maps and fixed jars transparency at Grout's mansion.
++Added taxi to maps and fixed jars transparency at Grout's Mansion.
 +Moved flamethrower into new atrium and made braid Mitnick's reward.
 +Placed some things in empty Giovanni rooms and fixed player start.
 Blocked way into locked SM junkyard and corrected Chunk levitating.
@@ -510,7 +590,7 @@ v9.5                                                     24.04.2016
 +Fixed library LaSombra becoming invincible after flamethrower fire.
 +Restored wolf warform model and fixed critical pier Rosa dead bug.
 +Recompiled beachhouse to fix dead dog hurting bug, thanks Psycho-A.
-Recompiled burning mansion to fix exit room bugs, thanks Psycho-A.
+Recompiled burning Mansion to fix exit room bugs, thanks Psycho-A.
 Removed basic maze note, plus emails and ignitions on Fu explosion.
 Disabled bad downtown hospital sounds and illogical debris vanish.
 Added infos about Auspex auras, Numina and more to the walkthrough.
@@ -611,7 +691,7 @@ Fixed Jack not replying due to Python vamputil.py, thanks Hasimir.
 Doubled distance in which detail models fade away, thanks to QUAKE.
 Fixed Skyeline elevator issue and VPK packing, thanks vladdmaster.
 Added updated fileutil.py into Python 2.7.2 folder, thanks Hasimir.
-Hid Ocean House and Grout's mansion blocks and a downtown texture.
+Hid Ocean House and Grout's Mansion blocks and a downtown texture.
 Moved patch info to gameplay menu and fixed madness sounds effects.
 
 v9.1                                                     04.08.2014
@@ -625,7 +705,7 @@ v9.1                                                     04.08.2014
 +Updated Free View Weapons to plus version and fixed some histories.
 +Halved damage of Giovanni ghosts and increased Obfuscator trigger.
 +Fixed missing blood pack after Blood Hunt and Barabas breaking out.
-+Added sound to blood guardian summoning and removed a blood trail.
++Added sound to Blood Guardian summoning and removed a blood trail.
 +Changed Sheriff's sword from Brawl to Melee and improved Lily line.
 +Delayed quick Nosferatu leaving and improved Pisha leaving issues.
 +Corrected library and Asylum elevator problems, thanks vladdmaster.
@@ -669,7 +749,7 @@ v9.0                                                     22.04.2014
 +Repaired hearing warehouse boss conversation twice and some floats.
 +Made Nadia react to zombies damaging player and removed fake door.
 +Gave Occult Nut a Scholarship bonus and fixed new discipline lines.
-+Fixed icons at Giovanni mansion and made Bruno react to feed-kill.
++Fixed icons at Giovanni Mansion and made Bruno react to feed-kill.
 Added modified trackerscheme into Extras to change Malkavian fonts.
 Repaired Carson, Knox, Damsel, Yukie, Regent and Hatter dialogues.
 Fixed two inverted textures and renamed Sheriff's warform Behemoth.
@@ -689,7 +769,7 @@ v8.9                                                     02.02.2014
 +Recreated missing Hallowbrook atrium level, thanks to EntenSchreck.
 +Moved Sabbat choice into Hallowbrook atrium and added missing XPs.
 +Restored male blood doll at Red Dragon by using former Tong mugger.
-+Recreated "maze" room at Grout's mansion and restored three icons.
++Recreated "maze" room at Grout's Mansion and restored three icons.
 +Fixed some minor discipline issues and restored the basic versions.
 +Restored ten decals, moved others and removed restored from basic.
 +Fixed warform using occult items issue and improved Bloodheal rate.
@@ -712,7 +792,7 @@ v8.9                                                     02.02.2014
 +Added Empire hotel and ending dance spots and made Glaze one plus.
 Fixed two particles, a door and added loading tips texts to Extras.
 Restored three skyboxes to warehouse, Dane and Hallowbrook atrium.
-Corrected Grout's mansion decals, tutorial bucket and tattoo boxes.
+Corrected Grout's Mansion decals, tutorial bucket and tattoo boxes.
 Fixed croucher laughs and no floats for females bug, thanks to AJ.
 Updated SweetFX to 1.5 and included a preset, thanks to eeekitties.
 Fixed pause messages in engine.dll, random sounds and many floats.
@@ -806,7 +886,7 @@ v8.5                                                     12.02.2013
 +Moved easter eggs hint from note to restored laptop at Luckee Star.
 +Restored two menu effects and unused Pisha eyes for Lasombra female.
 +Repaired Blood Shield light effect and updated Presentable history.
-+Removed Domination's mass suicide to add sleep, thanks EntenSchreck.
++Removed Domination's Mass Suicide to add Sleep, thanks EntenSchreck.
 +Restored Malkavian disciplines Veil and Voice, thanks EntenSchreck.
 +Fixed Thaumaturgy disciplines not working again after player frenzy.
 +Changed Jian into broadsword and armed Chang brother with a katana.
@@ -855,7 +935,7 @@ Corrected King's Way details and a Hollywood Asian theater trigger.
 Fixed Ash, Jack, Vandal, Romero, Mercurio and Therese dialogue bugs.
 Restored inaccessible Prince, Damsel, Flynn, Hatter and Ming lines.
 Improved TV and radio state consistencies in SM and downtown havens.
-Decreased Fu Syndicate's cross guy time-out and fixed bad doorknob.
+Decreased crossguy reaction and fixed bad doorknob at Fu Syndicate.
 Fixed Sabbat Obfuscator stats, warehouse inspection and Bertram bug.
 Disabled buggy spawner in warrens level and fixed Noir cop problem.
 
@@ -901,7 +981,7 @@ v8.2                                                     30.07.2012
 +Corrected Danielle disappearing from Asylum and added oak animation.
 +Restored option to stealth kill Johnny and to get gallery bonus XP.
 +Fixed beachhouse cash bug by using cigarbox and a loop with the bum.
-+Restored leaf and smoke to Grout's mansion and fog to warrens lake.
++Restored leaf and smoke to Grout's Mansion and fog to warrens lake.
 +Extended first warrens spiderchick cutscene, thanks to EntenSchreck.
 +Added option to sell severed arms to Pisha and tutorial armor info.
 Corrected some new histories bugs and added handle to Venture Tower.
@@ -925,7 +1005,7 @@ v8.1                                                     26.06.2012
 +Restored an Ocean House ghost sequence and missing tutorial sounds.
 +Added Blood Eye as Purge partial resistance, thanks to EntenSchreck.
 Improved cameras of Nines' intro, roof exit and epilogue cutscenes.
-Fixed claws usage in gallery, Hallowbrook hotel and Grout's mansion.
+Fixed claws usage in gallery, Hallowbrook hotel and Grout's Mansion.
 Corrected Yukie and Pisha dialogue issues and restored Nines' line.
 Restored Venture Tower bodies after Sabbat attack, thanks to Malkav.
 Removed illogical first SM quest info and fixed minor text details.
@@ -1028,7 +1108,7 @@ Added info about auto-moving and walk/run toggles to tutorial popup.
 
 v7.5                                                     30.05.2011
 ----
-+Corrected restored content appearing in Giovanni mansion and temple.
++Corrected restored content appearing in Giovanni Mansion and temple.
 Made Heather meet you out from Venture Tower and fixed Gargoyle XP.
 Set cameras stack limit to five and fixed bad stack limit variables.
 Moved unreachable NPCs at Hallowbrook hotel and fixed door opening.
@@ -1144,7 +1224,7 @@ Fixed Isaac reward in basic and restored context icon to eye quest.
 Restored three infobar icons and three scenery models to King's Way.
 Corrected Ocean House steam cloud directions and minor map details.
 Prevented restored NPC conversations from triggering multiple times.
-Hid doors icons at Grout's mansion and used phone prop to open one.
+Hid doors icons at Grout's Mansion and used phone prop to open one.
 Restored rain to beachhouse and removed it from Ocean House outside.
 
 v6.7                                                     22.12.2009
@@ -1190,7 +1270,7 @@ Placed alternative Cal skin into diner and rookie cops on the Dane.
 Restored Lu Fang, Therese and hustler to Lotus Blossom and Vesuvius.
 Used new Ming skin in Empire hotel and hustler and girl in Asphole.
 Restored headless security corpse and severed head to warrens level.
-Placed two scrubs into Grout's mansion and bartender in Last Round.
+Placed two scrubs into Grout's Mansion and bartender in Last Round.
 Added raver and female models into Glaze and missing VW bus to pier.
 Placed alternative Chang in temple and fixed Luckee Star fireplace.
 Used alternative stripper skins at Sin Bin, Vesuvius and Giovanni's.
@@ -1283,7 +1363,7 @@ Made it possible to trigger serial killer quest from all newspapers.
 Fixed tutorial Humanity bug and other Python errors, thanks to mzz.
 Restored laughter of Mr. Ox and a few sounds around the Ocean House.
 Corrected a wrong sign in warrens and removed icon of Mitnick's PC.
-Swapped wrong manhole covers for Griffith Park and Giovanni mansion.
+Swapped wrong manhole covers for Griffith Park and Giovanni Mansion.
 Removed test button in Ventrue clan popup and minor level problems.
 Improved sound effects of morgue doors and Kamikaze Zen vault doors.
 Fixed texture error with the third Gangrel armor, thanks to MooCha.
@@ -1410,7 +1490,7 @@ v5.6                                                     03.09.2008
 +Fixed broken Empire hotel card printer usage and made it plus only.
 +Restored first dot Domination options for Tremere during dialogue.
 +Added overlooked Humanity losses and restored sheet music of basic.
-+Disabled true sight for killer, Vick, Cathayan and Blood Guardian.
++Disabled "TrueSight" of killer, Vick, Cathayan and Blood Guardian.
 +Made Romero train up to Firearms 4 and Beckett up to Scholarship 4.
 +Increased XP gain on freeing Ash and delivering Imalia's magazine.
 Added a few Shin Guntos to sewer hunters and improved end fade out.
@@ -1470,7 +1550,7 @@ v5.4                                                    12.06.2008
 +Repaired braid Perception powerup and Yukie and VV dialogue issues.
 +Restored third person melee and moved first person view to Extras.
 Corrected minor dialogue and map details and two item descriptions.
-Swapped tape messages at Grout's mansion and fixed clipping ghoul.
+Swapped tape messages at Grout's Mansion and fixed clipping ghoul.
 Restored Toreador Humanity XP bonus and burning Tzimisce creations.
 Added many expressions towards Nosferatu and adjusted some others.
 Fixed missing Patty quest update and a possible Boris and Dima bug.
@@ -1517,7 +1597,7 @@ v5.2                                                    23.04.2008
 +Made occult braid raise Unarmed feat instead of computer knowledge.
 +Restored several Persuasion, stat updates and research conditions.
 +Made stealth harder and restored Melee and Defense powerup effects.
-+Fixed Nadia Humanity loss and moved a recorder at Grout's mansion.
++Fixed Nadia Humanity loss and moved a recorder at Grout's Mansion.
 +Corrected unofferable gum and renamed Asian vampire "The Cathayan".
 Re-added lost guard model and fixed Russians discipline reactions.
 Added about hundred expressions to thirty NPCs and a .38 for Flynn.
@@ -1572,7 +1652,7 @@ Added warehouse start astrolite check and fixed minor text issues.
 Removed unfitting sounds at Lotus Blossom and some dialogue pauses.
 Fixed asking Malcolm about saved Heather and Knox's quest looping.
 Re-fixed Thaumaturgy with non-humans and fixed Newscaster position.
-Fixed double doors at Giovanni mansion and removed Bruno's clones.
+Fixed double doors at Giovanni Mansion and removed Bruno's clones.
 Added a Vandal line for females and fixed two Venture double doors.
 Made Chang's threat stay in dialogue and fixed Lily's diary dates.
 Restored hotel guard and warehouse Markus models, thanks to gardeb.
@@ -1715,7 +1795,7 @@ Corrected boss flags for Mercurio, Chastity and Tzimisce creation.
 Fixed Venus' reaction for persuading Boris and Asylum email issues.
 Restored newscaster and Cal lines and fixed minor dialogue errors.
 Repaired Imalia's quest failure message and new Vandal alternative.
-Fixed possible random crashes on exiting Grout's mansion and Dane.
+Fixed possible random crashes on exiting Grout's Mansion and Dane.
 Corrected hostess not getting elevator and phoning without a phone.
 Added inspection to text at Society and a few more missing sounds.
 
@@ -1755,7 +1835,7 @@ Updated BSPEdit tool and fixed laser beams, thanks to RobinHood70.
 Made Milligan leave after Intimidation and Pisha react accordingly.
 Adjusted Mitnick's position, some subtitles and more text details.
 Fixed clipping and blocking Venture Tower debris, thanks to MooCHa.
-Removed last respawning at Giovanni mansion and alert state error.
+Removed last respawning at Giovanni Mansion and alert state error.
 Corrected clerk adressing women "Sir" and some badly placed decals.
 Repaired possible syntax issues for many dialogues, thanks to mzz.
 Fixed some dialogue problems of Knox, Skelter, LaCroix and Heather.
@@ -1849,7 +1929,7 @@ v3.7                                                    12.06.2007
 +Lowered Blood Buff effect to two points and corrected info symbol.
 +Modified Eliza to raise Brawl and lowered high Firearms book grade.
 Restored Leopold Society clans and clan equipments for multiplayer.
-Swapped low Dodge book and Dodge item places at hotel and mansion.
+Swapped low Dodge book and Dodge item places at hotel and Mansion.
 Made indirect disciplines not traceable and decreased maximal ammo.
 Removed Humanity gains from Milligan and fixed Wong Ho background.
 Fixed several crosshair issues and wrong icons near the Dane crane.
@@ -1918,7 +1998,7 @@ Made Giovanni snort girl mortal and fixed XP on Dementating Chunk.
 Swapped a Tremere history and showed player alive at Anarch ending.
 Corrected more misplaced props and flickering blood at DMP studio.
 Repaired lip-sync of Romero plus line and Strauss giving no reward.
-Restored missing flamethrower stats and voices at Grout's mansion.
+Restored missing flamethrower stats and voices at Grout's Mansion.
 Adjusted GLOCK deploy sound and restored missing Desert Eagle ones.
 Fixed Milligan Pisha bug, Lotus Blossom key board and Carson's PC.
 Created a few missing Malkavian lines for Damsel, McFly and Imalia.
@@ -1964,7 +2044,7 @@ Removed hunter when Ash is gone and erected more tipped over props.
 Fixed Romero's trunk refill and reduced zombie spawning frequency.
 Deleted extras at theatre and restored Larry's quest for Nosferatu.
 Restored Jeanette/Therese struggling scene and some Heather lines.
-Changed some weapon infos and fixed Giovanni mansion diving boards.
+Changed some weapon infos and fixed Giovanni Mansion diving boards.
 Made speech stop when Bruno enters and fixed some Giovanni guards.
 
 v3.0                                                    05.10.2006
@@ -1985,7 +2065,7 @@ v2.9                                                    13.09.2006
 Renamed new blade dropped by the Asian vampire to "Replica Katana".
 Released trapped Fu Syndicate guard and added Julius killed lines.
 Removed another warehouse spawning and restored beachhouse weapons.
-Fixed superguards at Giovanni mansion and the bonus sweeper lines.
+Fixed superguards at Giovanni Mansion and the bonus sweeper lines.
 Changed flaming crossbow text and added some more inspection nodes.
 Corrected typos and lines for newscaster, Lily, Copper and Vandal.
 
@@ -2011,7 +2091,7 @@ v2.7                                                    08.08.2006
 +Moved Computer and Firearms books from Trip to clinic and Carson's.
 +Removed the zoom mode of the "Jamie Sue" and balanced with damage.
 +Made Melee and Defense powerups increase the skill instead of feat.
-Fixed Python script errors in Grout's mansion and Vesuvius levels.
+Fixed Python script errors in Grout's Mansion and Vesuvius levels.
 Repaired bug that could make Imalia angry before getting her quest.
 Cops use GLOCKs and dead enemies will drop a little bit more ammo.
 Fixed paying angered Vandal error and added a Gargoyle quest state.
@@ -2062,7 +2142,7 @@ Added variable for Vick's death that may clear up connected quests.
 
 v2.3                                                    23.05.2006
 ----
-+Decreased kick of Mac 10 and Steyr AUG and restored Ra blade damage.
++Decreased kick of MAC-10 and Steyr AUG and restored Ra blade damage.
 +Lowered Humanity points gainable during the serial killer dialogue.
 +Made you loose a Humanity point when giving the pendant to Jeanette.
 Removed illogical player@directory prompts from computer terminals.
@@ -2093,7 +2173,7 @@ v2.2                                                    22.03.2006
 +The special Jeanette encounter is now possible one additional time.
 +Made you loose Humanity on taking money as reward of Imalia's quest.
 +Added infos for flaming crossbow bolts and made vendors offer them.
-+Awarded XP for killing Bruno Giovanni in the second mansion map too.
++Awarded XP for killing Bruno Giovanni in the second Mansion map too.
 +Renamed flaming crossbow "Kuei-jin" and lowered crossbows accuracy.
 Removed Barabus line calling you a Cammy and fixed a line with Mira.
 Fixed graphics of baton, VV photo, Megahurtz card and Gary's tapes.
@@ -2102,7 +2182,7 @@ Swapped trouble making history conditions with similar limitations.
 Provided twenty places for Malkavian voice whispers during dialogue.
 Restored welcome lines of Bertram including XP gain and log update.
 Repaired story state continuity problem after talking to the Changs.
-Made Bruno attack on lockpicking the Giovanni mansion meeting-room.
+Made Bruno attack on lockpicking the Giovanni Mansion meeting-room.
 Removed respawning at Lotus Blossom, temple, Venture and Giovanni's.
 Moved Giovanni loading tips up and added lost lines of the sweeper.
 Removed Gallery Noir key after use and made several items droppable.
@@ -2151,7 +2231,7 @@ Corrected typos, mapname LA to downtown and subtitles to fit speech.
 Removed npctemplate* files, delete those if found in /vdata/system.
 Renamed Sabbat Thug speaker name to Thug and a few Trips to Vandals.
 Redid lost changes to Wong Ho dialogue about the silver haired man.
-Made Giovanni guard at the rear entrance of the mansion speak again.
+Made Giovanni guard at the rear entrance of the Mansion speak again.
 After giving Ash the bloodpack it will be gone from your inventory.
 Fixed Damsel recognizing Malkavians and Romero offering them pimpin.
 Repaired more problems in Hitman quest and added a new quest state.
@@ -2206,7 +2286,7 @@ Corrected Ra blade description from fast speed to aggravated damage.
 Moved Pearl of Dubai and pull toy props to Arthur's bail bonds map.
 Placed two of the unused female raver models at the club Confession.
 Removed critical bum cutscene and illogical Pisha feeding cutscene.
-Put unfinished dogs at Giovanni mansion and fixed Mira dialogue bug.
+Put unfinished dogs at Giovanni Mansion and fixed Mira dialogue bug.
 Fixed a quest bug with the Fu Syndicate elevator and an Isaac text.
 Made Grout's wife fully visible and repaired a Muddy quest shortcut.
 Fixed a bug with Patty appearing in the alley although she is dead.
@@ -2219,9 +2299,9 @@ Corrected the corrupted Intimidation font "W" at higher resolutions.
 v1.8                                                    21.10.2005
 ----
 Restored female Sabbat and put three into the first Hallowbrook map.
-Added the missing Dodge II manual to second Giovanni mansion level.
+Added the missing Dodge II manual to second Giovanni Mansion level.
 Placed the Pearl of Dubai and the occult braid into the SM pawnshop.
-Restored guard models to Giovanni mansion and fixed a lip-sync bug.
+Restored guard models to Giovanni Mansion and fixed a lip-sync bug.
 Put little used male Asian nurse model into the Santa Monica clinic.
 Corrected formatting of a few haven PC emails and the Sin Bin note.
 Continued adjusting location names by correcting bus and sewer maps.
@@ -2250,7 +2330,7 @@ Restored many mistyped Intimidate options and some answers to Pisha.
 
 v1.6                                                    08.08.2005
 ----
-+Re-branded Uzi, Mac 10, GLOCK 17c, Ithaca and both Remington rifles.
++Re-branded Uzi, MAC-10, GLOCK 17c, Ithaca and both Remington rifles.
 +Adjusted damage values of Steyr AUG, SWAT rifle and Ithaca shotgun.
 Lowered lockpicking skill needed for chemical substances door to 10.
 Made Model Citizen quest show failure directly after leaving Tawni.
@@ -2375,7 +2455,7 @@ cleaned up brother kanker's dialogue - shouldn't get stuck in a loop
 anymore
 zygaena shouldn't be in the red dragon after you've killed him 
 anymore
-shouldn't teleport to king's way mansion after watching snuff film 
+shouldn't teleport to king's way Mansion after watching snuff film 
 with isaac
 shouldn't be able to get stuck with vandal's dialogue so he thinks 
 you're on the replacing lily quest when you're not
@@ -2489,7 +2569,7 @@ Restored uncensored intro beheading scene and swapped club dancers.
 Added radioshow and Malkavian whispers transcripts to Extras folder.
 Doubled explosion damage of shellboxes and fixed Leopold Society's.
 Included official patch 1.2 files and gas valves to all fireplaces.
-Swapped wrong manhole covers for Griffith Park and Giovanni mansion.
+Swapped wrong manhole covers for Griffith Park and Giovanni Mansion.
 Fixed edicts errors generated by multiple usage of Auspex on maps.
 Added frenzy for NPC models and restored special situations on hubs.
 Swapped several pedestrian models on a few levels to reduce cloning.
@@ -2510,12 +2590,13 @@ Stopped several dialogue NPCs staying tranced after being fed upon.
 Used autoexec.cfg to fix dsp sound talk and frame rate door issues.
 Made game and NPCs recognize death of Knox, Mercurio and Heather.
 Moved linux loader into main folder and added warning popup to it.
-Closed big map hole in Venture Tower and some more in observatory.
+Fixed map holes in Venture Tower and observatory and ground stutter.
 Made the patch copy all bin files into main folder to fix crashes.
 Prevented player from using idle animation during a few cutscenes.
 Made NPCs recognize the death of Misti, Venus, Mercurio and Knox.
 Removed corpses of blood dolls and other NPCs on revisiting maps.
 Made seductive feeding multiple times of Phil and Romero possible.
+Added missing solidity for sewer and temple models and some others.
 
 Interface:
 +Made pause, camera-moves, auto-move and walk/run toggles definable.
@@ -2527,7 +2608,7 @@ Interface:
 +Added seven missing infobar sounds and created seven infobar icons.
 +Mentioned Clan Lasombra and the Nagaraja in the world loading tips.
 +Improved title menu and character sheet clan symbols and fixed lag.
-+Added console key and all hotkeys to the controls options submenu.
++Added console key and hotkeys to options, and item gained message.
 Adjusted fonts issues regarding Dementation and Tremere Domination.
 Added missing newspaper icons and increased the Obfuscate frame rate.
 Corrected the corrupted Intimidation font "W" at higher resolutions.
@@ -2539,7 +2620,7 @@ Unified formatting of newspaper articles and improved GUI issues.
 
 Graphics:
 +Restored Nosferatu eyeballs, many clan idles and several hand skins.
-+Made Malkavians see shaking cables and fires show heat gaze effect.
++Made Malkavians see shaking cables and cars have transparent glass.
 +Added elevator button lights and arrows and improved traffic lights.
 +Improved rain and inspection effects and restored many particles.
 +Added missing steam to clinic, Ocean House, Vesuvius and Hollywood.
@@ -2555,7 +2636,7 @@ Fixed bad fire particle files and badly placed or flickering decals.
 Repaired clipping, holes, necks and Presence hair of various models.
 Adjusted health bar frame and weapon/discpline highlight graphics.
 Increased distance in which detail models and decals will fade away.
-Hid invisible Ocean House and Grout's mansion blocks by furniture.
+Hid invisible Ocean House and Grout's Mansion blocks by furniture.
 Corrected many inside/outside door handles and background screen.
 Fixed three mirrored keycard backsides and centered the area icons.
 Added native widescreen support and improved readability of notes.
@@ -2598,7 +2679,7 @@ Stats:
 +Lessened damage for frenzy check and corrected shown armor ratings.
 +Raised minimum Humanity for killing innocents to three like in hubs.
 +Added Combat to feats to avoid confusion and renamed Social Public.
-+Made Nosferatu break Masquerade easier and added patch version info.
++Made Nosferatu break Masquerade easier and Frenzy use boosted stats.
 +Swapped trouble making history conditions with similar limitations.
 +Added config, commands and special equipped clans for multiplayer.
 +Implied sleeping near tutorial and warehouse including bloodloss.
@@ -2619,7 +2700,6 @@ Disciplines:
 +Restored Domination Command and Sleep, Dementation Veil and Voice.
 +Changed Cadaverous Flesh history and occult heal rate accordingly.
 +Lowered Bloodbuff effect to two points and corrected info symbol.
-+Disabled true sight for killer, Vick, Cathayan and Blood Guardian.
 +Adjusted Blood Shot and Boil damages and added missing Boil sound.
 +Restored Potence effects and made it stack correctly with strength.
 +Changed active discpline durations to fit better to graphic effect.
@@ -2627,20 +2707,21 @@ Disciplines:
 +Changed Close to the Beast history because of wolf warform issues.
 +Reduced Bat's Communion duration and prolonged Brainwipe duration.
 +Added Blood Malady effect to supernaturals immune to Blood Theft.
-+Restored Faith Heal and combined Mind Shield and Shield of Faith.
-+Renamed Holy Sight to Vision and fixed Divine Light cross texture.
++Restored Spirit Heal and combined Mind Shield and Shield of Faith.
++Created icons and cross for Holy Light and Divine Vision Numinas.
 Made indirect disciplines not traceable and NPCs comfort loud ones.
 Fixed disciplines for non-humans and Protean claw effects and icons.
-Renamed Bloodsuckers' to Bats' Communion and Purge to Blood Purge.
+Trimmed Bloodsuckers' to Bloodsucker and renamed Purge Blood Purge.
 Fixed Potence, Ravens, Trance, Wipe and Hysteria issues and sounds.
 Removed not working Blood Shot blood return when fighting Tzimisces.
 Harmonized Presence chances and adjusted description of Blood Boil.
 Edited history and occult item descriptions to display percentages.
 Cleared disciplines before many more cutscenes than in the original.
 Made Chang brothers and serial killer be resistant to Blood Purge.
+Mentioned light amplification effects of Auspex and Divine Vision.
+Disabled Vision of Death, Suicide and Mass Suicide for the zombies.
 
 Items:
-+Changed armor to absorb half aggravated damage and updated the info.
 +Made it possible to sell or give redundant items and removed some.
 +Lowered Firearms book condition and swapped some researchable books.
 +Added unused models to three books, a script, a report and a data CD.
@@ -2679,7 +2760,7 @@ Reconstructed the missing Desert Eagle ammo and female wield models.
 Fixed GLOCK walk and run animations and several crosshair problems.
 Adjusted GLOCK deploy sound and restored missing Desert Eagle ones.
 Restored Ithaca, Ra blade, katana and bushhook stealth kill sounds.
-Fixed claws usage in gallery, Hallowbrook hotel and Grout's mansion.
+Fixed claws usage in gallery, Hallowbrook hotel and Grout's Mansion.
 Repaired bad Ming-Xiao, Tzimisce fatguy and Ra blade damage stats.
 Changed severed arm pickup sound and added two missing mode sounds.
 Fixed weapon stats shown using new client.dll and added claws info.
@@ -2703,6 +2784,7 @@ Removed second tutorial enemies for not mass affecting disciplines.
 Added Jack gesture, armor info, sounds and fixed stealth kill icon.
 Removed .38 ammo exploit and added check and options for high stats.
 Made Jack acknowledge a special stealth kill and fixed blood reset.
+Fixed location continuity, MAC-10 loudness and a way to get stuck.
 
 Haven:
 +Made it possible to specify which clothes Heather should wear next.
@@ -2711,8 +2793,8 @@ Haven:
 +Made Malkavians loose Humanity when sending McFly to threaten cops.
 +Added option to keep Heather alive and added a humane farewell line.
 +Made Larry send spam email and improved two friend emails timings.
-+Created four new Gary poster quests for several unused item models.
-+Made SM haven stay always active and added door to haven bathroom.
++Added four new Gary poster quests and made Heather throw away pizza.
++Made SM haven stay active, added bathroom door and locked another.
 Corrected Mercurio sending wrong timed emails and fixed email order.
 Repaired VV and Jeanette sending you their emails at the wrong time.
 Fixed Heather not appearing at haven and allowed some more feeding.
@@ -2725,37 +2807,35 @@ Stopped Gary's posters from appearing in your unused old haven too.
 Removed buggy SM haven board and Mercurio's note after you met him.
 Turned Chantry haven into Masquerade area to fix Tremere detriment.
 Improved TV and radio state consistencies in SM and downtown havens.
+Fixed talking with Heather after you dealt with McFly in two ways.
 
 Santa Monica:
 +Added male seduction to blueblood and removed him after alley trip.
 +Made CD quest available to all clans and fixed beachhouse cash bug.
-+Added Humanity points for giving money to haven bum and Mercurio.
 +Reconstructed Bertram's PC and incooperated text of unused emails.
 +Added dialogue to diner trap and restored Obfuscator and guard dog.
 +Restored jenny_cries sequence and fixed a SM schrecknet door lock.
 +Activated spooky cover sound and Asian vampire laptop screensaver.
 +Made only Chunk use porch in rain and drop key when incapacitated.
-+Restored Trip's drug quest and added Humanity loss to SM blueblood.
++Restored Trip's drug quest and fixed Trip's pawnshop door crashing.
 +Made player sending Gimble to Vandal loose humanity then regain it.
 +Cleaned Mercurio's apartment and fixed some wrong bum animations.
 +Made player phone Gimble in Carson quest and Carson remove McGee.
-+Locked a haven door and moved Malcolm's bribe to Mercurio's house.
++Unlocked door in Gimble's lair, showed his hand and fixed cutscene.
 Fixed morphine quest updates after angering Mercurio and warehouse.
-Made morphine quest acknowledge and removed some first quest info.
-Fixed Lily's sire's license plate in quest log and her diary dates.
 Made diner cook move more and stopped Doris from falling into floor.
+Fixed Lily's sire's license plate in quest log and her diary dates.
+Corrected prophet stop preaching and removed some first quest info.
 Added Lily's purse to her stuff and uncovered it if Doris is dead.
-Showed Gimble's hand, fixed cutscene and unlocked door in his lair.
-Made Bertram react to attacks and taking CD if you already have it.
-Restored Bertram welcome lines and fixed Trip's pawnshop door crash. 
 Made Carson pack his laptop and corrected skybox reflection on hub.
+Made Bertram react to attacks and taking CD if you already have it.
 Added check for having the astrolite and cops to pier conversation.
 Made it possible to trigger serial killer quest from all newspapers.
 Added cop cars to beachhouse level and corrected floating Mercurio.
 Adjusted Cathayan report dates and prevented him getting invincible.
 Made getting secret informations from Knox and Johansen consistent.
 Restored rain to beachhouse and removed buggy Ocean House version.
-Added bloss loss on ghouling Heather and having fun with Jeanette.
+Added bloss loss to ghouling Heather and having fun with Jeanette.
 Opened beachhouse door on combat and restored Al's and glass sounds.
 Corrected XP and restored log for unravelling Knox and Bertram plan.
 Blocked a way from the SM hub into the junkyard before it's opened.
@@ -2788,6 +2868,7 @@ Medical Clinic:
 +Made Vandal quest available later too and stealth work for guard.
 +Added Humanity loss for not freeing Lily and fixed cutscene eyes.
 +Improved emails, elevator display and climbing back into the vent.
++Moved Malcolm's black mail money from your mailbox into his office.
 Fixed getting Vandal's freebie and made him more talkative overall.
 Repaired not getting XP for replacing Lily and hacking the passcode.
 Stopped dead Malcolm mailing you and monitor react to dead victim.
@@ -2812,7 +2893,7 @@ Stopped Dane cop from looping and fixed illogical camera detection.
 Gallery Noir:
 +Restored XP for entering peacefully and improved Chunk's sequence.
 +Activated light switch and added cash box item and botch message.
-+Added sound to blood guardian summoning and removed a blood trail.
++Added sound to Blood Guardian summoning and removed a blood trail.
 +Stealing charity money will not cost Humanity if you know about it.
 Fixed Gallery bar inspection and made charity money stay available.
 Prevented talking with Chunk when someone else attacked the Gallery.
@@ -2821,7 +2902,7 @@ Corrected wrong painting positions after slashing then re-entering.
 
 Serial Killer:
 +Lowered gainable Humanity points and restored killer's phone call.
-+Restored two dog models to and fixed sounds and actions at junkyard.
++Restored one dog model to and fixed sounds and actions at junkyard.
 Removed Masquerade violation and failure for convincing the killer.
 Made killer react to Diner violence and quest independent from Muddy.
 Corrected freezes on meeting the killer and Gimble while Obfuscated.
@@ -2844,15 +2925,12 @@ Fixed outside map holes, a texture and lowered ghost music volume.
 Restored two missing XP in the Ocean House quest and swapped one.
 
 Pier:
-+Made letting Julius go free for money end up with Humanity balanced.
 +Awarded XP point for letting Julius free and fixed his wrong aura.
-+Added Humanity for comforting Copper and improved selling options.
 +Sending Copper after the president triggers a Masquerade violation.
 +Added a Humanity loss for sending Copper to kill the head vampire.
-+Added seperate quest and an XP for exploiting the thin-blood Copper.
 +Restored chewing gum for Copper into arcade and animated screens.
++Added seperate quest and an XP for exploiting the thin-blood Copper.
 +Made killing pier cops loose Humanity and gave one the baton only.
-+Added Humanity point and lines for giving Lily's items back to her. 
 Lowered money available from Julius and the surf computer difficulty.
 Prevented Copper from suddenly having money and added bus to pier.
 Removed cop cars after the police left and added Die My Darling song.
@@ -2895,7 +2973,7 @@ Fixed parking garage gang war problem and Ming as Nines size issue.
 Made Regent's quest fail if you betray him and added Blood Hunt line.
 Moved dumpster to map hole and fixed floating rails and hub windows.
 Fixed condition for telling Damsel that you killed a werewolf too.
-Corrected downtown NPC stats connected to Nosferatu and fixed moon.
+Corrected Nosferatu NPC stats, shopping cart physics, and the moon.
 Fixed possible problem if people kill Igor without talking to him.
 Made Igor attack the player if his friends are killed or attacked.
 Fixed LaCroix particles and hid floating Masquerade cutscene NPCs.
@@ -2908,7 +2986,7 @@ Restored Gangrels to Masquerade cutscene and added theatre email.
 Confession:
 +Restored laptop, turnstile, gestures, three cage dancers and a DJ.
 +Added line to get rid of the turnstile and fixed cross camera bug.
-Venus will now give you correct story state dependent cut payments.
+Fixed blocking Confession barkeeper and Venus giving right payments.
 Restored missing Venus reaction to persuading Boris to give up dept.
 Added short-time club replacement for Venus in case you killed her.
 Fixed dead Patty appearing in alley and staying around in Confession.
@@ -2932,9 +3010,10 @@ Stopped Empire hotel TV from being turned off because of lighting.
 Added floor number to suite names in computer and numbers to floors.
 Improved Empire Hotel mafia TV room sound switch and music radius.
 Gave Jezebel a Glock to hurt you on bed and stopped vanishing Dima.
+Corrected Boris dialogue problem after he survived fighting Dema.
 
 Malkavian Mansion:
-+Restored leaf, smoke, maze room and bed trigger to Grout's mansion.
++Restored leaf, smoke, maze room and bed trigger to Grout's Mansion.
 +Added aura for Grout's wife and fixed jars transparency problems.
 Fixed possible crash on leaving, Obfuscate freeze and candle skins.
 Disabled Grout's trigger after use to improve Comp Mod compability.
@@ -2959,14 +3038,13 @@ Added doorcode quest log at museum and improved breaking the windows.
 Prevented museum guard from dropping multiple storage room keycards.
 Fixed museum laser beams errors and an invisible air vent blockade.
 Corrected Beckett's bonus dialogue and fixed stuck museum guard AI.
+Removed shortcut at museum and fixed guard dropping workroom key.
 
 Skyeline Apartments:
 +Restored security guard with scenes and fixed elevator and monitor.
-+Provided a Humanity point for not telling Hannah that Paul is dead.
 +Rewarded one Humanity for Dominating Milligan and added toileteries.
 +Restored a Milligan line and created necessary license item for it.
-Fixed infamous Skyeline bug and Milligan stuck bug by recompilation.
-Corrected Milligan not leaving his apartment or not opening the door.
+Fixed Milligan not leaving and restored his black monitors and case.
 Adjusted Hannah's dates, forced her lines and made her actually die.
 Modified XP and log for plague quest state and made CDC stay longer.
 Added missing XP for plague quest and fixed Hannah quest state bug.
@@ -2987,15 +3065,13 @@ Corrected doors, handles, cameras, walk-through columns and an icon.
 Hollywood:
 +Added male seduce feed for Tommy and fixed re-persuading or killing.
 +Fixed quest log updates on Ash and Romero dying during their quest.
-+Restored VV's pool girl, actors to Ground Zero and cat to Kings Way.
-+Unlocked Red Spot's storage door and locked it's back door instead.
 +Added Masquerade violation and Humanity loss on public sweeper kill.
-+Restored private Velvet and Misti dances and fixed special sequence.
++Restored two actors to Ground Zero backstage and a cat to Kings Way.
++Unlocked Red Spot's storage door and locked it's back door instead.
 +Added Malkavian whisper to Ash sewers and restored Gargoyle gesture.
 Fixed food critic quest reward and endless prostitute dialogue loop. 
 Added DMP combat zone switch, fixed headrunner sequence and drop bug.
 Prevented hunters during the courier dialogue cutscene and forced it.
-Removed Misti freebie for Nosferatu, her clones and made her refill.
 Fixed wrong observatory manhole sound and locked outer Tawni door.
 Made sweeper defend himself and added a sweeper reference to Isaac.
 Fixed Humanity loss when killing thugs and Chinese Theatre trigger.
@@ -3006,6 +3082,20 @@ Stopped dead Tommy writing review and fixed slanting streetlights.
 Restored three King's Way headrunners and fixed Red Spot door bug.
 Corrected netcafe sound schemes switch and fixed many streetlights.
 Switched badly fixed missing Tommy line with better fitting float.
+Fixed possible courier and warrens computer problems in Hollywood.
+Added missing XP if you found Ginger Swan before meeting courier.
+
+Abrams Jewelry:
++Added XP and a Masquerade redemption for dealing with the Gargoyle.
+Made Isaac give the reward for defeating the Tzimisce to all clans.
+Stopped instant teleport to King's Way Mansion after watching film.
+Made Isaac recognize the Tzimisce defeat even if you pissed him off.
+Fixed some Isaac bugs regarding Toreador and his King's Way reward.
+Reconstructed lip-sync for Dan's restored line and fixed another one.
+Isaac-Tzimisce dialogue line will disappear after quest is complete.
+Used money as alternative for Isaac's gift issue in the basic patch.
+Added Gargoyle quest states and fixed connected quest start issue.
+Made video victim's model unique and corrected ghoul sound group.
 
 Asp Hole:
 +Made you loose a Humanity point for making Ash exchange his clothes.
@@ -3031,18 +3121,7 @@ Removed fight after zombie quest failing to prevent getting stuck.
 Fixed cemetery quest scripts breaking if you flee into the warrens.
 Corrected lip-sync of prostitutes in cemetery and a dialogue issue.
 Prevented Romero cemetery cutscene freezing if Presence is active.
-
-Abrams Jewelry:
-+Added XP and a Masquerade redemption for dealing with the Gargoyle.
-Made Isaac give the reward for defeating the Tzimisce to all clans.
-Stopped instant teleport to King's Way mansion after watching film.
-Made Isaac recognize the Tzimisce defeat even if you pissed him off.
-Fixed some Isaac bugs regarding Toreador and his King's Way reward.
-Reconstructed lip-sync for Dan's restored line and fixed another one.
-Isaac-Tzimisce dialogue line will disappear after quest is complete.
-Used money as alternative for Isaac's gift issue in the basic patch.
-Added Gargoyle quest states and fixed connected quest start issue.
-Made video victim's model unique and corrected ghoul sound group.
+Added sign to Hollywood cemetery gate and fixed name in computer.
 
 Luckee Star:
 +Fixed Hatter being unapproachable when you threatened him too early.
@@ -3070,6 +3149,13 @@ Made quest log and laptop show failure and fixed being noticed early.
 Prevented continuing the Tawni quest after you have been detected.
 Updated netcafe entries for Tawni and Ash dependent of quest states.
 Changed camera spot icons at Tawni's place and removed notice timer.
+Made Tawni's boyfriend holster gun when using interesting points.
+
+Vesuvius:
++Restored Velvet and Misti dances, pool girl and a special sequence.
+Removed Misti freebie for Nosferatu, her clones and made her refill.
+Fixed stripper and girl off work leaving Vesuvius' dressing room.
+Restored sound to Vesuvius' easter egg and made it easier to find.
 
 Warrens:
 +Added unused rat crowd model and removed bad warrens re-entry sound.
@@ -3085,7 +3171,7 @@ Highlighted keycard of locked sewer cover and fixed water reflection.
 Allowed sewer-warrens detour and made Imalia and Mitnick turn better.
 Corrected a wrong sign in warrens and removed icon of Mitnick's PC.
 Restored missing Bertram CD quest state update and fixed a cutscene.
-Added missing lamps to several levels and blocked pipe with barrel.
+Added missing lamps, blocked a pipe and fixed missing arch clipping.
 
 Nosferatu Lair:
 +Granted occult Perception powerup as reward during Mitnick's quest.
@@ -3108,6 +3194,7 @@ Chinatown:
 +Made killing Lu lower Humanity and added Intimidation to Ji and Lu.
 +Added XP and humanity for keeping Zhao alive and added Tong mugger.
 +Placed a dead dog into Fu Syndicate and filled Kamikaze Zen shelf.
++Made Glaze a Masquerade area and Fu Syndicate start as combat area.
 Made Tseng talk only of known people and restored Ming/Fu connection.
 Corrected Hitman quest rewards and added peace-talk lines for both.
 Fixed Hitman quest bug that showed failure when making them friends.
@@ -3119,15 +3206,15 @@ Recompiled Zhao's Warehouse to fix the doors vanishing at a distance.
 Fixed bad Lotus Blossom map location and replaced buggy phone sound.
 
 Fu Syndicate:
-+Added squashed Odious Chalice, GLOCK, katana and some more scenery.
++Added squashed Odious Chalice, katana, GLOCK and some more scenery.
 +Restored alarm off switch and removed lobby keypad and push barrier.
 Resolved issues with Obfuscated players and guards still seeing them.
 Improved Barabus' hack position and made PCs accessable afterwards.
 Released the trapped elevator guard and fixed wrong aura of Barabus.
 Added emergency doorcode and fixed laser beams error after loading.
 Made Barabus leave with you and not be breaking out all on his own.
-Improved cross guy timeout, test timing, door speed and ignitions.
-Made CDC guy at Fu Syndicate unbiteable like the others downtown.
+Improved crossguy reaction, test timing, door speed and ignitions.
+Repaired auto-locking door, stuck fanblades and teleporting SWAT.
 
 Glaze:
 +Restored XP for stealth killing Johnny and made guards fight back.
@@ -3174,8 +3261,11 @@ Giovanni Mansion:
 +Added quest logs for Giovanni candidates and for the endgame finish.
 +Restored spirits attacking if crypt coffins are hit and blast door.
 +Made Nadia react to zombies damaging player and removed fake door.
-+Changed two icons at Giovanni mansion and made Bruno react to feed.
++Changed two icons at Giovanni Mansion and made Bruno react to feed.
 +Placed some things in empty Giovanni rooms and fixed player start.
++Corrected getting secret from Christopher and flirting with Nadja.
++Improved Giovanni trap section and circumvented Bruno not burning.
+Fixed reentering issues and door breaking at the Giovanni Mansion.
 Removed inconsistent alert states, fixed lever icons and zombie bugs.
 Fixed doors and back door guard and removed invisible Bruno clones.
 Made Bruno attack on lockpicking and his speech stop when he enters.
@@ -3237,32 +3327,33 @@ Fixed crouching Blood Hunt vampires by swapping several used weapons.
 
 Temple:
 +Restored Yukie as companion to temple and Ming endgame camera shot.
-Disabled arrow chest spawning and fixed facing Ming while Obfuscated.
-Corrected temple maps start orientation, inspections and a tin can.
++Gave guards Shin Guntos and removed unusable Ming temple doorknobs.
 Unlocked a temple door for Yukie and secured three others later on.
+Disabled arrow chest spawning and fixed facing Ming while Obfuscated.
+Corrected start orientation, inspections, trap trigger and a tin can.
 Prevented picking of two temple doors and unbarred big temple gate.
 Fixed quest log update and XP gain on reaching Ming's inner sanctum.
 Added missing temple door sound and restored Chang and buddha skins.
-Removed unusable Ming temple doorknobs and gave guards Shin Guntos.
 Reduced slime particle spawning in temple and fixed clipping columns.
-Fixed Ming's sanctum view, teleport timing and a temple map hole.
+Fixed sanctum view, teleport timing, key drop and a temple map hole.
 
 Endgame:
-+Provided shortcuts to skip most endgame fighting, see walkthrough.
++Provided shortcuts to skip most fighting and locked Skyeline vents. 
 +Restored Sheriff conjuring Bat's Communion and added his sword too.
 +Made Ventrue enemies use disciplines and SWAT in armor not biteable.
 +Restored wolf-ending easter egg and a added timer to elevator bomb.
 +Added timed explosion and boss flag for LaCroix's Dominated bomber.
 +Restored Justicar and white SWATs, and cleaned up Nines at ending.
 +Added patch contributors to credits and fixed a taxi ride map hole.
-Corrected a clipping Venture Tower lamp and fixed very passive guard.
+Corrected Venture Tower lamp, a passive guard and made bomb hurt one.
 Added endgame quest logs and improved subtitles for Dominated guard.
 Swapped Ventrues in Tower with females or Toreadors to avoid clones.
 Fixed sliding chute, elevator, portals and a lock in Venture Tower.
-Showed player alive at Anarch ending and put Skelter at Nines' side.
+Showed player alive at Anarch ending and added Damsel and Skelter. 
 Made Chunk not attack you if you convinced him during the endgame.
 Repaired bad icons and flickering for upper Venture tower elevator.
 Improved many details in Ming ending and masquerade ending cutscene.
+Removed an icon in Venture Tower and made broken roof accessable.
 
 
 Restored Content:
@@ -3296,7 +3387,7 @@ Disciplines:
 + Bloodheal discipline.
 + Sleep instead of Suicide.
 + Madness as Bedlam partial.
-+ Faith Heal Numina for hunters.
++ Spirit Heal Numina for hunters.
 + Faith Shield Numina for hunters.
 + Bloody Eye as Blood Purge partial.
 + Blood Theft instead of Blood Salvo.
@@ -3365,16 +3456,16 @@ Options:
 + Private dancing from VV and Misti at Vesuvius.
 + Having fun with Jeanette possible one more time.
 + Improved handling of Empire Arms keycard printer.
++ Zombie and pimpin quest available after the other.
 + Warrens, Hallowbrook, Temple and Venture shortcuts.
 + Imalia's magazine quest available after Tawni quest.
-+ Romero and Pimpin' quest available after zombie quest.
-+ Redundant items can be given to Lily, LaCroix and others.
++ Surplus items can be given to Lily, LaCroix and others.
 
 Situations:
-+ Sheriff using Bat's Communion.
 + Hollywood sweeper fighting back.
-+ Two dogs and Lasombra at junkyard.
++ One dog and Lasombra at junkyard.
 + Giovanni spirits in Giovanni crypt.
++ Sheriff using Bloodsucker Communion.
 + Two actors being killed at Ground Zero.
 + Cat and Sabbat leader sequence at King's Way.
 + Special sequences on all hubs and at Vesuvius.
@@ -3388,7 +3479,7 @@ Scenery:
 + Ten props at beachhouse and five on pier.
 + Six props in theatre and four in tutorial.
 + Twelve props in museum and two in hospital.
-+ Leaves and smoke outside of Grout's mansion.
++ Leaves and smoke outside of Grout's Mansion.
 + Ten props in warrens and eleven in Ash sewers.
 + Seven props in Fu Syndicate and one in temple.
 + Nine props on Dane and and seven in Last Round.
@@ -3403,10 +3494,10 @@ Scenery:
 + Thirteen props in Empire hotel and four in Venture Tower.
 + Twenty-four props in tattoo shop and seven props in Tsengs.
 + Two props at junkyard and three in Foxy Boxes and Chinatown.
-+ One prop on each hub, one downtown, diner, Zhao's and Skyeline.
 + Twenty-four props in netcafe and nineteen at Society of Leopold.
-+- Two props at Gimble's and four at observatory.
-+- Six props at warrens and two at Leopold Society.
++ One prop on each hub, downtown, diner, Zhao's and two at Skyeline.
++- Six props at warrens and two at Society of Leopold.
++- Two props at Gimble's, four at observatory and one in SM.
 
 Moved items:
 + Moved Galdjum from Warrens into Skyeline haven.
@@ -3427,14 +3518,14 @@ Restored characters:
 + Clean Nines at solo ending.
 + Female ravers at the Asylum.
 + Alternative Chang at temple.
-+ White SWATs in Venture Tower.
 + Justicar at Camarilla ending.
 + Pinball player in Last Round.
++ Two new SWATs in Venture Tower.
 + Lasombra at junkyard and library.
 + Alternative singer at Empire hotel.
 + Bartenders at Last Round and Glaze.
 + Headless corpse and head in warrens.
-+ Two scrubs corpses in Grout's mansion.
++ Two scrubs corpses in Grout's Mansion.
 + Receptionist and Tongs in Lotus Blossom.
 + Lasombras and shovelheads at Hallowbrook.
 + Girl and hustler bartenders at the Asphole.
@@ -3475,8 +3566,8 @@ not implemented or too far from being finished to be restored.
 Actions:
 * Carrying bodies (context icon found).
 * Staking vampires (context icon found).
-* Dice rolls (context icons and info found).
-* Botching stuff (infobar icon and info found).
+* Dice rolls and botch (icons and info found).
+* Feeding grappling (animation and info found).
 
 Stats:
 * Histories giving items (infos found).
@@ -3498,9 +3589,9 @@ Disciplines:
 * Dementation Haunting and Voice of Madness(info found).
 * Presence Awe, General and Daze 1/2 levels (info found).
 * Discipline and Numina levels shown in HUD (graphics found).
+* Protean 5 Wolf warform (info, textures and animations found).
 * Bloodbuff-Dexterity/Stamina/Strength disciplines (info found).
 * Numinas Mind Shield and Shield of Faith (icons and info found).
-* Protean five Wolf warform (info, textures and animations found).
 
 Items:
 * Electronic lockpick (info found).
@@ -3601,7 +3692,7 @@ modified, the latter items can not be taken from containers.
 -item_d_holy_light -> is not visible in inventory
 item_g_garys_cd (Tung's CD duplicate) -> Pull Toy
 item_g_jumbles_flyer (flyer duplicate) -> Fleshy Ball
-item_g_ring_serial_killer_1 (unused) -> Bubble Bum
+item_g_ring_serial_killer_1 (unused) -> Pearl of Dubai
 item_g_wireless_camera_2 (camera duplicate) -> Name Plate
 item_g_wireless_camera_3 (camera duplicate) -> Squashed Chalice
 item_g_wireless_camera_4 (camera duplicate) -> Throwing Star
@@ -3621,9 +3712,9 @@ item_w_claws_protean5 (claw duplicate) -> Vacuum Tubes
 item_w_gargoyle_fist (NPC) -> item_p_occult_thaum_damage Daimonori
 item_w_hengeyokai_fist (NPC) -> item_p_occult_heal_rate Mummywrap
 item_w_manbat_claw (NPC) -> item_p_occult_dodge Weekapaug Thistle
-item_w_mingxiao_melee (NPC) -> Pearl of Dubai
+-item_w_mingxiao_melee (NPC) -> Ming won't attack if changed
 -item_w_mingxiao_spit (NPC) -> Ming won't attack if changed
--item_w_mingxiao_tentacle (NPC) -> Ming won't attack if changed
+item_w_mingxiao_tentacle (NPC) -> Bubble Bum
 item_w_rem_m_700_bach (not obtainable in basic) -> SWAT Rifle
 item_w_sabbatleader_attack (NPC) -> item_p_occult_hacking Braid
 item_w_sheriff_sword (not obtainable in basic) -> Sheriff Sword
@@ -3663,11 +3754,11 @@ Context Icons:
 (tube) 17 bomb 18 note 19 kill 20 chance 21-27 elev 1 - 7 28 8 (b) 
 29 g 30 no elevator 31 up 32 down 33 stop (sword) 34 drop (valve) 
 35 arrow > (oven) 36 arrow < (books) 37 sconce 38 recorder 39 key 
-40 clipboard 41 newspaper 42 spotlight 43+44 radio 45 cash (stake) 
-46 book 47 payphone 48 webcam 49 penthouse 50 bus map 51 sewer map 
-52 skull 53 pad locked 54 pad opened 55 break 56 bus map 57 sewer 
-lines 58 door closed 59 transition 60 sewer transition 61 pedestal 
-62 dance m 63 dance f 64 lever 65 use 66-71 malk symbols 72 push
+40 clipboard 41 newspaper 42 spotlight 43/44 graph 45 cash (stake) 
+46 book 47 payphone 48 webcam 49 penthouse 50 bus map 51 sewer map
+52 skull 53 pad locked 54 pad opened 55 break 56 bus map 57 sewer
+lines 58 door closed 59 transition 60 sewer transition 61 pedestal
+62/63 dance m/f 64 lever 65 use 66-71 malk symbols 72 push
 
 
 Multiplayer Support:
@@ -3706,37 +3797,40 @@ chareditor        Switches to sheet
 impulse 101       Gives most weapons
 cmdlist           Lists all console commands
 cvarlist          Lists all console variables
-gclearall         Clears all G. variables
-restart           Restarts the current map
 frenzyplayer      Frenzies player (which unfreezes cutscenes)
 camera_kill       Kills camera mode (which unfreezes cutscenes)
-vstats x y z      Stat editor: x get/buy/sell y stat z points
+vstats xxx y z    Stat editor: xxx get/buy/sell y stat z points
 vgender int 0/1   Changes gender: 0 female, 1 male
 vclan name        Changes clan to name: Player_... for singleplayer
 vhistories        Lists codes for all histories of current clan
 vhistory nn       Activates the history with the code nn
-v_hidegui 1       Hides the HUD for taking screenshots
-mat_fullbright 1  Turns the lighting to maximum
-buildcubemaps     Rebuild cubemaps, not from menu, then reload level
-map name          Start map name: ch_.../hw_.../la_.../sm_.../sp_...
-developer 0-3     Displays more error messages.
-G.variable(= n)   Displays (sets) value of game variable
 give name         Gives item to player: name item_...
 use name          Uses the item
 giftxp n          Gives n experience points
 blood n           Gives n blood points
 money n           Gives... not what you think ;)
-changelevel2 n m  Teleports player to map n at landmark m 
+map name          Start map name: ch_.../hw_.../la_.../sm_.../sp_...
+buildcubemaps     Rebuild cubemaps, not from menu, then reload level
+changelevel2 m n  Teleports player to map m at landmark n 
+restart           Restarts the current map
+developer 0-3     Displays more error messages.
+G.variable(= n)   Displays (sets) value of game variable
+gclearall         Clears all G. variables
+debug_area_type n Changes area to 0 combat, 1 masquerade, 2 elysium
+ent_dump ENT      Dumps all info about entity ENT
+mat_fullbright 1  Turns the lighting to maximum
 fov n (normal 0)  Change field of view for widescreens
 r_anamorphic 1    Enables stretching for widescreens
+v_hidegui 1       Hides the HUD for taking screenshots
 cl_showpos        Displays coordinates
 cl_showfps        Displays frame rate
 picker            Displays object data
 showtrigger 1     Displays trigger areas
-ai_show_hints     Shows pathfinding hints for NPCs
-ai_show_interesting 1  Shows special places that NPCs will use
 surround 1        Enable surround sound mode
 snd_gain 2        Compensate for loudness loss in surround mode
+ai_show_hints     Shows pathfinding hints for NPCs
+ai_show_interesting 1  Shows special places that NPCs will use
+vcollide_wireframe 1  Shows collision wireframes for floorblocks
 
 
 Story States:
@@ -3757,8 +3851,8 @@ It can be modified to get different results in dialogues or levels!
 5	Spoke with Beckett at warehouse.
 10	Entered downtown.
 15	Elizabeth Dane completed.
-20	Spoke with Bach at Grout's mansion.
-25	Spoke with Prince after Grout's mansion.
+20	Spoke with Bach at Grout's Mansion.
+25	Spoke with Prince after Grout's Mansion.
 30	Spoke with Beckett at museum.
 35	Spoke with Prince after museum.
 40	Spoke with the Tzimisce, added by wesp.
@@ -3766,9 +3860,9 @@ It can be modified to get different results in dialogues or levels!
 50	Mandarin started experiments.
 55	Rescued Barabus.
 60	Spoke with Chang brothers, added by wesp.
-65	Spoke with Prince after Giovanni mansion.
+65	Spoke with Prince after Giovanni Mansion.
 70	Spoke with Johansen.
-75	Spoke with Prince after Leopold Society.
+75	Spoke with Prince after Society of Leopold.
 80	Spoke with Ming-Xiao after Hallowbrook.
 85	Spoke with Prince about Ming-Xiao.
 90	Spoke with Jack after Griffith park.
@@ -3788,8 +3882,8 @@ might be helpful. Compile the release version with -final settings.
 
 * The decompiler omitts detail models, like /trash_stuff/junk_*.mdl.
 * The decompiler sometimes mucks areaportals up, fix or remove them.
-* Tools invisible slow VVIS, use clip except for functional brushes.
-* Tools noviz isn't working, use func_details, especially in skybox.
+* Tool invisible slows VVIS, use clip except for functional brushes.
+* Tool noviz isn't working, use func_details, especially for skybox.
 * Func_Details may add junk planes, in that case turn back to world.
 * Func_Details do not seal the world, use normal brushes to do that.
 * Always use nodraw textures for surfaces that the player can't see.
@@ -3797,7 +3891,7 @@ might be helpful. Compile the release version with -final settings.
 * Fix reflection differences by joining the brushes to func_details.
 * Fix bright reflection on brushes by placing cubemap in dark areas.
 * For a map transition landmark names on both maps must be the same.
-* For a map transition landmark angles only matter if flag 1 is set.
+* For a map transition landmark position and angles need flag 1 set.
 * Cubemap reflections are dependent on brushes, textures and groups.
 * Cubemap reflections of dynamic entities can be rebuild inside map.
 * NPC Entities that are killed are inaccessible, modify them before.
@@ -3904,13 +3998,13 @@ wood/braddoora, metal/bradgatea, plaster/bradwlla, plaster/bradwndwa
 
 Malkavian Maze:
 ---------------
-The maze map in Grout's mansion was build around concept art and 
+The maze map in Grout's Mansion was build around concept art and 
 beta screenshots, using the original Troika assets listed below.
 
 Troika Design Infos:
 There is little specific knowledge about the maze except for many
 models and textures whose names place them there, the three beta 
-screenshots that show unknown mansion areas, and some concept art 
+screenshots that show unknown Mansion areas, and some concept art 
 that looks so weird that it would fit in there as well. The maze
 was also used to restore some of the Chateau Marmont Hotel, which 
 Brian Mitsoda wrote could've been "Probably Malkavian Mansion?"
@@ -4159,11 +4253,11 @@ All enemies drop only one weapon, some exit-map icons are missing.
 If containers auto-close, right-click the objects to choose them.
 Occasionally mailboxes do not receive rewards or objects drop out.
 There is a way to exploit armors and stats, but that is a secret.
-In some cutscenes people might look weird or move about strangely.
+If you can't type or the Skyeline map is full of objects, restart.
 Sometimes the slow down effect of Tzimisce fatguys stays, reload.
 Selling too much to vendors makes goods unavailable or game crash.
 Sometimes the black inside of tunnels or manholes will disappear.
-Occasionally Ash will talk with you while a hunter is still alive.
+If LaCroix ignores a delivered sarcophagus set G.Story_State = 60.
 Feeding on rats may trigger melee mode and their bodies levitate.
 Don't save or leave levels with disciplines active or on a ladder.
 Blood, Health and disciplines bars sometimes freeze or disappear.
@@ -4172,17 +4266,16 @@ Some buildings look differently from the inside than the outside.
 Occasionally enemies do not show weapons or move into solid stuff.
 Ranged weapons with aggravated damage will not show a yellow bar.
 Sometimes the sarcophagus will already be stored in the warehouse.
-Occasionally you may not be able to throw the grenade from Nines.
+If you save and load in stealth bonus areas the effect will stay.
 Sometimes you can hear rain sounds although it not actually rains.
 If you pull out weapons after a taxi ride right-click on the map.
 Sometimes entities will vanish being out of sight in third person.
-Enemy death can open doors and give items, disciplines usage not.
-If LaCroix ignores a delivered sarcophagus set G.Story_State = 60.
 Don't feed on quest NPCs and attack them to break feeding trance.
 If game crashes when entering certain levels drop inventory items.
 Sometimes unknown occult items identify only after level changes.
 Visible colorful brushes means you continued an incompatible save.
-If you save and load in stealth bonus areas the effect will stay.
+Occasionally you may not be able to throw the grenade from Nines.
+If a new game starts black remove all saves, or try windowed mode.
 
 
 Open Technical Issues:
@@ -4190,7 +4283,7 @@ Open Technical Issues:
 When you get a SweetFX "d3d11" error rename dxgi.dll to d3d11.dll.
 To get rid off the bik intro movies just rename the media folder.
 Append -dxlevel 80(90) -window(fullscreen) to shortcut on crashes.
-On crashes of multi cores set process priority low or add -32bit.
+On "failed to load the launcher" error check game/patch location.
 When audio is missing on HDMI set snd_surround "0" in the console.
 If the mouse is missing from the menus, disable trail in windows.
 On index buffer errors with ATI cards install drivers without CCC.
@@ -4205,9 +4298,9 @@ If controls lag or the game crashes try Win98 or XP compatibility.
 Set resolution -w x -h y and use 3D-Analyze app for Intel G31/33.
 The skip intro button is only available for resolutions > 800x600.
 If background sounds are too low, add snd_refdist "80" to config.
-If character movement feels skidding add "sv_friction" "8" to cfg.
-On runtime error remove \Python\Pythoncore\2.1\ line in registry.
 To improve performance add to shortcut -heapsize x, x being RAM/2.
+On runtime error remove \Python\Pythoncore\2.1\ line in registry.
+If character movement feels skidding add "sv_friction" "8" to cfg.
 Special dialogue fonts will only appear at resolutions > 800x600.
 On low frame rate kill rain: "particles_enable_precipitation" "0".
 If you experience random attacking bind attack away from "enter".
@@ -4215,10 +4308,9 @@ When you get a "vertex buffer" error, disable additional monitors.
 On cutscenes freeze use "camera_kill", "frenzyplayer" or ALT-TAB.
 If you can't read papers re-bind "use" away from the mousebuttons.
 Weird water animations can be disabled using "mat_drawwater" "0".
-When modding avoid to rename backup files as they might be chosen.
+On crashes with "violation in module Vgui2.dll" change resolution.
 If dialogues are looping re-bind "use" away from any mousebutton.
 "Bad inline model" error means you continued an incompatible save.
-On "failed to load the launcher" error check game/patch location.
 
 
 Patch Permission:
