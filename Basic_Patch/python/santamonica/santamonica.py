@@ -1718,6 +1718,8 @@ def bertramOutOfHiding():
         G.SM_Gone = 1
         jenny = Find("plus_jenny")
         if jenny: jenny.Kill()
+        sobbingsound = Find("plus_sobbing_sound")
+        if sobbingsound: sobbingsound.Kill()
         copcars = FindList("copcar")
         for copcar in copcars:
             copcar.Kill()
