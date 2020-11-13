@@ -589,9 +589,9 @@
 {	589	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	590	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	591	}{	Where to?	}{	Where to?	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	592	}{	I need weapons.	}{	I need weapons.	}{	611	}{	(G.Trip_Know > 0 or (not IsDead("Mercurio") and G.Mercurio_Dead != 1)) and G.Caine_Weapons == 0	}{	G.Caine_Weapons = 0	}{	}{	}{	}{	}{	}{	}{	My arsenal needs work.	}
+{	592	}{	I need supplies.	}{	I need supplies.	}{	611	}{	(G.Trip_Know > 0 or G.Trip_Guns == 3) or ((not IsDead("Mercurio") and G.Mercurio_Dead != 1)) or (G.Vandal_Shop == 1 or G.Lily_Free > 0)	}{	}{	}{	}{	}{	}{	}{	}{	My arsenal needs work.	}
 {	593	}{	I need to go back to my haven.	}{	I need to go back to my haven.	}{	0	}{	}{	G.Caine_Haven = 1	}{	}{	}{	}{	}{	}{	}{	There's no place like home.	}
-{	594	}{	I need to buy blood.	}{	I need to buy blood.	}{	0	}{	G.Vandal_Shop == 1 or G.Lily_Free > 0	}{	G.Caine_Vandal = 1	}{	}{	}{	}{	}{	}{	}{	I need to make a withdrawal from the bank.	}
+{	594	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	595	}{	Let me check with Nines one more time.	}{	Let me check with Nines one more time.	}{	0	}{	G.Story_State == 115 and G.Ming_Dead == 1 and G.Nines_Second == 0 and G.Patch_Plus == 1	}{	G.Caine_Business = 1; G.Nines_Ending = 0 	}{	}{	}{	}{	}{	}{	}{	I want to meet the number nine again.	}
 {	596	}{	I'm ready to head to Chinatown.	}{	I'm ready to head to Chinatown.	}{	0	}{	G.Story_State == 125 and not G.Ming_Dead == 1	}{	G.Caine_Business = 1	}{	}{	}{	}{	}{	}{	}{	The end is near....	}
 {	597	}{	I'm ready to head to Chinatown.	}{	I'm ready to head to Chinatown.	}{	0	}{	G.Story_State == 120 and G.Regent_Ending == 1 and not G.Ming_Dead == 1	}{	G.Caine_Business = 1	}{	}{	}{	}{	}{	}{	}{	The end is near....	}
@@ -611,8 +611,8 @@
 {	611	}{	...	}{	...	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	612	}{	Take me to Trip's Pawnshop.	}{	Take me to Trip's Pawnshop.	}{	0	}{	G.Trip_Know > 0 or G.Trip_Guns == 3	}{	G.Caine_Trip = 1	}{	}{	}{	}{	}{	}{	}{	I want to take a Trip.	}
 {	613	}{	Take me to Mercurio's.	}{	Take me to Mercurio's.	}{	0	}{	not IsDead("Mercurio") and G.Mercurio_Dead != 1	}{	G.Caine_Mercurio = 1	}{	}{	}{	}{	}{	}{	}{	Fly me to Mercury.	}
-{	614	}{	Forget it, I have what I need.	}{	Forget it, I have what I need.	}{	591	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'm a killing machine already!	}
-{	615	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	614	}{	I need to buy blood.	}{	I need to buy blood.	}{	0	}{	G.Vandal_Shop == 1 or G.Lily_Free > 0	}{	G.Caine_Vandal = 1	}{	}{	}{	}{	}{	}{	}{	I need to make a withdrawal from the bank.	}
+{	615	}{	Forget it, I have what I need.	}{	Forget it, I have what I need.	}{	591	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'm a killing machine already!	}
 {	616	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	617	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	618	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
