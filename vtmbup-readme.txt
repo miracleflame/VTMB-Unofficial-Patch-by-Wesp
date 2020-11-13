@@ -105,22 +105,24 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.8                                                  12.11.2020
+v10.8                                                  13.11.2020
 -----
 +Improved the turnstile at Club Confession, thanks to EntenSchreck.
 +Corrected trigger, sound and badly lit wall at Hallowbrook Hotel.
 +Updated tutorial security guard's voice-overs, thanks to Chalvrek.
-Removed an icon in Venture Tower and made broken roof accessable.
++Delayed Vick's arena exit and made Tawni's boyfriend holster gun.
++Added exits to Sheriff roof fight and made his sword easy to find.
+Removed redundant or duplicate tools from the Player Mods folder.
 Corrected Blade Brother name in basic and Luckee Star body issues.
+Restored missing line of Mandarin and issues with Nadia in crypt.
+Fixed Venture Tower icon and holes and made glass roof accessable.
 Reset Gangrel sheet stances and combat area Glaze in basic patch.
 Locked endgame Skyeline vents and fixed floating or clipping junk.
 Fixed sticky floor, bad camera angles and other minor map issues.
 Disabled Arthur's privat computer and movement in the basic patch.
 Added sign to Hollywood cemetery gate and fixed name in computer.
 Fixed a temple trap trigger and covered bad Society rock textures.
-Made Tawni's boyfriend holster gun when using interesting points.
-Removed redundant or duplicate tools in the Player Mods directory.
-Restored missing line of Mandarin and issues with Nadia in crypt.
+Improved cabbie endgame options and fixed more minor text issues.
 
 v10.7                                                  20.09.2020
 -----
@@ -2962,7 +2964,7 @@ Downtown:
 +Restored Malkavian "sewer-cabbie" rat and interesting place types.
 +Swapped Igor's .38 with GLOCK 19 and fixed Beckett's "wait" cutscene.
 +Recreated library level with quest and missing Hallowbrook atrium.
-+Added Heather to sewers for Nosferatu that miss her on the streets.
++Added Heather to sewers for Nosferatu and delayed Vick's arena exit.
 +Moved finding out about the Gargoyle XP to avoid preferring sides.
 Removed theatre intro extras and a computer being hackable too soon.
 Hid an invisible block at the theatre and fixed sick bum respawning. 
@@ -3148,8 +3150,7 @@ Moved a Tawni quest camera into kitchen and added missing TV sound.
 Made quest log and laptop show failure and fixed being noticed early.
 Prevented continuing the Tawni quest after you have been detected.
 Updated netcafe entries for Tawni and Ash dependent of quest states.
-Changed camera spot icons at Tawni's place and removed notice timer.
-Made Tawni's boyfriend holster gun when using interesting points.
+Changed camera spot icons and made Tawni's boyfriend holster gun.
 
 Vesuvius:
 +Restored Velvet and Misti dances, pool girl and a special sequence.
@@ -3341,6 +3342,7 @@ Endgame:
 +Provided shortcuts to skip most fighting and locked Skyeline vents. 
 +Restored Sheriff conjuring Bat's Communion and added his sword too.
 +Made Ventrue enemies use disciplines and SWAT in armor not biteable.
++Added exits to Sheriff roof fight and made his sword easy to find.
 +Restored wolf-ending easter egg and a added timer to elevator bomb.
 +Added timed explosion and boss flag for LaCroix's Dominated bomber.
 +Restored Justicar and white SWATs, and cleaned up Nines at ending.
@@ -3353,7 +3355,7 @@ Showed player alive at Anarch ending and added Damsel and Skelter.
 Made Chunk not attack you if you convinced him during the endgame.
 Repaired bad icons and flickering for upper Venture tower elevator.
 Improved many details in Ming ending and masquerade ending cutscene.
-Removed an icon in Venture Tower and made broken roof accessable.
+Fixed Venture Tower icon and holes and made glass roof accessable.
 
 
 Restored Content:
