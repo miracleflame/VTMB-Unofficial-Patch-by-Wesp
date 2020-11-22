@@ -750,7 +750,7 @@ def checkTimer():
     power = Find("poweron")
     if (__main__.G.Shubs_Act == 4):
         power.Trigger()
-        if timer: timer.Kill()
+        if timer: timer.Hide()
 
 #LIBRARY: Removing vacuum tube box and library card, added by wesp
 def useBox():
