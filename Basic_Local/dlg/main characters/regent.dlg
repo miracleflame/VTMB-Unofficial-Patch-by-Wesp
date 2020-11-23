@@ -380,10 +380,10 @@
 {	380	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	381	}{	If you so desire, I can give to you a unique talisman that might be of use in the future. If that does not interest you, I can compensate you with hard currency. You decide.	}{	If you so desire, I can give to you a unique talisman that might be of use in the future. If that does not interest you, I can compensate you with hard currency. You decide.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	382	}{	I'll take the item you're talking about.	}{	I'll take the item you're talking about.	}{	371	}{	IsClan(pc,"Tremere") and G.Regent_Haven2 == 0	}{	G.Regent_Haven1 = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	383	}{	I'll take the item you're talking about.	}{	I'll take the item you're talking about.	}{	391	}{	IsClan(pc,"Tremere") and G.Regent_Haven2 == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	384	}{	Give me the cash, baby.	}{	Give me the cash, baby.	}{	401	}{	IsClan(pc,"Tremere") and pc.CalcFeat("haggle") < 4	}{	pc.MoneyAdd( 250 ); G.Regent_Haven1 = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	385	}{	Give me the cash, baby.	}{	Give me the cash, baby.	}{	401	}{	IsClan(pc,"Tremere") and pc.CalcFeat("haggle") == 4	}{	pc.MoneyAdd( 300 ); G.Regent_Haven1 = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	386	}{	Give me the cash, baby.	}{	Give me the cash, baby.	}{	401	}{	IsClan(pc,"Tremere") and pc.CalcFeat("haggle") > 4	}{	pc.MoneyAdd( 350 ); G.Regent_Haven1 = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	383	}{	I'll take the item you're talking about.	}{	I'll take the item you're talking about.	}{	391	}{	IsClan(pc,"Tremere") and G.Regent_Haven2 == 1	}{	G.Regent_Haven1 = 1	}{	}{	}{	}{	}{	}{	}{	}
+{	384	}{	Give me the cash, baby.	}{	Give me the cash, baby.	}{	401	}{	IsClan(pc,"Tremere") and pc.CalcFeat("haggle") < 4	}{	pc.MoneyAdd( 250 )	}{	}{	}{	}{	}{	}{	}{	}
+{	385	}{	Give me the cash, baby.	}{	Give me the cash, baby.	}{	401	}{	IsClan(pc,"Tremere") and pc.CalcFeat("haggle") == 4	}{	pc.MoneyAdd( 300 )	}{	}{	}{	}{	}{	}{	}{	}
+{	386	}{	Give me the cash, baby.	}{	Give me the cash, baby.	}{	401	}{	IsClan(pc,"Tremere") and pc.CalcFeat("haggle") > 4	}{	pc.MoneyAdd( 350 )	}{	}{	}{	}{	}{	}{	}{	}
 {	387	}{	Give me the cash, baby.	}{	Give me the cash, baby.	}{	401	}{	not IsClan(pc,"Tremere") and pc.CalcFeat("haggle") < 4	}{	pc.MoneyAdd( 250 )	}{	}{	}{	}{	}{	}{	}{	Green is my kind of color.	}
 {	388	}{	Give me the cash, baby.	}{	Give me the cash, baby.	}{	401	}{	not IsClan(pc,"Tremere") and pc.CalcFeat("haggle") == 4	}{	pc.MoneyAdd( 300 )	}{	}{	}{	}{	}{	}{	}{	Green is my kind of color.	}
 {	389	}{	Give me the cash, baby.	}{	Give me the cash, baby.	}{	401	}{	not IsClan(pc,"Tremere") and pc.CalcFeat("haggle") > 4	}{	pc.MoneyAdd( 350 )	}{	}{	}{	}{	}{	}{	}{	Green is my kind of color.	}

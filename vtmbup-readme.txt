@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.8                                                  13.11.2020
+v10.8                                                  23.11.2020
 -----
 +Improved the turnstile at Club Confession, thanks to EntenSchreck.
 +Corrected trigger, sound and badly lit wall at Hallowbrook Hotel.
@@ -114,15 +114,17 @@ v10.8                                                  13.11.2020
 +Added exits to Sheriff roof fight and made his sword easy to find.
 Removed redundant or duplicate tools from the Player Mods folder.
 Corrected Blade Brother name in basic and Luckee Star body issues.
-Restored missing line of Mandarin and issues with Nadia in crypt.
+Restored a line of Mandarin and fixed issues with Nadia in crypt.
 Fixed Venture Tower icon and holes and made glass roof accessable.
-Reset Gangrel sheet stances and combat area Glaze in basic patch.
+Reset Gangrel sheet stances and Glaze combat area in basic patch.
 Locked endgame Skyeline vents and fixed floating or clipping junk.
 Fixed sticky floor, bad camera angles and other minor map issues.
 Disabled Arthur's privat computer and movement in the basic patch.
 Added sign to Hollywood cemetery gate and fixed name in computer.
 Fixed a temple trap trigger and covered bad Society rock textures.
-Improved cabbie endgame options and fixed more minor text issues.
+Adjusted cabbie endgame lines and removed Ash sewers auto-ending.
+Fixed virus and timer issues on returning to the Kamikaze Zen map.
+Corrected Tremere haven condition and invisible tutorial windows.
 
 v10.7                                                  20.09.2020
 -----
@@ -3229,6 +3231,7 @@ Turned power on and timer off on re-visiting the Kamikaze Zen map.
 Made Glaze monitor turn off earlier and fixed Zhao death reference.
 Moved Kamikaze Zen vent exit into a back alley to make more sense.
 Recompiled Kamikaze Zen map to fix vent without exit and lighting.
+Fixed virus and timer issues on returning to the Kamikaze Zen map.
 
 Lotus Blossom:
 +Restored many China shop props to Lotus Blossom and Lu Fang skin.
