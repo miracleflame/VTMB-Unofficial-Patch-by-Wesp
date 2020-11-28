@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.8                                                  26.11.2020
+v10.8                                                  28.11.2020
 -----
 +Improved the turnstile at Club Confession, thanks to EntenSchreck.
 +Corrected trigger, sound and badly lit wall at Hallowbrook Hotel.
@@ -125,6 +125,7 @@ Fixed a temple trap trigger and covered bad Society rock textures.
 Adjusted cabbie endgame lines and removed Ash sewers auto-ending.
 Fixed virus and timer issues on returning to the Kamikaze Zen map.
 Corrected Tremere haven condition and invisible tutorial windows.
+Fixed texture flickering on downtown washer and courier shoe hole.
 
 v10.7                                                  20.09.2020
 -----
