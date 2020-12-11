@@ -105,13 +105,15 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.8                                                  02.12.2020
+v10.8                                                  11.12.2020
 -----
 +Improved the turnstile at Club Confession, thanks to EntenSchreck.
 +Corrected trigger, sound and badly lit wall at Hallowbrook Hotel.
 +Updated tutorial security guard's voice-overs, thanks to Chalvrek.
 +Delayed Vick's arena exit and made Tawni's boyfriend holster gun.
 +Added exits to Sheriff roof fight and made his sword easy to find.
++Removed whispers, cables and encounters in Subtly Insane history.
+Fixed texture flickering of downtown washer and courier shoe hole.
 Removed redundant or duplicate tools from the Player Mods folder.
 Corrected Blade Brother name in basic and Luckee Star body issues.
 Restored a line of Mandarin and fixed issues with Nadia in crypt.
@@ -125,7 +127,6 @@ Fixed a temple trap trigger and covered bad Society rock textures.
 Adjusted cabbie endgame lines and removed Ash sewers auto-ending.
 Fixed virus and timer issues on returning to the Kamikaze Zen map.
 Corrected Tremere haven condition, tutorial windows and a ladder.
-Fixed texture flickering of downtown washer and courier shoe hole.
 
 v10.7                                                  20.09.2020
 -----
@@ -2689,6 +2690,7 @@ Stats:
 +Added config, commands and special equipped clans for multiplayer.
 +Implied sleeping near tutorial and warehouse including bloodloss.
 +Restored killing any innocents inside combat areas cost Humanity.
++Removed whispers, cables and encounters in Subtly Insane history.
 Fixed crashes on final Masquerade violation gained during dialogues.
 Prevented Humanity from reaching zero and adjusted cash descriptions.
 Correctly stated Brujah unarmed bonus and Nosferatu Seduction zero.

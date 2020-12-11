@@ -455,9 +455,9 @@ def SetLuDeathQuestState():
     __main__.CallEntitySpawn(key)
     __main__.CallEntitySpawn(sparklies)
 
-#RED DRAGON: Make special Hostess for Malkavians
+#RED DRAGON: Make special Hostess for Malkavians, changed by wesp
 def makeMalkHostess():
-    if (__main__.IsClan(__main__.FindPlayer(), "Malkavian")):
+    if (__main__.IsClan(__main__.FindPlayer(), "Malkavian") and __main__.G.Player_Insane == 0):
         host1 = Find("Hostess")
         if host1: host1.Kill()
         if G.Hostess2_Dead == 0:

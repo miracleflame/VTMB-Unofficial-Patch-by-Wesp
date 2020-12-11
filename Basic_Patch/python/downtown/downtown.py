@@ -362,10 +362,10 @@ def SetBeckettTalk():
         trig = Find("trig_beckett_talk")
         if trig: trig.ScriptUnhide()
 
-#DOWNTOWN: Set stop sign
+#DOWNTOWN: Set stop sign, changed by wesp
 def SetStopSign():
     trig = Find("trig_stop_sign")
-    if __main__.IsClan(__main__.FindPlayer(), "Malkavian"):
+    if __main__.IsClan(__main__.FindPlayer(), "Malkavian" and G.Player_Insane == 0):
         if trig: trig.Enable()
     else:
         sign = Find("Stop")
@@ -857,7 +857,7 @@ def OnFlyerPickup():
 #SEWER: Malks no longer get sewer map ;_; restored by wesp
 def malkSewer():
     npc = Find("CabbieSewer")
-    if __main__.IsClan(__main__.FindPlayer(), "Malkavian") and G.Patch_Plus == 1:
+    if __main__.IsClan(__main__.FindPlayer(), "Malkavian") and G.Player_Insane == 0 and G.Patch_Plus == 1:
         if npc: npc.ScriptUnhide()
     else:
         if npc: npc.ScriptHide()

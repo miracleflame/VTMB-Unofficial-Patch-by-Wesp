@@ -58,10 +58,10 @@ def setBasic():
         if pad: pad.Kill()
         gate = Find("gasstationgate")
         if gate and not (G.Tourette_Wins == 1 or G.Therese_Dead == 1 or G.Jeanette_Dead == 1): gate.Lock()
-        axe = __main__.Find("wesp_axe")
+        axe = Find("wesp_axe")
         if axe: axe.ScriptUnhide()
         if axe: axe.Kill()
-        axenode = __main__.Find("wesp_axenode")
+        axenode = Find("wesp_axenode")
         if axenode: axenode.ScriptUnhide()
         if axenode: axenode.Kill()
         miau = Find("plus_miau")
@@ -74,9 +74,9 @@ def setBasic():
         if heli1: heli1.Kill()
         heli2 = Find("plus_helisound2")
         if heli2: heli2.Kill()
-        blade = __main__.Find("wesp_blade")
+        blade = Find("wesp_blade")
         if blade: blade.Kill()
-        bladenode = __main__.Find("wesp_bladenode")
+        bladenode = Find("wesp_bladenode")
         if bladenode: bladenode.Kill()
         bladebros = Find("ChangBrosBlade_basic")
         if bladebros and G.Chang_Swap == 0:
@@ -100,6 +100,8 @@ def setPlus():
     __main__.ccmd.detailfade=""
     __main__.ccmd.detaildist=""
     __main__.ccmd.clothes=""
+    if G.Player_Insane == 1:
+        __main__.ccmd.ropestop=""
     pc = __main__.FindPlayer()
     if not (pc.HasItem("item_w_fists")):
         pc.GiveItem("item_w_fists")
@@ -421,11 +423,11 @@ def setPlus():
         for b in basic:
             b.SetName("ChangCoffin%d"%n)
             n = n+1
-        if (__main__.IsClan(__main__.FindPlayer(), "Malkavian") and __main__.G.Stop_Shake == 0):
-            __main__.G.Player_Malkavian = 1
+        if (__main__.IsClan(__main__.FindPlayer(), "Malkavian") and G.Stop_Shake == 0 and G.Player_Insane == 0):
+            G.Player_Malkavian = 1
             __main__.ccmd.ropeshake=""
         else:
-            __main__.G.Stop_Shake = 0
+            G.Stop_Shake = 0
             __main__.ccmd.ropestop=""
         events = __main__.FindEntityByName("events_player_plus")
         if events: events.EnableOutputs()
@@ -796,7 +798,7 @@ def foundRitualChamber():
         dead_guard.SetModel("models/character/npc/common/security_guard/security_guard_skinny/security_guard_skinny.mdl")
         __main__.CallEntitySpawn(dead_guard)
 def PersonalStuntman():
-    pc=__main__.FindPlayer()
+    pc = __main__.FindPlayer()
     E = Find("Stuntman")
     E.SetModel(pc.model)
     #E.SetOrigin(pc.GetOrigin())
@@ -878,22 +880,22 @@ def floatElevator():
     hos = Find("Hostess")
     if (not __main__.IsDead("Hostess")):
         if (__main__.G.Hos_Float == 0):
-            if (__main__.IsClan(__main__.FindPlayer(), "Malkavian")):
+            if (__main__.IsClan(__main__.FindPlayer(), "Malkavian") and __main__.G.Player_Insane == 0):
                 hos.PlayDialogFile("Character/dlg/Chinatown/hostess/line1_col_n.mp3")
             else:
                 hos.PlayDialogFile("Character/dlg/Chinatown/hostess/line1_col_e.mp3")
         if (__main__.G.Hos_Float == 1):
-            if (__main__.IsClan(__main__.FindPlayer(), "Malkavian")):
+            if (__main__.IsClan(__main__.FindPlayer(), "Malkavian") and __main__.G.Player_Insane == 0):
                 hos.PlayDialogFile("Character/dlg/Chinatown/hostess/line2_col_n.mp3")
             else:
                 hos.PlayDialogFile("Character/dlg/Chinatown/hostess/line2_col_e.mp3")
         if (__main__.G.Hos_Float == 2):
-            if (__main__.IsClan(__main__.FindPlayer(), "Malkavian")):
+            if (__main__.IsClan(__main__.FindPlayer(), "Malkavian") and __main__.G.Player_Insane == 0):
                 hos.PlayDialogFile("Character/dlg/Chinatown/hostess/line3_col_n.mp3")
             else:
                 hos.PlayDialogFile("Character/dlg/Chinatown/hostess/line3_col_e.mp3")
         if (__main__.G.Hos_Float == 3):
-            if (__main__.IsClan(__main__.FindPlayer(), "Malkavian")):
+            if (__main__.IsClan(__main__.FindPlayer(), "Malkavian") and __main__.G.Player_Insane == 0):
                 hos.PlayDialogFile("Character/dlg/Chinatown/hostess/line4_col_n.mp3")
             else:
                 hos.PlayDialogFile("Character/dlg/Chinatown/hostess/line4_col_e.mp3")
@@ -1339,7 +1341,7 @@ def genderVentrue():
 #VENTRUETOWER 3: Sheriff uses Bat's Communion, added by EntenSchreck
 def SheriffBatsIn():
     if not Find("Bats") and __main__.G.BatsIn == 0:
-        pc=__main__.FindPlayer()
+        pc = __main__.FindPlayer()
         Bats=__main__.CreateEntityNoSpawn("npc_VHuman",pc.GetOrigin(),pc.GetAngles())
         Bats.SetName("Bats")
         __main__.CallEntitySpawn(Bats)
@@ -1351,7 +1353,7 @@ def SheriffBatsIn():
             Find("bats_in").BeginSequence()
 def SheriffBatsOut():
     if Find("Bats"):
-        pc=__main__.FindPlayer()
+        pc = __main__.FindPlayer()
         Bats2=__main__.CreateEntityNoSpawn("npc_VHuman",pc.GetOrigin(),pc.GetAngles())
         Bats2.SetName("Bats2")
         __main__.CallEntitySpawn(Bats2)
@@ -1366,7 +1368,7 @@ def SheriffBatsOut():
 	    __main__.ScheduleTask(0.2,'Find("Bats").Kill()')
 	    __main__.G.BatsIn = 0
 def EffectOnPlayer():
-    pc=__main__.FindPlayer()
+    pc = __main__.FindPlayer()
     i = randint(2, 4)
     pc.Bloodloss(i)	#damages player as well!
     SheriffBatsOut()
@@ -1523,7 +1525,7 @@ def checkOccult():
 #Player learns new Discipline, added by Entenschreck
 def newDiscipline(x):
     c  = __main__.ccmd
-    pc=__main__.FindPlayer()
+    pc = __main__.FindPlayer()
     if x == 1:
         c.incAnimalism=""
     elif x == 2:
@@ -2021,8 +2023,8 @@ def AThingOfSomeKind():
 
 #Adds random whispers to malkavian lookaround animation, "Ambiguous" or "Danger", added by Entenschreck, changed by wesp
 def RandomWhisper():
-    pc=__main__.FindPlayer()
-    if not (__main__.IsClan(pc, "Malkavian")):
+    pc = __main__.FindPlayer()
+    if not (__main__.IsClan(pc, "Malkavian") or __main__.G.Player_Insane == 1):
         return
     print "Selecting Whisper"
     NonHostile = 0
@@ -2042,14 +2044,14 @@ def RandomWhisper():
     elif Find("Victor"): NonHostile=1   
     if NonHostile == 1 and __main__.G.InCombat == 0:
         print "Nonhostile area"
-        i=randint(0,5)
+        i = randint(0,5)
         if i == 0: pc.Whisper("Crying")
         elif i == 1: pc.Whisper("Gibberish")
         elif i == 2: pc.Whisper("Moaning")
         else: pc.Whisper("Ambiguous")
     else:
         print "Hostile area"
-        i=randint(0,5)
+        i = randint(0,5)
         if i == 0: pc.Whisper("Crying")
         elif i == 1: pc.Whisper("Gibberish")
         elif i == 2: pc.Whisper("Moaning")
@@ -2095,7 +2097,7 @@ def OnActivateProtean():
         __main__.ScheduleTask(2.2,"__main__.ccmd.useClaws=\"\"")
 def OnFrenzyBegin():
     print "Frenzy Begin"
-    pc=__main__.FindPlayer()
+    pc = __main__.FindPlayer()
     if pc.HasItem("item_w_tzimisce2_head"):
         pc.RemoveItem("item_w_tzimisce2_head")
     if pc.HasItem("item_i_written"):
@@ -2277,7 +2279,7 @@ def OnDogFoundPlayer(Dog):
     Dog.SetRelationship("player D_NU 0")
     Dog.ChangeSchedule("SCHED_VDOG_SNARL")
 def AnimalRadar():
-    pc=__main__.FindPlayer()
+    pc = __main__.FindPlayer()
     PlayerPos = pc.GetOrigin()
     rats=FindClass("Npc_VRat")
     for r in rats:
@@ -3163,7 +3165,7 @@ def tomSetQuestFour():
 def malkTalkToTV():
     G = __main__.G
     pc = __main__.FindPlayer()
-    if(IsClan(pc,"Malkavian") and G.Story_State >= 65 and G.News_Spoke == 0):
+    if(IsClan(pc,"Malkavian") and G.Story_State >= 65 and G.News_Spoke == 0 and G.Player_Insane == 0):
         newscaster = Find("newscaster")
         newscaster.ScriptHide()
         newscaster.SetName("newscaster_break")
@@ -3208,6 +3210,11 @@ def chooseSire():
     if(pc.HasItem("item_i_written")):
         pc.RemoveItem("item_i_written")
         __main__.G.Player_Homo = 1
+    else: __main__.G.Player_Homo = 0
+    if(pc.HasItem("item_w_tzimisce2_head")):
+        pc.RemoveItem("item_w_tzimisce2_head")
+        __main__.G.Player_Insane = 1
+    else: __main__.G.Player_Insane = 0
     gender = pc.IsMale()
     clan = pc.clan
     sire = Find("Sire")
