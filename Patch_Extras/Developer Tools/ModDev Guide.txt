@@ -3095,10 +3095,13 @@ V.3 LIP Internals
       however, in Word or notepad, the string appears as:
 
           " W h o a " 
-         
 
      To make matters worse, even once you understand what is really there, most 
-     text editors wont let you insert a null character into your text.         
+     text editors wont let you insert a null character into your text.
+
+     An alternative to this method is changing the "unicode" string to "char",
+     after which you just need to add the character number and the spoken text
+     without any null characters inbetween.       
 
      The good news is that you don't NEED close captioning for 95% of the game 
      text. If you know for certain that your audio is intended to support a DLG 

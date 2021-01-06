@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.8                                                  11.12.2020
+v10.8                                                  04.01.2021
 -----
 +Improved the turnstile at Club Confession, thanks to EntenSchreck.
 +Corrected trigger, sound and badly lit wall at Hallowbrook Hotel.
@@ -113,7 +113,7 @@ v10.8                                                  11.12.2020
 +Delayed Vick's arena exit and made Tawni's boyfriend holster gun.
 +Added exits to Sheriff roof fight and made his sword easy to find.
 +Removed whispers, cables and encounters in Subtly Insane history.
-Fixed texture flickering of downtown washer and courier shoe hole.
++Made it easier to return items and improved other dialogue issues.
 Removed redundant or duplicate tools from the Player Mods folder.
 Corrected Blade Brother name in basic and Luckee Star body issues.
 Restored a line of Mandarin and fixed issues with Nadia in crypt.
@@ -127,6 +127,9 @@ Fixed a temple trap trigger and covered bad Society rock textures.
 Adjusted cabbie endgame lines and removed Ash sewers auto-ending.
 Fixed virus and timer issues on returning to the Kamikaze Zen map.
 Corrected Tremere haven condition, tutorial windows and a ladder.
+Added model Formatter to convert models to SDK, thanks to DDLullu.
+Made every armed NPC in downtown fight back when you attack them.
+Fixed texture flickering of downtown washer and courier shoe hole.
 
 v10.7                                                  20.09.2020
 -----
@@ -2989,6 +2992,7 @@ Fixed suitcase exchange at the parking garage and added one poster.
 Made abandoned warehouse bum and crackhouse girl leave after a time.
 Fixed two theatre door signs and discipline removal in crackhouse.
 Restored Gangrels to Masquerade cutscene and added theatre email.
+Made every armed NPC in downtown fight back when you attack them.
 
 Confession:
 +Restored laptop, turnstile, gestures, three cage dancers and a DJ.
