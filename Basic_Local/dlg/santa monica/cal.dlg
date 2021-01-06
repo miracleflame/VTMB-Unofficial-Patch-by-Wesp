@@ -9,11 +9,11 @@
 {	9	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	10	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	11	}{	There's a juice bar down the street. They serve the fruits over there.	}{	There's a juice bar down the street. They serve the fruits over there.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	12	}{	I'm looking for Therese. Know where I can find her?	}{	I'm looking for Therese. Know where I can find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek the daughters of Janus.	}
-{	13	}{	You're a funny guy. You'll be the first stand-up comedian I've knocked down.	}{	You're a funny guy. You'll be the first stand-up comedian I've knocked down.	}{	41	}{	Intimidate -4	}{	}{	}{	}{	}{	}{	}{	}{	Must I cuff you about the head and shoulders?	}
-{	14	}{	You're a funny guy. You'll be the first stand-up comedian I've knocked down.	}{	You're a funny guy. You'll be the first stand-up comedian I've knocked down.	}{	61	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	Must I cuff you about the head and shoulders?	}
-{	15	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	16	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	12	}{	I seek the daughters of Janus.	}{	I seek the daughters of Janus.	}{	250	}{	IsClan(pc,"Malkavian") and G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	13	}{	I'm looking for Therese. Know where can I find her?	}{	I'm looking for Therese. Know where can I find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	14	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Mercurio_Quest >= 2 and G.Cal_Knox == 0	}{	G.Cal_Knox = 1	}{	}{	}{	}{	}{	}{	}{	May I find Knox at your doors?	}
+{	15	}{	You're a funny guy. You'll be the first stand-up comedian I've knocked down.	}{	You're a funny guy. You'll be the first stand-up comedian I've knocked down.	}{	41	}{	Intimidate -4	}{	}{	}{	}{	}{	}{	}{	}{	Must I cuff you about the head and shoulders?	}
+{	16	}{	You're a funny guy. You'll be the first stand-up comedian I've knocked down.	}{	You're a funny guy. You'll be the first stand-up comedian I've knocked down.	}{	61	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	Must I cuff you about the head and shoulders?	}
 {	17	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	18	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	19	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -32,7 +32,7 @@
 {	32	}{	I'm sure you do. A big man like you must have lots of talents.	}{	I'm sure you do. A big man like you must have lots of talents.	}{	51	}{	Seduction 3	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	33	}{	I'm sure you do. A big man like you must have lots of talents.	}{	I'm sure you do. A big man like you must have lots of talents.	}{	55	}{	Seduction -3	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	34	}{	I'm looking for Therese. Know where I can find her?	}{	I'm looking for Therese. Know where I can find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	35	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	35	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Mercurio_Quest >= 2 and G.Cal_Knox == 0	}{	G.Cal_Knox = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	36	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -59,7 +59,7 @@
 {	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	61	}{	Hey, hey... I guess you mean business. I don't want any trouble. Just tell me what you need.	}{	Hey, hey... I guess you mean business. I don't want any trouble. Just tell me what you need.	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	G.Cal_Known = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	62	}{	I seek the daughters of Janus.	}{	I seek the daughters of Janus.	}{	261	}{	IsClan(pc,"Malkavian") and G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	62	}{	I seek two sisters, the daughters of Janus.	}{	I seek two sisters, the daughters of Janus.	}{	261	}{	IsClan(pc,"Malkavian") and G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	63	}{	I'm looking for Therese. Know where I can find her?	}{	I'm looking for Therese. Know where I can find her?	}{	81	}{	not IsClan(pc,"Malkavian") and G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	64	}{	Show me some respect next time. That's what I need.	}{	Show me some respect next time. That's what I need.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need you to stop breathing your breakfast on me. Farewell.	}
 {	65	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -160,13 +160,13 @@
 {	160	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	161	}{	Something else you need, chief?	}{	Something else you need, beautiful?	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	162	}{	I need to see Jeanette or Therese.	}{	I need to see Jeanette or Therese.	}{	231	}{	G.Jeanette_Refuse > 0 and G.Jeanette_Fire == 1	}{	}{	}{	}{	}{	}{	}{	}{	I seek the daughters of Janus.	}
-{	163	}{	I'm looking for Therese. Know where can I find her?	}{	I'm looking for Therese. Where can I find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek the dark daughter.	}
-{	164	}{	What do you know of the daughters of the two-headed god?	}{	What do you know of the daughters of the two-headed god?	}{	291	}{	G.Cal_Permission == 1 and IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	165	}{	What do you know about Therese and Jeanette?	}{	What do you know about Therese and Jeanette?	}{	181	}{	G.Cal_Permission == 1 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	166	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Mercurio_Quest >= 2 and G.Cal_Knox == 0	}{	G.Cal_Knox = 1	}{	}{	}{	}{	}{	}{	}{	May I find Knox at your doors?	}
-{	167	}{	I just need someone to tell my troubles to.	}{	I just need someone to tell my troubles to.	}{	191	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	168	}{	No. Goodbye.	}{	No. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	To be somewhere else.	}
-{	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	163	}{	I'm looking for Therese. Know where can I find her?	}{	I'm looking for Therese. Where can I find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	164	}{	I seek the daughters of Janus.	}{	I seek the daughters of Janus.	}{	250	}{	IsClan(pc,"Malkavian") and G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	165	}{	What do you know of the daughters of the two-headed god?	}{	What do you know of the daughters of the two-headed god?	}{	291	}{	G.Cal_Permission == 1 and IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	What do you know about Therese and Jeanette?	}{	What do you know about Therese and Jeanette?	}{	181	}{	G.Cal_Permission == 1 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	I'm looking for a guy named Knox - heavy-set, longish hair....	}{	241	}{	G.Extra_Lines == 1 and G.Knox_Vamp == 3 and G.Mercurio_Quest >= 2 and G.Cal_Knox == 0	}{	G.Cal_Knox = 1	}{	}{	}{	}{	}{	}{	}{	May I find Knox at your doors?	}
+{	168	}{	I just need someone to tell my troubles to.	}{	I just need someone to tell my troubles to.	}{	191	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	169	}{	No. Goodbye.	}{	No. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	To be somewhere else.	}
 {	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	171	}{	Hey, don't take this the wrong way, but even beer goggles have their limits, you know - if you were hopin' to find someone drunk enough to go home with ya.	}{	Hey, don't take this the wrong way, but even beer goggles have their limits, you know - if you were hopin' to find someone drunk enough to go home with ya.	}{	#	}{	npc.SetDisposition("Disgust", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	172	}{	I need to see Jeanette or Therese.	}{	I need to see Jeanette or Therese.	}{	231	}{	G.Jeanette_Refuse > 0 and G.Jeanette_Fire == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -239,9 +239,9 @@
 {	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	241	}{	Knox? Yeah... he's usually around here somewhere. Just look for a guy that doesn't look like he has any business being here. That's Knox.	}{	Knox? Yeah... he's usually around here somewhere. Just look for a guy that doesn't look like he has any business being here. That's Knox.	}{	#	}{	npc.SetDisposition("Bartender", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	242	}{	I'm looking for Therese. Know where can I find her?	}{	I'm looking for Therese. Where can I find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek the dark daughter of Janus.	}
-{	243	}{	Thanks. I'll go see if he's here.	}{	Thanks. I'll go see if he's here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	244	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	242	}{	I seek the daughters of Janus.	}{	I seek the daughters of Janus.	}{	250	}{	IsClan(pc,"Malkavian") and G.Mercurio_Quest == 2 and G.Cal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	243	}{	I'm looking for Therese. Where can I find her?	}{	I'm looking for Therese. Where can I find her?	}{	81	}{	G.Mercurio_Quest == 2 and G.Cal_Permission == 0 and not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	244	}{	Thanks. I'll go see if he's here.	}{	Thanks. I'll go see if he's here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	245	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	246	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	247	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -271,8 +271,8 @@
 {	271	}{	Wow. I have no idea what you just said. Is she expecting you?	}{	Wow. I have no idea what you just said. Is she expecting you?	}{	#	}{	npc.SetDisposition("Confused", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	272	}{	Therese waits in the arms of her own shadow.	}{	Therese waits in the arms of her own shadow.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	273	}{	Jeanette will love the words that I birth for her.	}{	Jeanette will love the words that I birth for her.	}{	281	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	274	}{	She said that she needed another ale monkey.	}{	She said that she needed another ale monkey.	}{	111	}{	M_Persuasion 3	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	275	}{	I'm a dancer, and she said she needed to check the color of my thong.	}{	I'm a dancer, and she said she needed to check the color of my thong.	}{	121	}{	F_Persuasion 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	274	}{	Therese said that she needed another ale monkey.	}{	Therese said that she needed another ale monkey.	}{	111	}{	M_Persuasion 3	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	275	}{	I'm a dancer. Jeanette wants to check the color of my thong.	}{	I'm a dancer. Jeanette wants to check the color of my thong.	}{	121	}{	F_Persuasion 3	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	276	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	277	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	278	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
