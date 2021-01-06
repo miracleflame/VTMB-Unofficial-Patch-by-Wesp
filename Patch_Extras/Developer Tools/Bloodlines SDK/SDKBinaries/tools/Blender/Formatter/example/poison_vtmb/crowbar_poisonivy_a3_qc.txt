@@ -1,0 +1,140 @@
+// Created by Crowbar 0.62
+
+$modelname "Humans/poison2/poisonivy_a3.mdl"
+
+$bodygroup "girl"
+{
+	studio "brujahFH_poison_female_Armor_0_REF"
+}
+
+
+$illumposition 0 0 64.673
+
+$eyeposition 0.5 -0.5 0.5
+
+$surfaceprop "flesh"
+
+$cdmaterials "models\character\pc\female\poisonivy\"
+
+$attachment "mouth" "Bip01 Head" 1.399998 4.500001 0
+$attachment "eyes" "Bip01 Head" 3.799996 3.500002 0
+$attachment "0" "Bip01 R Hand" 0 0.000001 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -16 -16 0 16 16 72
+
+$hboxset "default"
+$hbox 0 "Bip01 Spine2" 1 0 0 5 6 6
+$hbox 0 "Bip01 Pelvis" -6.257507 -4.778594 -6.125299 3.940492 4.2756 5.964796
+$hbox 3 "Bip01 Spine" 0 -3.593413 -4.954513 6.106313 4.084961 4.946887
+$hbox 2 "Bip01 Spine1" -0.720679 -4.016291 -5.619613 5.942171 5.393542 5.612087
+$hbox 2 "Bip01 Spine2" -0.595832 -4.038934 -6.692818 4.833077 3.277355 6.693282
+$hbox 1 "Bip01 Neck" -1.509052 -2.787488 -3.239915 3.278767 3.178029 3.239885
+$hbox 1 "Bip01 Head" -4.208666 -4.1074 -3.533521 7.548098 5.076531 3.533479
+$hbox 4 "Bip01 L UpperArm" -0.250289 -1.791975 -3.1711 9.912764 1.750783 1.518183
+$hbox 4 "Bip01 L Forearm" -1.494601 -1.30795 -1.559775 9.767429 1.56123 1.220618
+$hbox 4 "Bip01 L Hand" -0.51577 -0.693882 -2.01759 4.019242 1.169491 1.437732
+$hbox 5 "Bip01 R UpperArm" -0.253233 -1.904123 -1.578398 9.912813 1.807044 2.410374
+$hbox 5 "Bip01 R Forearm" -1.494106 -1.307888 -1.220543 9.767428 1.561187 1.559712
+$hbox 5 "Bip01 R Hand" -0.484416 -0.693848 -3.171222 4.019272 1.169526 2.017501
+$hbox 6 "Bip01 L Thigh" -1.429366 -4.824658 -3.167274 19.126331 4.041556 5.473756
+$hbox 6 "Bip01 L Calf" -1.704886 -3.418163 -3.161414 21.398937 2.519084 2.265621
+$hbox 6 "Bip01 L Foot" -0.534827 -3.059196 -3.707765 3.877966 6.386004 2.754936
+$hbox 7 "Bip01 R Thigh" -1.429353 -4.824566 -5.474551 19.125036 4.041552 3.167166
+$hbox 7 "Bip01 R Calf" -1.704883 -3.417473 -2.265158 21.398769 2.833129 3.310721
+$hbox 7 "Bip01 R Foot" -0.535525 -3.05911 -3.090097 3.877968 6.385992 4.034007
+
+$sequence "Brujah_Female_Idle2" {
+	"poisonivy_a3_anims\Brujah_Female_Idle2.smd"
+	activity "ACT_CHARSHEET_FIDGET" 4
+	fps 30
+}
+$sequence "Brujah_Female_ArmOut2" {
+	"poisonivy_a3_anims\Brujah_Female_ArmOut2.smd"
+	activity "ACT_CHARSHEET_FIDGET" 1
+	fps 30
+}
+$sequence "ragdoll" {
+	"poisonivy_a3_anims\ragdoll.smd"
+	activity "ACT_DIERAGDOLL" 1
+	fps 30
+}
+
+$includemodel "character/shared/female/pcidles_allsequences.mdl"
+$includemodel "character/shared/female/frenzy.mdl"
+
+$collisionmodel "poisonivy_a3_physics.smd"
+{
+	$mass 60
+	$inertia 5
+	$damping 0.01
+	$rotdamping 1.5
+	$rootbone " "
+
+
+	$jointconstrain "Bip01 Spine1" x limit -25 25 1
+	$jointconstrain "Bip01 Spine1" y limit -25 25 1
+	$jointconstrain "Bip01 Spine1" z limit -25 15 1
+
+	$jointmassbias "Bip01 R UpperArm" 2
+	$jointconstrain "Bip01 R UpperArm" x limit -20 20 1
+	$jointconstrain "Bip01 R UpperArm" y limit -40 35 1
+	$jointconstrain "Bip01 R UpperArm" z limit -60 30 1
+
+	$jointmassbias "Bip01 L UpperArm" 2
+	$jointconstrain "Bip01 L UpperArm" x limit -20 20 1
+	$jointconstrain "Bip01 L UpperArm" y limit -35 40 1
+	$jointconstrain "Bip01 L UpperArm" z limit -60 30 1
+
+	$jointmassbias "Bip01 L Forearm" 3
+	$jointconstrain "Bip01 L Forearm" x limit 0 0 0
+	$jointconstrain "Bip01 L Forearm" y limit 0 0 0
+	$jointconstrain "Bip01 L Forearm" z limit -120 4 1
+
+	$jointmassbias "Bip01 L Hand" 2
+	$jointconstrain "Bip01 L Hand" x limit 0 0 0
+	$jointconstrain "Bip01 L Hand" y limit 0 0 0
+	$jointconstrain "Bip01 L Hand" z limit -35 60 1
+
+	$jointmassbias "Bip01 R Forearm" 3
+	$jointconstrain "Bip01 R Forearm" x limit 0 0 0
+	$jointconstrain "Bip01 R Forearm" y limit 0 0 0
+	$jointconstrain "Bip01 R Forearm" z limit -120 4 1
+
+	$jointmassbias "Bip01 R Hand" 2
+	$jointconstrain "Bip01 R Hand" x limit 0 0 0
+	$jointconstrain "Bip01 R Hand" y limit 0 0 0
+	$jointconstrain "Bip01 R Hand" z limit -35 60 1
+
+	$jointmassbias "Bip01 R Thigh" 2
+	$jointconstrain "Bip01 R Thigh" x limit -25 20 1
+	$jointconstrain "Bip01 R Thigh" y limit -40 20 1
+	$jointconstrain "Bip01 R Thigh" z limit -37 63 1
+
+	$jointconstrain "Bip01 R Calf" x limit 0 0 0
+	$jointconstrain "Bip01 R Calf" y limit 0 0 0
+	$jointconstrain "Bip01 R Calf" z limit -95 4 1
+
+	$jointrotdamping "Bip01 Head" 5
+	$jointconstrain "Bip01 Head" x limit -20 20 1
+	$jointconstrain "Bip01 Head" y limit -25 25 1
+	$jointconstrain "Bip01 Head" z limit -13 30 1
+
+	$jointmassbias "Bip01 L Thigh" 2
+	$jointconstrain "Bip01 L Thigh" x limit -25 20 1
+	$jointconstrain "Bip01 L Thigh" y limit -20 40 1
+	$jointconstrain "Bip01 L Thigh" z limit -37 63 1
+
+	$jointconstrain "Bip01 L Calf" x limit 0 0 0
+	$jointconstrain "Bip01 L Calf" y limit 0 0 0
+	$jointconstrain "Bip01 L Calf" z limit -95 4 1
+
+	$jointconstrain "Bip01 L Foot" x limit 0 0 0
+	$jointconstrain "Bip01 L Foot" y limit 0 0 0
+	$jointconstrain "Bip01 L Foot" z limit -15 35 1
+
+	$jointconstrain "Bip01 R Foot" x limit 0 0 0
+	$jointconstrain "Bip01 R Foot" y limit 0 0 0
+	$jointconstrain "Bip01 R Foot" z limit -15 35 1
+}
