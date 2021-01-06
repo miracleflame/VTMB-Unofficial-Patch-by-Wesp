@@ -365,7 +365,7 @@ def SetBeckettTalk():
 #DOWNTOWN: Set stop sign, changed by wesp
 def SetStopSign():
     trig = Find("trig_stop_sign")
-    if __main__.IsClan(__main__.FindPlayer(), "Malkavian" and G.Player_Insane == 0):
+    if __main__.IsClan(__main__.FindPlayer(), "Malkavian") and G.Player_Insane == 0:
         if trig: trig.Enable()
     else:
         sign = Find("Stop")
