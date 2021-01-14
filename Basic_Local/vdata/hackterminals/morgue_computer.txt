@@ -34,16 +34,9 @@ Wounds suggest subject was beaten to death with a baseball bat."	//changed by we
 			"name"		"Crumb, V"	// changed by wesp
 			"description"	"Locker 3A -- 10/19/04"
 			"runtext"	"Locker 3A -- 10/19/04
-Subject died from heart failure. Personal items in storage B."
+Subject died from heart failure.
+Personal items in storage B."
 			"dependency"	"G.Knox_Quest == 5"	//changed by wesp
-		}
-
-		Function
-		{
-			"name"		"Jane Doe"
-			"description"	"Locker 2B -- 10/17/04"
-			"runtext"	"Locker 2B -- 10/17/04
-Subject apparently died of indeterminate causes. Note: Subject's body contained only one pint of blood. Foul play suspected."	//changed by wesp
 		}
 
 		Function
@@ -51,7 +44,17 @@ Subject apparently died of indeterminate causes. Note: Subject's body contained 
 			"name"		"Falz, D"
 			"description"	"Locker 5B -- 10/18/04"
 			"runtext"	"Locker 5B -- 10/18/04
-Severely beaten to death. Something about the way this one looked made me want to lock it in the freezer."	//changed by wesp
+Severely beaten to death.
+Something about the way this one looked made me want to lock it in the freezer."	//changed by wesp
+		}
+
+		Function
+		{
+			"name"		"Jane Doe"
+			"description"	"Locker 2B -- 10/17/04"
+			"runtext"	"Locker 2B -- 10/17/04
+Subject apparently died of indeterminate causes.
+Note: Subject's body contained only one pint of blood. Foul play suspected."	//changed by wesp
 		}
 
 		Function
@@ -67,17 +70,19 @@ Subject apparently choked to death on ham and/or cheese."	//changed by wesp
 			"name"		"Poe, H"
 			"description"	"Locker 3B -- 10/24/04"
 			"runtext"	"Locker 3B -- 10/24/04
-Subject died from internal bleedings. Sweet red-haired girl, it's a real shame."
+Subject died from internal bleedings.
+Sweet red-haired girl, it's a real shame."
 			"dependency"	"G.Heather_Drank == 0 and G.Story_State > 9"
 			"runscript"	"heatherQuest3()"
 		}
 
 		Function	// added by wesp
 		{
-			"name"		"Trevor, D"
+			"name"		"Wales, D"
 			"description"	"Locker 1B -- 10/24/04"
 			"runtext"	"Locker 1B -- 10/24/04
-Subject died from an heart attack. Her face looks as if she was scared to death."
+Subject died from a heart attack.
+Note: Old lady looking as if she was scared to death."
 			"dependency"	"G.Doris_Died == 1"
 		}
 	}
