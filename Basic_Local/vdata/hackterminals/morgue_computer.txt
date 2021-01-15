@@ -34,8 +34,7 @@ Wounds suggest subject was beaten to death with a baseball bat."	//changed by we
 			"name"		"Crumb, V"	// changed by wesp
 			"description"	"Locker 3A -- 10/19/04"
 			"runtext"	"Locker 3A -- 10/19/04
-Subject died from heart failure.
-Personal items in storage B."
+Subject died from heart failure. Personal items in storage B."
 			"dependency"	"G.Knox_Quest == 5"	//changed by wesp
 		}
 
@@ -70,9 +69,9 @@ Subject apparently choked to death on ham and/or cheese."	//changed by wesp
 			"name"		"Poe, H"
 			"description"	"Locker 3B -- 10/24/04"
 			"runtext"	"Locker 3B -- 10/24/04
-Subject died from internal bleedings.
-Sweet red-haired girl, it's a real shame."
-			"dependency"	"G.Heather_Drank == 0 and G.Story_State > 9"
+Cause of death internal bleedings.
+Sweet red-haired girl, it's a real shame that she couldn't be saved."
+			"dependency"	"G.Heather_Drank == 0 and G.Story_State > 9 and G.PP == 1"
 			"runscript"	"heatherQuest3()"
 		}
 
@@ -82,8 +81,8 @@ Sweet red-haired girl, it's a real shame."
 			"description"	"Locker 1B -- 10/24/04"
 			"runtext"	"Locker 1B -- 10/24/04
 Subject died from a heart attack.
-Note: Old lady looking as if she was scared to death."
-			"dependency"	"G.Doris_Died == 1"
+Note: Old lady, looking as if she was literally scared to death."
+			"dependency"	"G.Doris_Scare == 4 and G.PP == 1"
 		}
 	}
 }
