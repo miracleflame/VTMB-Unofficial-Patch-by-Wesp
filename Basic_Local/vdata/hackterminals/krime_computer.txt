@@ -102,6 +102,18 @@ Update 10/25/04 -- Deceased. Murdered by the serial killer."	// changed by wesp
 			"runtext"	"Carl Grady
 Bond written 04/02/01 -- Possession with Intent to Distribute. Case #320091. Bond Amount: $25,000. Type of Bond: Property - House, 222 Ocean's Way, Santa Monica, CA.
 Notes: Local surfer."	// changed by wesp
+		"dependency"		"(not IsDead(\"Carl\") and G.Beach_Dead == 0) or G.PP == 0"	// added by wesp
+		}
+
+		Function
+		{
+			"name"		"Grady, C"
+			"description"	"Carl Grady"
+			"runtext"	"Carl Grady
+Bond written 04/02/01 -- Possession with Intent to Distribute. Case #320091. Bond Amount: $25,000. Type of Bond: Property - House, 222 Ocean's Way, Santa Monica, CA.
+Notes: Local surfer.
+Update 10/24/04 -- Deceased.      Killed in gang fight or similar."	// changed by wesp
+		"dependency"		"(IsDead(\"Carl\") or G.Beach_Dead == 1) and G.PP == 1"	// added by wesp
 		}
 
 		Function
@@ -130,6 +142,18 @@ Notes: This is what we used to call a Jack-in-the-box - Wind her up and a someth
 			"runtext"	"Mike Mateo
 Bond written 03/13/02 -- Battery. Prior Conviction for Possession. Case #110089. Bond Amount: $5,000. Type of Bond: Cash - paid in full.
 Notes: Another local. Santa Monica used to be a swell place to live."	// changed by wesp
+		"dependency"		"(not IsDead(\"Mike\") and G.Beach_Dead == 0) or G.PP == 0"	// added by wesp
+		}
+
+		Function
+		{
+			"name"		"Mateo, M"
+			"description"	"Mike Mateo"
+			"runtext"	"Mike Mateo
+Bond written 03/13/02 -- Battery. Prior Conviction for Possession. Case #110089. Bond Amount: $5,000. Type of Bond: Cash - paid in full.
+Notes: Another local. Santa Monica used to be a swell place to live.
+Update 10/24/04 -- Deceased.      Killed in gang fight or similar."	// changed by wesp
+		"dependency"		"(IsDead(\"Mike\") or G.Beach_Dead == 1) and G.PP == 1"	// added by wesp
 		}
 
 		Function
@@ -155,7 +179,7 @@ Notes: Brought him in for excessive talking smack at the local arcade."	// chang
 			"runtext"	"Brian Nilson
 Bond written 12/01/01 -- Battery. Case #245990. Bond Amount: $10,000. Type of Bond: Cash.
 Notes: Local thug threw some guy who was allegedly trying to buy drugs from him down the beach access stairs."	// changed by wesp
-		"dependency"		"not IsDead(\"Brian\") or G.PP == 0"	// added by wesp
+		"dependency"		"(not IsDead(\"Brian\") and G.Beach_Dead == 0) or G.PP == 0"	// added by wesp
 		}
 
 		Function
@@ -165,8 +189,8 @@ Notes: Local thug threw some guy who was allegedly trying to buy drugs from him 
 			"runtext"	"Brian Nilson
 Bond written 12/01/01 -- Battery. Case #245990. Bond Amount: $10,000. Type of Bond: Cash.
 Notes: Local thug threw some guy who was allegedly trying to buy drugs from him down the beach access stairs.
-Update 10/24/04 -- Deceased.      Killed in a local fight."	// changed by wesp
-		"dependency"		"IsDead(\"Brian\") and G.PP == 1"	// added by wesp
+Update 10/24/04 -- Deceased.      Killed in gang fight or similar."	// changed by wesp
+		"dependency"		"(IsDead(\"Brian\") or G.Beach_Dead == 1) and G.PP == 1"	// added by wesp
 		}
 
 		Function

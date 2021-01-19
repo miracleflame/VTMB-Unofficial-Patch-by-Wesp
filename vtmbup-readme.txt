@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.8                                                  04.01.2021
+v10.8                                                  19.01.2021
 -----
 +Improved the turnstile at Club Confession, thanks to EntenSchreck.
 +Corrected trigger, sound and badly lit wall at Hallowbrook Hotel.
@@ -114,8 +114,8 @@ v10.8                                                  04.01.2021
 +Added exits to Sheriff roof fight and made his sword easy to find.
 +Removed whispers, cables and encounters in Subtly Insane history.
 +Made it easier to return items and improved other dialogue issues.
-Removed redundant or duplicate tools from the Player Mods folder.
-Corrected Blade Brother name in basic and Luckee Star body issues.
++Added morgue entry for Doris and Krimeputer entry for beachhouse.
+Removed redundant and duplicate tools from the Player Mods folder.
 Restored a line of Mandarin and fixed issues with Nadia in crypt.
 Fixed Venture Tower icon and holes and made glass roof accessable.
 Reset Gangrel sheet stances and Glaze combat area in basic patch.
@@ -129,7 +129,9 @@ Fixed virus and timer issues on returning to the Kamikaze Zen map.
 Corrected Tremere haven condition, tutorial windows and a ladder.
 Added model Formatter to convert models to SDK, thanks to DDLullu.
 Made every armed NPC in downtown fight back when you attack them.
-Fixed texture flickering of downtown washer and courier shoe hole.
+Fixed texture flickering on downtown washer and courier shoe hole.
+Removed disciplines when talking to the Mandarin at Fu Syndicate.
+Corrected Blade Brother name in basic and Luckee Star body issues.
 
 v10.7                                                  20.09.2020
 -----
@@ -2867,7 +2869,7 @@ Fixed misleading emails and lines for whoever did get the pendant.
 
 Bail Bonds:
 +Restored Arthur's computer and his starting monologue on the phone.
-+Updated the Krimeputer log entries on Brian's and Muddy's deaths.
++Updated Krimeputer log entries for beachhouse's and Muddy's deaths.
 +Added way to feed of Arthur after his quest and fixed restart loop.
 Made you remember former knowledge of Rolf Toten and Virgil Crumb.
 
@@ -2879,11 +2881,11 @@ Medical Clinic:
 +Added Humanity loss for not freeing Lily and fixed cutscene eyes.
 +Improved emails, elevator display and climbing back into the vent.
 +Moved Malcolm's black mail money from your mailbox into his office.
++Put Heather's and Doris' name in the morgue file in case they died.
 Fixed getting Vandal's freebie and made him more talkative overall.
 Repaired not getting XP for replacing Lily and hacking the passcode.
 Stopped dead Malcolm mailing you and monitor react to dead victim.
 Made clinic guard remember the dialogue and lowered his vision stat.
-Put Heather's name in the morgue file in case you left her to die.
 Fixed morgue computer mentioning Crumb and locked morgue freezers.
 Made Vandal acknowledge quest payment and corrected two wrong auras.
 Swapped Lily cutscene Phil with scrubs model Bill if Phil is dead.
@@ -3225,6 +3227,7 @@ Added emergency doorcode and fixed laser beams error after loading.
 Made Barabus leave with you and not be breaking out all on his own.
 Improved crossguy reaction, test timing, door speed and ignitions.
 Repaired auto-locking door, stuck fanblades and teleporting SWAT.
+Removed disciplines when talking to the Mandarin at Fu Syndicate.
 
 Glaze:
 +Restored XP for stealth killing Johnny and made guards fight back.
