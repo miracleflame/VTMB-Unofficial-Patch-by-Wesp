@@ -13,7 +13,7 @@ echo %ModDir%
 echo %1
 
 
-studiovtmb49g.exe dummy %BaseDir% %ModDir% %1
+studiovtmb49i.exe dummy %BaseDir% %ModDir% %1
 
 echo
 echo
