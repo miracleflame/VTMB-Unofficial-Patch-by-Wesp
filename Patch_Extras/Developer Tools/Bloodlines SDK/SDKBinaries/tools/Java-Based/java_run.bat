@@ -29,6 +29,7 @@ if exist "GameCfg.ini" (
 
 :checkjava
 for %%r in (
+	"%JAVA_HOME%\bin"
 	"%SystemRoot%\system32"
 	"%SystemRoot%\syswow64"
 	"%SystemRoot%\sysnative"

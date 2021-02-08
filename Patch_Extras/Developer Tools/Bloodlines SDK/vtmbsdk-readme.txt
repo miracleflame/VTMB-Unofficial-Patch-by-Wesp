@@ -57,7 +57,7 @@ This SDK includes various third-party tools, in particular:
 * BSPDetail v1.0 (by DDLullu, http://forums.planetvampire.com/index.php?action=profile;u=3672)
 * kHED v1.1.5, low-poly model editor (developed by JDPhU, http://khed.glsl.ru)
 * Blender v2.43, model editor (developed by Blender Foundation, http://www.blender.org)
-* Blender import/export scripts and MDL decompressor (written by DDLullu, adapted by Psycho-A)
+* Blender scripts, MDL decompressor and MDL formatter (written by DDLullu, adapted by Psycho-A)
 * VExtract (developed by Daedalus for Bloodlines Revival project [dropped now])
 * VPK Creator (developed by Psycho-A and Theo de Moree, http://www.gameapps.com)
 * Texture Converter and its Windows shell extenstions (developed by Psycho-A)
@@ -257,6 +257,7 @@ Project Developers:
 * Psycho-A (Programming and all subsequent works).
 * Behar (Rare, but very useful help).
 * Fire64 (Programming, project CEO) [no support anymore].
+* Wesp5 (Adding some new tools).
 
 Special Thanks to:
 
@@ -373,7 +374,6 @@ specified in the SDK readme file. You may also email me: psycho-a@rambler.ru, ps
 -- Psycho-A
 
 
-
 --------------------
 Version History:
 --------------------
@@ -407,20 +407,23 @@ Global changes:
 * Texture Converter now able to detect material types, properties and auto-append texture masks in vmt.
 * Added workarounds to automatically fix -90 degree rotation and animation bugs on compiling custom models.
 
-
 --------------------
+
+1.94 (06.02.2021):
+- Blender model Formatter added, thanks to DDLullu.
+- Java made compatible to newer or open source versions, thanks to Caner Özdemir.
 
 1.93 (20.09.2020):
 - Hammer/FGD: Re-added env_sun entity as fully workable in game.
 - Model Compiler: Added checking models for physbox and asking user to auto-generate it when compiling.
 - Model Viewer: Fixed opening MDL files if mod directory contain spaces in path.
-- Skin Editor: Bloodlines Edition (custom editor, developed by hlstriker)
+- Skin Editor: Bloodlines Edition (custom editor, developed by hlstriker).
 
 1.92 (08.02.2020):
 - Model Compiler: Added workaround to automatically fix -90-degree-rotation-issue on Vtmb-decompiled models.
 - Model Compiler: Added workaround to fix game crashes and rendering issues on compiling all dynamic models.
 * These fixies applies during model compiling and when issued model found, user will asked to apply it or leave.
-- Model Compiler: Fixed darkening models on shooting them by updating Studiomdl-fix tool, thanks to DDLullu!
+- Model Compiler: Fixed darkening models on shooting them by updating Studiomdl-fix tool, thanks DDLullu.
 - Model Compiler: Better QC files parsing, fixing compiling materials and improved log messages.
 - Crowbar tool: Fixed incorrect "phy" material string dumping on decompiling Vtmb's physics meshes.
 - Crowbar tool: Isolated Vtmb-adapted tool version settings from regular Source Engine Crowbar releases.
@@ -435,7 +438,7 @@ Global changes:
 - Some unused Java-based libraries have been cleared.
 
 1.90 (27.01.2020):
-- Added "Make-Model-Solid" tool and integrated it with Model Compiler, thanks to DDLullu!
+- Added "Make-Model-Solid" tool and integrated it with Model Compiler, thanks to DDLullu
 * Now there's no manual fixing MDLs, no PHY models usage limitations, and all prop entity types are supported!
 - Model Compiler: Added drag-n-drop to StudioMDL.bat and Windows Context menu item to quick compile QC to MDL.
 - Model Compiler: Added auto-compiling all model's source textures (TGAs etc.) right after compiling MDL file.

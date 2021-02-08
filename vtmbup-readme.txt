@@ -28,12 +28,12 @@ It's important to start a new game after patching, old saves will be
 moved to save/incompatible! To uninstall, remove the patch links and
 patch directory. Changelogs, known issues and more are listed below.
 
-On issues in Windows Vista/7/8/10 install the patch as administrator
-into the game folder, then disable visual themes/desktop composition
-or run the game in XP compatibility mode. On problems with Steam run
-Steam and the game as administrator and copy steam.dll into the game
-folder if you get a "failed to find Steam" error. If you want to run
-from the Steam library add -game Unofficial_Patch to launch options.
+On issues in Windows install the patch as administrator or use it in
+XP compatibility mode. On problems with Steam run Steam and the game
+as administrator and copy steam.dll to the game folder, if you get a
+"failed to find Steam" error. To start it from the Steam library add
+-game Unofficial_Patch to launch options! Disable auto-updating both
+in Steam and Galaxy. On issues in Linux run the loader-linux script.
 
 Special thanks to burgermeister for the Public Library, EntenSchreck
 for the Hallowbrook Atrium, the Chateau Hotel outside and drafts for
@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.8                                                  01.02.2021
+v10.8                                                  08.02.2021
 -----
 +Improved the turnstile at Club Confession, thanks to EntenSchreck.
 +Corrected trigger, sound and badly lit wall at Hallowbrook Hotel.
@@ -127,11 +127,12 @@ Fixed a temple trap trigger and covered bad Society rock textures.
 Adjusted cabbie endgame lines and removed Ash sewers auto-ending.
 Fixed virus and timer issues on returning to the Kamikaze Zen map.
 Corrected Tremere haven condition, tutorial windows and a ladder.
-Added model Formatter to convert models to SDK, thanks to DDLullu.
-Made every armed NPC in downtown fight back when you attack them.
 Fixed texture flickering on downtown washer and courier shoe hole.
-Removed disciplines when talking to the Mandarin at Fu Syndicate.
+Made every armed NPC in downtown fight back when you attack them.
 Corrected Blade Brother name in basic and Luckee Star body issues.
+Removed disciplines when talking to the Mandarin at Fu Syndicate.
+Added model Formatter to convert models to SDK, thanks to DDLullu.
+Made SDK work with new or open source Java, thanks Caner Özdemir.
 
 v10.7                                                  20.09.2020
 -----
