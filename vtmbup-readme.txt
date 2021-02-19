@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.8                                                  08.02.2021
+v10.8                                                  19.02.2021
 -----
 +Improved the turnstile at Club Confession, thanks to EntenSchreck.
 +Corrected trigger, sound and badly lit wall at Hallowbrook Hotel.
@@ -120,7 +120,7 @@ Restored a line of Mandarin and fixed issues with Nadia in crypt.
 Fixed Venture Tower icon and holes and made glass roof accessable.
 Reset Gangrel sheet stances and Glaze combat area in basic patch.
 Locked endgame Skyeline vents and fixed floating or clipping junk.
-Fixed sticky floor, bad camera angles and other minor map issues.
+Fixed sticky floors, camera angles and other map and text issues.
 Disabled Arthur's privat computer and movement in the basic patch.
 Added sign to Hollywood cemetery gate and fixed name in computer.
 Fixed a temple trap trigger and covered bad Society rock textures.

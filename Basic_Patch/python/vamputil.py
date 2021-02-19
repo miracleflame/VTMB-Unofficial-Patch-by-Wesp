@@ -852,6 +852,10 @@ def killWerewolf():
     __main__.CallEntitySpawn(dead_werewolf)
     __main__.G.Werewolf_Dead = 1
     if werewolf: werewolf.Kill()
+    tramtimer = Find("tram_timer")
+    tramtimer.Hide()
+    tramtrigger = Find("tram_to_station")
+    tramtrigger.Trigger() 
 
 #OCEANHOUSE: Swaps Dodge powerup and book, added by wesp
 def dodgeState():
