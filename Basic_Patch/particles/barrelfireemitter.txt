@@ -3,8 +3,6 @@ Particle
 	loop "1"
 	fps "30"
 
-
-
 	spawn
 	{
 		particle "FirePlace_Flames"
@@ -15,7 +13,6 @@ Particle
 		phi	"0"
 		z	"10"
 	}
-
 
 	spawn
 	{
@@ -35,6 +32,17 @@ Particle
 		radius "0~6"
 		theta "0~360"
 		phi	"0"
+	}
+
+// basic	spawn		// added by wesp
+	{
+		particle	"Fire_Heat"
+		loop "1"
+		rate "1"
+		radius "0~6"
+		theta "0~360"
+		phi	"0"
+		z	"10"
 	}
 
 }

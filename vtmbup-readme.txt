@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.8                                                  19.02.2021
+v10.8                                                  27.02.2021
 -----
 +Improved the turnstile at Club Confession, thanks to EntenSchreck.
 +Corrected trigger, sound and badly lit wall at Hallowbrook Hotel.
@@ -113,7 +113,7 @@ v10.8                                                  19.02.2021
 +Delayed Vick's arena exit and made Tawni's boyfriend holster gun.
 +Added exits to Sheriff roof fight and made his sword easy to find.
 +Removed whispers, cables and encounters in Subtly Insane history.
-+Made it easier to return items and improved other dialogue issues.
++Made it easier to return items in dialogue and restored heat haze.
 +Added morgue entry for Doris and Krimeputer entry for beachhouse.
 Removed redundant and duplicate tools from the Player Mods folder.
 Restored a line of Mandarin and fixed issues with Nadia in crypt.

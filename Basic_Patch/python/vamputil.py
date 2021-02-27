@@ -758,6 +758,7 @@ def checkTimer():
 def useBox():
     pc = __main__.FindPlayer()
     if (pc.HasItem("item_w_claws_protean5")):
+        pc.RemoveItem("item_w_claws_protean5")
         pc.SetQuest("Library", 5)
 def useCard():
     pc = __main__.FindPlayer()
