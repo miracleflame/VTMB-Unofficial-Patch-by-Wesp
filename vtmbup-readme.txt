@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.8                                                  10.03.2021
+v10.8                                                  16.03.2021
 -----
 +Improved the turnstile at Club Confession, thanks to EntenSchreck.
 +Corrected trigger, sound and badly lit wall at Hallowbrook Hotel.
