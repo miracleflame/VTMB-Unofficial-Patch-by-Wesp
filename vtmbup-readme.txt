@@ -44,10 +44,10 @@ Psycho-A and Fire64 and then finished and filled with life by Wesp5.
 
 Special thanks also to the people who modified the dlls of the game,
 to Jor and Wabbite who fixed the 2 GB memory bug in shaderapidx9.dll
-and Frank7777 who added the refresh-rate fix to it. To in9 who fixed
-client.dll bad weapons stats, to SomeCommentDoe and Drog Black Tooth
-who repaired lights-through-wall and LOD in engine.dll and Behar and
-Psycho-A who merged all in loader.dll, and added -game installation!
+and Frank7777 who added the refresh-rate fix. To in9 who fixed stats
+in client.dll, SomeCommentDoe, Drog Black Tooth and c6 who corrected
+lights-through-wall, LOD and save speed in engine.dll, and Behar and
+Psycho-A who merged most in loader.dll and added -game installation!
 
 The patch is provided "as is" and any warranties are disclaimed. The
 free redistribution of the unchanged patch is permitted but it's not
@@ -105,7 +105,11 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.8                                                  16.03.2021
+v10.9                                                  29.03.2021
+-----
+Fixed possible way to get stuck on top of big gate in warrens map.
+
+v10.8                                                  21.03.2021
 -----
 +Improved the turnstile at Club Confession, thanks to EntenSchreck.
 +Corrected trigger, sound and badly lit wall at Hallowbrook Hotel.
@@ -132,7 +136,8 @@ Made every armed NPC in downtown fight back when you attack them.
 Corrected Blade Brother name in basic and Luckee Star body issues.
 Removed disciplines when talking to the Mandarin at Fu Syndicate.
 Added model Formatter to convert models to SDK, thanks to DDLullu.
-Made SDK work with new or open source Java, thanks Caner Özdemir.
+Improved game save/load speed by modifying engine.dll, thanks c6.
+Made SDK work with new and open source Java, thanks Caner Özdemir.
 
 v10.7                                                  20.09.2020
 -----
