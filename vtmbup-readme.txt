@@ -105,9 +105,12 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  29.03.2021
+v10.9                                                  30.03.2021
 -----
++Removed Pisha snack reward and fixed Persuasion for Phil and Stan.
++Made Patty go behind the church as the alley is much too crowded.
 Fixed possible way to get stuck on top of big gate in warrens map.
+Corrected physical boundaries of three models, thanks to Norrwin.
 
 v10.8                                                  21.03.2021
 -----
@@ -2740,7 +2743,7 @@ Mentioned light amplification effects of Auspex and Divine Vision.
 Disabled Vision of Death, Suicide and Mass Suicide for the zombies.
 
 Items:
-+Made it possible to sell or give redundant items and removed some.
++Made it possible to give redundant items to NPCs and removed others.
 +Lowered Firearms book condition and swapped some researchable books.
 +Added unused models to three books, a script, a report and a data CD.
 +Set eight occult powerups to unknown unless a Research stat is met.
@@ -3005,6 +3008,7 @@ Made every armed NPC in downtown fight back when you attack them.
 Confession:
 +Restored laptop, turnstile, gestures, three cage dancers and a DJ.
 +Added line to get rid of the turnstile and fixed cross camera bug.
++Made Patty go behind the church as the alley is much too crowded.
 Fixed blocking Confession barkeeper and Venus giving right payments.
 Restored missing Venus reaction to persuading Boris to give up dept.
 Added short-time club replacement for Venus in case you killed her.
@@ -3040,7 +3044,7 @@ Corrected Grout's wife tube and hid secret door icons in basement.
 Rebuild la_malkavian_4.bsp map in Hammer to fix exit room problems.
 
 Hospital:
-+Added option to sell severed arms to Pisha and fixed line condition.
++Added option to give severed arms to Pisha and fixed line condition.
 Fixed level re-enter sounds, card quest update and scripts breaking.
 Milligan and Pisha react to Domination, Intimidation and Dementation.
 Turned hospital into Elysium area during your encounter with Pisha.

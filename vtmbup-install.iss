@@ -1,16 +1,16 @@
 ; -- vtmbup-installer.iss --
 
 [Setup]
-AppName=Vampire: The Masquerade - Bloodlines Unofficial Patch 10.5
-AppVerName=Vampire: The Masquerade - Bloodlines Unofficial Patch 10.5
+AppName=Vampire: The Masquerade - Bloodlines Unofficial Patch 10.9
+AppVerName=Vampire: The Masquerade - Bloodlines Unofficial Patch 10.9
 VersionInfoDescription=Vampire: The Masquerade - Bloodlines Unofficial Patch
-VersionInfoVersion=10.5
+VersionInfoVersion=10.9
 AppPublisher=Werner Spahl
 DefaultDirName={reg:HKLM\Software\Activision\Vampire - Bloodlines,InstallPath|{pf}\Steam\steamapps\common\vampire the masquerade - bloodlines}
 AppendDefaultDirName=no
 DirExistsWarning=no
 EnableDirDoesntExistWarning=no
-OutputBaseFilename=VTMBup105
+OutputBaseFilename=VTMBup109
 Uninstallable=no
 InfoBeforeFile=vtmbup-readme.txt
 InfoAfterFile=vtmbup-after.txt
@@ -46,16 +46,17 @@ function NextButtonClick(PageId: Integer): Boolean;
 begin
     Result := True;
     if (PageId = wpSelectDir) and not FileExists(ExpandConstant('{app}\vampire.exe')) then begin
-        MsgBox('Vampire.exe can not be found in that folder. Please select the correct folder.', mbError, MB_OK);
+        MsgBox('Vampire.exe can not be found in that folder. Please select the correct folder on the correct drive.', mbError, MB_OK);
         Result := False;
         exit;
     end;
 end;
 
 [Files]
-Source: "{app}\Vampire\cfg\*"; DestDir: "{app}\Vampire\cfg\old"; Components: basic; Flags: external skipifsourcedoesntexist
-Source: "{app}\Unofficial_Patch\save\*"; DestDir: "{app}\Unofficial_Patch\save\old"; Components: basic; Flags: external skipifsourcedoesntexist
+Source: "{app}\Vampire\save\*"; DestDir: "{app}\Vampire\save\incompatible"; Components: basic; Flags: external skipifsourcedoesntexist
+Source: "{app}\Unofficial_Patch\save\*"; DestDir: "{app}\Unofficial_Patch\save\incompatible"; Components: basic; Flags: external skipifsourcedoesntexist
 Source: "vtmbup-readme.txt"; DestDir: "{app}"; Components: readme; Flags: isreadme overwritereadonly
+Source: "vtmbup-small.bmp"; DestDir: "{app}"; Components: basic; Flags: overwritereadonly
 Source: "Official_Patch\*"; DestDir: "{app}"; Components: basic; Flags: recursesubdirs ignoreversion overwritereadonly
 Source: "Basic_Patch\dlls\*"; DestDir: "{app}\vampire\dlls"; Components: basic; Flags: recursesubdirs ignoreversion overwritereadonly
 Source: "Basic_Patch\cl_dlls\*"; DestDir: "{app}\vampire\cl_dlls"; Components: basic; Flags: recursesubdirs ignoreversion overwritereadonly
@@ -90,8 +91,8 @@ Type: filesandordirs; Name: "{app}\Unofficial_Patch\vidcfg.bin"
 Type: filesandordirs; Name: "{app}\Unofficial_Patch\voice_ban.dt"
 
 [Icons]
-Name: "{userdesktop}\VTM Bloodlines Unofficial Patch"; Filename: {app}\vampire.exe; Parameters: "-game Unofficial_Patch"
-Name: "{userprograms}\VTM Bloodlines Unofficial Patch"; Filename: {app}\vampire.exe; Parameters: "-game Unofficial_Patch"
+Name: "{userdesktop}\VTM Bloodlines Unofficial Patch"; Filename: {app}\vampire.exe; Parameters: "-game Unofficial_Patch"; IconFilename: {app}\vtmbup-small.bmp
+Name: "{userprograms}\VTM Bloodlines Unofficial Patch"; Filename: {app}\vampire.exe; Parameters: "-game Unofficial_Patch"; IconFilename: {app}\vtmbup-small.bmp
 
 [Run]
 Filename: {app}\vampire.exe; Parameters: "-game Unofficial_Patch"; Description: Run Bloodlines with the Unofficial Patch; Flags: postinstall runascurrentuser nowait skipifsilent
