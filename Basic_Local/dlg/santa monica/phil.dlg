@@ -39,7 +39,7 @@
 {	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	41	}{	I think you want the clinic upstairs. Are you sure you're supposed to be here?	}{	I think you want the clinic upstairs. Are you sure you're supposed to be here?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Phil_Start = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	42	}{	I'm here for the "special sauce". Why else would I be in a blood bank at night?	}{	I'm here for the "special sauce". Why else would I be in a blood bank at night?	}{	31	}{	Persuasion 6 & G.Phil_Persuade == 2	}{	}{	}{	}{	}{	}{	}{	}{	I'm here for that sauce most special.	}
+{	42	}{	I'm here for the "special sauce". Why else would I be in a blood bank at night?	}{	I'm here for the "special sauce". Why else would I be in a blood bank at night?	}{	31	}{	Persuasion 4 & G.Phil_Persuade == 2	}{	}{	}{	}{	}{	}{	}{	}{	I'm here for that sauce most special.	}
 {	43	}{	You're getting sleepy....	}{	You're getting sleepy....	}{	11	}{	Dominate 1	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	44	}{	You're getting sleepy....	}{	You're getting sleepy....	}{	11	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
 {	45	}{	Are you saying you want me to leave?	}{	Are you saying you want me to leave?	}{	51	}{	Seduction 6 & ( not IsMale(pc) and G.Phil_Seduce < 2 and G.Patch_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	I came back here to play doctor.	}

@@ -101,7 +101,7 @@
 {	101	}{	Oh? Then I'll see that he's suitably punished. Nonetheless, you've triumphed. My commendations.	}{	Oh? Then I'll see that he's suitably punished. Nonetheless, you've triumphed. My commendations.	}{	#	}{	}{	G.Prince_Mercurio = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	102	}{	Thanks.	}{	Thanks.	}{	111	}{	G.Mercurio_Dead == 0	}{	G.Mercurio_Dead = 1	}{	}{	}{	}{	}{	}{	}{	I had some fun.	}
 {	103	}{	Thanks, and don't care about Mercurio. I killed him already.	}{	Thanks, and don't care about Mercurio. I killed him already.	}{	111	}{	G.Mercurio_Dead == 1 and (not pc.HasItem("item_g_mercurio_journal") or G.Patch_Plus == 0)	}{	}{	}{	}{	}{	}{	}{	}{	I had fun killing Mercury myself.	}
-{	104	}{	Thanks, and don't care about Mercurio. I killed him already, here is his journal.	}{	Thanks, and don't care about Mercurio. I killed him already, here is his journal.	}{	111	}{	G.Mercurio_Dead == 1 and pc.HasItem("item_g_mercurio_journal") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_g_mercurio_journal")	}{	}{	}{	}{	}{	}{	}{	I had fun killing Mercury myself. And I brought the stories he wrote.	}
+{	104	}{	Thanks, and don't care about Mercurio. I killed him already, and here is his journal.	}{	Thanks, and don't care about Mercurio. I killed him already, and here is his journal.	}{	111	}{	G.Mercurio_Dead == 1 and pc.HasItem("item_g_mercurio_journal") and G.Patch_Plus == 1	}{	pc.RemoveItem("item_g_mercurio_journal")	}{	}{	}{	}{	}{	}{	}{	I had fun killing Mercury myself. And I brought the stories he wrote.	}
 {	105	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
