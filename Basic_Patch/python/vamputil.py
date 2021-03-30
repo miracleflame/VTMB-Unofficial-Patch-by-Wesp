@@ -38,6 +38,7 @@ def setBasic():
         pc.GiveItem("item_g_keyring")
         pc.GiveItem("item_a_lt_cloth")
     if G.Patch_Plus == 0:
+        print "Basic Patch"
         Find("idle_timer").Disable()
         musicplus = Find("music_plus")
         if musicplus: musicplus.StopSound()
@@ -194,6 +195,7 @@ def setPlus():
         fileutil.copyfile(src, dst)
         G.Vampire_Hunter = 0
     if G.Patch_Plus == 1:
+        print "Plus Patch"
         plus = __main__.FindEntitiesByName("plus_*")
         for p in plus:
             p.ScriptUnhide()

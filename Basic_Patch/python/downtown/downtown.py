@@ -317,13 +317,21 @@ def pattyAlleyDialog():
 #DOWNTOWN: Set Patty in alley by Confession, changed by wesp, RobinHood70
 def SetPatty():
     patty = Find("Patty")
+    patty_plus = Find("Patty_Plus")
     if patty:
         if __main__.IsDead("Patty"):
             patty.Kill()
+            patty_plus.Kill()
         else:
             if (G.Patty_Alley == 1):
-                patty.ScriptUnhide()
-                patty.WillTalk(0)
+                if G.Patch_Plus == 1:
+                    patty.SetName("Patty_basic")
+                    patty_plus.ScriptUnhide()
+                    patty_plus.SetName("Patty")
+                    patty_plus.WillTalk(0)
+                else:
+                    patty.ScriptUnhide()
+                    patty.WillTalk(0)
 #        trig = Find("trig_patty_alley")
 #        trig.Enable()
 
