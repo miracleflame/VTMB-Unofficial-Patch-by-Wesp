@@ -1,11 +1,11 @@
 Vampire: The Masquerade - Bloodlines Unofficial Patch
 -----------------------------------------------------
 Copyright by Werner Spahl, "Wesp5", email: spahl@cup.uni-muenchen.de
-Exclusive download link: http://www.patches-scrolls.de/patch/4647/7/
 Main support and talking boards: http://www.planetvampire.com/forum/
-ModDB support page: http://www.moddb.com/mods/vtmb-unofficial-patch/
 Detailed gaming infos: http://www.gamebanshee.com/vampirebloodlines/
-Early game versions media: http://www.vampire-network.net/index.php/
+The Patches Scrolls page: http://www.patches-scrolls.de/patch/4647/7
+ModDB download page: http://www.moddb.com/mods/vtmb-unofficial-patch
+Nexus Mods page: https://www.nexusmods.com/vampirebloodlines/mods/80
 
 This is an unofficial patch for Vampire: The Masquerade - Bloodlines
 by Troika Games. It's a cumulative patch containing all the previous
@@ -105,12 +105,12 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  30.03.2021
+v10.9                                                  01.04.2021
 -----
 +Removed Pisha snack reward and fixed Persuasion for Phil and Stan.
-+Made Patty go behind the church as the alley is much too crowded.
-Fixed possible way to get stuck on top of big gate in warrens map.
-Corrected physical boundaries of three models, thanks to Norrwin.
++Made Patty go behind the church and fixed beachhouse money issue.
++Improved braid icon and four models boundaries, thanks to Norrwin.
+Prevented getting stuck on top of large gate in last warrens map.
 
 v10.8                                                  21.03.2021
 -----
