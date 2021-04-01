@@ -111,7 +111,7 @@ v10.9                                                  01.04.2021
 +Made Patty go behind the church and fixed beachhouse money issue.
 +Removed Pisha snack reward and fixed Persuasion for Phil and Stan.
 +Improved Dragon's Breath model and texture, thanks to endthewars.
-Updated BSP Source decompiler in SDK to 1.4.1, thanks atrblizzard.
+Updated BSP Source decompiler of SDK to 1.4.1, thanks atrblizzard.
 Fixed being stuck on warrens gate and added ammo to Society roof.
 
 v10.8                                                  21.03.2021

@@ -1,6 +1,6 @@
---------------------
-Bloodlines SDK v1.93
---------------------
+--------------
+Bloodlines SDK
+--------------
 
 This is an unofficial software developer's kit (SDK) for Vampire - The Masquerade: 
 Bloodlines, the greatest game of all time developed by Troika Games in 2004. 
@@ -48,7 +48,7 @@ This SDK includes various third-party tools, in particular:
 * Source SDK GUI (developed by Valve, customized by Psycho-A)
 * PackFile Explorer v3.9 (developed by Dave Gaunt)
 * Crowbar tool v0.65 (developed by ZeqMacaw, https://github.com/ZeqMacaw/Crowbar)
-* BSPSource v1.2.1 (VMEx modification, developed by Barracuda, https://github.com/ata4/bspsrc)
+* BSPSource v1.4.1 (developed by Barracuda, adapted by atrblizzard, https://github.com/ata4/bspsrc)
 * VPKTool v3.9a (Quick and dirty Bloodlines Tools, developed by Turvy)
 * VTMBedit Tool (developed by David Arneson [xatmos])
 * Bloodlines Dialogue Editor (developed by Raptor for Paradise#77, http://go.to/paradise77)
@@ -408,6 +408,9 @@ Global changes:
 * Added workarounds to automatically fix -90 degree rotation and animation bugs on compiling custom models.
 
 --------------------
+
+1.95 (01.04.2021):
+- BSP Source upated to 1.4.1, thanks to atrblizzard
 
 1.94 (06.02.2021):
 - Blender model Formatter added, thanks to DDLullu.
