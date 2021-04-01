@@ -57,7 +57,7 @@ and doing the versions up to 1.2, his changelogs are included below.
 Many thanks also to the following people who contributed much to it!
 
 
-Acknowledgments: 
+Acknowledgments:
 ----------------
 Special thanks to: HungarianPatriot, Anderson, IanW, duchU, Zenith,
 GoodGamesPlayer, Wilhelm-Streicher, endthewars, Malkav, -3xA'Lu©?y,
@@ -107,10 +107,12 @@ Version Changelog:
 
 v10.9                                                  01.04.2021
 -----
-+Removed Pisha snack reward and fixed Persuasion for Phil and Stan.
-+Made Patty go behind the church and fixed beachhouse money issue.
 +Improved braid icon and four models boundaries, thanks to Norrwin.
-Prevented getting stuck on top of large gate in last warrens map.
++Made Patty go behind the church and fixed beachhouse money issue.
++Removed Pisha snack reward and fixed Persuasion for Phil and Stan.
++Improved Dragon's Breath model and texture, thanks to endthewars.
+Updated BSP Source decompiler in SDK to 1.4.1, thanks atrblizzard.
+Fixed being stuck on warrens gate and added ammo to Society roof.
 
 v10.8                                                  21.03.2021
 -----
@@ -3311,7 +3313,7 @@ Society of Leopold:
 +Created quest for freeing Ash and added more beds and toilet doors.
 +Added Humanity gain for saving Johansen and loss for killing him.
 +Johansen will only follow you if you told him during the dialogue.
-+Added ladder and food to Society and corrected issues on the roof.
++Added ladder and food and hid issues on the roof with ammo boxes.
 After giving Ash the bloodpack it will be gone from your inventory.
 Restored missing sounds to Bach cutscene and missing XP on escaping.
 Replaced some male hunters with females and swapped several weapons.
