@@ -39,8 +39,8 @@
 {	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	41	}{	Nahaa - now that's what I like to hear. But it's like this: I save my best stuff for select clientele. Now that don't mean I don't appreciate your bu'ness, it's just, you know, bu'ness.	}{	Nahaa - now that's what I like to hear. But it's like this: I save my best stuff for select clientele. Now that don't mean I don't appreciate your bu'ness, it's just, you know, bu'ness.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	42	}{	Show me the merchandise.	}{	Show me the merchandise.	}{	0	}{	G.Patch_Plus == 0	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	}
-{	43	}{	Show me the merchandise.	}{	Show me the merchandise.	}{	0	}{	G.Patch_Plus == 1	}{	G.Larry_Buy = 1; npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	}
+{	42	}{	Show me the merchandise.	}{	Show me the merchandise.	}{	0	}{	G.Patch_Plus == 0	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	}
+{	43	}{	Show me the merchandise.	}{	Show me the merchandise.	}{	0	}{	G.Patch_Plus == 1	}{	G.Larry_Buy = 1; npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	}
 {	44	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	46	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -49,8 +49,8 @@
 {	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	51	}{	Yo, now hold on a sec, brotha! Chill for a second, a'ight?!? Let me jus' tell you what I got. You need jewelry for your woman? I got that. You got a neighbor with a baby? I got loudass stereos. You live downtown? I got firearms make the NRA nervous.	}{	Now hold on a sec, babygirl! Fat Larry'll take care of you. Let me tell you what I got. You like diamond rings? I got that. You got a neighbor with a baby? I got loudass stereos. You live downtown? I got firearms 'at make the NRA nervous.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	52	}{	You got weapons? Show me what you got.	}{	You got weapons? Show me what you got.	}{	0	}{	G.Patch_Plus == 0	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	You have guns for my cold, dead hands... show me.	}
-{	53	}{	You got weapons? Show me what you got.	}{	You got weapons? Show me what you got.	}{	0	}{	G.Patch_Plus == 1	}{	G.Larry_Buy = 1; npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	You have guns for my cold, dead hands... show me.	}
+{	52	}{	You got weapons? Show me what you got.	}{	You got weapons? Show me what you got.	}{	0	}{	G.Patch_Plus == 0	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	You have guns for my cold, dead hands... show me.	}
+{	53	}{	You got weapons? Show me what you got.	}{	You got weapons? Show me what you got.	}{	0	}{	G.Patch_Plus == 1	}{	G.Larry_Buy = 1; npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	You have guns for my cold, dead hands... show me.	}
 {	54	}{	I'm going to go now. Say anything else and you're going to eat it.	}{	I'm going to go now. Say anything else and you're going to eat it.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I laugh at your roman candles and butter knives. I am gone.	}
 {	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	56	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -73,7 +73,7 @@
 {	73	}{	I'm listening.	}{	I'm listening.	}{	81	}{	not IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	YES! YES! YES!	}
 {	74	}{	What've you got in mind?	}{	What've you got in mind?	}{	251	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	75	}{	I'm listening.	}{	I'm listening.	}{	251	}{	IsClan(pc,"Nosferatu")	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	76	}{	I just need to pick up a few items. Show me what you got.	}{	I just need to pick up a few items. Show me what you got.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	No, right now I want to fill my shopping cart.	}
+{	76	}{	I just need to pick up a few items. Show me what you got.	}{	I just need to pick up a few items. Show me what you got.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	No, right now I want to fill my shopping cart.	}
 {	77	}{	Not interested. See you, Larry.	}{	Not interested. See you, Larry.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Who are you talking to? I am no longer here.	}
 {	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -119,7 +119,7 @@
 {	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	120	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	121	}{	Yeah, that's what I like to hear. Now, if you're the straight-out, hard-boiled terminator type, I'd suggest you buy some heavy firepower 'fore you roll up to the parking garage. You need anything?	}{	Yeah, that's what I like to hear. Now, if you're the straight-out, hard-boiled terminator type, I'd suggest you buy some heavy firepower 'fore you roll up to the parking garage. You need anything?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Larry_Quest = 1; G.Larry_Action = 0; pc.SetQuest("Traffik",1)	}{	}{	}{	}{	}{	}{	}{	}
-{	122	}{	Let's see what you got.	}{	Let's see what you got.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	My shopping cart is empty.	}
+{	122	}{	Let's see what you got.	}{	Let's see what you got.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	My shopping cart is empty.	}
 {	123	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	124	}{	I'm ready right now. I'll be back with the briefcase.	}{	I'm ready right now. I'll be back with the briefcase.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	My greatest weapon is knowledge. And laser beam eyes. Be back soon.	}
 {	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -133,8 +133,8 @@
 {	133	}{	Still need someone for that job?	}{	Still need someone for that job?	}{	81	}{	G.Larry_Action == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	134	}{	About the job... what do I have to do?	}{	About the job... what do I have to do?	}{	91	}{	G.Larry_Action == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	135	}{	About the job... I'll do it.	}{	About the job... I'll do it.	}{	121	}{	G.Larry_Action == 3	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	136	}{	Let's see the merchandise.	}{	Let's see the merchandise.	}{	0	}{	G.Patch_Plus == 0	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	}
-{	137	}{	Let's see the merchandise.	}{	Let's see the merchandise.	}{	0	}{	G.Patch_Plus == 1	}{	G.Larry_Buy = 1; npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	}
+{	136	}{	Let's see the merchandise.	}{	Let's see the merchandise.	}{	0	}{	G.Patch_Plus == 0	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	Let's see the merchandise.	}{	Let's see the merchandise.	}{	0	}{	G.Patch_Plus == 1	}{	G.Larry_Buy = 1; npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	}
 {	138	}{	I don't need anything.	}{	I don't need anything.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -149,8 +149,8 @@
 {	149	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	150	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	151	}{	Take a look. But I ain't got no rock, so I know you ain't interested.	}{	Take a look. But I ain't got no rock, so I know you ain't interested.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	152	}{	Let's see.	}{	Let's see.	}{	0	}{	G.Patch_Plus == 0	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	}
-{	153	}{	Let's see.	}{	Let's see.	}{	0	}{	G.Patch_Plus == 1	}{	G.Larry_Buy = 1; npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	}
+{	152	}{	Let's see.	}{	Let's see.	}{	0	}{	G.Patch_Plus == 0	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	}
+{	153	}{	Let's see.	}{	Let's see.	}{	0	}{	G.Patch_Plus == 1	}{	G.Larry_Buy = 1; npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	}
 {	154	}{	My money not good enough for you? Fine. I'll go somewhere else.	}{	My money not good enough for you? Fine. I'll go somewhere else.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	155	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	156	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -163,8 +163,8 @@
 {	163	}{	Still need someone for that job?	}{	Still need someone for that job?	}{	81	}{	G.Larry_Action == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	164	}{	About the job... what do I have to do?	}{	About the job... what do I have to do?	}{	91	}{	G.Larry_Action == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	165	}{	About the job... I'll do it.	}{	About the job... I'll do it.	}{	121	}{	G.Larry_Action == 3	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	166	}{	Let's see the merchandise.	}{	Let's see the merchandise.	}{	0	}{	G.Patch_Plus == 0	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	}
-{	167	}{	Let's see the merchandise.	}{	Let's see the merchandise.	}{	0	}{	G.Patch_Plus == 1	}{	G.Larry_Buy = 1; npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	}
+{	166	}{	Let's see the merchandise.	}{	Let's see the merchandise.	}{	0	}{	G.Patch_Plus == 0	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	}
+{	167	}{	Let's see the merchandise.	}{	Let's see the merchandise.	}{	0	}{	G.Patch_Plus == 1	}{	G.Larry_Buy = 1; npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	}
 {	168	}{	I don't need anything.	}{	I don't need anything.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -229,7 +229,7 @@
 {	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	231	}{	My man - what is up?	}{	Babygirl - you know I got what you need.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	232	}{	I need to do some shopping, Larry.	}{	I need to do some shopping, Larry.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special); G.Larry_Shop = G.Larry_Shop +1	}{	}{	}{	}{	}{	}{	}{	My shopping cart is empty.	}
+{	232	}{	I need to do some shopping, Larry.	}{	I need to do some shopping, Larry.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry"); G.Larry_Shop = G.Larry_Shop +1	}{	}{	}{	}{	}{	}{	}{	My shopping cart is empty.	}
 {	233	}{	Not much. I'll come back when I need something.	}{	I'll come back when I need something.	}{	0	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	234	}{	Nothing. See you, fatboy.	}{	See you, fatboy.	}{	0	}{	not IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	235	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -239,7 +239,7 @@
 {	239	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	240	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	241	}{	Man, what you do with all this stuff, I don't want to know. Just keep that cash flowing.	}{	Man, what you do with all this stuff, I don't want to know. Just keep that cash flowing.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	242	}{	I will, Larry.	}{	I will, Larry.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	My green will be yours.	}
+{	242	}{	I will, Larry.	}{	I will, Larry.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	My green will be yours.	}
 {	243	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	244	}{	I'll come back when I need something.	}{	I'll come back when I need something.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Flowing like a newspaper boat - down the drain I go!	}
 {	245	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -269,8 +269,8 @@
 {	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	270	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	271	}{	Hey, so you like the pipe. Didn't say I wouldn't sell you nothing. Chill! Peep this gear I got.	}{	Hey, so you like the pipe. Didn't say I wouldn't sell you nothing. Chill! Peep this gear I got.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	272	}{	I feel like a stone in a sinner store.	}{	I feel like a stone in a sinner store.	}{	0	}{	G.Patch_Plus == 0	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	}
-{	273	}{	I feel like a stone in a sinner store.	}{	I feel like a stone in a sinner store.	}{	0	}{	G.Patch_Plus == 1	}{	G.Larry_Buy = 1; npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	}
+{	272	}{	I feel like a stone in a sinner store.	}{	I feel like a stone in a sinner store.	}{	0	}{	G.Patch_Plus == 0	}{	npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	}
+{	273	}{	I feel like a stone in a sinner store.	}{	I feel like a stone in a sinner store.	}{	0	}{	G.Patch_Plus == 1	}{	G.Larry_Buy = 1; npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	}
 {	274	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	275	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	276	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -283,8 +283,8 @@
 {	283	}{	Do you still want me for your action figure?	}{	Do you still want me for your action figure?	}{	81	}{	G.Larry_Action == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	284	}{	As your action figure, how must I pose?	}{	As your action figure, how must I pose?	}{	91	}{	G.Larry_Action == 2	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	285	}{	I am your action figure.	}{	I am your action figure.	}{	121	}{	G.Larry_Action == 3	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	286	}{	My shopping cart is empty.	}{	My shopping cart is empty.	}{	0	}{	G.Patch_Plus == 0 }{	npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	}
-{	287	}{	My shopping cart is empty.	}{	My shopping cart is empty.	}{	0	}{	G.Patch_Plus == 1	}{	G.Larry_Buy = 1; npc.StartBarter(G.Story_State, 0, G.Larry_Special)	}{	}{	}{	}{	}{	}{	}{	}
+{	286	}{	My shopping cart is empty.	}{	My shopping cart is empty.	}{	0	}{	G.Patch_Plus == 0 }{	npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	}
+{	287	}{	My shopping cart is empty.	}{	My shopping cart is empty.	}{	0	}{	G.Patch_Plus == 1	}{	G.Larry_Buy = 1; npc.StartBarter(G.Story_State, 0, G.Larry_Special); preBarter("Larry")	}{	}{	}{	}{	}{	}{	}{	}
 {	288	}{	I am no longer in your present.	}{	I am no longer in your present.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

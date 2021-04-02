@@ -105,14 +105,15 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  01.04.2021
+v10.9                                                  02.04.2021
 -----
 +Improved braid icon and four models boundaries, thanks to Norrwin.
 +Made Patty go behind the church and fixed beachhouse money issue.
 +Removed Pisha snack reward and fixed Persuasion for Phil and Stan.
 +Improved Dragon's Breath model and texture, thanks to endthewars.
-Updated SDK's map decompiler and NirCmd tools, thanks atrblizzard.
++Made books sellable again due to real exploit fix, thanks Norrwin.
 Fixed being stuck on warrens gate and added ammo to Society roof.
+Updated SDK's map decompiler and NirCmd tools, thanks atrblizzard.
 
 v10.8                                                  21.03.2021
 -----

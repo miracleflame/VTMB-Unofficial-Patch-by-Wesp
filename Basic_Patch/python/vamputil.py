@@ -1528,6 +1528,38 @@ def checkOccult():
         pc.GiveItem("item_p_occult_thaum_damage")
         print "Daimonori swapped"
 
+#Vendor cleanup to fix book exploit, added by Norrwin
+def preBarter(vendor=""):
+    G  = __main__.G
+    G.pc_barter_loc = __main__.FindPlayer().GetAngles()
+    G.ip_vendor = vendor
+    barterWait()
+def barterWait():
+    G  = __main__.G
+    for item in booklist:
+        if len(__main__.FindEntitiesByClass(item)) == 2:
+            vendor = G.ip_vendor
+            cleanInventory(vendor)
+    if __main__.FindPlayer().GetAngles() == G.pc_barter_loc:
+        __main__.ScheduleTask(0.15,"barterWait()")
+saleitems = ("item_p_research_hg_computers", "item_p_research_hg_dodge", "item_p_research_hg_firearms", "item_p_research_hg_melee", "item_p_research_mg_brawl", "item_p_research_mg_finance", "item_p_research_mg_melee", "item_p_research_mg_security", "item_p_research_lg_firearms", "item_p_research_lg_dodge", "item_p_research_lg_stealth", "item_p_research_lg_computers")
+booklist = ("item_p_research_hg_computers", "item_p_research_hg_dodge", "item_p_research_hg_firearms", "item_p_research_hg_melee", "item_p_research_mg_brawl", "item_p_research_mg_finance", "item_p_research_mg_melee", "item_p_research_mg_security", "item_p_research_lg_firearms", "item_p_research_lg_dodge", "item_p_research_lg_stealth", "item_p_research_lg_computers")
+def cleanInventory(vendor=""):
+    npc = Find(vendor)
+    rst = "item_p_research_"
+    if npc:
+        for item in saleitems:
+            try:
+                item.index(rst)
+                # print "trying substring"
+            except ValueError:
+                while npc.HasItem(item): npc.RemoveItem(item)
+                # print "no substring"
+            else:
+                if __main__.FindPlayer().HasItem(item):
+                    while npc.HasItem(item): npc.RemoveItem(item)
+                # print "found substring"
+
 #Player learns new Discipline, added by Entenschreck
 def newDiscipline(x):
     c  = __main__.ccmd

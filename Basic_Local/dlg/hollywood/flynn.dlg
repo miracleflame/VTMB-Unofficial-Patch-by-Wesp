@@ -32,7 +32,7 @@
 {	32	}{	I've got a few questions for you.	}{	I've got a few questions for you.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need to mine your gray matter.	}
 {	33	}{	You know anyone named Ginger Swan?	}{	You know anyone named Ginger Swan?	}{	241	}{	G.Ginger_Swan == 1	}{	}{	}{	}{	}{	}{	}{	}{	I seek Ginger's Swan!	}
 {	34	}{	You got a girl who works here with a broken heart tattoo on her back?	}{	You got a girl who works here with a broken heart tattoo on her back?	}{	231	}{	pc.GetQuestState("Strip") > 0 and G.Flynn_Chastity == 0 and not IsDead("Chastity")	}{	}{	}{	}{	}{	}{	}{	}{	I seek the girl who wears her heart on her back.	}
-{	35	}{	Maybe I can use some of your stuff, show me what you got.	}{	Maybe I can use some of your stuff, show me what you got.	}{	0	}{	G.Patch_Plus == 1	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Here are my eyes, show them your courtesy.	}
+{	35	}{	Maybe I can use some of your stuff, show me what you got.	}{	Maybe I can use some of your stuff, show me what you got.	}{	0	}{	G.Patch_Plus == 1	}{	npc.StartBarter(G.Story_State, 0); preBarter("Flynn")	}{	}{	}{	}{	}{	}{	}{	Here are my eyes, show them your courtesy.	}
 {	36	}{	Nothing right now, Flynn. Later.	}{	Nothing right now, Flynn. Later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
 {	37	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	38	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -80,7 +80,7 @@
 {	80	}{	I like my bits just as they are, smut-junkie. Later.	}{	I like my bits just as they are, smut-junkie. Later.	}{	361	}{	}{	}{	}{	}{	}{	}{	}{	}{	My brain already left. My body follows.	}
 {	81	}{	Man, we got everything you'll ever need. Softcore, hardcore, gay, straight, farm or furry. We got shockers, shiverers, self-lubricators and strap-ons. Chains, crops and canes are in the back next to the triple-ripples. Like I said, we got it all.	}{	Man, we got everything you'll ever need. Softcore, hardcore, gay, straight, farm or furry. We got shockers, shiverers, self-lubricators and strap-ons. Chains, crops and canes are in the back next to the triple-ripples. Like I said, we got it all.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	82	}{	Sounds like it. I've got a few more questions for you.	}{	Sounds like it. I've got a few more questions for you.	}{	61	}{	}{	}{	}{	}{	}{	}{	}{	}{	I need to mine your gray matter.	}
-{	83	}{	Maybe I can use some of the stuff, show me what you got.	}{	Maybe I can use some of the stuff, show me what you got.	}{	0	}{	G.Patch_Plus == 1	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Here are my eyes, show them your courtesy.	}
+{	83	}{	Maybe I can use some of the stuff, show me what you got.	}{	Maybe I can use some of the stuff, show me what you got.	}{	0	}{	G.Patch_Plus == 1	}{	npc.StartBarter(G.Story_State, 0); preBarter("Flynn")	}{	}{	}{	}{	}{	}{	}{	Here are my eyes, show them your courtesy.	}
 {	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

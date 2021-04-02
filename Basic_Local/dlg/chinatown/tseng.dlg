@@ -59,8 +59,8 @@
 {	59	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	60	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	61	}{	These are good remedies for many problems! No credit cards.	}{	These are good remedies for many problems! No credit cards.	}{	#	}{	npc.SetDisposition("BehindBack", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	62	}{	Excellent. Let's see what you got.	}{	Excellent. Let's see what you got.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Gimme!	}
-{	63	}{	Lot of sick people in this city. I may need a few.	}{	Lot of sick people in this city. I may need a few.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Weapons never solved any problems. I'll take twelve.	}
+{	62	}{	Excellent. Let's see what you got.	}{	Excellent. Let's see what you got.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0); preBarter("Tseng")	}{	}{	}{	}{	}{	}{	}{	Gimme!	}
+{	63	}{	Lot of sick people in this city. I may need a few.	}{	Lot of sick people in this city. I may need a few.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0); preBarter("Tseng")	}{	}{	}{	}{	}{	}{	}{	Weapons never solved any problems. I'll take twelve.	}
 {	64	}{	Maybe later. I have some questions first.	}{	Maybe later. I have some questions first.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	First, I shop for answers from you.	}
 {	65	}{	I'll get some cash and come back. See you, Tseng.	}{	I'll get some cash and come back. See you, Tseng.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	If I buy new weapons, my old ones may get jealous. I am gone.	}
 {	66	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -79,8 +79,8 @@
 {	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	81	}{	[Affirmative grunt]Hmmm...!	}{	[Affirmative grunt]Hmmm...!	}{	#	}{	npc.SetDisposition("BehindBack", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	82	}{	Forget it, let me see the weapons.	}{	Forget it, let me see the weapons.	}{	0	}{	G.Guns_Tseng == 1 and G.Tseng_Guns == 1	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Gimme!	}
-{	83	}{	Forget it, let me see the weapons.	}{	Forget it, let me see the weapons.	}{	0	}{	G.Guns_Tseng == 0 and G.Tseng_Guns == 1	}{	tsengsShowGuns(); npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Gimme!	}
+{	82	}{	Forget it, let me see the weapons.	}{	Forget it, let me see the weapons.	}{	0	}{	G.Guns_Tseng == 1 and G.Tseng_Guns == 1	}{	npc.StartBarter(G.Story_State, 0); preBarter("Tseng")	}{	}{	}{	}{	}{	}{	}{	Gimme!	}
+{	83	}{	Forget it, let me see the weapons.	}{	Forget it, let me see the weapons.	}{	0	}{	G.Guns_Tseng == 0 and G.Tseng_Guns == 1	}{	tsengsShowGuns(); npc.StartBarter(G.Story_State, 0); preBarter("Tseng")	}{	}{	}{	}{	}{	}{	}{	Gimme!	}
 {	84	}{	Do you know Wong Ho?	}{	Do you know Wong Ho?	}{	91	}{	G.Tseng_Wong < 2 and G.Ming_Wongho == 1	}{	}{	}{	}{	}{	}{	}{	}{	The Red Dragon has a man named Wong Ho inside, did you know this?	}
 {	85	}{	I'm looking for a missing person named Barabus. Know anything?	}{	I'm looking for a missing person named Barabus. Know anything?	}{	111	}{	G.Tseng_Barabus == 0 and G.Story_State < 55	}{	}{	}{	}{	}{	}{	}{	}{	You know of Barabus, admit it!	}
 {	86	}{	The word "hengeyokai" mean anything to you?	}{	The word "hengeyokai" mean anything to you?	}{	121	}{	G.Yukie_Quest == 1 and G.Tseng_Henge == 0	}{	}{	}{	}{	}{	}{	}{	}{	Hengeyokai! Have you ever said this?	}
@@ -131,10 +131,10 @@
 {	131	}{	Welcome back!	}{	Welcome back!	}{	#	}{	npc.SetDisposition("BehindBack", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	132	}{	Were you in the military?	}{	Were you in the military?	}{	31	}{	G.Tseng_Guns == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	133	}{	I need a remedy for a Tong problem.	}{	I need a remedy for a Tong problem.	}{	41	}{	G.Tseng_Guns == 0 and G.Tong_Known == 1	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	134	}{	I need a remedy. Something in a large caliber maybe.	}{	I need a remedy. Something in a large caliber maybe.	}{	0	}{	G.Guns_Tseng == 1 and G.Tseng_Guns == 1	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
-{	135	}{	Let's see your inventory.	}{	Let's see your inventory.	}{	0	}{	G.Guns_Tseng == 1 and G.Tseng_Guns == 1	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Gimme!	}
-{	136	}{	I need a remedy. Something in a large caliber maybe.	}{	I need a remedy. Something in a large caliber maybe.	}{	0	}{	G.Guns_Tseng == 0 and G.Tseng_Guns == 1	}{	tsengsShowGuns(); npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
-{	137	}{	Let's see your inventory.	}{	Let's see your inventory.	}{	0	}{	G.Guns_Tseng == 0 and G.Tseng_Guns == 1	}{	tsengsShowGuns(); npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Gimme!	}
+{	134	}{	I need a remedy. Something in a large caliber maybe.	}{	I need a remedy. Something in a large caliber maybe.	}{	0	}{	G.Guns_Tseng == 1 and G.Tseng_Guns == 1	}{	npc.StartBarter(G.Story_State, 0); preBarter("Tseng")	}{	}{	}{	}{	}{	}{	}{	}
+{	135	}{	Let's see your inventory.	}{	Let's see your inventory.	}{	0	}{	G.Guns_Tseng == 1 and G.Tseng_Guns == 1	}{	npc.StartBarter(G.Story_State, 0); preBarter("Tseng")	}{	}{	}{	}{	}{	}{	}{	Gimme!	}
+{	136	}{	I need a remedy. Something in a large caliber maybe.	}{	I need a remedy. Something in a large caliber maybe.	}{	0	}{	G.Guns_Tseng == 0 and G.Tseng_Guns == 1	}{	tsengsShowGuns(); npc.StartBarter(G.Story_State, 0); preBarter("Tseng")	}{	}{	}{	}{	}{	}{	}{	}
+{	137	}{	Let's see your inventory.	}{	Let's see your inventory.	}{	0	}{	G.Guns_Tseng == 0 and G.Tseng_Guns == 1	}{	tsengsShowGuns(); npc.StartBarter(G.Story_State, 0); preBarter("Tseng")	}{	}{	}{	}{	}{	}{	}{	Gimme!	}
 {	138	}{	I had a question.	}{	I had a question.	}{	81	}{	}{	}{	}{	}{	}{	}{	}{	}{	First, I shop for answers from you.	}
 {	139	}{	Sorry, Tseng, don't need anything today. See you.	}{	Sorry, Tseng, don't need anything today. See you.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	If I buy new weapons, my old ones may get jealous. I am gone.	}
 {	140	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

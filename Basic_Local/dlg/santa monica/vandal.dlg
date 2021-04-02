@@ -39,7 +39,7 @@
 {	39	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	40	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	41	}{	If you have to ask...	}{	If you have to ask...	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	42	}{	Show me what you got.	}{	Show me what you got.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Show me your crimson nectars.	}
+{	42	}{	Show me what you got.	}{	Show me what you got.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	Show me your crimson nectars.	}
 {	43	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need to enter this bloody fortress.	}
 {	44	}{	Nothing right now then. Perhaps later.	}{	Nothing right now then. Perhaps later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Don't ask, don't tell. I am gone.	}
 {	45	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -49,7 +49,7 @@
 {	49	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	50	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	51	}{	I can accommodate a refined palate.	}{	I can accommodate a refined palate.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	52	}{	Let's see what you got.	}{	Let's see what you got.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	52	}{	Let's see what you got.	}{	Let's see what you got.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	}
 {	53	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	54	}{	Nothing right now then. Perhaps later.	}{	Nothing right now then. Perhaps later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	55	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -79,9 +79,9 @@
 {	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	81	}{	Fair enough. Need anything right now?	}{	Fair enough. Need anything right now?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.E_Missing = 3; G.Vandal_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	}
-{	82	}{	Yes, I do.	}{	Yes, I do.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Something red and delicious....	}
+{	82	}{	Yes, I do.	}{	Yes, I do.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	Something red and delicious....	}
 {	83	}{	Maybe another time. But not another word about what happened.	}{	Maybe another time. But not another word about what happened.	}{	0	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	No, and tell no one the tale of the lost little flower that I picked. Farewell.	}
-{	84	}{	Yes, I do.	}{	Yes, I do.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Something red and delicious....	}
+{	84	}{	Yes, I do.	}{	Yes, I do.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	Something red and delicious....	}
 {	85	}{	Maybe another time. But not another word about what happened.	}{	Maybe another time. But not another word about what happened.	}{	0	}{	G.Patch_Plus == 1	}{	pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1	}{	}{	}{	}{	}{	}{	}{	No, and tell no one the tale of the lost little flower that I picked. Farewell.	}
 {	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	87	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -99,9 +99,9 @@
 {	99	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	100	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	101	}{	[Laughs nervously]Hehahaha. Well, mistakes are made from time to time - without them, some of us might never have been born. Heh... I don't know what I'm saying half the time. Have a freebie, my compliments. You need more?	}{	[Laughs nervously]Hehahaha. Well, mistakes are made from time to time - without them, some of us might never have been born. Heh... I don't know what I'm saying half the time. Have a freebie, my compliments. You need more?	}{	#	}{	npc.SetDisposition("Fear", 1)	}{	G.Vandal_Shop = 1; G.E_Missing = 3; G.Vandal_Pissed = 0; spawnVandalBlood()	}{	}{	}{	}{	}{	}{	}{	}
-{	102	}{	Yeah, I need some more blood.	}{	Yeah, I need some more blood.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Something red and delicious....	}
+{	102	}{	Yeah, I need some more blood.	}{	Yeah, I need some more blood.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	Something red and delicious....	}
 {	103	}{	I'll be back later. And the service better be with a smile this time.	}{	I'll be back later. And the service better be with a smile this time.	}{	0	}{	G.Story_State < 100 and G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	When I return, pray I do not drink from your neck. Farewell.	}
-{	104	}{	Yeah, I need some more blood.	}{	Yeah, I need some more blood.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Something red and delicious....	}
+{	104	}{	Yeah, I need some more blood.	}{	Yeah, I need some more blood.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	Something red and delicious....	}
 {	105	}{	I'll be back later. And the service better be with a smile this time.	}{	I'll be back later. And the service better be with a smile this time.	}{	0	}{	G.Story_State < 100 and G.Patch_Plus == 1	}{	pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1	}{	}{	}{	}{	}{	}{	}{	When I return, pray I do not drink from your neck. Farewell.	}
 {	106	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	107	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -109,9 +109,9 @@
 {	109	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	110	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	111	}{	Right, a transaction. Green for red. Interested?	}{	Right, a transaction. Green for red. Interested?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.E_Missing = 3; G.Vandal_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	}
-{	112	}{	Yes, I'd like to make a withdrawal.	}{	Yes, I'd like to make a withdrawal.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	112	}{	Yes, I'd like to make a withdrawal.	}{	Yes, I'd like to make a withdrawal.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	}
 {	113	}{	Nothing right now.	}{	Nothing right now.	}{	0	}{	G.Story_State < 100 and G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	114	}{	Yes, I'd like to make a withdrawal.	}{	Yes, I'd like to make a withdrawal.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	114	}{	Yes, I'd like to make a withdrawal.	}{	Yes, I'd like to make a withdrawal.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	}
 {	115	}{	Nothing right now.	}{	Nothing right now.	}{	0	}{	G.Story_State < 100 and G.Patch_Plus == 1	}{ pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -169,9 +169,9 @@
 {	169	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	170	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	171	}{	That's some vile, depraved, maniacal shit. You are SICK mother. Yeah, I'll sell you your fix.	}{	That's some vile, depraved, maniacal shit. You are SICK mother. Yeah, I'll sell you your fix.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.E_Missing = 3; G.Vandal_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	}
-{	172	}{	Right, let's see what you got.	}{	Right, let's see what you got.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	172	}{	Right, let's see what you got.	}{	Right, let's see what you got.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	}
 {	173	}{	I'll be back later. I've got some people to take care of first.	}{	I'll be back later. I've got some people to take care of first.	}{	0	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	174	}{	Right, let's see what you got.	}{	Right, let's see what you got.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	174	}{	Right, let's see what you got.	}{	Right, let's see what you got.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	}
 {	175	}{	I'll be back later. I've got some people to take care of first.	}{	I'll be back later. I've got some people to take care of first.	}{	0	}{	G.Patch_Plus == 1	}{	pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	176	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	177	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -179,10 +179,10 @@
 {	179	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	180	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	181	}{	You're okay with me. Need a fix?	}{	You're okay with me. Need a fix?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.E_Missing = 3; G.Vandal_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	}
-{	182	}{	Yeah.	}{	Yeah.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	182	}{	Yeah.	}{	Yeah.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	}
 {	183	}{	Not right now. I'll be back later though.	}{	Not right now. I'll be back later though.	}{	0	}{	G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	184	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	185	}{	Yeah.	}{	Yeah.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	185	}{	Yeah.	}{	Yeah.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	}
 {	186	}{	Not right now. I'll be back later though.	}{	Not right now. I'll be back later though.	}{	0	}{	G.Patch_Plus == 1	}{	pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	188	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -219,7 +219,7 @@
 {	219	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	220	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	221	}{	Need a fix?	}{	Need a fix?	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	222	}{	Yeah.	}{	Yeah.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Give me the red sweetness....	}
+{	222	}{	Yeah.	}{	Yeah.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	Give me the red sweetness....	}
 {	223	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0 and G.Story_State < 100	}{	}{	}{	}{	}{	}{	}{	}{	I need to enter this bloody fortress.	}
 {	224	}{	Say, where do you get your blood from now?	}{	Say, where do you get your blood from now?	}{	371	}{	G.Story_State < 100 and G.Vandal_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	So who is your bloody well now?	}
 {	225	}{	Not right now.	}{	Not right now.	}{	0	}{	G.Story_State < 100	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
@@ -229,7 +229,7 @@
 {	229	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	230	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	231	}{	It's a mesmerizing liquid, isn't it? The color, the bouquet, the form. When I was a kid, I used to wait for the snap of the rat trap. It would trickle out of the animal's face and ooze just far enough to coagulate around the cheese... a poetic death.	}{	It's a mesmerizing liquid, isn't it? The color, the bouquet, the form. When I was a kid, I used to wait for the snap of the rat trap. It would trickle out of the animal's face and ooze just far enough to coagulate around the cheese... a poetic death.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	232	}{	Uh, yeah... just sell me some blood.	}{	Uh, yeah... just sell me some blood.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Just give me blood, gory ghoul.	}
+{	232	}{	Uh, yeah... just sell me some blood.	}{	Uh, yeah... just sell me some blood.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	Just give me blood, gory ghoul.	}
 {	233	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need to enter this bloody fortress.	}
 {	234	}{	I'll come back later. Freak.	}{	I'll come back later. Freak.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You smell of small, chittering deaths. Farewell.	}
 {	235	}{	Say, where do you get your blood from now?	}{	Say, where do you get your blood from now?	}{	371	}{	G.Story_State < 100 and G.Vandal_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	So who is your bloody well now?	}
@@ -269,7 +269,7 @@
 {	269	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	270	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	271	}{	To survive... my point exactly. Those that kill survive. The soldier that kills the other soldier first lives. The nation that kills the most enemies wins the war. It's the natural order of life. You are a predator. I respect that. I envy you.	}{	To survive... my point exactly. Those that kill survive. The soldier that kills the other soldier first lives. The nation that kills the most enemies wins the war. It's the natural order of life. You are a predator. I respect that. I envy you.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	272	}{	Shut the hell up and do your job, ghoul.	}{	Shut the hell up and do your job, ghoul.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	I tire of hearing your babblings. I need blood.	}
+{	272	}{	Shut the hell up and do your job, ghoul.	}{	Shut the hell up and do your job, ghoul.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	I tire of hearing your babblings. I need blood.	}
 {	273	}{	You're a waste of life. If I were you, I'd never speak to me about this again.	}{	You're a waste of life. If I were you, I'd never speak to me about this again.	}{	331	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tread lightly on this ground, lest it open up and grind you to ghoulie stew.	}
 {	274	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	275	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -289,7 +289,7 @@
 {	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	291	}{	Oh... yes... I understand. The predator needs the prey more than the prey needs the predator. Survival instincts will transform them into killers. The natural order. I see.	}{	Oh... yes... I understand. The predator needs the prey more than the prey needs the predator. Survival instincts will transform them into killers. The natural order. I see.	}{	#	}{	npc.SetDisposition("Joy", 3)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	292	}{	Now can I get some blood?	}{	Now can I get some blood?	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	I want the red stuff, blood slave.	}
+{	292	}{	Now can I get some blood?	}{	Now can I get some blood?	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	I want the red stuff, blood slave.	}
 {	293	}{	You think about that. I'll return later.	}{	You think about that. I'll return later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	For once you see clearly, errand boy. Farewell.	}
 {	294	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	295	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -309,7 +309,7 @@
 {	309	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	310	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	311	}{	Liar. I can see it in your eyes... smell it on your breath - you're a predator at heart. And even if you deny that, even if you swear you left your halo in the taxi, you exist to kill others. And I respect you for that. I envy you.	}{	Liar. I can see it in your eyes... smell it on your breath - you're a predator at heart. And even if you deny that, even if you swear you left your halo in the taxi, you exist to kill others. And I respect you for that. I envy you.	}{	#	}{	npc.SetDisposition("Anger", 2)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	312	}{	Shut the hell up and do your job, ghoul.	}{	Shut the hell up and do your job, ghoul.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	I tire of hearing your babblings. I need blood.	}
+{	312	}{	Shut the hell up and do your job, ghoul.	}{	Shut the hell up and do your job, ghoul.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	I tire of hearing your babblings. I need blood.	}
 {	313	}{	You're a waste of life. If I were you, I'd never speak to me about this again.	}{	You're a waste of life. If I were you, I'd never speak to me about this again.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Tread lightly on this ground, lest it open up and grind you to ghoulie stew.	}
 {	314	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	315	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -319,7 +319,7 @@
 {	319	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	320	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	321	}{	Oh, as you should. Yes, I'm weaker than you. I'm no match for you. I serve your kind because of my weakness - my addiction to your blood. And I aspire to be like you. To think like you. To be on the other side of this conversation. I respect and envy you.	}{	Oh, as you should. Yes, I'm weaker than you. I'm no match for you. I serve your kind because of my weakness - my addiction to your blood. And I aspire to be like you. To think like you. To be on the other side of this conversation. I respect and envy you.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	322	}{	As you should. Now do your job.	}{	As you should. Now do your job.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	I see you only as future sustenance. Remember that, and give me blood.	}
+{	322	}{	As you should. Now do your job.	}{	As you should. Now do your job.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	I see you only as future sustenance. Remember that, and give me blood.	}
 {	323	}{	I'm satisfied with that answer. Remember your place. Farewell.	}{	I'm satisfied with that answer. Remember your place. Farewell.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Your link is right below mine on the food chain, blood slave. Farewell.	}
 {	324	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	325	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -329,7 +329,7 @@
 {	329	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	330	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	331	}{	Of course. Your power far surpasses my own. I bow to that. I understand my place in the natural order. How can I serve you?	}{	Of course. Your power far surpasses my own. I bow to that. I understand my place in the natural order. How can I serve you?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	332	}{	You know what I'm here for.	}{	You know what I'm here for.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Show me the red stuff.	}
+{	332	}{	You know what I'm here for.	}{	You know what I'm here for.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	Show me the red stuff.	}
 {	333	}{	I'm leaving. And I don't want to hear you rant next time I come in.	}{	I'm leaving. And I don't want to hear you rant next time I come in.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	When next I return, keep your rantings inside or I will turn you inside out.	}
 {	334	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	335	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -339,7 +339,7 @@
 {	339	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	340	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	341	}{	More? You're quite the glutton. This city's veins are starting to dry up.	}{	More? You're quite the glutton. This city's veins are starting to dry up.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	342	}{	Let's see the stuff.	}{	Let's see the stuff.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Show me the red stuff.	}
+{	342	}{	Let's see the stuff.	}{	Let's see the stuff.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	Show me the red stuff.	}
 {	343	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need to enter this bloody fortress.	}
 {	344	}{	If you don't need my patronage, then I'll leave.	}{	If you don't need my patronage, then I'll leave.	}{	331	}{	}{	}{	}{	}{	}{	}{	}{	}{	Wasted words will lose you blood-sale, ghoul.	}
 {	345	}{	I'll come back later.	}{	I'll come back later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You still have some. Pray I do not come calling on you.	}
@@ -349,8 +349,8 @@
 {	349	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	350	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	351	}{	Today, I slit my wrist over a plastic salad bowl and spurted a few jets of the stuff until the bowl felt about right for two more bags. All just to fill your order. I hope you enjoy it.	}{	Today, I slit my wrist over a plastic salad bowl and spurted a few jets of the stuff until the bowl felt about right for two more bags. All just to fill your order. I hope you enjoy it.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	352	}{	Charming, eww... I guess I'll buy some.	}{	Charming, eww... I guess I'll buy some.	}{	0	}{	Humanity 5	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	I'll take some crimson elixir.	}
-{	353	}{	No sample? Alright, let's see what you got.	}{	No sample? Alright, let's see what you got.	}{	0	}{	Humanity -5	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	I want to lick the bowl.	}
+{	352	}{	Charming, eww... I guess I'll buy some.	}{	Charming, eww... I guess I'll buy some.	}{	0	}{	Humanity 5	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	I'll take some crimson elixir.	}
+{	353	}{	No sample? Alright, let's see what you got.	}{	No sample? Alright, let's see what you got.	}{	0	}{	Humanity -5	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	I want to lick the bowl.	}
 {	354	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need to enter this bloody fortress.	}
 {	355	}{	Say, where do you get your blood from now?	}{	Say, where do you get your blood from now?	}{	371	}{	G.Story_State < 100 and G.Vandal_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	So who is your bloody well now?	}
 {	356	}{	That's just disturbing. I'll come back later.	}{	That's just disturbing. I'll come back later.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I won't partake of your tainted apéritif. Farewell.	}
@@ -359,10 +359,10 @@
 {	359	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	360	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	361	}{	The blood god returns.	}{	The blood goddess returns.	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	362	}{	Blood me.	}{	Blood me.	}{	0	}{	G.Gimble_Vandal == 0 or G.Gimble_Vandal == 2	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	I need to feed....	}
+{	362	}{	Blood me.	}{	Blood me.	}{	0	}{	G.Gimble_Vandal == 0 or G.Gimble_Vandal == 2	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	I need to feed....	}
 {	363	}{	Later.	}{	Later.	}{	0	}{	G.Gimble_Vandal == 0 or G.Gimble_Vandal == 2	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
 {	364	}{	I need to get into the back room.	}{	I need to get into the back room.	}{	421	}{	G.E_Quest == 2 and G.Vandal_Permission == 0	}{	}{	}{	}{	}{	}{	}{	}{	I need to enter this bloody fortress.	}
-{	365	}{	Yeah, give me some blood of the guy I sent to you.	}{	Yeah, give me some blood of the guy I sent to you.	}{	0	}{	G.Gimble_Vandal == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); G.Vandal_Shop = 1; G.Vandal_Quest = 4; G.E_Missing = 3; G.Vandal_Pissed = 0; G.Gimble_Vandal = 2; pc.SetQuest("Danielle",6)	}{	}{	}{	}{	}{	}{	}{	Feed me with the blood from the madman I sent....	}
+{	365	}{	Yeah, give me some blood of the guy I sent to you.	}{	Yeah, give me some blood of the guy I sent to you.	}{	0	}{	G.Gimble_Vandal == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal"); G.Vandal_Shop = 1; G.Vandal_Quest = 4; G.E_Missing = 3; G.Vandal_Pissed = 0; G.Gimble_Vandal = 2; pc.SetQuest("Danielle",6)	}{	}{	}{	}{	}{	}{	}{	Feed me with the blood from the madman I sent....	}
 {	366	}{	So you liked the lunatic? I don't need his blood right now though.	}{	So you liked the lunatic? I don't need his blood right now though.	}{	0	}{	G.Gimble_Vandal == 1	}{	G.Vandal_Shop = 1; G.Vandal_Quest = 4; G.E_Missing = 3; G.Vandal_Pissed = 0; G.Gimble_Vandal = 2; pc.SetQuest("Danielle",6)	}{	}{	}{	}{	}{	}{	}{	I sent you a present, but I don't need it's blood.	}
 {	367	}{	Say, where do you get your blood from now?	}{	Say, where do you get your blood from now?	}{	371	}{	G.Story_State < 100 and G.Vandal_Plus == 1	}{	}{	}{	}{	}{	}{	}{	}{	So who is your bloody well now?	}
 {	368	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -409,7 +409,7 @@
 {	409	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	410	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	411	}{	Sweet girl you sent up. Made the other one seem like sour milk. Real bleeder, lovely thing. Least, she used to be. But she'll live on in your heart, won't she? Need a bag of her?	}{	Sweet girl you sent up. Made the other one seem like sour milk. Real bleeder, lovely thing. Least, she used to be. But she'll live on in your heart, won't she? Need a bag of her?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.Vandal_Shop = 1; G.Vandal_Quest = 4; G.E_Missing = 3; G.Vandal_Pissed = 0; pc.SetQuest("Danielle",6)	}{	}{	}{	}{	}{	}{	}{	}
-{	412	}{	Yeah.	}{	Yeah.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Give me the red sweetness....	}
+{	412	}{	Yeah.	}{	Yeah.	}{	0	}{	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	Give me the red sweetness....	}
 {	413	}{	Not right now. Goodbye.	}{	Not right now. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Not right now. Goodbye.	}
 {	414	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	415	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -489,9 +489,9 @@
 {	489	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	490	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	491	}{	[Maniacal laughter]A HA HA HA HA HA HAAAAA! HO HO HO HOo.... AH! AH! Ha... hoo... ho ho... haa.... Oh, ho ho, ha.... What were we laughing about?	}{	[Maniacal laughter]A HA HA HA HA HA HAAAAA! HO HO HO HOo.... AH! AH! Ha... hoo... ho ho... haa.... Oh, ho ho, ha.... What were we laughing about?	}{	#	}{	npc.SetDisposition("Joy", 1)	}{	G.E_Missing = 3; G.Vandal_Pissed = 0	}{	}{	}{	}{	}{	}{	}{	}
-{	492	}{	The price of the red nectar you were about to sell me.	}{	The price of the red nectar you were about to sell me.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	492	}{	The price of the red nectar you were about to sell me.	}{	The price of the red nectar you were about to sell me.	}{	0	}{	G.Patch_Plus == 0	}{	G.Vandal_Blood = G.Vandal_Blood +1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	}
 {	493	}{	Does one need a reason? Until we meet again - laugh.	}{	Does one need a reason? Until we meet again - laugh.	}{	0	}{	G.Story_State < 100 and G.Patch_Plus == 0	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	494	}{	The price of the red nectar you were about to sell me.	}{	The price of the red nectar you were about to sell me.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	}
+{	494	}{	The price of the red nectar you were about to sell me.	}{	The price of the red nectar you were about to sell me.	}{	0	}{	G.Patch_Plus == 1	}{	G.Vandal_Blood = G.Vandal_Blood +1; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1; npc.StartBarter(G.Story_State, 0); preBarter("Vandal")	}{	}{	}{	}{	}{	}{	}{	}
 {	495	}{	Does one need a reason? Until we meet again - laugh.	}{	Does one need a reason? Until we meet again - laugh.	}{	0	}{	G.Story_State < 100 and G.Patch_Plus == 0	}{	pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	496	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	497	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

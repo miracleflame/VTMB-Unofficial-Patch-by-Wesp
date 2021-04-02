@@ -79,7 +79,7 @@
 {	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	80	}{	No. Actually, I'm no longer here. Goodbye.	}{	No. Actually, I'm no longer here. Goodbye.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	81	}{	I'm glad you asked that, bro, seeing as how you look... trustworthy or something. I got this special where you buy some really expensive burrito-tots or Grapple juice, you get a free weapon of your choice, bro. You interested?	}{	I'm glad you asked that, baby, seeing as how you look... trustworthy or something. I got this special where you buy some really expensive burrito-tots or Grapple juice, you get a free weapon of your choice, bro. You interested?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Slater_Weapons = 1	}{	}{	}{	}{	}{	}{	}{	}
-{	82	}{	Of course. Show me what you got.	}{	Of course. Show me what you got.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Here are my eyes, show them your courtesy.	}
+{	82	}{	Of course. Show me what you got.	}{	Of course. Show me what you got.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0); preBarter("Slater")	}{	}{	}{	}{	}{	}{	}{	Here are my eyes, show them your courtesy.	}
 {	83	}{	Wait - you're selling weapons out of a convenience store?	}{	Wait - you're selling weapons out of a convenience store?	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Jerky, snack cakes, vodka, bullets. One of these things is not like the other.	}
 {	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -89,7 +89,7 @@
 {	89	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	90	}{	Not at the moment, thanks. I'm outta here.	}{	Not at the moment, thanks. I'm outta here.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I can deal death quite readily at the moment. I am gone.	}
 {	91	}{	Yo, keep it down, shh. It's just my side gig, y'know. New amps and lap dances don't pay for themselves, dude.	}{	Yo, keep it down, shh. It's just my side gig, y'know. New amps and lap dances don't pay for themselves, dude.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	92	}{	Alright. Show me what you've got.	}{	Alright. Show me what you've got.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Here are my eyes, show them your courtesy.	}
+{	92	}{	Alright. Show me what you've got.	}{	Alright. Show me what you've got.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0); preBarter("Slater")	}{	}{	}{	}{	}{	}{	}{	Here are my eyes, show them your courtesy.	}
 {	93	}{	I'll come back if I need anything.	}{	I'll come back if I need anything.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will return when my instruments of death need replenishing.	}
 {	94	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -133,7 +133,7 @@
 {	133	}{	You hear anything new about the serial killer?	}{	You hear anything new about the serial killer?	}{	51	}{	G.Slater_Serial == 0 and pc.GetQuestState("Serial") < 8	}{	}{	}{	}{	}{	}{	}{	}{	Has the killer that walks these streets bloodied his hands again?	}
 {	134	}{	I'm looking for a tape.	}{	I'm looking for a tape.	}{	21	}{	G.Isaac_Movie > 1 and G.Isaac_Show == 0 and G.Slater_Flynn == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek a tape full of nameless atrocity.	}
 {	135	}{	What exactly is your special?	}{	What exactly is your special?	}{	81	}{	G.Special_Heard == 1 and G.Slater_Weapons == 0	}{	}{	}{	}{	}{	}{	}{	}{	Special? What is so special?	}
-{	136	}{	I'd like the special.	}{	I'd like the special.	}{	0	}{	G.Slater_Weapons == 1	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Special me.	}
+{	136	}{	I'd like the special.	}{	I'd like the special.	}{	0	}{	G.Slater_Weapons == 1	}{	npc.StartBarter(G.Story_State, 0); preBarter("Slater")	}{	}{	}{	}{	}{	}{	}{	Special me.	}
 {	137	}{	Nothing much. How about you?	}{	Nothing much. How about you?	}{	71	}{	G.Slater_Exciting == 1 and G.Slater_Serial == 1 and G.Special_Heard == 0	}{	}{	}{	}{	}{	}{	}{	}{	The children are up, and soon the adults will put them to bed.	}
 {	138	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	139	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -153,7 +153,7 @@
 {	153	}{	You hear anything new about the serial killer?	}{	You hear anything new about the serial killer?	}{	51	}{	G.Slater_Serial == 0 and pc.GetQuestState("Serial") < 8	}{	}{	}{	}{	}{	}{	}{	}{	Has the killer that walks these streets bloodied his hands again?	}
 {	154	}{	I'm looking for a tape.	}{	I'm looking for a tape.	}{	21	}{	G.Isaac_Movie > 1 and G.Isaac_Show == 0 and G.Slater_Flynn == 0	}{	}{	}{	}{	}{	}{	}{	}{	I seek a tape full of nameless atrocity.	}
 {	155	}{	What exactly is your special?	}{	What exactly is your special?	}{	81	}{	G.Special_Heard == 1 and G.Slater_Weapons == 0	}{	}{	}{	}{	}{	}{	}{	}{	Special? What is so special?	}
-{	156	}{	I'd like to look at your special inventory.	}{	I'd like to look at your special inventory.	}{	0	}{	G.Slater_Weapons == 1	}{	npc.StartBarter(G.Story_State, 0)	}{	}{	}{	}{	}{	}{	}{	Special me.	}
+{	156	}{	I'd like to look at your special inventory.	}{	I'd like to look at your special inventory.	}{	0	}{	G.Slater_Weapons == 1	}{	npc.StartBarter(G.Story_State, 0); preBarter("Slater")	}{	}{	}{	}{	}{	}{	}{	Special me.	}
 {	157	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	158	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	159	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
