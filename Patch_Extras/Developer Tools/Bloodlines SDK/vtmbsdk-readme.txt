@@ -409,9 +409,9 @@ Global changes:
 
 --------------------
 
-1.95 (01.04.2021):
-- BSP Source upated to 1.4.1, thanks to atrblizzard
-- NirCmd updated to v2.86
+1.95 (05.04.2021):
+- BSPSource upated to 1.4.1, thanks to atrblizzard.
+- NirCmd updated to v2.86, thanks to Nir Sofer.
 
 1.94 (06.02.2021):
 - Blender model Formatter added, thanks to DDLullu.
