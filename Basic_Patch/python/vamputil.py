@@ -1353,7 +1353,7 @@ def SheriffBatsIn():
         __main__.CallEntitySpawn(Bats)
         Bats = Find("Bats")
         if Bats:
-	    Bats.MakeInvincible(1)
+# wesp            Bats.MakeInvincible(1)
             Bats.SetParent("!player")
             Bats.SetModel("models/weapons/disciplines/animalism/world/bats_group_01.mdl")
             Find("bats_in").BeginSequence()
@@ -1365,7 +1365,7 @@ def SheriffBatsOut():
         __main__.CallEntitySpawn(Bats2)
         Bats = Find("Bats2")
         if Bats2:
-	    Bats2.MakeInvincible(1)
+# wesp            Bats2.MakeInvincible(1)
             Bats2.SetParent("!player")
             Bats2.SetModel("models/weapons/disciplines/animalism/world/bats_group_01.mdl")
             Find("bats_out").BeginSequence()
@@ -1382,13 +1382,13 @@ def EffectOnPlayer():
 def HitCounter():
     G = __main__.G
     if G.Patch_Plus == 1:
-    	G.Sheriff_Hits = G.Sheriff_Hits + 1
-    	print(__main__.G.Sheriff_Hits)
-    	i = randint(5, 7)
-    	if G.Sheriff_Hits > i:
-    	#if G.Sheriff_Hits == 1:	#TEST
-	    SheriffBatsIn()
-	    G.BatsIn = 1	#prevents bats from spawning too often if player uses machine gun
+        G.Sheriff_Hits = G.Sheriff_Hits + 1
+        print(__main__.G.Sheriff_Hits)
+        i = randint(5, 7)
+        if G.Sheriff_Hits > i:
+        #if G.Sheriff_Hits == 1:	#TEST
+            SheriffBatsIn()
+            G.BatsIn = 1	#prevents bats from spawning too often if player uses machine gun
 def SheriffBatsSummon():
     Find("Swarm_1").ScriptUnhide()
     Find("Swarm_2").ScriptUnhide()

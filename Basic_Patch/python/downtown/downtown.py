@@ -120,7 +120,7 @@ def pattyDialog():
     if(G.Patty_Alley or G.Patty_SD or G.Patty_Pisha or G.Patty_SM):
         if(G.Patch_Plus == 0 or G.Turnstile_Gone == 2):
             script = Find("patty_to_door")
-        if(G.Patch_Plus == 1):
+        else:
             script = Find("patty_to_door_plus")
         patty.WillTalk(0)
         script.BeginSequence()
