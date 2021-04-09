@@ -111,7 +111,7 @@
 {	111	}{	Mmm... I expected you'd bite. Empire hotel, tell them I'm broke. [Quickly]You can run, right? Never mind... just don't go starting any streetfights, alright? These guys are connected. Anyhow, a lot of people have yet to confess to the beat priestess. Later, darling.	}{	Mmm... I expected you'd bite. Empire hotel, tell them I'm broke. [Quickly]You can run, right? Never mind... just don't go starting any streetfights, alright? These guys are connected. Anyhow, a lot of people have yet to confess to the beat priestess. Later, darling.	}{	#	}{	npc.SetDisposition("Apathy", 1)	}{	G.Venus_Quest = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	112	}{	Back in a minute.	}{	Back in a minute.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will be as the wind.	}
 {	113	}{	I just hope someone does something they'll regret.	}{	I just hope someone does something they'll regret.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I can hardly contain your message in my mouth.	}
-{	114	}{	Oh, and get rid of that annoying turnstile, will you?	}{	Oh, and get rid of that annoying turnstile, will you?	}{	0	}{	G.Patch_Plus == 1 and G.Turnstile_Gone == 0	}{	G.Turnstile_Gone = 1	}{	}{	}{	}{	}{	}{	}{	I will be gone like the stupid fan in your door.	}
+{	114	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	115	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	116	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	117	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -201,7 +201,7 @@
 {	201	}{	He's at the Empire hotel. Always has a few of the fiercest bully boys standing around trying to out-sneer each other. He's got a short temper, and more than likely he's been drinking for the last four hours. Here - key to the penthouse level.	}{	He's at the Empire hotel. Always has a few of the fiercest bully boys standing around trying to out-sneer each other. He's got a short temper, and more than likely he's been drinking for the last four hours. Here - key to the penthouse level.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Venus_Quest = 3; pc.GiveItem("item_k_empire_mafia_key"); pc.SetQuest("Venus",1)	}{	}{	}{	}{	}{	}{	}{	}
 {	202	}{	Be back when he's no longer breathing.	}{	Be back when he's no longer breathing.	}{	0	}{	G.Extra_Lines == 1	}{	}{	}{	}{	}{	}{	}{	}{	Yes... the czar's reign will end shortly.	}
 {	203	}{	When I get back, we'll talk about our club.	}{	When I get back, we'll talk about our club.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will return to begin my post as vicious beat commander.	}
-{	204	}{	Thanks. And get rid of that annoying turnstile, will you?	}{	Thanks. And get rid of that annoying turnstile, will you?	}{	0	}{	G.Patch_Plus == 1 and G.Turnstile_Gone == 0	}{	G.Turnstile_Gone = 1	}{	}{	}{	}{	}{	}{	}{	I will be gone like the stupid fan in your door.	}
+{	204	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	205	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	206	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	207	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -251,7 +251,7 @@
 {	251	}{	I've got some money to make us. I'll hold your share of the profits. Don't forget to drop by and scoop them up once in a while, hmm.	}{	I've got some money to make us. I'll hold your share of the profits. Don't forget to drop by and scoop them up once in a while, hmm.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	252	}{	You'll see me again and often, don't worry. Goodbye, Venus.	}{	You'll see me again and often, don't worry. Goodbye, Venus.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will return as often as the stars, goddess.	}
 {	253	}{	You know, I actually had some suggestions for the club....	}{	You know, I actually had some suggestions for the club....	}{	261	}{	}{	}{	}{	}{	}{	}{	}{	}{	The fruits of my fever dreams would paint these walls splendidly.	}
-{	254	}{	I'll do. And get rid of that annoying turnstile, will you?	}{	I'll do. And get rid of that annoying turnstile, will you?	}{	0	}{	G.Patch_Plus == 1 and G.Turnstile_Gone == 0	}{	G.Turnstile_Gone = 1	}{	}{	}{	}{	}{	}{	}{	I will be gone like the stupid fan in your door.	}
+{	254	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	255	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	256	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	257	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -310,7 +310,7 @@
 {	310	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	311	}{	I've got your cut right here.	}{	I've got your cut right here.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.MoneyAdd((G.Story_State - G.Pay_Base) * 25)	}{	}{	}{	}{	}{	}{	}{	}
 {	312	}{	Thanks, Venus. Keep it coming.	}{	Thanks, Venus. Keep it coming.	}{	0	}{	}{	G.Pay_Base = G.Story_State	}{	}{	}{	}{	}{	}{	}{	May the pilgrims never cease paying tribute at your temple, goddess.	}
-{	313	}{	Thanks. And get rid of that annoying turnstile, will you?	}{	Thanks. And get rid of that annoying turnstile, will you?	}{	0	}{	G.Patch_Plus == 1 and G.Turnstile_Gone == 0	}{	G.Turnstile_Gone = 1; G.Pay_Base = G.Story_State	}{	}{	}{	}{	}{	}{	}{	I will be gone like the stupid fan in your door.	}
+{	313	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	314	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	315	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	316	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -330,7 +330,7 @@
 {	330	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	331	}{	Been a while, your money's been piling up. Here, that should provide for an interesting evening.	}{	Been a while, your money's been piling up. Here, that should provide for an interesting evening.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	pc.MoneyAdd((G.Story_State - G.Pay_Base) * 25)	}{	}{	}{	}{	}{	}{	}{	}
 {	332	}{	Thanks. Keep it coming.	}{	Thanks. Keep it coming.	}{	0	}{	}{	G.Pay_Base = G.Story_State	}{	}{	}{	}{	}{	}{	}{	Your blessing is always appreciated, goddess.	}
-{	333	}{	Thanks. And get rid of that annoying turnstile, will you?	}{	Thanks. And get rid of that annoying turnstile, will you?	}{	0	}{	G.Patch_Plus == 1 and G.Turnstile_Gone == 0	}{	G.Turnstile_Gone = 1; G.Pay_Base = G.Story_State	}{	}{	}{	}{	}{	}{	}{	I will be gone like the stupid fan in your door.	}
+{	333	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	334	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	335	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	336	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

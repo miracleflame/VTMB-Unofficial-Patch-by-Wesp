@@ -108,14 +108,13 @@ Version Changelog:
 v10.9                                                  09.04.2021
 -----
 +Improved braid icon and four models boundaries, thanks to Norrwin.
-+Made Patty go behind the church and fixed beachhouse money issue.
++Made Patty go behind the church and fixed a few turnstile issues.
 +Removed Pisha snack reward and fixed Persuasion for Phil and Stan.
 +Improved Dragon's Breath model and texture, thanks to endthewars.
 +Made books sellable again due to real exploit fix, thanks Norrwin.
 +Improved controls options menu and settings text for widescreens.
-+Corrected Python errors for Confession turnstile and Sheriff bats.
-Fixed being stuck on warrens gate and added ammo to Society roof.
 Updated BSPSource and NirCmd, thanks to atrblizzard and Nir Sofer.
+Fixed being stuck on warrens gate and added ammo to Society roof.
 
 v10.8                                                  21.03.2021
 -----
@@ -3012,8 +3011,7 @@ Made every armed NPC in downtown fight back when you attack them.
 
 Confession:
 +Restored laptop, turnstile, gestures, three cage dancers and a DJ.
-+Added line to get rid of the turnstile and fixed cross camera bug.
-+Made Patty go behind the church as the alley is much too crowded.
++Made Patty go behind the church and fixed above cross camera bug.
 Fixed blocking Confession barkeeper and Venus giving right payments.
 Restored missing Venus reaction to persuading Boris to give up dept.
 Added short-time club replacement for Venus in case you killed her.
