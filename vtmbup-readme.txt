@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  09.04.2021
+v10.9                                                  12.04.2021
 -----
 +Improved braid icon and four models boundaries, thanks to Norrwin.
 +Made Patty go behind the church and fixed a few turnstile issues.
@@ -113,8 +113,10 @@ v10.9                                                  09.04.2021
 +Improved Dragon's Breath model and texture, thanks to endthewars.
 +Made books sellable again due to real exploit fix, thanks Norrwin.
 +Improved controls options menu and settings text for widescreens.
-Updated BSPSource and NirCmd, thanks to atrblizzard and Nir Sofer.
++Removed Kent's driver license item to restore Fatguy melee attack.
 Fixed being stuck on warrens gate and added ammo to Society roof.
+Updated BSPSource and NirCmd, thanks to atrblizzard and Nir Sofer.
+Corrected LODs, transitions and inspections at Hallowbrook Hotel.
 
 v10.8                                                  21.03.2021
 -----
@@ -251,7 +253,7 @@ v10.4                                                  18.07.2019
 +Added sounds to Veil of Madness, Blood Theft and Dragon's Breath.
 +Enhanced variety of sound schemes by restoring twenty-nine sounds.
 +Restored sounds to Mitnick's keyboard, Yukie and temple teleport.
-+Made Knox take Gimble's licence and Luca keep any used invitation.
++Made Knox take Gimble's license and Luca keep any used invitation.
 +Fixed Zhao being alive and Bruno being killed quest log problems.
 +Changed order of levels in the library quest, thanks Vaarna_Aarne.
 +Made tube box sellable and removed three more items after quests.
@@ -464,7 +466,7 @@ v9.9                                                    07.01.2018
 +Improved title menu and character sheet clan symbols, thanks IanW.
 +Activated Gallery light switch and fixed menu particles time lag.
 +Created homosexual history for all clans and adjusted intro scene.
-+Made Venture Tower song Malkavians only and fixed licence issues.
++Made Venture Tower song Malkavians only and fixed license issues.
 +Added possible Copper to Chateau and improved masquerade cutscene.
 +Implied sleeping near tutorial and warehouse including bloodloss.
 +Changed Close to the Beast history because of wolf warform issues.
@@ -3446,8 +3448,6 @@ Items:
 + Charity money box in gallery.
 + Name plate in Kamikaze Zen safe.
 + Throwing star on Red Dragon desk.
-+ Driver's license in Malkavian Maze.
-+ Eight at first unknown occult items.
 + Driver's license from Simon Milligan.
 + Wooden pulltoy in Metalhead Industries.
 + Library card found in the new library level.
@@ -3740,14 +3740,14 @@ item_w_claws_protean5 (claw duplicate) -> Vacuum Tubes
 item_w_gargoyle_fist (NPC) -> item_p_occult_thaum_damage Daimonori
 item_w_hengeyokai_fist (NPC) -> item_p_occult_heal_rate Mummywrap
 item_w_manbat_claw (NPC) -> item_p_occult_dodge Weekapaug Thistle
--item_w_mingxiao_melee (NPC) -> Ming won't attack if changed
--item_w_mingxiao_spit (NPC) -> Ming won't attack if changed
+-item_w_mingxiao_melee (NPC) -> Ming can't use it if changed
+-item_w_mingxiao_spit (NPC) -> Ming can't use it if changed
 item_w_mingxiao_tentacle (NPC) -> Bubble Bum
 item_w_rem_m_700_bach (not obtainable in basic) -> SWAT Rifle
 item_w_sabbatleader_attack (NPC) -> item_p_occult_hacking Braid
 item_w_sheriff_sword (not obtainable in basic) -> Sheriff Sword
 item_w_tzimisce_melee (NPC) -> item_p_occult_experience Saulocept
-item_w_tzimisce2_claw (NPC) -> Kent's Driver's License
+-item_w_tzimisce2_claw (NPC) -> Fatguy can't use it if changed
 item_w_tzimisce2_head (NPC) -> Thaumaturgy Casting
 item_w_tzimisce3_claw (NPC) -> item_p_occult_frenzy Tarulfang
 item_w_werewolf_attacks (NPC) -> item_p_occult_obfuscate Zharalketh
