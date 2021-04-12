@@ -6,10 +6,10 @@ You will need the Alien Swarm SDK (for the compiler) and it's free.
 
 You will need Crowbar for Valve models with all the links (here Alien Swarm links).
 
-And finally this Formatter to make a Bloodlines model out of a Valve model.
+And this Formatter (studioVTMB49k) to make a Bloodlines model out of a Valve model.
+
 
 I include a smd example (poisonivy) so you can try out the thing.
-
 
 Now the Valve model will need a skeleton from a Bloodlines model, poisonivy uses the Brujah model's skeleton (armature) with it's animations. So we must copy the mdl and the phy from the Brujah model into a special folder (xmodel) for the Formatter. You should rename it to a smaller name. In the example below, i have renamed mine to BrujahFH. I have changed some unused bones to make a pony tail on the Brujah model. Normally you will use a model with a pony tail like the number 2 or 3 Malk model but I started with the Brujah so... 
 
