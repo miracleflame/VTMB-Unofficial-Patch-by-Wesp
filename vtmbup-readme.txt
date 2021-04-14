@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  12.04.2021
+v10.9                                                  14.04.2021
 -----
 +Improved braid icon and four models boundaries, thanks to Norrwin.
 +Made Patty go behind the church and fixed a few turnstile issues.
@@ -114,6 +114,8 @@ v10.9                                                  12.04.2021
 +Made books sellable again due to real exploit fix, thanks Norrwin.
 +Improved controls options menu and settings text for widescreens.
 +Removed Kent's driver license item to restore Fatguy melee attack.
++Restored option to kill Vandal and placed a fridge into his room.
+Made Tseng hide his guns faster and Carson's killing being logged.
 Fixed being stuck on warrens gate and added ammo to Society roof.
 Updated BSPSource and NirCmd, thanks to atrblizzard and Nir Sofer.
 Corrected LODs, transitions and inspections at Hallowbrook Hotel.
@@ -2847,14 +2849,14 @@ Santa Monica:
 +Restored Trip's drug quest and fixed Trip's pawnshop door crashing.
 +Made player sending Gimble to Vandal loose humanity then regain it.
 +Cleaned Mercurio's apartment and fixed some wrong bum animations.
-+Made player phone Gimble in Carson quest and Carson remove McGee.
++Made player phone Gimble in shop and Carson's killing being logged.
 +Unlocked door in Gimble's lair, showed his hand and fixed cutscene.
++Made Carson pack his stuff and corrected skybox reflection on hub.
 Fixed morphine quest updates after angering Mercurio and warehouse.
 Made diner cook move more and stopped Doris from falling into floor.
 Fixed Lily's sire's license plate in quest log and her diary dates.
 Corrected prophet stop preaching and removed some first quest info.
 Added Lily's purse to her stuff and uncovered it if Doris is dead.
-Made Carson pack his laptop and corrected skybox reflection on hub.
 Made Bertram react to attacks and taking CD if you already have it.
 Added check for having the astrolite and cops to pier conversation.
 Made it possible to trigger serial killer quest from all newspapers.
@@ -2897,6 +2899,7 @@ Medical Clinic:
 +Improved emails, elevator display and climbing back into the vent.
 +Moved Malcolm's black mail money from your mailbox into his office.
 +Put Heather's and Doris' name in the morgue file in case they died.
++Restored option to kill Vandal and placed a fridge into his room.
 Fixed getting Vandal's freebie and made him more talkative overall.
 Repaired not getting XP for replacing Lily and hacking the passcode.
 Stopped dead Malcolm mailing you and monitor react to dead victim.
@@ -3470,6 +3473,7 @@ Encounters:
 + Security guard and sequence at Skyeline Apartments.
 
 Options:
++ Killing of Vandal possible.
 + Venus' computer at Confession.
 + Laptop and note at Luckee Star.
 + Santa Monica pier end accessable.
@@ -3478,7 +3482,6 @@ Options:
 + Dance spots at Glaze and Empire hotel.
 + Revisiting possible of seven locations.
 + Bertram's CD quest available to all clans.
-+ Vandal's Lily quest available to Nosferatu.
 + Arthur's and Bertram's computers accessible.
 + Talking to thugs and killer phoning in diner.
 + Private dancing from VV and Misti at Vesuvius.
