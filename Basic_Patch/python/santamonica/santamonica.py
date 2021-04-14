@@ -412,9 +412,14 @@ def virgilViewed():
         G.VirgilCrumbKnowledge = 1
     #changes end
 
-#BASEMENT: Called when carson dies
+#BASEMENT: Called when carson dies, changed by wesp
 def carsonDeath():
     print "carson just died, do we care?"
+    __main__.FindPlayer().SetQuest("Arthur Knox", 8)
+    switch = Find("carson_switch")
+    switch.Unlock()
+    brush = Find("Carson prot brush")
+    brush.Kill()
 
 #BASEMENT: Called when gimble is killed
 def gimbleDeath():
@@ -1009,18 +1014,29 @@ def updateDrugQuest():
         G.Trip_Discount = 2
         __main__.FindPlayer().SetQuest("Trip Drugs", 2)
 
-#CLINIC: Opens the door when the player gets vandal's position
+#CLINIC: Opens the door when the player gets vandal's permission
 def vandalDialog():
     if(G.Vandal_Permission):
         door = Find("employee_entrance")
         door.Unlock()
+    if (G.Patch_Plus == 1 and G.Vandal_Fight == 1):
+        vandal = Find("Vandal")
+        vandal.SetRelationship("player D_HT 5")
+        vandal.MakeInvincible(0)
+        vandal.SetScriptedDiscipline("potence 3")
+        push = Find("player_stay_out")
+        push.Disable()
+    else:
+        relay = Find("vandal_scene_relay")
+        relay.Enable()
 
 #CLINIC: Called when Vandal dies
 def vandalDeath():
     pc = __main__.FindPlayer()
     status = pc.GetQuestState("Danielle")
-    if(status == 1):
-        pc.SetQuest("Danielle", 3)
+# wesp  if(status == 1):
+    pc.SetQuest("Danielle", 3)
+    __main__.G.Vandal_Killed = 1
 
 #CLINIC: Spawns in the werewolf blood if the player is on the quest
 def werewolfBloodClinicEnter():

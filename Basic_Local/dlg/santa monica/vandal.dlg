@@ -74,7 +74,7 @@
 {	74	}{	I need to get blood from somewhere. Haven't had ghoul blood in a while.	}{	I need to get blood from somewhere. Haven't had ghoul blood in a while.	}{	101	}{	Intimidate 4	}{	}{	}{	}{	}{	}{	}{	}{	Maybe I will suck the life from your veins, blood slave.	}
 {	75	}{	I'll settle this after I get some cash.	}{	I'll settle this after I get some cash.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll be back with gold to erase your memory. Farewell.	}
 {	76	}{	Forget I said anything. I don't need your blood.	}{	Forget I said anything. I don't need your blood.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	Forget I am here. I don't need your blood.	}
-{	77	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	77	}{	You know what, I would rather like to taste your blood.	}{	You know what, I would rather like to taste your blood.	}{	0	}{	G.Patch_Plus == 1 and G.Vandal_Plus == 0	}{	G.Vandal_Fight = 1	}{	}{	}{	}{	}{	}{	}{	Not fair enough, as I will drink the blood from your body.	}
 {	78	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -92,7 +92,7 @@
 {	92	}{	Fine. Here.	}{	Fine. Here.	}{	81	}{	pc.CurrentMoney() >= 200	}{	pc.MoneyRemove(200); G.E_Missing = 3; G.Vandal_Pissed = 0; pc.AwardExperience("Danielle02"); G.Vandal_Plus = 1	}{	}{	}{	}{	}{	}{	}{	Greedy little ghoul. Take your blood-money.	}
 {	93	}{	I'll come back with the cash.	}{	I'll come back with the cash.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll be back with gold to erase your memory. Farewell.	}
 {	94	}{	Forget I said anything. I don't need your blood.	}{	Forget I said anything. I don't need your blood.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	You lost your gold, little blood slave. I am no longer here.	}
-{	95	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
+{	95	}{	You know what, I would rather like to taste your blood.	}{	You know what, I would rather like to taste your blood.	}{	0	}{	G.Patch_Plus == 1 and G.Vandal_Plus == 0	}{	G.Vandal_Fight = 1	}{	}{	}{	}{	}{	}{	}{	Not fair enough, as I will drink the blood from your body.	}
 {	96	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	97	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	98	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
