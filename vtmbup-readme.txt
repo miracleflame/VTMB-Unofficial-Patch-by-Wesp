@@ -119,6 +119,7 @@ Made Tseng hide his guns faster and Carson's killing being logged.
 Fixed being stuck on warrens gate and added ammo to Society roof.
 Updated BSPSource and NirCmd, thanks to atrblizzard and Nir Sofer.
 Corrected LODs, transitions and inspections at Hallowbrook Hotel.
+Restored junk to Skyeline level and fixed other minor junk issues.
 
 v10.8                                                  21.03.2021
 -----
