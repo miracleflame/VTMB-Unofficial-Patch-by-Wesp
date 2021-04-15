@@ -1023,12 +1023,13 @@ def vandalDialog():
         vandal = Find("Vandal")
         vandal.SetRelationship("player D_HT 5")
         vandal.MakeInvincible(0)
-        vandal.SetScriptedDiscipline("potence 3")
+        vandal.WillTalk(0)
         push = Find("player_stay_out")
         push.Disable()
     else:
         relay = Find("vandal_scene_relay")
         relay.Enable()
+        relay.Trigger()
 
 #CLINIC: Called when Vandal dies
 def vandalDeath():
