@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  15.04.2021
+v10.9                                                  16.04.2021
 -----
 +Improved braid icon and four models boundaries, thanks to Norrwin.
 +Made Patty go behind the church and fixed a few turnstile issues.
@@ -119,7 +119,7 @@ Made Tseng hide his guns faster and Carson's killing being logged.
 Fixed being stuck on warrens gate and added ammo to Society roof.
 Updated BSPSource and NirCmd, thanks to atrblizzard and Nir Sofer.
 Corrected LODs, transitions and inspections at Hallowbrook Hotel.
-Restored junk to Skyeline level and fixed other minor junk issues.
+Fixed junk in recompiled maps and other minor junk and map issues.
 
 v10.8                                                  21.03.2021
 -----
