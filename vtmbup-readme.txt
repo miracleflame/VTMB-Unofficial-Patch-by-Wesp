@@ -105,21 +105,21 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  16.04.2021
+v10.9                                                  21.04.2021
 -----
 +Improved braid icon and four models boundaries, thanks to Norrwin.
-+Made Patty go behind the church and fixed a few turnstile issues.
-+Removed Pisha snack reward and fixed Persuasion for Phil and Stan.
-+Improved Dragon's Breath model and texture, thanks to endthewars.
++Restored way to kill Vandal and improved other SM clinic details.
++Improved Dragon's Breath and vehicle models, thanks to endthewars.
++Removed Pisha snack reward and fixed Persuasion of Phil and Stan.
 +Made books sellable again due to real exploit fix, thanks Norrwin.
 +Improved controls options menu and settings text for widescreens.
 +Removed Kent's driver license item to restore Fatguy melee attack.
-+Restored option to kill Vandal and placed a fridge into his room.
-Made Tseng hide his guns faster and Carson's killing being logged.
-Fixed being stuck on warrens gate and added ammo to Society roof.
++Made Patty go behind Confession and fixed a few turnstile issues.
 Updated BSPSource and NirCmd, thanks to atrblizzard and Nir Sofer.
 Corrected LODs, transitions and inspections at Hallowbrook Hotel.
-Fixed junk in recompiled maps and other minor junk and map issues.
+Made Tseng hide his guns faster and Carson's killing being logged.
+Fixed being stuck on warrens gate and added ammo to Society roof.
+Restored junk to recompiled maps and fixed some junk related bugs.
 
 v10.8                                                  21.03.2021
 -----
@@ -2900,7 +2900,7 @@ Medical Clinic:
 +Improved emails, elevator display and climbing back into the vent.
 +Moved Malcolm's black mail money from your mailbox into his office.
 +Put Heather's and Doris' name in the morgue file in case they died.
-+Restored option to kill Vandal and placed a fridge into his room.
++Restored way to kill Vandal and improved other SM clinic details.
 Fixed getting Vandal's freebie and made him more talkative overall.
 Repaired not getting XP for replacing Lily and hacking the passcode.
 Stopped dead Malcolm mailing you and monitor react to dead victim.
@@ -2935,7 +2935,7 @@ Serial Killer:
 +Lowered gainable Humanity points and restored killer's phone call.
 +Restored one dog model to and fixed sounds and actions at junkyard.
 Removed Masquerade violation and failure for convincing the killer.
-Made killer react to Diner violence and quest independent from Muddy.
+Made killer react to diner violence and quest independent from Muddy.
 Corrected freezes on meeting the killer and Gimble while Obfuscated.
 
 Ocean House:
@@ -3667,7 +3667,9 @@ Models:
 * Spiderchick splitting on death (animation found).
 * Bat swarm as animals to befriend (npc class found).
 * Duplicate props with different sizes (models found).
-* Textureless trash, dummy and other props (models found).
+* Cowering and wine interesting places (animations found).
+* Booth and barstool interesting places (animations found).
+* Trash, dummy and other props without texture (models found).
 * Props with alternate skins or in combinations (models found).
 * More pipes, pillows, barbells and billiard balls (models found).
 
