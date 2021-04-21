@@ -1025,8 +1025,10 @@ def toTaxi():
         __main__.ChangeMap(2.5, "caine_landmark", "caine_transition")
         vent1 = Find("haven_vent_1")
         vent1.Close()
+        vent1.Lock()
         vent2 = Find("haven_vent_2")
         vent2.Close()
+        vent2.Lock()
 
 #SKYLINE: Called to unlock the player's haven, changed by wesp
 def unlockHaven():

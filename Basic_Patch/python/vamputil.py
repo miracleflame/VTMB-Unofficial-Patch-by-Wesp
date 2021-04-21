@@ -285,6 +285,12 @@ def setPlus():
             junkteleport.ScriptHide()
             junkdoor = Find("jnkshkb")
             junkdoor.Unlock()
+        malcolm = Find("Malcolm")
+        if malcolm:
+            placebasic = Find("place_basic")
+            placebasic.Disable()
+            placeplus = Find("place_plus")
+            placeplus.Enable()
         asianvamp = Find("AsianVamp")
         if asianvamp and G.Asian_Swap == 0:
             asianvamp.ScriptHide()
