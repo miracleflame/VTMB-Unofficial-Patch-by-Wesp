@@ -118,7 +118,7 @@ v10.9                                                  22.04.2021
 +Restored tutorial Jack end animation and made crying Jenny louder.
 Corrected LODs, transitions and inspections at Hallowbrook Hotel.
 Updated BSPSource and NirCmd, thanks to atrblizzard and Nir Sofer.
-Restored junk to recompiled maps and fixed more map related bugs.
+Restored and corrected junk details and player splashing at pier.
 Made Tseng hide his guns faster and Carson's killing being logged.
 Fixed being stuck on warrens gate and added ammo to Society roof.
 
