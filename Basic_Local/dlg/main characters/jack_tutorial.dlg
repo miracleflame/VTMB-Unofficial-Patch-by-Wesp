@@ -870,8 +870,8 @@
 {	870	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	871	}{	[Grumbling, peeved]Oh, boy. Well, I think they're lookin' for you outside; guess you got a cab to catch. Was hopin' to fill you in on a little more but... ah hell, you'll figure it all out.	}{	[Grumbling, peeved]Oh, boy. Well, I think they're lookin' for you outside; guess you got a cab to catch. Was hopin' to fill you in on a little more but... ah hell, you'll figure it all out.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	872	}{	(Auto-Link)	}{	(Auto-Link)	}{	881	}{	G.Patch_Plus == 0 and pc.HasItem("item_w_thirtyeight")	}{	pc.RemoveItem("item_w_thirtyeight")	}{	}{	}{	}{	}{	}{	}{	(Auto-Link)	}
-{	873	}{	Sure, and here's your gun.	}{	Sure, and here's your gun.	}{	881	}{	G.Patch_Plus == 1 and pc.HasItem("item_w_thirtyeight")	}{	pc.RemoveItem("item_w_thirtyeight"); G.Jack_Faction = G.Jack_Faction + 1	}{	}{	}{	}{	}{	}{	}{	We will, now take your pea-shooter back.	}
-{	874	}{	I will, but I would like to keep the gun.	}{	I will, but I would like to keep the gun.	}{	881	}{	Persuasion 1 & (G.Patch_Plus == 1 and pc.HasItem("item_w_thirtyeight"))	}{	}{	}{	}{	}{	}{	}{	}{	Yes, yes, yes. But we will need the pea-shooter.	}
+{	873	}{	After a good days sleep. And here's your gun.	}{	After a good days sleep. And here's your gun.	}{	881	}{	G.Patch_Plus == 1 and pc.HasItem("item_w_thirtyeight")	}{	pc.RemoveItem("item_w_thirtyeight"); G.Jack_Faction = G.Jack_Faction + 1	}{	}{	}{	}{	}{	}{	}{	After sleeping all day long, but now take your pea-shooter back.	}
+{	874	}{	I will sleep over it, but I would like to keep the gun.	}{	I will sleep over it, but I would like to keep the gun.	}{	881	}{	Persuasion 1 & (G.Patch_Plus == 1 and pc.HasItem("item_w_thirtyeight"))	}{	}{	}{	}{	}{	}{	}{	}{	Dreams will come during the day. But I will need the pea-shooter.	}
 {	875	}{	(Auto-Link)	}{	(Auto-Link)	}{	881	}{	not pc.HasItem("item_w_thirtyeight")	}{	}{	}{	}{	}{	}{	}{	}{	(Auto-Link)	}
 {	876	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	877	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -879,8 +879,8 @@
 {	879	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	880	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	881	}{	If you make it back, stop in at the Last Round - it's this bar downtown here - I'll fill you in on the politics. [chuckle]Now that's the stuff that'll kill ya. [laugh]Good luck.	}{	If you make it back, stop in at the Last Round - it's this bar downtown here - I'll fill you in on the politics. [chuckle]Now that's the stuff that'll kill ya. [laugh]Good luck.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	882	}{	I'll see you there.	}{	I'll see you there.	}{	0	}{	G.Patch_Plus == 0	}{	G.Tut_Jack = 15	}{	}{	}{	}{	}{	}{	}{	We will be there soon.	}
-{	883	}{	I'll see you there after I got a good day's sleep.	}{	I'll see you there after I got a good day's sleep.	}{	0	}{	G.Patch_Plus == 1	}{	G.Tut_Jack = 15	}{	}{	}{	}{	}{	}{	}{	We will be there after we close our eyes during the daylight.	}
+{	882	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	G.Tut_Jack = 15	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	883	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	884	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	885	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	886	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}

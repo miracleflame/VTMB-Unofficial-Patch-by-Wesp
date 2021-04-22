@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  21.04.2021
+v10.9                                                  22.04.2021
 -----
 +Improved braid icon and four models boundaries, thanks to Norrwin.
 +Restored way to kill Vandal and improved other SM clinic details.
@@ -115,11 +115,12 @@ v10.9                                                  21.04.2021
 +Improved controls options menu and settings text for widescreens.
 +Removed Kent's driver license item to restore Fatguy melee attack.
 +Made Patty go behind Confession and fixed a few turnstile issues.
-Updated BSPSource and NirCmd, thanks to atrblizzard and Nir Sofer.
++Restored tutorial Jack end animation and made crying Jenny louder.
 Corrected LODs, transitions and inspections at Hallowbrook Hotel.
+Updated BSPSource and NirCmd, thanks to atrblizzard and Nir Sofer.
+Restored junk to recompiled maps and fixed more map related bugs.
 Made Tseng hide his guns faster and Carson's killing being logged.
 Fixed being stuck on warrens gate and added ammo to Society roof.
-Restored junk to recompiled maps and fixed some junk related bugs.
 
 v10.8                                                  21.03.2021
 -----

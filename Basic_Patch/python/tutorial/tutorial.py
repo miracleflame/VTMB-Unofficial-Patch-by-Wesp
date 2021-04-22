@@ -202,9 +202,9 @@ def DialogPostProcess():
 
     # end of tutorial, changed by wesp
     elif G.Tut_Jack >= 15:
-        __main__.ScheduleTask(5, "__main__.FindEntityByName(\'popup_58\').OpenWindow()")
+        __main__.ScheduleTask(12, "__main__.FindEntityByName(\'popup_58\').OpenWindow()")
 #        Find("popup_58").OpenWindow()
-        __main__.ScheduleTask(2, "__main__.FindEntityByName(\"end_fade\").Fade()")
+        __main__.ScheduleTask(10, "__main__.FindEntityByName(\"end_fade\").Fade()")
         jack = Find("Jack")
         jack.WillTalk(0)
 
