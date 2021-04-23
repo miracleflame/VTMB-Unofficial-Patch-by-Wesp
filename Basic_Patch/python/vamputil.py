@@ -1594,12 +1594,12 @@ def newDiscipline(x):
         c.incThaumaturgy=""    #should actually never get this
     c.showDiscipline=""
 
-#Fix Discipline key, copied from Dheu's ModDev Guide, changed by Entenschreck
+#Fix Discipline key, copied from Dheu's ModDev Guide, changed by Entenschreck and wesp
 def FixKeyBindings():
     data = ''
     fin = None
     try:
-        config = nt.getcwd() + "\\Unofficial_Patch\\cfg\\config.cfg"
+        config = nt.getcwd() + "\\" + fileutil.moddir + "\\cfg\\config.cfg"
         fin = open(config,"r")
         line = fin.readline()
         while line:
@@ -1612,7 +1612,7 @@ def FixKeyBindings():
     finally:
         if fin: fin.close()
     if 0 != len(data):
-        console = nt.getcwd() + "\\Unofficial_Patch\\cfg\\console.cfg"
+        console = nt.getcwd() + "\\" + fileutil.moddir + "\\cfg\\console.cfg"
         cfg=open(console, 'w')
         try: cfg.write(data)
         finally: cfg.close()

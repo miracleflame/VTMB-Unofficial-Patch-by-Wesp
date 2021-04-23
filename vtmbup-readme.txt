@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  22.04.2021
+v10.9                                                  23.04.2021
 -----
 +Improved braid icon and four models boundaries, thanks to Norrwin.
 +Restored way to kill Vandal and improved other SM clinic details.
@@ -121,6 +121,7 @@ Updated BSPSource and NirCmd, thanks to atrblizzard and Nir Sofer.
 Restored and corrected junk details and player splashing at pier.
 Made Tseng hide his guns faster and Carson's killing being logged.
 Fixed being stuck on warrens gate and added ammo to Society roof.
+Corrected Python script that broke when renaming the patch folder.
 
 v10.8                                                  21.03.2021
 -----
@@ -3599,8 +3600,8 @@ not implemented or too far from being finished to be restored.
 Actions:
 * Carrying bodies (context icon found).
 * Staking vampires (context icon found).
+* Feeding grapple (animation and info found).
 * Dice rolls and botch (icons and info found).
-* Feeding grappling (animation and info found).
 
 Stats:
 * Histories giving items (infos found).
@@ -3649,7 +3650,9 @@ Weapons:
 Mapping:
 * Law and bunker buildings (textures found).
 * East LA latino style hub (unused music found).
-* Kiki with thugs in Ramen shop (Python scripts found).
+* Video game at beachhouse (Python script found).
+* Shadow mages in Hallowbrook (Python scripts found).
+* Kiki and thugs in Ramen shop (Python scripts found).
 * Beckett coming from left (sm_warehouse scripts found).
 * Disabled options (ch_fulab, sp_giovanni_2a/b info found).
 * Disabled events (hw_warrens_3, la_malkavian_5 info found).
@@ -3917,8 +3920,8 @@ might be helpful. Compile the release version with -final settings.
 
 * The decompiler omitts detail models, like /trash_stuff/junk_*.mdl.
 * The decompiler sometimes mucks areaportals up, fix or remove them.
-* Tool invisible slows VVIS, use clip except for functional brushes.
-* Tool noviz isn't working, use func_details, especially for skybox.
+* Toolsinvisible slows VVIS, use clip except for functional brushes.
+* Toolsnoviz isn't working, use func_details, especially for skybox.
 * Func_Details may add junk planes, in that case turn back to world.
 * Func_Details do not seal the world, use normal brushes to do that.
 * Always use nodraw textures for surfaces that the player can't see.
