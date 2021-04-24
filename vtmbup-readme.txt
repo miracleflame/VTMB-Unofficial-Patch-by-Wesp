@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  23.04.2021
+v10.9                                                  24.04.2021
 -----
 +Improved braid icon and four models boundaries, thanks to Norrwin.
 +Restored way to kill Vandal and improved other SM clinic details.
@@ -118,10 +118,11 @@ v10.9                                                  23.04.2021
 +Restored tutorial Jack end animation and made crying Jenny louder.
 Corrected LODs, transitions and inspections at Hallowbrook Hotel.
 Updated BSPSource and NirCmd, thanks to atrblizzard and Nir Sofer.
-Restored and corrected junk details and player splashing at pier.
+Repaired junk details, splashing at pier and ladder at warehouse.
 Made Tseng hide his guns faster and Carson's killing being logged.
 Fixed being stuck on warrens gate and added ammo to Society roof.
 Corrected Python script that broke when renaming the patch folder.
+Added links for beta videos to Restoration Doc, thanks to tarulu.
 
 v10.8                                                  21.03.2021
 -----
@@ -2981,7 +2982,7 @@ Fixed thug with too good eyesight and removed Beckett stealth alert.
 Added inspection to gascan and fixed transparent girders and icons.
 Corrected looping conversation, walk-into ventduct and buggy pallet.
 Added missing card player, animated generator and restored lockpick.
-Corrected overlapping music and near-distance portals at warehouse.
+Corrected overlapping music, near-distance portals and missing ladder.
 
 Downtown:
 +Moved frenzy powerup from basement into hollow book in Grout's room.
@@ -3648,10 +3649,10 @@ Weapons:
 * Dual Sig P220Ss instead of Desert Eagle (info and icons found).
 
 Mapping:
+* East LA latino hub (unused music found).
 * Law and bunker buildings (textures found).
-* East LA latino style hub (unused music found).
+* Thugs retreating (sm_warehouse scripts found).
 * Video game at beachhouse (Python script found).
-* Shadow mages in Hallowbrook (Python scripts found).
 * Kiki and thugs in Ramen shop (Python scripts found).
 * Beckett coming from left (sm_warehouse scripts found).
 * Disabled options (ch_fulab, sp_giovanni_2a/b info found).
