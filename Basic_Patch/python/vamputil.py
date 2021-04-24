@@ -2766,7 +2766,7 @@ def RandomLine( NumList ):
     Index = R.randint(0, len(NumList)-1)
     return NumList[Index]
 
-#Called on the hubs (and possibly other maps?) to place hunters if the player violates the masquerade
+#Called on the hubs (and possibly other maps?) to place hunters if the player violates the masquerade, changed by wesp
 def checkMasquerade():
     level = __main__.FindPlayer().GetMasqueradeLevel()
     print "level %i" % level
@@ -2780,6 +2780,14 @@ def checkMasquerade():
                     spawner = Find("hunter_maker_%i" % (i - 1))
                     spawner.Spawn()
                 i = i + 1
+        bertram = Find("Bertram")
+        if bertram:
+            hunter1 = Find("hunter_1")
+            if hunter1: hunter1.SetRelationship("bertram D_HT 5")
+            hunter2 = Find("hunter_2")
+            if hunter2: hunter2.SetRelationship("bertram D_HT 5")
+            hunter3 = Find("hunter_3")
+            if hunter3: hunter3.SetRelationship("bertram D_HT 5")
         #changes end
 
 #Spawns in the appropriate cop car given the input
