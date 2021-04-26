@@ -2783,7 +2783,9 @@ def checkMasquerade():
         bertram = Find("Bertram")
         if bertram:
             hunter1 = Find("hunter_1")
-            if hunter1: hunter1.SetRelationship("bertram D_HT 5")
+            if hunter1: 
+                hunter1.SetRelationship("bertram D_HT 10")
+                bertram.SetRelationship("hunter1 D_HT 10")
             hunter2 = Find("hunter_2")
             if hunter2: hunter2.SetRelationship("bertram D_HT 5")
             hunter3 = Find("hunter_3")

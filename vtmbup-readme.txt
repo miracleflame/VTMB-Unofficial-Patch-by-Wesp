@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  24.04.2021
+v10.9                                                  26.04.2021
 -----
 +Improved braid icon and four models boundaries, thanks to Norrwin.
 +Restored way to kill Vandal and improved other SM clinic details.
@@ -116,13 +116,17 @@ v10.9                                                  24.04.2021
 +Removed Kent's driver license item to restore Fatguy melee attack.
 +Made Patty go behind Confession and fixed a few turnstile issues.
 +Restored tutorial Jack end animation and made crying Jenny louder.
++Removed Mercurio's car from hub if you ratted him out to LaCroix.
+
 Corrected LODs, transitions and inspections at Hallowbrook Hotel.
 Updated BSPSource and NirCmd, thanks to atrblizzard and Nir Sofer.
-Repaired junk details, splashing at pier and ladder at warehouse.
+Restored and corrected junk details on many maps, thanks Norrwin.
 Made Tseng hide his guns faster and Carson's killing being logged.
 Fixed being stuck on warrens gate and added ammo to Society roof.
 Corrected Python script that broke when renaming the patch folder.
 Added links for beta videos to Restoration Doc, thanks to tarulu.
+Made hunters in Santa Monica attack Tung if they meet him outside.
+Restored water splashing at pier and missing ladder at warehouse.
 
 v10.8                                                  21.03.2021
 -----
@@ -2874,6 +2878,7 @@ Corrected XP and restored log for unravelling Knox and Bertram plan.
 Blocked a way from the SM hub into the junkyard before it's opened.
 Delayed Mercurio cutscene to make player move where he can see it.
 Darkened more ground floor lamps at beachhouse after power is off.
+Made hunters in Santa Monica attack Tung if they meet him outside.
 
 The Asylum:
 +Added one more Jeanette encounter with enough Seduction and blood.

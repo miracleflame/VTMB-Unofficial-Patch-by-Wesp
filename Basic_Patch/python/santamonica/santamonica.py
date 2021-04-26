@@ -1019,17 +1019,19 @@ def vandalDialog():
     if(G.Vandal_Permission):
         door = Find("employee_entrance")
         door.Unlock()
-    if (G.Patch_Plus == 1 and G.Vandal_Fight == 1):
-        vandal = Find("Vandal")
-        vandal.SetRelationship("player D_HT 5")
-        vandal.MakeInvincible(0)
-        vandal.WillTalk(0)
-        push = Find("player_stay_out")
-        push.Disable()
-    else:
-        relay = Find("vandal_scene_relay")
-        relay.Enable()
-        relay.Trigger()
+    if G.Lily_Free == 2:
+        if (G.Patch_Plus == 1 and G.Vandal_Fight == 1):
+            vandal = Find("Vandal")
+            vandal.SetRelationship("player D_HT 5")
+            vandal.MakeInvincible(0)
+            vandal.WillTalk(0)
+            push = Find("player_stay_out")
+            push.Disable()
+        else:
+            relay = Find("vandal_scene_relay")
+            relay.Enable()
+            relay.Trigger()
+        G.Lily_Free = 3
 
 #CLINIC: Called when Vandal dies
 def vandalDeath():
@@ -1721,6 +1723,9 @@ def bertramOutOfHiding():
             if yugo: yugo.Kill()
             if yugosteam1: yugosteam1.Kill()
             if yugosteam2: yugosteam2.Kill()
+        mercuriocar = Find("mercurio_car")
+        if G.Prince_Mercurio:
+            if mercuriocar: mercuriocar.Kill()
         obfuscator = Find("obfuscator")
         obfuscator_trigger = Find("obfuscator_trigger")
         if G.Story_State == 5:
