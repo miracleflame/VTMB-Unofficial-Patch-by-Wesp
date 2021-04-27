@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  26.04.2021
+v10.9                                                  27.04.2021
 -----
 +Improved braid icon and four models boundaries, thanks to Norrwin.
 +Restored way to kill Vandal and improved other SM clinic details.
@@ -117,7 +117,7 @@ v10.9                                                  26.04.2021
 +Made Patty go behind Confession and fixed a few turnstile issues.
 +Restored tutorial Jack end animation and made crying Jenny louder.
 +Removed Mercurio's car from hub if you ratted him out to LaCroix.
-
++Restored fighters brawling in Al's video game at beachhouse level.
 Corrected LODs, transitions and inspections at Hallowbrook Hotel.
 Updated BSPSource and NirCmd, thanks to atrblizzard and Nir Sofer.
 Restored and corrected junk details on many maps, thanks Norrwin.
@@ -2860,6 +2860,7 @@ Santa Monica:
 +Made player phone Gimble in shop and Carson's killing being logged.
 +Unlocked door in Gimble's lair, showed his hand and fixed cutscene.
 +Made Carson pack his stuff and corrected skybox reflection on hub.
++Restored fighters brawling in Al's video game at beachhouse level.
 Fixed morphine quest updates after angering Mercurio and warehouse.
 Made diner cook move more and stopped Doris from falling into floor.
 Fixed Lily's sire's license plate in quest log and her diary dates.
@@ -3508,7 +3509,7 @@ Situations:
 + Sheriff using Bloodsucker Communion.
 + Two actors being killed at Ground Zero.
 + Cat and Sabbat leader sequence at King's Way.
-+ Special sequences on all hubs and at Vesuvius.
++ Special sequences on all hubs and in Vesuvius.
 + Rat crowd and spiderchick sequences in warrens.
 + Female crying, broken limo and Obfuscator on SM hub.
 + Hellcat, valve and sprinkler sequences at Ocean House.
@@ -3576,7 +3577,7 @@ Other restorations:
 + Nosferatu and Pisha eyes.
 + Voiced conversation on Dane.
 + Over fifty dialogue gestures.
-+ Voiced tutorial guard dialogue.
++ Fighting video game characters.
 + Auto-moving and walk/run toggles.
 + Sixteen HUD and five vendor icons.
 + Sixteen unknown items descriptions.
@@ -3654,10 +3655,8 @@ Weapons:
 * Dual Sig P220Ss instead of Desert Eagle (info and icons found).
 
 Mapping:
-* East LA latino hub (unused music found).
 * Law and bunker buildings (textures found).
 * Thugs retreating (sm_warehouse scripts found).
-* Video game at beachhouse (Python script found).
 * Kiki and thugs in Ramen shop (Python scripts found).
 * Beckett coming from left (sm_warehouse scripts found).
 * Disabled options (ch_fulab, sp_giovanni_2a/b info found).

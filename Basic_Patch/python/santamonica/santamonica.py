@@ -561,13 +561,13 @@ def playerFoundAtBeachhouse():
 #        script = Find("ambush_player_dennis_surfer")
 #        script.StartSchedule()
 
-#BEACHHOUSE: Makes the video game characters attack randomly
+#BEACHHOUSE: Makes the video game characters attack randomly, changed by wesp
 def randomFighterAttack(f):
     fighter = Find("fighter_%i" % (f))
     from random import Random
     from time import time
     R = Random( time() )
-    attack = R.randint(1, 6)
+    attack = R.randint(1, 4)
     if(attack == 1):
         fighter.SetAnimation("claws_attack_low")
     elif(attack == 2):
