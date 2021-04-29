@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7999"
-	"mapversion" "584"
+	"mapversion" "632"
 	"prefab" "0"
 }
 visgroups
@@ -249,7 +249,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "584"
+	"mapversion" "632"
 	"classname" "worldspawn"
 	"skyname" "pier"
 	"sounds" "1"
@@ -51293,9 +51293,9 @@ entity
 	"m_flRadius" "102400"
 	"m_flRepeat" "0"
 	"m_fMoveTo" "1"
-	"angles" "0 26 0"
+	"angles" "0 320 0"
 	"radius" "10"
-	"origin" "3506.28 -2477.42 -111.363"
+	"origin" "3506 -2477 -111.363"
 	editor
 	{
 		"color" "128 128 255"
@@ -51493,7 +51493,6 @@ entity
 	"origin" "3314.59 -2136.23 -103.35"
 	connections
 	{
-		"OnStartTouch" "pause_relay,Trigger,,0,-1,,"
 		"OnStartTouch" "Brian,StartPlayerDialog,,0,-1,,"
 	}
 	solid
@@ -51887,7 +51886,7 @@ entity
 {
 	"id" "1129"
 	"classname" "npc_VHumanCombatant"
-	"angles" "0 16 0"
+	"angles" "0 320 0"
 	"renderfx" "0"
 	"rendermode" "0"
 	"renderamt" "255"
@@ -52015,7 +52014,6 @@ entity
 	"origin" "3374 -2774 -74"
 	connections
 	{
-		"OnStartTouch" "pause_relay,Trigger,,0,-1,,"
 		"OnStartTouch" "dog_cover_a,EnableHint,,0,-1,,"
 		"OnStartTouch" "dog_cover,EnableHint,,0,-1,,"
 		"OnStartTouch" "back_cover_a,EnableHint,,0,-1,,"
@@ -54230,105 +54228,6 @@ entity
 	{
 		"color" "255 128 64"
 		"visgroupid" "24"
-	}
-}
-entity
-{
-	"id" "1216"
-	"classname" "func_brush"
-	"renderamt" "255"
-	"rendercolor" "255 255 255"
-	"disableshadows" "1"
-	"targetname" "basic_videogame"
-	"renderfx" "0"
-	"rendermode" "0"
-	"InputFilter" "0"
-	"StartDisabled" "0"
-	"Solidity" "0"
-	"climbable" "0"
-	"origin" "3552 -2501.8 -67"
-	solid
-	{
-		"id" "103641"
-		side
-		{
-			"id" "5902"
-			"plane" "(3551 -2511.3 -59.5) (3551 -2511.3 -74.5) (3551 -2493.3 -74.5)"
-			"material" "OBJECTS/GAMESCREEN"
-			"uaxis" "[0 -1 0 -79.9034] 0.128906"
-			"vaxis" "[0 0 -1 -46.08] 0.0976563"
-			"rotation" "0"
-			"lightmapscale" "32"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "5901"
-			"plane" "(3553 -2519.3 -80) (3553 -2519.3 -54) (3553 -2484.3 -54)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[0 1 0 53.2] 0.25"
-			"vaxis" "[0 0 -1 -8.375] 0.25"
-			"rotation" "0"
-			"lightmapscale" "32"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "5896"
-			"plane" "(3551 -2511.3 -74.5) (3551 -2511.3 -59.5) (3553 -2519.3 -54)"
-			"material" "OBJECTS/GAMESCREEN"
-			"uaxis" "[0.141421 -0.989949 0 173] 0.134"
-			"vaxis" "[0 0 -1 -44] 0.098"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "5895"
-			"plane" "(3553 -2484.3 -80) (3553 -2484.3 -54) (3551 -2493.3 -59.5)"
-			"material" "OBJECTS/GAMESCREEN"
-			"uaxis" "[-0.124035 -0.992278 0 -240] 0.132"
-			"vaxis" "[0 0 -1 -44] 0.098"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "5894"
-			"plane" "(3553 -2484.3 -54) (3553 -2519.3 -54) (3551 -2511.3 -59.5)"
-			"material" "OBJECTS/GAMESCREEN"
-			"uaxis" "[0 -1 0 -115] 0.127"
-			"vaxis" "[-0.196116 0 -0.980581 43] 0.104"
-			"rotation" "0"
-			"lightmapscale" "32"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "5893"
-			"plane" "(3551 -2511.3 -74.5) (3553 -2519.3 -80) (3553 -2484.3 -80)"
-			"material" "OBJECTS/GAMESCREEN"
-			"uaxis" "[0 -1 0 -66] 0.129"
-			"vaxis" "[0.196116 0 -0.980581 -171] 0.102"
-			"rotation" "0"
-			"lightmapscale" "32"
-			"smoothing_groups" "0"
-		}
-		editor
-		{
-			"color" "220 141 82"
-		}
-	}
-	editor
-	{
-		"color" "220 141 82"
-	}
-	editor
-	{
-		"color" "220 141 82"
-		"visgroupid" "10"
 	}
 }
 entity
@@ -74357,40 +74256,6 @@ entity
 	"model" "models/scenery/furniture/tvbeach/tvbeach.mdl"
 	"disableshadows" "0"
 	"origin" "3561.46 -2503.53 -112"
-	editor
-	{
-		"color" "93 114 107"
-		"visgroupid" "19"
-	}
-}
-entity
-{
-	"id" "1923"
-	"classname" "prop_dynamic"
-	"angles" "0 0 0"
-	"skin" "0"
-	"solid" "6"
-	"model" "models/scenery/furniture/tvs/TV21inch.mdl"
-	"disableshadows" "1"
-	"targetname" "tv"
-	"StartHidden" "0"
-	"crossfade_skin_time" "2.0"
-	"npc_transparent" "1"
-	"demo_sequence" "None"
-	"RandomAnimation" "0"
-	"MinAnimTime" "5"
-	"MaxAnimTime" "10"
-	"collideable_gibs" "0"
-	"health" "0"
-	"ExplodeDamage" "0"
-	"ExplodeRadius" "0"
-	"blocks_traces" "0"
-	"renderfx" "0"
-	"rendermode" "0"
-	"renderamt" "255"
-	"rendercolor" "255 255 255"
-	"spawnflags" "0"
-	"origin" "3564.57 -2504.38 -82"
 	editor
 	{
 		"color" "93 114 107"
@@ -124040,9 +123905,9 @@ entity
 	"classname" "point_camera"
 	"angles" "0 0 0"
 	"FOV" "80"
-	"look_dest" "2456 -2740 -345"
+	"look_dest" "2456 -2739.5 -345"
 	"targetname" "news_camera"
-	"origin" "2417 -2740 -343"
+	"origin" "2417 -2739.5 -343"
 	editor
 	{
 		"color" "220 30 220"
@@ -124052,7 +123917,7 @@ entity
 {
 	"id" "358646"
 	"classname" "prop_dynamic"
-	"angles" "0 271.5 0"
+	"angles" "0 270 0"
 	"renderfx" "0"
 	"rendermode" "0"
 	"renderamt" "255"
@@ -124076,7 +123941,7 @@ entity
 	"ExplodeDamage" "0"
 	"ExplodeRadius" "0"
 	"blocks_traces" "0"
-	"origin" "2510.51 -2713.55 -403"
+	"origin" "2510.86 -2712.16 -403"
 	editor
 	{
 		"color" "127 127 255"
@@ -124086,7 +123951,7 @@ entity
 {
 	"id" "358652"
 	"classname" "prop_dynamic"
-	"angles" "0 91 0"
+	"angles" "0 90 0"
 	"renderfx" "0"
 	"rendermode" "0"
 	"renderamt" "255"
@@ -124110,7 +123975,7 @@ entity
 	"ExplodeDamage" "0"
 	"ExplodeRadius" "0"
 	"blocks_traces" "0"
-	"origin" "2512.51 -2768.55 -404"
+	"origin" "2512.86 -2766.16 -404"
 	editor
 	{
 		"color" "127 127 255"
@@ -124182,7 +124047,7 @@ entity
 	"model" "models/scenery/furniture/AsianTapestry/AsianTapestry.mdl"
 	"screenspacefade" "0"
 	"disableshadows" "1"
-	"origin" "2591.4 -2863 -311.018"
+	"origin" "2591 -2862 -311.018"
 	editor
 	{
 		"color" "144 160 112"
@@ -124200,7 +124065,7 @@ entity
 	"model" "models/scenery/structural/temple/temgate.mdl"
 	"screenspacefade" "0"
 	"disableshadows" "1"
-	"origin" "2654 -2737 -280"
+	"origin" "2655 -2739 -280"
 	editor
 	{
 		"color" "144 160 112"
@@ -124222,7 +124087,7 @@ entity
 	"targetname" "lanternglow"
 	"spawnflags" "1"
 	"angles" "0 0 0"
-	"origin" "2652 -2740 -260.061"
+	"origin" "2652 -2739 -260.061"
 	editor
 	{
 		"color" "20 140 20"
@@ -124239,7 +124104,7 @@ entity
 	"_quadratic_attn" "1"
 	"_distance" "300"
 	"fade_time" "0.05"
-	"origin" "2456 -2740 -259.019"
+	"origin" "2456 -2739 -259.019"
 	editor
 	{
 		"color" "220 30 220"
@@ -124267,89 +124132,87 @@ entity
 }
 entity
 {
-	"id" "366689"
+	"id" "378053"
 	"classname" "func_monitor"
-	"StartHidden" "1"
-	"renderfx" "0"
-	"rendermode" "0"
 	"renderamt" "255"
 	"rendercolor" "255 255 255"
 	"disableshadows" "1"
+	"targetname" "plus_videogame"
+	"target" "news_camera"
+	"renderfx" "0"
+	"rendermode" "0"
 	"disablereceiveshadows" "0"
 	"InputFilter" "0"
 	"StartDisabled" "0"
 	"Solidity" "0"
 	"climbable" "0"
-	"origin" "3532.22 -2502.66 -66.5"
-	"target" "news_camera"
-	"targetname" "plus_videogame"
-	"spawnflags" "0"
-	"view_entity" "tv"
+	"origin" "3553 -2503 -66.5"
+	"StartHidden" "1"
 	solid
 	{
-		"id" "366690"
+		"id" "378054"
 		side
 		{
-			"id" "8973"
-			"plane" "(3552 -2489 -76) (3550.02 -2489 -76) (3551.97 -2515 -76)"
+			"id" "9021"
+			"plane" "(3553.38 -2489 -56.0003) (3553.38 -2517 -56.0003) (3552.38 -2517 -56.0003)"
 			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[-0.707107 -0.707107 0 17.3219] 0.25"
-			"vaxis" "[0.707107 -0.707107 0 42.1472] 0.25"
+			"uaxis" "[-1 0 0 39.5811] 0.25"
+			"vaxis" "[0 1 0 19.9082] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
 		}
 		side
 		{
-			"id" "8974"
-			"plane" "(3551.97 -2515 -57) (3550.01 -2489 -57) (3552 -2489 -57)"
+			"id" "9022"
+			"plane" "(3553.38 -2489 -56.0003) (3553.38 -2489 -77.0003) (3553.38 -2517 -77.0003)"
 			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[0.707107 0.707107 0 -17.3219] 0.25"
-			"vaxis" "[0.707107 -0.707107 0 42.1472] 0.25"
+			"uaxis" "[0 1 0 19.9082] 0.25"
+			"vaxis" "[0 0 -1 -18.0011] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
 		}
 		side
 		{
-			"id" "8975"
-			"plane" "(3551.97 -2515 -76) (3549.99 -2515 -57) (3551.97 -2515 -57)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[1 0 0 12.2568] 0.25"
-			"vaxis" "[0 0 -1 -5.166] 0.25"
+			"id" "9023"
+			"plane" "(3552.38 -2517 -56.0003) (3552.38 -2517 -77.0003) (3552.38 -2489 -77.0003)"
+			"material" "DEV/DEV_TVMONITORNONOISE"
+			"uaxis" "[0 -1 0 26.1995] 0.10937"
+			"vaxis" "[0 0 -1 -170.748] 0.08203"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
 		}
 		side
 		{
-			"id" "8976"
-			"plane" "(3550.02 -2489 -76) (3552 -2489 -76) (3552 -2489 -57)"
+			"id" "9024"
+			"plane" "(3552.38 -2489 -56.0003) (3552.38 -2489 -77.0003) (3553.38 -2489 -77.0003)"
 			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[-1 0 0 -12.2964] 0.25"
-			"vaxis" "[0 0 -1 -5.166] 0.25"
+			"uaxis" "[-1 0 0 39.5811] 0.25"
+			"vaxis" "[0 0 -1 -18.0011] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
 		}
 		side
 		{
-			"id" "8977"
-			"plane" "(3549.99 -2515 -76) (3550.03 -2488.99 -57) (3549.99 -2515 -57)"
-			"material" "DEV/DEV_TVMONITOR1A"
-			"uaxis" "[0 -1 0 204.34] 0.10657"
-			"vaxis" "[0 0 -1 -1.48447] 0.07411"
+			"id" "9025"
+			"plane" "(3553.38 -2517 -56.0003) (3553.38 -2517 -77.0003) (3552.38 -2517 -77.0003)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 -39.5811] 0.25"
+			"vaxis" "[0 0 -1 -18.0011] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
 		}
 		side
 		{
-			"id" "8978"
-			"plane" "(3552 -2489 -76) (3551.97 -2515 -76) (3551.97 -2515 -57)"
+			"id" "9026"
+			"plane" "(3553.38 -2517 -77.0003) (3553.38 -2489 -77.0003) (3552.38 -2489 -77.0003)"
 			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[0.00101081 1 0 -28.2411] 0.25"
-			"vaxis" "[0 0 -1 -7.3047] 0.25"
+			"uaxis" "[1 0 0 -39.5811] 0.25"
+			"vaxis" "[0 1 0 19.9082] 0.25"
 			"rotation" "0"
 			"lightmapscale" "16"
 			"smoothing_groups" "0"
@@ -124374,14 +124237,129 @@ entity
 }
 entity
 {
-	"id" "358042"
-	"classname" "env_cubemap"
-	"cubemapsize" "0"
-	"sides" ""
-	"origin" "2635 -2739 -322"
+	"id" "378061"
+	"classname" "prop_dynamic"
+	"angles" "0 0 0"
+	"skin" "0"
+	"solid" "6"
+	"disableshadows" "0"
+	"model" "models/scenery/furniture/tvmodern/Tvmodern.mdl"
+	"targetname" "tv_prop"
+	"StartHidden" "0"
+	"collideable_gibs" "0"
+	"health" "0"
+	"demo_sequence" "None"
+	"crossfade_skin_time" "2.0"
+	"npc_transparent" "1"
+	"RandomAnimation" "0"
+	"MinAnimTime" "5"
+	"MaxAnimTime" "10"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"spawnflags" "0"
+	"origin" "3560.89 -2503.12 -83"
 	editor
 	{
-		"color" "0 0 255"
+		"color" "127 127 255"
+	}
+}
+entity
+{
+	"id" "381729"
+	"classname" "func_brush"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"disableshadows" "1"
+	"targetname" "basic_videogame"
+	"renderfx" "0"
+	"rendermode" "0"
+	"InputFilter" "0"
+	"StartDisabled" "0"
+	"Solidity" "0"
+	"climbable" "0"
+	"origin" "3551.5 -2503 -67.5"
+	"StartHidden" "0"
+	solid
+	{
+		"id" "381730"
+		side
+		{
+			"id" "9027"
+			"plane" "(3553 -2489 -57.0003) (3553 -2517 -57.0003) (3552 -2517 -57.0003)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[-1 0 0 38.0616] 0.25"
+			"vaxis" "[0 1 0 19.9082] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9028"
+			"plane" "(3553 -2489 -57.0003) (3553 -2489 -78.0003) (3553 -2517 -78.0003)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[0 1 0 19.9082] 0.25"
+			"vaxis" "[0 0 -1 -22.0011] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9029"
+			"plane" "(3552 -2517 -57.0003) (3552 -2517 -78.0003) (3552 -2489 -78.0003)"
+			"material" "OBJECTS/GAMESCREEN"
+			"uaxis" "[0 -1 0 160] 0.11"
+			"vaxis" "[0 0 -1 -200] 0.08"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9030"
+			"plane" "(3552 -2489 -57.0003) (3552 -2489 -78.0003) (3553 -2489 -78.0003)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[-1 0 0 38.0616] 0.25"
+			"vaxis" "[0 0 -1 -22.0011] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9031"
+			"plane" "(3553 -2517 -57.0003) (3553 -2517 -78.0003) (3552 -2517 -78.0003)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 -38.0616] 0.25"
+			"vaxis" "[0 0 -1 -22.0011] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		side
+		{
+			"id" "9032"
+			"plane" "(3553 -2517 -78.0003) (3553 -2489 -78.0003) (3552 -2489 -78.0003)"
+			"material" "TOOLS/TOOLSNODRAW"
+			"uaxis" "[1 0 0 -38.0616] 0.25"
+			"vaxis" "[0 1 0 19.9082] 0.25"
+			"rotation" "0"
+			"lightmapscale" "16"
+			"smoothing_groups" "0"
+		}
+		editor
+		{
+			"color" "220 30 220"
+		}
+	}
+	editor
+	{
+		"color" "220 30 220"
+	}
+	editor
+	{
+		"color" "220 30 220"
 	}
 }
 cameras
@@ -124389,8 +124367,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[3496.48 -2582.78 -47.5221]"
-		"look" "[15538.6 8725.29 -2974]"
+		"position" "[3536.29 -2543.63 -67.6468]"
+		"look" "[10529.2 12590.6 -1940.91]"
 	}
 }
 cordon

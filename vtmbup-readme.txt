@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  27.04.2021
+v10.9                                                  28.04.2021
 -----
 +Improved braid icon and four models boundaries, thanks to Norrwin.
 +Restored way to kill Vandal and improved other SM clinic details.
@@ -127,6 +127,7 @@ Corrected Python script that broke when renaming the patch folder.
 Added links for beta videos to Restoration Doc, thanks to tarulu.
 Made hunters in Santa Monica attack Tung if they meet him outside.
 Restored water splashing at pier and missing ladder at warehouse.
+Removed guard floats for some levels where they were not sensible.
 
 v10.8                                                  21.03.2021
 -----
@@ -2633,6 +2634,7 @@ Made NPCs recognize the death of Misti, Venus, Mercurio and Knox.
 Removed corpses of blood dolls and other NPCs on revisiting maps.
 Made seductive feeding multiple times of Phil and Romero possible.
 Added missing solidity for sewer and temple models and some others.
+Removed guard floats for some levels where they were not sensible.
 
 Interface:
 +Made pause, camera-moves, auto-move and walk/run toggles definable.
