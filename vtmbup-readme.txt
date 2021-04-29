@@ -128,7 +128,7 @@ Added links for beta videos to Restoration Doc, thanks to tarulu.
 Made hunters in Santa Monica attack Tung if they meet him outside.
 Restored water splashing at pier and missing ladder at warehouse.
 Removed guard floats for some levels where they were not sensible.
-Gave a knive to Bishop Vick as secondary weapon for close fights.
+Gave knive to Bishop Vick and made Jezebel .38 fix part of basic.
 
 v10.8                                                  21.03.2021
 -----
@@ -3014,19 +3014,18 @@ Moved bum in the LA abandoned building and fixed getting stuck there.
 Removed an all clans moving sewer map and a plaguebearer sewers lock.
 Fixed parking garage gang war problem and Ming as Nines size issue.
 Made Regent's quest fail if you betray him and added Blood Hunt line.
-Moved dumpster to map hole and fixed floating rails and hub windows.
+Hid map hole and fixed rails, windows and two theatre door signs.
 Fixed condition for telling Damsel that you killed a werewolf too.
 Corrected Nosferatu NPC stats, shopping cart physics, and the moon.
-Fixed possible problem if people kill Igor without talking to him.
+Fixed possible problem if player kills Igor without talking to him.
 Made Igor attack the player if his friends are killed or attacked.
 Fixed LaCroix particles and hid floating Masquerade cutscene NPCs.
 Restored plaguebearer quest log, Regent line and cool Nines gesture.
 Fixed suitcase exchange at the parking garage and added one poster.
 Made abandoned warehouse bum and crackhouse girl leave after a time.
-Fixed two theatre door signs and discipline removal in crackhouse.
+Added a knive to Bishop Vick and discipline removal at crackhouse.
 Restored Gangrels to Masquerade cutscene and added theatre email.
 Made every armed NPC in downtown fight back when you attack them.
-Gave a knive to Bishop Vick as secondary weapon for close fights.
 
 Confession:
 +Restored laptop, turnstile, gestures, three cage dancers and a DJ.
@@ -3045,7 +3044,7 @@ Empire Arms:
 +Restored two security guards and fixed Russian discipline reaction.
 +Made Empire clerk bisexual and restored unused Ming skin for singer.
 +Swapped Boris' .38 with a GLOCK and added dance spot to the lobby.
-+Gave Jezebel a .38 to hurt you on bed and stopped a vanishing Dima.
+Gave Jezebel a .38 to hurt you on bed and stopped a vanishing Dima.
 Fixed Igor not appearing and improved Russians position and reaction.
 Prevented Boris' door from closing and made Dima go outside and wait.
 Forced talking to Boris and fixed Obfuscate and Dementation problems.

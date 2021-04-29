@@ -320,14 +320,6 @@ def setPlus():
             for knob in knobs:
                 knob.Unlock()
             G.Spot_Door = 1
-        locke = Find("Jezebel_Locke")
-        if locke and G.Locke_Swap == 0:
-            locke.ScriptHide()
-            locke.SetName("Jezebel_Locke_basic")
-            lockeplus = Find("Jezebel_Locke_plus")
-            lockeplus.ScriptUnhide()
-            lockeplus.SetName("Jezebel_Locke")
-            G.Locke_Swap = 1
         bladebros = Find("ChangBrosBlade_plus")
         if bladebros and G.Chang_Swap == 0:
             bladebros.SetName("ChangBrosBlade")
