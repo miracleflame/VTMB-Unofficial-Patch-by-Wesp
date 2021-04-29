@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  28.04.2021
+v10.9                                                  29.04.2021
 -----
 +Improved braid icon and four models boundaries, thanks to Norrwin.
 +Restored way to kill Vandal and improved other SM clinic details.
@@ -117,7 +117,7 @@ v10.9                                                  28.04.2021
 +Made Patty go behind Confession and fixed a few turnstile issues.
 +Restored tutorial Jack end animation and made crying Jenny louder.
 +Removed Mercurio's car from hub if you ratted him out to LaCroix.
-+Restored fighters brawling in Al's video game at beachhouse level.
++Restored beachhouse video game and animalic Gangrel sheet stances.
 Corrected LODs, transitions and inspections at Hallowbrook Hotel.
 Updated BSPSource and NirCmd, thanks to atrblizzard and Nir Sofer.
 Restored and corrected junk details on many maps, thanks Norrwin.
@@ -128,6 +128,7 @@ Added links for beta videos to Restoration Doc, thanks to tarulu.
 Made hunters in Santa Monica attack Tung if they meet him outside.
 Restored water splashing at pier and missing ladder at warehouse.
 Removed guard floats for some levels where they were not sensible.
+Gave a knive to Bishop Vick as secondary weapon for close fights.
 
 v10.8                                                  21.03.2021
 -----
@@ -2663,7 +2664,7 @@ Graphics:
 +Improved rain and inspection effects and restored many particles.
 +Added missing steam to clinic, Ocean House, Vesuvius and Hollywood.
 +Included eye replacer, bloodlines logo and added blood to beheading.
-Fixed frozen hunter, Gangrel warform and crouch on character sheet.
++Fixed Gangrel warform, crouch and frozen hunters on character sheet.
 Corrected and added landmark names and icons of bus and sewer maps.
 Swapped location labels of the missing sewer map with worldmap ones.
 Added missing fangs to some vampires and fixed beast form model bug.
@@ -3025,6 +3026,7 @@ Made abandoned warehouse bum and crackhouse girl leave after a time.
 Fixed two theatre door signs and discipline removal in crackhouse.
 Restored Gangrels to Masquerade cutscene and added theatre email.
 Made every armed NPC in downtown fight back when you attack them.
+Gave a knive to Bishop Vick as secondary weapon for close fights.
 
 Confession:
 +Restored laptop, turnstile, gestures, three cage dancers and a DJ.
@@ -3043,6 +3045,7 @@ Empire Arms:
 +Restored two security guards and fixed Russian discipline reaction.
 +Made Empire clerk bisexual and restored unused Ming skin for singer.
 +Swapped Boris' .38 with a GLOCK and added dance spot to the lobby.
++Gave Jezebel a .38 to hurt you on bed and stopped a vanishing Dima.
 Fixed Igor not appearing and improved Russians position and reaction.
 Prevented Boris' door from closing and made Dima go outside and wait.
 Forced talking to Boris and fixed Obfuscate and Dementation problems.
@@ -3052,7 +3055,6 @@ Repaired bad elevator button at Empire hotel and Dima not attacking.
 Stopped Empire hotel TV from being turned off because of lighting.
 Added floor number to suite names in computer and numbers to floors.
 Improved Empire Hotel mafia TV room sound switch and music radius.
-Gave Jezebel a Glock to hurt you on bed and stopped vanishing Dima.
 Corrected Boris dialogue problem after he survived fighting Dema.
 
 Malkavian Mansion:
