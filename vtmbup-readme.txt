@@ -105,20 +105,24 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  29.04.2021
+v10.9                                                  30.04.2021
 -----
 +Improved braid icon and four models boundaries, thanks to Norrwin.
 +Restored way to kill Vandal and improved other SM clinic details.
 +Improved Dragon's Breath and vehicle models, thanks to endthewars.
 +Removed Pisha snack reward and fixed Persuasion of Phil and Stan.
-+Made books sellable again due to real exploit fix, thanks Norrwin.
++Restored tutorial Jack end animation and made crying Jenny louder.
 +Improved controls options menu and settings text for widescreens.
 +Removed Kent's driver license item to restore Fatguy melee attack.
 +Made Patty go behind Confession and fixed a few turnstile issues.
-+Restored tutorial Jack end animation and made crying Jenny louder.
-+Removed Mercurio's car from hub if you ratted him out to LaCroix.
-+Restored beachhouse video game and animalic Gangrel sheet stances.
++Removed Mercurio's car from hub if you snitched on him to LaCroix.
++Restored wine and cowering interesting places, thanks endthewars.
++Made books sellable again due to real exploit fix, thanks Norrwin.
++Restored beachhouse video game fighters and Gangrel sheet stance.
+Removed guard floats for some levels where they were not sensible.
 Corrected LODs, transitions and inspections at Hallowbrook Hotel.
+Added Mod Launcher tool to easily select mods, thanks to Psycho-A.
+Gave knive to Bishop Vick and made Jezebel .38 fix part of basic.
 Updated BSPSource and NirCmd, thanks to atrblizzard and Nir Sofer.
 Restored and corrected junk details on many maps, thanks Norrwin.
 Made Tseng hide his guns faster and Carson's killing being logged.
@@ -127,9 +131,6 @@ Corrected Python script that broke when renaming the patch folder.
 Added links for beta videos to Restoration Doc, thanks to tarulu.
 Made hunters in Santa Monica attack Tung if they meet him outside.
 Restored water splashing at pier and missing ladder at warehouse.
-Removed guard floats for some levels where they were not sensible.
-Gave knive to Bishop Vick and made Jezebel .38 fix part of basic.
-Added Mod Launcher tool to easily select mods, thanks to Psycho-A.
 
 v10.8                                                  21.03.2021
 -----
@@ -2587,6 +2588,7 @@ General:
 +Updated Ash, Copper and Serial quest states when you failed some.
 +Made several corpses not dissappear immediately after cutscenes.
 +Added missing manholes and taxis with cabbies to several levels.
++Restored wine drinking and cowering interesting places to levels.
 Made all enemies drop weapon except for balance or impossible cases.
 All illogical spawning and respawning is removed on several levels.
 Fixed refresh-rate, coronas, floats and > 2 GB memory bugs in dlls.
@@ -3591,9 +3593,9 @@ Other restorations:
 + Pause, hotkey and camera keydefinitions.
 + Discipline and weapon selection toggling.
 + Eight clan hand models and four skyboxes.
-+ Main menu and many other particle effects.
 + Over sixty decal graphics and terminal texts.
 + Over fifty clan idles and many more animations.
++ Many particle effects and wine and cower places.
 + Six character questions and three tutorial popups.
 + Histories mode offering ten histories for each clan.
 + Two songs and twenty-four compositions of Rik Schaffer.
@@ -3679,12 +3681,10 @@ Models:
 * Burning people running around (animation found).
 * Spiderchick splitting on death (animation found).
 * Bat swarm as animals to befriend (npc class found).
-* Duplicate props with different sizes (models found).
-* Cowering and wine interesting places (animations found).
 * Booth and barstool interesting places (animations found).
 * Trash, dummy and other props without texture (models found).
-* Props with alternate skins or in combinations (models found).
 * More pipes, pillows, barbells and billiard balls (models found).
+* Props with alternate skins, sizes or in combinations (models found).
 
 Textures:
 * Old style blood drop GUI (textures found).
