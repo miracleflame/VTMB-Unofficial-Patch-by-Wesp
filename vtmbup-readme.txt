@@ -129,6 +129,7 @@ Made hunters in Santa Monica attack Tung if they meet him outside.
 Restored water splashing at pier and missing ladder at warehouse.
 Removed guard floats for some levels where they were not sensible.
 Gave knive to Bishop Vick and made Jezebel .38 fix part of basic.
+Added Mod Launcher tool to easily select mods, thanks to Psycho-A.
 
 v10.8                                                  21.03.2021
 -----
