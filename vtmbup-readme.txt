@@ -105,7 +105,7 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  30.04.2021
+v10.9                                                  02.05.2021
 -----
 +Improved braid icon and four models boundaries, thanks to Norrwin.
 +Restored way to kill Vandal and improved other SM clinic details.
@@ -119,6 +119,8 @@ v10.9                                                  30.04.2021
 +Restored wine and cowering interesting places, thanks endthewars.
 +Made books sellable again due to real exploit fix, thanks Norrwin.
 +Restored beachhouse video game fighters and Gangrel sheet stance.
++Made Blood Boil stun enemies and unarmed Giovanni guests run away.
+Added links for beta videos to Restoration Doc, thanks to tarulu.
 Removed guard floats for some levels where they were not sensible.
 Corrected LODs, transitions and inspections at Hallowbrook Hotel.
 Added Mod Launcher tool to easily select mods, thanks to Psycho-A.
@@ -128,9 +130,9 @@ Restored and corrected junk details on many maps, thanks Norrwin.
 Made Tseng hide his guns faster and Carson's killing being logged.
 Fixed being stuck on warrens gate and added ammo to Society roof.
 Corrected Python script that broke when renaming the patch folder.
-Added links for beta videos to Restoration Doc, thanks to tarulu.
-Made hunters in Santa Monica attack Tung if they meet him outside.
-Restored water splashing at pier and missing ladder at warehouse.
+Made hunters attack Tung and Barabus turn off Potence more often.
+Fixed pier water, warehouse ladder and some SM interesting places.
+Corrected some mistakes in the walkthrough and minor text issues.
 
 v10.8                                                  21.03.2021
 -----
@@ -2749,7 +2751,7 @@ Disciplines:
 +Improved stat messages for Auspex, Fortidude, Potence and Protean.
 +Changed Close to the Beast history because of wolf warform issues.
 +Reduced Bat's Communion duration and prolonged Brainwipe duration.
-+Added Blood Malady effect to supernaturals immune to Blood Theft.
++Made Blood Boil stun enemies and Blood Malady partial Blood Theft.
 +Restored Spirit Heal and combined Mind Shield and Shield of Faith.
 +Created icons and cross for Holy Light and Divine Vision Numinas.
 Made indirect disciplines not traceable and NPCs comfort loud ones.
@@ -2885,7 +2887,7 @@ Corrected XP and restored log for unravelling Knox and Bertram plan.
 Blocked a way from the SM hub into the junkyard before it's opened.
 Delayed Mercurio cutscene to make player move where he can see it.
 Darkened more ground floor lamps at beachhouse after power is off.
-Made hunters in Santa Monica attack Tung if they meet him outside.
+Made hunters in Santa Monica attack Tung and fixed hub phone places.
 
 The Asylum:
 +Added one more Jeanette encounter with enough Seduction and blood.
@@ -3258,7 +3260,7 @@ Resolved issues with Obfuscated players and guards still seeing them.
 Improved Barabus' hack position and made PCs accessable afterwards.
 Released the trapped elevator guard and fixed wrong aura of Barabus.
 Added emergency doorcode and fixed laser beams error after loading.
-Made Barabus leave with you and not be breaking out all on his own.
+Made Barabus leave with you and made him turn off Potence more often.
 Improved crossguy reaction, test timing, door speed and ignitions.
 Repaired auto-locking door, stuck fanblades and teleporting SWAT.
 Removed disciplines when talking to the Mandarin at Fu Syndicate.
@@ -3313,7 +3315,7 @@ Giovanni Mansion:
 +Placed some things in empty Giovanni rooms and fixed player start.
 +Corrected getting secret from Christopher and flirting with Nadja.
 +Improved Giovanni trap section and circumvented Bruno not burning.
-Fixed reentering issues and door breaking at the Giovanni Mansion.
+Fixed door breaking and reentering issues and made guests run away.
 Removed inconsistent alert states, fixed lever icons and zombie bugs.
 Fixed doors and back door guard and removed invisible Bruno clones.
 Made Bruno attack on lockpicking and his speech stop when he enters.
