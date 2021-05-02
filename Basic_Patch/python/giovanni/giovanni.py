@@ -123,7 +123,7 @@ def gio1_openFront():
     open = Find("Relay_Open_Front_Door")
     open.Trigger()
 
-#GIOVANNI MANSION 1: Set all to hate outside the house
+#GIOVANNI MANSION 1: Set all to react outside the house, changed by wesp
 def gio1_aggroOutside():
     G.GioBotchedOutside = 1
     guard4 = Find( "guard_patrol4" )
@@ -154,7 +154,7 @@ def gio1_aggroOutside():
     partygoers = Finds( "partygoer" )
     for partygoer in partygoers:
         if partygoer:
-            partygoer.SetRelationship( "player D_HT 5" )
+            partygoer.SetRelationship( "player D_FR 5" )
 
     luca = Find( "Luca" )
     if (luca):
@@ -166,8 +166,8 @@ def gio1_aggroOutside():
 
     maria = Find( "Maria" )
     if (maria):
-        maria.SetRelationship( "player D_HT 5" )
-        print "********** Set all Outside to Hate **********"
+        maria.SetRelationship( "player D_FR 5" )
+        print "********** Set all outside to react **********"
 
 #GIOVANNI MANSION 2: Set all to hate inside the house, changed by wesp
 def gio2_aggroInside():
