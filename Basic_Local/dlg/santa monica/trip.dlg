@@ -56,7 +56,7 @@
 {	56	}{	You will sell your weapons to me.	}{	You will sell your weapons to me.	}{	81	}{	Dominate 1 & IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	57	}{	Thanks anyway. I'd like to see what you have to sell.	}{	Thanks anyway. I'd like to see what you have to sell.	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	How much gold for your goods?	}
 {	58	}{	You will sell your weapons to me.	}{	You will sell your weapons to me.	}{	81	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
-{	59	}{	But weapons love me.	}{	But weapons love me.	}{	81	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	59	}{	Don't deny me what I need.	}{	Don't deny me what I need.	}{	81	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
 {	60	}{	Too bad. I'll just look around then.	}{	Too bad. I'll just look around then.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will check out your puppet products.	}
 {	61	}{	[nervous, loss for words]No. I said - Well I-I mean... I don't have any... guns. No guns. What?	}{	[nervous, loss for words]No. I said - Well I-I mean... I don't have any... guns. No guns. What?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	62	}{	You will sell your weapons to me.	}{	You will sell your weapons to me.	}{	71	}{	Dominate 1 & IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -65,13 +65,13 @@
 {	65	}{	Nothing, it's just that I would be interested in knowing someone who did.	}{	Nothing, it's just that I would be interested in knowing someone who did.	}{	91	}{	}{	}{	}{	}{	}{	}{	}{	}{	Then light the path to a true dealer in death.	}
 {	66	}{	Never mind then. What do you have to sell?	}{	Never mind then. What do you have to sell?	}{	311	}{	not IsClan(pc,"Ventrue")	}{	}{	}{	}{	}{	}{	}{	}{	How much gold for your goods?	}
 {	67	}{	You will sell your weapons to me.	}{	You will sell your weapons to me.	}{	71	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
-{	68	}{	But weapons love me.	}{	But weapons love me.	}{	81	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	68	}{	Don't deny me what I need.	}{	Don't deny me what I need.	}{	81	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
 {	69	}{	Show me your guns and I will show you mine.	}{	Show me your guns and I will show you mine.	}{	71	}{	Seduction 3 & (not IsMale(pc) and not IsClan(pc,"Nosferatu") and IsClan(pc,"Malkavian"))	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	70	}{	Okay, just thought I'd ask. I'll just look around then.	}{	Okay, just thought I'd ask. I'll just look around then.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I will check out your puppet products.	}
 {	71	}{	You know, you really don't seem the criminal and/or undercover-cop type.	}{	[Blushing, flattered]You know, you r- you really don't seem the criminal type.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	72	}{	I am trustworthy.	}{	I am trustworthy.	}{	81	}{	Dominate 1 & IsClan(pc,"Ventrue")	}{	G.Trip_Trust = G.Trip_Trust + 1	}{	}{	}{	}{	}{	}{	}{	I carry no badge save that of the Damned.	}
 {	73	}{	I am trustworthy.	}{	I am trustworthy.	}{	81	}{	Thaumaturgy 1 & G.Patch_Plus == 1	}{	G.Trip_Trust = G.Trip_Trust + 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	I carry no badge save that of the Damned.	}
-{	74	}{	Yes, I am the fabulous type.	}{	Yes, I am the fabulous type.	}{	81	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
+{	74	}{	Yes, I am more the fabulous type.	}{	Yes, I am more the fabulous type.	}{	81	}{	Presence 1 & G.Patch_Plus == 1	}{	G.Dialog_Presence = 1; dialogParticles()	}{	}{	}{	}{	}{	}{	}{	}
 {	75	}{	Great. Let's see what you have.	}{	Great. Let's see what you have.	}{	321	}{	}{	G.Trip_Guns = 3; TripStoryState()	}{	}{	}{	}{	}{	}{	}{	Show me your boom-sticks, Death Dealer!	}
 {	76	}{	We really need to open up to each other. You first, then me.	}{	We really need to open up to each other. You first, then me.	}{	81	}{	Seduction 3 & (not IsMale(pc) and not IsClan(pc,"Nosferatu") and IsClan(pc,"Malkavian"))	}{	G.Trip_Trust = G.Trip_Trust + 1	}{	}{	}{	}{	}{	}{	}{	}
 {	77	}{	You can trust me, honey.	}{	You can trust me, honey.	}{	81	}{	Seduction 3 & (not IsMale(pc) and not IsClan(pc,"Nosferatu") and not IsClan(pc,"Malkavian"))	}{	G.Trip_Trust = G.Trip_Trust + 1	}{	}{	}{	}{	}{	}{	}{	}
@@ -79,8 +79,8 @@
 {	79	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	80	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	81	}{	[giving in]Well... okay. Hey, it's cool. I'm overstocked anyhow. Take a look and... feel free to come back any time.	}{	[giving in]Well... okay. Hey, it's cool. I'm overstocked anyhow. Take a look and... feel free to come back any time.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Trip_Guns = 3; G.Trip_Know = 4; TripStoryState()	}{	}{	}{	}{	}{	}{	}{	}
-{	82	}{	Thanks. Let's see what you have.	}{	Thanks. Let's see what you have.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs); preBarter("Trip")	}{	}{	}{	}{	}{	}{	}{	Miracle merchant, I thank you.	}
-{	83	}{	You're a good guy, Trip. Thanks. Let's see.	}{	You're a good guy, Trip. Thanks. Let's see.	}{	0	}{	G.Trip_Name == 1 and G.Extra_Lines == 1	}{	G.Trip_Trust = G.Trip_Trust + 1; npc.StartBarter(G.Story_State, 0, G.Trip_Drugs); preBarter("Trip")	}{	}{	}{	}{	}{	}{	}{	You could sell sunlight to the undead.	}
+{	82	}{	Thanks. Let's see what you have.	}{	Thanks. Let's see what you have.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs)	}{	}{	}{	}{	}{	}{	}{	Miracle merchant, I thank you.	}
+{	83	}{	You're a good guy, Trip. Thanks. Let's see.	}{	You're a good guy, Trip. Thanks. Let's see.	}{	0	}{	G.Trip_Name == 1 and G.Extra_Lines == 1	}{	G.Trip_Trust = G.Trip_Trust + 1; npc.StartBarter(G.Story_State, 0, G.Trip_Drugs)	}{	}{	}{	}{	}{	}{	}{	You could sell sunlight to the undead.	}
 {	84	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	85	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	86	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -119,7 +119,7 @@
 {	119	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	120	}{	Just thought I'd ask. I'll just look around then.	}{	Just thought I'd ask. I'll just look around then.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll peruse your opacity.	}
 {	121	}{	Umm... no, not, not really. Sorry.	}{	Umm... no, not, not really. Sorry.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	122	}{	Not really? There is a clinic across the road. Should I get you something for a discount?	}{	Not really? There is a clinic across the road. Should I get you something for a discount?	}{	191	}{	}{	G.Trip_Discount = 1; pc.SetQuest("Trip Drugs", 1)	}{	}{	}{	}{	}{	}{	}{	Are you sure? I could bring you some from the house of healing ahead to make things cheaper.	}
+{	122	}{	Not really? There is a clinic across the street. Can I get you something for a discount?	}{	Not really? There is a clinic across the street. Can I get you something for a discount?	}{	191	}{	}{	G.Trip_Discount = 1; pc.SetQuest("Trip Drugs", 1)	}{	}{	}{	}{	}{	}{	}{	Sure you are. I will get some from the house of healing to make things cheaper.	}
 {	123	}{	Just thought I'd ask. I'll just look around then.	}{	Just thought I'd ask. I'll just look around then.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I'll peruse your opacity.	}
 {	124	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	125	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -184,9 +184,9 @@
 {	184	}{	Cool. Do you sell weapons here?	}{	Cool. Do you sell weapons here?	}{	51	}{	G.Trip_Guns == 0	}{	}{	}{	}{	}{	}{	}{	}{	Do you sell boom-sticks in this bazaar?	}
 {	185	}{	Trip, what do you have to sell here?	}{	Trip, what do you have to sell here?	}{	311	}{	}{	}{	}{	}{	}{	}{	}{	}{	How much gold for your goods?	}
 {	186	}{	Ah! Death Trip!	}{	Ah! Death Trip!	}{	551	}{	IsClan(pc,"Malkavian")	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	187	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	188	}{	They call you Trip. Are you doing drugs?	}{	They call you Trip. Are you doing drugs?	}{	121	}{	G.Patch_Plus == 1 and G.Trip_Discount == 0	}{	}{	}{	}{	}{	}{	}{	}{	Trip is your name and drugs are your game?	}
-{	189	}{	See you later, Trip. I've got to run.	}{	See you later, Trip. I've got to run.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	187	}{	They call you Trip. That's a weird nickname, are you doing drugs?	}{	They call you Trip. That's a weird nickname, are you doing drugs?	}{	121	}{	G.Patch_Plus == 1 and G.Trip_Discount == 0	}{	}{	}{	}{	}{	}{	}{	}{	Trip is your name and drugs are your game?	}
+{	188	}{	See you later, Trip. I've got to run.	}{	See you later, Trip. I've got to run.	}{	0	}{	}{	}{	}{	}{	}{	}{	}{	}{	I am no longer here.	}
+{	189	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	190	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	191	}{	Thanks. You, uh, new to Santa Monica?	}{	Thanks. You, uh, new to Santa Monica?	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Trip_Flatter = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	192	}{	Yes I am. Is it that obvious?	}{	Yes I am. Is it that obvious?	}{	201	}{	}{	}{	}{	}{	}{	}{	}{	}{	I have never before seen the lady by the sea.	}
@@ -231,7 +231,7 @@
 {	231	}{	Yeah, it's freakin' me out, to be honest. I'm open all night and Santa Monica police don't rank amongst the nation's most worthy.	}{	Yeah, it's freakin' me out, to be honest. I'm open all night and Santa Monica police don't rank amongst the nation's most worthy.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	G.Trip_Killer = 1	}{	}{	}{	}{	}{	}{	}{	}
 {	232	}{	Are these killings happening around here?	}{	Are these killings happening around here?	}{	241	}{	G.Story_State < 5	}{	}{	}{	}{	}{	}{	}{	}{	What of the shadow-cloaked killer?	}
 {	233	}{	Heard anything new about it?	}{	Heard anything new about it?	}{	251	}{	G.Story_State >= 5	}{	}{	}{	}{	}{	}{	}{	}{	Do the voices speak any more of the killer cloaked in shadows?	}
-{	234	}{	Well try and stay safe. Can I see your weapons?	}{	Well try and stay safe. Can I see your weapons?	}{	0	}{	G.Trip_Guns == 3	}{	G.Trip_Trust = G.Trip_Trust + 1; npc.StartBarter(G.Story_State, 0, G.Trip_Drugs); preBarter("Trip")	}{	}{	}{	}{	}{	}{	}{	Hide in your own shadows, Death Trip. Now... to the boom-sticks.	}
+{	234	}{	Well try and stay safe. Can I see your weapons?	}{	Well try and stay safe. Can I see your weapons?	}{	0	}{	G.Trip_Guns == 3	}{	G.Trip_Trust = G.Trip_Trust + 1; npc.StartBarter(G.Story_State, 0, G.Trip_Drugs)	}{	}{	}{	}{	}{	}{	}{	Hide in your own shadows, Death Trip. Now... to the boom-sticks.	}
 {	235	}{	Well try and stay safe. What do you have to sell today?	}{	Well try and stay safe. What do you have to sell today?	}{	311	}{	G.Trip_Guns < 3	}{	G.Trip_Trust = G.Trip_Trust + 1	}{	}{	}{	}{	}{	}{	}{	Be safe, dealer of death. Now let us trade more than stories.	}
 {	236	}{	So they call you Trip. Are you doing drugs?	}{	So they call you Trip. Are you doing drugs?	}{	121	}{	G.Patch_Plus == 1 and G.Trip_Discount == 0 and G.Trip_Name == 1	}{	}{	}{	}{	}{	}{	}{	}{	So Trip is your name and drugs are your game?	}
 {	237	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -260,7 +260,7 @@
 {	260	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	261	}{	I'll tell ya, crazy stuff happens all the time and it's like we just get used to it; just go on our way "doot-dee-do". But this... I dunno, these killings are chilling.	}{	I'll tell ya, crazy stuff happens all the time and it's like we just get used to it; just go on our way "doot-dee-do". But this... I dunno, these killings are chilling.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	262	}{	Indeed, you should be careful.	}{	Indeed, you should be careful.	}{	271	}{	}{	}{	}{	}{	}{	}{	}{	}{	Armor yourself, Death Trip.	}
-{	263	}{	Whatever you say. What do you have to sell?	}{	Whatever you say. What do you have to sell?	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs); preBarter("Trip")	}{	}{	}{	}{	}{	}{	}{	Hide in your own shadows, Death Trip. Now... to the merchandise.	}
+{	263	}{	Whatever you say. What do you have to sell?	}{	Whatever you say. What do you have to sell?	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs)	}{	}{	}{	}{	}{	}{	}{	Hide in your own shadows, Death Trip. Now... to the merchandise.	}
 {	264	}{	Stay safe, Trip. What do you have to sell today?	}{	Stay safe, Trip. What do you have to sell today?	}{	311	}{	G.Extra_Lines == 1 and G.Trip_Name == 1 	}{	G.Trip_Trust = G.Trip_Trust + 1	}{	}{	}{	}{	}{	}{	}{	Be safe, dealer of death. Now let us trade more than stories.	}
 {	265	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	266	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -279,7 +279,7 @@
 {	279	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	280	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	281	}{	One, two... ah, damn it! One, two, three, four, ah whatever, dude... ah.	}{	One, two... ah, damn it! One, two, three, four, ah whatever, dude... ah.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	282	}{	All the pills are there, no need to count.	}{	All the pills are there, no need to count.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs); preBarter("Trip")	}{	}{	}{	}{	}{	}{	}{	The pill numbers are right, we know it.	}
+{	282	}{	No need to count, you will get more hard nights than you can handle.	}{	No need to count, you will get more hard nights than you can handle.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs)	}{	}{	}{	}{	}{	}{	}{	Don't count the numbers of the times that hardness will come over you.	}
 {	283	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	284	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	285	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -289,7 +289,7 @@
 {	289	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	290	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	291	}{	Nice pants, dude... ah.	}{	Nice pants, dude... ah.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	292	}{	Nothing compared to what you will get.	}{	Nothing compared to what you will get.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs); preBarter("Trip")	}{	}{	}{	}{	}{	}{	}{	Your pants will rise like the dead out of a grave.	}
+{	292	}{	Better take yours off when you use one of the pills.	}{	Better take yours off when you use one of the pills.	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs)	}{	}{	}{	}{	}{	}{	}{	Nothing compared to what will rise in yours.	}
 {	293	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	294	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	295	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -299,9 +299,9 @@
 {	299	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	300	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	301	}{	Uh, really? Let me see what you got.	}{	Uh, really? Let me see what you got.	}{	#	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	302	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	G.Trip_Discount < 3 or G.Trip_Drugs == 1	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs); preBarter("Trip")	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
-{	303	}{	I know it's not what you wanted, but you'll have a hard time with that! Now for my discount...	}{	I know it's not what you wanted, but you'll have a hard time with that! Now for my discount...	}{	281	}{	G.Trip_Discount == 3 and not IsMale(pc)	}{	pc.RemoveItem("item_g_drugs_drug_box"); pc.SetQuest("Trip Drugs", 3); G.Trip_Delivered = 1; G.Trip_Drugs = 1; pc.BumpStat("finance", 1)	}{	}{	}{	}{	}{	}{	}{	You wanted something else, but I brought you some hard stuff! Now make everything cheaper...	}
-{	304	}{	I know it's not what you wanted, but you'll have a hard time with that! Now for my discount...	}{	I know it's not what you wanted, but you'll have a hard time with that! Now for my discount...	}{	291	}{	G.Trip_Discount == 3 and IsMale(pc)	}{	pc.RemoveItem("item_g_drugs_drug_box"); pc.SetQuest("Trip Drugs", 3); G.Trip_Delivered = 1; G.Trip_Drugs = 1; pc.BumpStat("finance", 1)	}{	}{	}{	}{	}{	}{	}{	You wanted something else, but I brought you some hard stuff! Now make everything cheaper...	}
+{	302	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	G.Trip_Discount < 3 or G.Trip_Drugs == 1	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs)	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	303	}{	It's probably not what you thought, but you'll have some fun with it! Now for my discount...	}{	It's probably not what you thought, but you'll have some fun with it! Now for my discount...	}{	281	}{	G.Trip_Discount == 3 and not IsMale(pc)	}{	pc.RemoveItem("item_g_drugs_drug_box"); pc.SetQuest("Trip Drugs", 3); G.Trip_Delivered = 1; G.Trip_Drugs = 1; pc.BumpStat("finance", 1)	}{	}{	}{	}{	}{	}{	}{	You wanted something else, but I brought you what you need! Now make things cheaper...	}
+{	304	}{	It's probably not what you thought, but you'll have some fun with it! Now for my discount...	}{	It's probably not what you thought, but you'll have some fun with it! Now for my discount...	}{	291	}{	G.Trip_Discount == 3 and IsMale(pc)	}{	pc.RemoveItem("item_g_drugs_drug_box"); pc.SetQuest("Trip Drugs", 3); G.Trip_Delivered = 1; G.Trip_Drugs = 1; pc.BumpStat("finance", 1)	}{	}{	}{	}{	}{	}{	}{	You wanted something else, but I brought you what you need! Now make things cheaper...	}
 {	305	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	306	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	307	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -309,7 +309,7 @@
 {	309	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	310	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	311	}{	A'ight, here's what we got today.	}{	A'ight, here's what we got today.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	312	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs); preBarter("Trip")	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	312	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs)	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
 {	313	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	314	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	315	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
@@ -319,7 +319,7 @@
 {	319	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	320	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	321	}{	Alright, come take a look then.	}{	Alright, come take a look then.	}{	#	}{	npc.SetDisposition("Neutral", 1)	}{	}{	}{	}{	}{	}{	}{	}{	}
-{	322	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs); preBarter("Trip")	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
+{	322	}{	(Auto-End)	}{	(Auto-End)	}{	0	}{	}{	npc.StartBarter(G.Story_State, 0, G.Trip_Drugs)	}{	}{	}{	}{	}{	}{	}{	(Auto-End)	}
 {	323	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	324	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
 {	325	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}{	}
