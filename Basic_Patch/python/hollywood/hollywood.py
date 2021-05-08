@@ -794,14 +794,14 @@ def SetTaxi():
         map = Find("sewer_map")
         if map: map.Unlock()
 
-#HOLLYWOOD: Cleans up after courier's death
+#HOLLYWOOD: Cleans up after courier's death, changed by wesp
 def UnsetCourierBlood():
     if __main__.FindPlayer().GetQuestState("Courier") > 4:
         bloods = Finds("courier_blood")
         for blood in bloods:
             blood.Kill()
         arm = Find("courier_arm")
-        if arm: arm.Kill()
+        if arm and not (pc.HasItem("item_w_severed_arm")): arm.Kill()
 
 #HOLLYWOOD: Places NPCs
 def SetNPCs():
