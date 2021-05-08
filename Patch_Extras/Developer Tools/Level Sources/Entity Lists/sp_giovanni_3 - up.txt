@@ -2184,7 +2184,8 @@
 "angles" "0 214 0"
 "spawnflags" "0"
 "OnBeginSequence" "trig_zombie_failsafe,Kill,,0,-1,,"
-"OnEndSequence" "trig_nadia_start_dlg2,ScriptUnhide,,0,-1,G.gio_3_startzombies = 1,"
+"OnEndSequence" "trig_nadia_start_dlg2,ScriptUnhide,,0,-1,,"
+"OnEndSequence" ",,,0,-1,G.gio_3_startzombies = 1,"
 "OnEndSequence" "Nadia,WillTalk,1,0,-1,,"
 "origin" "-550.203 -877.386 -301"
 }
@@ -3461,7 +3462,8 @@
 "spawnflags" "1"
 "OnTrigger" ",,,0,-1,G.gio_2_nadia_pt = 0,"
 "OnTrigger" "choreo_Whats_Happening,Start,,0,-1,,"
-"OnTrigger" "Nadia,WillTalk,0,0,-1,G.Nadia_Fright = 1,"
+"OnTrigger" "Nadia,WillTalk,0,0,-1,,"
+"OnTrigger" ",,,0,-1,G.Nadia_Fright = 1,"
 "OnTrigger" "Nadia,SetFollowerBoss,0,0,-1,,"
 "origin" "-759.794 -551.398 -174.716"
 }

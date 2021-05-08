@@ -555,10 +555,11 @@ def gio1_victorMariaFlee():
 #GIOVANNI MANSION 3: Break door look at
 def breakDoorLook():
     print ( "********* Triggered Break Look *************" )
-    if ( G.ZombiesDead > 5 ):
+    if ( G.ZombiesDead > 5 and G.Door_Broken == 0):
         print ( "********* Breaking Door *************" )
         relay = Find( "Relay_break_door" )
         relay.Trigger()
+        G.Door_Broken = 1
     else:
         print ( "********* No Break *************" )
 
