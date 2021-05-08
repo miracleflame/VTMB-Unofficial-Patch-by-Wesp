@@ -24,9 +24,9 @@ lights-through-walls, floats-for-females and more-than-2GB-RAM bugs.
 To install the patch choose the Bloodlines directory as destination,
 select wanted features, install and then start the game from the new
 desktop or start menu links. Thanks to Jordan Russel for Inno Setup!
-It's important to start a new game after patching, old saves will be
-moved to save/incompatible! To uninstall, remove the patch links and
-patch directory. Changelogs, known issues and more are listed below.
+It's important to start a new game after patching, so old saves will
+be moved to save/incompatible! To remove the patch, delete the links
+and patch folder. Before updating to a new patch remove the old one.
 
 On issues in Windows install the patch as administrator or use it in
 XP compatibility mode. On problems with Steam run Steam and the game
@@ -105,13 +105,13 @@ Trackerscheme.res: Turns Malkavian font off, check txt, by Wesp5.
 Version Changelog:
 ------------------
 
-v10.9                                                  02.05.2021
+v10.9                                                  08.05.2021
 -----
 +Improved braid icon and four models boundaries, thanks to Norrwin.
 +Restored way to kill Vandal and improved other SM clinic details.
 +Improved Dragon's Breath and vehicle models, thanks to endthewars.
 +Removed Pisha snack reward and fixed Persuasion of Phil and Stan.
-+Restored tutorial Jack end animation and made crying Jenny louder.
++Restored tutorial Jack end animation and repaired SM crying Jenny.
 +Improved controls options menu and settings text for widescreens.
 +Removed Kent's driver license item to restore Fatguy melee attack.
 +Made Patty go behind Confession and fixed a few turnstile issues.
@@ -120,8 +120,10 @@ v10.9                                                  02.05.2021
 +Made books sellable again due to real exploit fix, thanks Norrwin.
 +Restored beachhouse video game fighters and Gangrel sheet stance.
 +Made Blood Boil stun enemies and unarmed Giovanni guests run away.
++Added Hallowbrook GLOCKs to secret room and made Firemage defend.
++Removed active Disciplines during frenzy and several guard floats.
 Added links for beta videos to Restoration Doc, thanks to tarulu.
-Removed guard floats for some levels where they were not sensible.
+Fixed Fortitude ghoul, Lasombra teleport and walls at Hallowbrook.
 Corrected LODs, transitions and inspections at Hallowbrook Hotel.
 Added Mod Launcher tool to easily select mods, thanks to Psycho-A.
 Gave knive to Bishop Vick and made Jezebel .38 fix part of basic.
@@ -131,8 +133,9 @@ Made Tseng hide his guns faster and Carson's killing being logged.
 Fixed being stuck on warrens gate and added ammo to Society roof.
 Corrected Python script that broke when renaming the patch folder.
 Made hunters attack Tung and Barabus turn off Potence more often.
-Fixed pier water, warehouse ladder and some SM interesting places.
+Fixed pier water, warehouse ladder and several interesting places.
 Corrected some mistakes in the walkthrough and minor text issues.
+Repaired Nadia standing up again and restored zombie death sounds.
 
 v10.8                                                  21.03.2021
 -----
@@ -159,7 +162,7 @@ Corrected Tremere haven condition, tutorial windows and a ladder.
 Fixed texture flickering on downtown washer and courier shoe hole.
 Made every armed NPC in downtown fight back when you attack them.
 Corrected Blade Brother name in basic and Luckee Star body issues.
-Removed disciplines when talking to the Mandarin at Fu Syndicate.
+Removed Disciplines when talking to the Mandarin at Fu Syndicate.
 Added model Formatter to convert models to SDK, thanks to DDLullu.
 Improved game save/load speed by modifying engine.dll, thanks c6.
 Made SDK work with new and open source Java, thanks Caner Özdemir.
@@ -209,7 +212,7 @@ v10.6                                                  14.04.2020
 -----
 +Repaired broken melee of Ming and created new item gained message.
 +Improved all cars and tutorial guard audio, thanks to endthewars.
-+Fixed Frenzy to really use the boosted stats, thanks EntenSchreck.
++Fixed frenzy to really use the boosted stats, thanks EntenSchreck.
 +Adjusted firearms ammo cost and restored one for the basic patch.
 +Restored Jeanette and Therese dialogue and many more unused lines.
 +Made Heather throw away old pizza and not being visible as ghost.
@@ -280,7 +283,7 @@ v10.4                                                  18.07.2019
 +Restored a King's Way room and copied Die My Darling song to pier.
 +Added way to feed of Arthur after his quest and fixed some hairs.
 +Made Mandarin and Arthur glasses plus and added Grout's wife aura.
-+Improved disciplines casting hand switch, thanks to EntenSchreck.
++Improved Disciplines casting hand switch, thanks to EntenSchreck.
 +Made seductive feeding multiple times of Phil and Romero possible.
 +Increased flamethrower ammo and made Larry more immune to fights.
 +Improved library quest notes and location of teeth marks in intro.
@@ -314,7 +317,7 @@ v10.3                                                  18.04.2019
 +Added Blood Malady effect for supernaturals immune to Blood Theft.
 +Updated Ash, Copper and Serial quest states when you failed them.
 +Changed medical emails conditions and guard sounds away from cops.
-+Readded Bedlam and Mass Suicide disciplines, thanks EntenSchreck.
++Readded Bedlam and Mass Suicide Disciplines, thanks EntenSchreck.
 +Removed second CIS computer password and restored many new models.
 +Restored full mission impossible, jewelry and Ming combat tracks.
 +Reskinned Beckett's wolf form to look more real, thanks Zer0morph.
@@ -413,9 +416,9 @@ v10.1                                                   23.10.2018
 +Made Carson quest more logical by having the player phone Gimble.
 +Added male blood doll to Smoke Shop and a surprise to pier ending.
 +Moved Knox in Asylum to restore lines of Cal and some for Arthur.
-+Corrected Auspex stats if you use "no changed disciplines" option.
++Corrected Auspex stats if you use "no changed Disciplines" option.
 +Swapped final poster quest poster and restored it to Ground Zero.
-+Restored partial damage to supernaturals with several disciplines.
++Restored partial damage to supernaturals with several Disciplines.
 +Updated some entries in some computers to reflect NPC fatalities.
 +Fixed four Humanity cost altering histories, thanks miracle.flame.
 +Removed plus and extras installer sub-options to avoid confusion.
@@ -436,7 +439,7 @@ Disabled bad icons and buttons for inactive Ocean House elevator.
 Fixed Presence hair and cleared Disciplines before more cutscenes.
 Covered level holes in observatory, Red Dragon and Venture Tower.
 Fixed vanishing details downtown, at Ocean House, and in cemetery.
-Added missing monster sounds reacting to Dementation disciplines.
+Added missing monster sounds reacting to Dementation Disciplines.
 Made the patch copy all bin files into main folder to fix crashes.
 Added toilet doors to a few maps and fixed minor dialogue issues.
 Moved breakroom at the SM clinic so the geometry fits the outside.
@@ -456,14 +459,14 @@ v10.0                                                   15.06.2018
 +Opened museum and Giovanni Mansion after quests for Pisha's items.
 +Restored thrown weapons slot for grenade and fixed Imalia webcam.
 Fixed female casting hands, object and NPC models, thanks DDLullu.
-Corrected problems with tutorial vampire enemies and disciplines.
+Corrected problems with tutorial vampire enemies and Disciplines.
 Made warehouse and beachhouse props solid and fixed downtown moon.
 Updated SDK and added darker SweetFX setting, thanks to Psycho-A.
 Darkened more beachhouse lamps and fixed gender of embrace scream.
 Fixed Fu Syndicate Barabus hacking check and a Ginger Swans date.
 Moved linux loader into main folder and added warning popup to it.
 Modified several dlls to not create empty files, thanks Psycho-A.
-Fixed LaCroix particles and Fortitude for basic disciplines setup.
+Fixed LaCroix particles and Fortitude for basic Disciplines setup.
 Added missing door to Ocean House and fixed two railing problems.
 Restored some safety windows and fixed minor map and text details.
 Unlocked a door at the Fu Syndicate and corrected more doorknobs.
@@ -686,11 +689,11 @@ v9.3                                                     26.04.2015
 +Improved library and atrium maps and removed Giovanni well spirit.
 +Made it possible to do the cemetery quest after getting Romero fun.
 +Included eye replacer mod, but made it deselectable, thanks Nivea.
-+Added installer option to deselect casting and changed disciplines.
++Added installer option to deselect casting and changed Disciplines.
 +Corrected beachhouse dog vanishing and dealing damage after death.
 +Made auto-move and walk/run toggles be definable, thanks to Malkav.
 +Fixed Johansen always following you and Romero's whore trying too.
-+Made it possible to freely select one of Beckett's new disciplines.
++Made it possible to freely select one of Beckett's new Disciplines.
 +Corrected cabbie sewer animation and Venture Tower elevator issue.
 Repaired Confession cross and restored dance spot, thanks Psycho-A.
 Fixed Plaquebearer quest bug and added all concept arts to Extras.
@@ -846,7 +849,7 @@ Corrected three interesting places with wrong bum animations in SM.
 
 v8.8                                                     24.10.2013
 ----
-+Added animations for all active disciplines, thanks to EntenSchreck.
++Added animations for all active Disciplines, thanks to EntenSchreck.
 +Made new elevator arrows light up and stealth work on clinic guard.
 +Fixed Lasombra teleport death and made new occult items undroppable.
 +Added Humanity for keeping Zhao alive and restored two feed sounds.
@@ -879,7 +882,7 @@ v8.7                                                     23.07.2013
 +Made Strauss give Fae Charm and Isaac Pearl or money when in basic.
 +Placed two patrons into Lotus Blossom and lowered perceptions there.
 +Restored several unused doors to tattoo shop and Hallowbrook lobby.
-+Increased level 3 Dementation and Domination disciplines' durations.
++Increased level 3 Dementation and Domination Disciplines' durations.
 +Made Romero boink possible after zombie quest and Wong Ho stand up.
 Activated Asian vampire laptop screensaver and cover sound variable.
 Fixed basic poster quest order and only Nosferatu getting CD email.
@@ -929,8 +932,8 @@ v8.5                                                     12.02.2013
 +Restored two menu effects and unused Pisha eyes for Lasombra female.
 +Repaired Blood Shield light effect and updated Presentable history.
 +Removed Domination's Mass Suicide to add Sleep, thanks EntenSchreck.
-+Restored Malkavian disciplines Veil and Voice, thanks EntenSchreck.
-+Fixed Thaumaturgy disciplines not working again after player frenzy.
++Restored Malkavian Disciplines Veil and Voice, thanks EntenSchreck.
++Fixed Thaumaturgy Disciplines not working again after player frenzy.
 +Changed Jian into broadsword and armed Chang brother with a katana.
 +Restored ten scenery props into sewers and Hallowbrook hotel levels.
 +Improved Bloodheal sound and restored HUD sounds and botch message.
@@ -1064,7 +1067,7 @@ v8.0                                                     30.04.2012
 +Dropped Sheriff sword on the roof, thanks MooCHa for missing models.
 +Restored guard in the tutorial, thanks MalkyJeff and burgermeister.
 +Corrected issues of new Vandal options and removed Skyeline trigger.
-+Restored proper Giovanni spirit use and inventory disciplines slot.
++Restored proper Giovanni spirit use and inventory Disciplines slot.
 +Increased cemetery gate health and restored basic patch spawn rates.
 +Improved bobcat, forklift, Chinese mugger and Obfuscator sequences.
 +Restored sewer-cabbie rat for Malkavians and wolf-ending easter egg.
@@ -1419,7 +1422,7 @@ v6.0                                                     15.02.2009
 ----
 +Added Tremere Domination tutorial info and fixed all clans CD email.
 +Repaired Heather remembrance dialogue and Gary's poster quest bugs.
-+Made Ventrue enemies use disciplines and SWAT in armor not biteable.
++Made Ventrue enemies use Disciplines and SWAT in armor not biteable.
 +Added quest logs for Giovanni candidates and for the final endgame.
 +Restored security guard and a sequence into the Skyeline Apartments.
 +Made Romero pimpin quest available after zombie and fixed Firearms.
@@ -1435,7 +1438,7 @@ Repaired Nadia's "c'mon" sequence, speaker names and a door handle.
 Restored Ventrues to Tower using females and Toreadors as variation.
 Swapped wrecks on Blood Hunt map and added missing bar-break sound.
 Fixed quest log update and XP gain on reaching Ming's inner sanctum.
-Made sweeper and Bertram Tung use disciplines if they are attacked.
+Made sweeper and Bertram Tung use Disciplines if they are attacked.
 Restored censored blood for intro and added some to the Hallowbrook.
 Fixed pony tail of Kerri and glasses of Mandarin, thanks to MooCha.
 Removed not working blood return when fighting against the Tzimisce.
@@ -1854,7 +1857,7 @@ Restored over 30 missing sounds and removed crackhouse respawning.
 Made prostitute leave you when attacked and removed some more keys.
 Added list to readme presenting changes sorted  by theme and area.
 Allowed some more feeding from Heather and improved her last scene.
-Improved Bach and Johnny cutscenes and Chang disciplines immunity.
+Improved Bach and Johnny cutscenes and Chang Disciplines immunity.
 Made Pisha's quests fail on fight and fixed Gallery bar inspection.
 Repaired bum, Mercurio, Tseng, Yukie and Danielle dialogue issues.
 Fixed new line on phone not working and minor log and text details.
@@ -1953,7 +1956,7 @@ v3.8                                                    03.07.2007
 +Added Domination options for Danielle and Romero quest prostitutes.
 Added Humanity gain for saving Johansen instead of missing torture.
 Modified placeholder names and descriptions of four upgrade books.
-Made NPCs act comforting to more disciplines and added male sounds.
+Made NPCs act comforting to more Disciplines and added male sounds.
 Altered duplicate Lu Fang conditions and re-added Nadia sentences.
 Made Vandal more talkative and Milligan react right when Dominated.
 Repaired completing Larry's quest being impossible in basic patch.
@@ -1972,7 +1975,7 @@ v3.7                                                    12.06.2007
 +Modified Eliza to raise Brawl and lowered high Firearms book grade.
 Restored Leopold Society clans and clan equipments for multiplayer.
 Swapped low Dodge book and Dodge item places at hotel and Mansion.
-Made indirect disciplines not traceable and decreased maximal ammo.
+Made indirect Disciplines not traceable and decreased maximal ammo.
 Removed Humanity gains from Milligan and fixed Wong Ho background.
 Fixed several crosshair issues and wrong icons near the Dane crane.
 Corrected several tutorial popups and mentioned camera adjustment.
@@ -2640,11 +2643,11 @@ Made NPCs recognize the death of Misti, Venus, Mercurio and Knox.
 Removed corpses of blood dolls and other NPCs on revisiting maps.
 Made seductive feeding multiple times of Phil and Romero possible.
 Added missing solidity for sewer and temple models and some others.
-Removed guard floats for some levels where they were not sensible.
+Removed some guard floats and fixed several hub interesting places.
 
 Interface:
 +Made pause, camera-moves, auto-move and walk/run toggles definable.
-+Restored vendor and context icons and disciplines and thrown slot.
++Restored vendor and context icons and Disciplines and thrown slot.
 +Added answers for not reading tomes and improved note readability.
 +Restored six character creation questions and several menu effects.
 +Made skip intro button always work and removed all special letters.
@@ -2711,7 +2714,7 @@ Removed other clans whispers in tutorial, warrens and Ocean House.
 Fixed sewer sound transitions in SM, Hollywood and Chinatown hubs.
 Removed character sheet music overlaying and unified keypad sounds.
 Lowered idle sound rate and missing sound to Blood Boil explosion.
-Added missing monster sounds reacting to Dementation disciplines.
+Added missing monster sounds reacting to Dementation Disciplines.
 Restored breaking and machine sounds to observatory and SM clinic.
 Added crane sounds to warehouse and changed crane sounds on Dane.
 Improved Ocean House breaking wood, fling, noise and beach sounds.
@@ -2720,10 +2723,10 @@ Stats:
 +Included and modified the cut histories, so that each clan has ten.
 +Created homosexual history for all clans and adjusted intro scene.
 +Made stealth harder to maximize it out and increased falling damage.
-+Lessened damage for frenzy check and corrected shown armor ratings.
++Lessened damage for frenzy check and removed Disciplines on frenzy.
 +Raised minimum Humanity for killing innocents to three like in hubs.
 +Added Combat to feats to avoid confusion and renamed Social Public.
-+Made Nosferatu break Masquerade easier and Frenzy use boosted stats.
++Made Nosferatu break Masquerade easier and frenzy use boosted stats.
 +Swapped trouble making history conditions with similar limitations.
 +Added config, commands and special equipped clans for multiplayer.
 +Implied sleeping near tutorial and warehouse including bloodloss.
@@ -2754,14 +2757,14 @@ Disciplines:
 +Made Blood Boil stun enemies and Blood Malady partial Blood Theft.
 +Restored Spirit Heal and combined Mind Shield and Shield of Faith.
 +Created icons and cross for Holy Light and Divine Vision Numinas.
-Made indirect disciplines not traceable and NPCs comfort loud ones.
-Fixed disciplines for non-humans and Protean claw effects and icons.
+Made indirect Disciplines not traceable and NPCs comfort loud ones.
+Fixed Disciplines for non-humans and Protean claw effects and icons.
 Trimmed Bloodsuckers' to Bloodsucker and renamed Purge Blood Purge.
 Fixed Potence, Ravens, Trance, Wipe and Hysteria issues and sounds.
 Removed not working Blood Shot blood return when fighting Tzimisces.
 Harmonized Presence chances and adjusted description of Blood Boil.
 Edited history and occult item descriptions to display percentages.
-Cleared disciplines before many more cutscenes than in the original.
+Cleared Disciplines before many more cutscenes than in the original.
 Made Chang brothers and serial killer be resistant to Blood Purge.
 Mentioned light amplification effects of Auspex and Divine Vision.
 Disabled Vision of Death, Suicide and Mass Suicide for the zombies.
@@ -2774,7 +2777,7 @@ Items:
 +Made Strauss give Fae Charm and Isaac Pearl or money when in basic.
 +Modified Ocean House diary and Lily's photo textures to fit text.
 Modified placeholder names of four upgrade books and lowered a value.
-Removed some keys after use and fixed some item drop and sell flags.
+Corrected shown armor ratings and fixed some item drop and sell flags.
 Fixed graphics of baton, VV photo, business cards and Gary's tapes.
 Made sarcophagus key and clothes not stashable and fixed drop sounds.
 Fixed the same-objects-in-inventory-and-containers-not-visible bug.
@@ -2825,7 +2828,7 @@ Tutorial:
 +Made keeping Jack's .38 gun possible and repaired missing hands bug.
 +Restored tutorial dialogue guard and removed Ventrue's rat feeding.
 Fixed some popups issues, restored one and mentioned camera commands.
-Removed second tutorial enemies for not mass affecting disciplines.
+Removed second tutorial enemies for not mass affecting Disciplines.
 Added Jack gesture, armor info, sounds and fixed stealth kill icon.
 Removed .38 ammo exploit and added check and options for high stats.
 Made Jack acknowledge a special stealth kill and fixed blood reset.
@@ -3263,7 +3266,7 @@ Added emergency doorcode and fixed laser beams error after loading.
 Made Barabus leave with you and made him turn off Potence more often.
 Improved crossguy reaction, test timing, door speed and ignitions.
 Repaired auto-locking door, stuck fanblades and teleporting SWAT.
-Removed disciplines when talking to the Mandarin at Fu Syndicate.
+Removed Disciplines when talking to the Mandarin at Fu Syndicate.
 
 Glaze:
 +Restored XP for stealth killing Johnny and made guards fight back.
@@ -3345,19 +3348,19 @@ Fixed exit crash with style and grace and cellar ladder top issue.
 Prevented Humanity from reaching zero in the dialogue with Johansen.
 
 Hallowbrook Hotel:
-+Opened Hallowbrook Hotel shortcut door in atrium to skip interior.
 +Added a Sabbat option to endgame including skipping the whole hotel.
-+Moved Ra blade to lair, flamethrower to atrium and removed GLOCKs.
++Opened Hallowbrook Hotel shortcut door in atrium to skip interior.
++Moved Ra blade to lair, flamethrower to atrium and moved the GLOCKs.
 +Forced Heather remembrance lines and added slash sounds and blood.
 +Added crashed elevator with metal grating and fixed bad door script.
 +Restored shovelhead and Lasombra models and Firemage cast animation.
+Made Heather cutscene only happen if she is alive and is your ghoul.
 Fixed Hallowbrook name differences and invincible burning Lasombra.
-The Heather cutscene will only happen if she is alive and your ghoul.
 Made Heather's last clothes fit and added animations to her scene.
-Turned Tremere Firemage into a female for males and swapped AUGs in.
+Fixed way to kill downtown Ming and corrected several breaking walls.
 Prevented Heather's comeback when returning from lower Hallowbrook.
+Made Tremere Firemage female for males and made them defend better.
 Moved unreachable NPCs, fixed door openings and premature spawning.
-Fixed way to kill downtown Ming and replaced cutscene Asian vampire.
 
 Blood Hunt:
 +Made werewolf damageable by normal weapons and removed debug switch.
@@ -3390,7 +3393,7 @@ Fixed sanctum view, teleport timing, key drop and a temple map hole.
 Endgame:
 +Provided shortcuts to skip most fighting and locked Skyeline vents. 
 +Restored Sheriff conjuring Bat's Communion and added his sword too.
-+Made Ventrue enemies use disciplines and SWAT in armor not biteable.
++Made Ventrue enemies use Disciplines and SWAT in armor not biteable.
 +Added exits to Sheriff roof fight and made his sword easy to find.
 +Restored wolf-ending easter egg and a added timer to elevator bomb.
 +Added timed explosion and boss flag for LaCroix's Dominated bomber.
@@ -3444,7 +3447,7 @@ Disciplines:
 + Blood Theft instead of Blood Salvo.
 + Blood Malady as Blood Theft partial.
 + Active discipline casting animations.
-+ New disciplines available from Beckett.
++ New Disciplines available from Beckett.
 + Toreador and Brujah Presence in dialogue.
 + Tremere first level Domination in dialogue.
 
@@ -3639,7 +3642,7 @@ Disciplines:
 * Presence Awe, General and Daze 1/2 levels (info found).
 * Discipline and Numina levels shown in HUD (graphics found).
 * Protean 5 Wolf warform (info, textures and animations found).
-* Bloodbuff-Dexterity/Stamina/Strength disciplines (info found).
+* Bloodbuff-Dexterity/Stamina/Strength Disciplines (info found).
 * Numinas Mind Shield and Shield of Faith (icons and info found).
 
 Items:
@@ -4308,8 +4311,8 @@ Selling too much to vendors makes goods unavailable or game crash.
 Sometimes the black inside of tunnels or manholes will disappear.
 If LaCroix ignores a delivered sarcophagus set G.Story_State = 60.
 Feeding on rats may trigger melee mode and their bodies levitate.
-Don't save or leave levels with disciplines active or on a ladder.
-Blood, Health and disciplines bars sometimes freeze or disappear.
+Don't save or leave levels with Disciplines active or on a ladder.
+Blood, Health and Disciplines bars sometimes freeze or disappear.
 The news will not always fit to your actual actions but that's TV.
 Some buildings look differently from the inside than the outside.
 Occasionally enemies do not show weapons or move into solid stuff.
