@@ -275,7 +275,7 @@ def setPlus():
             if gender: clothes.ScriptHide()
             else: condoms.ScriptHide()
         box = Find("plus_cigarbox")
-        if box: box.AddEntityToContainer("money_basic")
+        if box: box.AddEntityToContainer("basic_money")
         stumpy = Find("stumpy")
         if (stumpy and G.Gimble_Dead == 1):
             stumpy.ScriptHide()
@@ -678,8 +678,8 @@ def genderTremere():
     pc = __main__.FindPlayer()
     gender = pc.IsMale()
     clan = pc.clan
-    mage = Find("Tremere_FireMage")
-    female_mage = Find("Tremere_FireMage_Female")
+    mage = Find("Mage")
+    female_mage = Find("Mage_Female")
     if (gender == 1 and clan == 7):
         female_mage.ScriptUnhide()
     else:
@@ -2140,11 +2140,12 @@ def OnFrenzyBegin():
         pc.RemoveItem("item_i_written")
 # added by EntenSchreck to correct Frenzy stats
     if __main__.G.Patch_Plus == 1:
+        __main__.FindPlayer().ClearActiveDisciplines()
         f=FindClass("Npc_VFrenzyShadow")[0]    #This is the frenzying clone
         if f:
             f.SetName("FrenzyShadow")
             f.SetScriptedDiscipline("Corpus_Vampirus 2")
-            if IsClan(pc, "Gangrel"):
+            if IsClan(pc,"Gangrel"):
                 f.SetScriptedDiscipline("Corpus_Vampirus 3")
 def OnFrenzyEnd():
     print "Frenzy End"
